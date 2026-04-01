@@ -14,48 +14,53 @@
   <!-- Background -->
   <rect width="512" height="512" rx="96" ry="96" fill="url(#bg)"/>
 
-  <!-- Letter Y — arms shorter, stem longer -->
-  <!-- Left arm: from top-left down to center junction -->
-  <path d="M 136 96 L 256 220" stroke="url(#g1)" stroke-width="38" stroke-linecap="round" fill="none"/>
-  <!-- Right arm: from top-right down to center junction -->
-  <path d="M 376 96 L 256 220" stroke="url(#g1)" stroke-width="38" stroke-linecap="round" fill="none"/>
-  <!-- Stem: from junction straight down (long) -->
-  <path d="M 256 220 L 256 416" stroke="url(#g1)" stroke-width="38" stroke-linecap="round" fill="none"/>
+  <!-- Serif Y — Playfair-inspired with stroke contrast -->
+  <!-- Thin-to-thick strokes mimicking high-contrast serif italic -->
+  <!-- Left arm (thin stroke, italic lean) -->
+  <path d="M 120 88 Q 160 88 200 160 Q 230 210 256 230" 
+        stroke="url(#g1)" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <!-- Right arm (thick stroke, italic lean) -->
+  <path d="M 380 88 Q 348 88 310 160 Q 280 210 256 230" 
+        stroke="url(#g1)" stroke-width="34" stroke-linecap="round" fill="none"/>
+  <!-- Stem (medium, slightly italic) -->
+  <path d="M 256 230 Q 252 320 248 420" 
+        stroke="url(#g1)" stroke-width="30" stroke-linecap="round" fill="none"/>
 
-  <!-- Neural network nodes — left arm -->
-  <circle cx="166" cy="130" r="6" fill="#60a5fa" opacity="0.9"/>
-  <circle cx="142" cy="168" r="4.5" fill="#38bdf8" opacity="0.65"/>
-  <circle cx="196" cy="162" r="5" fill="#60a5fa" opacity="0.7"/>
-  <line x1="166" y1="130" x2="142" y2="168" stroke="#38bdf8" stroke-width="1.5" opacity="0.45"/>
-  <line x1="166" y1="130" x2="196" y2="162" stroke="#60a5fa" stroke-width="1.5" opacity="0.45"/>
-  <line x1="142" y1="168" x2="196" y2="162" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+  <!-- Serifs — small horizontal strokes at terminals -->
+  <!-- Left arm top serif -->
+  <path d="M 108 88 L 138 88" stroke="#60a5fa" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <!-- Right arm top serif -->
+  <path d="M 368 88 L 396 88" stroke="#06b6d4" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <!-- Bottom serif -->
+  <path d="M 232 420 L 264 420" stroke="#06b6d4" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
 
-  <!-- Neural network nodes — right arm -->
-  <circle cx="346" cy="130" r="6" fill="#06b6d4" opacity="0.9"/>
-  <circle cx="370" cy="168" r="4.5" fill="#06b6d4" opacity="0.65"/>
-  <circle cx="316" cy="162" r="5" fill="#22d3ee" opacity="0.7"/>
-  <line x1="346" y1="130" x2="370" y2="168" stroke="#06b6d4" stroke-width="1.5" opacity="0.45"/>
-  <line x1="346" y1="130" x2="316" y2="162" stroke="#22d3ee" stroke-width="1.5" opacity="0.45"/>
-  <line x1="370" y1="168" x2="316" y2="162" stroke="#22d3ee" stroke-width="1" opacity="0.3"/>
+  <!-- Neural network nodes — left side -->
+  <circle cx="148" cy="128" r="5.5" fill="#60a5fa" opacity="0.85"/>
+  <circle cx="126" cy="164" r="4" fill="#38bdf8" opacity="0.6"/>
+  <circle cx="176" cy="158" r="4.5" fill="#60a5fa" opacity="0.65"/>
+  <line x1="148" y1="128" x2="126" y2="164" stroke="#38bdf8" stroke-width="1.2" opacity="0.4"/>
+  <line x1="148" y1="128" x2="176" y2="158" stroke="#60a5fa" stroke-width="1.2" opacity="0.4"/>
+  <line x1="126" y1="164" x2="176" y2="158" stroke="#60a5fa" stroke-width="0.8" opacity="0.25"/>
 
-  <!-- Center junction glow -->
-  <circle cx="256" cy="220" r="14" fill="#3b82f6" opacity="0.25"/>
-  <circle cx="256" cy="220" r="8" fill="#60a5fa" opacity="0.55"/>
+  <!-- Neural network nodes — right side -->
+  <circle cx="356" cy="128" r="5.5" fill="#06b6d4" opacity="0.85"/>
+  <circle cx="378" cy="164" r="4" fill="#06b6d4" opacity="0.6"/>
+  <circle cx="328" cy="158" r="4.5" fill="#22d3ee" opacity="0.65"/>
+  <line x1="356" y1="128" x2="378" y2="164" stroke="#06b6d4" stroke-width="1.2" opacity="0.4"/>
+  <line x1="356" y1="128" x2="328" y2="158" stroke="#22d3ee" stroke-width="1.2" opacity="0.4"/>
+  <line x1="378" y1="164" x2="328" y2="158" stroke="#22d3ee" stroke-width="0.8" opacity="0.25"/>
 
-  <!-- Stem side nodes (data flow) -->
-  <circle cx="232" cy="300" r="4" fill="#38bdf8" opacity="0.45"/>
-  <circle cx="280" cy="340" r="4" fill="#38bdf8" opacity="0.45"/>
-  <circle cx="232" cy="380" r="3.5" fill="#06b6d4" opacity="0.35"/>
-  <line x1="256" y1="290" x2="232" y2="300" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
-  <line x1="256" y1="330" x2="280" y2="340" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
-  <line x1="256" y1="370" x2="232" y2="380" stroke="#06b6d4" stroke-width="1" opacity="0.25"/>
+  <!-- Junction glow -->
+  <circle cx="256" cy="230" r="12" fill="#3b82f6" opacity="0.2"/>
+  <circle cx="256" cy="230" r="6" fill="#60a5fa" opacity="0.5"/>
 
-  <!-- Bottom terminal glow -->
-  <circle cx="256" cy="416" r="10" fill="#06b6d4" opacity="0.3"/>
+  <!-- Stem side data nodes -->
+  <circle cx="228" cy="310" r="3.5" fill="#38bdf8" opacity="0.4"/>
+  <circle cx="272" cy="355" r="3.5" fill="#38bdf8" opacity="0.4"/>
+  <line x1="252" y1="300" x2="228" y2="310" stroke="#38bdf8" stroke-width="0.8" opacity="0.25"/>
+  <line x1="250" y1="345" x2="272" y2="355" stroke="#38bdf8" stroke-width="0.8" opacity="0.25"/>
 
   <!-- Ambient particles -->
-  <circle cx="104" cy="240" r="2.5" fill="#60a5fa" opacity="0.25"/>
-  <circle cx="408" cy="240" r="2.5" fill="#06b6d4" opacity="0.25"/>
-  <circle cx="180" cy="420" r="2" fill="#818cf8" opacity="0.2"/>
-  <circle cx="332" cy="420" r="2" fill="#818cf8" opacity="0.2"/>
+  <circle cx="96" cy="256" r="2" fill="#60a5fa" opacity="0.2"/>
+  <circle cx="416" cy="256" r="2" fill="#06b6d4" opacity="0.2"/>
 </svg>
