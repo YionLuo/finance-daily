@@ -336,6 +336,37 @@
     margin-top: 4px;
   }
 
+  .breaking-item-source a,
+  .source-link {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .breaking-item-source a:hover,
+  .source-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .news-source {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 6px;
+  }
+
+  .news-source a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .news-source a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
   /* ============ Hero (Compact) ============ */
   .hero-compact {
     padding: 24px 0;
@@ -1376,7 +1407,7 @@ function renderAiBreakingNews() {
               <div class="breaking-item-text">
                 <span class="breaking-item-tag ${item.tag}">${item.tagText}</span>${item.text}
               </div>
-              <div class="breaking-item-source">${item.source}</div>
+              <div class="breaking-item-source">${item.url ? `<a href="${item.url}" target="_blank" rel="noopener">${item.source} ↗</a>` : item.source}</div>
             </div>
           </li>
         `).join('')}
@@ -1412,7 +1443,7 @@ function renderAiArticleBody(issue) {
   issue.research.forEach(r => {
     html += '<div class="macro-event"><h3><span class="event-icon" style="background:' + r.iconBg + '">' + r.icon + '</span><span>' + r.title + '</span></h3>';
     html += '<div class="fact-block"><div class="label">详情</div>' + r.detail + '</div>';
-    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + r.impact + '</div></div>';
+    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + r.impact + '</div>' + (r.url ? '<div class="news-source"><a href="' + r.url + '" target="_blank" rel="noopener">' + (r.source || '查看来源') + ' \u2197</a></div>' : (r.source ? '<div class="news-source">' + r.source + '</div>' : '')) + '</div>';
   });
   html += '</section>';
 
@@ -1421,7 +1452,7 @@ function renderAiArticleBody(issue) {
   issue.application.forEach(a => {
     html += '<div class="macro-event"><h3><span class="event-icon" style="background:' + a.iconBg + '">' + a.icon + '</span><span>' + a.title + '</span></h3>';
     html += '<div class="fact-block"><div class="label">详情</div>' + a.detail + '</div>';
-    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + a.impact + '</div></div>';
+    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + a.impact + '</div>' + (a.url ? '<div class="news-source"><a href="' + a.url + '" target="_blank" rel="noopener">' + (a.source || '查看来源') + ' \u2197</a></div>' : (a.source ? '<div class="news-source">' + a.source + '</div>' : '')) + '</div>';
   });
   html += '</section>';
 
@@ -1430,7 +1461,7 @@ function renderAiArticleBody(issue) {
   issue.industry.forEach(d => {
     html += '<div class="macro-event"><h3><span class="event-icon" style="background:' + d.iconBg + '">' + d.icon + '</span><span>' + d.title + '</span></h3>';
     html += '<div class="fact-block"><div class="label">详情</div>' + d.detail + '</div>';
-    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + d.impact + '</div></div>';
+    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + d.impact + '</div>' + (d.url ? '<div class="news-source"><a href="' + d.url + '" target="_blank" rel="noopener">' + (d.source || '查看来源') + ' \u2197</a></div>' : (d.source ? '<div class="news-source">' + d.source + '</div>' : '')) + '</div>';
   });
   html += '</section>';
 
@@ -1514,7 +1545,7 @@ function renderBreakingNews() {
               <div class="breaking-item-text">
                 <span class="breaking-item-tag ${item.tag}">${item.tagText}</span>${item.text}
               </div>
-              <div class="breaking-item-source">${item.source}</div>
+              <div class="breaking-item-source">${item.url ? `<a href="${item.url}" target="_blank" rel="noopener">${item.source} ↗</a>` : item.source}</div>
             </div>
           </li>
         `).join('')}
@@ -1561,6 +1592,7 @@ function renderArticleBody(issue) {
         <ul class="mapping-list">
           ${e.mappings.map(m => `<li><span class="badge-${m.type === 'bull' ? 'bull' : 'bear'}">${m.type === 'bull' ? '利好' : '利空'}</span>${m.text}</li>`).join('')}
         </ul>
+        ${e.url ? `<div class="news-source"><a href="${e.url}" target="_blank" rel="noopener">${e.source || '查看来源'} ↗</a></div>` : (e.source ? `<div class="news-source">${e.source}</div>` : '')}
       </div>`;
   });
   html += `</section>`;
@@ -1579,6 +1611,7 @@ function renderArticleBody(issue) {
             <div class="news-item">
               <div class="news-label">${n.label}</div>
               <div class="news-content">${n.content}</div>
+              ${n.url ? `<div class="news-source"><a href="${n.url}" target="_blank" rel="noopener">${n.source || '查看来源'} ↗</a></div>` : (n.source ? `<div class="news-source">${n.source}</div>` : '')}
             </div>
           `).join('')}
           <div class="assessment">
