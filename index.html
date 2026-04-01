@@ -163,6 +163,80 @@
 
   .hero-cta:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
 
+  /* ============ Hero (Compact) ============ */
+  .hero-compact {
+    padding: 40px 0 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .hero-compact h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .hero-compact p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 480px;
+  }
+
+  .hero-compact-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 6px;
+  }
+
+  /* Latest issue inline header */
+  .latest-header {
+    margin-bottom: 32px;
+  }
+
+  .latest-header .date-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 4px 12px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  .latest-header h2 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+  }
+
+  .latest-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  /* Archive section */
+  .archive-section {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 2px solid var(--border);
+  }
+
   /* ============ Issue List ============ */
   .issues-header {
     display: flex;
@@ -655,8 +729,9 @@
 
   /* Responsive */
   @media (max-width: 640px) {
-    .hero h1 { font-size: 30px; }
-    .hero p { font-size: 15px; }
+    .hero-compact { flex-direction: column; padding: 28px 0 24px; }
+    .hero-compact h1 { font-size: 22px; }
+    .latest-header h2 { font-size: 20px; }
     .article-header h1 { font-size: 26px; }
     .article-meta { flex-direction: column; gap: 8px; }
     .stock-header { flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -684,29 +759,32 @@
 <!-- ============ Home Page ============ -->
 <div class="home-page active" id="homePage">
   <div class="page">
-    <!-- Hero -->
-    <div class="hero">
-      <h1>每日金融资讯<br>降噪聚合</h1>
-      <p>基于定制股票池，自动检索过去 24 小时宏观地缘与个股动态，经关联分析后输出投行风格研报。</p>
-      <div class="hero-tags">
+    <!-- Compact Hero -->
+    <div class="hero-compact">
+      <div class="hero-compact-left">
+        <h1>📊 金融资讯日报</h1>
+        <p>基于定制股票池，每日自动检索宏观地缘与个股动态，降噪聚合后输出投行风格研报。</p>
+      </div>
+      <div class="hero-compact-tags">
         <span class="hero-tag">🏢 腾讯控股</span>
         <span class="hero-tag">📱 小米集团</span>
         <span class="hero-tag">🚗 小鹏汽车</span>
         <span class="hero-tag">₿ BTC</span>
       </div>
-      <button class="hero-cta" onclick="showArticle('2026-04-01')">
-        查看最新日报
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
     </div>
 
-    <!-- Issue List -->
-    <div class="issues-header">
-      <h2>历史日报</h2>
-      <span class="issues-count" id="issueCount"></span>
-    </div>
+    <!-- Latest Issue (rendered inline) -->
+    <div id="latestIssueHeader"></div>
+    <div class="article-body" id="latestIssueBody"></div>
 
-    <div id="issueList"></div>
+    <!-- Archive -->
+    <div class="archive-section" id="archiveSection">
+      <div class="issues-header">
+        <h2>历史日报</h2>
+        <span class="issues-count" id="issueCount"></span>
+      </div>
+      <div id="issueList"></div>
+    </div>
   </div>
 </div>
 
@@ -834,60 +912,26 @@ const issues = [
 
 // ============ Rendering ============
 
-function renderIssueList() {
-  const list = document.getElementById('issueList');
-  const count = document.getElementById('issueCount');
-  count.textContent = `共 ${issues.length} 期`;
-
-  if (issues.length === 0) {
-    list.innerHTML = `
-      <div class="empty-state">
-        <div class="icon">📭</div>
-        <h3>暂无日报</h3>
-        <p>日报将在每天晚上 10 点自动生成</p>
-      </div>`;
-    return;
-  }
-
-  list.innerHTML = issues.map(issue => `
-    <div class="issue-card" onclick="showArticle('${issue.id}')">
-      <div class="issue-card-top">
-        <span class="issue-date">${issue.date}</span>
-        <span class="issue-weekday">${issue.weekday}</span>
-      </div>
-      <h3>${issue.title}</h3>
-      <p class="issue-summary">${issue.summary}</p>
-      <div class="issue-tags">
-        ${issue.tags.map(t => `<span class="issue-tag ${t.type}">${t.text}</span>`).join('')}
-      </div>
-    </div>
-  `).join('');
-}
-
-function renderArticle(issueId) {
-  const issue = issues.find(i => i.id === issueId);
-  if (!issue) return;
+function renderLatestIssue() {
+  if (issues.length === 0) return;
+  const issue = issues[0]; // latest
 
   // Header
-  document.getElementById('articleHeaderContent').innerHTML = `
-    <div class="date-badge">${issue.date} · ${issue.weekday}</div>
-    <h1>${issue.title}</h1>
-    <div class="article-meta">
-      <span class="article-meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        ${issue.timeRange}
-      </span>
-      <span class="article-meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        ${issue.focusAreas}
-      </span>
-    </div>
-    <div class="watchlist-tags">
-      ${issue.watchlist.map(w => `<span class="tag">${w}</span>`).join('')}
-    </div>
-  `;
+  document.getElementById('latestIssueHeader').innerHTML = `
+    <div class="latest-header">
+      <div class="date-badge">${issue.date} · ${issue.weekday}</div>
+      <h2>${issue.title}</h2>
+      <div class="latest-meta">
+        <span>⏱ ${issue.timeRange}</span>
+        <span>📋 ${issue.focusAreas}</span>
+      </div>
+    </div>`;
 
-  // Body
+  // Body — reuse renderArticleBody
+  document.getElementById('latestIssueBody').innerHTML = renderArticleBody(issue);
+}
+
+function renderArticleBody(issue) {
   let html = '';
 
   // Briefings
@@ -953,7 +997,65 @@ function renderArticle(issueId) {
       <div class="generated-at">报告生成时间：${issue.generatedAt}</div>
     </div>`;
 
-  document.getElementById('articleBody').innerHTML = html;
+  return html;
+}
+
+function renderIssueList() {
+  const list = document.getElementById('issueList');
+  const count = document.getElementById('issueCount');
+  const archive = document.getElementById('archiveSection');
+
+  // Archive shows only past issues (skip the latest which is shown inline)
+  const pastIssues = issues.slice(1);
+
+  if (pastIssues.length === 0) {
+    archive.style.display = 'none';
+    return;
+  }
+
+  archive.style.display = 'block';
+  count.textContent = `共 ${pastIssues.length} 期`;
+
+  list.innerHTML = pastIssues.map(issue => `
+    <div class="issue-card" onclick="showArticle('${issue.id}')">
+      <div class="issue-card-top">
+        <span class="issue-date">${issue.date}</span>
+        <span class="issue-weekday">${issue.weekday}</span>
+      </div>
+      <h3>${issue.title}</h3>
+      <p class="issue-summary">${issue.summary}</p>
+      <div class="issue-tags">
+        ${issue.tags.map(t => `<span class="issue-tag ${t.type}">${t.text}</span>`).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderArticle(issueId) {
+  const issue = issues.find(i => i.id === issueId);
+  if (!issue) return;
+
+  // Header
+  document.getElementById('articleHeaderContent').innerHTML = `
+    <div class="date-badge">${issue.date} · ${issue.weekday}</div>
+    <h1>${issue.title}</h1>
+    <div class="article-meta">
+      <span class="article-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        ${issue.timeRange}
+      </span>
+      <span class="article-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        ${issue.focusAreas}
+      </span>
+    </div>
+    <div class="watchlist-tags">
+      ${issue.watchlist.map(w => `<span class="tag">${w}</span>`).join('')}
+    </div>
+  `;
+
+  // Body
+  document.getElementById('articleBody').innerHTML = renderArticleBody(issue);
 }
 
 // ============ Navigation ============
@@ -990,6 +1092,7 @@ window.addEventListener('popstate', () => {
 });
 
 // ============ Init ============
+renderLatestIssue();
 renderIssueList();
 
 // Check hash on load
