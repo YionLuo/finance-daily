@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>金融资讯日报</title>
-<meta name="description" content="每日定制化股票池资讯聚合与影响分析，投行分析师风格，克制精准数据导向。">
+<title>Y Daily · 金融资讯 & AI 前沿</title>
+<meta name="description" content="金融资讯日报 + AI 前沿资讯，每日自动聚合降噪，投行分析师风格。">
 <link rel="icon" type="image/png" href="favicon.png">
 <style>
   :root {
@@ -43,6 +43,39 @@
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
   }
+
+  /* ============ Module Tabs ============ */
+  .module-tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--code-bg);
+    border-radius: 10px;
+    padding: 3px;
+  }
+
+  .module-tab {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 6px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    background: none;
+    white-space: nowrap;
+  }
+
+  .module-tab:hover { color: var(--text); }
+
+  .module-tab.active {
+    color: var(--accent);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .module-page { display: none; }
+  .module-page.active { display: block; }
 
   /* ============ Navigation ============ */
   .navbar {
@@ -875,18 +908,22 @@
 <!-- ============ Navigation ============ -->
 <nav class="navbar">
   <div class="navbar-inner">
-    <a class="navbar-brand" href="#" onclick="showHome(); return false;">
+    <a class="navbar-brand" href="#" onclick="showModule('finance'); return false;">
       <img class="logo-img" src="favicon.png" alt="Y">
-      <span>金融资讯日报</span>
+      <span>Y Daily</span>
     </a>
+    <div class="module-tabs">
+      <button class="module-tab active" id="tab-finance" onclick="showModule('finance')">金融资讯</button>
+      <button class="module-tab" id="tab-ai" onclick="showModule('ai')">AI 前沿</button>
+    </div>
     <div class="navbar-links">
-      <a class="nav-link active" id="nav-home" onclick="showHome()">首页</a>
       <a class="nav-link" id="nav-about" onclick="showAbout()">关于</a>
     </div>
   </div>
 </nav>
 
-<!-- ============ Home Page ============ -->
+<!-- ============ Finance Module ============ -->
+<div class="module-page active" id="mod-finance">
 <div class="home-page active" id="homePage">
   <div class="page">
     <!-- Compact Hero -->
@@ -939,9 +976,69 @@
       </div>
     </div>
   </div>
+</div><!-- /mod-finance -->
+
+<!-- ============ AI Module ============ -->
+<div class="module-page" id="mod-ai">
+<div class="home-page active" id="aiHomePage">
+  <div class="page">
+    <div class="hero-compact">
+      <p class="hero-desc">聚焦中美 AI 前沿动态，覆盖大模型、智能体、具身智能、AI for Science 等研究与应用两大维度。</p>
+      <div class="hero-compact-tags">
+        <span class="hero-tag">大模型</span>
+        <span class="hero-tag">智能体</span>
+        <span class="hero-tag">具身智能</span>
+        <span class="hero-tag">AI Coding</span>
+        <span class="hero-tag">AI for Science</span>
+      </div>
+    </div>
+
+    <div class="page-with-sidebar">
+      <aside class="sidebar" id="aiSidebar">
+        <div class="sidebar-title">目录</div>
+        <ul class="toc-list" id="aiTocList">
+          <li id="ai-toc-breaking"><a class="toc-link active" data-section="ai-sec-breaking" onclick="scrollToSection('ai-sec-breaking')">Breaking News</a></li>
+          <li><a class="toc-link" data-section="ai-sec-briefing" onclick="scrollToSection('ai-sec-briefing')">核心摘要</a></li>
+          <li><a class="toc-link" data-section="ai-sec-research" onclick="scrollToSection('ai-sec-research')">研究前沿</a></li>
+          <li><a class="toc-link" data-section="ai-sec-application" onclick="scrollToSection('ai-sec-application')">应用落地</a></li>
+          <li><a class="toc-link" data-section="ai-sec-industry" onclick="scrollToSection('ai-sec-industry')">产业动态</a></li>
+          <li><a class="toc-link" data-section="ai-sec-outlook" onclick="scrollToSection('ai-sec-outlook')">前瞻展望</a></li>
+          <li id="ai-toc-archive"><a class="toc-link" data-section="ai-sec-archive" onclick="scrollToSection('ai-sec-archive')">历史期刊</a></li>
+        </ul>
+      </aside>
+
+      <div class="main-content">
+        <div class="breaking-section" id="aiBreakingSection"></div>
+        <div id="aiLatestHeader"></div>
+        <div class="article-body" id="aiLatestBody"></div>
+        <div class="archive-section" id="aiArchiveSection">
+          <div class="issues-header" id="ai-sec-archive">
+            <h2>历史期刊</h2>
+            <span class="issues-count" id="aiIssueCount"></span>
+          </div>
+          <div id="aiIssueList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- ============ Article Page ============ -->
+<!-- Article Page (AI) -->
+<div class="article-page" id="aiArticlePage">
+  <div class="page">
+    <div class="article-header">
+      <a class="back-link" onclick="showModule('ai')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        返回 AI 前沿
+      </a>
+      <div id="aiArticleHeaderContent"></div>
+    </div>
+    <div class="article-body" id="aiArticleBody"></div>
+  </div>
+</div>
+</div><!-- /mod-ai -->
+
+<!-- ============ Article Page (Finance) ============ -->
 <div class="article-page" id="articlePage">
   <div class="page">
     <div class="article-header">
@@ -957,8 +1054,8 @@
 
 <!-- ============ Footer ============ -->
 <footer class="site-footer">
-  本站内容仅供资讯聚合与逻辑推演，不构成投资建议。<br>
-  数据来源于公开渠道，投资者应独立判断并自行承担风险。
+  Y Daily · 金融资讯日报 & AI 前沿资讯<br>
+  内容仅供资讯聚合与逻辑推演，不构成投资建议。数据来源于公开渠道。
 </footer>
 
 <script>
@@ -977,6 +1074,111 @@ const breakingNews = [
   { time: "10:00", tag: "tech", tagText: "科技", text: "英伟达GTC 2026发布Vera Rubin全栈计算平台（7款芯片），从芯片公司转型AI全栈基础设施搭建者。", source: "英伟达官方" }
 ];
 const breakingDate = "2026年4月1日";
+
+// ============ AI Breaking News Data ============
+const aiBreakingNews = [
+  { time: "21:00", tag: "ai", tagText: "大模型", text: "OpenAI发布首批开源模型OSS 120b/20b（Apache许可），推理能力与o4-mini相当，小模型可在手机端运行。AI开源格局剧变。", source: "TechCrunch" },
+  { time: "19:30", tag: "ai", tagText: "研究", text: "Nature Machine Intelligence发表：LLM Agent + ROS框架实现具身智能通用操作系统，机器人可通过自然语言指令完成复杂任务链。", source: "Nature" },
+  { time: "18:00", tag: "tech", tagText: "产业", text: "中国AI日均Token调用量突破140万亿，较2024年增长近100倍。国产开源模型全球TOP10占据6席。", source: "新华网" },
+  { time: "17:00", tag: "ai", tagText: "大模型", text: "阿里通义千问Qwen3.5-Max-Preview发布，采用MoE稀疏激活架构，推理效率大幅提升。国产大模型新一轮突破。", source: "阿里云" },
+  { time: "15:30", tag: "tech", tagText: "应用", text: "Anthropic Claude Sonnet 4.6上线两周，AI Coding市场格局剧变——以Opus 1/5价格提供接近旗舰性能，企业级Agent工作流采用率激增。", source: "Anthropic" },
+  { time: "14:00", tag: "ai", tagText: "研究", text: "Google Quantum AI论文：量子纠错成本大幅下降，2029年前有望实现实用量子计算，对密码学和AI训练产生深远影响。", source: "Google Research" },
+  { time: "12:00", tag: "tech", tagText: "产业", text: "英伟达GTC 2026发布Vera Rubin全栈AI平台（7款芯片），黄仁勋宣布从芯片公司正式转型AI全栈基础设施。", source: "NVIDIA" },
+  { time: "10:00", tag: "ai", tagText: "应用", text: "智谱AI（02513.HK）年报：营收7.24亿元（+131.9%），成为港股AI概念领涨标杆。大模型商业化进入正循环。", source: "港交所" }
+];
+const aiBreakingDate = "2026年4月1日";
+
+// ============ AI Issue Data ============
+const aiIssues = [
+  {
+    id: "ai-2026-04-01",
+    date: "2026年4月1日",
+    weekday: "周三",
+    title: "OpenAI首发开源模型撼动格局，中国AI日均Token调用140万亿，具身智能进入操作系统时代",
+    summary: "OpenAI发布首批Apache开源模型（OSS 120b/20b），AI开源生态剧变。中国AI日均Token调用量突破140万亿，国产模型全球TOP10占6席。Nature发表LLM+ROS具身智能通用框架。",
+    tags: [
+      { text: "OpenAI开源", type: "warn" },
+      { text: "中国Token 140万亿/日", type: "up" },
+      { text: "具身智能OS", type: "warn" },
+      { text: "Vera Rubin平台", type: "up" }
+    ],
+    focusAreas: "大模型 · 智能体 · 具身智能 · AI Coding · 量子计算",
+    timeRange: "2026.03.31 – 2026.04.01",
+    generatedAt: "2026年4月1日 22:30 CST",
+    // AI module uses different section structure
+    briefings: [
+      "<span class=\"briefing-number\">1</span><strong>OpenAI首次发布开源模型（OSS 120b/20b），Apache许可证。</strong>大模型推理能力与o4-mini相当，小模型可在智能手机运行。标志闭源路线重大转向，直接冲击Meta Llama、Qwen、DeepSeek的开源生态位。",
+      "<span class=\"briefing-number\">2</span><strong>中国AI日均Token调用量突破140万亿，较2024年增长近100倍。</strong>OpenRouter数据显示国产模型全球TOP10占6席，周调用量连续超越美国。<span class=\"data up\">技术迭代→成本下降→应用爆发</span>正循环已形成。",
+      "<span class=\"briefing-number\">3</span><strong>具身智能进入操作系统时代：</strong>Nature发表LLM Agent + ROS通用框架论文，机器人可通过自然语言指令完成跨场景复杂任务链。斯坦福Karen Liu团队推进具身智能学术前沿。"
+    ],
+    // Research section
+    research: [
+      {
+        icon: "🧬", iconBg: "#eff6ff",
+        title: "LLM + ROS：具身智能通用操作系统框架（Nature Machine Intelligence）",
+        detail: "3/16 Nature MI发表论文，将LLM Agent接入ROS（Robot Operating System），实现机器人通过自然语言规划、执行和纠错复杂任务链。框架完整开源。斯坦福Karen Liu团队同期推进具身智能物理世界建模。",
+        impact: "具身智能从「感知-规划-执行」割裂走向「端到端Agent化」，降低机器人开发门槛一个数量级。"
+      },
+      {
+        icon: "⚛️", iconBg: "#fef2f2",
+        title: "Google量子计算：纠错成本下降20倍，2029年实用化路线图",
+        detail: "Google Quantum AI论文显示破解ECDLP-256所需量子比特数较2023年估计下降约20倍。呼吁密码学和区块链行业在2029年前完成后量子迁移。",
+        impact: "量子计算对AI训练（量子采样加速）和安全领域（密码学）产生双重影响，中长期需关注。"
+      }
+    ],
+    // Application section
+    application: [
+      {
+        icon: "🔓", iconBg: "#ecfdf5",
+        title: "OpenAI首次拥抱开源：OSS 120b/20b（Apache许可）",
+        detail: "3/28 OpenAI发布首批开放权重模型。OSS 120b推理能力与o4-mini相当；OSS 20b可在智能手机本地运行。Apache许可证允许商业使用和修改。",
+        impact: "直接冲击Meta Llama、Qwen、DeepSeek生态位。AI开源格局从「中国主导」变为「中美并进」。"
+      },
+      {
+        icon: "💻", iconBg: "#f5f3ff",
+        title: "Claude Sonnet 4.6 重塑AI Coding市场",
+        detail: "2/17上线，以Opus 1/5价格提供接近旗舰性能。SWE-bench编程能力超越GPT-5.3，企业级Agent工作流（Postman、Cursor等）采用率激增。100万Token上下文窗口成为标配。",
+        impact: "AI编程从辅助走向主导，Agent自主完成复杂工程任务成为现实。Anthropic在企业市场形成差异化壁垒。"
+      },
+      {
+        icon: "🧠", iconBg: "#eff6ff",
+        title: "阿里Qwen3.5-Max-Preview：MoE稀疏激活架构突破",
+        detail: "3/20发布旗舰预览版，采用MoE（Mixture of Experts）稀疏激活，推理效率大幅提升同时降低部署成本。Qwen系列在OpenRouter全球调用量持续领先。",
+        impact: "国产大模型在推理效率上接近甚至超越国际同行，开源+低成本路线持续扩大全球份额。"
+      }
+    ],
+    // Industry section
+    industry: [
+      {
+        icon: "📊", iconBg: "#ecfdf5",
+        title: "中国AI日均Token调用量突破140万亿",
+        detail: "3月23日中国发展高层论坛2026年年会数据：日均Token调用量突破140万亿，较2024年增长近100倍。OpenRouter数据周调用量4.69万亿Token，连续超越美国。国产AI核心产业规模预计突破1.2万亿元。",
+        impact: "中国在AI应用规模上已取得领先，开源+低成本模式形成正循环。但基础研究和芯片仍存短板。"
+      },
+      {
+        icon: "🖥️", iconBg: "#fffbeb",
+        title: "英伟达GTC 2026：Vera Rubin全栈AI平台",
+        detail: "3/16-19 GTC发布7款芯片组成的Vera Rubin平台：Rubin GPU + Vera CPU + NVLink 6 + ConnectX 9 + BlueField 4。黄仁勋正式宣布从芯片公司转型AI全栈基础设施搭建者。",
+        impact: "AI算力基础设施进入「极协同设计」时代。台积电先进制程需求持续紧张，博通定制ASIC受益。"
+      },
+      {
+        icon: "📈", iconBg: "#ecfdf5",
+        title: "智谱AI年报：营收+131.9%，大模型商业化正循环",
+        detail: "智谱AI（02513.HK）发布上市后首份年报，全年营收7.24亿元（+131.9%）。股价盘中暴涨31%。港股AI概念股集体走强。",
+        impact: "大模型企业进入营收兑现阶段，二级市场开始为AI商业化定价。"
+      }
+    ],
+    // Outlook
+    outlook: [
+      { time: "4月", event: "腾讯混元3.0大模型发布，前OpenAI研究员加盟后首款旗舰产品", focus: "大模型" },
+      { time: "Q2", event: "DeepSeek V4预计落地，中国开源大模型新一轮迭代", focus: "大模型" },
+      { time: "Q2", event: "OpenAI OSS模型生态发展观察：开发者采用率与社区反馈", focus: "开源" },
+      { time: "持续跟踪", event: "具身智能LLM+ROS框架的实际工业部署进展", focus: "具身智能" },
+      { time: "持续跟踪", event: "AI Coding市场格局：Claude vs GPT vs Gemini企业端占比变化", focus: "AI Coding" },
+      { time: "2029前", event: "后量子密码学迁移进度（受Google量子计算进展驱动）", focus: "量子/安全" }
+    ]
+  }
+];
 
 // ============ Issue Data ============
 // Each issue is a self-contained object. The daily automation appends new issues here.
@@ -1128,6 +1330,143 @@ const issues = [
 ];
 
 // ============ Rendering ============
+
+// ============ AI Module Rendering ============
+
+function renderAiBreakingNews() {
+  const container = document.getElementById('aiBreakingSection');
+  const tocBreaking = document.getElementById('ai-toc-breaking');
+  if (!aiBreakingNews || aiBreakingNews.length === 0) {
+    container.style.display = 'none';
+    if (tocBreaking) tocBreaking.style.display = 'none';
+    return;
+  }
+  container.style.display = 'block';
+  if (tocBreaking) tocBreaking.style.display = 'block';
+  container.innerHTML = `
+    <div id="ai-sec-breaking">
+      <div class="breaking-header">
+        <span class="breaking-badge"><span class="dot"></span>BREAKING</span>
+        <span class="breaking-time">最近更新：${aiBreakingDate}</span>
+      </div>
+      <ul class="breaking-list">
+        ${aiBreakingNews.map(item => `
+          <li class="breaking-item">
+            <span class="breaking-item-time">${item.time}</span>
+            <div class="breaking-item-body">
+              <div class="breaking-item-text">
+                <span class="breaking-item-tag ${item.tag}">${item.tagText}</span>${item.text}
+              </div>
+              <div class="breaking-item-source">${item.source}</div>
+            </div>
+          </li>
+        `).join('')}
+      </ul>
+    </div>`;
+}
+
+function renderAiLatestIssue() {
+  if (aiIssues.length === 0) return;
+  const issue = aiIssues[0];
+  document.getElementById('aiLatestHeader').innerHTML = `
+    <div class="latest-header">
+      <div class="date-badge">${issue.date} · ${issue.weekday}</div>
+      <h2>${issue.title}</h2>
+      <div class="latest-meta">
+        <span>\u23f1 ${issue.timeRange}</span>
+        <span>\ud83d\udccb ${issue.focusAreas}</span>
+      </div>
+    </div>`;
+  document.getElementById('aiLatestBody').innerHTML = renderAiArticleBody(issue);
+}
+
+function renderAiArticleBody(issue) {
+  let html = '';
+
+  // Briefings
+  html += '<section id="ai-sec-briefing"><div class="section-label">核心摘要</div>';
+  issue.briefings.forEach(b => { html += '<div class="briefing-card"><p>' + b + '</p></div>'; });
+  html += '</section>';
+
+  // Research
+  html += '<section id="ai-sec-research"><div class="section-label">研究前沿</div>';
+  issue.research.forEach(r => {
+    html += '<div class="macro-event"><h3><span class="event-icon" style="background:' + r.iconBg + '">' + r.icon + '</span><span>' + r.title + '</span></h3>';
+    html += '<div class="fact-block"><div class="label">详情</div>' + r.detail + '</div>';
+    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + r.impact + '</div></div>';
+  });
+  html += '</section>';
+
+  // Application
+  html += '<section id="ai-sec-application"><div class="section-label">应用落地</div>';
+  issue.application.forEach(a => {
+    html += '<div class="macro-event"><h3><span class="event-icon" style="background:' + a.iconBg + '">' + a.icon + '</span><span>' + a.title + '</span></h3>';
+    html += '<div class="fact-block"><div class="label">详情</div>' + a.detail + '</div>';
+    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + a.impact + '</div></div>';
+  });
+  html += '</section>';
+
+  // Industry
+  html += '<section id="ai-sec-industry"><div class="section-label">产业动态</div>';
+  issue.industry.forEach(d => {
+    html += '<div class="macro-event"><h3><span class="event-icon" style="background:' + d.iconBg + '">' + d.icon + '</span><span>' + d.title + '</span></h3>';
+    html += '<div class="fact-block"><div class="label">详情</div>' + d.detail + '</div>';
+    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + d.impact + '</div></div>';
+  });
+  html += '</section>';
+
+  // Outlook
+  html += '<section id="ai-sec-outlook"><div class="section-label">前瞻展望</div><ul class="alert-list">';
+  issue.outlook.forEach(o => {
+    html += '<li class="alert-item"><span class="alert-item-time">' + o.time + '</span><div class="alert-item-body"><div class="alert-item-event">' + o.event + '</div><div class="alert-item-target">' + o.focus + '</div></div></li>';
+  });
+  html += '</ul></section>';
+
+  // Disclaimer
+  html += '<div class="disclaimer"><strong>\u2696\ufe0f 免责声明：</strong>本报告仅提供资讯聚合与分析，内容来源于公开渠道，不构成任何投资或技术决策建议。<div class="generated-at">报告生成时间：' + issue.generatedAt + '</div></div>';
+  return html;
+}
+
+function renderAiIssueList() {
+  const list = document.getElementById('aiIssueList');
+  const count = document.getElementById('aiIssueCount');
+  const archive = document.getElementById('aiArchiveSection');
+  const tocArchive = document.getElementById('ai-toc-archive');
+  const pastIssues = aiIssues.slice(1);
+  if (pastIssues.length === 0) {
+    archive.style.display = 'none';
+    if (tocArchive) tocArchive.style.display = 'none';
+    return;
+  }
+  archive.style.display = 'block';
+  if (tocArchive) tocArchive.style.display = 'block';
+  count.textContent = '\u5171 ' + pastIssues.length + ' \u671f';
+  list.innerHTML = pastIssues.map(issue => '<div class="issue-card" onclick="showAiArticle(\'' + issue.id + '\')">' +
+    '<div class="issue-card-top"><span class="issue-date">' + issue.date + '</span><span class="issue-weekday">' + issue.weekday + '</span></div>' +
+    '<h3>' + issue.title + '</h3><p class="issue-summary">' + issue.summary + '</p>' +
+    '<div class="issue-tags">' + issue.tags.map(t => '<span class="issue-tag ' + t.type + '">' + t.text + '</span>').join('') + '</div></div>'
+  ).join('');
+}
+
+function renderAiArticle(issueId) {
+  const issue = aiIssues.find(i => i.id === issueId);
+  if (!issue) return;
+  document.getElementById('aiArticleHeaderContent').innerHTML =
+    '<div class="date-badge">' + issue.date + ' \u00b7 ' + issue.weekday + '</div>' +
+    '<h1>' + issue.title + '</h1>' +
+    '<div class="article-meta"><span class="article-meta-item">\u23f1 ' + issue.timeRange + '</span><span class="article-meta-item">\ud83d\udccb ' + issue.focusAreas + '</span></div>';
+  document.getElementById('aiArticleBody').innerHTML = renderAiArticleBody(issue);
+}
+
+function showAiArticle(id) {
+  renderAiArticle(id);
+  document.getElementById('aiHomePage').classList.remove('active');
+  document.getElementById('aiArticlePage').classList.add('active');
+  window.scrollTo(0, 0);
+  history.pushState(null, '', '#ai-' + id);
+}
+
+// ============ Finance Module Rendering ============
 
 function renderBreakingNews() {
   const container = document.getElementById('breakingSection');
@@ -1320,34 +1659,57 @@ function renderArticle(issueId) {
 
 // ============ Navigation ============
 
-function showHome() {
-  document.getElementById('homePage').classList.add('active');
-  document.getElementById('articlePage').classList.remove('active');
-  document.getElementById('nav-home').classList.add('active');
+let currentModule = 'finance';
+
+function showModule(mod) {
+  currentModule = mod;
+  // Toggle module pages
+  document.getElementById('mod-finance').classList.toggle('active', mod === 'finance');
+  document.getElementById('mod-ai').classList.toggle('active', mod === 'ai');
+  // Toggle tabs
+  document.getElementById('tab-finance').classList.toggle('active', mod === 'finance');
+  document.getElementById('tab-ai').classList.toggle('active', mod === 'ai');
+  // Reset to home view within module
+  if (mod === 'finance') {
+    document.getElementById('homePage').classList.add('active');
+    document.getElementById('articlePage').classList.remove('active');
+  } else {
+    document.getElementById('aiHomePage').classList.add('active');
+    document.getElementById('aiArticlePage').classList.remove('active');
+  }
   window.scrollTo(0, 0);
-  history.pushState(null, '', '#');
+  history.pushState(null, '', mod === 'finance' ? '#' : '#ai');
+}
+
+function showHome() {
+  showModule('finance');
 }
 
 function showArticle(id) {
   renderArticle(id);
   document.getElementById('homePage').classList.remove('active');
   document.getElementById('articlePage').classList.add('active');
-  document.getElementById('nav-home').classList.remove('active');
   window.scrollTo(0, 0);
   history.pushState(null, '', '#' + id);
 }
 
 function showAbout() {
-  alert('金融资讯日报\n\n每日自动聚合定制股票池相关的宏观与个股资讯，\n经降噪与关联分析后生成投行风格研报。\n\n数据来源：公开渠道\n更新频率：每日 22:00');
+  alert('Y Daily \u00b7 金融资讯 & AI 前沿\n\n金融资讯日报：每日自动聚合定制股票池的宏观与个股资讯。\nAI 前沿资讯：聚焦中美 AI 研究与应用最新动态。\n\n更新频率：每日 22:00\n数据来源：公开渠道');
 }
 
 // Handle back button
 window.addEventListener('popstate', () => {
   const hash = location.hash.replace('#', '');
-  if (hash && issues.find(i => i.id === hash)) {
+  if (hash === 'ai') {
+    showModule('ai');
+  } else if (hash.startsWith('ai-')) {
+    showModule('ai');
+    showAiArticle(hash.replace('ai-', ''));
+  } else if (hash && issues.find(i => i.id === hash)) {
+    showModule('finance');
     showArticle(hash);
   } else {
-    showHome();
+    showModule('finance');
   }
 });
 
@@ -1355,6 +1717,9 @@ window.addEventListener('popstate', () => {
 renderBreakingNews();
 renderLatestIssue();
 renderIssueList();
+renderAiBreakingNews();
+renderAiLatestIssue();
+renderAiIssueList();
 
 // TOC scroll spy
 function scrollToSection(id) {
@@ -1366,28 +1731,44 @@ function scrollToSection(id) {
 }
 
 function updateTocHighlight() {
-  const sections = ['sec-breaking', 'sec-briefing', 'sec-macro', 'sec-stocks', 'sec-alerts', 'sec-archive'];
-  const links = document.querySelectorAll('.toc-link');
-  let current = sections[0];
-
-  for (const id of sections) {
+  // Finance TOC
+  const finSections = ['sec-breaking', 'sec-briefing', 'sec-macro', 'sec-stocks', 'sec-alerts', 'sec-archive'];
+  const finLinks = document.querySelectorAll('#tocList .toc-link');
+  let finCurrent = finSections[0];
+  for (const id of finSections) {
     const el = document.getElementById(id);
     if (el && el.offsetParent !== null) {
       const rect = el.getBoundingClientRect();
-      if (rect.top <= 120) current = id;
+      if (rect.top <= 120) finCurrent = id;
     }
   }
+  finLinks.forEach(link => { link.classList.toggle('active', link.dataset.section === finCurrent); });
 
-  links.forEach(link => {
-    link.classList.toggle('active', link.dataset.section === current);
-  });
+  // AI TOC
+  const aiSections = ['ai-sec-breaking', 'ai-sec-briefing', 'ai-sec-research', 'ai-sec-application', 'ai-sec-industry', 'ai-sec-outlook', 'ai-sec-archive'];
+  const aiLinks = document.querySelectorAll('#aiTocList .toc-link');
+  let aiCurrent = aiSections[0];
+  for (const id of aiSections) {
+    const el = document.getElementById(id);
+    if (el && el.offsetParent !== null) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= 120) aiCurrent = id;
+    }
+  }
+  aiLinks.forEach(link => { link.classList.toggle('active', link.dataset.section === aiCurrent); });
 }
 
 window.addEventListener('scroll', updateTocHighlight, { passive: true });
 
 // Check hash on load
 const initHash = location.hash.replace('#', '');
-if (initHash && issues.find(i => i.id === initHash)) {
+if (initHash === 'ai') {
+  showModule('ai');
+} else if (initHash.startsWith('ai-')) {
+  showModule('ai');
+  const aiId = initHash.replace('ai-', '');
+  if (aiIssues.find(i => i.id === aiId)) showAiArticle(aiId);
+} else if (initHash && issues.find(i => i.id === initHash)) {
   showArticle(initHash);
 }
 </script>
