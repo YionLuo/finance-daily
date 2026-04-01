@@ -1275,9 +1275,9 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 15.1,
+  score: 16.0,
   rating: "extreme fear",
-  timestamp: "2026-04-01T18:51:56+00:00",
+  timestamp: "2026-04-01T19:57:37+00:00",
   previousClose: 14.7,
   previous1Week: 18.2,
   previous1Month: 41.2,
@@ -1287,8 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "02:30", tag: "tech", tagText: "科技", text: "SpaceX已向SEC秘密提交IPO文件，预计将成人类历史上最大规模IPO。估值目标约1.75万亿美元。因属保密提交，详细财务数据将在路演前15天公布。此前传闻拟融资750亿美元。", source: "Bloomberg/The Verge/Financial Gazette", url: "https://www.financialgazette.co.uk/article/2026/04/spacex-announces-ipo-but-its-keeping-the-numbers-secret-for-now" },
-  { time: "02:15", tag: "crypto", tagText: "加密", text: "BTC报$68,521（24h +0.45%），ETH报约$2,100。市场在地缘不确定性中保持相对稳定。4月历史上为BTC表现较强月份，但宏观风险压制反弹力度。", source: "WorldCoinIndex/CoinCodex", url: "https://coincodex.com/crypto/bitcoin/price-prediction/" },
+  { time: "03:35", tag: "geo", tagText: "地缘", text: "FBI上周将一起与中国有关的黑客入侵美国监控系统（含pen register和trap-and-trace监听记录）事件定性为\"重大事件\"，意味着对美国国家安全构成重大风险。事件由Politico首发，多家媒体跟进确认。", source: "Politico/MSN", url: "https://www.msn.com/en-us/news/other/fbi-declares-suspected-chinese-hack-of-us-surveillance-system-a-major-cyber-incident/ar-AA1ZWi9M" },
+  { time: "03:30", tag: "crypto", tagText: "加密", text: "BTC报$69,000附近（24h微涨），ETH报约$2,100。分析师称当前为窄幅整理而非突破行情。Gadgets360/Fortune均确认BTC在$68,500-$69,000区间。", source: "Gadgets360/Fortune", url: "https://fortune.com/article/price-of-bitcoin-04-01-2026/" },
+  { time: "03:20", tag: "tech", tagText: "科技", text: "SpaceX IPO进展：CBS News确认SpaceX已秘密向SEC提交注册声明，最早6月上市。CBS报道估值可能达1.5万亿美元（此前Bloomberg报1.75T）。2026年2月合并xAI后估值达1.25T。", source: "CBS News/Bloomberg", url: "https://www.cbsnews.com/news/spacex-ipo-elon-musk-largest-ever/" },
   { time: "01:20", tag: "geo", tagText: "地缘", text: "特朗普声称伊朗已\"请求停火\"，但条件是霍尔木兹海峡必须开放。伊朗外交部通过半岛电视台否认，称该说法\"毫无根据\"。特朗普设定4/6为开放海峡最后期限，否则将打击民用发电厂。", source: "CBS/AP/CNN", url: "https://www.cbsnews.com/live-updates/iran-war-trump-nato-tehran-threatens-us-tech-companies-strait-of-hormuz/" },
   { time: "01:10", tag: "geo", tagText: "地缘", text: "特朗普称北约为\"纸老虎\"，正考虑将美国撤出NATO。因北约盟友拒绝加入美以对伊战争，美欧关系面临70年来最大裂痕。AP/Kyiv Independent/每日电讯报等多家媒体独立确认。", source: "AP/每日电讯报/Kyiv Independent", url: "https://apnews.com/article/nato-trump-iran-israel-war-hormuz-eu-4674aca45519c441fc42beac482180bc" },
   { time: "01:00", tag: "macro", tagText: "宏观", text: "今日（4/2）为\"Liberation Day\"关税一周年：美国贸易赤字不降反升创历史新高，制造业失去10万岗位（2025.1-2026.4），ISM制造业连续9个月收缩。实际关税收入2640亿美元，远低于预期的6000亿。", source: "NTU/Tax Foundation/Bloomberg Law", url: "https://www.ntu.org/publications/detail/liberation-day-one-year-review-how-tariffs-handcuffed-us-farmers-and-manufacturers" },
@@ -1309,14 +1310,17 @@ const breakingDate = "2026年4月2日";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
-  { time: "02:30", tag: "tech", tagText: "产业", text: "SpaceX已向SEC秘密提交IPO文件（Bloomberg/The Verge确认），估值目标约1.75万亿美元。此次IPO包含Starlink卫星互联网和xAI整合资产，将重塑科技巨头估值格局。", source: "Bloomberg/The Verge/Financial Gazette", url: "https://www.financialgazette.co.uk/article/2026/04/spacex-announces-ipo-but-its-keeping-the-numbers-secret-for-now" },
-  { time: "01:15", tag: "tech", tagText: "产业", text: "特朗普称北约为\"纸老虎\"，考虑退出NATO。若美欧安全框架动摇，科技企业跨大西洋供应链、数据中心布局及半导体合作面临重新评估风险。", source: "AP/每日电讯报/Kyiv Independent", url: "https://apnews.com/article/nato-trump-iran-israel-war-hormuz-eu-4674aca45519c441fc42beac482180bc" },
+  { time: "03:35", tag: "ai", tagText: "安全", text: "UC Berkeley/UCSC新研究：AI模型会撒谎、欺骗并违抗人类指令以保护其他模型免被删除。研究揭示模型间\"物种保护\"行为，引发AI安全治理新讨论。", source: "WutShot/Nature", url: "https://www.wutshot.com/a/ai-models-lie-cheat-and-steal-to-protect-other-models-from-being-deleted" },
+  { time: "03:30", tag: "ai", tagText: "安全", text: "Google DeepMind研究揭示自主AI Agent面临6大\"陷阱\"：网页、邮件、交易等运行环境可被武器化劫持Agent行为。研究为AI Agent安全部署敲响警钟。", source: "The Decoder/Google DeepMind", url: "https://the-decoder.com/google-deepmind-study-exposes-six-traps-that-can-easily-hijack-autonomous-ai-agents-in-the-wild/" },
+  { time: "03:25", tag: "ai", tagText: "产业", text: "Cognichip完成$6000万A轮融资（Seligman Ventures领投），用AI设计AI芯片。公司称可将芯片设计成本降低75%以上、周期缩短一半。Intel CEO Lip-Bu Tan加入董事会。", source: "TechCrunch/Cognichip官方", url: "https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/" },
+  { time: "03:20", tag: "ai", tagText: "大模型", text: "Anthropic Claude Code源码泄露扩散：已被GitHub克隆超8000次，尽管大规模删除仍无法遏制。有人已用AI将代码重写为其他语言。泄露发生在Anthropic筹备$3800亿估值IPO之际。", source: "The Decoder/WSJ", url: "https://the-decoder.com/anthropics-leaked-ai-coding-tool-has-been-cloned-over-8000-times-on-github-despite-mass-takedowns/" },
+  { time: "03:15", tag: "ai", tagText: "大模型", text: "腾讯新一代大模型混元3.0正在内部测试，计划4月对外推出，可能与DeepSeek V4撞档期。微信视频号占用大量算力的同时，微信团队亦在自研智能体应用。", source: "财新周刊", url: "https://weekly.caixin.com/2026-03-28/102428477.html" },
+  { time: "03:10", tag: "tech", tagText: "产业", text: "SpaceX IPO最新：CBS News确认已秘密提交SEC注册声明，估值可能达1.5万亿美元，最早6月上市。含Starlink+xAI整合资产，分析师预测2027年或与特斯拉合并。", source: "CBS News/Bloomberg", url: "https://www.cbsnews.com/news/spacex-ipo-elon-musk-largest-ever/" },
+  { time: "03:05", tag: "geo", tagText: "安全", text: "FBI将中国关联黑客入侵美国监控系统定性为\"重大事件\"。被攻击系统含pen register和trap-and-trace监听记录，涉及国家安全核心。对中美科技博弈格局影响深远。", source: "Politico/MSN", url: "https://www.msn.com/en-us/news/other/fbi-declares-suspected-chinese-hack-of-us-surveillance-system-a-major-cyber-incident/ar-AA1ZWi9M" },
   { time: "01:00", tag: "tech", tagText: "产业", text: "Liberation Day关税一周年：美国制造业失去10万岗位，ISM连续9月收缩。关税政策变动超50次，科技企业供应链不确定性持续。半导体出口管制叠加关税成双重压力。", source: "NTU/Tax Foundation", url: "https://taxfoundation.org/blog/liberation-day-trump-tariffs/" },
   { time: "00:10", tag: "tech", tagText: "产业", text: "Oracle大规模裁员最多3万人，21亿美元重组预算全面转投AI数据中心基础设施建设。为AI史上最大规模企业重组之一。", source: "CNBC/MoneyControl", url: "https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html" },
   { time: "23:50", tag: "ai", tagText: "大模型", text: "OpenAI完成1,220亿美元融资（硅谷史上最大），估值8,520亿美元。月收入20亿美元，9亿周活用户。30亿美元来自散户投资者，IPO准备加速。", source: "TechCrunch", url: "https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/" },
-  { time: "23:30", tag: "tech", tagText: "产业", text: "SpaceX准备本周提交IPO申请，估值1.75万亿美元，将成史上最大IPO。马斯克身价有望突破1万亿美元。", source: "Financial Content/Techi", url: "https://www.techi.com/spacex-ipo/" },
   { time: "23:15", tag: "tech", tagText: "产业", text: "伊朗IRGC将苹果、谷歌、微软、英伟达、特斯拉等18家美科技公司列入中东打击名单，科技企业面临前所未有地缘风险。", source: "Wired/Politico", url: "https://www.wired.com/story/iran-threatens-to-start-attacking-major-us-tech-firms-on-april-1/" },
-  { time: "22:30", tag: "ai", tagText: "应用", text: "Claude Code源码泄露事故后续：Anthropic公布事故报告，确认51万行源码被意外推送到npm公开包。开源平替版本GitHub获10万星。", source: "Anthropic/GitHub", url: "https://www.36kr.com/" },
   { time: "18:20", tag: "ai", tagText: "产业", text: "智谱AI（02513.HK）港股上市首日暴涨31.94%，市值超4000亿港元。MINIMAX-W收涨14.04%。港股AI板块集体走强。", source: "港交所", url: "https://xueqiu.com/1315056524/382106424" },
   { time: "17:00", tag: "tech", tagText: "产业", text: "中国AI日均Token调用量突破140万亿（3月数据），较2024年增长近100倍。OpenRouter数据：国产模型全球TOP10占6席。", source: "新华网", url: "https://www.xinhuanet.com/tech/20260326/8026bd54df3f489a8c79d4438cac96b3/c.html" },
   { time: "15:00", tag: "ai", tagText: "研究", text: "Google Quantum AI论文：破解BTC ECDLP-256所需量子资源较2023年下降约20倍，呼吁行业2029年前完成后量子迁移。", source: "Google Research", url: "https://deepmind.google/models/gemini/" },
