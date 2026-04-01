@@ -1063,14 +1063,20 @@
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "21:30", tag: "geo", tagText: "地缘", text: "美伊双方释放缓和信号，布伦特原油盘中急跌逾11%，收于104.09美元/桶（-3.45%）。霍尔木兹海峡封锁已32天，恢复率仅4.5%。", source: "新华社/同花顺" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "现货黄金站上4,700美元/盎司，盘中最高4,724美元。白银涨4.37%至18,918元/千克。铜价涨1.91%。避险与工业金属同步走强。", source: "聚金数据" },
+  { time: "23:15", tag: "geo", tagText: "地缘", text: "特朗普将于北京时间4/2上午9时发表伊朗问题全国讲话。此前他称伊朗\"请求停火\"，并设2-3周撤军时间表，称政权更迭非目标。", source: "白宫/财联社" },
+  { time: "23:00", tag: "geo", tagText: "地缘", text: "伊朗总统佩泽希齐扬首次表态愿意结束战争，前提是获得不再遭受侵略的安全保证。美伊冲突进入第33天，和谈信号显现。", source: "新华社/大众日报" },
+  { time: "22:45", tag: "macro", tagText: "宏观", text: "美股大涨收盘：道指+2.49%报46341，纳指+3.83%报21590，标普+2.91%。中东缓和预期+科技股反弹驱动。", source: "CNBC/东方财富" },
+  { time: "22:30", tag: "ai", tagText: "AI", text: "Claude Code负责人Boris Cherny回应51万行源码泄露事故：承认团队失误，手动部署步骤本应自动化。开源平替版GitHub狂飙10万星。", source: "智东西/36氪" },
+  { time: "22:10", tag: "crypto", tagText: "加密", text: "BTC报$67,941（+0.22%），中东缓和信号未明显提振加密市场。全网47%的BTC处于亏损状态，市场仍处承压区间。", source: "CoinCodex/币圈子" },
+  { time: "22:00", tag: "tech", tagText: "科技", text: "京东科技发布A2A微支付基础设施ClawTip，含智能体专属钱包与AI自主决策支付引擎，抢占AI Agent经济赛道。", source: "东方财富" },
+  { time: "21:30", tag: "geo", tagText: "地缘", text: "美伊双方释放缓和信号，布伦特原油盘中急跌逾11%后反弹收于118.30美元/桶（+4.94%）。WTI报102.20美元。霍尔木兹海峡封锁已32天。", source: "新华社/国际金融报" },
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "现货黄金报4,680美元/盎司（+0.28%），COMEX期金4,699美元。沪金主连涨1.97%至1040.82元/克。伦铜创新高12368美元/吨。", source: "国际金融报" },
   { time: "19:40", tag: "ai", tagText: "AI", text: "Google Quantum AI发布论文：破解BTC加密所需量子比特数较2023年估计下降约20倍，呼吁行业2029年前完成后量子迁移。", source: "Google Research Blog" },
-  { time: "18:20", tag: "tech", tagText: "科技", text: "智谱AI（02513.HK）发布首份年报：营收7.24亿元（+131.9%），股价暴涨31%。港股AI概念股集体走强。", source: "港交所公告" },
+  { time: "18:20", tag: "tech", tagText: "科技", text: "智谱AI（02513.HK）港股上市首日暴涨31.94%，市值超4000亿港元。MINIMAX-W收涨14.04%。\"全球大模型第一股\"引爆AI板块。", source: "港交所/中国基金报" },
   { time: "17:00", tag: "ai", tagText: "AI", text: "阿里通义千问发布Qwen3.5-Max-Preview旗舰预览版（3/20），采用MoE稀疏激活架构，国产大模型进入新一轮突破期。", source: "CSDN/阿里云" },
   { time: "16:45", tag: "macro", tagText: "宏观", text: "央行一季度例会重申适度宽松，LPR连续10个月持稳（1Y 3.0% / 5Y 3.5%）。市场预期Q2降准降息窗口打开。", source: "中国人民银行" },
-  { time: "15:30", tag: "tech", tagText: "科技", text: "小鹏3月交付27,415辆（环比+80%），正式更名小鹏集团，启动拉美三年战略进军墨西哥。", source: "小鹏官方" },
-  { time: "14:37", tag: "macro", tagText: "宏观", text: "恒生科技指数收涨2.73%，蔚来+9.8%领涨。美股MAG7过去一周市值蒸发超8,500亿美元，技术面集体恶化。", source: "港交所/CNBC" },
+  { time: "15:30", tag: "tech", tagText: "科技", text: "港股4/1开门红：恒指+2.04%收25294点，恒生科技+2.29%。阿里+3.11%、腾讯+2.60%。创新药板块领涨，荣昌生物+15.24%。", source: "港交所/中国基金报" },
+  { time: "14:37", tag: "tech", tagText: "科技", text: "小鹏3月交付27,415辆（环比+80%），正式更名小鹏集团，启动拉美三年战略进军墨西哥。", source: "小鹏官方" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "俄罗斯4/1起全面禁止汽油出口（至7/31），应对中东战事引发的能源动荡。普京表态伊朗局势影响全球能源市场。", source: "新华社" },
   { time: "10:00", tag: "tech", tagText: "科技", text: "英伟达GTC 2026发布Vera Rubin全栈计算平台（7款芯片），从芯片公司转型AI全栈基础设施搭建者。", source: "英伟达官方" }
 ];
