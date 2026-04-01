@@ -903,6 +903,171 @@
     font-style: italic;
   }
 
+  /* ============ Fear & Greed Index ============ */
+  .fg-section {
+    margin-bottom: 32px;
+  }
+
+  .fg-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .fg-gauge {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+  }
+
+  .fg-gauge svg {
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
+  }
+
+  .fg-gauge-bg {
+    fill: none;
+    stroke: var(--border-light);
+    stroke-width: 8;
+  }
+
+  .fg-gauge-fill {
+    fill: none;
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease, stroke 0.5s ease;
+  }
+
+  .fg-gauge-score {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fg-score-num {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .fg-score-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+
+  .fg-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .fg-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .fg-title .fg-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .fg-history {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .fg-hist-item {
+    text-align: center;
+    padding: 8px 4px;
+    background: var(--code-bg);
+    border-radius: var(--radius-xs);
+  }
+
+  .fg-hist-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .fg-hist-score {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .fg-hist-rating {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-top: 2px;
+  }
+
+  .fg-source {
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--text-tertiary);
+  }
+
+  .fg-source a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .fg-source a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  /* FG color utilities */
+  .fg-extreme-fear { color: #dc2626; }
+  .fg-fear { color: #ea580c; }
+  .fg-neutral { color: #ca8a04; }
+  .fg-greed { color: #65a30d; }
+  .fg-extreme-greed { color: #059669; }
+
+  .fg-bg-extreme-fear { background: #fef2f2; color: #dc2626; }
+  .fg-bg-fear { background: #fff7ed; color: #ea580c; }
+  .fg-bg-neutral { background: #fefce8; color: #ca8a04; }
+  .fg-bg-greed { background: #f0fdf4; color: #65a30d; }
+  .fg-bg-extreme-greed { background: #ecfdf5; color: #059669; }
+
+  @media (max-width: 640px) {
+    .fg-card {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+    .fg-gauge { margin: 0 auto; }
+    .fg-history { grid-template-columns: repeat(2, 1fr); }
+  }
+
   /* Footer */
   .site-footer {
     max-width: 1160px;
@@ -992,6 +1157,7 @@
         <div class="sidebar-title">目录</div>
         <ul class="toc-list" id="tocList">
           <li id="toc-breaking"><a class="toc-link active" data-section="sec-breaking" onclick="scrollToSection('sec-breaking')">Breaking News</a></li>
+          <li id="toc-fg"><a class="toc-link" data-section="sec-fg" onclick="scrollToSection('sec-fg')">贪恐指数</a></li>
           <li><a class="toc-link" data-section="sec-briefing" onclick="scrollToSection('sec-briefing')">核心情报摘要</a></li>
           <li><a class="toc-link" data-section="sec-macro" onclick="scrollToSection('sec-macro')">宏观与地缘风向</a></li>
           <li><a class="toc-link" data-section="sec-stocks" onclick="scrollToSection('sec-stocks')">标的精准追踪</a></li>
@@ -1004,6 +1170,9 @@
       <div class="main-content">
         <!-- Breaking News -->
         <div class="breaking-section" id="breakingSection"></div>
+
+        <!-- Fear & Greed Index -->
+        <div class="fg-section" id="fearGreedSection"></div>
 
         <div id="latestIssueHeader"></div>
         <div class="article-body" id="latestIssueBody"></div>
@@ -1103,6 +1272,18 @@
 </footer>
 
 <script>
+// ============ Fear & Greed Index Data ============
+// Updated by automation or manually. Source: CNN Fear & Greed Index.
+const fearGreedData = {
+  score: 16.1,
+  rating: "extreme fear",
+  timestamp: "2026-04-01T16:32:12+00:00",
+  previousClose: 14.7,
+  previous1Week: 18.2,
+  previous1Month: 41.2,
+  previous1Year: 19.6
+};
+
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
@@ -1513,6 +1694,73 @@ function showAiArticle(id) {
   history.pushState(null, '', '#ai-' + id);
 }
 
+// ============ Fear & Greed Rendering ============
+
+function getFgColor(score) {
+  if (score <= 25) return { cls: 'fg-extreme-fear', bg: 'fg-bg-extreme-fear', stroke: '#dc2626', label: 'Extreme Fear' };
+  if (score <= 45) return { cls: 'fg-fear', bg: 'fg-bg-fear', stroke: '#ea580c', label: 'Fear' };
+  if (score <= 55) return { cls: 'fg-neutral', bg: 'fg-bg-neutral', stroke: '#ca8a04', label: 'Neutral' };
+  if (score <= 75) return { cls: 'fg-greed', bg: 'fg-bg-greed', stroke: '#65a30d', label: 'Greed' };
+  return { cls: 'fg-extreme-greed', bg: 'fg-bg-extreme-greed', stroke: '#059669', label: 'Extreme Greed' };
+}
+
+function getFgLabelCN(rating) {
+  const map = {
+    'extreme fear': '极度恐惧',
+    'fear': '恐惧',
+    'neutral': '中性',
+    'greed': '贪婪',
+    'extreme greed': '极度贪婪'
+  };
+  return map[rating] || rating;
+}
+
+function renderFearGreed() {
+  const container = document.getElementById('fearGreedSection');
+  const tocFg = document.getElementById('toc-fg');
+  if (!fearGreedData || fearGreedData.score === null) {
+    container.style.display = 'none';
+    if (tocFg) tocFg.style.display = 'none';
+    return;
+  }
+  container.style.display = 'block';
+  if (tocFg) tocFg.style.display = 'block';
+
+  const s = fearGreedData.score;
+  const c = getFgColor(s);
+  // SVG arc: radius=50, circumference=2*PI*50=314.16
+  const circ = 314.16;
+  const offset = circ - (s / 100) * circ;
+
+  function histItem(label, score) {
+    const hc = getFgColor(score);
+    return '<div class="fg-hist-item"><div class="fg-hist-label">' + label + '</div><div class="fg-hist-score ' + hc.cls + '">' + Math.round(score) + '</div><div class="fg-hist-rating ' + hc.cls + '">' + getFgLabelCN(hc.label.toLowerCase()) + '</div></div>';
+  }
+
+  const ts = new Date(fearGreedData.timestamp);
+  const timeStr = ts.getFullYear() + '/' + (ts.getMonth()+1) + '/' + ts.getDate() + ' ' + ts.getHours().toString().padStart(2,'0') + ':' + ts.getMinutes().toString().padStart(2,'0');
+
+  container.innerHTML =
+    '<div id="sec-fg">' +
+    '<div class="fg-card">' +
+    '<div class="fg-gauge">' +
+    '<svg viewBox="0 0 120 120"><circle class="fg-gauge-bg" cx="60" cy="60" r="50"/><circle class="fg-gauge-fill" cx="60" cy="60" r="50" stroke="' + c.stroke + '" stroke-dasharray="' + circ + '" stroke-dashoffset="' + offset + '"/></svg>' +
+    '<div class="fg-gauge-score"><div class="fg-score-num ' + c.cls + '">' + Math.round(s) + '</div><div class="fg-score-label ' + c.cls + '">' + getFgLabelCN(fearGreedData.rating) + '</div></div>' +
+    '</div>' +
+    '<div class="fg-info">' +
+    '<div class="fg-title">CNN Fear & Greed Index <span class="fg-badge ' + c.bg + '">' + getFgLabelCN(fearGreedData.rating) + '</span></div>' +
+    '<div class="fg-history">' +
+    histItem('昨收', fearGreedData.previousClose) +
+    histItem('一周前', fearGreedData.previous1Week) +
+    histItem('一月前', fearGreedData.previous1Month) +
+    histItem('一年前', fearGreedData.previous1Year) +
+    '</div>' +
+    '<div class="fg-source">数据来源：<a href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener">CNN Business ↗</a> · 更新于 ' + timeStr + '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>';
+}
+
 // ============ Finance Module Rendering ============
 
 function renderBreakingNews() {
@@ -1764,6 +2012,7 @@ window.addEventListener('popstate', () => {
 
 // ============ Init ============
 renderBreakingNews();
+renderFearGreed();
 renderLatestIssue();
 renderIssueList();
 renderAiBreakingNews();
@@ -1781,7 +2030,7 @@ function scrollToSection(id) {
 
 function updateTocHighlight() {
   // Finance TOC
-  const finSections = ['sec-breaking', 'sec-briefing', 'sec-macro', 'sec-stocks', 'sec-alerts', 'sec-archive'];
+  const finSections = ['sec-breaking', 'sec-fg', 'sec-briefing', 'sec-macro', 'sec-stocks', 'sec-alerts', 'sec-archive'];
   const finLinks = document.querySelectorAll('#tocList .toc-link');
   let finCurrent = finSections[0];
   for (const id of finSections) {
