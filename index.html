@@ -173,6 +173,124 @@
     max-width: 760px;
   }
 
+  /* ============ Breaking News ============ */
+  .breaking-section {
+    margin-bottom: 40px;
+  }
+
+  .breaking-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .breaking-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #fff;
+    background: var(--red);
+    padding: 4px 12px;
+    border-radius: 4px;
+    animation: pulse-badge 2s ease-in-out infinite;
+  }
+
+  .breaking-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    animation: pulse-dot 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @keyframes pulse-badge {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(220,38,38,0.3); }
+    50% { box-shadow: 0 0 0 6px rgba(220,38,38,0); }
+  }
+
+  .breaking-time {
+    font-size: 12px;
+    color: var(--text-tertiary);
+  }
+
+  .breaking-list {
+    list-style: none;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .breaking-item {
+    display: flex;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+
+  .breaking-item:last-child {
+    border-bottom: none;
+  }
+
+  .breaking-item:hover {
+    background: var(--code-bg);
+  }
+
+  .breaking-item-time {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+    padding-top: 2px;
+    min-width: 42px;
+    font-family: "SF Mono", "Fira Code", monospace;
+  }
+
+  .breaking-item-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .breaking-item-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-right: 6px;
+    vertical-align: 1px;
+  }
+
+  .breaking-item-tag.geo { background: #fef2f2; color: var(--red); }
+  .breaking-item-tag.macro { background: #ecfdf5; color: var(--green); }
+  .breaking-item-tag.ai { background: #eff6ff; color: var(--accent); }
+  .breaking-item-tag.tech { background: #f5f3ff; color: #7c3aed; }
+  .breaking-item-tag.crypto { background: var(--orange-bg); color: var(--orange); }
+
+  .breaking-item-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  .breaking-item-source {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 4px;
+  }
+
   /* ============ Hero (Compact) ============ */
   .hero-compact {
     padding: 24px 0;
@@ -784,7 +902,8 @@
       <aside class="sidebar" id="homeSidebar">
         <div class="sidebar-title">目录</div>
         <ul class="toc-list" id="tocList">
-          <li><a class="toc-link active" data-section="sec-briefing" onclick="scrollToSection('sec-briefing')">核心情报摘要</a></li>
+          <li id="toc-breaking"><a class="toc-link active" data-section="sec-breaking" onclick="scrollToSection('sec-breaking')">Breaking News</a></li>
+          <li><a class="toc-link" data-section="sec-briefing" onclick="scrollToSection('sec-briefing')">核心情报摘要</a></li>
           <li><a class="toc-link" data-section="sec-macro" onclick="scrollToSection('sec-macro')">宏观与地缘风向</a></li>
           <li><a class="toc-link" data-section="sec-stocks" onclick="scrollToSection('sec-stocks')">标的精准追踪</a></li>
           <li><a class="toc-link" data-section="sec-alerts" onclick="scrollToSection('sec-alerts')">前瞻预警</a></li>
@@ -794,6 +913,9 @@
 
       <!-- Main Content -->
       <div class="main-content">
+        <!-- Breaking News -->
+        <div class="breaking-section" id="breakingSection"></div>
+
         <div id="latestIssueHeader"></div>
         <div class="article-body" id="latestIssueBody"></div>
 
@@ -831,7 +953,21 @@
 </footer>
 
 <script>
-// ============ Data Store ============
+// ============ Breaking News Data ============
+// Updated by hourly automation. Latest items at top. Max 20 items kept.
+const breakingNews = [
+  { time: "21:30", tag: "geo", tagText: "地缘", text: "伊朗外长确认收到美方和谈信息，系伊方首次公开释放和谈意愿。布伦特原油应声跌破100美元/桶。", source: "新华社" },
+  { time: "20:15", tag: "crypto", tagText: "加密", text: "BTC升破69,000美元，日内涨1.07%。比特币ETF持有量已超总供应量6%，资金持续回流。", source: "CoinDesk" },
+  { time: "19:40", tag: "ai", tagText: "AI", text: "Google Quantum AI发布论文：破解BTC ECDLP-256加密所需量子比特数较2023年估计下降约20倍，呼吁行业2029年前完成后量子迁移。", source: "Google Research Blog" },
+  { time: "18:20", tag: "tech", tagText: "科技", text: "智谱AI（02513.HK）发布上市后首份年报：全年营收7.24亿元，同比增长131.9%。股价盘中暴涨31%。", source: "港交所公告" },
+  { time: "16:45", tag: "macro", tagText: "宏观", text: "央行一季度货币政策委员会例会：继续实施适度宽松货币政策，加大逆周期和跨周期调节力度。降准降息预期维持。", source: "中国人民银行" },
+  { time: "15:30", tag: "tech", tagText: "科技", text: "小鹏汽车公布3月交付数据：27,415辆，环比大增80%。同日正式更名为小鹏集团，启动拉美市场扩张。", source: "小鹏汽车官方" },
+  { time: "14:37", tag: "macro", tagText: "宏观", text: "恒生科技指数强势上涨2.73%。蔚来涨9.8%领涨，舜宇光学涨7.5%，零跑汽车涨7.4%。", source: "港交所" },
+  { time: "10:00", tag: "geo", tagText: "地缘", text: "现货黄金重新站上4,700美元/盎司，盘中最高触及4,724美元。避险资产与风险资产同步走强。", source: "路透社" }
+];
+const breakingDate = "2026年4月1日";
+
+// ============ Issue Data ============
 // Each issue is a self-contained object. The daily automation appends new issues here.
 const issues = [
   {
@@ -941,6 +1077,41 @@ const issues = [
 ];
 
 // ============ Rendering ============
+
+function renderBreakingNews() {
+  const container = document.getElementById('breakingSection');
+  const tocBreaking = document.getElementById('toc-breaking');
+
+  if (!breakingNews || breakingNews.length === 0) {
+    container.style.display = 'none';
+    if (tocBreaking) tocBreaking.style.display = 'none';
+    return;
+  }
+
+  container.style.display = 'block';
+  if (tocBreaking) tocBreaking.style.display = 'block';
+
+  container.innerHTML = `
+    <div id="sec-breaking">
+      <div class="breaking-header">
+        <span class="breaking-badge"><span class="dot"></span>BREAKING</span>
+        <span class="breaking-time">最近更新：${breakingDate}</span>
+      </div>
+      <ul class="breaking-list">
+        ${breakingNews.map(item => `
+          <li class="breaking-item">
+            <span class="breaking-item-time">${item.time}</span>
+            <div class="breaking-item-body">
+              <div class="breaking-item-text">
+                <span class="breaking-item-tag ${item.tag}">${item.tagText}</span>${item.text}
+              </div>
+              <div class="breaking-item-source">${item.source}</div>
+            </div>
+          </li>
+        `).join('')}
+      </ul>
+    </div>`;
+}
 
 function renderLatestIssue() {
   if (issues.length === 0) return;
@@ -1125,6 +1296,7 @@ window.addEventListener('popstate', () => {
 });
 
 // ============ Init ============
+renderBreakingNews();
 renderLatestIssue();
 renderIssueList();
 
@@ -1138,13 +1310,13 @@ function scrollToSection(id) {
 }
 
 function updateTocHighlight() {
-  const sections = ['sec-briefing', 'sec-macro', 'sec-stocks', 'sec-alerts', 'sec-archive'];
+  const sections = ['sec-breaking', 'sec-briefing', 'sec-macro', 'sec-stocks', 'sec-alerts', 'sec-archive'];
   const links = document.querySelectorAll('.toc-link');
   let current = sections[0];
 
   for (const id of sections) {
     const el = document.getElementById(id);
-    if (el && el.offsetParent !== null) { // skip hidden
+    if (el && el.offsetParent !== null) {
       const rect = el.getBoundingClientRect();
       if (rect.top <= 120) current = id;
     }
