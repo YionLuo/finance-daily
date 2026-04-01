@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>金融资讯日报</title>
 <meta name="description" content="每日定制化股票池资讯聚合与影响分析，投行分析师风格，克制精准数据导向。">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
   :root {
     --bg: #fafafa;
@@ -78,6 +78,20 @@
   .navbar-brand .logo {
     font-size: 22px;
     line-height: 1;
+  }
+
+  .navbar-brand .logo-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+  }
+
+  .hero-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    vertical-align: -4px;
+    margin-right: 4px;
   }
 
   .navbar-links {
@@ -746,7 +760,7 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a class="navbar-brand" href="#" onclick="showHome(); return false;">
-      <span class="logo">📊</span>
+      <img class="logo-img" src="favicon.png" alt="Y">
       <span>金融资讯日报</span>
     </a>
     <div class="navbar-links">
@@ -762,7 +776,7 @@
     <!-- Compact Hero -->
     <div class="hero-compact">
       <div class="hero-compact-left">
-        <h1>📊 金融资讯日报</h1>
+        <h1><img class="hero-logo" src="favicon.png" alt="Y"> 金融资讯日报</h1>
         <p>基于定制股票池，每日自动检索宏观地缘与个股动态，降噪聚合后输出投行风格研报。</p>
       </div>
       <div class="hero-compact-tags">
