@@ -748,50 +748,50 @@
 
   .assessment .label { color: var(--orange); }
 
-  /* Alert table */
-  .alert-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    background: var(--surface);
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 1px solid var(--border);
+  /* Alert cards (mobile-friendly) */
+  .alert-list {
+    list-style: none;
+    padding: 0;
   }
 
-  .alert-table thead { background: var(--code-bg); }
-
-  .alert-table th {
-    text-align: left;
-    padding: 12px 16px;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-secondary);
+  .alert-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
     border-bottom: 1px solid var(--border);
+    align-items: flex-start;
   }
 
-  .alert-table td {
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--border);
-    vertical-align: top;
-    line-height: 1.6;
-  }
+  .alert-item:last-child { border-bottom: none; }
 
-  .alert-table tr:last-child td { border-bottom: none; }
-
-  .alert-table .time-cell {
-    font-weight: 600;
-    white-space: nowrap;
-    color: var(--accent);
+  .alert-item-time {
     font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1.5;
   }
 
-  .alert-table .target-cell {
-    font-family: "SF Mono", "Fira Code", monospace;
+  .alert-item-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .alert-item-event {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .alert-item-target {
     font-size: 12px;
-    color: var(--text-secondary);
+    font-family: "SF Mono", "Fira Code", monospace;
+    color: var(--text-tertiary);
   }
 
   /* Data */
@@ -1231,12 +1231,17 @@ function renderArticleBody(issue) {
 
   // Alerts
   html += `<section id="sec-alerts"><div class="section-label">前瞻预警</div>
-    <table class="alert-table">
-      <thead><tr><th>时间</th><th>事件</th><th>关联标的</th></tr></thead>
-      <tbody>
-        ${issue.alerts.map(a => `<tr><td class="time-cell">${a.time}</td><td>${a.event}</td><td class="target-cell">${a.target}</td></tr>`).join('')}
-      </tbody>
-    </table>
+    <ul class="alert-list">
+      ${issue.alerts.map(a => `
+        <li class="alert-item">
+          <span class="alert-item-time">${a.time}</span>
+          <div class="alert-item-body">
+            <div class="alert-item-event">${a.event}</div>
+            <div class="alert-item-target">${a.target}</div>
+          </div>
+        </li>
+      `).join('')}
+    </ul>
   </section>`;
 
   // Disclaimer
