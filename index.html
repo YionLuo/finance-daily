@@ -7,6 +7,9 @@
 <meta name="description" content="金融资讯日报 + AI 前沿资讯，每日自动聚合降噪，投行分析师风格。">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #fafafa;
@@ -107,6 +110,14 @@
     color: var(--text);
     font-weight: 700;
     font-size: 16px;
+  }
+
+  .navbar-brand .brand-name {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.3px;
   }
 
   .navbar-brand .logo-img {
@@ -911,7 +922,7 @@
   <div class="navbar-inner">
     <a class="navbar-brand" href="#" onclick="showModule('finance'); return false;">
       <img class="logo-img" src="favicon.svg" alt="Y">
-      <span>Y Daily</span>
+      <span class="brand-name">Y Daily</span>
     </a>
     <div class="module-tabs">
       <button class="module-tab active" id="tab-finance" onclick="showModule('finance')">金融资讯</button>
