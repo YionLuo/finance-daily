@@ -1312,31 +1312,125 @@ const breakingDate = "2026年4月2日 21:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
-  { time: "21:25", tag: "geo", tagText: "地缘", text: "🔴 阿联酋单日遭19枚弹道导弹+26架无人机攻击！KEZAD经济区再受波及。阿联酋为中东AI数据中心重要节点（G42/MBZUAI总部所在），持续军事威胁对AI基础设施建设信心产生冲击。自2/28以来累计191人受伤。", source: "Khaleej Times/Al Arabiya/Gulf News", url: "https://www.khaleejtimes.com/world/day-34-us-iran-israel-war-live-updates" },
-  { time: "21:22", tag: "geo", tagText: "地缘", text: "🔴 西方阵营裂痕扩大！法国马克龙公开批评美国单边发动战争。伊朗军方警告地面入侵。IRGC此前列出18家美科技公司打击名单，NATO内部分歧对科技企业全球化战略构成新变量。", source: "Fox6/NPR/Independent", url: "https://www.fox6now.com/news/live-updates-on-war-in-iran" },
-  { time: "21:20", tag: "ai", tagText: "开源", text: "🔴 Cloudflare发布EmDash：AI构建的WordPress精神继承者！完全由AI编码代理在两个月内开发，TypeScript+Astro框架，核心创新是Dynamic Workers对插件沙箱隔离，解决WordPress安全痼疾。开源CMS新时代来临。", source: "Hacker News/Cloudflare", url: "https://aitoolly.com/ai-news/2026-04-02" },
-  { time: "21:15", tag: "ai", tagText: "大模型", text: "Hugging Face发布Holo3：突破\"计算机使用\"边界！代表AI驱动计算机交互能力的重大里程碑，可能为自主数字任务执行设定新标准。LangChain同步宣布与NVIDIA新技术集成，Agent Builder正式更名为LangSmith Fleet。", source: "Hugging Face Blog/LangChain", url: "https://aitoolly.com/ai-news/2026-04-02" },
-  { time: "21:10", tag: "ai", tagText: "产业", text: "Anthropic误发大规模删除通知！意外向GitHub数千个代码仓库发送删除通知（原意针对泄露源码），高管紧急澄清为误操作并撤回。此前Claude Code 512K行TS源码已被克隆超8000次。凸显AI公司知识产权管理难题。", source: "TechCrunch/The Hacker News", url: "https://aitoolly.com/ai-news/2026-04-02" },
-  { time: "21:05", tag: "ai", tagText: "产业", text: "Meta宣布Hyperion AI数据中心将由10座新建天然气发电厂供电！反映下一代AI设施巨大能源需求。同时开源BOxCrete模型，用贝叶斯优化混凝土配方设计，助力美国建筑行业减少水泥进口。", source: "TechCrunch AI/Hacker News", url: "https://aitoolly.com/ai-news/2026-04-02" },
-  { time: "21:00", tag: "ai", tagText: "开源", text: "GitHub趋势：微软Agent-Lightning（AI代理终极训练器）、VibeVoice（开源语音AI）双项目上榜。NousResearch Hermes Agent号称\"与用户共同成长\"。Oh-My-ClaudeCode多代理编排框架支持团队协作。AI Agent开发生态快速扩展。", source: "GitHub/AIToolly", url: "https://aitoolly.com/ai-news/2026-04-02" },
-  { time: "20:50", tag: "ai", tagText: "研究", text: "微软研究推出ADeLe框架：预测和解释AI模型在各种任务中的性能表现，增强AI系统透明度和可靠性。PaddleOCR更新支持100+种语言，致力弥合视觉文档与LLM之间的鸿沟。", source: "Microsoft Research/GitHub", url: "https://aitoolly.com/ai-news/2026-04-02" },
-  { time: "20:20", tag: "ai", tagText: "大模型", text: "🔴 阿里Qwen3.6-Plus今日正式发布！千问新一代旗舰模型，原生多模态理解+推理能力大幅增强。SWE-bench智能体编程评测领先，1M上下文窗口，支持OpenAI/Anthropic API协议。聚焦\"Real World Agents\"：前端Web开发、终端操作、视频理解全面突破。百炼上架，每百万Token输入最低2元。", source: "阿里云官博/每经网/百度百科/Media OutReach", url: "https://www.alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005" },
-  { time: "20:15", tag: "ai", tagText: "大模型", text: "Qwen3.6-Plus细节：采用MoE稀疏激活架构，新增preserve_thinking参数增强Agent决策一致性。QwenWebBench评测覆盖Web设计/应用/游戏/SVG等7类。MSN分析指出这标志阿里从模型研发向AI商业化的激进转型，一周内第三款模型发布。", source: "Alibaba Cloud/MSN/Constellation Research", url: "https://qwen.ai/blog?id=qwen3.6" },
-  { time: "20:10", tag: "geo", tagText: "地缘", text: "🔴 英国宣布4/3主持35国霍尔木兹峰会：海峡封锁对AI数据中心电力成本冲击持续。油价盘中剧烈波动WTI从$113→$107。全球20%石油经此通过，若峰会未能达成突破，AI基建能源成本将持续攀升。", source: "AP/The National News/Trading Economics", url: "https://apnews.com/article/hormuz-strait-shipping-summit-uk-iran-ca2c6af551df98c81a39f2137e417856" },
-  { time: "20:05", tag: "tech", tagText: "产业", text: "🔴 AI成裁员最大原因！Challenger报告：美国3月裁员60,260人（+25%），AI相关裁员15,341人居首。Oracle此前裁3万人全力投入AI基建。劳动力市场正经历AI驱动的结构性重组。美商务部邀请企业提议出口全套AI系统。", source: "CNBC/Challenger/Benzinga", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "19:50", tag: "tech", tagText: "产业", text: "美股科技股开盘重挫：标普500 -1.33%报6488，纳指100 -1.80%报23587。能源股逆市领涨（APA +4.3%，Exxon/Chevron +3%），科技板块与航空/邮轮板块同步下跌约4%。AI算力概念股面临成本端（能源）+需求端（经济放缓）双重压力。", source: "CNBC/Barrons/Trading Economics", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "19:30", tag: "tech", tagText: "航天", text: "🚀 Artemis II厕所故障已排除！机组正准备近地点提升燃烧，随后执行TLI飞向月球（EDT 20:12）。NASA下午go/no-go会议进行中。如TLI成功，将是阿波罗17号以来人类首次超越低地球轨道。", source: "NASA/Space.com/Mint", url: "https://www.space.com/space-exploration/artemis/nasa-just-launched-artemis-2-what-happens-today-could-make-or-break-the-moon-mission" },
-  { time: "19:20", tag: "ai", tagText: "产业", text: "美联储政策与AI产业展望：利率维持3.5%-3.75%，通胀率2.40%。鲍威尔5月卸任，Kevin Warsh接任预期更宽松政策。但油价高企→通胀上行→滞胀风险，对AI企业融资和估值构成压力。Q1全球VC投资$2970亿创纪录。", source: "NRS/CNBC/The Neuron/Yahoo Finance", url: "https://naturalresourcestocks.net/gold-price-today-april-02-2026/" },
-  { time: "19:05", tag: "geo", tagText: "安全", text: "🔴 以色列防空系统遭网络攻击！黑客组织Handala声称入侵设计以色列防空指挥控制系统的PSK WIND Technologies，窃取敏感数据。伊朗同时在6小时内向以色列发射4轮导弹测试防空极限，科技战与实战双线并行。", source: "eTV Bharat/AP/CNN", url: "https://www.etvbharat.com/en/international/live-blog--united-states-israel-iran-war-latest-news-april-02-donald-trump-netanyahu-mojtaba-khamenei-ghalibaf-kharg-island-ceasefire-qatar-dubai-saudi-arabia-strait-of-hormuz-oil-price-araghchi-mideast-conflict-enn26040200941" },
-  { time: "16:50", tag: "ai", tagText: "产业", text: "Q1 2026全球VC投资创纪录$2970亿，环比增长约150%。AI算力和前沿实验室为主要驱动力，约6000家初创公司获融资。NVIDIA $20亿投资Marvell推动NVLink Fusion。Cognichip获$6000万A轮（AI设计AI芯片，Intel CEO加入董事会）。", source: "The Neuron/CNBC/TechCrunch/Seeking Alpha", url: "https://www.cnbc.com/2026/03/31/marvell-nvidia-stock-stake.html" },
-  { time: "16:48", tag: "ai", tagText: "研究", text: "Science期刊同行评审研究：测试11个主流AI模型，证实\"谄媚型AI\"（sycophantic AI）普遍存在且有害——过度迎合降低用户亲社会意图，促进AI依赖。", source: "Science/The Neuron", url: "https://www.theneuron.ai/explainer-articles/-around-the-horn-digest-everything-that-happened-in-ai-today-wednesday-april-1-2026/" },
-  { time: "15:30", tag: "tech", tagText: "产业", text: "港股科技板块节前收官遭重挫：恒指收25116（-0.7%），小米跌超4%至30.66港元（距高点腰斩50%）。卖空博弈加剧，小米5日卖空暴增90%。4/3-4/7清明休市。NIO 3月交付量同比增136%。", source: "每经/财联社/OpenTools", url: "https://news.10jqka.com.cn/20260402/c675715531.shtml" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普演讲后快速停战希望破灭，油价重新飙升。IRGC此前已将18家美科技公司列入中东打击名单，若战事延续2-3周，科技企业供应链和中东资产持续承压。伊朗首次允许菲律宾船只通过霍尔木兹运油，或为其他亚洲进口国树立先例。", source: "Reuters/MSN/Manila Times", url: "https://www.msn.com/en-us/news/world/hopes-dim-for-swift-end-to-iran-war-after-trump-speech-oil-prices-surge-anew/ar-AA1ZXK0M" },
+  { time: "22:05", tag: "ai", tagText: "大模型", text: "🔴 智谱发布GLM-5V-Turbo：视觉编程多模态基座模型！支持200K上下文，可\"看懂\"设计稿/网页界面/复杂文档并直接生成代码。融合视觉感知与编程能力，支持画框、截图、读网页等工具调用，开启从视觉到代码的端到端自动化新阶段。", source: "AITOP100/Alldu/智谱官方", url: "https://www.aitop100.cn/ai-daily-2026-04-02" },
+  { time: "22:02", tag: "ai", tagText: "大模型", text: "🔴 阿里Qwen3.6-Plus正式发布！原生100万Token上下文，MoE稀疏激活架构，SWE-bench编程评测领先。兼容Anthropic/OpenAI协议，新增preserve_thinking参数增强Agent决策一致性。百炼上架，每百万Token输入仅2元。一周内阿里第三款模型发布。", source: "阿里云官博/Alldu/AITOP100/MSN", url: "https://www.alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005" },
+  { time: "21:58", tag: "ai", tagText: "产业", text: "🔴 Anthropic Claude Code源码泄露风波持续！512K行TS代码经npm source map意外泄露，已被克隆8000+次。泄露内容含KAIROS持久Agent、多Agent工作树等未发布功能。Anthropic误向GitHub数千仓库发删除通知后紧急撤回。", source: "CNBC/Cybernews/Bloomberg/TechCrunch", url: "https://www.cnbc.com/2026/03/31/anthropic-leak-claude-code-internal-source.html" },
+  { time: "21:55", tag: "ai", tagText: "产业", text: "🔴 OpenAI完成史上最大融资$1220亿，估值$8520亿！Amazon与NVIDIA领投。但Bloomberg报道二级市场遇冷，机构投资者约$6亿股票\"几乎无法交易\"，资金正快速转向Anthropic。", source: "CNBC/Reuters/Bloomberg/Computing.net", url: "https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html" },
+  { time: "21:50", tag: "ai", tagText: "视频", text: "快手可灵AI月活突破780万登顶全球第一！Sensor Tower数据显示远超Sora的470万。OpenAI关闭Sora后留下的市场真空被可灵承接，移动端零门槛体验+快手内容生态为核心优势。", source: "AITOP100/Sensor Tower/Alldu", url: "https://www.aitop100.cn/ai-daily-2026-04-02" },
+  { time: "21:45", tag: "ai", tagText: "视频", text: "字节火山引擎Seedance 2.0正式开放API申请！多模态视频生成支持文字/图片/音频/视频四模态输入，高度一致角色保持+导演级相机控制+真实物理模拟+原生声画同步。此前字节豆包日均Token突破120万亿。", source: "AITOP100/Alldu/火山引擎", url: "https://www.aitop100.cn/ai-daily-2026-04-02" },
+  { time: "21:40", tag: "ai", tagText: "智能体", text: "Google DeepMind发布\"AI Agent Traps\"论文：详细分类六种针对自主AI代理的对抗技术（隐藏HTML/CSS注入、RAG记忆投毒、多Agent协同攻击等），指出开放网络已成为Agent时代主要攻击面。", source: "The Neuron/Google DeepMind", url: "https://www.theneuron.ai/explainer-articles/-around-the-horn-digest-everything-that-happened-in-ai-today-wednesday-april-1-2026/" },
+  { time: "21:35", tag: "ai", tagText: "研究", text: "Nature发表\"AI Scientist\"系统：实现科研端到端自动化！Sakana AI联合牛津大学开发，可自主完成构思→实验→论文撰写→同行评审全流程。生成论文已通过ICLR研讨会首轮评审（均分6.33/10）。代码已开源。", source: "Nature/Sakana AI", url: "https://www.nature.com/articles/s41586-026-10265-5" },
+  { time: "21:30", tag: "ai", tagText: "具身", text: "智元机器人第10,000台远征A3下线！从5000台到万台仅用3个多月。柔性生产年产能超10万台。具身智能从实验室加速迈入规模化商用阶段，中国速度引领全球。", source: "新华网/中国日报/澎湃新闻", url: "https://www.xinhuanet.com/20260331/dc1a73761ca1470da08657faf27426f5/c.html" },
+  { time: "21:25", tag: "ai", tagText: "产业", text: "Oracle裁员2-3万人（约18%），释放$80-100亿/年现金流全力投入AI数据中心建设！AI成美国3月裁员最大原因：Challenger报告总裁员60,260人，AI相关裁员15,341人居首。劳动力市场正经历结构性重组。", source: "WSJ/CNBC/Challenger/The Neuron", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
+  { time: "21:20", tag: "ai", tagText: "产业", text: "微软AI支出面临现实检验！投资者担忧数据中心巨额开支回报率。同时宣布2029年前向新加坡投$55亿、泰国$10亿建AI基础设施。Cisco高管称市场严重\"低估\"AI所需基建规模。", source: "Bloomberg/Semafor/TechStartups", url: "https://techstartups.com/2026/04/02/top-tech-news-today-april-2-2026/" },
+  { time: "21:15", tag: "ai", tagText: "开源", text: "Cloudflare发布EmDash：AI编码代理两个月内全程开发的WordPress精神继承者！TypeScript+Astro框架，Dynamic Workers插件沙箱隔离，开源CMS新时代。Arcee AI同步发布Trinity Large Thinking开源推理模型（262K上下文）。", source: "Hacker News/Cloudflare/Arcee AI", url: "https://aitoolly.com/ai-news/2026-04-02" },
+  { time: "21:10", tag: "ai", tagText: "硬件", text: "千问AI眼镜首次OTA升级：新增多人对话AI克隆同传（低延迟识别并克隆发言者音色），深度接入支付宝/淘宝支持语音支付。Meta同步推出处方雷朋智能眼镜（$499），配备实时翻译和视觉搜索。AI硬件向全场景生活终端演进。", source: "AITOP100/Reuters/Alldu", url: "https://www.aitop100.cn/ai-daily-2026-04-02" },
+  { time: "21:05", tag: "ai", tagText: "安全", text: "朝鲜黑客攻击AI开源供应链！入侵npm组件Axios植入恶意代码影响全平台，同时攻击AI工具库LiteLLM。谷歌警告量子计算可能比预期更快破解当前加密技术，敦促立即采用后量子密码标准。", source: "Reuters/The Hacker News/Times of India", url: "https://techstartups.com/2026/04/02/top-tech-news-today-april-2-2026/" },
+  { time: "21:00", tag: "ai", tagText: "研究", text: "Science同行评审研究：测试11个主流AI模型，证实\"谄媚型AI\"普遍存在且有害——过度迎合降低用户亲社会意图并促进AI依赖。Moonshot AI（Kimi）内部报道：300人团队（多数<30岁），70%日常工作由AI代理群处理。", source: "Science/The Neuron", url: "https://www.theneuron.ai/explainer-articles/-around-the-horn-digest-everything-that-happened-in-ai-today-wednesday-april-1-2026/" },
+  { time: "20:50", tag: "ai", tagText: "产业", text: "Q1全球VC投资创纪录$2970亿（环比+150%），AI算力和前沿实验室为主要驱动力。NVIDIA $20亿投资Marvell推动NVLink Fusion。英特尔$142亿回购爱尔兰Fab 34芯片厂股份，重获完全控制权。SpaceX秘密提交IPO申请，估值或超万亿美元。", source: "TechCrunch/CNBC/Bloomberg", url: "https://www.cnbc.com/2026/03/31/marvell-nvidia-stock-stake.html" },
+  { time: "20:40", tag: "ai", tagText: "监管", text: "中国广电联合会演员委员会严禁AI换脸与素材魔改！明确七类禁止性行为，标注\"非商用\"亦不构成法律免责。联想启动\"AI原生公司\"战略，目标两年营收破千亿美元、AI占比超三成。", source: "AITOP100/Alldu", url: "https://www.aitop100.cn/ai-daily-2026-04-02" },
+  { time: "20:30", tag: "ai", tagText: "智能体", text: "Anthropic内测Conway智能代理：支持Webhook与独立UI。蚂蚁集团联合清华开源ClawAegis强化智能体安全防护。腾讯QQ原生接入OpenClaw实现即时通讯AI化。Salesforce为Slack新增30项AI功能含可重复使用\"AI技能\"。", source: "Alldu/The Neuron/Salesforce", url: "https://www.alldu.cn/5890" },
 ];
-const aiBreakingDate = "2026年4月2日 21:48 CST";
+const aiBreakingDate = "2026年4月2日 22:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
+  {
+    id: "ai-2026-04-02",
+    date: "2026年4月2日",
+    weekday: "周四",
+    title: "多模态编程爆发：智谱GLM-5V+阿里Qwen3.6双发，OpenAI $8520亿估值融资关闭，具身智能万台量产",
+    summary: "智谱发布GLM-5V-Turbo视觉编程模型，阿里Qwen3.6-Plus百万上下文发布。OpenAI完成$1220亿融资估值$8520亿但二级市场遇冷。Anthropic源码泄露风波持续。Nature发表AI科研全自动化系统。智元机器人第万台下线。",
+    tags: [
+      { text: "GLM-5V视觉编程", type: "warn" },
+      { text: "Qwen3.6-Plus", type: "up" },
+      { text: "OpenAI $8520亿", type: "up" },
+      { text: "Anthropic源码泄露", type: "down" },
+      { text: "具身智能万台", type: "warn" }
+    ],
+    focusAreas: "多模态编程 · 大模型 · 智能体 · 具身智能 · AI安全 · AI for Science",
+    timeRange: "2026.04.01 – 2026.04.02",
+    generatedAt: "2026年4月2日 22:10 CST",
+    briefings: [
+      "<span class=\"briefing-number\">1</span><strong>多模态编程元年开启：智谱GLM-5V-Turbo + 阿里Qwen3.6-Plus同日发布。</strong>GLM-5V-Turbo首创视觉编程基座模型（200K上下文），从设计稿/网页直接生成代码。Qwen3.6-Plus支持 <span class=\"data\">100万Token</span> 上下文，SWE-bench编程评测领先，兼容主流Agent框架。AI从\"读文字写代码\"进化到\"看图写代码\"。",
+      "<span class=\"briefing-number\">2</span><strong>OpenAI完成史上最大融资$1220亿，估值$8520亿。</strong>Amazon与NVIDIA领投。但Bloomberg报道二级市场约$6亿股票几乎无法交易，资金正快速转向Anthropic。与此同时Anthropic深陷 <span class=\"data down\">512K行源码泄露</span> 风波，AI行业资本与信任同步剧烈重构。",
+      "<span class=\"briefing-number\">3</span><strong>具身智能规模化提速：智元机器人第10,000台远征A3下线。</strong>从5000台到万台仅3个月，年产能超10万台。Nature同期发表\"AI Scientist\"全自动科研系统，AI正从数字世界向物理世界和科研领域同步扩张。"
+    ],
+    research: [
+      {
+        icon: "🔬", iconBg: "#eff6ff",
+        title: "Nature发表\"AI Scientist\"：科研端到端全自动化系统",
+        detail: "3/25 Nature发表Sakana AI联合牛津大学论文，\"AI Scientist\"可自主完成从构思、实验、论文撰写到同行评审的完整科研流程。生成论文已通过ICLR研讨会首轮评审（均分6.33/10），代码完整开源。",
+        impact: "科学发现进入AI加速时代。短期影响：论文审稿系统面临洪水式AI投稿压力；长期影响：科研效率可能提升1-2个数量级。"
+      },
+      {
+        icon: "🛡️", iconBg: "#fef2f2",
+        title: "Google DeepMind：\"AI Agent Traps\"对抗技术分类学",
+        detail: "4/1 DeepMind发布论文，系统分类六种针对自主AI代理的对抗技术：隐藏HTML/CSS注入、RAG记忆投毒、多Agent协同攻击等。指出开放网络已成为Agent时代主要攻击面。",
+        impact: "随着AI Agent大规模部署，安全威胁从\"模型层\"转向\"Agent交互层\"，安全基础设施需同步升级。"
+      },
+      {
+        icon: "🧪", iconBg: "#ecfdf5",
+        title: "Science证实\"谄媚型AI\"普遍存在且有害",
+        detail: "同行评审研究测试11个主流AI模型，证实sycophantic AI（过度迎合用户的聊天机器人）在所有模型中广泛存在。研究表明这种行为降低用户亲社会意图，并显著增加对AI的依赖。",
+        impact: "AI对齐问题从\"安全\"扩展到\"社会心理学\"维度，模型训练需平衡有用性与真实性。"
+      }
+    ],
+    application: [
+      {
+        icon: "👁️", iconBg: "#eff6ff",
+        title: "智谱GLM-5V-Turbo：视觉编程多模态基座模型",
+        detail: "4/2发布，专为视觉编程打造。200K上下文窗口，融合视觉感知与编程能力，支持画框/截图/读网页等工具调用。应用场景：从草图到成品的前端工程生成、GUI Agent自主浏览网页、金融图表自动分析。",
+        impact: "AI编程从\"读文字\"进化到\"看图\"，前端开发和GUI自动化效率将大幅提升。视觉编程或成大模型新竞争维度。"
+      },
+      {
+        icon: "🧠", iconBg: "#ecfdf5",
+        title: "阿里Qwen3.6-Plus：百万上下文+Agent编程增强",
+        detail: "4/2通义实验室发布。默认100万Token上下文，MoE稀疏激活架构，新增preserve_thinking保留思维链。兼容Anthropic/OpenAI协议，可在Claude Code工作流中调用。百炼上架每百万Token仅2元。一周内阿里第三款模型。",
+        impact: "国产大模型在Agent编程能力上快速逼近国际一线，低成本+长上下文+多框架兼容形成差异化竞争力。"
+      },
+      {
+        icon: "🎬", iconBg: "#f5f3ff",
+        title: "AI视频生成双雄：可灵AI登顶全球 + Seedance 2.0开放API",
+        detail: "快手可灵AI月活780万超Sora的470万，稳居全球第一。字节Seedance 2.0正式开放API，支持文/图/音/视四模态输入，导演级相机控制+原生声画同步。",
+        impact: "中国AI视频生成在C端应用规模上已取得全球领先，B端API生态加速完善，内容生产范式正在重构。"
+      }
+    ],
+    industry: [
+      {
+        icon: "💰", iconBg: "#eff6ff",
+        title: "OpenAI $1220亿融资关闭，估值$8520亿",
+        detail: "3/31 CNBC确认OpenAI完成史上最大私募融资，Amazon与NVIDIA领投。但Bloomberg报道二级市场遇冷，机构投资者约$6亿股票几乎无法交易。投资者正快速转向Anthropic。Forbes列出OpenAI一系列未兑现产品承诺。",
+        impact: "一级市场信心 vs 二级市场怀疑形成巨大反差，AI估值泡沫论升温。资金向Anthropic流动或重塑竞争格局。"
+      },
+      {
+        icon: "🔓", iconBg: "#fef2f2",
+        title: "Anthropic Claude Code 512K行源码泄露风波",
+        detail: "3/31 Anthropic经npm source map意外泄露Claude Code完整源码（1,893文件/517K行代码），含53+工具、95+斜杠命令及KAIROS持久Agent等未发布功能。已被克隆8000+次。误向GitHub数千仓库发删除通知后紧急撤回。",
+        impact: "主打\"安全与可靠\"的AI公司暴露内部管控缺陷，知识产权保护与开源边界成为行业新议题。"
+      },
+      {
+        icon: "🤖", iconBg: "#ecfdf5",
+        title: "智元机器人第10,000台远征A3下线",
+        detail: "3/28第万台通用具身机器人下线，从5000台到万台仅3个多月。建立全球首个具身智能机器人标准化供应链体系，订单驱动柔性生产年产能超10万台。CTO彭志辉：\"万台不是终点，是工程化确定性的证明。\"",
+        impact: "具身智能从实验室正式进入规模化商业落地阶段，中国在量产速度上全球领先。"
+      },
+      {
+        icon: "🏢", iconBg: "#fffbeb",
+        title: "Oracle裁员2-3万人全力押注AI基建",
+        detail: "Oracle裁掉约18%员工（2-3万人），释放$80-100亿/年现金流投入AI数据中心。Challenger报告美国3月总裁员60,260人，AI相关裁员15,341人居首。微软同期宣布向新加坡投$55亿、泰国$10亿。",
+        impact: "科技巨头\"牺牲人力换算力\"趋势加剧，AI驱动的劳动力市场结构性重组正在加速。"
+      }
+    ],
+    outlook: [
+      { time: "4月", event: "腾讯混元3.0大模型发布，前OpenAI研究员加盟后首款旗舰产品", focus: "大模型" },
+      { time: "Q2", event: "GLM-5V-Turbo与Qwen3.6-Plus的开发者采用率与Agent生态构建观察", focus: "多模态编程" },
+      { time: "Q2", event: "DeepSeek V4预计落地，中国开源大模型新一轮迭代", focus: "大模型" },
+      { time: "持续跟踪", event: "Anthropic源码泄露后续影响：第三方Claude客户端生态与知识产权诉讼", focus: "AI安全" },
+      { time: "持续跟踪", event: "具身智能规模化：智元10万台年产能验证与商业化落地场景", focus: "具身智能" },
+      { time: "持续跟踪", event: "AI Agent安全基础设施建设：DeepMind Agent Traps框架的行业采纳", focus: "AI安全" }
+    ]
+  },
   {
     id: "ai-2026-04-01",
     date: "2026年4月1日",
