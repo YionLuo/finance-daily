@@ -1275,9 +1275,9 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 13.29,
+  score: 13.66,
   rating: "extreme fear",
-  timestamp: "2026-04-02T14:19:21+00:00",
+  timestamp: "2026-04-02T14:34:03+00:00",
   previousClose: 15.71,
   previous1Week: 14.92,
   previous1Month: 34.29,
@@ -1287,28 +1287,27 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "21:25", tag: "geo", tagText: "地缘", text: "🔴 阿联酋单日拦截19枚弹道导弹+26架无人机！均来自伊朗，为开战以来单日最大攻击规模之一。阿布扎比KEZAD经济区附近拦截成功但有轻微损坏。自2/28开战以来阿联酋累计191人受伤。沙特同日拦截4架无人机。巴林自开战以来已拦截188枚导弹+429架无人机。", source: "Khaleej Times/Al Arabiya/Gulf News", url: "https://www.khaleejtimes.com/world/day-34-us-iran-israel-war-live-updates" },
-  { time: "21:22", tag: "geo", tagText: "地缘", text: "🔴 法国公开与美国保持距离！马克龙表示\"美国未咨询盟友就发动战争，不应抱怨缺乏支持。这不是我们的行动。\"伊朗军队总司令警告：若美国发动地面入侵\"没有一个人能幸存\"，议长称700万伊朗人准备好武装保卫国家。西方阵营裂痕扩大。", source: "Fox6/NPR/Independent", url: "https://www.fox6now.com/news/live-updates-on-war-in-iran" },
-  { time: "21:20", tag: "macro", tagText: "宏观", text: "🔴 美股开盘重挫！标普500报6488（-1.33%），道指报46006（-1.20%），纳指100报23587（-1.80%）。VIX恐慌指数飙升12.7%至27.65。两日反弹涨幅全部回吐。能源股逆市领涨：APA +4.3%，Exxon/Chevron/ConocoPhillips/Devon均涨约3%。航空邮轮股均跌约4%。", source: "CNBC/Yahoo Finance/Trading Economics", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "21:15", tag: "macro", tagText: "宏观", text: "🔴 油价剧烈波动！Trading Economics显示WTI一度飙至$113.24（+13.11%），但盘中大幅回落。OilPriceAPI实时报WTI $107.03，Gulf News报布伦特$105.53（+4.32%）。美国汽油均价自2022年来首次突破$4/加仑。市场在战争升级与停火预期间剧烈拉锯。", source: "Trading Economics/OilPriceAPI/Gulf News", url: "https://tradingeconomics.com/commodity/crude-oil" },
-  { time: "21:10", tag: "macro", tagText: "宏观", text: "🔴 黄金暴跌-4.11%至$4,588/盎司，白银跌-5.88%至$70.67。避险资金转向美元而非贵金属，投资者抛售筹集现金。黄金月跌近10%但年涨仍47%+。机构年底目标：摩根大通$6,300、富国$6,100-$6,300、瑞银$6,200。", source: "Trading Economics/Kitco/NRS", url: "https://tradingeconomics.com/commodity/gold" },
-  { time: "21:05", tag: "macro", tagText: "宏观", text: "美国初请失业金意外下降至20.2万（预期21.2万），显示裁员率仍较低。2月贸易逆差573亿美元，低于预期的620亿。但Challenger报告显示3月裁员增25%达60,260人，AI成最大裁员原因（15,341人）。劳动力市场信号矛盾。", source: "CNBC/Challenger/Labor Dept", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "21:00", tag: "macro", tagText: "宏观", text: "Nike盘前暴跌超15%！为今日单只个股最大跌幅。Globalstar（GSAT）飙升15%，因亚马逊正洽谈收购，卫星互联网赛道竞争白热化。Transocean受益10亿美元新合同股价上涨。", source: "Benzinga/Yahoo Finance", url: "https://www.benzinga.com/news" },
-  { time: "20:50", tag: "crypto", tagText: "加密", text: "BTC跌至$66,600（-2.72%），ETH跌至$2,050（-3.36%）。加密总市值$2.34T（-0.51%）。BTC ETF Q2开局遇冷：4/1净流出$1.737亿，IBIT流出$8652万。BTC主导率56.93%。82%的币种过去24h下跌，市场持续偏空。", source: "CoinCodex/CoinMarketCap/BeInCrypto", url: "https://coincodex.com/article/83560/daily-market-update-for-april-02-2026/" },
-  { time: "20:30", tag: "macro", tagText: "宏观", text: "特斯拉Q1交付量358,000辆，环比下降14%。但中国制造EV 3月销量增长8.7%，连续第二个季度增长。分析师认为霍尔木兹海峡危机意外提振EV需求，传统燃油车成本优势削弱。", source: "Benzinga/Reuters/CNBC", url: "https://www.benzinga.com/news" },
-  { time: "20:20", tag: "geo", tagText: "地缘", text: "🔴 英国宣布4/3主持35国霍尔木兹海峡重启虚拟峰会！首相斯塔默联合欧盟召集外交施压，目标恢复海峡通行。印度外秘线上参加。这是海峡封锁以来最大规模国际协调行动。会议结果将直接影响油价走势和全球能源供应。", source: "AP/The National News/MoneyControl", url: "https://apnews.com/article/hormuz-strait-shipping-summit-uk-iran-ca2c6af551df98c81a39f2137e417856" },
+  { time: "22:35", tag: "tech", tagText: "航天", text: "🚀 Artemis II TLI点火倒计时！猎户座飞船正在绕地轨道完成最终系统检查，TLI（地月转移轨道注入）点火计划于北京时间4/3 08:12执行。NASA任务管理团队下午go/no-go会议进行中。如成功，这将是阿波罗17号以来人类首次超越低地球轨道飞向月球。", source: "NASA/Space.com/CBS", url: "https://www.space.com/space-exploration/artemis/nasa-just-launched-artemis-2-what-happens-today-could-make-or-break-the-moon-mission" },
+  { time: "22:30", tag: "macro", tagText: "宏观", text: "🔴 美股收盘跌幅收窄但仍录得下跌！标普500收约6523（-0.8%），道指收约46130（-0.9%），纳指收约21622（-1.0%）。盘中一度跌超1.3%后跌幅收窄。VIX恐慌指数报26.02。4/3耶稣受难日休市，下周一恢复交易。能源股逆市领涨。", source: "CNBC/Yahoo Finance", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
+  { time: "22:25", tag: "macro", tagText: "宏观", text: "🔴 贵金属继续大幅波动！黄金现货报$4,677（-1.70%，日内振幅$4,554-$4,801），白银$70.97（-5.48%）。避险资金持续流向美元而非贵金属。机构年底目标：摩根大通$6,300、富国$6,100-$6,300、瑞银$6,200。", source: "Kitco/Trading Economics/USA Today", url: "https://www.kitco.com/gold-price-today-usa/" },
+  { time: "22:20", tag: "macro", tagText: "宏观", text: "🔴 油价高位震荡！布伦特原油$109.27（+7.96%），WTI $105.20。盘中WTI曾飙至$113以上。美国汽油均价自2022年来首次突破$4/加仑。霍尔木兹海峡持续封锁是核心推手，明日35国虚拟峰会结果将决定短期走向。", source: "OilPriceAPI/Trading Economics/Pintu", url: "https://www.oilpriceapi.com/live/brent-crude-oil-price" },
+  { time: "22:15", tag: "macro", tagText: "宏观", text: "Nike收盘暴跌-15.52%至$44.62！市销率跌至2009年以来最低的1.4倍。尽管Q3业绩超预期且北美批发+11%，但管理层预计未来9个月销售下降3%，华尔街集体下调评级。成交量超1.09亿股，为三个月均值的5倍。SpaceX秘密提交IPO申请，估值或超万亿美元。", source: "Motley Fool/CNN/Benzinga", url: "https://www.fool.com/coverage/stock-market-today/2026/04/01/stock-market-today-april-1-nike-shares-plunge-after-weak-guidance-and-analyst-downgrades/" },
+  { time: "22:10", tag: "geo", tagText: "地缘", text: "🔴 阿联酋单日拦截19枚弹道导弹+26架无人机！均来自伊朗，为开战以来单日最大攻击规模之一。阿布扎比KEZAD经济区附近拦截成功但有轻微损坏。自2/28开战以来阿联酋累计191人受伤。沙特同日拦截4架无人机。巴林自开战以来已拦截188枚导弹+429架无人机。", source: "Khaleej Times/Al Arabiya/Gulf News", url: "https://www.khaleejtimes.com/world/day-34-us-iran-israel-war-live-updates" },
+  { time: "22:05", tag: "geo", tagText: "地缘", text: "🔴 美伊冲突第35天！伊朗累计伤亡超1,900人，黎巴嫩超1,200人，美军13人、以军10人阵亡。航母布什号+三艘驱逐舰正赶赴中东，第82空降师已开始抵达。特朗普暗示若北约盟国不协助或退出北约。法国公开与美保持距离。", source: "AP/ISW/CNN", url: "https://apnews.com/live/iran-war-israel-trump-04-01-2026" },
+  { time: "21:50", tag: "crypto", tagText: "加密", text: "BTC $66,600（-2.72%），ETH $2,050（-3.36%）。加密总市值$2.34T。BTC ETF Q2开局遇冷：4/1净流出$1.737亿，IBIT流出$8652万。82%的币种过去24h下跌。BTC主导率56.93%，市场持续偏空。", source: "CoinCodex/CoinMarketCap/BeInCrypto", url: "https://coincodex.com/article/83560/daily-market-update-for-april-02-2026/" },
+  { time: "21:30", tag: "macro", tagText: "宏观", text: "美国初请失业金意外下降至20.2万（预期21.2万），显示裁员率仍较低。2月贸易逆差573亿美元，低于预期的620亿。但Challenger报告显示3月裁员增25%达60,260人，AI成最大裁员原因（15,341人）。劳动力市场信号矛盾。", source: "CNBC/Challenger/Labor Dept", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
+  { time: "21:15", tag: "macro", tagText: "宏观", text: "特斯拉Q1交付量358,000辆，环比下降14%。但中国制造EV 3月销量增长8.7%，连续第二个季度增长。分析师认为霍尔木兹海峡危机意外提振EV需求，传统燃油车成本优势削弱。", source: "Benzinga/Reuters/CNBC", url: "https://www.benzinga.com/news" },
+  { time: "20:30", tag: "geo", tagText: "地缘", text: "🔴 英国宣布4/3主持35国霍尔木兹海峡重启虚拟峰会！首相斯塔默联合欧盟召集外交施压，目标恢复海峡通行。印度外秘线上参加。这是海峡封锁以来最大规模国际协调行动。会议结果将直接影响油价走势和全球能源供应。", source: "AP/The National News/MoneyControl", url: "https://apnews.com/article/hormuz-strait-shipping-summit-uk-iran-ca2c6af551df98c81a39f2137e417856" },
   { time: "20:10", tag: "macro", tagText: "宏观", text: "欧股因中东局势下跌：STOXX 600 -1.35%报589.62，FTSE -0.45%报10318。ECB官员Panetta警告能源危机引发金融稳定性风险。德意志银行称若冲突平息，奢侈品股将出现\"急剧反弹\"。科技板块遭遇2/3以来最差单日。", source: "Reuters/CNBC/Deutsche Bank", url: "https://www.reuters.com/markets/" },
-  { time: "19:30", tag: "tech", tagText: "航天", text: "🚀 Artemis II厕所故障已排除！机组正准备近地点提升燃烧，随后执行TLI点火（EDT 20:12/北京时间4/3 08:12）飞向月球。NASA下午go/no-go决策会议进行中。如成功将是阿波罗17号以来人类首次超越低地球轨道。", source: "NASA/Space.com/Mint", url: "https://www.space.com/space-exploration/artemis/nasa-just-launched-artemis-2-what-happens-today-could-make-or-break-the-moon-mission" },
-  { time: "19:20", tag: "macro", tagText: "宏观", text: "美联储政策预期更新：利率维持3.5%-3.75%，通胀率2.40%。鲍威尔任期5月到期，Kevin Warsh接任预期更宽松政策。但油价高企推升通胀+就业疲软=滞胀风险加大。FOMC 4/29最后一次鲍威尔主持会议。10年期美债收益率升至4.354%。", source: "NRS/CNBC/Fed/Yahoo Finance", url: "https://naturalresourcestocks.net/gold-price-today-april-02-2026/" },
-  { time: "19:05", tag: "geo", tagText: "地缘", text: "🔴 伊朗强硬反击！特朗普演讲结束数分钟内，伊朗向以色列发射至少4轮导弹，以军6小时内4次拦截。同时攻击阿联酋阿布扎比KEZAD经济区（导弹被拦截，轻微损坏）和巴林（美第五舰队基地响警报）。伊朗军方警告将发动\"更具毁灭性\"报复。", source: "AP/CNN/eTV Bharat/CBS", url: "https://apnews.com/live/iran-war-israel-trump-04-01-2026" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "🔴 全球能源危机加剧！澳大利亚宣布10亿澳元无息贷款支援关键燃料企业。马来西亚4/15起公务员居家办公节约能源。泰国柴油涨12%。印度班加罗尔汽油突破₹120/升。美商务部邀请企业提议出口全套AI系统，推进全球AI领导地位。", source: "AP/eTV Bharat/Reuters/Benzinga", url: "https://apnews.com/live/iran-war-israel-trump-04-01-2026" },
+  { time: "19:30", tag: "macro", tagText: "宏观", text: "美联储政策预期更新：利率维持3.5%-3.75%，通胀率2.40%。鲍威尔任期5月到期，Kevin Warsh接任预期更宽松政策。但油价高企推升通胀+就业疲软=滞胀风险加大。FOMC 4/29最后一次鲍威尔主持会议。10年期美债收益率升至4.354%。", source: "NRS/CNBC/Fed/Yahoo Finance", url: "https://naturalresourcestocks.net/gold-price-today-april-02-2026/" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "🔴 全球能源危机加剧！澳大利亚宣布10亿澳元无息贷款支援关键燃料企业。马来西亚4/15起公务员居家办公节约能源。泰国柴油涨12%。印度班加罗尔汽油突破₹120/升。", source: "AP/eTV Bharat/Reuters", url: "https://apnews.com/live/iran-war-israel-trump-04-01-2026" },
   { time: "18:20", tag: "geo", tagText: "地缘", text: "突破！伊朗承诺允许菲律宾船只安全通过霍尔木兹海峡运输石油。菲律宾此前已正式请求伊朗将其列为\"非敌对国家\"。这是海峡封锁以来首次有国家获得通行承诺，或为其他亚洲石油进口国树立先例。", source: "Manila Times/PhilStar/AFP", url: "https://www.manilatimes.net/2026/04/02/news/iran-to-allow-ph-oil-shipments-through-strait-of-hormuz/2313230" },
   { time: "18:00", tag: "macro", tagText: "宏观", text: "🔴 印度Sensex暴跌超1390点（-2%）至71722，Nifty跌至22224，Bank Nifty-2.7%。BSE总市值单日蒸发超9万亿卢比。FII单日净卖出833亿卢比。RBI要求银行平仓投机合约。", source: "KotakNeo/Benzinga", url: "https://www.kotakneo.com/news/market-news/stock-market-fall-today-2-pct-sensex-nifty-2-april/" },
   { time: "17:00", tag: "macro", tagText: "宏观", text: "港股节前最后交易日收盘：恒指报25116.53（-0.7%），上证综指报3919.29（-0.7%）。4/3-4/7清明休市，4/8恢复。小米集团盘中跌超4%至30.66港元，5日卖空暴增90%。南向资金半日净流入超60亿港元。", source: "AP/每经/财联社", url: "https://www.nbd.com.cn/articles/2026-04-02/4322229.html" },
   { time: "15:30", tag: "macro", tagText: "宏观", text: "🔴 亚股全线重挫！日经225-2.4%收52463，韩国Kospi暴跌-4.5%收5234，台湾加权-1.8%，澳洲ASX200-1.1%。特朗普讲话升级战争措辞，4/1涨幅几乎全部回吐。", source: "AP/CNN/各交易所", url: "https://apnews.com/article/stock-markets-war-oil-trump-iran-6fc90a2e50b1252cde130fc3e0ce0da3" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "Reuters：特朗普演讲后快速停战希望破灭。特朗普誓言对伊朗发动更猛烈打击，\"2-3周完成任务\"但未给出停火路线图。油价重新飙升，此前两日的乐观情绪几乎殆尽。美伊冲突进入第34天。", source: "Reuters/MSN/Gulf News", url: "https://gulfnews.com/world/mena/usisrael-war-on-iran-day-34-trump-says-us-to-hit-iran-extremely-hard-for-2-3-weeks-2-1.500493799" },
 ];
-const breakingDate = "2026年4月2日 21:48 CST";
+const breakingDate = "2026年4月2日 22:37 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
