@@ -1287,10 +1287,12 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:05", tag: "geo", tagText: "地缘", text: "🔴 伊朗强硬反击！特朗普演讲结束数分钟内，伊朗向以色列发射至少4轮导弹，以军6小时内4次拦截。同时攻击阿联酋阿布扎比KEZAD经济区（导弹被拦截，轻微损坏）和巴林（美第五舰队基地响警报）。伊朗军方警告将发动\"更具毁灭性\"报复，声称拥有美方未知的隐藏战略武器。", source: "AP/CNN/eTV Bharat/CBS", url: "https://apnews.com/live/iran-war-israel-trump-04-01-2026" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "🔴 全球能源危机加剧！澳大利亚宣布10亿澳元（6.89亿美元）无息贷款支援关键燃料企业应对霍尔木兹封锁。马来西亚4/15起公务员居家办公节约能源。泰国柴油涨12%。印度班加罗尔汽油突破₹120/升，政府免除关键石化品关税至6/30。", source: "AP/eTV Bharat/Reuters", url: "https://apnews.com/live/iran-war-israel-trump-04-01-2026" },
   { time: "18:55", tag: "macro", tagText: "宏观", text: "🔴 美股期货大幅下挫！标普500期货-1.12%报6543.50，Polymarket预测今日开盘上涨概率仅5%。特朗普讲话鹰派远超预期，4/1连续两日涨幅面临全部回吐风险。今晚关注初请失业金和贸易数据。", source: "Benzinga/Barrons/Polymarket", url: "https://www.benzinga.com/markets/prediction-markets/26/04/51618924/sp500-april-2-open-up-or-down-polymarket-trump-iran-oil-futures-drop" },
-  { time: "18:50", tag: "macro", tagText: "宏观", text: "🔴 油价再度飙升！WTI原油涨超6%突破$106/桶，布伦特原油涨超6%至$107.15/桶。特朗普宣布将\"显著加强\"对伊军事行动，霍尔木兹海峡4/6最后期限仅剩4天，供应中断担忧急剧升温。", source: "Benzinga/Trading Economics/Pintu", url: "https://tradingeconomics.com/commodity/crude-oil" },
+  { time: "18:50", tag: "macro", tagText: "宏观", text: "🔴 油价再度飙升！布伦特原油$107.96-$108.60/桶（+7.35%，Trading Economics/OilPriceAPI双源确认），WTI突破$106/桶。特朗普宣布将\"显著加强\"对伊军事行动，霍尔木兹海峡4/6最后期限仅剩4天。", source: "Trading Economics/OilPriceAPI/Benzinga", url: "https://tradingeconomics.com/commodity/brent-crude-oil" },
   { time: "18:45", tag: "macro", tagText: "宏观", text: "🔴 黄金暴跌3.58%至$4,614/盎司（Trading Economics确认），亚洲时段一度跌至$4,693。避险资金意外转向美元而非黄金，投资者抛售资产筹集现金。机构仍看涨年底至$6,000+。50日均线$4,120提供动态支撑。", source: "Trading Economics/NRS/Kitco", url: "https://naturalresourcestocks.net/gold-price-today-april-02-2026/" },
-  { time: "18:30", tag: "tech", tagText: "航天", text: "🚀 Artemis II今晚关键时刻：TLI地月转移点火定于EDT ~20:00（北京时间4/3 08:00）执行。宇航员已完成近地点抬升燃烧(PRM)和近距离手动驾驶测试，飞船厕所故障已修复。如TLI成功，Orion将打破人类最远距离记录。", source: "CNN/NASA/Space.com", url: "https://www.space.com/space-exploration/artemis/nasa-just-launched-artemis-2-what-happens-today-could-make-or-break-the-moon-mission" },
+  { time: "18:30", tag: "tech", tagText: "航天", text: "🚀 Artemis II今晚关键时刻：TLI地月转移点火确认定于EDT 20:12（北京时间4/3 08:12）。NASA决策会议今日下午评估系统测试结果后决定go/no-go。如TLI成功，将是1972年阿波罗17号以来人类首次超越低地球轨道。", source: "Space.com/NASA/CNN", url: "https://www.space.com/space-exploration/artemis/nasa-just-launched-artemis-2-what-happens-today-could-make-or-break-the-moon-mission" },
   { time: "18:20", tag: "geo", tagText: "地缘", text: "突破！伊朗承诺允许菲律宾船只安全通过霍尔木兹海峡运输石油。菲律宾此前已正式请求伊朗将其列为\"非敌对国家\"。这是海峡封锁以来首次有国家获得通行承诺，或为其他亚洲石油进口国树立先例。", source: "Manila Times/PhilStar/AFP", url: "https://www.manilatimes.net/2026/04/02/news/iran-to-allow-ph-oil-shipments-through-strait-of-hormuz/2313230" },
   { time: "18:00", tag: "macro", tagText: "宏观", text: "🔴 印度Sensex暴跌超1390点（-2%）至71722，Nifty跌至22224，Bank Nifty-2.7%。BSE总市值单日蒸发超9万亿卢比。布伦特原油+4%至$104.9加剧通胀担忧。FII单日净卖出833亿卢比。RBI要求银行平仓投机合约。", source: "KotakNeo/Benzinga", url: "https://www.kotakneo.com/news/market-news/stock-market-fall-today-2-pct-sensex-nifty-2-april/" },
   { time: "17:00", tag: "macro", tagText: "宏观", text: "港股节前最后交易日收盘：恒指报25116.53（-0.7%），上证综指报3919.29（-0.7%）。4/3-4/7清明休市，4/8恢复。小米集团盘中跌超4%至30.66港元，5日卖空暴增90%。南向资金半日净流入超60亿港元。", source: "AP/每经/财联社", url: "https://www.nbd.com.cn/articles/2026-04-02/4322229.html" },
@@ -1306,13 +1308,15 @@ const breakingNews = [
   { time: "03:20", tag: "tech", tagText: "科技", text: "SpaceX IPO进展：CBS News确认SpaceX已秘密向SEC提交注册声明，最早6月上市。估值可能达1.5-1.75万亿美元。Starlink 920万订户+xAI整合资产。CNBC/Fortune/Bloomberg多源确认。", source: "CBS News/CNBC/Fortune/Bloomberg", url: "https://www.cbsnews.com/news/spacex-ipo-elon-musk-largest-ever/" },
   { time: "01:00", tag: "macro", tagText: "宏观", text: "4/2为\"Liberation Day\"关税一周年：美国贸易赤字不降反升创历史新高，制造业失去10万岗位，ISM制造业连续9个月收缩。实际关税收入2640亿美元，远低于预期的6000亿。", source: "NTU/Tax Foundation/MSN", url: "https://www.ntu.org/publications/detail/liberation-day-one-year-review-how-tariffs-handcuffed-us-farmers-and-manufacturers" },
 ];
-const breakingDate = "2026年4月2日 18:55 CST";
+const breakingDate = "2026年4月2日 19:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:05", tag: "geo", tagText: "安全", text: "🔴 以色列防空系统遭网络攻击！黑客组织Handala声称入侵设计以色列防空指挥控制系统的PSK WIND Technologies，窃取敏感数据。伊朗同时在6小时内向以色列发射4轮导弹测试防空极限，科技战与实战双线并行。", source: "eTV Bharat/AP/CNN", url: "https://www.etvbharat.com/en/international/live-blog--united-states-israel-iran-war-latest-news-april-02-donald-trump-netanyahu-mojtaba-khamenei-ghalibaf-kharg-island-ceasefire-qatar-dubai-saudi-arabia-strait-of-hormuz-oil-price-araghchi-mideast-conflict-enn26040200941" },
+  { time: "19:00", tag: "tech", tagText: "产业", text: "🔴 能源危机冲击AI基建！澳大利亚10亿澳元贷款救能源企业，马来西亚强制公务员居家办公，泰国柴油涨12%。布伦特$108+持续高位直接推高全球数据中心运营成本，AI算力扩张面临能源瓶颈。", source: "AP/eTV Bharat/Trading Economics", url: "https://tradingeconomics.com/commodity/brent-crude-oil" },
   { time: "18:55", tag: "tech", tagText: "产业", text: "🔴 美股期货大幅下挫！标普500期货-1.12%报6543.50。Polymarket预测开盘上涨概率仅5%。特朗普鹰派讲话逆转市场乐观情绪。Zacks选出NVIDIA和IBM作为科技回调后AI+量子双赛道首选标的。", source: "Benzinga/Barrons/Zacks", url: "https://www.zacks.com/stock/news/2892442/ai-quantum-opportunities-after-tech-sell-off-2-stocks-for-april" },
-  { time: "18:50", tag: "tech", tagText: "产业", text: "🔴 油价飙升6%+对AI基建冲击：WTI突破$106/桶，布伦特$107+。能源危机直接威胁AI数据中心电力供应成本。Oracle此前已裁员3万人全面转投AI基建，高企油价将进一步推高部署成本。", source: "Benzinga/Trading Economics/CNBC", url: "https://tradingeconomics.com/commodity/crude-oil" },
-  { time: "18:30", tag: "tech", tagText: "航天", text: "🚀 Artemis II TLI燃烧今晚~EDT 20:00（北京时间4/3 08:00）执行。宇航员已完成PRM近地点抬升燃烧和手动驾驶测试，厕所故障已修复。如成功将打破人类最远距离记录。后续：2027 Artemis III，2028 Artemis IV登月。", source: "CNN/NASA/Space.com/SpaceQ", url: "https://www.cnn.com/2026/04/01/science/live-news/artemis-2-nasa-launch" },
+  { time: "18:50", tag: "tech", tagText: "产业", text: "🔴 油价飙升7%+对AI基建冲击：布伦特$108.60（+7.35%），WTI突破$106/桶。能源危机直接威胁AI数据中心电力供应成本。Oracle此前已裁员3万人全面转投AI基建，高企油价将进一步推高部署成本。", source: "Trading Economics/OilPriceAPI/CNBC", url: "https://tradingeconomics.com/commodity/brent-crude-oil" },
+  { time: "18:30", tag: "tech", tagText: "航天", text: "🚀 Artemis II TLI点火确认EDT 20:12（北京时间4/3 08:12）。NASA决策会议今日下午评估go/no-go，这是\"真正的重大承诺点\"。如成功将是1972年来人类首次超越低地球轨道，第6天飞越月球，第10天返回地球。", source: "Space.com/NASA/CNN/SpaceQ", url: "https://www.space.com/space-exploration/artemis/nasa-just-launched-artemis-2-what-happens-today-could-make-or-break-the-moon-mission" },
   { time: "16:50", tag: "ai", tagText: "产业", text: "Q1 2026全球VC投资创纪录$2970亿，环比增长约150%。AI算力和前沿实验室为主要驱动力，约6000家初创公司获融资。NVIDIA $20亿投资Marvell推动NVLink Fusion，MRVL股价涨13%。", source: "The Neuron/CNBC/Seeking Alpha", url: "https://www.cnbc.com/2026/03/31/marvell-nvidia-stock-stake.html" },
   { time: "16:48", tag: "ai", tagText: "研究", text: "Science期刊同行评审研究：测试11个主流AI模型，证实\"谄媚型AI\"（sycophantic AI）普遍存在且有害——过度迎合降低用户亲社会意图，促进AI依赖。", source: "Science/The Neuron", url: "https://www.theneuron.ai/explainer-articles/-around-the-horn-digest-everything-that-happened-in-ai-today-wednesday-april-1-2026/" },
   { time: "15:30", tag: "tech", tagText: "产业", text: "港股科技板块节前收官遭重挫：恒指收25116（-0.7%），小米跌超4%至30.66港元（距高点腰斩50%）。卖空博弈加剧，小米5日卖空暴增90%。4/3-4/7清明休市。雷军今晚19:00直播拆解2026款SU7。", source: "每经/财联社/证券之星", url: "https://news.10jqka.com.cn/20260402/c675715531.shtml" },
@@ -1332,7 +1336,7 @@ const aiBreakingNews = [
   { time: "23:50", tag: "ai", tagText: "大模型", text: "OpenAI完成1,220亿美元融资（硅谷史上最大），估值8,520亿美元。但二级市场投资者开始抛售OpenAI股份转投Anthropic，显示市场对增长期担忧。月收入20亿美元，9亿周活用户。", source: "TechCrunch/The Neuron", url: "https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/" },
   { time: "23:15", tag: "tech", tagText: "产业", text: "伊朗IRGC将苹果、谷歌、微软、英伟达、特斯拉等18家美科技公司列入中东打击名单，科技企业面临前所未有地缘风险。", source: "Wired/CNBC/Politico", url: "https://www.cnbc.com/2026/04/01/iran-irgc-nvidia-appple-attack-threat.html" },
 ];
-const aiBreakingDate = "2026年4月2日 18:55 CST";
+const aiBreakingDate = "2026年4月2日 19:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
