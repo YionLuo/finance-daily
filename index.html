@@ -1275,9 +1275,9 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 14.46,
+  score: 14.49,
   rating: "extreme fear",
-  timestamp: "2026-04-02T16:24:01+00:00",
+  timestamp: "2026-04-03T00:50:00+08:00",
   previousClose: 15.71,
   previous1Week: 14.92,
   previous1Month: 34.29,
@@ -1287,30 +1287,29 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "23:45", tag: "geo", tagText: "地缘", text: "🔴 重大突破！伊朗与阿曼正起草霍尔木兹海峡\"监测协议\"！IRNA报道伊朗副法律事务部长Gharibabadi称油轮通行\"应受两国监督和协调\"，强调是\"促进安全通过\"而非限制。消息令美股尾盘急速反弹，道指从盘中-600点收窄至仅-75点。市场解读为海峡有望在无需军事行动下以某种形式重开。", source: "CNBC/IRNA/Seeking Alpha", url: "https://www.cnbc.com/2026/04/02/iran-war-oman-hormuz-strait.html" },
-  { time: "23:40", tag: "macro", tagText: "宏观", text: "美股上演惊天大逆转收盘！标普500报6579（+0.06%），道指46490（-0.16%），纳指23999（-0.09%）。盘中一度暴跌——道指-600点、标普-1.5%、纳指-2.2%——伊朗-阿曼海峡协议消息传出后V型反弹。VIX收25.20。4/3耶稣受难日休市。", source: "Trading Economics/CNBC/Barron's", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "23:35", tag: "macro", tagText: "宏观", text: "🔴 油价飙升后高位回落！WTI盘中飙至$110附近后回落至$108（+8%），布伦特$106+（+5%）。美国汽油均价一个月内涨超30%，突破$4/加仑创多年新高。伊朗-阿曼协议传出后油价从日高回落，但仍为2022年来最高水平。", source: "CNBC/Trading Economics/OilPrice", url: "https://oilprice.com/" },
-  { time: "23:30", tag: "macro", tagText: "宏观", text: "🔴 黄金暴跌-2.34%至$4,673！Trading Economics确认日跌幅为$112。特朗普战争升级言论引发极端不确定性，投资者抛售所有资产类别持有现金。但机构仍极度看涨：摩根大通年底目标$6,300、瑞银$6,200、富国$6,100-$6,300。金银比62.8，白银跌幅更大。", source: "Trading Economics/NRS/JPM/UBS", url: "https://naturalresourcestocks.net/gold-price-today-april-02-2026/" },
-  { time: "23:25", tag: "crypto", tagText: "加密", text: "BTC报$66,231（-2.90%），ETH $2,043（-2.10%）。加密总市值跌至$2.29万亿（-2.26%）。BTC ETF资金外流$1.74亿，BlackRock IBIT和Fidelity FBTC领跌。但摩根士丹利申请新BTC ETF（MSBT，费率仅0.14%低于BlackRock的0.25%）。Solana跌幅最大接近-6%。", source: "Analytics Insight/CoinCodex/CNBC", url: "https://www.analyticsinsight.net/price-analysis/crypto-prices-today-bitcoin-drops-to-66000-ethereum-at-2043-as-us-iran-war-and-oil-spike-shake-market" },
-  { time: "23:20", tag: "macro", tagText: "宏观", text: "特斯拉收跌约4%至$379.60！Q1交付量358K不及预期叠加油价飙升。Blue Owl Capital暴跌-7%：因AI disruption担忧引发赎回请求激增，将私募信贷基金赎回上限设为5%。Netflix逆市涨约2%。能源股领涨：APA +4%、Exxon/Chevron/ConocoPhillips均涨约3%。", source: "CNBC/Robinhood/Trading Economics", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "23:15", tag: "tech", tagText: "航天", text: "🚀 Artemis II近地点提升燃烧成功完成！ICPS的RL10发动机精确调整轨道最低点。此前远地点燃烧4/1晚已成功。飞船厕所故障已排除。4人机组（Wiseman/Glover/Koch/Hansen）状态良好。TLI地月转移点火准备中，若成功将是阿波罗17号以来人类首次超越低地球轨道。", source: "NASA Artemis Blog", url: "https://www.nasa.gov/blogs/artemis/" },
-  { time: "23:10", tag: "macro", tagText: "宏观", text: "邮轮航空股因油价暴跌！Carnival、Royal Caribbean、Norwegian均跌约4%。Delta、United、Southwest同跌约4%。燃油成本飙升直接压缩利润率，叠加消费者需求担忧。4/3-4/7全球多数市场因复活节/清明节休市。", source: "CNBC/Barron's", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "22:38", tag: "geo", tagText: "地缘", text: "🔴 IRGC宣布18家美企为军事目标！Apple、Google、Microsoft、NVIDIA、Meta、Tesla、Intel、Boeing等均上榜。CNBC/Wired/Politico多源确认。IRGC称4/1起可对这些企业在海湾地区设施发动打击，战争从传统军事目标扩展到科技基础设施。", source: "CNBC/Wired/Politico/WinBuzzer", url: "https://www.cnbc.com/2026/04/01/iran-irgc-nvidia-appple-attack-threat.html" },
-  { time: "22:05", tag: "geo", tagText: "地缘", text: "🔴 美伊冲突第35天！伊朗累计伤亡超1,900人，黎巴嫩超1,200人，美军13人、以军10人阵亡。航母布什号+三艘驱逐舰正赶赴中东。特朗普黄金时段演讲称将\"极其强硬\"打击伊朗2-3周，未给停火路线图。法国公开与美保持距离。", source: "AP/ISW/CNN/Politico", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
-  { time: "21:30", tag: "macro", tagText: "宏观", text: "美国初请失业金意外降至20.2万（预期21.2万）。2月贸易逆差573亿美元低于预期620亿。但Challenger报告3月裁员增25%达60,260人，AI成最大裁员原因（15,341人）。高盛仍预计2026年两次降息（9月和12月）。", source: "CNBC/Challenger/Goldman Sachs", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "21:15", tag: "macro", tagText: "宏观", text: "特斯拉Q1交付量358,000辆环比下降14%。但中国制造EV 3月销量增长8.7%。NPR深度分析：霍尔木兹海峡持续封锁对全球经济的长期影响将远超短期油价波动，供应链重构成本不可逆。", source: "Benzinga/Reuters/NPR", url: "https://www.npr.org/2026/04/01/nx-s1-5770140/how-long-the-strait-of-hormuz-stays-closed-will-have-major-economic-implications" },
-  { time: "20:30", tag: "geo", tagText: "地缘", text: "🔴 英国宣布4/3主持35国霍尔木兹海峡重启虚拟峰会！首相斯塔默联合欧盟召集外交施压。ISW分析：伊朗高层计划将海峡和能源流作为战后谈判筹码。特朗普4/6最后期限临近——若伊朗不开放海峡将打击其发电厂。", source: "AP/ISW/France24", url: "https://www.understandingwar.org/research/middle-east/iran-update-special-report-april-1-2026/" },
-  { time: "20:10", tag: "macro", tagText: "宏观", text: "欧股因中东局势下跌：STOXX 600 -1.35%报589.62，FTSE -0.45%报10318。ECB官员Panetta警告能源危机引发金融稳定性风险。科技板块遭遇2/3以来最差单日。美联储利率维持3.5%-3.75%，鲍威尔5月任期到期，Warsh接任预期更宽松政策。", source: "Reuters/CNBC/Deutsche Bank", url: "https://www.reuters.com/markets/" },
-  { time: "18:20", tag: "geo", tagText: "地缘", text: "伊朗承诺允许菲律宾船只安全通过霍尔木兹海峡！这是海峡封锁以来首次有国家获得通行承诺。同时IRGC强调海峡\"不会对敌人开放\"。伊朗正利用选择性通行建立后战争时代的海峡控制权新框架。", source: "Manila Times/CBS/HSToday", url: "https://www.manilatimes.net/2026/04/02/news/iran-to-allow-ph-oil-shipments-through-strait-of-hormuz/2313230" },
-  { time: "18:00", tag: "macro", tagText: "宏观", text: "🔴 印度Sensex暴跌超1390点（-2%）至71722，Nifty跌至22224，Bank Nifty-2.7%。BSE总市值单日蒸发超9万亿卢比。FII单日净卖出833亿卢比。阿联酋单日拦截19枚弹道导弹+26架无人机，为开战以来最大规模攻击之一。", source: "KotakNeo/Khaleej Times/Gulf News", url: "https://www.kotakneo.com/news/market-news/stock-market-fall-today-2-pct-sensex-nifty-2-april/" },
-  { time: "17:00", tag: "macro", tagText: "宏观", text: "港股节前最后交易日收盘：恒指报25116（-0.7%），上证综指3919（-0.7%）。4/3-4/7清明休市，4/8恢复。小米盘中跌超4%至30.66港元，5日卖空暴增90%。南向资金半日净流入超60亿港元。", source: "AP/每经/财联社", url: "https://www.nbd.com.cn/articles/2026-04-02/4322229.html" },
-  { time: "15:30", tag: "macro", tagText: "宏观", text: "🔴 亚股全线重挫！日经225-2.4%收52463，韩国Kospi暴跌-4.5%收5234，台湾加权-1.8%，澳洲ASX200-1.1%。特朗普讲话升级战争措辞，4/1涨幅几乎全部回吐。全球能源危机加剧——澳大利亚10亿澳元贷款支援燃料企业、马来西亚4/15起公务员居家办公节能。", source: "AP/CNN/各交易所", url: "https://apnews.com/article/stock-markets-war-oil-trump-iran-6fc90a2e50b1252cde130fc3e0ce0da3" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "Reuters：特朗普演讲后快速停战希望破灭。特朗普誓言对伊朗发动更猛烈打击，\"2-3周完成任务\"但未给出停火路线图。油价重新飙升。4/6 Hormuz最后期限前局势持续紧张，ISW称伊朗高层寻求将海峡作为战后谈判杠杆。", source: "Reuters/ISW/Gulf News", url: "https://gulfnews.com/world/mena/usisrael-war-on-iran-day-34-trump-says-us-to-hit-iran-extremely-hard-for-2-3-weeks-2-1.500493799" },
+  { time: "00:50", tag: "geo", tagText: "地缘", text: "🔴 英国4/3主持40+国霍尔木兹海峡重启虚拟峰会！AP确认40多国参与，英首相斯塔默联合欧盟向伊朗施压。4/6特朗普最后期限临近——若伊朗不重开海峡将打击其发电厂。伊朗-阿曼\"监测协议\"草案能否为和平重开海峡提供框架成关键悬念。", source: "AP/Reuters/France24", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
+  { time: "00:45", tag: "macro", tagText: "宏观", text: "美股4/2收盘涨跌不一：标普500报6,569（-0.09%），道指46,450（-0.25%），纳指21,814（-0.12%），Russell 2000微涨+0.07%。VIX升至25.81（+5.17%）。盘中受特朗普讲话冲击一度重挫后，因伊朗-阿曼海峡协议传闻反弹。4/3耶稣受难日休市。", source: "Yahoo Finance/Reuters/CNBC", url: "https://finance.yahoo.com/" },
+  { time: "00:40", tag: "macro", tagText: "宏观", text: "🔴 油价创2022年来新高！WTI飙升至$111.36（+11.23%），布伦特$107.63（+6.4%）。特朗普未给出结束战争明确时间表令油价继续攀升。美国汽油均价突破$4/加仑创多年新高。IEA署长警告全球经济面临\"重大威胁\"。航空邮轮股承压。", source: "Yahoo Finance/Reuters/AP/CNBC", url: "https://oilprice.com/" },
+  { time: "00:35", tag: "macro", tagText: "宏观", text: "🔴 黄金大跌-2.75%至$4,651.80！Reuters确认日跌幅超$130。白银$70.97（-5.48%）。铜-1.10%至$1,156。投资者抛售一切持有现金。但机构仍极度看涨：摩根大通年底目标$6,300、瑞银$6,200、富国$6,100-$6,300。", source: "Reuters/Yahoo Finance/JPM/UBS", url: "https://www.reuters.com/markets/" },
+  { time: "00:30", tag: "crypto", tagText: "加密", text: "BTC报$67,139（-2.46%），ETH $2,065（-3.74%）。加密总市值$2.31万亿（-2.55%）。24h交易量$102.65B（+7.14%）。CMC恐贪指数28（恐惧）。BTC市占率58.20%。Coinbase获美国信托牌照有条件批准，向银行业务迈进。", source: "CoinMarketCap/Yahoo Finance/Reuters", url: "https://coinmarketcap.com/" },
+  { time: "00:25", tag: "macro", tagText: "宏观", text: "特斯拉收跌超4%领跌MAG7！Q1交付量358K不及预期+油价飙升双重打击。Blue Owl Capital-7%：私募信贷基金因AI disruption担忧遭历史性赎回，限额设为5%。能源股领涨：APA +4%、Exxon/Chevron/ConocoPhillips均涨约3%。Wingstop+7.73%。", source: "CNBC/Yahoo Finance/Seeking Alpha", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
+  { time: "00:20", tag: "tech", tagText: "航天", text: "🚀 Artemis II TLI地月转移点火在即！近地点提升燃烧+远地点燃烧均已成功完成。飞船厕所故障已排除，4人机组状态良好。NASA确认TLI将是阿波罗17号以来人类首次超越低地球轨道，预计北京时间4/3上午执行。全球瞩目。", source: "NASA Artemis Blog/AP", url: "https://www.nasa.gov/blogs/artemis/" },
+  { time: "00:15", tag: "macro", tagText: "宏观", text: "美国长期抵押贷款利率连续五周上升至6.46%，为近7个月新高。Novo Nordisk称Wegovy在交叉试验中优于礼来口服GLP-1。Starbucks向咖啡师发$1,200奖金促业务扭转。SpaceX秘密提交IPO申请，估值或超万亿美元。", source: "AP/CNBC/Yahoo Finance", url: "https://apnews.com/hub/business" },
+  { time: "00:10", tag: "geo", tagText: "地缘", text: "🔴 美伊冲突第35天局势升级！特朗普黄金时段演讲：誓言\"极其强硬\"打击伊朗2-3周，但未给停火路线图。伊朗累计伤亡超1,900人，黎巴嫩超1,200人，美军13人、以军10人阵亡。航母布什号+三艘驱逐舰赶赴中东。法国公开与美保持距离。", source: "AP/ISW/CNN/Politico", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
+  { time: "00:05", tag: "geo", tagText: "地缘", text: "IRGC宣布18家美企为军事目标！Apple、Google、Microsoft、NVIDIA、Meta、Tesla、Intel、Boeing均上榜。伊朗同时承诺允许菲律宾船只安全通过海峡（首个获通行承诺国家），利用选择性通行建立后战争时代海峡控制权新框架。", source: "CNBC/Wired/Manila Times", url: "https://www.cnbc.com/2026/04/01/iran-irgc-nvidia-appple-attack-threat.html" },
+  { time: "00:00", tag: "macro", tagText: "宏观", text: "全球股市4/2收盘：欧洲STOXX600 596.63（-0.18%），英FTSE +0.69%报10,436。亚洲重挫——日经-2.38%收52,463，韩Kospi-4.5%，台湾加权-1.8%。港股清明前最后交易日恒指-0.7%报25,116。4/3-4/7多数市场因复活节/清明节休市。", source: "Reuters/AP/各交易所", url: "https://www.reuters.com/markets/" },
+  { time: "23:50", tag: "macro", tagText: "宏观", text: "NVIDIA H100 GPU租赁价6个月内飙升近40%！SemiAnalysis数据确认AI算力供需失衡加剧。美国私人信贷面临更高违约率风险，软件投资敞口成压力来源。Fundstrat分析师：股市筑底过程已开始。Vertiv Holdings领跑大市值ROE增长榜。", source: "Seeking Alpha/Reuters/Bloomberg", url: "https://seekingalpha.com/market-news" },
+  { time: "23:40", tag: "macro", tagText: "宏观", text: "美国初请失业金意外降至20.2万（预期21.2万）。2月贸易逆差573亿美元低于预期620亿。但Challenger报告3月裁员增25%达60,260人，AI成最大裁员原因（15,341人）。高盛仍预计2026年两次降息（9月和12月）。", source: "CNBC/Challenger/Goldman Sachs", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
+  { time: "23:30", tag: "macro", tagText: "宏观", text: "印度Sensex暴跌超1390点（-2%）至71722，Nifty跌至22224，Bank Nifty-2.7%。BSE总市值单日蒸发超9万亿卢比。德国下调增长预测，IEA署长警告伊朗战争对全球经济构成\"重大威胁\"。邮轮航空股因油价暴跌4%。", source: "KotakNeo/AP/Reuters", url: "https://www.kotakneo.com/news/market-news/stock-market-fall-today-2-pct-sensex-nifty-2-april/" },
+  { time: "23:20", tag: "macro", tagText: "宏观", text: "特斯拉Q1交付358K环比下降14%。中国制造EV 3月销量增长8.7%。NPR深度分析：霍尔木兹海峡持续封锁对全球经济长期影响远超短期油价波动，供应链重构成本不可逆。美联储利率维持3.5%-3.75%，鲍威尔5月任期到期。", source: "Benzinga/Reuters/NPR/CNBC", url: "https://www.npr.org/2026/04/01/nx-s1-5770140/how-long-the-strait-of-hormuz-stays-closed-will-have-major-economic-implications" },
 ];
-const breakingDate = "2026年4月2日 23:45 CST";
+const breakingDate = "2026年4月3日 00:50 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:55", tag: "ai", tagText: "智能体", text: "H Company发布Holo3：OSWorld计算机使用基准测试SOTA！10B活跃参数（122B total）MoE模型，专为自主操控计算机界面而训练。通过合成导航数据+环境工厂独创训练飞轮，成本仅为GPT-5.4/Opus 4.6等大模型的零头。Hugging Face博客重点推荐。", source: "Hugging Face Blog/H Company/BardAI", url: "https://huggingface.co/blog/Hcompany/holo3" },
+  { time: "00:52", tag: "ai", tagText: "开源", text: "微软VibeVoice开源语音AI全家桶GitHub斩获32.4K Star！MIT协议，同时覆盖TTS语音合成与ASR语音识别，支持90分钟多角色播客生成。首个完整开源的前沿语音AI模型家族，打破OpenAI/ElevenLabs闭源垄断格局。", source: "GitHub/aitoolly/jimo.studio/微软研究院", url: "https://github.com/microsoft/VibeVoice" },
+  { time: "00:48", tag: "ai", tagText: "产业", text: "🔴 Meta订购10座天然气发电厂为Hyperion AI数据中心供电！电力规模足以供应整个南达科他州。Fortune/TechCrunch确认这是科技行业对可再生能源承诺的重大逆转，训练大模型需要基础负载电力而非间歇性可再生能源。环保组织或发起法律挑战。", source: "Fortune/TechCrunch/AI Business Review", url: "https://fortune.com/2026/03/27/meta-hyperion-10-gas-power-plants-louisiana-entergy/" },
   { time: "23:50", tag: "ai", tagText: "硬件", text: "拉夫堡大学发布脑启发纳米忆阻器芯片！利用纳米多孔氧化物材料物理特性实现储层计算，特定AI任务能效提升高达2000倍。已在混沌系统预测、图像识别等任务验证，论文发表于Advanced Intelligent Systems。未来有望大幅降低AI系统能耗。", source: "TechXplore/Electronics For You/Cambridge", url: "https://techxplore.com/news/2026-04-brain-chip-ai-tasks-energy.html" },
   { time: "23:48", tag: "ai", tagText: "产业", text: "Mustafa Suleyman接受The Verge专访：微软3月重组后全力追求超级智能。Suleyman称修改OpenAI合同\"解锁了微软追求超级智能的能力\"，新转录模型是\"迈向目标的重要一步\"。同时微软2029年前向新加坡投$55亿、泰国$10亿建AI基础设施。", source: "The Verge/Techmeme/GeekWire/The Register", url: "https://www.theverge.com/2026/4/2/mustafa-suleyman-microsoft-superintelligence" },
   { time: "22:38", tag: "tech", tagText: "产业", text: "🔴 IRGC威胁波及全球科技基建！18家被列为目标的美企中NVIDIA、Apple、Google、Microsoft、Meta、Tesla、Intel均有海湾地区数据中心或云基础设施。Wired/CNBC分析：若打击落实将影响全球AI训练算力供应链。中东云计算枢纽面临前所未有的安全风险。", source: "CNBC/Wired/Politico", url: "https://www.cnbc.com/2026/04/01/iran-irgc-nvidia-appple-attack-threat.html" },
@@ -1333,7 +1332,7 @@ const aiBreakingNews = [
   { time: "20:40", tag: "ai", tagText: "监管", text: "中国广电联合会演员委员会严禁AI换脸与素材魔改！明确七类禁止性行为，标注\"非商用\"亦不构成法律免责。联想启动\"AI原生公司\"战略，目标两年营收破千亿美元、AI占比超三成。", source: "AITOP100/Alldu", url: "https://www.aitop100.cn/ai-daily-2026-04-02" },
   { time: "20:30", tag: "ai", tagText: "智能体", text: "Anthropic内测Conway智能代理：支持Webhook与独立UI。蚂蚁集团联合清华开源ClawAegis强化智能体安全防护。腾讯QQ原生接入OpenClaw实现即时通讯AI化。Salesforce为Slack新增30项AI功能含可重复使用\"AI技能\"。", source: "Alldu/The Neuron/Salesforce", url: "https://www.alldu.cn/5890" },
 ];
-const aiBreakingDate = "2026年4月2日 23:50 CST";
+const aiBreakingDate = "2026年4月3日 00:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
