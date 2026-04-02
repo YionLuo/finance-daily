@@ -1,0 +1,48 @@
+name: AI Daily Report
+
+on:
+  schedule:
+    # 22:10 CST = 14:10 UTC
+    - cron: '10 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-ai-daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate AI Daily Report
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TZ: Asia/Shanghai
+        run: python scripts/update_ai.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "Y Daily Bot"
+          git config user.email "bot@yion.me"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "auto: AI daily report $(date +%Y-%m-%d)"
+            git push
+          fi

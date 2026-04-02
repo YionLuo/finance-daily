@@ -24,65 +24,104 @@ def write_html(content):
         f.write(content)
 
 
-def extract_js_array(html, var_name):
+def _find_matching_bracket(html, start_pos, open_char, close_char):
     """
-    Extract a JS array from `const varName = [...]` in the HTML.
-    Returns the parsed Python list.
+    Find the matching closing bracket, properly handling strings.
+    Returns the position of the closing bracket.
     """
-    # Match: const varName = [...];
-    pattern = rf'const\s+{var_name}\s*=\s*\['
-    match = re.search(pattern, html)
-    if not match:
-        return []
-
-    start = match.start()
-    # Find the opening bracket
-    bracket_pos = html.index('[', match.start())
-    # Count brackets to find the matching close
     depth = 0
-    i = bracket_pos
+    i = start_pos
     while i < len(html):
         ch = html[i]
-        if ch == '[':
+        if ch == open_char:
             depth += 1
-        elif ch == ']':
+        elif ch == close_char:
             depth -= 1
             if depth == 0:
-                break
-        elif ch == '"' or ch == "'":
-            # Skip string content
-            quote = ch
+                return i
+        elif ch == '"':
             i += 1
-            while i < len(html) and html[i] != quote:
+            while i < len(html) and html[i] != '"':
                 if html[i] == '\\':
-                    i += 1  # skip escaped char
+                    i += 1
+                i += 1
+        elif ch == "'":
+            i += 1
+            while i < len(html) and html[i] != "'":
+                if html[i] == '\\':
+                    i += 1
                 i += 1
         elif ch == '`':
-            # Skip template literal
             i += 1
             while i < len(html) and html[i] != '`':
                 if html[i] == '\\':
                     i += 1
                 i += 1
         i += 1
+    return -1
 
-    array_str = html[bracket_pos:i + 1]
 
-    # Convert JS object notation to JSON:
-    # 1. Unquoted keys -> quoted keys
-    # 2. Single quotes -> double quotes (in values)
-    # 3. Template literals -> regular strings
-    try:
-        json_str = js_array_to_json(array_str)
-        return json.loads(json_str)
-    except json.JSONDecodeError:
+def _parse_js_value(text):
+    """
+    Parse a raw JS text block into Python objects using node.
+    This is more reliable than regex-based parsing for complex JS.
+    """
+    import subprocess
+
+    # Use node to evaluate JS and output JSON
+    node_script = f"""
+    try {{
+        const data = {text};
+        console.log(JSON.stringify(data));
+    }} catch(e) {{
+        console.error('PARSE_ERROR: ' + e.message);
+        process.exit(1);
+    }}
+    """
+
+    node_paths = [
+        "node",
+        os.path.expanduser("~/.workbuddy/binaries/node/versions/22.12.0/bin/node"),
+    ]
+
+    for node in node_paths:
+        try:
+            result = subprocess.run(
+                [node, "-e", node_script],
+                capture_output=True, text=True, timeout=10,
+            )
+            if result.returncode == 0 and result.stdout.strip():
+                return json.loads(result.stdout.strip())
+        except (FileNotFoundError, json.JSONDecodeError, subprocess.TimeoutExpired):
+            continue
+
+    return None
+
+
+def extract_js_array(html, var_name):
+    """
+    Extract a JS array from `const varName = [...]` in the HTML.
+    Uses node for reliable parsing of complex JS (template literals, emoji, etc.).
+    """
+    pattern = rf'const\s+{var_name}\s*=\s*\['
+    match = re.search(pattern, html)
+    if not match:
         return []
+
+    bracket_pos = html.index('[', match.start())
+    end_pos = _find_matching_bracket(html, bracket_pos, '[', ']')
+    if end_pos == -1:
+        return []
+
+    array_str = html[bracket_pos:end_pos + 1]
+    result = _parse_js_value(array_str)
+    return result if isinstance(result, list) else []
 
 
 def extract_js_object(html, var_name):
     """
     Extract a JS object from `const varName = {...}` in the HTML.
-    Returns the parsed Python dict.
+    Uses node for reliable parsing.
     """
     pattern = rf'const\s+{var_name}\s*=\s*\{{'
     match = re.search(pattern, html)
@@ -90,31 +129,13 @@ def extract_js_object(html, var_name):
         return {}
 
     bracket_pos = html.index('{', match.start())
-    depth = 0
-    i = bracket_pos
-    while i < len(html):
-        ch = html[i]
-        if ch == '{':
-            depth += 1
-        elif ch == '}':
-            depth -= 1
-            if depth == 0:
-                break
-        elif ch == '"' or ch == "'":
-            quote = ch
-            i += 1
-            while i < len(html) and html[i] != quote:
-                if html[i] == '\\':
-                    i += 1
-                i += 1
-        i += 1
-
-    obj_str = html[bracket_pos:i + 1]
-    try:
-        json_str = js_object_to_json(obj_str)
-        return json.loads(json_str)
-    except json.JSONDecodeError:
+    end_pos = _find_matching_bracket(html, bracket_pos, '{', '}')
+    if end_pos == -1:
         return {}
+
+    obj_str = html[bracket_pos:end_pos + 1]
+    result = _parse_js_value(obj_str)
+    return result if isinstance(result, dict) else {}
 
 
 def extract_js_string(html, var_name):
@@ -134,41 +155,17 @@ def replace_js_array(html, var_name, new_data, indent=0):
     """
     js_str = python_to_js_array(new_data, indent)
 
-    # Find and replace the array
-    pattern = rf'(const\s+{var_name}\s*=\s*)\[[\s\S]*?\];'
-    # Use a more careful approach: find the const declaration and its array
     match = re.search(rf'const\s+{var_name}\s*=\s*\[', html)
     if not match:
         return html
 
     bracket_pos = html.index('[', match.start())
-    depth = 0
-    i = bracket_pos
-    while i < len(html):
-        ch = html[i]
-        if ch == '[':
-            depth += 1
-        elif ch == ']':
-            depth -= 1
-            if depth == 0:
-                break
-        elif ch == '"' or ch == "'":
-            quote = ch
-            i += 1
-            while i < len(html) and html[i] != quote:
-                if html[i] == '\\':
-                    i += 1
-                i += 1
-        elif ch == '`':
-            i += 1
-            while i < len(html) and html[i] != '`':
-                if html[i] == '\\':
-                    i += 1
-                i += 1
-        i += 1
+    end_bracket = _find_matching_bracket(html, bracket_pos, '[', ']')
+    if end_bracket == -1:
+        return html
 
     # Also consume the trailing semicolon
-    end = i + 1
+    end = end_bracket + 1
     if end < len(html) and html[end] == ';':
         end += 1
 
@@ -192,26 +189,11 @@ def replace_js_object(html, var_name, new_data):
         return html
 
     bracket_pos = html.index('{', match.start())
-    depth = 0
-    i = bracket_pos
-    while i < len(html):
-        ch = html[i]
-        if ch == '{':
-            depth += 1
-        elif ch == '}':
-            depth -= 1
-            if depth == 0:
-                break
-        elif ch == '"' or ch == "'":
-            quote = ch
-            i += 1
-            while i < len(html) and html[i] != quote:
-                if html[i] == '\\':
-                    i += 1
-                i += 1
-        i += 1
+    end_bracket = _find_matching_bracket(html, bracket_pos, '{', '}')
+    if end_bracket == -1:
+        return html
 
-    end = i + 1
+    end = end_bracket + 1
     if end < len(html) and html[end] == ';':
         end += 1
 
