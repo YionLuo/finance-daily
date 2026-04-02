@@ -1275,24 +1275,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 13.90,
+  score: 13.89,
   rating: "extreme fear",
-  timestamp: "2026-04-02T08:57:46+00:00",
-  previousClose: 15.70,
-  previous1Week: 14.90,
-  previous1Month: 34.30,
+  timestamp: "2026-04-02T09:29:01+00:00",
+  previousClose: 15.71,
+  previous1Week: 14.92,
+  previous1Month: 34.29,
   previous1Year: 22.60
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "16:45", tag: "macro", tagText: "宏观", text: "🔴 印度Sensex暴跌1400点（-1.9%）至71722，Nifty跌445点至22224，市值蒸发超9万亿卢比。银行Nifty-2.7%。RBI要求平掉卢比投机合约，FII持续外流。原油冲击+地缘风险叠加。", source: "KotakNeo/News18/LogicalIndian", url: "https://www.kotakneo.com/news/market-news/stock-market-fall-today-2-pct-sensex-nifty-2-april/" },
-  { time: "16:40", tag: "macro", tagText: "宏观", text: "布伦特原油继续攀升至$108.44/桶（+7.20%），WTI报$106.55。TradingEconomics数据：过去1个月涨33.22%，同比涨54.61%。伊朗战事持续+IEA警告4月供应中断将恶化。", source: "Trading Economics/IEA", url: "https://tradingeconomics.com/commodity/brent-crude-oil" },
-  { time: "16:35", tag: "crypto", tagText: "加密", text: "BTC跌至$66,600（-2.72%），ETH跌至$2,050（-3.36%）。空头主导，82%代币下跌。总市值$2.34T（-0.51%）。XRP超越BNB升至市值第3。加密恐惧指数仍处极度恐惧区间。", source: "CoinCodex/CoinMarketCap", url: "https://coincodex.com/article/83560/daily-market-update-for-april-02-2026/" },
-  { time: "16:20", tag: "tech", tagText: "航天", text: "🚀 Artemis II今日执行地月转移点火（TLI），Orion飞船将从高地球轨道（46,000英里）加速飞向月球。4名宇航员状态良好、精神极佳。如成功，飞船将打破人类最远距离记录，绕月球背面飞行后返回。", source: "NASA/ABC/CBS", url: "https://abcnews.com/Technology/live-updates/artemis-ii-live-updates-window-launch-opens-today/?id=131444306" },
-  { time: "15:30", tag: "macro", tagText: "宏观", text: "🔴 亚股全线重挫！恒指-1.3%收24965，日经225-2.4%收52463，韩国Kospi暴跌-4.5%，台湾加权-1.8%。特朗普讲话未提供停火路线图，市场避险情绪急剧升温。4/1涨幅几乎全部回吐。", source: "AP/CNN/各交易所", url: "https://apnews.com/article/stock-markets-war-oil-trump-iran-6fc90a2e50b1252cde130fc3e0ce0da3" },
-  { time: "15:00", tag: "macro", tagText: "宏观", text: "黄金亚盘时段回调-1.4%，现货跌破$4,690/盎司。MCX黄金跌近-2%。此前连涨5日，获利了结叠加美元走强压制。白银跌幅更大约-5%。", source: "GoodReturns/Kitco/NRS", url: "https://www.goodreturns.in/news/gold-rates-silver-rates-today-live-mcx-gold-silver-price-crash-24k-22k-18k-gold-prices-april-2-1499973.html" },
+  { time: "17:45", tag: "macro", tagText: "宏观", text: "🔴 黄金暴跌-3.46%至$4,619.74/盎司，日内跌幅为近期最大。TradingEconomics数据：过去1个月跌9.22%，但同比仍高48.41%。白银同步暴跌至$32.36/盎司（-$3.13），MCX白银跌超6%。避险资金转向美元。", source: "Trading Economics/NRS/GoodReturns", url: "https://naturalresourcestocks.net/silver-price-today-april-02-2026/" },
+  { time: "17:40", tag: "macro", tagText: "宏观", text: "布伦特原油从日高$108回落至$105.27/桶，WTI报$105.20。日内先冲高后遭获利回吐，一度跌至$103附近后企稳。伊朗战事第34天，霍尔木兹海峡4/6最后期限临近。", source: "Pintu/Trading Economics", url: "https://pintu.co.id/en/news/270413-world-oil-price-per-barrel-today-thursday-april-2-2026" },
+  { time: "17:30", tag: "tech", tagText: "航天", text: "🚀 Artemis II关键时刻：TLI地月转移点火定于今晚EDT 20:12（北京时间4/3 08:12）执行。如获\"绿灯\"，Orion将加速飞向月球，执行\"8字形\"绕月飞行。4名宇航员正在最后检查飞船系统。成败在此一举。", source: "Space.com/NASA", url: "https://www.space.com/space-exploration/artemis/nasa-just-launched-artemis-2-what-happens-today-could-make-or-break-the-moon-mission" },
+  { time: "17:15", tag: "macro", tagText: "宏观", text: "🔴 印度Sensex暴跌1600点至盘中低点71545（-2.17%），Nifty跌497点破22183。美伊开战以来Sensex累跌12%。PSU银行指数-3.5%领跌，卢比跌至95.22新低。RBI严打卢比投机。", source: "Outlook Money/KotakNeo/News18", url: "https://www.outlookmoney.com/invest/stock-market-today-sensex-nifty-why-stock-market-is-falling-today-trump-warning-crude-oil-price" },
+  { time: "17:00", tag: "macro", tagText: "宏观", text: "恒指收报25110（-0.73%），连跌两日。Trading Economics数据：过去1个月跌2.55%，同比仍涨9.89%。港股科技板块持续承压，小米卖空股数近5日暴增90%。", source: "Trading Economics/Investing.com", url: "https://tradingeconomics.com/hong-kong/stock-market" },
+  { time: "16:35", tag: "crypto", tagText: "加密", text: "BTC跌至$66,600（-2.72%），ETH跌至$2,050（-3.36%）。空头主导，82%代币下跌。总市值$2.34T（-0.51%）。XRP超越BNB升至市值第3。STO暴涨328%创历史新高。", source: "CoinCodex/CoinMarketCap/CryptoNews", url: "https://coincodex.com/article/83560/daily-market-update-for-april-02-2026/" },
+  { time: "15:30", tag: "macro", tagText: "宏观", text: "🔴 亚股全线重挫！日经225-2.4%收52463，韩国Kospi暴跌-4.5%，台湾加权-1.8%。特朗普讲话升级战争措辞，市场避险情绪急剧升温。4/1涨幅几乎全部回吐。", source: "AP/CNN/各交易所", url: "https://apnews.com/article/stock-markets-war-oil-trump-iran-6fc90a2e50b1252cde130fc3e0ce0da3" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "Reuters：特朗普演讲后快速停战希望破灭。特朗普誓言对伊朗发动更猛烈打击，\"2-3周完成任务\"但未给出停火路线图。油价重新飙升，此前两日的乐观情绪几乎殆尽。", source: "Reuters/MSN", url: "https://www.msn.com/en-us/news/world/hopes-dim-for-swift-end-to-iran-war-after-trump-speech-oil-prices-surge-anew/ar-AA1ZXK0M" },
   { time: "10:00", tag: "geo", tagText: "地缘", text: "🔴 特朗普全国讲话完成（美东21:00/北京9:00）：宣布将在2-3周内\"完成任务\"，称核心战略目标\"接近完成\"。威胁将伊朗\"打回石器时代\"，但未提供具体停火路线图或霍尔木兹海峡解封方案。美伊冲突进入第34天。", source: "AP/CNN/CBS/France24/ABC", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
   { time: "07:15", tag: "tech", tagText: "航天", text: "🚀 Artemis II昨日成功发射并进入高地球轨道！EDT 6:35PM（北京时间4/2 06:35）从KSC 39B升空。4名宇航员（含首位女性、首位非裔、首位非美国公民登月乘员）状态良好。53年来首次载人月球任务。", source: "AP/NASA/ABC/CBS/CNN", url: "https://apnews.com/live/artemis-ii-launch-nasa-moon-rocket" },
@@ -1305,10 +1306,9 @@ const breakingNews = [
   { time: "23:30", tag: "geo", tagText: "地缘", text: "伊朗IRGC威胁从4/1起攻击苹果、谷歌、微软、英伟达、特斯拉、波音等18家美企在中东资产，地缘风险向科技行业蔓延。", source: "Wired/CNBC/Politico", url: "https://www.cnbc.com/2026/04/01/iran-irgc-nvidia-appple-attack-threat.html" },
   { time: "23:15", tag: "macro", tagText: "宏观", text: "美国汽油均价突破$4/加仑，为2022年以来首次。伊朗战事以来涨幅超30%，柴油涨超40%。", source: "AP/CNBC/ABC", url: "https://apnews.com/article/gas-prices-4-gallon-iran-war-de8b7ccea254a1585cab86f336db57a6" },
   { time: "23:00", tag: "geo", tagText: "地缘", text: "伊朗总统佩泽希齐扬首次表态愿意结束战争，前提是获得不再遭受侵略的安全保证。美伊冲突进入第33天，和谈信号显现。", source: "CNN/NPR", url: "https://www.cnn.com/2026/04/01/world/live-news/iran-war-us-trump-oil" },
-  { time: "22:10", tag: "crypto", tagText: "加密", text: "加密恐惧与贪婪指数跌至8（极度恐惧），为近期最低。Q1为BTC自2018年以来最差季度，但4月首日市场总市值回升至2.42万亿美元。", source: "CoinGabbar/CoinCodex", url: "https://coincodex.com/article/83508/daily-market-update-for-april-01-2026/" },
   { time: "18:20", tag: "tech", tagText: "科技", text: "智谱AI（02513.HK）港股上市首日暴涨31.94%，市值超4000亿港元。MINIMAX-W收涨14.04%。\"全球大模型第一股\"引爆AI板块。", source: "港交所/中国基金报", url: "https://xueqiu.com/1315056524/382106424" },
 ];
-const breakingDate = "2026年4月2日 17:03 CST";
+const breakingDate = "2026年4月2日 17:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "23:15", tag: "tech", tagText: "产业", text: "伊朗IRGC将苹果、谷歌、微软、英伟达、特斯拉等18家美科技公司列入中东打击名单，科技企业面临前所未有地缘风险。", source: "Wired/CNBC/Politico", url: "https://www.cnbc.com/2026/04/01/iran-irgc-nvidia-appple-attack-threat.html" },
   { time: "18:20", tag: "ai", tagText: "产业", text: "智谱AI（02513.HK）港股上市首日暴涨31.94%，市值超4000亿港元。MINIMAX-W收涨14.04%。港股AI板块集体走强。", source: "港交所", url: "https://xueqiu.com/1315056524/382106424" },
 ];
-const aiBreakingDate = "2026年4月2日 17:03 CST";
+const aiBreakingDate = "2026年4月2日 17:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
