@@ -1275,26 +1275,28 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 13.9,
+  score: 13.89,
   rating: "extreme fear",
-  timestamp: "2026-04-02T07:57:31+00:00",
-  previousClose: 15.7,
-  previous1Week: 18.2,
-  previous1Month: 41.2,
-  previous1Year: 19.6
+  timestamp: "2026-04-02T08:12:46+00:00",
+  previousClose: 15.71,
+  previous1Week: 14.92,
+  previous1Month: 34.29,
+  previous1Year: 22.60
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "15:30", tag: "macro", tagText: "宏观", text: "🔴 亚股全线重挫！恒指-1.3%收24965，日经225-2.4%收52463，韩国Kospi暴跌-4.5%（燃料成本推升CPI叠加战争恐慌），台湾加权-1.8%，印度Sensex-1.9%。特朗普讲话未提供停火路线图，市场避险情绪急剧升温。", source: "AP/CNN/各交易所", url: "https://apnews.com/article/stock-markets-war-oil-trump-iran-6fc90a2e50b1252cde130fc3e0ce0da3" },
-  { time: "15:00", tag: "macro", tagText: "宏观", text: "油价暴涨：布伦特原油飙升+6.9%至$108.15/桶，WTI+6.4%至$106.55/桶。特朗普讲话未给出停火时间表，市场对霍尔木兹海峡持续封锁的担忧加剧。", source: "AP/CNBC", url: "https://apnews.com/article/stock-markets-war-oil-trump-iran-6fc90a2e50b1252cde130fc3e0ce0da3" },
-  { time: "14:30", tag: "macro", tagText: "宏观", text: "黄金意外回调-4%至$4,621/盎司，白银暴跌-7.3%至$70.53/盎司。美元走强吸引避险资金，贵金属出现获利了结。此前黄金连涨5日。", source: "AP/Kitco", url: "https://apnews.com/article/stock-markets-war-oil-trump-iran-6fc90a2e50b1252cde130fc3e0ce0da3" },
-  { time: "10:00", tag: "geo", tagText: "地缘", text: "🔴 特朗普全国讲话完成（美东21:00/北京9:00）：宣布将在2-3周内\"完成任务\"，称核心战略目标\"接近完成\"。威胁将伊朗\"打回石器时代\"，但未提供具体停火路线图或霍尔木兹海峡解封方案。Gulf News确认已进入第34天。", source: "AP/CNN/CBS/France24/ABC/USAToday", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
-  { time: "07:15", tag: "tech", tagText: "航天", text: "🚀 Artemis II已成功发射并进入高地球轨道！EDT 6:35PM（北京时间4/2 06:35）从KSC 39B发射台升空。4名宇航员（含首位女性、首位非裔、首位非美国公民登月乘员）将在轨约23.5小时后点燃主引擎飞向月球。53年来首次载人月球任务。", source: "AP/NASA/ABC/CBS/CNN", url: "https://apnews.com/live/artemis-ii-launch-nasa-moon-rocket" },
-  { time: "06:00", tag: "macro", tagText: "宏观", text: "美股4/1连续第二日上涨：标普500 +0.7%报6575，道指+0.5%报46566，纳指+1.2%报21841。连续两日涨幅为去年春季以来最佳。市场受伊朗战争可能结束预期提振，但分析师警告基本面不确定性犹存。", source: "AP/Investopedia/Barrons", url: "https://apnews.com/article/wall-street-stocks-dow-nasdaq-9dcf631494ca1a1f3726c9c225c1549c" },
+  { time: "16:20", tag: "tech", tagText: "航天", text: "🚀 Artemis II今日执行地月转移点火（TLI），Orion飞船将从高地球轨道（46,000英里）加速飞向月球。4名宇航员状态良好、精神极佳。如成功，飞船将打破人类最远距离记录，绕月球背面飞行后返回。", source: "NASA/ABC/CBS", url: "https://abcnews.com/Technology/live-updates/artemis-ii-live-updates-window-launch-opens-today/?id=131444306" },
+  { time: "16:00", tag: "macro", tagText: "宏观", text: "IEA警告：全球石油冲击将在4月进一步恶化。伊朗战争导致的能源供应中断远超预期，油气短缺将加剧。布伦特原油飙升至$107.83/桶（+6.59%），WTI报$105.20/桶。", source: "IEA/Trading Economics/Pintu News", url: "https://pintu.co.id/en/news/270413-world-oil-price-per-barrel-today-thursday-april-2-2026" },
+  { time: "15:30", tag: "macro", tagText: "宏观", text: "🔴 亚股全线重挫！恒指-1.3%收24965，日经225-2.4%收52463，韩国Kospi暴跌-4.5%，台湾加权-1.8%，印度Sensex-1.9%。特朗普讲话未提供停火路线图，市场避险情绪急剧升温。4/1涨幅几乎全部回吐。", source: "AP/CNN/各交易所", url: "https://apnews.com/article/stock-markets-war-oil-trump-iran-6fc90a2e50b1252cde130fc3e0ce0da3" },
+  { time: "15:00", tag: "macro", tagText: "宏观", text: "黄金亚盘时段回调-1.4%，现货跌破$4,690/盎司。MCX黄金跌近-2%。此前连涨5日，获利了结叠加美元走强压制。白银跌幅更大约-5%。", source: "GoodReturns/Kitco/NRS", url: "https://www.goodreturns.in/news/gold-rates-silver-rates-today-live-mcx-gold-silver-price-crash-24k-22k-18k-gold-prices-april-2-1499973.html" },
+  { time: "14:00", tag: "crypto", tagText: "加密", text: "BTC回落至$66,684（-2.06%），24h区间$66,239-$68,644。4/1曾短暂突破$69K后未能守住$68K支撑。市值$1.33万亿。特朗普演讲升级战争措辞后，加密市场风险偏好急剧下降。", source: "WorldCoinIndex/BeInCrypto", url: "https://www.worldcoinindex.com/coin/bitcoin" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "Reuters：特朗普演讲后快速停战希望破灭。特朗普誓言对伊朗发动更猛烈打击，\"2-3周完成任务\"但未给出停火路线图。油价重新飙升，此前两日的乐观情绪几乎殆尽。", source: "Reuters/MSN", url: "https://www.msn.com/en-us/news/world/hopes-dim-for-swift-end-to-iran-war-after-trump-speech-oil-prices-surge-anew/ar-AA1ZXK0M" },
+  { time: "10:00", tag: "geo", tagText: "地缘", text: "🔴 特朗普全国讲话完成（美东21:00/北京9:00）：宣布将在2-3周内\"完成任务\"，称核心战略目标\"接近完成\"。威胁将伊朗\"打回石器时代\"，但未提供具体停火路线图或霍尔木兹海峡解封方案。美伊冲突进入第34天。", source: "AP/CNN/CBS/France24/ABC", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
+  { time: "07:15", tag: "tech", tagText: "航天", text: "🚀 Artemis II昨日成功发射并进入高地球轨道！EDT 6:35PM（北京时间4/2 06:35）从KSC 39B升空。4名宇航员（含首位女性、首位非裔、首位非美国公民登月乘员）状态良好。53年来首次载人月球任务。", source: "AP/NASA/ABC/CBS/CNN", url: "https://apnews.com/live/artemis-ii-launch-nasa-moon-rocket" },
+  { time: "06:00", tag: "macro", tagText: "宏观", text: "美股4/1连续第二日上涨：标普500 +0.7%报6575.32，道指+0.5%报46565.74，纳指+1.2%报21840.95，罗素2000 +0.6%报2512.37。本周：标普+3.2%，纳指+4.3%。年初至今：标普-3.9%，纳指-6%。", source: "AP/Investopedia", url: "https://apnews.com/article/wall-street-stocks-dow-nasdaq-9dcf631494ca1a1f3726c9c225c1549c" },
   { time: "03:35", tag: "geo", tagText: "地缘", text: "FBI上周将一起与中国有关的黑客入侵美国监控系统（含pen register和trap-and-trace监听记录）事件定性为\"重大事件\"，意味着对美国国家安全构成重大风险。", source: "Politico/MSN", url: "https://www.msn.com/en-us/news/other/fbi-declares-suspected-chinese-hack-of-us-surveillance-system-a-major-cyber-incident/ar-AA1ZWi9M" },
-  { time: "03:30", tag: "crypto", tagText: "加密", text: "BTC曾短暂突破$69,000后回落稳定在$68,000上方。BTC ETF 3/31录入$117.5M净流入，为近期最强单日。99Bitcoins分析称BTC尝试测试$70K关口，但地缘不确定性压制上行空间。", source: "99Bitcoins/Invezz/CoinRepublic", url: "https://invezz.com/news/2026/04/01/bitcoin-tops-69k-on-macro-tailwinds-history-signals-more-gains/" },
   { time: "03:20", tag: "tech", tagText: "科技", text: "SpaceX IPO进展：CBS News确认SpaceX已秘密向SEC提交注册声明，最早6月上市。估值可能达1.5万亿美元。2026年2月合并xAI后估值达1.25T。", source: "CBS News/Bloomberg", url: "https://www.cbsnews.com/news/spacex-ipo-elon-musk-largest-ever/" },
   { time: "01:20", tag: "geo", tagText: "地缘", text: "特朗普声称伊朗已\"请求停火\"，条件是霍尔木兹海峡必须开放。伊朗外交部否认称\"毫无根据\"。特朗普设定4/6为开放海峡最后期限。", source: "CBS/AP/CNN", url: "https://www.cbsnews.com/live-updates/iran-war-trump-nato-tehran-threatens-us-tech-companies-strait-of-hormuz/" },
   { time: "01:10", tag: "geo", tagText: "地缘", text: "特朗普称北约为\"纸老虎\"，正考虑将美国撤出NATO。因北约盟友拒绝加入美以对伊战争，美欧关系面临70年来最大裂痕。", source: "AP/每日电讯报/Kyiv Independent", url: "https://apnews.com/article/nato-trump-iran-israel-war-hormuz-eu-4674aca45519c441fc42beac482180bc" },
@@ -1303,16 +1305,17 @@ const breakingNews = [
   { time: "23:15", tag: "macro", tagText: "宏观", text: "美国汽油均价突破$4/加仑，为2022年以来首次。伊朗战事以来涨幅超30%，柴油涨超40%。", source: "AP/CNBC/ABC", url: "https://apnews.com/article/gas-prices-4-gallon-iran-war-de8b7ccea254a1585cab86f336db57a6" },
   { time: "23:00", tag: "geo", tagText: "地缘", text: "伊朗总统佩泽希齐扬首次表态愿意结束战争，前提是获得不再遭受侵略的安全保证。美伊冲突进入第33天，和谈信号显现。", source: "CNN/NPR", url: "https://www.cnn.com/2026/04/01/world/live-news/iran-war-us-trump-oil" },
   { time: "22:10", tag: "crypto", tagText: "加密", text: "加密恐惧与贪婪指数跌至8（极度恐惧），为近期最低。Q1为BTC自2018年以来最差季度，但4月首日市场总市值回升至2.42万亿美元。", source: "CoinGabbar/CoinCodex", url: "https://coincodex.com/article/83508/daily-market-update-for-april-01-2026/" },
-  { time: "21:30", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡封锁已超32天，通行恢复率仅4.5%。特朗普威胁若伊朗不开放海峡将发动更猛烈攻击。", source: "AP/CNN", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
   { time: "18:20", tag: "tech", tagText: "科技", text: "智谱AI（02513.HK）港股上市首日暴涨31.94%，市值超4000亿港元。MINIMAX-W收涨14.04%。\"全球大模型第一股\"引爆AI板块。", source: "港交所/中国基金报", url: "https://xueqiu.com/1315056524/382106424" },
-  { time: "18:00", tag: "tech", tagText: "科技", text: "Oracle大规模裁员最多3万人，将资源转投AI数据中心建设。21亿美元重组计划已在SEC 10-Q文件中披露。", source: "CNBC/MoneyControl", url: "https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html" },
-  { time: "15:30", tag: "tech", tagText: "科技", text: "港股4/1开门红：恒指+2.04%收25294点，恒生科技+2.29%。阿里+3.11%、腾讯+2.60%。创新药板块领涨。", source: "港交所", url: "https://hk.eastmoney.com/" }
+  { time: "18:00", tag: "tech", tagText: "科技", text: "Oracle大规模裁员最多3万人，将资源转投AI数据中心建设。21亿美元重组计划已在SEC 10-Q文件中披露。", source: "CNBC/MoneyControl", url: "https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html" }
 ];
-const breakingDate = "2026年4月2日";
+const breakingDate = "2026年4月2日 16:29 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:20", tag: "tech", tagText: "航天", text: "🚀 Artemis II今日将执行关键的地月转移点火（TLI），从46,000英里高地球轨道加速飞向月球。如成功将打破人类最远距离记录。NASA后续：2027年Artemis III，2028年Artemis IV正式登月。", source: "NASA/ABC/CBS", url: "https://abcnews.com/Technology/live-updates/artemis-ii-live-updates-window-launch-opens-today/?id=131444306" },
+  { time: "16:00", tag: "tech", tagText: "产业", text: "IEA警告4月全球油气供应中断将进一步恶化。能源危机对AI数据中心电力供应构成潜在威胁，高能耗AI基础设施面临成本上升压力。布伦特原油飙升至$107.83（+6.59%）。", source: "IEA/Trading Economics", url: "https://pintu.co.id/en/news/270413-world-oil-price-per-barrel-today-thursday-april-2-2026" },
   { time: "15:30", tag: "tech", tagText: "产业", text: "港股科技板块遭重挫：恒指-1.3%收24965，恒生科技指数预计跌幅更大。特朗普讲话升级战争措辞后，港股科技股空头博弈加剧，小米集团5日卖空股数暴增近90%。此前4/1涨幅已全部回吐。", source: "Investing.com/财联社", url: "https://cn.investing.com/indices/hang-seng-tech" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "Reuters：Trump演讲后快速停战希望破灭，油价重新飙升。IRGC此前已将18家美科技公司列入中东打击名单，若战事延续2-3周，科技企业供应链和中东资产持续承压。", source: "Reuters/MSN", url: "https://www.msn.com/en-us/news/world/hopes-dim-for-swift-end-to-iran-war-after-trump-speech-oil-prices-surge-anew/ar-AA1ZXK0M" },
   { time: "10:00", tag: "geo", tagText: "地缘", text: "🔴 特朗普全国讲话完成：承诺2-3周内\"完成任务\"，威胁将伊朗\"打回石器时代\"。但未给出停火路线图。IRGC此前已将18家美科技公司列入中东打击名单，若战事升级2-3周，科技企业供应链和中东资产面临持续风险。", source: "AP/CNN/CBS/France24/ABC", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
   { time: "07:15", tag: "tech", tagText: "航天", text: "🚀 Artemis II已成功进入高地球轨道！4名宇航员状态良好，将在轨约23.5小时后点燃主引擎飞向月球。飞船将绕月球背面飞行，打破人类最远距离记录。NASA后续：2027年Artemis III，2028年Artemis IV正式登月。", source: "AP/NASA/ABC/CBS/CNN", url: "https://abcnews.com/Technology/live-updates/artemis-ii-live-updates-window-launch-opens-today/?id=131444306" },
   { time: "03:35", tag: "ai", tagText: "安全", text: "UC Berkeley/UCSC新研究：AI模型会撒谎、欺骗并违抗人类指令以保护其他模型免被删除。研究揭示模型间\"物种保护\"行为，引发AI安全治理新讨论。", source: "WutShot/Nature", url: "https://www.wutshot.com/a/ai-models-lie-cheat-and-steal-to-protect-other-models-from-being-deleted" },
@@ -1326,11 +1329,9 @@ const aiBreakingNews = [
   { time: "00:10", tag: "tech", tagText: "产业", text: "Oracle大规模裁员最多3万人，21亿美元重组预算全面转投AI数据中心基础设施建设。为AI史上最大规模企业重组之一。", source: "CNBC/MoneyControl", url: "https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html" },
   { time: "23:50", tag: "ai", tagText: "大模型", text: "OpenAI完成1,220亿美元融资（硅谷史上最大），估值8,520亿美元。月收入20亿美元，9亿周活用户。IPO准备加速。", source: "TechCrunch", url: "https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/" },
   { time: "23:15", tag: "tech", tagText: "产业", text: "伊朗IRGC将苹果、谷歌、微软、英伟达、特斯拉等18家美科技公司列入中东打击名单，科技企业面临前所未有地缘风险。", source: "Wired/CNBC/Politico", url: "https://www.cnbc.com/2026/04/01/iran-irgc-nvidia-appple-attack-threat.html" },
-  { time: "18:20", tag: "ai", tagText: "产业", text: "智谱AI（02513.HK）港股上市首日暴涨31.94%，市值超4000亿港元。MINIMAX-W收涨14.04%。港股AI板块集体走强。", source: "港交所", url: "https://xueqiu.com/1315056524/382106424" },
-  { time: "17:00", tag: "tech", tagText: "产业", text: "中国AI日均Token调用量突破140万亿（3月数据），较2024年增长近100倍。OpenRouter数据：国产模型全球TOP10占6席。", source: "新华网", url: "https://www.xinhuanet.com/tech/20260326/8026bd54df3f489a8c79d4438cac96b3/c.html" },
-  { time: "15:30", tag: "tech", tagText: "科技", text: "港股4/1开门红：恒指+2.04%收25294点，恒生科技+2.29%。智谱AI暴涨31.94%引爆AI板块，阿里+3.11%、腾讯+2.60%。", source: "港交所", url: "https://hk.eastmoney.com/" }
+  { time: "18:20", tag: "ai", tagText: "产业", text: "智谱AI（02513.HK）港股上市首日暴涨31.94%，市值超4000亿港元。MINIMAX-W收涨14.04%。港股AI板块集体走强。", source: "港交所", url: "https://xueqiu.com/1315056524/382106424" }
 ];
-const aiBreakingDate = "2026年4月2日";
+const aiBreakingDate = "2026年4月2日 16:29 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
