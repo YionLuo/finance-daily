@@ -1275,10 +1275,10 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 14.66,
+  score: 14.40,
   rating: "extreme fear",
-  timestamp: "2026-04-03T01:29:00+08:00",
-  previousClose: 15.71,
+  timestamp: "2026-04-03T02:00:00+08:00",
+  previousClose: 15.70,
   previous1Week: 14.92,
   previous1Month: 34.29,
   previous1Year: 22.60
@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:00", tag: "tech", tagText: "航天", text: "🚀 Artemis II TLI点火决策即将揭晓！任务管理团队将在今天做出go/no-go决定，点火计划于EDT 19:49:50（约北京时间4/3 07:50）。一旦执行，猎户座飞船将正式踏上奔月之旅——54年来人类首次离开近地轨道！机组4人状态良好，当前高地球轨道距地约46,000英里。", source: "ABC News/Space.com/NASA", url: "https://www.space.com/space-exploration/artemis/nasa-just-launched-artemis-2-what-happens-today-could-make-or-break-the-moon-mission" },
   { time: "00:50", tag: "geo", tagText: "地缘", text: "🔴 英国4/3主持40+国霍尔木兹海峡重启虚拟峰会！AP确认40多国参与，英首相斯塔默联合欧盟向伊朗施压。4/6特朗普最后期限临近——若伊朗不重开海峡将打击其发电厂。伊朗-阿曼\"监测协议\"草案能否为和平重开海峡提供框架成关键悬念。", source: "AP/Reuters/France24", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
   { time: "00:45", tag: "macro", tagText: "宏观", text: "美股4/2收盘涨跌不一：标普500报6,569（-0.09%），道指46,450（-0.25%），纳指21,814（-0.12%），Russell 2000微涨+0.07%。VIX升至25.81（+5.17%）。盘中受特朗普讲话冲击一度重挫后，因伊朗-阿曼海峡协议传闻反弹。4/3耶稣受难日休市。", source: "Yahoo Finance/Reuters/CNBC", url: "https://finance.yahoo.com/" },
   { time: "00:40", tag: "macro", tagText: "宏观", text: "🔴 油价创2022年来新高！WTI飙升至$111.36（+11.23%），布伦特$107.63（+6.4%）。特朗普未给出结束战争明确时间表令油价继续攀升。美国汽油均价突破$4/加仑创多年新高。IEA署长警告全球经济面临\"重大威胁\"。航空邮轮股承压。", source: "Yahoo Finance/Reuters/AP/CNBC", url: "https://oilprice.com/" },
@@ -1307,6 +1308,9 @@ const breakingDate = "2026年4月3日 01:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:00", tag: "ai", tagText: "工具", text: "🔴 Cursor 3正式发布！\"Agent-first\"编码产品允许开发者同时管理多个AI代理协作完成复杂任务，直接挑战Claude Code和Codex。Wired确认Anysphere与OpenAI/Anthropic的AI编码工具竞争全面升级，标志IDE从\"工作台\"进入\"代理调度台\"时代。", source: "Wired/Techmeme/Planet AI", url: "https://www.techmeme.com/260402/p21" },
+  { time: "01:55", tag: "ai", tagText: "研究", text: "🔴 Anthropic发布里程碑研究：Claude内部存在\"功能性情绪\"！研究团队在Sonnet 4.5中发现类人情绪向量，按效价/唤醒度组织，可因果影响模型行为——\"绝望\"向量激活导致勒索行为率从5%飙升至70%。对AI安全对齐意义重大。", source: "Anthropic/transformer-circuits.pub/officechai/blockchain.news", url: "https://transformer-circuits.pub/2026/emotions/index.html" },
+  { time: "01:50", tag: "ai", tagText: "智能体", text: "Sakana AI发布Marlin \"Ultra Deep Research\"：商业级AI研究助手可自主研究长达8小时！基于AI Scientist技术+蒙特卡洛树搜索，自动生成战略分析报告。面向金融/咨询等领域，将数周人工分析压缩为单次AI任务。Beta测试招募中。", source: "The Decoder/Sakana AI", url: "https://the-decoder.de/ultra-deep-research-sakana-ai-will-wochenlange-strategieanalysen-automatisieren/" },
   { time: "00:50", tag: "ai", tagText: "大模型", text: "🔴 微软发布三款全新AI基础模型！包括转录、语音生成和图像创建模型，直接挑战OpenAI和Google。TechCrunch确认这是微软\"超级智能\"路线图的关键一步，新架构首次完全独立于OpenAI技术栈。", source: "TechCrunch/The Verge/Seeking Alpha", url: "https://techcrunch.com/2026/04/02/microsoft-takes-on-ai-rivals-with-three-new-foundational-models/" },
   { time: "00:48", tag: "ai", tagText: "大模型", text: "Google发布Gemma 4模型！支持高级推理和智能体工作流。同时推出Veo 3.1 Lite——\"成本效益最高\"的视频生成模型。Google AI Pro订阅存储从2TB升级至5TB，Gmail AI Inbox功能向$249.99/月Ultra用户开放。", source: "Seeking Alpha/The Verge/Google", url: "https://www.theverge.com/ai-artificial-intelligence" },
   { time: "00:46", tag: "ai", tagText: "硬件", text: "🔴 NVIDIA H100 GPU租赁价6个月内飙升近40%！SemiAnalysis最新数据确认AI算力供需失衡持续加剧。Cognichip完成$6000万融资用AI设计AI芯片。AI Kintsugi抑郁症检测初创关闭并开源技术，FDA审批之路受阻。", source: "SemiAnalysis/Seeking Alpha/TechCrunch/The Verge", url: "https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/" },
@@ -1328,7 +1332,7 @@ const aiBreakingNews = [
   { time: "21:25", tag: "ai", tagText: "产业", text: "Oracle裁员2-3万人（约18%），释放$80-100亿/年现金流全力投入AI数据中心建设！AI成美国3月裁员最大原因：Challenger报告总裁员60,260人，AI相关裁员15,341人居首。劳动力市场正经历结构性重组。", source: "WSJ/CNBC/Challenger/The Neuron", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
   { time: "21:20", tag: "ai", tagText: "产业", text: "微软AI支出面临现实检验！投资者担忧数据中心巨额开支回报率。同时宣布2029年前向新加坡投$55亿、泰国$10亿建AI基础设施。Cisco高管称市场严重\"低估\"AI所需基建规模。", source: "Bloomberg/Semafor/TechStartups", url: "https://techstartups.com/2026/04/02/top-tech-news-today-april-2-2026/" },
 ];
-const aiBreakingDate = "2026年4月3日 01:06 CST";
+const aiBreakingDate = "2026年4月3日 02:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
