@@ -1314,6 +1314,8 @@ const breakingDate = "2026年4月2日 21:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:25", tag: "geo", tagText: "地缘", text: "🔴 阿联酋单日遭19枚弹道导弹+26架无人机攻击！KEZAD经济区再受波及。阿联酋为中东AI数据中心重要节点（G42/MBZUAI总部所在），持续军事威胁对AI基础设施建设信心产生冲击。自2/28以来累计191人受伤。", source: "Khaleej Times/Al Arabiya/Gulf News", url: "https://www.khaleejtimes.com/world/day-34-us-iran-israel-war-live-updates" },
+  { time: "21:22", tag: "geo", tagText: "地缘", text: "🔴 西方阵营裂痕扩大！法国马克龙公开批评美国单边发动战争。伊朗军方警告地面入侵。IRGC此前列出18家美科技公司打击名单，NATO内部分歧对科技企业全球化战略构成新变量。", source: "Fox6/NPR/Independent", url: "https://www.fox6now.com/news/live-updates-on-war-in-iran" },
   { time: "21:20", tag: "ai", tagText: "开源", text: "🔴 Cloudflare发布EmDash：AI构建的WordPress精神继承者！完全由AI编码代理在两个月内开发，TypeScript+Astro框架，核心创新是Dynamic Workers对插件沙箱隔离，解决WordPress安全痼疾。开源CMS新时代来临。", source: "Hacker News/Cloudflare", url: "https://aitoolly.com/ai-news/2026-04-02" },
   { time: "21:15", tag: "ai", tagText: "大模型", text: "Hugging Face发布Holo3：突破\"计算机使用\"边界！代表AI驱动计算机交互能力的重大里程碑，可能为自主数字任务执行设定新标准。LangChain同步宣布与NVIDIA新技术集成，Agent Builder正式更名为LangSmith Fleet。", source: "Hugging Face Blog/LangChain", url: "https://aitoolly.com/ai-news/2026-04-02" },
   { time: "21:10", tag: "ai", tagText: "产业", text: "Anthropic误发大规模删除通知！意外向GitHub数千个代码仓库发送删除通知（原意针对泄露源码），高管紧急澄清为误操作并撤回。此前Claude Code 512K行TS源码已被克隆超8000次。凸显AI公司知识产权管理难题。", source: "TechCrunch/The Hacker News", url: "https://aitoolly.com/ai-news/2026-04-02" },
@@ -1322,7 +1324,7 @@ const aiBreakingNews = [
   { time: "20:50", tag: "ai", tagText: "研究", text: "微软研究推出ADeLe框架：预测和解释AI模型在各种任务中的性能表现，增强AI系统透明度和可靠性。PaddleOCR更新支持100+种语言，致力弥合视觉文档与LLM之间的鸿沟。", source: "Microsoft Research/GitHub", url: "https://aitoolly.com/ai-news/2026-04-02" },
   { time: "20:20", tag: "ai", tagText: "大模型", text: "🔴 阿里Qwen3.6-Plus今日正式发布！千问新一代旗舰模型，原生多模态理解+推理能力大幅增强。SWE-bench智能体编程评测领先，1M上下文窗口，支持OpenAI/Anthropic API协议。聚焦\"Real World Agents\"：前端Web开发、终端操作、视频理解全面突破。百炼上架，每百万Token输入最低2元。", source: "阿里云官博/每经网/百度百科/Media OutReach", url: "https://www.alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005" },
   { time: "20:15", tag: "ai", tagText: "大模型", text: "Qwen3.6-Plus细节：采用MoE稀疏激活架构，新增preserve_thinking参数增强Agent决策一致性。QwenWebBench评测覆盖Web设计/应用/游戏/SVG等7类。MSN分析指出这标志阿里从模型研发向AI商业化的激进转型，一周内第三款模型发布。", source: "Alibaba Cloud/MSN/Constellation Research", url: "https://qwen.ai/blog?id=qwen3.6" },
-  { time: "20:10", tag: "geo", tagText: "地缘", text: "🔴 英国主持35国霍尔木兹峰会：海峡封锁对AI数据中心电力成本冲击持续。布伦特$109.23（+7.98%），WTI $113.24（+13.11%）。全球20%石油经此通过，若峰会未能达成突破，AI基建能源成本将持续攀升。", source: "AP/The National News/Trading Economics", url: "https://apnews.com/article/hormuz-strait-shipping-summit-uk-iran-ca2c6af551df98c81a39f2137e417856" },
+  { time: "20:10", tag: "geo", tagText: "地缘", text: "🔴 英国宣布4/3主持35国霍尔木兹峰会：海峡封锁对AI数据中心电力成本冲击持续。油价盘中剧烈波动WTI从$113→$107。全球20%石油经此通过，若峰会未能达成突破，AI基建能源成本将持续攀升。", source: "AP/The National News/Trading Economics", url: "https://apnews.com/article/hormuz-strait-shipping-summit-uk-iran-ca2c6af551df98c81a39f2137e417856" },
   { time: "20:05", tag: "tech", tagText: "产业", text: "🔴 AI成裁员最大原因！Challenger报告：美国3月裁员60,260人（+25%），AI相关裁员15,341人居首。Oracle此前裁3万人全力投入AI基建。劳动力市场正经历AI驱动的结构性重组。美商务部邀请企业提议出口全套AI系统。", source: "CNBC/Challenger/Benzinga", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
   { time: "19:50", tag: "tech", tagText: "产业", text: "美股科技股开盘重挫：标普500 -1.33%报6488，纳指100 -1.80%报23587。能源股逆市领涨（APA +4.3%，Exxon/Chevron +3%），科技板块与航空/邮轮板块同步下跌约4%。AI算力概念股面临成本端（能源）+需求端（经济放缓）双重压力。", source: "CNBC/Barrons/Trading Economics", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
   { time: "19:30", tag: "tech", tagText: "航天", text: "🚀 Artemis II厕所故障已排除！机组正准备近地点提升燃烧，随后执行TLI飞向月球（EDT 20:12）。NASA下午go/no-go会议进行中。如TLI成功，将是阿波罗17号以来人类首次超越低地球轨道。", source: "NASA/Space.com/Mint", url: "https://www.space.com/space-exploration/artemis/nasa-just-launched-artemis-2-what-happens-today-could-make-or-break-the-moon-mission" },
@@ -1338,7 +1340,7 @@ const aiBreakingNews = [
   { time: "03:15", tag: "ai", tagText: "大模型", text: "腾讯混元3.0+DeepSeek V4均计划4月发布，中国大模型新一轮军备竞赛即将开启。混元3.0为前OpenAI研究员加盟后首款旗舰，微信团队同步自研智能体应用。", source: "财新周刊/Dataconomy/搜狐", url: "https://dataconomy.com/2026/03/16/deepseek-v4-and-tencents-new-hunyuan-model-to-launch-in-april/" },
   { time: "03:10", tag: "tech", tagText: "产业", text: "SpaceX IPO最新：已秘密提交SEC注册声明，估值可能达1.5-1.75万亿美元，最早6月上市。Starlink 920万订户+xAI整合资产。Liberation Day关税一周年：美国制造业失去10万岗位，半导体出口管制叠加关税成双重压力。", source: "CNBC/CBS/Fortune/Bloomberg/Tax Foundation", url: "https://www.cbsnews.com/news/spacex-ipo-elon-musk-largest-ever/" },
 ];
-const aiBreakingDate = "2026年4月2日 21:20 CST";
+const aiBreakingDate = "2026年4月2日 21:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
