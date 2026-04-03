@@ -1277,7 +1277,7 @@
 const fearGreedData = {
   score: 15,
   rating: "extreme fear",
-  timestamp: "2026-04-03T07:50:00+08:00",
+  timestamp: "2026-04-03T08:55:00+08:00",
   previousClose: 16,
   previous1Week: 15,
   previous1Month: 34,
@@ -1287,27 +1287,16 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "07:45", tag: "tech", tagText: "航天", text: "🚀 Artemis II TLI点火倒计时最后阶段！ICPS发动机将于07:49 CST（EDT 19:49）点火5分49秒，加速猎户座至逃逸速度（+388m/s）。飞船距地约41,000公里。指令长Wiseman：\"我们正快速落向地球，期待加速飞向月球。\"52年来人类首次离开地球轨道的历史时刻即将到来！", source: "NASA/Space.com/ABC News", url: "https://www.space.com/news/live/artemis-2-nasa-moon-mission-launch-updates-april-2-2026" },
-  { time: "07:30", tag: "geo", tagText: "地缘", text: "🔴 CENTCOM否认伊朗击落美军战斗机！声明称所有飞机安全，指控伊朗\"多次发布虚假战况\"。伊朗IRGC声称开战以来已击落154架美军无人机。伊朗外长回应特朗普炸桥言论：\"摧毁桥梁不会迫使伊朗投降\"。以美联军继续空袭德黑兰附近目标，包括桥梁和巴斯德研究所。", source: "CBS News/CENTCOM/AP/Reuters", url: "https://www.cbsnews.com/live-updates/iran-war-trump-oil-prices-israel-iranian-president-letter-american-people/" },
+  { time: "08:35", tag: "geo", tagText: "地缘", text: "🔴 联合国安理会今天将投票霍尔木兹海峡决议！巴林提案授权各国使用\"一切必要防御手段\"确保海峡通行安全。约2,000艘船只和2万船员仍受困。俄罗斯称海峡对俄船只\"仍保持开放\"。法国马克龙坚持武力重开\"不现实\"。投票结果将决定国际社会下一步行动。", source: "CNN/AP/Reuters", url: "https://www.cnn.com/2026/04/02/world/live-news/iran-war-us-trump-oil-intl-hnk" },
+  { time: "08:30", tag: "geo", tagText: "地缘", text: "🔴 IRGC声称攻击巴林AWS数据中心和迪拜Oracle数据中心！以报复近期\"暗杀\"行动。巴林官方谴责这是\"对民用基础设施的攻击\"。此前IRGC已将Apple/Google/NVIDIA/Microsoft/Meta等18家美企列为军事目标。中东云计算基础设施安全风险空前升级。", source: "CNN/巴林官方", url: "https://www.cnn.com/2026/04/02/world/live-news/iran-war-us-trump-oil-intl-hnk" },
+  { time: "08:25", tag: "tech", tagText: "航天", text: "🚀 Artemis II TLI点火成功！52年来人类首次离开地球轨道飞向月球！猎户座飞船利用ESA服务舱主发动机完成约6分钟TLI点火，进入自由返回轨道。宇航员Hansen：\"机组感觉非常好。\"第2天机组已唤醒，正在25万英里深空旅途中。舱内温度偏低，机组取出额外衣物保暖。", source: "NASA/ABC News/Mashable/CNN/Space.com", url: "https://abcnews.com/Technology/live-updates/artemis-ii-live-updates-window-launch-opens-today/?id=131444306" },
+  { time: "08:20", tag: "geo", tagText: "地缘", text: "伊朗战争第36天最新伤亡统计：伊朗超2,000人死亡、21,000人受伤，黎巴嫩超100万人流离失所，美军13人、以军10人阵亡。美情报评估：尽管猛烈轰炸，伊朗约一半导弹发射装置仍完好，数千架攻击无人机仍在库存，仍具\"造成绝对破坏\"能力。美以联军轰炸德黑兰外Karaj大桥致8死95伤。", source: "CNN/AP/ISW/Reuters", url: "https://www.cnn.com/2026/04/02/world/live-news/iran-war-us-trump-oil-intl-hnk" },
+  { time: "07:30", tag: "geo", tagText: "地缘", text: "CENTCOM否认伊朗击落美军战斗机，声明称所有飞机安全，指控伊朗\"多次发布虚假战况\"。IRGC声称开战以来已击落154架美军无人机。伊朗外长回应特朗普炸桥言论：\"摧毁桥梁不会迫使伊朗投降。\"胡塞武装向特拉维夫发射弹道导弹。", source: "CBS News/CENTCOM/AP/Reuters", url: "https://www.cbsnews.com/live-updates/iran-war-trump-oil-prices-israel-iranian-president-letter-american-people/" },
   { time: "07:25", tag: "crypto", tagText: "加密", text: "🔴 Polymarket极度看跌加密！预测4月BTC跌破$65K概率93%，跌破$60K概率54%；ETH跌破$2K概率96%。SOL逆势看涨——$80以上概率87%。当前BTC $66,246（-3.31%），ETH $2,064（-4.06%）。地缘冲突+油价暴涨推动风险资产全面承压，CMC恐贪指数8（极度恐惧）。", source: "CoinAlertNews/Polymarket/CoinMarketCap", url: "https://coinalertnews.com/news/2026/04/02/polymarket-april-predictions-bitcoin-ethereum" },
-  { time: "07:20", tag: "geo", tagText: "地缘", text: "伊朗总统佩泽什基安发公开信致美国民众！质问\"美国优先是否仍是你们的国策\"，称攻击伊朗民用基础设施构成战争罪。GCC秘书长在安理会呼吁授权使用武力保护霍尔木兹。特朗普称确保海峡畅通\"不是美国的工作\"。中国外交部：美以非法军事行动是海峡航行中断\"根本原因\"。", source: "CBS News/Reuters/中国外交部", url: "https://www.cbsnews.com/live-updates/iran-war-trump-oil-prices-israel-iranian-president-letter-american-people/" },
+  { time: "07:20", tag: "geo", tagText: "地缘", text: "伊朗总统佩泽什基安发公开信致美国民众！质问\"美国优先是否仍是你们的国策\"，称攻击伊朗民用基础设施构成战争罪。GCC秘书长在安理会呼吁授权使用武力保护霍尔木兹。特朗普称确保海峡畅通\"不是美国的工作\"。阿根廷下令伊朗大使馆临时代办48h内离境。", source: "CBS News/Reuters/CNN", url: "https://www.cbsnews.com/live-updates/iran-war-trump-oil-prices-israel-iranian-president-letter-american-people/" },
   { time: "07:15", tag: "geo", tagText: "地缘", text: "🔴 美国防部长Hegseth要求陆军参谋长Randy George立即退休！伊朗战争进入第5周之际的重大军事人事变动，George自2023年8月起任职。这是Hegseth一系列高层解职行动的最新一起。CNN/AP/Reuters/Politico/Fox News/The Hill等8+独立来源确认。", source: "CNN/AP/Reuters/Politico/Fox News", url: "https://apnews.com/article/pentagon-hegseth-army-chief-iran-war-c6707d1d3a95ea5f679e0f9a5c5012e7" },
-  { time: "06:00", tag: "macro", tagText: "港股", text: "🔴 4/2北水爆买港股198亿港元！盈富基金净买入85.46亿，恒生国企25.94亿，小米+11.15亿，腾讯+6.57亿，吉利+4.27亿。净卖出中海油4.62亿、阿里-W 2.07亿（连续6日抛售）。资金在清明/复活节长假前大幅加仓港股ETF和科技龙头。", source: "格隆汇/金融界/雪球/FX168", url: "https://stock.jrj.com.cn/2026/04/02203756606468.shtml" },
-  { time: "05:05", tag: "macro", tagText: "宏观", text: "🔴 3月非农就业报告今天8:30 ET发布但美股因Good Friday休市！共识预期新增5.9万（2月为-9.2万），失业率料持稳4.4%。圣路易斯联储：维持就业稳定仅需1.5万-8.7万。首份反映伊朗战争数据。4/6周一开盘将剧烈波动。高盛/穆迪上调衰退概率，EY预测40%。", source: "BLS/CNBC/StLouisFed/EY-Parthenon", url: "https://www.cnbc.com/2026/04/02/the-march-jobs-report-will-be-released-on-friday-heres-what-to-expect.html" },
-  { time: "05:00", tag: "macro", tagText: "宏观", text: "🔴 Good Friday全球主要市场休市！美股/伦敦/法兰克福/港股/A股（清明节）均关闭。4/2美股收盘：标普500报6,582.69（+0.11%），道指46,504.67（-0.13%），纳指21,879.18（+0.18%）。盘中因特朗普伊朗讲话一度暴跌600+点后V型反弹。本周标普+3.4%，纳指+4.4%。下一交易日4/6周一。", source: "NYSE/Nasdaq/CNBC", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-
-  { time: "04:50", tag: "geo", tagText: "地缘", text: "🔴 英国霍尔木兹峰会结束但无具体措施！40+国参与虚拟会议（美国缺席），英外相Cooper指控伊朗\"挟持全球经济\"。约2,000艘船只和2万船员仍受困。会后将安排军事规划会议讨论扫雷+航运保护。马克龙称武力重开\"不现实\"。4/6特朗普最后期限迫近。", source: "AP/Reuters/US News", url: "https://apnews.com/article/hormuz-strait-shipping-summit-uk-iran-ca2c6af551df98c81a39f2137e417856" },
-  { time: "04:45", tag: "macro", tagText: "宏观", text: "🔴 油价4/2暴涨创2022年来新高！WTI $111.54（+11.41%），布伦特$109.03（+7.78%）。特朗普电视讲话誓言2-3周内\"极其强硬\"打击伊朗。盘中伊朗-阿曼起草霍尔木兹监控协议消息令油价从高位回落。美国汽油均价突破$4/加仑。IEA署长警告全球经济面临\"重大威胁\"。", source: "CNBC/Reuters/AP", url: "https://www.cnbc.com/2026/04/02/oil-prices-today-wti-brent-trump-speech-iran-war-.html" },
-  { time: "04:40", tag: "crypto", tagText: "加密", text: "BTC跌至$66,246（-3.31%），ETH $2,066（-4.06%）。加密市场受油价暴涨+地缘风险加剧拖累。Drift Protocol遭$2.85亿DeFi黑客攻击（2026年最大），DRIFT暴跌40%+，SOL跌超7%。Coinbase信托牌照获批。CMC恐贪指数8（极度恐惧）。BTC较去年$83K高位回落20%。", source: "CoinMarketCap/Fortune/TechCrunch", url: "https://coinmarketcap.com/" },
-  { time: "04:35", tag: "macro", tagText: "宏观", text: "🔴 黄金$4,671.38（-2.38%），月跌幅8.2%但年同比仍涨50%！白银$70.97（-5.48%）。投资者恐慌性持现。但机构极度看涨：摩根大通年底目标$6,300、瑞银$6,200、富国$6,100-$6,300。铜-1.10%至$1,156。", source: "TradingEconomics/Reuters/JPM/UBS", url: "https://www.reuters.com/markets/" },
-  { time: "04:30", tag: "macro", tagText: "宏观", text: "4/2美股V型大反转！盘中道指暴跌600+点（-1.4%），标普一度-1.5%，纳指-2.2%。特朗普\"2-3周强硬打击伊朗\"讲话引发恐慌。但伊朗-阿曼霍尔木兹监控协议消息令市场收复大部分失地。收盘标普+0.11%，纳指+0.18%，道指仅-0.13%。Tesla -5%（Q1交付逊色），Coinbase -1%。本周标普+3.4%。", source: "CNBC/AP/Reuters", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "04:25", tag: "macro", tagText: "宏观", text: "4/2个股焦点：Tesla -5%（Q1交付358K环比-14%，Wedbush称\"令人失望\"）！Coinbase获OCC信托银行有条件批准扩展稳定币业务。AI最大裁员原因——Challenger报告3月裁员达60,260人中AI占15,341人。SpaceX秘密提交IPO估值或超$1.25万亿。", source: "CNBC/AP/Challenger/Fortune", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "04:20", tag: "macro", tagText: "宏观", text: "ISM制造业3月52.7（好于预期52.4，扩张区间），但物价支付指数飙升至78.3显示战争通胀压力。初请失业金降至20.2万（好于预期21.2万）。ADP 3月私营就业+6.2万。2月贸易逆差573亿美元低于预期。高盛仍预计2026年两次降息（9月和12月）。", source: "ISM/ADP/CNBC/Goldman Sachs", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "00:10", tag: "geo", tagText: "地缘", text: "🔴 美伊冲突第35天局势升级！特朗普黄金时段演讲：誓言\"极其强硬\"打击伊朗2-3周，但未给停火路线图。伊朗累计伤亡超1,900人，黎巴嫩超1,200人，美军13人、以军10人阵亡。航母布什号+三艘驱逐舰赶赴中东。法国公开与美保持距离。", source: "AP/ISW/CNN/Politico", url: "https://apnews.com/article/iran-us-israel-trump-lebanon-april-1-2026-19cf516c2d2c614eb182dbad7a6592ef" },
-  { time: "00:05", tag: "geo", tagText: "地缘", text: "IRGC宣布18家美企为军事目标！Apple、Google、Microsoft、NVIDIA、Meta、Tesla、Intel、Boeing均上榜。伊朗同时承诺允许菲律宾船只安全通过海峡（首个获通行承诺国家），利用选择性通行建立后战争时代海峡控制权新框架。", source: "CNBC/Wired/Manila Times", url: "https://www.cnbc.com/2026/04/01/iran-irgc-nvidia-appple-attack-threat.html" },
-  { time: "00:00", tag: "macro", tagText: "宏观", text: "全球股市4/2收盘：欧洲STOXX600 596.63（-0.18%），英FTSE +0.69%报10,436。亚洲重挫——日经-2.38%收52,463，韩Kospi-4.5%，台湾加权-1.8%。港股清明前最后交易日恒指-0.7%报25,116。4/3-4/7多数市场因复活节/清明节休市。", source: "Reuters/AP/各交易所", url: "https://www.reuters.com/markets/" },
 ];
-const breakingDate = "2026年4月3日 07:47 CST";
+const breakingDate = "2026年4月3日 08:37 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
