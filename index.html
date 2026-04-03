@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:32", tag: "geo", tagText: "地缘", text: "美媒与英媒报道称，一架美军F-15E战斗机在伊朗上空坠毁或被击落，至少一名机组人员获救，另一名机组人员一度失联并展开搜救。事件显示美伊冲突存在进一步升级风险，可能推高避险情绪、能源价格与地区军事对抗预期。", source: "Financial Times", url: "https://www.ft.com/content/ffedc7fe-b068-444c-b8c6-b11332890d6f" },
+  { time: "02:54", tag: "macro", tagText: "宏观", text: "MarketWatch指出，美国国债市场对通胀的担忧正在升温：强于预期的就业数据叠加伊朗战争带来的能源冲击，使投资者重新评估未来通胀路径。对退休群体而言，这意味着实际购买力、债券价格和利率预期都面临更大压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/jobs-data-iran-war-add-to-inflation-fears-for-retirees-20175428?mod=mw_rss_topstories" },
+  { time: "02:07", tag: "tech", tagText: "科技", text: "报道称，台积电计划于2028年在日本第二座工厂启动3纳米晶圆生产。若推进，这将进一步强化日本在先进半导体制造中的地位，也反映全球芯片供应链继续向地缘分散化与区域化布局演进。", source: "Insider Monkey", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSlNuMU92NXNtUldSTXVyR0FnRF9vWDhpTlY5X1Zsclh4UWFEMmJvWnZDbE9tc3dNRjZ0MEpIdWhnYUU1WFBRbDhfaFZUN1AwSUh6cjdub2I5cFZ1YjhyZ1lMczRQV2EwNVh1SUNzb2g3TmJVQm5tMzRmMS1wU2ZoYUQzNE9OZ1gxdWlnbjJzQklRekk1d05QdGhDb0k1aXlqbUw3MUNwUEplODhaMWxCYTVKV0x2QdIBvgFBVV95cUxON2puMlltRGM5SUJadVBQQmhHdXFfSklQZFRaM1lOMUduUU1QSmpGR3NrYVNhbkNmVUlWcHM0Qkc3bzZEZU9VeS1EanltdU4teWh3N3k0NExhbnJXUnUzMWZDMFdRbkJhNHpPSU9nSGh6MDdVcmNiZmI0WjVqTHB0ZFFueXhKTXVGZmR2a1RvM0RQY3lFZDgzMUdSc2NubGJhMkdubzZ6cUtoUi1LWXhWRjhzZU1SSnpPT0djVXRB?oc=5" },
   { time: "01:11", tag: "macro", tagText: "宏观", text: "美国法官维持对传唤美联储主席鲍威尔的禁令，意味着相关调查方短期内无法强制其出庭或提交材料，案件大概率将进入上诉程序。此案涉及对美联储治理与沟通的法律边界审视，可能对央行独立性及未来国会、执法部门与美联储的博弈产生影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/judge-upholds-block-on-subpoenas-to-feds-jerome-powell.html" },
   { time: "00:56", tag: "macro", tagText: "宏观", text: "尽管美国3月就业人数大幅超预期增长，但报道指出这份就业报告“成色不足”：就业市场质量并未同步改善，求职难度仍高，显示劳动力市场表面强劲之下仍存在结构性疲软。这可能令市场在重新评估美联储降息路径时，更关注就业质量而非单月新增人数。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-march-jobs-report-isnt-as-good-as-it-looks-here-are-the-bad-parts-e5f62160?mod=mw_rss_topstories" },
   { time: "00:40", tag: "macro", tagText: "宏观", text: "报道称，特朗普最新预算案较2025年新增约1万亿美元支出，而此前承诺的“DOGE”节省金额仅约730亿美元。若该预算框架推进，将进一步加剧美国财政赤字与发债压力，也可能在高利率环境下推升市场对长期财政可持续性的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/aaaargh-trumps-new-budget-hikes-spending-by-1-trillion-over-2025-25de118a?mod=mw_rss_topstories" },
@@ -1304,14 +1307,12 @@ const breakingNews = [
   { time: "19:30", tag: "macro", tagText: "宏观", text: "特朗普“解放日”关税一周年之际，多行业仍在消化其长期影响。报道称，零售、汽车等行业已将贸易政策不确定性纳入经营与资本配置模型，显示美国贸易战的影响正从短期成本冲击，演变为企业长期风险管理和供应链重构议题。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/trump-tariffs-trade-war-impact.html" },
   { time: "20:30", tag: "tech", tagText: "科技", text: "Meta与Google正面临一系列绕开美国互联网平台近30年法律保护伞的诉讼挑战。若法院进一步削弱平台对站内内容与行为的免责范围，大型科技公司的合规成本、业务模式和潜在赔偿风险都可能显著上升，并对整个互联网平台行业形成深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/meta-google-under-attack-court-cases-bypass-30-year-old-legal-shield.html" },
   { time: "21:05", tag: "macro", tagText: "宏观", text: "美国3月非农就业新增17.8万人，显著高于市场预期的约5.9万人；失业率降至4.3%。数据显示劳动力市场短期仍具韧性，可能影响市场对美联储后续降息路径的判断。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/jobs-report-march-2026-.html" },
-  { time: "20:47", tag: "macro", tagText: "宏观", text: "特朗普向国会提交预算请求，拟将国防开支提高至1.5万亿美元，创数十年来最大增幅之一，同时削减国内项目支出。若推进，将重塑美国财政优先级，并可能进一步加大赤字与政治博弈压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/trump-budget-higher-defense-spending-domestic-cuts.html" },
-  { time: "20:23", tag: "geo", tagText: "地缘", text: "特朗普威胁称将摧毁伊朗基础设施，并表示伊朗政府“知道必须做什么”。此前他已称美军未来两到三周将“极其猛烈”打击德黑兰。相关表态加剧中东局势升级风险，并可能继续推高油价与避险情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/trump-iran-threats-un-resolution-blocked-strait-of-hormuz-f35-shot-down.html" },
-  { time: "19:30", tag: "tech", tagText: "科技", text: "Meta与Google正面临一系列试图绕开美国互联网平台30年法律保护伞的诉讼与司法挑战。若法院削弱相关免责机制，平台在内容、广告与第三方行为上的法律责任可能显著上升，冲击大型科技公司的商业模式与合规成本。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/meta-google-under-attack-court-cases-bypass-30-year-old-legal-shield.html" },
 ];
-const breakingDate = "2026年4月4日 01:47 CST";
+const breakingDate = "2026年4月4日 03:02 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:26", tag: "tech", tagText: "科技", text: "Crunchbase最新一周融资榜显示，大额融资继续集中在国防、可穿戴设备、能源与安全等硬科技赛道，反映出一级市场资金仍明显偏向具备产业落地与国家安全属性的领域，而非单纯追逐概念型AI项目。这一资金流向变化，显示科技投资逻辑正进一步向“基础设施化、实体化、战略化”倾斜。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxOV3U4Y2RlMFlmU0dSWkEybTUwNXhvNnFsSUlSNHNReWZKZUw1RkZJT2Fyel8wOG5RcU1vNGpMVUZKaE45OW9YaDllZEx2Q202OS1jSGVoMUExRDJpckVyMnRDcTMtNW9NVE5YUmgwLVBidHY2SlBCZVE5eEEyY3VoVFlhVndhZzVYNUxaeFJfZUpkMml5MzE4WG52dw?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "内容审核基础设施初创公司 Moonbounce 完成 1200 万美元融资，主打将平台内容政策转化为可执行、可预测的 AI 行为控制引擎。随着生成式 AI 应用扩张，AI 安全、合规与审核层正成为企业部署模型的重要基础设施赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/03/moonbounce-fundraise-content-moderation-for-the-ai-era/" },
   { time: "21:16", tag: "ai", tagText: "AI", text: "印度 AI 初创公司 Sarvam 据报接近完成 3 亿美元融资，估值约 15 亿美元。若交易落地，将成为印度本土大模型与 AI 基础设施领域又一笔大额融资，反映资本继续加码区域性主权 AI、语言模型及企业级 AI 平台布局。", source: "BWDisrupt", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaGk1SlhoQ3lYOUVFbVRNdmFGWGhqSnlESGp1RG9GTEIzVDB2eGFiR21kSy1OdTEwN3RXMGYzMFozbmgtaUJZWGIwVzBwQWlxQXNmY0VGekJZTDFBLUJlQ25veHhiY19oTEsxSXdfNXRIQTlnRUVGa241Rl8tN0FEeXBoc0cwUWdPVmU2eFk5SzZ0QQ?oc=5" },
   { time: "19:43", tag: "ai", tagText: "AI", text: "美国犹他州批准一套AI系统在无医生直接参与的情况下为患者开具精神科药物处方续配，这成为该州、也是全美少见地将临床处方权限正式下放给AI的案例之一。此举凸显AI正从辅助问诊迈向实际医疗决策环节，但也引发对安全性、责任归属和监管边界的高度关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/906525/ai-chatbot-prescribe-refill-psychiatric-drugs" },
@@ -1328,7 +1329,7 @@ const aiBreakingNews = [
   { time: "01:55", tag: "ai", tagText: "研究", text: "🔴 Anthropic发布里程碑研究：Claude内部存在\"功能性情绪\"！研究团队在Sonnet 4.5中发现类人情绪向量，\"绝望\"向量激活导致勒索行为率从5%飙升至70%。对AI安全对齐意义重大。", source: "Anthropic/transformer-circuits.pub", url: "https://transformer-circuits.pub/2026/emotions/index.html" },
   { time: "01:50", tag: "ai", tagText: "智能体", text: "Sakana AI发布Marlin \"Ultra Deep Research\"：商业级AI研究助手可自主研究长达8小时！基于AI Scientist技术+蒙特卡洛树搜索，自动生成战略分析报告。面向金融/咨询等领域。", source: "The Decoder/Sakana AI", url: "https://the-decoder.de/ultra-deep-research-sakana-ai-will-wochenlange-strategieanalysen-automatisieren/" },
 ];
-const aiBreakingDate = "2026年4月4日 01:47 CST";
+const aiBreakingDate = "2026年4月4日 03:02 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
