@@ -77,7 +77,11 @@ def get_openai_client():
     if not api_key:
         print("WARNING: OPENAI_API_KEY not set. Using cleanup-only mode.")
         return None
-    return OpenAI(api_key=api_key)
+    base_url = os.environ.get("OPENAI_BASE_URL")
+    kwargs = {"api_key": api_key}
+    if base_url:
+        kwargs["base_url"] = base_url
+    return OpenAI(**kwargs)
 
 
 def search_news_via_llm(client, queries, category):
@@ -176,7 +180,7 @@ Return ONLY the JSON array, no markdown fencing.
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-5.1-low",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.0,
             max_tokens=4000,

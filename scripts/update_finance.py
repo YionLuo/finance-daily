@@ -51,7 +51,11 @@ def get_openai_client():
     if not api_key:
         print("ERROR: OPENAI_API_KEY is required for daily report generation.")
         sys.exit(1)
-    return OpenAI(api_key=api_key)
+    base_url = os.environ.get("OPENAI_BASE_URL")
+    kwargs = {"api_key": api_key}
+    if base_url:
+        kwargs["base_url"] = base_url
+    return OpenAI(**kwargs)
 
 
 def fetch_fear_greed():
@@ -160,7 +164,7 @@ Return ONLY the JSON object. No markdown fencing.
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-5.1",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.2,
             max_tokens=8000,

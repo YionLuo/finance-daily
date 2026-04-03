@@ -35,6 +35,7 @@ jobs:
       - name: Generate AI Daily Report
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           TZ: Asia/Shanghai
         run: python scripts/update_ai.py
 
