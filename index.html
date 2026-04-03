@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:40", tag: "ai", tagText: "AI", text: "OpenAI宣布管理层调整：Fidji Simo因健康原因暂时休假，OpenAI总裁Greg Brockman将在其缺席期间负责产品工作。作为OpenAI核心高管之一，Simo暂离岗位可能影响公司产品推进与商业化节奏，也反映出AI龙头在高速扩张期的人事稳定性风险。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/openai-fidji-simo-medical-leave-executive-changes.html" },
+  { time: "04:53", tag: "macro", tagText: "宏观", text: "路透指出，私人信贷行业的压力虽未到系统性失控阶段，但潜在风险不容忽视。若融资环境继续收紧、违约上升或赎回压力扩大，私人信贷可能成为金融体系中的脆弱环节。随着传统银行收缩部分放贷业务，私人信贷体量上升，其风险外溢性正受到市场更高关注。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNGQ3OXNUcENwVE9OS2JtMlJfeEpUNlctTlRiMk4zdHotSlRpOVhUdnlEbnhaSms4T3BNWXdEOVp6c0k0b0FlUTUyMlN4VzNWTWhqQjVnV0N4MUxoaFFXaTlmWUUwTTZaQUprdGE1WjVKV3AyT0NZT2VKaG5WU1V5Q3JsX1hxWDA1TWppZGNQUEQ4MFprLS1JWnU3S05pR0JUZWlqM3luZHFUU1BaOEdvOWVNTnBxOU41bGc?oc=5" },
+  { time: "05:41", tag: "macro", tagText: "宏观", text: "报道称，得州油气行业正在出现裁员。作为美国能源重镇，得州油气就业变化不仅影响地区经济，也可视作能源企业资本开支、钻探活动和盈利预期的前瞻信号。在当前油价波动加剧、地缘冲突推高能源不确定性的背景下，行业用工走弱值得关注。", source: "The Center Square", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxPYVVGT1ZLaTJfS0FpdkE4eXF3azZpeU5yM1pUdk1LNE5HWDJ6VUV4MFM1a05FX2cwY2oyZjM3M2NFLXp0RllsUTFSR2pUdnVQdzItcXJqZzBYSGxYVzZFMzI3emFsdmFJRzlVd3JmZWg2Zm5kUDlua3oyUDFuS0NXcnd1R1JpRGJ3cmRLZ2d3SXTSAZYBQVVfeXFMTTNCVTV6UVlpZHhXR00xdUdQWkhQOGx6SV8tb3NsLU9hWEZxWUd0aEdhZ1g5V24xbFVfZEFFZ1BRYUp2UjZfM0RHV0NSUDBNZ3VORVkyYVczVGNNRjN3RE8tSlFmMHZXdmZiNHl4UTgwX3B6cV81eE1vZ3dJM2JuX1Z2RktxOFRpWE1xdGJkbHpNZHYzUWh3?oc=5" },
   { time: "05:15", tag: "macro", tagText: "宏观", text: "美国医保优势计划（Medicare Advantage）在癌症治疗上的网络覆盖问题再受关注。报道指出，一些保险公司会在年度中途将特定癌症中心移出网络，导致患者面临治疗中断、转院或自付成本大增的风险。这反映出美国商业化医保在重大疾病保障上的结构性缺陷，可能进一步推高家庭医疗负担，并加剧对医保监管改革的压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-is-an-overlooked-catastrophe-why-do-so-many-hospitals-not-accept-medicare-advantage-for-cancer-patients-130c1a13?mod=mw_rss_topstories" },
   { time: "03:34", tag: "macro", tagText: "宏观", text: "美国住房市场议价权正开始向买方倾斜。报道指出，尽管按揭利率和房价仍处高位，但房源增加、挂牌周期拉长以及卖家让步空间扩大，正让购房者在价格、维修补贴和成交条件上获得更多谈判筹码。这表明美国房地产市场正在从前期卖方强势逐步转向更平衡阶段，对后续房价走势和住宅交易活跃度具有指示意义。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buyers-finally-have-leverage-in-the-housing-market-here-are-3-smart-ways-to-use-it-49abcfa3?mod=mw_rss_topstories" },
   { time: "04:21", tag: "ai", tagText: "AI", text: "OpenAI表示，Fidji Simo因健康原因暂时休医疗假，期间由总裁Greg Brockman负责产品事务。此次高层调整发生在OpenAI持续推进商业化与产品整合之际，可能影响其短期管理分工与产品决策节奏。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/openai-fidji-simo-medical-leave-executive-changes.html" },
@@ -1304,14 +1307,12 @@ const breakingNews = [
   { time: "23:35", tag: "macro", tagText: "宏观", text: "美国汽油价格升至每加仑4美元后，消费者负担感明显加重。报道指出，在伊朗战争推升能源价格之际，油价上涨正通过通胀预期与消费情绪影响美国家庭支出，这将增加美联储与白宫面临的经济压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/were-a-wildly-fickle-bunch-gas-prices-hit-4-a-gallon-why-do-i-feel-like-im-the-only-american-who-is-genuinely-upset-7b3f2216?mod=mw_rss_topstories" },
   { time: "23:26", tag: "geo", tagText: "地缘", text: "美国一架战斗机在伊朗境内坠毁，美方已启动搜救行动寻找机组人员。报道称，伊朗媒体发布了残骸照片，德黑兰方面还悬赏追捕机组成员。事件标志着美伊冲突进一步升级，军事误判与局势外溢风险显著上升。", source: "Financial Times", url: "https://www.ft.com/content/c860846e-e7e9-42cf-9c26-15ca516169b0" },
   { time: "22:06", tag: "macro", tagText: "宏观", text: "美国房贷利率连续第五周上升。报道指出，在中东战事爆发前，房贷利率一度降至2022年以来低点，但伊朗战争推高能源与通胀预期后，购房者融资成本明显增加。若油价高位持续，美国房地产需求和居民消费承压风险将进一步上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/mortgage-rates-rise-for-the-fifth-week-in-a-row-heres-how-much-more-homebuyers-are-paying-since-the-iran-wars-start-910bd100?mod=mw_rss_topstories" },
-  { time: "23:00", tag: "macro", tagText: "宏观", text: "受燃油价格飙升影响，美国公务机出行成本上涨最高可达20%。报道指出，伊朗战争与油价走高正推升航空运营附加费和燃料支出。虽然私人航空需求对价格不敏感，但该趋势反映出能源冲击正向交通与高端服务业传导，进一步印证通胀黏性压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/private-jet-travel-costs-rise-fuel-prices.html" },
-  { time: "22:31", tag: "geo", tagText: "地缘", text: "在伊朗战争引发供应紧张之际，美国将从战略石油储备中以“借油”形式向市场提供1000万桶原油，显示华盛顿正试图缓解能源供应冲击并稳定油价与成品油市场。这一举措凸显霍尔木兹海峡风险已开始实质影响全球能源安全。", source: "Benzinga", url: "https://finance.yahoo.com/sectors/energy/articles/us-loan-10-million-barrels-143114371.html" },
-  { time: "21:30", tag: "macro", tagText: "宏观", text: "强于预期的美国3月就业数据公布后，美股期货与比特币走弱，美国国债收益率上行。市场重新评估美联储降息路径，意味着在地缘冲突推升通胀风险的背景下，货币政策或更难迅速转向宽松。", source: "MarketWatch", url: "https://www.marketwatch.com/story/stock-futures-and-bitcoin-slip-treasury-yields-climb-as-hot-jobs-report-raises-more-questions-about-fed-rate-cuts-921ff82f?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月4日 05:45 CST";
+const breakingDate = "2026年4月4日 06:47 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:30", tag: "tech", tagText: "科技", text: "AI代理工具 OpenClaw 被曝存在严重安全漏洞：攻击者可在未认证情况下静默获取管理员权限。该问题意味着用户环境可能已被完全攻陷，事件再次凸显热门“代理式AI”工具在权限控制与默认安全设计上的系统性风险。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/heres-why-its-prudent-for-openclaw-users-to-assume-compromise/" },
   { time: "04:35", tag: "ai", tagText: "AI", text: "OpenAI再度调整高管分工：COO Brad Lightcap将新增负责“特别项目”，与此同时，CMO Kate Rouch因癌症治疗恢复暂时离岗，待健康状况允许后回归。结合近期管理层连续变动，此次调整显示OpenAI正在重新梳理核心管理职责与重点项目推进机制。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/03/openai-executive-shuffle-new-roles-coo-brad-lightcap-fidji-simo-kate-rouch/" },
   { time: "04:30", tag: "tech", tagText: "科技", text: "爆红AI代理工具OpenClaw被曝存在严重安全漏洞，攻击者可在无需认证的情况下静默获得管理员权限。该事件再次凸显AI agent工具在快速扩张中面临的高风险安全短板，受影响用户被建议默认按“可能已遭入侵”处理。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/heres-why-its-prudent-for-openclaw-users-to-assume-compromise/" },
   { time: "03:20", tag: "tech", tagText: "科技", text: "最新民调显示，美国民众对数据中心的接受度明显偏低，甚至更愿意让亚马逊仓库建在自家附近，也不愿邻近数据中心。随着AI带动算力基础设施扩张，数据中心在用电、噪音、土地占用和社区影响上的阻力，正成为科技公司扩产面临的现实约束。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/03/people-would-rather-have-an-amazon-warehouse-in-their-backyard-than-a-data-center/" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "10:00", tag: "ai", tagText: "并购", text: "🔴 Anthropic以约$4亿收购生物科技初创Coefficient Bio！该公司致力于让AI执行生物技术任务（如规划药物研究）。收购以股票形式完成，标志Anthropic从纯AI模型公司向医疗健康/生命科学领域扩张。", source: "The Information/Newcomer/CGTN/TechFlow", url: "https://www.theinformation.com/articles/anthropic-acquires-startup-coefficient-bio-400-million" },
   { time: "09:55", tag: "ai", tagText: "媒体", text: "OpenAI收购科技媒体TBPN！这是OpenAI首次收购媒体公司。同时OpenAI正削减Sora项目，全面聚焦企业AI和编程工具。Nebius(NBIS)AI云业务收入激增802%但盈利能力存风险。", source: "TechCrunch/CNBC/Motley Fool", url: "https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/" },
   { time: "03:15", tag: "ai", tagText: "产品", text: "ElevenLabs发布ElevenMusic！AI音乐生成应用正式上架iOS，支持文本生成歌曲、混音、电台和排行榜，直接挑战Suno和Udio。免费用户每天7首，Pro版$9.99/月500首。公司估值$110亿。", source: "TechCrunch/ElevenLabs", url: "https://techcrunch.com/2026/04/02/elevenlabs-releases-a-new-ai-powered-music-generation-app/" },
-  { time: "03:10", tag: "tech", tagText: "自动驾驶", text: "🔴 百度Apollo Go武汉大规模瘫痪！100+无人出租车因\"系统故障\"路中停摆，部分乘客被困长达2小时。这是L4级自动驾驶商业化部署以来最严重的群体性故障事件。", source: "TechCrunch/CNEVPost/TechNode", url: "https://techcrunch.com/2026/04/01/system-failure-paralyzes-baidu-robotaxis-in-china/" },
 ];
-const aiBreakingDate = "2026年4月4日 05:45 CST";
+const aiBreakingDate = "2026年4月4日 06:47 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
