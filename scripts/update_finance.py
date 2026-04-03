@@ -4,12 +4,11 @@ Finance Daily Report generator for Y Daily.
 Runs daily at 22:00 CST via GitHub Actions.
 
 Flow:
-1. Search for macro events, stock news, alerts
-2. Generate structured report with LLM
-3. Fact-check numbers and claims
-4. Update Fear & Greed index
-5. Inject new issue into index.html
-6. Also refresh Breaking News
+1. Fetch real news from RSS feeds (macro, stocks, watchlist)
+2. Fetch Fear & Greed index from CNN
+3. Use LLM to analyze and generate structured report
+4. Inject new issue into index.html
+5. Validate JS syntax
 """
 
 import os
@@ -26,6 +25,10 @@ from utils import (
     replace_js_array, replace_js_string, replace_js_object,
     format_date_cst, now_cst, CST,
     _dict_to_js,
+)
+from news_fetcher import (
+    fetch_finance_news, fetch_watchlist_news,
+    articles_to_context, dedup_by_title,
 )
 
 from openai import OpenAI
@@ -45,14 +48,16 @@ FOCUS_AREAS = "AI与大模型 · 半导体与算力 · 中美科技博弈 · 云
 
 FEAR_GREED_API = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
 
+LLM_MODEL = os.environ.get("LLM_MODEL", "gpt-5.1")
+
 
 def get_openai_client():
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
         print("ERROR: OPENAI_API_KEY is required for daily report generation.")
         sys.exit(1)
-    base_url = os.environ.get("OPENAI_BASE_URL")
     kwargs = {"api_key": api_key}
+    base_url = os.environ.get("OPENAI_BASE_URL")
     if base_url:
         kwargs["base_url"] = base_url
     return OpenAI(**kwargs)
@@ -80,8 +85,8 @@ def fetch_fear_greed():
     return None
 
 
-def generate_report(client):
-    """Use LLM to generate the daily finance report."""
+def generate_report(client, news_context, fg_data):
+    """Use LLM to generate the daily finance report based on REAL news."""
     now = now_cst()
     yesterday = now - timedelta(days=1)
     time_range = f"{yesterday.strftime('%Y.%m.%d')} – {now.strftime('%Y.%m.%d')}"
@@ -93,10 +98,21 @@ def generate_report(client):
     for group in WATCHLIST.values():
         watchlist_flat.extend(group)
 
+    fg_str = ""
+    if fg_data:
+        fg_str = f"\nFear & Greed Index: {fg_data['score']} ({fg_data['rating']}), Previous close: {fg_data['previousClose']}, 1 week ago: {fg_data['previous1Week']}, 1 month ago: {fg_data['previous1Month']}"
+
     prompt = f"""You are the chief analyst at Y Daily (yion.me), a financial intelligence platform.
 Current time: {format_date_cst(now)}
 
-Generate today's finance daily report covering the past 24 hours.
+Below are REAL news articles from the past 24 hours, fetched from RSS feeds (Reuters, CNBC, Bloomberg, MarketWatch, Yahoo Finance, Google News, etc.).
+
+=== TODAY'S NEWS ===
+{news_context}
+=== END NEWS ===
+{fg_str}
+
+Generate today's finance daily report based on THESE REAL articles above.
 
 WATCHLIST: {json.dumps(watchlist_flat, ensure_ascii=False)}
 FOCUS AREAS: {FOCUS_AREAS}
@@ -127,6 +143,8 @@ You MUST produce a complete issue object matching this EXACT structure:
       "iconBg": "#hex",
       "title": "event title",
       "fact": "core facts with HTML spans for data",
+      "source": "source name",
+      "url": "source URL from the articles above",
       "mappings": [
         {{"type": "bull", "text": "<strong>Target</strong> — reasoning"}},
         {{"type": "bear", "text": "<strong>Target</strong> — reasoning"}}
@@ -139,11 +157,11 @@ You MUST produce a complete issue object matching this EXACT structure:
       "name": "emoji Name",
       "code": "TICKER",
       "news": [
-        {{"label": "📰 headline", "content": "detail with <span class=\\"data\\">numbers</span>"}}
+        {{"label": "📰 headline", "content": "detail with <span class=\\"data\\">numbers</span>", "source": "source", "url": "URL"}}
       ],
       "assessment": "HTML string with impact analysis"
     }}
-    // Cover all watchlist stocks grouped logically (9 entries)
+    // Cover watchlist stocks with actual news
   ],
   "alerts": [
     {{"time": "timeframe", "event": "upcoming event", "target": "TICKER"}}
@@ -152,19 +170,20 @@ You MUST produce a complete issue object matching this EXACT structure:
 }}
 
 CRITICAL RULES:
-1. ALL numbers (prices, percentages, market caps) MUST be accurate and from today's actual market data.
-2. EVERY claim must be verifiable from at least 2 independent sources.
-3. Distinguish between "已发生" (happened) and "计划/预计" (planned/expected).
+1. Base your report ONLY on the real articles provided above. Do NOT fabricate any data or events.
+2. ALL numbers (prices, percentages) must come from the articles. If not in articles, do not guess.
+3. Include source URLs from the articles in macroEvents and stock news items.
 4. Use Chinese for all text content.
 5. Include HTML formatting (<strong>, <span class="data">, etc.) as shown.
 6. The data represents Chinese market convention: 涨=红(up), 跌=绿(down).
+7. If there's not enough data for a section, use fewer items rather than fabricating.
 
 Return ONLY the JSON object. No markdown fencing.
 """
 
     try:
         response = client.chat.completions.create(
-            model="gpt-5.1",
+            model=LLM_MODEL,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.2,
             max_tokens=8000,
@@ -239,9 +258,18 @@ def main():
     else:
         print("Skipped (fetch failed)")
 
-    # Step 2: Generate report
+    # Step 2: Fetch REAL news from RSS feeds
+    print("\n--- Fetching news from RSS feeds ---")
+    raw_finance = fetch_finance_news(max_age_hours=24)
+    raw_watchlist = fetch_watchlist_news(max_age_hours=24)
+    all_articles = dedup_by_title(raw_finance + raw_watchlist)
+    print(f"Total articles: {len(all_articles)}")
+
+    news_context = articles_to_context(all_articles, max_articles=50)
+
+    # Step 3: Generate report
     print("\n--- Generating daily report ---")
-    report = generate_report(client)
+    report = generate_report(client, news_context, fg_data)
     if not report:
         print("ERROR: Failed to generate report")
         sys.exit(1)
@@ -254,10 +282,9 @@ def main():
     print(f"Macro events: {len(report.get('macroEvents', []))}")
     print(f"Stock entries: {len(report.get('stocks', []))}")
 
-    # Step 3: Insert new issue at the beginning of issues array
+    # Step 4: Insert new issue at the beginning of issues array
     issues = extract_js_array(html, 'issues')
 
-    # Check if today's issue already exists
     today_id = report["id"]
     existing_idx = next((i for i, iss in enumerate(issues) if iss.get("id") == today_id), None)
     if existing_idx is not None:
@@ -269,7 +296,7 @@ def main():
 
     html = replace_js_array(html, 'issues', issues)
 
-    # Step 4: Write and validate
+    # Step 5: Write and validate
     write_html(html)
 
     html_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'index.html'))

@@ -4,11 +4,10 @@ AI Daily Report generator for Y Daily.
 Runs daily at 22:10 CST via GitHub Actions.
 
 Flow:
-1. Search for AI/tech research, applications, industry news
-2. Generate structured AI report with LLM
-3. Fact-check claims and numbers
-4. Inject new AI issue into index.html
-5. Also refresh AI Breaking News
+1. Fetch real AI/tech news from RSS feeds (TechCrunch, The Verge, Google News, etc.)
+2. Use LLM to analyze and generate structured AI report
+3. Inject new AI issue into index.html
+4. Validate JS syntax
 """
 
 import os
@@ -25,10 +24,15 @@ from utils import (
     replace_js_array, replace_js_string,
     format_date_cst, now_cst, CST,
 )
+from news_fetcher import (
+    fetch_ai_news, articles_to_context, dedup_by_title,
+)
 
 from openai import OpenAI
 
 FOCUS_AREAS = "大模型 · 智能体 · 具身智能 · AI Coding · AI for Science"
+
+LLM_MODEL = os.environ.get("LLM_MODEL", "gpt-5.1")
 
 
 def get_openai_client():
@@ -36,15 +40,15 @@ def get_openai_client():
     if not api_key:
         print("ERROR: OPENAI_API_KEY is required for AI daily report.")
         sys.exit(1)
-    base_url = os.environ.get("OPENAI_BASE_URL")
     kwargs = {"api_key": api_key}
+    base_url = os.environ.get("OPENAI_BASE_URL")
     if base_url:
         kwargs["base_url"] = base_url
     return OpenAI(**kwargs)
 
 
-def generate_ai_report(client):
-    """Use LLM to generate the daily AI report."""
+def generate_ai_report(client, news_context):
+    """Use LLM to generate the daily AI report based on REAL news."""
     now = now_cst()
     yesterday = now - timedelta(days=1)
     time_range = f"{yesterday.strftime('%Y.%m.%d')} – {now.strftime('%Y.%m.%d')}"
@@ -55,7 +59,13 @@ def generate_ai_report(client):
     prompt = f"""You are the chief AI analyst at Y Daily (yion.me), an AI intelligence platform.
 Current time: {format_date_cst(now)}
 
-Generate today's AI daily report covering the past 24 hours of AI/tech developments.
+Below are REAL AI/tech news articles from the past 24 hours, fetched from RSS feeds (TechCrunch, The Verge, Ars Technica, VentureBeat, Google News, etc.).
+
+=== TODAY'S AI NEWS ===
+{news_context}
+=== END NEWS ===
+
+Generate today's AI daily report based on THESE REAL articles above.
 
 FOCUS AREAS: {FOCUS_AREAS}
 Key players to track: OpenAI, Anthropic, Google DeepMind, Meta AI, 字节(豆包), 阿里(通义千问), 腾讯(混元), 智谱, DeepSeek, 百度(文心), NVIDIA, Apple
@@ -84,7 +94,9 @@ You MUST produce a complete AI issue object matching this EXACT structure:
       "iconBg": "#hex",
       "title": "research title",
       "detail": "research detail",
-      "impact": "impact assessment"
+      "impact": "impact assessment",
+      "source": "source name",
+      "url": "source URL from articles above"
     }}
     // 2-3 research items
   ],
@@ -94,7 +106,9 @@ You MUST produce a complete AI issue object matching this EXACT structure:
       "iconBg": "#hex",
       "title": "application title",
       "detail": "detail",
-      "impact": "impact"
+      "impact": "impact",
+      "source": "source name",
+      "url": "source URL"
     }}
     // 2-3 application items
   ],
@@ -104,7 +118,9 @@ You MUST produce a complete AI issue object matching this EXACT structure:
       "iconBg": "#hex",
       "title": "industry news title",
       "detail": "detail",
-      "impact": "impact"
+      "impact": "impact",
+      "source": "source name",
+      "url": "source URL"
     }}
     // 2-3 industry items
   ],
@@ -115,19 +131,19 @@ You MUST produce a complete AI issue object matching this EXACT structure:
 }}
 
 CRITICAL RULES:
-1. ALL numbers must be accurate (model parameters, funding amounts, benchmark scores).
-2. EVERY claim must be verifiable from at least 2 independent sources.
-3. Distinguish between published results and leaked/rumored information.
+1. Base your report ONLY on the real articles provided above. Do NOT fabricate.
+2. ALL numbers (parameters, funding, benchmarks) must come from the articles.
+3. Include source URLs from the articles in research, application, and industry items.
 4. Use Chinese for all text content.
 5. Include HTML formatting where appropriate.
-6. Focus on genuinely new developments, not rehashing old news.
+6. If there's not enough data for a section, use fewer items rather than fabricating.
 
 Return ONLY the JSON object. No markdown fencing.
 """
 
     try:
         response = client.chat.completions.create(
-            model="gpt-5.1",
+            model=LLM_MODEL,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.2,
             max_tokens=8000,
@@ -187,9 +203,17 @@ def main():
     client = get_openai_client()
     html = read_html()
 
-    # Generate report
+    # Step 1: Fetch REAL AI news from RSS feeds
+    print("\n--- Fetching AI news from RSS feeds ---")
+    raw_ai = fetch_ai_news(max_age_hours=24)
+    raw_ai = dedup_by_title(raw_ai)
+    print(f"Total AI articles: {len(raw_ai)}")
+
+    news_context = articles_to_context(raw_ai, max_articles=40)
+
+    # Step 2: Generate report
     print("\n--- Generating AI daily report ---")
-    report = generate_ai_report(client)
+    report = generate_ai_report(client, news_context)
     if not report:
         print("ERROR: Failed to generate report")
         sys.exit(1)
@@ -200,7 +224,7 @@ def main():
 
     print(f"Title: {report['title']}")
 
-    # Insert/replace in aiIssues
+    # Step 3: Insert/replace in aiIssues
     ai_issues = extract_js_array(html, 'aiIssues')
     today_id = report["id"]
     existing_idx = next((i for i, iss in enumerate(ai_issues) if iss.get("id") == today_id), None)
@@ -213,7 +237,7 @@ def main():
 
     html = replace_js_array(html, 'aiIssues', ai_issues)
 
-    # Write and validate
+    # Step 4: Write and validate
     write_html(html)
 
     html_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'index.html'))
