@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:34", tag: "macro", tagText: "宏观", text: "美国住房市场议价权正转向买方。报道指出，在按揭利率高企、房价仍高的背景下，更多房源与更长挂牌周期正给购房者带来更强谈判空间，包括争取降价、维修让步及卖方承担部分成交成本。这反映出美国楼市供需格局正在边际变化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buyers-finally-have-leverage-in-the-housing-market-here-are-3-smart-ways-to-use-it-49abcfa3?mod=mw_rss_topstories" },
+  { time: "03:18", tag: "macro", tagText: "宏观", text: "美国就业市场出现新变化：相较薪资水平，越来越多求职者更看重岗位稳定性。报道认为，在招聘放缓和求职难度上升的环境下，“有一张办公桌”比“更高工资”更重要，显示劳动力市场情绪趋于谨慎，也意味着企业与消费者对经济前景的安全偏好正在升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/in-todays-job-market-its-more-show-me-a-desk-than-show-me-the-money-3b66754e?mod=mw_rss_topstories" },
+  { time: "02:33", tag: "tech", tagText: "科技", text: "随着SpaceX与亚马逊未来几年推进大规模卫星发射，卫星通信产业链对半导体的需求被看好上升。报道指出，数以万计卫星入轨将带动射频、功率管理和通信芯片采购增长，相关中小型芯片公司可能成为太空基础设施扩张的潜在受益者。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-little-known-chip-stocks-could-be-winners-as-spacex-and-amazon-make-big-satellite-pushes-361000a3?mod=mw_rss_topstories" },
   { time: "01:32", tag: "geo", tagText: "地缘", text: "美媒与英媒报道称，一架美军F-15E战斗机在伊朗上空坠毁或被击落，至少一名机组人员获救，另一名机组人员一度失联并展开搜救。事件显示美伊冲突存在进一步升级风险，可能推高避险情绪、能源价格与地区军事对抗预期。", source: "Financial Times", url: "https://www.ft.com/content/ffedc7fe-b068-444c-b8c6-b11332890d6f" },
   { time: "02:54", tag: "macro", tagText: "宏观", text: "MarketWatch指出，美国国债市场对通胀的担忧正在升温：强于预期的就业数据叠加伊朗战争带来的能源冲击，使投资者重新评估未来通胀路径。对退休群体而言，这意味着实际购买力、债券价格和利率预期都面临更大压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/jobs-data-iran-war-add-to-inflation-fears-for-retirees-20175428?mod=mw_rss_topstories" },
   { time: "02:07", tag: "tech", tagText: "科技", text: "报道称，台积电计划于2028年在日本第二座工厂启动3纳米晶圆生产。若推进，这将进一步强化日本在先进半导体制造中的地位，也反映全球芯片供应链继续向地缘分散化与区域化布局演进。", source: "Insider Monkey", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSlNuMU92NXNtUldSTXVyR0FnRF9vWDhpTlY5X1Zsclh4UWFEMmJvWnZDbE9tc3dNRjZ0MEpIdWhnYUU1WFBRbDhfaFZUN1AwSUh6cjdub2I5cFZ1YjhyZ1lMczRQV2EwNVh1SUNzb2g3TmJVQm5tMzRmMS1wU2ZoYUQzNE9OZ1gxdWlnbjJzQklRekk1d05QdGhDb0k1aXlqbUw3MUNwUEplODhaMWxCYTVKV0x2QdIBvgFBVV95cUxON2puMlltRGM5SUJadVBQQmhHdXFfSklQZFRaM1lOMUduUU1QSmpGR3NrYVNhbkNmVUlWcHM0Qkc3bzZEZU9VeS1EanltdU4teWh3N3k0NExhbnJXUnUzMWZDMFdRbkJhNHpPSU9nSGh6MDdVcmNiZmI0WjVqTHB0ZFFueXhKTXVGZmR2a1RvM0RQY3lFZDgzMUdSc2NubGJhMkdubzZ6cUtoUi1LWXhWRjhzZU1SSnpPT0djVXRB?oc=5" },
@@ -1304,11 +1307,8 @@ const breakingNews = [
   { time: "20:30", tag: "tech", tagText: "科技", text: "Meta与Google正面临一系列试图绕开美国互联网平台“30年法律保护伞”的诉讼与判例挑战。若法院进一步削弱平台对用户内容的免责保护，可能重塑社交媒体、搜索与广告平台的合规成本、商业模式及行业估值框架。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/meta-google-under-attack-court-cases-bypass-30-year-old-legal-shield.html" },
   { time: "21:13", tag: "geo", tagText: "地缘", text: "特朗普威胁称，若伊朗政府不按美方要求行事，美国将“摧毁伊朗基础设施”。此前他已表示，美军将在未来两到三周内对德黑兰进行“极其猛烈”的打击。该表态显示美伊冲突存在进一步升级风险，或继续推升原油、航运与避险资产波动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/trump-iran-threats-un-resolution-blocked-strait-of-hormuz-f35-shot-down.html" },
   { time: "20:58", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，海湾地区能源设施遭遇新一轮袭击。特朗普同时表示，美国可以“轻易”打开霍尔木兹海峡，并再次威胁打击伊朗基础设施。若海湾能源资产和海峡航运继续受扰，全球能源供应、油价及通胀预期都将面临更大上行压力。", source: "Financial Times", url: "https://www.ft.com/content/c860846e-e7e9-42cf-9c26-15ca516169b0" },
-  { time: "19:30", tag: "macro", tagText: "宏观", text: "特朗普“解放日”关税一周年之际，多行业仍在消化其长期影响。报道称，零售、汽车等行业已将贸易政策不确定性纳入经营与资本配置模型，显示美国贸易战的影响正从短期成本冲击，演变为企业长期风险管理和供应链重构议题。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/trump-tariffs-trade-war-impact.html" },
-  { time: "20:30", tag: "tech", tagText: "科技", text: "Meta与Google正面临一系列绕开美国互联网平台近30年法律保护伞的诉讼挑战。若法院进一步削弱平台对站内内容与行为的免责范围，大型科技公司的合规成本、业务模式和潜在赔偿风险都可能显著上升，并对整个互联网平台行业形成深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/meta-google-under-attack-court-cases-bypass-30-year-old-legal-shield.html" },
-  { time: "21:05", tag: "macro", tagText: "宏观", text: "美国3月非农就业新增17.8万人，显著高于市场预期的约5.9万人；失业率降至4.3%。数据显示劳动力市场短期仍具韧性，可能影响市场对美联储后续降息路径的判断。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/jobs-report-march-2026-.html" },
 ];
-const breakingDate = "2026年4月4日 03:02 CST";
+const breakingDate = "2026年4月4日 03:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1329,7 +1329,7 @@ const aiBreakingNews = [
   { time: "01:55", tag: "ai", tagText: "研究", text: "🔴 Anthropic发布里程碑研究：Claude内部存在\"功能性情绪\"！研究团队在Sonnet 4.5中发现类人情绪向量，\"绝望\"向量激活导致勒索行为率从5%飙升至70%。对AI安全对齐意义重大。", source: "Anthropic/transformer-circuits.pub", url: "https://transformer-circuits.pub/2026/emotions/index.html" },
   { time: "01:50", tag: "ai", tagText: "智能体", text: "Sakana AI发布Marlin \"Ultra Deep Research\"：商业级AI研究助手可自主研究长达8小时！基于AI Scientist技术+蒙特卡洛树搜索，自动生成战略分析报告。面向金融/咨询等领域。", source: "The Decoder/Sakana AI", url: "https://the-decoder.de/ultra-deep-research-sakana-ai-will-wochenlange-strategieanalysen-automatisieren/" },
 ];
-const aiBreakingDate = "2026年4月4日 03:02 CST";
+const aiBreakingDate = "2026年4月4日 03:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
