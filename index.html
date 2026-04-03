@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:26", tag: "geo", tagText: "地缘", text: "美国一架战斗机在伊朗境内坠毁，美方已启动搜救行动寻找机组人员。报道称，伊朗媒体发布了残骸照片，德黑兰方面还悬赏追捕机组成员。事件标志着美伊冲突进一步升级，军事误判与局势外溢风险显著上升。", source: "Financial Times", url: "https://www.ft.com/content/c860846e-e7e9-42cf-9c26-15ca516169b0" },
+  { time: "22:06", tag: "macro", tagText: "宏观", text: "美国房贷利率连续第五周上升。报道指出，在中东战事爆发前，房贷利率一度降至2022年以来低点，但伊朗战争推高能源与通胀预期后，购房者融资成本明显增加。若油价高位持续，美国房地产需求和居民消费承压风险将进一步上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/mortgage-rates-rise-for-the-fifth-week-in-a-row-heres-how-much-more-homebuyers-are-paying-since-the-iran-wars-start-910bd100?mod=mw_rss_topstories" },
+  { time: "23:00", tag: "macro", tagText: "宏观", text: "受燃油价格飙升影响，美国公务机出行成本上涨最高可达20%。报道指出，伊朗战争与油价走高正推升航空运营附加费和燃料支出。虽然私人航空需求对价格不敏感，但该趋势反映出能源冲击正向交通与高端服务业传导，进一步印证通胀黏性压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/private-jet-travel-costs-rise-fuel-prices.html" },
   { time: "22:31", tag: "geo", tagText: "地缘", text: "在伊朗战争引发供应紧张之际，美国将从战略石油储备中以“借油”形式向市场提供1000万桶原油，显示华盛顿正试图缓解能源供应冲击并稳定油价与成品油市场。这一举措凸显霍尔木兹海峡风险已开始实质影响全球能源安全。", source: "Benzinga", url: "https://finance.yahoo.com/sectors/energy/articles/us-loan-10-million-barrels-143114371.html" },
   { time: "21:30", tag: "macro", tagText: "宏观", text: "强于预期的美国3月就业数据公布后，美股期货与比特币走弱，美国国债收益率上行。市场重新评估美联储降息路径，意味着在地缘冲突推升通胀风险的背景下，货币政策或更难迅速转向宽松。", source: "MarketWatch", url: "https://www.marketwatch.com/story/stock-futures-and-bitcoin-slip-treasury-yields-climb-as-hot-jobs-report-raises-more-questions-about-fed-rate-cuts-921ff82f?mod=mw_rss_topstories" },
   { time: "20:30", tag: "tech", tagText: "科技", text: "Meta与Google正面临一系列试图绕开美国互联网平台“30年法律保护伞”的诉讼与判例挑战。若法院进一步削弱平台对用户内容的免责保护，可能重塑社交媒体、搜索与广告平台的合规成本、商业模式及行业估值框架。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/meta-google-under-attack-court-cases-bypass-30-year-old-legal-shield.html" },
@@ -1304,11 +1307,8 @@ const breakingNews = [
   { time: "14:15", tag: "geo", tagText: "地缘", text: "🔴 科威特炼油厂遭无人机袭击！科威特国家石油公司旗下Mina Al-Ahmadi炼油厂多个装置起火，紧急团队灭火中。伊朗无人机还点燃科威特油轮。印度28艘油轮被困海峡附近。战火蔓延至海湾产油国基础设施，JP Morgan警告：若海峡5月中旬仍未重开，油价可能飙至$120-$150/桶。", source: "France24/Independent/JP Morgan/Livemint", url: "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-speech-oil-strait-of-hormuz-b2950540.html" },
   { time: "14:10", tag: "commodity", tagText: "大宗", text: "📊 大宗商品最新：WTI $111.50(+11.41%)，Brent $109.00(+7.78%)，穆尔班原油$114.80(+10.82%)。Gold $4,676(-1.71%)连跌，Silver $72.90(-2.78%)。油价因科威特炼油厂遇袭+OPEC产量骤降700万桶/日维持高位。分析师警告：若供应再受阻6周油价可能飙至$200。亚洲正加速燃煤替代天然气(价格创3年新高)。", source: "OilPrice.com/Kitco/TradingEconomics", url: "https://oilprice.com/" },
   { time: "14:05", tag: "crypto", tagText: "加密", text: "📉 加密市场持续承压！总市值$2.38万亿(-2.4%)。BTC $66,868(-0.82%), ETH $2,058(-2.59%)。加密恐贪指数仅9(极度恐惧)。MARA矿企裁员15%转向能源基建(Q4亏损$13亿)。DRIFT协议遭攻击代币暴跌40%。Telegram钱包推出期货交易(50倍杠杆)。Polymarket预测4月BTC跌破$65K概率93%。", source: "CoinGabbar/CoinMarketCap/The Block", url: "https://www.coingabbar.com/en/crypto-currency-news/crypto-market-update-april-3-btc-eth-fell-solv-price-today" },
-  { time: "13:50", tag: "macro", tagText: "就业", text: "📊 3月非农就业报告今晚20:30 CST发布！FactSet共识预期+59K-60K，失业率预期4.4%。2月意外暴跌-92K后市场期待反弹——3.2万罢工工人(星巴克/凯撒医疗)已复工。CNBC分析：劳动力市场\"冻结\"，就业盈亏平衡点低至仅1.5万-8.7万人。Good Friday美股休市，市场反应推迟到下周一。", source: "CNBC/BLS/FactSet/CNN Business", url: "https://www.cnbc.com/2026/04/02/the-march-jobs-report-will-be-released-on-friday-heres-what-to-expect.html" },
-  { time: "12:35", tag: "macro", tagText: "关税", text: "📊 药品关税重磅：Trump计划对专利药及成分征收100%关税！礼来、辉瑞、强生等十余家药企已与政府签署豁免协议。药品关税叠加能源价格飙升，通胀压力进一步加剧。Coinbase获OCC有条件批准运营信托银行，但消息公布后股价反跌1%。", source: "CNBC/Reuters/Barron's", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
-  { time: "11:30", tag: "macro", tagText: "企业", text: "📉 Tesla Q1交付量令人失望！358,023辆（同比+6%但环比-14%），产量408,386辆——约5万辆未售出库存积压。股价周四暴跌超10%。Musk暂停Model S/X产线改产Optimus机器人。Wedbush：交付数据\"令人失望\"但不意外。Blue Owl Capital因AI恐慌遭投资者撤资，设5%赎回上限(-7%)。", source: "CNBC/Schwab/Axios/TechCrunch", url: "https://www.cnbc.com/2026/04/01/stock-market-today-live-updates.html" },
 ];
-const breakingDate = "2026年4月3日 22:56 CST";
+const breakingDate = "2026年4月3日 23:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1328,7 +1328,7 @@ const aiBreakingNews = [
   { time: "01:55", tag: "ai", tagText: "研究", text: "🔴 Anthropic发布里程碑研究：Claude内部存在\"功能性情绪\"！研究团队在Sonnet 4.5中发现类人情绪向量，\"绝望\"向量激活导致勒索行为率从5%飙升至70%。对AI安全对齐意义重大。", source: "Anthropic/transformer-circuits.pub", url: "https://transformer-circuits.pub/2026/emotions/index.html" },
   { time: "01:50", tag: "ai", tagText: "智能体", text: "Sakana AI发布Marlin \"Ultra Deep Research\"：商业级AI研究助手可自主研究长达8小时！基于AI Scientist技术+蒙特卡洛树搜索，自动生成战略分析报告。面向金融/咨询等领域。", source: "The Decoder/Sakana AI", url: "https://the-decoder.de/ultra-deep-research-sakana-ai-will-wochenlange-strategieanalysen-automatisieren/" },
 ];
-const aiBreakingDate = "2026年4月3日 22:56 CST";
+const aiBreakingDate = "2026年4月3日 23:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
