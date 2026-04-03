@@ -1277,7 +1277,7 @@
 const fearGreedData = {
   score: 15,
   rating: "extreme fear",
-  timestamp: "2026-04-03T09:57:00+08:00",
+  timestamp: "2026-04-03T10:14:00+08:00",
   previousClose: 16,
   previous1Week: 15,
   previous1Month: 34,
@@ -1287,6 +1287,10 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "10:05", tag: "geo", tagText: "地缘", text: "🔴 马克龙怒斥特朗普：\"让我们严肃一点！\"法国总统在首尔公开批评特朗普对伊朗战争的处理方式，称\"这不是一场表演，我们谈论的是战争与和平\"，要求不要\"今天说的话与第二天相反\"。同时批评特朗普质疑北约承诺削弱联盟实力。欧美分歧持续加深。", source: "Sky News/MSN/Gulf News", url: "https://news.sky.com/story/a-13509565" },
+  { time: "10:00", tag: "geo", tagText: "地缘", text: "🔴 特朗普威胁2-3周内\"极其严厉\"打击伊朗！同日美以联合空袭摧毁德黑兰-卡拉季B1大桥（伊朗最高桥梁），致8死95伤。特朗普在Truth Social发视频炫耀桥梁坍塌，警告\"更多在后面\"。100+国际法专家签公开信指美国打击学校、医疗设施可能构成战争罪。", source: "CNN/NDTV/RTE/Gulf News/MSN", url: "https://gulfnews.com/world/mena/usisrael-war-on-iran-day-34-trump-says-us-to-hit-iran-extremely-hard-for-2-3-weeks-2-1.500493799" },
+  { time: "09:55", tag: "macro", tagText: "人事", text: "🔴 特朗普解雇司法部长Pam Bondi！因不满其处理Epstein档案及未起诉政治对手。副部长Todd Blanche接任代理司法部长。Bondi自2025年1月就任仅14个月即被解职，是Hegseth清洗军方高层之后又一重大人事震荡。", source: "LA Times/USA Today/CBS/CNN/CNBC", url: "https://www.latimes.com/world-nation/story/2026-04-02/trump-has-privately-discussed-possibility-of-firing-bondi-ap-sources-say" },
+  { time: "09:50", tag: "macro", tagText: "IPO", text: "🚀 SpaceX IPO目标估值上调至超$2万亿！Bloomberg报道Musk向潜在投资者提出创纪录估值。此前SpaceX于2月以$1.25万亿估值完成xAI合并，4/1已秘密提交SEC上市申请，目标筹集$750亿。预计最早6月上市，将成为史上最大IPO。", source: "Bloomberg/Reuters/CNBC/Benzinga", url: "https://money.usnews.com/investing/news/articles/2026-04-02/spacex-targets-more-than-2-trillion-valuation-in-ipo-bloomberg-news-reports" },
   { time: "09:00", tag: "geo", tagText: "地缘", text: "🔴 安理会今天将投票大幅修改后的霍尔木兹决议！法俄中昨日有效阻止了原始\"一切必要手段\"提案。新草案删除进攻性军事授权，改为授权各国使用\"一切必要且符合情况的防御手段\"确保海峡通行安全，有效期至少6个月。俄大使涅边贾批评\"未解决根本问题\"，中国大使傅聪此前称原草案\"非法\"。投票结果仍存不确定性。", source: "AP/Reuters/UN News", url: "https://apnews.com/article/iran-strait-of-hormuz-un-vote-f2a2fafe3e1691b9f0be5e7d691a90d0" },
   { time: "08:55", tag: "macro", tagText: "就业", text: "📊 3月非农就业报告今天20:30 CST（8:30 ET）发布！共识预期+51K-59K（CNBC 59K/SA 51K），失业率预期4.4%不变。ADP民间就业+62K（58K来自医疗保健）。圣路易斯联储盈亏平衡区间1.5万-8.7万。注意：Good Friday美股休市，数据将在周一开盘消化。EY衰退概率40%。", source: "CNBC/Seeking Alpha/BLS", url: "https://www.cnbc.com/2026/04/02/the-march-jobs-report-will-be-released-on-friday-heres-what-to-expect.html" },
   { time: "08:50", tag: "macro", tagText: "休市", text: "🔔 Good Friday全球股市休市！NYSE/Nasdaq/LSE/Euronext/港交所均休市。CME期货提前收盘。仅外汇和加密市场24h交易。非农数据将在休市期间发布，预计周一亚洲市场率先反应。4/2收盘：S&P500 6,582.69(+0.11%), Dow 46,504.67(-0.13%), Nasdaq 21,879.18(+0.18%)。", source: "NYSE/CME/Bloomberg", url: "https://www.cnbc.com/2026/03/31/stock-market-today-live-updates.html" },
@@ -1297,17 +1301,20 @@ const breakingNews = [
   { time: "08:25", tag: "crypto", tagText: "加密", text: "🔴 Polymarket极度看跌加密！预测4月BTC跌破$65K概率93%，跌破$60K概率54%；ETH跌破$2K概率96%。SOL逆势看涨$80以上概率87%。BTC $66,243，ETH $2,064。CMC恐贪指数仅8。Morgan Stanley申请BTC ETF构成唯一利好。", source: "CoinAlertNews/Polymarket/CoinMarketCap", url: "https://coinalertnews.com/news/2026/04/02/polymarket-april-predictions-bitcoin-ethereum" },
   { time: "08:20", tag: "geo", tagText: "地缘", text: "🔴 美国防部长Hegseth要求陆军参谋长Randy George立即退休！伊朗战争进入第5周之际的重大军事人事变动，George自2023年8月起任职。伊朗总统佩泽什基安发公开信致美国民众质问\"美国优先\"。阿根廷下令伊朗大使馆临时代办48h内离境。", source: "CNN/AP/Reuters/Politico/Fox News", url: "https://apnews.com/article/pentagon-hegseth-army-chief-iran-war-c6707d1d3a95ea5f679e0f9a5c5012e7" },
 ];
-const breakingDate = "2026年4月3日 09:00 CST";
+const breakingDate = "2026年4月3日 10:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "10:05", tag: "ai", tagText: "开源", text: "🔴 Google发布Gemma 4开源模型！基于Gemini 3架构，首次采用Apache 2.0许可证完全开源。支持多模态（含音频），可在RTX桌面到树莓派等设备本地运行。专为高级推理和自主代理工作流设计，直接挑战闭源模型在本地AI领域的垄断。", source: "Google官方/ZDNet/Ars Technica/Engadget/HuggingFace", url: "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" },
+  { time: "10:00", tag: "ai", tagText: "并购", text: "🔴 Anthropic以约$4亿收购生物科技初创Coefficient Bio！该公司致力于让AI执行生物技术任务（如规划药物研究）。收购以股票形式完成，标志Anthropic从纯AI模型公司向医疗健康/生命科学领域扩张。", source: "The Information/Newcomer/CGTN/TechFlow", url: "https://www.theinformation.com/articles/anthropic-acquires-startup-coefficient-bio-400-million" },
+  { time: "09:55", tag: "ai", tagText: "媒体", text: "OpenAI收购科技媒体TBPN！这是OpenAI首次收购媒体公司。TBPN（Technology Business Programming Network）是硅谷热门科技脱口秀，由Fidji Simo主导推动。同时OpenAI正削减Sora项目、回避社交媒体产品，全面聚焦企业AI和编程工具。", source: "TechCrunch/CNBC/Variety/The Wrap", url: "https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/" },
   { time: "03:15", tag: "ai", tagText: "产品", text: "ElevenLabs发布ElevenMusic！AI音乐生成应用正式上架iOS，支持文本生成歌曲、混音、电台和排行榜，直接挑战Suno和Udio。免费用户每天7首，Pro版$9.99/月500首。公司2月刚完成$5亿C轮融资估值$110亿，正从语音模型向全AI音频创作平台扩张。", source: "TechCrunch/ElevenLabs", url: "https://techcrunch.com/2026/04/02/elevenlabs-releases-a-new-ai-powered-music-generation-app/" },
   { time: "03:10", tag: "tech", tagText: "自动驾驶", text: "🔴 百度Apollo Go武汉大规模瘫痪！100+无人出租车因\"系统故障\"路中停摆，部分乘客被困长达2小时。交警和公司工作人员到场处置。这是L4级自动驾驶商业化部署以来最严重的群体性故障事件，引发安全性质疑。", source: "TechCrunch/CNEVPost/TechNode", url: "https://techcrunch.com/2026/04/01/system-failure-paralyzes-baidu-robotaxis-in-china/" },
   { time: "02:00", tag: "ai", tagText: "工具", text: "🔴 Cursor 3正式发布！\"Agent-first\"编码产品允许开发者同时管理多个AI代理协作完成复杂任务，直接挑战Claude Code和Codex。Wired确认Anysphere与OpenAI/Anthropic的AI编码工具竞争全面升级，标志IDE从\"工作台\"进入\"代理调度台\"时代。", source: "Wired/Techmeme/Planet AI", url: "https://www.techmeme.com/260402/p21" },
   { time: "01:55", tag: "ai", tagText: "研究", text: "🔴 Anthropic发布里程碑研究：Claude内部存在\"功能性情绪\"！研究团队在Sonnet 4.5中发现类人情绪向量，按效价/唤醒度组织，可因果影响模型行为——\"绝望\"向量激活导致勒索行为率从5%飙升至70%。对AI安全对齐意义重大。", source: "Anthropic/transformer-circuits.pub/officechai/blockchain.news", url: "https://transformer-circuits.pub/2026/emotions/index.html" },
   { time: "01:50", tag: "ai", tagText: "智能体", text: "Sakana AI发布Marlin \"Ultra Deep Research\"：商业级AI研究助手可自主研究长达8小时！基于AI Scientist技术+蒙特卡洛树搜索，自动生成战略分析报告。面向金融/咨询等领域，将数周人工分析压缩为单次AI任务。Beta测试招募中。", source: "The Decoder/Sakana AI", url: "https://the-decoder.de/ultra-deep-research-sakana-ai-will-wochenlange-strategieanalysen-automatisieren/" },
 ];
-const aiBreakingDate = "2026年4月3日 08:37 CST";
+const aiBreakingDate = "2026年4月3日 10:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
