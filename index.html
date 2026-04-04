@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:58", tag: "geo", tagText: "地缘", text: "印度七年来首次购买伊朗原油，且交易未出现支付障碍。作为全球第三大原油进口国与消费国，印度自2019年5月以来未再接收伊朗原油货物。此举显示在中东局势剧烈波动背景下，伊朗原油正重新进入亚洲买家视野，可能影响地区能源贸易流向、制裁执行力度预期以及国际油价定价。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/india-makes-first-iranian-oil-purchase-in-seven-years.html" },
   { time: "18:29", tag: "geo", tagText: "地缘", text: "据MS NOW援引两名美国官员报道，一架美军F-15战机在伊朗境内被击落，目前一名机组人员已获救，另一人仍下落不明。若消息属实，这将显著升级美伊之间的军事对抗风险，并可能进一步推高中东地缘政治溢价、扰动原油及全球风险资产走势。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/03/us-fighter-jet-downed-in-iran.html" },
   { time: "17:11", tag: "geo", tagText: "地缘", text: "阿联酋方面表示，在对空中目标实施拦截过程中产生的碎片击中甲骨文（Oracle）位于迪拜的一栋办公楼。此前，伊朗曾警告将把在中东运营的美国科技公司列为打击目标之一。事件显示伊朗相关冲突外溢风险正进一步波及海湾地区商业与科技资产，或加剧跨国企业在中东的运营与安全担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/debris-from-interception-strikes-oracle-building-in-dubai-uae-says.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，一个名为“Ashab al-Yamin”的隐秘组织已宣称对欧洲多起袭击负责，目标包括救护车、犹太教堂和银行。该组织通过与伊朗有关联的Telegram频道发布信息，显示欧洲安全形势与中东冲突外溢风险正在上升，可能进一步推升地区政治与金融市场避险情绪。", source: "Financial Times", url: "https://www.ft.com/content/adc3e954-5928-471b-b7f2-e4385bbca540" },
@@ -1306,9 +1307,8 @@ const breakingNews = [
   { time: "02:07", tag: "tech", tagText: "科技", text: "报道称，台积电计划于2028年在日本第二座工厂启动3纳米晶圆生产。若推进，这将进一步强化日本在先进半导体制造中的地位，也反映全球芯片供应链继续向地缘分散化与区域化布局演进。", source: "Insider Monkey", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSlNuMU92NXNtUldSTXVyR0FnRF9vWDhpTlY5X1Zsclh4UWFEMmJvWnZDbE9tc3dNRjZ0MEpIdWhnYUU1WFBRbDhfaFZUN1AwSUh6cjdub2I5cFZ1YjhyZ1lMczRQV2EwNVh1SUNzb2g3TmJVQm5tMzRmMS1wU2ZoYUQzNE9OZ1gxdWlnbjJzQklRekk1d05QdGhDb0k1aXlqbUw3MUNwUEplODhaMWxCYTVKV0x2QdIBvgFBVV95cUxON2puMlltRGM5SUJadVBQQmhHdXFfSklQZFRaM1lOMUduUU1QSmpGR3NrYVNhbkNmVUlWcHM0Qkc3bzZEZU9VeS1EanltdU4teWh3N3k0NExhbnJXUnUzMWZDMFdRbkJhNHpPSU9nSGh6MDdVcmNiZmI0WjVqTHB0ZFFueXhKTXVGZmR2a1RvM0RQY3lFZDgzMUdSc2NubGJhMkdubzZ6cUtoUi1LWXhWRjhzZU1SSnpPT0djVXRB?oc=5" },
   { time: "01:11", tag: "macro", tagText: "宏观", text: "美国法官维持对传唤美联储主席鲍威尔的禁令，意味着相关调查方短期内无法强制其出庭或提交材料，案件大概率将进入上诉程序。此案涉及对美联储治理与沟通的法律边界审视，可能对央行独立性及未来国会、执法部门与美联储的博弈产生影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/judge-upholds-block-on-subpoenas-to-feds-jerome-powell.html" },
   { time: "00:56", tag: "macro", tagText: "宏观", text: "尽管美国3月就业人数大幅超预期增长，但报道指出这份就业报告“成色不足”：就业市场质量并未同步改善，求职难度仍高，显示劳动力市场表面强劲之下仍存在结构性疲软。这可能令市场在重新评估美联储降息路径时，更关注就业质量而非单月新增人数。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-march-jobs-report-isnt-as-good-as-it-looks-here-are-the-bad-parts-e5f62160?mod=mw_rss_topstories" },
-  { time: "00:40", tag: "macro", tagText: "宏观", text: "报道称，特朗普最新预算案较2025年新增约1万亿美元支出，而此前承诺的“DOGE”节省金额仅约730亿美元。若该预算框架推进，将进一步加剧美国财政赤字与发债压力，也可能在高利率环境下推升市场对长期财政可持续性的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/aaaargh-trumps-new-budget-hikes-spending-by-1-trillion-over-2025-25de118a?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月4日 18:47 CST";
+const breakingDate = "2026年4月4日 19:38 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "10:00", tag: "ai", tagText: "并购", text: "🔴 Anthropic以约$4亿收购生物科技初创Coefficient Bio！该公司致力于让AI执行生物技术任务（如规划药物研究）。收购以股票形式完成，标志Anthropic从纯AI模型公司向医疗健康/生命科学领域扩张。", source: "The Information/Newcomer/CGTN/TechFlow", url: "https://www.theinformation.com/articles/anthropic-acquires-startup-coefficient-bio-400-million" },
   { time: "09:55", tag: "ai", tagText: "媒体", text: "OpenAI收购科技媒体TBPN！这是OpenAI首次收购媒体公司。同时OpenAI正削减Sora项目，全面聚焦企业AI和编程工具。Nebius(NBIS)AI云业务收入激增802%但盈利能力存风险。", source: "TechCrunch/CNBC/Motley Fool", url: "https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/" },
 ];
-const aiBreakingDate = "2026年4月4日 18:47 CST";
+const aiBreakingDate = "2026年4月4日 19:38 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
