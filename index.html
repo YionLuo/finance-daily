@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，一个名为“Ashab al-Yamin”的隐秘组织已宣称对欧洲多起袭击负责，目标包括救护车、犹太教堂和银行。该组织通过与伊朗有关联的Telegram频道发布信息，显示欧洲安全形势与中东冲突外溢风险正在上升，可能进一步推升地区政治与金融市场避险情绪。", source: "Financial Times", url: "https://www.ft.com/content/adc3e954-5928-471b-b7f2-e4385bbca540" },
   { time: "06:13", tag: "ai", tagText: "AI", text: "英国《金融时报》称，OpenAI首席运营官Brad Lightcap在管理层调整中被赋予“特别项目”等新职责，公司也在为首次公开募股（IPO）做准备。这显示OpenAI在高层分工、资本市场路径与组织治理上正同步推进，AI龙头的融资与上市预期可能继续影响全球科技与一级市场估值。", source: "Financial Times", url: "https://www.ft.com/content/d82b6277-fdd3-4914-a500-2bb39f4a114b" },
   { time: "05:14", tag: "tech", tagText: "科技", text: "英国《金融时报》报道，一家获Meta支持的数据中心项目正为“Project Walleye”园区寻求30亿美元融资，贷款结构将首次把建设资金与电力配套一并纳入。随着AI算力需求推动超大规模数据中心扩建，电力获取与基础设施融资正成为行业核心瓶颈，此类创新融资模式或为AI基础设施投资提供新范式。", source: "Financial Times", url: "https://www.ft.com/content/390545d7-148d-4e88-a56a-ade079a9ed5e" },
   { time: "06:40", tag: "ai", tagText: "AI", text: "OpenAI宣布管理层调整：Fidji Simo因健康原因暂时休假，OpenAI总裁Greg Brockman将在其缺席期间负责产品工作。作为OpenAI核心高管之一，Simo暂离岗位可能影响公司产品推进与商业化节奏，也反映出AI龙头在高速扩张期的人事稳定性风险。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/openai-fidji-simo-medical-leave-executive-changes.html" },
@@ -1306,9 +1307,8 @@ const breakingNews = [
   { time: "00:40", tag: "macro", tagText: "宏观", text: "报道称，特朗普最新预算案较2025年新增约1万亿美元支出，而此前承诺的“DOGE”节省金额仅约730亿美元。若该预算框架推进，将进一步加剧美国财政赤字与发债压力，也可能在高利率环境下推升市场对长期财政可持续性的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/aaaargh-trumps-new-budget-hikes-spending-by-1-trillion-over-2025-25de118a?mod=mw_rss_topstories" },
   { time: "00:40", tag: "macro", tagText: "宏观", text: "特朗普新预算案提出，2026财年支出较2025年增加约1万亿美元，而此前承诺的“DOGE”节支仅约730亿美元。若方案推进，意味着美国财政赤字与发债压力可能继续扩大，并削弱市场对财政整顿的预期。", source: "MarketWatch", url: "https://www.marketwatch.com/story/aaaargh-trumps-new-budget-hikes-spending-by-1-trillion-over-2025-25de118a?mod=mw_rss_topstories" },
   { time: "00:29", tag: "geo", tagText: "地缘", text: "特朗普预算案寻求大幅提高美国国防开支，创历史级别增幅。伊朗冲突背景下，军工行业有望获得更强财政支持，相关防务承包商与军工ETF可能因此受益，也显示中东局势正进一步向美国财政与产业政策传导。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trumps-budget-seeks-historic-increase-to-defense-spending-the-industry-could-use-a-boost-these-etfs-show-c569dc47?mod=mw_rss_topstories" },
-  { time: "23:35", tag: "macro", tagText: "宏观", text: "美国汽油价格升至每加仑4美元后，消费者负担感明显加重。报道指出，在伊朗战争推升能源价格之际，油价上涨正通过通胀预期与消费情绪影响美国家庭支出，这将增加美联储与白宫面临的经济压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/were-a-wildly-fickle-bunch-gas-prices-hit-4-a-gallon-why-do-i-feel-like-im-the-only-american-who-is-genuinely-upset-7b3f2216?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月4日 13:00 CST";
+const breakingDate = "2026年4月4日 14:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "10:00", tag: "ai", tagText: "并购", text: "🔴 Anthropic以约$4亿收购生物科技初创Coefficient Bio！该公司致力于让AI执行生物技术任务（如规划药物研究）。收购以股票形式完成，标志Anthropic从纯AI模型公司向医疗健康/生命科学领域扩张。", source: "The Information/Newcomer/CGTN/TechFlow", url: "https://www.theinformation.com/articles/anthropic-acquires-startup-coefficient-bio-400-million" },
   { time: "09:55", tag: "ai", tagText: "媒体", text: "OpenAI收购科技媒体TBPN！这是OpenAI首次收购媒体公司。同时OpenAI正削减Sora项目，全面聚焦企业AI和编程工具。Nebius(NBIS)AI云业务收入激增802%但盈利能力存风险。", source: "TechCrunch/CNBC/Motley Fool", url: "https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/" },
 ];
-const aiBreakingDate = "2026年4月4日 13:00 CST";
+const aiBreakingDate = "2026年4月4日 14:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
