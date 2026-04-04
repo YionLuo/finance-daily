@@ -1287,6 +1287,10 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:16", tag: "geo", tagText: "地缘", text: "美伊战争带来的“战争税”开始传导至美国经济。报道指出，柴油和航空燃油价格上升正推高企业运输与运营成本，并逐步转嫁给消费者；在霍尔木兹海峡紧张局势未缓解的情况下，相关能源冲击短期内看不到明显缓解，对通胀和企业利润率均构成压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/us-iran-war-gas-prices-diesel-jet-fuel-economy-consumer-tax.html" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "苹果成立50周年之际，CNBC称其在AI竞赛中“浪费了5年领先优势”。报道援引前内部人士称，苹果过去依靠隐私与终端生态建立护城河，但若要在生成式AI时代保持竞争力，可能需要在产品策略、数据使用方式和Siri等核心入口上作出更大调整。这关系到苹果未来硬件增长与平台估值逻辑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/apple-50-anniversary-ai-iphone-siri.html" },
+  { time: "20:24", tag: "macro", tagText: "宏观", text: "MarketWatch指出，美股技术面裂痕正在扩大，标普500多项技术指标显示市场可能进一步走弱。若这些信号持续恶化，意味着近期反弹更可能是弱市中的修复，而非新一轮上行起点，这将影响风险资产定价与投资者仓位调整。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-charts-show-the-cracks-in-the-stock-market-are-widening-9ee6a281?mod=mw_rss_topstories" },
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC报道，中国票房市场对好莱坞的“决定性影响力”已明显下降。由于内容审查趋严、疫情后观影习惯变化以及好莱坞自身发行策略调整，中国市场不再像过去那样决定全球大片的商业成败。这反映出中美文化消费市场进一步分化，也将影响国际娱乐公司的收入结构与投资布局。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/china-box-office-hollywood-films.html" },
   { time: "21:04", tag: "macro", tagText: "宏观", text: "美国参议院一个委员会将于4月中旬审议凯文·沃什（Kevin Warsh）的提名，这使特朗普阵营内部相互竞争的美联储人事与政策设想进一步正面碰撞。若提名推进，可能影响美联储未来的政策路线、市场对独立性的判断，以及利率预期与美元资产定价。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/warsh-fed-nomination-hearing-set-for-mid-april.html" },
   { time: "20:16", tag: "macro", tagText: "宏观", text: "受伊朗战争推动的油价飙升影响，欧元区3月通胀率升至2.5%，高于2月的1.9%。在此背景下，欧洲多国部长呼吁对能源企业征收暴利税。若落实，既可能缓解居民与企业能源成本压力，也将影响欧洲能源行业盈利预期、财政政策取向及欧洲央行后续降息空间。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/europe-energy-windfall-profit-tax.html" },
   { time: "21:08", tag: "macro", tagText: "宏观", text: "报道称，沃伦·巴菲特可能因比尔·盖茨与杰弗里·爱泼斯坦关系曝光，而停止对盖茨基金会每年数十亿美元级别的捐赠。这一变化若成真，将冲击全球最大慈善资金来源之一，也可能引发市场对大型基金会治理、名誉风险和超高净值人群慈善安排的重新评估。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/buffett-may-end-donations-to-gates-charity-over-bills-ties-to-epstein.html" },
@@ -1303,12 +1307,8 @@ const breakingNews = [
   { time: "03:34", tag: "macro", tagText: "宏观", text: "美国住房市场议价权正开始向买方倾斜。报道指出，尽管按揭利率和房价仍处高位，但房源增加、挂牌周期拉长以及卖家让步空间扩大，正让购房者在价格、维修补贴和成交条件上获得更多谈判筹码。这表明美国房地产市场正在从前期卖方强势逐步转向更平衡阶段，对后续房价走势和住宅交易活跃度具有指示意义。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buyers-finally-have-leverage-in-the-housing-market-here-are-3-smart-ways-to-use-it-49abcfa3?mod=mw_rss_topstories" },
   { time: "04:21", tag: "ai", tagText: "AI", text: "OpenAI表示，Fidji Simo因健康原因暂时休医疗假，期间由总裁Greg Brockman负责产品事务。此次高层调整发生在OpenAI持续推进商业化与产品整合之际，可能影响其短期管理分工与产品决策节奏。", source: "CNBC", url: "https://www.cnbc.com/2026/04/03/openai-fidji-simo-medical-leave-executive-changes.html" },
   { time: "03:34", tag: "macro", tagText: "宏观", text: "美国住房市场议价权正转向买方。报道指出，在按揭利率高企、房价仍高的背景下，更多房源与更长挂牌周期正给购房者带来更强谈判空间，包括争取降价、维修让步及卖方承担部分成交成本。这反映出美国楼市供需格局正在边际变化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buyers-finally-have-leverage-in-the-housing-market-here-are-3-smart-ways-to-use-it-49abcfa3?mod=mw_rss_topstories" },
-  { time: "03:18", tag: "macro", tagText: "宏观", text: "美国就业市场出现新变化：相较薪资水平，越来越多求职者更看重岗位稳定性。报道认为，在招聘放缓和求职难度上升的环境下，“有一张办公桌”比“更高工资”更重要，显示劳动力市场情绪趋于谨慎，也意味着企业与消费者对经济前景的安全偏好正在升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/in-todays-job-market-its-more-show-me-a-desk-than-show-me-the-money-3b66754e?mod=mw_rss_topstories" },
-  { time: "02:33", tag: "tech", tagText: "科技", text: "随着SpaceX与亚马逊未来几年推进大规模卫星发射，卫星通信产业链对半导体的需求被看好上升。报道指出，数以万计卫星入轨将带动射频、功率管理和通信芯片采购增长，相关中小型芯片公司可能成为太空基础设施扩张的潜在受益者。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-little-known-chip-stocks-could-be-winners-as-spacex-and-amazon-make-big-satellite-pushes-361000a3?mod=mw_rss_topstories" },
-  { time: "01:32", tag: "geo", tagText: "地缘", text: "美媒与英媒报道称，一架美军F-15E战斗机在伊朗上空坠毁或被击落，至少一名机组人员获救，另一名机组人员一度失联并展开搜救。事件显示美伊冲突存在进一步升级风险，可能推高避险情绪、能源价格与地区军事对抗预期。", source: "Financial Times", url: "https://www.ft.com/content/ffedc7fe-b068-444c-b8c6-b11332890d6f" },
-  { time: "02:54", tag: "macro", tagText: "宏观", text: "MarketWatch指出，美国国债市场对通胀的担忧正在升温：强于预期的就业数据叠加伊朗战争带来的能源冲击，使投资者重新评估未来通胀路径。对退休群体而言，这意味着实际购买力、债券价格和利率预期都面临更大压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/jobs-data-iran-war-add-to-inflation-fears-for-retirees-20175428?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月4日 21:17 CST";
+const breakingDate = "2026年4月4日 22:44 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "10:05", tag: "ai", tagText: "开源", text: "🔴 Google发布Gemma 4开源模型！基于Gemini 3架构，首次采用Apache 2.0许可证完全开源。支持多模态（含音频），可在RTX桌面到树莓派等设备本地运行。专为高级推理和自主代理工作流设计，直接挑战闭源模型在本地AI领域的垄断。", source: "Google官方/ZDNet/Ars Technica/Engadget/HuggingFace", url: "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" },
   { time: "10:00", tag: "ai", tagText: "并购", text: "🔴 Anthropic以约$4亿收购生物科技初创Coefficient Bio！该公司致力于让AI执行生物技术任务（如规划药物研究）。收购以股票形式完成，标志Anthropic从纯AI模型公司向医疗健康/生命科学领域扩张。", source: "The Information/Newcomer/CGTN/TechFlow", url: "https://www.theinformation.com/articles/anthropic-acquires-startup-coefficient-bio-400-million" },
 ];
-const aiBreakingDate = "2026年4月4日 21:17 CST";
+const aiBreakingDate = "2026年4月4日 22:44 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
