@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:09", tag: "geo", tagText: "地缘", text: "据CNBC援引消息人士报道，OPEC+正讨论批准进一步增产，尽管受美国与以色列对伊朗战争影响，部分关键成员实际上难以提升产量。若该决定落地，更多将被视为稳定市场和压制油价预期的政治信号，而非短期内显著增加实际供应。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/opec-debates-making-oil-output-hike-amid-iran-war-paralysis-reuters.html" },
   { time: "21:24", tag: "geo", tagText: "地缘", text: "伊朗已允许伊拉克船只通过霍尔木兹海峡。英国《金融时报》称，这一决定可能使约300万桶/日的原油重新进入国际市场，释放出局部缓和海上能源运输压力的信号；在伊朗战争导致全球供应链紧张之际，此举对油价、航运与中东出口流向具有直接影响。", source: "Financial Times", url: "https://www.ft.com/content/53db0c3d-c897-4ccd-8517-5ad392dfa252" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "达美航空将于周三拉开美国一季度财报季序幕。MarketWatch指出，在汽油与航空燃油价格因伊朗战争飙升之际，达美的业绩和前瞻指引将成为观察美国消费者与企业能否承受能源冲击的重要风向标，也可能影响市场对出行需求、企业差旅和通胀传导的判断。", source: "MarketWatch", url: "https://www.marketwatch.com/story/delta-kicks-off-an-earnings-season-focused-on-surging-gas-prices-and-the-iran-war-4a4226fc?mod=mw_rss_topstories" },
   { time: "21:11", tag: "geo", tagText: "地缘", text: "特朗普表示，此前在伊朗境内失踪并获救的美军飞行员“伤势严重”，并进一步威胁称，若局势升级，美国可能打击伊朗的发电厂和桥梁等关键基础设施。该表态显示美伊冲突存在继续外溢和升级风险，或加剧全球能源、航运与避险资产波动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/us-trump-confirms-missing-us-pilot-rescued.html" },
@@ -1306,9 +1307,8 @@ const breakingNews = [
   { time: "00:47", tag: "macro", tagText: "宏观", text: "MarketWatch分析称，在汽油价格升至每加仑约4美元的背景下，美国地方和联邦层面频繁讨论“油价税假期”，但从过往经验与测算看，短期减免汽油税对消费者价格的实际缓解有限，且可能扭曲能源价格信号、恶化财政状况，更像是选举政治工具而非有效通胀对策。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gas-tax-holidays-sound-tempting-at-4-a-gallon-too-bad-they-dont-actually-work-b20e2441?mod=mw_rss_topstories" },
   { time: "23:25", tag: "tech", tagText: "科技", text: "甲骨文开始新一轮大规模裁员，部分员工通过电子邮件收到裁撤通知。报道指此次裁员规模达数千人，反映出即便在云计算与数据库等核心业务领域，大型科技公司仍在继续压缩成本、优化人员结构，企业“邮件裁员”或正成为新常态。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fired-via-email-some-of-the-30-000-workers-cut-by-oracle-woke-up-to-a-morning-message-saying-they-were-laid-off-89a7af94?mod=mw_rss_topstories" },
   { time: "23:18", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，一个名为“阿沙卜·亚明”（Ashab al-Yamin）的神秘组织宣称在欧洲发动多起袭击，包括针对救护车、犹太教堂和银行的攻击。该组织通过与伊朗有关联的Telegram频道发布声明，显示欧洲安全风险正与中东代理人网络产生更直接联动，地缘外溢威胁上升。", source: "Financial Times", url: "https://www.ft.com/content/adc3e954-5928-471b-b7f2-e4385bbca540" },
-  { time: "21:16", tag: "geo", tagText: "地缘", text: "美伊战争带来的“战争税”开始传导至美国经济。报道指出，柴油和航空燃油价格上升正推高企业运输与运营成本，并逐步转嫁给消费者；在霍尔木兹海峡紧张局势未缓解的情况下，相关能源冲击短期内看不到明显缓解，对通胀和企业利润率均构成压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/us-iran-war-gas-prices-diesel-jet-fuel-economy-consumer-tax.html" },
 ];
-const breakingDate = "2026年4月5日 22:47 CST";
+const breakingDate = "2026年4月5日 23:43 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "11:30", tag: "ai", tagText: "基建", text: "🔴 微软投资$100亿在日本建设AI基础设施！与软银和Sakura Internet合作，四年内建设AI数据中心集群并培训100万名AI工程师。这是微软在亚太地区最大单笔AI投资，标志全球AI算力竞赛从美国向亚洲扩展。", source: "Bloomberg/Techmeme", url: "https://llm-stats.com/ai-news" },
   { time: "11:25", tag: "ai", tagText: "融资", text: "📊 Supabase洽谈$5亿融资估值$100亿！GIC预计领投，估值较2025年10月翻倍。AI原生产品设计工具Noon走出隐身模式获$4400万融资。印度Sarvam AI接近$3-3.5亿融资估值$15亿(Bessemer领投)。AI基础设施投资热度持续攀升。", source: "The Information/Economic Times/Bloomberg", url: "https://llm-stats.com/ai-news" },
 ];
-const aiBreakingDate = "2026年4月5日 22:47 CST";
+const aiBreakingDate = "2026年4月5日 23:43 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
