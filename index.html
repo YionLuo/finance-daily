@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:20", tag: "geo", tagText: "地缘", text: "特朗普威胁称，若伊朗未在其设定期限前重新开放霍尔木兹海峡，美国将打击伊朗电厂和桥梁等基础设施。此举意味着美伊冲突存在进一步升级风险，可能再度冲击全球原油运输、能源价格与避险资产表现。", source: "Financial Times", url: "https://www.ft.com/content/50943619-f694-4f49-bacf-6191b9096215" },
   { time: "00:31", tag: "macro", tagText: "宏观", text: "房利美预计，到2026年底美国30年期按揭利率将降至约5.7%。不过报道指出，利率回落未必能明显改善购房可负担性，因为房价仍处高位、房源供给偏紧，住房市场的实质性修复仍受收入增速与库存不足制约。", source: "Benzinga", url: "https://finance.yahoo.com/economy/policy/articles/fannie-mae-says-mortgage-rates-163121517.html" },
   { time: "23:58", tag: "macro", tagText: "宏观", text: "美国2月两项被视为货运需求前瞻指标的工业材料数据录得增长，显示制造业与运输活动存在边际企稳迹象。若趋势延续，可能为美国物流、工业和周期性板块提供早期需求改善信号，但整体复苏力度仍需更多月度数据确认。", source: "FreightWaves", url: "https://finance.yahoo.com/economy/articles/two-materials-predict-freight-demand-155839352.html" },
   { time: "23:09", tag: "geo", tagText: "地缘", text: "据CNBC援引消息人士报道，OPEC+正讨论批准进一步增产，尽管受美国与以色列对伊朗战争影响，部分关键成员实际上难以提升产量。若该决定落地，更多将被视为稳定市场和压制油价预期的政治信号，而非短期内显著增加实际供应。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/opec-debates-making-oil-output-hike-amid-iran-war-paralysis-reuters.html" },
@@ -1306,12 +1307,12 @@ const breakingNews = [
   { time: "02:56", tag: "crypto", tagText: "加密", text: "CNBC称，去中心化预测市场平台 Polymarket 因被批评允许就美军在伊朗营救行动的成败进行下注，在舆论和政界压力下已下架相关赌盘，美国众议员Seth Moulton斥其“令人作呕”，事件凸显加密预测市场在涉及战争与生命议题时面临的伦理与监管风险。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/polymarket-war-bet-iran-rescue-prediction-market-moulton.html" },
   { time: "00:56", tag: "macro", tagText: "宏观", text: "MarketWatch指出，当前私募信贷市场的压力与违约风险上升，使得美国“六大银行”（Big Six）在监管资本、流动性和透明度方面的相对稳定性更具吸引力，文章认为在利率高企与经济放缓背景下，系统性大行可能比高杠杆、披露有限的私募信贷机构更安全。", source: "MarketWatch", url: "https://www.marketwatch.com/story/private-credit-crisis-or-growing-pains-why-the-big-six-banks-are-a-safer-bet-ab4f5145?mod=mw_rss_topstories" },
   { time: "01:42", tag: "macro", tagText: "宏观", text: "MarketWatch提出所谓“E形经济”概念，指高收入与低收入人群就业和收入双向分化，而中产阶级在中间断层中被挤压：高技能岗位受益于AI与资本，低技能服务业维持刚性需求，而中等技能与中等收入群体则面临岗位流失与收入停滞，加剧社会与消费结构分化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/whats-an-e-shaped-economy-and-where-do-you-fit-in-it-a1192908?mod=mw_rss_topstories" },
-  { time: "00:47", tag: "macro", tagText: "宏观", text: "MarketWatch分析称，在汽油价格升至每加仑约4美元的背景下，美国地方和联邦层面频繁讨论“油价税假期”，但从过往经验与测算看，短期减免汽油税对消费者价格的实际缓解有限，且可能扭曲能源价格信号、恶化财政状况，更像是选举政治工具而非有效通胀对策。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gas-tax-holidays-sound-tempting-at-4-a-gallon-too-bad-they-dont-actually-work-b20e2441?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月6日 01:42 CST";
+const breakingDate = "2026年4月6日 03:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:51", tag: "ai", tagText: "AI", text: "微软在 Copilot 服务条款中写明，该产品“仅供娱乐用途”，并明确表示不应将其输出作为专业建议或事实依据。此举凸显出，即便是头部厂商也在法律层面持续强调生成式AI存在幻觉、错误和不可靠风险，企业级与消费级AI应用的责任边界仍在收紧。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "AI音乐平台 Suno 再陷版权争议。The Verge 报道称，尽管 Suno 政策声称不允许使用受版权保护的材料，但平台实际仍可能被用户用来生成高度近似知名歌曲风格或翻唱效果的内容，凸显生成式音乐在版权归属、授权边界与平台合规审查方面的风险仍在快速上升。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/906896/sunos-copyright-ai-music-covers" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "日本正将“物理AI”从试点阶段推进到真实商业场景落地。由于劳动力短缺持续加剧，机器人不再主要被视为替代现有岗位，而是被部署去填补“没人愿意做”或长期招不到人的工作。这一趋势显示，服务业、物流及护理等领域的实体机器人商业化正在提速，日本或成为全球观察AI机器人规模化应用的重要样本市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/" },
   { time: "12:59", tag: "ai", tagText: "AI", text: "一项最新研究发现，主流AI聊天机器人普遍存在“奉承/迎合”倾向，即更容易给出让用户感到被认同的回答，而非保持中立或纠正错误。这种交互模式可能削弱用户判断力、放大确认偏误，并对AI在搜索、教育、医疗与决策辅助等场景中的可靠性提出新的安全与治理挑战。", source: "bgnes.com", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOOC1teGRaVjU4S1c5aDBpVHMzT3ZBZXFkdlR1N1RHdzl4VHYyc1R3ZHB0VzdxMVlzNzhKQ2tHVTRVQ0Rwa01YaktqdVowZ0lBWkxoN3I2bk9mdUEzOWVWLXp1Ukg1ZFlYZ3RTQnhldU0yMm5tY0tfd2ZtU0dCSTQyZGptWWtqU2Y1Vmo2T1c1S0dxWjdCdndBcGk4eDRGbFhOWkliOHBIS3ZGcU4ybEE?oc=5" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "内容审核基础设施初创公司 Moonbounce 完成 1200 万美元融资，主打将平台内容政策转化为可执行、可预测的 AI 行为控制引擎。随着生成式 AI 应用扩张，AI 安全、合规与审核层正成为企业部署模型的重要基础设施赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/03/moonbounce-fundraise-content-moderation-for-the-ai-era/" },
   { time: "21:16", tag: "ai", tagText: "AI", text: "印度 AI 初创公司 Sarvam 据报接近完成 3 亿美元融资，估值约 15 亿美元。若交易落地，将成为印度本土大模型与 AI 基础设施领域又一笔大额融资，反映资本继续加码区域性主权 AI、语言模型及企业级 AI 平台布局。", source: "BWDisrupt", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaGk1SlhoQ3lYOUVFbVRNdmFGWGhqSnlESGp1RG9GTEIzVDB2eGFiR21kSy1OdTEwN3RXMGYzMFozbmgtaUJZWGIwVzBwQWlxQXNmY0VGekJZTDFBLUJlQ25veHhiY19oTEsxSXdfNXRIQTlnRUVGa241Rl8tN0FEeXBoc0cwUWdPVmU2eFk5SzZ0QQ?oc=5" },
   { time: "19:43", tag: "ai", tagText: "AI", text: "美国犹他州批准一套AI系统在无医生直接参与的情况下为患者开具精神科药物处方续配，这成为该州、也是全美少见地将临床处方权限正式下放给AI的案例之一。此举凸显AI正从辅助问诊迈向实际医疗决策环节，但也引发对安全性、责任归属和监管边界的高度关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/906525/ai-chatbot-prescribe-refill-psychiatric-drugs" },
-  { time: "11:30", tag: "ai", tagText: "基建", text: "🔴 微软投资$100亿在日本建设AI基础设施！与软银和Sakura Internet合作，四年内建设AI数据中心集群并培训100万名AI工程师。这是微软在亚太地区最大单笔AI投资，标志全球AI算力竞赛从美国向亚洲扩展。", source: "Bloomberg/Techmeme", url: "https://llm-stats.com/ai-news" },
 ];
-const aiBreakingDate = "2026年4月6日 01:42 CST";
+const aiBreakingDate = "2026年4月6日 03:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
