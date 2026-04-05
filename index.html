@@ -1287,6 +1287,10 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:49", tag: "macro", tagText: "宏观", text: "瑞银警告，在能源价格飙升之后，全球食品价格可能成为下一轮更持久的通胀冲击。报道指出，化肥、运输和农业生产成本都将受到高能源价格传导，若粮食价格继续上行，可能加大各国央行在通胀与增长之间的政策权衡压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/soaring-energy-costs-are-rattling-investors-the-food-price-shock-may-be-worse.html" },
+  { time: "04:49", tag: "macro", tagText: "宏观", text: "巴菲特在淡出管理层后的首次公开表态中，对市场维持审慎基调：他认为近期市场波动本身不必过度解读，但银行体系仍存在脆弱性。这番讲话被视为对金融稳定风险的提醒，尤其是在利率高位、能源冲击与地缘风险交织之际。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/warren-buffett-strikes-measured-tone-on-markets-in-first-remarks-since-stepping-back.html" },
+  { time: "04:55", tag: "macro", tagText: "宏观", text: "一项由麻省理工支持的新工具显示，美国不少社区的电价上涨并非短期波动，而是与当地电网投资、需求增长和基础设施成本上升有关。报道强调，这意味着居民用电账单的上行压力可能更具结构性，并可能进一步推高生活成本与通胀黏性。", source: "Moneywise", url: "https://finance.yahoo.com/sectors/energy/articles/mit-backed-tool-shows-exactly-205500689.html" },
+  { time: "05:20", tag: "ai", tagText: "AI", text: "AI基础设施公司Nebius宣布与Meta达成合作后，股价一度大涨15%。市场将此视为大型科技公司继续加码算力与云基础设施的信号，也反映出除英伟达之外，AI产业链中数据中心和算力服务提供商正获得更多资本关注。", source: "Motley Fool", url: "https://finance.yahoo.com/markets/stocks/articles/nebius-stock-jumped-15-meta-212000784.html" },
   { time: "02:31", tag: "macro", tagText: "宏观", text: "京东公布离岸人民币债券发行定价，规模100亿元人民币。该融资有助于其优化债务结构、补充一般企业用途与潜在再融资安排，也反映中资大型互联网企业在离岸债券市场的融资窗口仍然存在。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/jd-com-jd-announces-pricing-183126246.html" },
   { time: "02:31", tag: "ai", tagText: "AI", text: "IQVIA与英伟达合作推出统一的Agentic AI平台“IQVIA.ai”，面向医药研发、临床试验和医疗数据工作流。此举显示生成式AI正进一步渗透生命科学与医疗服务行业，有望提升研发效率并加快医药商业化流程。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/healthcare/articles/iqvia-iqv-launches-iqvia-ai-183121755.html" },
   { time: "02:31", tag: "tech", tagText: "科技", text: "GE HealthCare获得美国FDA对Photonova Spectra CT系统的许可。该产品获批意味着其在高端医学影像设备市场的产品线进一步推进，也有助于强化公司在医院资本开支与诊断设备升级周期中的竞争地位。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/healthcare/articles/ge-healthcare-gehc-receives-fda-183123377.html" },
@@ -1303,12 +1307,8 @@ const breakingNews = [
   { time: "18:05", tag: "macro", tagText: "宏观", text: "据路透援引消息人士报道，OPEC+正在讨论再次上调原油产量目标，尽管受美以对伊战争影响，部分核心成员国实际上已难以有效增产。若最终推进，这更像是释放稳定市场和压制油价预期的政策信号，而非真实供应能力的同步提升，凸显当前全球原油市场在地缘冲突下的“名义增产、实际受限”矛盾。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/opec-debates-making-oil-output-hike-amid-iran-war-paralysis-reuters.html" },
   { time: "16:52", tag: "ai", tagText: "AI", text: "据《南华早报》报道，Meta已任命前字节跳动高管徐睿负责AI硬件业务，显示其正加快自研AI基础设施与硬件布局。在全球AI竞争从模型能力延伸至芯片、服务器和终端设备之际，这一跨中美科技巨头的人才流动，反映出头部公司正试图通过硬件掌控力降低对外部供应链和算力平台的依赖。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMDZhRWxOTUhWb0VrOFM5ajBYR2FqbWV0R3h4NTZfa0JNdEUwSmdjRUFYeDhpTlE2VEJieFhmS05WMjNyU3pyb1JPcDZ3RGRFX3phbUJ5UHZsMzdDdDhyM3c2dHp6eFd4RWlSTlRnUTdHVU16Q0R2bHFZamxvVE5DX0tYM1Nud3duUlRDOEZyUGRBaERFaC1tbkhiZ3E1TEdnY2k5SXZkZUQ0QlNxRlZtSTNhSFQ1a2_SAbcBQVVfeXFMTTA2YUVsTk1IVm9FazhTOWowWEdham1ldEd4eDU2X2tCTXRFMEpnY0VBWHg4aU5RNlRCYnhYZktOVjIzclN6cm9ST3A2d0RkRV96YW1CeVB2bDM3Q3Q4cjN3NnR6enhXeEVpUk5UZ1E3R1VNekNEdmxxWWpsb1ROQ19LWDNTbnd3blJUQzhGclBkQWhERWgtbW5IYmdxNUxHZ2NpOUl2ZGVENEJTcUZWbUkzYUhUNWtv?oc=5" },
   { time: "12:42", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，美军已在伊朗西南部通过一项复杂行动救出此前被击落战机上的第二名失踪飞行员。这意味着此前在伊朗境内失联的两名美军机组人员均已获救，显示美伊冲突正进一步升级，并提高后续军事报复与地区局势失控的风险。", source: "Financial Times", url: "https://www.ft.com/content/764a9cda-eda0-4332-a4ce-6a26afaf7597" },
-  { time: "11:00", tag: "macro", tagText: "宏观", text: "国际能源署（IEA）警告，各国在伊朗战争引发的供应冲击下不应囤积燃料或实施出口限制。IEA负责人比罗尔还含蓄点名中国，呼吁主要消费国保持市场开放。该表态凸显全球能源供应紧张已从油价上涨演变为潜在的贸易与配给风险。", source: "Financial Times", url: "https://www.ft.com/content/9e47e3b8-fae1-4c1c-b79c-22dda42bc2b1" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "英国《金融时报》称，受AI概念股年内最高约400%涨幅带动，香港IPO市场融资额升至5年来高位，企业排队上市现象加剧。不过，随着港交所加强质量审查，一些科技公司也开始重新转向中国内地市场挂牌。该趋势反映出AI热潮正在重塑大中华区资本市场融资流向。", source: "Financial Times", url: "https://www.ft.com/content/77736111-3975-41a7-a0a3-d9d482ea2679" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "英国政府正积极游说美国AI初创公司Anthropic扩大其在伦敦的布局，背景是该公司此前在美国国防合作层面曾遭遇摩擦。此举显示英国正加码争夺全球顶级AI企业落地，试图在欧美AI监管与产业竞争中提升本土影响力。", source: "Financial Times", url: "https://www.ft.com/content/6bfd7b59-5e63-4a4d-ab55-7c2bd39b05a5" },
-  { time: "02:46", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，美国总统特朗普对伊朗发出最新威胁，称若霍尔木兹海峡在48小时内未重新开放，美国将让“地狱降临”，此举令本已紧张的美伊局势进一步升级，并加剧原油供应、油运航线及全球风险资产的不确定性。", source: "Financial Times", url: "https://www.ft.com/content/cc8974c6-2552-424c-9eab-231c49095461" },
 ];
-const breakingDate = "2026年4月6日 04:47 CST";
+const breakingDate = "2026年4月6日 05:43 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "内容审核基础设施初创公司 Moonbounce 完成 1200 万美元融资，主打将平台内容政策转化为可执行、可预测的 AI 行为控制引擎。随着生成式 AI 应用扩张，AI 安全、合规与审核层正成为企业部署模型的重要基础设施赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/03/moonbounce-fundraise-content-moderation-for-the-ai-era/" },
   { time: "21:16", tag: "ai", tagText: "AI", text: "印度 AI 初创公司 Sarvam 据报接近完成 3 亿美元融资，估值约 15 亿美元。若交易落地，将成为印度本土大模型与 AI 基础设施领域又一笔大额融资，反映资本继续加码区域性主权 AI、语言模型及企业级 AI 平台布局。", source: "BWDisrupt", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaGk1SlhoQ3lYOUVFbVRNdmFGWGhqSnlESGp1RG9GTEIzVDB2eGFiR21kSy1OdTEwN3RXMGYzMFozbmgtaUJZWGIwVzBwQWlxQXNmY0VGekJZTDFBLUJlQ25veHhiY19oTEsxSXdfNXRIQTlnRUVGa241Rl8tN0FEeXBoc0cwUWdPVmU2eFk5SzZ0QQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月6日 04:47 CST";
+const aiBreakingDate = "2026年4月6日 05:43 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
