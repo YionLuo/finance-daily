@@ -1287,6 +1287,8 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:05", tag: "macro", tagText: "宏观", text: "据路透援引消息人士报道，OPEC+正在讨论再次上调原油产量目标，尽管受美以对伊战争影响，部分核心成员国实际上已难以有效增产。若最终推进，这更像是释放稳定市场和压制油价预期的政策信号，而非真实供应能力的同步提升，凸显当前全球原油市场在地缘冲突下的“名义增产、实际受限”矛盾。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/opec-debates-making-oil-output-hike-amid-iran-war-paralysis-reuters.html" },
+  { time: "16:52", tag: "ai", tagText: "AI", text: "据《南华早报》报道，Meta已任命前字节跳动高管徐睿负责AI硬件业务，显示其正加快自研AI基础设施与硬件布局。在全球AI竞争从模型能力延伸至芯片、服务器和终端设备之际，这一跨中美科技巨头的人才流动，反映出头部公司正试图通过硬件掌控力降低对外部供应链和算力平台的依赖。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMDZhRWxOTUhWb0VrOFM5ajBYR2FqbWV0R3h4NTZfa0JNdEUwSmdjRUFYeDhpTlE2VEJieFhmS05WMjNyU3pyb1JPcDZ3RGRFX3phbUJ5UHZsMzdDdDhyM3c2dHp6eFd4RWlSTlRnUTdHVU16Q0R2bHFZamxvVE5DX0tYM1Nud3duUlRDOEZyUGRBaERFaC1tbkhiZ3E1TEdnY2k5SXZkZUQ0QlNxRlZtSTNhSFQ1a2_SAbcBQVVfeXFMTTA2YUVsTk1IVm9FazhTOWowWEdham1ldEd4eDU2X2tCTXRFMEpnY0VBWHg4aU5RNlRCYnhYZktOVjIzclN6cm9ST3A2d0RkRV96YW1CeVB2bDM3Q3Q4cjN3NnR6enhXeEVpUk5UZ1E3R1VNekNEdmxxWWpsb1ROQ19LWDNTbnd3blJUQzhGclBkQWhERWgtbW5IYmdxNUxHZ2NpOUl2ZGVENEJTcUZWbUkzYUhUNWtv?oc=5" },
   { time: "12:42", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，美军已在伊朗西南部通过一项复杂行动救出此前被击落战机上的第二名失踪飞行员。这意味着此前在伊朗境内失联的两名美军机组人员均已获救，显示美伊冲突正进一步升级，并提高后续军事报复与地区局势失控的风险。", source: "Financial Times", url: "https://www.ft.com/content/764a9cda-eda0-4332-a4ce-6a26afaf7597" },
   { time: "11:00", tag: "macro", tagText: "宏观", text: "国际能源署（IEA）警告，各国在伊朗战争引发的供应冲击下不应囤积燃料或实施出口限制。IEA负责人比罗尔还含蓄点名中国，呼吁主要消费国保持市场开放。该表态凸显全球能源供应紧张已从油价上涨演变为潜在的贸易与配给风险。", source: "Financial Times", url: "https://www.ft.com/content/9e47e3b8-fae1-4c1c-b79c-22dda42bc2b1" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "英国《金融时报》称，受AI概念股年内最高约400%涨幅带动，香港IPO市场融资额升至5年来高位，企业排队上市现象加剧。不过，随着港交所加强质量审查，一些科技公司也开始重新转向中国内地市场挂牌。该趋势反映出AI热潮正在重塑大中华区资本市场融资流向。", source: "Financial Times", url: "https://www.ft.com/content/77736111-3975-41a7-a0a3-d9d482ea2679" },
@@ -1305,10 +1307,8 @@ const breakingNews = [
   { time: "21:04", tag: "macro", tagText: "宏观", text: "美国参议院一个委员会将于4月中旬审议凯文·沃什（Kevin Warsh）的提名，这使特朗普阵营内部相互竞争的美联储人事与政策设想进一步正面碰撞。若提名推进，可能影响美联储未来的政策路线、市场对独立性的判断，以及利率预期与美元资产定价。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/warsh-fed-nomination-hearing-set-for-mid-april.html" },
   { time: "20:16", tag: "macro", tagText: "宏观", text: "受伊朗战争推动的油价飙升影响，欧元区3月通胀率升至2.5%，高于2月的1.9%。在此背景下，欧洲多国部长呼吁对能源企业征收暴利税。若落实，既可能缓解居民与企业能源成本压力，也将影响欧洲能源行业盈利预期、财政政策取向及欧洲央行后续降息空间。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/europe-energy-windfall-profit-tax.html" },
   { time: "21:08", tag: "macro", tagText: "宏观", text: "报道称，沃伦·巴菲特可能因比尔·盖茨与杰弗里·爱泼斯坦关系曝光，而停止对盖茨基金会每年数十亿美元级别的捐赠。这一变化若成真，将冲击全球最大慈善资金来源之一，也可能引发市场对大型基金会治理、名誉风险和超高净值人群慈善安排的重新评估。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/buffett-may-end-donations-to-gates-charity-over-bills-ties-to-epstein.html" },
-  { time: "18:58", tag: "geo", tagText: "地缘", text: "印度七年来首次购买伊朗原油，且交易未出现支付障碍。作为全球第三大原油进口国与消费国，印度自2019年5月以来未再接收伊朗原油货物。此举显示在中东局势剧烈波动背景下，伊朗原油正重新进入亚洲买家视野，可能影响地区能源贸易流向、制裁执行力度预期以及国际油价定价。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/india-makes-first-iranian-oil-purchase-in-seven-years.html" },
-  { time: "18:29", tag: "geo", tagText: "地缘", text: "据MS NOW援引两名美国官员报道，一架美军F-15战机在伊朗境内被击落，目前一名机组人员已获救，另一人仍下落不明。若消息属实，这将显著升级美伊之间的军事对抗风险，并可能进一步推高中东地缘政治溢价、扰动原油及全球风险资产走势。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/03/us-fighter-jet-downed-in-iran.html" },
 ];
-const breakingDate = "2026年4月5日 17:51 CST";
+const breakingDate = "2026年4月5日 18:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "11:25", tag: "ai", tagText: "融资", text: "📊 Supabase洽谈$5亿融资估值$100亿！GIC预计领投，估值较2025年10月翻倍。AI原生产品设计工具Noon走出隐身模式获$4400万融资。印度Sarvam AI接近$3-3.5亿融资估值$15亿(Bessemer领投)。AI基础设施投资热度持续攀升。", source: "The Information/Economic Times/Bloomberg", url: "https://llm-stats.com/ai-news" },
   { time: "11:20", tag: "ai", tagText: "大模型", text: "🔴 阿里发布Qwen 3.6-Plus旗舰模型！继2月Qwen 3.5系列后的重大升级，1M上下文窗口，深度优化Agentic Coding与复杂推理能力。智谱同日发布GLM-5V-Turbo——首个原生多模态Coding基座模型，可理解图片/视频/设计稿。中国AI厂商大模型军备赛加速。", source: "阿里云官方/智谱AI官方/财新/MarkTechPost", url: "https://www.alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005" },
 ];
-const aiBreakingDate = "2026年4月5日 17:51 CST";
+const aiBreakingDate = "2026年4月5日 18:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
