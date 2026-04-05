@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:11", tag: "geo", tagText: "地缘", text: "特朗普表示，此前在伊朗境内失踪并获救的美军飞行员“伤势严重”，并进一步威胁称，若局势升级，美国可能打击伊朗的发电厂和桥梁等关键基础设施。该表态显示美伊冲突存在继续外溢和升级风险，或加剧全球能源、航运与避险资产波动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/us-trump-confirms-missing-us-pilot-rescued.html" },
   { time: "19:02", tag: "macro", tagText: "宏观", text: "英国《金融时报》报道，激进投资人纳尔逊·佩尔茨相关交易竞逐，凸显全球资管行业正掀起一轮约250亿美元的整合浪潮。在费用压力上升、被动投资竞争加剧及规模效应愈发关键的背景下，全球资金管理公司并购节奏正有望显著超过去年，反映传统资管商业模式正加速重构。", source: "Financial Times", url: "https://www.ft.com/content/e51d9d8f-ffaa-480e-b763-350ebace12c8" },
   { time: "19:26", tag: "macro", tagText: "宏观", text: "MarketWatch报道称，美国汽油价格再度逼近每加仑4美元，但此次消费者对高油价的负面感受更强，情绪几乎“每天都在变化”。这反映出，在通胀记忆尚未消退、地缘冲突推高能源不确定性的背景下，能源成本对美国家庭消费信心和政治情绪的冲击正在放大。", source: "MarketWatch", url: "https://www.marketwatch.com/story/were-a-wildly-fickle-bunch-gas-prices-hit-4-a-gallon-why-do-i-feel-like-im-the-only-american-who-is-genuinely-upset-7b3f2216?mod=mw_rss_topstories" },
   { time: "19:15", tag: "macro", tagText: "宏观", text: "MarketWatch指出，美国不少医院和癌症治疗中心并不接受Medicare Advantage（联邦医保优势计划）患者，部分案例中保险公司甚至在保单年度尚未结束前就将癌症治疗机构移出网络。报道称，这暴露出美国医保支付体系在重大疾病治疗上的覆盖缺口，可能进一步推高患者自付成本并加剧医疗资源分配不均。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-is-an-overlooked-catastrophe-why-do-so-many-hospitals-not-accept-medicare-advantage-for-cancer-patients-130c1a13?mod=mw_rss_topstories" },
@@ -1306,9 +1307,8 @@ const breakingNews = [
   { time: "21:16", tag: "geo", tagText: "地缘", text: "美伊战争带来的“战争税”开始传导至美国经济。报道指出，柴油和航空燃油价格上升正推高企业运输与运营成本，并逐步转嫁给消费者；在霍尔木兹海峡紧张局势未缓解的情况下，相关能源冲击短期内看不到明显缓解，对通胀和企业利润率均构成压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/us-iran-war-gas-prices-diesel-jet-fuel-economy-consumer-tax.html" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "苹果成立50周年之际，CNBC称其在AI竞赛中“浪费了5年领先优势”。报道援引前内部人士称，苹果过去依靠隐私与终端生态建立护城河，但若要在生成式AI时代保持竞争力，可能需要在产品策略、数据使用方式和Siri等核心入口上作出更大调整。这关系到苹果未来硬件增长与平台估值逻辑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/apple-50-anniversary-ai-iphone-siri.html" },
   { time: "20:24", tag: "macro", tagText: "宏观", text: "MarketWatch指出，美股技术面裂痕正在扩大，标普500多项技术指标显示市场可能进一步走弱。若这些信号持续恶化，意味着近期反弹更可能是弱市中的修复，而非新一轮上行起点，这将影响风险资产定价与投资者仓位调整。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-charts-show-the-cracks-in-the-stock-market-are-widening-9ee6a281?mod=mw_rss_topstories" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC报道，中国票房市场对好莱坞的“决定性影响力”已明显下降。由于内容审查趋严、疫情后观影习惯变化以及好莱坞自身发行策略调整，中国市场不再像过去那样决定全球大片的商业成败。这反映出中美文化消费市场进一步分化，也将影响国际娱乐公司的收入结构与投资布局。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/china-box-office-hollywood-films.html" },
 ];
-const breakingDate = "2026年4月5日 19:39 CST";
+const breakingDate = "2026年4月5日 21:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "11:25", tag: "ai", tagText: "融资", text: "📊 Supabase洽谈$5亿融资估值$100亿！GIC预计领投，估值较2025年10月翻倍。AI原生产品设计工具Noon走出隐身模式获$4400万融资。印度Sarvam AI接近$3-3.5亿融资估值$15亿(Bessemer领投)。AI基础设施投资热度持续攀升。", source: "The Information/Economic Times/Bloomberg", url: "https://llm-stats.com/ai-news" },
   { time: "11:20", tag: "ai", tagText: "大模型", text: "🔴 阿里发布Qwen 3.6-Plus旗舰模型！继2月Qwen 3.5系列后的重大升级，1M上下文窗口，深度优化Agentic Coding与复杂推理能力。智谱同日发布GLM-5V-Turbo——首个原生多模态Coding基座模型，可理解图片/视频/设计稿。中国AI厂商大模型军备赛加速。", source: "阿里云官方/智谱AI官方/财新/MarkTechPost", url: "https://www.alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005" },
 ];
-const aiBreakingDate = "2026年4月5日 19:39 CST";
+const aiBreakingDate = "2026年4月5日 21:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
