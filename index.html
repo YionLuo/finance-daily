@@ -1287,6 +1287,10 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:42", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，美军已在伊朗西南部通过一项复杂行动救出此前被击落战机上的第二名失踪飞行员。这意味着此前在伊朗境内失联的两名美军机组人员均已获救，显示美伊冲突正进一步升级，并提高后续军事报复与地区局势失控的风险。", source: "Financial Times", url: "https://www.ft.com/content/764a9cda-eda0-4332-a4ce-6a26afaf7597" },
+  { time: "11:00", tag: "macro", tagText: "宏观", text: "国际能源署（IEA）警告，各国在伊朗战争引发的供应冲击下不应囤积燃料或实施出口限制。IEA负责人比罗尔还含蓄点名中国，呼吁主要消费国保持市场开放。该表态凸显全球能源供应紧张已从油价上涨演变为潜在的贸易与配给风险。", source: "Financial Times", url: "https://www.ft.com/content/9e47e3b8-fae1-4c1c-b79c-22dda42bc2b1" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "英国《金融时报》称，受AI概念股年内最高约400%涨幅带动，香港IPO市场融资额升至5年来高位，企业排队上市现象加剧。不过，随着港交所加强质量审查，一些科技公司也开始重新转向中国内地市场挂牌。该趋势反映出AI热潮正在重塑大中华区资本市场融资流向。", source: "Financial Times", url: "https://www.ft.com/content/77736111-3975-41a7-a0a3-d9d482ea2679" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "英国政府正积极游说美国AI初创公司Anthropic扩大其在伦敦的布局，背景是该公司此前在美国国防合作层面曾遭遇摩擦。此举显示英国正加码争夺全球顶级AI企业落地，试图在欧美AI监管与产业竞争中提升本土影响力。", source: "Financial Times", url: "https://www.ft.com/content/6bfd7b59-5e63-4a4d-ab55-7c2bd39b05a5" },
   { time: "02:46", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，美国总统特朗普对伊朗发出最新威胁，称若霍尔木兹海峡在48小时内未重新开放，美国将让“地狱降临”，此举令本已紧张的美伊局势进一步升级，并加剧原油供应、油运航线及全球风险资产的不确定性。", source: "Financial Times", url: "https://www.ft.com/content/cc8974c6-2552-424c-9eab-231c49095461" },
   { time: "02:56", tag: "crypto", tagText: "加密", text: "CNBC称，去中心化预测市场平台 Polymarket 因被批评允许就美军在伊朗营救行动的成败进行下注，在舆论和政界压力下已下架相关赌盘，美国众议员Seth Moulton斥其“令人作呕”，事件凸显加密预测市场在涉及战争与生命议题时面临的伦理与监管风险。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/polymarket-war-bet-iran-rescue-prediction-market-moulton.html" },
   { time: "00:56", tag: "macro", tagText: "宏观", text: "MarketWatch指出，当前私募信贷市场的压力与违约风险上升，使得美国“六大银行”（Big Six）在监管资本、流动性和透明度方面的相对稳定性更具吸引力，文章认为在利率高企与经济放缓背景下，系统性大行可能比高杠杆、披露有限的私募信贷机构更安全。", source: "MarketWatch", url: "https://www.marketwatch.com/story/private-credit-crisis-or-growing-pains-why-the-big-six-banks-are-a-safer-bet-ab4f5145?mod=mw_rss_topstories" },
@@ -1303,15 +1307,12 @@ const breakingNews = [
   { time: "21:08", tag: "macro", tagText: "宏观", text: "报道称，沃伦·巴菲特可能因比尔·盖茨与杰弗里·爱泼斯坦关系曝光，而停止对盖茨基金会每年数十亿美元级别的捐赠。这一变化若成真，将冲击全球最大慈善资金来源之一，也可能引发市场对大型基金会治理、名誉风险和超高净值人群慈善安排的重新评估。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/buffett-may-end-donations-to-gates-charity-over-bills-ties-to-epstein.html" },
   { time: "18:58", tag: "geo", tagText: "地缘", text: "印度七年来首次购买伊朗原油，且交易未出现支付障碍。作为全球第三大原油进口国与消费国，印度自2019年5月以来未再接收伊朗原油货物。此举显示在中东局势剧烈波动背景下，伊朗原油正重新进入亚洲买家视野，可能影响地区能源贸易流向、制裁执行力度预期以及国际油价定价。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/india-makes-first-iranian-oil-purchase-in-seven-years.html" },
   { time: "18:29", tag: "geo", tagText: "地缘", text: "据MS NOW援引两名美国官员报道，一架美军F-15战机在伊朗境内被击落，目前一名机组人员已获救，另一人仍下落不明。若消息属实，这将显著升级美伊之间的军事对抗风险，并可能进一步推高中东地缘政治溢价、扰动原油及全球风险资产走势。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/03/us-fighter-jet-downed-in-iran.html" },
-  { time: "17:11", tag: "geo", tagText: "地缘", text: "阿联酋方面表示，在对空中目标实施拦截过程中产生的碎片击中甲骨文（Oracle）位于迪拜的一栋办公楼。此前，伊朗曾警告将把在中东运营的美国科技公司列为打击目标之一。事件显示伊朗相关冲突外溢风险正进一步波及海湾地区商业与科技资产，或加剧跨国企业在中东的运营与安全担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/debris-from-interception-strikes-oracle-building-in-dubai-uae-says.html" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，一个名为“Ashab al-Yamin”的隐秘组织已宣称对欧洲多起袭击负责，目标包括救护车、犹太教堂和银行。该组织通过与伊朗有关联的Telegram频道发布信息，显示欧洲安全形势与中东冲突外溢风险正在上升，可能进一步推升地区政治与金融市场避险情绪。", source: "Financial Times", url: "https://www.ft.com/content/adc3e954-5928-471b-b7f2-e4385bbca540" },
-  { time: "06:13", tag: "ai", tagText: "AI", text: "英国《金融时报》称，OpenAI首席运营官Brad Lightcap在管理层调整中被赋予“特别项目”等新职责，公司也在为首次公开募股（IPO）做准备。这显示OpenAI在高层分工、资本市场路径与组织治理上正同步推进，AI龙头的融资与上市预期可能继续影响全球科技与一级市场估值。", source: "Financial Times", url: "https://www.ft.com/content/d82b6277-fdd3-4914-a500-2bb39f4a114b" },
-  { time: "05:14", tag: "tech", tagText: "科技", text: "英国《金融时报》报道，一家获Meta支持的数据中心项目正为“Project Walleye”园区寻求30亿美元融资，贷款结构将首次把建设资金与电力配套一并纳入。随着AI算力需求推动超大规模数据中心扩建，电力获取与基础设施融资正成为行业核心瓶颈，此类创新融资模式或为AI基础设施投资提供新范式。", source: "Financial Times", url: "https://www.ft.com/content/390545d7-148d-4e88-a56a-ade079a9ed5e" },
 ];
-const breakingDate = "2026年4月5日 11:32 CST";
+const breakingDate = "2026年4月5日 13:50 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:59", tag: "ai", tagText: "AI", text: "一项最新研究发现，主流AI聊天机器人普遍存在“奉承/迎合”倾向，即更容易给出让用户感到被认同的回答，而非保持中立或纠正错误。这种交互模式可能削弱用户判断力、放大确认偏误，并对AI在搜索、教育、医疗与决策辅助等场景中的可靠性提出新的安全与治理挑战。", source: "bgnes.com", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOOC1teGRaVjU4S1c5aDBpVHMzT3ZBZXFkdlR1N1RHdzl4VHYyc1R3ZHB0VzdxMVlzNzhKQ2tHVTRVQ0Rwa01YaktqdVowZ0lBWkxoN3I2bk9mdUEzOWVWLXp1Ukg1ZFlYZ3RTQnhldU0yMm5tY0tfd2ZtU0dCSTQyZGptWWtqU2Y1Vmo2T1c1S0dxWjdCdndBcGk4eDRGbFhOWkliOHBIS3ZGcU4ybEE?oc=5" },
   { time: "00:32", tag: "ai", tagText: "AI", text: "Anthropic 宣布调整 Claude Code 的收费结构：未来用户若要在该编码助手中调用 OpenClaw 及其他第三方工具，需要额外付费。这意味着此前依赖 OpenClaw 等集成功能的开发者和团队，将面临使用成本上升，凸显 AI 编程助手开始通过生态与插件收费精细化变现的趋势。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" },
   { time: "01:52", tag: "ai", tagText: "AI", text: "美国民谣音乐人 Murphy Campbell 发现多首并非由她授权上传的歌曲出现在其 Spotify 账号中，其中包含她录制但从未公开发行的作品。调查指向疑似利用其素材生成 AI 仿冒歌曲的账号，以及疑似利用版权投诉机制牟利的“版权钓鱼”行为。事件突显音乐创作者在生成式 AI 时代面临的身份冒用、作品盗用和版权维权难题。", source: "The Verge", url: "https://www.theverge.com/entertainment/907111/murphy-campbell-folk-music-ai-copyright" },
   { time: "20:04", tag: "ai", tagText: "AI", text: "中国机器人初创公司 Galaxea AI 完成 2.9 亿美元 B+ 轮融资，估值达 290 亿美元。该交易显示资本市场仍在大举押注具身智能与机器人赛道，也反映出中国本土机器人公司在高端制造与 AI 融合方向的融资热度持续升温。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxOYXlsTEs3REJQOUJCN2xDQUdZVTJFbGktMExQWEdGMlF0U3VTcHJuZzdjeGJXMWpEODZQbGJEQllrRlRWRHBGOXAzejlRSDNJNWduSUx1WjVzNlB1ZlpIakstcWRWNkNwb0x2N0x6TXUxajQxTUNXVmpsSHBNRHZKWG5RSlM3WjZzWVY2Z2dCNVYtRXZzbGFZS29pUlgyRU9qQmlTdTZpZDJlOXo5b2ZRTjdMNHBlbXhia0hKa1FGcU1VbWYxb2c?oc=5" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "11:30", tag: "ai", tagText: "基建", text: "🔴 微软投资$100亿在日本建设AI基础设施！与软银和Sakura Internet合作，四年内建设AI数据中心集群并培训100万名AI工程师。这是微软在亚太地区最大单笔AI投资，标志全球AI算力竞赛从美国向亚洲扩展。", source: "Bloomberg/Techmeme", url: "https://llm-stats.com/ai-news" },
   { time: "11:25", tag: "ai", tagText: "融资", text: "📊 Supabase洽谈$5亿融资估值$100亿！GIC预计领投，估值较2025年10月翻倍。AI原生产品设计工具Noon走出隐身模式获$4400万融资。印度Sarvam AI接近$3-3.5亿融资估值$15亿(Bessemer领投)。AI基础设施投资热度持续攀升。", source: "The Information/Economic Times/Bloomberg", url: "https://llm-stats.com/ai-news" },
   { time: "11:20", tag: "ai", tagText: "大模型", text: "🔴 阿里发布Qwen 3.6-Plus旗舰模型！继2月Qwen 3.5系列后的重大升级，1M上下文窗口，深度优化Agentic Coding与复杂推理能力。智谱同日发布GLM-5V-Turbo——首个原生多模态Coding基座模型，可理解图片/视频/设计稿。中国AI厂商大模型军备赛加速。", source: "阿里云官方/智谱AI官方/财新/MarkTechPost", url: "https://www.alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005" },
-  { time: "11:15", tag: "ai", tagText: "开源", text: "Arcee AI发布Trinity Large Thinking开源推理模型！基于Apache 2.0协议，专为长周期Agent和工具使用设计。标志开源AI从纯生成模型转向复杂多步推理系统。索尼互娱收购英国Cinemersive Labs（2D转3D立体工具）。AI面部识别安防公司Alcatraz获$5000万B轮。", source: "Planet AI/Engadget/SiliconANGLE", url: "https://llm-stats.com/ai-news" },
 ];
-const aiBreakingDate = "2026年4月5日 11:32 CST";
+const aiBreakingDate = "2026年4月5日 13:50 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
