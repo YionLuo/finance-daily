@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:31", tag: "macro", tagText: "宏观", text: "京东公布离岸人民币债券发行定价，规模100亿元人民币。该融资有助于其优化债务结构、补充一般企业用途与潜在再融资安排，也反映中资大型互联网企业在离岸债券市场的融资窗口仍然存在。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/jd-com-jd-announces-pricing-183126246.html" },
+  { time: "02:31", tag: "ai", tagText: "AI", text: "IQVIA与英伟达合作推出统一的Agentic AI平台“IQVIA.ai”，面向医药研发、临床试验和医疗数据工作流。此举显示生成式AI正进一步渗透生命科学与医疗服务行业，有望提升研发效率并加快医药商业化流程。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/healthcare/articles/iqvia-iqv-launches-iqvia-ai-183121755.html" },
+  { time: "02:31", tag: "tech", tagText: "科技", text: "GE HealthCare获得美国FDA对Photonova Spectra CT系统的许可。该产品获批意味着其在高端医学影像设备市场的产品线进一步推进，也有助于强化公司在医院资本开支与诊断设备升级周期中的竞争地位。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/healthcare/articles/ge-healthcare-gehc-receives-fda-183123377.html" },
   { time: "01:20", tag: "geo", tagText: "地缘", text: "特朗普威胁称，若伊朗未在其设定期限前重新开放霍尔木兹海峡，美国将打击伊朗电厂和桥梁等基础设施。此举意味着美伊冲突存在进一步升级风险，可能再度冲击全球原油运输、能源价格与避险资产表现。", source: "Financial Times", url: "https://www.ft.com/content/50943619-f694-4f49-bacf-6191b9096215" },
   { time: "00:31", tag: "macro", tagText: "宏观", text: "房利美预计，到2026年底美国30年期按揭利率将降至约5.7%。不过报道指出，利率回落未必能明显改善购房可负担性，因为房价仍处高位、房源供给偏紧，住房市场的实质性修复仍受收入增速与库存不足制约。", source: "Benzinga", url: "https://finance.yahoo.com/economy/policy/articles/fannie-mae-says-mortgage-rates-163121517.html" },
   { time: "23:58", tag: "macro", tagText: "宏观", text: "美国2月两项被视为货运需求前瞻指标的工业材料数据录得增长，显示制造业与运输活动存在边际企稳迹象。若趋势延续，可能为美国物流、工业和周期性板块提供早期需求改善信号，但整体复苏力度仍需更多月度数据确认。", source: "FreightWaves", url: "https://finance.yahoo.com/economy/articles/two-materials-predict-freight-demand-155839352.html" },
@@ -1304,11 +1307,8 @@ const breakingNews = [
   { time: "12:00", tag: "tech", tagText: "科技", text: "英国《金融时报》称，受AI概念股年内最高约400%涨幅带动，香港IPO市场融资额升至5年来高位，企业排队上市现象加剧。不过，随着港交所加强质量审查，一些科技公司也开始重新转向中国内地市场挂牌。该趋势反映出AI热潮正在重塑大中华区资本市场融资流向。", source: "Financial Times", url: "https://www.ft.com/content/77736111-3975-41a7-a0a3-d9d482ea2679" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "英国政府正积极游说美国AI初创公司Anthropic扩大其在伦敦的布局，背景是该公司此前在美国国防合作层面曾遭遇摩擦。此举显示英国正加码争夺全球顶级AI企业落地，试图在欧美AI监管与产业竞争中提升本土影响力。", source: "Financial Times", url: "https://www.ft.com/content/6bfd7b59-5e63-4a4d-ab55-7c2bd39b05a5" },
   { time: "02:46", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，美国总统特朗普对伊朗发出最新威胁，称若霍尔木兹海峡在48小时内未重新开放，美国将让“地狱降临”，此举令本已紧张的美伊局势进一步升级，并加剧原油供应、油运航线及全球风险资产的不确定性。", source: "Financial Times", url: "https://www.ft.com/content/cc8974c6-2552-424c-9eab-231c49095461" },
-  { time: "02:56", tag: "crypto", tagText: "加密", text: "CNBC称，去中心化预测市场平台 Polymarket 因被批评允许就美军在伊朗营救行动的成败进行下注，在舆论和政界压力下已下架相关赌盘，美国众议员Seth Moulton斥其“令人作呕”，事件凸显加密预测市场在涉及战争与生命议题时面临的伦理与监管风险。", source: "CNBC", url: "https://www.cnbc.com/2026/04/04/polymarket-war-bet-iran-rescue-prediction-market-moulton.html" },
-  { time: "00:56", tag: "macro", tagText: "宏观", text: "MarketWatch指出，当前私募信贷市场的压力与违约风险上升，使得美国“六大银行”（Big Six）在监管资本、流动性和透明度方面的相对稳定性更具吸引力，文章认为在利率高企与经济放缓背景下，系统性大行可能比高杠杆、披露有限的私募信贷机构更安全。", source: "MarketWatch", url: "https://www.marketwatch.com/story/private-credit-crisis-or-growing-pains-why-the-big-six-banks-are-a-safer-bet-ab4f5145?mod=mw_rss_topstories" },
-  { time: "01:42", tag: "macro", tagText: "宏观", text: "MarketWatch提出所谓“E形经济”概念，指高收入与低收入人群就业和收入双向分化，而中产阶级在中间断层中被挤压：高技能岗位受益于AI与资本，低技能服务业维持刚性需求，而中等技能与中等收入群体则面临岗位流失与收入停滞，加剧社会与消费结构分化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/whats-an-e-shaped-economy-and-where-do-you-fit-in-it-a1192908?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月6日 03:00 CST";
+const breakingDate = "2026年4月6日 03:41 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "21:16", tag: "ai", tagText: "AI", text: "印度 AI 初创公司 Sarvam 据报接近完成 3 亿美元融资，估值约 15 亿美元。若交易落地，将成为印度本土大模型与 AI 基础设施领域又一笔大额融资，反映资本继续加码区域性主权 AI、语言模型及企业级 AI 平台布局。", source: "BWDisrupt", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaGk1SlhoQ3lYOUVFbVRNdmFGWGhqSnlESGp1RG9GTEIzVDB2eGFiR21kSy1OdTEwN3RXMGYzMFozbmgtaUJZWGIwVzBwQWlxQXNmY0VGekJZTDFBLUJlQ25veHhiY19oTEsxSXdfNXRIQTlnRUVGa241Rl8tN0FEeXBoc0cwUWdPVmU2eFk5SzZ0QQ?oc=5" },
   { time: "19:43", tag: "ai", tagText: "AI", text: "美国犹他州批准一套AI系统在无医生直接参与的情况下为患者开具精神科药物处方续配，这成为该州、也是全美少见地将临床处方权限正式下放给AI的案例之一。此举凸显AI正从辅助问诊迈向实际医疗决策环节，但也引发对安全性、责任归属和监管边界的高度关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/906525/ai-chatbot-prescribe-refill-psychiatric-drugs" },
 ];
-const aiBreakingDate = "2026年4月6日 03:00 CST";
+const aiBreakingDate = "2026年4月6日 03:41 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
