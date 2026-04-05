@@ -1287,6 +1287,8 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:31", tag: "macro", tagText: "宏观", text: "房利美预计，到2026年底美国30年期按揭利率将降至约5.7%。不过报道指出，利率回落未必能明显改善购房可负担性，因为房价仍处高位、房源供给偏紧，住房市场的实质性修复仍受收入增速与库存不足制约。", source: "Benzinga", url: "https://finance.yahoo.com/economy/policy/articles/fannie-mae-says-mortgage-rates-163121517.html" },
+  { time: "23:58", tag: "macro", tagText: "宏观", text: "美国2月两项被视为货运需求前瞻指标的工业材料数据录得增长，显示制造业与运输活动存在边际企稳迹象。若趋势延续，可能为美国物流、工业和周期性板块提供早期需求改善信号，但整体复苏力度仍需更多月度数据确认。", source: "FreightWaves", url: "https://finance.yahoo.com/economy/articles/two-materials-predict-freight-demand-155839352.html" },
   { time: "23:09", tag: "geo", tagText: "地缘", text: "据CNBC援引消息人士报道，OPEC+正讨论批准进一步增产，尽管受美国与以色列对伊朗战争影响，部分关键成员实际上难以提升产量。若该决定落地，更多将被视为稳定市场和压制油价预期的政治信号，而非短期内显著增加实际供应。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/opec-debates-making-oil-output-hike-amid-iran-war-paralysis-reuters.html" },
   { time: "21:24", tag: "geo", tagText: "地缘", text: "伊朗已允许伊拉克船只通过霍尔木兹海峡。英国《金融时报》称，这一决定可能使约300万桶/日的原油重新进入国际市场，释放出局部缓和海上能源运输压力的信号；在伊朗战争导致全球供应链紧张之际，此举对油价、航运与中东出口流向具有直接影响。", source: "Financial Times", url: "https://www.ft.com/content/53db0c3d-c897-4ccd-8517-5ad392dfa252" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "达美航空将于周三拉开美国一季度财报季序幕。MarketWatch指出，在汽油与航空燃油价格因伊朗战争飙升之际，达美的业绩和前瞻指引将成为观察美国消费者与企业能否承受能源冲击的重要风向标，也可能影响市场对出行需求、企业差旅和通胀传导的判断。", source: "MarketWatch", url: "https://www.marketwatch.com/story/delta-kicks-off-an-earnings-season-focused-on-surging-gas-prices-and-the-iran-war-4a4226fc?mod=mw_rss_topstories" },
@@ -1305,13 +1307,12 @@ const breakingNews = [
   { time: "00:56", tag: "macro", tagText: "宏观", text: "MarketWatch指出，当前私募信贷市场的压力与违约风险上升，使得美国“六大银行”（Big Six）在监管资本、流动性和透明度方面的相对稳定性更具吸引力，文章认为在利率高企与经济放缓背景下，系统性大行可能比高杠杆、披露有限的私募信贷机构更安全。", source: "MarketWatch", url: "https://www.marketwatch.com/story/private-credit-crisis-or-growing-pains-why-the-big-six-banks-are-a-safer-bet-ab4f5145?mod=mw_rss_topstories" },
   { time: "01:42", tag: "macro", tagText: "宏观", text: "MarketWatch提出所谓“E形经济”概念，指高收入与低收入人群就业和收入双向分化，而中产阶级在中间断层中被挤压：高技能岗位受益于AI与资本，低技能服务业维持刚性需求，而中等技能与中等收入群体则面临岗位流失与收入停滞，加剧社会与消费结构分化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/whats-an-e-shaped-economy-and-where-do-you-fit-in-it-a1192908?mod=mw_rss_topstories" },
   { time: "00:47", tag: "macro", tagText: "宏观", text: "MarketWatch分析称，在汽油价格升至每加仑约4美元的背景下，美国地方和联邦层面频繁讨论“油价税假期”，但从过往经验与测算看，短期减免汽油税对消费者价格的实际缓解有限，且可能扭曲能源价格信号、恶化财政状况，更像是选举政治工具而非有效通胀对策。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gas-tax-holidays-sound-tempting-at-4-a-gallon-too-bad-they-dont-actually-work-b20e2441?mod=mw_rss_topstories" },
-  { time: "23:25", tag: "tech", tagText: "科技", text: "甲骨文开始新一轮大规模裁员，部分员工通过电子邮件收到裁撤通知。报道指此次裁员规模达数千人，反映出即便在云计算与数据库等核心业务领域，大型科技公司仍在继续压缩成本、优化人员结构，企业“邮件裁员”或正成为新常态。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fired-via-email-some-of-the-30-000-workers-cut-by-oracle-woke-up-to-a-morning-message-saying-they-were-laid-off-89a7af94?mod=mw_rss_topstories" },
-  { time: "23:18", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，一个名为“阿沙卜·亚明”（Ashab al-Yamin）的神秘组织宣称在欧洲发动多起袭击，包括针对救护车、犹太教堂和银行的攻击。该组织通过与伊朗有关联的Telegram频道发布声明，显示欧洲安全风险正与中东代理人网络产生更直接联动，地缘外溢威胁上升。", source: "Financial Times", url: "https://www.ft.com/content/adc3e954-5928-471b-b7f2-e4385bbca540" },
 ];
-const breakingDate = "2026年4月5日 23:43 CST";
+const breakingDate = "2026年4月6日 00:50 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:00", tag: "ai", tagText: "AI", text: "AI音乐平台 Suno 再陷版权争议。The Verge 报道称，尽管 Suno 政策声称不允许使用受版权保护的材料，但平台实际仍可能被用户用来生成高度近似知名歌曲风格或翻唱效果的内容，凸显生成式音乐在版权归属、授权边界与平台合规审查方面的风险仍在快速上升。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/906896/sunos-copyright-ai-music-covers" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "日本正将“物理AI”从试点阶段推进到真实商业场景落地。由于劳动力短缺持续加剧，机器人不再主要被视为替代现有岗位，而是被部署去填补“没人愿意做”或长期招不到人的工作。这一趋势显示，服务业、物流及护理等领域的实体机器人商业化正在提速，日本或成为全球观察AI机器人规模化应用的重要样本市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/" },
   { time: "12:59", tag: "ai", tagText: "AI", text: "一项最新研究发现，主流AI聊天机器人普遍存在“奉承/迎合”倾向，即更容易给出让用户感到被认同的回答，而非保持中立或纠正错误。这种交互模式可能削弱用户判断力、放大确认偏误，并对AI在搜索、教育、医疗与决策辅助等场景中的可靠性提出新的安全与治理挑战。", source: "bgnes.com", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOOC1teGRaVjU4S1c5aDBpVHMzT3ZBZXFkdlR1N1RHdzl4VHYyc1R3ZHB0VzdxMVlzNzhKQ2tHVTRVQ0Rwa01YaktqdVowZ0lBWkxoN3I2bk9mdUEzOWVWLXp1Ukg1ZFlYZ3RTQnhldU0yMm5tY0tfd2ZtU0dCSTQyZGptWWtqU2Y1Vmo2T1c1S0dxWjdCdndBcGk4eDRGbFhOWkliOHBIS3ZGcU4ybEE?oc=5" },
   { time: "00:32", tag: "ai", tagText: "AI", text: "Anthropic 宣布调整 Claude Code 的收费结构：未来用户若要在该编码助手中调用 OpenClaw 及其他第三方工具，需要额外付费。这意味着此前依赖 OpenClaw 等集成功能的开发者和团队，将面临使用成本上升，凸显 AI 编程助手开始通过生态与插件收费精细化变现的趋势。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "21:16", tag: "ai", tagText: "AI", text: "印度 AI 初创公司 Sarvam 据报接近完成 3 亿美元融资，估值约 15 亿美元。若交易落地，将成为印度本土大模型与 AI 基础设施领域又一笔大额融资，反映资本继续加码区域性主权 AI、语言模型及企业级 AI 平台布局。", source: "BWDisrupt", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaGk1SlhoQ3lYOUVFbVRNdmFGWGhqSnlESGp1RG9GTEIzVDB2eGFiR21kSy1OdTEwN3RXMGYzMFozbmgtaUJZWGIwVzBwQWlxQXNmY0VGekJZTDFBLUJlQ25veHhiY19oTEsxSXdfNXRIQTlnRUVGa241Rl8tN0FEeXBoc0cwUWdPVmU2eFk5SzZ0QQ?oc=5" },
   { time: "19:43", tag: "ai", tagText: "AI", text: "美国犹他州批准一套AI系统在无医生直接参与的情况下为患者开具精神科药物处方续配，这成为该州、也是全美少见地将临床处方权限正式下放给AI的案例之一。此举凸显AI正从辅助问诊迈向实际医疗决策环节，但也引发对安全性、责任归属和监管边界的高度关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/906525/ai-chatbot-prescribe-refill-psychiatric-drugs" },
   { time: "11:30", tag: "ai", tagText: "基建", text: "🔴 微软投资$100亿在日本建设AI基础设施！与软银和Sakura Internet合作，四年内建设AI数据中心集群并培训100万名AI工程师。这是微软在亚太地区最大单笔AI投资，标志全球AI算力竞赛从美国向亚洲扩展。", source: "Bloomberg/Techmeme", url: "https://llm-stats.com/ai-news" },
-  { time: "11:25", tag: "ai", tagText: "融资", text: "📊 Supabase洽谈$5亿融资估值$100亿！GIC预计领投，估值较2025年10月翻倍。AI原生产品设计工具Noon走出隐身模式获$4400万融资。印度Sarvam AI接近$3-3.5亿融资估值$15亿(Bessemer领投)。AI基础设施投资热度持续攀升。", source: "The Information/Economic Times/Bloomberg", url: "https://llm-stats.com/ai-news" },
 ];
-const aiBreakingDate = "2026年4月5日 23:43 CST";
+const aiBreakingDate = "2026年4月6日 00:50 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
