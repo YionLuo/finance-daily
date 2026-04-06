@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:47", tag: "ai", tagText: "AI", text: "博通与谷歌达成扩大的AI芯片合作，将继续生产谷歌后续版本的AI加速芯片；同时公司还宣布扩大与Anthropic的合作。此举凸显大型云与模型公司正继续加码自研/定制AI芯片供应链，也进一步巩固博通在AI基础设施领域的关键受益地位。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/broadcom-agrees-to-expanded-chip-deals-with-google-anthropic.html" },
+  { time: "05:16", tag: "macro", tagText: "宏观", text: "特朗普政府最终敲定2027年Medicare Advantage支付费率，平均上调2.48%，对应规模超过130亿美元，结果好于市场此前担忧。该决定将直接提振美国健康保险商盈利预期，并缓解医保支付政策收紧对行业估值带来的压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/trump-medicare-advantage.html" },
+  { time: "04:59", tag: "geo", tagText: "地缘", text: "英国将主持有关霍尔木兹海峡安全通行的会议，讨论战后如何保障这一全球关键能源航道的航运安全。此前特朗普已警告西方盟友，未来需要自行承担该海峡的安全责任。霍尔木兹海峡关系全球原油运输命脉，任何护航机制变化都可能影响油价、航运成本与地区安全格局。", source: "Financial Times", url: "https://www.ft.com/content/8a86004e-c1c2-4c58-aa38-4e77b7650960" },
   { time: "04:35", tag: "macro", tagText: "宏观", text: "特朗普政府正推动取消帮助低收入家庭支付水电暖账单的联邦援助项目，而美国今冬家庭平均能源支出已升至逾1000美元。若该项目被削减，意味着高能源价格将更直接冲击居民现金流，并可能加大地方财政与社会救助压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-moves-to-scrap-utility-bill-aid-for-americans-as-soaring-energy-costs-hit-over-1-000-on-average-this-winter-1c486251?mod=mw_rss_topstories" },
   { time: "04:11", tag: "ai", tagText: "AI", text: "OpenAI已致信加州和特拉华州总检察长，要求调查马斯克及其关联方涉嫌“反竞争行为”，时间点临近4月庭审。此举显示OpenAI与马斯克之间的法律与控制权争端继续升级，可能影响AI行业竞争格局、公司治理以及未来融资和合作预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/openai-asks-california-ag-to-probe-musks-anti-competitive-behavior-.html" },
   { time: "02:03", tag: "macro", tagText: "宏观", text: "摩根大通就美联储下一次降息发出谨慎信号，暗示市场对短期内宽松转向的预期可能过于乐观。在通胀、能源价格和地缘风险仍具不确定性的背景下，若降息继续推迟，美债收益率、美元及风险资产定价都可能面临重新调整。", source: "TheStreet / Yahoo Finance", url: "https://finance.yahoo.com/economy/policy/articles/jpmorgan-stark-message-next-fed-180300978.html" },
@@ -1304,11 +1307,8 @@ const breakingNews = [
   { time: "22:49", tag: "tech", tagText: "科技", text: "美国财政部已指定纽约梅隆银行（BNY）作为“Trump Accounts”的金融代理机构，BNY还将与Robinhood合作开发相关应用。此举意味着政府主导账户体系与零售券商平台进一步打通，可能对美国数字金融分发、零售投资入口和监管边界产生实质影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/treasury-trump-accounts-bny-robinhood.html" },
   { time: "23:34", tag: "crypto", tagText: "加密", text: "Yahoo Finance报道，Michael Saylor旗下Strategy再次买入约3.3亿美元比特币，带动公司股价走高。作为上市公司中最激进的比特币配置者之一，Strategy持续加仓强化了机构资金对加密资产的示范效应，也提升了美股与比特币价格联动的关注度。", source: "Yahoo Finance", url: "https://finance.yahoo.com/news/michael-saylors-strategy-buys-330-million-worth-of-bitcoin-stock-rises-153457420.html" },
   { time: "22:21", tag: "geo", tagText: "地缘", text: "据英国《金融时报》报道，以色列空袭已迫使伊朗关键石化工厂停产，直接打击其重要工业设施与出口创汇来源。若冲突继续升级，伊朗能源与化工出口能力受损，可能进一步收紧全球能源和化工品供应，并加大中东局势外溢风险。", source: "Financial Times", url: "https://www.ft.com/content/43f8ea8a-d8a9-444c-82c5-8a0358c948ed" },
-  { time: "21:33", tag: "macro", tagText: "宏观", text: "美国油价维持在每桶110美元上方，因伊朗拒绝按特朗普设定期限重开霍尔木兹海峡。霍尔木兹海峡是全球最关键的原油运输通道之一，若持续受阻，将显著推升全球通胀、压缩企业利润，并增加各国央行维持高利率的压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/crude-oil-dropping-after-historic-11-surge-as-negotiators-race-against-trumps-deadline-for-iran-407a2094?mod=mw_rss_topstories" },
-  { time: "22:47", tag: "macro", tagText: "宏观", text: "MarketWatch称，伊朗战争已开始冲击美国经济：3月服务业扩张放缓，企业面对油价和其他成本上升，开始压缩招聘。报道指出，战争正通过能源价格向更广泛通胀传导，并削弱就业与增长前景，暗示美国经济前景更加颠簸。", source: "MarketWatch", url: "https://www.marketwatch.com/story/economy-jolted-by-iran-war-inflation-bubbles-up-and-service-companies-reduce-employment-89e21443?mod=mw_rss_topstories" },
-  { time: "22:48", tag: "tech", tagText: "科技", text: "Yahoo Finance报道，伊朗战争已触发存储芯片价格飙升，消费电子硬件贸易面临冲击。若存储器等关键零部件持续涨价，智能手机、PC及其他消费电子产品的成本和终端售价都可能上行，进一步扰动全球科技硬件供应链与需求复苏。", source: "Yahoo Finance", url: "https://finance.yahoo.com/news/consumer-hardware-trade-in-danger-as-iran-war-triggers-memory-chip-pricing-explosion-144857982.html" },
 ];
-const breakingDate = "2026年4月7日 04:51 CST";
+const breakingDate = "2026年4月7日 05:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "12:59", tag: "ai", tagText: "AI", text: "一项最新研究发现，主流AI聊天机器人普遍存在“奉承/迎合”倾向，即更容易给出让用户感到被认同的回答，而非保持中立或纠正错误。这种交互模式可能削弱用户判断力、放大确认偏误，并对AI在搜索、教育、医疗与决策辅助等场景中的可靠性提出新的安全与治理挑战。", source: "bgnes.com", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOOC1teGRaVjU4S1c5aDBpVHMzT3ZBZXFkdlR1N1RHdzl4VHYyc1R3ZHB0VzdxMVlzNzhKQ2tHVTRVQ0Rwa01YaktqdVowZ0lBWkxoN3I2bk9mdUEzOWVWLXp1Ukg1ZFlYZ3RTQnhldU0yMm5tY0tfd2ZtU0dCSTQyZGptWWtqU2Y1Vmo2T1c1S0dxWjdCdndBcGk4eDRGbFhOWkliOHBIS3ZGcU4ybEE?oc=5" },
   { time: "00:32", tag: "ai", tagText: "AI", text: "Anthropic 宣布调整 Claude Code 的收费结构：未来用户若要在该编码助手中调用 OpenClaw 及其他第三方工具，需要额外付费。这意味着此前依赖 OpenClaw 等集成功能的开发者和团队，将面临使用成本上升，凸显 AI 编程助手开始通过生态与插件收费精细化变现的趋势。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" },
 ];
-const aiBreakingDate = "2026年4月7日 04:51 CST";
+const aiBreakingDate = "2026年4月7日 05:48 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
