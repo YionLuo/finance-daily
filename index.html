@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:35", tag: "macro", tagText: "宏观", text: "特朗普政府正推动取消帮助低收入家庭支付水电暖账单的联邦援助项目，而美国今冬家庭平均能源支出已升至逾1000美元。若该项目被削减，意味着高能源价格将更直接冲击居民现金流，并可能加大地方财政与社会救助压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-moves-to-scrap-utility-bill-aid-for-americans-as-soaring-energy-costs-hit-over-1-000-on-average-this-winter-1c486251?mod=mw_rss_topstories" },
+  { time: "04:11", tag: "ai", tagText: "AI", text: "OpenAI已致信加州和特拉华州总检察长，要求调查马斯克及其关联方涉嫌“反竞争行为”，时间点临近4月庭审。此举显示OpenAI与马斯克之间的法律与控制权争端继续升级，可能影响AI行业竞争格局、公司治理以及未来融资和合作预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/openai-asks-california-ag-to-probe-musks-anti-competitive-behavior-.html" },
+  { time: "02:03", tag: "macro", tagText: "宏观", text: "摩根大通就美联储下一次降息发出谨慎信号，暗示市场对短期内宽松转向的预期可能过于乐观。在通胀、能源价格和地缘风险仍具不确定性的背景下，若降息继续推迟，美债收益率、美元及风险资产定价都可能面临重新调整。", source: "TheStreet / Yahoo Finance", url: "https://finance.yahoo.com/economy/policy/articles/jpmorgan-stark-message-next-fed-180300978.html" },
   { time: "02:51", tag: "geo", tagText: "地缘", text: "在伊朗冲突持续、霍尔木兹海峡通行风险牵动全球市场之际，华尔街研究机构Citrini Research称已派分析师前往阿曼穆桑达姆半岛，并乘船实地观察海峡航运活动。这反映出市场正把霍尔木兹海峡是否维持正常通航，视为影响原油、航运与全球风险资产的关键变量。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/wall-street-firm-sends-analyst-to-the-strait-of-hormuz-heres-what-they-found-out.html" },
   { time: "02:56", tag: "macro", tagText: "宏观", text: "MarketWatch报道，越来越多美国人声称将以“政治抗议”为由拒缴今年税款，但美国税务体系并不存在“自愿纳税”这一说法。若未按规定申报或缴税，纳税人可能面临罚款、利息追缴，严重情况下甚至可能被刑事起诉。这一现象显示美国税务合规风险与政治情绪正在交织升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/americans-are-increasingly-saying-they-wont-pay-their-taxes-this-year-as-a-political-protest-heres-what-could-happen-to-them-c0a3563c?mod=mw_rss_topstories" },
   { time: "02:00", tag: "macro", tagText: "宏观", text: "CNBC称，随着伊朗战争持续，美国原油价格出现向上突破。历史经验显示，油价在地缘冲突驱动下快速冲高，往往会压缩企业利润、推升通胀预期，并对美股形成更广泛压力。当前油价走势已成为判断后续通胀与风险资产表现的重要领先信号。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/us-oil-is-breaking-out-as-iran-war-continues-a-look-at-how-past-peaks-have-affected-stocks.html" },
@@ -1304,11 +1307,8 @@ const breakingNews = [
   { time: "21:33", tag: "macro", tagText: "宏观", text: "美国油价维持在每桶110美元上方，因伊朗拒绝按特朗普设定期限重开霍尔木兹海峡。霍尔木兹海峡是全球最关键的原油运输通道之一，若持续受阻，将显著推升全球通胀、压缩企业利润，并增加各国央行维持高利率的压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/crude-oil-dropping-after-historic-11-surge-as-negotiators-race-against-trumps-deadline-for-iran-407a2094?mod=mw_rss_topstories" },
   { time: "22:47", tag: "macro", tagText: "宏观", text: "MarketWatch称，伊朗战争已开始冲击美国经济：3月服务业扩张放缓，企业面对油价和其他成本上升，开始压缩招聘。报道指出，战争正通过能源价格向更广泛通胀传导，并削弱就业与增长前景，暗示美国经济前景更加颠簸。", source: "MarketWatch", url: "https://www.marketwatch.com/story/economy-jolted-by-iran-war-inflation-bubbles-up-and-service-companies-reduce-employment-89e21443?mod=mw_rss_topstories" },
   { time: "22:48", tag: "tech", tagText: "科技", text: "Yahoo Finance报道，伊朗战争已触发存储芯片价格飙升，消费电子硬件贸易面临冲击。若存储器等关键零部件持续涨价，智能手机、PC及其他消费电子产品的成本和终端售价都可能上行，进一步扰动全球科技硬件供应链与需求复苏。", source: "Yahoo Finance", url: "https://finance.yahoo.com/news/consumer-hardware-trade-in-danger-as-iran-war-triggers-memory-chip-pricing-explosion-144857982.html" },
-  { time: "21:33", tag: "macro", tagText: "宏观", text: "美国散户投资者的交易行为正从“逢低买入”转向“逢高卖出”，并更多配置债券等防御性资产。报道称，伊朗战争打乱市场节奏后，个人投资者风险偏好明显降温，这种仓位切换若持续，可能削弱美股反弹的资金支撑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/individual-investors-are-shifting-from-buying-dips-to-selling-rips-as-they-favor-bonds-and-other-defensive-bets-5a81a97e?mod=mw_rss_topstories" },
-  { time: "21:22", tag: "geo", tagText: "地缘", text: "美国与伊朗正研究一项结束双方持续五周冲突的停火方案框架，但德黑兰仍对华盛顿施压持抵触态度。若停火方案成形，将直接影响霍尔木兹海峡通航、全球能源供应与本周全球风险资产走势。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/us-and-iran-receive-peace-proposal-as-trump-vows-hell-if-strait-stays-shut.html" },
-  { time: "21:33", tag: "macro", tagText: "宏观", text: "在伊朗拒绝特朗普要求其重开霍尔木兹海峡的最后通牒后，美国原油价格仍维持在每桶110美元上方。霍尔木兹海峡是全球关键能源运输通道，油价高位意味着市场仍在计入中东供应中断与更广泛通胀冲击风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/crude-oil-dropping-after-historic-11-surge-as-negotiators-race-against-trumps-deadline-for-iran-407a2094?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月7日 03:15 CST";
+const breakingDate = "2026年4月7日 04:51 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "12:59", tag: "ai", tagText: "AI", text: "一项最新研究发现，主流AI聊天机器人普遍存在“奉承/迎合”倾向，即更容易给出让用户感到被认同的回答，而非保持中立或纠正错误。这种交互模式可能削弱用户判断力、放大确认偏误，并对AI在搜索、教育、医疗与决策辅助等场景中的可靠性提出新的安全与治理挑战。", source: "bgnes.com", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOOC1teGRaVjU4S1c5aDBpVHMzT3ZBZXFkdlR1N1RHdzl4VHYyc1R3ZHB0VzdxMVlzNzhKQ2tHVTRVQ0Rwa01YaktqdVowZ0lBWkxoN3I2bk9mdUEzOWVWLXp1Ukg1ZFlYZ3RTQnhldU0yMm5tY0tfd2ZtU0dCSTQyZGptWWtqU2Y1Vmo2T1c1S0dxWjdCdndBcGk4eDRGbFhOWkliOHBIS3ZGcU4ybEE?oc=5" },
   { time: "00:32", tag: "ai", tagText: "AI", text: "Anthropic 宣布调整 Claude Code 的收费结构：未来用户若要在该编码助手中调用 OpenClaw 及其他第三方工具，需要额外付费。这意味着此前依赖 OpenClaw 等集成功能的开发者和团队，将面临使用成本上升，凸显 AI 编程助手开始通过生态与插件收费精细化变现的趋势。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" },
 ];
-const aiBreakingDate = "2026年4月7日 03:15 CST";
+const aiBreakingDate = "2026年4月7日 04:51 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
