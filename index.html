@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "10:50", tag: "crypto", tagText: "加密", text: "尽管特朗普对伊朗发出更强硬的战争威胁、全球风险资产承压，比特币仍小幅上涨，显示加密资产在地缘冲突升级期间与传统市场出现一定分化。但报道也指出，市场整体仍处于高不确定性阶段，避险与风险交易逻辑正在重新定价。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRGZtdUNJT1gzQlRWYUxsbzdBeU1kUVJOYlRyN0R6bWZ2Nms4dDI0TFVQMnAxUDN6a3dsSXVtTkJNeVhPYmlDZVFES2ZESVZOUVg5eUZlZWl6ME0tMEVuVmh4TFRkUlkxZVZXR2dEbVZtbl9wdUdWMklEMUJKMEswVU5ZbXVfcHl1cWZFVUk1SGlhSF9FT0NHMUotRzRpbURwWnhEOXMyWkZTQUZMTXU5ZkNFRVM?oc=5" },
+  { time: "10:49", tag: "tech", tagText: "科技", text: "英国《金融时报》报道，宁德时代正推动将电池技术应用于全球航运船队，试图把电动化从汽车扩展至海运领域。若大规模落地，可能重塑船舶能源结构与港口补能体系，并进一步提升中国电池企业在全球工业脱碳链条中的影响力；不过成本、续航、充电基础设施和行业标准仍是主要障碍。", source: "International homepage", url: "https://www.ft.com/content/06563cf9-e200-42d2-853d-cefa78db7d30" },
+  { time: "10:47", tag: "tech", tagText: "科技", text: "Neurocrine据报接近达成一笔超过25亿美元的交易，收购罕见病生物科技公司Soleno Therapeutics。Soleno开发出首个商业化治疗普拉德-威利综合征相关极端饥饿症的药物，这笔并购显示大型生物医药公司仍在通过高溢价收购补充创新管线，罕见病与代谢疾病资产的战略价值继续上升。", source: "International homepage", url: "https://www.ft.com/content/6642c09c-12df-4724-8ed4-a28c32b9b2b7" },
   { time: "16:32", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道称，特朗普警告称，若伊朗不重新开放霍尔木兹海峡，美国将摧毁其发电厂和桥梁等基础设施。随着战争进入第六周，布伦特原油早盘一度升破每桶111美元，显示中东局势升级正继续推高全球能源与航运风险。", source: "Financial Times", url: "https://www.ft.com/content/50943619-f694-4f49-bacf-6191b9096215" },
   { time: "15:56", tag: "geo", tagText: "地缘", text: "CNBC披露，一次在伊朗境内营救美军武器专家的高风险行动险些失控。该人员是此前被伊朗称遭防空系统击中的F-15E战机两名机组成员之一。报道凸显美伊冲突已从能源与航运风险外溢至直接军事对抗层面，进一步加剧地区升级担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/how-a-perilous-us-rescue-mission-in-iran-nearly-went-off-course.html" },
   { time: "16:57", tag: "tech", tagText: "科技", text: "美国编剧工会与好莱坞制片厂达成为期四年的初步协议，谈判仅进行了约三周便意外取得进展。该协议若最终落地，将降低美国影视产业再度出现大规模劳资中断的风险，有助于稳定内容生产、流媒体排播和媒体公司收入预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/screenwriters-union-and-hollywood-studios-reach-four-year-tentative-agreement.html" },
@@ -1304,14 +1307,12 @@ const breakingNews = [
   { time: "23:09", tag: "geo", tagText: "地缘", text: "据CNBC援引消息人士报道，OPEC+正讨论批准进一步增产，尽管受美国与以色列对伊朗战争影响，部分关键成员实际上难以提升产量。若该决定落地，更多将被视为稳定市场和压制油价预期的政治信号，而非短期内显著增加实际供应。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/opec-debates-making-oil-output-hike-amid-iran-war-paralysis-reuters.html" },
   { time: "21:24", tag: "geo", tagText: "地缘", text: "伊朗已允许伊拉克船只通过霍尔木兹海峡。英国《金融时报》称，这一决定可能使约300万桶/日的原油重新进入国际市场，释放出局部缓和海上能源运输压力的信号；在伊朗战争导致全球供应链紧张之际，此举对油价、航运与中东出口流向具有直接影响。", source: "Financial Times", url: "https://www.ft.com/content/53db0c3d-c897-4ccd-8517-5ad392dfa252" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "达美航空将于周三拉开美国一季度财报季序幕。MarketWatch指出，在汽油与航空燃油价格因伊朗战争飙升之际，达美的业绩和前瞻指引将成为观察美国消费者与企业能否承受能源冲击的重要风向标，也可能影响市场对出行需求、企业差旅和通胀传导的判断。", source: "MarketWatch", url: "https://www.marketwatch.com/story/delta-kicks-off-an-earnings-season-focused-on-surging-gas-prices-and-the-iran-war-4a4226fc?mod=mw_rss_topstories" },
-  { time: "21:11", tag: "geo", tagText: "地缘", text: "特朗普表示，此前在伊朗境内失踪并获救的美军飞行员“伤势严重”，并进一步威胁称，若局势升级，美国可能打击伊朗的发电厂和桥梁等关键基础设施。该表态显示美伊冲突存在继续外溢和升级风险，或加剧全球能源、航运与避险资产波动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/us-trump-confirms-missing-us-pilot-rescued.html" },
-  { time: "19:02", tag: "macro", tagText: "宏观", text: "英国《金融时报》报道，激进投资人纳尔逊·佩尔茨相关交易竞逐，凸显全球资管行业正掀起一轮约250亿美元的整合浪潮。在费用压力上升、被动投资竞争加剧及规模效应愈发关键的背景下，全球资金管理公司并购节奏正有望显著超过去年，反映传统资管商业模式正加速重构。", source: "Financial Times", url: "https://www.ft.com/content/e51d9d8f-ffaa-480e-b763-350ebace12c8" },
-  { time: "19:26", tag: "macro", tagText: "宏观", text: "MarketWatch报道称，美国汽油价格再度逼近每加仑4美元，但此次消费者对高油价的负面感受更强，情绪几乎“每天都在变化”。这反映出，在通胀记忆尚未消退、地缘冲突推高能源不确定性的背景下，能源成本对美国家庭消费信心和政治情绪的冲击正在放大。", source: "MarketWatch", url: "https://www.marketwatch.com/story/were-a-wildly-fickle-bunch-gas-prices-hit-4-a-gallon-why-do-i-feel-like-im-the-only-american-who-is-genuinely-upset-7b3f2216?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月6日 07:46 CST";
+const breakingDate = "2026年4月6日 11:35 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "09:25", tag: "ai", tagText: "AI", text: "一项最新AI研究取得关键突破：新方法据称可将计算能耗降低约100倍，同时提升模型准确率。若结果可在更广泛场景中复现，这可能显著缓解AI训练与推理对数据中心电力和散热的压力，并推动低功耗、高性能AI硬件与算法进一步落地。", source: "ScienceDaily", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE1CWTZjRk1GSnp3NUtGUm1OWG14cUxGYVBpWjBlc0hvbHhJQUZOemNBQ3lXU0JoeFQteTJnNkpkRXpOUENVRVE3NWI2bllLb2V0ME1xc1FxUTRsdlJrUnpJZkcxbTFSUlJfcGRuUmpobw?oc=5" },
   { time: "02:51", tag: "ai", tagText: "AI", text: "微软最新服务条款被发现将 Copilot 的输出界定为“仅供娱乐用途”，并明确提醒用户不要将其作为专业建议或高风险决策依据。这凸显出，即便大型科技公司正大力推广生成式AI，其法律文本仍在主动弱化对模型准确性与可靠性的责任承担；对企业采购、合规审查以及AI在金融、医疗、法律等场景的落地边界具有重要参考意义。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/" },
   { time: "02:51", tag: "ai", tagText: "AI", text: "微软在 Copilot 服务条款中写明，该产品“仅供娱乐用途”，并明确表示不应将其输出作为专业建议或事实依据。此举凸显出，即便是头部厂商也在法律层面持续强调生成式AI存在幻觉、错误和不可靠风险，企业级与消费级AI应用的责任边界仍在收紧。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "AI音乐平台 Suno 再陷版权争议。The Verge 报道称，尽管 Suno 政策声称不允许使用受版权保护的材料，但平台实际仍可能被用户用来生成高度近似知名歌曲风格或翻唱效果的内容，凸显生成式音乐在版权归属、授权边界与平台合规审查方面的风险仍在快速上升。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/906896/sunos-copyright-ai-music-covers" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "03:48", tag: "tech", tagText: "科技", text: "Meta、微软和谷歌正押注建设大型天然气电站，为AI数据中心提供电力。该趋势凸显AI算力扩张已开始倒逼能源基础设施重构，但也带来成本锁定、碳排放、审批风险及未来清洁能源转型受阻等长期隐忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/03/ai-energy-microsoft-meta-google-natural-gas-mining-fomo/" },
   { time: "02:26", tag: "tech", tagText: "科技", text: "Crunchbase最新一周融资榜显示，大额融资继续集中在国防、可穿戴设备、能源与安全等硬科技赛道，反映出一级市场资金仍明显偏向具备产业落地与国家安全属性的领域，而非单纯追逐概念型AI项目。这一资金流向变化，显示科技投资逻辑正进一步向“基础设施化、实体化、战略化”倾斜。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxOV3U4Y2RlMFlmU0dSWkEybTUwNXhvNnFsSUlSNHNReWZKZUw1RkZJT2Fyel8wOG5RcU1vNGpMVUZKaE45OW9YaDllZEx2Q202OS1jSGVoMUExRDJpckVyMnRDcTMtNW9NVE5YUmgwLVBidHY2SlBCZVE5eEEyY3VoVFlhVndhZzVYNUxaeFJfZUpkMml5MzE4WG52dw?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "内容审核基础设施初创公司 Moonbounce 完成 1200 万美元融资，主打将平台内容政策转化为可执行、可预测的 AI 行为控制引擎。随着生成式 AI 应用扩张，AI 安全、合规与审核层正成为企业部署模型的重要基础设施赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/03/moonbounce-fundraise-content-moderation-for-the-ai-era/" },
-  { time: "21:16", tag: "ai", tagText: "AI", text: "印度 AI 初创公司 Sarvam 据报接近完成 3 亿美元融资，估值约 15 亿美元。若交易落地，将成为印度本土大模型与 AI 基础设施领域又一笔大额融资，反映资本继续加码区域性主权 AI、语言模型及企业级 AI 平台布局。", source: "BWDisrupt", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaGk1SlhoQ3lYOUVFbVRNdmFGWGhqSnlESGp1RG9GTEIzVDB2eGFiR21kSy1OdTEwN3RXMGYzMFozbmgtaUJZWGIwVzBwQWlxQXNmY0VGekJZTDFBLUJlQ25veHhiY19oTEsxSXdfNXRIQTlnRUVGa241Rl8tN0FEeXBoc0cwUWdPVmU2eFk5SzZ0QQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月6日 07:46 CST";
+const aiBreakingDate = "2026年4月6日 11:35 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
