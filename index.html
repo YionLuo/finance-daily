@@ -1287,6 +1287,10 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:38", tag: "ai", tagText: "AI", text: "AI数据中心建设潮正对保险业形成“压力测试”。大量私人资本涌入、项目融资规模迅速膨胀，以及GPU、供电、火灾与施工等新型风险上升，促使保险公司重新评估承保定价与风险敞口。这显示AI基础设施热潮已开始向金融与保险体系传导。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/ai-data-centers-financing-insurance-deals-gpu-debt.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "欧盟警告成员国，不要把能源危机应对措施演变为财政危机。欧盟经济专员称，若各国为对冲高企能源价格而过度支出，将带来“严重的财政后果”。这一表态意味着，在新一轮能源冲击下，欧洲政策重心正转向防范债务与赤字风险失控。", source: "Financial Times", url: "https://www.ft.com/content/cee4cbc8-95ff-4c10-83fa-a5bdb1833baf" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "受AI担忧与战争冲击影响，全球私募股权并购明显降温。报道指出，截至3月的三个月内，相关收购协议规模为1720亿美元，较前一季度下滑36%。这表明地缘冲突与科技变局正在压制大型交易活动，并加剧企业估值与融资环境的不确定性。", source: "Financial Times", url: "https://www.ft.com/content/52ba3545-72ae-4bb6-86dd-1f892adccecf" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰无人机袭击正削弱俄罗斯因战争受益的石油收入。出口受扰不仅压缩俄方能源现金流，也进一步推高本已因伊朗冲突而紧张的全球油市供应风险。若俄罗斯出口持续受限，国际原油市场可能面临更长期的供给收缩压力。", source: "Financial Times", url: "https://www.ft.com/content/d49e288f-b74e-44a8-a2f3-ec87f7cb5c27" },
   { time: "10:50", tag: "crypto", tagText: "加密", text: "尽管特朗普对伊朗发出更强硬的战争威胁、全球风险资产承压，比特币仍小幅上涨，显示加密资产在地缘冲突升级期间与传统市场出现一定分化。但报道也指出，市场整体仍处于高不确定性阶段，避险与风险交易逻辑正在重新定价。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRGZtdUNJT1gzQlRWYUxsbzdBeU1kUVJOYlRyN0R6bWZ2Nms4dDI0TFVQMnAxUDN6a3dsSXVtTkJNeVhPYmlDZVFES2ZESVZOUVg5eUZlZWl6ME0tMEVuVmh4TFRkUlkxZVZXR2dEbVZtbl9wdUdWMklEMUJKMEswVU5ZbXVfcHl1cWZFVUk1SGlhSF9FT0NHMUotRzRpbURwWnhEOXMyWkZTQUZMTXU5ZkNFRVM?oc=5" },
   { time: "10:49", tag: "tech", tagText: "科技", text: "英国《金融时报》报道，宁德时代正推动将电池技术应用于全球航运船队，试图把电动化从汽车扩展至海运领域。若大规模落地，可能重塑船舶能源结构与港口补能体系，并进一步提升中国电池企业在全球工业脱碳链条中的影响力；不过成本、续航、充电基础设施和行业标准仍是主要障碍。", source: "International homepage", url: "https://www.ft.com/content/06563cf9-e200-42d2-853d-cefa78db7d30" },
   { time: "10:47", tag: "tech", tagText: "科技", text: "Neurocrine据报接近达成一笔超过25亿美元的交易，收购罕见病生物科技公司Soleno Therapeutics。Soleno开发出首个商业化治疗普拉德-威利综合征相关极端饥饿症的药物，这笔并购显示大型生物医药公司仍在通过高溢价收购补充创新管线，罕见病与代谢疾病资产的战略价值继续上升。", source: "International homepage", url: "https://www.ft.com/content/6642c09c-12df-4724-8ed4-a28c32b9b2b7" },
@@ -1303,12 +1307,8 @@ const breakingNews = [
   { time: "02:31", tag: "tech", tagText: "科技", text: "GE HealthCare获得美国FDA对Photonova Spectra CT系统的许可。该产品获批意味着其在高端医学影像设备市场的产品线进一步推进，也有助于强化公司在医院资本开支与诊断设备升级周期中的竞争地位。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/healthcare/articles/ge-healthcare-gehc-receives-fda-183123377.html" },
   { time: "01:20", tag: "geo", tagText: "地缘", text: "特朗普威胁称，若伊朗未在其设定期限前重新开放霍尔木兹海峡，美国将打击伊朗电厂和桥梁等基础设施。此举意味着美伊冲突存在进一步升级风险，可能再度冲击全球原油运输、能源价格与避险资产表现。", source: "Financial Times", url: "https://www.ft.com/content/50943619-f694-4f49-bacf-6191b9096215" },
   { time: "00:31", tag: "macro", tagText: "宏观", text: "房利美预计，到2026年底美国30年期按揭利率将降至约5.7%。不过报道指出，利率回落未必能明显改善购房可负担性，因为房价仍处高位、房源供给偏紧，住房市场的实质性修复仍受收入增速与库存不足制约。", source: "Benzinga", url: "https://finance.yahoo.com/economy/policy/articles/fannie-mae-says-mortgage-rates-163121517.html" },
-  { time: "23:58", tag: "macro", tagText: "宏观", text: "美国2月两项被视为货运需求前瞻指标的工业材料数据录得增长，显示制造业与运输活动存在边际企稳迹象。若趋势延续，可能为美国物流、工业和周期性板块提供早期需求改善信号，但整体复苏力度仍需更多月度数据确认。", source: "FreightWaves", url: "https://finance.yahoo.com/economy/articles/two-materials-predict-freight-demand-155839352.html" },
-  { time: "23:09", tag: "geo", tagText: "地缘", text: "据CNBC援引消息人士报道，OPEC+正讨论批准进一步增产，尽管受美国与以色列对伊朗战争影响，部分关键成员实际上难以提升产量。若该决定落地，更多将被视为稳定市场和压制油价预期的政治信号，而非短期内显著增加实际供应。", source: "CNBC", url: "https://www.cnbc.com/2026/04/05/opec-debates-making-oil-output-hike-amid-iran-war-paralysis-reuters.html" },
-  { time: "21:24", tag: "geo", tagText: "地缘", text: "伊朗已允许伊拉克船只通过霍尔木兹海峡。英国《金融时报》称，这一决定可能使约300万桶/日的原油重新进入国际市场，释放出局部缓和海上能源运输压力的信号；在伊朗战争导致全球供应链紧张之际，此举对油价、航运与中东出口流向具有直接影响。", source: "Financial Times", url: "https://www.ft.com/content/53db0c3d-c897-4ccd-8517-5ad392dfa252" },
-  { time: "22:00", tag: "macro", tagText: "宏观", text: "达美航空将于周三拉开美国一季度财报季序幕。MarketWatch指出，在汽油与航空燃油价格因伊朗战争飙升之际，达美的业绩和前瞻指引将成为观察美国消费者与企业能否承受能源冲击的重要风向标，也可能影响市场对出行需求、企业差旅和通胀传导的判断。", source: "MarketWatch", url: "https://www.marketwatch.com/story/delta-kicks-off-an-earnings-season-focused-on-surging-gas-prices-and-the-iran-war-4a4226fc?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月6日 11:35 CST";
+const breakingDate = "2026年4月6日 14:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "02:26", tag: "tech", tagText: "科技", text: "Crunchbase最新一周融资榜显示，大额融资继续集中在国防、可穿戴设备、能源与安全等硬科技赛道，反映出一级市场资金仍明显偏向具备产业落地与国家安全属性的领域，而非单纯追逐概念型AI项目。这一资金流向变化，显示科技投资逻辑正进一步向“基础设施化、实体化、战略化”倾斜。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxOV3U4Y2RlMFlmU0dSWkEybTUwNXhvNnFsSUlSNHNReWZKZUw1RkZJT2Fyel8wOG5RcU1vNGpMVUZKaE45OW9YaDllZEx2Q202OS1jSGVoMUExRDJpckVyMnRDcTMtNW9NVE5YUmgwLVBidHY2SlBCZVE5eEEyY3VoVFlhVndhZzVYNUxaeFJfZUpkMml5MzE4WG52dw?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "内容审核基础设施初创公司 Moonbounce 完成 1200 万美元融资，主打将平台内容政策转化为可执行、可预测的 AI 行为控制引擎。随着生成式 AI 应用扩张，AI 安全、合规与审核层正成为企业部署模型的重要基础设施赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/03/moonbounce-fundraise-content-moderation-for-the-ai-era/" },
 ];
-const aiBreakingDate = "2026年4月6日 11:35 CST";
+const aiBreakingDate = "2026年4月6日 14:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
