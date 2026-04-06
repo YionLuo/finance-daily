@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:43", tag: "geo", tagText: "地缘", text: "印度在中断7年后恢复从伊朗进口石油和天然气，反映其在中东局势恶化、霍尔木兹海峡供应风险上升之际，正重新平衡与德黑兰及华盛顿的关系。此举凸显美国对地区盟友能源选择的影响力存在边界，也可能重塑亚洲能源贸易流向。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/india-iran-oil-imports-strait-hormuz-us-tensions.html" },
+  { time: "14:01", tag: "geo", tagText: "地缘", text: "日韩股市走高，投资者评估特朗普就伊朗问题释放的强硬表态及延长期限信号。市场押注局势仍存在谈判窗口，但能源运输与原油供应的不确定性继续主导亚洲市场定价，显示区域资产对中东风险高度敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/asia-markets-nikkei-225-crude-oil-trump-iran-hormuz.html" },
+  { time: "14:45", tag: "macro", tagText: "宏观", text: "巴基斯坦金融压力据报已逼近临界点。报道指出，外部融资、汇率稳定与债务偿付压力同步加剧，若缺乏新的国际支持，可能进一步冲击其财政与银行体系，并对南亚区域金融稳定构成外溢风险。", source: "WION", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxOWFJYV2JVSGQxbzVjTjBDMTNWZkdRNUsxUjlMQ2JVbEFCSzVmYTRBYkN5TU5qdkpFc0h2UmpxQjkwTHloLWI5U1V5Y1pybkpNWVNqUFM0ZEgxX2hkQ256VDFKYlB4MGQ3SFE5TkM1SEgtYVRGc0dxVUxCZ19uTFdHQ2NiQVkxTFd1engyUHpURUNTZlVoZGtHTWZxUdIBoAFBVV95cUxOV0xxX3hRR255STdFUXJkUndxNDdRVG5SM0ViYWlvRVgtTHR0dEdja0FJQWtXWEhTZ2tZZ3pQb3RwaW1wWXh1UEkySkF0VVZQb3BxaEhnWkNJb1ZrTzk4SmRmUHowWnM3aUkzRXJlemt2cFFPN19UVE1Kak1GdS12ZkVLdUxReXJXck1jUzJmYmJ0ZTZKLXlkU25nbVBGbk5x?oc=5" },
   { time: "13:38", tag: "ai", tagText: "AI", text: "AI数据中心建设潮正对保险业形成“压力测试”。大量私人资本涌入、项目融资规模迅速膨胀，以及GPU、供电、火灾与施工等新型风险上升，促使保险公司重新评估承保定价与风险敞口。这显示AI基础设施热潮已开始向金融与保险体系传导。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/ai-data-centers-financing-insurance-deals-gpu-debt.html" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "欧盟警告成员国，不要把能源危机应对措施演变为财政危机。欧盟经济专员称，若各国为对冲高企能源价格而过度支出，将带来“严重的财政后果”。这一表态意味着，在新一轮能源冲击下，欧洲政策重心正转向防范债务与赤字风险失控。", source: "Financial Times", url: "https://www.ft.com/content/cee4cbc8-95ff-4c10-83fa-a5bdb1833baf" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "受AI担忧与战争冲击影响，全球私募股权并购明显降温。报道指出，截至3月的三个月内，相关收购协议规模为1720亿美元，较前一季度下滑36%。这表明地缘冲突与科技变局正在压制大型交易活动，并加剧企业估值与融资环境的不确定性。", source: "Financial Times", url: "https://www.ft.com/content/52ba3545-72ae-4bb6-86dd-1f892adccecf" },
@@ -1304,11 +1307,8 @@ const breakingNews = [
   { time: "05:20", tag: "ai", tagText: "AI", text: "AI基础设施公司Nebius宣布与Meta达成合作后，股价一度大涨15%。市场将此视为大型科技公司继续加码算力与云基础设施的信号，也反映出除英伟达之外，AI产业链中数据中心和算力服务提供商正获得更多资本关注。", source: "Motley Fool", url: "https://finance.yahoo.com/markets/stocks/articles/nebius-stock-jumped-15-meta-212000784.html" },
   { time: "02:31", tag: "macro", tagText: "宏观", text: "京东公布离岸人民币债券发行定价，规模100亿元人民币。该融资有助于其优化债务结构、补充一般企业用途与潜在再融资安排，也反映中资大型互联网企业在离岸债券市场的融资窗口仍然存在。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/jd-com-jd-announces-pricing-183126246.html" },
   { time: "02:31", tag: "ai", tagText: "AI", text: "IQVIA与英伟达合作推出统一的Agentic AI平台“IQVIA.ai”，面向医药研发、临床试验和医疗数据工作流。此举显示生成式AI正进一步渗透生命科学与医疗服务行业，有望提升研发效率并加快医药商业化流程。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/healthcare/articles/iqvia-iqv-launches-iqvia-ai-183121755.html" },
-  { time: "02:31", tag: "tech", tagText: "科技", text: "GE HealthCare获得美国FDA对Photonova Spectra CT系统的许可。该产品获批意味着其在高端医学影像设备市场的产品线进一步推进，也有助于强化公司在医院资本开支与诊断设备升级周期中的竞争地位。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/healthcare/articles/ge-healthcare-gehc-receives-fda-183123377.html" },
-  { time: "01:20", tag: "geo", tagText: "地缘", text: "特朗普威胁称，若伊朗未在其设定期限前重新开放霍尔木兹海峡，美国将打击伊朗电厂和桥梁等基础设施。此举意味着美伊冲突存在进一步升级风险，可能再度冲击全球原油运输、能源价格与避险资产表现。", source: "Financial Times", url: "https://www.ft.com/content/50943619-f694-4f49-bacf-6191b9096215" },
-  { time: "00:31", tag: "macro", tagText: "宏观", text: "房利美预计，到2026年底美国30年期按揭利率将降至约5.7%。不过报道指出，利率回落未必能明显改善购房可负担性，因为房价仍处高位、房源供给偏紧，住房市场的实质性修复仍受收入增速与库存不足制约。", source: "Benzinga", url: "https://finance.yahoo.com/economy/policy/articles/fannie-mae-says-mortgage-rates-163121517.html" },
 ];
-const breakingDate = "2026年4月6日 14:05 CST";
+const breakingDate = "2026年4月6日 15:59 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "02:26", tag: "tech", tagText: "科技", text: "Crunchbase最新一周融资榜显示，大额融资继续集中在国防、可穿戴设备、能源与安全等硬科技赛道，反映出一级市场资金仍明显偏向具备产业落地与国家安全属性的领域，而非单纯追逐概念型AI项目。这一资金流向变化，显示科技投资逻辑正进一步向“基础设施化、实体化、战略化”倾斜。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxOV3U4Y2RlMFlmU0dSWkEybTUwNXhvNnFsSUlSNHNReWZKZUw1RkZJT2Fyel8wOG5RcU1vNGpMVUZKaE45OW9YaDllZEx2Q202OS1jSGVoMUExRDJpckVyMnRDcTMtNW9NVE5YUmgwLVBidHY2SlBCZVE5eEEyY3VoVFlhVndhZzVYNUxaeFJfZUpkMml5MzE4WG52dw?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "内容审核基础设施初创公司 Moonbounce 完成 1200 万美元融资，主打将平台内容政策转化为可执行、可预测的 AI 行为控制引擎。随着生成式 AI 应用扩张，AI 安全、合规与审核层正成为企业部署模型的重要基础设施赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/03/moonbounce-fundraise-content-moderation-for-the-ai-era/" },
 ];
-const aiBreakingDate = "2026年4月6日 14:05 CST";
+const aiBreakingDate = "2026年4月6日 15:59 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
