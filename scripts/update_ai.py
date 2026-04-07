@@ -32,7 +32,7 @@ from openai import OpenAI
 
 FOCUS_AREAS = "大模型 · 智能体 · 具身智能 · AI Coding · AI for Science"
 
-LLM_MODEL = os.environ.get("LLM_MODEL", "gpt-5.1")
+LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-v3.2")
 
 
 def get_openai_client():
@@ -148,7 +148,11 @@ Return ONLY the JSON object. No markdown fencing.
             temperature=0.2,
             max_tokens=8000,
         )
-        content = response.choices[0].message.content.strip()
+        raw = response.choices[0].message.content
+        if not raw:
+            print("ERROR: LLM returned empty content")
+            return None
+        content = raw.strip()
         content = re.sub(r'^```json\s*', '', content)
         content = re.sub(r'\s*```$', '', content)
         return json.loads(content)

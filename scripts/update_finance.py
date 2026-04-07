@@ -48,7 +48,7 @@ FOCUS_AREAS = "AI与大模型 · 半导体与算力 · 中美科技博弈 · 云
 
 FEAR_GREED_API = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
 
-LLM_MODEL = os.environ.get("LLM_MODEL", "gpt-5.1")
+LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-v3.2")
 
 
 def get_openai_client():
@@ -188,7 +188,11 @@ Return ONLY the JSON object. No markdown fencing.
             temperature=0.2,
             max_tokens=8000,
         )
-        content = response.choices[0].message.content.strip()
+        raw = response.choices[0].message.content
+        if not raw:
+            print("ERROR: LLM returned empty content")
+            return None
+        content = raw.strip()
         content = re.sub(r'^```json\s*', '', content)
         content = re.sub(r'\s*```$', '', content)
         return json.loads(content)

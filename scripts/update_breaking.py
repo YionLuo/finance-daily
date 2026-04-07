@@ -43,7 +43,7 @@ except ImportError:
 
 MAX_ITEMS = 20
 WINDOW_HOURS = 24
-LLM_MODEL = os.environ.get("LLM_MODEL", "gpt-5.1-low")
+LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-v3.2")
 
 
 def get_openai_client():
@@ -120,7 +120,11 @@ Return ONLY the JSON array, no markdown fencing.
             temperature=0.1,
             max_tokens=4000,
         )
-        content = response.choices[0].message.content.strip()
+        raw = response.choices[0].message.content
+        if not raw:
+            print("LLM returned empty content")
+            return []
+        content = raw.strip()
         # Strip markdown code fences if present
         content = re.sub(r'^```json\s*', '', content)
         content = re.sub(r'\s*```$', '', content)
@@ -266,12 +270,12 @@ def main():
 
     # Step 2: Fetch REAL news from RSS feeds
     print("\n--- Fetching news from RSS feeds ---")
-    raw_finance = fetch_finance_news(max_age_hours=3)
-    raw_finance += fetch_watchlist_news(max_age_hours=3)
+    raw_finance = fetch_finance_news(max_age_hours=6)
+    raw_finance += fetch_watchlist_news(max_age_hours=6)
     raw_finance = dedup_by_title(raw_finance)
     print(f"Total finance articles from RSS: {len(raw_finance)}")
 
-    raw_ai = fetch_ai_news(max_age_hours=3)
+    raw_ai = fetch_ai_news(max_age_hours=6)
     raw_ai = dedup_by_title(raw_ai)
     print(f"Total AI articles from RSS: {len(raw_ai)}")
 
