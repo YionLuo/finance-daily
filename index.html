@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:41", tag: "macro", tagText: "宏观", text: "比尔·阿克曼的潘兴广场提出以550亿欧元收购环球音乐集团，提议将这家全球最大的音乐集团与一家特殊目的收购公司合并。", source: "Financial Times", url: "https://www.ft.com/content/3322139e-5df5-4a4a-a6d2-ec42ca6a3c4b" },
   { time: "13:44", tag: "geo", tagText: "地缘", text: "美国总统特朗普表示，美国有能力在一夜之间摧毁伊朗，并要求伊朗在周二最后期限前同意协议，否则将打击其民用基础设施。此举加剧了霍尔木兹海峡地区的紧张局势。", source: "Financial Times", url: "https://www.ft.com/content/35346eaf-0869-4706-8ebb-2d171e15266f" },
   { time: "13:35", tag: "geo", tagText: "地缘", text: "随着特朗普设定的霍尔木兹海峡最后期限临近，标普500指数期货下跌，市场紧张情绪加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/stock-market-today-live-updates.html" },
   { time: "13:31", tag: "macro", tagText: "宏观", text: "标普500指数期货下跌，因特朗普设定的伊朗问题最后期限临近，市场对霍尔木兹海峡可能关闭及冲突升级的风险感到担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/stock-market-today-live-updates.html" },
@@ -1295,6 +1296,7 @@ const breakingNews = [
   { time: "13:00", tag: "tech", tagText: "科技", text: "杰夫·贝索斯的新实验室Project Prometheus聘请了OpenAI联合创始人Kyle Kosic，该初创公司致力于开发理解物理世界的系统。", source: "Financial Times", url: "https://www.ft.com/content/e03c235d-8637-41e5-9e63-a872e398897a" },
   { time: "12:58", tag: "ai", tagText: "AI", text: "三星电子预计第一季度营业利润将因AI存储芯片需求激增而飙升8倍，远超分析师预期，股价随之大涨。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/samsung-shares-rise-nearly-5percent-on-record-breaking-earnings-forecast-buoyed-by-ai-chip-demand.html" },
   { time: "12:46", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic与谷歌和博通达成了价值数千亿美元的芯片协议，以获取更多算力，其年化收入已达300亿美元。", source: "Financial Times", url: "https://www.ft.com/content/28757ce7-0d9f-4ffb-bb91-16dc83f2cf6a" },
+  { time: "12:08", tag: "macro", tagText: "宏观", text: "巴西将中国电动汽车制造商比亚迪列入‘耻辱名单’，因其在2024年涉及一起中国工人遭受人口贩卖和虐待合同的丑闻。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/brazil-puts-chinas-byd-on-list-of-shame-for-workers-past-slavery-like-conditions.html" },
   { time: "12:08", tag: "macro", tagText: "宏观", text: "巴西将中国电动汽车制造商比亚迪列入“耻辱名单”，因其在2024年涉及一起中国工人遭受人口贩卖和虐待合同的丑闻。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/brazil-puts-chinas-byd-on-list-of-shame-for-workers-past-slavery-like-conditions.html" },
   { time: "12:08", tag: "macro", tagText: "宏观", text: "巴西将中国比亚迪列入‘耻辱名单’，因其过去涉及工人奴隶般工作条件的丑闻。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/brazil-puts-chinas-byd-on-list-of-shame-for-workers-past-slavery-like-conditions.html" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic与谷歌和博通达成价值数千亿美元的芯片协议，以获取更多计算能力。其年化收入已达到300亿美元。", source: "Financial Times", url: "https://www.ft.com/content/28757ce7-0d9f-4ffb-bb91-16dc83f2cf6a" },
@@ -1305,13 +1307,12 @@ const breakingNews = [
   { time: "07:39", tag: "geo", tagText: "地缘", text: "伊朗最高军事指挥部称特朗普针对其基础设施的威胁是‘妄想’，并称这些‘粗鲁’且‘毫无根据’的威胁无法弥补美国在该地区的‘羞辱’。", source: "Financial Times", url: "https://www.ft.com/content/e49f0110-f07b-4480-9ea4-2b37aab2c906" },
   { time: "06:30", tag: "geo", tagText: "地缘", text: "特朗普表示美国可以‘在一夜之间摧毁伊朗’，并要求德黑兰在周二晚间前同意协议，否则将升级对民用基础设施的攻击。", source: "Financial Times", url: "https://www.ft.com/content/35346eaf-0869-4706-8ebb-2d171e15266f" },
   { time: "06:22", tag: "tech", tagText: "科技", text: "亚马逊与美国邮政署（USPS）达成新协议，显示尽管亚马逊持续扩张自有仓储和同日达网络、并曾威胁大幅削减合作，但双方在“最后一公里”配送上仍高度依赖彼此。这一协议有助于稳定美国电商物流基础设施，也反映大型平台在降本增效与全国覆盖之间仍需借助传统邮政体系。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amazon-usps-strike-a-deal-showing-they-still-need-each-other-despite-threats-of-big-delivery-cuts-87078db2?mod=mw_rss_topstories" },
-  { time: "05:48", tag: "macro", tagText: "宏观", text: "摩根大通首席策略师指出，市场对伊朗战争影响存在多项误判，其中最关键的是“美国是能源净出口国，因此可免疫全球油价冲击”的看法并不成立。该行警告，若冲突推高全球能源成本，美国经济、企业利润与通胀仍会承受明显外溢压力，这将继续牵动美联储与风险资产定价。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-top-j-p-morgan-strategist-tackles-some-of-the-biggest-myths-about-the-war-in-iran-ec30f625?mod=mw_rss_topstories" },
-  { time: "05:47", tag: "ai", tagText: "AI", text: "博通与谷歌达成扩大的AI芯片合作，将继续生产谷歌后续版本的AI加速芯片；同时公司还宣布扩大与Anthropic的合作。此举凸显大型云与模型公司正继续加码自研/定制AI芯片供应链，也进一步巩固博通在AI基础设施领域的关键受益地位。", source: "CNBC", url: "https://www.cnbc.com/2026/04/06/broadcom-agrees-to-expanded-chip-deals-with-google-anthropic.html" },
 ];
-const breakingDate = "2026年4月7日 13:54 CST";
+const breakingDate = "2026年4月7日 15:52 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:01", tag: "tech", tagText: "科技", text: "全球AI芯片供应商竞争加剧，台积电（TSMC）仍是顶级代工合作伙伴。报道指出，尽管多家厂商竞逐AI芯片市场，但先进制程的制造能力仍高度集中于台积电，凸显其在AI硬件供应链中的关键地位。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWV9LcWQ2QWlMWmtnTlVuV01tVXR6ZFN0U1A2Y3pXVk53NzRJQkMySkEzN0xXcHVXUTk5LUdmZTJVTFpsb3dremZUanljaHNSa1dLREVubGV3RjI2ajFLenQ0ekdZSFAzSDBNMnBiT21DTnJYMTBZNE1aN1FRYjhVNVhacVR6M2c?oc=5" },
   { time: "13:30", tag: "ai", tagText: "AI", text: "AI初创公司Rocket推出新平台，旨在提供麦肯锡式的战略咨询报告，但成本仅为后者的一小部分。该平台结合了战略制定、产品构建和竞争情报分析，标志着AI应用正从单纯的代码生成向更高阶的商业咨询服务拓展。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/06/indian-startup-rocket-wants-its-ai-to-do-mckinsey-style-consulting-at-a-fraction-of-the-cost/" },
   { time: "13:30", tag: "ai", tagText: "AI", text: "AI初创公司Rocket推出新平台，旨在提供类似麦肯锡的战略咨询、产品构建和竞争情报报告，成本仅为传统咨询的一小部分，标志着AI正从代码生成向更高阶的商业分析领域扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/06/indian-startup-rocket-wants-its-ai-to-do-mckinsey-style-consulting-at-a-fraction-of-the-cost/" },
   { time: "12:53", tag: "ai", tagText: "AI", text: "Agentic AI初创公司Xccelera宣布获得新一轮融资，投资者包括Ramakant Sharma等。这表明市场对能够自主执行复杂任务的智能体（Agentic AI）技术持续看好。", source: "Entrackr", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbVhyUFl2SE80N2NDTFNvNVdmQXhZM0FQSUhzbm9sWnFadUYwYXFrRWY2Qkw1cDBMZlc1dW9hdXk1dXNuNHRQTnRVTGtrTFFkak5tX0RiaXlXUGYyaGhTZWM5R1dXdWpWT3lZNFBaV3YyS1F1RUV5MkNqNk9XV1hiMU16dmlocGsyMm5OazgxdTVCR3VBUElscGhuR3ZLaFo0QXE3bVRWWnBUdUlGRmRoeNIBsAFBVV95cUxNbVhyUFl2SE80N2NDTFNvNVdmQXhZM0FQSUhzbm9sWnFadUYwYXFrRWY2Qkw1cDBMZlc1dW9hdXk1dXNuNHRQTnRVTGtrTFFkak5tX0RiaXlXUGYyaGhTZWM5R1dXdWpWT3lZNFBaV3YyS1F1RUV5MkNqNk9XV1hiMU16dmlocGsyMm5OazgxdTVCR3VBUElscGhuR3ZLaFo0QXE3bVRWWnBUdUlGRmRoeA?oc=5" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "02:51", tag: "ai", tagText: "AI", text: "微软在 Copilot 服务条款中写明，该产品“仅供娱乐用途”，并明确表示不应将其输出作为专业建议或事实依据。此举凸显出，即便是头部厂商也在法律层面持续强调生成式AI存在幻觉、错误和不可靠风险，企业级与消费级AI应用的责任边界仍在收紧。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/" },
   { time: "01:01", tag: "tech", tagText: "科技", text: "特斯拉最新交付量低于市场预期，显示其电动车主业仍面临需求与执行压力。报道指出，马斯克正将更多战略重心押注于 AI 与机器人，这意味着公司估值逻辑或进一步从“汽车制造商”转向“AI/机器人平台”，但短期业绩承压可能加剧投资者对转型节奏与商业化落地的质疑。", source: "National Today", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNcmFlZFRZa0tPdURHb1Y0dmVMUmstV194VWFNSTlpaTBTaEV1blFFOUxMOEhLeElLQmhaSnlLbWRZMWV0cktwQW1Tck5FdFRwb003ZEwwRlNlZWVPZFNuc0RraG9Eb2U1NEZyUDJQWi1EbDI2UENjSnR5aGRoM29hdnA0ZUo4WWhDTG5JV0Q5OHBrUW51dWg3bWk2ME9rMU5MSUZ1MGd2Nnl2ZlQ5Tnl2WGtTZFI3dmRzRXk0TVRQTURTZw?oc=5" },
   { time: "00:32", tag: "ai", tagText: "AI", text: "Anthropic 宣布调整 Claude Code 的收费结构：未来用户若要在该编码助手中调用 OpenClaw 及其他第三方工具，需要额外付费。这意味着此前依赖 OpenClaw 等集成功能的开发者和团队，将面临使用成本上升，凸显 AI 编程助手开始通过生态与插件收费精细化变现的趋势。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "AI音乐平台 Suno 再陷版权争议。The Verge 报道称，尽管 Suno 政策声称不允许使用受版权保护的材料，但平台实际仍可能被用户用来生成高度近似知名歌曲风格或翻唱效果的内容，凸显生成式音乐在版权归属、授权边界与平台合规审查方面的风险仍在快速上升。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/906896/sunos-copyright-ai-music-covers" },
 ];
-const aiBreakingDate = "2026年4月7日 13:54 CST";
+const aiBreakingDate = "2026年4月7日 15:52 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
