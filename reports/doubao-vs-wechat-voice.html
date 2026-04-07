@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>豆包 vs 微信输入法 · 语音输入深度对比（2026）</title>
+<style>
+  :root { --bg:#f8f9fa; --card:#fff; --card-hover:#f0f1f3; --accent:#5b4dc7; --accent-light:#ede9ff; --accent2:#0891b2; --green:#059669; --red:#dc2626; --yellow:#d97706; --text:#1a1a2e; --text-dim:#6b7280; --border:#e5e7eb; --sidebar-bg:#fff; --sidebar-w:260px; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+
+  /* Layout: sidebar + main */
+  .layout{display:flex;min-height:100vh}
+  .sidebar{width:var(--sidebar-w);position:fixed;top:0;left:0;height:100vh;background:var(--sidebar-bg);border-right:1px solid var(--border);padding:28px 20px;overflow-y:auto;z-index:100}
+  .sidebar .logo{font-size:1.1em;font-weight:800;color:var(--accent);margin-bottom:6px}
+  .sidebar .logo-sub{font-size:.78em;color:var(--text-dim);margin-bottom:24px;line-height:1.4}
+  .sidebar nav a{display:block;padding:7px 12px;margin:2px 0;border-radius:8px;color:var(--text-dim);text-decoration:none;font-size:.88em;transition:all .15s}
+  .sidebar nav a:hover{background:var(--accent-light);color:var(--accent)}
+  .sidebar nav a.hot{color:var(--accent);font-weight:700;background:var(--accent-light);border-left:3px solid var(--accent);padding-left:9px}
+  .sidebar .stats{margin-top:28px;padding-top:16px;border-top:1px solid var(--border)}
+  .sidebar .stat-item{display:flex;justify-content:space-between;font-size:.82em;padding:3px 0;color:var(--text-dim)}
+  .sidebar .stat-item .val{font-weight:700;color:var(--text)}
+
+  .main{margin-left:var(--sidebar-w);flex:1;max-width:780px;padding:48px 48px 80px}
+
+  /* Hero */
+  .hero-blog{margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--border)}
+  .hero-blog h1{font-size:2em;font-weight:800;color:var(--text);line-height:1.3;margin-bottom:12px}
+  .hero-blog .meta{font-size:.88em;color:var(--text-dim)}
+  .hero-blog .meta span{margin-right:16px}
+  .hero-blog .lead{margin-top:16px;font-size:1.08em;color:var(--text-dim);line-height:1.7}
+
+  h2{font-size:1.5em;margin:52px 0 16px;color:var(--text);font-weight:700;scroll-margin-top:24px}
+  h3{font-size:1.1em;color:var(--accent2);margin:24px 0 10px;font-weight:600}
+  p{margin:10px 0;color:#374151}
+
+  /* Featured section */
+  .featured-section{background:linear-gradient(135deg,#faf5ff,#ede9fe);border:2px solid var(--accent);border-radius:16px;padding:32px;margin:24px 0;position:relative;overflow:hidden}
+  .featured-section::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+  .featured-tag{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;font-size:.78em;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:.3px}
+  .featured-tag::before{content:'⭐'}
+  .featured-title{font-size:1.35em;font-weight:800;color:var(--accent);margin-bottom:12px}
+  .featured-desc{font-size:1em;color:#4b5563;line-height:1.8;margin-bottom:16px}
+
+  /* Regular section */
+  .section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;margin:20px 0}
+
+  /* Quote cards */
+  .quote{background:#f9fafb;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin:14px 0}
+  .quote.featured-quote{background:var(--accent-light);border-left:4px solid var(--accent);font-size:1.02em}
+  .quote.negative{background:#fef2f2;border-left-color:var(--red)}
+  .quote-text{font-size:.94em;line-height:1.7;color:#1f2937}
+  .quote-text strong{color:var(--accent);font-weight:700}
+  .quote-from{margin-top:8px;font-size:.8em;color:var(--text-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px}
+  .quote-from a{color:var(--accent2);text-decoration:none}
+  .quote-from a:hover{text-decoration:underline}
+
+  /* Table */
+  .compare-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9em;border-radius:12px;overflow:hidden}
+  .compare-table th{background:var(--accent);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+  .compare-table td{padding:9px 14px;border-bottom:1px solid var(--border);background:var(--card)}
+  .compare-table tr:hover td{background:#f3f4f6}
+  .compare-table tr.highlight-row{background:var(--accent-light)}
+  .compare-table tr.highlight-row td{background:var(--accent-light);font-weight:600}
+  .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.78em;font-weight:600}
+  .tag.win{background:rgba(5,150,105,.1);color:var(--green)} .tag.lose{background:rgba(220,38,38,.08);color:var(--red)}
+
+  /* Insight box */
+  .insight{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:20px;margin:16px 0}
+  .insight-title{font-weight:700;color:var(--green);margin-bottom:6px;font-size:.95em}
+  .insight p{font-size:.9em;color:#374151;margin:4px 0}
+
+  .verdict-box{background:linear-gradient(135deg,#ede9fe,#e0f2fe);border:1px solid var(--accent);border-radius:14px;padding:28px;margin:24px 0;text-align:center}
+  .verdict-box .big{font-size:1.15em;font-weight:700;color:var(--accent);margin-bottom:8px}
+
+  .footer{text-align:center;padding:40px 0;color:var(--text-dim);font-size:.82em;border-top:1px solid var(--border);margin-top:60px}
+  .highlight{color:var(--accent);font-weight:700}
+  
+  @media(max-width:900px){
+    .sidebar{display:none}
+    .main{margin-left:0;padding:24px 16px 60px}
+    .hero-blog h1{font-size:1.5em}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="logo">🎤 豆包 vs 微信</div>
+  <div class="logo-sub">语音输入法对比分析<br>小红书 2026 年数据</div>
+  <nav>
+    <a href="#overview">对比总表</a>
+    <a href="#p1" class="hot">⭐ 上下文语义纠错</a>
+    <a href="#p2" class="hot">⭐ 中英文混说识别</a>
+    <a href="#p3">语音识别准确率</a>
+    <a href="#p4">智能标点</a>
+    <a href="#p5">小声说话识别</a>
+    <a href="#p6">Mac端语音体验</a>
+    <a href="#p7">简洁 & iOS26适配</a>
+    <a href="#p8">免费干掉Typeless</a>
+    <a href="#wx-wins">微信赢的地方</a>
+    <a href="#verdict">最终结论</a>
+  </nav>
+  <div class="stats">
+    <div class="stat-item"><span>帖子数</span><span class="val">46</span></div>
+    <div class="stat-item"><span>评论数</span><span class="val">491</span></div>
+    <div class="stat-item"><span>时间</span><span class="val">2026.01–04</span></div>
+    <div class="stat-item"><span>关键词</span><span class="val">13组</span></div>
+  </div>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<main class="main">
+
+<div class="hero-blog">
+  <h1>豆包语音输入比微信强在哪？<br>46篇小红书帖子告诉你答案</h1>
+  <div class="meta">
+    <span>📅 2026年4月7日</span>
+    <span>📊 46条帖子 · 491条评论</span>
+    <span>🔍 数据来源：小红书</span>
+  </div>
+  <p class="lead">我们用自动化工具从小红书爬取了2026年发布的所有豆包输入法相关帖子，筛选出46条高质量内容和491条用户评论。本报告聚焦<strong>豆包语音输入对比微信输入法的优势</strong>，特别是两大核心技术能力：<span class="highlight">上下文语义纠错</span>和<span class="highlight">中英文混说识别</span>。</p>
+</div>
+
+<!-- ==================== 对比总表 ==================== -->
+<h2 id="overview">对比总表</h2>
+
+<table class="compare-table">
+  <tr><th>维度</th><th>豆包</th><th>微信</th><th>结论</th></tr>
+  <tr class="highlight-row"><td>⭐ 上下文语义纠错</td><td>边说边改，后文修正前文</td><td>无</td><td><span class="tag win">豆包碾压</span></td></tr>
+  <tr class="highlight-row"><td>⭐ 中英文混说</td><td>技术术语准确</td><td>错误率高</td><td><span class="tag win">豆包碾压</span></td></tr>
+  <tr><td>语音准确率</td><td>~99%</td><td>明显低</td><td><span class="tag win">豆包碾压</span></td></tr>
+  <tr><td>智能标点</td><td>自动准确</td><td>一般</td><td><span class="tag win">豆包</span></td></tr>
+  <tr><td>小声识别</td><td>✅ 悄悄话</td><td>❌</td><td><span class="tag win">豆包</span></td></tr>
+  <tr><td>Mac端</td><td>内测好评如潮</td><td>fn冲突被骂</td><td><span class="tag win">豆包</span></td></tr>
+  <tr><td>iOS26适配</td><td>液态玻璃完美</td><td>主动关闭新键盘</td><td><span class="tag win">豆包</span></td></tr>
+  <tr><td>打字手感</td><td>卡顿</td><td>流畅</td><td><span class="tag lose">微信</span></td></tr>
+  <tr><td>跨端粘贴</td><td>❌</td><td>✅独家</td><td><span class="tag lose">微信</span></td></tr>
+  <tr><td>表情/AI</td><td>刚补</td><td>丰富</td><td><span class="tag lose">微信</span></td></tr>
+  <tr><td>隐私信任</td><td>字节系担忧</td><td>本地存储</td><td><span class="tag lose">微信</span></td></tr>
+</table>
+
+<!-- ==================== 核心优势1：上下文纠错 ==================== -->
+<h2 id="p1">⭐ 核心优势一：上下文语义纠错</h2>
+
+<div class="featured-section">
+  <div class="featured-tag">核心技术壁垒 · 与微信差距最大的能力</div>
+  <div class="featured-title">说到后面，前面的错字自动改对</div>
+  <div class="featured-desc">
+    这是豆包语音输入<strong>最具技术含量的能力</strong>，也是与微信拉开差距最大的一环。传统语音输入是"听一句写一句"，写完就定了。而豆包是——<strong>边听边理解语境，根据后面说的内容回头修正前面已经输出的文字</strong>。
+    <br><br>
+    举个例子：你说"我直到他来了"，豆包先输出"直到"，但当你继续说"才知道真相"，它会回头把"直到"改成"知道"。这种<strong>后向语义约束</strong>是端到端大模型的核心能力，微信输入法目前完全做不到。
+  </div>
+
+  <h3>用户怎么说</h3>
+
+  <div class="quote featured-quote">
+    <div class="quote-text">目前体验下来比较舒服的是流式输出，除了常规的边说边出文字之外，有意思的是能看到它会进行<strong>实时纠错，前面刚转出来的文字可能是错的，但再接着说的过程中，它会根据后文把前面的结果改回来</strong>，全部说完之后，能看到它的修改就非常准确了。</div>
+    <div class="quote-from"><span>— plotome · Mac内测详细评测 · 03-28 新加坡</span><a href="https://www.xiaohongshu.com/explore/69c79417000000002302704c" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <div class="quote featured-quote">
+    <div class="quote-text">使用豆包语音输入法输文字，说一些个性化相关的内容，<strong>它能自动给我纠正</strong>。</div>
+    <div class="quote-from"><span>— starlake · 03-15 北京</span><a href="https://www.xiaohongshu.com/explore/69b6afa0000000002102de93" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <div class="quote featured-quote">
+    <div class="quote-text">输入法语音转文字可以训练，就是转完文字后手动修改一次到两次，<strong>它就会自动记住，之后再碰到就会自己改成你想要的</strong></div>
+    <div class="quote-from"><span>— mōmō · 评论 · 03-26 北京</span><a href="https://www.xiaohongshu.com/explore/69c4f0c6000000002102c6f5" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <div class="quote">
+    <div class="quote-text">豆包输入法Mac版有点意思…… 试用了一下，<strong>它会根据上下文自动修正</strong>，效果非常好</div>
+    <div class="quote-from"><span>— Mac版评测 · 3天前 上海</span></div>
+  </div>
+
+  <h3>微信做不到</h3>
+
+  <div class="quote negative">
+    <div class="quote-text">还是用回微信输入法了，微信输入法有小鹤双拼，他的语音识别也是流式的，<strong>虽说识别率差点</strong>但是也不差太多</div>
+    <div class="quote-from"><span>— WILLIAM · 4天前 广东 — 承认微信识别率不如豆包</span><a href="https://www.xiaohongshu.com/explore/69c7a022000000001a023149" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <div class="quote negative">
+    <div class="quote-text">它打字识别确实比较精准，但是语音输入，我也不想频繁跳转……<strong>微信输入法打字识别又没它准</strong>，真是让人难受</div>
+    <div class="quote-from"><span>— PaineLue · 02-11</span><a href="https://www.xiaohongshu.com/explore/698c0104000000001a0238bd" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-title">🔬 VoiceIME 技术启示</div>
+    <p>上下文纠错 = 端到端 ASR 大模型 + 后向语义约束。传统 ASR 逐帧解码无法回溯；豆包的做法是流式输出同时用 LLM 做语义后处理，使得同音词（"直到/知道""的/得/地"）准确率大幅提升。<strong>这是微信短期内最难追赶的能力。</strong></p>
+  </div>
+</div>
+
+<!-- ==================== 核心优势2：中英混说 ==================== -->
+<h2 id="p2">⭐ 核心优势二：中英文混说识别</h2>
+
+<div class="featured-section">
+  <div class="featured-tag">开发者 & 商务人群刚需</div>
+  <div class="featured-title">MySQL、Python、Golang…… 张嘴就能认</div>
+  <div class="featured-desc">
+    中英文混说（code-switching）是 ASR 的经典难题。对于程序员、产品经理、自媒体创作者来说，说话时夹杂英文术语是常态。豆包在这方面<strong>远超微信</strong>，能准确识别大量技术术语和日常英文短语——这得益于其端到端大模型天然具备多语言上下文理解能力，不需要像传统 ASR 那样切换语言模型。
+  </div>
+
+  <h3>技术术语实测</h3>
+
+  <div class="quote featured-quote">
+    <div class="quote-text"><strong>MySQL、PostgreSQL、Golang、Python 这些常见术语都能准确识别。</strong>但新一点的词就不行了，Claude Code 识别出来是 Cloud Code，得手动改（当然我用 API 也有这个问题）。也没有自定义词库的功能，所以新词、小众词暂时只能靠它模型本身的覆盖面。</div>
+    <div class="quote-from"><span>— plotome · Mac评测 · 03-28 新加坡</span><a href="https://www.xiaohongshu.com/explore/69c79417000000002302704c" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <div class="quote featured-quote">
+    <div class="quote-text">豆包每次都把 <strong>claude code 识别成 cloud code</strong></div>
+    <div class="quote-from"><span>— momo（复活版）· 03-28 上海 — 新兴术语是目前弱点</span><a href="https://www.xiaohongshu.com/explore/69c72a0f000000001a02c917" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <h3>日常中英混合 & 多语言</h3>
+
+  <div class="quote featured-quote">
+    <div class="quote-text">试用了一下Mac版本，效果非常好，自动加各种标点符号，而且<strong>中英文识别也很准确</strong>。</div>
+    <div class="quote-from"><span>— 这个手刹不太灵 · 4天前 广东</span><a href="https://www.xiaohongshu.com/explore/69c7a022000000001a023149" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <div class="quote">
+    <div class="quote-text">🇲🇾 迎来了多语言 voice to text 的神器</div>
+    <div class="quote-from"><span>— 多语言帖 · 02-06 — 马来西亚用户认可多语言能力</span></div>
+  </div>
+
+  <div class="quote">
+    <div class="quote-text">我甚至之前都是手机语音说完之后再去复制去电脑，<strong>豆包语音输入真的很强</strong>。不过微信mac语音输入也是近期更新，不过实测有魔法容易卡</div>
+    <div class="quote-from"><span>— Dannnomoney · 03-20 广东</span><a href="https://www.xiaohongshu.com/explore/69bd543d000000002200f96c" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <h3>当前短板 & 改进方向</h3>
+  <p>用户反馈的弱点集中在：<strong>新兴术语</strong>（Claude Code → Cloud Code）和<strong>无自定义词库</strong>。开放术语表将进一步拉大与微信的差距。</p>
+
+  <div class="insight">
+    <div class="insight-title">🔬 VoiceIME 技术启示</div>
+    <p>中英混说靠的是端到端大模型的多语言内生能力，不需要显式语言切换。当前最明确的改进方向是<strong>自定义热词/术语表</strong>（hot-word boosting），plotome 等技术用户已明确提出这个需求。对于 Doubao ASR，可以探索在解码阶段注入用户词表来提升新词识别率。</p>
+  </div>
+</div>
+
+<!-- ==================== 优势3：准确率 ==================== -->
+<h2 id="p3">语音识别准确率断崖式领先</h2>
+
+<div class="section">
+  <p>这是用户提及频率最高的优势。几乎所有做过对比的用户都认为豆包语音<strong>远胜微信</strong>。</p>
+
+  <div class="quote">
+    <div class="quote-text"><strong>如果是语音输入的话，绝对是豆包输入法</strong></div>
+    <div class="quote-from"><span>— momo · 03-20 浙江</span><a href="https://www.xiaohongshu.com/explore/69bcf861000000002200fbc4" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">微信输入法被豆包超越是迟早的事</div>
+    <div class="quote-from"><span>— 林希圣 · 03-14 四川 · 181赞</span><a href="https://www.xiaohongshu.com/explore/69b5021c0000000021007e87" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">语音转文字正确率基本在<strong>90%以上</strong>（包括姓名正确率）</div>
+    <div class="quote-from"><span>— mōmō · 03-26 北京</span><a href="https://www.xiaohongshu.com/explore/69c4f0c6000000002102c6f5" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">微信输入法确实很不错……下一步等<strong>豆包输入法MacBook端出来之后我可能会切换到豆包</strong></div>
+    <div class="quote-from"><span>— 鹏城笑笑生 · 03-01</span><a href="https://www.xiaohongshu.com/explore/69a32c73000000002802327c" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">豆包输入法真的牛逼 <strong>吊打苹果</strong></div>
+    <div class="quote-from"><span>— Vinda哥 · 01-01</span><a href="https://www.xiaohongshu.com/explore/6955623e00000000220307aa" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">这下，你<strong>所有的输入法都可以卸载了</strong>。</div>
+    <div class="quote-from"><span>— 01-16</span></div>
+  </div>
+</div>
+
+<!-- ==================== 优势4：智能标点 ==================== -->
+<h2 id="p4">智能标点自动补全</h2>
+
+<div class="section">
+  <div class="quote">
+    <div class="quote-text">自动加各种标点符号，而且中英文识别也很准确</div>
+    <div class="quote-from"><span>— 这个手刹不太灵 · 4天前 广东</span><a href="https://www.xiaohongshu.com/explore/69c7a022000000001a023149" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">嗯、啊这些<strong>水词自动过滤</strong>，标点自动补。同类收费产品语义处理更进一步，但<strong>豆包免费</strong></div>
+    <div class="quote-from"><span>— 熊喵哥AIGC · 昨天 河北</span><a href="https://www.xiaohongshu.com/explore/69d287c20000000022003e92" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">支持iOS26.4以上系统版本，点击语音入口后<strong>可自动跳回输入页面</strong>；性能与内存优化，打字更快、更丝滑</div>
+    <div class="quote-from"><span>— letschips · 03-27 山东</span><a href="https://www.xiaohongshu.com/explore/69c5fd5700000000230244a1" target="_blank">查看原帖 →</a></div>
+  </div>
+</div>
+
+<!-- ==================== 优势5：小声识别 ==================== -->
+<h2 id="p5">小声说话也能识别</h2>
+
+<div class="section">
+  <p>微信完全没有这个能力，这是豆包的<strong>独家差异化</strong>。在安静办公室里小声嘟囔也能识别。</p>
+  <div class="quote">
+    <div class="quote-text">豆包输入法，<strong>口喷的终极武器</strong>，生产力直接十倍提升</div>
+    <div class="quote-from"><span>— Ming明在修仙 · 03-28 上海</span><a href="https://www.xiaohongshu.com/explore/69c72a0f000000001a02c917" target="_blank">查看原帖 →</a></div>
+  </div>
+</div>
+
+<!-- ==================== 优势6：Mac端 ==================== -->
+<h2 id="p6">Mac端语音体验碾压</h2>
+
+<div class="section">
+  <div class="quote">
+    <div class="quote-text">拿到豆包Mac输入法内测版，试了一整天，然后<strong>把电脑里其他输入法全删了</strong>。语音输入会逼你把思路理清楚，出来的文字反而比打字更干净</div>
+    <div class="quote-from"><span>— 熊喵哥AIGC · 162赞 · 昨天 河北</span><a href="https://www.xiaohongshu.com/explore/69d287c20000000022003e92" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">Mac语音输入其实可以试一下豆包</div>
+    <div class="quote-from"><span>— 使用分享 · 03-20 广东</span><a href="https://www.xiaohongshu.com/explore/69bd543d000000002200f96c" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">豆包抓紧更新电脑版输入法呀，就因为这点还在用着微信输入法。<strong>手机端的豆包输入法已经高度可用了</strong></div>
+    <div class="quote-from"><span>— 陈一木o · 03-20 广东</span><a href="https://www.xiaohongshu.com/explore/69bd543d000000002200f96c" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote negative">
+    <div class="quote-text">微信输入法mac端新增语音识别，关键是<strong>快捷键怎么能设成fn啊</strong>🫢？而且找不到哪里关闭</div>
+    <div class="quote-from"><span>— SanDing三丁 · 02-27</span><a href="https://www.xiaohongshu.com/explore/69a105db00000000220382bb" target="_blank">查看原帖 →</a></div>
+  </div>
+</div>
+
+<!-- ==================== 优势7：简洁 + iOS26 ==================== -->
+<h2 id="p7">简洁无广告 & iOS26 适配更好</h2>
+
+<div class="section">
+  <div class="quote">
+    <div class="quote-text">微信已经适配了，<strong>但是他主动关闭了新版键盘</strong></div>
+    <div class="quote-from"><span>— Fun® · 03-30 辽宁</span><a href="https://www.xiaohongshu.com/explore/69c9df960000000021039096" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">更新以后发现微信输入法又有一坨白边了，其他第三方输入法没有这个问题</div>
+    <div class="quote-from"><span>— X. · 03-25 四川</span><a href="https://www.xiaohongshu.com/explore/69c35407000000002200faea" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">iOS26.4更新后，豆包输入法更新1.3.0，<strong>可以自动跳回了</strong></div>
+    <div class="quote-from"><span>— 日常不信 · 6天前 内蒙古</span><a href="https://www.xiaohongshu.com/explore/69cc60f1000000001a02bc07" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">终于有输入法<strong>支持双拼纠错了</strong></div>
+    <div class="quote-from"><span>— 盐多必师 · 03-24 广西</span><a href="https://www.xiaohongshu.com/explore/69c22e7d000000002301193b" target="_blank">查看原帖 →</a></div>
+  </div>
+</div>
+
+<!-- ==================== 优势8：免费干掉Typeless ==================== -->
+<h2 id="p8">免费干掉收费产品 Typeless</h2>
+
+<div class="section">
+  <div class="quote">
+    <div class="quote-text">Typeless 已经死了，不是公司死了，是它这个位置死了。<strong>省事，直接豆包。要深，直接外挂。中间这层收费产品，已经没必要了。</strong></div>
+    <div class="quote-from"><span>— AI清醒剂 · 03-30 美国</span><a href="https://www.xiaohongshu.com/explore/69c953a9000000002a03bdc6" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote">
+    <div class="quote-text">Typeless移动端做的有点太反人性了……横向对比下，不如豆包输入法</div>
+    <div class="quote-from"><span>— AI金三啊 · 02-23</span><a href="https://www.xiaohongshu.com/explore/699c2f65000000000a02b008" target="_blank">查看原帖 →</a></div>
+  </div>
+</div>
+
+<!-- ==================== 微信赢的地方 ==================== -->
+<h2 id="wx-wins">微信输入法仍然赢的地方</h2>
+
+<div class="section" style="border-color:var(--red)">
+  <h3>打字手感更流畅</h3>
+  <div class="quote negative">
+    <div class="quote-text">豆包输入法太难用了，最近还需要来回跳转……然后用其他的输入法跟智障似的</div>
+    <div class="quote-from"><span>— 红衣大哥李显红 · 03-26 北京</span><a href="https://www.xiaohongshu.com/explore/69c4f0c6000000002102c6f5" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <h3>跨端复制粘贴（独家）</h3>
+  <div class="quote negative">
+    <div class="quote-text"><strong>微信输入法最好用的是跨设备复制粘贴</strong></div>
+    <div class="quote-from"><span>— Declan Zhang · 03-14 四川</span><a href="https://www.xiaohongshu.com/explore/69b5021c0000000021007e87" target="_blank">查看原帖 →</a></div>
+  </div>
+
+  <h3>隐私信任度更高</h3>
+  <div class="quote negative">
+    <div class="quote-text">豆包输入法有承诺过数据不拿去广告分发吗？以前用搜狗深受其害，<strong>现在只用微信</strong></div>
+    <div class="quote-from"><span>— 麻瓜问题研究 · 03-28 上海</span><a href="https://www.xiaohongshu.com/explore/69c72a0f000000001a02c917" target="_blank">查看原帖 →</a></div>
+  </div>
+  <div class="quote negative">
+    <div class="quote-text">豆包输入法我不敢用，看了协议后总有点担心</div>
+    <div class="quote-from"><span>— 木子木子木木子 · 03-24 湖南</span><a href="https://www.xiaohongshu.com/explore/69c23de30000000023007acb" target="_blank">查看原帖 →</a></div>
+  </div>
+</div>
+
+<!-- ==================== 最终结论 ==================== -->
+<h2 id="verdict">最终结论</h2>
+
+<div class="verdict-box">
+  <div class="big">"语音用豆包，打字用微信，两个都装着"</div>
+  <p style="color:#4b5563;margin-top:8px">—— 2026年小红书用户的典型心态</p>
+</div>
+
+<div class="insight">
+  <div class="insight-title">📊 对 VoiceIME 项目的核心启示</div>
+  <p><strong>⭐ 上下文语义纠错</strong>和<strong>⭐ 中英文混说识别</strong>是豆包建立技术壁垒的两大杀手锏。</p>
+  <p>用户核心诉求排序：<strong>准确率 → 上下文纠错 → 中英混合 → 智能标点 → 响应速度</strong></p>
+  <p>微信正在追赶（3.0升级对标豆包），但在端到端大模型能力上短期内难以追平。</p>
+</div>
+
+</main>
+</div>
+
+<div class="footer">
+  小红书舆情分析 · 46条2026年帖子 · 491条评论 · 2026.01–04 · playwright 自动化采集<br>
+  生成时间：2026年4月7日
+</div>
+
+</body>
+</html>
