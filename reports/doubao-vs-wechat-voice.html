@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>豆包 vs 微信输入法 · 语音输入深度对比（2026）</title>
 <style>
-  :root { --bg:#f8f9fa; --card:#fff; --card-hover:#f0f1f3; --accent:#5b4dc7; --accent-light:#ede9ff; --accent2:#0891b2; --green:#059669; --red:#dc2626; --yellow:#d97706; --text:#1a1a2e; --text-dim:#6b7280; --border:#e5e7eb; --sidebar-bg:#fff; --sidebar-w:260px; }
+  :root { --bg:#f4f9f5; --card:#fff; --card-hover:#eef5f0; --accent:#16a34a; --accent-light:#dcfce7; --accent2:#059669; --green:#059669; --red:#dc2626; --yellow:#d97706; --text:#1a2e1a; --text-dim:#6b7280; --border:#d1e7d5; --sidebar-bg:#f8fcf9; --sidebar-w:260px; }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
 
@@ -35,7 +35,7 @@
   p{margin:10px 0;color:#374151}
 
   /* Featured section */
-  .featured-section{background:linear-gradient(135deg,#faf5ff,#ede9fe);border:2px solid var(--accent);border-radius:16px;padding:32px;margin:24px 0;position:relative;overflow:hidden}
+  .featured-section{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2px solid var(--accent);border-radius:16px;padding:32px;margin:24px 0;position:relative;overflow:hidden}
   .featured-section::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
   .featured-tag{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;font-size:.78em;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:.3px}
   .featured-tag::before{content:'⭐'}
@@ -47,7 +47,7 @@
 
   /* Quote cards */
   .quote{background:#f9fafb;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin:14px 0}
-  .quote.featured-quote{background:var(--accent-light);border-left:4px solid var(--accent);font-size:1.02em}
+  .quote.featured-quote{background:#f0fdf4;border-left:4px solid var(--accent);font-size:1.02em}
   .quote.negative{background:#fef2f2;border-left-color:var(--red)}
   .quote-text{font-size:.94em;line-height:1.7;color:#1f2937}
   .quote-text strong{color:var(--accent);font-weight:700}
@@ -70,7 +70,7 @@
   .insight-title{font-weight:700;color:var(--green);margin-bottom:6px;font-size:.95em}
   .insight p{font-size:.9em;color:#374151;margin:4px 0}
 
-  .verdict-box{background:linear-gradient(135deg,#ede9fe,#e0f2fe);border:1px solid var(--accent);border-radius:14px;padding:28px;margin:24px 0;text-align:center}
+  .verdict-box{background:linear-gradient(135deg,#dcfce7,#d1fae5);border:1px solid var(--accent);border-radius:14px;padding:28px;margin:24px 0;text-align:center}
   .verdict-box .big{font-size:1.15em;font-weight:700;color:var(--accent);margin-bottom:8px}
 
   .footer{text-align:center;padding:40px 0;color:var(--text-dim);font-size:.82em;border-top:1px solid var(--border);margin-top:60px}
@@ -92,8 +92,8 @@
   <div class="logo-sub">语音输入法对比分析<br>小红书 2026 年数据</div>
   <nav>
     <a href="#overview">对比总表</a>
-    <a href="#p1" class="hot">⭐ 上下文语义纠错</a>
-    <a href="#p2" class="hot">⭐ 中英文混说识别</a>
+    <a href="#p1">上下文语义纠错</a>
+    <a href="#p2">中英文混说识别</a>
     <a href="#p3">语音识别准确率</a>
     <a href="#p4">智能标点</a>
     <a href="#p5">小声说话识别</a>
@@ -121,7 +121,7 @@
     <span>📊 46条帖子 · 491条评论</span>
     <span>🔍 数据来源：小红书</span>
   </div>
-  <p class="lead">我们用自动化工具从小红书爬取了2026年发布的所有豆包输入法相关帖子，筛选出46条高质量内容和491条用户评论。本报告聚焦<strong>豆包语音输入对比微信输入法的优势</strong>，特别是两大核心技术能力：<span class="highlight">上下文语义纠错</span>和<span class="highlight">中英文混说识别</span>。</p>
+  <p class="lead">我们用自动化工具从小红书爬取了2026年发布的所有豆包输入法相关帖子，筛选出46条高质量内容和491条用户评论。本报告聚焦<strong>豆包语音输入对比微信输入法的表现差异</strong>，特别是两大亮点能力：<span class="highlight">上下文语义纠错</span>和<span class="highlight">中英文混说识别</span>。</p>
 </div>
 
 <!-- ==================== 对比总表 ==================== -->
@@ -129,9 +129,9 @@
 
 <table class="compare-table">
   <tr><th>维度</th><th>豆包</th><th>微信</th><th>结论</th></tr>
-  <tr class="highlight-row"><td>⭐ 上下文语义纠错</td><td>边说边改，后文修正前文</td><td>无</td><td><span class="tag win">豆包碾压</span></td></tr>
-  <tr class="highlight-row"><td>⭐ 中英文混说</td><td>技术术语准确</td><td>错误率高</td><td><span class="tag win">豆包碾压</span></td></tr>
-  <tr><td>语音准确率</td><td>~99%</td><td>明显低</td><td><span class="tag win">豆包碾压</span></td></tr>
+  <tr><td>⭐ 上下文语义纠错</td><td>边说边改，后文修正前文</td><td>无</td><td><span class="tag win">豆包领先</span></td></tr>
+  <tr><td>⭐ 中英文混说</td><td>技术术语准确</td><td>错误率高</td><td><span class="tag win">豆包领先</span></td></tr>
+  <tr><td>语音准确率</td><td>~99%</td><td>明显低</td><td><span class="tag win">豆包领先</span></td></tr>
   <tr><td>智能标点</td><td>自动准确</td><td>一般</td><td><span class="tag win">豆包</span></td></tr>
   <tr><td>小声识别</td><td>✅ 悄悄话</td><td>❌</td><td><span class="tag win">豆包</span></td></tr>
   <tr><td>Mac端</td><td>内测好评如潮</td><td>fn冲突被骂</td><td><span class="tag win">豆包</span></td></tr>
@@ -143,15 +143,15 @@
 </table>
 
 <!-- ==================== 核心优势1：上下文纠错 ==================== -->
-<h2 id="p1">⭐ 核心优势一：上下文语义纠错</h2>
+<h2 id="p1">⭐ 亮点一：上下文语义纠错</h2>
 
 <div class="featured-section">
-  <div class="featured-tag">核心技术壁垒 · 与微信差距最大的能力</div>
+  <div class="featured-tag">差异化能力 · 豆包的独特优势</div>
   <div class="featured-title">说到后面，前面的错字自动改对</div>
   <div class="featured-desc">
-    这是豆包语音输入<strong>最具技术含量的能力</strong>，也是与微信拉开差距最大的一环。传统语音输入是"听一句写一句"，写完就定了。而豆包是——<strong>边听边理解语境，根据后面说的内容回头修正前面已经输出的文字</strong>。
+    这是豆包语音输入<strong>比较突出的能力</strong>，也是与微信拉开差距较大的一环。传统语音输入是"听一句写一句"，写完就定了。而豆包是——<strong>边听边理解语境，根据后面说的内容回头修正前面已经输出的文字</strong>。
     <br><br>
-    举个例子：你说"我直到他来了"，豆包先输出"直到"，但当你继续说"才知道真相"，它会回头把"直到"改成"知道"。这种<strong>后向语义约束</strong>是端到端大模型的核心能力，微信输入法目前完全做不到。
+    举个例子：你说"我直到他来了"，豆包先输出"直到"，但当你继续说"才知道真相"，它会回头把"直到"改成"知道"。这种<strong>后向语义约束</strong>是端到端大模型的能力体现，微信输入法目前还不支持。
   </div>
 
   <h3>用户怎么说</h3>
@@ -190,18 +190,18 @@
 
   <div class="insight">
     <div class="insight-title">🔬 VoiceIME 技术启示</div>
-    <p>上下文纠错 = 端到端 ASR 大模型 + 后向语义约束。传统 ASR 逐帧解码无法回溯；豆包的做法是流式输出同时用 LLM 做语义后处理，使得同音词（"直到/知道""的/得/地"）准确率大幅提升。<strong>这是微信短期内最难追赶的能力。</strong></p>
+    <p>上下文纠错 = 端到端 ASR 大模型 + 后向语义约束。传统 ASR 逐帧解码无法回溯；豆包的做法是流式输出同时用 LLM 做语义后处理，使得同音词（"直到/知道""的/得/地"）准确率大幅提升。<strong>这是目前微信较难短期追赶的能力。</strong></p>
   </div>
 </div>
 
 <!-- ==================== 核心优势2：中英混说 ==================== -->
-<h2 id="p2">⭐ 核心优势二：中英文混说识别</h2>
+<h2 id="p2">⭐ 亮点二：中英文混说识别</h2>
 
 <div class="featured-section">
   <div class="featured-tag">开发者 & 商务人群刚需</div>
   <div class="featured-title">MySQL、Python、Golang…… 张嘴就能认</div>
   <div class="featured-desc">
-    中英文混说（code-switching）是 ASR 的经典难题。对于程序员、产品经理、自媒体创作者来说，说话时夹杂英文术语是常态。豆包在这方面<strong>远超微信</strong>，能准确识别大量技术术语和日常英文短语——这得益于其端到端大模型天然具备多语言上下文理解能力，不需要像传统 ASR 那样切换语言模型。
+    中英文混说（code-switching）是 ASR 的经典难题。对于程序员、产品经理、自媒体创作者来说，说话时夹杂英文术语是常态。豆包在这方面<strong>明显优于微信</strong>，能准确识别大量技术术语和日常英文短语——这得益于其端到端大模型天然具备多语言上下文理解能力，不需要像传统 ASR 那样切换语言模型。
   </div>
 
   <h3>技术术语实测</h3>
@@ -243,10 +243,10 @@
 </div>
 
 <!-- ==================== 优势3：准确率 ==================== -->
-<h2 id="p3">语音识别准确率断崖式领先</h2>
+<h2 id="p3">语音识别准确率明显领先</h2>
 
 <div class="section">
-  <p>这是用户提及频率最高的优势。几乎所有做过对比的用户都认为豆包语音<strong>远胜微信</strong>。</p>
+  <p>这是用户提及频率最高的优势。几乎所有做过对比的用户都认为豆包语音<strong>优于微信</strong>。</p>
 
   <div class="quote">
     <div class="quote-text"><strong>如果是语音输入的话，绝对是豆包输入法</strong></div>
@@ -398,7 +398,7 @@
 
 <div class="insight">
   <div class="insight-title">📊 对 VoiceIME 项目的核心启示</div>
-  <p><strong>⭐ 上下文语义纠错</strong>和<strong>⭐ 中英文混说识别</strong>是豆包建立技术壁垒的两大杀手锏。</p>
+  <p><strong>⭐ 上下文语义纠错</strong>和<strong>⭐ 中英文混说识别</strong>是豆包在语音输入上的两大差异化亮点。</p>
   <p>用户核心诉求排序：<strong>准确率 → 上下文纠错 → 中英混合 → 智能标点 → 响应速度</strong></p>
   <p>微信正在追赶（3.0升级对标豆包），但在端到端大模型能力上短期内难以追平。</p>
 </div>
