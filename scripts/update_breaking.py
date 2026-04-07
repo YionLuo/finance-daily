@@ -184,6 +184,30 @@ def filter_by_window(items, window_hours=24):
     return filtered
 
 
+def sort_by_time_desc(items):
+    """
+    Sort items by time (HH:MM) from newest to oldest.
+    Handles overnight wrap: if current hour < 12, times > 12 are considered yesterday.
+    Otherwise, all times are today, with larger hours being more recent.
+    """
+    now = now_cst()
+
+    def time_sort_key(item):
+        time_str = item.get("time", "")
+        try:
+            hour, minute = map(int, time_str.split(":"))
+            item_time = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+            # If item time is in the future, it was yesterday
+            if item_time > now:
+                item_time -= timedelta(days=1)
+            return item_time
+        except (ValueError, TypeError):
+            # Can't parse → put at the end
+            return now.replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=2)
+
+    return sorted(items, key=time_sort_key, reverse=True)
+
+
 def validate_js(html_path):
     """Validate JS syntax using node."""
     try:
@@ -285,9 +309,12 @@ def main():
     print(f"\nNew unique finance items: {len(new_finance)}")
     print(f"New unique AI items: {len(new_ai)}")
 
-    # Prepend new items
+    # Prepend new items and sort by time (newest first)
     finance_news = new_finance + finance_news
     ai_news = new_ai + ai_news
+
+    finance_news = sort_by_time_desc(finance_news)
+    ai_news = sort_by_time_desc(ai_news)
 
     # Step 5: Trim to max items
     finance_news = finance_news[:MAX_ITEMS]
