@@ -110,17 +110,6 @@ body {
     <div class="adv-list">
       <div class="adv-item">
         <div class="left">
-          <div class="scene-name">📌 上下文一致</div>
-          <div class="scene-vals">火山 <b>20.45%</b> vs audiollm 23.58%</div>
-        </div>
-        <div class="right">
-          <div class="lead-val">3.13pp</div>
-          <div class="lead-rel">相对 13.3%</div>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-        </div>
-      </div>
-      <div class="adv-item">
-        <div class="left">
           <div class="scene-name">🌐 中英混合 diff</div>
           <div class="scene-vals">火山 <b>5.51%</b> vs audiollm 6.65%</div>
         </div>
@@ -154,6 +143,17 @@ body {
       </div>
       <div class="adv-item">
         <div class="left">
+          <div class="scene-name">📌 上下文一致</div>
+          <div class="scene-vals">火山 <b>3.10%</b> vs audiollm 3.49%</div>
+        </div>
+        <div class="right">
+          <div class="lead-val">0.39pp</div>
+          <div class="lead-rel">相对 11.2%</div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="left">
           <div class="scene-name">👤 新用户</div>
           <div class="scene-vals">火山 <b>3.75%</b> vs audiollm 3.84%</div>
         </div>
@@ -165,7 +165,7 @@ body {
       </div>
     </div>
     <div class="finding-box">
-      <b>💡 关键发现：</b>火山引擎在<b>鲁棒性场景</b>（中英混合、噪声、轻声、上下文理解）表现出系统性优势。特别是<b>上下文一致性</b>场景（领先3.13pp），反映了火山在语义连贯性理解上的优势。
+      <b>💡 关键发现：</b>火山引擎在<b>鲁棒性场景</b>（中英混合、噪声、轻声、上下文理解）表现出系统性优势。其中<b>中英混合 diff</b> 场景领先最为显著（1.14pp / 17.1%），反映了火山在多语种混合识别上的能力优势。
     </div>
   </div>
 
@@ -217,8 +217,8 @@ const shortNames = [
   '上下文一致','实体错误','医疗diff'
 ];
 
-const volcano = [3.86,8.18,3.26,4.91,2.85,1.92,3.75,6.93,3.89,4.28,5.51,7.31,4.56,20.45,7.24,3.36];
-const audiollm = [3.82,5.81,1.9,4.09,2.77,1.62,3.84,6.59,3.81,3.93,6.65,7.82,5.05,23.58,6.84,3.28];
+const volcano = [3.86,8.18,3.26,4.91,2.85,1.92,3.75,6.93,3.89,4.28,5.51,7.31,4.56,3.1,7.24,3.36];
+const audiollm = [3.82,5.81,1.9,4.09,2.77,1.62,3.84,6.59,3.81,3.93,6.65,7.82,5.05,3.49,6.84,3.28];
 
 const volColor = '#E15759';
 const wxColor = '#B07AA1';
@@ -238,7 +238,7 @@ diffs.forEach((d,i) => { if(d < 0) volWinIdx.push(i); });
 
 // ===== 火山胜出场景对比柱状图 =====
 (function(){
-  const volScenes = [13, 10, 11, 12, 6];
+  const volScenes = [10, 11, 12, 13, 6];
   const labels = volScenes.map(i => shortNames[i]);
   const volData = volScenes.map(i => volcano[i]);
   const wxData = volScenes.map(i => audiollm[i]);
@@ -375,15 +375,11 @@ diffs.forEach((d,i) => { if(d < 0) volWinIdx.push(i); });
   box.innerHTML = '<h3>🔥 火山引擎_流式 核心优势总结</h3>'
     + '<div class="conclusion-item"><span class="tag">🏆</span>'
     + '<div><b>鲁棒性全面领先，真实场景体验更优</b><br/>'
-    + '火山引擎在 <b>5 个场景</b>中胜出（上下文一致、中英diff、轻声、噪声50-60db、新用户），均属于<b>高复杂度、贴近真实使用环境</b>的测试集。</div></div>'
-
-    + '<div class="conclusion-item"><span class="tag">🔊</span>'
-    + '<div><b>上下文一致性：最大绝对优势 (领先 3.13pp / 13.3%)</b><br/>'
-    + '火山 <b>20.45%</b> vs audiollm <b>23.58%</b>。上下文一致性直接反映模型对<b>语义连贯性的理解能力</b>，在连续对话、长句转写中至关重要。</div></div>'
+    + '火山引擎在 <b>5 个场景</b>中胜出（中英diff、轻声、噪声50-60db、上下文一致、新用户），均属于<b>高复杂度、贴近真实使用环境</b>的测试集。</div></div>'
 
     + '<div class="conclusion-item"><span class="tag">🌐</span>'
-    + '<div><b>中英混合 diff：最大相对优势 (领先 17.1%)</b><br/>'
-    + '火山 <b>5.51%</b> vs audiollm <b>6.65%</b>。中英混合是输入法使用中<b>最常见且最难处理的场景之一</b>。</div></div>'
+    + '<div><b>中英混合 diff：最大绝对 & 相对优势 (领先 1.14pp / 17.1%)</b><br/>'
+    + '火山 <b>5.51%</b> vs audiollm <b>6.65%</b>。中英混合是输入法使用中<b>最常见且最难处理的场景之一</b>，火山引擎在该场景下的优势最为显著。</div></div>'
 
     + '<div class="conclusion-item"><span class="tag">🔇</span>'
     + '<div><b>抗噪声 + 轻声：环境适应性更强</b><br/>'
@@ -391,15 +387,19 @@ diffs.forEach((d,i) => { if(d < 0) volWinIdx.push(i); });
     + '轻声：火山 <b>7.31%</b> vs audiollm <b>7.82%</b>（领先 6.5%）<br/>'
     + '在嘈杂环境和低音量条件下更稳定，对移动端场景尤为重要。</div></div>'
 
+    + '<div class="conclusion-item"><span class="tag">🔊</span>'
+    + '<div><b>上下文一致性：领先 0.39pp / 11.2%</b><br/>'
+    + '火山 <b>3.10%</b> vs audiollm <b>3.49%</b>。上下文一致性直接反映模型对<b>语义连贯性的理解能力</b>，在连续对话、长句转写中至关重要。</div></div>'
+
     + '<div class="conclusion-item"><span class="tag">👤</span>'
     + '<div><b>新用户首次体验：火山略优</b><br/>'
     + '火山 <b>3.75%</b> vs audiollm <b>3.84%</b>（领先 0.09pp）。更低的初始错误率有助于<b>新用户留存</b>。</div></div>'
 
     + '<div class="conclusion-item"><span class="tag">📊</span>'
     + '<div><b>加权影响分析</b><br/>'
-    + '<ul><li><b>上下文一致 → 高影响</b>：断句错误导致重新输入</li>'
-    + '<li><b>中英混合 → 极高影响</b>：日常中英切换极频繁</li>'
+    + '<ul><li><b>中英混合 → 极高影响</b>：日常中英切换极频繁</li>'
     + '<li><b>噪声/轻声 → 高影响</b>：移动端真实环境</li>'
+    + '<li><b>上下文一致 → 高影响</b>：断句错误导致重新输入</li>'
     + '<li><b>新用户 → 中等影响</b>：增长漏斗顶部转化</li></ul>'
     + '火山优势场景数量（5个）少于 audiollm（11个），但<b>用户感知维度权重更高</b>。</div></div>'
 
