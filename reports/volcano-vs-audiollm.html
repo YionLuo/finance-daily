@@ -121,66 +121,6 @@ body {
     <div class="focus">🔥 聚焦：火山引擎优势场景深度解析</div>
   </div>
 
-  <!-- KPI 卡片 — 火山视角 -->
-  <div class="kpi-row">
-    <div class="kpi-card vol">
-      <div class="kpi-label">🔥 火山引擎胜出场景数</div>
-      <div class="kpi-value red" id="kpiVolWin"></div>
-      <div class="kpi-sub">audiollm CER 更高的场景</div>
-    </div>
-    <div class="kpi-card blue">
-      <div class="kpi-label">火山最大领先幅度</div>
-      <div class="kpi-value blue" id="kpiMaxLead"></div>
-      <div class="kpi-sub">上下文一致场景</div>
-    </div>
-    <div class="kpi-card green">
-      <div class="kpi-label">中英混合场景优势</div>
-      <div class="kpi-value green" id="kpiCnEn"></div>
-      <div class="kpi-sub">中英diff: 5.51% vs 6.65%</div>
-    </div>
-    <div class="kpi-card orange">
-      <div class="kpi-label">噪声场景优势</div>
-      <div class="kpi-value orange" id="kpiNoise"></div>
-      <div class="kpi-sub">噪声50-60db: 4.56% vs 5.05%</div>
-    </div>
-  </div>
-
-  <!-- 🔥 火山引擎核心优势区块 -->
-  <div class="vol-adv-section">
-    <div class="vol-adv-grid">
-      <div class="vol-adv-item">
-        <div class="scene">📌 上下文一致</div>
-        <div class="vals">火山 20.45% → audiollm 23.58%</div>
-        <div class="advantage">领先 3.13pp</div>
-        <div class="note">相对优势 13.3%，差距最大</div>
-      </div>
-      <div class="vol-adv-item">
-        <div class="scene">🌐 中英混合 diff</div>
-        <div class="vals">火山 5.51% → audiollm 6.65%</div>
-        <div class="advantage">领先 1.14pp</div>
-        <div class="note">相对优势 17.1%，实用场景关键指标</div>
-      </div>
-      <div class="vol-adv-item">
-        <div class="scene">🔊 噪声 50-60db</div>
-        <div class="vals">火山 4.56% → audiollm 5.05%</div>
-        <div class="advantage">领先 0.49pp</div>
-        <div class="note">相对优势 9.7%，抗噪能力更强</div>
-      </div>
-      <div class="vol-adv-item">
-        <div class="scene">📝 轻声场景</div>
-        <div class="vals">火山 7.31% → audiollm 7.82%</div>
-        <div class="advantage">领先 0.51pp</div>
-        <div class="note">相对优势 6.5%，低音量识别更稳定</div>
-      </div>
-      <div class="vol-adv-item">
-        <div class="scene">👤 新用户</div>
-        <div class="vals">火山 3.75% → audiollm 3.84%</div>
-        <div class="advantage">领先 0.09pp</div>
-        <div class="note">新用户首次体验更佳</div>
-      </div>
-    </div>
-  </div>
-
   <!-- 火山优势场景详细对比表 -->
   <div class="card highlight">
     <div class="card-title"><span class="icon">🔥</span> 火山引擎优势场景 · 详细数据拆解</div>
@@ -228,40 +168,28 @@ body {
     </div>
   </div>
 
+  <!-- 结论 -->
+  <div class="card highlight">
+    <div class="card-title"><span class="icon">📝</span> 对比结论 · 火山引擎优势视角</div>
+    <div class="conclusion-box" id="conclusionBox"></div>
+  </div>
+
   <!-- 火山优势场景专项对比图 -->
   <div class="card highlight">
     <div class="card-title"><span class="icon">📊</span> 火山引擎胜出场景 · 可视化对比</div>
     <div id="volWinChart" class="chart-box"></div>
   </div>
 
-  <!-- 场景维度分析 -->
-  <div class="row">
-    <div class="card highlight">
-      <div class="card-title"><span class="icon">🛡️</span> 鲁棒性维度：火山引擎系统性优势</div>
-      <div id="robustChart" class="chart-box-sm"></div>
-    </div>
-    <div class="card">
-      <div class="card-title"><span class="icon">🕸️</span> 关键场景雷达对比</div>
-      <div id="radarChart" class="chart-box-sm"></div>
-    </div>
+  <!-- 鲁棒性维度分析 -->
+  <div class="card highlight">
+    <div class="card-title"><span class="icon">🛡️</span> 鲁棒性维度：火山引擎系统性优势</div>
+    <div id="robustChart" class="chart-box-sm"></div>
   </div>
 
-  <!-- 全场景对比（参考） -->
+  <!-- 差值分析 -->
   <div class="card">
-    <div class="card-title"><span class="icon">📊</span> 全场景 CER% 总览（火山胜出场景红色高亮）</div>
-    <div id="barChart" class="chart-box-wide"></div>
-  </div>
-
-  <!-- 差值分析 + 类别对比 -->
-  <div class="row">
-    <div class="card">
-      <div class="card-title"><span class="icon">📉</span> CER 差值分析（正值 = 火山更优）</div>
-      <div id="diffChart" class="chart-box"></div>
-    </div>
-    <div class="card">
-      <div class="card-title"><span class="icon">🎯</span> 按场景类别平均 CER%</div>
-      <div id="categoryChart" class="chart-box"></div>
-    </div>
+    <div class="card-title"><span class="icon">📉</span> CER 差值分析（正值 = 火山更优）</div>
+    <div id="diffChart" class="chart-box"></div>
   </div>
 
   <!-- 完整数据表 -->
@@ -270,12 +198,6 @@ body {
     <div style="overflow-x:auto;">
       <table class="cmp-table" id="cmpTable"></table>
     </div>
-  </div>
-
-  <!-- 结论 -->
-  <div class="card highlight">
-    <div class="card-title"><span class="icon">📝</span> 对比结论 · 火山引擎优势视角</div>
-    <div class="conclusion-box" id="conclusionBox"></div>
   </div>
 </div>
 
@@ -312,12 +234,6 @@ const diffs = volcano.map((v,i) => {
 // 火山胜出的场景索引
 const volWinIdx = [];
 diffs.forEach((d,i) => { if(d < 0) volWinIdx.push(i); });
-
-// KPI
-document.getElementById('kpiVolWin').textContent = volWinCount + ' 个场景';
-document.getElementById('kpiMaxLead').textContent = '3.13 pp';
-document.getElementById('kpiCnEn').textContent = '-17.1%';
-document.getElementById('kpiNoise').textContent = '-9.7%';
 
 // ===== 火山胜出场景对比柱状图 =====
 (function(){
@@ -395,68 +311,6 @@ document.getElementById('kpiNoise').textContent = '-9.7%';
   window.addEventListener('resize', () => chart.resize());
 })();
 
-// ===== 雷达图 =====
-(function(){
-  const scenes = ['中英 diff6465','噪声50_60db','轻声 15038','上下文一致','新用户1w(采样5k)','噪声358','中英 nodiff3535','大盘2w','老用户1w(采样5k)'];
-  const labels = ['中英diff','噪声50-60db','轻声','上下文一致','新用户','噪声358','中英nodiff','大盘','老用户'];
-  const idx = scenes.map(s => testSets.indexOf(s));
-  const maxVals = idx.map(i => Math.max(volcano[i], audiollm[i]) * 1.2);
-
-  const chart = echarts.init(document.getElementById('radarChart'));
-  chart.setOption({
-    tooltip: {},
-    legend: { data: ['火山引擎_流式','微信_audiollm'], bottom: 0, textStyle: { fontSize: 12 } },
-    radar: {
-      indicator: labels.map((l,k) => ({ name: l, max: maxVals[k] })),
-      shape: 'polygon', radius: '58%',
-      axisName: { fontSize: 10 }
-    },
-    series: [{ type: 'radar', data: [
-      { name: '火山引擎_流式', 
-        value: idx.map((ii, k) => parseFloat((maxVals[k] - volcano[ii]).toFixed(2))),
-        lineStyle: { color: volColor, width: 2.5 }, itemStyle: { color: volColor },
-        areaStyle: { color: volColor, opacity: 0.18 } },
-      { name: '微信_audiollm',
-        value: idx.map((ii, k) => parseFloat((maxVals[k] - audiollm[ii]).toFixed(2))),
-        lineStyle: { color: wxColor, width: 2 }, itemStyle: { color: wxColor },
-        areaStyle: { color: wxColor, opacity: 0.08 } }
-    ]}]
-  });
-  window.addEventListener('resize', () => chart.resize());
-})();
-
-// ===== 全场景柱状对比 =====
-(function(){
-  const chart = echarts.init(document.getElementById('barChart'));
-  // 火山胜出的柱子加粗/高亮
-  const volBarData = volcano.map((v,i) => ({
-    value: v,
-    itemStyle: audiollm[i] > v ? { color: '#c0392b', borderRadius: [6,6,0,0], borderWidth: 2, borderColor: '#a93226' } : { color: volColor, borderRadius: [4,4,0,0] }
-  }));
-  
-  chart.setOption({
-    tooltip: { trigger: 'axis', formatter: params => {
-      let s = `<b>${params[0].axisValue}</b><br/>`;
-      params.forEach(p => s += `${p.marker} ${p.seriesName}: <b>${p.value}%</b><br/>`);
-      const d = (volcano[params[0].dataIndex] - audiollm[params[0].dataIndex]).toFixed(2);
-      const lead = d < 0 ? '🔥 火山领先' : d > 0 ? 'audiollm领先' : '持平';
-      s += `${lead}: <b>${Math.abs(d)}pp</b>`;
-      return s;
-    }},
-    legend: { data: ['火山引擎_流式', '微信_audiollm'], top: 5 },
-    grid: { left: 55, right: 30, top: 45, bottom: 80 },
-    xAxis: { type: 'category', data: shortNames, axisLabel: { rotate: 35, fontSize: 11 } },
-    yAxis: { type: 'value', name: 'CER%' },
-    series: [
-      { name: '火山引擎_流式', type: 'bar', data: volBarData, barGap: '10%', barWidth: 22,
-        label: { show: true, position: 'top', fontSize: 10, formatter: '{c}' } },
-      { name: '微信_audiollm', type: 'bar', data: audiollm, itemStyle: { color: wxColor, borderRadius: [4,4,0,0] }, barWidth: 22,
-        label: { show: true, position: 'top', fontSize: 10, formatter: '{c}' } }
-    ]
-  });
-  window.addEventListener('resize', () => chart.resize());
-})();
-
 // ===== 差值图（火山视角：正值=火山更优）=====
 (function(){
   // 反转差值：audiollm - volcano，正值=火山更优
@@ -489,37 +343,6 @@ document.getElementById('kpiNoise').textContent = '-9.7%';
       barWidth: 16,
       markLine: { data: [{ xAxis: 0 }], lineStyle: { color: '#94a3b8', type: 'solid' }, label: { show: false } }
     }]
-  });
-  window.addEventListener('resize', () => chart.resize());
-})();
-
-// ===== 场景分类对比 =====
-(function(){
-  const categories = {
-    '中英混合': [9,10], '噪声场景': [7,12], '通用大盘': [0],
-    '用户分群': [6,8], '特殊场景': [4,11], '垂类(医疗)': [5,15],
-    '垂类(地名)': [2,3], '垂类(游戏)': [1]
-  };
-  const catNames = Object.keys(categories);
-  const volCat = catNames.map(c => parseFloat((categories[c].reduce((s,i)=>s+volcano[i],0)/categories[c].length).toFixed(2)));
-  const wxCat = catNames.map(c => parseFloat((categories[c].reduce((s,i)=>s+audiollm[i],0)/categories[c].length).toFixed(2)));
-
-  const chart = echarts.init(document.getElementById('categoryChart'));
-  chart.setOption({
-    tooltip: { trigger: 'axis' },
-    legend: { data: ['火山引擎_流式','微信_audiollm'], top: 5 },
-    grid: { left: 55, right: 30, top: 40, bottom: 60 },
-    xAxis: { type: 'category', data: catNames, axisLabel: { rotate: 20, fontSize: 11 } },
-    yAxis: { type: 'value', name: 'CER%' },
-    series: [
-      { name: '火山引擎_流式', type: 'bar', data: volCat.map((v,i) => ({
-        value: v,
-        itemStyle: { color: v < wxCat[i] ? '#c0392b' : volColor, borderRadius: [4,4,0,0] }
-      })), barWidth: 26, barGap: '10%',
-        label: { show: true, position: 'top', fontSize: 10 } },
-      { name: '微信_audiollm', type: 'bar', data: wxCat, itemStyle: { color: wxColor, borderRadius: [4,4,0,0] }, barWidth: 26,
-        label: { show: true, position: 'top', fontSize: 10 } }
-    ]
   });
   window.addEventListener('resize', () => chart.resize());
 })();
