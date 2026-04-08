@@ -73,7 +73,7 @@ def analyze_news_with_llm(client, articles_context, category, existing_texts):
     now = now_cst()
     time_str = now.strftime("%Y-%m-%d %H:%M CST")
 
-    existing_str = "\n".join(f"- {t[:60]}" for t in list(existing_texts)[:15])
+    existing_str = "\n".join(f"- {t[:80]}" for t in list(existing_texts)[:20])
 
     prompt = f"""You are a professional financial news analyst for Y Daily (yion.me).
 Current time: {time_str}
@@ -95,9 +95,10 @@ Rules:
 1. ONLY select genuinely important/impactful news. Skip fluff, opinion pieces, and minor updates.
 2. Translate to Chinese. Be concise but complete.
 3. Each item MUST have a real source URL from the articles above.
-4. DO NOT duplicate any existing items listed above.
-5. Aim for 3-8 high-quality items. Quality over quantity.
-6. Tag each item appropriately.
+4. DO NOT duplicate any existing items listed above — even if worded differently, if it's the SAME event, skip it.
+5. CRITICAL: If multiple input articles describe the SAME event, produce ONLY ONE item. Merge info from multiple sources into a single comprehensive item, and pick the most authoritative source URL.
+6. Aim for 3-8 high-quality items. Quality over quantity.
+7. Tag each item appropriately.
 
 Return a JSON array. Each item:
 {{
@@ -150,20 +151,168 @@ def clean_item(item):
 
 
 def dedup_items(existing, new_items):
-    """Remove duplicates based on text similarity."""
-    existing_texts = set()
-    for item in existing:
-        text = item.get("text", "")[:30]
-        existing_texts.add(text)
+    """Remove duplicates using multi-layer semantic dedup."""
+    return dedup_items_semantic(existing, new_items, client=None)
+
+
+def dedup_items_semantic(existing, new_items, client=None):
+    """
+    Multi-layer semantic dedup:
+    1. URL exact match
+    2. difflib SequenceMatcher (local, fast, threshold 0.6)
+    3. LLM semantic dedup for remaining ambiguous pairs (optional)
+    """
+    from difflib import SequenceMatcher
+
+    if not new_items:
+        return []
+
+    SIMILARITY_THRESHOLD = 0.6
+
+    # Build reference set from existing items
+    existing_urls = {item.get("url", "") for item in existing if item.get("url")}
+    existing_texts = [item.get("text", "") for item in existing]
 
     deduped = []
+    deduped_texts = []
+
     for item in new_items:
-        text = item.get("text", "")[:30]
-        if text not in existing_texts:
-            deduped.append(item)
-            existing_texts.add(text)
+        url = item.get("url", "")
+        text = item.get("text", "")
+
+        # Layer 1: URL exact match
+        if url and url in existing_urls:
+            print(f"  Dedup [URL]: {text[:40]}...")
+            continue
+
+        # Layer 2: difflib similarity against existing items
+        is_dup = False
+        for ref_text in existing_texts:
+            if not ref_text:
+                continue
+            # Compare on shorter segments for speed
+            a = text[:80]
+            b = ref_text[:80]
+            ratio = SequenceMatcher(None, a, b).ratio()
+            if ratio > SIMILARITY_THRESHOLD:
+                print(f"  Dedup [sim={ratio:.2f}]: {text[:40]}...")
+                is_dup = True
+                break
+
+        if is_dup:
+            continue
+
+        # Layer 2b: difflib similarity against other new items (self-dedup)
+        for ref_text in deduped_texts:
+            a = text[:80]
+            b = ref_text[:80]
+            ratio = SequenceMatcher(None, a, b).ratio()
+            if ratio > SIMILARITY_THRESHOLD:
+                print(f"  Dedup [new-self, sim={ratio:.2f}]: {text[:40]}...")
+                is_dup = True
+                break
+
+        if is_dup:
+            continue
+
+        deduped.append(item)
+        deduped_texts.append(text)
+        existing_urls.add(url)
+
+    # Layer 3: LLM semantic dedup on final candidates (if client available)
+    if client and deduped and existing_texts:
+        deduped = _llm_semantic_dedup(client, existing_texts, deduped)
 
     return deduped
+
+
+def _llm_semantic_dedup(client, existing_texts, candidates):
+    """
+    Use LLM to identify semantically duplicate items that local methods missed.
+    Sends all existing + candidate texts; LLM returns indices of duplicates to remove.
+    """
+    if not candidates:
+        return candidates
+
+    # Build compact representation
+    existing_brief = [t[:80] for t in existing_texts[:20]]
+    candidate_brief = []
+    for i, item in enumerate(candidates):
+        candidate_brief.append({"idx": i, "text": item.get("text", "")[:100]})
+
+    prompt = f"""You are a deduplication engine. Compare CANDIDATE items against EXISTING items.
+Two items are duplicates if they describe the SAME event/fact, even with different wording.
+
+EXISTING items:
+{json.dumps(existing_brief, ensure_ascii=False)}
+
+CANDIDATE items:
+{json.dumps(candidate_brief, ensure_ascii=False)}
+
+Return a JSON array of candidate indices (idx) that are DUPLICATES of any existing item.
+If no duplicates, return [].
+Return ONLY the JSON array, no explanation.
+"""
+
+    try:
+        response = client.chat.completions.create(
+            model=LLM_MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.0,
+            max_tokens=200,
+        )
+        content = response.choices[0].message.content.strip()
+        content = re.sub(r'^```json\s*', '', content)
+        content = re.sub(r'\s*```$', '', content)
+        dup_indices = set(json.loads(content))
+        if dup_indices:
+            print(f"  LLM dedup removed {len(dup_indices)} items: {dup_indices}")
+        return [item for i, item in enumerate(candidates) if i not in dup_indices]
+    except Exception as e:
+        print(f"  LLM dedup error (keeping all): {e}")
+        return candidates
+
+
+def _cross_board_dedup(primary_items, secondary_items, threshold=0.55):
+    """
+    Remove items from secondary that duplicate primary (cross-board dedup).
+    Uses URL match + difflib similarity.
+    """
+    from difflib import SequenceMatcher
+
+    primary_urls = {item.get("url", "") for item in primary_items if item.get("url")}
+    primary_texts = [item.get("text", "") for item in primary_items]
+
+    result = []
+    removed = 0
+    for item in secondary_items:
+        url = item.get("url", "")
+        text = item.get("text", "")
+
+        # URL match
+        if url and url in primary_urls:
+            print(f"  Cross-dedup [URL]: {text[:40]}...")
+            removed += 1
+            continue
+
+        # Text similarity
+        is_dup = False
+        for ref_text in primary_texts:
+            if not ref_text:
+                continue
+            ratio = SequenceMatcher(None, text[:80], ref_text[:80]).ratio()
+            if ratio > threshold:
+                print(f"  Cross-dedup [sim={ratio:.2f}]: {text[:40]}...")
+                is_dup = True
+                removed += 1
+                break
+
+        if not is_dup:
+            result.append(item)
+
+    if removed:
+        print(f"  Cross-board dedup removed {removed} items")
+    return result
 
 
 def filter_by_window(items, window_hours=24):
@@ -265,8 +414,8 @@ def main():
     print(f"After filtering: finance={len(finance_news)}, ai={len(ai_news)}")
 
     # Collect existing texts for dedup
-    existing_finance_texts = {item.get("text", "")[:60] for item in finance_news}
-    existing_ai_texts = {item.get("text", "")[:60] for item in ai_news}
+    existing_finance_texts = {item.get("text", "")[:80] for item in finance_news}
+    existing_ai_texts = {item.get("text", "")[:80] for item in ai_news}
 
     # Step 2: Fetch REAL news from RSS feeds
     print("\n--- Fetching news from RSS feeds ---")
@@ -306,9 +455,10 @@ def main():
         print("\nNo LLM client - skipping analysis")
         new_ai = []
 
-    # Step 4: Dedup and merge
-    new_finance = dedup_items(finance_news, [clean_item(i) for i in new_finance])
-    new_ai = dedup_items(ai_news, [clean_item(i) for i in new_ai])
+    # Step 4: Dedup and merge (multi-layer semantic dedup)
+    print("\n--- Semantic dedup ---")
+    new_finance = dedup_items_semantic(finance_news, [clean_item(i) for i in new_finance], client)
+    new_ai = dedup_items_semantic(ai_news, [clean_item(i) for i in new_ai], client)
 
     print(f"\nNew unique finance items: {len(new_finance)}")
     print(f"New unique AI items: {len(new_ai)}")
@@ -316,6 +466,10 @@ def main():
     # Prepend new items and sort by time (newest first)
     finance_news = new_finance + finance_news
     ai_news = new_ai + ai_news
+
+    # Step 4b: Cross-board dedup (remove items in AI that duplicate finance)
+    print("\n--- Cross-board dedup ---")
+    ai_news = _cross_board_dedup(finance_news, ai_news)
 
     finance_news = sort_by_time_desc(finance_news)
     ai_news = sort_by_time_desc(ai_news)

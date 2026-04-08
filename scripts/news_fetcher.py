@@ -229,16 +229,31 @@ def articles_to_context(articles, max_articles=30):
     return "\n".join(lines)
 
 
-def dedup_by_title(articles):
-    """Remove near-duplicate articles by title similarity."""
-    seen = set()
+def dedup_by_title(articles, threshold=0.70):
+    """Remove near-duplicate articles by title similarity using SequenceMatcher."""
+    from difflib import SequenceMatcher
+
     result = []
+    seen_keys = []  # normalized titles for comparison
+
     for art in articles:
-        # Normalize title for comparison
-        key = re.sub(r'\W+', '', art["title"].lower())[:40]
-        if key not in seen:
-            seen.add(key)
+        # Normalize: lowercase, remove non-alphanumeric, collapse spaces
+        key = re.sub(r'\W+', ' ', art["title"].lower()).strip()
+
+        is_dup = False
+        for existing_key in seen_keys:
+            # Quick length check: if lengths differ too much, skip
+            len_ratio = min(len(key), len(existing_key)) / max(len(key), len(existing_key), 1)
+            if len_ratio < 0.4:
+                continue
+            if SequenceMatcher(None, key[:60], existing_key[:60]).ratio() > threshold:
+                is_dup = True
+                break
+
+        if not is_dup:
             result.append(art)
+            seen_keys.append(key)
+
     return result
 
 
