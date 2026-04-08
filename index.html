@@ -1287,6 +1287,12 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:36", tag: "geo", tagText: "地缘", text: "油价在伊朗同意在停火期间确保霍尔木兹海峡安全通行后跌破100美元。美国总统特朗普在与巴基斯坦总理谢里夫讨论后同意了此次停火。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/oil-prices-iran-war-trump-deadline-strait-hormuz.html" },
+  { time: "15:27", tag: "macro", tagText: "宏观", text: "美伊为期两周的停火协议引发全球市场释然性反弹，股市上涨，油价暴跌，甚至传统避险资产也获得提振。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/us-iran-ceasefire-gold-oil-stocks-treasuries.html" },
+  { time: "15:12", tag: "geo", tagText: "地缘", text: "美伊宣布停火数小时内，多个中东国家仍报告拦截到来自伊朗的弹道导弹和无人机，显示协议脆弱，地区冲突风险犹存。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/iran-missile-attacks-after-us-ceasefire-gulf-air-defenses.html" },
+  { time: "14:53", tag: "macro", tagText: "宏观", text: "印度股市Sensex指数暴涨2800点，Nifty指数上涨800点，市场对美伊停火消息表示欢迎。", source: "NDTV", url: "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVnFvaTN2NlF0VEZCVGZLOHRwRXlpZVdndjYyeHZfU3RjQ1dMeXVXSzdCeWhFU2ZJRHE4amkxd2VlLVdMczRUbVpUQnVWdDMxQVdfOEhEV0N4RVhJY3NRREVCQ2JUVVU4YWVfYmN2Y3Axcnc1MWhQRmxPX2Z6VFh1TXZ6MTJUTFJWdFB6UWhqVVZ4cjU4T0l3OWQzWmhKN3Y3Tm03aEF4Um5LYnVOSVphQzU3dVBvcDFUM3ZnT2NzTHd4UU9WNjgtMlZFYzFTRWZ3eHdGUENuMWpLWEpkbDQ5V1k2RWt0VDlM0gHwAUFVX3lxTE9OcmlVdW16OEt4c2V6WmxXVm5HYWZJY3d3cFlTRUhiMTlxTzlDVkhVemo2Z00tYi1oaWg0MUt3TVdsTzRfTS1HRUdaVHVVMjJaTUl3eFp1SGh3OENxV1owN0FkMmZzaERRWVkzc2VJS1VPM1Z5bEZjLU5oU3E5S25seXRJUW9GT1pjcl9hSkNFXzJmRnZob0Y2SmUtNGRIY3p1MVZxWV9yUDNqNVk0ZlNlejdES19kMTFCX0lpTlhZOF9rYmJRd2pnNnVGS1dfbHhUVkRfeXNDNDJXV3pqZGpScVRUZVh2WE5PUGlyYjhEMw?oc=5" },
+  { time: "14:47", tag: "tech", tagText: "科技", text: "亚洲科技及半导体公司股价因美伊达成有条件两周停火的消息而大涨，市场对霍尔木兹海峡供应中断的担忧缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/asian-chip-stocks-surge-us-iran-ceasefire-helium-supply-relief.html" },
+  { time: "12:37", tag: "macro", tagText: "宏观", text: "关于特朗普‘历史性’炼油厂协议的疑问：投资额是3000亿美元还是4000万美元？信实工业尚未就此德克萨斯州布朗斯维尔项目向交易所发布公告。", source: "Financial Times", url: "https://www.ft.com/content/f217467c-e113-4aa2-ac5e-7046a1dc9be0" },
   { time: "12:07", tag: "geo", tagText: "地缘", text: "美国和伊朗同意为期两周的停火，伊朗将在此期间开放霍尔木兹海峡。此举旨在缓解全球石油运输咽喉要道的紧张局势。", source: "Financial Times", url: "https://www.ft.com/content/d8e9e0e9-9417-47ad-a915-ba08049d643f" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "土耳其央行3月安排了价值200亿美元的黄金销售和互换交易，以支撑里拉，此举加剧了黄金价格的下跌。", source: "Financial Times", url: "https://www.ft.com/content/6c931469-495c-4860-a455-4888af072f58" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "AI初创公司Perplexity在从搜索转向AI代理的转型中，收入增长了50%，显示出市场对更复杂、潜在利润更高的AI服务的需求。", source: "Financial Times", url: "https://www.ft.com/content/e9c28d31-a962-4684-8b58-c9e6bc68401f" },
@@ -1301,18 +1307,13 @@ const breakingNews = [
   { time: "06:47", tag: "geo", tagText: "地缘", text: "美国总统特朗普同意暂停对伊朗的军事行动两周，条件是伊朗必须重新开放霍尔木兹海峡。此举暂时缓解了战争立即升级的风险。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/trump-iran-ceasefire-hormuz-strait.html" },
   { time: "06:44", tag: "macro", tagText: "宏观", text: "在特朗普同意暂停对伊朗攻击两周后，美国原油价格暴跌逾9%。此前特朗普曾威胁，若伊朗未能在美东时间晚8点前重新开放霍尔木兹海峡，将摧毁其整个文明。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/oil-prices-iran-war-trump-deadline-strait-hormuz.html" },
   { time: "06:14", tag: "macro", tagText: "宏观", text: "桥水基金创始人瑞·达利欧警告，伊朗冲突可能演变为下一场世界大战。他指出，以色列、美国和伊朗之间的冲突并非在真空中发生。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ray-dalio-says-the-iran-conflict-could-evolve-into-the-next-world-war-fa3045ef?mod=mw_rss_topstories" },
-  { time: "06:06", tag: "geo", tagText: "地缘", text: "特朗普威胁要‘摧毁伊朗整个文明’的言论引发美国国内要求其下台或弹劾的呼声。批评者警告这可能构成战争罪。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/25th-amendment-trump-removal-iran-war.html" },
-  { time: "05:48", tag: "geo", tagText: "地缘", text: "巴基斯坦呼吁美国总统特朗普延长与伊朗谈判的最后期限。特朗普此前警告，若未能在美东时间晚8点前达成协议，‘整个文明将灭亡’。", source: "Financial Times", url: "https://www.ft.com/content/e49f0110-f07b-4480-9ea4-2b37aab2c906" },
-  { time: "05:06", tag: "macro", tagText: "宏观", text: "比尔·阿克曼旗下的潘兴广场提出以550亿欧元收购环球音乐集团的交易。该提议旨在将全球最大的音乐集团与一家特殊目的收购公司合并。", source: "Financial Times", url: "https://www.ft.com/content/3322139e-5df5-4a4a-a6d2-ec42ca6a3c4b" },
-  { time: "03:17", tag: "geo", tagText: "地缘", text: "美国与伊朗达成为期两周的停火协议，引发全球风险资产普遍上涨的‘释然性反弹’，油价跌破每桶100美元。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/us-iran-ceasefire-gold-oil-stocks-treasuries.html" },
-  { time: "03:12", tag: "geo", tagText: "地缘", text: "尽管美伊宣布停火，但数小时内多个海湾国家仍报告拦截到来自伊朗的弹道导弹和无人机袭击，显示地区紧张局势并未立即平息。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/iran-missile-attacks-after-us-ceasefire-gulf-air-defenses.html" },
-  { time: "03:08", tag: "geo", tagText: "地缘", text: "美国总统特朗普警告伊朗，若不在美东时间晚8点前达成协议，其‘整个文明将在今晚灭亡’。霍尔木兹海峡近乎关闭已造成历史性的石油供应冲击，推动全球能源价格飙升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/iran-war-trump-deadline.html" },
 ];
-const breakingDate = "2026年4月8日 13:55 CST";
+const breakingDate = "2026年4月8日 15:51 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
   { time: "13:40", tag: "ai", tagText: "AI", text: "谷歌悄然发布了一款离线优先的AI听写应用，该应用使用其Gemma AI模型，旨在与Wispr Flow等应用竞争。此举凸显了谷歌将AI功能本地化、提升隐私和可访问性的战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/" },
+  { time: "13:01", tag: "geo", tagText: "地缘", text: "中国AI及云计算公司正加速采用国产芯片。此举反映了在地缘政治紧张和技术自主趋势下，中国科技行业供应链的持续调整。", source: "digitimes.com", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOX2FRYmlsWF9uVlZ4SnRLMXZCUVI4RDVlV2JUY0stVGJuRnkyY3hMR1N0ai0xY1Y5WTdvX1J5QW5QTTI0QkdEWHVhR2luUy1Od0JzaTM3dkFZWUdGbzdETG1qdl9henFfdjA5WjVvUVlMeHVwSFBtV05vUFMyLUxEQnMtYk43eVZkMzFFby1uR20zQ3NQZ08w?oc=5" },
   { time: "12:29", tag: "ai", tagText: "AI", text: "AI初创公司WorkOnGrid获得新一轮融资，以支持其全球扩张计划。这表明资本仍在持续流入特定领域的AI初创企业。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNSktlbnpaSW5hWnFGaHZ1S09Ca0hvdnZLLXIxOGx1eE5tMGN1WHlNZ1JZZ2Y3NmdTMW1QSGJPYWYyZlE4T0swLTJWcjdqRjZiSnloWFIwNkxKYS1rX2lOcUNXcEJsNVlLcURkamM1VklOOUZWSHVzWWpuZTdGU054M1R0dVBmcXRHb2Y5OUFXWGFCRnh3ZGQxUHRn?oc=5" },
   { time: "06:27", tag: "ai", tagText: "AI", text: "知名风险投资机构Eclipse宣布为其第二支基金筹集了13亿美元，该基金将专注于投资“物理AI”（Physical AI）初创公司，即那些将人工智能应用于机器人、制造、物流和能源等实体世界的企业。此举标志着资本正大规模流向AI与实体经济的结合领域。", source: "mezha.net", url: "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5sMkdMRUZraXVfdlMzR3h2Y3NoLVJMU1dxRjdYOVRmaTZKUHZzR0M5V2ZmTnEyNk1nRFRmMzZDNFZRRmE3Q09vNzYxYTlQQWZPdjNIckJJRTY3N2otLUpoMQ?oc=5" },
   { time: "05:42", tag: "ai", tagText: "AI", text: "一家牙科AI初创公司宣布完成2000万美元的种子轮融资。该公司利用人工智能技术辅助牙科诊断和治疗规划，此轮融资将用于产品开发和市场拓展，反映了AI在垂直医疗领域持续获得资本关注。", source: "National Today", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNR1hLbElMRXE3cGx5SmJuQ092ZkxMaktUdGkxdUxWSWQxOUU1R3F1c0R1eUlSU29zTHpmTWNCMXl2TU9QdjRjdEE0RjM1SmpFN2QxcGpVTlVsS2llbjJnSWdzZFhJYVVHTFhJMk1YcnU3S0dhX0doYzQwakRaY0J5NVVYYmhmVXFJcVl2WXp1LVVnYUFOMWlCSWdFbno4OHlpNVJF?oc=5" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "00:05", tag: "ai", tagText: "AI", text: "AI公司Anthropic大幅扩大了与谷歌和博通的算力合作协议，因其年化收入已飙升至300亿美元。这一巨额交易凸显了顶级AI模型公司对算力的巨大需求，以及谷歌TPU生态系统的关键地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/07/anthropic-compute-deal-google-broadcom-tpus/" },
   { time: "00:01", tag: "ai", tagText: "AI", text: "AI融资热潮正将四大会计师事务所（普华永道、德勤、安永、毕马威）更深地卷入初创公司的尽职调查业务。随着AI投资规模激增，投资者对技术验证和风险评估的需求推动了对专业审计与咨询服务的需求。", source: "Mint", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQamYzeXBNeTEwdDFDSVBCa2ZQd0tZTWFCNEVzVGxyU01fZ2ZCU29SS1N0eGYzYnNFQzZWZnRHcXVXc3FDSXREeksyb2FrT1k5N2FOMzhPZ1NVbVdsdjZpUXpRNmFpT2lKaVpmdENZNlhtQm5mcWpoU0pMMXpYT3hQZnh1Mmcwd1VyZEIxZjVTLUhxR09nQlJfMl82X1QzR1RuOEpjMmdOdDNLRkY30gGyAUFVX3lxTE1JREQ0bG9UbF9oXzMyMmVkODFOXzBmV1RsNUswUEpXazVjSGRhZkstV1Q4Vk5xQjg4OU5qTTFfM3NPT3BKcEhMdHRYZF9VOVlqbmlNbUtuN2RPQmFBcUJwWF9NMmJvTmFDSmhNZFZQSTZnWGcwQVR3bEZsRkZ3dEU5SjRob1VlMVlWY2hVS3ViZFRjVG9fbW5WX2xJOGh2aFl6OTZPY0wwbURoT1phSlpXX0E?oc=5" },
   { time: "23:43", tag: "tech", tagText: "科技", text: "英特尔宣布将参与设计和建造埃隆·马斯克在德克萨斯州奥斯汀的Terafab AI芯片工厂。这一合作标志着英特尔在代工服务领域的重大进展，也为马斯克旗下公司的AI芯片雄心提供了关键的制造伙伴。", source: "The Verge", url: "https://www.theverge.com/transportation/907976/elon-musk-terafab-intel-ai-chip-spacex-tesla" },
-  { time: "23:30", tag: "ai", tagText: "AI", text: "谷歌地图推出新功能，利用Gemini AI为用户上传的照片和视频自动生成描述性标题。这是AI进一步融入日常工具、提升用户体验的又一例证。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/" },
 ];
-const aiBreakingDate = "2026年4月8日 13:55 CST";
+const aiBreakingDate = "2026年4月8日 15:51 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
