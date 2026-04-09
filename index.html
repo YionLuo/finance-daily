@@ -1287,6 +1287,11 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:37", tag: "macro", tagText: "宏观", text: "关于特朗普'历史性'炼油厂协议的疑问：投资额是3000亿美元还是4000万美元？信实工业尚未就此德克萨斯州布朗斯维尔项目向交易所发布公告。", source: "Financial Times", url: "https://www.ft.com/content/f217467c-e113-4aa2-ac5e-7046a1dc9be0" },
+  { time: "12:07", tag: "geo", tagText: "地缘", text: "美国和伊朗同意为期两周的停火，伊朗将在此期间开放霍尔木兹海峡。此举旨在缓解全球石油运输咽喉要道的紧张局势。", source: "Financial Times", url: "https://www.ft.com/content/d8e9e0e9-9417-47ad-a915-ba08049d643f" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "土耳其央行3月安排了价值200亿美元的黄金销售和互换交易，以支撑里拉，此举加剧了黄金价格的下跌。", source: "Financial Times", url: "https://www.ft.com/content/6c931469-495c-4860-a455-4888af072f58" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "AI初创公司Perplexity在从搜索转向AI代理的转型中，收入增长了50%，显示出市场对更复杂、潜在利润更高的AI服务的需求。", source: "Financial Times", url: "https://www.ft.com/content/e9c28d31-a962-4684-8b58-c9e6bc68401f" },
+  { time: "11:36", tag: "crypto", tagText: "加密", text: "在美国与伊朗达成两周停火协议后，以太坊价格飙升超过5%，多头点燃强劲上涨势头。", source: "cryptorank.io", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5hRjZtemM2cHZWMDZheTUtbGVmOHA0TVBiQU1rdzZfcWVyUjJ3alRRMG9Pc2tHRE95WW8wbUpuVFpKcFpvbkc5cmhIX29OWlBfVnpybTdpaUdIWWZsNDVFdUhQMlVEOVE3QnZTOHlFU1dmaTVadjNBNQ?oc=5" },
   { time: "23:22", tag: "geo", tagText: "地缘", text: "美国总统特朗普威胁称，将对任何\"向伊朗供应军事武器\"的国家征收50%的进口商品关税。此举可能引发新一轮全球贸易紧张局势，并影响相关国家的对美出口。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/trump-threatens-tariffs-countries-supplying-weapons-iran-ceasefire.html" },
   { time: "23:20", tag: "macro", tagText: "宏观", text: "达美航空CEO表示，由于燃油成本上升，公司将\"显著\"削减增长计划，并预计其炼油厂业务将带来3亿美元的提振。这反映了航空公司正积极应对高油价环境下的成本压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/delta-air-lines-q1-2026-earnings.html" },
   { time: "23:17", tag: "geo", tagText: "地缘", text: "特朗普-伊朗停火后，首批船只通过霍尔木兹海峡，但通航量仍低。有报道称，伊朗正计划要求航运公司以加密货币支付油轮通行费，这可能为全球贸易结算引入新的不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/trump-iran-ceasefire-strait-of-hormuz-toll.html" },
@@ -1302,16 +1307,14 @@ const breakingNews = [
   { time: "15:12", tag: "geo", tagText: "地缘", text: "美伊宣布停火数小时内，多个中东国家仍报告拦截到来自伊朗的弹道导弹和无人机，显示协议脆弱，地区冲突风险犹存。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/iran-missile-attacks-after-us-ceasefire-gulf-air-defenses.html" },
   { time: "14:53", tag: "macro", tagText: "宏观", text: "印度股市Sensex指数暴涨2800点，Nifty指数上涨800点，市场对美伊停火消息表示欢迎。", source: "NDTV", url: "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVnFvaTN2NlF0VEZCVGZLOHRwRXlpZVdndjYyeHZfU3RjQ1dMeXVXSzdCeWhFU2ZJRHE4amkxd2VlLVdMczRUbVpUQnVWdDMxQVdfOEhEV0N4RVhJY3NRREVCQ2JUVVU4YWVfYmN2Y3Axcnc1MWhQRmxPX2Z6VFh1TXZ6MTJUTFJWdFB6UWhqVVZ4cjU4T0l3OWQzWmhKN3Y3Tm03aEF4Um5LYnVOSVphQzU3dVBvcDFUM3ZnT2NzTHd4UU9WNjgtMlZFYzFTRWZ3eHdGUENuMWpLWEpkbDQ5V1k2RWt0VDlM0gHwAUFVX3lxTE9OcmlVdW16OEt4c2V6WmxXVm5HYWZJY3d3cFlTRUhiMTlxTzlDVkhVemo2Z00tYi1oaWg0MUt3TVdsTzRfTS1HRUdaVHVVMjJaTUl3eFp1SGh3OENxV1owN0FkMmZzaERRWVkzc2VJS1VPM1Z5bEZjLU5oU3E5S25seXRJUW9GT1pjcl9hSkNFXzJmRnZob0Y2SmUtNGRIY3p1MVZxWV9yUDNqNVk0ZlNlejdES19kMTFCX0lpTlhZOF9rYmJRd2pnNnVGS1dfbHhUVkRfeXNDNDJXV3pqZGpScVRUZVh2WE5PUGlyYjhEMw?oc=5" },
   { time: "14:47", tag: "tech", tagText: "科技", text: "亚洲科技及半导体公司股价因美伊达成有条件两周停火的消息而大涨，市场对霍尔木兹海峡供应中断的担忧缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/asian-chip-stocks-surge-us-iran-ceasefire-helium-supply-relief.html" },
-  { time: "12:37", tag: "macro", tagText: "宏观", text: "关于特朗普'历史性'炼油厂协议的疑问：投资额是3000亿美元还是4000万美元？信实工业尚未就此德克萨斯州布朗斯维尔项目向交易所发布公告。", source: "Financial Times", url: "https://www.ft.com/content/f217467c-e113-4aa2-ac5e-7046a1dc9be0" },
-  { time: "12:07", tag: "geo", tagText: "地缘", text: "美国和伊朗同意为期两周的停火，伊朗将在此期间开放霍尔木兹海峡。此举旨在缓解全球石油运输咽喉要道的紧张局势。", source: "Financial Times", url: "https://www.ft.com/content/d8e9e0e9-9417-47ad-a915-ba08049d643f" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "土耳其央行3月安排了价值200亿美元的黄金销售和互换交易，以支撑里拉，此举加剧了黄金价格的下跌。", source: "Financial Times", url: "https://www.ft.com/content/6c931469-495c-4860-a455-4888af072f58" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "AI初创公司Perplexity在从搜索转向AI代理的转型中，收入增长了50%，显示出市场对更复杂、潜在利润更高的AI服务的需求。", source: "Financial Times", url: "https://www.ft.com/content/e9c28d31-a962-4684-8b58-c9e6bc68401f" },
-  { time: "11:36", tag: "crypto", tagText: "加密", text: "在美国与伊朗达成两周停火协议后，以太坊价格飙升超过5%，多头点燃强劲上涨势头。", source: "cryptorank.io", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5hRjZtemM2cHZWMDZheTUtbGVmOHA0TVBiQU1rdzZfcWVyUjJ3alRRMG9Pc2tHRE95WW8wbUpuVFpKcFpvbkc5cmhIX29OWlBfVnpybTdpaUdIWWZsNDVFdUhQMlVEOVE3QnZTOHlFU1dmaTVadjNBNQ?oc=5" },
 ];
-const breakingDate = "2026年4月9日 11:21 CST";
+const breakingDate = "2026年4月9日 13:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:40", tag: "ai", tagText: "AI", text: "谷歌悄然发布了一款离线优先的AI听写应用，该应用使用其Gemma AI模型，旨在与Wispr Flow等应用竞争。此举凸显了谷歌将AI功能本地化、提升隐私和可访问性的战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/" },
+  { time: "13:01", tag: "geo", tagText: "地缘", text: "据Digitimes报道，中国的AI和云计算公司正在加速采用国产芯片。这一趋势反映了在地缘政治紧张和技术自主的背景下，中国科技行业减少对外国半导体依赖的持续努力。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOX2FRYmlsWF9uVlZ4SnRLMXZCUVI4RDVlV2JUY0stVGJuRnkyY3hMR1N0ai0xY1Y5WTdvX1J5QW5QTTI0QkdEWHVhR2luUy1Od0JzaTM3dkFZWUdGbzdETG1qdl9henFfdjA5WjVvUVlMeHVwSFBtV05vUFMyLUxEQnMtYk43eVZkMzFFby1uR20zQ3NQZ08w?oc=5" },
+  { time: "12:29", tag: "ai", tagText: "AI", text: "AI初创公司WorkOnGrid宣布获得新一轮融资，以支持其全球扩张计划。这表明尽管市场环境变化，资本仍在持续流入具有明确商业模式和增长潜力的AI初创企业。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNSktlbnpaSW5hWnFGaHZ1S09Ca0hvdnZLLXIxOGx1eE5tMGN1WHlNZ1JZZ2Y3NmdTMW1QSGJPYWYyZlE4T0swLTJWcjdqRjZiSnloWFIwNkxKYS1rX2lOcUNXcEJsNVlLcURkamM1VklOOUZWSHVzWWpuZTdGU054M1R0dVBmcXRHb2Y5OUFXWGFCRnh3ZGQxUHRn?oc=5" },
   { time: "06:27", tag: "ai", tagText: "AI", text: "知名风险投资机构Eclipse宣布为其第二支基金筹集了13亿美元，该基金将专注于投资\"物理AI\"（Physical AI）初创公司，即那些将人工智能应用于机器人、制造、物流和能源等实体世界的企业。此举标志着资本正大规模流向AI与实体经济的结合领域。", source: "mezha.net", url: "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5sMkdMRUZraXVfdlMzR3h2Y3NoLVJMU1dxRjdYOVRmaTZKUHZzR0M5V2ZmTnEyNk1nRFRmMzZDNFZRRmE3Q09vNzYxYTlQQWZPdjNIckJJRTY3N2otLUpoMQ?oc=5" },
   { time: "05:35", tag: "ai", tagText: "AI", text: "仅有26人的美国开源AI模型初创公司Arcee因其构建的高性能、大规模开源大语言模型而受到关注，并在OpenClaw用户中日益流行。这展示了小型团队在AI前沿竞争的可能性。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/07/i-cant-help-rooting-for-tiny-open-source-ai-model-maker-arcee/" },
   { time: "04:13", tag: "tech", tagText: "科技", text: "Spotify将其'提示生成播放列表'功能扩展至播客领域，Premium用户可通过提示词更便捷地发现新播客节目。这体现了AI在内容发现和个性化推荐上的应用深化。", source: "The Verge", url: "https://www.theverge.com/entertainment/908339/spotify-prompted-playlists-podcasts" },
@@ -1326,11 +1329,8 @@ const aiBreakingNews = [
   { time: "19:47", tag: "ai", tagText: "AI", text: "OpenAI在完成1220亿美元巨额融资后，公司内部氛围紧张，处境微妙。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/908513/the-vibes-are-off-at-openai" },
   { time: "17:53", tag: "macro", tagText: "宏观", text: "非营利新闻机构ProPublica的工会员工因AI使用、裁员和薪酬问题举行24小时罢工。", source: "The Verge", url: "https://www.theverge.com/news/908401/propublica-union-strike-negotiations-ai-layoffs" },
   { time: "17:00", tag: "tech", tagText: "科技", text: "Atlassian为其协作软件Confluence推出视觉AI工具和第三方AI代理集成，用户可直接在软件内创建视觉资产，并与Lovable、Replit和Gamma等平台联动。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/08/atlassian-confluence-visual-ai-tools-agents/" },
-  { time: "13:40", tag: "ai", tagText: "AI", text: "谷歌悄然发布了一款离线优先的AI听写应用，该应用使用其Gemma AI模型，旨在与Wispr Flow等应用竞争。此举凸显了谷歌将AI功能本地化、提升隐私和可访问性的战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/" },
-  { time: "13:01", tag: "geo", tagText: "地缘", text: "据Digitimes报道，中国的AI和云计算公司正在加速采用国产芯片。这一趋势反映了在地缘政治紧张和技术自主的背景下，中国科技行业减少对外国半导体依赖的持续努力。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOX2FRYmlsWF9uVlZ4SnRLMXZCUVI4RDVlV2JUY0stVGJuRnkyY3hMR1N0ai0xY1Y5WTdvX1J5QW5QTTI0QkdEWHVhR2luUy1Od0JzaTM3dkFZWUdGbzdETG1qdl9henFfdjA5WjVvUVlMeHVwSFBtV05vUFMyLUxEQnMtYk43eVZkMzFFby1uR20zQ3NQZ08w?oc=5" },
-  { time: "12:29", tag: "ai", tagText: "AI", text: "AI初创公司WorkOnGrid宣布获得新一轮融资，以支持其全球扩张计划。这表明尽管市场环境变化，资本仍在持续流入具有明确商业模式和增长潜力的AI初创企业。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNSktlbnpaSW5hWnFGaHZ1S09Ca0hvdnZLLXIxOGx1eE5tMGN1WHlNZ1JZZ2Y3NmdTMW1QSGJPYWYyZlE4T0swLTJWcjdqRjZiSnloWFIwNkxKYS1rX2lOcUNXcEJsNVlLcURkamM1VklOOUZWSHVzWWpuZTdGU054M1R0dVBmcXRHb2Y5OUFXWGFCRnh3ZGQxUHRn?oc=5" },
 ];
-const aiBreakingDate = "2026年4月9日 11:21 CST";
+const aiBreakingDate = "2026年4月9日 13:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
