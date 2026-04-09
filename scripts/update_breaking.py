@@ -167,7 +167,8 @@ def dedup_items_semantic(existing, new_items, client=None):
     if not new_items:
         return []
 
-    SIMILARITY_THRESHOLD = 0.6
+    SIMILARITY_THRESHOLD = 0.55  # Lowered from 0.6 for better Chinese dedup
+    CMP_LEN = 120  # Compare longer text segments for accuracy
 
     # Build reference set from existing items
     existing_urls = {item.get("url", "") for item in existing if item.get("url")}
@@ -190,9 +191,8 @@ def dedup_items_semantic(existing, new_items, client=None):
         for ref_text in existing_texts:
             if not ref_text:
                 continue
-            # Compare on shorter segments for speed
-            a = text[:80]
-            b = ref_text[:80]
+            a = text[:CMP_LEN]
+            b = ref_text[:CMP_LEN]
             ratio = SequenceMatcher(None, a, b).ratio()
             if ratio > SIMILARITY_THRESHOLD:
                 print(f"  Dedup [sim={ratio:.2f}]: {text[:40]}...")
@@ -204,8 +204,8 @@ def dedup_items_semantic(existing, new_items, client=None):
 
         # Layer 2b: difflib similarity against other new items (self-dedup)
         for ref_text in deduped_texts:
-            a = text[:80]
-            b = ref_text[:80]
+            a = text[:CMP_LEN]
+            b = ref_text[:CMP_LEN]
             ratio = SequenceMatcher(None, a, b).ratio()
             if ratio > SIMILARITY_THRESHOLD:
                 print(f"  Dedup [new-self, sim={ratio:.2f}]: {text[:40]}...")
@@ -271,6 +271,59 @@ Return ONLY the JSON array, no explanation.
     except Exception as e:
         print(f"  LLM dedup error (keeping all): {e}")
         return candidates
+
+
+def final_dedup(items, similarity_threshold=0.55):
+    """
+    Final full-list dedup after merging new + existing items.
+    Removes duplicates by:
+    1. Exact URL match (keep the first occurrence)
+    2. difflib SequenceMatcher on text (keep the first, i.e. newest after sort)
+    This catches duplicates that slip through the incremental dedup,
+    e.g. same event described with slightly different wording across runs.
+    """
+    from difflib import SequenceMatcher
+
+    if not items:
+        return items
+
+    seen_urls = set()
+    seen_texts = []
+    result = []
+
+    for item in items:
+        url = item.get("url", "")
+        text = item.get("text", "")
+
+        # Layer 1: URL exact match
+        if url and url in seen_urls:
+            print(f"  Final-dedup [URL]: {text[:50]}...")
+            continue
+
+        # Layer 2: Text similarity
+        is_dup = False
+        for ref_text in seen_texts:
+            # Use longer comparison window (120 chars) for better Chinese dedup
+            a = text[:120]
+            b = ref_text[:120]
+            ratio = SequenceMatcher(None, a, b).ratio()
+            if ratio > similarity_threshold:
+                print(f"  Final-dedup [sim={ratio:.2f}]: {text[:50]}...")
+                is_dup = True
+                break
+
+        if is_dup:
+            continue
+
+        result.append(item)
+        if url:
+            seen_urls.add(url)
+        seen_texts.append(text)
+
+    removed = len(items) - len(result)
+    if removed:
+        print(f"  Final dedup removed {removed} duplicates")
+    return result
 
 
 def _cross_board_dedup(primary_items, secondary_items, threshold=0.55):
@@ -463,11 +516,16 @@ def main():
     print(f"\nNew unique finance items: {len(new_finance)}")
     print(f"New unique AI items: {len(new_ai)}")
 
-    # Prepend new items and sort by time (newest first)
+    # Prepend new items and merge
     finance_news = new_finance + finance_news
     ai_news = new_ai + ai_news
 
-    # Step 4b: Cross-board dedup (remove items in AI that duplicate finance)
+    # Step 4b: Full-list dedup (catches duplicates that slipped through incremental dedup)
+    print("\n--- Final full-list dedup ---")
+    finance_news = final_dedup(finance_news)
+    ai_news = final_dedup(ai_news)
+
+    # Step 4c: Cross-board dedup (remove items in AI that duplicate finance)
     print("\n--- Cross-board dedup ---")
     ai_news = _cross_board_dedup(finance_news, ai_news)
 
