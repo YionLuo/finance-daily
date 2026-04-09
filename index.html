@@ -1287,6 +1287,11 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:36", tag: "geo", tagText: "地缘", text: "油价在伊朗同意在停火期间确保霍尔木兹海峡安全通行后跌破100美元。美国总统特朗普在与巴基斯坦总理谢里夫讨论后同意了此次停火。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/oil-prices-iran-war-trump-deadline-strait-hormuz.html" },
+  { time: "15:27", tag: "macro", tagText: "宏观", text: "美伊为期两周的停火协议引发全球市场释然性反弹，股市上涨，油价暴跌，甚至传统避险资产也获得提振。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/us-iran-ceasefire-gold-oil-stocks-treasuries.html" },
+  { time: "15:12", tag: "geo", tagText: "地缘", text: "美伊宣布停火数小时内，多个中东国家仍报告拦截到来自伊朗的弹道导弹和无人机，显示协议脆弱，地区冲突风险犹存。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/iran-missile-attacks-after-us-ceasefire-gulf-air-defenses.html" },
+  { time: "14:53", tag: "macro", tagText: "宏观", text: "印度股市Sensex指数暴涨2800点，Nifty指数上涨800点，市场对美伊停火消息表示欢迎。", source: "NDTV", url: "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVnFvaTN2NlF0VEZCVGZLOHRwRXlpZVdndjYyeHZfU3RjQ1dMeXVXSzdCeWhFU2ZJRHE4amkxd2VlLVdMczRUbVpUQnVWdDMxQVdfOEhEV0N4RVhJY3NRREVCQ2JUVVU4YWVfYmN2Y3Axcnc1MWhQRmxPX2Z6VFh1TXZ6MTJUTFJWdFB6UWhqVVZ4cjU4T0l3OWQzWmhKN3Y3Tm03aEF4Um5LYnVOSVphQzU3dVBvcDFUM3ZnT2NzTHd4UU9WNjgtMlZFYzFTRWZ3eHdGUENuMWpLWEpkbDQ5V1k2RWt0VDlM0gHwAUFVX3lxTE9OcmlVdW16OEt4c2V6WmxXVm5HYWZJY3d3cFlTRUhiMTlxTzlDVkhVemo2Z00tYi1oaWg0MUt3TVdsTzRfTS1HRUdaVHVVMjJaTUl3eFp1SGh3OENxV1owN0FkMmZzaERRWVkzc2VJS1VPM1Z5bEZjLU5oU3E5S25seXRJUW9GT1pjcl9hSkNFXzJmRnZob0Y2SmUtNGRIY3p1MVZxWV9yUDNqNVk0ZlNlejdES19kMTFCX0lpTlhZOF9rYmJRd2pnNnVGS1dfbHhUVkRfeXNDNDJXV3pqZGpScVRUZVh2WE5PUGlyYjhEMw?oc=5" },
+  { time: "14:47", tag: "tech", tagText: "科技", text: "亚洲科技及半导体公司股价因美伊达成有条件两周停火的消息而大涨，市场对霍尔木兹海峡供应中断的担忧缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/asian-chip-stocks-surge-us-iran-ceasefire-helium-supply-relief.html" },
   { time: "12:37", tag: "macro", tagText: "宏观", text: "关于特朗普'历史性'炼油厂协议的疑问：投资额是3000亿美元还是4000万美元？信实工业尚未就此德克萨斯州布朗斯维尔项目向交易所发布公告。", source: "Financial Times", url: "https://www.ft.com/content/f217467c-e113-4aa2-ac5e-7046a1dc9be0" },
   { time: "12:07", tag: "geo", tagText: "地缘", text: "美国和伊朗同意为期两周的停火，伊朗将在此期间开放霍尔木兹海峡。此举旨在缓解全球石油运输咽喉要道的紧张局势。", source: "Financial Times", url: "https://www.ft.com/content/d8e9e0e9-9417-47ad-a915-ba08049d643f" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "土耳其央行3月安排了价值200亿美元的黄金销售和互换交易，以支撑里拉，此举加剧了黄金价格的下跌。", source: "Financial Times", url: "https://www.ft.com/content/6c931469-495c-4860-a455-4888af072f58" },
@@ -1302,13 +1307,8 @@ const breakingNews = [
   { time: "21:57", tag: "macro", tagText: "宏观", text: "美国总统特朗普威胁将对任何\"向伊朗供应军事武器\"的国家征收50%的进口关税。此举可能引发新一轮的全球贸易紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/trump-threatens-tariffs-countries-supplying-weapons-iran-ceasefire.html" },
   { time: "21:57", tag: "tech", tagText: "科技", text: "AI发展的下一个瓶颈：即使在美国制造的最先进芯片，也需要运往台积电进行高级封装。英伟达已预订了台积电大部分先进封装产能，这一鲜为人知的环节可能成为AI芯片供应的新瓶颈。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/tsmc-nvidia-advanced-packaging-intel.html" },
   { time: "21:57", tag: "crypto", tagText: "加密", text: "随着美伊停火协议推动投资者重返风险资产，加密货币相关股票价格飙升。市场情绪转向乐观，资金从避险资产流出。", source: "CryptoProwl via Yahoo Finance", url: "https://finance.yahoo.com/markets/crypto/articles/crypto-stocks-skyrocket-investors-rush-132000736.html" },
-  { time: "15:36", tag: "geo", tagText: "地缘", text: "油价在伊朗同意在停火期间确保霍尔木兹海峡安全通行后跌破100美元。美国总统特朗普在与巴基斯坦总理谢里夫讨论后同意了此次停火。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/oil-prices-iran-war-trump-deadline-strait-hormuz.html" },
-  { time: "15:27", tag: "macro", tagText: "宏观", text: "美伊为期两周的停火协议引发全球市场释然性反弹，股市上涨，油价暴跌，甚至传统避险资产也获得提振。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/us-iran-ceasefire-gold-oil-stocks-treasuries.html" },
-  { time: "15:12", tag: "geo", tagText: "地缘", text: "美伊宣布停火数小时内，多个中东国家仍报告拦截到来自伊朗的弹道导弹和无人机，显示协议脆弱，地区冲突风险犹存。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/iran-missile-attacks-after-us-ceasefire-gulf-air-defenses.html" },
-  { time: "14:53", tag: "macro", tagText: "宏观", text: "印度股市Sensex指数暴涨2800点，Nifty指数上涨800点，市场对美伊停火消息表示欢迎。", source: "NDTV", url: "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVnFvaTN2NlF0VEZCVGZLOHRwRXlpZVdndjYyeHZfU3RjQ1dMeXVXSzdCeWhFU2ZJRHE4amkxd2VlLVdMczRUbVpUQnVWdDMxQVdfOEhEV0N4RVhJY3NRREVCQ2JUVVU4YWVfYmN2Y3Axcnc1MWhQRmxPX2Z6VFh1TXZ6MTJUTFJWdFB6UWhqVVZ4cjU4T0l3OWQzWmhKN3Y3Tm03aEF4Um5LYnVOSVphQzU3dVBvcDFUM3ZnT2NzTHd4UU9WNjgtMlZFYzFTRWZ3eHdGUENuMWpLWEpkbDQ5V1k2RWt0VDlM0gHwAUFVX3lxTE9OcmlVdW16OEt4c2V6WmxXVm5HYWZJY3d3cFlTRUhiMTlxTzlDVkhVemo2Z00tYi1oaWg0MUt3TVdsTzRfTS1HRUdaVHVVMjJaTUl3eFp1SGh3OENxV1owN0FkMmZzaERRWVkzc2VJS1VPM1Z5bEZjLU5oU3E5S25seXRJUW9GT1pjcl9hSkNFXzJmRnZob0Y2SmUtNGRIY3p1MVZxWV9yUDNqNVk0ZlNlejdES19kMTFCX0lpTlhZOF9rYmJRd2pnNnVGS1dfbHhUVkRfeXNDNDJXV3pqZGpScVRUZVh2WE5PUGlyYjhEMw?oc=5" },
-  { time: "14:47", tag: "tech", tagText: "科技", text: "亚洲科技及半导体公司股价因美伊达成有条件两周停火的消息而大涨，市场对霍尔木兹海峡供应中断的担忧缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/asian-chip-stocks-surge-us-iran-ceasefire-helium-supply-relief.html" },
 ];
-const breakingDate = "2026年4月9日 13:54 CST";
+const breakingDate = "2026年4月9日 15:52 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1330,7 +1330,7 @@ const aiBreakingNews = [
   { time: "17:53", tag: "macro", tagText: "宏观", text: "非营利新闻机构ProPublica的工会员工因AI使用、裁员和薪酬问题举行24小时罢工。", source: "The Verge", url: "https://www.theverge.com/news/908401/propublica-union-strike-negotiations-ai-layoffs" },
   { time: "17:00", tag: "tech", tagText: "科技", text: "Atlassian为其协作软件Confluence推出视觉AI工具和第三方AI代理集成，用户可直接在软件内创建视觉资产，并与Lovable、Replit和Gamma等平台联动。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/08/atlassian-confluence-visual-ai-tools-agents/" },
 ];
-const aiBreakingDate = "2026年4月9日 13:54 CST";
+const aiBreakingDate = "2026年4月9日 15:52 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
