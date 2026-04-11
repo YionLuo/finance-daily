@@ -1,11 +1,13 @@
 """
 Shared utilities for Y Daily automation scripts.
 Handles reading/writing JS data blocks embedded in index.html.
+Provides shared LLM client creation with fallback endpoints and retry logic.
 """
 
 import re
 import json
 import os
+import time as _time
 from datetime import datetime, timezone, timedelta
 
 CST = timezone(timedelta(hours=8))
@@ -338,3 +340,140 @@ def is_within_hours(time_str, hours=24):
     to determine the reference date. For simplicity, return True (caller handles).
     """
     return True  # Actual filtering done at a higher level
+
+
+# ============ LLM Client & Retry ============
+
+# Fallback API endpoints — tried in order if the primary fails with connection errors
+FALLBACK_ENDPOINTS = [
+    "https://once.novai.su/v1",
+    "https://us.novaiapi.com/v1",
+]
+
+
+def create_llm_client(required=True):
+    """
+    Create an OpenAI-compatible client with multi-endpoint fallback.
+
+    Args:
+        required: If True, raise SystemExit when API key is missing.
+                  If False, return None (for breaking news cleanup-only mode).
+
+    Returns:
+        OpenAI client instance, or None if not required and unavailable.
+    """
+    try:
+        from openai import OpenAI
+    except ImportError:
+        if required:
+            print("ERROR: openai package not installed.")
+            raise SystemExit(1)
+        print("WARNING: openai package not installed. Cleanup-only mode.")
+        return None
+
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        if required:
+            print("ERROR: OPENAI_API_KEY is required.")
+            raise SystemExit(1)
+        print("WARNING: OPENAI_API_KEY not set. Cleanup-only mode.")
+        return None
+
+    # Build endpoint list: env var first, then fallbacks
+    endpoints = []
+    env_url = os.environ.get("OPENAI_BASE_URL")
+    if env_url:
+        endpoints.append(env_url)
+    for ep in FALLBACK_ENDPOINTS:
+        if ep not in endpoints:
+            endpoints.append(ep)
+
+    # Try each endpoint with a quick connectivity check
+    for ep in endpoints:
+        try:
+            client = OpenAI(api_key=api_key, base_url=ep, timeout=30)
+            # Quick connectivity test — list models (lightweight)
+            client.models.list()
+            print(f"LLM client connected: {ep}")
+            return client
+        except Exception as e:
+            print(f"LLM endpoint {ep} failed: {e}")
+            continue
+
+    # All endpoints failed — try the first one anyway (let actual call fail with better error)
+    fallback_ep = endpoints[0] if endpoints else None
+    if fallback_ep:
+        print(f"WARNING: All endpoints failed connectivity test, using {fallback_ep} anyway")
+        return OpenAI(api_key=api_key, base_url=fallback_ep, timeout=60)
+
+    if required:
+        print("ERROR: No working LLM endpoint found.")
+        raise SystemExit(1)
+    return None
+
+
+def llm_chat_with_retry(client, messages, model=None, max_tokens=4000,
+                        temperature=0.2, max_retries=3, backoff_base=2):
+    """
+    LLM chat completion with exponential backoff retry.
+
+    Retries on: network errors, timeouts, HTTP 5xx, empty responses.
+    Does NOT retry on: 401 (auth), 404 (model not found), 400 (bad request).
+
+    Args:
+        client: OpenAI client instance
+        messages: List of message dicts
+        model: Model name (defaults to LLM_MODEL env var or deepseek-v3.2)
+        max_tokens: Max response tokens
+        temperature: Sampling temperature
+        max_retries: Maximum retry attempts
+        backoff_base: Base seconds for exponential backoff
+
+    Returns:
+        Response content string
+
+    Raises:
+        Exception: If all retries exhausted
+    """
+    if model is None:
+        model = os.environ.get("LLM_MODEL", "deepseek-v3.2")
+
+    last_error = None
+    for attempt in range(max_retries + 1):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=temperature,
+                max_tokens=max_tokens,
+            )
+            content = response.choices[0].message.content
+            if not content or not content.strip():
+                raise ValueError("LLM returned empty content")
+            return content.strip()
+
+        except Exception as e:
+            last_error = e
+            err_str = str(e).lower()
+
+            # Non-retryable errors
+            if any(code in err_str for code in ["401", "unauthorized", "invalid api key"]):
+                print(f"ERROR: Authentication failed — {e}")
+                raise
+            if "404" in err_str and "model" in err_str:
+                print(f"ERROR: Model not found — {e}")
+                raise
+            if "400" in err_str and "bad request" in err_str:
+                print(f"ERROR: Bad request — {e}")
+                raise
+
+            # Retryable
+            if attempt < max_retries:
+                wait = backoff_base ** (attempt + 1)
+                print(f"LLM call failed (attempt {attempt + 1}/{max_retries + 1}): {e}")
+                print(f"Retrying in {wait}s...")
+                _time.sleep(wait)
+            else:
+                print(f"LLM call failed after {max_retries + 1} attempts: {e}")
+
+    raise last_error

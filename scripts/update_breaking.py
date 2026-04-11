@@ -26,40 +26,19 @@ from utils import (
     extract_js_array, extract_js_string,
     replace_js_array, replace_js_string,
     format_date_cst, now_cst, CST,
-    python_to_js_object_inline
+    python_to_js_object_inline,
+    create_llm_client,
 )
 from news_fetcher import (
     fetch_finance_news, fetch_ai_news, fetch_watchlist_news,
     articles_to_context, dedup_by_title,
 )
 
-# OpenAI for news analysis
-try:
-    from openai import OpenAI
-except ImportError:
-    OpenAI = None
-
 # ============ Configuration ============
 
 MAX_ITEMS = 20
 WINDOW_HOURS = 24
 LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-v3.2")
-
-
-def get_openai_client():
-    """Initialize OpenAI client with optional custom base URL."""
-    if OpenAI is None:
-        print("WARNING: openai package not installed. Cleanup-only mode.")
-        return None
-    api_key = os.environ.get("OPENAI_API_KEY")
-    if not api_key:
-        print("WARNING: OPENAI_API_KEY not set. Using cleanup-only mode.")
-        return None
-    kwargs = {"api_key": api_key}
-    base_url = os.environ.get("OPENAI_BASE_URL")
-    if base_url:
-        kwargs["base_url"] = base_url
-    return OpenAI(**kwargs)
 
 
 def analyze_news_with_llm(client, articles_context, category, existing_texts):
@@ -482,7 +461,7 @@ def main():
     print(f"Total AI articles from RSS: {len(raw_ai)}")
 
     # Step 3: Use LLM to analyze and structure
-    client = get_openai_client()
+    client = create_llm_client(required=False)
 
     if client and raw_finance:
         print("\n--- Analyzing finance news with LLM ---")

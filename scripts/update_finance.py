@@ -25,13 +25,13 @@ from utils import (
     replace_js_array, replace_js_string, replace_js_object,
     format_date_cst, now_cst, CST,
     _dict_to_js,
+    create_llm_client, llm_chat_with_retry,
 )
 from news_fetcher import (
     fetch_finance_news, fetch_watchlist_news,
     articles_to_context, dedup_by_title,
 )
 
-from openai import OpenAI
 import requests
 
 # ============ Configuration ============
@@ -49,18 +49,6 @@ FOCUS_AREAS = "AI与大模型 · 半导体与算力 · 中美科技博弈 · 云
 FEAR_GREED_API = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
 
 LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-v3.2")
-
-
-def get_openai_client():
-    api_key = os.environ.get("OPENAI_API_KEY")
-    if not api_key:
-        print("ERROR: OPENAI_API_KEY is required for daily report generation.")
-        sys.exit(1)
-    kwargs = {"api_key": api_key}
-    base_url = os.environ.get("OPENAI_BASE_URL")
-    if base_url:
-        kwargs["base_url"] = base_url
-    return OpenAI(**kwargs)
 
 
 def fetch_fear_greed():
@@ -182,20 +170,16 @@ Return ONLY the JSON object. No markdown fencing.
 """
 
     try:
-        response = client.chat.completions.create(
-            model=LLM_MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.2,
-            max_tokens=8000,
+        raw = llm_chat_with_retry(
+            client, [{"role": "user", "content": prompt}],
+            model=LLM_MODEL, max_tokens=8000, temperature=0.2, max_retries=3,
         )
-        raw = response.choices[0].message.content
-        if not raw:
-            print("ERROR: LLM returned empty content")
-            return None
-        content = raw.strip()
-        content = re.sub(r'^```json\s*', '', content)
+        content = re.sub(r'^```json\s*', '', raw)
         content = re.sub(r'\s*```$', '', content)
         return json.loads(content)
+    except json.JSONDecodeError as e:
+        print(f"ERROR: Failed to parse LLM response as JSON: {e}")
+        return None
     except Exception as e:
         print(f"ERROR generating report: {e}")
         return None
@@ -250,7 +234,7 @@ def main():
     print(f"Finance Daily Report - {format_date_cst()}")
     print("=" * 60)
 
-    client = get_openai_client()
+    client = create_llm_client(required=True)
     html = read_html()
 
     # Step 1: Fetch Fear & Greed

@@ -16,6 +16,9 @@ import subprocess
 import time
 from datetime import datetime, timezone, timedelta
 
+sys.path.insert(0, os.path.dirname(__file__))
+from utils import FALLBACK_ENDPOINTS
+
 # ============ Configuration ============
 
 SITE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -91,39 +94,54 @@ def get_last_auto_commit_age():
 
 
 def test_api():
-    """Quick test if NovAI API is responsive."""
+    """Quick test if any LLM API endpoint is responsive."""
     import urllib.request
     import json
 
-    base_url = os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL)
     api_key = os.environ.get("OPENAI_API_KEY", DEFAULT_API_KEY)
-
     if not api_key:
         log("No API key available")
         return False
 
-    url = f"{base_url}/chat/completions"
-    data = json.dumps({
-        "model": "gpt-5.1-low",
-        "messages": [{"role": "user", "content": "say ok"}],
-        "max_tokens": 5
-    }).encode()
+    # Build endpoint list: env var first, then fallbacks
+    endpoints = []
+    env_url = os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL)
+    if env_url:
+        endpoints.append(env_url)
+    for ep in FALLBACK_ENDPOINTS:
+        if ep not in endpoints:
+            endpoints.append(ep)
 
-    req = urllib.request.Request(
-        url,
-        data=data,
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json"
-        }
-    )
+    for base_url in endpoints:
+        url = f"{base_url}/chat/completions"
+        data = json.dumps({
+            "model": "gpt-5.1-low",
+            "messages": [{"role": "user", "content": "say ok"}],
+            "max_tokens": 5
+        }).encode()
 
-    try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            return resp.status == 200
-    except Exception as e:
-        log(f"API test failed: {e}")
-        return False
+        req = urllib.request.Request(
+            url,
+            data=data,
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json"
+            }
+        )
+
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                if resp.status == 200:
+                    log(f"API test OK: {base_url}")
+                    # Update env for subsequent scripts to use the working endpoint
+                    os.environ["OPENAI_BASE_URL"] = base_url
+                    return True
+        except Exception as e:
+            log(f"API test failed [{base_url}]: {e}")
+            continue
+
+    log("All API endpoints failed")
+    return False
 
 
 def run_update():
