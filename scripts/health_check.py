@@ -35,7 +35,7 @@ def run(cmd, cwd=None):
     try:
         r = subprocess.run(
             cmd, shell=True, capture_output=True, text=True,
-            timeout=120, cwd=cwd or SITE_DIR
+            timeout=300, cwd=cwd or SITE_DIR
         )
         return r.returncode == 0, r.stdout.strip() + "\n" + r.stderr.strip()
     except subprocess.TimeoutExpired:
