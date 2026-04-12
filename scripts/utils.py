@@ -388,23 +388,28 @@ def create_llm_client(required=True):
         if ep not in endpoints:
             endpoints.append(ep)
 
-    # Try each endpoint with a quick connectivity check
+    # Try each endpoint with a quick connectivity check (short timeout)
+    # Then create the actual client with longer timeout for LLM calls
+    working_ep = None
     for ep in endpoints:
         try:
-            client = OpenAI(api_key=api_key, base_url=ep, timeout=300)
-            # Quick connectivity test — list models (lightweight)
-            client.models.list()
-            print(f"LLM client connected: {ep}")
-            return client
+            # Use a short timeout (10s) just for connectivity test
+            test_client = OpenAI(api_key=api_key, base_url=ep, timeout=10)
+            test_client.models.list()
+            print(f"LLM endpoint OK: {ep}")
+            working_ep = ep
+            break
         except Exception as e:
             print(f"LLM endpoint {ep} failed: {e}")
             continue
 
-    # All endpoints failed — try the first one anyway (let actual call fail with better error)
-    fallback_ep = endpoints[0] if endpoints else None
-    if fallback_ep:
-        print(f"WARNING: All endpoints failed connectivity test, using {fallback_ep} anyway")
-        return OpenAI(api_key=api_key, base_url=fallback_ep, timeout=300)
+    # Use the working endpoint, or fall back to first one
+    chosen_ep = working_ep or (endpoints[0] if endpoints else None)
+    if chosen_ep:
+        if not working_ep:
+            print(f"WARNING: All endpoints failed connectivity test, using {chosen_ep} anyway")
+        # Create actual client with long timeout for LLM generation
+        return OpenAI(api_key=api_key, base_url=chosen_ep, timeout=300)
 
     if required:
         print("ERROR: No working LLM endpoint found.")
