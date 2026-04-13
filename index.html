@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:56", tag: "ai", tagText: "AI", text: "美联储主席鲍威尔与美国主要银行CEO讨论了Anthropic公司新推出的Mythos AI模型带来的网络安全威胁。出于对黑客可能利用其能力的担忧，Anthropic仅向部分公司推出了该模型。", source: "CNBC", url: "https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html" },
   { time: "18:35", tag: "crypto", tagText: "加密", text: "在美国通胀报告发布前，加密货币市场波动性受到压制，呈现盘整态势。比特币正在测试关键阻力位，以太坊则显示出三年未见的复苏信号。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRUdiZzliZ3RFX29wMkRrUGFMQUxhMGhPSFRfcU14NHFBQVF3TEQ2Q2dvLTFtYXFnU2lxbUdWVjZpSlVQRXBsVWJCbGx5R0pqQTRKNU5qTzNhb0p1eUtJTktoZVZQX3JEV0JISWVKazN2U1VZVmRQNFcxYnpFdlprV0p2Y1FmanVBMU1vWnk5ZWlwSjNKRTVPY3ZUU19GdXViQmUxQ2VXV2ZiS3VYTHc?oc=5" },
   { time: "18:20", tag: "macro", tagText: "宏观", text: "全球市场在关键美国CPI通胀数据公布前保持谨慎，股指期货变动不大。投资者同时密切关注美伊停火协议的发展以及脆弱的地区局势。油价小幅走高。", source: "Investopedia", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxOR1JFS3Nac0xjNmQ3c3k1Yk9pcWEzbnBuTmFENGtpaWV0QTdDdlFsbkRDMlN5QURQRmZVMWpnVGtObk5GM3U3MUtWUnNVRTYzZDRNdzh6c1dMZ2xfUDhJazZjUmV6MGVuWlBsOXYxWjlIS2hoTHdTRHl3OEx5cl9YLW9xQi1SaHRLMHdyR1N2RmQ?oc=5" },
   { time: "18:13", tag: "tech", tagText: "科技", text: "台积电（TSMC）第一季度营收同比增长35%，创下历史新高，远超预期。这表明尽管存在地缘政治紧张局势，但来自苹果和英伟达等关键客户对高端AI芯片的需求依然强劲。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/10/tsmc-q1-record-revenue-ai-chip-demand-strong.html" },
@@ -1306,12 +1307,12 @@ const breakingNews = [
   { time: "08:44", tag: "geo", tagText: "地缘", text: "伊朗对沙特关键石油管道和生产设施的袭击，严重削减了沙特的石油产量。这一事件加剧了由伊朗在霍尔木兹海峡袭击油轮引发的全球石油供应中断。", source: "CNBC", url: "https://www.cnbc.com/2026/04/09/iran-war-oil-saudi-arabia-east-west-pipeline.html" },
   { time: "08:00", tag: "crypto", tagText: "加密", text: "在美国CPI数据公布后，比特币价格突破73,000美元。数据显示3月CPI同比上涨3.3%，超出预期，市场将此解读为通胀压力可能促使美联储维持宽松政策，从而提振了风险资产，包括加密货币。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxOdV94OXUzMThIT05MRE1pZFp2Tk93Y1cza1J5SDE3dEpYWG9PeXRqNkJPMkhfeVVpUjRyR2cwcDlQMDB0VnhuSkRjYmFkanVNMHdyZFNJM1pndmpTTERJNmxLSVJCOXNtMF9rWERtaG5KTExRbjV5VGRfUS1ZVWtJaVN1UnlIRVZXZnJLSWxUYWVtOVBDenBrZHBmckpHV3FpUlFEcENBWXFMa2lzbVlFX2lrLWNneTQtTVBodDFR?oc=5" },
   { time: "05:37", tag: "macro", tagText: "宏观", text: "债券市场对私人信贷危机的担忧正蔓延至固定收益ETF领域。随着规模庞大且透明度较低的私人信贷市场被纳入更多固定收益ETF，市场对其潜在危机的恐惧加剧，可能影响更广泛的债券市场稳定。", source: "CNBC", url: "https://www.cnbc.com/2026/04/11/bond-market-private-credit-crisis-fixed-income-etfs.html" },
-  { time: "20:56", tag: "ai", tagText: "AI", text: "美联储主席鲍威尔与美国主要银行CEO讨论了Anthropic公司新推出的Mythos AI模型带来的网络安全威胁。出于对黑客可能利用其能力的担忧，Anthropic仅向部分公司推出了该模型。", source: "CNBC", url: "https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html" },
 ];
-const breakingDate = "2026年4月13日 19:25 CST";
+const breakingDate = "2026年4月13日 22:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:58", tag: "tech", tagText: "科技", text: "三星电机（Samsung Electro-Mechanics）将向英伟达供应其下一代AI芯片“Groq3”的基板。此举标志着三星在AI芯片供应链中扮演关键角色，并可能加强英伟达与三星在先进封装领域的合作。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE16TC1mdzU0S19zdkNrZC1rVFZqV0NpdmJBd3hIYXRac0I5T1F3SG1pakJ1eGFaQTR6SmxLMXBYcGtwaFB1TTJHV0U2VE04cWFCWjgweHhVZ3Z0QkVUZEE5WGJBcVY1T3RaLUdRZUl0MDg2bnlx?oc=5" },
   { time: "19:23", tag: "ai", tagText: "AI", text: "盖洛普最新报告显示，美国Z世代（14-29岁）对AI的“爱恨关系”日益加深。尽管对AI的幻灭感增强，认为其加剧了不平等并威胁就业，但Z世代并未停止使用AI工具。这反映了年轻一代在技术依赖与伦理担忧之间的矛盾心态。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/909687/gen-z-doesnt-like-ai-gallup" },
   { time: "18:53", tag: "ai", tagText: "AI", text: "YouTube Shorts推出新AI功能，让创作者能轻松在镜头前生成逼真的个人深度伪造形象。此举反映了平台在推动AI创作工具普及的同时，也面临着相关的伦理与真实性挑战。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/909104/youtube-shorts-make-ai-avatar" },
   { time: "17:53", tag: "macro", tagText: "宏观", text: "非营利新闻机构ProPublica的工会员工因AI使用、裁员和薪酬问题举行24小时罢工。", source: "The Verge", url: "https://www.theverge.com/news/908401/propublica-union-strike-negotiations-ai-layoffs" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "05:35", tag: "ai", tagText: "AI", text: "仅有26人的美国开源AI模型初创公司Arcee因其构建的高性能、大规模开源大语言模型而受到关注，并在OpenClaw用户中日益流行。这展示了小型团队在AI前沿竞争的可能性。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/07/i-cant-help-rooting-for-tiny-open-source-ai-model-maker-arcee/" },
   { time: "04:13", tag: "tech", tagText: "科技", text: "Spotify将其'提示生成播放列表'功能扩展至播客领域，Premium用户可通过提示词更便捷地发现新播客节目。这体现了AI在内容发现和个性化推荐上的应用深化。", source: "The Verge", url: "https://www.theverge.com/entertainment/908339/spotify-prompted-playlists-podcasts" },
   { time: "02:46", tag: "ai", tagText: "AI", text: "英伟达支持的亚洲AI数据中心建设商Firmus在六个月内融资13.5亿美元，估值飙升至55亿美元。这突显了全球对AI基础设施的狂热投资。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/07/firmus-the-southgate-ai-datacenter-builder-backed-by-nvidia-hits-5-5b-valuation/" },
-  { time: "19:58", tag: "tech", tagText: "科技", text: "三星电机（Samsung Electro-Mechanics）将向英伟达供应其下一代AI芯片“Groq3”的基板。此举标志着三星在AI芯片供应链中扮演关键角色，并可能加强英伟达与三星在先进封装领域的合作。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE16TC1mdzU0S19zdkNrZC1rVFZqV0NpdmJBd3hIYXRac0I5T1F3SG1pakJ1eGFaQTR6SmxLMXBYcGtwaFB1TTJHV0U2VE04cWFCWjgweHhVZ3Z0QkVUZEE5WGJBcVY1T3RaLUdRZUl0MDg2bnlx?oc=5" },
 ];
-const aiBreakingDate = "2026年4月13日 19:25 CST";
+const aiBreakingDate = "2026年4月13日 22:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
