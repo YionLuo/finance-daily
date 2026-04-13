@@ -39,7 +39,7 @@ DAILY_GRACE_MINUTES = 60          # Allow 60 min grace after scheduled time
 MAX_RETRY = 2
 
 # NovAI config (fallback if env not set)
-DEFAULT_BASE_URL = "https://us.novaiapi.com/v1"
+DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
 
@@ -185,7 +185,7 @@ def test_api():
     for base_url in endpoints:
         url = f"{base_url}/chat/completions"
         data = json.dumps({
-            "model": "deepseek-v3.2",
+            "model": "google/gemini-2.5-flash",
             "messages": [{"role": "user", "content": "say ok"}],
             "max_tokens": 5
         }).encode()

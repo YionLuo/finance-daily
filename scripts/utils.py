@@ -346,9 +346,11 @@ def is_within_hours(time_str, hours=24):
 
 # Fallback API endpoints — tried in order if the primary fails with connection errors
 FALLBACK_ENDPOINTS = [
-    "https://once.novai.su/v1",
-    "https://us.novaiapi.com/v1",
+    "https://openrouter.ai/api/v1",
 ]
+
+# Default model — can be overridden by LLM_MODEL env var
+DEFAULT_LLM_MODEL = "google/gemini-2.5-flash"
 
 
 def create_llm_client(required=True):
@@ -382,23 +384,32 @@ def create_llm_client(required=True):
     # Build endpoint list: env var first, then fallbacks
     endpoints = []
     env_url = os.environ.get("OPENAI_BASE_URL")
-    if env_url:
-        endpoints.append(env_url)
+    if env_url and env_url.strip():
+        endpoints.append(env_url.strip())
     for ep in FALLBACK_ENDPOINTS:
         if ep not in endpoints:
             endpoints.append(ep)
 
-    # Try each endpoint with a quick connectivity check (short timeout)
-    # Then create the actual client with longer timeout for LLM calls
+    print(f"LLM endpoints to try ({len(endpoints)}): {endpoints}")
+
+    # Try each endpoint with a quick chat completion test (short timeout)
     working_ep = None
     for ep in endpoints:
         try:
-            # Use a short timeout (10s) just for connectivity test
-            test_client = OpenAI(api_key=api_key, base_url=ep, timeout=10)
-            test_client.models.list()
-            print(f"LLM endpoint OK: {ep}")
-            working_ep = ep
-            break
+            test_client = OpenAI(api_key=api_key, base_url=ep, timeout=15)
+            # Use a minimal chat completion instead of models.list()
+            # This tests the actual path we'll use for report generation
+            test_resp = test_client.chat.completions.create(
+                model=os.environ.get("LLM_MODEL", DEFAULT_LLM_MODEL),
+                messages=[{"role": "user", "content": "say ok"}],
+                max_tokens=5,
+            )
+            if test_resp.choices and test_resp.choices[0].message.content:
+                print(f"LLM endpoint OK: {ep}")
+                working_ep = ep
+                break
+            else:
+                print(f"LLM endpoint {ep}: empty response")
         except Exception as e:
             print(f"LLM endpoint {ep} failed: {e}")
             continue
@@ -441,7 +452,7 @@ def llm_chat_with_retry(client, messages, model=None, max_tokens=4000,
         Exception: If all retries exhausted
     """
     if model is None:
-        model = os.environ.get("LLM_MODEL", "deepseek-v3.2")
+        model = os.environ.get("LLM_MODEL", DEFAULT_LLM_MODEL)
 
     last_error = None
     for attempt in range(max_retries + 1):

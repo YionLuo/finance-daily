@@ -31,7 +31,7 @@ from news_fetcher import (
 
 FOCUS_AREAS = "大模型 · 智能体 · 具身智能 · AI Coding · AI for Science"
 
-LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-v3.2")
+LLM_MODEL = os.environ.get("LLM_MODEL", "google/gemini-2.5-flash")
 
 
 def generate_ai_report(client, news_context):

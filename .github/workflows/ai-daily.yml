@@ -35,16 +35,9 @@ jobs:
       - name: Generate AI Daily Report
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          OPENAI_BASE_URL: "https://openrouter.ai/api/v1"
           TZ: Asia/Shanghai
-        run: |
-          echo "=== Diagnostics ==="
-          echo "API key length: ${#OPENAI_API_KEY}"
-          echo "Base URL length: ${#OPENAI_BASE_URL}"
-          echo "Base URL prefix: ${OPENAI_BASE_URL:0:20}..."
-          echo "Python: $(python --version)"
-          echo "==================="
-          python scripts/update_ai.py
+        run: python scripts/update_ai.py
 
       - name: Commit and push
         run: |
