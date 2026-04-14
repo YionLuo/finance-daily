@@ -1287,6 +1287,10 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:58", tag: "ai|tech", tagText: "AI|科技", text: "Meta宣布与博通达成一项为期多年的新协议，承诺部署1吉瓦（GW）与博通共同设计的定制化MTIA芯片。作为协议的一部分，博通首席执行官Hock Tan将辞去Meta董事会职务。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/14/meta-commits-to-one-gigawatt-of-custom-chips-with-broadcom-as-hock-tan-agrees-to-leave-board.html" },
+  { time: "05:51", tag: "ai|tech", tagText: "AI|科技", text: "美国全国有色人种协进会（NAACP）起诉埃隆·马斯克的xAI公司，指控其在孟菲斯的数据中心造成空气污染。马斯克曾计划将大孟菲斯地区作为xAI建设的骨干。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/14/elon-musk-xai-memphis-data-centers.html" },
+  { time: "05:44", tag: "tech", tagText: "科技", text: "亚马逊股价上涨，此前该公司宣布以116亿美元收购Globalstar，此举将进一步推动其卫星互联网业务发展。亚马逊股价已连续第七个交易日上涨，创下自2022年以来的最佳表现。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxPX2M2WkQ3WW1NYnotcXBodnN0YTA1M3dkSHI5Z1d3MldDZ0dIeGRnQTdNQnVqRHpvZU5MMGdYYlpzWTcwaHZPaFZYRVJBd3JIQi1fR0FpWUZSMUhhR09YNE8ycndIcjZfY1NIX3RfaHhzTm1IaURYaXc4ZldLNEdoNzFqTGZNYUNsWGFybk94QkZVTG5VWlcw?oc=5" },
+  { time: "04:38", tag: "macro", tagText: "宏观", text: "据报道，联合航空首席执行官斯科特·柯比今年早些时候曾向特朗普政府官员提出与美国航空合并的可能性。此举将面临反垄断审查以及对机票价格的影响。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/14/united-airlines-american-airlines-merger-report.html" },
   { time: "01:12", tag: "macro", tagText: "宏观", text: "伯恩斯坦银行预测，到2030年预测市场规模将增长至1万亿美元。该投行估计，2026年交易量将达到2400亿美元，并在2025年至2030年间以80%的复合年增长率增长。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/14/prediction-markets-will-grow-to-1-trillion-by-2030-bernstein-says.html" },
   { time: "01:05", tag: "macro", tagText: "宏观", text: "受伊朗和平协议希望和低于预期的批发通胀数据影响，道琼斯指数、标普500指数和纳斯达克指数上涨。标普500指数在基准指数抹去前一日涨幅后继续走高。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNUEyby1TdG1XUklRd3lDQnZwMmpUZUY1ZVl5azd5VFAzM0pvTFExV1NSYVlVazN0S0RuVHN2SDdxNXVQLTc3QXVGV0lzbTU1Q2NXR0x2djFNRHZRcVFHRUEwazVMaEZNZFFYWEItbDV6Szh6M25GV005dGI5dTZRSVVwNE91bTcyM2lnNTRUZjZON1dTMTdmMTlaWkhWLUVzOUFPazJvR2ZLX2o4MS11ZVR5c3dVREh4b2RzTC1PZXhRakJkZHBDc2J6cFJZSWxjR1dHQkdnUQ?oc=5" },
   { time: "01:02", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什（Kevin Warsh）披露了其庞大的财富，远超历任主席。其财务文件显示，沃什的资产超过1.3亿美元，其中包括从斯坦利·德鲁肯米勒（Stanley Druckenmiller）家族办公室获得的1000万美元咨询费。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/14/federal-reserve-warsh-wealth.html" },
@@ -1303,15 +1307,12 @@ const breakingNews = [
   { time: "15:36", tag: "geo", tagText: "地缘", text: "油价在伊朗同意在停火期间确保霍尔木兹海峡安全通行后跌破100美元。美国总统特朗普在与巴基斯坦总理谢里夫讨论后同意了此次停火。", source: "CNBC", url: "https://www.cnbc.com/2026/04/07/oil-prices-iran-war-trump-deadline-strait-hormuz.html" },
   { time: "15:31", tag: "tech", tagText: "科技", text: "软银集团计划任命Arm首席执行官雷内·哈斯领导其大部分国际业务，并推动其人工智能战略。这一新职位将是在哈斯继续执掌英国芯片设计公司Arm之外的额外职责。", source: "FT", url: "https://www.ft.com/content/7c61190d-e0dd-4ccf-994c-a8af273f5e9c" },
   { time: "15:27", tag: "macro", tagText: "宏观", text: "美伊为期两周的停火协议引发全球市场释然性反弹，股市上涨，油价暴跌，甚至传统避险资产也获得提振。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/us-iran-ceasefire-gold-oil-stocks-treasuries.html" },
-  { time: "15:12", tag: "geo", tagText: "地缘", text: "美伊宣布停火数小时内，多个中东国家仍报告拦截到来自伊朗的弹道导弹和无人机，显示协议脆弱，地区冲突风险犹存。", source: "CNBC", url: "https://www.cnbc.com/2026/04/08/iran-missile-attacks-after-us-ceasefire-gulf-air-defenses.html" },
-  { time: "15:00", tag: "tech", tagText: "科技", text: "英伟达股价已连续10个交易日上涨，期间累计上涨18%。此前，英伟达否认了其正在洽谈收购一家大型PC公司的传闻，并向CNBC表示“未参与相关讨论”。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/14/nvidia-stock-nvda-ai-streak.html" },
-  { time: "15:00", tag: "macro", tagText: "宏观", text: "2026年第一季度，投资者寻求从私人信贷基金赎回高达200亿美元，包括阿波罗、阿瑞斯和黑石在内的主要集团均遭遇赎回请求。这反映出在利率和地缘政治不确定性环境下，投资者对非流动性资产的谨慎态度。", source: "FT", url: "https://www.ft.com/content/3513f9df-18dd-4ea4-ae20-3523988c106c" },
-  { time: "14:53", tag: "macro", tagText: "宏观", text: "印度股市Sensex指数暴涨2800点，Nifty指数上涨800点，市场对美伊停火消息表示欢迎。", source: "NDTV", url: "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVnFvaTN2NlF0VEZCVGZLOHRwRXlpZVdndjYyeHZfU3RjQ1dMeXVXSzdCeWhFU2ZJRHE4amkxd2VlLVdMczRUbVpUQnVWdDMxQVdfOEhEV0N4RVhJY3NRREVCQ2JUVVU4YWVfYmN2Y3Axcnc1MWhQRmxPX2Z6VFh1TXZ6MTJUTFJWdFB6UWhqVVZ4cjU4T0l3OWQzWmhKN3Y3Tm03aEF4Um5LYnVOSVphQzU3dVBvcDFUM3ZnT2NzTHd4UU9WNjgtMlZFYzFTRWZ3eHdGUENuMWpLWEpkbDQ5V1k2RWt0VDlM0gHwAUFVX3lxTE9OcmlVdW16OEt4c2V6WmxXVm5HYWZJY3d3cFlTRUhiMTlxTzlDVkhVemo2Z00tYi1oaWg0MUt3TVdsTzRfTS1HRUdaVHVVMjJaTUl3eFp1SGh3OENxV1owN0FkMmZzaERRWVkzc2VJS1VPM1Z5bEZjLU5oU3E5S25seXRJUW9GT1pjcl9hSkNFXzJmRnZob0Y2SmUtNGRIY3p1MVZxWV9yUDNqNVk0ZlNlejdES19kMTFCX0lpTlhZOF9rYmJRd2pnNnVGS1dfbHhUVkRfeXNDNDJXV3pqZGpScVRUZVh2WE5PUGlyYjhEMw?oc=5" },
 ];
-const breakingDate = "2026年4月15日 04:13 CST";
+const breakingDate = "2026年4月15日 06:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:00", tag: "ai", tagText: "AI", text: "Trustpoint Xposure公布了一项突破性策略，旨在ChatGPT、Gemini和AI搜索结果中排名第一。", source: "The Batesville Daily Guard", url: "https://news.google.com/rss/articles/CBMimgJBVV95cUxQMEdVdzZHUWhScjlJUURfNEhGLUJLZ0NUOVIxU1N2dDE0MjE2b2pWamlucFpPVnZnaEJDTm44RXJodTZIbWlkOTAwaUJ2Sm9QSm0yWmdONDJNVVJSbVl0TGhDU0Yyb3FhQWo3RkIwZEhvTW1MQ29XQjRkeDIwa2t2SmVjenc4RmY2MTZFbU5tMEtnUkFObnhyWWpFUEVtbFRzRVM4V1MxLVh3ZGt5UVhQZ2UyRDlVVnFnZFlNazMyMnRTZDRfMGRYTEk0Y2szNUhUVWkzR1pjTkR1TldBV3RwOVdMU0trUnNQS2cwRm5HeWxIN2FyTzJRWmZ1MW54V3BMZy1IWEo1YlUtdncyNDc4M2MydjlKR2d0YmE?oc=5" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "谷歌将其Gemini个人智能功能引入印度，该功能允许用户连接Gmail和Photos等谷歌账户以获取个性化答案。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/14/google-brings-its-gemini-personal-intelligence-feature-to-india/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "安娜堡量子AI初创公司完成1.39亿美元融资。", source: "Crain's Detroit", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxNeFp5WFVZVUVkNmxJWkRROUpfWGt4N283OGVJZHRrVUdrZWQ2RVM1dVRCX05HdkZZdk0xZUdaeGFjZFNNX1BkTXZCcW5ad3pjdjF1TXFsS3I5ZTBYaW1FRDVzajhadzlfdUg3MTVWckZ2WGc1cEY2cVdlcXUtdGZGZWRJQmhGb1gwemNDY3hYVVVOUQ?oc=5" },
   { time: "19:58", tag: "tech", tagText: "科技", text: "三星电机（Samsung Electro-Mechanics）将向英伟达供应其下一代AI芯片“Groq3”的基板。此举标志着三星在AI芯片供应链中扮演关键角色，并可能加强英伟达与三星在先进封装领域的合作。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE16TC1mdzU0S19zdkNrZC1rVFZqV0NpdmJBd3hIYXRac0I5T1F3SG1pakJ1eGFaQTR6SmxLMXBYcGtwaFB1TTJHV0U2VE04cWFCWjgweHhVZ3Z0QkVUZEE5WGJBcVY1T3RaLUdRZUl0MDg2bnlx?oc=5" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "10:09", tag: "ai", tagText: "AI", text: "AI巨头Anthropic联合创始人证实，该公司已向特朗普政府介绍了其最新模型Mythos，该模型声称拥有强大的网络安全能力。", source: "AI News & Artificial Intelligence | TechCrunch", url: "https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-adminstration-on-mythos/" },
   { time: "10:04", tag: "ai", tagText: "AI", text: "OpenAI首席执行官Sam Altman的住宅遭到袭击，一名20岁嫌疑人因担心AI竞赛导致人类灭绝而采取行动。这起事件对AI世界发出了警告，凸显了AI发展带来的社会担忧和潜在风险。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/911778/ai-violence-sam-altman-home" },
   { time: "09:13", tag: "tech", tagText: "科技", text: "Max Hodak的Science Corp.正准备将首个传感器植入人脑。如果成功，该设备有望解决多种神经系统疾病，早期应用可能包括向受损的大脑或脊髓细胞提供温和的电刺激以促进恢复。", source: "AI News & Artificial Intelligence | TechCrunch", url: "https://techcrunch.com/2026/04/14/max-hodaks-science-corp-is-preparing-to-place-its-first-sensor-in-a-human-brain/" },
-  { time: "09:00", tag: "ai", tagText: "AI", text: "谷歌正在Chrome浏览器中添加“技能”功能，允许用户保存和重复使用AI提示，该功能基于Gemini的浏览器集成，旨在帮助用户保存和重复使用喜爱的AI工作流程。", source: "AI News & Artificial Intelligence | TechCrunch", url: "https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/" },
 ];
-const aiBreakingDate = "2026年4月15日 04:13 CST";
+const aiBreakingDate = "2026年4月15日 06:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
