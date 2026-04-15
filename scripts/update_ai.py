@@ -131,7 +131,7 @@ Return ONLY the JSON object. No markdown fencing.
     try:
         raw = llm_chat_with_retry(
             client, [{"role": "user", "content": prompt}],
-            model=LLM_MODEL, max_tokens=8000, temperature=0.2, max_retries=3,
+            model=LLM_MODEL, max_tokens=4096, temperature=0.2, max_retries=3,
         )
         content = re.sub(r'^```json\s*', '', raw)
         content = re.sub(r'\s*```$', '', content)
