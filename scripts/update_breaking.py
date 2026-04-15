@@ -38,7 +38,7 @@ from news_fetcher import (
 
 MAX_ITEMS = 20
 WINDOW_HOURS = 24
-LLM_MODEL = os.environ.get("LLM_MODEL", "google/gemini-2.5-flash")
+LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek/deepseek-chat")
 
 
 def analyze_news_with_llm(client, articles_context, category, existing_texts):

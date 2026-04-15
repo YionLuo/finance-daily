@@ -48,7 +48,7 @@ FOCUS_AREAS = "AI与大模型 · 半导体与算力 · 中美科技博弈 · 云
 
 FEAR_GREED_API = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
 
-LLM_MODEL = os.environ.get("LLM_MODEL", "google/gemini-2.5-flash")
+LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek/deepseek-chat")
 
 
 def fetch_fear_greed():
