@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:00", tag: "tech", tagText: "科技", text: "谷歌持有的SpaceX股份价值或超全球多数公司，随着SpaceX即将进行首次公开募股(IPO)，这家搜索巨头有望获得巨大收益。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/googles-stake-in-spacex-could-be-worth-more-than-most-companies-on-the-planet-9ef1a6bb?mod=mw_rss_topstories" },
+  { time: "05:59", tag: "macro", tagText: "宏观", text: "美国财政部长Scott Bessent要求银行配合收集客户公民身份信息，特朗普政府正推动这一政策实施。", source: "CNBC", url: "https://www.cnbc.com/2026/04/15/banks-citizenship-data-collection-customer-accounts.html" },
+  { time: "05:42", tag: "macro", tagText: "宏观", text: "高盛利率交易部门因伊朗战争颠覆利率预期而表现不佳，固定收益收入意外下滑。", source: "Financial Times", url: "https://www.ft.com/content/1f2d514d-4418-4b77-a3f5-2181080b670c" },
   { time: "03:39", tag: "geo", tagText: "地缘", text: "美伊或将于下周在巴基斯坦举行和平谈判，霍尔木兹海峡油轮运输仍因美国对伊朗港口的报复性封锁而近乎停滞。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/trump-iran-war-peace-talks-pakistan.html" },
   { time: "03:06", tag: "macro", tagText: "宏观", text: "美联储褐皮书显示，伊朗战争带来的不确定性导致美国企业推迟重大决策，经济显现疲软迹象。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/iran-war-is-a-major-source-of-uncertainty-for-u-s-businesses-feds-beige-book-says-52d45d7b?mod=mw_rss_topstories" },
   { time: "02:51", tag: "geo", tagText: "地缘", text: "黎巴嫩表示正努力与以色列达成停火协议，停火持续时间可能取决于美伊休战能维持多久。", source: "International homepage", url: "https://www.ft.com/content/40218940-4f0f-4aee-9209-2fb713eea736" },
@@ -1304,14 +1307,12 @@ const breakingNews = [
   { time: "20:35", tag: "macro", tagText: "宏观", text: "陪审团裁定Ticketmaster和Live Nation对大型音乐场馆存在反竞争垄断行为，该公司面临数十个美国州的诉讼。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/jury-finds-ticketmaster-live-nation-anticompetitive-monopoly-big-concert-venues.html" },
   { time: "20:02", tag: "macro", tagText: "宏观", text: "摩根士丹利一季度业绩超预期，固收和股票交易业务收入达85亿美元，超出预期10亿美元。", source: "CNBC", url: "https://www.cnbc.com/2026/04/15/morgan-stanley-ms-earnings-1q-2026.html" },
   { time: "20:00", tag: "geo", tagText: "地缘", text: "美国民主党能源委员会主席调查特朗普政府对霍尔木兹海峡关闭的应对措施。该海峡自美伊开战后实际关闭，导致能源价格剧烈波动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/15/iran-war-martin-heinrich-trump-probe-strait-of-hormuz-closure.html" },
-  { time: "19:42", tag: "geo", tagText: "地缘", text: "特朗普称美伊战争'接近结束'，暗示可能达成和平协议，并预测股市将因此繁荣。", source: "CNBC", url: "https://www.cnbc.com/2026/04/15/iran-war-trump-peace-deal-us-talks-stock-market-oil-prices-.html" },
-  { time: "19:37", tag: "geo", tagText: "地缘", text: "特朗普威胁撕毁与英国的贸易协议，美英因伊朗战争关系紧张升级。", source: "Financial Times", url: "https://www.ft.com/content/2cbe9668-d858-468c-86cc-08fd3dc725f3" },
-  { time: "19:16", tag: "macro", tagText: "宏观", text: "著名新兴市场投资者马克·莫比乌斯去世，享年89岁。他是新兴市场投资的先驱。", source: "International homepage", url: "https://www.ft.com/content/590c65f4-6261-4dd7-b8ea-73b78fa23479" },
 ];
-const breakingDate = "2026年4月16日 05:04 CST";
+const breakingDate = "2026年4月16日 06:03 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:31", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋表示，公司在将电子转化为代币、推动AI代理指数级增长以及克服半导体供应链瓶颈方面发挥关键作用。他强调AI技术的快速发展将重塑行业格局。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwJBVV95cUxOckF4UjRxZXdheU9Hdm9zUDRBc1hvMkxCQkszeFFVMEV0ZjRoejRsbC1ZdkJWU2NmaEVLVm5yLWFuVTh3UEdKQnBCMzlpcG5uSzJuNWhncl9xTGVJZDI2TlpuazJtdEJyNVB5UmJ1YnAtTmpaMEVBa0FHSk1pblBEWU1iejlBOXdONmRaOU1PejRCR081a04wUkl0T2xaU3dBbUxGc2RlbU1fMlVFQkItQW1TTnIxNWhFY2g3MGhhRF9vemY0aGJHVXpIU21YUkhBLXRWSURtOEpVNEpmVkdMMGtPZnc4dDFxOHQ5QVlYZTk1SHRhVVpfRjQwOVI1bFlhUTc1NFFzR0JsZlhNOGx2NDE4UTJKQjQ?oc=5" },
   { time: "04:56", tag: "macro", tagText: "宏观", text: "AI芯片市场预计将达5000亿美元规模，24/7 Wall St.推荐三只半导体ETF提前布局。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxQTTVpelpIWWZLLUh5c2tOWWJvRWVSVnZ3T0hQR2JHZU5hSGZXeVNqZjJfZERQeW51eV9JdDl3WlliNzZIdzZxRFd6RTA5MkU2dkt0bnNNSkJaZGlCb29oMVdReVlFZjJzZmZkWUpmbldVakFRbU4yaldDd0VweFlGX3dlZnh2WElsVjhBd1dMSzgzZ21QUkZZSmhIMWh2X2dMaVJWR0lZWHQ4b0IzTkRVNnhrNEw?oc=5" },
   { time: "03:28", tag: "ai", tagText: "AI", text: "OpenAI更新其Agents SDK，帮助企业构建更安全、更强大的AI代理。随着代理式AI的普及，OpenAI扩展了其工具包的功能。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/" },
   { time: "02:55", tag: "ai", tagText: "AI", text: "Hightouch凭借AI驱动的营销工具，年收入突破1亿美元。该公司在推出AI代理平台后，仅20个月内ARR增长了7000万美元。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/hightouch-reaches-100m-arr-fueled-by-marketing-tools-powered-by-ai/" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "19:23", tag: "ai", tagText: "AI", text: "盖洛普最新报告显示，美国Z世代（14-29岁）对AI的“爱恨关系”日益加深。尽管对AI的幻灭感增强，认为其加剧了不平等并威胁就业，但Z世代并未停止使用AI工具。这反映了年轻一代在技术依赖与伦理担忧之间的矛盾心态。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/909687/gen-z-doesnt-like-ai-gallup" },
   { time: "19:04", tag: "tech", tagText: "科技", text: "英伟达的量子AI突破引发投机性量子股票上涨，投资者押注下一代计算前沿。", source: "Tekedia", url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQU3loVjQ1Q3dzb3hQTWFKR3FhLWE3WHc5c2JTcS1nMmcwc2ozZDl5bGRjSXVfd2dVX1IxeTNnSjF2anhiOVhTWHQtMktHVk5aMnl2ajdWWU5rdXp4VDF6cFhxNkIycUFYMlIwOXZld1BLeGJCZW1zeExvcHJpTWVYYUZGVnJnXzNyNjFqZExyUlhIRFdnVFh5dHhDVEhhLWFaYVFVSS1JMmJvUE5zYlJUUlNCRlAtZmY1bGpIWVdZb2FGajZRTm9rOTVkWDRpdTBWcUhsc2RkMW83R0tpc2d4ek1B?oc=5" },
   { time: "18:57", tag: "tech", tagText: "科技", text: "英伟达、台积电和博通半导体股票盘前集体上涨，分析师指出系AI芯片需求激增及数据中心投资加速推动。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVC1YaEZFc1gxUk96SUt4ZXVjTGZmYVVPcUp6MnQ1QTJSV3lMMldCVUczQjh6S2xSTVgwTlptWjB4b2VDdjluZDZLdzlUMXJCdkFjbEQ2bzE1VTh4MWRiNzZCWWlEaUpZRmd5bER3WEw1S2FHY1dUVFdrQjB1TzRKX1ZvQnpVbkUzUWhzYVNFekNjYXg2cVMtdjh0azhkMC1ZSHpBX0R0SVRVdFAwMkctQlRqUTEyX3djWE5LeVZlOA?oc=5" },
-  { time: "18:55", tag: "ai", tagText: "AI", text: "苹果曾因未有效管控非自愿色情深度伪造内容，于1月威胁将马斯克的AI应用Grok下架。事件暴露生成式AI内容治理难题。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/912297/apple-app-store-ban-grok-x-deepfakes" },
 ];
-const aiBreakingDate = "2026年4月16日 05:04 CST";
+const aiBreakingDate = "2026年4月16日 06:03 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
