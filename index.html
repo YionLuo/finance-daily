@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:11", tag: "macro", tagText: "宏观", text: "美国民主党提出新法案，拟将劳动所得税抵免(EITC)提高至每名儿童5500美元，并将申请资格年收入上限提升至近10万美元。此举旨在通过税收政策缓解中低收入家庭压力。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/tax-day-earned-income-credit-child.html" },
   { time: "21:54", tag: "macro", tagText: "宏观", text: "美国3月进口商品成本连续第三个月大幅上涨，主要受油价上涨推动，预示未来几个月通胀可能进一步攀升。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/inflation-watch-high-oil-prices-boost-the-cost-of-imports-again-how-long-will-the-pain-last-8202054a?mod=mw_rss_topstories" },
   { time: "21:50", tag: "macro", tagText: "宏观", text: "标普500指数接近历史高点，距1月28日创下的纪录仅差不到1%。", source: "CNBC", url: "https://www.cnbc.com/2026/04/14/stock-market-today-live-updates.html" },
   { time: "21:45", tag: "tech", tagText: "科技", text: "鞋类品牌Allbirds宣布转型为AI计算提供商，股价暴涨超300%。该公司3月以3900万美元出售知识产权等资产。", source: "CNBC", url: "https://www.cnbc.com/2026/04/15/allbirds-bird-stock-shoes-ai.html" },
@@ -1306,18 +1307,20 @@ const breakingNews = [
   { time: "08:41", tag: "macro", tagText: "宏观", text: "奢侈品股票因伊朗战争影响盈利而下跌，爱马仕股价暴跌14%。爱马仕表示，第一季度批发业务‘受到显著影响’，尤其是在中东和机场的销售下降。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/kering-stock-q1-earnings-gucci-sales-iran-war-middle-east-luxury.html" },
   { time: "07:28", tag: "geo", tagText: "地缘", text: "日本首相承诺提供100亿美元金融援助，帮助亚洲应对石油短缺问题。此举旨在缓解因伊朗战争导致的全球石油供应紧张。", source: "Japan Wire by Kyodo News", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9sR1Nub0pXT0VxUWg1T09Qb0sxTVd2eGMwbWQ4WVdmazQzWm1tZDZHR1FNZElvOUNRTkJwdE52cW9MTS1GbnBvUkRVZ3h2SHg3Q3RHUXVCRE0tZw?oc=5" },
   { time: "07:01", tag: "geo", tagText: "地缘", text: "美国宣布霍尔木兹海峡封锁‘全面实施’，同时暗示与伊朗的外交解决方案。白宫正在推动中东冲突的外交解决，继续与德黑兰进行谈判。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/us-strait-of-hormuz-blockade-navy-iran-seaborne-trade-oil-trump.html" },
-  { time: "05:58", tag: "ai|tech", tagText: "AI|科技", text: "Meta宣布与博通达成一项为期多年的新协议，承诺部署1吉瓦（GW）与博通共同设计的定制化MTIA芯片。作为协议的一部分，博通首席执行官Hock Tan将辞去Meta董事会职务。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/14/meta-commits-to-one-gigawatt-of-custom-chips-with-broadcom-as-hock-tan-agrees-to-leave-board.html" },
 ];
-const breakingDate = "2026年4月15日 22:04 CST";
+const breakingDate = "2026年4月15日 23:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:24", tag: "tech", tagText: "科技", text: "Allbirds出售鞋类业务后转向AI领域，更名为NewBird AI，并锁定5000万美元的可转换融资。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/after-sale-of-its-shoe-business-allbirds-pivots-to-ai/" },
   { time: "21:06", tag: "ai", tagText: "AI", text: "Reid Hoffman在‘tokenmaxxing’辩论中表示，追踪AI代币使用可以衡量采用率，但应结合上下文，不应直接视为生产力指标。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/" },
   { time: "21:01", tag: "tech", tagText: "科技", text: "Adobe推出全新Firefly AI助手，可跨Creative Cloud应用（如Photoshop、Premiere等）完成任务，标志着创意工作的‘根本性转变’。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/adobes-new-firefly-ai-assistant-can-use-creative-cloud-apps-to-complete-tasks/" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "Parasail在A轮融资中筹集3200万美元，押注‘tokenmaxxing’将催生下一代计算巨头，预示着模型和计算的碎片化未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Gitar利用AI代理审查代码，完成900万美元融资，专注于解决AI生成代码的安全问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/" },
   { time: "20:46", tag: "tech", tagText: "科技", text: "博通（Broadcom）与Meta和谷歌达成AI芯片合作协议，进一步巩固其在AI硬件领域的地位。", source: "Rolling Out", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE55WEl1ZFpUY3NUdUxIVHkyNWdQdWc5QXQyaGNuekE1Nmd2SlEwSHFmSHBNanJITDZGekVLZGw4bGNCdGhSWEJITUFYRWpBM2RaZjhzQ0M0MXNadmNoSXVENlRtUGdxUUZoTHFaRTc3VDRRTWxhMUtidQ?oc=5" },
   { time: "19:58", tag: "tech", tagText: "科技", text: "三星电机（Samsung Electro-Mechanics）将向英伟达供应其下一代AI芯片“Groq3”的基板。此举标志着三星在AI芯片供应链中扮演关键角色，并可能加强英伟达与三星在先进封装领域的合作。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE16TC1mdzU0S19zdkNrZC1rVFZqV0NpdmJBd3hIYXRac0I5T1F3SG1pakJ1eGFaQTR6SmxLMXBYcGtwaFB1TTJHV0U2VE04cWFCWjgweHhVZ3Z0QkVUZEE5WGJBcVY1T3RaLUdRZUl0MDg2bnlx?oc=5" },
   { time: "19:23", tag: "ai", tagText: "AI", text: "盖洛普最新报告显示，美国Z世代（14-29岁）对AI的“爱恨关系”日益加深。尽管对AI的幻灭感增强，认为其加剧了不平等并威胁就业，但Z世代并未停止使用AI工具。这反映了年轻一代在技术依赖与伦理担忧之间的矛盾心态。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/909687/gen-z-doesnt-like-ai-gallup" },
+  { time: "19:04", tag: "tech", tagText: "科技", text: "英伟达的量子AI突破引发投机性量子股票上涨，投资者押注下一代计算前沿。", source: "Tekedia", url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQU3loVjQ1Q3dzb3hQTWFKR3FhLWE3WHc5c2JTcS1nMmcwc2ozZDl5bGRjSXVfd2dVX1IxeTNnSjF2anhiOVhTWHQtMktHVk5aMnl2ajdWWU5rdXp4VDF6cFhxNkIycUFYMlIwOXZld1BLeGJCZW1zeExvcHJpTWVYYUZGVnJnXzNyNjFqZExyUlhIRFdnVFh5dHhDVEhhLWFaYVFVSS1JMmJvUE5zYlJUUlNCRlAtZmY1bGpIWVdZb2FGajZRTm9rOTVkWDRpdTBWcUhsc2RkMW83R0tpc2d4ek1B?oc=5" },
   { time: "18:57", tag: "tech", tagText: "科技", text: "英伟达、台积电和博通半导体股票盘前集体上涨，分析师指出系AI芯片需求激增及数据中心投资加速推动。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVC1YaEZFc1gxUk96SUt4ZXVjTGZmYVVPcUp6MnQ1QTJSV3lMMldCVUczQjh6S2xSTVgwTlptWjB4b2VDdjluZDZLdzlUMXJCdkFjbEQ2bzE1VTh4MWRiNzZCWWlEaUpZRmd5bER3WEw1S2FHY1dUVFdrQjB1TzRKX1ZvQnpVbkUzUWhzYVNFekNjYXg2cVMtdjh0azhkMC1ZSHpBX0R0SVRVdFAwMkctQlRqUTEyX3djWE5LeVZlOA?oc=5" },
   { time: "18:55", tag: "ai", tagText: "AI", text: "苹果曾因未有效管控非自愿色情深度伪造内容，于1月威胁将马斯克的AI应用Grok下架。事件暴露生成式AI内容治理难题。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/912297/apple-app-store-ban-grok-x-deepfakes" },
   { time: "18:09", tag: "ai", tagText: "AI", text: "小鹏汽车前自动驾驶负责人将加入机器人初创公司EngineAI，此举可能影响中国自动驾驶人才流动格局。", source: "CnEVPost", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxNY3ByN0p5Z0RvcnhPZWk4djkxT0dOSTcxZ2ZGODJHakkyTEZoUUlUYkVraWE4bnFTOUtySjd5QWhpOFdfc3BNYmM0THBPcS1IaEJkeVJiRU1UeTZGbTNVc042TWxKNGEzTTFUNHVxM05PQ1Nfc2RkYlkyd2dhNFZPWW44ZXZPbS1ncXpVcEFmZk4?oc=5" },
@@ -1329,11 +1332,8 @@ const aiBreakingNews = [
   { time: "13:40", tag: "ai", tagText: "AI", text: "谷歌悄然发布了一款离线优先的AI听写应用，该应用使用其Gemma AI模型，旨在与Wispr Flow等应用竞争。此举凸显了谷歌将AI功能本地化、提升隐私和可访问性的战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/" },
   { time: "13:19", tag: "ai", tagText: "AI", text: "中国正期待其本土AI公司深度求索（DeepSeek）即将发布的V4模型，以期在人工智能领域实现新的突破。", source: "News.az", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5Fd0gxX0Q1dzRJS2czdHlDUU1lVjZHMkxXZjZhRDl0R1RTdm9qbTE0QmVWLS1tX1VUeENTc3VoeElXYXR1ZFQ0MUhyWjNCRWNtV3NYSVJILW5qY1ZVd2Q0WkNFbGlJeF9peWtFSE9XWngzdUduclhFQ29n?oc=5" },
   { time: "10:09", tag: "ai", tagText: "AI", text: "AI巨头Anthropic联合创始人证实，该公司已向特朗普政府介绍了其最新模型Mythos，该模型声称拥有强大的网络安全能力。", source: "AI News & Artificial Intelligence | TechCrunch", url: "https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-adminstration-on-mythos/" },
-  { time: "10:04", tag: "ai", tagText: "AI", text: "OpenAI首席执行官Sam Altman的住宅遭到袭击，一名20岁嫌疑人因担心AI竞赛导致人类灭绝而采取行动。这起事件对AI世界发出了警告，凸显了AI发展带来的社会担忧和潜在风险。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/911778/ai-violence-sam-altman-home" },
-  { time: "09:21", tag: "ai|tech", tagText: "AI|科技", text: "韩国初创公司Upstage在获得更多融资后，成为韩国首家AI独角兽企业。", source: "aju press", url: "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1sTGpFck44YzE3NGRwMmMzdmN0SGhPcEdDb096cUZUNGhoamluTXhYTGJoQ2VJeVEwaFRJMGJxd054a2JxTWdJX01HUVNrcTdQM19iQW1lYU9mOXfSAVdBVV95cUxNcmxpbmozeUpDQmk3c2t3Tmw0ZXctc3VQTUdMampCVFZPQnF6VnNlZWhUNXZQU1hLWXpwYm5Cbm16SHEtV09adTlBcTBLZnA5dTg0SWVLbkU?oc=5" },
-  { time: "08:20", tag: "ai", tagText: "AI", text: "韩国电商巨头Coupang宣布追加8400万美元AI初创企业投资，加速人工智能领域布局。", source: "World Business Outlook", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSFV4Szk0OWRkTFdMVXlsdHJEczBFZXMyMVNTVlBLZ2JMR2dkZFF6WWJPbml3Wll6SzE4Q2VBRTk4NDh3Qlc4dEVzXzhUeVVkTGI5RURTaHlSTFJyMHpELV9OTVhRNDloSTIxbnNMU1NuVXFlQkd4eTNDenF0OFlfamRNNmlqYTIweHA0RU02NV9HcTZCVVYxN0tHMGxxQ0E?oc=5" },
 ];
-const aiBreakingDate = "2026年4月15日 22:04 CST";
+const aiBreakingDate = "2026年4月15日 23:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
