@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>候选人评估：程阳 — 秒剪/读书产品部</title>
+<style>
+  :root { --bg:#fafafa; --card:#fff; --accent:#2563eb; --accent-light:#eff6ff; --accent2:#1d4ed8; --text:#111827; --text-dim:#6b7280; --border:#e5e7eb; --quote-bg:#f8fafc; --callout-bg:#eff6ff; --callout-border:#3b82f6; --sidebar-bg:#f9fafb; --sidebar-w:240px; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.85;-webkit-font-smoothing:antialiased}
+  .layout{display:flex;min-height:100vh}
+  .sidebar{width:var(--sidebar-w);position:fixed;top:0;left:0;height:100vh;background:var(--sidebar-bg);border-right:1px solid var(--border);padding:28px 18px;overflow-y:auto;z-index:100}
+  .sidebar .logo{font-size:1em;font-weight:800;color:var(--accent);margin-bottom:4px}
+  .sidebar .logo-sub{font-size:.75em;color:var(--text-dim);margin-bottom:20px;line-height:1.5}
+  .sidebar nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:6px;color:var(--text-dim);text-decoration:none;font-size:.82em;transition:all .15s;line-height:1.5}
+  .sidebar nav a:hover{background:var(--accent-light);color:var(--accent)}
+  .sidebar nav a.active{color:var(--accent);font-weight:600;background:var(--accent-light)}
+  .main{margin-left:var(--sidebar-w);flex:1;max-width:720px;padding:48px 48px 80px}
+  .hero{margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+  .hero h1{font-size:1.85em;font-weight:800;color:var(--text);line-height:1.3;margin-bottom:12px;letter-spacing:-.02em}
+  .hero .meta{font-size:.85em;color:var(--text-dim)}
+  .hero .meta span{margin-right:14px}
+  .hero .lead{margin-top:14px;font-size:1em;color:var(--text-dim);line-height:1.8}
+  .tab-bar{display:flex;gap:0;margin-bottom:36px;border-bottom:2px solid var(--border)}
+  .tab-btn{padding:12px 24px;font-size:.95em;font-weight:600;color:var(--text-dim);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;position:relative}
+  .tab-btn:hover{color:var(--accent);background:var(--accent-light)}
+  .tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+  .tab-content{display:none}
+  .tab-content.active{display:block}
+  h2{font-size:1.35em;margin:48px 0 16px;color:var(--text);font-weight:700;scroll-margin-top:24px;padding-bottom:8px;border-bottom:2px solid var(--accent)}
+  h2:first-child{margin-top:0}
+  h3{font-size:1.05em;color:var(--text);margin:28px 0 10px;font-weight:600}
+  p{margin:10px 0;color:#374151;font-size:.95em}
+  blockquote{background:var(--quote-bg);border-left:3px solid #d1d5db;border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0;font-size:.9em;color:#4b5563;line-height:1.8;font-style:italic}
+  blockquote strong{color:var(--text);font-style:normal}
+  .callout{background:var(--callout-bg);border-left:4px solid var(--callout-border);border-radius:0 10px 10px 0;padding:16px 20px;margin:16px 0}
+  .callout p{font-size:.9em;color:#1e40af;margin:4px 0}
+  .callout-warn{background:#fef3c7;border-left-color:#f59e0b}
+  .callout-warn p{color:#92400e}
+  .callout-green{background:#ecfdf5;border-left-color:#10b981}
+  .callout-green p{color:#065f46}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0}
+  table{width:100%;border-collapse:collapse;font-size:.88em;border-radius:10px;overflow:hidden;min-width:0}
+  th{background:var(--accent);color:#fff;padding:10px 14px;text-align:left;font-weight:600;font-size:.85em;white-space:nowrap}
+  td{padding:9px 14px;border-bottom:1px solid var(--border);background:var(--card)}
+  tr:hover td{background:#f9fafb}
+  .card-table{display:none}
+  .card-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:10px 0}
+  .card-item .card-label{font-size:.75em;color:var(--text-dim);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px}
+  .card-item .card-value{font-size:.9em;color:var(--text);line-height:1.6}
+  .card-item .card-row{margin:6px 0}
+  .card-item .card-title{font-size:.95em;font-weight:700;color:var(--text);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+  .card-item .stars{font-size:.85em}
+  ul,ol{margin:10px 0 10px 20px;font-size:.93em;color:#374151}
+  li{margin:6px 0;line-height:1.7}
+  li strong{color:var(--text)}
+  .stars{color:#f59e0b;letter-spacing:1px}
+  .footer{text-align:center;padding:36px 0;color:var(--text-dim);font-size:.8em;border-top:1px solid var(--border);margin-top:60px}
+  @media(max-width:860px){
+    .sidebar{display:none}
+    .main{margin-left:0;padding:24px 16px 60px;max-width:100%}
+    .hero h1{font-size:1.3em}
+    .hero .lead{font-size:.9em}
+    .hero .meta{font-size:.8em}
+    .hero .meta span{display:block;margin-bottom:2px}
+    h2{font-size:1.15em;margin:36px 0 12px}
+    h3{font-size:1em;margin:22px 0 8px}
+    p{font-size:.9em}
+    .tab-bar{gap:0;margin-bottom:24px}
+    .tab-btn{padding:10px 14px;font-size:.85em;flex:1;text-align:center}
+    blockquote{padding:12px 14px;font-size:.85em;margin:10px 0}
+    .callout{padding:12px 14px;margin:12px 0}
+    .callout p{font-size:.85em}
+    ul,ol{margin:8px 0 8px 16px;font-size:.88em}
+    .mobile-card table{display:none}
+    .mobile-card .card-table{display:block}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<aside class="sidebar">
+  <div class="logo">📋 面试分析</div>
+  <div class="logo-sub">候选人胜任度评估报告</div>
+  <nav id="sidebar-nav">
+    <div id="nav-tab1">
+      <a href="#c1">一、候选人画像</a>
+      <a href="#c2">二、核心优势</a>
+      <a href="#c3">三、需关注的问题</a>
+      <a href="#c4">四、求职意愿</a>
+      <a href="#c5">五、综合评估</a>
+    </div>
+    <div id="nav-tab2" style="display:none">
+      <a href="#s1">一、搜索开关优化实战</a>
+      <a href="#s2">二、联网搜索策略体系</a>
+      <a href="#s3">三、数据驱动方法论</a>
+      <a href="#s4">四、对AI产品的思考</a>
+      <a href="#s5">五、对微信读书的理解</a>
+      <a href="#s6">六、行动建议</a>
+    </div>
+  </nav>
+</aside>
+
+<div class="main">
+
+<div class="hero">
+  <h1>候选人评估：程阳 — 读书产品部</h1>
+  <div class="meta">
+    <span>📅 2026年4月</span>
+    <span>📎 来源：一面访谈记录</span>
+  </div>
+  <p class="lead">基于对候选人程阳的面试记录，评估其是否适合读书产品部（秒剪/微信读书/输入法）的产品经理岗位。</p>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="tab1" onclick="switchTab('tab1')">👤 候选人评估</button>
+  <button class="tab-btn" data-tab="tab2" onclick="switchTab('tab2')">📋 访谈洞察</button>
+</div>
+
+<!-- ======== TAB 1: 候选人评估 ======== -->
+<div class="tab-content active" id="tab-tab1">
+
+<h2 id="c1">一、候选人基本画像</h2>
+
+<div class="mobile-card">
+<table>
+  <tr><th>维度</th><th>信息</th></tr>
+  <tr><td>当前职位</td><td>腾讯·元宝 — 搜索策略产品经理（联网搜索开关方向）</td></tr>
+  <tr><td>工作经历</td><td>字节·抖音搜索（个性化评测+搜索策略，约3.5年）→ 腾讯·元宝（搜索/大模型方向，约1年）</td></tr>
+  <tr><td>绩效</td><td>腾讯一年仅一次绩效：Outstanding（获得过一次E，其他都是A）</td></tr>
+  <tr><td>求职动机</td><td>元宝工作偏底层基建，离应用层远；希望做产品形态/AI应用方向</td></tr>
+  <tr><td>岗位倾向</td><td>明确表示主要对微信读书感兴趣</td></tr>
+</table>
+<div class="card-table">
+  <div class="card-item">
+    <div class="card-row"><div class="card-label">当前职位</div><div class="card-value">腾讯·元宝 — 搜索策略产品经理（联网搜索开关方向）</div></div>
+    <div class="card-row"><div class="card-label">工作经历</div><div class="card-value">字节·抖音搜索（~3.5年）→ 腾讯·元宝（~1年）</div></div>
+    <div class="card-row"><div class="card-label">绩效</div><div class="card-value">Outstanding（获得过一次E，其他都是A）</div></div>
+    <div class="card-row"><div class="card-label">求职动机</div><div class="card-value">元宝工作偏底层基建，离应用层远；希望做AI应用方向</div></div>
+    <div class="card-row"><div class="card-label">岗位倾向</div><div class="card-value">明确表示主要对微信读书感兴趣</div></div>
+  </div>
+</div>
+</div>
+
+<!-- C2 -->
+<h2 id="c2">二、核心优势</h2>
+
+<h3>1. 数据驱动的策略闭环能力</h3>
+
+<p>程阳在搜索开关项目上展现了完整的数据驱动闭环：发现线上bad case→分析意图分类→搭建自动化Agent做数据清洗/分类→针对四类核心问题做针对性训练→线上bad case解决率下降70%。这套能力在大模型产品中是实用的。</p>
+
+<blockquote>"通过Agent进行数据清洗、数据分类等动作，帮助我们更精准地识别出关注的重点垂类……最终识别出四个关键类别，这些是线上bad case比较集中的垂类。"</blockquote>
+
+<h3>2. 对搜索/联网策略有较深的理解</h3>
+
+<p>他对联网搜索的理解不仅停留在功能层面，而是深入到了策略平衡的层面：联网率vs时延性能、信息增益vs搜索占比、热点识别vs长尾覆盖。并且能清楚地区分不同模型（豆包/GPT/Gemini/元宝）的联网策略差异及其原因。</p>
+
+<blockquote>"本质上是在信息的准确率和最终的搜索联网率占比之间取得平衡。"</blockquote>
+
+<h3>3. 有SFT/RL/PE等模型训练的实操经验</h3>
+
+<p>虽然他自认为偏底层基建，但这恰恰说明他有实际的模型训练参与经验——SFT/RL项目、PE调优、训练数据构建、蒸馏模型配合等。在需要和算法团队协作的岗位上，这是有价值的。</p>
+
+<h3>4. 绩效表现优秀</h3>
+
+<p>入职腾讯仅一年获得Outstanding（含一次E），在元宝这种变化快、压力大的团队中能拿到顶级绩效，说明基本的执行力和交付能力没有问题。</p>
+
+<h3>5. 坦诚，不过度包装</h3>
+
+<p>他坦诚承认"我们这个功能并没有带动任何的留存增长"、"用的人不太多"、"还没有找到一个特别好的方式"。这种不粉饰的态度在面试中是加分项。</p>
+
+<!-- C3 -->
+<h2 id="c3">三、需关注的问题</h2>
+
+<h3>🔴 核心问题：缺乏产品感——更像策略PM而非产品PM</h3>
+
+<p>整场面试暴露出一个结构性问题：<strong>程阳的能力栈集中在"模型策略优化"，而非"产品定义与用户洞察"。</strong></p>
+
+<p><strong>最直接的证据是他对微信读书的分析。</strong>当被问到"你来了可以做什么方向"时，他给出了三个方向：</p>
+<ol>
+  <li>AI推荐书籍</li>
+  <li>多本书知识图谱串联</li>
+  <li>利用微信社交优势做阅读分享</li>
+</ol>
+
+<p>面试官逐一指出了这些想法的问题：</p>
+<ul>
+  <li>推荐——"我们现在已经在做生成式推荐了"</li>
+  <li>社交——"我们很早以前就有非常多社交功能，但它不是最重要的部分"</li>
+  <li>AI功能——"这个功能并没有带动任何的留存增长…用的人不太多"</li>
+</ul>
+
+<blockquote>"说实话，我们真的会觉得说目前这个事情和微信读书去做强结合，就是AI和微信读书去做强结合这个事情上，<strong>我们还没有找到一个特别好的方式和办法</strong>。"</blockquote>
+
+<p>问题不在于他的答案"错了"——这些方向确实是常见思路。问题在于<strong>他没有展现出任何超越常规的思考深度</strong>。他给的是"任何一个对微信读书有基本了解的人都能想到的方向"，而不是"一个深度用户+产品经理才能给出的洞察"。面试官实际上在用微信读书的真实困境测试他的产品直觉，他没有通过。</p>
+
+<div class="callout callout-warn"><p>💡 <strong>深层问题</strong>：他的产品思维路径是"功能→技术实现"，而不是"用户痛点→产品形态"。他想的是"AI能帮读书做什么"，而不是"读书用户到底缺什么，AI只是手段之一"。</p></div>
+
+<h3>🔴 对"应用层"的理解比较表面</h3>
+
+<p>他反复强调想离开底层基建、去做应用层，但当被追问"你想在微信读书做什么"时，他的回答暴露了一个矛盾：<strong>他想做的"应用层"仍然是"模型能力的包装"，而不是"用户价值的创造"</strong>。</p>
+
+<blockquote>"我注意到我们现在有一些，比如说像这个AI帮助我们去做，或者是我点开这个阅读页之后，可能会有帮助我去有一些人物的梳理故事梗概相关的一些功能……我觉得这个是能够结合AI帮助这个APP做一些留存增长。"</blockquote>
+
+<p>面试官直接戳破了这个假设——这些功能实际上没有带来留存增长。而程阳在听到这个信息后，没有追问"那用户到底在乎什么"，而是继续列举更多的AI功能方向。这说明他还没有建立<strong>"从用户真实行为反推产品策略"</strong>的思维习惯。</p>
+
+<h3>⚠️ 项目经验的"主导性"存疑</h3>
+
+<p>搜索开关项目——他自称"中途接手"，且项目本身更多是策略优化而非从0到1的产品定义。在被追问"你到底解决了什么问题"时，他的描述偏向于"整个团队做了什么"而非"我个人判断/推动了什么"。关键的热点库是"引擎团队提供的"，他的角色更多是"打通数据链路+训练数据构建"。</p>
+
+<blockquote>"首先热点库是我们和引擎的一些合作……直播的这个热点库的一些更新维护其实是在引擎这边来做的。也就是这个库其实是别人提供的。"</blockquote>
+
+<p>这不是说他没有贡献，但在面试中没有成功展现出"独立做出关键判断"的案例。</p>
+
+<h3>⚠️ 对元宝的吐槽暴露了适应性问题</h3>
+
+<blockquote>"首先元宝太卷了……我没有12点半之前下班的……很多时候就是你做到一半突然换了项目，或者是我们有一些想法，但其实根本来不及落地"</blockquote>
+
+<p>但读书产品部同样会有方向调整和创新项目的流动。他把元宝的问题归因于"变化太快"，但接着又说"大模型业务本身就代表着变化"——这说明他知道变化是正常的，但仍然觉得不舒服。需要关注他对"不确定性"的真实容忍度。</p>
+
+<!-- C4 -->
+<h2 id="c4">四、关于求职意愿</h2>
+
+<p>他明确表示对微信读书最感兴趣，对秒剪和输入法没有主动表达意愿。但从面试过程来看：</p>
+
+<ul>
+  <li>他对微信读书的理解是<strong>用户级别</strong>的，不是产品经理级别的——列举的功能方向没有超出一个普通用户的想象</li>
+  <li>他对AI在读书中的定位缺乏清醒认知——面试官明确说"我们还没想明白"，他没有给出能让人眼前一亮的回应</li>
+  <li>他没有问过一个关于秒剪的问题，也没有对岗位的工作方式、团队文化表达好奇</li>
+</ul>
+
+<div class="callout"><p>💡 他的动机更多是"逃离元宝的基建工作"，而非"被微信读书的产品挑战吸引"。这种push型动机在入职后容易遇到落差——如果新岗位也有不确定期，他可能会再次感到"不是我想要的"。</p></div>
+
+<!-- C5 -->
+<h2 id="c5">五、综合评估</h2>
+
+<h3>能力匹配度矩阵</h3>
+
+<div class="mobile-card">
+<table>
+  <tr><th>能力维度</th><th>岗位要求</th><th>匹配度</th><th>说明</th></tr>
+  <tr><td>搜索/联网策略经验</td><td>中</td><td><span class="stars">★★★★☆</span></td><td>抖音搜索+元宝联网开关，策略层面扎实</td></tr>
+  <tr><td>模型训练协作能力</td><td>中高</td><td><span class="stars">★★★★☆</span></td><td>有SFT/RL/PE实操经验，能和算法对话</td></tr>
+  <tr><td>数据驱动能力</td><td>高</td><td><span class="stars">★★★★☆</span></td><td>数据闭环思维清晰，搭建过自动化Agent</td></tr>
+  <tr><td>产品直觉与用户洞察</td><td>高</td><td><span class="stars">★★☆☆☆</span></td><td>对微信读书的分析停留在功能列举层面</td></tr>
+  <tr><td>0→1产品定义能力</td><td>高</td><td><span class="stars">★★☆☆☆</span></td><td>所有项目都是接手/优化，无从0到1案例</td></tr>
+  <tr><td>独立判断与推动力</td><td>高</td><td><span class="stars">★★★☆☆</span></td><td>项目叙述中"我"和"团队"边界模糊</td></tr>
+  <tr><td>坦诚度</td><td>中</td><td><span class="stars">★★★★★</span></td><td>不包装，直说做得不好的地方</td></tr>
+  <tr><td>对AI产品的理解深度</td><td>高</td><td><span class="stars">★★★☆☆</span></td><td>理解模型能力边界，但对"AI该怎么落地"缺乏独到见解</td></tr>
+  <tr><td>组织适应性</td><td>中</td><td><span class="stars">★★★☆☆</span></td><td>对元宝变化快有抱怨，对不确定性容忍度需观察</td></tr>
+  <tr><td>求职动机匹配</td><td>—</td><td><span class="stars">★★☆☆☆</span></td><td>push型动机（逃离元宝），而非pull型（被产品吸引）</td></tr>
+</table>
+<div class="card-table">
+  <div class="card-item"><div class="card-title">搜索/联网策略经验 <span class="stars">★★★★☆</span></div><div class="card-row"><div class="card-label">岗位要求：中</div><div class="card-value">抖音搜索+元宝联网开关，策略层面扎实</div></div></div>
+  <div class="card-item"><div class="card-title">模型训练协作能力 <span class="stars">★★★★☆</span></div><div class="card-row"><div class="card-label">岗位要求：中高</div><div class="card-value">有SFT/RL/PE实操经验，能和算法对话</div></div></div>
+  <div class="card-item"><div class="card-title">数据驱动能力 <span class="stars">★★★★☆</span></div><div class="card-row"><div class="card-label">岗位要求：高</div><div class="card-value">数据闭环思维清晰，搭建过自动化Agent</div></div></div>
+  <div class="card-item"><div class="card-title">产品直觉与用户洞察 <span class="stars">★★☆☆☆</span></div><div class="card-row"><div class="card-label">岗位要求：高</div><div class="card-value">对微信读书的分析停留在功能列举层面</div></div></div>
+  <div class="card-item"><div class="card-title">0→1产品定义能力 <span class="stars">★★☆☆☆</span></div><div class="card-row"><div class="card-label">岗位要求：高</div><div class="card-value">所有项目都是接手/优化，无从0到1案例</div></div></div>
+  <div class="card-item"><div class="card-title">独立判断与推动力 <span class="stars">★★★☆☆</span></div><div class="card-row"><div class="card-label">岗位要求：高</div><div class="card-value">项目叙述中"我"和"团队"边界模糊</div></div></div>
+  <div class="card-item"><div class="card-title">坦诚度 <span class="stars">★★★★★</span></div><div class="card-row"><div class="card-label">岗位要求：中</div><div class="card-value">不包装，直说做得不好的地方</div></div></div>
+  <div class="card-item"><div class="card-title">对AI产品的理解深度 <span class="stars">★★★☆☆</span></div><div class="card-row"><div class="card-label">岗位要求：高</div><div class="card-value">理解模型能力边界，但缺乏独到见解</div></div></div>
+  <div class="card-item"><div class="card-title">组织适应性 <span class="stars">★★★☆☆</span></div><div class="card-row"><div class="card-label">岗位要求：中</div><div class="card-value">对元宝变化快有抱怨，不确定性容忍度需观察</div></div></div>
+  <div class="card-item"><div class="card-title">求职动机匹配 <span class="stars">★★☆☆☆</span></div><div class="card-row"><div class="card-label">岗位要求：—</div><div class="card-value">push型动机（逃离元宝），而非pull型（被产品吸引）</div></div></div>
+</div>
+</div>
+
+<h3>最终判断</h3>
+
+<div class="callout callout-warn"><p><strong>程阳是一个合格的"策略型产品经理"，但不太适合需要强产品定义能力的岗位。</strong></p>
+<p>他的强项在数据驱动的模型策略优化——训练数据构建、意图分类、bad case收敛、PE调优等。这些能力在<strong>输入法</strong>方向可能有较好的匹配度（偏模型训练和算法调优），但对秒剪（需要视频产品感）和微信读书（需要用户洞察深度）的匹配度不足。</p>
+<p>最大的隐忧是：他想"逃离基建做应用"，但面试中展现的思维方式仍然是基建思维——想的是"模型能做什么"而非"用户需要什么"。这个转变不是换个岗位就能完成的。</p></div>
+
+<h3>建议</h3>
+
+<ol>
+  <li><strong>如果考虑输入法方向</strong>——值得推进。他的模型训练协作能力和数据驱动能力与输入法的需求匹配度较高，且输入法确实更偏算法调优。</li>
+  <li><strong>如果考虑秒剪或微信读书</strong>——建议谨慎。产品直觉和用户洞察是短板，且他的动机不在这两个产品上。</li>
+  <li><strong>如果决定推进</strong>，下一轮可重点验证：
+    <ul>
+      <li>给他一个具体的产品问题（不是AI问题），看他能否从用户视角出发而非技术视角</li>
+      <li>让他描述一个"自己独立做出关键判断并推动落地"的案例（非团队笼统叙述）</li>
+      <li>了解他对"前6个月可能没有明确方向"的接受度</li>
+    </ul>
+  </li>
+</ol>
+
+</div><!-- tab1 -->
+
+<!-- ======== TAB 2: 访谈洞察 ======== -->
+<div class="tab-content" id="tab-tab2">
+
+<h2 id="s1">一、搜索开关优化实战</h2>
+
+<h3>项目背景</h3>
+
+<p>元宝的联网搜索开关项目：决定用户query是走联网搜索还是靠模型本身的知识库回答。程阳中途接手时，项目处于"频繁报case"阶段——线上bad case居高不下，用户反馈率持续很高。</p>
+
+<h3>优化路径</h3>
+
+<ol>
+  <li><strong>定义理想态</strong>：哪些query该搜（时效新闻、深入研究、工具调用），哪些不该搜（常识百科、翻译等模型自有能力）</li>
+  <li><strong>搭建自动化Agent</strong>：数据清洗、意图分类，用PE工作调优驱动</li>
+  <li><strong>识别四类核心问题</strong>：强时效新闻热点、时政、搜索工具、其他</li>
+  <li><strong>针对性训练+Answer驱动生产链路</strong></li>
+  <li><strong>上线三版模型</strong>，配合蒸馏模型和主流模型替换</li>
+</ol>
+
+<h3>核心成果</h3>
+<ul>
+  <li>线上bad case解决率下降70%</li>
+  <li>搜索渗透率和联网场景下LT收益提升</li>
+  <li>评测级题目指标明显提升</li>
+</ul>
+
+<div class="callout"><p>💡 最难的部分是<strong>训练数据的生产链路搭建</strong>——多层漏斗过滤、意图分类、数据分布分析，整个workflow复杂且耗时长。</p></div>
+
+<!-- S2 -->
+<h2 id="s2">二、联网搜索策略体系</h2>
+
+<h3>搜索与不搜索的判断框架</h3>
+
+<table>
+  <tr><th>场景</th><th>策略</th><th>原因</th></tr>
+  <tr><td>强时效新闻热点</td><td>搜索</td><td>模型知识库无法覆盖</td></tr>
+  <tr><td>时政相关</td><td>搜索</td><td>敏感性+时效性要求高</td></tr>
+  <tr><td>工具调用场景</td><td>搜索</td><td>需要外部数据</td></tr>
+  <tr><td>深入研究类</td><td>搜索</td><td>需要最新信息</td></tr>
+  <tr><td>常识百科</td><td>不搜索</td><td>模型自有能力可答</td></tr>
+  <tr><td>翻译等</td><td>不搜索</td><td>模型原生能力</td></tr>
+</table>
+
+<h3>联网率的平衡艺术</h3>
+
+<blockquote>"联网能带来信息增益，补充信息丰富度；但如果联网频率或占比过高，会影响时延或性能指标。本质上是在<strong>信息的准确率和最终的搜索联网率占比之间取得平衡</strong>。"</blockquote>
+
+<h3>各模型联网策略差异</h3>
+<ul>
+  <li><strong>豆包</strong>：联网率较高，策略激进</li>
+  <li><strong>GPT/Claude/Gemini</strong>：相对保守，知识库覆盖面广，自身能力强</li>
+  <li><strong>元宝</strong>：用小模型做搜索开关判断，追求联网率不升的前提下提高判断准确率</li>
+</ul>
+
+<div class="callout"><p>💡 关键洞察：豆包联网率高不一定是因为策略激进——也可能是因为其知识库覆盖不够全面，所以需要更多联网来补偿。各模型差异不仅在策略，也在底层知识库和引擎能力上。</p></div>
+
+<!-- S3 -->
+<h2 id="s3">三、数据驱动方法论</h2>
+
+<h3>训练数据的生产链路</h3>
+
+<ol>
+  <li><strong>现网数据获取</strong>→过滤无效数据</li>
+  <li><strong>意图分类</strong>→Agent自动化分类</li>
+  <li><strong>搜索/不搜索标注</strong>→识别本应搜索vs不应搜索</li>
+  <li><strong>针对性挖掘</strong>→四类核心垂类专项训练</li>
+  <li><strong>Answer驱动生产</strong>→对比搜索vs不搜索的增益，结合权威度/时效性评估</li>
+</ol>
+
+<h3>Answer驱动链路的价值</h3>
+
+<blockquote>"针对边界case或模糊case……我们探索了Answer驱动的生产链路。加入Answer驱动链路后，<strong>边界case和模糊case的提升较大，模型识别更准确</strong>。"</blockquote>
+
+<p>这套方法论的核心思想是：不只看query本身的意图，还要看搜索结果（answer）是否真的对最终效果有增益。这避免了"为搜而搜"的问题。</p>
+
+<!-- S4 -->
+<h2 id="s4">四、对AI产品的思考</h2>
+
+<h3>关联网判断对用户体验的影响</h3>
+
+<blockquote>"这个和用户之间的关联，可能很难去撼动LT，或者是带来一些真正的影响体验的这样子的一些增长……这些模型能力和最终的用户真正的能够感受到体验啊，就它只是<strong>隔着一个比较远的距离</strong>。"</blockquote>
+
+<p>他清醒地认识到：底层能力优化和用户体验之间存在较远的传导距离。这既是他想离开的原因，也说明他对"基建vs应用"的差别有认知。</p>
+
+<h3>对AI在读书产品中的定位</h3>
+
+<p>他对微信读书的AI功能提出了几个方向——推荐、知识图谱、社交裂变。但这些方向在面试中均被面试官指出存在的现实问题。核心矛盾是：</p>
+
+<blockquote>"说实话，对，而是对于用户来讲，他的需求是什么？他是否可以通过AI满足，还是说他不需要通过AI也能够去满足？<strong>对我们来说，我们没有那么纠结这个事儿是不是通过AI来去完成的。</strong>"</blockquote>
+
+<p>面试官强调的核心理念是：关注用户真实需求，AI只是手段。</p>
+
+<!-- S5 -->
+<h2 id="s5">五、对微信读书的理解</h2>
+
+<h3>候选人的三个方向提议</h3>
+
+<table>
+  <tr><th>方向</th><th>内容</th><th>面试官反馈</th></tr>
+  <tr><td>AI推荐</td><td>结合阅读兴趣和书架数据做个性化推荐</td><td>已在做生成式推荐，且表现形式待验证</td></tr>
+  <tr><td>知识图谱</td><td>多本书串联，帮助形成知识体系</td><td>有想法但未验证用户真实需求强度</td></tr>
+  <tr><td>社交互动</td><td>利用微信社交关系做阅读裂变</td><td>很早就做过大量社交功能，"重要但不是最重要"</td></tr>
+</table>
+
+<h3>面试官透露的核心观点</h3>
+
+<ul>
+  <li>微信读书的主区肯定是<strong>读书</strong>——提供更多资源、更丰富的读物</li>
+  <li>AI目前在读书中的定位还<strong>没有想明白</strong></li>
+  <li>产品形态不是关键——关键是<strong>是否真的给了用户想要的东西</strong></li>
+  <li>部门的项目是<strong>流动的</strong>，不一定绑定某个产品</li>
+  <li>三个岗位（秒剪/输入法/微信读书）合并招聘，但方向侧重不同</li>
+</ul>
+
+<!-- S6 -->
+<h2 id="s6">六、行动建议</h2>
+
+<h3>关于岗位匹配</h3>
+<ol>
+  <li><strong>输入法方向</strong>是最匹配程阳能力栈的选项——偏模型训练和算法调优</li>
+  <li><strong>微信读书</strong>需要更强的用户洞察和产品定义能力，程阳目前不具备</li>
+  <li><strong>秒剪</strong>需要视频领域的理解，程阳没有相关经验</li>
+</ol>
+
+<h3>如果推进下一轮</h3>
+<ol>
+  <li>重点验证他的<strong>产品定义能力</strong>——给一个开放性的产品问题（非AI优化问题），看他能否从用户需求出发</li>
+  <li>验证他的<strong>独立判断力</strong>——让他描述一个"自己独立做了关键决策"的案例</li>
+  <li>验证他对<strong>不确定性的真实容忍度</strong>——他从元宝出来的部分原因是"变化太快"，需要确认这不会在新岗位重演</li>
+</ol>
+
+</div><!-- tab2 -->
+
+<div class="footer">
+  Interview Analysis · 候选人评估报告 · yion.me
+</div>
+
+</div>
+</div>
+
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelector('[data-tab="'+tab+'"]').classList.add('active');
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  document.getElementById('nav-tab1').style.display = tab === 'tab1' ? 'block' : 'none';
+  document.getElementById('nav-tab2').style.display = tab === 'tab2' ? 'block' : 'none';
+  var subs = { tab1: '候选人胜任度评估报告', tab2: '访谈洞察提取' };
+  document.querySelector('.sidebar .logo-sub').textContent = subs[tab] || '';
+  window.scrollTo({top:0, behavior:'smooth'});
+  updateNav();
+}
+function updateNav() {
+  var activeTab = document.querySelector('.tab-content.active');
+  var sections = activeTab.querySelectorAll('h2[id]');
+  var visibleNav = document.querySelector('.sidebar nav > div:not([style*="none"])');
+  if (!visibleNav) return;
+  var navLinks = visibleNav.querySelectorAll('a');
+  var current = '';
+  sections.forEach(function(s) { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+  navLinks.forEach(function(a) {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+}
+window.addEventListener('scroll', updateNav);
+window.addEventListener('DOMContentLoaded', function() {
+  var hash = window.location.hash;
+  if (hash && document.querySelector('#tab-tab2 ' + hash)) {
+    switchTab('tab2');
+    setTimeout(function() {
+      var el = document.querySelector(hash);
+      if (el) el.scrollIntoView({behavior:'smooth'});
+    }, 100);
+  }
+});
+</script>
+</body>
+</html>
