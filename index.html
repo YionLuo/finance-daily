@@ -1287,6 +1287,9 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:40", tag: "macro", tagText: "宏观", text: "分析师警告勿过早断言美元霸权终结，尽管'石油人民币'呼声高涨。美元指数2025年累计下跌近10%，但全球储备货币地位仍稳固。", source: "CNBC", url: "https://www.cnbc.com/2026/04/16/us-dollar-dominance-reserve-currency-iran-war-oil-china.html" },
+  { time: "16:00", tag: "tech", tagText: "地缘", text: "海湾国家转向私人交易进行100亿美元战时融资，阿布扎比、卡塔尔和科威特回避公开市场募资，伊朗冲突造成经济冲击。", source: "Financial Times", url: "https://www.ft.com/content/3b927d8b-4c6b-414a-bb85-3d6070495df7" },
+  { time: "16:00", tag: "geo", tagText: "地缘", text: "北约与欧盟爆发国防开支'地盘争夺战'，争议焦点在于用欧盟资金购买美国武器。", source: "Financial Times", url: "https://www.ft.com/content/00ea4f9b-65f1-4080-b526-9783fa8a4f83" },
   { time: "14:07", tag: "macro", tagText: "宏观", text: "英国2月GDP增长0.5%，远超经济学家预期的0.1%，显示经济复苏势头强劲。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/uk-gdp-march-2026-iran-war.html" },
   { time: "14:06", tag: "tech", tagText: "科技", text: "台积电一季度利润增长58%超预期，AI芯片需求持续推动业绩创纪录。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/tsmc-q1-profit-58-percent-ai-chip-demand-record.html" },
   { time: "13:38", tag: "geo", tagText: "地缘", text: "特朗普宣布以色列与黎巴嫩将举行数十年来首次高级别会谈，试图缓解两国紧张局势。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/trump-israel-lebanon-talks-hezbollah-ceasefire-conflict.html" },
@@ -1304,14 +1307,12 @@ const breakingNews = [
   { time: "06:00", tag: "tech", tagText: "科技", text: "谷歌持有的SpaceX股份价值或超全球多数公司，随着SpaceX即将进行首次公开募股(IPO)，这家搜索巨头有望获得巨大收益。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/googles-stake-in-spacex-could-be-worth-more-than-most-companies-on-the-planet-9ef1a6bb?mod=mw_rss_topstories" },
   { time: "05:59", tag: "macro", tagText: "宏观", text: "美国财政部长Scott Bessent要求银行配合收集客户公民身份信息，特朗普政府正推动这一政策实施。", source: "CNBC", url: "https://www.cnbc.com/2026/04/15/banks-citizenship-data-collection-customer-accounts.html" },
   { time: "05:42", tag: "macro", tagText: "宏观", text: "高盛利率交易部门因伊朗战争颠覆利率预期而表现不佳，固定收益收入意外下滑。", source: "Financial Times", url: "https://www.ft.com/content/1f2d514d-4418-4b77-a3f5-2181080b670c" },
-  { time: "03:39", tag: "geo", tagText: "地缘", text: "美伊或将于下周在巴基斯坦举行和平谈判，霍尔木兹海峡油轮运输仍因美国对伊朗港口的报复性封锁而近乎停滞。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/trump-iran-war-peace-talks-pakistan.html" },
-  { time: "03:06", tag: "macro", tagText: "宏观", text: "美联储褐皮书显示，伊朗战争带来的不确定性导致美国企业推迟重大决策，经济显现疲软迹象。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/iran-war-is-a-major-source-of-uncertainty-for-u-s-businesses-feds-beige-book-says-52d45d7b?mod=mw_rss_topstories" },
-  { time: "02:51", tag: "geo", tagText: "地缘", text: "黎巴嫩表示正努力与以色列达成停火协议，停火持续时间可能取决于美伊休战能维持多久。", source: "International homepage", url: "https://www.ft.com/content/40218940-4f0f-4aee-9209-2fb713eea736" },
 ];
-const breakingDate = "2026年4月16日 14:10 CST";
+const breakingDate = "2026年4月16日 16:52 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:00", tag: "tech", tagText: "科技", text: "DeepL宣布将进军语音翻译领域，其技术可用于Zoom和Microsoft Teams等会议工具的实时翻译。这一举措标志着DeepL从文本翻译向语音翻译的扩展，可能对全球沟通方式产生深远影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/16/deepl-known-for-text-translation-now-wants-to-translate-your-voice/" },
   { time: "13:30", tag: "ai", tagText: "AI", text: "台积电（TSMC）因英伟达和苹果的AI芯片需求激增，供应短缺，分析师预测其利润将创纪录飙升。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVTVETFRUVEN0U3QtaUpCOVFXQ2FtWFBZemgtNDhUbF9QczMwZ1R1N3pRQWdFZ1oyZ1gtQzhhLWZjOHA3UkdpS2pUSUdMbWFSOGVnVUxrZmpaMnlNS3BNMzU0TlVuUkN0MGFKN21IMTNQM19QYWFvWUs5MlF3cUlZaTFNMWQzVi1wT1k3YmplZ2FlbEtUa1lEbDBubE96VTVSZ2ZnMEdn?oc=5" },
   { time: "12:11", tag: "tech", tagText: "科技", text: "Cadence与英伟达深化AI合作，共同重塑芯片设计和机器人技术领域。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTGw0a3VPdjl3dkFTMWFHMk9oQ3I0b1h2amV1WHY4c0NRY3pOdWlDTTc1WTlPbXJTWjN0ci1RQTVfU0lmNzNLVU1RVkpvOEFzbVpwQlJ0blNqbFE5ekVHTm5KWFk0TnlWdzdRUFUxZmF6MWtxUFU5Rnh1YUlBam9QRThmMDRmQ3FXU0VVNmUwT0ZKSlhlRnNKUDRUMV9PNVpM?oc=5" },
   { time: "10:01", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic估值或达8000亿美元，正进行IPO筹备谈判。该公司近期融资动态引发行业关注，可能成为AI领域最大规模IPO之一。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxOX2pjci1iQktyMWFSX0xDTEZtRW9hWXBWY3NOY2JsdDJLSkw5Z2JGTHFoRDByRVRhX01PdV96T1RvVlpNV1d1Z21tU0FpaWk5WUh1T2QzRzRqTmd1Sm9ZMDcyaFpKS09oRi1aUTExN0dielIyZ2ticEVHdW1FM3lpWUZza3JuUkI2c3RSMHZscE56czQ?oc=5" },
@@ -1331,9 +1332,8 @@ const aiBreakingNews = [
   { time: "21:01", tag: "tech", tagText: "科技", text: "Adobe推出全新Firefly AI助手，可跨Creative Cloud应用（如Photoshop、Premiere等）完成任务，标志着创意工作的‘根本性转变’。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/adobes-new-firefly-ai-assistant-can-use-creative-cloud-apps-to-complete-tasks/" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "Parasail在A轮融资中筹集3200万美元，押注‘tokenmaxxing’将催生下一代计算巨头，预示着模型和计算的碎片化未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Gitar利用AI代理审查代码，完成900万美元融资，专注于解决AI生成代码的安全问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/" },
-  { time: "20:46", tag: "tech", tagText: "科技", text: "博通（Broadcom）与Meta和谷歌达成AI芯片合作协议，进一步巩固其在AI硬件领域的地位。", source: "Rolling Out", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE55WEl1ZFpUY3NUdUxIVHkyNWdQdWc5QXQyaGNuekE1Nmd2SlEwSHFmSHBNanJITDZGekVLZGw4bGNCdGhSWEJITUFYRWpBM2RaZjhzQ0M0MXNadmNoSXVENlRtUGdxUUZoTHFaRTc3VDRRTWxhMUtidQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月16日 14:10 CST";
+const aiBreakingDate = "2026年4月16日 16:52 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
