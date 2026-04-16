@@ -23,7 +23,7 @@ import json
 from datetime import datetime, timezone, timedelta
 
 sys.path.insert(0, os.path.dirname(__file__))
-from utils import FALLBACK_ENDPOINTS
+from utils import FALLBACK_ENDPOINTS, DEFAULT_LLM_MODEL
 
 # ============ Configuration ============
 
@@ -185,7 +185,7 @@ def test_api():
     for base_url in endpoints:
         url = f"{base_url}/chat/completions"
         data = json.dumps({
-            "model": "google/gemini-2.5-flash",
+            "model": DEFAULT_LLM_MODEL,
             "messages": [{"role": "user", "content": "say ok"}],
             "max_tokens": 5
         }).encode()

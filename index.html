@@ -1287,7 +1287,10 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:41", tag: "macro", tagText: "宏观", text: "欧盟计划放宽并购规则，旨在培育‘欧洲冠军企业’。草案改革强调，竞争监管机构在评估拟议交易时，应更重视规模经济和投资效益。此举可能重塑欧洲产业格局，促进大型跨国公司的形成。", source: "Financial Times", url: "https://www.ft.com/content/75073836-d923-4b3f-a1ca-5ae83dcd705a" },
+  { time: "17:38", tag: "macro", tagText: "宏观", text: "Fundstrat策略师Tom Lee指出，散户投资者错过了上一轮市场反弹，但可能引领下一轮上涨。数据显示，三月底市场触底时，散户在积极抛售，而对冲基金则在逢低买入。", source: "MarketWatch", url: "https://www.marketwatch.com/story/retail-investors-missed-the-rally-why-strategist-tom-lee-says-theyll-lead-the-next-one-eb5889bb?mod=mw_rss_topstories" },
   { time: "16:40", tag: "macro", tagText: "宏观", text: "分析师警告勿过早断言美元霸权终结，尽管'石油人民币'呼声高涨。美元指数2025年累计下跌近10%，但全球储备货币地位仍稳固。", source: "CNBC", url: "https://www.cnbc.com/2026/04/16/us-dollar-dominance-reserve-currency-iran-war-oil-china.html" },
+  { time: "16:13", tag: "tech", tagText: "科技", text: "百事可乐第一季度营收和盈利均超华尔街预期，主要得益于其北美食品业务的改善。这表明在通胀压力下，部分消费品巨头仍能通过定价和运营效率实现增长。", source: "CNBC", url: "https://www.cnbc.com/2026/04/16/pepsico-pep-q1-2026-earnings.html" },
   { time: "16:00", tag: "tech", tagText: "地缘", text: "海湾国家转向私人交易进行100亿美元战时融资，阿布扎比、卡塔尔和科威特回避公开市场募资，伊朗冲突造成经济冲击。", source: "Financial Times", url: "https://www.ft.com/content/3b927d8b-4c6b-414a-bb85-3d6070495df7" },
   { time: "16:00", tag: "geo", tagText: "地缘", text: "北约与欧盟爆发国防开支'地盘争夺战'，争议焦点在于用欧盟资金购买美国武器。", source: "Financial Times", url: "https://www.ft.com/content/00ea4f9b-65f1-4080-b526-9783fa8a4f83" },
   { time: "14:07", tag: "macro", tagText: "宏观", text: "英国2月GDP增长0.5%，远超经济学家预期的0.1%，显示经济复苏势头强劲。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/uk-gdp-march-2026-iran-war.html" },
@@ -1304,11 +1307,8 @@ const breakingNews = [
   { time: "06:54", tag: "macro", tagText: "宏观", text: "标普500指数和纳斯达克指数创历史新高，市场对美伊达成协议的乐观情绪推动股市上涨。", source: "Leader Publications", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQRVE2Q3pvRW1oY3VYUmFKelVWcHpRZTBhTi1GLU9JNWI1cWczTXQ1THBlVEVReGZndkJNMnh0dC1sd1ZQZDRhV0piXzFNV2NLQmpzTGVtekRVYXUwb2dTZXZMZmRkblhQbGVoSTlOT1d5QVhKOVlyZjJtZWZxOTR3a2I0dVFiTXFXeFp0OUNNVFAxaUQwcFFRMWthc0FKYWUzYUd3U0RKZENuSHRnT2NmeUZNZkNZUGlXWjAyN0EyMHFTU2ZTWHB0bU8tN1BUTXFrbzVqZlRNbVlxbkV3MXdQeHhaVDluNlFTdXFITg?oc=5" },
   { time: "06:54", tag: "tech", tagText: "科技", text: "微软股价迎来三年来最强涨势，投资者对该公司前景重新燃起信心。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/microsofts-stock-has-sprung-back-to-life-its-on-its-strongest-run-in-3-years-by-one-measure-02b7e184?mod=mw_rss_topstories" },
   { time: "06:54", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡油轮拥堵加剧美中关系紧张，亚洲专家David Riedel表示，伊朗战争对两国关系的影响将持续。", source: "US Top News and Analysis", url: "https://www.cnbc.com/video/2026/04/15/oil-tanker-jam-in-strait-of-hormuz-is-straining-u-s-china-relations-says-asia-expert-david-riedel.html" },
-  { time: "06:00", tag: "tech", tagText: "科技", text: "谷歌持有的SpaceX股份价值或超全球多数公司，随着SpaceX即将进行首次公开募股(IPO)，这家搜索巨头有望获得巨大收益。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/googles-stake-in-spacex-could-be-worth-more-than-most-companies-on-the-planet-9ef1a6bb?mod=mw_rss_topstories" },
-  { time: "05:59", tag: "macro", tagText: "宏观", text: "美国财政部长Scott Bessent要求银行配合收集客户公民身份信息，特朗普政府正推动这一政策实施。", source: "CNBC", url: "https://www.cnbc.com/2026/04/15/banks-citizenship-data-collection-customer-accounts.html" },
-  { time: "05:42", tag: "macro", tagText: "宏观", text: "高盛利率交易部门因伊朗战争颠覆利率预期而表现不佳，固定收益收入意外下滑。", source: "Financial Times", url: "https://www.ft.com/content/1f2d514d-4418-4b77-a3f5-2181080b670c" },
 ];
-const breakingDate = "2026年4月16日 16:53 CST";
+const breakingDate = "2026年4月16日 18:17 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "Parasail在A轮融资中筹集3200万美元，押注‘tokenmaxxing’将催生下一代计算巨头，预示着模型和计算的碎片化未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Gitar利用AI代理审查代码，完成900万美元融资，专注于解决AI生成代码的安全问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/" },
 ];
-const aiBreakingDate = "2026年4月16日 16:53 CST";
+const aiBreakingDate = "2026年4月16日 18:17 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
