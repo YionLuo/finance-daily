@@ -20,23 +20,36 @@
   .sidebar nav a.active{color:var(--accent);font-weight:600;background:var(--accent-light)}
   .sidebar .back{display:inline-flex;align-items:center;gap:4px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border);font-size:.8em;color:var(--text-dim);text-decoration:none}
   .sidebar .back:hover{color:var(--accent)}
+  .sidebar .nav-group-title{font-size:.72em;font-weight:700;color:var(--text-dim);text-transform:uppercase;letter-spacing:.05em;margin:16px 0 6px 10px;opacity:.6}
 
   /* Main */
   .main{margin-left:var(--sidebar-w);flex:1;max-width:720px;padding:48px 48px 80px}
 
   /* Hero */
-  .hero{margin-bottom:44px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+  .hero{margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border)}
   .hero h1{font-size:1.85em;font-weight:800;color:var(--text);line-height:1.3;margin-bottom:12px;letter-spacing:-.02em}
   .hero .meta{font-size:.85em;color:var(--text-dim)}
   .hero .meta span{margin-right:14px}
   .hero .lead{margin-top:14px;font-size:1em;color:var(--text-dim);line-height:1.8}
 
+  /* Tabs */
+  .tab-bar{display:flex;gap:0;margin-bottom:36px;border-bottom:2px solid var(--border)}
+  .tab-btn{padding:12px 24px;font-size:.95em;font-weight:600;color:var(--text-dim);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;position:relative}
+  .tab-btn:hover{color:var(--accent);background:var(--accent-light)}
+  .tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+  .tab-btn .badge{display:inline-block;font-size:.7em;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;vertical-align:middle}
+  .tab-btn .badge-blue{background:var(--accent-light);color:var(--accent)}
+  .tab-btn .badge-amber{background:#fef3c7;color:#92400e}
+  .tab-content{display:none}
+  .tab-content.active{display:block}
+
   /* Headings */
   h2{font-size:1.35em;margin:48px 0 16px;color:var(--text);font-weight:700;scroll-margin-top:24px;padding-bottom:8px;border-bottom:2px solid var(--accent)}
+  h2:first-child{margin-top:0}
   h3{font-size:1.05em;color:var(--text);margin:28px 0 10px;font-weight:600}
   p{margin:10px 0;color:#374151;font-size:.95em}
 
-  /* Blockquote - 原文引用 */
+  /* Blockquote */
   blockquote{background:var(--quote-bg);border-left:3px solid #d1d5db;border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0;font-size:.9em;color:#4b5563;line-height:1.8;font-style:italic}
   blockquote strong{color:var(--text);font-style:normal}
 
@@ -44,6 +57,10 @@
   .callout{background:var(--callout-bg);border-left:4px solid var(--callout-border);border-radius:0 10px 10px 0;padding:16px 20px;margin:16px 0}
   .callout-icon{font-size:.9em;margin-bottom:4px}
   .callout p{font-size:.9em;color:#1e40af;margin:4px 0}
+  .callout-warn{background:#fef3c7;border-left-color:#f59e0b}
+  .callout-warn p{color:#92400e}
+  .callout-green{background:#ecfdf5;border-left-color:#10b981}
+  .callout-green p{color:#065f46}
 
   /* Table */
   table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.88em;border-radius:10px;overflow:hidden}
@@ -56,6 +73,9 @@
   li{margin:6px 0;line-height:1.7}
   li strong{color:var(--text)}
 
+  /* Star rating */
+  .stars{color:#f59e0b;letter-spacing:1px}
+
   /* Footer */
   .footer{text-align:center;padding:36px 0;color:var(--text-dim);font-size:.8em;border-top:1px solid var(--border);margin-top:60px}
 
@@ -64,6 +84,7 @@
     .main{margin-left:0;padding:24px 18px 60px;max-width:100%}
     .hero h1{font-size:1.4em}
     h2{font-size:1.2em}
+    .tab-btn{padding:10px 16px;font-size:.88em}
   }
 </style>
 </head>
@@ -71,19 +92,30 @@
 <div class="layout">
 
 <!-- SIDEBAR -->
-<aside class="sidebar">
+<aside class="sidebar" id="sidebar">
   <div class="logo">📹 AI 剪辑洞察</div>
   <div class="logo-sub">来自 CapCut AI 剪辑负责人访谈</div>
-  <nav>
-    <a href="#s1">一、产品定位与竞争格局</a>
-    <a href="#s2">二、Agent 产品策略</a>
-    <a href="#s3">三、技术架构与模型</a>
-    <a href="#s4">四、冷启动策略</a>
-    <a href="#s5">五、口播场景分析</a>
-    <a href="#s6">六、长期规划</a>
-    <a href="#s7">七、海外市场洞察</a>
-    <a href="#s8">八、团队组织</a>
-    <a href="#s9">九、行动建议</a>
+  <nav id="sidebar-nav">
+    <!-- Tab 1 nav (default) -->
+    <div id="nav-insights">
+      <a href="#s1">一、产品定位与竞争格局</a>
+      <a href="#s2">二、Agent 产品策略</a>
+      <a href="#s3">三、技术架构与模型</a>
+      <a href="#s4">四、冷启动策略</a>
+      <a href="#s5">五、口播场景分析</a>
+      <a href="#s6">六、长期规划</a>
+      <a href="#s7">七、海外市场洞察</a>
+      <a href="#s8">八、团队组织</a>
+      <a href="#s9">九、行动建议</a>
+    </div>
+    <!-- Tab 2 nav -->
+    <div id="nav-candidate" style="display:none">
+      <a href="#c1">一、候选人画像</a>
+      <a href="#c2">二、核心优势</a>
+      <a href="#c3">三、潜在问题</a>
+      <a href="#c4">四、求职意愿</a>
+      <a href="#c5">五、综合评估</a>
+    </div>
   </nav>
   <a class="back" href="https://yion.me">← 返回首页</a>
 </aside>
@@ -100,7 +132,18 @@
   <p class="lead">基于对字节跳动 CapCut（海外剪映）AI 剪辑方向负责人的深度访谈，提取了所有对 AI 视频剪辑工具有价值的产品策略、技术路线和实战经验。</p>
 </div>
 
-<!-- ==================== S1 ==================== -->
+<!-- TAB BAR -->
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="insights" onclick="switchTab('insights')">📋 访谈洞察</button>
+  <button class="tab-btn" data-tab="candidate" onclick="switchTab('candidate')">👤 候选人评估</button>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 1: 访谈洞察 -->
+<!-- ============================================================ -->
+<div class="tab-content active" id="tab-insights">
+
+<!-- S1 -->
 <h2 id="s1">一、产品定位与竞争格局</h2>
 
 <h3>1.1 轨道剪辑 vs 生成式内容：两个不同赛道</h3>
@@ -141,7 +184,7 @@
 "针对于移动端的用户，其实智能粗剪或者是一键成片，或者是简单的一些轨道编辑大概率能满足用户需求，而更精细化的复杂的编辑是在 PC 端，那这部分用户他的 Agent 给他带来的价值会远比移动端带来的价值会更大。<strong>所以我们更建议是在 PC 端去做剪辑 Agent 这件事情。</strong>"
 </blockquote>
 
-<!-- ==================== S2 ==================== -->
+<!-- S2 -->
 <h2 id="s2">二、AI 剪辑 Agent 的产品策略</h2>
 
 <h3>2.1 核心原则：Agent 必须全功能上线</h3>
@@ -201,7 +244,7 @@
 "我们会对用户的需求和我们最终成绩去做 0-1-2-3 的打分。0 分和 1 分就表示不能接受，2 分和 3 分是满分，2 分有瑕疵可接受。那我们对口播这个场景是希望所有这样的工具能做到有瑕疵可接受的，对于非口播的场景可以接受一些更大的瑕疵，<strong>但是用户在想用的时候至少让他能做到。</strong>"
 </blockquote>
 
-<!-- ==================== S3 ==================== -->
+<!-- S3 -->
 <h2 id="s3">三、技术架构与模型策略</h2>
 
 <h3>3.1 技术架构：VLM + LLM 双模型</h3>
@@ -248,7 +291,7 @@
 
 <p>以"去水词"为例：先定义大众基线 → 允许用户手动调整 → 记录偏好反哺为专属词库。成本低、可控性好。</p>
 
-<!-- ==================== S4 ==================== -->
+<!-- S4 -->
 <h2 id="s4">四、用户获取与冷启动策略</h2>
 
 <h3>4.1 渗透率预期</h3>
@@ -284,7 +327,7 @@
 "它是一个 <strong>Agent 和自己操作的一个结合</strong>的这样的一个产品，不强制绑定用户的创作一定要在 Agent 里或者是在自己手动去搓。只要局部能进行提效就是 OK 的。"
 </blockquote>
 
-<!-- ==================== S5 ==================== -->
+<!-- S5 -->
 <h2 id="s5">五、口播场景深度分析</h2>
 
 <table>
@@ -299,7 +342,7 @@
 
 <p>口播场景涉及的关键工具：剪口播（ASR）、去水词、加字幕、文字包装、简单粗剪、配乐。</p>
 
-<!-- ==================== S6 ==================== -->
+<!-- S6 -->
 <h2 id="s6">六、长期规划与技术演进</h2>
 
 <h3>6.1 四条技术线并行推进</h3>
@@ -328,7 +371,7 @@
 
 <div class="callout"><p>💡 本质不是"模型仿剪"，而是"提取个人工作流 + 模板化执行"。这是当前技术水平下最可行的方案。</p></div>
 
-<!-- ==================== S7 ==================== -->
+<!-- S7 -->
 <h2 id="s7">七、海外市场特殊洞察</h2>
 
 <blockquote>
@@ -346,7 +389,7 @@
   <li>口播场景占创作者维度约 80%，高度集中</li>
 </ul>
 
-<!-- ==================== S8 ==================== -->
+<!-- S8 -->
 <h2 id="s8">八、团队组织经验</h2>
 
 <blockquote>
@@ -368,7 +411,7 @@
 "我觉得先看说达不到我的效果这个是什么程度的。比如说只是一个 2.3 分和 2.5 分的差别，我觉得这个事情就定目标就好了，技术去驱动。但我最近遇到的 case 是可能是一个 1.5 分和 2.5 分的差别，<strong>所以我就会去从他们的训练数据入手</strong>。"
 </blockquote>
 
-<!-- ==================== S9 ==================== -->
+<!-- S9 -->
 <h2 id="s9">九、关键结论与行动建议</h2>
 
 <h3>立即可执行</h3>
@@ -389,6 +432,197 @@
   <li>从口播扩展到电商等下一批场景</li>
 </ol>
 
+</div><!-- tab-insights -->
+
+<!-- ============================================================ -->
+<!-- TAB 2: 候选人评估 -->
+<!-- ============================================================ -->
+<div class="tab-content" id="tab-candidate">
+
+<h2 id="c1">一、候选人基本画像</h2>
+
+<table>
+  <tr><th>维度</th><th>信息</th></tr>
+  <tr><td>当前职位</td><td>字节跳动·剪映(CapCut)海外版 — 轨道智能化产品负责人</td></tr>
+  <tr><td>工作经历</td><td>抖音搜索(综搜框架+垂类) → 豆包(信息检索/联网全链路) → 剪映CapCut(剪辑Agent)</td></tr>
+  <tr><td>团队规模</td><td>产品个位数(2-3人做Agent)，算法&lt;5人，端上个位数</td></tr>
+  <tr><td>求职动机</td><td>自称"Open看看"，非主动求职，以交流为主</td></tr>
+  <tr><td>技术深度</td><td>懂SFT/RM/RL全链路训练、数据分布、PE调优，能深入到训练数据层面与算法协作</td></tr>
+</table>
+
+<!-- C2 -->
+<h2 id="c2">二、核心优势</h2>
+
+<h3>1. 技术-产品复合能力：行业稀缺型人才</h3>
+
+<p>韩霄能流利地讨论SFT、RL、蒸馏微调、VLM post-train、训练数据分布等话题，且不是纸上谈兵——她在豆包真正负责过"从SFT到RM到RL的全链路训练"，在剪映亲自带产品同学去"捋算法的训练数据"，看数据分布、训练方法和更新频次。</p>
+
+<p>这意味着她不会被技术团队以"模型做不到"轻易挡回来，也不会提出脱离技术现实的产品需求。在AI产品负责人这个岗位上，能真正理解模型训练全链路的产品经理极其稀缺。</p>
+
+<div class="callout callout-green"><p>💡 <strong>对秒剪的价值</strong>：秒剪当前处于AI能力建设早期，最缺的就是一个能跟算法团队深度对话、推动效果优化、不被技术黑箱糊弄的产品负责人。她的技术深度可以直接帮助秒剪少走很多弯路。</p></div>
+
+<h3>2. 经过验证的从0到1方法论</h3>
+
+<p>她在剪映从智能粗剪到剪辑Agent的完整路径展现了清晰的产品思路：</p>
+<ul>
+  <li><strong>假设验证先行</strong>：先做粗剪验证"专业创作者是否愿意用模型剪辑"这个核心假设，而不是一上来就铺大</li>
+  <li><strong>数据驱动选场景</strong>：通过分析发现口播类内容占海外创作者80%→集中资源先打口播场景</li>
+  <li><strong>分层质量管理</strong>：核心场景要求2-3分，非核心场景可容忍瑕疵但不能是0-1分，边缘工具先不接入</li>
+  <li><strong>先跑通再优化</strong>：用工程链路+PE先拿到用户收益，再回头做模型自训练</li>
+</ul>
+
+<p>更重要的是，这套方法论拿到了实际结果——部分用户群体上取得了显著LT收益，双端Agent在英语五国已推全。</p>
+
+<h3>3. 务实的资源约束意识</h3>
+
+<blockquote>"我们甚至拿到收益的那个版本，甚至连自己训练的数据都没有，纯靠 PE，纯靠工程链路。"</blockquote>
+
+<p>在模型能力不足时，知道怎么用最小成本跑出结果。秒剪面临的模型困境和她在剪映遇到的高度相似——没有自研大模型、依赖开源或外部模型、资源有限。她已经证明了在类似约束下能交付结果。</p>
+
+<h3>4. 成熟的用户分层与渐进式产品策略</h3>
+
+<ul>
+  <li><strong>用户分类</strong>：大众/模板用户 → 有创作想法的用户 → 专业用户，知道不同群体的产品形态完全不同</li>
+  <li><strong>渐进式推广</strong>：先在自媒体用户上验证→再扩全场景→识别可转化用户 vs 天然不需要的用户</li>
+  <li><strong>务实的预期管理</strong>：长期渗透率目标40-50%，不盲目追求80-90%</li>
+  <li><strong>不强制用户改变习惯</strong>："agent和自己操作的结合…不强制绑定用户的创作一定要在agent里"</li>
+</ul>
+
+<h3>5. 长期规划能力与节奏感</h3>
+
+<blockquote>"在做这个项目的时候，我整个的长期的规划就是做一个剪辑的agent帮用户完成全链路的剪辑。那为什么先做这件事情，是因为我的判断，无论是剪辑agent也好，还是未来的所有的剪辑助手也好，它最核心的就是粗剪。"</blockquote>
+
+<p>没有因为看到了长期方向就急于铺开，而是先验证关键假设（模型效果、用户接受度、端上反馈），等条件成熟再推进。规划清晰：口播→电商→底层能力线（粗剪、包装、复杂需求、VLM）交织推进。</p>
+
+<h3>6. 对产品与技术边界的判断力</h3>
+
+<blockquote>"我在豆包也知道他们做 Memory 做了很久也没有什么效果。那因为我是做工具的，为什么不用一些简单的工具的方式去解决用户这样的问题？"</blockquote>
+
+<p>有跨项目的经验积累，不迷信模型万能，能在"用模型"和"用工程"之间做出务实选择。</p>
+
+<h3>7. 坦诚、不回避问题</h3>
+
+<ul>
+  <li>主动承认"口播+旁白"场景做得非常差，解释原因是"技术压根没有去校验口播内容和画面的冲突"</li>
+  <li>直说Agent"不是所有用户一定能用起来的产品"</li>
+  <li>承认自己换工作的真实原因，没有包装成高大上的叙事</li>
+  <li>对技术交付持合理怀疑态度："技术信誓旦旦说…我自己是不相信的"</li>
+</ul>
+
+<p>这种坦诚在产品负责人身上是重要品质——不粉饰太平，团队才能做出正确决策。</p>
+
+<!-- C3 -->
+<h2 id="c3">三、需关注的潜在问题</h2>
+
+<h3>🔴 核心关注点：驱动模式与团队风格的契合度风险</h3>
+
+<p>综合整场对话，有一条暗线非常清晰：<strong>她的忠诚度绑定在"事"上，不在"人"和"组织"上。</strong> 这本身不是坏事，很多强执行力的产品人都是这样。但问题在于她定义"做出事情"的标准和驱动模式，与秒剪所处的环境可能存在结构性错配。</p>
+
+<p><strong>具体表现在三个层面：</strong></p>
+
+<p><strong>① 她需要对结果有清晰的归因权。</strong>豆包那段最能说明问题：搜索能力做得再好，最终模型分数不由她决定，她就觉得"没有抓手"。她不是说"搜索这件事我做不好"，而是"这个目标我控制不了变量"。这说明她不太能接受<strong>间接贡献</strong>的角色——而秒剪早期很可能需要产品负责人做大量"间接贡献"的事情（推动基建、磨合团队、探索方向），这些事的成果不容易被快速量化。</p>
+
+<blockquote>"搜索要背整个模型的最终的 GSB 的分数和一个模型的质量分数，但是我会觉得这件事情我没有抓手，因为我只是做搜索的，搜索只能提供一个参考的合理性，它最终决定不了模型的好与坏。"</blockquote>
+
+<p><strong>② 她对"做出事情"有自己的节奏预期。</strong>在剪映做粗剪半年拿到LT收益，这是她认可的节奏。但秒剪的起步期可能更长、反馈更慢、方向更模糊——她会不会觉得"做不出东西"从而失去耐心？纵观她的经历，她<strong>没有展现过在一个长时间看不到结果的情境下坚持</strong>的案例。每次遇到"做不出事"的局面，她的选择都是离开。</p>
+
+<p><strong>③ 她和团队的关系更像"合伙"而非"融入"。</strong>她描述和技术的关系是"效果差距大我就下场，差距小我就放手"；描述和另一个AI团队是"之前关系不好，不沟通"。她是一个<strong>独立运作型</strong>的人，不是一个会花精力去经营团队关系、磨合风格差异的人。</p>
+
+<div class="callout callout-warn"><p>💡 <strong>风险本质</strong>：她需要的是「明确的scope + 可量化的目标 + 快速的反馈循环 + 足够的自主权」。如果秒剪能给这些，她会干得很好。如果给不了——比如方向还在探索期、需要和团队一起慢慢磨——她可能撑不了太久。<br><br>
+<strong>验证问题</strong>：下一轮可以直接问一个场景题——<strong>"如果你来秒剪，前6个月方向还没定，团队也在磨合，你会怎么度过这段时间？"</strong> 她的回答能直接告诉你答案。</p></div>
+
+<h3>⚠️ 关注点二：职业稳定性——对组织变动的应对模式</h3>
+
+<p><strong>原文信号</strong>：</p>
+<ul>
+  <li>离开抖音搜索："老板换了…百度来的…我不太能接受那种top down的做法"</li>
+  <li>离开豆包："把我手上的SFT/RM/RL调给了另外一个同学…我觉得没有抓手…跟老板达成一致看其他机会"</li>
+</ul>
+
+<p><strong>分析</strong>：两次内部转岗的归因都指向外部组织变动。从正面看，这说明她对工作环境和做事方式有清晰的要求（不接受top-down、需要对结果有抓手），在字节内部能主动寻找更适合自己的位置也是一种能力。从需关注的角度看，她在豆包拿了M+绩效但因scope调整选择离开，说明<strong>她对"能否做出事情"的权重远高于"安稳待着"</strong>——这在秒剪的早期阶段是双刃剑：如果给她足够的scope和自主权，她会全力投入；但如果方向频繁调整导致她觉得"没有抓手"，可能触发离开意愿。</p>
+
+<div class="callout callout-warn"><p>💡 <strong>建议验证</strong>：了解她对"scope不确定期"的容忍度——秒剪早期方向可能多次调整，她能否在不确定中保持投入？</p></div>
+
+<h3>⚠️ 关注点三：产品思维偏向"技术落地"而非"用户洞察驱动"</h3>
+
+<p><strong>原文信号</strong>：</p>
+<ul>
+  <li>被问到"红包封面审美问题怎么解决"时，第一反应是"先看PE怎么写"、"训练数据从哪找"</li>
+  <li>对用户需求的描述多用数据结论（"口播占80%"、"电商10%几"），较少讲具体的用户故事</li>
+  <li>讨论最深入和最兴奋的话题集中在模型训练和工程链路</li>
+</ul>
+
+<p><strong>分析</strong>：这是一个特点而不一定是缺点——她的产品思维路径是<strong>"技术能力边界→匹配用户场景→工程方案落地"</strong>，这在AI产品PM中其实是正确且高效的路径。在模型能力制约一切的当下，从技术端出发反而能避免"画大饼最后落不了地"的问题。不过，秒剪作为一个需要差异化的产品，可能也需要一些"从用户侧反推产品形态"的能力。</p>
+
+<h3>⚠️ 关注点四：对竞争格局的判断值得进一步讨论</h3>
+
+<p><strong>原文信号</strong>：</p>
+<ul>
+  <li>"我最不焦虑，其他人都很焦虑"</li>
+  <li>"他们卷的是生图生视频…我们做的是轨道类剪辑…完全是两个创作方式"</li>
+  <li>"CC的核心竞争力是轨道剪辑，其他产品很难快速复制起来"</li>
+</ul>
+
+<p><strong>分析</strong>：她的判断有合理之处——当前阶段，生成式视频和轨道剪辑确实是两条不同的赛道。她对"真人拍摄内容仍需轨道剪辑"的判断在中短期内大概率成立，对生成成本问题的分析也是对的。但这个判断的时间维度需要追问：如果多模态模型在1-2年内取得突破，轨道剪辑的护城河是否会被削弱？</p>
+
+<div class="callout callout-warn"><p>💡 <strong>建议</strong>：不是硬伤，但如果推进面试，可以深入讨论她对3-5年时间维度的竞争格局判断，以及护城河被削弱时的应变策略。</p></div>
+
+<!-- C4 -->
+<h2 id="c4">四、关于求职意愿</h2>
+
+<p>她明确表示"Open看看"，对当前工作满意度高，整场对话中没有问过一个关于秒剪的问题。</p>
+
+<p>但这不一定是坏事：</p>
+<ol>
+  <li>这说明<strong>她不是被动被挤出来的</strong>，在当前岗位表现好且有未完成的事情想做</li>
+  <li>她是<strong>有选择权的候选人</strong>，这类人如果被打动加入，投入度反而更高</li>
+  <li>面谈性质本身是"交流认识"，她没有提问可能也与对方对这次会面的预期定位有关</li>
+</ol>
+
+<div class="callout"><p>💡 如果决定推进，需要给她一个有吸引力的叙事——秒剪能提供什么剪映给不了的东西（更大scope？更自主的产品决策权？不同的用户群体和市场？微信生态的独特优势？）</p></div>
+
+<!-- C5 -->
+<h2 id="c5">五、综合评估</h2>
+
+<h3>能力匹配度矩阵</h3>
+
+<table>
+  <tr><th>能力维度</th><th>秒剪要求</th><th>匹配度</th><th>说明</th></tr>
+  <tr><td>AI产品落地经验</td><td>高</td><td><span class="stars">★★★★★</span></td><td>搜索→大模型→剪辑Agent，完整实战链</td></tr>
+  <tr><td>技术-算法协作深度</td><td>高</td><td><span class="stars">★★★★★</span></td><td>行业罕见，能下到训练数据层推动效果优化</td></tr>
+  <tr><td>资源受限下的交付能力</td><td>高</td><td><span class="stars">★★★★★</span></td><td>开源VLM+PE+工程链路，无自训练数据也能拿收益</td></tr>
+  <tr><td>从0到1产品方法论</td><td>高</td><td><span class="stars">★★★★☆</span></td><td>路径清晰、有实战验证</td></tr>
+  <tr><td>用户分层与渐进策略</td><td>中高</td><td><span class="stars">★★★★☆</span></td><td>分层清晰、预期务实，偏数据驱动</td></tr>
+  <tr><td>长期规划与节奏把控</td><td>中高</td><td><span class="stars">★★★★☆</span></td><td>从粗剪到Agent有清晰的阶段规划</td></tr>
+  <tr><td>坦诚度与问题暴露意愿</td><td>中</td><td><span class="stars">★★★★★</span></td><td>主动暴露做得差的部分，不粉饰</td></tr>
+  <tr><td>战略视野与竞争判断</td><td>高</td><td><span class="stars">★★★★☆</span></td><td>有自己的判断框架，时间维度可再拉长</td></tr>
+  <tr><td>团队管理经验</td><td>中</td><td><span class="stars">★★★☆☆</span></td><td>带过小团队（&lt;10人），大团队经验未知</td></tr>
+  <tr><td>组织适应性</td><td>中</td><td><span class="stars">★★★☆☆</span></td><td>对scope和自主权有要求，需给予足够空间</td></tr>
+  <tr><td>求职意愿</td><td>—</td><td><span class="stars">★★★☆☆</span></td><td>Open状态，需要有吸引力的叙事来打动</td></tr>
+</table>
+
+<h3>最终判断</h3>
+
+<div class="callout callout-green"><p><strong>韩霄是一个高质量的候选人，在"AI+剪辑"这个交叉领域的产品能力处于行业前列。</strong></p>
+<p>她的核心竞争力在于<strong>技术-产品的深度融合</strong>——既能理解模型训练的底层逻辑，又能把技术能力翻译成可落地的产品方案，还能在资源不足时用工程手段兜底。这套能力组合在当前AI产品PM市场上是稀缺的。</p>
+<p>她在剪映的实践证明她能在"模型不强+资源有限+方向需要验证"的条件下交付结果，而这恰好是秒剪当前面临的情境。</p></div>
+
+<h3>下一步建议</h3>
+
+<ol>
+  <li><strong>值得推进到下一轮</strong>。核心能力与秒剪当前阶段的需求高度匹配。</li>
+  <li><strong>下一轮可重点探讨</strong>：
+    <ul>
+      <li>她对秒剪产品的独立思考（看她能否给出差异化的产品方向建议，而非复制剪映经验）</li>
+      <li>在scope不确定期她的工作方式（秒剪早期方向可能调整，她的应对策略是什么）</li>
+      <li>如果要她定义秒剪的"口播场景"等价物是什么——即秒剪应该优先打哪个场景、为什么</li>
+    </ul>
+  </li>
+  <li><strong>吸引策略</strong>：强调秒剪能给她什么剪映给不了的——更大的产品决策权、国内市场 vs 海外、微信生态的独特优势、或更完整的产品负责人scope。</li>
+</ol>
+
+</div><!-- tab-candidate -->
+
 <div class="footer">
   AI Video Editing Insights · 基于 CapCut AI 剪辑负责人访谈整理 · yion.me
 </div>
@@ -397,16 +631,51 @@
 </div><!-- .layout -->
 
 <script>
+// Tab switching
+function switchTab(tab) {
+  // Update tab buttons
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelector('[data-tab="'+tab+'"]').classList.add('active');
+  // Update tab content
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  // Update sidebar nav
+  document.getElementById('nav-insights').style.display = tab === 'insights' ? 'block' : 'none';
+  document.getElementById('nav-candidate').style.display = tab === 'candidate' ? 'block' : 'none';
+  // Update sidebar title
+  document.querySelector('.sidebar .logo-sub').textContent = tab === 'insights'
+    ? '来自 CapCut AI 剪辑负责人访谈'
+    : '候选人胜任度评估报告';
+  // Scroll to top of content
+  window.scrollTo({top:0, behavior:'smooth'});
+  // Reset active nav
+  updateNav();
+}
+
 // Sidebar active state on scroll
-const sections = document.querySelectorAll('h2[id]');
-const navLinks = document.querySelectorAll('.sidebar nav a');
-window.addEventListener('scroll', () => {
+function updateNav() {
+  const activeTab = document.querySelector('.tab-content.active');
+  const sections = activeTab.querySelectorAll('h2[id]');
+  const navLinks = document.querySelectorAll('.sidebar nav > div:not([style*="none"]) a');
   let current = '';
   sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
   navLinks.forEach(a => {
     a.classList.remove('active');
     if (a.getAttribute('href') === '#' + current) a.classList.add('active');
   });
+}
+window.addEventListener('scroll', updateNav);
+
+// Handle hash on load
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#c')) {
+    switchTab('candidate');
+    setTimeout(() => {
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({behavior:'smooth'});
+    }, 100);
+  }
 });
 </script>
 </body>
