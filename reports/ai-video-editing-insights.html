@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 视频剪辑工具：产品策略与实战洞察</title>
+<style>
+  :root { --bg:#fafafa; --card:#fff; --accent:#2563eb; --accent-light:#eff6ff; --accent2:#1d4ed8; --text:#111827; --text-dim:#6b7280; --border:#e5e7eb; --quote-bg:#f8fafc; --callout-bg:#eff6ff; --callout-border:#3b82f6; --sidebar-bg:#f9fafb; --sidebar-w:240px; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.85;-webkit-font-smoothing:antialiased}
+
+  .layout{display:flex;min-height:100vh}
+
+  /* Sidebar */
+  .sidebar{width:var(--sidebar-w);position:fixed;top:0;left:0;height:100vh;background:var(--sidebar-bg);border-right:1px solid var(--border);padding:28px 18px;overflow-y:auto;z-index:100}
+  .sidebar .logo{font-size:1em;font-weight:800;color:var(--accent);margin-bottom:4px}
+  .sidebar .logo-sub{font-size:.75em;color:var(--text-dim);margin-bottom:20px;line-height:1.5}
+  .sidebar nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:6px;color:var(--text-dim);text-decoration:none;font-size:.82em;transition:all .15s;line-height:1.5}
+  .sidebar nav a:hover{background:var(--accent-light);color:var(--accent)}
+  .sidebar nav a.active{color:var(--accent);font-weight:600;background:var(--accent-light)}
+  .sidebar .back{display:inline-flex;align-items:center;gap:4px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border);font-size:.8em;color:var(--text-dim);text-decoration:none}
+  .sidebar .back:hover{color:var(--accent)}
+
+  /* Main */
+  .main{margin-left:var(--sidebar-w);flex:1;max-width:720px;padding:48px 48px 80px}
+
+  /* Hero */
+  .hero{margin-bottom:44px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+  .hero h1{font-size:1.85em;font-weight:800;color:var(--text);line-height:1.3;margin-bottom:12px;letter-spacing:-.02em}
+  .hero .meta{font-size:.85em;color:var(--text-dim)}
+  .hero .meta span{margin-right:14px}
+  .hero .lead{margin-top:14px;font-size:1em;color:var(--text-dim);line-height:1.8}
+
+  /* Headings */
+  h2{font-size:1.35em;margin:48px 0 16px;color:var(--text);font-weight:700;scroll-margin-top:24px;padding-bottom:8px;border-bottom:2px solid var(--accent)}
+  h3{font-size:1.05em;color:var(--text);margin:28px 0 10px;font-weight:600}
+  p{margin:10px 0;color:#374151;font-size:.95em}
+
+  /* Blockquote - 原文引用 */
+  blockquote{background:var(--quote-bg);border-left:3px solid #d1d5db;border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0;font-size:.9em;color:#4b5563;line-height:1.8;font-style:italic}
+  blockquote strong{color:var(--text);font-style:normal}
+
+  /* Callout */
+  .callout{background:var(--callout-bg);border-left:4px solid var(--callout-border);border-radius:0 10px 10px 0;padding:16px 20px;margin:16px 0}
+  .callout-icon{font-size:.9em;margin-bottom:4px}
+  .callout p{font-size:.9em;color:#1e40af;margin:4px 0}
+
+  /* Table */
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.88em;border-radius:10px;overflow:hidden}
+  th{background:var(--accent);color:#fff;padding:10px 14px;text-align:left;font-weight:600;font-size:.85em}
+  td{padding:9px 14px;border-bottom:1px solid var(--border);background:var(--card)}
+  tr:hover td{background:#f9fafb}
+
+  /* List */
+  ul,ol{margin:10px 0 10px 20px;font-size:.93em;color:#374151}
+  li{margin:6px 0;line-height:1.7}
+  li strong{color:var(--text)}
+
+  /* Footer */
+  .footer{text-align:center;padding:36px 0;color:var(--text-dim);font-size:.8em;border-top:1px solid var(--border);margin-top:60px}
+
+  @media(max-width:860px){
+    .sidebar{display:none}
+    .main{margin-left:0;padding:24px 18px 60px;max-width:100%}
+    .hero h1{font-size:1.4em}
+    h2{font-size:1.2em}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">📹 AI 剪辑洞察</div>
+  <div class="logo-sub">来自 CapCut AI 剪辑负责人访谈</div>
+  <nav>
+    <a href="#s1">一、产品定位与竞争格局</a>
+    <a href="#s2">二、Agent 产品策略</a>
+    <a href="#s3">三、技术架构与模型</a>
+    <a href="#s4">四、冷启动策略</a>
+    <a href="#s5">五、口播场景分析</a>
+    <a href="#s6">六、长期规划</a>
+    <a href="#s7">七、海外市场洞察</a>
+    <a href="#s8">八、团队组织</a>
+    <a href="#s9">九、行动建议</a>
+  </nav>
+  <a class="back" href="https://yion.me">← 返回首页</a>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="hero">
+  <h1>AI 视频剪辑工具：产品策略与实战洞察</h1>
+  <div class="meta">
+    <span>📅 2026年4月</span>
+    <span>📎 来源：CapCut AI 剪辑负责人访谈</span>
+  </div>
+  <p class="lead">基于对字节跳动 CapCut（海外剪映）AI 剪辑方向负责人的深度访谈，提取了所有对 AI 视频剪辑工具有价值的产品策略、技术路线和实战经验。</p>
+</div>
+
+<!-- ==================== S1 ==================== -->
+<h2 id="s1">一、产品定位与竞争格局</h2>
+
+<h3>1.1 轨道剪辑 vs 生成式内容：两个不同赛道</h3>
+
+<p>豆包、极梦、星图 CC 等产品卷的是<strong>生成式内容</strong>（从 prompt 到成片），而 AI 剪辑工具做的是<strong>轨道类剪辑</strong>（基于真实素材的智能编辑）。这是两类完全不同的创作方式，服务两类不同的用户。</p>
+
+<blockquote>
+"无论是豆包也好，极梦也好，还是星图那个 CC 也好，他们在其他赛道卷的都是生图生视频，是从 prompt 到成片这样的一个路径，而我们现在做的是轨道类的剪辑，它是完全是两个创作的方式和两类创作的用户。"
+</blockquote>
+
+<p>真实拍摄内容的剪辑需求长期存在，不会被生成式模型替代：</p>
+
+<blockquote>
+"在未来它一定会有纯创作者的一个空间和流量，它一定不会都是纯虚拟的世界，它一定会有真人的拍摄需要真人去进行剪辑，而这件事情我不觉得长期内能靠生成式的模型可以很好的解决。一个是效果……第二个是只要过程中稍微有一点变动，它的真实性就会发生改变，这不是创作者想要的。第三个是成本问题，<strong>生成的成本可远比用推理模型去做剪辑的成本要高很多</strong>。"
+</blockquote>
+
+<div class="callout"><p>💡 轨道剪辑是专业剪辑工具的核心竞争力，其他产品很难快速复制。</p></div>
+
+<h3>1.2 用户分层体系</h3>
+
+<blockquote>
+"我们现在不叫分法已经不再是 UGC、PGC 和 PUGC 了，它是偏大众用户或者是自媒体用户和有创作想法的用户和专业用户，大概是这样几种分法。"
+</blockquote>
+
+<table>
+  <tr><th>用户类型</th><th>特征</th><th>核心需求</th><th>产品策略</th></tr>
+  <tr><td>大众用户</td><td>简单创作、无明确想法</td><td>模板 + 一键成片</td><td>低门槛、快速出片</td></tr>
+  <tr><td>自媒体用户</td><td>有创作意图的 UGC</td><td>提效、粗剪、智能辅助</td><td>AI 剪辑助手核心用户</td></tr>
+  <tr><td>有创作想法的用户</td><td>高频创作、有固定风格</td><td>精细化编辑、个性化工作流</td><td>Agent + 手动结合</td></tr>
+  <tr><td>专业用户（PGC）</td><td>万粉以上、高频创作</td><td>全链路效率提升</td><td>PC 端深度 Agent</td></tr>
+</table>
+
+<h3>1.3 平台差异：PC 端 vs 移动端</h3>
+
+<p>移动端约 60% 模板用户 + 40% 轨道用户；PC 端天然面向专业创作者，模板属性弱。</p>
+
+<blockquote>
+"针对于移动端的用户，其实智能粗剪或者是一键成片，或者是简单的一些轨道编辑大概率能满足用户需求，而更精细化的复杂的编辑是在 PC 端，那这部分用户他的 Agent 给他带来的价值会远比移动端带来的价值会更大。<strong>所以我们更建议是在 PC 端去做剪辑 Agent 这件事情。</strong>"
+</blockquote>
+
+<!-- ==================== S2 ==================== -->
+<h2 id="s2">二、AI 剪辑 Agent 的产品策略</h2>
+
+<h3>2.1 核心原则：Agent 必须全功能上线</h3>
+
+<p>一旦给用户开放对话入口，用户的需求一定是全方面的。局部 Agent 会严重伤害体验。</p>
+
+<blockquote>
+"一旦我们把那个对话框的入口或者是更开放的需求的入口给到用户，需求一定是来自于剪辑的全方面的。如果这么做的话，用户就会觉得你没有这个功能，那你就只能做这件事情，<strong>那我就走了，我就不用你了</strong>。其实对用户是蛮伤害的。"
+</blockquote>
+
+<blockquote>
+"我们现在就是粗剪的独立的功能依旧会每天收到大量的用户反馈，问为什么我让他去做包装他不能做，我让他去做生图不能做——但是我们只是一个粗剪功能，单纯的是粗剪功能里面开放了一个需求描述一个 prompt 一个入口，然后就会这样。"
+</blockquote>
+
+<div class="callout"><p>💡 Agent 上线就必须是全功能的——但不意味着每个功能都做到满分，而是控制质量底线，先让核心场景跑通。</p></div>
+
+<h3>2.2 渐进式路径：粗剪先行 → Agent 展开</h3>
+
+<ol>
+  <li><strong>先做智能粗剪</strong>：帮用户从素材中找有效镜头，验证方向可行性</li>
+  <li><strong>观察用户行为</strong>：通过 prompt 分析发现用户天然用自然语言交互</li>
+  <li><strong>启动剪辑 Agent</strong>：有数据支撑和用户教育基础后推出全功能 Agent</li>
+</ol>
+
+<blockquote>
+"我的判断，无论是剪辑 Agent 也好，还是未来的所有的剪辑助手也好，<strong>它最核心的就是粗剪</strong>，这个能力一定是先完成粗剪，再围绕粗剪去展开一系列的包装后编辑能力。"
+</blockquote>
+
+<blockquote>
+"天然的用户就会用自然的语言方式去和我们的粗剪这样的一个 feature 去进行交互——就问你们能不能帮我找到里边什么样的镜头，你能不能帮我的素材进行什么样的分类，我想剪一个什么效果的片子。<strong>用户的需求自然而然就已经到了。</strong>"
+</blockquote>
+
+<h3>2.3 场景优先级：用数据选战场</h3>
+
+<table>
+  <tr><th>场景</th><th>占比</th><th>优先级</th><th>说明</th></tr>
+  <tr><td>口播类（含 Vlog、旁白）</td><td>~80%</td><td>P0</td><td>创作者最多、链路最清晰</td></tr>
+  <tr><td>电商</td><td>~10%+</td><td>P1</td><td>高价值、场景收敛</td></tr>
+  <tr><td>其他（剧情、风光等）</td><td>~10%</td><td>P2</td><td>底层能力做好后自然覆盖</td></tr>
+</table>
+
+<blockquote>
+"口播里的播客……我们的口播非常的泛，包含了 Vlog 里边有人说话，哪怕人不出镜有人说话其实也算。因为是这样，创作者在剪这类内容的时候，他有只要有人说话，他可能会<strong>看着那个字去剪</strong>。他的剪辑的方法会有一点不一样。"
+</blockquote>
+
+<h3>2.4 质量管控：0-1-2-3 分评分法</h3>
+
+<table>
+  <tr><th>分数</th><th>含义</th><th>容忍度</th></tr>
+  <tr><td>0 分</td><td>完全不可接受</td><td>任何场景都不允许</td></tr>
+  <tr><td>1 分</td><td>体验很差</td><td>核心场景不允许</td></tr>
+  <tr><td>2 分</td><td>有瑕疵但可接受</td><td>核心场景目标下限</td></tr>
+  <tr><td>3 分</td><td>效果良好</td><td>核心场景目标上限</td></tr>
+</table>
+
+<blockquote>
+"我们会对用户的需求和我们最终成绩去做 0-1-2-3 的打分。0 分和 1 分就表示不能接受，2 分和 3 分是满分，2 分有瑕疵可接受。那我们对口播这个场景是希望所有这样的工具能做到有瑕疵可接受的，对于非口播的场景可以接受一些更大的瑕疵，<strong>但是用户在想用的时候至少让他能做到。</strong>"
+</blockquote>
+
+<!-- ==================== S3 ==================== -->
+<h2 id="s3">三、技术架构与模型策略</h2>
+
+<h3>3.1 技术架构：VLM + LLM 双模型</h3>
+
+<ul>
+  <li><strong>VLM（视觉语言模型）</strong>：负责视觉理解和内容理解</li>
+  <li><strong>LLM（大语言模型）</strong>：负责逻辑推演和编排决策</li>
+</ul>
+
+<blockquote>
+"如果要做剪辑，它其实用的不是它（C-Dance），用的一个是 VLM 的一个偏视觉理解或者内容理解的模型，然后再加一个 LLM 的逻辑推演的模型。"
+</blockquote>
+
+<blockquote>
+"<strong>我们甚至拿到收益的那个版本，甚至连自己训练的数据都没有，纯靠 PE，纯靠工程链路。</strong>"
+</blockquote>
+
+<div class="callout"><p>💡 即使模型基础不强，通过 PE + 工程链路也可以先跑出 MVP 拿到收益。</p></div>
+
+<h3>3.2 模型效果提升的实操方法</h3>
+
+<ol>
+  <li><strong>审查训练数据</strong>：直接查看数据质量和来源</li>
+  <li><strong>检查数据分布</strong>：训练量、更新频次、场景分布</li>
+  <li><strong>优化 PE</strong>：用模型自身语言诱导出描述，再写入 PE</li>
+  <li><strong>分场景训练</strong>：每个指令遵循能力单独训好</li>
+</ol>
+
+<blockquote>
+"我会去看说你们现在最近在做啥，他说在做自训练，那你把你的训练数据发给我看看是不是我产品想要的，<strong>因为这个东西就决定了你的效果天花板</strong>。所以我带着产品同学去捋他们的数据，然后看他们的训练的方法，然后去问很多细节——比如说你的模型大概的耗时是怎么样的，训练数据用多少条，你的每天的更新频次是什么样的，数据分布有了吗？"
+</blockquote>
+
+<blockquote>
+"造成审美的不好的原因是什么？是他最早的训练数据的时候，所有的数据都选的比较下沉的，<strong>他是从哪儿找的，是不是从一些老年人的电子相册上去搞的，还是他是从 ins 上搞的？</strong>我觉得这两类数据训练出来的模型审美就差别很大。"
+</blockquote>
+
+<div class="callout"><p>💡 介入深度取决于差距大小。2.3→2.5 分让技术自驱；1.5→2.5 分需要产品直接下场看数据。</p></div>
+
+<h3>3.3 个性化：工程化优于 Memory</h3>
+
+<blockquote>
+"<strong>我在豆包也知道他们做 Memory 做了很久也没有什么效果。</strong>那因为我是做工具的，为什么不用一些简单的工具的方式去解决用户这样的问题？所以我们最终还是想用基于用户的一些习惯的一些简单的工具和记录去工程的方式去解决这个问题。"
+</blockquote>
+
+<p>以"去水词"为例：先定义大众基线 → 允许用户手动调整 → 记录偏好反哺为专属词库。成本低、可控性好。</p>
+
+<!-- ==================== S4 ==================== -->
+<h2 id="s4">四、用户获取与冷启动策略</h2>
+
+<h3>4.1 渗透率预期</h3>
+
+<blockquote>
+"现在的渗透可能是百分之十……长期来看就是非常长期，可能不是一个季度两个季度，希望能做到大概是 <strong>40-50%</strong> 的样子，绝对没有说 80、90 这样的一个预期。"
+</blockquote>
+
+<h3>4.2 冷启动人群</h3>
+
+<blockquote>
+"第一期我是拿<strong>自媒体用户</strong>去开的实验。他有强的创作需求，我会发现他整个数据非常好，因为这类用户他本身学习意愿就很强，有强创作动力，且他提效的诉求也很强烈。"
+</blockquote>
+
+<p>扩至全场景后发现三类用户：</p>
+<ul>
+  <li>偏简单创作的用户 → 天然不需要 Agent</li>
+  <li>看不懂产品的用户 → 可转化，需教育体验</li>
+  <li>反复尝试给反馈的用户 → 最有价值的种子用户</li>
+</ul>
+
+<h3>4.3 入口设计</h3>
+
+<blockquote>
+"我觉得好的一个 Agent 是<strong>随时随地可以去唤起</strong>和发起对话和去满足用户需求的。"
+</blockquote>
+
+<blockquote>
+"我们接下来 PC 端会把入口做在轨道上——就是当用户点这个片段的时候，他可以随时去发起针对这个片段的一些模型上的一些改动。"
+</blockquote>
+
+<blockquote>
+"它是一个 <strong>Agent 和自己操作的一个结合</strong>的这样的一个产品，不强制绑定用户的创作一定要在 Agent 里或者是在自己手动去搓。只要局部能进行提效就是 OK 的。"
+</blockquote>
+
+<!-- ==================== S5 ==================== -->
+<h2 id="s5">五、口播场景深度分析</h2>
+
+<table>
+  <tr><th>驱动类型</th><th>特征</th><th>技术路线</th><th>难度</th></tr>
+  <tr><td>文案驱动</td><td>成片以文字信息为主</td><td>OCR + ASR 为主</td><td>低</td></tr>
+  <tr><td>情节驱动</td><td>画面叙事为主</td><td>需分析口播与画面冲突</td><td>高</td></tr>
+</table>
+
+<blockquote>
+"做的不好，这类就做的非常差，就是最差的一类，<strong>原因是因为我们现在技术压根就没有去校验说口播类的那个内容和画面的冲突</strong>。"
+</blockquote>
+
+<p>口播场景涉及的关键工具：剪口播（ASR）、去水词、加字幕、文字包装、简单粗剪、配乐。</p>
+
+<!-- ==================== S6 ==================== -->
+<h2 id="s6">六、长期规划与技术演进</h2>
+
+<h3>6.1 四条技术线并行推进</h3>
+
+<blockquote>
+"这件事情我不会掰场景去做……我们会去把用户的剪辑去分链路：粗剪是一块，它其实是偏技术的剪辑；包装是一块；然后还有一块最重要的是它的复杂类的需求。除此之外还有一个底层能力叫 <strong>VLM 的能力，因为视觉内容理解至关重要</strong>。我们会用这几条线交织着来去做这个事情。"
+</blockquote>
+
+<table>
+  <tr><th>技术线</th><th>内容</th><th>价值</th></tr>
+  <tr><td>粗剪</td><td>筛选有效画面、编排</td><td>Agent 基础能力</td></tr>
+  <tr><td>包装</td><td>字幕、特效、转场</td><td>提升成片质量</td></tr>
+  <tr><td>复杂需求</td><td>模糊类 + 多步骤需求</td><td>Agent 智能度</td></tr>
+  <tr><td>VLM</td><td>素材内容理解</td><td>底层天花板</td></tr>
+</table>
+
+<h3>6.2 仿剪：个人创作工作流</h3>
+
+<blockquote>
+"我觉得对于剪辑类的产品，它的 input 一定不局限于文字，它一定也是多模态的。那我给你一个影片，我告诉你说我想要这个影片的感觉……那模型要理解这个感觉包含了哪几个维度。"
+</blockquote>
+
+<blockquote>
+"我们就去把仿剪再去缩一层，做成有点像<strong>创作者个人的一个 Skill</strong>，去定义它整个创作的工作流去实现一个我想要仿剪的效果。但本质它的做法不是模型仿剪。"
+</blockquote>
+
+<div class="callout"><p>💡 本质不是"模型仿剪"，而是"提取个人工作流 + 模板化执行"。这是当前技术水平下最可行的方案。</p></div>
+
+<!-- ==================== S7 ==================== -->
+<h2 id="s7">七、海外市场特殊洞察</h2>
+
+<blockquote>
+"我们在 US 地区，我们所有一些 AI 功能<strong>都不能标它是 AI，它叫 Smart 或者 Magic</strong>。他们很烦 AI 这个词，他们觉得 AI 在侵蚀他们的生活，就是海外和国内有很多不一样。"
+</blockquote>
+
+<blockquote>
+"所以我们在做这些产品都非常谨慎，然后尽可能告诉他是<strong>帮你解决效率问题</strong>，不是 AI 怎么怎么样，就是有一些情绪的安抚。"
+</blockquote>
+
+<p>海外创作者特征：</p>
+<ul>
+  <li>非常喜欢真人出镜讲话，即使 Vlog 也倾向人脸出镜</li>
+  <li>很少像国内用户拍风光、朋友圈式视频</li>
+  <li>口播场景占创作者维度约 80%，高度集中</li>
+</ul>
+
+<!-- ==================== S8 ==================== -->
+<h2 id="s8">八、团队组织经验</h2>
+
+<blockquote>
+"没有超过个位数，算上我个位数。<strong>实际做 Agent 的同学可能就 2、3 个人。</strong>算法也是个位数，没超过 5 个人。"
+</blockquote>
+
+<p>在如此精简的团队下，实现了双端（PC + 移动）在英美法德西五国推全。</p>
+
+<h3>产品与算法协作模式</h3>
+
+<table>
+  <tr><th>情况</th><th>产品介入方式</th></tr>
+  <tr><td>效果差距小（2.3→2.5）</td><td>定目标，技术自驱</td></tr>
+  <tr><td>效果差距大（1.5→2.5）</td><td>直接下场看训练数据、参与 PE</td></tr>
+  <tr><td>基础能力不足</td><td>和算法一起从 SFT 开始重新训</td></tr>
+</table>
+
+<blockquote>
+"我觉得先看说达不到我的效果这个是什么程度的。比如说只是一个 2.3 分和 2.5 分的差别，我觉得这个事情就定目标就好了，技术去驱动。但我最近遇到的 case 是可能是一个 1.5 分和 2.5 分的差别，<strong>所以我就会去从他们的训练数据入手</strong>。"
+</blockquote>
+
+<!-- ==================== S9 ==================== -->
+<h2 id="s9">九、关键结论与行动建议</h2>
+
+<h3>立即可执行</h3>
+<ol>
+  <li><strong>优先聚焦口播场景</strong>：覆盖面广、技术可控、需求明确</li>
+  <li><strong>Agent 全功能上线但分级管理质量</strong>：核心 2-3 分，非核心允许瑕疵，极边缘不接入</li>
+  <li><strong>先跑 PE + 工程链路的 MVP</strong>：不要等自训练模型，开源 VLM + PE 就能拿到初始收益</li>
+  <li><strong>冷启动选自媒体用户</strong>：学习意愿强、创作动力强、提效诉求强</li>
+  <li><strong>个性化用工程手段</strong>：偏好词库/工作流模板，不用模型 Memory</li>
+</ol>
+
+<h3>中长期规划</h3>
+<ol>
+  <li>四条技术线并行推进（粗剪、包装、复杂需求、VLM）</li>
+  <li>在粗剪基础上逐步展开后编辑和包装能力</li>
+  <li>发展个人 Skill（基于历史草稿的仿剪能力）</li>
+  <li>将 Agent 入口从对话窗口融入轨道操作流程</li>
+  <li>从口播扩展到电商等下一批场景</li>
+</ol>
+
+<div class="footer">
+  AI Video Editing Insights · 基于 CapCut AI 剪辑负责人访谈整理 · yion.me
+</div>
+
+</div><!-- .main -->
+</div><!-- .layout -->
+
+<script>
+// Sidebar active state on scroll
+const sections = document.querySelectorAll('h2[id]');
+const navLinks = document.querySelectorAll('.sidebar nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
