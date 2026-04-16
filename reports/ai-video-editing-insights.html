@@ -63,10 +63,20 @@
   .callout-green p{color:#065f46}
 
   /* Table */
-  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.88em;border-radius:10px;overflow:hidden}
-  th{background:var(--accent);color:#fff;padding:10px 14px;text-align:left;font-weight:600;font-size:.85em}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0}
+  table{width:100%;border-collapse:collapse;font-size:.88em;border-radius:10px;overflow:hidden;min-width:0}
+  th{background:var(--accent);color:#fff;padding:10px 14px;text-align:left;font-weight:600;font-size:.85em;white-space:nowrap}
   td{padding:9px 14px;border-bottom:1px solid var(--border);background:var(--card)}
   tr:hover td{background:#f9fafb}
+
+  /* Card table for mobile - used on key tables */
+  .card-table{display:none}
+  .card-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:10px 0}
+  .card-item .card-label{font-size:.75em;color:var(--text-dim);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px}
+  .card-item .card-value{font-size:.9em;color:var(--text);line-height:1.6}
+  .card-item .card-row{margin:6px 0}
+  .card-item .card-title{font-size:.95em;font-weight:700;color:var(--text);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+  .card-item .stars{font-size:.85em}
 
   /* List */
   ul,ol{margin:10px 0 10px 20px;font-size:.93em;color:#374151}
@@ -81,10 +91,24 @@
 
   @media(max-width:860px){
     .sidebar{display:none}
-    .main{margin-left:0;padding:24px 18px 60px;max-width:100%}
-    .hero h1{font-size:1.4em}
-    h2{font-size:1.2em}
-    .tab-btn{padding:10px 16px;font-size:.88em}
+    .main{margin-left:0;padding:24px 16px 60px;max-width:100%}
+    .hero h1{font-size:1.3em}
+    .hero .lead{font-size:.9em}
+    .hero .meta{font-size:.8em}
+    .hero .meta span{display:block;margin-bottom:2px}
+    h2{font-size:1.15em;margin:36px 0 12px}
+    h3{font-size:1em;margin:22px 0 8px}
+    p{font-size:.9em}
+    .tab-bar{gap:0;margin-bottom:24px}
+    .tab-btn{padding:10px 14px;font-size:.85em;flex:1;text-align:center}
+    blockquote{padding:12px 14px;font-size:.85em;margin:10px 0}
+    .callout{padding:12px 14px;margin:12px 0}
+    .callout p{font-size:.85em}
+    ul,ol{margin:8px 0 8px 16px;font-size:.88em}
+
+    /* Hide desktop tables, show card layout on mobile */
+    .mobile-card table{display:none}
+    .mobile-card .card-table{display:block}
   }
 </style>
 </head>
@@ -441,6 +465,7 @@
 
 <h2 id="c1">一、候选人基本画像</h2>
 
+<div class="mobile-card">
 <table>
   <tr><th>维度</th><th>信息</th></tr>
   <tr><td>当前职位</td><td>字节跳动·剪映(CapCut)海外版 — 轨道智能化产品负责人</td></tr>
@@ -449,6 +474,16 @@
   <tr><td>求职动机</td><td>自称"Open看看"，非主动求职，以交流为主</td></tr>
   <tr><td>技术深度</td><td>懂SFT/RM/RL全链路训练、数据分布、PE调优，能深入到训练数据层面与算法协作</td></tr>
 </table>
+<div class="card-table">
+  <div class="card-item">
+    <div class="card-row"><div class="card-label">当前职位</div><div class="card-value">字节跳动·剪映(CapCut)海外版 — 轨道智能化产品负责人</div></div>
+    <div class="card-row"><div class="card-label">工作经历</div><div class="card-value">抖音搜索(综搜+垂类) → 豆包(信息检索全链路) → 剪映CapCut(剪辑Agent)</div></div>
+    <div class="card-row"><div class="card-label">团队规模</div><div class="card-value">产品个位数(2-3人做Agent)，算法&lt;5人，端上个位数</div></div>
+    <div class="card-row"><div class="card-label">求职动机</div><div class="card-value">自称"Open看看"，非主动求职，以交流为主</div></div>
+    <div class="card-row"><div class="card-label">技术深度</div><div class="card-value">懂SFT/RM/RL全链路训练、数据分布、PE调优，能深入到训练数据层面与算法协作</div></div>
+  </div>
+</div>
+</div>
 
 <!-- C2 -->
 <h2 id="c2">二、核心优势</h2>
@@ -586,6 +621,7 @@
 
 <h3>能力匹配度矩阵</h3>
 
+<div class="mobile-card">
 <table>
   <tr><th>能力维度</th><th>秒剪要求</th><th>匹配度</th><th>说明</th></tr>
   <tr><td>AI产品落地经验</td><td>高</td><td><span class="stars">★★★★★</span></td><td>搜索→大模型→剪辑Agent，完整实战链</td></tr>
@@ -600,6 +636,20 @@
   <tr><td>组织适应性</td><td>中</td><td><span class="stars">★★★☆☆</span></td><td>对scope和自主权有要求，需给予足够空间</td></tr>
   <tr><td>求职意愿</td><td>—</td><td><span class="stars">★★★☆☆</span></td><td>Open状态，需要有吸引力的叙事来打动</td></tr>
 </table>
+<div class="card-table">
+  <div class="card-item"><div class="card-title">AI产品落地经验 <span class="stars">★★★★★</span></div><div class="card-row"><div class="card-label">秒剪要求：高</div><div class="card-value">搜索→大模型→剪辑Agent，完整实战链</div></div></div>
+  <div class="card-item"><div class="card-title">技术-算法协作深度 <span class="stars">★★★★★</span></div><div class="card-row"><div class="card-label">秒剪要求：高</div><div class="card-value">行业罕见，能下到训练数据层推动效果优化</div></div></div>
+  <div class="card-item"><div class="card-title">资源受限下的交付能力 <span class="stars">★★★★★</span></div><div class="card-row"><div class="card-label">秒剪要求：高</div><div class="card-value">开源VLM+PE+工程链路，无自训练数据也能拿收益</div></div></div>
+  <div class="card-item"><div class="card-title">从0到1产品方法论 <span class="stars">★★★★☆</span></div><div class="card-row"><div class="card-label">秒剪要求：高</div><div class="card-value">路径清晰、有实战验证</div></div></div>
+  <div class="card-item"><div class="card-title">用户分层与渐进策略 <span class="stars">★★★★☆</span></div><div class="card-row"><div class="card-label">秒剪要求：中高</div><div class="card-value">分层清晰、预期务实，偏数据驱动</div></div></div>
+  <div class="card-item"><div class="card-title">长期规划与节奏把控 <span class="stars">★★★★☆</span></div><div class="card-row"><div class="card-label">秒剪要求：中高</div><div class="card-value">从粗剪到Agent有清晰的阶段规划</div></div></div>
+  <div class="card-item"><div class="card-title">坦诚度与问题暴露意愿 <span class="stars">★★★★★</span></div><div class="card-row"><div class="card-label">秒剪要求：中</div><div class="card-value">主动暴露做得差的部分，不粉饰</div></div></div>
+  <div class="card-item"><div class="card-title">战略视野与竞争判断 <span class="stars">★★★★☆</span></div><div class="card-row"><div class="card-label">秒剪要求：高</div><div class="card-value">有自己的判断框架，时间维度可再拉长</div></div></div>
+  <div class="card-item"><div class="card-title">团队管理经验 <span class="stars">★★★☆☆</span></div><div class="card-row"><div class="card-label">秒剪要求：中</div><div class="card-value">带过小团队（&lt;10人），大团队经验未知</div></div></div>
+  <div class="card-item"><div class="card-title">组织适应性 <span class="stars">★★★☆☆</span></div><div class="card-row"><div class="card-label">秒剪要求：中</div><div class="card-value">对scope和自主权有要求，需给予足够空间</div></div></div>
+  <div class="card-item"><div class="card-title">求职意愿 <span class="stars">★★★☆☆</span></div><div class="card-row"><div class="card-label">秒剪要求：—</div><div class="card-value">Open状态，需要有吸引力的叙事来打动</div></div></div>
+</div>
+</div>
 
 <h3>最终判断</h3>
 
