@@ -1287,6 +1287,7 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:18", tag: "tech", tagText: "科技", text: "亚马逊收购Globalstar的交易可能使其低轨卫星业务Leo成为卫星领域的强大力量，尽管这笔交易相对于亚马逊的规模看似微不足道，但它表明亚马逊对太空业务的承诺。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/how-the-globalstar-purchase-could-turn-amazons-leo-into-a-satellite-powerhouse-4b27cdf5?mod=mw_rss_topstories" },
   { time: "06:54", tag: "macro", tagText: "宏观", text: "标普500指数和纳斯达克指数创历史新高，市场对美伊达成协议的乐观情绪推动股市上涨。", source: "Leader Publications", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQRVE2Q3pvRW1oY3VYUmFKelVWcHpRZTBhTi1GLU9JNWI1cWczTXQ1THBlVEVReGZndkJNMnh0dC1sd1ZQZDRhV0piXzFNV2NLQmpzTGVtekRVYXUwb2dTZXZMZmRkblhQbGVoSTlOT1d5QVhKOVlyZjJtZWZxOTR3a2I0dVFiTXFXeFp0OUNNVFAxaUQwcFFRMWthc0FKYWUzYUd3U0RKZENuSHRnT2NmeUZNZkNZUGlXWjAyN0EyMHFTU2ZTWHB0bU8tN1BUTXFrbzVqZlRNbVlxbkV3MXdQeHhaVDluNlFTdXFITg?oc=5" },
   { time: "06:54", tag: "tech", tagText: "科技", text: "微软股价迎来三年来最强涨势，投资者对该公司前景重新燃起信心。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/microsofts-stock-has-sprung-back-to-life-its-on-its-strongest-run-in-3-years-by-one-measure-02b7e184?mod=mw_rss_topstories" },
   { time: "06:54", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡油轮拥堵加剧美中关系紧张，亚洲专家David Riedel表示，伊朗战争对两国关系的影响将持续。", source: "US Top News and Analysis", url: "https://www.cnbc.com/video/2026/04/15/oil-tanker-jam-in-strait-of-hormuz-is-straining-u-s-china-relations-says-asia-expert-david-riedel.html" },
@@ -1306,9 +1307,8 @@ const breakingNews = [
   { time: "10:04", tag: "macro", tagText: "宏观", text: "大金工业股价飙升14%，此前激进投资者Elliott敦促该公司提高利润率和股东回报。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/daikin-shares-jump-elliott-activist-investment-valuation-gap-nikkei225.html" },
   { time: "09:58", tag: "macro", tagText: "宏观", text: "公众对AI和数据中心的负面情绪可能拖累OpenAI和Anthropic的IPO计划，并成为中期选举的主要议题。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/public-opinion-ai-data-centers-anthropic-openai-ipo.html" },
   { time: "09:30", tag: "macro", tagText: "宏观", text: "精神航空可能最早本周清算，面临燃油价格上涨的额外挑战。燃油是航空公司仅次于劳动力的最大支出。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/spirit-airlines-could-liquidate-as-early-as-this-week-sources-say.html" },
-  { time: "07:18", tag: "tech", tagText: "科技", text: "亚马逊收购Globalstar的交易可能使其低轨卫星业务Leo成为卫星领域的强大力量，尽管这笔交易相对于亚马逊的规模看似微不足道，但它表明亚马逊对太空业务的承诺。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/how-the-globalstar-purchase-could-turn-amazons-leo-into-a-satellite-powerhouse-4b27cdf5?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月17日 06:55 CST";
+const breakingDate = "2026年4月17日 07:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1333,7 +1333,7 @@ const aiBreakingNews = [
   { time: "12:11", tag: "tech", tagText: "科技", text: "Cadence与英伟达深化AI合作，共同重塑芯片设计和机器人技术领域。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTGw0a3VPdjl3dkFTMWFHMk9oQ3I0b1h2amV1WHY4c0NRY3pOdWlDTTc1WTlPbXJTWjN0ci1RQTVfU0lmNzNLVU1RVkpvOEFzbVpwQlJ0blNqbFE5ekVHTm5KWFk0TnlWdzdRUFUxZmF6MWtxUFU5Rnh1YUlBam9QRThmMDRmQ3FXU0VVNmUwT0ZKSlhlRnNKUDRUMV9PNVpM?oc=5" },
   { time: "10:01", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic估值或达8000亿美元，正进行IPO筹备谈判。该公司近期融资动态引发行业关注，可能成为AI领域最大规模IPO之一。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxOX2pjci1iQktyMWFSX0xDTEZtRW9hWXBWY3NOY2JsdDJLSkw5Z2JGTHFoRDByRVRhX01PdV96T1RvVlpNV1d1Z21tU0FpaWk5WUh1T2QzRzRqTmd1Sm9ZMDcyaFpKS09oRi1aUTExN0dielIyZ2ticEVHdW1FM3lpWUZza3JuUkI2c3RSMHZscE56czQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月17日 06:55 CST";
+const aiBreakingDate = "2026年4月17日 07:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
