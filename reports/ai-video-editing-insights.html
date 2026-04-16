@@ -94,10 +94,10 @@
 <!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar">
   <div class="logo">📹 AI 剪辑洞察</div>
-  <div class="logo-sub">来自 CapCut AI 剪辑负责人访谈</div>
+  <div class="logo-sub">候选人胜任度评估报告</div>
   <nav id="sidebar-nav">
     <!-- Tab 1 nav (default) -->
-    <div id="nav-insights">
+    <div id="nav-insights" style="display:none">
       <a href="#s1">一、产品定位与竞争格局</a>
       <a href="#s2">二、Agent 产品策略</a>
       <a href="#s3">三、技术架构与模型</a>
@@ -109,7 +109,7 @@
       <a href="#s9">九、行动建议</a>
     </div>
     <!-- Tab 2 nav -->
-    <div id="nav-candidate" style="display:none">
+    <div id="nav-candidate">
       <a href="#c1">一、候选人画像</a>
       <a href="#c2">二、核心优势</a>
       <a href="#c3">三、潜在问题</a>
@@ -134,14 +134,14 @@
 
 <!-- TAB BAR -->
 <div class="tab-bar">
-  <button class="tab-btn active" data-tab="insights" onclick="switchTab('insights')">📋 访谈洞察</button>
-  <button class="tab-btn" data-tab="candidate" onclick="switchTab('candidate')">👤 候选人评估</button>
+  <button class="tab-btn active" data-tab="candidate" onclick="switchTab('candidate')">👤 候选人评估</button>
+  <button class="tab-btn" data-tab="insights" onclick="switchTab('insights')">📋 访谈洞察</button>
 </div>
 
 <!-- ============================================================ -->
 <!-- TAB 1: 访谈洞察 -->
 <!-- ============================================================ -->
-<div class="tab-content active" id="tab-insights">
+<div class="tab-content" id="tab-insights">
 
 <!-- S1 -->
 <h2 id="s1">一、产品定位与竞争格局</h2>
@@ -437,7 +437,7 @@
 <!-- ============================================================ -->
 <!-- TAB 2: 候选人评估 -->
 <!-- ============================================================ -->
-<div class="tab-content" id="tab-candidate">
+<div class="tab-content active" id="tab-candidate">
 
 <h2 id="c1">一、候选人基本画像</h2>
 
