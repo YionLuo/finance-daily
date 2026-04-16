@@ -62,6 +62,13 @@
   .callout-green{background:#ecfdf5;border-left-color:#10b981}
   .callout-green p{color:#065f46}
 
+  /* Profile card */
+  .profile-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:16px 0}
+  .profile-card .profile-row{display:flex;padding:10px 0;border-bottom:1px solid #f3f4f6}
+  .profile-card .profile-row:last-child{border-bottom:none}
+  .profile-card .profile-label{width:80px;min-width:80px;font-size:.8em;font-weight:600;color:var(--accent);line-height:1.6;padding-top:1px}
+  .profile-card .profile-value{flex:1;font-size:.92em;color:var(--text);line-height:1.7}
+
   /* Table */
   .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0}
   table{width:100%;border-collapse:collapse;font-size:.88em;border-radius:10px;overflow:hidden;min-width:0}
@@ -465,24 +472,12 @@
 
 <h2 id="c1">一、候选人基本画像</h2>
 
-<div class="mobile-card">
-<table>
-  <tr><th>维度</th><th>信息</th></tr>
-  <tr><td>当前职位</td><td>字节跳动·剪映(CapCut)海外版 — 轨道智能化产品负责人</td></tr>
-  <tr><td>工作经历</td><td>抖音搜索(综搜框架+垂类) → 豆包(信息检索/联网全链路) → 剪映CapCut(剪辑Agent)</td></tr>
-  <tr><td>团队规模</td><td>产品个位数(2-3人做Agent)，算法&lt;5人，端上个位数</td></tr>
-  <tr><td>求职动机</td><td>自称"Open看看"，非主动求职，以交流为主</td></tr>
-  <tr><td>技术深度</td><td>懂SFT/RM/RL全链路训练、数据分布、PE调优，能深入到训练数据层面与算法协作</td></tr>
-</table>
-<div class="card-table">
-  <div class="card-item">
-    <div class="card-row"><div class="card-label">当前职位</div><div class="card-value">字节跳动·剪映(CapCut)海外版 — 轨道智能化产品负责人</div></div>
-    <div class="card-row"><div class="card-label">工作经历</div><div class="card-value">抖音搜索(综搜+垂类) → 豆包(信息检索全链路) → 剪映CapCut(剪辑Agent)</div></div>
-    <div class="card-row"><div class="card-label">团队规模</div><div class="card-value">产品个位数(2-3人做Agent)，算法&lt;5人，端上个位数</div></div>
-    <div class="card-row"><div class="card-label">求职动机</div><div class="card-value">自称"Open看看"，非主动求职，以交流为主</div></div>
-    <div class="card-row"><div class="card-label">技术深度</div><div class="card-value">懂SFT/RM/RL全链路训练、数据分布、PE调优，能深入到训练数据层面与算法协作</div></div>
-  </div>
-</div>
+<div class="profile-card">
+  <div class="profile-row"><div class="profile-label">当前职位</div><div class="profile-value">字节跳动·剪映(CapCut)海外版 — 轨道智能化产品负责人</div></div>
+  <div class="profile-row"><div class="profile-label">工作经历</div><div class="profile-value">抖音搜索(综搜框架+垂类) → 豆包(信息检索/联网全链路) → 剪映CapCut(剪辑Agent)</div></div>
+  <div class="profile-row"><div class="profile-label">团队规模</div><div class="profile-value">产品个位数(2-3人做Agent)，算法&lt;5人，端上个位数</div></div>
+  <div class="profile-row"><div class="profile-label">求职动机</div><div class="profile-value">自称"Open看看"，非主动求职，以交流为主</div></div>
+  <div class="profile-row"><div class="profile-label">技术深度</div><div class="profile-value">懂SFT/RM/RL全链路训练、数据分布、PE调优，能深入到训练数据层面与算法协作</div></div>
 </div>
 
 <!-- Core Verdict -->
