@@ -1287,6 +1287,11 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:07", tag: "macro", tagText: "宏观", text: "英国2月GDP增长0.5%，远超经济学家预期的0.1%，显示经济复苏势头强劲。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/uk-gdp-march-2026-iran-war.html" },
+  { time: "14:06", tag: "tech", tagText: "科技", text: "台积电一季度利润增长58%超预期，AI芯片需求持续推动业绩创纪录。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/tsmc-q1-profit-58-percent-ai-chip-demand-record.html" },
+  { time: "13:38", tag: "geo", tagText: "地缘", text: "特朗普宣布以色列与黎巴嫩将举行数十年来首次高级别会谈，试图缓解两国紧张局势。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/trump-israel-lebanon-talks-hezbollah-ceasefire-conflict.html" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "西班牙Repsol重获委内瑞拉石油业务控制权，协议包括支付保障和三倍增产计划。", source: "International homepage", url: "https://www.ft.com/content/622a60db-6e0f-40bb-835c-8542bd83d72a" },
+  { time: "10:58", tag: "tech", tagText: "科技", text: "Allbirds宣布转型AI后股价暴涨近600%，市场再现概念炒作热潮。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/allbirds-ai-pivot-sends-its-stock-soaring-300-weve-seen-this-film-before-04665b32?mod=mw_rss_topstories" },
   { time: "10:50", tag: "macro", tagText: "宏观", text: "中国一季度GDP同比增长5%，超出预期，主要受工业产出和出口强劲推动。北京今年设定的增长目标为4.5%-5%，是自1990年代以来最低目标。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/china-gdp-growth-first-quarter-exports-property-retail-sales-iran-war.html" },
   { time: "10:42", tag: "tech", tagText: "科技", text: "特斯拉AI5芯片完成关键里程碑，该芯片将用于人形机器人和超级计算机，投资者欢呼特斯拉可能成为芯片股。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/is-tesla-a-chip-stock-now-investors-are-cheering-a-semiconductor-milestone-56341cf8?mod=mw_rss_topstories" },
   { time: "10:04", tag: "macro", tagText: "宏观", text: "大金工业股价飙升14%，此前激进投资者Elliott敦促该公司提高利润率和股东回报。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/daikin-shares-jump-elliott-activist-investment-valuation-gap-nikkei225.html" },
@@ -1302,16 +1307,13 @@ const breakingNews = [
   { time: "03:39", tag: "geo", tagText: "地缘", text: "美伊或将于下周在巴基斯坦举行和平谈判，霍尔木兹海峡油轮运输仍因美国对伊朗港口的报复性封锁而近乎停滞。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/trump-iran-war-peace-talks-pakistan.html" },
   { time: "03:06", tag: "macro", tagText: "宏观", text: "美联储褐皮书显示，伊朗战争带来的不确定性导致美国企业推迟重大决策，经济显现疲软迹象。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/iran-war-is-a-major-source-of-uncertainty-for-u-s-businesses-feds-beige-book-says-52d45d7b?mod=mw_rss_topstories" },
   { time: "02:51", tag: "geo", tagText: "地缘", text: "黎巴嫩表示正努力与以色列达成停火协议，停火持续时间可能取决于美伊休战能维持多久。", source: "International homepage", url: "https://www.ft.com/content/40218940-4f0f-4aee-9209-2fb713eea736" },
-  { time: "02:30", tag: "macro", tagText: "宏观", text: "白宫预算主任拒绝在国会听证会上预估伊朗战争成本，引发两党议员对财政透明度的质疑。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/iran-war-budget-white-house-russ-vought.html" },
-  { time: "01:27", tag: "macro", tagText: "宏观", text: "伊朗战争已造成中东地区高达580亿美元的能源基础设施损失，Rystad预计需数年才能恢复至战前产能水平。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/iran-war-energy-facilities-refinery-pipeline-lng.html" },
-  { time: "23:11", tag: "macro", tagText: "宏观", text: "美国民主党提出新法案，拟将劳动所得税抵免(EITC)提高至每名儿童5500美元，并将申请资格年收入上限提升至近10万美元。此举旨在通过税收政策缓解中低收入家庭压力。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/15/tax-day-earned-income-credit-child.html" },
-  { time: "21:54", tag: "macro", tagText: "宏观", text: "美国3月进口商品成本连续第三个月大幅上涨，主要受油价上涨推动，预示未来几个月通胀可能进一步攀升。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/inflation-watch-high-oil-prices-boost-the-cost-of-imports-again-how-long-will-the-pain-last-8202054a?mod=mw_rss_topstories" },
-  { time: "21:50", tag: "macro", tagText: "宏观", text: "标普500指数接近历史高点，距1月28日创下的纪录仅差不到1%。", source: "CNBC", url: "https://www.cnbc.com/2026/04/14/stock-market-today-live-updates.html" },
 ];
-const breakingDate = "2026年4月16日 11:41 CST";
+const breakingDate = "2026年4月16日 14:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:30", tag: "ai", tagText: "AI", text: "台积电（TSMC）因英伟达和苹果的AI芯片需求激增，供应短缺，分析师预测其利润将创纪录飙升。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVTVETFRUVEN0U3QtaUpCOVFXQ2FtWFBZemgtNDhUbF9QczMwZ1R1N3pRQWdFZ1oyZ1gtQzhhLWZjOHA3UkdpS2pUSUdMbWFSOGVnVUxrZmpaMnlNS3BNMzU0TlVuUkN0MGFKN21IMTNQM19QYWFvWUs5MlF3cUlZaTFNMWQzVi1wT1k3YmplZ2FlbEtUa1lEbDBubE96VTVSZ2ZnMEdn?oc=5" },
+  { time: "12:11", tag: "tech", tagText: "科技", text: "Cadence与英伟达深化AI合作，共同重塑芯片设计和机器人技术领域。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTGw0a3VPdjl3dkFTMWFHMk9oQ3I0b1h2amV1WHY4c0NRY3pOdWlDTTc1WTlPbXJTWjN0ci1RQTVfU0lmNzNLVU1RVkpvOEFzbVpwQlJ0blNqbFE5ekVHTm5KWFk0TnlWdzdRUFUxZmF6MWtxUFU5Rnh1YUlBam9QRThmMDRmQ3FXU0VVNmUwT0ZKSlhlRnNKUDRUMV9PNVpM?oc=5" },
   { time: "10:01", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic估值或达8000亿美元，正进行IPO筹备谈判。该公司近期融资动态引发行业关注，可能成为AI领域最大规模IPO之一。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxOX2pjci1iQktyMWFSX0xDTEZtRW9hWXBWY3NOY2JsdDJLSkw5Z2JGTHFoRDByRVRhX01PdV96T1RvVlpNV1d1Z21tU0FpaWk5WUh1T2QzRzRqTmd1Sm9ZMDcyaFpKS09oRi1aUTExN0dielIyZ2ticEVHdW1FM3lpWUZza3JuUkI2c3RSMHZscE56czQ?oc=5" },
   { time: "06:18", tag: "ai", tagText: "AI", text: "Anthropic在最新融资谈判中瞄准8000亿美元估值，显示AI头部企业持续获得资本青睐。投资方认为其技术壁垒和商业化潜力支撑高估值。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa2hfbC1UTmxfMHZtMDBvMWgtMERRQUt0ejg4MEhLeGllN1U5MG5qOGVqY0N0dEx6OUVTal9XbVVxWjhhTzB3blNvOFpZQWN2aTNmaktGQi1Mekh5ZjlOX0NkaUozemxsWWl4TjVSbjhHSzAzMWFzSGtKQ0NtZW01TjU2OTMyWlR2bjJRYUNzZzRMbHlVMjJjN0JheF9zNVNJMHc?oc=5" },
   { time: "05:31", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋表示，公司在将电子转化为代币、推动AI代理指数级增长以及克服半导体供应链瓶颈方面发挥关键作用。他强调AI技术的快速发展将重塑行业格局。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwJBVV95cUxOckF4UjRxZXdheU9Hdm9zUDRBc1hvMkxCQkszeFFVMEV0ZjRoejRsbC1ZdkJWU2NmaEVLVm5yLWFuVTh3UEdKQnBCMzlpcG5uSzJuNWhncl9xTGVJZDI2TlpuazJtdEJyNVB5UmJ1YnAtTmpaMEVBa0FHSk1pblBEWU1iejlBOXdONmRaOU1PejRCR081a04wUkl0T2xaU3dBbUxGc2RlbU1fMlVFQkItQW1TTnIxNWhFY2g3MGhhRF9vemY0aGJHVXpIU21YUkhBLXRWSURtOEpVNEpmVkdMMGtPZnc4dDFxOHQ5QVlYZTk1SHRhVVpfRjQwOVI1bFlhUTc1NFFzR0JsZlhNOGx2NDE4UTJKQjQ?oc=5" },
@@ -1330,10 +1332,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "Parasail在A轮融资中筹集3200万美元，押注‘tokenmaxxing’将催生下一代计算巨头，预示着模型和计算的碎片化未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Gitar利用AI代理审查代码，完成900万美元融资，专注于解决AI生成代码的安全问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/" },
   { time: "20:46", tag: "tech", tagText: "科技", text: "博通（Broadcom）与Meta和谷歌达成AI芯片合作协议，进一步巩固其在AI硬件领域的地位。", source: "Rolling Out", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE55WEl1ZFpUY3NUdUxIVHkyNWdQdWc5QXQyaGNuekE1Nmd2SlEwSHFmSHBNanJITDZGekVLZGw4bGNCdGhSWEJITUFYRWpBM2RaZjhzQ0M0MXNadmNoSXVENlRtUGdxUUZoTHFaRTc3VDRRTWxhMUtidQ?oc=5" },
-  { time: "19:58", tag: "tech", tagText: "科技", text: "三星电机（Samsung Electro-Mechanics）将向英伟达供应其下一代AI芯片“Groq3”的基板。此举标志着三星在AI芯片供应链中扮演关键角色，并可能加强英伟达与三星在先进封装领域的合作。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE16TC1mdzU0S19zdkNrZC1rVFZqV0NpdmJBd3hIYXRac0I5T1F3SG1pakJ1eGFaQTR6SmxLMXBYcGtwaFB1TTJHV0U2VE04cWFCWjgweHhVZ3Z0QkVUZEE5WGJBcVY1T3RaLUdRZUl0MDg2bnlx?oc=5" },
-  { time: "19:23", tag: "ai", tagText: "AI", text: "盖洛普最新报告显示，美国Z世代（14-29岁）对AI的“爱恨关系”日益加深。尽管对AI的幻灭感增强，认为其加剧了不平等并威胁就业，但Z世代并未停止使用AI工具。这反映了年轻一代在技术依赖与伦理担忧之间的矛盾心态。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/909687/gen-z-doesnt-like-ai-gallup" },
 ];
-const aiBreakingDate = "2026年4月16日 11:41 CST";
+const aiBreakingDate = "2026年4月16日 14:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
