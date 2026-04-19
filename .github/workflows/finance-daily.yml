@@ -34,8 +34,8 @@ jobs:
 
       - name: Generate Finance Daily Report
         env:
-          OPENAI_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          OPENAI_BASE_URL: "https://api.deepseek.com"
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: "https://openrouter.ai/api/v1"
           TZ: Asia/Shanghai
         run: python scripts/update_finance.py
 
