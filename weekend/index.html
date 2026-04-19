@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>周末去哪玩</title>
+<style>
+  /* ===== Reset & Base ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  :root {
+    --mint:     #5EBD9B;
+    --mint-lt:  #E8F5EE;
+    --peach:    #F5A623;
+    --peach-bg: rgba(245,166,35,.12);
+    --coral:    #FF6B6B;
+    --sky:      #4A90D9;
+    --sky-bg:   rgba(74,144,217,.10);
+    --cream:    #F6F9F4;
+    --white:    #FFFFFF;
+    --txt:      #1D1D1F;
+    --txt-2:    #3A3A3C;
+    --txt-3:    #86868B;
+    --txt-4:    #AEAEB2;
+    --line:     rgba(60,60,67,.12);
+    --radius:    14px;
+    --radius-sm: 10px;
+    --safe-top:  env(safe-area-inset-top, 0px);
+    --safe-bot:  env(safe-area-inset-bottom, 0px);
+  }
+  html { font-size: 16px; }
+  body {
+    font-family: "SF Pro Display", "SF Pro SC", "Helvetica Neue", "PingFang SC", system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--txt);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    padding-top: calc(56px + var(--safe-top));
+    padding-bottom: calc(24px + var(--safe-bot));
+    min-height: 100dvh;
+  }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; font-size: inherit; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ===== Global SVG defaults ===== */
+  svg { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ===== Top Nav ===== */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: calc(56px + var(--safe-top));
+    padding-top: var(--safe-top);
+    background: rgba(246,249,244,.85);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: .5px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+    padding-left: 20px; padding-right: 20px;
+  }
+  .nav-l { display: flex; align-items: center; gap: 10px; }
+  .nav-icon { color: var(--mint); display: flex; align-items: center; }
+  .nav-icon svg { width: 22px; height: 22px; stroke-width: 1.8; }
+  .nav-title { font-size: 17px; font-weight: 700; letter-spacing: -.3px; }
+  .nav-sub { font-size: 11px; color: var(--txt-3); font-weight: 500; margin-top: -1px; }
+  .nav-r { display: flex; align-items: center; gap: 6px; }
+  .nav-btn {
+    width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: var(--txt-2); transition: background .15s;
+    position: relative;
+  }
+  .nav-btn:active { background: rgba(0,0,0,.06); }
+  .nav-btn svg { width: 20px; height: 20px; stroke-width: 1.8; }
+  .badge {
+    position: absolute; top: 2px; right: 2px;
+    background: var(--coral); color: #fff; font-size: 9px; font-weight: 700;
+    min-width: 16px; height: 16px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 4px; line-height: 1;
+  }
+
+  /* ===== Tag Pills ===== */
+  .tg { padding: 12px 20px 4px; }
+  .tg-row { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .tg-row::-webkit-scrollbar { display: none; }
+  .pill {
+    flex-shrink: 0; scroll-snap-align: start;
+    padding: 7px 14px 7px 10px; border-radius: 20px; font-size: 13px; font-weight: 600;
+    background: var(--white); color: var(--txt-2);
+    border: 1.5px solid var(--line);
+    display: flex; align-items: center; gap: 5px;
+    transition: all .18s; white-space: nowrap;
+  }
+  .pill:active { transform: scale(.96); }
+  .pill.on { background: var(--mint); color: #fff; border-color: var(--mint); box-shadow: 0 2px 8px rgba(94,189,155,.25); }
+  .pill.on svg { stroke: #fff; }
+  .pill svg { width: 15px; height: 15px; stroke-width: 1.8; flex-shrink: 0; }
+
+  /* ===== Prompt Panel ===== */
+  .pp { padding: 4px 20px 0; }
+  .pp-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px; border-radius: 22px;
+    background: var(--white); border: 1.5px solid var(--line);
+    font-size: 13px; color: var(--txt-2); font-weight: 600;
+    cursor: pointer; transition: all .18s;
+  }
+  .pp-head:active { transform: scale(.985); }
+  .pp-head.has-val { background: var(--mint-lt); border-color: rgba(94,189,155,.35); color: #2D7A52; }
+  .pp-head-l { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1; }
+  .pp-head-l svg { width: 16px; height: 16px; stroke-width: 2; flex-shrink: 0; }
+  .pp-head-txt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pp-head-chev { width: 18px; height: 18px; stroke-width: 2.2; color: var(--txt-3); transition: transform .22s; flex-shrink: 0; margin-left: 8px; }
+  .pp.open .pp-head-chev { transform: rotate(180deg); }
+  .pp-body {
+    max-height: 0; overflow: hidden;
+    transition: max-height .28s cubic-bezier(.4,.0,.2,1), margin-top .2s;
+  }
+  .pp.open .pp-body { max-height: 280px; margin-top: 8px; }
+  .pp-card {
+    background: var(--white); border: 1.5px solid var(--line);
+    border-radius: 16px; padding: 12px 14px;
+  }
+  .pp-ta {
+    width: 100%; border: none; outline: none; resize: none;
+    font-family: inherit; font-size: 14px; color: var(--txt); line-height: 1.55;
+    background: transparent; min-height: 60px; max-height: 120px;
+    padding: 0;
+  }
+  .pp-ta::placeholder { color: var(--txt-4); }
+  .pp-chips {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    padding-top: 10px; margin-top: 10px;
+    border-top: .5px dashed var(--line);
+  }
+  .pp-chip {
+    padding: 5px 11px; border-radius: 14px; font-size: 12px; font-weight: 500;
+    background: var(--cream); color: var(--txt-2); border: 1px solid var(--line);
+    transition: all .15s;
+  }
+  .pp-chip:active { transform: scale(.94); }
+  .pp-chip.on { background: var(--mint); color: #fff; border-color: var(--mint); }
+  .pp-clear {
+    margin-top: 8px; font-size: 12px; color: var(--txt-3); text-align: right;
+    padding: 2px 4px;
+  }
+  .pp-clear:active { color: var(--coral); }
+
+  /* ===== CTA ===== */
+  .cta { text-align: center; padding: 28px 20px 8px; }
+  .cta-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: var(--mint); color: #fff;
+    padding: 14px 36px; border-radius: 28px; font-size: 15px; font-weight: 700;
+    box-shadow: 0 6px 20px rgba(94,189,155,.35), 0 2px 6px rgba(94,189,155,.20);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .cta-btn:active { transform: scale(.96); box-shadow: 0 2px 10px rgba(94,189,155,.25); }
+  .cta-btn svg { width: 18px; height: 18px; stroke-width: 2; }
+  .cta-sub { font-size: 12px; color: var(--txt-3); margin-top: 10px; }
+
+  /* ===== Destination Card ===== */
+  .card {
+    margin: 14px 20px; border-radius: var(--radius); background: var(--white);
+    box-shadow: 0 2px 16px rgba(0,0,0,.05), 0 0.5px 2px rgba(0,0,0,.03);
+    overflow: hidden;
+    animation: cardIn .32s ease-out;
+  }
+  @keyframes cardIn { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+  .card-hero {
+    height: 160px; background: linear-gradient(135deg, var(--mint-lt), #D4EDE0);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .card-hero-icon { font-size: 56px; opacity: .25; position: absolute; }
+  .card-hero-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 32px 16px 12px;
+    background: linear-gradient(transparent, rgba(255,255,255,.92) 40%, var(--white));
+  }
+  .card-name { font-size: 22px; font-weight: 800; letter-spacing: -.4px; }
+  .card-prov { font-size: 12px; color: var(--txt-3); margin-top: 1px; }
+  .card-badges { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .lb {
+    padding: 3px 9px; border-radius: 6px; font-size: 11px; font-weight: 600;
+  }
+  .lb-food  { background: var(--peach-bg); color: #B87A0F; }
+  .lb-hike  { background: var(--mint-lt);  color: #2D7A52; }
+  .lb-scene { background: var(--sky-bg);  color: #2D5FA0; }
+  .lb-hot   { background: rgba(255,107,107,.10); color: #B83A3A; }
+  .lb-island{ background: rgba(74,144,217,.10); color: #2D5FA0; }
+  .lb-town  { background: rgba(134,134,139,.10); color: #525256; }
+
+  .card-body { padding: 0 16px 14px; }
+  .card-desc { font-size: 13px; color: var(--txt-2); line-height: 1.6; margin-top: 10px; }
+  .card-reason {
+    margin-top: 10px; padding: 10px 12px; border-radius: var(--radius-sm);
+    background: var(--mint-lt); font-size: 12px; color: #2D7A52; line-height: 1.55;
+    border-left: 3px solid var(--mint);
+  }
+
+  /* Highlights */
+  .hl { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .hl-item {
+    display: flex; gap: 10px;
+    padding: 11px 12px; border-radius: var(--radius-sm);
+    background: var(--cream); border: 1px solid var(--line);
+  }
+  .hl-emoji { font-size: 18px; line-height: 1.3; flex-shrink: 0; width: 24px; text-align: center; }
+  .hl-body { flex: 1; min-width: 0; }
+  .hl-title {
+    font-size: 12px; font-weight: 700; color: var(--txt);
+    letter-spacing: .2px; margin-bottom: 2px;
+  }
+  .hl-content {
+    font-size: 13px; color: var(--txt-2); line-height: 1.55;
+  }
+
+  /* Transport */
+  .tp { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+  .tp-c {
+    flex: 1; min-width: 140px; padding: 12px; border-radius: var(--radius-sm);
+    background: var(--cream); border: 1px solid var(--line);
+  }
+  .tp-city { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: var(--txt-2); margin-bottom: 8px; }
+  .tp-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .tp-dot.gz { background: var(--coral); }
+  .tp-dot.sh { background: var(--sky); }
+  .tp-r { display: flex; align-items: center; gap: 7px; font-size: 12px; margin-top: 5px; }
+  .tp-r svg { width: 13px; height: 13px; stroke: var(--txt-3); stroke-width: 1.8; flex-shrink: 0; }
+  .tp-k { color: var(--txt-3); }
+  .tp-v { color: var(--txt); font-weight: 600; }
+
+  /* Meta row */
+  .mt { display: flex; gap: 16px; margin-top: 14px; padding-top: 12px; border-top: .5px solid var(--line); }
+  .mt-i { display: flex; align-items: center; }
+  .mt-i svg { width: 15px; height: 15px; stroke: var(--mint); stroke-width: 2; }
+  .mt-inf { display: flex; flex-direction: column; }
+  .mt-k { font-size: 10px; color: var(--txt-4); text-transform: uppercase; letter-spacing: .4px; font-weight: 600; }
+  .mt-v { font-size: 13px; font-weight: 700; color: var(--txt); }
+
+  /* Card actions */
+  .card-act { display: flex; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: .5px solid var(--line); }
+  .cd-btn {
+    flex: 1; padding: 9px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+    border: 1.5px solid var(--line);
+    transition: background .12s;
+  }
+  .cd-btn:active { background: rgba(0,0,0,.04); }
+  .cd-btn svg { width: 15px; height: 15px; stroke-width: 1.8; }
+  .cd-btn.fv svg { stroke: var(--peach); }
+  .cd-btn.fv.on svg { fill: var(--peach); }
+  .cd-btn.vd svg { stroke: var(--mint); }
+  .cd-btn.vd.on svg { fill: var(--mint); stroke: var(--mint); }
+
+  /* ===== Loading ===== */
+  .skel { margin: 14px 20px; }
+  .skel-h { height: 18px; background: linear-gradient(90deg,#E8E8ED 25%,#F5F5F7 50%,#E8E8ED 75%); background-size:200% 100%; border-radius:6px; animation: shimmer 1.4s infinite; }
+  .skel-card { border-radius: var(--radius); background: var(--white); height: 320px; margin-top: 14px; padding: 16px; }
+  .skel-card .skel-h { margin-bottom: 12px; }
+  @keyframes shimmer { to { background-position: 200% 0; } }
+
+  /* ===== Error ===== */
+  .er { text-align: center; padding: 48px 20px; }
+  .er svg { width: 48px; height: 48px; stroke: var(--txt-4); stroke-width: 1.2; margin-bottom: 14px; }
+  .er-t { font-size: 17px; font-weight: 700; }
+  .er-m { font-size: 13px; color: var(--txt-3); margin-top: 6px; }
+  .er-b {
+    margin-top: 18px; padding: 10px 28px; border-radius: 20px;
+    background: var(--mint); color: #fff; font-size: 14px; font-weight: 600;
+    box-shadow: 0 4px 12px rgba(94,189,155,.28);
+  }
+
+  /* ===== Empty ===== */
+  .em-h { text-align: center; padding: 48px 20px 20px; }
+  .em-g svg { width: 52px; height: 52px; stroke: var(--mint); stroke-width: 1.2; }
+  .em-t { font-size: 20px; font-weight: 800; margin-top: 14px; letter-spacing: -.3px; }
+  .em-s { font-size: 13px; color: var(--txt-3); margin-top: 8px; line-height: 1.6; }
+
+  /* ===== History ===== */
+  .hist { padding: 8px 20px 8px; }
+  .hist-h {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 13px; font-weight: 700; color: var(--txt-2);
+    padding: 8px 0; cursor: pointer;
+  }
+  .hist-h svg { width: 16px; height: 16px; stroke: var(--txt-3); stroke-width: 2; transition: transform .2s; }
+  .hist-h.open svg { transform: rotate(180deg); }
+  .hc {
+    display: flex; align-items: center; gap: 10px;
+    padding: 11px 0; border-bottom: .5px solid var(--line);
+    cursor: pointer; transition: background .1s;
+  }
+  .hc:last-child { border-bottom: none; }
+  .hc:hover { background: rgba(0,0,0,.02); }
+  .hc-n { font-size: 15px; font-weight: 600; flex: 1; }
+  .hc-ts { display: flex; gap: 4px; }
+  .hc-t { padding: 2px 7px; border-radius: 5px; font-size: 10px; font-weight: 600; }
+  .hc-d { font-size: 11px; color: var(--txt-4); min-width: 56px; text-align: right; }
+  .hc-b { display: flex; align-items: center; }
+  .hc-b svg { width: 13px; height: 13px; stroke-width: 2; }
+  .hc-b svg.filled { fill: var(--peach); stroke: var(--peach); }
+  .hc.vd .hc-n { color: var(--txt-4); text-decoration: line-through; }
+
+  /* ===== Drawer ===== */
+  .overlay {
+    position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.25);
+    opacity: 0; pointer-events: none; transition: opacity .22s;
+  }
+  .overlay.show { opacity: 1; pointer-events: auto; }
+  .drawer {
+    position: fixed; top: 0; right: 0; bottom: 0; z-index: 201;
+    width: min(340px, 88vw); background: var(--white);
+    transform: translateX(100%); transition: transform .28s cubic-bezier(.4,.0,.2,1);
+    display: flex; flex-direction: column;
+  }
+  .drawer.show { transform: none; }
+  .dw-head {
+    padding: calc(var(--safe-top) + 14px) 18px 14px;
+    border-bottom: .5px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .dw-title { font-size: 17px; font-weight: 700; }
+  .dw-close { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .dw-close svg { width: 18px; height: 18px; stroke: var(--txt-2); stroke-width: 2; }
+  .dw-body { flex: 1; overflow-y: auto; padding: 8px 18px 20px; }
+  .dw-empty { text-align: center; padding: 48px 0; color: var(--txt-3); font-size: 14px; }
+  .fc { padding: 12px 0; border-bottom: .5px solid var(--line); }
+  .fc:last-child { border-bottom: none; }
+  .fc-t { display: flex; align-items: center; justify-content: space-between; }
+  .fc-n { font-size: 15px; font-weight: 600; }
+  .fc-bs { display: flex; gap: 6px; }
+  .fc-b {
+    width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    transition: background .12s;
+  }
+  .fc-b svg { width: 14px; height: 14px; stroke-width: 1.8; }
+  .fc-rs { display: flex; gap: 12px; margin-top: 6px; flex-wrap: wrap; }
+  .fc-r { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--txt-3); }
+  .fc-d { width: 7px; height: 7px; border-radius: 50%; }
+
+  /* ===== Utility ===== */
+  .hidden { display: none !important; }
+  .view { animation: fadeUp .22s ease-out; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 380px) {
+    .card-name { font-size: 19px; }
+    .tp { flex-direction: column; }
+    .tp-c { min-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== Nav ====== -->
+<nav class="nav">
+  <div class="nav-l">
+    <div class="nav-icon">
+      <!-- Tabler: compass -->
+      <svg viewBox="0 0 24 24"><path d="m8 16l2-6l6-2l-2 6z"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0m9-9v2m0 14v2m-9-9h2m14 0h2"/></svg>
+    </div>
+    <div>
+      <div class="nav-title">周末去哪玩</div>
+      <div class="nav-sub">广州 × 上海 · 一起出发</div>
+    </div>
+  </div>
+  <div class="nav-r">
+    <button class="nav-btn" id="favBtn" aria-label="收藏">
+      <!-- Tabler: heart (outline) -->
+      <svg viewBox="0 0 24 24"><path d="M19.5 12.572L12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572"/></svg>
+      <span class="badge hidden" id="badge">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ====== Tag Filter ====== -->
+<section class="tg">
+  <div class="tg-row" id="tagsRow">
+    <button class="pill on" data-tag="all">
+      <!-- Tabler: grid-dots -->
+      <svg viewBox="0 0 24 24"><circle cx="5" cy="5" r="1" fill="currentColor"/><circle cx="12" cy="5" r="1" fill="currentColor"/><circle cx="19" cy="5" r="1" fill="currentColor"/><circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="19" cy="12" r="1" fill="currentColor"/><circle cx="5" cy="19" r="1" fill="currentColor"/><circle cx="12" cy="19" r="1" fill="currentColor"/><circle cx="19" cy="19" r="1" fill="currentColor"/></svg>
+      全部
+    </button>
+    <button class="pill" data-tag="food">
+      <!-- Tabler: soup -->
+      <svg viewBox="0 0 24 24"><path d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5-2.5 5.5-4 6.5v1a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-1c-1.5-1-4-5-4-6.5V12a1 1 0 0 1 1-1m8-7a2.4 2.4 0 0 1 .76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949zM14 18v-7m4 7v-7M3 22h18M6 18v-7"/></svg>
+      美食
+    </button>
+    <button class="pill" data-tag="hike">
+      <!-- Tabler: walk -->
+      <svg viewBox="0 0 24 24"><path d="M7 21l3-4m6 4l-2-4l-3-3l1-6"/><path d="m6 12l2-3l4-1l3 3l3 1"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg>
+      徒步
+    </button>
+    <button class="pill" data-tag="scene">
+      <!-- Tabler: photo -->
+      <svg viewBox="0 0 24 24"><path d="M15 8h.01M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/><path d="m3 16l5-5c.928-.893 2.072-.893 3 0l5 5"/><path d="m14 14l1-1c.928-.893 2.072-.893 3 0l3 3"/></svg>
+      美景
+    </button>
+    <button class="pill" data-tag="hot">
+      <!-- Tabler: bath -->
+      <svg viewBox="0 0 24 24"><path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1m2 0V5a2 2 0 0 1 2-2h3v2.25M4 21l1-1.5M20 21l-1-1.5"/></svg>
+      温泉
+    </button>
+    <button class="pill" data-tag="island">
+      <!-- Tabler: beach -->
+      <svg viewBox="0 0 24 24"><path d="M17.553 16.75a7.5 7.5 0 0 0-10.606 0M18 3.804A6 6 0 0 0 9.804 6l10.392 6A6 6 0 0 0 18 3.804zM16.732 10C18.39 7.13 18.957 4.356 18 3.804S14.925 5.13 13.268 8M15 9l-3 5.196M3 19.25A2.4 2.4 0 0 1 4 19a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2-1a2.4 2.4 0 0 1 2-1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2-1a2.4 2.4 0 0 1 2-1a2.4 2.4 0 0 1 1 .25"/></svg>
+      海岛
+    </button>
+    <button class="pill" data-tag="town">
+      <!-- Tabler: building -->
+      <svg viewBox="0 0 24 24"><path d="M9 21V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v16"/><path d="M3 21h18M5 21V12h4v9M19 21V12h-4v9"/></svg>
+      古镇
+    </button>
+  </div>
+</section>
+
+<!-- ====== Views ====== -->
+
+<!-- Loading -->
+<section class="cta view hidden" id="viewLoading">
+  <button class="cta-btn" disabled style="opacity:.55">
+    <!-- Tabler: clock -->
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></svg>
+    正在寻找小众目的地…
+  </button>
+  <p class="cta-sub">AI 正在分析两地交通和景点</p>
+  <div class="skel" style="margin-top:16px">
+    <div class="skel-card">
+      <div class="skel-h" style="width:55%;height:20px"></div>
+      <div class="skel-h" style="width:35%;height:14px;margin-top:12px"></div>
+      <div class="skel-h" style="width:100%;height:60px;margin-top:16px;border-radius:10px"></div>
+      <div class="skel-h" style="width:80%;height:40px;margin-top:16px;border-radius:10px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Error -->
+<section class="view hidden" id="viewError">
+  <div class="er">
+    <!-- Tabler: wifi-off -->
+    <svg viewBox="0 0 24 24"><path d="M12 18h.01M8.5 16.429a5 5 0 0 1 7 0M5 12.859a10 10 0 0 1 5.17-2.69m8.83 2.69a10 10 0 0 0-2.007-1.523M2 8.82a15 15 0 0 1 4.177-2.643M22 8.82a15 15 0 0 0-11.288-3.764M2 2l20 20"/></svg>
+    <div class="er-t">暂时没找到</div>
+    <div class="er-m">网络开了个小差，再试一次？</div>
+    <button class="er-b" id="btnRetry">重新推荐</button>
+  </div>
+</section>
+
+<!-- Empty -->
+<section class="view" id="viewEmpty">
+  <div class="em-h">
+    <!-- Tabler: compass (large) -->
+    <svg style="width:52px;height:52px;stroke:var(--mint);stroke-width:1.2" viewBox="0 0 24 24"><path d="m8 16l2-6l6-2l-2 6z"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0m9-9v2m0 14v2m-9-9h2m14 0h2"/></svg>
+    <div class="em-t">下一站，去哪？</div>
+    <p class="em-s">选个类别，或直接点击按钮<br>让 AI 为你们推荐小众好去处</p>
+    <button class="cta-btn" id="btnEmpty" style="margin-top:20px">
+      <!-- Lucide: shuffle -->
+      <svg viewBox="0 0 24 24">
+        <path d="m18 14l4 4l-4 4m0-20l4 4l-4 4"/>
+        <path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22M2 6h1.972a4 4 0 0 1 3.6 2.2M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"/>
+      </svg>
+      开始探索
+    </button>
+  </div>
+</section>
+
+<!-- Result (hidden by default) -->
+<section class="view hidden" id="viewResult">
+  <div class="cta">
+    <button class="cta-btn" id="btnShuffle">
+      <!-- Lucide: shuffle -->
+      <svg viewBox="0 0 24 24">
+        <path d="m18 14l4 4l-4 4m0-20l4 4l-4 4"/>
+        <path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22M2 6h1.972a4 4 0 0 1 3.6 2.2M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"/>
+      </svg>
+      换一个
+    </button>
+    <p class="cta-sub" id="subText">已为你们推荐一个小众目的地 ✨</p>
+  </div>
+
+  <!-- ====== Prompt Panel ====== -->
+  <div class="pp" id="ppSection">
+    <div class="pp-head" id="ppHead">
+      <div class="pp-head-l">
+        <!-- Tabler: sparkles -->
+        <svg viewBox="0 0 24 24"><path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2-2a2 2 0 0 1-2-2a2 2 0 0 1-2 2zm0-12a2 2 0 0 1 2 2a2 2 0 0 1 2-2a2 2 0 0 1-2-2a2 2 0 0 1-2 2zM9 18a6 6 0 0 0 6-6a6 6 0 0 0 6 6a6 6 0 0 0-6 6a6 6 0 0 0-6-6z"/></svg>
+        <span class="pp-head-txt" id="ppHeadTxt">加点偏好，让 AI 更懂你</span>
+      </div>
+      <!-- Tabler: chevron-down -->
+      <svg class="pp-head-chev" viewBox="0 0 24 24"><path d="M6 9l6 6l6-6"/></svg>
+    </div>
+    <div class="pp-body">
+      <div class="pp-card">
+        <textarea class="pp-ta" id="ppInput" rows="2"
+          placeholder="比如：想吃海鲜、不爬山、预算 500 以内、带孩子…"></textarea>
+        <div class="pp-chips" id="ppChips">
+          <button class="pp-chip" data-kw="想吃海鲜">🦐 海鲜</button>
+          <button class="pp-chip" data-kw="小众冷门">✨ 小众</button>
+          <button class="pp-chip" data-kw="适合带娃">👶 亲子</button>
+          <button class="pp-chip" data-kw="人少不拥挤">🧘 人少</button>
+          <button class="pp-chip" data-kw="预算有限">💰 省钱</button>
+          <button class="pp-chip" data-kw="拍照出片">📷 出片</button>
+          <button class="pp-chip" data-kw="周边游 2 小时内">🚗 近郊</button>
+          <button class="pp-chip" data-kw="不想爬山">🛏️ 懒人</button>
+        </div>
+        <div class="pp-clear" id="ppClear">清空</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card: Xiapu -->
+  <div class="card" id="cardDest">
+    <div class="card-hero">
+      <div class="card-hero-icon" id="cIcon">🌊</div>
+      <div class="card-hero-overlay">
+        <div class="card-name" id="cName">霞浦</div>
+        <div class="card-prov" id="cProv">福建省宁德市</div>
+        <div class="card-badges" id="cBadges">
+          <span class="lb lb-scene">美景</span>
+          <span class="lb lb-food">美食</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-desc" id="cDesc">霞浦拥有中国最美的滩涂海岸线，每年吸引无数摄影师。渔排、海带田、紫菜架构成绝妙几何图案，潮汐变化时更是光影盛宴。</div>
+      <div class="card-reason">🌟 <b>推荐理由</b><span id="cReason">：从广州和上海出发高铁都在 5h 内，霞浦县城不大，两天足够深度体验，海鲜便宜到哭。</span></div>
+      <div class="hl" id="cHl"></div>
+      <div class="tp">
+        <div class="tp-c">
+          <div class="tp-city"><div class="tp-dot tp-gz"></div><span class="tp-cn">从广州</span></div>
+          <div class="tp-r">
+            <!-- Tabler: train -->
+            <svg viewBox="0 0 24 24"><path d="M21 13c0-3.87-3.37-7-10-7H3m0 9h16a2 2 0 0 0 2-2"/><path d="M3 6v5h17.5M3 11v4m5-4V6m5 5V6.5M3 19h18"/></svg>
+            <div class="tp-inf"><span class="tp-k">交通</span><span class="tp-v" id="gzMode">高铁</span></div>
+          </div>
+          <div class="tp-r">
+            <!-- Tabler: clock -->
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></svg>
+            <div class="tp-inf"><span class="tp-k">耗时</span><span class="tp-v" id="gzDur">约 5.5h</span></div>
+          </div>
+          <div class="tp-r">
+            <!-- Tabler: receipt-2 -->
+            <svg viewBox="0 0 24 24"><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-3-2l-2 2l-2-2l-2 2l-2-2z"/><path d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3H10m2 0v1.5m0-9V8"/></svg>
+            <div class="tp-inf"><span class="tp-k">费用</span><span class="tp-v" id="gzPrice">¥380 起</span></div>
+          </div>
+        </div>
+        <div class="tp-c">
+          <div class="tp-city"><div class="tp-dot tp-sh"></div><span class="tp-cn">从上海</span></div>
+          <div class="tp-r">
+            <!-- Tabler: train -->
+            <svg viewBox="0 0 24 24"><path d="M21 13c0-3.87-3.37-7-10-7H3m0 9h16a2 2 0 0 0 2-2"/><path d="M3 6v5h17.5M3 11v4m5-4V6m5 5V6.5M3 19h18"/></svg>
+            <div class="tp-inf"><span class="tp-k">交通</span><span class="tp-v" id="shMode">高铁</span></div>
+          </div>
+          <div class="tp-r">
+            <!-- Tabler: clock -->
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></svg>
+            <div class="tp-inf"><span class="tp-k">耗时</span><span class="tp-v" id="shDur">约 4h</span></div>
+          </div>
+          <div class="tp-r">
+            <!-- Tabler: receipt-2 -->
+            <svg viewBox="0 0 24 24"><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-3-2l-2 2l-2-2l-2 2l-2-2z"/><path d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3H10m2 0v1.5m0-9V8"/></svg>
+            <div class="tp-inf"><span class="tp-k">费用</span><span class="tp-v" id="shPrice">¥320 起</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="mt">
+        <div class="mt-i">
+          <!-- Tabler: calendar -->
+          <svg viewBox="0 0 24 24"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>
+        </div>
+        <div class="mt-inf"><span class="mt-k">建议行程</span><span class="mt-v" id="cDays">2–3 天</span></div>
+        <div class="mt-i" style="margin-left:12px">
+          <!-- Tabler: wallet -->
+          <svg viewBox="0 0 24 24"><path d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3"/></svg>
+        </div>
+        <div class="mt-inf"><span class="mt-k">当地花费</span><span class="mt-v" id="cCost">¥800/人</span></div>
+      </div>
+      <div class="card-act">
+        <button class="cd-btn fv" id="btnFav">
+          <!-- Tabler: heart -->
+          <svg viewBox="0 0 24 24"><path d="M19.5 12.572L12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572"/></svg>
+          收藏
+        </button>
+        <button class="cd-btn vd" id="btnVisited">
+          <!-- Tabler: square -->
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          已去过
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== History ====== -->
+<section class="hist" id="histSection">
+  <div class="hist-h" id="histToggle">
+    <span>历史推荐</span>
+    <!-- Tabler: chevron-down -->
+    <svg viewBox="0 0 24 24"><path d="M6 9l6 6l6-6"/></svg>
+  </div>
+  <div id="histList" class="hidden">
+    <div class="hc">
+      <div class="hc-n">婺源</div>
+      <div class="hc-ts"><span class="hc-t lb-scene">美景</span></div>
+      <div class="hc-d">4月18日</div>
+      <div class="hc-b">
+        <!-- Tabler: heart (filled style) -->
+        <svg viewBox="0 0 24 24" class="filled" style="fill:var(--peach);stroke:var(--peach);stroke-width:1.5"><path d="M19.5 12.572L12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572"/></svg>
+      </div>
+    </div>
+    <div class="hc vd">
+      <div class="hc-n">武夷山</div>
+      <div class="hc-ts"><span class="hc-t lb-hike">徒步</span></div>
+      <div class="hc-d">4月15日</div>
+      <div class="hc-b">
+        <!-- Tabler: square-check (filled) -->
+        <svg viewBox="0 0 24 24" style="fill:var(--mint);stroke:var(--mint);stroke-width:1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 12l2 2l4-4" stroke="#fff" fill="none" stroke-width="2"/></svg>
+      </div>
+    </div>
+    <div class="hc">
+      <div class="hc-n">长汀</div>
+      <div class="hc-ts"><span class="hc-t lb-food">美食</span><span class="hc-t lb-town">古镇</span></div>
+      <div class="hc-d">4月12日</div>
+    </div>
+    <div class="hc">
+      <div class="hc-n">庐山</div>
+      <div class="hc-ts"><span class="hc-t lb-scene">美景</span><span class="hc-t lb-hike">徒步</span></div>
+      <div class="hc-d">4月8日</div>
+      <div class="hc-b">
+        <svg viewBox="0 0 24 24" class="filled" style="fill:var(--peach);stroke:var(--peach);stroke-width:1.5"><path d="M19.5 12.572L12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Drawer: Favorites ====== -->
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="dw-head">
+    <div class="dw-title">收藏的目的地</div>
+    <button class="dw-close" id="dwClose">
+      <!-- Tabler: x -->
+      <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="dw-body" id="dwBody">
+    <div class="fc">
+      <div class="fc-t">
+        <span class="fc-n">霞浦</span>
+        <div class="fc-bs">
+          <button class="fc-b" title="标记已去过">
+            <!-- Tabler: square-check -->
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 12l2 2l4-4"/></svg>
+          </button>
+          <button class="fc-b" style="color:var(--coral)" title="移除收藏">
+            <!-- Tabler: x -->
+            <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="fc-rs">
+        <span class="fc-r"><span class="fc-d" style="background:var(--coral)"></span>广州 · 高铁 5.5h</span>
+        <span class="fc-r"><span class="fc-d" style="background:var(--sky)"></span>上海 · 高铁 4h</span>
+      </div>
+    </div>
+    <div class="fc">
+      <div class="fc-t">
+        <span class="fc-n">婺源</span>
+        <div class="fc-bs">
+          <button class="fc-b" title="标记已去过">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 12l2 2l4-4"/></svg>
+          </button>
+          <button class="fc-b" style="color:var(--coral)" title="移除收藏">
+            <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="fc-rs">
+        <span class="fc-r"><span class="fc-d" style="background:var(--coral)"></span>广州 · 高铁 4h</span>
+        <span class="fc-r"><span class="fc-d" style="background:var(--sky)"></span>上海 · 高铁 3h</span>
+      </div>
+    </div>
+    <div class="fc">
+      <div class="fc-t">
+        <span class="fc-n">庐山</span>
+        <div class="fc-bs">
+          <button class="fc-b" title="标记已去过">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 12l2 2l4-4"/></svg>
+          </button>
+          <button class="fc-b" style="color:var(--coral)" title="移除收藏">
+            <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="fc-rs">
+        <span class="fc-r"><span class="fc-d" style="background:var(--coral)"></span>广州 · 高铁 4.5h</span>
+        <span class="fc-r"><span class="fc-d" style="background:var(--sky)"></span>上海 · 高铁 3.5h</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== Tab switching =====
+document.querySelectorAll('.pill').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.pill').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+  });
+});
+
+// ===== Prompt Panel =====
+const ppSection = document.getElementById('ppSection');
+const ppHead    = document.getElementById('ppHead');
+const ppHeadTxt = document.getElementById('ppHeadTxt');
+const ppInput   = document.getElementById('ppInput');
+const ppChips   = document.getElementById('ppChips');
+const ppClear   = document.getElementById('ppClear');
+
+ppHead.addEventListener('click', () => ppSection.classList.toggle('open'));
+
+// chip 切换 + 同步写入 textarea
+ppChips.addEventListener('click', (e) => {
+  const chip = e.target.closest('.pp-chip');
+  if (!chip) return;
+  chip.classList.toggle('on');
+  syncChipsToInput();
+  refreshPpHead();
+});
+function syncChipsToInput() {
+  const ons = [...ppChips.querySelectorAll('.pp-chip.on')].map(c => c.dataset.kw);
+  // 只保留用户手写的部分（chip 词之前的内容）
+  let manual = ppInput.value;
+  [...ppChips.querySelectorAll('.pp-chip')].forEach(c => {
+    manual = manual.replace(new RegExp('[、，,\\s]*' + c.dataset.kw, 'g'), '');
+  });
+  manual = manual.trim().replace(/^[、，,]+|[、，,]+$/g, '');
+  ppInput.value = [manual, ons.join('、')].filter(Boolean).join(manual && ons.length ? '、' : '');
+}
+ppInput.addEventListener('input', refreshPpHead);
+ppClear.addEventListener('click', () => {
+  ppInput.value = '';
+  ppChips.querySelectorAll('.pp-chip.on').forEach(c => c.classList.remove('on'));
+  refreshPpHead();
+});
+function refreshPpHead() {
+  const val = ppInput.value.trim();
+  if (val) {
+    ppHead.classList.add('has-val');
+    ppHeadTxt.textContent = '已设置偏好 · ' + val;
+  } else {
+    ppHead.classList.remove('has-val');
+    ppHeadTxt.textContent = '加点偏好，让 AI 更懂你';
+  }
+}
+
+// ===== View management =====
+function showView(id) {
+  ['viewLoading','viewError','viewEmpty','viewResult'].forEach(v => {
+    document.getElementById(v).classList.toggle('hidden', v !== id);
+  });
+}
+
+// ===== API config =====
+const NOVAI_URL = 'https://us.novaiapi.com/v1/chat/completions';
+const NOVAI_KEY = 'sk-pX1HGzohFaLQ4PWLENApQ1g4HdP9v9w2g3nupcLBcPwaEFsd';
+const MODEL = '[次]gemini-3.1-pro-preview';
+const DAILY_LIMIT = 100;
+
+// ===== Shuffle / recommend =====
+const TAG_MAP = { food:'美食', hike:'徒步', scene:'美景', hot:'温泉', island:'海岛', town:'古镇', all:'不限' };
+const TAG_CLASS = { '美食':'lb-food','徒步':'lb-hike','美景':'lb-scene','温泉':'lb-hot','海岛':'lb-island','古镇':'lb-town' };
+
+function getCurrentTag() {
+  const on = document.querySelector('.pill.on');
+  return on ? on.dataset.tag : 'all';
+}
+function getHistoryNames() {
+  return [...document.querySelectorAll('.hc-n')].map(el => el.textContent.trim()).slice(0, 8);
+}
+
+// 本地限额（按北京时间日历日）
+function todayYMD() {
+  const d = new Date(Date.now() + 8 * 3600 * 1000);
+  return d.toISOString().slice(0, 10);
+}
+function getUsage() {
+  try {
+    const raw = localStorage.getItem('weekend_usage');
+    if (!raw) return { date: todayYMD(), count: 0 };
+    const p = JSON.parse(raw);
+    if (p.date !== todayYMD()) return { date: todayYMD(), count: 0 };
+    return p;
+  } catch { return { date: todayYMD(), count: 0 }; }
+}
+function bumpUsage() {
+  const u = getUsage();
+  u.count += 1;
+  localStorage.setItem('weekend_usage', JSON.stringify(u));
+  return u;
+}
+
+function renderCard(d) {
+  document.getElementById('cIcon').textContent  = d.icon || '🗺️';
+  document.getElementById('cName').textContent  = d.name || '—';
+  document.getElementById('cProv').textContent  = d.province || '';
+  document.getElementById('cDesc').textContent  = d.desc || '';
+  document.getElementById('cReason').textContent = '：' + (d.reason || '');
+  // highlights
+  const hl = document.getElementById('cHl');
+  hl.innerHTML = '';
+  (d.highlights || []).forEach(it => {
+    const row = document.createElement('div');
+    row.className = 'hl-item';
+    row.innerHTML = `
+      <div class="hl-emoji">${it.emoji || '✨'}</div>
+      <div class="hl-body">
+        <div class="hl-title">${it.title || ''}</div>
+        <div class="hl-content">${(it.content || '').replace(/</g,'&lt;')}</div>
+      </div>`;
+    hl.appendChild(row);
+  });
+  const tagBox = document.getElementById('cBadges');
+  tagBox.innerHTML = '';
+  (d.tags || []).forEach(t => {
+    const cls = TAG_CLASS[t] || 'lb-town';
+    const el = document.createElement('span');
+    el.className = `lb ${cls}`;
+    el.textContent = t;
+    tagBox.appendChild(el);
+  });
+  const tr = d.transport || {};
+  if (tr.gz) {
+    document.getElementById('gzMode').textContent  = tr.gz.mode || '—';
+    document.getElementById('gzDur').textContent   = tr.gz.duration || '—';
+    document.getElementById('gzPrice').textContent = tr.gz.price || '—';
+  }
+  if (tr.sh) {
+    document.getElementById('shMode').textContent  = tr.sh.mode || '—';
+    document.getElementById('shDur').textContent   = tr.sh.duration || '—';
+    document.getElementById('shPrice').textContent = tr.sh.price || '—';
+  }
+  document.getElementById('cDays').textContent = d.days || '—';
+  document.getElementById('cCost').textContent = d.cost || '—';
+  // 重置收藏/已去过
+  document.getElementById('btnFav')?.classList.remove('on');
+  document.getElementById('btnFav')?.querySelector('svg')?.setAttribute('style', '');
+  document.getElementById('btnVisited')?.classList.remove('on');
+  const vdSvg = document.getElementById('btnVisited')?.querySelector('svg');
+  if (vdSvg) vdSvg.innerHTML = '<rect x="3" y="3" width="18" height="18" rx="2"/>';
+}
+
+function buildPrompt(category, preference, history) {
+  const categoryLabel = TAG_MAP[category] || '不限';
+  const histStr = history.length ? `\n已经推荐过的地方（不要重复）：${history.join('、')}` : '';
+  const prefStr = preference ? `\n用户额外需求：${preference}` : '';
+
+  const systemPrompt = `你是一个旅行推荐助手。用户是一对异地情侣，男方在广州、女方在上海，想找一个"周末两地都容易到达"的小众目的地一起出游。
+
+严格按以下 JSON 格式回复（不要加 markdown 代码块，不要任何多余文字）：
+{
+  "name": "地名",
+  "province": "省份 · 市/地区",
+  "icon": "emoji（1 个，代表该地特色）",
+  "tags": ["标签1", "标签2"],
+  "desc": "2-3 句话描述这个地方的氛围和特色，要生动具体，让人一看就心动",
+  "highlights": [
+    { "emoji": "🍜", "title": "必吃", "content": "具体到菜名/店名，比如：海蛎煎、十三行的陈桂香鱼丸、海带苗炖排骨" },
+    { "emoji": "📸", "title": "必打卡", "content": "具体景点+玩法，比如：小皓滩涂日落（5点前到占机位）、杨家溪榕树群划船" },
+    { "emoji": "✨", "title": "小众体验", "content": "别的攻略少提的玩法/店/小众点位" },
+    { "emoji": "💡", "title": "贴心提醒", "content": "实用 tips，比如穿什么鞋、几点去、忌什么" }
+  ],
+  "reason": "为什么特别推荐给这对广沪情侣，一句话讲清楚",
+  "transport": {
+    "gz": { "mode": "高铁/飞机", "duration": "约 Xh", "price": "¥XXX 起" },
+    "sh": { "mode": "高铁/飞机", "duration": "约 Xh", "price": "¥XXX 起" }
+  },
+  "days": "2-3 天",
+  "cost": "¥XXX/人"
+}
+
+可选 tag：美食/徒步/美景/温泉/海岛/古镇
+icon 选一个最贴切的 emoji，比如海边🌊、古镇🏯、温泉♨️、山🏔️、美食🍜
+highlights 的 content 要具体可执行，绝对不要空话（❌"美食丰富" ✅"老城厢黄记海蛎煎 ¥15/份"）`;
+
+  const userPrompt = `偏好类别：${categoryLabel}${prefStr}${histStr}\n请推荐一个地方。`;
+  return { systemPrompt, userPrompt };
+}
+
+async function recommend() {
+  // 本地限额
+  const u = getUsage();
+  if (u.count >= DAILY_LIMIT) {
+    const subEl = document.querySelector('#viewError .er-m');
+    if (subEl) subEl.textContent = `今天用得有点多啦（${DAILY_LIMIT} 次上限），明天再来 🌙`;
+    showView('viewError');
+    return;
+  }
+
+  showView('viewLoading');
+  try {
+    const { systemPrompt, userPrompt } = buildPrompt(
+      getCurrentTag(),
+      (document.getElementById('ppInput')?.value || '').trim(),
+      getHistoryNames()
+    );
+    const res = await fetch(NOVAI_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${NOVAI_KEY}`,
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user',   content: userPrompt },
+        ],
+        stream: false,
+      }),
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const aiData = await res.json();
+    const content = aiData?.choices?.[0]?.message?.content?.trim() || '';
+    const clean = content.replace(/^```json\s*|\s*```$/g, '').trim();
+    const parsed = JSON.parse(clean);
+
+    renderCard(parsed);
+    const used = bumpUsage().count;
+    const subText = document.getElementById('subText');
+    if (subText) subText.textContent = `今日已用 ${used}/${DAILY_LIMIT} · 已为你们推荐 ✨`;
+    showView('viewResult');
+  } catch (e) {
+    console.error(e);
+    const subEl = document.querySelector('#viewError .er-m');
+    if (subEl) subEl.textContent = '网络开了个小差，再试一次？';
+    showView('viewError');
+  }
+}
+
+document.getElementById('btnShuffle')?.addEventListener('click', recommend);
+document.getElementById('btnEmpty')?.addEventListener('click', recommend);
+document.getElementById('btnRetry')?.addEventListener('click', recommend);
+// 切换标签时，如果当前已有结果，自动重新推荐
+document.querySelectorAll('.pill').forEach(p => {
+  p.addEventListener('click', () => {
+    if (!document.getElementById('viewResult').classList.contains('hidden')) {
+      recommend();
+    }
+  });
+});
+
+// ===== Fav / Visited toggle =====
+document.getElementById('btnFav')?.addEventListener('click', function() {
+  this.classList.toggle('on');
+  const svg = this.querySelector('svg');
+  if (this.classList.contains('on')) {
+    svg.setAttribute('style', 'fill:var(--peach);stroke:var(--peach)');
+  } else {
+    svg.setAttribute('style', '');
+  }
+  updateBadge();
+});
+document.getElementById('btnVisited')?.addEventListener('click', function() {
+  this.classList.toggle('on');
+  const svg = this.querySelector('svg');
+  if (this.classList.contains('on')) {
+    svg.innerHTML = '<rect x="3" y="3" width="18" height="18" rx="2" fill="var(--mint)" stroke="var(--mint)" stroke-width="1.5"/><path d="m9 12l2 2l4-4" stroke="#fff" fill="none" stroke-width="2"/>';
+  } else {
+    svg.innerHTML = '<rect x="3" y="3" width="18" height="18" rx="2"/>';
+  }
+});
+
+// ===== Badge =====
+function updateBadge() {
+  const b = document.getElementById('badge');
+  const on = document.querySelectorAll('.cd-btn.fv.on').length;
+  b.textContent = on;
+  b.classList.toggle('hidden', on === 0);
+}
+
+// ===== Drawer =====
+const overlay = document.getElementById('overlay');
+const drawer  = document.getElementById('drawer');
+document.getElementById('favBtn')?.addEventListener('click', () => {
+  overlay.classList.add('show');
+  drawer.classList.add('show');
+});
+function closeDrawer() {
+  overlay.classList.remove('show');
+  drawer.classList.remove('show');
+}
+document.getElementById('dwClose')?.addEventListener('click', closeDrawer);
+overlay.addEventListener('click', closeDrawer);
+
+// ===== History toggle =====
+document.getElementById('histToggle')?.addEventListener('click', function() {
+  this.classList.toggle('open');
+  document.getElementById('histList').classList.toggle('hidden');
+});
+</script>
+</body>
+</html>
