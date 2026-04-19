@@ -199,22 +199,47 @@
     border-left: 3px solid var(--mint);
   }
 
-  /* Highlights */
-  .hl { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
-  .hl-item {
-    display: flex; gap: 10px;
-    padding: 11px 12px; border-radius: var(--radius-sm);
-    background: var(--cream); border: 1px solid var(--line);
+  /* Section blocks (foods / spots) */
+  .sec { margin-top: 14px; }
+  .sec-h {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 700; color: var(--txt);
+    letter-spacing: .2px; margin-bottom: 8px;
   }
-  .hl-emoji { font-size: 18px; line-height: 1.3; flex-shrink: 0; width: 24px; text-align: center; }
-  .hl-body { flex: 1; min-width: 0; }
-  .hl-title {
-    font-size: 12px; font-weight: 700; color: var(--txt);
-    letter-spacing: .2px; margin-bottom: 2px;
+  .sec-h .sec-emo { font-size: 16px; }
+  .sec-h .sec-cnt {
+    font-size: 11px; font-weight: 600; color: var(--txt-3);
+    padding: 2px 7px; border-radius: 9px; background: var(--cream); border: 1px solid var(--line);
   }
-  .hl-content {
-    font-size: 13px; color: var(--txt-2); line-height: 1.55;
+  .sec-list {
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: var(--radius-sm); overflow: hidden;
   }
+  .sec-item {
+    display: flex; gap: 10px; padding: 11px 12px;
+    border-bottom: .5px solid var(--line);
+  }
+  .sec-item:last-child { border-bottom: none; }
+  .sec-num {
+    flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--mint-lt); color: #2D7A52;
+    font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+  .sec-body { flex: 1; min-width: 0; }
+  .sec-name { font-size: 14px; font-weight: 700; color: var(--txt); }
+  .sec-desc { font-size: 12.5px; color: var(--txt-2); line-height: 1.55; margin-top: 2px; }
+
+  /* Tips */
+  .tips {
+    margin-top: 14px; padding: 10px 12px; border-radius: var(--radius-sm);
+    background: #FFF7E8; border-left: 3px solid var(--peach);
+    font-size: 12px; color: #8B5A00; line-height: 1.6;
+  }
+  .tips-t { font-weight: 700; margin-bottom: 4px; font-size: 12px; color: #6B4500; }
+  .tips ul { list-style: none; padding: 0; margin: 0; }
+  .tips li { position: relative; padding-left: 12px; }
+  .tips li::before { content: "·"; position: absolute; left: 3px; top: -1px; font-weight: 700; }
 
   /* Transport */
   .tp { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
@@ -526,7 +551,21 @@
     <div class="card-body">
       <div class="card-desc" id="cDesc">霞浦拥有中国最美的滩涂海岸线，每年吸引无数摄影师。渔排、海带田、紫菜架构成绝妙几何图案，潮汐变化时更是光影盛宴。</div>
       <div class="card-reason">🌟 <b>推荐理由</b><span id="cReason">：从广州和上海出发高铁都在 5h 内，霞浦县城不大，两天足够深度体验，海鲜便宜到哭。</span></div>
-      <div class="hl" id="cHl"></div>
+
+      <div class="sec" id="secFoods">
+        <div class="sec-h"><span class="sec-emo">🍜</span><span>必吃美食</span><span class="sec-cnt" id="foodsCnt">0</span></div>
+        <div class="sec-list" id="foodsList"></div>
+      </div>
+
+      <div class="sec" id="secSpots">
+        <div class="sec-h"><span class="sec-emo">📸</span><span>必玩景点</span><span class="sec-cnt" id="spotsCnt">0</span></div>
+        <div class="sec-list" id="spotsList"></div>
+      </div>
+
+      <div class="tips hidden" id="secTips">
+        <div class="tips-t">💡 贴心提醒</div>
+        <ul id="tipsList"></ul>
+      </div>
       <div class="tp">
         <div class="tp-c">
           <div class="tp-city"><div class="tp-dot tp-gz"></div><span class="tp-cn">从广州</span></div>
@@ -808,19 +847,57 @@ function renderCard(d) {
   document.getElementById('cProv').textContent  = d.province || '';
   document.getElementById('cDesc').textContent  = d.desc || '';
   document.getElementById('cReason').textContent = '：' + (d.reason || '');
-  // highlights
-  const hl = document.getElementById('cHl');
-  hl.innerHTML = '';
-  (d.highlights || []).forEach(it => {
+
+  // foods
+  const foods = d.foods || [];
+  const foodsList = document.getElementById('foodsList');
+  document.getElementById('foodsCnt').textContent = foods.length;
+  document.getElementById('secFoods').classList.toggle('hidden', foods.length === 0);
+  foodsList.innerHTML = '';
+  foods.forEach((f, i) => {
     const row = document.createElement('div');
-    row.className = 'hl-item';
+    row.className = 'sec-item';
     row.innerHTML = `
-      <div class="hl-emoji">${it.emoji || '✨'}</div>
-      <div class="hl-body">
-        <div class="hl-title">${it.title || ''}</div>
-        <div class="hl-content">${(it.content || '').replace(/</g,'&lt;')}</div>
+      <div class="sec-num">${i + 1}</div>
+      <div class="sec-body">
+        <div class="sec-name"></div>
+        <div class="sec-desc"></div>
       </div>`;
-    hl.appendChild(row);
+    row.querySelector('.sec-name').textContent = f.name || '';
+    row.querySelector('.sec-desc').textContent = f.detail || '';
+    foodsList.appendChild(row);
+  });
+
+  // spots
+  const spots = d.spots || [];
+  const spotsList = document.getElementById('spotsList');
+  document.getElementById('spotsCnt').textContent = spots.length;
+  document.getElementById('secSpots').classList.toggle('hidden', spots.length === 0);
+  spotsList.innerHTML = '';
+  spots.forEach((s, i) => {
+    const row = document.createElement('div');
+    row.className = 'sec-item';
+    row.innerHTML = `
+      <div class="sec-num">${i + 1}</div>
+      <div class="sec-body">
+        <div class="sec-name"></div>
+        <div class="sec-desc"></div>
+      </div>`;
+    row.querySelector('.sec-name').textContent = s.name || '';
+    row.querySelector('.sec-desc').textContent = s.detail || '';
+    spotsList.appendChild(row);
+  });
+
+  // tips
+  const tips = d.tips || [];
+  const tipsBox = document.getElementById('secTips');
+  tipsBox.classList.toggle('hidden', tips.length === 0);
+  const tipsList = document.getElementById('tipsList');
+  tipsList.innerHTML = '';
+  tips.forEach(t => {
+    const li = document.createElement('li');
+    li.textContent = t;
+    tipsList.appendChild(li);
   });
   const tagBox = document.getElementById('cBadges');
   tagBox.innerHTML = '';
@@ -859,20 +936,23 @@ function buildPrompt(category, preference, history) {
 
   const systemPrompt = `你是一个旅行推荐助手。用户是一对异地情侣，男方在广州、女方在上海，想找一个"周末两地都容易到达"的小众目的地一起出游。
 
-严格按以下 JSON 格式回复（不要加 markdown 代码块，不要任何多余文字）：
+严格按以下 JSON 格式回复（不要加 markdown 代码块，不要任何多余文字，所有字符串用双引号）：
 {
   "name": "地名",
   "province": "省份 · 市/地区",
   "icon": "emoji（1 个，代表该地特色）",
   "tags": ["标签1", "标签2"],
-  "desc": "2-3 句话描述这个地方的氛围和特色，要生动具体，让人一看就心动",
-  "highlights": [
-    { "emoji": "🍜", "title": "必吃", "content": "具体到菜名/店名，比如：海蛎煎、十三行的陈桂香鱼丸、海带苗炖排骨" },
-    { "emoji": "📸", "title": "必打卡", "content": "具体景点+玩法，比如：小皓滩涂日落（5点前到占机位）、杨家溪榕树群划船" },
-    { "emoji": "✨", "title": "小众体验", "content": "别的攻略少提的玩法/店/小众点位" },
-    { "emoji": "💡", "title": "贴心提醒", "content": "实用 tips，比如穿什么鞋、几点去、忌什么" }
+  "desc": "2-3 句话描述这个地方的氛围和特色，要生动具体",
+  "reason": "为什么特别推荐给这对广沪情侣，一句话讲清楚独特价值",
+
+  "foods": [
+    { "name": "具体菜名或店名", "detail": "一句话讲为什么值得吃，可带推荐菜/价位/地址关键字" }
   ],
-  "reason": "为什么特别推荐给这对广沪情侣，一句话讲清楚",
+  "spots": [
+    { "name": "景点/玩法名", "detail": "一句话讲玩法、时机、亮点" }
+  ],
+  "tips": ["贴心提醒 1（具体可执行）", "贴心提醒 2"],
+
   "transport": {
     "gz": { "mode": "高铁/飞机", "duration": "约 Xh", "price": "¥XXX 起" },
     "sh": { "mode": "高铁/飞机", "duration": "约 Xh", "price": "¥XXX 起" }
@@ -881,9 +961,13 @@ function buildPrompt(category, preference, history) {
   "cost": "¥XXX/人"
 }
 
-可选 tag：美食/徒步/美景/温泉/海岛/古镇
-icon 选一个最贴切的 emoji，比如海边🌊、古镇🏯、温泉♨️、山🏔️、美食🍜
-highlights 的 content 要具体可执行，绝对不要空话（❌"美食丰富" ✅"老城厢黄记海蛎煎 ¥15/份"）`;
+硬性要求：
+- foods 至少 3 条，最多 5 条；spots 至少 3 条，最多 5 条
+- 内容必须具体到可执行，不要说空话
+  ❌ "美食丰富" / "风景优美"
+  ✅ "老城厢黄记海蛎煎 ¥15/份" / "小皓滩涂日落（5 点前到占机位）"
+- tags 从这些里选：美食/徒步/美景/温泉/海岛/古镇
+- icon 选一个贴切 emoji（海边🌊、古镇🏯、温泉♨️、山🏔️、美食🍜 等）`;
 
   const userPrompt = `偏好类别：${categoryLabel}${prefStr}${histStr}\n请推荐一个地方。`;
   return { systemPrompt, userPrompt };
