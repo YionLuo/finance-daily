@@ -110,6 +110,7 @@ def select_topic(client, breaking_news, ai_breaking_news, existing_topics):
 # ============ Stage 2: Brain Dump ============
 
 BRAIN_DUMP_PROMPT = """你是一位在 AI 和科技金融领域有 15 年经验的资深分析师。
+当前时间：{current_time}
 
 今天你要深度分析的主题是：「{topic}」
 角度：{angle}
@@ -123,6 +124,8 @@ BRAIN_DUMP_PROMPT = """你是一位在 AI 和科技金融领域有 15 年经验�
 5. **关键数据点**：你记得的重要数据（市场规模、增速、关键公司的财务指标等）
 6. **你的初步判断**：基于经验，你对这件事的第一反应是什么
 
+注意：你的知识可能截止到 2024-2025 年，这没关系——先把背景知识倒出来，后续会通过搜索补充 2026 年的最新信息。标注你不确定的地方（如"截至 2024 年数据为 X，2026 年需确认"）。
+
 不要搜索，不要引用新闻。纯粹基于你的知识库输出。
 用中文，2000 字左右。
 """
@@ -135,6 +138,7 @@ def brain_dump(client, topic_info):
     prompt = BRAIN_DUMP_PROMPT.format(
         topic=topic_info.get("topic", ""),
         angle=topic_info.get("angle", ""),
+        current_time=format_date_cst(now_cst()),
     )
 
     response = llm_chat_with_retry(
@@ -150,39 +154,52 @@ def brain_dump(client, topic_info):
 
 RESEARCH_SYSTEM_PROMPT = """你是 Y Daily 的首席分析师，正在对「{topic}」进行深度研究。
 
+当前时间：{current_time}（注意：现在是 2026 年，你的内部知识可能截止到 2024-2025，所有关于当前状态的判断必须基于搜索到的最新信息，不要用旧数据当新事实。）
+
 你的读者是 AI/科技行业资深从业者和专业投资者。他们不需要科普，需要的是独到洞察和有论据支撑的判断。
 
-你已经做了初步知识梳理（见下方），现在要通过搜索补充最新信息，然后写出深度分析。
-
-=== 你的知识储备 ===
+=== 你的知识储备（背景参考，数据可能过时）===
 {brain_dump}
 
-=== 今日相关新闻 ===
+=== 今日相关新闻（2026 年最新）===
 {breaking_context}
 
-=== 你的任务 ===
-1. 先想清楚你还需要什么信息来支撑分析，用 web_search 工具搜索
-2. 如果搜到的文章需要详细内容，用 fetch_url_content 读取全文
-3. 搜集够了之后，写出完整的深度分析报告
+=== 你的工作流程 ===
+
+第一步：研究
+- 用 web_search 搜索你需要的最新信息（2026 年的数据、事件、观点）
+- 用 fetch_url_content 读取关键文章的全文以获取细节
+- 特别注意搜索：最新的数据/财报、不同立场的观点、被忽略的反面证据
+
+第二步：列提纲
+- 搜集够了后，先输出你的报告提纲（5-7 个章节标题 + 每章核心论点）
+- 确认提纲覆盖了：核心论点、支撑证据、反面观点、投资影响
+
+第三步：写报告
+- 确认提纲后直接开始写完整报告
+- **报告正文必须 4000-6000 字**，每个章节至少 500 字——这不是新闻简报，是深度研究
+- 每个关键论点都要有具体数据和来源支撑
 
 === Y Daily 的分析偏好 ===
 - 核心关注：AI 和互联网行业的技术/产品/商业动态
-- 投资视角：关注对美股和港股的影响
+- 投资视角：关注对美股和港股的影响，给出具体标的和逻辑
 - 风格：有一个清晰的核心论点贯穿全文，不是面面俱到的综述
-- 敢于下判断，用事实和逻辑支撑
+- 敢于下判断——"我们认为 X 因为 Y"——而不是"有待观察"
 - 指出主流叙事中的盲点或错误
+- 所有数据和事实必须标注来源
 
-=== 报告格式要求 ===
-当你准备好写报告时，直接输出完整的中文分析报告。不需要 JSON 格式，直接写文章。
+=== 报告格式 ===
+直接输出中文文章，不要 JSON。
 
-报告结构：
-- 标题（有态度，不是中性描述）
-- 副标题（核心论点一句话）
-- 正文（3000-6000 字，分章节，每个章节有小标题）
-- 每个关键论点后标注信息来源（搜索到的文章标题或 URL）
-- 最后附「核心判断」（3-4 条一句话总结）和「关注标的」（相关股票代码）
+必须包含：
+- 标题（有态度、有判断，不是中性描述）
+- 副标题（核心论点一句话浓缩）
+- 正文 4000-6000 字，分 5-7 个章节，每章有小标题
+- 关键数据和论点后标注来源（文章标题或 URL）
+- 末尾附「核心判断」（4-5 条，每条一句话，有态度）
+- 末尾附「关注标的」（相关美股/港股代码 + 一句话逻辑）
 
-写中文。开始吧。
+开始研究。
 """
 
 
@@ -197,6 +214,7 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
         topic=topic_info.get("topic", ""),
         brain_dump=brain_dump_text,
         breaking_context=breaking_context,
+        current_time=format_date_cst(now_cst()),
     )
 
     messages = [
@@ -222,7 +240,7 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
                 messages=messages,
                 tools=AGENT_TOOLS,
                 temperature=0.5,
-                max_tokens=8192,
+                max_tokens=16384,
             )
         except Exception as e:
             print(f"  LLM call failed: {e}")
@@ -281,7 +299,7 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
                 model=LLM_MODEL,
                 messages=messages,
                 temperature=0.5,
-                max_tokens=8192,
+                max_tokens=16384,
             )
             final_text = response.choices[0].message.content
             print(f"  Forced output: {len(final_text or '')} chars")
@@ -333,7 +351,7 @@ def format_to_json(client, report_text):
 
     response = llm_chat_with_retry(
         client, [{"role": "user", "content": prompt}],
-        max_tokens=8192, temperature=0.1,
+        max_tokens=16384, temperature=0.1,
     )
 
     cleaned = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
