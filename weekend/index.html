@@ -803,10 +803,8 @@ function showView(id) {
 }
 
 // ===== API config =====
-const NOVAI_URL = 'https://us.novaiapi.com/v1/chat/completions';
-const NOVAI_KEY = 'sk-pX1HGzohFaLQ4PWLENApQ1g4HdP9v9w2g3nupcLBcPwaEFsd';
-const MODEL = '[次]gemini-3.1-pro-preview';
-const DAILY_LIMIT = 100;
+// 后端 API（腾讯云 SCF Web 函数），代理 NovAI 并做服务端限额（IP 日 30 次 / 全局日 200 次）
+const API_ENDPOINT = 'https://1301018561-gxpio6h7ch.ap-guangzhou.tencentscf.com/api/recommend';
 
 // ===== Shuffle / recommend =====
 const TAG_MAP = { food:'美食', hike:'徒步', scene:'美景', hot:'温泉', island:'海岛', town:'古镇', all:'不限' };
@@ -820,26 +818,7 @@ function getHistoryNames() {
   return [...document.querySelectorAll('.hc-n')].map(el => el.textContent.trim()).slice(0, 8);
 }
 
-// 本地限额（按北京时间日历日）
-function todayYMD() {
-  const d = new Date(Date.now() + 8 * 3600 * 1000);
-  return d.toISOString().slice(0, 10);
-}
-function getUsage() {
-  try {
-    const raw = localStorage.getItem('weekend_usage');
-    if (!raw) return { date: todayYMD(), count: 0 };
-    const p = JSON.parse(raw);
-    if (p.date !== todayYMD()) return { date: todayYMD(), count: 0 };
-    return p;
-  } catch { return { date: todayYMD(), count: 0 }; }
-}
-function bumpUsage() {
-  const u = getUsage();
-  u.count += 1;
-  localStorage.setItem('weekend_usage', JSON.stringify(u));
-  return u;
-}
+// 限额已迁移到服务端（IP 日 30 次 / 全局日 200 次），前端不再记账
 
 function renderCard(d) {
   document.getElementById('cIcon').textContent  = d.icon || '🗺️';
@@ -974,47 +953,41 @@ function buildPrompt(category, preference, history) {
 }
 
 async function recommend() {
-  // 本地限额
-  const u = getUsage();
-  if (u.count >= DAILY_LIMIT) {
-    const subEl = document.querySelector('#viewError .er-m');
-    if (subEl) subEl.textContent = `今天用得有点多啦（${DAILY_LIMIT} 次上限），明天再来 🌙`;
-    showView('viewError');
-    return;
-  }
-
   showView('viewLoading');
   try {
-    const { systemPrompt, userPrompt } = buildPrompt(
-      getCurrentTag(),
-      (document.getElementById('ppInput')?.value || '').trim(),
-      getHistoryNames()
-    );
-    const res = await fetch(NOVAI_URL, {
+    const res = await fetch(API_ENDPOINT, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${NOVAI_KEY}`,
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: MODEL,
-        messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user',   content: userPrompt },
-        ],
-        stream: false,
+        category: getCurrentTag(),
+        pref: (document.getElementById('ppInput')?.value || '').trim(),
+        history: getHistoryNames(),
       }),
     });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const aiData = await res.json();
-    const content = aiData?.choices?.[0]?.message?.content?.trim() || '';
-    const clean = content.replace(/^```json\s*|\s*```$/g, '').trim();
-    const parsed = JSON.parse(clean);
 
-    renderCard(parsed);
-    const used = bumpUsage().count;
+    // 限额命中：后端返回 429
+    if (res.status === 429) {
+      const err = await res.json().catch(() => ({}));
+      const subEl = document.querySelector('#viewError .er-m');
+      if (subEl) {
+        subEl.textContent = err.scope === 'global'
+          ? '今天大家都玩疯了，明天再来 🌙'
+          : '你今天已经玩够啦，明天再来 🌙';
+      }
+      showView('viewError');
+      return;
+    }
+
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const result = await res.json();
+    if (!result.ok || !result.data) throw new Error('bad response');
+
+    renderCard(result.data);
     const subText = document.getElementById('subText');
-    if (subText) subText.textContent = `今日已用 ${used}/${DAILY_LIMIT} · 已为你们推荐 ✨`;
+    if (subText) {
+      const u = result.usage || {};
+      subText.textContent = `今日已用 ${u.ip_used ?? '-'}/${u.ip_limit ?? '-'} · 已为你们推荐 ✨`;
+    }
     showView('viewResult');
   } catch (e) {
     console.error(e);
