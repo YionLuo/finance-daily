@@ -1467,6 +1467,12 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:55", tag: "tech", tagText: "科技", text: "苹果公司宣布，现任CEO蒂姆·库克将于9月1日卸任，转任公司执行董事长。硬件工程高级副总裁约翰·特努斯将接任CEO一职。这是苹果自2011年库克接替乔布斯以来最重要的领导层变动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/apple-names-john-ternus-ceo-replacing-tim-cook-who-becomes-chairman.html" },
+  { time: "04:54", tag: "ai", tagText: "AI", text: "亚马逊宣布将向AI初创公司Anthropic追加投资高达250亿美元，作为一项AI基础设施协议的一部分。作为交换，Anthropic承诺在未来十年内使用超过1000亿美元的亚马逊云服务。此举进一步巩固了亚马逊在生成式AI军备竞赛中的地位。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html" },
+  { time: "04:51", tag: "macro", tagText: "宏观", text: "受特朗普总统支持将LSD等致幻剂用于心理健康治疗的行政命令推动，致幻剂概念股大幅上涨。该命令旨在加快相关药物通过监管审批流程的速度，为这一新兴医疗领域带来政策利好。", source: "MarketWatch", url: "https://www.marketwatch.com/story/psychedelic-stocks-rally-with-trumps-support-addafa78?mod=mw_rss_topstories" },
+  { time: "04:43", tag: "ai", tagText: "AI", text: "据报道，芯片设计公司迈威尔科技将帮助谷歌开发定制AI芯片。受此消息提振，迈威尔股价上涨，而其竞争对手博通的股价则下跌。今年3月，英伟达曾向迈威尔投资20亿美元，显示出市场对AI芯片供应链的持续关注。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/marvell-stock-google-custom-ai-chips.html" },
+  { time: "04:17", tag: "macro", tagText: "宏观", text: "汇丰银行表示对股市持“极度看涨”立场，认为伊朗冲突并非市场“游戏规则改变者”。该行认为，过去几天市场创下新高的涨势与历史先例非常吻合。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/hsbc-is-max-bullish-stocks-saying-iran-conflict-is-not-a-game-changer.html" },
+  { time: "03:33", tag: "tech", tagText: "科技", text: "加州地区检察官指控亚马逊“胁迫”李维斯、恒适等主要供应商，要求它们说服沃尔玛、塔吉特和家得宝等竞争对手零售商提高价格，涉嫌价格操纵。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/california-da-amazon-price-fixing-walmart-target.html" },
   { time: "03:04", tag: "geo", tagText: "地缘", text: "美伊紧张局势急剧升级，霍尔木兹海峡发生针对商船的袭击事件，导致油价飙升。特朗普总统再次威胁伊朗，称若其不签署协议，将摧毁其桥梁和发电厂等基础设施。市场担忧双方可能爆发全面冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/trump-defense-iran-war-pakistan-vance-witkoff-kushner.html" },
   { time: "02:40", tag: "macro", tagText: "宏观", text: "霍尔木兹海峡的航运中断已开始影响全球供应链。中国作为全球主要的圣诞商品生产国，其制造商表示，塑料等原材料成本上升将导致消费者为节日商品支付更高价格。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/hormuz-china-christmas-capital-holiday-spending.html" },
   { time: "02:28", tag: "macro", tagText: "宏观", text: "晨星研究发现，在当前美联储暂停降息的背景下，现金类资产比美国国债更能有效分散投资组合风险，且仍能提供有吸引力的收益率。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/cash-has-diversified-portfolios-better-than-bonds-says-morningstar-.html" },
@@ -1481,14 +1487,8 @@ const breakingNews = [
   { time: "23:42", tag: "macro", tagText: "宏观", text: "知名投资者霍华德·马克斯表示，当前市场上便宜的股票非常少，'只有当人们恐慌时，才会出现真正的便宜货'。他认为目前市场整体估值并不低廉。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/howard-marks-says-there-are-very-few-cheap-stocks-bargains-come-when-people-panic.html" },
   { time: "23:35", tag: "tech", tagText: "科技", text: "电动汽车制造商Rivian位于伊利诺伊州的工厂遭受龙卷风破坏，正值其关键车型R2发布之际。此次事件可能对其生产和交付计划造成影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/rivians-factory-damaged-by-tornado-amid-crucial-r2-ev-launch.html" },
   { time: "23:35", tag: "tech", tagText: "科技", text: "数据中心及AI电力公司Fermi股价暴跌，此前其首席执行官及多名高管离职。该公司由美国前能源部长里克·佩里联合创立，近期还遭遇了亚马逊1.5亿美元投资撤出的挫折。", source: "Financial Times", url: "https://www.ft.com/content/cf10c7b5-a3b5-41aa-8d54-96b40628aa78" },
-  { time: "23:09", tag: "macro", tagText: "宏观", text: "三明治连锁店Jersey Mike's已秘密提交首次公开募股(IPO)申请。黑石集团于2024年收购了该公司的多数股权，当时估值约为80亿美元。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/jersey-mikes-ipo.html" },
-  { time: "17:41", tag: "macro", tagText: "宏观", text: "欧盟计划放宽并购规则，旨在培育‘欧洲冠军企业’。草案改革强调，竞争监管机构在评估拟议交易时，应更重视规模经济和投资效益。此举可能重塑欧洲产业格局，促进大型跨国公司的形成。", source: "Financial Times", url: "https://www.ft.com/content/75073836-d923-4b3f-a1ca-5ae83dcd705a" },
-  { time: "17:38", tag: "macro", tagText: "宏观", text: "Fundstrat策略师Tom Lee指出，散户投资者错过了上一轮市场反弹，但可能引领下一轮上涨。数据显示，三月底市场触底时，散户在积极抛售，而对冲基金则在逢低买入。", source: "MarketWatch", url: "https://www.marketwatch.com/story/retail-investors-missed-the-rally-why-strategist-tom-lee-says-theyll-lead-the-next-one-eb5889bb?mod=mw_rss_topstories" },
-  { time: "16:40", tag: "macro", tagText: "宏观", text: "分析师警告勿过早断言美元霸权终结，尽管'石油人民币'呼声高涨。美元指数2025年累计下跌近10%，但全球储备货币地位仍稳固。", source: "CNBC", url: "https://www.cnbc.com/2026/04/16/us-dollar-dominance-reserve-currency-iran-war-oil-china.html" },
-  { time: "16:13", tag: "tech", tagText: "科技", text: "百事可乐第一季度营收和盈利均超华尔街预期，主要得益于其北美食品业务的改善。这表明在通胀压力下，部分消费品巨头仍能通过定价和运营效率实现增长。", source: "CNBC", url: "https://www.cnbc.com/2026/04/16/pepsico-pep-q1-2026-earnings.html" },
-  { time: "16:00", tag: "tech", tagText: "地缘", text: "海湾国家转向私人交易进行100亿美元战时融资，阿布扎比、卡塔尔和科威特回避公开市场募资，伊朗冲突造成经济冲击。", source: "Financial Times", url: "https://www.ft.com/content/3b927d8b-4c6b-414a-bb85-3d6070495df7" },
 ];
-const breakingDate = "2026年4月21日 03:23 CST";
+const breakingDate = "2026年4月21日 05:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1513,7 +1513,7 @@ const aiBreakingNews = [
   { time: "13:30", tag: "ai", tagText: "AI", text: "台积电（TSMC）因英伟达和苹果的AI芯片需求激增，供应短缺，分析师预测其利润将创纪录飙升。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVTVETFRUVEN0U3QtaUpCOVFXQ2FtWFBZemgtNDhUbF9QczMwZ1R1N3pRQWdFZ1oyZ1gtQzhhLWZjOHA3UkdpS2pUSUdMbWFSOGVnVUxrZmpaMnlNS3BNMzU0TlVuUkN0MGFKN21IMTNQM19QYWFvWUs5MlF3cUlZaTFNMWQzVi1wT1k3YmplZ2FlbEtUa1lEbDBubE96VTVSZ2ZnMEdn?oc=5" },
   { time: "12:11", tag: "tech", tagText: "科技", text: "Cadence与英伟达深化AI合作，共同重塑芯片设计和机器人技术领域。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTGw0a3VPdjl3dkFTMWFHMk9oQ3I0b1h2amV1WHY4c0NRY3pOdWlDTTc1WTlPbXJTWjN0ci1RQTVfU0lmNzNLVU1RVkpvOEFzbVpwQlJ0blNqbFE5ekVHTm5KWFk0TnlWdzdRUFUxZmF6MWtxUFU5Rnh1YUlBam9QRThmMDRmQ3FXU0VVNmUwT0ZKSlhlRnNKUDRUMV9PNVpM?oc=5" },
 ];
-const aiBreakingDate = "2026年4月21日 03:23 CST";
+const aiBreakingDate = "2026年4月21日 05:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
