@@ -48,5 +48,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "auto: update breaking news $(date +%Y-%m-%d\ %H:%M\ CST)"
+            git pull --rebase origin main
             git push
           fi

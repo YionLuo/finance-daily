@@ -48,5 +48,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "auto: deep research report $(date +%Y-%m-%d)"
+            git pull --rebase origin main
             git push
           fi
