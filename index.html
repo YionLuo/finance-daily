@@ -1467,6 +1467,8 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:54", tag: "macro", tagText: "宏观", text: "美国劳工部长洛里·查韦斯-德雷默宣布辞去特朗普内阁职务，由基思·桑德林接任。这是特朗普政府近期又一重要人事变动。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/20/labor-secretary-lori-chavez-deremer-resignation-keith-sonderling.html" },
+  { time: "05:21", tag: "macro", tagText: "宏观", text: "阿拉斯加航空集团因伊朗战争导致航空燃油成本飙升，前景不明，宣布撤回其2026年全年利润预测。这凸显了地缘政治紧张局势对航空业的直接冲击。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/20/alaska-air-pulls-2026-profit-forecast-amid-fuel-costs-related-uncertainty.html" },
   { time: "04:55", tag: "tech", tagText: "科技", text: "苹果公司宣布，现任CEO蒂姆·库克将于9月1日卸任，转任公司执行董事长。硬件工程高级副总裁约翰·特努斯将接任CEO一职。这是苹果自2011年库克接替乔布斯以来最重要的领导层变动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/apple-names-john-ternus-ceo-replacing-tim-cook-who-becomes-chairman.html" },
   { time: "04:54", tag: "ai", tagText: "AI", text: "亚马逊宣布将向AI初创公司Anthropic追加投资高达250亿美元，作为一项AI基础设施协议的一部分。作为交换，Anthropic承诺在未来十年内使用超过1000亿美元的亚马逊云服务。此举进一步巩固了亚马逊在生成式AI军备竞赛中的地位。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html" },
   { time: "04:51", tag: "macro", tagText: "宏观", text: "受特朗普总统支持将LSD等致幻剂用于心理健康治疗的行政命令推动，致幻剂概念股大幅上涨。该命令旨在加快相关药物通过监管审批流程的速度，为这一新兴医疗领域带来政策利好。", source: "MarketWatch", url: "https://www.marketwatch.com/story/psychedelic-stocks-rally-with-trumps-support-addafa78?mod=mw_rss_topstories" },
@@ -1485,10 +1487,8 @@ const breakingNews = [
   { time: "00:11", tag: "macro", tagText: "宏观", text: "受美伊紧张局势升级影响，美国股市周一普遍下跌。道指、标普500指数和纳斯达克指数均走低，其中纳斯达克指数可能结束连涨势头。市场避险情绪升温，油价则因海湾地区供应风险而攀升。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPYlI5Q1M3bFBxbENja09GXzVuZldxY3RjQk9qXzB6YklQMWZKd1FqSjZ1THgzMjdTUU1SM2ZBTkhYWFZMZVBvY0drRHJNbkNHV3E2ZXNqSGVrcXBBbkw1VlBwWHJCeWYtRV83SEswWUFWUEZqM2hzQWVySWJMcElhbmQ3MjJxRzZOLU04MXBLbHdvRE0zbndBdGVpSzZqOXJITmU0NHctcUtPQnJFeHZvMVo5RUhDYmw1UTFpNV9GOWhFdFlOYm1mRkZDdC1xWnpKZjVqR1d4ZDhLUFBFT2N2WkVKdHhrb01MMjlj?oc=5" },
   { time: "00:05", tag: "crypto", tagText: "加密", text: "比特币价格在周末下跌约5%，市场担忧其4月份的反弹行情可能已经结束。地缘政治紧张局势加剧了加密货币市场的波动。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTTJFQzFRb29oZ0lYbW1LRnlFbHZMWjVGSThMb3AwazlqYUREN29BREJxekVoOUs0UXQ4cFlsUzdYQ1h0QVZvVThrdGVidkVvNmZlYnVUVHRDbFc4b0V4djFrVmxSRHNxRXExWWJpT21QU0pIenRGaVFzVFd1dzJCbnNTYVM1VHlUclgyYm45SnM0bVZIX3d1dGZlRWJLUzBEZXM1VGFZTmNaOWNKNHA5TzA1bl9xdWM?oc=4" },
   { time: "23:42", tag: "macro", tagText: "宏观", text: "知名投资者霍华德·马克斯表示，当前市场上便宜的股票非常少，'只有当人们恐慌时，才会出现真正的便宜货'。他认为目前市场整体估值并不低廉。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/howard-marks-says-there-are-very-few-cheap-stocks-bargains-come-when-people-panic.html" },
-  { time: "23:35", tag: "tech", tagText: "科技", text: "电动汽车制造商Rivian位于伊利诺伊州的工厂遭受龙卷风破坏，正值其关键车型R2发布之际。此次事件可能对其生产和交付计划造成影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/rivians-factory-damaged-by-tornado-amid-crucial-r2-ev-launch.html" },
-  { time: "23:35", tag: "tech", tagText: "科技", text: "数据中心及AI电力公司Fermi股价暴跌，此前其首席执行官及多名高管离职。该公司由美国前能源部长里克·佩里联合创立，近期还遭遇了亚马逊1.5亿美元投资撤出的挫折。", source: "Financial Times", url: "https://www.ft.com/content/cf10c7b5-a3b5-41aa-8d54-96b40628aa78" },
 ];
-const breakingDate = "2026年4月21日 05:00 CST";
+const breakingDate = "2026年4月21日 05:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1513,7 +1513,7 @@ const aiBreakingNews = [
   { time: "13:30", tag: "ai", tagText: "AI", text: "台积电（TSMC）因英伟达和苹果的AI芯片需求激增，供应短缺，分析师预测其利润将创纪录飙升。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVTVETFRUVEN0U3QtaUpCOVFXQ2FtWFBZemgtNDhUbF9QczMwZ1R1N3pRQWdFZ1oyZ1gtQzhhLWZjOHA3UkdpS2pUSUdMbWFSOGVnVUxrZmpaMnlNS3BNMzU0TlVuUkN0MGFKN21IMTNQM19QYWFvWUs5MlF3cUlZaTFNMWQzVi1wT1k3YmplZ2FlbEtUa1lEbDBubE96VTVSZ2ZnMEdn?oc=5" },
   { time: "12:11", tag: "tech", tagText: "科技", text: "Cadence与英伟达深化AI合作，共同重塑芯片设计和机器人技术领域。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTGw0a3VPdjl3dkFTMWFHMk9oQ3I0b1h2amV1WHY4c0NRY3pOdWlDTTc1WTlPbXJTWjN0ci1RQTVfU0lmNzNLVU1RVkpvOEFzbVpwQlJ0blNqbFE5ekVHTm5KWFk0TnlWdzdRUFUxZmF6MWtxUFU5Rnh1YUlBam9QRThmMDRmQ3FXU0VVNmUwT0ZKSlhlRnNKUDRUMV9PNVpM?oc=5" },
 ];
-const aiBreakingDate = "2026年4月21日 05:00 CST";
+const aiBreakingDate = "2026年4月21日 05:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
