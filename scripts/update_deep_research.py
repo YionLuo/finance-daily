@@ -158,116 +158,166 @@ def gather_research(topic_info, max_articles=50):
     return articles
 
 
-# ============ Stage 3: Report Generation ============
+# ============ Stage 3a: Generate Research Prompt ============
 
-REPORT_GENERATION_PROMPT = """你是 Y Daily 首席分析师，正在撰写一篇深度研究报告。
+RESEARCH_PROMPT_GENERATION = """你是 Y Daily 的研究总监。你的任务不是写报告，而是为今天的选题设计一份**定制化的深度研究指令**。
 
-专题：{topic}
+选题：{topic}
 选题理由：{topic_reason}
 分析角度：{angle}
 
-以下是你搜集到的 {article_count} 篇相关新闻文章（带编号和来源）：
+你搜集到了 {article_count} 篇相关文章，以下是标题和来源摘要：
+{article_summaries}
 
+=== Y Daily 的分析偏好 ===
+- 核心关注：AI 和互联网行业的技术/产品/商业动态
+- 投资视角：关注对金融市场的影响，尤其是美股和港股
+- 读者画像：AI 从业者（工程师、PM、创始人）+ 有科技股投资偏好的专业投资者
+- 风格：像 Ben Thompson (Stratechery) 或 Matt Levine (Money Stuff) 那样——有清晰的论点、有逻辑链条、敢下判断
+
+=== 你的任务 ===
+根据这个具体选题和你看到的文章素材，设计一份研究指令（prompt），用来指导一个高能力分析模型完成深度分析。
+
+你需要输出以下内容（纯文本，不是 JSON）：
+
+1. **核心研究问题**（1个）：这篇报告要回答的那个最关键的问题是什么？不是"介绍X"，而是"X为什么会Y？这对Z意味着什么？"
+
+2. **必须覆盖的分析维度**（3-5个）：根据这个话题的特殊性，列出必须分析的维度。不要用通用框架（"背景/影响/展望"），要根据这个话题定制。比如：
+   - 如果是一个公司的战略动作 → 分析竞争格局变化、定价策略逻辑、对生态系统的影响
+   - 如果是政策变化 → 分析真实意图（vs 表面意图）、执行路径、谁受益谁受损
+   - 如果是技术突破 → 分析技术可行性、商业化路径、对现有玩家的颠覆程度
+
+3. **必须回答的尖锐问题**（3个）：这些是读者心里会有但一般报告不敢回答的问题。比如"这真的是突破还是营销？""谁在这件事里说谎？""一年后回头看这件事还重要吗？"
+
+4. **投资视角要求**：这个话题对哪些美股/港股有影响？需要分析什么价格/估值逻辑？
+
+5. **写作风格指令**：给分析模型的具体文风要求（结合这个话题的特点）。
+"""
+
+
+def generate_research_prompt(client, topic_info, articles):
+    """
+    Stage 3a: Generate a customized deep research prompt for this specific topic.
+    Uses the fast model (deepseek-chat).
+    """
+    print("\n=== Stage 3a: Generating Research Prompt ===")
+
+    # Build article summaries (just titles + sources, not full text)
+    summaries = []
+    for i, art in enumerate(articles[:40], 1):
+        title = art.get("title", "")[:100]
+        source = art.get("source", "")
+        summaries.append(f"[{i}] {title} ({source})")
+
+    prompt = RESEARCH_PROMPT_GENERATION.format(
+        topic=topic_info.get("topic", ""),
+        topic_reason=topic_info.get("topicReason", ""),
+        angle=topic_info.get("angle", ""),
+        article_count=len(articles),
+        article_summaries="\n".join(summaries),
+    )
+
+    research_prompt = llm_chat_with_retry(
+        client,
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=2048,
+        temperature=0.5,
+    )
+
+    print(f"  Research prompt generated ({len(research_prompt)} chars)")
+    return research_prompt
+
+
+# ============ Stage 3b: Execute Deep Analysis ============
+
+# Model for deep analysis (reasoning model with chain-of-thought)
+ANALYSIS_MODEL = os.environ.get("ANALYSIS_MODEL", "deepseek/deepseek-r1")
+
+REPORT_EXECUTION_PROMPT = """你是一位资深的行业分析师，现在要根据以下研究指令和素材，撰写一篇深度分析报告。
+
+=== 研究指令（由研究总监制定）===
+{research_prompt}
+
+=== 新闻素材（共 {article_count} 篇，带编号和来源）===
 {articles_context}
 
-请基于以上真实新闻素材，撰写一篇深度分析报告。
+=== 输出要求 ===
 
-写作要求：
-1. **只基于提供的真实文章**，绝不编造数据或事实
-2. **关键论点必须标注来源编号**，如 [1][3] 表示引用第1和第3篇文章
-3. 语言：中文，专业但不晦涩，适合有一定金融/科技背景的读者
-4. 报告应有 **清晰的论证链条**：从事实到分析到影响到展望
+1. **严格基于提供的真实文章**，关键论点必须标注来源编号如 [1][3]
+2. 语言：中文，专业但不晦涩
+3. 报告要有**一个清晰的核心论点**贯穿全文，不是面面俱到的综述
+4. 章节结构根据上面的研究指令来定（不要用固定模板），每个章节解决一个具体问题
 5. 每个章节的 content 字段包含 HTML 格式（<p>段落、<strong>加粗、<ul><li>列表等）
-6. 总字数控制在 3000-5000 字
+6. 敢于给出判断——"我们认为X因为Y"——而不是"有待观察"
+7. 总字数 3000-6000 字
 
 输出严格的 JSON 格式（不要包含 markdown 代码块标记）：
 {{
-  "title": "报告标题（震撼力强、概括全文核心观点，20字以内）",
-  "subtitle": "副标题（补充说明切入角度或关键论点，30字以内）",
-  "summary": "200字以内的报告摘要，概括核心发现和结论",
+  "title": "报告标题（有态度、有判断，不是中性描述，20字以内）",
+  "subtitle": "副标题（核心论点的一句话浓缩，30字以内）",
+  "summary": "200字以内的报告摘要——不是内容概要，而是'我们的核心判断是什么、为什么、这意味着什么'",
   "tags": [
-    {{"text": "标签文字", "type": "up|down|warn"}}
+    {{"text": "标签", "type": "up|down|warn"}}
   ],
   "keyTakeaways": [
-    "核心要点1（1句话）",
-    "核心要点2（1句话）",
-    "核心要点3（1句话）",
-    "核心要点4（1句话）"
+    "核心判断1（一句有态度的话，不是中性描述）",
+    "核心判断2",
+    "核心判断3",
+    "核心判断4"
   ],
-  "relatedTickers": ["相关标的代码1", "相关标的代码2"],
+  "relatedTickers": ["相关美股/港股代码"],
   "sections": [
     {{
-      "id": "sec-background",
-      "title": "背景与时间线",
-      "content": "<p>HTML 格式的章节内容...</p>"
-    }},
-    {{
-      "id": "sec-core-analysis",
-      "title": "核心分析",
-      "content": "<p>HTML 格式的章节内容...</p>"
-    }},
-    {{
-      "id": "sec-data-evidence",
-      "title": "数据与证据",
-      "content": "<p>HTML 格式的章节内容...</p>"
-    }},
-    {{
-      "id": "sec-perspectives",
-      "title": "多方观点",
-      "content": "<p>HTML 格式的章节内容...</p>"
-    }},
-    {{
-      "id": "sec-impact",
-      "title": "影响评估",
-      "content": "<p>HTML 格式的章节内容...</p>"
-    }},
-    {{
-      "id": "sec-risks",
-      "title": "风险与机遇",
-      "content": "<p>HTML 格式的章节内容...</p>"
-    }},
-    {{
-      "id": "sec-outlook",
-      "title": "前瞻展望",
-      "content": "<p>HTML 格式的章节内容...</p>"
+      "id": "sec-1",
+      "title": "章节标题（根据研究指令定制，不是固定模板）",
+      "content": "<p>HTML 格式内容。引用来源用 [编号]。</p>"
     }}
+    // 4-7 个章节，结构由研究指令决定
   ],
-  "sourceIndices": [1, 3, 5, 7, 12]
+  "sourceIndices": [1, 3, 5]
 }}
 
-tags 的 type 用 "up" 表示利好/积极、"down" 表示利空/消极、"warn" 表示警示/关注。
-relatedTickers 填写与本文相关的股票/ETF/商品代码。
-sourceIndices 是报告中实际引用过的文章编号列表。
-sections 可以根据内容增减章节，但至少包含 5 个章节。
+tags type: "up"=利好/积极, "down"=利空/消极, "warn"=警示/关注。
+sourceIndices: 实际引用过的文章编号列表。
 """
 
 
 def generate_report(client, topic_info, articles, breaking_context=""):
     """
-    Stage 3: Generate the deep research report using LLM.
-    Returns: dict with the full report structure
+    Stage 3: Two-step report generation.
+    3a: Generate a customized research prompt (fast model)
+    3b: Execute deep analysis with the generated prompt (reasoning model)
     """
-    print("\n=== Stage 3: Report Generation ===")
+
+    # ====== Stage 3a: Generate research prompt ======
+    research_prompt = generate_research_prompt(client, topic_info, articles)
+
+    # ====== Stage 3b: Execute deep analysis ======
+    print(f"\n=== Stage 3b: Executing Deep Analysis (model: {ANALYSIS_MODEL}) ===")
 
     articles_context = articles_to_context(articles, max_articles=50)
 
-    prompt = REPORT_GENERATION_PROMPT.format(
-        topic=topic_info.get("topic", ""),
-        topic_reason=topic_info.get("topicReason", ""),
-        angle=topic_info.get("angle", ""),
+    execution_prompt = REPORT_EXECUTION_PROMPT.format(
+        research_prompt=research_prompt,
         article_count=len(articles),
         articles_context=articles_context,
     )
 
     response = llm_chat_with_retry(
         client,
-        messages=[{"role": "user", "content": prompt}],
-        max_tokens=8192,
-        temperature=0.3,
+        messages=[{"role": "user", "content": execution_prompt}],
+        model=ANALYSIS_MODEL,
+        max_tokens=16384,
+        temperature=0.6,
     )
 
-    # Parse JSON response
-    cleaned = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
+    # Parse JSON response (R1 may include <think> tags, strip them)
+    cleaned = response
+    # Strip <think>...</think> block if present (DeepSeek R1 reasoning trace)
+    think_end = cleaned.find("</think>")
+    if think_end != -1:
+        cleaned = cleaned[think_end + len("</think>"):]
+    cleaned = re.sub(r'^```(?:json)?\s*\n?', '', cleaned.strip(), flags=re.MULTILINE)
     cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE)
     cleaned = cleaned.strip()
 
@@ -275,7 +325,7 @@ def generate_report(client, topic_info, articles, breaking_context=""):
         report = json.loads(cleaned)
     except json.JSONDecodeError as e:
         print(f"ERROR: Failed to parse report JSON: {e}")
-        print(f"Raw response (first 1000 chars):\n{response[:1000]}")
+        print(f"Raw response (first 1500 chars):\n{response[:1500]}")
         raise
 
     print(f"  Report title: {report.get('title', 'untitled')}")
