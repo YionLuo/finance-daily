@@ -346,12 +346,11 @@ def is_within_hours(time_str, hours=24):
 
 # Fallback API endpoints — tried in order if the primary fails with connection errors
 FALLBACK_ENDPOINTS = [
-    "https://openrouter.ai/api/v1",
-    "https://openrouter.ai/api/v1",
+    "https://api.deepseek.com",
 ]
 
 # Default model — can be overridden by LLM_MODEL env var
-DEFAULT_LLM_MODEL = "deepseek/deepseek-chat"
+DEFAULT_LLM_MODEL = "deepseek-chat"
 
 
 def create_llm_client(required=True):

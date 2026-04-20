@@ -1,9 +1,9 @@
-name: AI Daily Report
+name: Deep Research Report
 
 on:
   schedule:
-    # 22:10 CST = 14:10 UTC
-    - cron: '10 14 * * *'
+    # 22:00 CST = 14:00 UTC
+    - cron: '0 14 * * *'
   workflow_dispatch:
 
 permissions:
@@ -13,9 +13,9 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  generate-ai-daily:
+  generate-deep-research:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - uses: actions/checkout@v4
@@ -32,12 +32,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Generate AI Daily Report
+      - name: Generate Deep Research Report
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_BASE_URL: "https://openrouter.ai/api/v1"
+          OPENAI_BASE_URL: "https://api.deepseek.com"
           TZ: Asia/Shanghai
-        run: python scripts/update_ai.py
+        run: python scripts/update_deep_research.py
 
       - name: Commit and push
         run: |
@@ -47,6 +47,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "auto: AI daily report $(date +%Y-%m-%d)"
+            git commit -m "auto: deep research report $(date +%Y-%m-%d)"
             git push
           fi

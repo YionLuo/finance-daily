@@ -39,7 +39,7 @@ DAILY_GRACE_MINUTES = 60          # Allow 60 min grace after scheduled time
 MAX_RETRY = 2
 
 # NovAI config (fallback if env not set)
-DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
+DEFAULT_BASE_URL = "https://api.deepseek.com"
 DEFAULT_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
 

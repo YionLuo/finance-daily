@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Y Daily · 金融资讯 & AI 前沿</title>
-<meta name="description" content="金融资讯日报 + AI 前沿资讯，每日自动聚合降噪，投行分析师风格。">
+<title>Y Daily · 每日深度研究</title>
+<meta name="description" content="每日从全球头条精选一个专题，进行深度分析研究。金融 · 科技 · 地缘 · 宏观。">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1080,6 +1080,250 @@
     line-height: 1.8;
   }
 
+  /* ============ Deep Research Preview ============ */
+  .research-preview {
+    margin-bottom: 40px;
+  }
+
+  .research-preview-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .research-preview-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .research-preview-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .research-preview-card h2 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+    margin-bottom: 8px;
+  }
+
+  .research-preview-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .research-preview-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .research-read-time {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .research-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #fff;
+    background: var(--accent);
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+
+  /* Key Takeaways */
+  .key-takeaways {
+    background: var(--accent-light);
+    border: 1px solid #dbeafe;
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+
+  .key-takeaways h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .key-takeaways ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .key-takeaways li {
+    position: relative;
+    padding: 6px 0 6px 20px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text);
+  }
+
+  .key-takeaways li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* Deep Research Article Sections */
+  .research-section {
+    margin-bottom: 40px;
+  }
+
+  .research-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--text);
+  }
+
+  .research-section-content {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .research-section-content p {
+    margin-bottom: 16px;
+  }
+
+  .research-section-content strong {
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .research-section-content ul,
+  .research-section-content ol {
+    margin: 12px 0 16px;
+    padding-left: 24px;
+  }
+
+  .research-section-content li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+
+  .research-section-content blockquote {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-light);
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+
+  /* Source reference badges in content */
+  .source-ref {
+    display: inline;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    cursor: help;
+  }
+
+  /* Sources Section */
+  .sources-section {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 2px solid var(--border);
+  }
+
+  .sources-section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .source-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .source-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 13px;
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .source-list li:last-child { border-bottom: none; }
+
+  .source-num {
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+    min-width: 24px;
+  }
+
+  .source-list a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .source-list a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .source-publisher {
+    color: var(--text-tertiary);
+    font-size: 11px;
+  }
+
+  /* Related Tickers */
+  .related-tickers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .ticker-tag {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: var(--radius-xs);
+    background: var(--code-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    font-family: "SF Mono", "Fira Code", monospace;
+  }
+
   /* Empty state */
   .empty-state {
     text-align: center;
@@ -1116,38 +1360,29 @@
 <!-- ============ Navigation ============ -->
 <nav class="navbar">
   <div class="navbar-inner">
-    <a class="navbar-brand" href="#" onclick="showModule('finance'); return false;">
+    <a class="navbar-brand" href="#" onclick="showHome(); return false;">
       <img class="logo-img" src="favicon.svg" alt="Y">
       <span class="brand-name">Y Daily</span>
     </a>
-    <div class="module-tabs">
-      <button class="module-tab active" id="tab-finance" onclick="showModule('finance')">金融资讯</button>
-      <button class="module-tab" id="tab-ai" onclick="showModule('ai')">AI 前沿</button>
-    </div>
     <div class="navbar-links">
       <a class="nav-link" id="nav-about" onclick="showAbout()">关于</a>
     </div>
   </div>
 </nav>
 
-<!-- ============ Finance Module ============ -->
-<div class="module-page active" id="mod-finance">
+<!-- ============ Home Page ============ -->
 <div class="home-page active" id="homePage">
   <div class="page">
     <!-- Compact Hero -->
     <div class="hero-compact">
-      <p class="hero-desc">聚焦美股港股 AI 科技互联网头部企业，每日自动检索宏观与个股动态，降噪聚合后输出投行风格研报。</p>
+      <p class="hero-desc">每日从全球头条中精选一个专题，进行深度分析研究。金融 · 科技 · 地缘 · 宏观。</p>
       <div class="hero-compact-tags">
-        <span class="hero-tag">腾讯</span>
-        <span class="hero-tag">阿里</span>
-        <span class="hero-tag">小鹏</span>
-        <span class="hero-tag">美团</span>
-        <span class="hero-tag">小米</span>
-        <span class="hero-tag">MAG7</span>
-        <span class="hero-tag">台积电</span>
-        <span class="hero-tag">博通</span>
-        <span class="hero-tag">BTC/ETH</span>
-        <span class="hero-tag">黄金/白银/铜</span>
+        <span class="hero-tag">深度研究</span>
+        <span class="hero-tag">Breaking News</span>
+        <span class="hero-tag">金融</span>
+        <span class="hero-tag">AI/科技</span>
+        <span class="hero-tag">地缘政治</span>
+        <span class="hero-tag">宏观经济</span>
       </div>
     </div>
 
@@ -1158,29 +1393,26 @@
         <ul class="toc-list" id="tocList">
           <li id="toc-breaking"><a class="toc-link active" data-section="sec-breaking" onclick="scrollToSection('sec-breaking')">Breaking News</a></li>
           <li id="toc-fg"><a class="toc-link" data-section="sec-fg" onclick="scrollToSection('sec-fg')">贪恐指数</a></li>
-          <li><a class="toc-link" data-section="sec-briefing" onclick="scrollToSection('sec-briefing')">核心情报摘要</a></li>
-          <li><a class="toc-link" data-section="sec-macro" onclick="scrollToSection('sec-macro')">宏观与地缘风向</a></li>
-          <li><a class="toc-link" data-section="sec-stocks" onclick="scrollToSection('sec-stocks')">标的精准追踪</a></li>
-          <li><a class="toc-link" data-section="sec-alerts" onclick="scrollToSection('sec-alerts')">前瞻预警</a></li>
-          <li id="toc-archive"><a class="toc-link" data-section="sec-archive" onclick="scrollToSection('sec-archive')">历史日报</a></li>
+          <li id="toc-research"><a class="toc-link" data-section="sec-research" onclick="scrollToSection('sec-research')">深度研究</a></li>
+          <li id="toc-archive"><a class="toc-link" data-section="sec-archive" onclick="scrollToSection('sec-archive')">历史报告</a></li>
         </ul>
       </aside>
 
       <!-- Main Content -->
       <div class="main-content">
-        <!-- Breaking News -->
+        <!-- Breaking News (merged finance + AI) -->
         <div class="breaking-section" id="breakingSection"></div>
 
         <!-- Fear & Greed Index -->
         <div class="fg-section" id="fearGreedSection"></div>
 
-        <div id="latestIssueHeader"></div>
-        <div class="article-body" id="latestIssueBody"></div>
+        <!-- Latest Deep Research Preview -->
+        <div id="latestResearchPreview"></div>
 
         <!-- Archive -->
         <div class="archive-section" id="archiveSection">
           <div class="issues-header" id="sec-archive">
-            <h2>历史日报</h2>
+            <h2>历史报告</h2>
             <span class="issues-count" id="issueCount"></span>
           </div>
           <div id="issueList"></div>
@@ -1190,84 +1422,32 @@
   </div>
 </div>
 
-<!-- Article Page (Finance) -->
+<!-- ============ Deep Research Article Page ============ -->
 <div class="article-page" id="articlePage">
   <div class="page">
     <div class="article-header">
-      <a class="back-link" onclick="showModule('finance')">
+      <a class="back-link" onclick="showHome()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         返回首页
       </a>
       <div id="articleHeaderContent"></div>
     </div>
-    <div class="article-body" id="articleBody"></div>
-  </div>
-</div>
-</div><!-- /mod-finance -->
-
-<!-- ============ AI Module ============ -->
-<div class="module-page" id="mod-ai">
-<div class="home-page active" id="aiHomePage">
-  <div class="page">
-    <div class="hero-compact">
-      <p class="hero-desc">聚焦中美 AI 前沿动态，覆盖大模型、智能体、具身智能、AI for Science 等研究与应用两大维度。</p>
-      <div class="hero-compact-tags">
-        <span class="hero-tag">大模型</span>
-        <span class="hero-tag">智能体</span>
-        <span class="hero-tag">具身智能</span>
-        <span class="hero-tag">AI Coding</span>
-        <span class="hero-tag">AI for Science</span>
-      </div>
-    </div>
-
+    <!-- Article TOC (sidebar for sections) -->
     <div class="page-with-sidebar">
-      <aside class="sidebar" id="aiSidebar">
-        <div class="sidebar-title">目录</div>
-        <ul class="toc-list" id="aiTocList">
-          <li id="ai-toc-breaking"><a class="toc-link active" data-section="ai-sec-breaking" onclick="scrollToSection('ai-sec-breaking')">Breaking News</a></li>
-          <li><a class="toc-link" data-section="ai-sec-briefing" onclick="scrollToSection('ai-sec-briefing')">核心摘要</a></li>
-          <li><a class="toc-link" data-section="ai-sec-research" onclick="scrollToSection('ai-sec-research')">研究前沿</a></li>
-          <li><a class="toc-link" data-section="ai-sec-application" onclick="scrollToSection('ai-sec-application')">应用落地</a></li>
-          <li><a class="toc-link" data-section="ai-sec-industry" onclick="scrollToSection('ai-sec-industry')">产业动态</a></li>
-          <li><a class="toc-link" data-section="ai-sec-outlook" onclick="scrollToSection('ai-sec-outlook')">前瞻展望</a></li>
-          <li id="ai-toc-archive"><a class="toc-link" data-section="ai-sec-archive" onclick="scrollToSection('ai-sec-archive')">历史期刊</a></li>
-        </ul>
+      <aside class="sidebar" id="articleSidebar">
+        <div class="sidebar-title">章节导航</div>
+        <ul class="toc-list" id="articleTocList"></ul>
       </aside>
-
       <div class="main-content">
-        <div class="breaking-section" id="aiBreakingSection"></div>
-        <div id="aiLatestHeader"></div>
-        <div class="article-body" id="aiLatestBody"></div>
-        <div class="archive-section" id="aiArchiveSection">
-          <div class="issues-header" id="ai-sec-archive">
-            <h2>历史期刊</h2>
-            <span class="issues-count" id="aiIssueCount"></span>
-          </div>
-          <div id="aiIssueList"></div>
-        </div>
+        <div class="article-body" id="articleBody"></div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- Article Page (AI) -->
-<div class="article-page" id="aiArticlePage">
-  <div class="page">
-    <div class="article-header">
-      <a class="back-link" onclick="showModule('ai')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        返回 AI 前沿
-      </a>
-      <div id="aiArticleHeaderContent"></div>
-    </div>
-    <div class="article-body" id="aiArticleBody"></div>
-  </div>
-</div>
-</div><!-- /mod-ai -->
 
 <!-- ============ Footer ============ -->
 <footer class="site-footer">
-  Y Daily · 金融资讯日报 & AI 前沿资讯<br>
+  Y Daily · 每日深度研究报告<br>
   内容仅供资讯聚合与逻辑推演，不构成投资建议。数据来源于公开渠道。
 </footer>
 
@@ -1366,28 +1546,53 @@ const issues = [
   { id: "2026-04-01", date: "2026年4月1日", weekday: "周三", title: "美伊缓和信号提振港股科技，MAG7周跌蒸发8500亿美元，英伟达GTC发布Vera Rubin平台", summary: "美伊双方释放和谈信号，布伦特原油盘中急跌送11%。恒生科技+2.73%，但美股MAG7过去一周市值蒸发超8500亿美元。英伟达GTC发布Vera Rubin全栈平台，腐蚀混元3.0进入发布倒计时。黄金站上4700美元。", tags: [{ text: "恒生科技 +2.73%", type: "up" }, { text: "MAG7 周跌 -8500亿$", type: "down" }, { text: "布伦特 -3.45%", type: "down" }, { text: "黄金 $4,700+", type: "up" }, { text: "Vera Rubin 发布", type: "warn" }], watchlist: ["腾讯 0700", "阿里 9988", "小鹏 XPEV", "美团 3690", "小米 1810", "MAG7", "台积电 TSM", "博通 AVGO", "BTC/ETH", "黄金/白银/铜"], focusAreas: "AI与大模型 · 半导体与算力 · 中美科技博弈 · 宏观与流动性", timeRange: "2026.03.31 – 2026.04.01", generatedAt: "2026年4月1日 22:30 CST", briefings: ["<span class=\"briefing-number\">1</span><strong>美伊缓和信号提振风险偏好，港股反弹但美股科技股继续承压。</strong>恒生科技 <span class=\"data up\">+2.73%</span>，但MAG7过去一周市值蒸发超 <span class=\"data down\">8,500亿美元</span>，技术面集体恶化。布伦特原油盘中急跌送11%，收于 <span class=\"data\">104.09美元</span>。", "<span class=\"briefing-number\">2</span><strong>英伟达GTC 2026发布Vera Rubin全栈平台（7款芯片），</strong>标志从芯片公司转型AI全栈基础设施搭建者。腐蚀混元3.0确认4月发布，前 OpenAI研究员加盟。阿里通义千问Qwen3.5-Max-Preview发布。", "<span class=\"briefing-number\">3</span><strong>黄金站上4,700美元，白银涨+4.37%，铜涨+1.91%。</strong>避险与工业金属同步走强，反映地缘不确定性与全球经济韧性并存。俄罗斯4/1起禁止汽油出口（至7/31）。"], macroEvents: [{ icon: "🕊️", iconBg: "#fef2f2", title: "美伊双方释放缓和信号，油价盘中急跌送11%", fact: "4/1美伊两国总统均对结束战争持开放态度。布伦特原油盘中急跌送11%，收于104.09美元/桶（-3.45%）。但霍尔木兹海峡封锁已持32天，恢复率仅4.5%，海峡仍近乎停摆。现货黄金重上4,700美元（盘中最高4,724美元），白银涨4.37%，铜涨1.91%。", mappings: [{ type: "bull", text: "<strong>港股科技股（腾讯·阿里·小鹏·美团·小米）</strong> — 地缘缓释 → 风险偏好回升 → 恒生科技+2.73%" }, { type: "bull", text: "<strong>黄金/白银/铜</strong> — 避险情绪与工业需求双驱动，商品全线走强" }, { type: "bear", text: "<strong>MAG7</strong> — 过去一周市值蒸发8,500亿美元，通胀预期+技术面恶化，美股科技股继续承压" }] }, { icon: "⛽", iconBg: "#fef2f2", title: "俄罗斯4/1起全面禁止汽油出口，能源供应链承压", fact: "3/27俄副总理诺瓦克签署指令，自4/1至7/31全面禁止汽油出口，以应对中东战事引发的能源动荡。普京4/1表示伊朗局势影响了全球能源市场。", mappings: [{ type: "bear", text: "<strong>全池（间接）</strong> — 全球成品油供应进一步收紧，若油价维持高位将推升通胀预期，压制科技股估值" }, { type: "bull", text: "<strong>黄金/白银</strong> — 能源供应不确定性支撑避险资产需求" }] }, { icon: "🏦", iconBg: "#ecfdf5", title: "央行维持适度宽松，LPR连续10个月未调整", fact: "央行行长潘功胜3/22重申\"继续实施适度宽松货币政策\"。LPR报价1Y 3.0% / 5Y 3.5%，连续10个月持稳。市场普遍预期Q2存在降准降息窗口。", mappings: [{ type: "bull", text: "<strong>港股科技股全池</strong> — 充裕流动性支撑估值修复，降息预期利好成长股DCF估值" }] }, { icon: "🛡️", iconBg: "#eff6ff", title: "商务部对美启动两项贸易壁垒调查", fact: "3/27商务部发布第17号和第18号公告，分别就美国\"破坏全球产供链\"和\"阻碍绿色产品贸易\"启动贸易壁垒调查。中美经贸博弈再添新维度。", mappings: [{ type: "bear", text: "<strong>小鹏·小米</strong> — 中美贸易摩擦加剧可能波及新能源车出海政策环境" }, { type: "bear", text: "<strong>台积电·博通·英伟达</strong> — 芯片出口管制风险不确定性上升" }] }], stocks: [{ name: "🏢 腾讯控股", code: "0700.HK", news: [{ label: "📰 混元3.0大模型4月发布进入倒计时", content: "3/27副总裁李强确认，前 OpenAI高级研究员加盟后，混元3.0将在4月发布。内部超 <span class=\"data\">900个业务</span> 已接入混元大模型。财新周刊3/28封面报道\"腾讯AI急行军\"。" }, { label: "📰 持续回购", content: "3/30斜资 <span class=\"data\">3.006亿港元</span> 回购62.4万股。" }], assessment: "混元3.0发布为近期最重要催化剂。前OpenAI研究员加盟提升技术叙事可信度。AI商业化（腾讯云盈利、900+业务接入）构成估值重估基础。<strong>维持关注4月发布节奏。</strong>" }, { name: "💻 阿里巴巴", code: "9988.HK / BABA", news: [{ label: "📰 通义千问Qwen3.5-Max-Preview发布", content: "3/20发布旗舰预览版，采用MoE稀疏激活架构，推理能力大幅提升。标志国产大模型进入新一轮突破期。" }, { label: "📰 高盛维持买入评级", content: "高盛此前维持BABA\"买入\"，AI云业务成估值核心，目标价205美元/199港元。" }], assessment: "Qwen3.5-Max发布显示阿里在大模型赛道的持续投入。AI云业务是估值重估的关键驱动力。需跟踪2026财年Q4云业务增速。" }, { name: "🚗 小鹏集团", code: "XPEV / 9868.HK", news: [{ label: "📰 3月交付27,415辆，环比+80%（4/1公布）", content: "Q1累计交付 <span class=\"data\">62,682辆</span>。X9当月 <span class=\"data up\">3,075辆</span>（同比+134%）。交付节奏强劲恢复。" }, { label: "📰 正式更名\"小鹏集团\"（4/1生效）", content: "明确<strong>\"汽车+AI+机器人\"多元科技集团</strong>定位。启动拉美三年战略进军墨西哥。" }], assessment: "3月交付环比+80%确认Q1低谷为季节性。更名对标特斯拉叙事，有望获AI/机器人估值溢价。<strong>Q4首次单季盈利（3.8亿元）为拐点信号，需验证Q1延续性。</strong>" }, { name: "📱 小米集团", code: "1810.HK", news: [{ label: "📰 新一代SU7锁单表现强劲", content: "3/19上市，34分钟锁单 <span class=\"data up\">1.5万辆</span>；3天累计锁单突破 <span class=\"data up\">3万辆</span>。2026年交付目标 <span class=\"data\">55万辆</span>。" }, { label: "📰 2025全年财报（3/24）", content: "<ul><li>总收入 <span class=\"data\">4,573亿元</span>（<span class=\"up\">+25%</span>），调整后净利 <span class=\"data\">392亿元</span>（<span class=\"up\">+43.8%</span>）</li><li>汽车营收 <span class=\"data\">1,061亿元</span>（<span class=\"up\">+223.8%</span>），交付41.1万辆，但单台亏损仍超 <span class=\"data down\">4.53万元</span></li></ul>" }], assessment: "SU7新一代锁单验证产品力，但<strong>单台亏损>4.5万元</strong>是估值核心争议。55万辆年交付目标激进，需跟踪Q1实际交付与毛利趋势。" }, { name: "📦 美团", code: "3690.HK", news: [{ label: "📰 市场表现", content: "跟随恒生科技指数反弹。平台经济政策边际友好，AI赋能本地生活服务为中期看点。" }], assessment: "受益于港股科技板块整体反弹。AI在即时零售/配送的落地是中期估值驱动。跟踪即将发布的年报数据。" }, { name: "💻 英伟达", code: "NVDA", news: [{ label: "📰 GTC 2026发布Vera Rubin全栈平台", content: "3/16-19 GTC大会发布Vera Rubin平台（7款芯片），通过\"极协同设计\"整合为AI超级计算平台。Rubin GPU + Vera CPU + NVLink 6 + ConnectX 9 + BlueField 4。" }, { label: "📰 股价承压", content: "MAG7过去一周市值蒸发超8,500亿美元。NVDA过5年涨1,344%，但技术面关键支撑告破。" }], assessment: "Vera Rubin发布确认英伟达转型AI全栈基础设施。但短期股价受MAG7整体抛压拖累，技术面恶化。<strong>中期看算力CapEx周期是否延续。</strong>" }, { name: "🔧 台积电·博通", code: "TSM / AVGO", news: [{ label: "📰 台积电股价2026年表现超越英伟达", content: "先进制程产能持续紧张，AI芯片代工需求强劲。但中美芯片出口管制风险不确定性上升。" }], assessment: "台积电受益AI算力需求，但地缘风险和芯片出口管制是持续压制因素。博通定制ASIC业务受益于云厂商\"去英伟达化\"趋势。" }, { name: "₿ BTC / ETH", code: "BTC·ETH", news: [{ label: "📰 BTC报67,000-68,000美元", content: "3月收盘微涨 <span class=\"up\">+0.19%</span>，连续下跌趋势有望终结。年内跌幅仍超20%。" }, { label: "📰 ETH处于弱势区间", content: "ETH报约1,800-1,900美元，较历史高点大幅回调。L2生态发展为中期看点。" }, { label: "📰 谷歌量子计算威胁（中期）", content: "Google Quantum AI论文称破解BTC加密所需量子资源较2023年预估<strong>下降约20倍</strong>，行业需在2029年前完成后量子迁移。" }], assessment: "<strong>多空交织。</strong>BTC利好：地缘缓和 + 减半周期 + ETF资金回流。利空：量子计算远期威胁 + 宏观不确定性。ETH需关注Pectra升级进展。" }, { name: "🪙 黄金·白银·铜", code: "XAU·XAG·HG", news: [{ label: "📰 黄金重上4,700美元", content: "现货黄金站上 <span class=\"data up\">4,700美元/盎司</span>，盘中最高4,724美元。地缘不确定性+降息预期双驱动。" }, { label: "📰 白银涨4.37%，铜涨1.91%", content: "白银报18,918元/千克，铜报5.6445美元/磅。工业金属受益于新能源需求+全球经济韧性预期。" }], assessment: "黄金受益于地缘避险+降息预期双轮驱动，4,700美元为新支撑位。铜价反映全球经济韧性预期，白银具备工业+避险双属性，<strong>商品全线走强。</strong>" }], alerts: [{ time: "4月（待定）", event: "腾讯混元3.0大模型正式发布", target: "0700.HK" }, { time: "4月", event: "小鹏集团更名生效后市场重新审视估值逻辑", target: "XPEV" }, { time: "Q2", event: "央行降准降息窗口期（LPR连续10个月未调整）", target: "全池" }, { time: "5月", event: "小米XLA辅助驾驶OTA升级推送", target: "1810.HK" }, { time: "4/1-7/31", event: "俄罗斯汽油出口禁令有效期，油价波动风险", target: "全池" }, { time: "持续跟踪", event: "美伊和谈进展 → 霍尔木兹海峡通行恢复 → 油价 → 通胀预期", target: "全池/黄金" }, { time: "持续跟踪", event: "MAG7技术面修复节奏，美股科技股估值重估方向", target: "NVDA/AAPL/MSFT/GOOGL" }, { time: "持续跟踪", event: "中美芯片出口管制进展及商务部贸易壁垒调查结果", target: "TSM/AVGO/NVDA" }] },
 ];
 
+// ============ Deep Research Data ============
+// Updated by daily automation. Latest report at top. Max 30 entries kept.
+const deepResearch = [
+  { id: "2026-04-20", date: "2026年4月20日", weekday: "周一", title: "欧盟并购新政：地缘竞争下的有限松绑", subtitle: "从“欧洲冠军”愿景看产业整合的现实困境与全球连锁反应", summary: "本报告基于欧盟官员的最新表态，深度剖析欧盟拟议的并购规则改革。报告指出，尽管欧盟面临中美竞争压力，意图通过放宽并购审查培育本土龙头企业，但政策转向绝非“免费通行证”。改革的核心是在提升欧洲产业竞争力与维护内部市场公平竞争之间寻求艰难平衡。此举将首先影响半导体、新能源、国防等关键战略产业，引发新一轮欧洲内部整合潮，但同时也面临保护主义抬头、消费者利益受损及全球监管冲突等多重风险。全球跨国公司的欧洲战略与全球并购市场格局将因此重塑。", tags: [{ text: "监管转向", type: "warn" }, { text: "产业整合", type: "up" }, { text: "地缘竞争", type: "warn" }, { text: "保护主义风险", type: "down" }], topic: "欧盟放宽并购规则与欧洲产业格局重塑", topicReason: "该事件具备极强的时效性与深度分析价值：欧盟拟改革竞争政策，旨在培育‘欧洲冠军企业’，这不仅是重大的监管转向，更将深远影响欧洲在全球科技、工业及地缘竞争中的地位。此话题涉及产业政策、地缘政治、金融市场等多维度，有充足空间进行3000-5000字的深度剖析，且与近期已发布的台积电业绩报告无重叠。", readTime: "5分钟", generatedAt: "2026年4月20日 23:09 CST", keyTakeaways: ["欧盟并购规则改革旨在应对中美竞争压力，培育“欧洲冠军”，但绝非无条件的“免费通行证”[1]。", "政策核心矛盾在于平衡提升全球竞争力与维护欧盟内部市场公平，改革将是审慎、有条件的[1]。", "半导体、新能源、国防等战略产业将成首批试验场，引发欧洲内部企业整合与重组浪潮。", "全球并购市场与跨国公司战略面临调整，但改革同时可能引发贸易伙伴的反弹与监管冲突。"], relatedTickers: ["ASML.AS", "AIR.PA", "SIE.DE", "ENEL.MI", "VOW3.DE"], sections: [{ id: "sec-background", title: "背景与动因：地缘竞争压力下的被迫转身", content: "<p>近年来，全球产业竞争格局发生深刻变革。中美在科技、工业领域的激烈角逐，以及美国《芯片与科学法案》、《通胀削减法案》等带有强烈保护主义色彩产业政策的出台，对欧洲构成了前所未有的压力。欧洲企业普遍感到在规模、创新速度和政府支持上落后于中美巨头，尤其在半导体、人工智能、电动汽车和清洁技术等关键未来产业。</p><p>在此背景下，欧盟内部关于修改其严格竞争政策、特别是并购审查规则的呼声日益高涨。其核心逻辑是：过于僵化和分散的竞争政策，阻碍了欧洲形成能够与中美巨头抗衡的规模化企业。因此，拟议中的改革旨在为打造“欧洲冠军企业”扫清监管障碍，允许更多国内巨头之间的合并，以形成规模效应，增强全球竞争力。这标志着欧盟竞争政策正从专注于维护内部市场公平竞争，向兼顾地缘经济竞争和产业战略安全的方向进行重大转向。</p>" }, { id: "sec-core-analysis", title: "核心分析：有限松绑下的“新平衡术”", content: "<p>尽管改革呼声强烈，但欧盟的政策转向绝非激进或无条件。根据西班牙副总理兼生态转型部长特蕾莎·里贝拉（Teresa Ribera）的明确表态，<strong>新的并购规则“不会给欧洲冠军企业提供免费通行证”</strong>[1]。这一论断揭示了此次改革的核心特征与内在矛盾。</p><p><strong>首先，改革的目标是“有竞争力的冠军”，而非“受保护的巨头”。</strong>里贝拉的言论表明，欧盟决策层清醒地认识到，单纯通过放松反垄断监管来制造大型企业，并不能自动带来竞争力。真正的“冠军”需要在全球市场中经受考验，而非在温室中受到庇护。因此，政策调整更可能体现在审查标准的权重变化上，例如，在评估一项并购时，会更多地考虑其对于提升欧洲整体产业竞争力、供应链安全或技术自主性的战略价值，而不仅仅是其对特定市场消费者价格的短期影响。</p><p><strong>其次，维护单一市场公平竞争的基础原则不会动摇。</strong>欧盟的根基在于其统一市场。任何可能严重损害内部竞争、导致市场垄断、最终损害消费者和中小企业利益的重组，仍将面临严格的审查。改革更可能为那些“有利于整体经济效率、创新和欧洲战略利益”的并购开辟“绿色通道”，但前提是这些效益必须明确、可验证，且其带来的潜在竞争损害能得到有效缓解。</p><p><strong>最后，这是一场在“规模”与“活力”之间的艰难权衡。</strong>培育大企业以获得规模效应，与维持市场充分竞争以激发创新活力，本质上是存在张力的。欧盟新政的难点与看点，正在于如何设计一套精细化的评估框架，在这两者之间找到一个新的、动态的平衡点。这绝非简单的放松管制，而是监管复杂度的升级。</p>" }, { id: "sec-data-evidence", title: "关键证据：来自决策层的定调", content: "<p>本报告的分析核心建立在对唯一信源——欧盟高级官员公开表态的解读之上。特蕾莎·里贝拉作为西班牙政府核心成员，其观点在很大程度上反映了欧盟内部主流但审慎的改革思路。</p><ul><li><strong>核心论断：</strong>里贝拉明确指出，<strong>“新的合并规则不会为欧洲冠军企业提供免费通行证”</strong>[1]。这句话直接否定了市场部分人士对欧盟将彻底放开国内并购的激进预期，为改革划定了底线。</li><li><strong>政策意图：</strong>此番表态证实了欧盟确有通过调整并购规则来<strong>积极培育本土产业领军者</strong>的意图，否则便无需讨论“免费通行证”与否的问题。这印证了地缘竞争是改革的主要驱动力。</li><li><strong>约束条件：</strong>“免费通行证”的否定，意味着任何并购案仍将面临基于<strong>欧盟竞争法基本原则的严格审查</strong>。改革将是框架内的优化，而非原则上的颠覆。竞争主管部门（欧盟委员会）的权力和独立性依然关键。</li></ul><p>这一表态是评估未来具体政策草案和案例裁决时至关重要的“风向标”，表明欧盟的路径将是务实的、渐进的，并充满内部博弈。</p>" }, { id: "sec-impact", title: "影响评估：产业、市场与全球连锁反应", content: "<p><strong>1. 对欧洲关键产业格局的重塑：</strong></p><ul><li><strong>半导体：</strong>最可能受益的领域。欧洲在设备（ASML）和部分芯片设计领域有优势，但在制造和IDM（整合器件制造）领域规模不足。新政可能鼓励设备商与材料商、设计公司与制造工厂之间进行更紧密的联盟或合并，以构建更完整、更有韧性的产业生态。</li><li><strong>新能源与清洁技术：</strong>风电、光伏、电网设备、氢能等领域存在大量中型企业。为与中国巨头竞争，可能出现跨成员国的大型整合，形成覆盖全价值链的能源解决方案巨头。</li><li><strong>国防与航空航天：</strong>在地缘政治紧张背景下，该领域的整合呼声已久。规则放宽可能加速空客、莱昂纳多、泰雷兹等巨头进一步整合供应链，或催生新的欧洲防务集团。</li><li><strong>汽车：</strong>在电动化、智能化转型中，欧洲车企面临巨大投资压力。并购改革可能为车企之间在电池、软件、自动驾驶等关键领域的深度合作乃至合并提供更多可能。</li></ul><p><strong>2. 对全球并购市场与跨国公司战略的影响：</strong></p><ul><li><strong>激活欧洲内部并购市场：</strong>预计将掀起一波以战略协同和规模化为导向的欧洲内部跨境并购浪潮，交易估值逻辑将更多纳入“战略价值”考量。</li><li><strong>改变非欧洲企业的并购策略：</strong>对于中美企业而言，收购欧洲优质技术企业的难度可能相对增加，因为欧洲本土“白衣骑士”在政策支持下更具竞争力。它们可能转而寻求更多合资、战略投资等非控制性合作模式。</li><li><strong>引发监管冲突与效仿：</strong>欧盟的“战略利益”审查可能与美国的外国投资委员会（CFIUS）审查、中国的反垄断审查产生新的摩擦点。同时，其他地区也可能效仿，进一步推动全球并购审查的政治化和战略化。</li></ul>" }, { id: "sec-risks", title: "风险与机遇", content: "<p><strong>机遇：</strong></p><ul><li><strong>产业升级窗口：</strong>为欧洲关键产业通过整合实现技术互补、降低重复投资、加速创新提供了政策窗口。</li><li><strong>投资主题明确：</strong>金融市场将围绕潜在的“欧洲冠军”候选企业及其整合路径形成新的投资主题，利好相关板块。</li><li><strong>供应链韧性提升：</strong>通过培育本土龙头企业，有望增强欧洲在战略领域的供应链自主性和安全性。</li></ul><p><strong>风险：</strong></p><ul><li><strong>保护主义陷阱：</strong>过度强调培育本土冠军可能导致市场封闭，削弱欧洲企业的全球视野和创新动力，长期损害竞争力。</li><li><strong>消费者与中小企业利益受损：</strong>如果监管平衡拿捏不当，大型合并可能导致市场垄断力量增强，推高价格，抑制创新，挤压中小企业生存空间。</li><li><strong>内部市场割裂风险：</strong>成员国可能出于本国利益，支持本国企业成为整合主导方，引发“欧洲冠军”之争，反而损害单一市场统一性。</li><li><strong>执行与裁决的不确定性：</strong>新的审查标准如何具体应用存在不确定性，可能增加企业规划并购交易的成本和风险。</li><li><strong>全球贸易摩擦加剧：</strong>被视为保护主义的政策可能招致主要贸易伙伴的报复，引发新一轮贸易争端。</li></ul>" }, { id: "sec-outlook", title: "前瞻展望：漫长的博弈与审慎的实践", content: "<p>欧盟并购规则的改革将是一条漫长而谨慎的道路。展望未来：</p><p><strong>短期（1-2年）：</strong>欧盟委员会将出台改革草案，核心争议将围绕“如何量化并购带来的战略利益”以及“如何设置有效的补救措施”展开。成员国、企业、消费者团体将展开激烈博弈。首批试水并购案将受到市场高度关注，其审查过程和结果将成为新规实际效力的“试金石”。</p><p><strong>中期（3-5年）：</strong>随着案例积累，一套新的、更复杂的并购审查判例和实践将逐渐形成。半导体和新能源领域可能率先出现标志性的大型整合案例。欧洲资本市场将适应新的估值体系。同时，全球主要经济体在并购审查上的互动与摩擦将成为常态。</p><p><strong>长期：</strong>改革的成败最终将取决于其能否真正培育出既具全球竞争力、又能在欧洲内部市场保持创新活力与消费者福祉的企业。这不仅仅是一场监管改革，更是对欧洲产业政策哲学、治理能力以及在地缘竞争中自我定位的一次全面考验。里贝拉“没有免费通行证”的警告[1]将始终是悬在头顶的达摩克利斯之剑，提醒着各方：通往“欧洲冠军”的道路，注定是一条需要精心设计、步步为营的险峻之路。</p>" }], sources: [{ title: "New merger rules are no free ride for European champions, says Teresa Ribera - politico.eu", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxNR2hHRVBMR2h4dFBUX1d6N09GZlZ6Z2xvX1FjZXE4S1dJQlJaSldJRGhkSV9jRjE2QkE1MXNieGl1S09DMjNQYlBRNkRXRWYtX2JxMnp2djBwNE1fckE0SFdWVXZQMlM0ajBEUGYtbEk1eEEwT3RwTjVWWlBLclJsbmNWNjFRa2ljUVJOOFFUMlk0OXRKSjRKb0dqQjBsRDZLQU9Wb3g2WEx1OFZ0?oc=5", publisher: "politico.eu" }] },
+];
+
 // ============ Rendering ============
 
-// ============ AI Module Rendering ============
+// ============ Merged Breaking News Rendering ============
 
-function renderAiBreakingNews() {
-  const container = document.getElementById('aiBreakingSection');
-  const tocBreaking = document.getElementById('ai-toc-breaking');
-  if (!aiBreakingNews || aiBreakingNews.length === 0) {
+function renderBreakingNews() {
+  const container = document.getElementById('breakingSection');
+  const tocBreaking = document.getElementById('toc-breaking');
+
+  // Merge finance + AI breaking news, sorted by time descending
+  const allNews = [
+    ...breakingNews.map(n => ({...n, _src: 'finance'})),
+    ...aiBreakingNews.map(n => ({...n, _src: 'ai'})),
+  ];
+
+  // Sort by time descending (handle cross-midnight)
+  allNews.sort((a, b) => {
+    const ta = a.time.replace(':', '');
+    const tb = b.time.replace(':', '');
+    return tb.localeCompare(ta);
+  });
+
+  if (allNews.length === 0) {
     container.style.display = 'none';
     if (tocBreaking) tocBreaking.style.display = 'none';
     return;
   }
+
   container.style.display = 'block';
   if (tocBreaking) tocBreaking.style.display = 'block';
+
+  // Use the most recent date
+  const dateStr = breakingDate || aiBreakingDate || '';
+
   container.innerHTML = `
-    <div id="ai-sec-breaking">
+    <div id="sec-breaking">
       <div class="breaking-header">
         <span class="breaking-badge"><span class="dot"></span>BREAKING</span>
-        <span class="breaking-time">最近更新：${aiBreakingDate}</span>
+        <span class="breaking-time">最近更新：${dateStr}</span>
       </div>
       <ul class="breaking-list">
-        ${aiBreakingNews.map(item => `
+        ${allNews.slice(0, 25).map(item => `
           <li class="breaking-item">
             <span class="breaking-item-time">${item.time}</span>
             <div class="breaking-item-body">
@@ -1400,107 +1605,6 @@ function renderAiBreakingNews() {
         `).join('')}
       </ul>
     </div>`;
-}
-
-function renderAiLatestIssue() {
-  if (aiIssues.length === 0) return;
-  const issue = aiIssues[0];
-  document.getElementById('aiLatestHeader').innerHTML = `
-    <div class="latest-header">
-      <div class="date-badge">${issue.date} · ${issue.weekday}</div>
-      <h2>${issue.title}</h2>
-      <div class="latest-meta">
-        <span>\u23f1 ${issue.timeRange}</span>
-        <span>\ud83d\udccb ${issue.focusAreas}</span>
-      </div>
-    </div>`;
-  document.getElementById('aiLatestBody').innerHTML = renderAiArticleBody(issue);
-}
-
-function renderAiArticleBody(issue) {
-  let html = '';
-
-  // Briefings
-  html += '<section id="ai-sec-briefing"><div class="section-label">核心摘要</div>';
-  issue.briefings.forEach(b => { html += '<div class="briefing-card"><p>' + b + '</p></div>'; });
-  html += '</section>';
-
-  // Research
-  html += '<section id="ai-sec-research"><div class="section-label">研究前沿</div>';
-  issue.research.forEach(r => {
-    html += '<div class="macro-event"><h3><span class="event-icon" style="background:' + r.iconBg + '">' + r.icon + '</span><span>' + r.title + '</span></h3>';
-    html += '<div class="fact-block"><div class="label">详情</div>' + r.detail + '</div>';
-    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + r.impact + '</div>' + (r.url ? '<div class="news-source"><a href="' + r.url + '" target="_blank" rel="noopener">' + (r.source || '查看来源') + ' \u2197</a></div>' : (r.source ? '<div class="news-source">' + r.source + '</div>' : '')) + '</div>';
-  });
-  html += '</section>';
-
-  // Application
-  html += '<section id="ai-sec-application"><div class="section-label">应用落地</div>';
-  issue.application.forEach(a => {
-    html += '<div class="macro-event"><h3><span class="event-icon" style="background:' + a.iconBg + '">' + a.icon + '</span><span>' + a.title + '</span></h3>';
-    html += '<div class="fact-block"><div class="label">详情</div>' + a.detail + '</div>';
-    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + a.impact + '</div>' + (a.url ? '<div class="news-source"><a href="' + a.url + '" target="_blank" rel="noopener">' + (a.source || '查看来源') + ' \u2197</a></div>' : (a.source ? '<div class="news-source">' + a.source + '</div>' : '')) + '</div>';
-  });
-  html += '</section>';
-
-  // Industry
-  html += '<section id="ai-sec-industry"><div class="section-label">产业动态</div>';
-  issue.industry.forEach(d => {
-    html += '<div class="macro-event"><h3><span class="event-icon" style="background:' + d.iconBg + '">' + d.icon + '</span><span>' + d.title + '</span></h3>';
-    html += '<div class="fact-block"><div class="label">详情</div>' + d.detail + '</div>';
-    html += '<div class="assessment"><div class="label">\u26a1 影响评估</div>' + d.impact + '</div>' + (d.url ? '<div class="news-source"><a href="' + d.url + '" target="_blank" rel="noopener">' + (d.source || '查看来源') + ' \u2197</a></div>' : (d.source ? '<div class="news-source">' + d.source + '</div>' : '')) + '</div>';
-  });
-  html += '</section>';
-
-  // Outlook
-  html += '<section id="ai-sec-outlook"><div class="section-label">前瞻展望</div><ul class="alert-list">';
-  issue.outlook.forEach(o => {
-    html += '<li class="alert-item"><span class="alert-item-time">' + o.time + '</span><div class="alert-item-body"><div class="alert-item-event">' + o.event + '</div><div class="alert-item-target">' + o.focus + '</div></div></li>';
-  });
-  html += '</ul></section>';
-
-  // Disclaimer
-  html += '<div class="disclaimer"><strong>\u2696\ufe0f 免责声明：</strong>本报告仅提供资讯聚合与分析，内容来源于公开渠道，不构成任何投资或技术决策建议。<div class="generated-at">报告生成时间：' + issue.generatedAt + '</div></div>';
-  return html;
-}
-
-function renderAiIssueList() {
-  const list = document.getElementById('aiIssueList');
-  const count = document.getElementById('aiIssueCount');
-  const archive = document.getElementById('aiArchiveSection');
-  const tocArchive = document.getElementById('ai-toc-archive');
-  const pastIssues = aiIssues.slice(1);
-  if (pastIssues.length === 0) {
-    archive.style.display = 'none';
-    if (tocArchive) tocArchive.style.display = 'none';
-    return;
-  }
-  archive.style.display = 'block';
-  if (tocArchive) tocArchive.style.display = 'block';
-  count.textContent = '\u5171 ' + pastIssues.length + ' \u671f';
-  list.innerHTML = pastIssues.map(issue => '<div class="issue-card" onclick="showAiArticle(\'' + issue.id + '\')">' +
-    '<div class="issue-card-top"><span class="issue-date">' + issue.date + '</span><span class="issue-weekday">' + issue.weekday + '</span></div>' +
-    '<h3>' + issue.title + '</h3><p class="issue-summary">' + issue.summary + '</p>' +
-    '<div class="issue-tags">' + issue.tags.map(t => '<span class="issue-tag ' + t.type + '">' + t.text + '</span>').join('') + '</div></div>'
-  ).join('');
-}
-
-function renderAiArticle(issueId) {
-  const issue = aiIssues.find(i => i.id === issueId);
-  if (!issue) return;
-  document.getElementById('aiArticleHeaderContent').innerHTML =
-    '<div class="date-badge">' + issue.date + ' \u00b7 ' + issue.weekday + '</div>' +
-    '<h1>' + issue.title + '</h1>' +
-    '<div class="article-meta"><span class="article-meta-item">\u23f1 ' + issue.timeRange + '</span><span class="article-meta-item">\ud83d\udccb ' + issue.focusAreas + '</span></div>';
-  document.getElementById('aiArticleBody').innerHTML = renderAiArticleBody(issue);
-}
-
-function showAiArticle(id) {
-  renderAiArticle(id);
-  document.getElementById('aiHomePage').classList.remove('active');
-  document.getElementById('aiArticlePage').classList.add('active');
-  window.scrollTo(0, 0);
-  history.pushState(null, '', '#ai-' + id);
 }
 
 // ============ Fear & Greed Rendering ============
@@ -1537,7 +1641,6 @@ function renderFearGreed() {
 
   const s = fearGreedData.score;
   const c = getFgColor(s);
-  // SVG arc: radius=50, circumference=2*PI*50=314.16
   const circ = 314.16;
   const offset = circ - (s / 100) * circ;
 
@@ -1570,136 +1673,134 @@ function renderFearGreed() {
     '</div>';
 }
 
-// ============ Finance Module Rendering ============
+// ============ Deep Research Rendering ============
 
-function renderBreakingNews() {
-  const container = document.getElementById('breakingSection');
-  const tocBreaking = document.getElementById('toc-breaking');
+function renderLatestResearch() {
+  const container = document.getElementById('latestResearchPreview');
+  const tocResearch = document.getElementById('toc-research');
 
-  if (!breakingNews || breakingNews.length === 0) {
-    container.style.display = 'none';
-    if (tocBreaking) tocBreaking.style.display = 'none';
+  if (!deepResearch || deepResearch.length === 0) {
+    container.innerHTML = '';
+    if (tocResearch) tocResearch.style.display = 'none';
     return;
   }
+  if (tocResearch) tocResearch.style.display = 'block';
 
-  container.style.display = 'block';
-  if (tocBreaking) tocBreaking.style.display = 'block';
+  const report = deepResearch[0];
 
   container.innerHTML = `
-    <div id="sec-breaking">
-      <div class="breaking-header">
-        <span class="breaking-badge"><span class="dot"></span>BREAKING</span>
-        <span class="breaking-time">最近更新：${breakingDate}</span>
+    <div class="research-preview" id="sec-research">
+      <div class="section-label">今日深度研究</div>
+      <div class="research-preview-card" onclick="showArticle('${report.id}')">
+        <div class="research-preview-meta">
+          <span class="research-label">📊 DEEP RESEARCH</span>
+          <span class="date-badge">${report.date} · ${report.weekday}</span>
+          <span class="research-read-time">📖 ${report.readTime || '阅读'}</span>
+        </div>
+        <h2>${report.title}</h2>
+        ${report.subtitle ? `<div class="research-preview-subtitle">${report.subtitle}</div>` : ''}
+        <p class="research-preview-summary">${report.summary}</p>
+        <div class="issue-tags">
+          ${(report.tags || []).map(t => `<span class="issue-tag ${t.type}">${t.text}</span>`).join('')}
+        </div>
+        ${report.relatedTickers && report.relatedTickers.length > 0 ? `
+          <div class="related-tickers">
+            ${report.relatedTickers.map(t => `<span class="ticker-tag">${t}</span>`).join('')}
+          </div>
+        ` : ''}
       </div>
-      <ul class="breaking-list">
-        ${breakingNews.map(item => `
-          <li class="breaking-item">
-            <span class="breaking-item-time">${item.time}</span>
-            <div class="breaking-item-body">
-              <div class="breaking-item-text">
-                <span class="breaking-item-tag ${item.tag}">${item.tagText}</span>${item.text}
-              </div>
-              <div class="breaking-item-source">${item.url ? `<a href="${item.url}" target="_blank" rel="noopener">${item.source} ↗</a>` : item.source}</div>
+    </div>`;
+}
+
+function renderResearchArticle(reportId) {
+  const report = deepResearch.find(r => r.id === reportId);
+  if (!report) return;
+
+  // Header
+  document.getElementById('articleHeaderContent').innerHTML = `
+    <div class="research-preview-meta">
+      <span class="research-label">📊 DEEP RESEARCH</span>
+      <span class="date-badge">${report.date} · ${report.weekday}</span>
+      <span class="research-read-time">📖 ${report.readTime || '阅读'}</span>
+    </div>
+    <h1>${report.title}</h1>
+    ${report.subtitle ? `<div style="font-size:16px;color:var(--text-secondary);margin-bottom:16px;line-height:1.6;">${report.subtitle}</div>` : ''}
+    <div class="issue-tags" style="margin-bottom:8px;">
+      ${(report.tags || []).map(t => `<span class="issue-tag ${t.type}">${t.text}</span>`).join('')}
+    </div>
+    ${report.relatedTickers && report.relatedTickers.length > 0 ? `
+      <div class="related-tickers">
+        ${report.relatedTickers.map(t => `<span class="ticker-tag">${t}</span>`).join('')}
+      </div>
+    ` : ''}
+  `;
+
+  // Build article body
+  let html = '';
+
+  // Key Takeaways
+  if (report.keyTakeaways && report.keyTakeaways.length > 0) {
+    html += `<div class="key-takeaways">
+      <h3>🎯 核心要点</h3>
+      <ul>${report.keyTakeaways.map(t => `<li>${t}</li>`).join('')}</ul>
+    </div>`;
+  }
+
+  // Sections
+  (report.sections || []).forEach(sec => {
+    html += `<div class="research-section" id="${sec.id || ''}">
+      <h2 class="research-section-title">${sec.title}</h2>
+      <div class="research-section-content">${sec.content}</div>
+    </div>`;
+  });
+
+  // Sources
+  if (report.sources && report.sources.length > 0) {
+    html += `<div class="sources-section">
+      <h3>📚 参考来源</h3>
+      <ul class="source-list">
+        ${report.sources.map((s, i) => `
+          <li>
+            <span class="source-num">[${i + 1}]</span>
+            <div>
+              ${s.url ? `<a href="${s.url}" target="_blank" rel="noopener">${s.title} ↗</a>` : s.title}
+              ${s.publisher ? `<span class="source-publisher"> — ${s.publisher}</span>` : ''}
             </div>
           </li>
         `).join('')}
       </ul>
     </div>`;
-}
+  }
 
-function renderLatestIssue() {
-  if (issues.length === 0) return;
-  const issue = issues[0]; // latest
-
-  // Header
-  document.getElementById('latestIssueHeader').innerHTML = `
-    <div class="latest-header">
-      <div class="date-badge">${issue.date} · ${issue.weekday}</div>
-      <h2>${issue.title}</h2>
-      <div class="latest-meta">
-        <span>⏱ ${issue.timeRange}</span>
-        <span>📋 ${issue.focusAreas}</span>
-      </div>
+  // Topic reason
+  if (report.topicReason) {
+    html += `<div style="margin-top:24px;padding:16px 20px;background:var(--code-bg);border-radius:var(--radius-sm);font-size:13px;color:var(--text-secondary);">
+      <strong>📝 选题理由：</strong>${report.topicReason}
     </div>`;
-
-  // Body — reuse renderArticleBody
-  document.getElementById('latestIssueBody').innerHTML = renderArticleBody(issue);
-}
-
-function renderArticleBody(issue) {
-  let html = '';
-
-  // Briefings
-  html += `<section id="sec-briefing"><div class="section-label">核心情报摘要</div>`;
-  issue.briefings.forEach(b => {
-    html += `<div class="briefing-card"><p>${b}</p></div>`;
-  });
-  html += `</section>`;
-
-  // Macro Events
-  html += `<section id="sec-macro"><div class="section-label">宏观与地缘风向</div>`;
-  issue.macroEvents.forEach(e => {
-    html += `
-      <div class="macro-event">
-        <h3><span class="event-icon" style="background:${e.iconBg}">${e.icon}</span><span>${e.title}</span></h3>
-        <div class="fact-block"><div class="label">核心事实</div>${e.fact}</div>
-        <ul class="mapping-list">
-          ${e.mappings.map(m => `<li><span class="badge-${m.type === 'bull' ? 'bull' : 'bear'}">${m.type === 'bull' ? '利好' : '利空'}</span>${m.text}</li>`).join('')}
-        </ul>
-        ${e.url ? `<div class="news-source"><a href="${e.url}" target="_blank" rel="noopener">${e.source || '查看来源'} ↗</a></div>` : (e.source ? `<div class="news-source">${e.source}</div>` : '')}
-      </div>`;
-  });
-  html += `</section>`;
-
-  // Stocks
-  html += `<section id="sec-stocks"><div class="section-label">标的精准追踪</div>`;
-  issue.stocks.forEach(s => {
-    html += `
-      <div class="stock-card">
-        <div class="stock-header">
-          <h3>${s.name}</h3>
-          <span class="stock-code">${s.code}</span>
-        </div>
-        <div class="stock-body">
-          ${s.news.map(n => `
-            <div class="news-item">
-              <div class="news-label">${n.label}</div>
-              <div class="news-content">${n.content}</div>
-              ${n.url ? `<div class="news-source"><a href="${n.url}" target="_blank" rel="noopener">${n.source || '查看来源'} ↗</a></div>` : (n.source ? `<div class="news-source">${n.source}</div>` : '')}
-            </div>
-          `).join('')}
-          <div class="assessment">
-            <div class="label">⚡ 影响评估</div>
-            ${s.assessment}
-          </div>
-        </div>
-      </div>`;
-  });
-  html += `</section>`;
-
-  // Alerts
-  html += `<section id="sec-alerts"><div class="section-label">前瞻预警</div>
-    <ul class="alert-list">
-      ${issue.alerts.map(a => `
-        <li class="alert-item">
-          <span class="alert-item-time">${a.time}</span>
-          <div class="alert-item-body">
-            <div class="alert-item-event">${a.event}</div>
-            <div class="alert-item-target">${a.target}</div>
-          </div>
-        </li>
-      `).join('')}
-    </ul>
-  </section>`;
+  }
 
   // Disclaimer
-  html += `
-    <div class="disclaimer">
-      <strong>⚖️ 免责声明：</strong>本报告仅提供资讯聚合与逻辑推演，不构成任何买入、卖出或持有的投资建议。所有信息来源于公开渠道，投资者应独立判断并自行承担风险。
-      <div class="generated-at">报告生成时间：${issue.generatedAt}</div>
-    </div>`;
+  html += `<div class="disclaimer">
+    <strong>⚖️ 免责声明：</strong>本报告仅提供资讯聚合与逻辑推演，不构成任何买入、卖出或持有的投资建议。所有信息来源于公开渠道，投资者应独立判断并自行承担风险。
+    <div class="generated-at">报告生成时间：${report.generatedAt}</div>
+  </div>`;
 
-  return html;
+  document.getElementById('articleBody').innerHTML = html;
+
+  // Build article TOC
+  const tocList = document.getElementById('articleTocList');
+  if (tocList) {
+    let tocHtml = '';
+    if (report.keyTakeaways && report.keyTakeaways.length > 0) {
+      tocHtml += '<li><a class="toc-link" onclick="scrollToSection(\'key-takeaways\')">核心要点</a></li>';
+    }
+    (report.sections || []).forEach(sec => {
+      if (sec.id) {
+        tocHtml += `<li><a class="toc-link" data-section="${sec.id}" onclick="scrollToSection('${sec.id}')">${sec.title}</a></li>`;
+      }
+    });
+    tocList.innerHTML = tocHtml;
+  }
 }
 
 function renderIssueList() {
@@ -1708,10 +1809,9 @@ function renderIssueList() {
   const archive = document.getElementById('archiveSection');
   const tocArchive = document.getElementById('toc-archive');
 
-  // Archive shows only past issues (skip the latest which is shown inline)
-  const pastIssues = issues.slice(1);
+  const pastReports = deepResearch.slice(1);
 
-  if (pastIssues.length === 0) {
+  if (pastReports.length === 0) {
     archive.style.display = 'none';
     if (tocArchive) tocArchive.style.display = 'none';
     return;
@@ -1719,80 +1819,35 @@ function renderIssueList() {
 
   archive.style.display = 'block';
   if (tocArchive) tocArchive.style.display = 'block';
-  count.textContent = `共 ${pastIssues.length} 期`;
+  count.textContent = `共 ${pastReports.length} 期`;
 
-  list.innerHTML = pastIssues.map(issue => `
-    <div class="issue-card" onclick="showArticle('${issue.id}')">
+  list.innerHTML = pastReports.map(report => `
+    <div class="issue-card" onclick="showArticle('${report.id}')">
       <div class="issue-card-top">
-        <span class="issue-date">${issue.date}</span>
-        <span class="issue-weekday">${issue.weekday}</span>
+        <span class="issue-date">${report.date}</span>
+        <span class="issue-weekday">${report.weekday}</span>
+        <span class="research-read-time" style="margin-left:auto;">📖 ${report.readTime || ''}</span>
       </div>
-      <h3>${issue.title}</h3>
-      <p class="issue-summary">${issue.summary}</p>
+      <h3>${report.title}</h3>
+      <p class="issue-summary">${report.summary}</p>
       <div class="issue-tags">
-        ${issue.tags.map(t => `<span class="issue-tag ${t.type}">${t.text}</span>`).join('')}
+        ${(report.tags || []).map(t => `<span class="issue-tag ${t.type}">${t.text}</span>`).join('')}
       </div>
     </div>
   `).join('');
 }
 
-function renderArticle(issueId) {
-  const issue = issues.find(i => i.id === issueId);
-  if (!issue) return;
-
-  // Header
-  document.getElementById('articleHeaderContent').innerHTML = `
-    <div class="date-badge">${issue.date} · ${issue.weekday}</div>
-    <h1>${issue.title}</h1>
-    <div class="article-meta">
-      <span class="article-meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        ${issue.timeRange}
-      </span>
-      <span class="article-meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        ${issue.focusAreas}
-      </span>
-    </div>
-    <div class="watchlist-tags">
-      ${issue.watchlist.map(w => `<span class="tag">${w}</span>`).join('')}
-    </div>
-  `;
-
-  // Body
-  document.getElementById('articleBody').innerHTML = renderArticleBody(issue);
-}
-
 // ============ Navigation ============
 
-let currentModule = 'finance';
-
-function showModule(mod) {
-  currentModule = mod;
-  // Toggle module pages
-  document.getElementById('mod-finance').classList.toggle('active', mod === 'finance');
-  document.getElementById('mod-ai').classList.toggle('active', mod === 'ai');
-  // Toggle tabs
-  document.getElementById('tab-finance').classList.toggle('active', mod === 'finance');
-  document.getElementById('tab-ai').classList.toggle('active', mod === 'ai');
-  // Reset to home view within module
-  if (mod === 'finance') {
-    document.getElementById('homePage').classList.add('active');
-    document.getElementById('articlePage').classList.remove('active');
-  } else {
-    document.getElementById('aiHomePage').classList.add('active');
-    document.getElementById('aiArticlePage').classList.remove('active');
-  }
-  window.scrollTo(0, 0);
-  history.pushState(null, '', mod === 'finance' ? '#' : '#ai');
-}
-
 function showHome() {
-  showModule('finance');
+  document.getElementById('homePage').classList.add('active');
+  document.getElementById('articlePage').classList.remove('active');
+  window.scrollTo(0, 0);
+  history.pushState(null, '', '#');
 }
 
 function showArticle(id) {
-  renderArticle(id);
+  renderResearchArticle(id);
   document.getElementById('homePage').classList.remove('active');
   document.getElementById('articlePage').classList.add('active');
   window.scrollTo(0, 0);
@@ -1800,33 +1855,24 @@ function showArticle(id) {
 }
 
 function showAbout() {
-  alert('Y Daily \u00b7 金融资讯 & AI 前沿\n\n金融资讯日报：每日自动聚合定制股票池的宏观与个股资讯。\nAI 前沿资讯：聚焦中美 AI 研究与应用最新动态。\n\n更新频率：每日 22:00\n数据来源：公开渠道');
+  alert('Y Daily · 每日深度研究\n\n每日从全球头条精选一个专题，进行深度分析研究。\n\n更新频率：每日 22:00\n数据来源：公开渠道');
 }
 
 // Handle back button
 window.addEventListener('popstate', () => {
   const hash = location.hash.replace('#', '');
-  if (hash === 'ai') {
-    showModule('ai');
-  } else if (hash.startsWith('ai-')) {
-    showModule('ai');
-    showAiArticle(hash.replace('ai-', ''));
-  } else if (hash && issues.find(i => i.id === hash)) {
-    showModule('finance');
+  if (hash && deepResearch.find(r => r.id === hash)) {
     showArticle(hash);
   } else {
-    showModule('finance');
+    showHome();
   }
 });
 
 // ============ Init ============
 renderBreakingNews();
 renderFearGreed();
-renderLatestIssue();
+renderLatestResearch();
 renderIssueList();
-renderAiBreakingNews();
-renderAiLatestIssue();
-renderAiIssueList();
 
 // TOC scroll spy
 function scrollToSection(id) {
@@ -1838,44 +1884,44 @@ function scrollToSection(id) {
 }
 
 function updateTocHighlight() {
-  // Finance TOC
-  const finSections = ['sec-breaking', 'sec-fg', 'sec-briefing', 'sec-macro', 'sec-stocks', 'sec-alerts', 'sec-archive'];
-  const finLinks = document.querySelectorAll('#tocList .toc-link');
-  let finCurrent = finSections[0];
-  for (const id of finSections) {
+  // Home page TOC
+  const homeSections = ['sec-breaking', 'sec-fg', 'sec-research', 'sec-archive'];
+  const homeLinks = document.querySelectorAll('#tocList .toc-link');
+  let homeCurrent = homeSections[0];
+  for (const id of homeSections) {
     const el = document.getElementById(id);
     if (el && el.offsetParent !== null) {
       const rect = el.getBoundingClientRect();
-      if (rect.top <= 120) finCurrent = id;
+      if (rect.top <= 120) homeCurrent = id;
     }
   }
-  finLinks.forEach(link => { link.classList.toggle('active', link.dataset.section === finCurrent); });
+  homeLinks.forEach(link => { link.classList.toggle('active', link.dataset.section === homeCurrent); });
 
-  // AI TOC
-  const aiSections = ['ai-sec-breaking', 'ai-sec-briefing', 'ai-sec-research', 'ai-sec-application', 'ai-sec-industry', 'ai-sec-outlook', 'ai-sec-archive'];
-  const aiLinks = document.querySelectorAll('#aiTocList .toc-link');
-  let aiCurrent = aiSections[0];
-  for (const id of aiSections) {
-    const el = document.getElementById(id);
-    if (el && el.offsetParent !== null) {
-      const rect = el.getBoundingClientRect();
-      if (rect.top <= 120) aiCurrent = id;
-    }
+  // Article page TOC
+  const articleLinks = document.querySelectorAll('#articleTocList .toc-link');
+  if (articleLinks.length > 0) {
+    let articleCurrent = '';
+    articleLinks.forEach(link => {
+      const secId = link.dataset.section;
+      if (secId) {
+        const el = document.getElementById(secId);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 120) articleCurrent = secId;
+        }
+      }
+    });
+    articleLinks.forEach(link => {
+      link.classList.toggle('active', link.dataset.section === articleCurrent);
+    });
   }
-  aiLinks.forEach(link => { link.classList.toggle('active', link.dataset.section === aiCurrent); });
 }
 
 window.addEventListener('scroll', updateTocHighlight, { passive: true });
 
 // Check hash on load
 const initHash = location.hash.replace('#', '');
-if (initHash === 'ai') {
-  showModule('ai');
-} else if (initHash.startsWith('ai-')) {
-  showModule('ai');
-  const aiId = initHash.replace('ai-', '');
-  if (aiIssues.find(i => i.id === aiId)) showAiArticle(aiId);
-} else if (initHash && issues.find(i => i.id === initHash)) {
+if (initHash && deepResearch.find(r => r.id === initHash)) {
   showArticle(initHash);
 }
 </script>

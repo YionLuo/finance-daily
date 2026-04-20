@@ -257,6 +257,36 @@ def dedup_by_title(articles, threshold=0.70):
     return result
 
 
+def fetch_topic_articles(keywords, max_age_hours=72, max_per_keyword=15):
+    """
+    Fetch articles related to a specific topic using keyword search via Google News RSS.
+
+    Args:
+        keywords: list of search keywords (English and/or Chinese)
+        max_age_hours: how far back to search (default 72h for deep research)
+        max_per_keyword: max articles per keyword search
+
+    Returns:
+        Deduplicated list of article dicts, sorted by recency.
+    """
+    all_articles = []
+    feeds = [_make_google_news_url(kw) for kw in keywords]
+
+    print(f"\n=== Topic Research: searching {len(keywords)} keywords ===")
+    for kw, feed_url in zip(keywords, feeds):
+        try:
+            arts = fetch_rss_articles([feed_url], max_age_hours=max_age_hours, max_per_feed=max_per_keyword)
+            print(f"  Keyword [{kw}]: {len(arts)} articles")
+            all_articles.extend(arts)
+        except Exception as e:
+            print(f"  Keyword [{kw}] error: {e}")
+
+    # Deduplicate
+    deduped = dedup_by_title(all_articles)
+    print(f"  Total after dedup: {len(deduped)} articles")
+    return deduped
+
+
 # ============ Self-test ============
 
 if __name__ == "__main__":
