@@ -287,6 +287,122 @@ def fetch_topic_articles(keywords, max_age_hours=72, max_per_keyword=15):
     return deduped
 
 
+# ============ Web Search (for agent tool use) ============
+
+def web_search(query, max_results=10, max_age_hours=72):
+    """
+    Search for articles via Google News RSS. Used as a tool by the research agent.
+
+    Args:
+        query: search query string
+        max_results: max number of results to return
+        max_age_hours: how far back to search
+
+    Returns:
+        list of dicts with title, summary, url, source, published
+    """
+    feed_url = _make_google_news_url(query)
+    articles = fetch_rss_articles([feed_url], max_age_hours=max_age_hours, max_per_feed=max_results)
+    return articles[:max_results]
+
+
+def fetch_url_content(url, max_chars=3000):
+    """
+    Fetch and extract text content from a URL. Used by the agent to read full articles.
+
+    Args:
+        url: URL to fetch
+        max_chars: max characters to return
+
+    Returns:
+        str: extracted text content, or error message
+    """
+    try:
+        headers = {"User-Agent": USER_AGENT}
+        resp = requests.get(url, headers=headers, timeout=TIMEOUT, allow_redirects=True)
+        resp.raise_for_status()
+        html_text = resp.text
+
+        # Simple content extraction: strip scripts/styles, then tags
+        # Remove script and style blocks
+        cleaned = re.sub(r'<script[^>]*>.*?</script>', '', html_text, flags=re.DOTALL | re.IGNORECASE)
+        cleaned = re.sub(r'<style[^>]*>.*?</style>', '', cleaned, flags=re.DOTALL | re.IGNORECASE)
+        # Strip tags
+        text = re.sub(r'<[^>]+>', ' ', cleaned)
+        # Collapse whitespace
+        text = re.sub(r'\s+', ' ', text).strip()
+
+        if len(text) > max_chars:
+            text = text[:max_chars] + "..."
+
+        return text
+    except Exception as e:
+        return f"Error fetching URL: {e}"
+
+
+# Tool definitions for OpenAI function calling format
+AGENT_TOOLS = [
+    {
+        "type": "function",
+        "function": {
+            "name": "web_search",
+            "description": "Search Google News for articles on a specific topic. Returns titles, summaries, URLs and sources. Use this to find information you need for your analysis.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "Search query. Be specific. English works best for global topics."
+                    }
+                },
+                "required": ["query"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "fetch_url_content",
+            "description": "Fetch and read the full text content of a specific URL. Use this to get details from an article you found via web_search.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "url": {
+                        "type": "string",
+                        "description": "The URL to fetch content from"
+                    }
+                },
+                "required": ["url"]
+            }
+        }
+    }
+]
+
+
+def execute_tool_call(tool_name, arguments):
+    """Execute a tool call from the agent and return the result as string."""
+    if tool_name == "web_search":
+        query = arguments.get("query", "")
+        results = web_search(query)
+        if not results:
+            return "No results found for this query."
+        lines = []
+        for i, art in enumerate(results, 1):
+            lines.append(f"[{i}] {art['title']}")
+            if art.get('summary'):
+                lines.append(f"    {art['summary'][:200]}")
+            lines.append(f"    Source: {art.get('source', '')} | URL: {art.get('url', '')}")
+            lines.append("")
+        return "\n".join(lines)
+
+    elif tool_name == "fetch_url_content":
+        url = arguments.get("url", "")
+        return fetch_url_content(url)
+
+    else:
+        return f"Unknown tool: {tool_name}"
+
+
 # ============ Self-test ============
 
 if __name__ == "__main__":
