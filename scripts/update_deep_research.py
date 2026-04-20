@@ -219,11 +219,20 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
 
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": f"开始研究「{topic_info.get('topic', '')}」。先想想你需要搜索什么，然后开始。"},
+        {"role": "user", "content": f"""开始研究「{topic_info.get('topic', '')}」。
+
+请按以下步骤进行：
+1. 先用 web_search 搜索 5-8 个不同角度的关键词，收集足够的素材
+2. 对重要文章用 fetch_url_content 读取全文获取细节数据
+3. 搜集足够素材后（至少搜索 5 次以上），先列出报告提纲
+4. 然后写出完整报告（必须 4000 字以上，每个章节至少 500 字）
+
+重要：不要急于写报告。先充分搜索，读几篇关键文章全文，确保你有足够的最新数据和多方观点。"""},
     ]
 
-    collected_sources = []  # Track all sources found during research
+    collected_sources = []
     final_text = None
+    search_count = 0  # Track number of searches done
 
     for round_num in range(MAX_AGENT_ROUNDS):
         print(f"\n  --- Round {round_num + 1} ---")
@@ -265,8 +274,9 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
 
                 result = execute_tool_call(func_name, func_args)
 
-                # Track sources from search results
+                # Track searches
                 if func_name == "web_search":
+                    search_count += 1
                     search_results = result.split("\n")
                     for line in search_results:
                         if line.strip().startswith("[") and "]" in line:
@@ -282,12 +292,28 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
                     "content": result,
                 })
 
-            print(f"  Processed {len(message.tool_calls)} tool call(s)")
+            print(f"  Processed {len(message.tool_calls)} tool call(s), total searches: {search_count}")
 
         else:
-            # Model returned text — this is the final analysis
-            final_text = message.content
-            print(f"  Final output: {len(final_text or '')} chars")
+            # Model returned text
+            text = message.content or ""
+
+            # If model tried to write too early (not enough research), push it back
+            if search_count < 4 and round_num < 5:
+                print(f"  Output received but only {search_count} searches done. Requesting more research.")
+                messages.append(message)
+                messages.append({"role": "user", "content": f"你只搜索了 {search_count} 次，素材还不够。请继续用 web_search 搜索更多角度的信息，特别是：反面观点、具体数据（财报/融资/市场规模）、2026年最新动态。至少再搜索 3 次再开始写。"})
+                continue
+
+            # If output is too short, ask to expand
+            if len(text) < 3000 and round_num < MAX_AGENT_ROUNDS - 2:
+                print(f"  Output too short ({len(text)} chars). Requesting expansion.")
+                messages.append(message)
+                messages.append({"role": "user", "content": f"报告只有约 {len(text)} 字，远低于 4000 字的最低要求。请扩展每个章节的分析深度——补充更多数据、对比、案例和推理过程。不要重写，在现有基础上扩展。目标至少 4000 字。"})
+                continue
+
+            final_text = text
+            print(f"  Final output: {len(final_text)} chars")
             break
 
     if not final_text:
