@@ -1287,6 +1287,10 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:07", tag: "macro", tagText: "宏观", text: "英国2月GDP增长0.5%，远超经济学家预期的0.1%，显示经济复苏势头强劲。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/uk-gdp-march-2026-iran-war.html" },
+  { time: "14:06", tag: "tech", tagText: "科技", text: "台积电一季度利润增长58%超预期，AI芯片需求持续推动业绩创纪录。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/tsmc-q1-profit-58-percent-ai-chip-demand-record.html" },
+  { time: "13:38", tag: "geo", tagText: "地缘", text: "特朗普宣布以色列与黎巴嫩将举行数十年来首次高级别会谈，试图缓解两国紧张局势。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/trump-israel-lebanon-talks-hezbollah-ceasefire-conflict.html" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "西班牙Repsol重获委内瑞拉石油业务控制权，协议包括支付保障和三倍增产计划。", source: "International homepage", url: "https://www.ft.com/content/622a60db-6e0f-40bb-835c-8542bd83d72a" },
   { time: "10:58", tag: "tech", tagText: "科技", text: "Allbirds宣布转型AI后股价暴涨近600%，市场再现概念炒作热潮。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/allbirds-ai-pivot-sends-its-stock-soaring-300-weve-seen-this-film-before-04665b32?mod=mw_rss_topstories" },
   { time: "10:50", tag: "macro", tagText: "宏观", text: "中国一季度GDP同比增长5%，超出预期，主要受工业产出和出口强劲推动。北京今年设定的增长目标为4.5%-5%，是自1990年代以来最低目标。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/china-gdp-growth-first-quarter-exports-property-retail-sales-iran-war.html" },
   { time: "10:42", tag: "tech", tagText: "科技", text: "特斯拉AI5芯片完成关键里程碑，该芯片将用于人形机器人和超级计算机，投资者欢呼特斯拉可能成为芯片股。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/is-tesla-a-chip-stock-now-investors-are-cheering-a-semiconductor-milestone-56341cf8?mod=mw_rss_topstories" },
@@ -1303,15 +1307,13 @@ const breakingNews = [
   { time: "16:13", tag: "tech", tagText: "科技", text: "百事可乐第一季度营收和盈利均超华尔街预期，主要得益于其北美食品业务的改善。这表明在通胀压力下，部分消费品巨头仍能通过定价和运营效率实现增长。", source: "CNBC", url: "https://www.cnbc.com/2026/04/16/pepsico-pep-q1-2026-earnings.html" },
   { time: "16:00", tag: "tech", tagText: "地缘", text: "海湾国家转向私人交易进行100亿美元战时融资，阿布扎比、卡塔尔和科威特回避公开市场募资，伊朗冲突造成经济冲击。", source: "Financial Times", url: "https://www.ft.com/content/3b927d8b-4c6b-414a-bb85-3d6070495df7" },
   { time: "16:00", tag: "geo", tagText: "地缘", text: "北约与欧盟爆发国防开支'地盘争夺战'，争议焦点在于用欧盟资金购买美国武器。", source: "Financial Times", url: "https://www.ft.com/content/00ea4f9b-65f1-4080-b526-9783fa8a4f83" },
-  { time: "14:07", tag: "macro", tagText: "宏观", text: "英国2月GDP增长0.5%，远超经济学家预期的0.1%，显示经济复苏势头强劲。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/uk-gdp-march-2026-iran-war.html" },
-  { time: "14:06", tag: "tech", tagText: "科技", text: "台积电一季度利润增长58%超预期，AI芯片需求持续推动业绩创纪录。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/tsmc-q1-profit-58-percent-ai-chip-demand-record.html" },
-  { time: "13:38", tag: "geo", tagText: "地缘", text: "特朗普宣布以色列与黎巴嫩将举行数十年来首次高级别会谈，试图缓解两国紧张局势。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/trump-israel-lebanon-talks-hezbollah-ceasefire-conflict.html" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "西班牙Repsol重获委内瑞拉石油业务控制权，协议包括支付保障和三倍增产计划。", source: "International homepage", url: "https://www.ft.com/content/622a60db-6e0f-40bb-835c-8542bd83d72a" },
 ];
-const breakingDate = "2026年4月20日 11:47 CST";
+const breakingDate = "2026年4月20日 14:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:30", tag: "ai", tagText: "AI", text: "台积电（TSMC）因英伟达和苹果的AI芯片需求激增，供应短缺，分析师预测其利润将创纪录飙升。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVTVETFRUVEN0U3QtaUpCOVFXQ2FtWFBZemgtNDhUbF9QczMwZ1R1N3pRQWdFZ1oyZ1gtQzhhLWZjOHA3UkdpS2pUSUdMbWFSOGVnVUxrZmpaMnlNS3BNMzU0TlVuUkN0MGFKN21IMTNQM19QYWFvWUs5MlF3cUlZaTFNMWQzVi1wT1k3YmplZ2FlbEtUa1lEbDBubE96VTVSZ2ZnMEdn?oc=5" },
+  { time: "12:11", tag: "tech", tagText: "科技", text: "Cadence与英伟达深化AI合作，共同重塑芯片设计和机器人技术领域。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTGw0a3VPdjl3dkFTMWFHMk9oQ3I0b1h2amV1WHY4c0NRY3pOdWlDTTc1WTlPbXJTWjN0ci1RQTVfU0lmNzNLVU1RVkpvOEFzbVpwQlJ0blNqbFE5ekVHTm5KWFk0TnlWdzdRUFUxZmF6MWtxUFU5Rnh1YUlBam9QRThmMDRmQ3FXU0VVNmUwT0ZKSlhlRnNKUDRUMV9PNVpM?oc=5" },
   { time: "10:01", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic估值或达8000亿美元，正进行IPO筹备谈判。该公司近期融资动态引发行业关注，可能成为AI领域最大规模IPO之一。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxOX2pjci1iQktyMWFSX0xDTEZtRW9hWXBWY3NOY2JsdDJLSkw5Z2JGTHFoRDByRVRhX01PdV96T1RvVlpNV1d1Z21tU0FpaWk5WUh1T2QzRzRqTmd1Sm9ZMDcyaFpKS09oRi1aUTExN0dielIyZ2ticEVHdW1FM3lpWUZza3JuUkI2c3RSMHZscE56czQ?oc=5" },
   { time: "06:18", tag: "ai", tagText: "AI", text: "Anthropic在最新融资谈判中瞄准8000亿美元估值，显示AI头部企业持续获得资本青睐。投资方认为其技术壁垒和商业化潜力支撑高估值。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa2hfbC1UTmxfMHZtMDBvMWgtMERRQUt0ejg4MEhLeGllN1U5MG5qOGVqY0N0dEx6OUVTal9XbVVxWjhhTzB3blNvOFpZQWN2aTNmaktGQi1Mekh5ZjlOX0NkaUozemxsWWl4TjVSbjhHSzAzMWFzSGtKQ0NtZW01TjU2OTMyWlR2bjJRYUNzZzRMbHlVMjJjN0JheF9zNVNJMHc?oc=5" },
   { time: "05:31", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋表示，公司在将电子转化为代币、推动AI代理指数级增长以及克服半导体供应链瓶颈方面发挥关键作用。他强调AI技术的快速发展将重塑行业格局。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwJBVV95cUxOckF4UjRxZXdheU9Hdm9zUDRBc1hvMkxCQkszeFFVMEV0ZjRoejRsbC1ZdkJWU2NmaEVLVm5yLWFuVTh3UEdKQnBCMzlpcG5uSzJuNWhncl9xTGVJZDI2TlpuazJtdEJyNVB5UmJ1YnAtTmpaMEVBa0FHSk1pblBEWU1iejlBOXdONmRaOU1PejRCR081a04wUkl0T2xaU3dBbUxGc2RlbU1fMlVFQkItQW1TTnIxNWhFY2g3MGhhRF9vemY0aGJHVXpIU21YUkhBLXRWSURtOEpVNEpmVkdMMGtPZnc4dDFxOHQ5QVlYZTk1SHRhVVpfRjQwOVI1bFlhUTc1NFFzR0JsZlhNOGx2NDE4UTJKQjQ?oc=5" },
@@ -1330,10 +1332,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "Parasail在A轮融资中筹集3200万美元，押注‘tokenmaxxing’将催生下一代计算巨头，预示着模型和计算的碎片化未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Gitar利用AI代理审查代码，完成900万美元融资，专注于解决AI生成代码的安全问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/" },
   { time: "16:00", tag: "tech", tagText: "科技", text: "DeepL宣布将进军语音翻译领域，其技术可用于Zoom和Microsoft Teams等会议工具的实时翻译。这一举措标志着DeepL从文本翻译向语音翻译的扩展，可能对全球沟通方式产生深远影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/16/deepl-known-for-text-translation-now-wants-to-translate-your-voice/" },
-  { time: "13:30", tag: "ai", tagText: "AI", text: "台积电（TSMC）因英伟达和苹果的AI芯片需求激增，供应短缺，分析师预测其利润将创纪录飙升。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVTVETFRUVEN0U3QtaUpCOVFXQ2FtWFBZemgtNDhUbF9QczMwZ1R1N3pRQWdFZ1oyZ1gtQzhhLWZjOHA3UkdpS2pUSUdMbWFSOGVnVUxrZmpaMnlNS3BNMzU0TlVuUkN0MGFKN21IMTNQM19QYWFvWUs5MlF3cUlZaTFNMWQzVi1wT1k3YmplZ2FlbEtUa1lEbDBubE96VTVSZ2ZnMEdn?oc=5" },
-  { time: "12:11", tag: "tech", tagText: "科技", text: "Cadence与英伟达深化AI合作，共同重塑芯片设计和机器人技术领域。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTGw0a3VPdjl3dkFTMWFHMk9oQ3I0b1h2amV1WHY4c0NRY3pOdWlDTTc1WTlPbXJTWjN0ci1RQTVfU0lmNzNLVU1RVkpvOEFzbVpwQlJ0blNqbFE5ekVHTm5KWFk0TnlWdzdRUFUxZmF6MWtxUFU5Rnh1YUlBam9QRThmMDRmQ3FXU0VVNmUwT0ZKSlhlRnNKUDRUMV9PNVpM?oc=5" },
 ];
-const aiBreakingDate = "2026年4月20日 11:47 CST";
+const aiBreakingDate = "2026年4月20日 14:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
