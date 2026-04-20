@@ -1467,6 +1467,11 @@ const fearGreedData = {
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什在提前公布的国会证词中表示，美联储必须“守好本分”以保持独立性，并坚定承诺抗击通胀。他淡化总统对利率发表看法带来的威胁，强调央行应专注于其核心任务。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-testimony-to-congress-is-out-early-he-wants-the-fed-to-stay-in-its-lane-d6249040?mod=mw_rss_topstories" },
+  { time: "01:52", tag: "macro", tagText: "宏观", text: "美国关税退款申请门户将于周一启动，沃尔玛、塔吉特等大型进口商有望获得数十亿美元的退款。此举将为相关零售商带来巨额现金流入。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/tariff-refunds-begin-on-monday-these-retailers-are-due-big-paydays.html" },
+  { time: "01:28", tag: "macro", tagText: "宏观", text: "美伊冲突导致燃料价格飙升，加之能获取廉价的北美原油，美国炼油商正从中获得巨额利润。地缘政治紧张局势使美国炼油商处于有利地位。", source: "Financial Times", url: "https://www.ft.com/content/6d0f7c29-ee60-40d8-81bf-ce8af414aed7" },
+  { time: "01:14", tag: "geo", tagText: "地缘", text: "城堡基金商品部门负责人表示，特朗普的社交媒体帖子已经改变了石油交易格局，交易员们正努力适应其频繁言论所引发的市场波动。", source: "Financial Times", url: "https://www.ft.com/content/23b14d1b-8efa-4346-ab06-30db101e7748" },
+  { time: "00:47", tag: "crypto", tagText: "加密", text: "加密货币市场发生大规模轧空，数小时内清算了价值4.22亿美元的空头头寸，加剧了市场波动。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMiggFBVV95cUxPb2gxUkdOSVZtQXBnWndZLVVQTnZCX0VQekZlVmNHXzM0Z1J6aHU2emZjcmM4NHp4NS04MGtsWEczUGxZcC1EMTRaM0lRR1BKNTYyek13SWIwdFlJbW83U2M3UkRJLS16MmdmU2VFX0lralg2c0gyRXdPMlFrQzJncGtB?oc=5" },
   { time: "00:11", tag: "macro", tagText: "宏观", text: "受美伊紧张局势升级影响，美国股市周一普遍下跌。道指、标普500指数和纳斯达克指数均走低，其中纳斯达克指数可能结束连涨势头。市场避险情绪升温，油价则因海湾地区供应风险而攀升。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPYlI5Q1M3bFBxbENja09GXzVuZldxY3RjQk9qXzB6YklQMWZKd1FqSjZ1THgzMjdTUU1SM2ZBTkhYWFZMZVBvY0drRHJNbkNHV3E2ZXNqSGVrcXBBbkw1VlBwWHJCeWYtRV83SEswWUFWUEZqM2hzQWVySWJMcElhbmQ3MjJxRzZOLU04MXBLbHdvRE0zbndBdGVpSzZqOXJITmU0NHctcUtPQnJFeHZvMVo5RUhDYmw1UTFpNV9GOWhFdFlOYm1mRkZDdC1xWnpKZjVqR1d4ZDhLUFBFT2N2WkVKdHhrb01MMjlj?oc=5" },
   { time: "00:05", tag: "crypto", tagText: "加密", text: "比特币价格在周末下跌约5%，市场担忧其4月份的反弹行情可能已经结束。地缘政治紧张局势加剧了加密货币市场的波动。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTTJFQzFRb29oZ0lYbW1LRnlFbHZMWjVGSThMb3AwazlqYUREN29BREJxekVoOUs0UXQ4cFlsUzdYQ1h0QVZvVThrdGVidkVvNmZlYnVUVHRDbFc4b0V4djFrVmxSRHNxRXExWWJpT21QU0pIenRGaVFzVFd1dzJCbnNTYVM1VHlUclgyYm45SnM0bVZIX3d1dGZlRWJLUzBEZXM1VGFZTmNaOWNKNHA5TzA1bl9xdWM?oc=4" },
   { time: "23:42", tag: "macro", tagText: "宏观", text: "知名投资者霍华德·马克斯表示，当前市场上便宜的股票非常少，'只有当人们恐慌时，才会出现真正的便宜货'。他认为目前市场整体估值并不低廉。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/howard-marks-says-there-are-very-few-cheap-stocks-bargains-come-when-people-panic.html" },
@@ -1482,16 +1487,12 @@ const breakingNews = [
   { time: "14:07", tag: "macro", tagText: "宏观", text: "英国2月GDP增长0.5%，远超经济学家预期的0.1%，显示经济复苏势头强劲。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/uk-gdp-march-2026-iran-war.html" },
   { time: "14:06", tag: "tech", tagText: "科技", text: "台积电一季度利润增长58%超预期，AI芯片需求持续推动业绩创纪录。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/tsmc-q1-profit-58-percent-ai-chip-demand-record.html" },
   { time: "13:38", tag: "geo", tagText: "地缘", text: "特朗普宣布以色列与黎巴嫩将举行数十年来首次高级别会谈，试图缓解两国紧张局势。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/trump-israel-lebanon-talks-hezbollah-ceasefire-conflict.html" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "西班牙Repsol重获委内瑞拉石油业务控制权，协议包括支付保障和三倍增产计划。", source: "International homepage", url: "https://www.ft.com/content/622a60db-6e0f-40bb-835c-8542bd83d72a" },
-  { time: "10:58", tag: "tech", tagText: "科技", text: "Allbirds宣布转型AI后股价暴涨近600%，市场再现概念炒作热潮。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/allbirds-ai-pivot-sends-its-stock-soaring-300-weve-seen-this-film-before-04665b32?mod=mw_rss_topstories" },
-  { time: "10:50", tag: "macro", tagText: "宏观", text: "中国一季度GDP同比增长5%，超出预期，主要受工业产出和出口强劲推动。北京今年设定的增长目标为4.5%-5%，是自1990年代以来最低目标。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/china-gdp-growth-first-quarter-exports-property-retail-sales-iran-war.html" },
-  { time: "10:42", tag: "tech", tagText: "科技", text: "特斯拉AI5芯片完成关键里程碑，该芯片将用于人形机器人和超级计算机，投资者欢呼特斯拉可能成为芯片股。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/is-tesla-a-chip-stock-now-investors-are-cheering-a-semiconductor-milestone-56341cf8?mod=mw_rss_topstories" },
-  { time: "10:04", tag: "macro", tagText: "宏观", text: "大金工业股价飙升14%，此前激进投资者Elliott敦促该公司提高利润率和股东回报。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/16/daikin-shares-jump-elliott-activist-investment-valuation-gap-nikkei225.html" },
 ];
-const breakingDate = "2026年4月21日 00:21 CST";
+const breakingDate = "2026年4月21日 02:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
   { time: "00:06", tag: "geo", tagText: "地缘", text: "据TechCrunch报道，美国国家安全局（NSA）的情报人员正在使用Anthropic的受限AI模型Mythos，尽管五角大楼与该公司存在分歧。这表明先进AI模型正被迅速应用于国家情报领域，引发对技术监管与安全的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/nsa-spies-are-reportedly-using-anthropics-mythos-despite-pentagon-feud/" },
   { time: "23:19", tag: "tech", tagText: "科技", text: "英伟达面临来自内部AI芯片的压力，这可能对其市场主导地位构成挑战。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZ1Jsa2s2a3MwV1c2UlNwYm8zeVFONndXc2lPVk9VWDRfdjFkdWNjQ0o5Nk5YY3pUMzlKVTNPUDhFZjZmWDFYYmUwV1M0dHQ5ZGllcDJKNGI3amUwOGNvZl8xcWVycVdtakYxNjltZmJpZTdrNERuQV9XdmhVOS1iZFNHeTUtck5CNmd1NVU2bw?oc=5" },
   { time: "22:30", tag: "ai", tagText: "AI", text: "AI核能初创公司Fermi的CEO和CFO突然离职。该公司由美国前能源部长里克·佩里联合创立，其位于德克萨斯州的AI园区项目正面临阻力。高层变动可能影响其利用AI优化核能技术的计划。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/fermi-ceo-and-cfo-depart-texas-nuclear-power-ai/" },
@@ -1511,9 +1512,8 @@ const aiBreakingNews = [
   { time: "06:18", tag: "ai", tagText: "AI", text: "Anthropic在最新融资谈判中瞄准8000亿美元估值，显示AI头部企业持续获得资本青睐。投资方认为其技术壁垒和商业化潜力支撑高估值。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa2hfbC1UTmxfMHZtMDBvMWgtMERRQUt0ejg4MEhLeGllN1U5MG5qOGVqY0N0dEx6OUVTal9XbVVxWjhhTzB3blNvOFpZQWN2aTNmaktGQi1Mekh5ZjlOX0NkaUozemxsWWl4TjVSbjhHSzAzMWFzSGtKQ0NtZW01TjU2OTMyWlR2bjJRYUNzZzRMbHlVMjJjN0JheF9zNVNJMHc?oc=5" },
   { time: "05:31", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋表示，公司在将电子转化为代币、推动AI代理指数级增长以及克服半导体供应链瓶颈方面发挥关键作用。他强调AI技术的快速发展将重塑行业格局。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwJBVV95cUxOckF4UjRxZXdheU9Hdm9zUDRBc1hvMkxCQkszeFFVMEV0ZjRoejRsbC1ZdkJWU2NmaEVLVm5yLWFuVTh3UEdKQnBCMzlpcG5uSzJuNWhncl9xTGVJZDI2TlpuazJtdEJyNVB5UmJ1YnAtTmpaMEVBa0FHSk1pblBEWU1iejlBOXdONmRaOU1PejRCR081a04wUkl0T2xaU3dBbUxGc2RlbU1fMlVFQkItQW1TTnIxNWhFY2g3MGhhRF9vemY0aGJHVXpIU21YUkhBLXRWSURtOEpVNEpmVkdMMGtPZnc4dDFxOHQ5QVlYZTk1SHRhVVpfRjQwOVI1bFlhUTc1NFFzR0JsZlhNOGx2NDE4UTJKQjQ?oc=5" },
   { time: "04:56", tag: "macro", tagText: "宏观", text: "AI芯片市场预计将达5000亿美元规模，24/7 Wall St.推荐三只半导体ETF提前布局。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxQTTVpelpIWWZLLUh5c2tOWWJvRWVSVnZ3T0hQR2JHZU5hSGZXeVNqZjJfZERQeW51eV9JdDl3WlliNzZIdzZxRFd6RTA5MkU2dkt0bnNNSkJaZGlCb29oMVdReVlFZjJzZmZkWUpmbldVakFRbU4yaldDd0VweFlGX3dlZnh2WElsVjhBd1dMSzgzZ21QUkZZSmhIMWh2X2dMaVJWR0lZWHQ4b0IzTkRVNnhrNEw?oc=5" },
-  { time: "03:28", tag: "ai", tagText: "AI", text: "OpenAI更新其Agents SDK，帮助企业构建更安全、更强大的AI代理。随着代理式AI的普及，OpenAI扩展了其工具包的功能。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/" },
 ];
-const aiBreakingDate = "2026年4月21日 00:21 CST";
+const aiBreakingDate = "2026年4月21日 02:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
