@@ -90,55 +90,70 @@ def generate_report(client, news_context, fg_data):
     if fg_data:
         fg_str = f"\nFear & Greed Index: {fg_data['score']} ({fg_data['rating']}), Previous close: {fg_data['previousClose']}, 1 week ago: {fg_data['previous1Week']}, 1 month ago: {fg_data['previous1Month']}"
 
-    prompt = f"""You are the chief analyst at Y Daily (yion.me), a financial intelligence platform.
+    prompt = f"""You are the senior macro strategist at Y Daily (yion.me). Your readers are finance professionals and serious investors — they already know what happened. Your job is to tell them what it MEANS.
+
 Current time: {format_date_cst(now)}
 
-Below are REAL news articles from the past 24 hours, fetched from RSS feeds (Reuters, CNBC, Bloomberg, MarketWatch, Yahoo Finance, Google News, etc.).
-
-=== TODAY'S NEWS ===
+=== TODAY'S NEWS (real, from RSS) ===
 {news_context}
 === END NEWS ===
 {fg_str}
 
-Generate today's finance daily report based on THESE REAL articles above.
-
 WATCHLIST: {json.dumps(watchlist_flat, ensure_ascii=False)}
 FOCUS AREAS: {FOCUS_AREAS}
 
-You MUST produce a complete issue object matching this EXACT structure:
+=== YOUR ANALYTICAL FRAMEWORK ===
+
+Before writing the report, think through these steps (do NOT output your thinking, only the final JSON):
+
+1. NARRATIVE THREAD: What is the ONE story that connects today's most important events? Not "5 things happened" — find the thread. (e.g., "The market is pricing in a policy pivot, but the bond market disagrees")
+
+2. SECOND-ORDER EFFECTS: For each major event, ask "and then what?" at least twice. The obvious take is worthless — your readers already thought of it. Find the non-obvious implication.
+
+3. CONTRADICTIONS: Where are markets or narratives contradicting each other? These are the most valuable signals.
+
+4. WHAT'S MISSING: What SHOULD be in the news but isn't? Silence from a key player, a missing data point, or an event that didn't happen can be as important as what did.
+
+5. ACTIONABLE EDGE: What does a professional need to watch in the next 24-72 hours based on today's events?
+
+=== OUTPUT FORMAT ===
+
+Produce a JSON object with this structure. ALL text in Chinese. Be opinionated — bland analysis is worse than wrong analysis.
 
 {{
   "id": "{now.strftime('%Y-%m-%d')}",
   "date": "{date_cn}",
   "weekday": "{weekday}",
-  "title": "50 chars max, key events summary",
-  "summary": "100 chars max, core narrative",
+  "title": "≤50 chars — the narrative, not the headline (bad: '美股涨了', good: '市场在赌降息但债市不买账')",
+  "summary": "≤120 chars — the 'so what' in one sentence, written for a fund manager",
   "tags": [
     {{"text": "恒生科技 +X.XX%", "type": "up|down|warn"}},
-    // 4-5 tags total
+    // 4-5 tags, include market moves with real numbers from articles
   ],
   "watchlist": {json.dumps(watchlist_flat[:10], ensure_ascii=False)},
   "focusAreas": "{FOCUS_AREAS}",
   "timeRange": "{time_range}",
   "generatedAt": "{format_date_cst(now)}",
   "briefings": [
-    // 3 HTML strings, each starting with <span class=\\"briefing-number\\">N</span><strong>...
-    // Use <span class=\\"data up\\">+X%</span> for up data, <span class=\\"data down\\">-X%</span> for down
+    // 3 HTML strings. NOT news summaries — these are ANALYTICAL TAKES.
+    // Each: <span class=\\"briefing-number\\">N</span><strong>Sharp headline</strong> — Why it matters, not what happened.
+    // Use <span class=\\"data up\\">+X%</span> / <span class=\\"data down\\">-X%</span> for real numbers.
   ],
   "macroEvents": [
     {{
       "icon": "emoji",
       "iconBg": "#hex",
-      "title": "event title",
-      "fact": "core facts with HTML spans for data",
+      "title": "event title — be specific, not generic",
+      "fact": "The key FACT with numbers (HTML spans for data). Keep it tight — one paragraph max.",
       "source": "source name",
-      "url": "source URL from the articles above",
+      "url": "source URL from articles",
       "mappings": [
-        {{"type": "bull", "text": "<strong>Target</strong> — reasoning"}},
-        {{"type": "bear", "text": "<strong>Target</strong> — reasoning"}}
+        // Bull/bear mappings should be NON-OBVIOUS. Not "利好科技股" — tell me WHY and WHICH ones.
+        {{"type": "bull", "text": "<strong>Target</strong> — specific reasoning with second-order logic"}},
+        {{"type": "bear", "text": "<strong>Target</strong> — the risk nobody is talking about"}}
       ]
     }}
-    // 3-5 macro events
+    // 3-5 macro events. Quality > quantity. Skip if a news item is noise.
   ],
   "stocks": [
     {{
@@ -147,32 +162,28 @@ You MUST produce a complete issue object matching this EXACT structure:
       "news": [
         {{"label": "📰 headline", "content": "detail with <span class=\\"data\\">numbers</span>", "source": "source", "url": "URL"}}
       ],
-      "assessment": "HTML string with impact analysis"
+      "assessment": "HTML — your TAKE on this stock. Not 'positive catalyst' — be specific about why, and what could go wrong."
     }}
-    // Cover watchlist stocks with actual news
+    // Only watchlist stocks with REAL news. No news = skip, don't fabricate.
   ],
   "alerts": [
-    {{"time": "timeframe", "event": "upcoming event", "target": "TICKER"}}
-    // 6-8 forward-looking alerts
+    {{"time": "next 24-72h", "event": "specific upcoming event", "target": "TICKER or macro"}}
+    // 4-6 forward-looking items. Things your reader should literally put on their calendar.
   ]
 }}
 
-CRITICAL RULES:
-1. Base your report ONLY on the real articles provided above. Do NOT fabricate any data or events.
-2. ALL numbers (prices, percentages) must come from the articles. If not in articles, do not guess.
-3. Include source URLs from the articles in macroEvents and stock news items.
-4. Use Chinese for all text content.
-5. Include HTML formatting (<strong>, <span class="data">, etc.) as shown.
-6. The data represents Chinese market convention: 涨=红(up), 跌=绿(down).
-7. If there's not enough data for a section, use fewer items rather than fabricating.
-
-Return ONLY the JSON object. No markdown fencing.
+RULES:
+1. ONLY use data from the articles above. Do NOT fabricate numbers, events, or URLs.
+2. If articles are thin today, write fewer items — never pad with generic filler.
+3. ALL text in Chinese. HTML formatting as shown.
+4. Chinese market convention: 涨=红(up), 跌=绿(down).
+5. Return ONLY the JSON object. No markdown fencing.
 """
 
     try:
         raw = llm_chat_with_retry(
             client, [{"role": "user", "content": prompt}],
-            model=LLM_MODEL, max_tokens=4096, temperature=0.2, max_retries=3,
+            model=LLM_MODEL, max_tokens=4096, temperature=0.5, max_retries=3,
         )
         content = re.sub(r'^```json\s*', '', raw)
         content = re.sub(r'\s*```$', '', content)

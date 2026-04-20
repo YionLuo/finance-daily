@@ -43,95 +43,105 @@ def generate_ai_report(client, news_context):
     weekdays = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
     weekday = weekdays[now.weekday()]
 
-    prompt = f"""You are the chief AI analyst at Y Daily (yion.me), an AI intelligence platform.
+    prompt = f"""You are an AI industry analyst at Y Daily (yion.me). Your readers are AI practitioners — engineers, PMs, founders — who live in this space daily. They don't need you to explain what a transformer is. They need you to tell them what's ACTUALLY shifting in the industry.
+
 Current time: {format_date_cst(now)}
 
-Below are REAL AI/tech news articles from the past 24 hours, fetched from RSS feeds (TechCrunch, The Verge, Ars Technica, VentureBeat, Google News, etc.).
-
-=== TODAY'S AI NEWS ===
+=== TODAY'S AI NEWS (real, from RSS) ===
 {news_context}
 === END NEWS ===
 
-Generate today's AI daily report based on THESE REAL articles above.
-
 FOCUS AREAS: {FOCUS_AREAS}
-Key players to track: OpenAI, Anthropic, Google DeepMind, Meta AI, 字节(豆包), 阿里(通义千问), 腾讯(混元), 智谱, DeepSeek, 百度(文心), NVIDIA, Apple
+Key players: OpenAI, Anthropic, Google DeepMind, Meta AI, 字节(豆包), 阿里(通义千问), 腾讯(混元), 智谱, DeepSeek, 百度(文心), NVIDIA, Apple
 
-You MUST produce a complete AI issue object matching this EXACT structure:
+=== YOUR ANALYTICAL FRAMEWORK ===
+
+Before writing, think through (do NOT output thinking, only final JSON):
+
+1. POWER DYNAMICS: Who gained or lost leverage today? A model release isn't just a product — it's a competitive move. What does it mean for the ecosystem?
+
+2. TECHNICAL SIGNIFICANCE: Is this a genuine capability leap, or incremental marketing? Your readers can tell the difference. Be honest — "this is iteration, not revolution" is a valid take.
+
+3. SECOND-ORDER EFFECTS: A new model is news. What it means for API pricing, open-source dynamics, talent wars, or regulation — that's insight.
+
+4. THE PRACTITIONER'S QUESTION: For someone building AI products right now, what does today's news mean for their stack, their roadmap, or their hiring?
+
+5. WHAT TO IGNORE: Not every press release matters. If something is noise, skip it. Fewer items with real insight > many items with surface takes.
+
+=== OUTPUT FORMAT ===
+
+JSON object. ALL text in Chinese. Be opinionated — your readers want a point of view, not a summary.
 
 {{
   "id": "ai-{now.strftime('%Y-%m-%d')}",
   "date": "{date_cn}",
   "weekday": "{weekday}",
-  "title": "50 chars max, key AI events summary",
-  "summary": "100 chars max, core narrative",
+  "title": "≤50 chars — the TREND, not the event (bad: 'OpenAI发新模型', good: 'API价格战进入下半场')",
+  "summary": "≤120 chars — one sentence a CTO would forward to their team",
   "tags": [
-    {{"text": "tag text", "type": "up|down|warn"}},
+    {{"text": "tag", "type": "up|down|warn"}},
     // 3-5 tags
   ],
   "focusAreas": "{FOCUS_AREAS}",
   "timeRange": "{time_range}",
   "generatedAt": "{format_date_cst(now)}",
   "briefings": [
-    // 3 HTML strings with <span class=\\"briefing-number\\">N</span><strong>...
+    // 3 HTML strings — NOT news summaries, but STRATEGIC TAKES.
+    // <span class=\\"briefing-number\\">N</span><strong>Opinionated headline</strong> — Why a practitioner should care.
   ],
   "research": [
     {{
       "icon": "emoji",
       "iconBg": "#hex",
-      "title": "research title",
-      "detail": "research detail",
-      "impact": "impact assessment",
+      "title": "What happened — be specific",
+      "detail": "The technical substance — what's new and what's not. Skip the marketing language.",
+      "impact": "So what? For practitioners. 'This means you should/shouldn't X because Y.'",
       "source": "source name",
-      "url": "source URL from articles above"
+      "url": "source URL"
     }}
-    // 2-3 research items
+    // 1-3 items. Only genuinely significant research. Incremental papers = skip.
   ],
   "application": [
     {{
       "icon": "emoji",
       "iconBg": "#hex",
-      "title": "application title",
-      "detail": "detail",
-      "impact": "impact",
+      "title": "product/application title",
+      "detail": "What it does and what's novel about the approach.",
+      "impact": "Market implication — who should be worried, who benefits, what pattern does this confirm?",
       "source": "source name",
       "url": "source URL"
     }}
-    // 2-3 application items
+    // 1-3 items.
   ],
   "industry": [
     {{
       "icon": "emoji",
       "iconBg": "#hex",
-      "title": "industry news title",
-      "detail": "detail",
-      "impact": "impact",
+      "title": "deal/hire/policy/strategy title",
+      "detail": "The facts.",
+      "impact": "Read between the lines — what does this signal about strategy, not just what was announced?",
       "source": "source name",
       "url": "source URL"
     }}
-    // 2-3 industry items
+    // 1-3 items.
   ],
   "outlook": [
-    {{"time": "timeframe", "event": "upcoming event", "focus": "area"}}
-    // 4-6 forward-looking items
+    {{"time": "next 1-4 weeks", "event": "specific event to watch", "focus": "why it matters to practitioners"}}
+    // 3-5 items. Concrete things, not vague trends.
   ]
 }}
 
-CRITICAL RULES:
-1. Base your report ONLY on the real articles provided above. Do NOT fabricate.
-2. ALL numbers (parameters, funding, benchmarks) must come from the articles.
-3. Include source URLs from the articles in research, application, and industry items.
-4. Use Chinese for all text content.
-5. Include HTML formatting where appropriate.
-6. If there's not enough data for a section, use fewer items rather than fabricating.
-
-Return ONLY the JSON object. No markdown fencing.
+RULES:
+1. ONLY use data from articles above. Do NOT fabricate.
+2. Thin news day? Write fewer items. Never pad.
+3. ALL text in Chinese. HTML formatting as shown.
+4. Return ONLY JSON. No markdown fencing.
 """
 
     try:
         raw = llm_chat_with_retry(
             client, [{"role": "user", "content": prompt}],
-            model=LLM_MODEL, max_tokens=4096, temperature=0.2, max_retries=3,
+            model=LLM_MODEL, max_tokens=4096, temperature=0.5, max_retries=3,
         )
         content = re.sub(r'^```json\s*', '', raw)
         content = re.sub(r'\s*```$', '', content)
