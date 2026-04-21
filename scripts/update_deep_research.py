@@ -351,6 +351,118 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
     return final_text, collected_sources
 
 
+# ============ Stage 3.5: Fact Check ============
+
+FACT_CHECK_PROMPT = """你是一位严格的事实核查编辑。以下是一篇待发布的深度分析报告。
+
+你的任务：逐条检查报告中的**具体事实性声明**（数字、日期、公司名、产品版本、融资金额、市场份额等），判断它们是否有搜索结果支撑。
+
+=== 待核查报告 ===
+{report_text}
+
+=== 核查规则 ===
+1. 只核查**事实性声明**（数据、事件、引用），不核查观点和判断
+2. 对每条事实，判断：
+   - ✅ 有来源支撑（报告中标注了出处，且合理可信）
+   - ⚠️ 无明确来源但合理（常识性内容或合理推断）
+   - ❌ 可疑/无来源（具体数字但没有标注出处，或看起来可能是编造的）
+3. 特别关注：
+   - 具体融资金额、估值、营收数字
+   - 产品版本号、发布日期
+   - 市场份额百分比
+   - 引用某人的话
+
+=== 输出格式 ===
+JSON 格式：
+{{
+  "total_claims": 检查的事实条数,
+  "verified": 有来源支撑的条数,
+  "reasonable": 无来源但合理的条数,
+  "suspicious": 可疑条数,
+  "issues": [
+    {{
+      "claim": "可疑的具体声明",
+      "reason": "为什么可疑",
+      "suggestion": "建议如何处理（删除/修改/补充来源）"
+    }}
+  ],
+  "corrections": "如果有明显事实错误，写出修正后的表述。如果没有严重问题，写 null"
+}}
+
+只输出 JSON，不要 markdown 代码块。
+"""
+
+
+def fact_check(client, report_text):
+    """
+    Stage 3.5: Fact-check the report.
+    Returns: (cleaned_report_text, fact_check_result)
+    """
+    print("\n=== Stage 3.5: Fact Check ===")
+
+    prompt = FACT_CHECK_PROMPT.format(report_text=report_text[:10000])
+
+    response = llm_chat_with_retry(
+        client, [{"role": "user", "content": prompt}],
+        max_tokens=4096, temperature=0.1,
+    )
+
+    # Parse result
+    cleaned = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
+    cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE).strip()
+
+    try:
+        result = json.loads(cleaned)
+    except json.JSONDecodeError:
+        print(f"  WARNING: Could not parse fact check result, skipping")
+        return report_text, None
+
+    total = result.get("total_claims", 0)
+    verified = result.get("verified", 0)
+    suspicious = result.get("suspicious", 0)
+    issues = result.get("issues", [])
+
+    print(f"  Claims checked: {total}")
+    print(f"  Verified: {verified}, Reasonable: {result.get('reasonable', 0)}, Suspicious: {suspicious}")
+
+    if issues:
+        print(f"  Issues found ({len(issues)}):")
+        for issue in issues[:5]:
+            print(f"    ❌ {issue.get('claim', '')[:80]}")
+            print(f"       → {issue.get('suggestion', '')[:80]}")
+
+    # If there are suspicious claims, ask the model to fix them
+    if suspicious > 0 and issues:
+        print(f"\n  Requesting corrections for {suspicious} suspicious claims...")
+        fix_prompt = f"""以下报告有 {suspicious} 处可疑的事实声明需要修正。
+
+=== 原始报告 ===
+{report_text[:10000]}
+
+=== 需要修正的问题 ===
+{json.dumps(issues, ensure_ascii=False, indent=2)}
+
+请输出修正后的完整报告。对于无法确认的数据：
+- 如果有近似的可靠数据可替代，替换之
+- 如果没有可靠来源，删除该声明或改为更审慎的表述（如"据报道约为X"改为"市场估计在X-Y范围"）
+- 不要编造新数据来替换
+
+输出修正后的完整报告文本，不要 JSON。"""
+
+        fixed = llm_chat_with_retry(
+            client, [{"role": "user", "content": fix_prompt}],
+            max_tokens=16384, temperature=0.2,
+        )
+
+        if fixed and len(fixed) > len(report_text) * 0.5:
+            print(f"  Report corrected: {len(report_text)} → {len(fixed)} chars")
+            return fixed, result
+        else:
+            print(f"  Correction too short or failed, keeping original")
+
+    return report_text, result
+
+
 # ============ Stage 4: Format to JSON ============
 
 FORMAT_PROMPT = """把以下深度分析报告转换为 JSON 格式。保留所有内容，只改变格式。
@@ -472,6 +584,9 @@ def main():
 
     # ====== Stage 3: Research Agent Loop ======
     report_text, sources = research_agent_loop(client, topic_info, brain_dump_text, breaking_context)
+
+    # ====== Stage 3.5: Fact Check ======
+    report_text, fact_check_result = fact_check(client, report_text)
 
     # ====== Stage 4: Format to JSON ======
     report = format_to_json(client, report_text)
