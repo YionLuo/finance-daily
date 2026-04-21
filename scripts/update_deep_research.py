@@ -38,8 +38,8 @@ from news_fetcher import (
 
 MAX_RESEARCH_ENTRIES = 30
 WEEKDAY_MAP = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
-LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek/deepseek-chat")
-WRITER_MODEL = os.environ.get("WRITER_MODEL", "deepseek/deepseek-r1")  # Reasoning model for report writing
+LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-chat")
+WRITER_MODEL = os.environ.get("WRITER_MODEL", "deepseek-reasoner")  # DeepSeek R1 reasoning model
 MAX_AGENT_ROUNDS = 12  # Safety limit for agent loop
 
 
@@ -212,7 +212,7 @@ def research_collect(client, topic_info, breaking_context):
     from news_fetcher import AGENT_TOOLS, execute_tool_call
 
     api_key = os.environ.get("OPENAI_API_KEY")
-    base_url = os.environ.get("OPENAI_BASE_URL", "https://openrouter.ai/api/v1")
+    base_url = os.environ.get("OPENAI_BASE_URL", "https://api.deepseek.com")
     raw_client = OpenAI(api_key=api_key, base_url=base_url, timeout=300)
 
     system_prompt = RESEARCH_COLLECTOR_PROMPT.format(
