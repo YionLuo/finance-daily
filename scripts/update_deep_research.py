@@ -367,7 +367,7 @@ def write_report(client, topic_info, brain_dump_text, research_materials):
         response = client.chat.completions.create(
             model=WRITER_MODEL,
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=16384,
+            max_tokens=8192,
             temperature=0.6,
         )
         text = response.choices[0].message.content or ""
@@ -385,7 +385,7 @@ def write_report(client, topic_info, brain_dump_text, research_materials):
         response = client.chat.completions.create(
             model=LLM_MODEL,
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=16384,
+            max_tokens=8192,
             temperature=0.5,
         )
         text = response.choices[0].message.content or ""
@@ -588,7 +588,7 @@ def fact_check(client, report_text):
 
         fixed = llm_chat_with_retry(
             client, [{"role": "user", "content": fix_prompt}],
-            max_tokens=16384, temperature=0.1,
+            max_tokens=8192, temperature=0.1,
         )
 
         if fixed and len(fixed) > len(report_text) * 0.4:
@@ -645,7 +645,7 @@ def format_to_json(client, report_text):
 
     response = llm_chat_with_retry(
         client, [{"role": "user", "content": prompt}],
-        max_tokens=16384, temperature=0.1,
+        max_tokens=8192, temperature=0.1,
     )
 
     cleaned = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
