@@ -1455,14 +1455,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 70.91,
+  score: 71.63,
   rating: "greed",
-  timestamp: "2026-04-21T11:49:46+00:00",
+  timestamp: "2026-04-21T14:48:19+00:00",
   previousClose: 69.94,
   previous1Week: 49.11,
   previous1Month: 15.63,
   previous1Year: 12.37,
-  date: "2026年4月21日 20:06 CST"
+  date: "2026年4月21日 22:52 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1489,10 +1489,19 @@ const breakingNews = [
   { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什在提前公布的国会证词中表示，美联储必须“守好本分”以保持独立性，并坚定承诺抗击通胀。他淡化总统对利率发表看法带来的威胁，强调央行应专注于其核心任务。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-testimony-to-congress-is-out-early-he-wants-the-fed-to-stay-in-its-lane-d6249040?mod=mw_rss_topstories" },
   { time: "01:52", tag: "macro", tagText: "宏观", text: "美国关税退款申请门户将于周一启动，沃尔玛、塔吉特等大型进口商有望获得数十亿美元的退款。此举将为相关零售商带来巨额现金流入。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/tariff-refunds-begin-on-monday-these-retailers-are-due-big-paydays.html" },
 ];
-const breakingDate = "2026年4月21日 20:06 CST";
+const breakingDate = "2026年4月21日 22:52 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:30", tag: "ai", tagText: "AI", text: "AI核能初创公司Fermi的CEO和CFO突然离职。该公司由美国前能源部长里克·佩里联合创立，其位于德克萨斯州的AI园区项目正面临阻力。高层变动可能影响其利用AI优化核能技术的计划。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/fermi-ceo-and-cfo-depart-texas-nuclear-power-ai/" },
+  { time: "22:29", tag: "tech", tagText: "科技", text: "英伟达的芯片制造竞争对手、AI初创公司Cerebras Systems已提交IPO申请。该公司以其独特的晶圆级AI芯片闻名，此举标志着AI芯片市场格局可能迎来新的挑战者。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYlI5UTRuUnpubE5ETlJFSDlhMVdYc1Z3amZySzg4WkRUcDRnN21pRmw5WFhLQ1J4SHBZNGhCME1FMENtX29MSjc2NldIMVJTUVNZZ1BORjRyazhaVTN1RXpVMG5HV2pOU0hkbHppTXlGbGU4YW90NHQ3Y2RFb3hQWVVuOXc5Vl9NeWpxOFlRRTM2c05PZnpqRQ?oc=5" },
+  { time: "22:24", tag: "tech", tagText: "科技", text: "Allbirds出售鞋类业务后转向AI领域，更名为NewBird AI，并锁定5000万美元的可转换融资。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/after-sale-of-its-shoe-business-allbirds-pivots-to-ai/" },
+  { time: "21:56", tag: "macro", tagText: "宏观", text: "英国政府宣布启动一项规模达6.75亿美元（约合5.4亿英镑）的基金，专门用于支持AI初创公司。此举旨在巩固英国在人工智能领域的全球竞争力，并推动本土创新。", source: "AI Business", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTjFhdTlUUjhNZ0h3aUdENUZwaXdRVHJjR05FbnFweXM5ZmJQaHpmbENjaXpkMHYxVjliSkxNUUJEeHBuLUxsM2NhaXQzeGlPaE1DWlR0eEc3Um1wZ00tU01jSE9SUGo1MF8ydjY4NG94aEpaMi1McVZfUTRsbUJHdlIySQ?oc=5" },
+  { time: "21:06", tag: "ai", tagText: "AI", text: "Reid Hoffman在‘tokenmaxxing’辩论中表示，追踪AI代币使用可以衡量采用率，但应结合上下文，不应直接视为生产力指标。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/" },
+  { time: "21:05", tag: "ai", tagText: "AI", text: "Adobe、英伟达与广告巨头WPP合作，推出大规模自主AI代理（Adobe Agents），旨在解锁突破性的创意智能。该合作将AI深度集成到创意工作流程中，预示着广告和内容创作行业的变革。", source: "NVIDIA Blog", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBHcVhIaEhFTGh6Ul9Xbm9Jc0JuR3VlSEIzb0JSRHpseGRFM1NTNGV1azFkWTM5MDhkcDFlZy10b1RLa1JpVEFXZFdLUlNfeWJTb1ZyYUtGeUhsUE5YXzJPNHVyZ1huVzlo?oc=5" },
+  { time: "21:01", tag: "tech", tagText: "科技", text: "Adobe推出全新Firefly AI助手，可跨Creative Cloud应用（如Photoshop、Premiere等）完成任务，标志着创意工作的‘根本性转变’。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/adobes-new-firefly-ai-assistant-can-use-creative-cloud-apps-to-complete-tasks/" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "Parasail在A轮融资中筹集3200万美元，押注‘tokenmaxxing’将催生下一代计算巨头，预示着模型和计算的碎片化未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Gitar利用AI代理审查代码，完成900万美元融资，专注于解决AI生成代码的安全问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "AI编程初创公司Cursor正寻求以20亿美元的新一轮融资，冲刺高达500亿美元的估值。该公司开发的AI辅助编程工具增长迅速，显示出资本市场对AI生产力工具的极高热情。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeG9mRHMydU15QnYzVGQzWHRKeTMwYW92bE5ZUFJfSGpaYnVRSGZmT1BndlAwOHdfUHNGMENkWUJyTTNrZ1lZWVhoTTRZQ0tYSEw2TksxUFlPVUlBNkNnUDZpRzl1dGZiQTdBeURHRmFSUG94NWlHVUxneG9PZzcxUGg2akpVblFNYkEteEZ3Y2hZZWc?oc=5" },
   { time: "10:26", tag: "ai", tagText: "AI", text: "据报道，由杰夫·贝索斯创立的秘密AI初创公司Project Prometheus即将完成一轮高达100亿美元的巨额融资。此轮融资预计将使公司估值达到约380亿美元，显示出资本市场对顶级AI项目的持续狂热。", source: "AASTOCKS.com", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRlVZQTlNWmg5V3ZuLXR1Rkt3Z2h2bGJuSTdlR0pfVDNRT1RpU3NQYkc3eUVXRTJrNFlSelg5clVHenhteDM1MndqZWpTYnVseGJVaGJZZ3ViS1NFbmx2Z0NsdmRpZC1tRi1iU3RtVWpmNDR5U2ZCNU9VUTJHQ1FtNmpBNDdLQTlUQXc?oc=5" },
   { time: "07:10", tag: "ai", tagText: "AI", text: "亚马逊向AI公司Anthropic追加投资50亿美元，而Anthropic则承诺在未来将投入1000亿美元用于亚马逊云服务（AWS）。这笔巨额双向交易进一步巩固了双方的战略联盟，并可能重塑AI基础设施的竞争格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/anthropic-takes-5b-from-amazon-and-pledges-100b-in-cloud-spending-in-return/" },
@@ -1504,17 +1513,8 @@ const aiBreakingNews = [
   { time: "00:06", tag: "geo", tagText: "地缘", text: "据TechCrunch报道，美国国家安全局（NSA）的情报人员正在使用Anthropic的受限AI模型Mythos，尽管五角大楼与该公司存在分歧。这表明先进AI模型正被迅速应用于国家情报领域，引发对技术监管与安全的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/nsa-spies-are-reportedly-using-anthropics-mythos-despite-pentagon-feud/" },
   { time: "23:50", tag: "ai", tagText: "科技", text: "AI芯片初创公司融资热潮持续，多家公司获得资金以挑战英伟达的市场主导地位。这反映了资本对AI硬件替代方案的强烈兴趣和行业竞争的加剧。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPczJiek1HZHFMeGtoMHBXMzZXTmhmUFRXZkpabGllU2tXZmV2OUttNFhTa2Q0UXF4TlRPRG5RZVZPSUhaUk9MaHZGcjc2VUFlUHB0WHRwb1BhQzd4RHY5a1hmOThYX1VybGlscmxlX1lyT2gza2Q1VVg1a3p0ME1xXzF0VkJ3c3BQQlNiT3pvODFuZ2tuaVhUckdMNDgwX1ZvZVJESTRmbnpwM1h4b1E?oc=5" },
   { time: "23:19", tag: "tech", tagText: "科技", text: "英伟达面临来自内部AI芯片的压力，这可能对其市场主导地位构成挑战。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZ1Jsa2s2a3MwV1c2UlNwYm8zeVFONndXc2lPVk9VWDRfdjFkdWNjQ0o5Nk5YY3pUMzlKVTNPUDhFZjZmWDFYYmUwV1M0dHQ5ZGllcDJKNGI3amUwOGNvZl8xcWVycVdtakYxNjltZmJpZTdrNERuQV9XdmhVOS1iZFNHeTUtck5CNmd1NVU2bw?oc=5" },
-  { time: "22:30", tag: "ai", tagText: "AI", text: "AI核能初创公司Fermi的CEO和CFO突然离职。该公司由美国前能源部长里克·佩里联合创立，其位于德克萨斯州的AI园区项目正面临阻力。高层变动可能影响其利用AI优化核能技术的计划。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/fermi-ceo-and-cfo-depart-texas-nuclear-power-ai/" },
-  { time: "22:29", tag: "tech", tagText: "科技", text: "英伟达的芯片制造竞争对手、AI初创公司Cerebras Systems已提交IPO申请。该公司以其独特的晶圆级AI芯片闻名，此举标志着AI芯片市场格局可能迎来新的挑战者。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYlI5UTRuUnpubE5ETlJFSDlhMVdYc1Z3amZySzg4WkRUcDRnN21pRmw5WFhLQ1J4SHBZNGhCME1FMENtX29MSjc2NldIMVJTUVNZZ1BORjRyazhaVTN1RXpVMG5HV2pOU0hkbHppTXlGbGU4YW90NHQ3Y2RFb3hQWVVuOXc5Vl9NeWpxOFlRRTM2c05PZnpqRQ?oc=5" },
-  { time: "22:24", tag: "tech", tagText: "科技", text: "Allbirds出售鞋类业务后转向AI领域，更名为NewBird AI，并锁定5000万美元的可转换融资。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/after-sale-of-its-shoe-business-allbirds-pivots-to-ai/" },
-  { time: "21:56", tag: "macro", tagText: "宏观", text: "英国政府宣布启动一项规模达6.75亿美元（约合5.4亿英镑）的基金，专门用于支持AI初创公司。此举旨在巩固英国在人工智能领域的全球竞争力，并推动本土创新。", source: "AI Business", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTjFhdTlUUjhNZ0h3aUdENUZwaXdRVHJjR05FbnFweXM5ZmJQaHpmbENjaXpkMHYxVjliSkxNUUJEeHBuLUxsM2NhaXQzeGlPaE1DWlR0eEc3Um1wZ00tU01jSE9SUGo1MF8ydjY4NG94aEpaMi1McVZfUTRsbUJHdlIySQ?oc=5" },
-  { time: "21:06", tag: "ai", tagText: "AI", text: "Reid Hoffman在‘tokenmaxxing’辩论中表示，追踪AI代币使用可以衡量采用率，但应结合上下文，不应直接视为生产力指标。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/" },
-  { time: "21:05", tag: "ai", tagText: "AI", text: "Adobe、英伟达与广告巨头WPP合作，推出大规模自主AI代理（Adobe Agents），旨在解锁突破性的创意智能。该合作将AI深度集成到创意工作流程中，预示着广告和内容创作行业的变革。", source: "NVIDIA Blog", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBHcVhIaEhFTGh6Ul9Xbm9Jc0JuR3VlSEIzb0JSRHpseGRFM1NTNGV1azFkWTM5MDhkcDFlZy10b1RLa1JpVEFXZFdLUlNfeWJTb1ZyYUtGeUhsUE5YXzJPNHVyZ1huVzlo?oc=5" },
-  { time: "21:01", tag: "tech", tagText: "科技", text: "Adobe推出全新Firefly AI助手，可跨Creative Cloud应用（如Photoshop、Premiere等）完成任务，标志着创意工作的‘根本性转变’。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/adobes-new-firefly-ai-assistant-can-use-creative-cloud-apps-to-complete-tasks/" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "Parasail在A轮融资中筹集3200万美元，押注‘tokenmaxxing’将催生下一代计算巨头，预示着模型和计算的碎片化未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Gitar利用AI代理审查代码，完成900万美元融资，专注于解决AI生成代码的安全问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/" },
 ];
-const aiBreakingDate = "2026年4月21日 20:06 CST";
+const aiBreakingDate = "2026年4月21日 22:52 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
