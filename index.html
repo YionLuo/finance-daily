@@ -1455,19 +1455,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 69.83,
+  score: 68.86,
   rating: "greed",
-  timestamp: "2026-04-21T16:13:14+00:00",
+  timestamp: "2026-04-21T18:03:52+00:00",
   previousClose: 69.94,
   previous1Week: 49.11,
   previous1Month: 15.63,
   previous1Year: 12.37,
-  date: "2026年4月22日 00:18 CST"
+  date: "2026年4月22日 02:08 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什在提前公布的国会证词中表示，美联储必须“守好本分”以保持独立性，并坚定承诺抗击通胀。他淡化总统对利率发表看法带来的威胁，强调央行应专注于其核心任务。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-testimony-to-congress-is-out-early-he-wants-the-fed-to-stay-in-its-lane-d6249040?mod=mw_rss_topstories" },
+  { time: "01:52", tag: "macro", tagText: "宏观", text: "美国关税退款申请门户将于周一启动，沃尔玛、塔吉特等大型进口商有望获得数十亿美元的退款。此举将为相关零售商带来巨额现金流入。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/tariff-refunds-begin-on-monday-these-retailers-are-due-big-paydays.html" },
   { time: "11:28", tag: "tech", tagText: "科技", text: "英伟达供应商胜利精密技术在香港上市首日股价飙升60%，成为今年迄今为止香港规模最大的首次公开募股。这反映了市场对AI供应链关键环节的持续追捧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/21/nvidia-supplier-victory-giant-sees-shares-soar-60percent-in-hong-kong-debut.html" },
   { time: "11:15", tag: "geo", tagText: "地缘", text: "日本政府宣布解除致命武器出口禁令，标志着其长期和平主义立场的重大转变。此举将允许日本国防承包商瞄准国际市场，可能重塑全球防务贸易格局。", source: "Financial Times", url: "https://www.ft.com/content/539bdbe1-a535-44fb-aa7a-2c1fe1828adf" },
   { time: "09:41", tag: "ai", tagText: "AI", text: "杰夫·贝索斯旗下代号为“普罗米修斯计划”的AI实验室在一轮融资中估值接近380亿美元。该公司专注于开发工业应用模型，显示出AI领域巨额资本持续涌入。", source: "Financial Times", url: "https://www.ft.com/content/87ea0ced-bf3c-4822-8dda-437241570ded" },
@@ -1486,13 +1488,13 @@ const breakingNews = [
   { time: "02:40", tag: "macro", tagText: "宏观", text: "霍尔木兹海峡的航运中断已开始影响全球供应链。中国作为全球主要的圣诞商品生产国，其制造商表示，塑料等原材料成本上升将导致消费者为节日商品支付更高价格。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/hormuz-china-christmas-capital-holiday-spending.html" },
   { time: "02:28", tag: "macro", tagText: "宏观", text: "晨星研究发现，在当前美联储暂停降息的背景下，现金类资产比美国国债更能有效分散投资组合风险，且仍能提供有吸引力的收益率。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/cash-has-diversified-portfolios-better-than-bonds-says-morningstar-.html" },
   { time: "02:20", tag: "macro", tagText: "宏观", text: "美国进出口银行表示，在伊朗冲突期间，其能源贷款业务激增，该机构被支持美国石油和天然气出口的融资请求“淹没”。这凸显了地缘政治危机对美国能源出口的推动作用。", source: "Financial Times", url: "https://www.ft.com/content/e320d4d9-02a6-4b7c-8a8d-da689d77e45e" },
-  { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什在提前公布的国会证词中表示，美联储必须“守好本分”以保持独立性，并坚定承诺抗击通胀。他淡化总统对利率发表看法带来的威胁，强调央行应专注于其核心任务。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-testimony-to-congress-is-out-early-he-wants-the-fed-to-stay-in-its-lane-d6249040?mod=mw_rss_topstories" },
-  { time: "01:52", tag: "macro", tagText: "宏观", text: "美国关税退款申请门户将于周一启动，沃尔玛、塔吉特等大型进口商有望获得数十亿美元的退款。此举将为相关零售商带来巨额现金流入。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/tariff-refunds-begin-on-monday-these-retailers-are-due-big-paydays.html" },
 ];
-const breakingDate = "2026年4月22日 00:18 CST";
+const breakingDate = "2026年4月22日 02:08 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
+  { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
   { time: "00:06", tag: "geo", tagText: "地缘", text: "据TechCrunch报道，美国国家安全局（NSA）的情报人员正在使用Anthropic的受限AI模型Mythos，尽管五角大楼与该公司存在分歧。这表明先进AI模型正被迅速应用于国家情报领域，引发对技术监管与安全的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/nsa-spies-are-reportedly-using-anthropics-mythos-despite-pentagon-feud/" },
   { time: "23:50", tag: "ai", tagText: "科技", text: "AI芯片初创公司融资热潮持续，多家公司获得资金以挑战英伟达的市场主导地位。这反映了资本对AI硬件替代方案的强烈兴趣和行业竞争的加剧。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPczJiek1HZHFMeGtoMHBXMzZXTmhmUFRXZkpabGllU2tXZmV2OUttNFhTa2Q0UXF4TlRPRG5RZVZPSUhaUk9MaHZGcjc2VUFlUHB0WHRwb1BhQzd4RHY5a1hmOThYX1VybGlscmxlX1lyT2gza2Q1VVg1a3p0ME1xXzF0VkJ3c3BQQlNiT3pvODFuZ2tuaVhUckdMNDgwX1ZvZVJESTRmbnpwM1h4b1E?oc=5" },
   { time: "23:19", tag: "tech", tagText: "科技", text: "英伟达面临来自内部AI芯片的压力，这可能对其市场主导地位构成挑战。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZ1Jsa2s2a3MwV1c2UlNwYm8zeVFONndXc2lPVk9VWDRfdjFkdWNjQ0o5Nk5YY3pUMzlKVTNPUDhFZjZmWDFYYmUwV1M0dHQ5ZGllcDJKNGI3amUwOGNvZl8xcWVycVdtakYxNjltZmJpZTdrNERuQV9XdmhVOS1iZFNHeTUtck5CNmd1NVU2bw?oc=5" },
@@ -1511,10 +1513,8 @@ const aiBreakingNews = [
   { time: "06:00", tag: "tech", tagText: "科技", text: "谷歌宣布在Chrome浏览器中向澳大利亚、印度尼西亚、日本、菲律宾、新加坡、韩国和越南七个新市场推出其AI助手Gemini。此举是谷歌扩大其AI产品全球覆盖范围的重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/google-rolls-out-gemini-in-chrome-in-seven-new-countries/" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "谷歌正在开发用于AI推理的专用芯片，旨在与英伟达竞争。此举表明科技巨头正加速自研AI硬件，以降低对英伟达的依赖并优化其AI服务的性能和成本。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE05ZE9yUktReXc1OHBmNkk1UVdXRzRRYllrSEFnaE1iZUZiYTd4ZWg4UHAydnpmalp6TWFOeDhBQjNtbDdSQ2FtQlpLdV9ZRGdkNDFQNUZQMVdVenE2MnpHdDBDb2ozeGVvYUNpQVExYw?oc=5" },
   { time: "02:15", tag: "tech", tagText: "科技", text: "激光雷达公司禾赛科技发布Picasso 6D全彩色SPAD-SoC、下一代ETX，并在空间智能与物理AI领域推出创新。这些进展旨在提升自动驾驶和机器人等领域的感知能力。", source: "The Malaysian Reserve", url: "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPbUU0UU5MSzVXb1pza0hCZ1lja0NaMzA5MVpBNHlGWmRlaEZJdTI4R04tYnFlUFI3a0RYR2RjQUVZSGNoRkFhdll0WVI1SHd6UW9yeF9JWkVXVUtJQlpiWFpLb29wbnJfQ0lkc0hkdG5sSzhGLXh4QWVHc3ZpQ0N6dllBWEtlLTZZMmx2MjJvNG1zQk9IbnU2alhzSmdNVVoxbG9XX21NaW5leGFKbDdsaGxqcVM3QndDMzVuYnJKWFhEeG90eldELWFxeC16Rlk1LUdWLVdQMUtwb1VRLU1EbzMxbXdQUGF4ZDBwellR?oc=5" },
-  { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
-  { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
 ];
-const aiBreakingDate = "2026年4月22日 00:18 CST";
+const aiBreakingDate = "2026年4月22日 02:08 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
