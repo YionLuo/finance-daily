@@ -306,20 +306,67 @@ def web_search(query, max_results=10, max_age_hours=72):
     return articles[:max_results]
 
 
-def fetch_url_content(url, max_chars=3000):
+def _resolve_google_news_url(url):
+    """
+    Resolve a Google News RSS redirect URL to the actual article URL.
+    Google News URLs look like: https://news.google.com/rss/articles/CBMi...
+    They return a 302/303 redirect or an HTML page with a redirect.
+    """
+    if "news.google.com/rss/articles/" not in url:
+        return url
+
+    try:
+        # Method 1: Use HEAD request to follow redirects
+        resp = requests.head(url, headers={"User-Agent": USER_AGENT},
+                             timeout=10, allow_redirects=True)
+        if resp.url and "news.google.com" not in resp.url:
+            return resp.url
+    except Exception:
+        pass
+
+    try:
+        # Method 2: GET and look for redirect in HTML/meta tags
+        resp = requests.get(url, headers={"User-Agent": USER_AGENT},
+                            timeout=10, allow_redirects=True)
+        # Check for meta refresh or JS redirect
+        import re as _re
+        meta_match = _re.search(r'<meta[^>]*?url=(["\']?)([^"\'\s>]+)', resp.text, _re.IGNORECASE)
+        if meta_match:
+            return meta_match.group(2)
+        # Check for window.location
+        loc_match = _re.search(r'window\.location\s*=\s*["\']([^"\']+)', resp.text)
+        if loc_match:
+            return loc_match.group(1)
+        # Check for data-url or href in the page
+        href_match = _re.search(r'href="(https?://(?!news\.google)[^"]+)"', resp.text)
+        if href_match:
+            return href_match.group(1)
+    except Exception:
+        pass
+
+    return url  # Fallback: return original
+
+
+def fetch_url_content(url, max_chars=5000):
     """
     Fetch and extract text content from a URL. Used by the agent to read full articles.
+    Handles Google News redirect URLs automatically.
 
     Args:
-        url: URL to fetch
-        max_chars: max characters to return
+        url: URL to fetch (can be a Google News redirect URL)
+        max_chars: max characters to return (default 5000 for richer content)
 
     Returns:
         str: extracted text content, or error message
     """
     try:
+        # Resolve Google News redirects first
+        resolved_url = _resolve_google_news_url(url)
+        if resolved_url != url:
+            print(f"    Resolved: {url[:60]}... → {resolved_url[:80]}")
+
         headers = {"User-Agent": USER_AGENT}
-        resp = requests.get(url, headers=headers, timeout=TIMEOUT, allow_redirects=True)
+        resp = requests.get(resolved_url, headers=headers, timeout=TIMEOUT, allow_redirects=True)
         resp.raise_for_status()
         html_text = resp.text
 
@@ -327,16 +374,24 @@ def fetch_url_content(url, max_chars=3000):
         # Remove script and style blocks
         cleaned = re.sub(r'<script[^>]*>.*?</script>', '', html_text, flags=re.DOTALL | re.IGNORECASE)
         cleaned = re.sub(r'<style[^>]*>.*?</style>', '', cleaned, flags=re.DOTALL | re.IGNORECASE)
+        # Remove nav, footer, aside, header blocks
+        cleaned = re.sub(r'<(nav|footer|aside|header)[^>]*>.*?</\1>', '', cleaned, flags=re.DOTALL | re.IGNORECASE)
         # Strip tags
         text = re.sub(r'<[^>]+>', ' ', cleaned)
         # Collapse whitespace
         text = re.sub(r'\s+', ' ', text).strip()
+
+        if len(text) < 100:
+            return f"Error: page content too short ({len(text)} chars), likely a redirect or paywall page. URL: {resolved_url}"
 
         if len(text) > max_chars:
             text = text[:max_chars] + "..."
 
         return text
     except Exception as e:
+        err_str = str(e)
+        if "403" in err_str or "401" in err_str:
+            return f"Error: paywall/auth required ({resolved_url[:60]})"
         return f"Error fetching URL: {e}"
 
 

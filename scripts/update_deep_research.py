@@ -737,11 +737,49 @@ def main():
         breaking_lines.append(f"[{item.get('time', '')}] {item.get('text', '')}")
     breaking_context = "\n".join(breaking_lines)
 
+    # ====== Stage 2.5: Pre-fetch top breaking news articles ======
+    print("\n=== Stage 2.5: Pre-fetch Breaking News Articles ===")
+    prefetch_articles = []
+    topic_lower = topic_info.get("topic", "").lower()
+    all_breaking = breaking_news + ai_breaking_news
+
+    # Collect URLs from breaking news (skip Google News redirects)
+    fetchable_urls = []
+    for item in all_breaking:
+        url = item.get("url", "")
+        if url and "news.google.com" not in url:
+            fetchable_urls.append((item.get("text", "")[:80], url))
+
+    # Fetch up to 8 articles
+    from news_fetcher import fetch_url_content
+    for title, url in fetchable_urls[:8]:
+        try:
+            content = fetch_url_content(url, max_chars=5000)
+            if content and not content.startswith("Error") and len(content) > 200:
+                prefetch_articles.append(f"### {title}\nSource: {url}\n{content}\n")
+                print(f"  ✅ {title[:60]}... ({len(content)}c)")
+            else:
+                print(f"  ❌ {title[:60]}... (failed or too short)")
+        except Exception as e:
+            print(f"  ❌ {title[:60]}... ({e})")
+
+    prefetch_text = "\n".join(prefetch_articles)
+    print(f"  Pre-fetched: {len(prefetch_articles)} articles, {len(prefetch_text)} chars total")
+
+    # Combine breaking context with pre-fetched content
+    enriched_context = breaking_context
+    if prefetch_text:
+        enriched_context += "\n\n=== 以下是预抓取的相关文章全文 ===\n" + prefetch_text
+
     # ====== Stage 3a: Research Collection (chat model + tools) ======
-    research_materials, sources = research_collect(client, topic_info, breaking_context)
+    research_materials, sources = research_collect(client, topic_info, enriched_context)
 
     # ====== Stage 3b: Report Writing (reasoning model) ======
-    report_text = write_report(client, topic_info, brain_dump_text, research_materials)
+    # Combine research materials with pre-fetched articles for maximum context
+    full_materials = research_materials
+    if prefetch_text:
+        full_materials += "\n\n=== 预抓取的新闻全文（高质量来源）===\n" + prefetch_text
+    report_text = write_report(client, topic_info, brain_dump_text, full_materials)
 
     # ====== Stage 3.5: Fact Check ======
     report_text, fact_check_result = fact_check(client, report_text)
