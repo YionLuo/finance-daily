@@ -39,6 +39,7 @@ from news_fetcher import (
 MAX_RESEARCH_ENTRIES = 30
 WEEKDAY_MAP = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek/deepseek-chat")
+WRITER_MODEL = os.environ.get("WRITER_MODEL", "deepseek/deepseek-r1")  # Reasoning model for report writing
 MAX_AGENT_ROUNDS = 12  # Safety limit for agent loop
 
 
@@ -155,147 +156,99 @@ def brain_dump(client, topic_info):
     return response
 
 
-# ============ Stage 3: Research Agent Loop ============
+# ============ Stage 3a: Research Collection (chat model + tools) ============
 
-RESEARCH_SYSTEM_PROMPT = """你是 Y Daily 的首席分析师，正在对「{topic}」进行深度研究。
+RESEARCH_COLLECTOR_PROMPT = """你是 Y Daily 的研究助理，正在为「{topic}」收集分析素材。
 
-⚠️ 当前时间：{current_time}。现在是 **2026 年**。
+当前时间：{current_time}（现在是 2026 年）
 
-你的训练数据截止到 2024 年底。AI 行业在 2025-2026 年发生了大量变化——新模型发布、公司融资、产品迭代、政策变化。**你在写报告时提到的所有具体事实（产品版本、估值、市场份额、政策等）必须来自搜索结果，不能用你的旧知识。**
+你有 web_search 和 fetch_url_content 工具。
 
-你的读者是 AI/科技行业资深从业者和专业投资者。他们对行业的了解不亚于你。不需要科普基础概念，需要的是独到洞察和有论据支撑的判断。
+你的任务是**只做搜索收集，不写报告**。收集足够的素材后，输出一份结构化的「研究素材包」给分析师。
 
-=== 分析框架参考（来自你的行业经验，仅供思维参考）===
-{brain_dump}
-注意：以上只是你的结构性认知和分析框架。其中提到的具体数据可能已经过时。所有事实性内容以搜索结果为准。
-
-=== 今日相关新闻（2026 年 4 月最新）===
+=== 今日相关新闻 ===
 {breaking_context}
 
-=== 你的工作流程 ===
+=== 收集要求 ===
+1. 搜索 8-12 个不同角度的关键词（中英文都试，搜索时带 "2026"）
+2. 对最重要的 3-5 篇文章用 fetch_url_content 读取全文
+3. 寻找：正面报道、反面观点、具体数据（财报/融资/市场规模）、行业分析文章
+4. 搜集够了后，输出以下格式：
 
-第一步：研究
-- 用 web_search 搜索你需要的最新信息（2026 年的数据、事件、观点）
-- 搜索时加上 "2026" 关键词以确保获取最新信息
-- 用 fetch_url_content 读取关键文章的全文以获取细节
-- 特别注意搜索：最新的数据/财报、不同立场的观点、被忽略的反面证据
+---素材汇总---
+## 核心事件
+（事件的基本事实，只用搜索到的信息）
 
-第二步：列提纲
-- 搜集够了后，先输出你的报告提纲（5-7 个章节标题 + 每章核心论点）
-- 确认提纲覆盖了：核心论点、支撑证据、反面观点、投资影响
+## 关键数据点
+（搜索到的具体数字，标注来源 URL）
 
-第三步：写报告
-- 确认提纲后直接开始写完整报告
-- **报告正文必须 4000-6000 字**，每个章节至少 500 字——这不是新闻简报，是深度研究
-- 每个关键论点都要有具体数据和来源支撑
-- **禁止使用你的旧知识作为事实依据**——所有数据必须能追溯到搜索结果
+## 正面观点
+（支持/看好的分析和论据，标注来源）
 
-=== Y Daily 的分析偏好 ===
-- 核心关注：AI 和互联网行业的技术/产品/商业动态
-- 投资视角：关注对美股和港股的影响，给出具体标的和逻辑
-- 风格：有一个清晰的核心论点贯穿全文，不是面面俱到的综述
-- 敢于下判断——"我们认为 X 因为 Y"——而不是"有待观察"
-- 指出主流叙事中的盲点或错误
-- 所有数据和事实必须标注来源
+## 反面观点/风险
+（质疑/看空的分析和论据，标注来源）
 
-=== ⚠️ 绝对禁止编造数据 ===
-你的报告会经过独立的 fact-check 环节，每一条事实声明都会被搜索引擎验证。
-- **绝对不要编造引用来源**：不要写"据 Gartner 报告""据 McKinsey 数据""据 The Information 报道"等，除非你在搜索中确实看到了这些报告/报道的内容
-- **绝对不要编造具体数字**：如果你搜索中没有看到具体的营收、估值、增长率数字，就不要写。宁可写"数额未公开"也不要编一个
-- **只使用你搜索到的信息**：你能引用的唯一来源是你通过 web_search 和 fetch_url_content 实际看到的内容
-- 如果某个论点缺乏数据支撑，用逻辑推理和定性分析代替，不要用假数据凑
+## 行业背景
+（相关的行业趋势和竞争动态，标注来源）
 
-=== 报告格式 ===
-直接输出中文文章，不要 JSON。
+## 来源列表
+（所有参考文章的标题和 URL）
+---素材汇总结束---
 
-必须包含：
-- 标题（有态度、有判断，不是中性描述）
-- 副标题（核心论点一句话浓缩）
-- 正文 **5000-8000 字**，分 4-6 个章节，每章有小标题
-- 关键数据和论点后标注来源（文章标题或 URL）
-- 末尾附「核心判断」（4-5 条，每条一句话，有态度）
-- 末尾附「关注标的」（相关美股/港股代码 + 一句话逻辑）
-
-⚠️ 写作深度要求（极其重要）：
-- **每个章节至少 800 字**。你写的是深度研究，不是新闻摘要。
-- 每个论点必须有**完整的论证链条**：事实 → 为什么重要 → 推导过程 → 结论
-- 不要只写"X 很重要"——要解释 WHY 和 HOW
-- 善用对比和类比：和竞争对手比、和历史事件比、和市场预期比
-- 加入"反面论证"：你的判断可能错在哪？什么条件下会反转？
-- 章节不宜过多——4-6 个章节就够，宁可每章写透不要章节多但每章都浅
-- 想象你是在给基金经理做投研路演，不是在写公众号推送
-
-开始研究。
+只输出搜索到的真实信息。不要编造任何数据或引用来源。如果某个方面搜不到信息，就写"未找到相关信息"。
 """
 
+MAX_COLLECT_ROUNDS = 10
 
-def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
-    """
-    Stage 3: Agent loop with web_search and fetch_url_content tools.
-    Model decides what to search, reads results, and writes the final analysis.
-    """
-    print(f"\n=== Stage 3: Research Agent Loop (max {MAX_AGENT_ROUNDS} rounds) ===")
 
-    system_prompt = RESEARCH_SYSTEM_PROMPT.format(
+def research_collect(client, topic_info, breaking_context):
+    """
+    Stage 3a: Collect research materials using chat model + search tools.
+    Returns the collected research materials as text.
+    """
+    print(f"\n=== Stage 3a: Research Collection (max {MAX_COLLECT_ROUNDS} rounds) ===")
+
+    from openai import OpenAI
+    from news_fetcher import AGENT_TOOLS, execute_tool_call
+
+    api_key = os.environ.get("OPENAI_API_KEY")
+    base_url = os.environ.get("OPENAI_BASE_URL", "https://openrouter.ai/api/v1")
+    raw_client = OpenAI(api_key=api_key, base_url=base_url, timeout=300)
+
+    system_prompt = RESEARCH_COLLECTOR_PROMPT.format(
         topic=topic_info.get("topic", ""),
-        brain_dump=brain_dump_text,
         breaking_context=breaking_context,
         current_time=format_date_cst(now_cst()),
     )
 
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": f"""开始研究「{topic_info.get('topic', '')}」。
-
-请按以下步骤进行：
-1. 先用 web_search 搜索 5-8 个不同角度的关键词，收集 2026 年的最新素材
-   - 搜索时加上 "2026" 以确保时效性，比如 "Anthropic 2026 valuation" 而不是 "Anthropic valuation"
-   - 搜中英文都要试（英文信息通常更丰富更新）
-2. 对重要文章用 fetch_url_content 读取全文获取细节数据（至少读 3 篇全文）
-3. 搜集足够素材后（至少搜索 5 次以上），先列出报告提纲
-4. 然后写出完整报告（必须 5000 字以上，4-6 个章节，每章至少 800 字）
-
-重要：
-- 不要急于写报告。先充分搜索，确保你有 2026 年最新的数据和观点。
-- 你知识库里的信息可能是 2024 年的。所有具体版本号、估值、市场份额都用搜索结果。
-- 如果搜索结果不足，换不同的关键词再搜。
-- 写深度研究而不是新闻摘要：每个论点都要展开论证——为什么？证据是什么？反面怎么看？
-- 章节要少而精（4-6 个），每章写透，不要 7-8 个章节每章只有 300 字。"""},
+        {"role": "user", "content": f"开始为「{topic_info.get('topic', '')}」收集研究素材。先用 web_search 搜索 8-12 个不同角度的关键词。"},
     ]
 
     collected_sources = []
-    final_text = None
-    search_count = 0  # Track number of searches done
+    search_count = 0
+    final_materials = None
 
-    for round_num in range(MAX_AGENT_ROUNDS):
-        print(f"\n  --- Round {round_num + 1} ---")
+    for round_num in range(MAX_COLLECT_ROUNDS):
+        print(f"\n  --- Collect Round {round_num + 1} ---")
 
         try:
-            from openai import OpenAI
-            # We need raw API call for tool use since llm_chat_with_retry doesn't support it
-            api_key = os.environ.get("OPENAI_API_KEY", "")
-            base_url = os.environ.get("OPENAI_BASE_URL", "https://openrouter.ai/api/v1")
-            raw_client = OpenAI(api_key=api_key, base_url=base_url, timeout=300)
-
             response = raw_client.chat.completions.create(
                 model=LLM_MODEL,
                 messages=messages,
                 tools=AGENT_TOOLS,
-                temperature=0.5,
-                max_tokens=16384,
+                temperature=0.3,
+                max_tokens=8192,
             )
         except Exception as e:
-            print(f"  LLM call failed: {e}")
+            print(f"  ERROR: {e}")
             break
 
-        choice = response.choices[0]
-        message = choice.message
+        message = response.choices[0].message
+        messages.append(message)
 
-        # Check if model wants to call tools
         if message.tool_calls:
-            # Add assistant message with tool calls
-            messages.append(message)
-
             for tool_call in message.tool_calls:
                 func_name = tool_call.function.name
                 try:
@@ -304,18 +257,14 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
                     func_args = {}
 
                 print(f"  Tool: {func_name}({json.dumps(func_args, ensure_ascii=False)[:100]})")
-
                 result = execute_tool_call(func_name, func_args)
 
-                # Track searches
                 if func_name == "web_search":
                     search_count += 1
-                    search_results = result.split("\n")
-                    for line in search_results:
+                    for line in result.split("\n"):
                         if line.strip().startswith("[") and "]" in line:
                             collected_sources.append(line.strip())
 
-                # Truncate very long results
                 if len(result) > 5000:
                     result = result[:5000] + "\n...(truncated)"
 
@@ -327,54 +276,111 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
 
             print(f"  Processed {len(message.tool_calls)} tool call(s), total searches: {search_count}")
 
+            # If not enough searches after round 1, push back
+            if search_count < 5 and round_num == 1:
+                messages.append({"role": "user", "content": "继续搜索更多角度，特别是反面观点和具体数据。至少再搜 3-5 次。"})
+
         else:
-            # Model returned text
-            text = message.content or ""
-
-            # If model tried to write too early (not enough research), push it back
-            if search_count < 4 and round_num < 5:
-                print(f"  Output received but only {search_count} searches done. Requesting more research.")
-                messages.append(message)
-                messages.append({"role": "user", "content": f"你只搜索了 {search_count} 次，素材还不够。请继续用 web_search 搜索更多角度的信息，搜索时带上 '2026' 确保时效性。特别需要：反面观点、具体数据（2026 年最新财报/融资/市场规模）、行业内不同立场的分析。至少再搜索 3 次再开始写。"})
-                continue
-
-            # If output is too short, ask to expand (max 3 expansion attempts)
-            expansion_count = sum(1 for m in messages if isinstance(m, dict) and m.get("role") == "user" and "展开" in m.get("content", ""))
-            if len(text) < 3500 and round_num < MAX_AGENT_ROUNDS - 2 and expansion_count < 3:
-                print(f"  Output too short ({len(text)} chars, expansion #{expansion_count+1}). Requesting expansion.")
-                messages.append(message)
-                messages.append({"role": "user", "content": f"""报告只有约 {len(text)} 字，需要更详细。
-
-请选择报告中**最重要的 2 个章节**，大幅展开论证：
-- 加入具体的对比分析（和竞争对手、和历史事件）
-- 展开因果推理链条（不只是说"X 很重要"，要解释为什么、影响路径是什么）
-- 加入反面论证（什么条件下判断会反转）
-
-直接输出展开后的完整报告。"""})
-                continue
-
-            final_text = text
-            print(f"  Final output: {len(final_text)} chars")
+            final_materials = message.content or ""
+            print(f"  Materials collected: {len(final_materials)} chars, from {search_count} searches")
             break
 
-    if not final_text:
-        print("  WARNING: Agent loop ended without producing final text")
-        # Try one more call without tools to force output
-        messages.append({"role": "user", "content": "请现在输出你的完整分析报告。"})
+    if not final_materials:
+        messages.append({"role": "user", "content": "请现在输出你收集到的素材汇总。"})
         try:
             response = raw_client.chat.completions.create(
-                model=LLM_MODEL,
-                messages=messages,
-                temperature=0.5,
-                max_tokens=16384,
+                model=LLM_MODEL, messages=messages, max_tokens=8192, temperature=0.2,
             )
-            final_text = response.choices[0].message.content
-            print(f"  Forced output: {len(final_text or '')} chars")
+            final_materials = response.choices[0].message.content or ""
         except Exception as e:
+            final_materials = "素材收集失败"
             print(f"  Force output failed: {e}")
-            final_text = "研究报告生成失败"
 
-    return final_text, collected_sources
+    return final_materials, collected_sources
+
+
+# ============ Stage 3b: Report Writing (reasoning model, no tools) ============
+
+WRITER_PROMPT = """你是 Y Daily 的首席分析师。以下是研究助理为你收集的素材，请基于这些素材撰写一篇深度分析报告。
+
+当前时间：{current_time}（2026 年 4 月）
+
+=== 分析框架参考 ===
+{brain_dump}
+
+=== 研究素材（全部来自真实搜索，可直接引用）===
+{research_materials}
+
+=== Y Daily 的分析偏好 ===
+- 核心关注：AI 和互联网行业的技术/产品/商业动态
+- 投资视角：关注对美股和港股的影响
+- 读者画像：AI 从业者和专业投资者——不需要科普，需要洞察
+- 风格：有清晰的核心论点，敢于下判断
+
+=== 关于数据的严格要求 ===
+- **只使用上面素材中明确包含的数据和事实**
+- 如果素材里没有具体数字，就用定性分析——"显著增长""占据主导地位"比编一个百分比强得多
+- 绝对不要编造引用来源（如 Gartner、McKinsey、IDC 报告）——除非素材中真的有
+- 善用历史类比、逻辑推理、对比分析来展开论证——这比假数据有价值得多
+
+=== 报告要求 ===
+直接输出中文文章。
+
+结构：
+- 标题（有态度、有判断）
+- 副标题（核心论点一句话）
+- 正文 4-6 个章节，每章有小标题
+- 每个章节要展开论证：不只是说结论，要解释为什么、逻辑链条是什么、反面怎么看
+- 善用对比（和竞争对手比、和历史事件比）和类比来帮助理解
+- 来源标注用素材中提供的真实 URL
+- 末尾附「核心判断」（4-5 条）和「关注标的」（美股/港股代码 + 逻辑）
+
+写作风格参考：Stratechery（Ben Thompson）、Money Stuff（Matt Levine）——有观点、有逻辑、不装腔作势。
+"""
+
+
+def write_report(client, topic_info, brain_dump_text, research_materials):
+    """
+    Stage 3b: Write the deep analysis report using reasoning model (R1).
+    No tool use — pure text generation with deep thinking.
+    """
+    print(f"\n=== Stage 3b: Report Writing (model: {WRITER_MODEL}) ===")
+
+    prompt = WRITER_PROMPT.format(
+        brain_dump=brain_dump_text,
+        research_materials=research_materials[:15000],
+        current_time=format_date_cst(now_cst()),
+    )
+
+    try:
+        response = client.chat.completions.create(
+            model=WRITER_MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=16384,
+            temperature=0.6,
+        )
+        text = response.choices[0].message.content or ""
+
+        # Strip <think> block if present (R1 reasoning trace)
+        think_end = text.find("</think>")
+        if think_end != -1:
+            text = text[think_end + len("</think>"):].strip()
+
+        print(f"  Report written: {len(text)} chars")
+        return text
+    except Exception as e:
+        print(f"  ERROR writing with {WRITER_MODEL}: {e}")
+        print(f"  Falling back to {LLM_MODEL}...")
+        response = client.chat.completions.create(
+            model=LLM_MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=16384,
+            temperature=0.5,
+        )
+        text = response.choices[0].message.content or ""
+        print(f"  Fallback report: {len(text)} chars")
+        return text
+
 
 
 # ============ Stage 3.5: Fact Check (with search verification) ============
@@ -683,8 +689,11 @@ def main():
         breaking_lines.append(f"[{item.get('time', '')}] {item.get('text', '')}")
     breaking_context = "\n".join(breaking_lines)
 
-    # ====== Stage 3: Research Agent Loop ======
-    report_text, sources = research_agent_loop(client, topic_info, brain_dump_text, breaking_context)
+    # ====== Stage 3a: Research Collection (chat model + tools) ======
+    research_materials, sources = research_collect(client, topic_info, breaking_context)
+
+    # ====== Stage 3b: Report Writing (reasoning model) ======
+    report_text = write_report(client, topic_info, brain_dump_text, research_materials)
 
     # ====== Stage 3.5: Fact Check ======
     report_text, fact_check_result = fact_check(client, report_text)
