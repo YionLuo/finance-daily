@@ -1455,19 +1455,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.86,
+  score: 67.2,
   rating: "greed",
-  timestamp: "2026-04-21T18:03:52+00:00",
+  timestamp: "2026-04-21T19:59:59+00:00",
   previousClose: 69.94,
   previous1Week: 49.11,
   previous1Month: 15.63,
   previous1Year: 12.37,
-  date: "2026年4月22日 02:08 CST"
+  date: "2026年4月22日 04:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:33", tag: "tech", tagText: "科技", text: "加州地区检察官指控亚马逊“胁迫”李维斯、恒适等主要供应商，要求它们说服沃尔玛、塔吉特和家得宝等竞争对手零售商提高价格，涉嫌价格操纵。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/california-da-amazon-price-fixing-walmart-target.html" },
+  { time: "03:04", tag: "geo", tagText: "地缘", text: "美伊紧张局势急剧升级，霍尔木兹海峡发生针对商船的袭击事件，导致油价飙升。特朗普总统再次威胁伊朗，称若其不签署协议，将摧毁其桥梁和发电厂等基础设施。市场担忧双方可能爆发全面冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/trump-defense-iran-war-pakistan-vance-witkoff-kushner.html" },
+  { time: "02:40", tag: "macro", tagText: "宏观", text: "霍尔木兹海峡的航运中断已开始影响全球供应链。中国作为全球主要的圣诞商品生产国，其制造商表示，塑料等原材料成本上升将导致消费者为节日商品支付更高价格。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/hormuz-china-christmas-capital-holiday-spending.html" },
+  { time: "02:28", tag: "macro", tagText: "宏观", text: "晨星研究发现，在当前美联储暂停降息的背景下，现金类资产比美国国债更能有效分散投资组合风险，且仍能提供有吸引力的收益率。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/cash-has-diversified-portfolios-better-than-bonds-says-morningstar-.html" },
+  { time: "02:20", tag: "macro", tagText: "宏观", text: "美国进出口银行表示，在伊朗冲突期间，其能源贷款业务激增，该机构被支持美国石油和天然气出口的融资请求“淹没”。这凸显了地缘政治危机对美国能源出口的推动作用。", source: "Financial Times", url: "https://www.ft.com/content/e320d4d9-02a6-4b7c-8a8d-da689d77e45e" },
   { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什在提前公布的国会证词中表示，美联储必须“守好本分”以保持独立性，并坚定承诺抗击通胀。他淡化总统对利率发表看法带来的威胁，强调央行应专注于其核心任务。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-testimony-to-congress-is-out-early-he-wants-the-fed-to-stay-in-its-lane-d6249040?mod=mw_rss_topstories" },
   { time: "01:52", tag: "macro", tagText: "宏观", text: "美国关税退款申请门户将于周一启动，沃尔玛、塔吉特等大型进口商有望获得数十亿美元的退款。此举将为相关零售商带来巨额现金流入。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/tariff-refunds-begin-on-monday-these-retailers-are-due-big-paydays.html" },
   { time: "11:28", tag: "tech", tagText: "科技", text: "英伟达供应商胜利精密技术在香港上市首日股价飙升60%，成为今年迄今为止香港规模最大的首次公开募股。这反映了市场对AI供应链关键环节的持续追捧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/21/nvidia-supplier-victory-giant-sees-shares-soar-60percent-in-hong-kong-debut.html" },
@@ -1483,16 +1488,13 @@ const breakingNews = [
   { time: "04:51", tag: "macro", tagText: "宏观", text: "受特朗普总统支持将LSD等致幻剂用于心理健康治疗的行政命令推动，致幻剂概念股大幅上涨。该命令旨在加快相关药物通过监管审批流程的速度，为这一新兴医疗领域带来政策利好。", source: "MarketWatch", url: "https://www.marketwatch.com/story/psychedelic-stocks-rally-with-trumps-support-addafa78?mod=mw_rss_topstories" },
   { time: "04:43", tag: "ai", tagText: "AI", text: "据报道，芯片设计公司迈威尔科技将帮助谷歌开发定制AI芯片。受此消息提振，迈威尔股价上涨，而其竞争对手博通的股价则下跌。今年3月，英伟达曾向迈威尔投资20亿美元，显示出市场对AI芯片供应链的持续关注。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/marvell-stock-google-custom-ai-chips.html" },
   { time: "04:17", tag: "macro", tagText: "宏观", text: "汇丰银行表示对股市持“极度看涨”立场，认为伊朗冲突并非市场“游戏规则改变者”。该行认为，过去几天市场创下新高的涨势与历史先例非常吻合。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/hsbc-is-max-bullish-stocks-saying-iran-conflict-is-not-a-game-changer.html" },
-  { time: "03:33", tag: "tech", tagText: "科技", text: "加州地区检察官指控亚马逊“胁迫”李维斯、恒适等主要供应商，要求它们说服沃尔玛、塔吉特和家得宝等竞争对手零售商提高价格，涉嫌价格操纵。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/california-da-amazon-price-fixing-walmart-target.html" },
-  { time: "03:04", tag: "geo", tagText: "地缘", text: "美伊紧张局势急剧升级，霍尔木兹海峡发生针对商船的袭击事件，导致油价飙升。特朗普总统再次威胁伊朗，称若其不签署协议，将摧毁其桥梁和发电厂等基础设施。市场担忧双方可能爆发全面冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/trump-defense-iran-war-pakistan-vance-witkoff-kushner.html" },
-  { time: "02:40", tag: "macro", tagText: "宏观", text: "霍尔木兹海峡的航运中断已开始影响全球供应链。中国作为全球主要的圣诞商品生产国，其制造商表示，塑料等原材料成本上升将导致消费者为节日商品支付更高价格。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/hormuz-china-christmas-capital-holiday-spending.html" },
-  { time: "02:28", tag: "macro", tagText: "宏观", text: "晨星研究发现，在当前美联储暂停降息的背景下，现金类资产比美国国债更能有效分散投资组合风险，且仍能提供有吸引力的收益率。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/cash-has-diversified-portfolios-better-than-bonds-says-morningstar-.html" },
-  { time: "02:20", tag: "macro", tagText: "宏观", text: "美国进出口银行表示，在伊朗冲突期间，其能源贷款业务激增，该机构被支持美国石油和天然气出口的融资请求“淹没”。这凸显了地缘政治危机对美国能源出口的推动作用。", source: "Financial Times", url: "https://www.ft.com/content/e320d4d9-02a6-4b7c-8a8d-da689d77e45e" },
 ];
-const breakingDate = "2026年4月22日 02:08 CST";
+const breakingDate = "2026年4月22日 04:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:00", tag: "ai", tagText: "AI", text: "谷歌正在开发用于AI推理的专用芯片，旨在与英伟达竞争。此举表明科技巨头正加速自研AI硬件，以降低对英伟达的依赖并优化其AI服务的性能和成本。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE05ZE9yUktReXc1OHBmNkk1UVdXRzRRYllrSEFnaE1iZUZiYTd4ZWg4UHAydnpmalp6TWFOeDhBQjNtbDdSQ2FtQlpLdV9ZRGdkNDFQNUZQMVdVenE2MnpHdDBDb2ozeGVvYUNpQVExYw?oc=5" },
+  { time: "02:15", tag: "tech", tagText: "科技", text: "激光雷达公司禾赛科技发布Picasso 6D全彩色SPAD-SoC、下一代ETX，并在空间智能与物理AI领域推出创新。这些进展旨在提升自动驾驶和机器人等领域的感知能力。", source: "The Malaysian Reserve", url: "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPbUU0UU5MSzVXb1pza0hCZ1lja0NaMzA5MVpBNHlGWmRlaEZJdTI4R04tYnFlUFI3a0RYR2RjQUVZSGNoRkFhdll0WVI1SHd6UW9yeF9JWkVXVUtJQlpiWFpLb29wbnJfQ0lkc0hkdG5sSzhGLXh4QWVHc3ZpQ0N6dllBWEtlLTZZMmx2MjJvNG1zQk9IbnU2alhzSmdNVVoxbG9XX21NaW5leGFKbDdsaGxqcVM3QndDMzVuYnJKWFhEeG90eldELWFxeC16Rlk1LUdWLVdQMUtwb1VRLU1EbzMxbXdQUGF4ZDBwellR?oc=5" },
   { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
   { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
   { time: "00:06", tag: "geo", tagText: "地缘", text: "据TechCrunch报道，美国国家安全局（NSA）的情报人员正在使用Anthropic的受限AI模型Mythos，尽管五角大楼与该公司存在分歧。这表明先进AI模型正被迅速应用于国家情报领域，引发对技术监管与安全的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/nsa-spies-are-reportedly-using-anthropics-mythos-despite-pentagon-feud/" },
@@ -1511,10 +1513,8 @@ const aiBreakingNews = [
   { time: "10:26", tag: "ai", tagText: "AI", text: "据报道，由杰夫·贝索斯创立的秘密AI初创公司Project Prometheus即将完成一轮高达100亿美元的巨额融资。此轮融资预计将使公司估值达到约380亿美元，显示出资本市场对顶级AI项目的持续狂热。", source: "AASTOCKS.com", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRlVZQTlNWmg5V3ZuLXR1Rkt3Z2h2bGJuSTdlR0pfVDNRT1RpU3NQYkc3eUVXRTJrNFlSelg5clVHenhteDM1MndqZWpTYnVseGJVaGJZZ3ViS1NFbmx2Z0NsdmRpZC1tRi1iU3RtVWpmNDR5U2ZCNU9VUTJHQ1FtNmpBNDdLQTlUQXc?oc=5" },
   { time: "07:10", tag: "ai", tagText: "AI", text: "亚马逊向AI公司Anthropic追加投资50亿美元，而Anthropic则承诺在未来将投入1000亿美元用于亚马逊云服务（AWS）。这笔巨额双向交易进一步巩固了双方的战略联盟，并可能重塑AI基础设施的竞争格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/anthropic-takes-5b-from-amazon-and-pledges-100b-in-cloud-spending-in-return/" },
   { time: "06:00", tag: "tech", tagText: "科技", text: "谷歌宣布在Chrome浏览器中向澳大利亚、印度尼西亚、日本、菲律宾、新加坡、韩国和越南七个新市场推出其AI助手Gemini。此举是谷歌扩大其AI产品全球覆盖范围的重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/google-rolls-out-gemini-in-chrome-in-seven-new-countries/" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "谷歌正在开发用于AI推理的专用芯片，旨在与英伟达竞争。此举表明科技巨头正加速自研AI硬件，以降低对英伟达的依赖并优化其AI服务的性能和成本。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE05ZE9yUktReXc1OHBmNkk1UVdXRzRRYllrSEFnaE1iZUZiYTd4ZWg4UHAydnpmalp6TWFOeDhBQjNtbDdSQ2FtQlpLdV9ZRGdkNDFQNUZQMVdVenE2MnpHdDBDb2ozeGVvYUNpQVExYw?oc=5" },
-  { time: "02:15", tag: "tech", tagText: "科技", text: "激光雷达公司禾赛科技发布Picasso 6D全彩色SPAD-SoC、下一代ETX，并在空间智能与物理AI领域推出创新。这些进展旨在提升自动驾驶和机器人等领域的感知能力。", source: "The Malaysian Reserve", url: "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPbUU0UU5MSzVXb1pza0hCZ1lja0NaMzA5MVpBNHlGWmRlaEZJdTI4R04tYnFlUFI3a0RYR2RjQUVZSGNoRkFhdll0WVI1SHd6UW9yeF9JWkVXVUtJQlpiWFpLb29wbnJfQ0lkc0hkdG5sSzhGLXh4QWVHc3ZpQ0N6dllBWEtlLTZZMmx2MjJvNG1zQk9IbnU2alhzSmdNVVoxbG9XX21NaW5leGFKbDdsaGxqcVM3QndDMzVuYnJKWFhEeG90eldELWFxeC16Rlk1LUdWLVdQMUtwb1VRLU1EbzMxbXdQUGF4ZDBwellR?oc=5" },
 ];
-const aiBreakingDate = "2026年4月22日 02:08 CST";
+const aiBreakingDate = "2026年4月22日 04:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
