@@ -1455,18 +1455,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.09,
+  score: 69.83,
   rating: "greed",
-  timestamp: "2026-04-17T23:59:39+00:00",
-  previousClose: 62.2,
-  previous1Week: 36.57,
-  previous1Month: 20.69,
-  previous1Year: 16.06
+  timestamp: "2026-04-21T00:00:00+00:00",
+  previousClose: 69.94,
+  previous1Week: 49.11,
+  previous1Month: 15.63,
+  previous1Year: 12.37,
+  date: "2026年4月21日 12:27 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:26", tag: "macro", tagText: "宏观", text: "韩国KOSPI指数创历史新高，亚洲市场涨跌互现。投资者无视特朗普对伊朗的新威胁，聚焦脆弱的停火期限。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/21/asia-markets-today-nikkei225-hangseng-sensex-asx-iran-us-trump-hormuz.html" },
+  { time: "12:18", tag: "tech", tagText: "科技", text: "英伟达供应商Victory Giant在香港首日上市股价飙升60%，成为今年香港规模最大的IPO。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/21/nvidia-supplier-victory-giant-sees-shares-soar-60percent-in-hong-kong-debut.html" },
+  { time: "12:15", tag: "geo", tagText: "地缘", text: "日本解除致命武器出口禁令，标志着其和平主义立场的重大转变，将允许国防承包商进军国际市场。此举可能重塑亚太地区军备格局。", source: "International homepage", url: "https://www.ft.com/content/539bdbe1-a535-44fb-aa7a-2c1fe1828adf" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普的'和平委员会'与迪拜环球港务集团讨论加沙重建计划，拟由阿联酋公司管理供应链和物流，作为美国对该地区重建方案的一部分。", source: "International homepage", url: "https://www.ft.com/content/873b866b-fd17-426d-8cb1-a34566e2e1d5" },
   { time: "07:26", tag: "crypto", tagText: "加密", text: "比特币价格反弹至76,000美元上方，但DeFi领域遭遇重大打击。KelpDAO遭黑客攻击后，DeFi协议出现约140亿美元的资金外流。分析指出，此次漏洞可能短期内阻碍链上信贷的创造。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVS15c1ViYU4zRUR4dEJTalF0Y3RUWXlkOFhQbE94aEZzQ2JCUGZicEJoSFYzRWdaN2JaZ183c2tZeHREZXhDdEwwQkNrWFZMdjMyaTMta2VMNmJBU0RSMmpoVWZDX3FsQml1aE4tNzJsNWU1R3BWS1BOTTV0aXJseVJ0dUJGanFCdHZkU1FYRHEyN0FtV3dPYzQ3c3JVLVY1MVVBcWZwYTFVQmVpMVhmVUluT1lOWDJaVk9tazdrQUdRT29VRnZVZ3J4Yw?oc=5" },
   { time: "06:43", tag: "tech", tagText: "科技", text: "亚马逊旗下蓝色起源公司的新格伦火箭因美国联邦航空管理局的指令而停飞，这对其旨在与SpaceX星链竞争的卫星互联网雄心构成挫折。此次停飞也影响了AST SpaceMobile的BlueBird 7卫星发射任务，该卫星虽成功入轨但未达到预定高度，导致AST SpaceMobile股价下跌。", source: "International homepage (FT)", url: "https://www.ft.com/content/cbc55056-91f2-4b69-af26-fd749fbf15ed" },
   { time: "05:54", tag: "macro", tagText: "宏观", text: "美国劳工部长洛里·查韦斯-德雷默宣布辞去特朗普内阁职务，由基思·桑德林接任。这是特朗普政府近期又一重要人事变动。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/20/labor-secretary-lori-chavez-deremer-resignation-keith-sonderling.html" },
@@ -1483,15 +1488,12 @@ const breakingNews = [
   { time: "02:20", tag: "macro", tagText: "宏观", text: "美国进出口银行表示，在伊朗冲突期间，其能源贷款业务激增，该机构被支持美国石油和天然气出口的融资请求“淹没”。这凸显了地缘政治危机对美国能源出口的推动作用。", source: "Financial Times", url: "https://www.ft.com/content/e320d4d9-02a6-4b7c-8a8d-da689d77e45e" },
   { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什在提前公布的国会证词中表示，美联储必须“守好本分”以保持独立性，并坚定承诺抗击通胀。他淡化总统对利率发表看法带来的威胁，强调央行应专注于其核心任务。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-testimony-to-congress-is-out-early-he-wants-the-fed-to-stay-in-its-lane-d6249040?mod=mw_rss_topstories" },
   { time: "01:52", tag: "macro", tagText: "宏观", text: "美国关税退款申请门户将于周一启动，沃尔玛、塔吉特等大型进口商有望获得数十亿美元的退款。此举将为相关零售商带来巨额现金流入。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/tariff-refunds-begin-on-monday-these-retailers-are-due-big-paydays.html" },
-  { time: "01:28", tag: "macro", tagText: "宏观", text: "美伊冲突导致燃料价格飙升，加之能获取廉价的北美原油，美国炼油商正从中获得巨额利润。地缘政治紧张局势使美国炼油商处于有利地位。", source: "Financial Times", url: "https://www.ft.com/content/6d0f7c29-ee60-40d8-81bf-ce8af414aed7" },
-  { time: "01:14", tag: "geo", tagText: "地缘", text: "城堡基金商品部门负责人表示，特朗普的社交媒体帖子已经改变了石油交易格局，交易员们正努力适应其频繁言论所引发的市场波动。", source: "Financial Times", url: "https://www.ft.com/content/23b14d1b-8efa-4346-ab06-30db101e7748" },
-  { time: "00:47", tag: "crypto", tagText: "加密", text: "加密货币市场发生大规模轧空，数小时内清算了价值4.22亿美元的空头头寸，加剧了市场波动。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMiggFBVV95cUxPb2gxUkdOSVZtQXBnWndZLVVQTnZCX0VQekZlVmNHXzM0Z1J6aHU2emZjcmM4NHp4NS04MGtsWEczUGxZcC1EMTRaM0lRR1BKNTYyek13SWIwdFlJbW83U2M3UkRJLS16MmdmU2VFX0lralg2c0gyRXdPMlFrQzJncGtB?oc=5" },
-  { time: "00:11", tag: "macro", tagText: "宏观", text: "受美伊紧张局势升级影响，美国股市周一普遍下跌。道指、标普500指数和纳斯达克指数均走低，其中纳斯达克指数可能结束连涨势头。市场避险情绪升温，油价则因海湾地区供应风险而攀升。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPYlI5Q1M3bFBxbENja09GXzVuZldxY3RjQk9qXzB6YklQMWZKd1FqSjZ1THgzMjdTUU1SM2ZBTkhYWFZMZVBvY0drRHJNbkNHV3E2ZXNqSGVrcXBBbkw1VlBwWHJCeWYtRV83SEswWUFWUEZqM2hzQWVySWJMcElhbmQ3MjJxRzZOLU04MXBLbHdvRE0zbndBdGVpSzZqOXJITmU0NHctcUtPQnJFeHZvMVo5RUhDYmw1UTFpNV9GOWhFdFlOYm1mRkZDdC1xWnpKZjVqR1d4ZDhLUFBFT2N2WkVKdHhrb01MMjlj?oc=5" },
 ];
-const breakingDate = "2026年4月21日 07:55 CST";
+const breakingDate = "2026年4月21日 12:27 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "11:21", tag: "ai", tagText: "AI", text: "杰夫·贝佐斯创立的AI初创公司Project Prometheus即将完成100亿美元融资，估值达380亿美元。该项目保持高度保密，但巨额融资凸显资本对颠覆性AI技术的狂热追逐。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTWpRSmZrdnBhQmZFZ21LSjdReFg2LW5GLXF4N3RvN3VYcy0ySzlEcklUbmNpWlpDSHFTQzJDd3F5RV9JNm1tOC1qNDJXZWs1c3V0ekxNaGYyYUdBdF9qSnNJbnl2aVJmLUtDaTROSjFBcGJrMkRTNjliZE9GQTFmNWRURWRTMjdGLWZxTnJiVG5JZG8?oc=5" },
   { time: "07:10", tag: "ai", tagText: "AI", text: "亚马逊向AI公司Anthropic追加投资50亿美元，而Anthropic则承诺在未来将投入1000亿美元用于亚马逊云服务（AWS）。这笔巨额双向交易进一步巩固了双方的战略联盟，并可能重塑AI基础设施的竞争格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/anthropic-takes-5b-from-amazon-and-pledges-100b-in-cloud-spending-in-return/" },
   { time: "06:00", tag: "tech", tagText: "科技", text: "谷歌宣布在Chrome浏览器中向澳大利亚、印度尼西亚、日本、菲律宾、新加坡、韩国和越南七个新市场推出其AI助手Gemini。此举是谷歌扩大其AI产品全球覆盖范围的重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/google-rolls-out-gemini-in-chrome-in-seven-new-countries/" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "谷歌正在开发用于AI推理的专用芯片，旨在与英伟达竞争。此举表明科技巨头正加速自研AI硬件，以降低对英伟达的依赖并优化其AI服务的性能和成本。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE05ZE9yUktReXc1OHBmNkk1UVdXRzRRYllrSEFnaE1iZUZiYTd4ZWg4UHAydnpmalp6TWFOeDhBQjNtbDdSQ2FtQlpLdV9ZRGdkNDFQNUZQMVdVenE2MnpHdDBDb2ozeGVvYUNpQVExYw?oc=5" },
@@ -1511,9 +1513,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "Parasail在A轮融资中筹集3200万美元，押注‘tokenmaxxing’将催生下一代计算巨头，预示着模型和计算的碎片化未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Gitar利用AI代理审查代码，完成900万美元融资，专注于解决AI生成代码的安全问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "AI编程初创公司Cursor正寻求以20亿美元的新一轮融资，冲刺高达500亿美元的估值。该公司开发的AI辅助编程工具增长迅速，显示出资本市场对AI生产力工具的极高热情。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeG9mRHMydU15QnYzVGQzWHRKeTMwYW92bE5ZUFJfSGpaYnVRSGZmT1BndlAwOHdfUHNGMENkWUJyTTNrZ1lZWVhoTTRZQ0tYSEw2TksxUFlPVUlBNkNnUDZpRzl1dGZiQTdBeURHRmFSUG94NWlHVUxneG9PZzcxUGg2akpVblFNYkEteEZ3Y2hZZWc?oc=5" },
-  { time: "16:00", tag: "tech", tagText: "科技", text: "DeepL宣布将进军语音翻译领域，其技术可用于Zoom和Microsoft Teams等会议工具的实时翻译。这一举措标志着DeepL从文本翻译向语音翻译的扩展，可能对全球沟通方式产生深远影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/16/deepl-known-for-text-translation-now-wants-to-translate-your-voice/" },
 ];
-const aiBreakingDate = "2026年4月21日 07:55 CST";
+const aiBreakingDate = "2026年4月21日 12:27 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [

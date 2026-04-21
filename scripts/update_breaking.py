@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from utils import (
     read_html, write_html,
     extract_js_array, extract_js_string,
-    replace_js_array, replace_js_string,
+    replace_js_array, replace_js_string, replace_js_object,
     format_date_cst, now_cst, CST,
     python_to_js_object_inline,
     create_llm_client,
@@ -521,6 +521,30 @@ def main():
     html = replace_js_string(html, 'breakingDate', now_str)
     html = replace_js_array(html, 'aiBreakingNews', ai_news)
     html = replace_js_string(html, 'aiBreakingDate', now_str)
+
+    # Step 6b: Update Fear & Greed Index
+    try:
+        import requests as req
+        FG_API = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
+        fg_resp = req.get(FG_API, headers={"User-Agent": "Mozilla/5.0 (Y Daily Bot)"}, timeout=15)
+        if fg_resp.status_code == 200:
+            fg_raw = fg_resp.json().get("fear_and_greed", {})
+            fg_data = {
+                "score": round(fg_raw.get("score", 0), 2),
+                "rating": fg_raw.get("rating", "neutral"),
+                "timestamp": fg_raw.get("timestamp", ""),
+                "previousClose": round(fg_raw.get("previous_close", 0), 2),
+                "previous1Week": round(fg_raw.get("previous_1_week", 0), 2),
+                "previous1Month": round(fg_raw.get("previous_1_month", 0), 2),
+                "previous1Year": round(fg_raw.get("previous_1_year", 0), 2),
+                "date": now_str,
+            }
+            html = replace_js_object(html, 'fearGreedData', fg_data)
+            print(f"Fear & Greed: {fg_data['score']} ({fg_data['rating']})")
+        else:
+            print(f"Fear & Greed: HTTP {fg_resp.status_code}, skipped")
+    except Exception as e:
+        print(f"Fear & Greed: failed ({e}), skipped")
 
     # Write
     write_html(html)
