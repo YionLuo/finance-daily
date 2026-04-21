@@ -323,17 +323,28 @@ WRITER_PROMPT = """你是 Y Daily 的首席分析师。以下是研究助理为�
 - 绝对不要编造引用来源（如 Gartner、McKinsey、IDC 报告）——除非素材中真的有
 - 善用历史类比、逻辑推理、对比分析来展开论证——这比假数据有价值得多
 
+=== 必须覆盖的分析维度（漏掉任何一个都算不合格）===
+1. **财务逻辑检验**：涉及大额交易/投资时，必须质疑钱从哪来、商业模型是否成立、是否存在"左手倒右手"或"卖方融资"嫌疑。不要只说"百亿投资"就完事，要算账。
+2. **产业链全景**：不只分析当事双方，必须覆盖上下游关键玩家的受益/受损。比如谈云+AI绑定，就不能漏掉芯片上游（英伟达/ASML）和替代路径（开源生态）。
+3. **反面力量与替代路径**：巨头闭环越强，反面力量（开源、监管、解耦需求）就越重要。必须分析"如果这个趋势持续，谁会反抗、怎么反抗"。
+4. **历史类比的精确性**：用历史类比时，必须指出类比的**适用边界**——哪里像、哪里不像。不能简单说"和XX一样"。
+5. **二阶效应**：不只分析直接影响，还要分析"因为A所以B，因为B所以C"的连锁反应。
+
 === 报告要求 ===
 直接输出中文文章。
 
 结构：
-- 标题（有态度、有判断）
+- 标题（有态度、有判断，注意引号配对完整）
 - 副标题（核心论点一句话）
-- 正文 4-6 个章节，每章有小标题
+- 正文 5-7 个章节，每章有小标题
 - 每个章节要展开论证：不只是说结论，要解释为什么、逻辑链条是什么、反面怎么看
 - 善用对比（和竞争对手比、和历史事件比）和类比来帮助理解
 - 来源标注用素材中提供的真实 URL
-- 末尾附「核心判断」（4-5 条）和「关注标的」（美股/港股代码 + 逻辑）
+- 末尾附「核心判断」（4-5 条，**每条要有冲击力和明确立场，不要四平八稳的废话**）和「关注标的」（美股/港股代码 + 逻辑）
+
+核心判断的写法示例（好 vs 差）：
+- ❌ 差："1000亿美元支出承诺将加剧算力市场马太效应"（太平淡）
+- ✅ 好："百亿投资换千亿云订单，本质是变相的算力垄断与云收入'左手倒右手'，技术主导权正不可逆地向云巨头倾斜"（有判断、有态度）
 
 写作风格参考：Stratechery（Ben Thompson）、Money Stuff（Matt Levine）——有观点、有逻辑、不装腔作势。
 """
@@ -385,7 +396,7 @@ def write_report(client, topic_info, brain_dump_text, research_materials):
 
 # ============ Stage 3.5: Fact Check (with search verification) ============
 
-FACT_CHECK_SYSTEM = """你是一位严格的事实核查编辑。你的工作是验证一篇深度分析报告中的事实性声明。
+FACT_CHECK_SYSTEM = """你是一位严格的事实核查编辑。你的工作是验证一篇深度分析报告中的事实性声明和逻辑质量。
 
 ⚠️ 你和报告的作者是不同的人。作者可能会编造看起来很真实的数据。你不能相信任何没有可靠来源的具体数字。
 
@@ -411,22 +422,37 @@ FACT_CHECK_SYSTEM = """你是一位严格的事实核查编辑。你的工作是
 - 报告说"OpenAI 与腾讯合资入华" → 搜索 "OpenAI Tencent joint venture China 2026"
 - 报告说"某公司估值 800 亿" → 搜索 "company name valuation 2026"
 
-第三步：输出核查结果
+第三步：检查逻辑质量
+除了事实核查，还要检查：
+- **不当类比**：历史类比是否准确？比如"A公司收购B，和C收购D一样"——但如果实际情况有重大差异（如D在被收后仍有重大突破），就应该指出类比不成立
+- **遗漏关键玩家**：分析产业格局时是否遗漏了不可忽视的参与者（如谈AI芯片不提英伟达、谈云市场不提阿里云/华为云等）
+- **财务逻辑漏洞**：大额承诺是否有可行性分析？钱从哪来？是否存在循环融资嫌疑？
+
+第四步：输出核查结果
 完成搜索验证后，输出 JSON：
 {{
   "total_claims": 核查的事实条数,
   "verified": 搜索确认正确的条数,
   "unverifiable": 搜索找不到佐证但也没有反证的条数,
   "false_or_fabricated": 搜索结果与声明矛盾、或完全找不到任何相关信息的条数,
+  "logic_issues": 逻辑问题的条数,
   "issues": [
     {{
       "claim": "有问题的声明原文",
       "search_result": "你搜到的实际信息是什么",
-      "verdict": "false（与事实矛盾）/ fabricated（完全找不到相关信息，很可能是编造的）/ unverifiable（无法确认）",
+      "verdict": "false / fabricated / unverifiable / bad_analogy / missing_player / logic_gap",
       "fix": "建议的修正文本（如果应该删除就写'删除此句'）"
     }}
   ]
 }}
+
+verdict 含义：
+- false: 与搜索到的事实矛盾
+- fabricated: 完全找不到相关信息，很可能是编造的
+- unverifiable: 无法确认
+- bad_analogy: 历史类比不准确或有重大遗漏
+- missing_player: 分析遗漏了关键参与者
+- logic_gap: 财务/商业逻辑有漏洞
 
 重要：只输出最终 JSON。每个 issue 都必须有 search_result 说明你搜到了什么。
 """
@@ -520,39 +546,43 @@ def fact_check(client, report_text):
     total = final_result.get("total_claims", 0)
     verified = final_result.get("verified", 0)
     fabricated = final_result.get("false_or_fabricated", 0)
+    logic_issues = final_result.get("logic_issues", 0)
     issues = final_result.get("issues", [])
 
     print(f"\n  Claims checked: {total}")
-    print(f"  Verified: {verified}, Unverifiable: {final_result.get('unverifiable', 0)}, False/Fabricated: {fabricated}")
+    print(f"  Verified: {verified}, Unverifiable: {final_result.get('unverifiable', 0)}, False/Fabricated: {fabricated}, Logic issues: {logic_issues}")
 
     if issues:
         print(f"  Issues ({len(issues)}):")
-        for issue in issues[:8]:
+        for issue in issues[:10]:
             verdict = issue.get("verdict", "?")
-            icon = "🚫" if verdict in ("false", "fabricated") else "⚠️"
+            icon = "🚫" if verdict in ("false", "fabricated") else "🔍" if verdict in ("bad_analogy", "missing_player", "logic_gap") else "⚠️"
             print(f"    {icon} [{verdict}] {issue.get('claim', '')[:80]}")
             print(f"       搜索结果: {issue.get('search_result', '')[:80]}")
             print(f"       修正: {issue.get('fix', '')[:80]}")
 
-    # Apply corrections if there are false/fabricated claims
-    fixable_issues = [i for i in issues if i.get("verdict") in ("false", "fabricated")]
+    # Apply corrections for both factual errors AND logic issues
+    fixable_issues = [i for i in issues if i.get("verdict") in ("false", "fabricated", "bad_analogy", "missing_player", "logic_gap")]
 
     if fixable_issues:
         print(f"\n  Applying corrections for {len(fixable_issues)} false/fabricated claims...")
 
-        fix_prompt = f"""以下报告有 {len(fixable_issues)} 处经搜索验证为**错误或编造**的事实声明，必须修正。
+        fix_prompt = f"""以下报告有 {len(fixable_issues)} 处经核查发现的问题，必须修正。
 
 === 原始报告 ===
 {report_text[:10000]}
 
-=== 经搜索验证的错误 ===
+=== 经核查发现的问题 ===
 {json.dumps(fixable_issues, ensure_ascii=False, indent=2)}
 
 修正规则：
-1. 对于标记为 "false" 的：用 fix 字段建议的正确表述替换
-2. 对于标记为 "fabricated" 的：直接删除该句或该段落，不要用新编的内容替换
-3. 不要添加任何新的事实声明
-4. 保持报告其余部分不变
+1. 对于 "false" 的：用 fix 字段建议的正确表述替换
+2. 对于 "fabricated" 的：直接删除该句或该段落，不要用新编的内容替换
+3. 对于 "bad_analogy" 的：修正类比，说明适用边界，或用更准确的类比替换
+4. 对于 "missing_player" 的：在相关段落补充对遗漏玩家的分析
+5. 对于 "logic_gap" 的：补充财务/商业逻辑分析，质疑可行性
+6. 不要添加任何新的事实声明（逻辑分析除外）
+7. 保持报告其余部分不变
 
 输出修正后的完整报告文本。"""
 
@@ -573,6 +603,10 @@ def fact_check(client, report_text):
 # ============ Stage 4: Format to JSON ============
 
 FORMAT_PROMPT = """把以下深度分析报告转换为 JSON 格式。保留所有内容，只改变格式。
+
+⚠️ 格式化时检查标点：
+- 标题和副标题中的引号必须配对（有左引号必须有右引号）
+- 中文使用中文标点（""、''），不要混用半角引号
 
 === 原始报告 ===
 {report_text}
