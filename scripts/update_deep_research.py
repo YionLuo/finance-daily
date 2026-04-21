@@ -169,15 +169,21 @@ RESEARCH_COLLECTOR_PROMPT = """你是 Y Daily 的研究助理，正在为「{top
 === 今日相关新闻 ===
 {breaking_context}
 
-=== 收集要求 ===
-1. 搜索 8-12 个不同角度的关键词（中英文都试，搜索时带 "2026"）
-2. 对最重要的 3-5 篇文章用 fetch_url_content 读取全文
-3. 寻找：正面报道、反面观点、具体数据（财报/融资/市场规模）、行业分析文章
-4. 搜集够了后，输出以下格式：
+=== ⚠️ 关键要求：你必须读全文 ===
+web_search 只能返回标题和摘要片段，信息量远远不够写深度报告。
+你**必须**对搜索结果中最重要的 5-8 篇文章使用 fetch_url_content 读取全文。
+如果你只搜不读全文，分析师会因为素材太薄而写出空洞的报告。
+
+=== 收集流程 ===
+1. 先用 web_search 搜索 8-12 个不同角度的关键词（中英文都试，搜索时带 "2026"）
+2. 从搜索结果中挑出最重要、信息量最大的 5-8 篇文章
+3. 对这些文章逐一使用 fetch_url_content 读取全文（这一步不能跳过！）
+4. 寻找：正面报道、反面观点、具体数据（财报/融资/市场规模）、行业分析文章
+5. 搜集够了后，输出以下格式：
 
 ---素材汇总---
 ## 核心事件
-（事件的基本事实，只用搜索到的信息）
+（事件的基本事实，用搜索和全文中获取的详细信息）
 
 ## 关键数据点
 （搜索到的具体数字，标注来源 URL）
@@ -198,7 +204,7 @@ RESEARCH_COLLECTOR_PROMPT = """你是 Y Daily 的研究助理，正在为「{top
 只输出搜索到的真实信息。不要编造任何数据或引用来源。如果某个方面搜不到信息，就写"未找到相关信息"。
 """
 
-MAX_COLLECT_ROUNDS = 10
+MAX_COLLECT_ROUNDS = 15
 
 
 def research_collect(client, topic_info, breaking_context):
@@ -228,6 +234,7 @@ def research_collect(client, topic_info, breaking_context):
 
     collected_sources = []
     search_count = 0
+    fetch_count = 0
     final_materials = None
 
     for round_num in range(MAX_COLLECT_ROUNDS):
@@ -265,6 +272,9 @@ def research_collect(client, topic_info, breaking_context):
                         if line.strip().startswith("[") and "]" in line:
                             collected_sources.append(line.strip())
 
+                if func_name == "fetch_url_content":
+                    fetch_count += 1
+
                 if len(result) > 5000:
                     result = result[:5000] + "\n...(truncated)"
 
@@ -274,10 +284,14 @@ def research_collect(client, topic_info, breaking_context):
                     "content": result,
                 })
 
-            print(f"  Processed {len(message.tool_calls)} tool call(s), total searches: {search_count}")
+            print(f"  Processed {len(message.tool_calls)} tool call(s), total searches: {search_count}, fetches: {fetch_count}")
+
+            # If searched enough but hasn't read any full articles, push to read
+            if search_count >= 6 and fetch_count == 0 and round_num >= 2:
+                messages.append({"role": "user", "content": "你已经搜索了足够多的关键词。现在请从搜索结果中挑选最重要的 5 篇文章，使用 fetch_url_content 逐一读取全文。这一步非常关键，搜索摘要的信息量不够写深度报告。"})
 
             # If not enough searches after round 1, push back
-            if search_count < 5 and round_num == 1:
+            elif search_count < 5 and round_num == 1:
                 messages.append({"role": "user", "content": "继续搜索更多角度，特别是反面观点和具体数据。至少再搜 3-5 次。"})
 
         else:
@@ -359,7 +373,7 @@ def write_report(client, topic_info, brain_dump_text, research_materials):
 
     prompt = WRITER_PROMPT.format(
         brain_dump=brain_dump_text,
-        research_materials=research_materials[:15000],
+        research_materials=research_materials[:25000],
         current_time=format_date_cst(now_cst()),
     )
 
