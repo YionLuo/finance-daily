@@ -211,10 +211,19 @@ RESEARCH_SYSTEM_PROMPT = """你是 Y Daily 的首席分析师，正在对「{top
 必须包含：
 - 标题（有态度、有判断，不是中性描述）
 - 副标题（核心论点一句话浓缩）
-- 正文 4000-6000 字，分 5-7 个章节，每章有小标题
+- 正文 **5000-8000 字**，分 4-6 个章节，每章有小标题
 - 关键数据和论点后标注来源（文章标题或 URL）
 - 末尾附「核心判断」（4-5 条，每条一句话，有态度）
 - 末尾附「关注标的」（相关美股/港股代码 + 一句话逻辑）
+
+⚠️ 写作深度要求（极其重要）：
+- **每个章节至少 800 字**。你写的是深度研究，不是新闻摘要。
+- 每个论点必须有**完整的论证链条**：事实 → 为什么重要 → 推导过程 → 结论
+- 不要只写"X 很重要"——要解释 WHY 和 HOW
+- 善用对比和类比：和竞争对手比、和历史事件比、和市场预期比
+- 加入"反面论证"：你的判断可能错在哪？什么条件下会反转？
+- 章节不宜过多——4-6 个章节就够，宁可每章写透不要章节多但每章都浅
+- 想象你是在给基金经理做投研路演，不是在写公众号推送
 
 开始研究。
 """
@@ -244,12 +253,14 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
    - 搜中英文都要试（英文信息通常更丰富更新）
 2. 对重要文章用 fetch_url_content 读取全文获取细节数据（至少读 3 篇全文）
 3. 搜集足够素材后（至少搜索 5 次以上），先列出报告提纲
-4. 然后写出完整报告（必须 4000 字以上，每个章节至少 500 字）
+4. 然后写出完整报告（必须 5000 字以上，4-6 个章节，每章至少 800 字）
 
 重要：
 - 不要急于写报告。先充分搜索，确保你有 2026 年最新的数据和观点。
-- 你知识库里的信息可能是 2024 年的。比如你可能记得 Claude 3，但现在已经是 Claude 4.6 了。所有具体版本号、估值、市场份额都用搜索结果。
-- 如果搜索结果不足，换不同的关键词再搜。"""},
+- 你知识库里的信息可能是 2024 年的。所有具体版本号、估值、市场份额都用搜索结果。
+- 如果搜索结果不足，换不同的关键词再搜。
+- 写深度研究而不是新闻摘要：每个论点都要展开论证——为什么？证据是什么？反面怎么看？
+- 章节要少而精（4-6 个），每章写透，不要 7-8 个章节每章只有 300 字。"""},
     ]
 
     collected_sources = []
@@ -327,11 +338,19 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
                 messages.append({"role": "user", "content": f"你只搜索了 {search_count} 次，素材还不够。请继续用 web_search 搜索更多角度的信息，搜索时带上 '2026' 确保时效性。特别需要：反面观点、具体数据（2026 年最新财报/融资/市场规模）、行业内不同立场的分析。至少再搜索 3 次再开始写。"})
                 continue
 
-            # If output is too short, ask to expand
-            if len(text) < 3000 and round_num < MAX_AGENT_ROUNDS - 2:
-                print(f"  Output too short ({len(text)} chars). Requesting expansion.")
+            # If output is too short, ask to expand (max 3 expansion attempts)
+            expansion_count = sum(1 for m in messages if isinstance(m, dict) and m.get("role") == "user" and "展开" in m.get("content", ""))
+            if len(text) < 3500 and round_num < MAX_AGENT_ROUNDS - 2 and expansion_count < 3:
+                print(f"  Output too short ({len(text)} chars, expansion #{expansion_count+1}). Requesting expansion.")
                 messages.append(message)
-                messages.append({"role": "user", "content": f"报告只有约 {len(text)} 字，远低于 4000 字的最低要求。请扩展每个章节的分析深度——补充更多数据、对比、案例和推理过程。不要重写，在现有基础上扩展。目标至少 4000 字。"})
+                messages.append({"role": "user", "content": f"""报告只有约 {len(text)} 字，需要更详细。
+
+请选择报告中**最重要的 2 个章节**，大幅展开论证：
+- 加入具体的对比分析（和竞争对手、和历史事件）
+- 展开因果推理链条（不只是说"X 很重要"，要解释为什么、影响路径是什么）
+- 加入反面论证（什么条件下判断会反转）
+
+直接输出展开后的完整报告。"""})
                 continue
 
             final_text = text
