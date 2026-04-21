@@ -198,6 +198,13 @@ RESEARCH_SYSTEM_PROMPT = """你是 Y Daily 的首席分析师，正在对「{top
 - 指出主流叙事中的盲点或错误
 - 所有数据和事实必须标注来源
 
+=== ⚠️ 绝对禁止编造数据 ===
+你的报告会经过独立的 fact-check 环节，每一条事实声明都会被搜索引擎验证。
+- **绝对不要编造引用来源**：不要写"据 Gartner 报告""据 McKinsey 数据""据 The Information 报道"等，除非你在搜索中确实看到了这些报告/报道的内容
+- **绝对不要编造具体数字**：如果你搜索中没有看到具体的营收、估值、增长率数字，就不要写。宁可写"数额未公开"也不要编一个
+- **只使用你搜索到的信息**：你能引用的唯一来源是你通过 web_search 和 fetch_url_content 实际看到的内容
+- 如果某个论点缺乏数据支撑，用逻辑推理和定性分析代替，不要用假数据凑
+
 === 报告格式 ===
 直接输出中文文章，不要 JSON。
 
@@ -351,116 +358,191 @@ def research_agent_loop(client, topic_info, brain_dump_text, breaking_context):
     return final_text, collected_sources
 
 
-# ============ Stage 3.5: Fact Check ============
+# ============ Stage 3.5: Fact Check (with search verification) ============
 
-FACT_CHECK_PROMPT = """你是一位严格的事实核查编辑。以下是一篇待发布的深度分析报告。
+FACT_CHECK_SYSTEM = """你是一位严格的事实核查编辑。你的工作是验证一篇深度分析报告中的事实性声明。
 
-你的任务：逐条检查报告中的**具体事实性声明**（数字、日期、公司名、产品版本、融资金额、市场份额等），判断它们是否有搜索结果支撑。
+⚠️ 你和报告的作者是不同的人。作者可能会编造看起来很真实的数据。你不能相信任何没有可靠来源的具体数字。
+
+你有 web_search 工具可以验证事实。
 
 === 待核查报告 ===
 {report_text}
 
-=== 核查规则 ===
-1. 只核查**事实性声明**（数据、事件、引用），不核查观点和判断
-2. 对每条事实，判断：
-   - ✅ 有来源支撑（报告中标注了出处，且合理可信）
-   - ⚠️ 无明确来源但合理（常识性内容或合理推断）
-   - ❌ 可疑/无来源（具体数字但没有标注出处，或看起来可能是编造的）
-3. 特别关注：
-   - 具体融资金额、估值、营收数字
-   - 产品版本号、发布日期
-   - 市场份额百分比
-   - 引用某人的话
+=== 你的工作流程 ===
 
-=== 输出格式 ===
-JSON 格式：
+第一步：提取所有事实性声明
+从报告中找出所有**具体的事实性声明**，特别是：
+- 具体金额（融资、估值、营收、市值）
+- 具体百分比（市场份额、增长率、转化率）
+- 具体事件（收购、合作、诉讼、产品发布）
+- 公司间的具体合作关系
+- 引用的报告名称或研究机构
+- 产品版本号和发布时间
+
+第二步：用 web_search 验证
+对每个关键声明，用 web_search 搜索验证。比如：
+- 报告说"亚马逊投资 Anthropic 250 亿" → 搜索 "Amazon Anthropic investment amount 2026"
+- 报告说"OpenAI 与腾讯合资入华" → 搜索 "OpenAI Tencent joint venture China 2026"
+- 报告说"某公司估值 800 亿" → 搜索 "company name valuation 2026"
+
+第三步：输出核查结果
+完成搜索验证后，输出 JSON：
 {{
-  "total_claims": 检查的事实条数,
-  "verified": 有来源支撑的条数,
-  "reasonable": 无来源但合理的条数,
-  "suspicious": 可疑条数,
+  "total_claims": 核查的事实条数,
+  "verified": 搜索确认正确的条数,
+  "unverifiable": 搜索找不到佐证但也没有反证的条数,
+  "false_or_fabricated": 搜索结果与声明矛盾、或完全找不到任何相关信息的条数,
   "issues": [
     {{
-      "claim": "可疑的具体声明",
-      "reason": "为什么可疑",
-      "suggestion": "建议如何处理（删除/修改/补充来源）"
+      "claim": "有问题的声明原文",
+      "search_result": "你搜到的实际信息是什么",
+      "verdict": "false（与事实矛盾）/ fabricated（完全找不到相关信息，很可能是编造的）/ unverifiable（无法确认）",
+      "fix": "建议的修正文本（如果应该删除就写'删除此句'）"
     }}
-  ],
-  "corrections": "如果有明显事实错误，写出修正后的表述。如果没有严重问题，写 null"
+  ]
 }}
 
-只输出 JSON，不要 markdown 代码块。
+重要：只输出最终 JSON。每个 issue 都必须有 search_result 说明你搜到了什么。
 """
+
+MAX_FACT_CHECK_ROUNDS = 8
 
 
 def fact_check(client, report_text):
     """
-    Stage 3.5: Fact-check the report.
+    Stage 3.5: Fact-check the report using web search verification.
+    The fact checker is an independent agent that searches to verify claims.
     Returns: (cleaned_report_text, fact_check_result)
     """
-    print("\n=== Stage 3.5: Fact Check ===")
+    print("\n=== Stage 3.5: Fact Check (search-verified) ===")
 
-    prompt = FACT_CHECK_PROMPT.format(report_text=report_text[:10000])
+    from news_fetcher import AGENT_TOOLS, execute_tool_call
 
-    response = llm_chat_with_retry(
-        client, [{"role": "user", "content": prompt}],
-        max_tokens=4096, temperature=0.1,
-    )
+    system_prompt = FACT_CHECK_SYSTEM.format(report_text=report_text[:10000])
 
-    # Parse result
-    cleaned = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
-    cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE).strip()
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": "开始核查。先列出需要验证的关键事实声明，然后逐个用 web_search 验证。"},
+    ]
 
-    try:
-        result = json.loads(cleaned)
-    except json.JSONDecodeError:
-        print(f"  WARNING: Could not parse fact check result, skipping")
+    final_result = None
+
+    for round_num in range(1, MAX_FACT_CHECK_ROUNDS + 1):
+        print(f"\n  --- Fact Check Round {round_num} ---")
+
+        try:
+            response = client.chat.completions.create(
+                model=LLM_MODEL,
+                messages=messages,
+                tools=AGENT_TOOLS,
+                temperature=0.1,
+                max_tokens=8192,
+            )
+        except Exception as e:
+            print(f"  ERROR: {e}")
+            break
+
+        message = response.choices[0].message
+        messages.append(message)
+
+        if message.tool_calls:
+            for tool_call in message.tool_calls:
+                func_name = tool_call.function.name
+                try:
+                    func_args = json.loads(tool_call.function.arguments)
+                except json.JSONDecodeError:
+                    func_args = {}
+
+                print(f"  Verify: {func_name}({json.dumps(func_args, ensure_ascii=False)[:100]})")
+                result = execute_tool_call(func_name, func_args)
+
+                if len(result) > 3000:
+                    result = result[:3000] + "\n...(truncated)"
+
+                messages.append({
+                    "role": "tool",
+                    "tool_call_id": tool_call.id,
+                    "content": result,
+                })
+
+            print(f"  Verified {len(message.tool_calls)} claim(s)")
+
+        else:
+            # Final output — parse JSON result
+            text = message.content or ""
+            cleaned = re.sub(r'^```(?:json)?\s*\n?', '', text, flags=re.MULTILINE)
+            cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE).strip()
+
+            try:
+                final_result = json.loads(cleaned)
+            except json.JSONDecodeError:
+                # Try to extract JSON from text
+                json_match = re.search(r'\{[\s\S]*\}', cleaned)
+                if json_match:
+                    try:
+                        final_result = json.loads(json_match.group())
+                    except json.JSONDecodeError:
+                        print(f"  WARNING: Could not parse fact check JSON")
+                        final_result = None
+            break
+
+    if not final_result:
+        print("  Fact check did not produce parseable result, skipping corrections")
         return report_text, None
 
-    total = result.get("total_claims", 0)
-    verified = result.get("verified", 0)
-    suspicious = result.get("suspicious", 0)
-    issues = result.get("issues", [])
+    # Print summary
+    total = final_result.get("total_claims", 0)
+    verified = final_result.get("verified", 0)
+    fabricated = final_result.get("false_or_fabricated", 0)
+    issues = final_result.get("issues", [])
 
-    print(f"  Claims checked: {total}")
-    print(f"  Verified: {verified}, Reasonable: {result.get('reasonable', 0)}, Suspicious: {suspicious}")
+    print(f"\n  Claims checked: {total}")
+    print(f"  Verified: {verified}, Unverifiable: {final_result.get('unverifiable', 0)}, False/Fabricated: {fabricated}")
 
     if issues:
-        print(f"  Issues found ({len(issues)}):")
-        for issue in issues[:5]:
-            print(f"    ❌ {issue.get('claim', '')[:80]}")
-            print(f"       → {issue.get('suggestion', '')[:80]}")
+        print(f"  Issues ({len(issues)}):")
+        for issue in issues[:8]:
+            verdict = issue.get("verdict", "?")
+            icon = "🚫" if verdict in ("false", "fabricated") else "⚠️"
+            print(f"    {icon} [{verdict}] {issue.get('claim', '')[:80]}")
+            print(f"       搜索结果: {issue.get('search_result', '')[:80]}")
+            print(f"       修正: {issue.get('fix', '')[:80]}")
 
-    # If there are suspicious claims, ask the model to fix them
-    if suspicious > 0 and issues:
-        print(f"\n  Requesting corrections for {suspicious} suspicious claims...")
-        fix_prompt = f"""以下报告有 {suspicious} 处可疑的事实声明需要修正。
+    # Apply corrections if there are false/fabricated claims
+    fixable_issues = [i for i in issues if i.get("verdict") in ("false", "fabricated")]
+
+    if fixable_issues:
+        print(f"\n  Applying corrections for {len(fixable_issues)} false/fabricated claims...")
+
+        fix_prompt = f"""以下报告有 {len(fixable_issues)} 处经搜索验证为**错误或编造**的事实声明，必须修正。
 
 === 原始报告 ===
 {report_text[:10000]}
 
-=== 需要修正的问题 ===
-{json.dumps(issues, ensure_ascii=False, indent=2)}
+=== 经搜索验证的错误 ===
+{json.dumps(fixable_issues, ensure_ascii=False, indent=2)}
 
-请输出修正后的完整报告。对于无法确认的数据：
-- 如果有近似的可靠数据可替代，替换之
-- 如果没有可靠来源，删除该声明或改为更审慎的表述（如"据报道约为X"改为"市场估计在X-Y范围"）
-- 不要编造新数据来替换
+修正规则：
+1. 对于标记为 "false" 的：用 fix 字段建议的正确表述替换
+2. 对于标记为 "fabricated" 的：直接删除该句或该段落，不要用新编的内容替换
+3. 不要添加任何新的事实声明
+4. 保持报告其余部分不变
 
-输出修正后的完整报告文本，不要 JSON。"""
+输出修正后的完整报告文本。"""
 
         fixed = llm_chat_with_retry(
             client, [{"role": "user", "content": fix_prompt}],
-            max_tokens=16384, temperature=0.2,
+            max_tokens=16384, temperature=0.1,
         )
 
-        if fixed and len(fixed) > len(report_text) * 0.5:
+        if fixed and len(fixed) > len(report_text) * 0.4:
             print(f"  Report corrected: {len(report_text)} → {len(fixed)} chars")
-            return fixed, result
+            return fixed, final_result
         else:
-            print(f"  Correction too short or failed, keeping original")
+            print(f"  Correction failed, keeping original")
 
-    return report_text, result
+    return report_text, final_result
 
 
 # ============ Stage 4: Format to JSON ============
