@@ -1455,19 +1455,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.77,
+  score: 68.14,
   rating: "greed",
-  timestamp: "2026-04-22T14:11:26+00:00",
+  timestamp: "2026-04-22T15:35:10+00:00",
   previousClose: 67.57,
   previous1Week: 57.63,
   previous1Month: 15.63,
   previous1Year: 13.6,
-  date: "2026年4月22日 22:19 CST"
+  date: "2026年4月22日 23:39 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:36", tag: "macro", tagText: "宏观", text: "受美伊停火延长消息提振，美国股市周三上涨。纳斯达克综合指数创下盘中及收盘历史新高，标普500指数和道琼斯工业平均指数也同步走高。市场风险偏好改善，暂时盖过了地缘政治紧张和油价飙升的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/21/stock-market-today-live-updates.html" },
+  { time: "23:22", tag: "ai", tagText: "AI", text: "GE Vernova（通用电气旗下能源业务）的财报显示，其业绩因人工智能数据中心的需求激增而获得显著提振。这反映了AI算力扩张对电力基础设施的强劲拉动作用，是AI热潮向传统工业领域传导的又一例证。", source: "Investor's Business Daily", url: "https://www.investors.com/news/ge-vernova-earnings-ai-data-center-power-gev-stock/?src=A00220&yptr=yahoo" },
+  { time: "23:16", tag: "macro", tagText: "宏观", text: "特朗普政府正在就一项救助方案进行深入谈判，以拯救陷入困境的超低成本航空公司Spirit Airlines。此举表明，在行业面临地缘政治和运营挑战的背景下，美国政府可能对特定航空企业进行干预。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/spirit-airlines-rescue-trump-administration.html" },
+  { time: "23:09", tag: "macro", tagText: "宏观", text: "由于伊朗战争的影响，企业行为正从最初的涨价转向削减产出。从航空业到化工业，多个行业的产出开始下降，表明地缘政治冲击正从价格层面传导至实体经济层面，可能对全球供应链和经济增长构成进一步压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/first-came-the-price-rises-now-output-is-falling-in-industries-ranging-from-airlines-to-chemicals-0f187ef8?mod=mw_rss_topstories" },
   { time: "22:13", tag: "macro", tagText: "宏观", text: "瑞士联邦委员会公布银行业改革计划，提议要求瑞银集团(UBS)增加高达200亿美元的资本金。此举是在该国最大银行数月游说后，为加强金融体系稳定而采取的重大监管措施。", source: "Financial Times", url: "https://www.ft.com/content/c9ba52cb-c862-45ed-abb5-e0b599e17888" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "由于关税影响，中小企业(SMBs)正放弃‘观望’态度，被迫进行供应链重组。这表明地缘政治紧张和贸易政策变化正对全球商业运营产生实质性影响。", source: "FreightWaves", url: "https://finance.yahoo.com/economy/policy/articles/smbs-ditch-wait-see-tariffs-140000027.html" },
   { time: "21:45", tag: "geo", tagText: "地缘", text: "伊朗宣布在霍尔木兹海峡扣押了两艘船只，此举发生在特朗普总统宣布延长美伊停火协议以继续和平谈判之后。事件加剧了该关键石油运输通道的紧张局势，并可能影响停火前景。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/strait-of-hormuz-ships-attacked-iran-war.html" },
@@ -1484,15 +1488,14 @@ const breakingNews = [
   { time: "13:41", tag: "macro", tagText: "宏观", text: "欧洲央行高级政策制定者、拉脱维亚央行行长Mārtiņš Kazāks表示，欧洲央行有‘奢侈’的时间等待，不必急于因伊朗战争推高的能源价格而加息。", source: "FT", url: "https://www.ft.com/content/5978f69a-83c3-43dd-98c4-d9d95eb542c7" },
   { time: "13:30", tag: "macro", tagText: "宏观", text: "印度股市下跌：Sensex指数下跌600点，Nifty指数跌破24,450点。IT股拖累大盘，而FMCG（快速消费品）板块提供支撑。", source: "Moneycontrol.com", url: "https://news.google.com/rss/articles/CBMikwJBVV95cUxNMTdicWswV05KRVB2UEZnWXBZaXBaNjkybUVZcTg1ZU12Y2pERHd5ZHY0QnJjMGc4NzQtWkdRR1pZMDJVamhtMDdKQkt0WGoxbEFkZmZzTlZnRVpMSDRBNEJpUFhtX2VXZ0dRbXhfOGEtbVB0M0xPS2hCTzR5RnZWUGk3SXFISms5NTllOUNlNVl1eTU1MjJaZVpVSEw4cjN3a00wOVk4cFBRVkQ1Rk04aVVjSDFzbjJ2Y2JvRGxqNG9wcEdseXhsak5fVVVDU0JqWnZiT1dxTmVMUzJ1cUxVZUx0RlhiQ0ZQbGRnTE5paV9jTUN2SllIRXNBRGcxN2lNdHNRamxpdGh2eWNGblYydWJ2RdIBmAJBVV95cUxQWUpGSmNOYW1xTG82cjVqemdBVmtZRFkzQXBqLVFNT3hxbkhBTFNCQnhmTXJtRlBkdmRMNVJaMkowWFoybW51ZjVacG5YYkZmTmxxSnN6NGtPNUlmelJIc0ZfakRCTzNtN1lrakZVUElDWjNIMjhnZTdicGFtT3FqMmtlTU5KbzhsOExtdXlVTEYxdGt0cTJjZGJrN1d5UGZRcXhmS3VTVW8telcwby1sY0haajBIam1VWmxaUGpfWWlGMnczT0tBYndFQm1yZ1BDbUNEZU5zT3k1anllTHlybTI0ODE2VGJucVk2cjZ6U1hZV3hpSEp3QlFBOVB3V0dmZ0NkaGZrbkpqS3ktaFRzOUNMWlV4NnBN?oc=5" },
   { time: "13:22", tag: "geo", tagText: "地缘", text: "伊朗驻联合国大使指责美国扣押船只的行为违反了国际法，并称华盛顿的‘持续国际不法行为’破坏了停火协议。此举加剧了美伊之间的紧张关系。", source: "FT", url: "https://www.ft.com/content/da5f559c-f340-4091-95ca-dd930627f292" },
-  { time: "12:31", tag: "ai", tagText: "AI", text: "SpaceX宣布已获得以600亿美元收购AI编程初创公司Cursor的权利，交易可在今年晚些时候进行。作为替代方案，SpaceX也可支付100亿美元以获得双方合作成果。此举是马斯克旗下公司追赶OpenAI和Anthropic等竞争对手的最新努力。", source: "FT", url: "https://www.ft.com/content/d23bd03a-92ac-4e81-8460-3b867a833860" },
-  { time: "11:28", tag: "tech", tagText: "科技", text: "英伟达供应商胜利精密技术在香港上市首日股价飙升60%，成为今年迄今为止香港规模最大的首次公开募股。这反映了市场对AI供应链关键环节的持续追捧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/21/nvidia-supplier-victory-giant-sees-shares-soar-60percent-in-hong-kong-debut.html" },
-  { time: "11:15", tag: "geo", tagText: "地缘", text: "日本政府宣布解除致命武器出口禁令，标志着其长期和平主义立场的重大转变。此举将允许日本国防承包商瞄准国际市场，可能重塑全球防务贸易格局。", source: "Financial Times", url: "https://www.ft.com/content/539bdbe1-a535-44fb-aa7a-2c1fe1828adf" },
-  { time: "09:41", tag: "ai", tagText: "AI", text: "杰夫·贝索斯旗下代号为“普罗米修斯计划”的AI实验室在一轮融资中估值接近380亿美元。该公司专注于开发工业应用模型，显示出AI领域巨额资本持续涌入。", source: "Financial Times", url: "https://www.ft.com/content/87ea0ced-bf3c-4822-8dda-437241570ded" },
 ];
-const breakingDate = "2026年4月22日 22:19 CST";
+const breakingDate = "2026年4月22日 23:39 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:19", tag: "tech", tagText: "科技", text: "英伟达面临来自内部AI芯片的压力，这可能对其市场主导地位构成挑战。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZ1Jsa2s2a3MwV1c2UlNwYm8zeVFONndXc2lPVk9VWDRfdjFkdWNjQ0o5Nk5YY3pUMzlKVTNPUDhFZjZmWDFYYmUwV1M0dHQ5ZGllcDJKNGI3amUwOGNvZl8xcWVycVdtakYxNjltZmJpZTdrNERuQV9XdmhVOS1iZFNHeTUtck5CNmd1NVU2bw?oc=5" },
+  { time: "22:22", tag: "ai", tagText: "AI", text: "Meta开始通过名为“模型能力计划”（Model Capability Initiative, MCI）的工具，追踪美国员工在电脑上的活动数据，用于训练其AI智能体。此举引发了对员工隐私和工作场所监控的担忧。", source: "The Verge", url: "https://www.theverge.com/tech/916681/meta-ai-agents-employee-tracking" },
+  { time: "22:22", tag: "ai", tagText: "AI", text: "OpenAI与印度IT巨头印孚瑟斯（Infosys）达成合作，旨在将OpenAI的AI工具带给更多企业客户。合作初期将专注于软件工程、遗留系统现代化和工作流程自动化等领域。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/openai-teams-up-with-infosys-to-bring-ai-tools-to-more-businesses/" },
   { time: "21:56", tag: "macro", tagText: "宏观", text: "英国政府宣布启动一项规模达6.75亿美元（约合5.4亿英镑）的基金，专门用于支持AI初创公司。此举旨在巩固英国在人工智能领域的全球竞争力，并推动本土创新。", source: "AI Business", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTjFhdTlUUjhNZ0h3aUdENUZwaXdRVHJjR05FbnFweXM5ZmJQaHpmbENjaXpkMHYxVjliSkxNUUJEeHBuLUxsM2NhaXQzeGlPaE1DWlR0eEc3Um1wZ00tU01jSE9SUGo1MF8ydjY4NG94aEpaMi1McVZfUTRsbUJHdlIySQ?oc=5" },
   { time: "21:06", tag: "ai", tagText: "AI", text: "Reid Hoffman在‘tokenmaxxing’辩论中表示，追踪AI代币使用可以衡量采用率，但应结合上下文，不应直接视为生产力指标。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "AI药物发现初创公司10x Science完成480万美元种子轮融资。该公司旨在帮助制药研究人员从AI生成的海量候选分子中，识别出真正有潜力的药物分子，以解决AI产出过剩但验证不足的行业痛点。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/ai-is-spitting-out-more-potential-drugs-than-ever-this-start-up-wants-to-figure-out-which-ones-matter/" },
@@ -1510,11 +1513,8 @@ const aiBreakingNews = [
   { time: "02:15", tag: "tech", tagText: "科技", text: "激光雷达公司禾赛科技发布Picasso 6D全彩色SPAD-SoC、下一代ETX，并在空间智能与物理AI领域推出创新。这些进展旨在提升自动驾驶和机器人等领域的感知能力。", source: "The Malaysian Reserve", url: "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPbUU0UU5MSzVXb1pza0hCZ1lja0NaMzA5MVpBNHlGWmRlaEZJdTI4R04tYnFlUFI3a0RYR2RjQUVZSGNoRkFhdll0WVI1SHd6UW9yeF9JWkVXVUtJQlpiWFpLb29wbnJfQ0lkc0hkdG5sSzhGLXh4QWVHc3ZpQ0N6dllBWEtlLTZZMmx2MjJvNG1zQk9IbnU2alhzSmdNVVoxbG9XX21NaW5leGFKbDdsaGxqcVM3QndDMzVuYnJKWFhEeG90eldELWFxeC16Rlk1LUdWLVdQMUtwb1VRLU1EbzMxbXdQUGF4ZDBwellR?oc=5" },
   { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
   { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
-  { time: "00:06", tag: "geo", tagText: "地缘", text: "据TechCrunch报道，美国国家安全局（NSA）的情报人员正在使用Anthropic的受限AI模型Mythos，尽管五角大楼与该公司存在分歧。这表明先进AI模型正被迅速应用于国家情报领域，引发对技术监管与安全的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/nsa-spies-are-reportedly-using-anthropics-mythos-despite-pentagon-feud/" },
-  { time: "23:50", tag: "ai", tagText: "科技", text: "AI芯片初创公司融资热潮持续，多家公司获得资金以挑战英伟达的市场主导地位。这反映了资本对AI硬件替代方案的强烈兴趣和行业竞争的加剧。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPczJiek1HZHFMeGtoMHBXMzZXTmhmUFRXZkpabGllU2tXZmV2OUttNFhTa2Q0UXF4TlRPRG5RZVZPSUhaUk9MaHZGcjc2VUFlUHB0WHRwb1BhQzd4RHY5a1hmOThYX1VybGlscmxlX1lyT2gza2Q1VVg1a3p0ME1xXzF0VkJ3c3BQQlNiT3pvODFuZ2tuaVhUckdMNDgwX1ZvZVJESTRmbnpwM1h4b1E?oc=5" },
-  { time: "23:19", tag: "tech", tagText: "科技", text: "英伟达面临来自内部AI芯片的压力，这可能对其市场主导地位构成挑战。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZ1Jsa2s2a3MwV1c2UlNwYm8zeVFONndXc2lPVk9VWDRfdjFkdWNjQ0o5Nk5YY3pUMzlKVTNPUDhFZjZmWDFYYmUwV1M0dHQ5ZGllcDJKNGI3amUwOGNvZl8xcWVycVdtakYxNjltZmJpZTdrNERuQV9XdmhVOS1iZFNHeTUtck5CNmd1NVU2bw?oc=5" },
 ];
-const aiBreakingDate = "2026年4月22日 22:19 CST";
+const aiBreakingDate = "2026年4月22日 23:39 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
