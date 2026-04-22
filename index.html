@@ -1310,11 +1310,18 @@
   }
 
   /* Tables in research content */
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0 24px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+  }
   .research-section-content table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0 24px;
     font-size: 14px;
+    margin: 0;
   }
 
   .research-section-content th {
@@ -1472,9 +1479,10 @@
     .research-section-content ul, .research-section-content ol { padding-left: 16px; margin: 12px 0 16px; }
     .research-section-content li { margin-bottom: 8px; line-height: 1.7; }
     .research-section-content blockquote { padding: 14px 16px; margin: 16px 0; font-size: 14px; }
-    /* Tables: horizontal scroll on mobile */
-    .research-section-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; font-size: 13px; }
-    .research-section-content th, .research-section-content td { padding: 8px 10px; min-width: 100px; }
+    /* Tables: horizontal scroll on mobile via wrapper */
+    .table-scroll-wrapper { margin: 12px -16px 16px; border-radius: 0; border-left: none; border-right: none; }
+    .research-section-content table { font-size: 13px; min-width: 500px; }
+    .research-section-content th, .research-section-content td { padding: 8px 10px; }
     .research-section-content table { white-space: normal; }
     .sources-section { padding-top: 24px; }
     .source-list li { flex-direction: column; gap: 4px; font-size: 13px; }
@@ -1930,9 +1938,13 @@ function renderResearchArticle(reportId) {
 
   // Sections
   (report.sections || []).forEach(sec => {
+    // Wrap <table> in scrollable container for mobile
+    let content = sec.content || '';
+    content = content.replace(/<table/g, '<div class="table-scroll-wrapper"><table');
+    content = content.replace(/<\/table>/g, '</table></div>');
     html += `<div class="research-section" id="${sec.id || ''}">
       <h2 class="research-section-title">${sec.title}</h2>
-      <div class="research-section-content">${sec.content}</div>
+      <div class="research-section-content">${content}</div>
     </div>`;
   });
 
