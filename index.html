@@ -1457,17 +1457,22 @@
 const fearGreedData = {
   score: 67.74,
   rating: "greed",
-  timestamp: "2026-04-22T08:36:31+00:00",
+  timestamp: "2026-04-22T11:46:46+00:00",
   previousClose: 67.57,
   previous1Week: 57.63,
   previous1Month: 15.63,
   previous1Year: 13.6,
-  date: "2026年4月22日 16:54 CST"
+  date: "2026年4月22日 20:06 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:00", tag: "tech", tagText: "科技", text: "谷歌发布专为人工智能训练和推理设计的新一代TPU芯片，内置大量静态随机存取存储器，旨在挑战英伟达在AI芯片市场的主导地位。这是科技巨头在关键硬件领域竞争加剧的最新迹象。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/google-launches-training-and-inference-tpus-in-latest-shot-at-nvidia.html" },
+  { time: "19:58", tag: "macro", tagText: "宏观", text: "波音公司第一季度财报显示亏损收窄，飞机交付量上升。公司预计新的737 Max 7和Max 10型号将在今年晚些时候获得认证，并于2027年开始交付。美国联邦航空管理局也表示看到了获得关键认证的路径。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/boeing-ba-q1-2026-earnings.html" },
+  { time: "19:50", tag: "ai", tagText: "AI", text: "英国金融行为监管局（FCA）宣布将启动一项AI测试计划，并已指定八家银行参与。此举旨在评估和监管金融机构对人工智能技术的应用。", source: "Retail Banker International", url: "https://finance.yahoo.com/sectors/technology/articles/uk-fca-names-eight-banks-115428708.html" },
+  { time: "19:45", tag: "tech", tagText: "科技", text: "AT&T第一季度财报显示，其无线用户净增数超出预期，这得益于将无线服务与高速光纤服务捆绑销售的策略取得成功。公司营收符合预期，利润超出预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/att-adds-more-wireless-subscribers-than-expected-as-bundling-pays-off.html" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "数据分析公司Palantir与美国农业部签署了一份价值3亿美元的合同，以帮助保障美国的食品供应链安全。这是该公司在军事和国防核心合同之外，持续推动业务多元化的一部分。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/palantir-inks-300-million-deal-with-usda-to-safeguard-food-supply.html" },
   { time: "16:54", tag: "macro", tagText: "宏观", text: "英国3月通胀率跃升至3.3%，受伊朗战争推动燃油价格创三年多来最大涨幅。能源成本飙升正加剧英国及欧洲经济压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/uk-inflation-jumps-to-3point3percent-in-march-as-fuel-prices-surge.html" },
   { time: "16:54", tag: "geo", tagText: "地缘", text: "新加坡外长维文警告称，若中美在太平洋开战，当前霍尔木兹海峡的冲突只是‘预演’。他是在CNBC CONVERGE LIVE活动上讨论中美关系复杂性时作出上述表态。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/cnbc-converge-live-hormuz-singapore-fm-vivian-iran-war.html" },
   { time: "16:54", tag: "macro", tagText: "宏观", text: "欧洲股市周三涨跌互现，ASMI一季度业绩超预期股价大涨8%。市场同时评估伊朗停火延长及企业财报影响，美股期货因停火延长而走高。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/european-markets-stoxx-600-ftse-dax-iran-latest-news-oil-price.html" },
@@ -1483,16 +1488,13 @@ const breakingNews = [
   { time: "06:43", tag: "tech", tagText: "科技", text: "亚马逊旗下蓝色起源公司的新格伦火箭因美国联邦航空管理局的指令而停飞，这对其旨在与SpaceX星链竞争的卫星互联网雄心构成挫折。此次停飞也影响了AST SpaceMobile的BlueBird 7卫星发射任务，该卫星虽成功入轨但未达到预定高度，导致AST SpaceMobile股价下跌。", source: "International homepage (FT)", url: "https://www.ft.com/content/cbc55056-91f2-4b69-af26-fd749fbf15ed" },
   { time: "06:00", tag: "macro", tagText: "宏观", text: "支持特朗普的超级政治行动委员会Maga Inc.已筹集近3.5亿美元资金，为中期选举建立雄厚“战争基金”。3月份单月筹款3500万美元，主要捐赠者包括亿万富翁黛安·亨德里克斯和风投公司Andreessen Horowitz。", source: "Financial Times", url: "https://www.ft.com/content/01e3925e-bca7-4595-9788-ee64f4e94f5f" },
   { time: "05:54", tag: "macro", tagText: "宏观", text: "美国劳工部长洛里·查韦斯-德雷默宣布辞去特朗普内阁职务，由基思·桑德林接任。这是特朗普政府近期又一重要人事变动。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/20/labor-secretary-lori-chavez-deremer-resignation-keith-sonderling.html" },
-  { time: "05:21", tag: "macro", tagText: "宏观", text: "阿拉斯加航空集团因伊朗战争导致航空燃油成本飙升，前景不明，宣布撤回其2026年全年利润预测。这凸显了地缘政治紧张局势对航空业的直接冲击。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/20/alaska-air-pulls-2026-profit-forecast-amid-fuel-costs-related-uncertainty.html" },
-  { time: "04:55", tag: "tech", tagText: "科技", text: "苹果公司宣布，现任CEO蒂姆·库克将于9月1日卸任，转任公司执行董事长。硬件工程高级副总裁约翰·特努斯将接任CEO一职。这是苹果自2011年库克接替乔布斯以来最重要的领导层变动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/apple-names-john-ternus-ceo-replacing-tim-cook-who-becomes-chairman.html" },
-  { time: "04:54", tag: "ai", tagText: "AI", text: "亚马逊宣布将向AI初创公司Anthropic追加投资高达250亿美元，作为一项AI基础设施协议的一部分。作为交换，Anthropic承诺在未来十年内使用超过1000亿美元的亚马逊云服务。此举进一步巩固了亚马逊在生成式AI军备竞赛中的地位。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html" },
-  { time: "04:51", tag: "macro", tagText: "宏观", text: "受特朗普总统支持将LSD等致幻剂用于心理健康治疗的行政命令推动，致幻剂概念股大幅上涨。该命令旨在加快相关药物通过监管审批流程的速度，为这一新兴医疗领域带来政策利好。", source: "MarketWatch", url: "https://www.marketwatch.com/story/psychedelic-stocks-rally-with-trumps-support-addafa78?mod=mw_rss_topstories" },
-  { time: "04:43", tag: "ai", tagText: "AI", text: "据报道，芯片设计公司迈威尔科技将帮助谷歌开发定制AI芯片。受此消息提振，迈威尔股价上涨，而其竞争对手博通的股价则下跌。今年3月，英伟达曾向迈威尔投资20亿美元，显示出市场对AI芯片供应链的持续关注。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/marvell-stock-google-custom-ai-chips.html" },
 ];
-const breakingDate = "2026年4月22日 16:54 CST";
+const breakingDate = "2026年4月22日 20:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:00", tag: "ai", tagText: "AI", text: "谷歌云与Mira Murati领导的Thinking Machines Lab签署了一项价值数十亿美元的新协议，以获取由英伟达最新GB300芯片驱动的AI基础设施。此举深化了双方的合作关系，旨在支持前沿AI模型的开发与训练。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "谷歌宣布将在其地图服务中大规模注入生成式AI功能。此举旨在提升用户体验，例如通过自然语言交互获取更智能的路线规划和地点推荐，标志着谷歌核心产品AI化的又一重要步骤。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-maps-is-about-to-get-a-big-dose-of-ai/" },
   { time: "16:00", tag: "ai", tagText: "AI", text: "欧洲在AI领域拥有人才和资金，但需摆脱对“美股七巨头”的依赖，才能实现突破。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMmdVNjh5LUJSSXp4RE9zMUhkWUZWbE93cE03eWdrVzZ1V0RpU1ItSzU2cDB0WktJMkQ0eVpaZzN0akZwc2duN05NQUgxS0JmclNRZWRpdEdFTjBoWEpDX05RMzFhbTFteDBGQ1VmY0hvZlVZRXBxRGNuajVJTlNIbUpuUHE2RUJCMzE2R1Z4WjdJcjRmUmg3eDhzZVBJOVU1?oc=5" },
   { time: "13:03", tag: "ai", tagText: "AI", text: "瑞士洛桑联邦理工学院（EPFL）的研究人员在AI领域取得突破，开发出能够模拟阅读障碍（Dyslexia）的人工智能模型。这项研究有助于更深入地理解阅读障碍的神经机制，并可能为开发新的诊断和干预工具铺平道路。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMUl2Z0V4VlBkbUZBNU9BOV9RNVNqcmlIRTFYVEpzczdwY3h2RWhZaHh1VVM1ZXJScmJXdDJGSGxOcnV1VUN0OVV5Z014M2dCdDkyaTZGa0RYZDdVSnpBeGpBTEdCd0NGTi0zYlU1UXpiMUk0bDJBM0lFZmktbnFkXzNidG9acEhu?oc=5" },
   { time: "12:41", tag: "ai", tagText: "AI", text: "AI初创公司Core Automation正积极从顶尖AI研究机构挖角，已成功招募来自Anthropic和DeepMind的研究人员。此举表明，专注于AI自动化领域的公司正通过吸纳顶尖人才来增强其研发实力，行业人才竞争持续加剧。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZlg3ZlpGWnBYYU1GSk82bTIyNVpZcnk2M1dSUEZLRUlEYXI5Y0V6T0c3R0ZIZC1OaEhSR0E1TlJELWhxVTFCUlQ0TGIwVHYwYlJYMF9pM3Z3VTVFSzRnUjhhd0Jna2E1ekdhR3JUbDlXMXlObTVILVpkTXg2bVZpV185WF8yUm1GVjVCS2RrdWNLckVvQTg3dldRU1NkRDB1ZzY4RA?oc=5" },
@@ -1511,10 +1513,8 @@ const aiBreakingNews = [
   { time: "22:24", tag: "tech", tagText: "科技", text: "Allbirds出售鞋类业务后转向AI领域，更名为NewBird AI，并锁定5000万美元的可转换融资。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/after-sale-of-its-shoe-business-allbirds-pivots-to-ai/" },
   { time: "21:56", tag: "macro", tagText: "宏观", text: "英国政府宣布启动一项规模达6.75亿美元（约合5.4亿英镑）的基金，专门用于支持AI初创公司。此举旨在巩固英国在人工智能领域的全球竞争力，并推动本土创新。", source: "AI Business", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTjFhdTlUUjhNZ0h3aUdENUZwaXdRVHJjR05FbnFweXM5ZmJQaHpmbENjaXpkMHYxVjliSkxNUUJEeHBuLUxsM2NhaXQzeGlPaE1DWlR0eEc3Um1wZ00tU01jSE9SUGo1MF8ydjY4NG94aEpaMi1McVZfUTRsbUJHdlIySQ?oc=5" },
   { time: "21:06", tag: "ai", tagText: "AI", text: "Reid Hoffman在‘tokenmaxxing’辩论中表示，追踪AI代币使用可以衡量采用率，但应结合上下文，不应直接视为生产力指标。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/" },
-  { time: "21:05", tag: "ai", tagText: "AI", text: "Adobe、英伟达与广告巨头WPP合作，推出大规模自主AI代理（Adobe Agents），旨在解锁突破性的创意智能。该合作将AI深度集成到创意工作流程中，预示着广告和内容创作行业的变革。", source: "NVIDIA Blog", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBHcVhIaEhFTGh6Ul9Xbm9Jc0JuR3VlSEIzb0JSRHpseGRFM1NTNGV1azFkWTM5MDhkcDFlZy10b1RLa1JpVEFXZFdLUlNfeWJTb1ZyYUtGeUhsUE5YXzJPNHVyZ1huVzlo?oc=5" },
-  { time: "21:01", tag: "tech", tagText: "科技", text: "Adobe推出全新Firefly AI助手，可跨Creative Cloud应用（如Photoshop、Premiere等）完成任务，标志着创意工作的‘根本性转变’。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/adobes-new-firefly-ai-assistant-can-use-creative-cloud-apps-to-complete-tasks/" },
 ];
-const aiBreakingDate = "2026年4月22日 16:54 CST";
+const aiBreakingDate = "2026年4月22日 20:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
