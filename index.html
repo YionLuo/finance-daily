@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 68.14,
   rating: "greed",
-  timestamp: "2026-04-22T20:47:35+00:00",
+  timestamp: "2026-04-22T22:42:46+00:00",
   previousClose: 67.57,
   previous1Week: 57.63,
   previous1Month: 15.63,
   previous1Year: 13.6,
-  date: "2026年4月23日 05:06 CST"
+  date: "2026年4月23日 06:59 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:17", tag: "geo", tagText: "地缘", text: "伊朗战争导致巴拿马运河通行费创下历史新高。亚洲买家为获取西方原油，将竞价推高至冲突前水平的五倍。这凸显了地缘冲突对全球关键航运通道成本的巨大冲击。", source: "Financial Times", url: "https://www.ft.com/content/05c0e794-4ed9-4e2a-a026-fb8575f789c3" },
+  { time: "06:05", tag: "tech", tagText: "科技", text: "特斯拉第一季度财报显示，其营收不及预期但利润超预期，汽车利润率大幅跃升。同时，公司宣布将年度资本支出预测大幅提高至250亿美元，CEO马斯克表示将加倍押注自动驾驶出租车、卡车、机器人和芯片工厂等AI相关领域。", source: "Financial Times", url: "https://www.ft.com/content/7ce83108-9f2d-48b4-8ce1-28865045bd67" },
+  { time: "05:44", tag: "geo", tagText: "地缘", text: "美国海军部长约翰·费兰已立即离开特朗普政府。此举正值伊朗战争期间，是美国国防部高层的一次重要人事变动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/navy-secretary-john-phelan-iran-war.html" },
+  { time: "05:35", tag: "crypto", tagText: "加密", text: "市场分析指出，伊朗停火协议提振了投资者对比特币的胃口，资本正通过多个渠道流入。这使得比特币不太可能出现此前几个月的剧烈逆转，更有可能积聚动能突破80,000美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-iran-cease-fire-has-boosted-investors-appetite-for-bitcoin-heres-why-it-could-break-past-80-000-soon-29c08c3e?mod=mw_rss_topstories" },
   { time: "04:51", tag: "macro", tagText: "宏观", text: "IBM首席执行官阿尔温德·克里希纳表示，伊朗局势及其他不确定性因素正在影响公司前景。他同时预计，竞争对手将很快在性能和能力上追平Anthropic的Mythos AI模型。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/ibm-ceo-arvind-krishna-earnings-iran-anthropic.html" },
   { time: "04:29", tag: "tech", tagText: "科技", text: "软件公司ServiceNow股价大跌14%，因其订阅收入受到伊朗战争影响。尽管公司盈利和收入超出预期，并持续扩展AI产品，但其利润率展望令投资者担忧。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/servicenow-now-earnings-q1-2026.html" },
   { time: "04:02", tag: "macro", tagText: "宏观", text: "市场分析指出，此前被大肆宣扬的2026年资金从科技股轮动到其他板块的趋势可能已经结束。随着成长股重获青睐，那些作为轮动受益者的板块本身也开始表现落后。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/the-much-hyped-great-rotation-out-of-tech-for-2026-may-be-over-already.html" },
@@ -1645,16 +1649,15 @@ const breakingNews = [
   { time: "23:16", tag: "macro", tagText: "宏观", text: "特朗普政府正在就一项救助方案进行深入谈判，以拯救陷入困境的超低成本航空公司Spirit Airlines。此举表明，在行业面临地缘政治和运营挑战的背景下，美国政府可能对特定航空企业进行干预。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/spirit-airlines-rescue-trump-administration.html" },
   { time: "23:09", tag: "macro", tagText: "宏观", text: "由于伊朗战争的影响，企业行为正从最初的涨价转向削减产出。从航空业到化工业，多个行业的产出开始下降，表明地缘政治冲击正从价格层面传导至实体经济层面，可能对全球供应链和经济增长构成进一步压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/first-came-the-price-rises-now-output-is-falling-in-industries-ranging-from-airlines-to-chemicals-0f187ef8?mod=mw_rss_topstories" },
   { time: "22:13", tag: "macro", tagText: "宏观", text: "瑞士联邦委员会公布银行业改革计划，提议要求瑞银集团(UBS)增加高达200亿美元的资本金。此举是在该国最大银行数月游说后，为加强金融体系稳定而采取的重大监管措施。", source: "Financial Times", url: "https://www.ft.com/content/c9ba52cb-c862-45ed-abb5-e0b599e17888" },
-  { time: "22:00", tag: "macro", tagText: "宏观", text: "由于关税影响，中小企业(SMBs)正放弃‘观望’态度，被迫进行供应链重组。这表明地缘政治紧张和贸易政策变化正对全球商业运营产生实质性影响。", source: "FreightWaves", url: "https://finance.yahoo.com/economy/policy/articles/smbs-ditch-wait-see-tariffs-140000027.html" },
-  { time: "21:45", tag: "geo", tagText: "地缘", text: "伊朗宣布在霍尔木兹海峡扣押了两艘船只，此举发生在特朗普总统宣布延长美伊停火协议以继续和平谈判之后。事件加剧了该关键石油运输通道的紧张局势，并可能影响停火前景。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/strait-of-hormuz-ships-attacked-iran-war.html" },
-  { time: "21:23", tag: "geo", tagText: "地缘", text: "俄罗斯计划暂停通过德鲁日巴管道南段的哈萨克斯坦石油输送，该管道是供应德国柏林的主要石油来源。此举将打击向柏林供应大部分汽油、航空煤油和取暖燃料的俄罗斯石油公司炼油厂，影响欧洲能源供应。", source: "Financial Times", url: "https://www.ft.com/content/3738ba48-b4e2-493d-96b1-0a80b4e2c4b8" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "谷歌发布专为人工智能训练和推理设计的新一代TPU芯片，内置大量静态随机存取存储器，旨在挑战英伟达在AI芯片市场的主导地位。这是科技巨头在关键硬件领域竞争加剧的最新迹象。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/google-launches-training-and-inference-tpus-in-latest-shot-at-nvidia.html" },
 ];
-const breakingDate = "2026年4月23日 05:06 CST";
+const breakingDate = "2026年4月23日 06:59 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:44", tag: "ai", tagText: "AI", text: "谷歌宣布为Workspace套件推出一系列由全新AI系统‘Workspace Intelligence’驱动的新自动化功能，旨在将AI打造成用户的‘办公室实习生’，提升工作效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-updates-workspace-to-make-ai-your-new-office-intern/" },
+  { time: "06:25", tag: "tech", tagText: "科技", text: "X平台（原Twitter）推出由AI驱动的自定义信息流功能，以取代原有的‘社区’板块。新功能由Grok AI策划内容，并引入了新的广告位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/hands-on-with-xs-new-ai-powered-custom-feeds/" },
   { time: "04:29", tag: "macro", tagText: "宏观", text: "美国参议员伊丽莎白·沃伦警告称，AI领域的失败可能引发下一次金融危机。她表示自己“看到了泡沫”，并呼吁加强监管，以防止类似2008年的经济衰退重演。", source: "The Verge", url: "https://www.theverge.com/policy/917026/ai-economy-bubble-elizabeth-warren" },
+  { time: "04:09", tag: "ai", tagText: "AI", text: "OpenAI宣布，面向其商业、企业、教育和教师计划的用户推出云端‘工作空间’智能体。这些在ChatGPT中可用的自定义机器人能够自主执行业务任务。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots" },
   { time: "03:52", tag: "tech", tagText: "科技", text: "SpaceX以一笔100亿美元的“合作费”和一条通往600亿美元收购的路径，抢先截胡了AI初创公司Cursor原定于本周完成的20亿美元融资轮。此举展示了科技巨头在争夺顶尖AI人才和资产方面的激进策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/how-spacex-preempted-a-2b-fundraise-with-a-60b-buyout-offer/" },
   { time: "01:30", tag: "ai", tagText: "AI", text: "谷歌为Chrome企业版引入Gemini驱动的“自动浏览”功能，将其转变为AI工作助手，可帮助员工自动化处理研究、数据录入等任务。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/" },
   { time: "00:58", tag: "ai", tagText: "AI", text: "谷歌发布面向企业IT和技术用户的Gemini Enterprise Agent Platform，这是一款新的智能体构建工具。该平台旨在让技术团队能够更高效地开发和部署企业级AI助手，标志着谷歌在企业AI解决方案上采取了更偏向技术栈的策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "AI药物发现初创公司10x Science完成480万美元种子轮融资。该公司旨在帮助制药研究人员从AI生成的海量候选分子中，识别出真正有潜力的药物分子，以解决AI产出过剩但验证不足的行业痛点。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/ai-is-spitting-out-more-potential-drugs-than-ever-this-start-up-wants-to-figure-out-which-ones-matter/" },
   { time: "20:11", tag: "tech", tagText: "科技", text: "谷歌发布第八代TPU，旨在训练和推理领域挑战英伟达。新款TPU在性能和效率上均有提升，标志着谷歌在自研AI芯片道路上迈出重要一步，加剧了与英伟达在AI硬件市场的竞争。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQlUyeHJpUklnVUJ1YXJXTHZCb1BZZGFnTENZbHloRXpibTAxazF2TFpOczRJWXFNSExwTC1VZGE0VEl0cS1lZGRFaHVldEFoT1F3TVVnUW5UUGdlTXV4bkE2OXFUSXMtcXZBd0RzMV95YXh3X1N0dmxxa2NSODcyYmN6YjdfcEFv?oc=5" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "谷歌在年度云大会Google Cloud Next 2026上重点展示了一系列AI初创公司。此举旨在吸引更多AI开发者使用其云平台，巩固其在AI基础设施领域的生态地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/the-most-interesting-startups-showcased-at-google-cloud-next-2026/" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "谷歌云与Mira Murati领导的Thinking Machines Lab签署了一项价值数十亿美元的新协议，以获取由英伟达最新GB300芯片驱动的AI基础设施。此举深化了双方的合作关系，旨在支持前沿AI模型的开发与训练。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "谷歌宣布将在其地图服务中大规模注入生成式AI功能。此举旨在提升用户体验，例如通过自然语言交互获取更智能的路线规划和地点推荐，标志着谷歌核心产品AI化的又一重要步骤。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-maps-is-about-to-get-a-big-dose-of-ai/" },
-  { time: "16:00", tag: "ai", tagText: "AI", text: "欧洲在AI领域拥有人才和资金，但需摆脱对“美股七巨头”的依赖，才能实现突破。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMmdVNjh5LUJSSXp4RE9zMUhkWUZWbE93cE03eWdrVzZ1V0RpU1ItSzU2cDB0WktJMkQ0eVpaZzN0akZwc2duN05NQUgxS0JmclNRZWRpdEdFTjBoWEpDX05RMzFhbTFteDBGQ1VmY0hvZlVZRXBxRGNuajVJTlNIbUpuUHE2RUJCMzE2R1Z4WjdJcjRmUmg3eDhzZVBJOVU1?oc=5" },
 ];
-const aiBreakingDate = "2026年4月23日 05:06 CST";
+const aiBreakingDate = "2026年4月23日 06:59 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
