@@ -1618,17 +1618,19 @@
 const fearGreedData = {
   score: 68.14,
   rating: "greed",
-  timestamp: "2026-04-22T22:42:46+00:00",
+  timestamp: "2026-04-22T23:37:55+00:00",
   previousClose: 67.57,
   previous1Week: 57.63,
   previous1Month: 15.63,
   previous1Year: 13.6,
-  date: "2026年4月23日 06:59 CST"
+  date: "2026年4月23日 07:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:55", tag: "ai", tagText: "AI", text: "SK海力士公布创纪录的第一季度利润，符合市场预期，原因是AI需求旺盛推动内存价格持续攀升。这进一步印证了AI硬件需求对半导体行业的强劲拉动作用。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/sk-hynix-earnings-ai-memory-shortage-hbm-demand.html" },
+  { time: "07:13", tag: "macro", tagText: "宏观", text: "铁路巨头CSX上调全年销售展望，因伊朗战争导致燃料成本飙升，更多企业选择铁路运输以节省成本。其股价在盘后交易中上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/csx-says-more-businesses-are-shipping-via-rail-to-avoid-surging-fuel-costs-c674dbab?mod=mw_rss_topstories" },
   { time: "06:17", tag: "geo", tagText: "地缘", text: "伊朗战争导致巴拿马运河通行费创下历史新高。亚洲买家为获取西方原油，将竞价推高至冲突前水平的五倍。这凸显了地缘冲突对全球关键航运通道成本的巨大冲击。", source: "Financial Times", url: "https://www.ft.com/content/05c0e794-4ed9-4e2a-a026-fb8575f789c3" },
   { time: "06:05", tag: "tech", tagText: "科技", text: "特斯拉第一季度财报显示，其营收不及预期但利润超预期，汽车利润率大幅跃升。同时，公司宣布将年度资本支出预测大幅提高至250亿美元，CEO马斯克表示将加倍押注自动驾驶出租车、卡车、机器人和芯片工厂等AI相关领域。", source: "Financial Times", url: "https://www.ft.com/content/7ce83108-9f2d-48b4-8ce1-28865045bd67" },
   { time: "05:44", tag: "geo", tagText: "地缘", text: "美国海军部长约翰·费兰已立即离开特朗普政府。此举正值伊朗战争期间，是美国国防部高层的一次重要人事变动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/navy-secretary-john-phelan-iran-war.html" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "23:28", tag: "macro", tagText: "宏观", text: "全球主要能源交易商（如维多、托克等）正在扩大信贷额度，为伊朗战争可能导致的全球石油和天然气流动长期中断做准备。这表明行业预期冲突将持续并对能源市场产生深远影响。", source: "Financial Times", url: "https://www.ft.com/content/2d857fb7-e952-4aee-8b9c-1d170b6857b5" },
   { time: "23:22", tag: "ai", tagText: "AI", text: "GE Vernova（通用电气旗下能源业务）的财报显示，其业绩因人工智能数据中心的需求激增而获得显著提振。这反映了AI算力扩张对电力基础设施的强劲拉动作用，是AI热潮向传统工业领域传导的又一例证。", source: "Investor's Business Daily", url: "https://www.investors.com/news/ge-vernova-earnings-ai-data-center-power-gev-stock/?src=A00220&yptr=yahoo" },
   { time: "23:16", tag: "macro", tagText: "宏观", text: "特朗普政府正在就一项救助方案进行深入谈判，以拯救陷入困境的超低成本航空公司Spirit Airlines。此举表明，在行业面临地缘政治和运营挑战的背景下，美国政府可能对特定航空企业进行干预。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/spirit-airlines-rescue-trump-administration.html" },
-  { time: "23:09", tag: "macro", tagText: "宏观", text: "由于伊朗战争的影响，企业行为正从最初的涨价转向削减产出。从航空业到化工业，多个行业的产出开始下降，表明地缘政治冲击正从价格层面传导至实体经济层面，可能对全球供应链和经济增长构成进一步压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/first-came-the-price-rises-now-output-is-falling-in-industries-ranging-from-airlines-to-chemicals-0f187ef8?mod=mw_rss_topstories" },
-  { time: "22:13", tag: "macro", tagText: "宏观", text: "瑞士联邦委员会公布银行业改革计划，提议要求瑞银集团(UBS)增加高达200亿美元的资本金。此举是在该国最大银行数月游说后，为加强金融体系稳定而采取的重大监管措施。", source: "Financial Times", url: "https://www.ft.com/content/c9ba52cb-c862-45ed-abb5-e0b599e17888" },
 ];
-const breakingDate = "2026年4月23日 06:59 CST";
+const breakingDate = "2026年4月23日 07:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "20:11", tag: "tech", tagText: "科技", text: "谷歌发布第八代TPU，旨在训练和推理领域挑战英伟达。新款TPU在性能和效率上均有提升，标志着谷歌在自研AI芯片道路上迈出重要一步，加剧了与英伟达在AI硬件市场的竞争。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQlUyeHJpUklnVUJ1YXJXTHZCb1BZZGFnTENZbHloRXpibTAxazF2TFpOczRJWXFNSExwTC1VZGE0VEl0cS1lZGRFaHVldEFoT1F3TVVnUW5UUGdlTXV4bkE2OXFUSXMtcXZBd0RzMV95YXh3X1N0dmxxa2NSODcyYmN6YjdfcEFv?oc=5" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "谷歌在年度云大会Google Cloud Next 2026上重点展示了一系列AI初创公司。此举旨在吸引更多AI开发者使用其云平台，巩固其在AI基础设施领域的生态地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/the-most-interesting-startups-showcased-at-google-cloud-next-2026/" },
 ];
-const aiBreakingDate = "2026年4月23日 06:59 CST";
+const aiBreakingDate = "2026年4月23日 07:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
