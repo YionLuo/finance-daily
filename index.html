@@ -1462,15 +1462,19 @@ const fearGreedData = {
   previous1Week: 57.63,
   previous1Month: 15.63,
   previous1Year: 13.6,
-  date: "2026年4月22日 12:55 CST"
+  date: "2026年4月22日 13:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:53", tag: "geo", tagText: "地缘", text: "新加坡外长维文警告称，如果中美在太平洋地区爆发战争，霍尔木兹海峡的紧张局势只是一场“演习”。他在CNBC的CONVERGE LIVE活动上从新加坡视角讨论了中美关系的复杂性。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/cnbc-converge-live-hormuz-singapore-fm-vivian-iran-war.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "《金融时报》专栏文章总结了历史上重大金融危机（从巴比伦债务违约到2008年次贷危机）的六个教训，为当前市场环境提供历史镜鉴。", source: "Financial Times", url: "https://www.ft.com/content/0bd796c9-bc0e-43ab-bedd-d0294c2efd17" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "雀巢在华业务陷入混乱。由于需求下降，雀巢被指向市场过度供应产品，导致中国经销商正追讨退款。这反映了跨国消费品巨头在中国市场面临的挑战。", source: "Financial Times", url: "https://www.ft.com/content/7ec9b427-5bff-42d3-8893-357e3e7e03bb" },
   { time: "11:28", tag: "tech", tagText: "科技", text: "英伟达供应商胜利精密技术在香港上市首日股价飙升60%，成为今年迄今为止香港规模最大的首次公开募股。这反映了市场对AI供应链关键环节的持续追捧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/21/nvidia-supplier-victory-giant-sees-shares-soar-60percent-in-hong-kong-debut.html" },
   { time: "11:15", tag: "geo", tagText: "地缘", text: "日本政府宣布解除致命武器出口禁令，标志着其长期和平主义立场的重大转变。此举将允许日本国防承包商瞄准国际市场，可能重塑全球防务贸易格局。", source: "Financial Times", url: "https://www.ft.com/content/539bdbe1-a535-44fb-aa7a-2c1fe1828adf" },
   { time: "09:41", tag: "ai", tagText: "AI", text: "杰夫·贝索斯旗下代号为“普罗米修斯计划”的AI实验室在一轮融资中估值接近380亿美元。该公司专注于开发工业应用模型，显示出AI领域巨额资本持续涌入。", source: "Financial Times", url: "https://www.ft.com/content/87ea0ced-bf3c-4822-8dda-437241570ded" },
+  { time: "08:39", tag: "ai", tagText: "AI", text: "埃隆·马斯克的SpaceX获得了以600亿美元收购AI编程初创公司Cursor的权利，交易可在今年晚些时候完成。若放弃收购，SpaceX也需为双方合作支付100亿美元。此举旨在追赶OpenAI和Anthropic在AI编码工具领域的领先地位。", source: "Financial Times", url: "https://www.ft.com/content/d23bd03a-92ac-4e81-8460-3b867a833860" },
   { time: "07:26", tag: "crypto", tagText: "加密", text: "比特币价格反弹至76,000美元上方，但DeFi领域遭遇重大打击。KelpDAO遭黑客攻击后，DeFi协议出现约140亿美元的资金外流。分析指出，此次漏洞可能短期内阻碍链上信贷的创造。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVS15c1ViYU4zRUR4dEJTalF0Y3RUWXlkOFhQbE94aEZzQ2JCUGZicEJoSFYzRWdaN2JaZ183c2tZeHREZXhDdEwwQkNrWFZMdjMyaTMta2VMNmJBU0RSMmpoVWZDX3FsQml1aE4tNzJsNWU1R3BWS1BOTTV0aXJseVJ0dUJGanFCdHZkU1FYRHEyN0FtV3dPYzQ3c3JVLVY1MVVBcWZwYTFVQmVpMVhmVUluT1lOWDJaVk9tazdrQUdRT29VRnZVZ3J4Yw?oc=5" },
   { time: "06:43", tag: "tech", tagText: "科技", text: "亚马逊旗下蓝色起源公司的新格伦火箭因美国联邦航空管理局的指令而停飞，这对其旨在与SpaceX星链竞争的卫星互联网雄心构成挫折。此次停飞也影响了AST SpaceMobile的BlueBird 7卫星发射任务，该卫星虽成功入轨但未达到预定高度，导致AST SpaceMobile股价下跌。", source: "International homepage (FT)", url: "https://www.ft.com/content/cbc55056-91f2-4b69-af26-fd749fbf15ed" },
   { time: "06:00", tag: "macro", tagText: "宏观", text: "支持特朗普的超级政治行动委员会Maga Inc.已筹集近3.5亿美元资金，为中期选举建立雄厚“战争基金”。3月份单月筹款3500万美元，主要捐赠者包括亿万富翁黛安·亨德里克斯和风投公司Andreessen Horowitz。", source: "Financial Times", url: "https://www.ft.com/content/01e3925e-bca7-4595-9788-ee64f4e94f5f" },
@@ -1484,16 +1488,15 @@ const breakingNews = [
   { time: "03:33", tag: "tech", tagText: "科技", text: "加州地区检察官指控亚马逊“胁迫”李维斯、恒适等主要供应商，要求它们说服沃尔玛、塔吉特和家得宝等竞争对手零售商提高价格，涉嫌价格操纵。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/california-da-amazon-price-fixing-walmart-target.html" },
   { time: "03:04", tag: "geo", tagText: "地缘", text: "美伊紧张局势急剧升级，霍尔木兹海峡发生针对商船的袭击事件，导致油价飙升。特朗普总统再次威胁伊朗，称若其不签署协议，将摧毁其桥梁和发电厂等基础设施。市场担忧双方可能爆发全面冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/trump-defense-iran-war-pakistan-vance-witkoff-kushner.html" },
   { time: "02:40", tag: "macro", tagText: "宏观", text: "霍尔木兹海峡的航运中断已开始影响全球供应链。中国作为全球主要的圣诞商品生产国，其制造商表示，塑料等原材料成本上升将导致消费者为节日商品支付更高价格。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/hormuz-china-christmas-capital-holiday-spending.html" },
-  { time: "02:28", tag: "macro", tagText: "宏观", text: "晨星研究发现，在当前美联储暂停降息的背景下，现金类资产比美国国债更能有效分散投资组合风险，且仍能提供有吸引力的收益率。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/cash-has-diversified-portfolios-better-than-bonds-says-morningstar-.html" },
-  { time: "02:20", tag: "macro", tagText: "宏观", text: "美国进出口银行表示，在伊朗冲突期间，其能源贷款业务激增，该机构被支持美国石油和天然气出口的融资请求“淹没”。这凸显了地缘政治危机对美国能源出口的推动作用。", source: "Financial Times", url: "https://www.ft.com/content/e320d4d9-02a6-4b7c-8a8d-da689d77e45e" },
-  { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什在提前公布的国会证词中表示，美联储必须“守好本分”以保持独立性，并坚定承诺抗击通胀。他淡化总统对利率发表看法带来的威胁，强调央行应专注于其核心任务。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-testimony-to-congress-is-out-early-he-wants-the-fed-to-stay-in-its-lane-d6249040?mod=mw_rss_topstories" },
-  { time: "01:52", tag: "macro", tagText: "宏观", text: "美国关税退款申请门户将于周一启动，沃尔玛、塔吉特等大型进口商有望获得数十亿美元的退款。此举将为相关零售商带来巨额现金流入。", source: "CNBC", url: "https://www.cnbc.com/2026/04/20/tariff-refunds-begin-on-monday-these-retailers-are-due-big-paydays.html" },
 ];
-const breakingDate = "2026年4月22日 12:55 CST";
+const breakingDate = "2026年4月22日 13:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:41", tag: "ai", tagText: "AI", text: "AI初创公司Core Automation从Anthropic和DeepMind招募研究人员。此举表明AI人才争夺战持续激烈，新兴公司正通过吸引顶尖人才来增强其研发实力。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZlg3ZlpGWnBYYU1GSk82bTIyNVpZcnk2M1dSUEZLRUlEYXI5Y0V6T0c3R0ZIZC1OaEhSR0E1TlJELWhxVTFCUlQ0TGIwVHYwYlJYMF9pM3Z3VTVFSzRnUjhhd0Jna2E1ekdhR3JUbDlXMXlObTVILVpkTXg2bVZpV185WF8yUm1GVjVCS2RrdWNLckVvQTg3dldRU1NkRDB1ZzY4RA?oc=5" },
   { time: "10:26", tag: "ai", tagText: "AI", text: "据报道，由杰夫·贝索斯创立的秘密AI初创公司Project Prometheus即将完成一轮高达100亿美元的巨额融资。此轮融资预计将使公司估值达到约380亿美元，显示出资本市场对顶级AI项目的持续狂热。", source: "AASTOCKS.com", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRlVZQTlNWmg5V3ZuLXR1Rkt3Z2h2bGJuSTdlR0pfVDNRT1RpU3NQYkc3eUVXRTJrNFlSelg5clVHenhteDM1MndqZWpTYnVseGJVaGJZZ3ViS1NFbmx2Z0NsdmRpZC1tRi1iU3RtVWpmNDR5U2ZCNU9VUTJHQ1FtNmpBNDdLQTlUQXc?oc=5" },
+  { time: "07:45", tag: "tech", tagText: "科技", text: "Meta将记录员工的键盘敲击和鼠标移动数据，用于训练其AI模型。该公司表示已推出新的内部工具来收集此类交互数据，以改进AI性能，此举引发了关于员工隐私和数据使用的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/21/meta-will-record-employees-keystrokes-and-use-it-to-train-its-ai-models/" },
+  { time: "07:26", tag: "ai", tagText: "AI", text: "有报道称，未经授权的组织获得了访问Anthropic独家网络安全工具Mythos的权限。Anthropic表示正在调查此事，但坚称没有证据表明其系统受到影响。此事凸显了先进AI工具的安全风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/21/unauthorized-group-has-gained-access-to-anthropics-exclusive-cyber-tool-mythos-report-claims/" },
   { time: "07:10", tag: "ai", tagText: "AI", text: "亚马逊向AI公司Anthropic追加投资50亿美元，而Anthropic则承诺在未来将投入1000亿美元用于亚马逊云服务（AWS）。这笔巨额双向交易进一步巩固了双方的战略联盟，并可能重塑AI基础设施的竞争格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/anthropic-takes-5b-from-amazon-and-pledges-100b-in-cloud-spending-in-return/" },
   { time: "06:00", tag: "tech", tagText: "科技", text: "谷歌宣布在Chrome浏览器中向澳大利亚、印度尼西亚、日本、菲律宾、新加坡、韩国和越南七个新市场推出其AI助手Gemini。此举是谷歌扩大其AI产品全球覆盖范围的重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/google-rolls-out-gemini-in-chrome-in-seven-new-countries/" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "谷歌正在开发用于AI推理的专用芯片，旨在与英伟达竞争。此举表明科技巨头正加速自研AI硬件，以降低对英伟达的依赖并优化其AI服务的性能和成本。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE05ZE9yUktReXc1OHBmNkk1UVdXRzRRYllrSEFnaE1iZUZiYTd4ZWg4UHAydnpmalp6TWFOeDhBQjNtbDdSQ2FtQlpLdV9ZRGdkNDFQNUZQMVdVenE2MnpHdDBDb2ozeGVvYUNpQVExYw?oc=5" },
@@ -1510,11 +1513,8 @@ const aiBreakingNews = [
   { time: "21:06", tag: "ai", tagText: "AI", text: "Reid Hoffman在‘tokenmaxxing’辩论中表示，追踪AI代币使用可以衡量采用率，但应结合上下文，不应直接视为生产力指标。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/" },
   { time: "21:05", tag: "ai", tagText: "AI", text: "Adobe、英伟达与广告巨头WPP合作，推出大规模自主AI代理（Adobe Agents），旨在解锁突破性的创意智能。该合作将AI深度集成到创意工作流程中，预示着广告和内容创作行业的变革。", source: "NVIDIA Blog", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBHcVhIaEhFTGh6Ul9Xbm9Jc0JuR3VlSEIzb0JSRHpseGRFM1NTNGV1azFkWTM5MDhkcDFlZy10b1RLa1JpVEFXZFdLUlNfeWJTb1ZyYUtGeUhsUE5YXzJPNHVyZ1huVzlo?oc=5" },
   { time: "21:01", tag: "tech", tagText: "科技", text: "Adobe推出全新Firefly AI助手，可跨Creative Cloud应用（如Photoshop、Premiere等）完成任务，标志着创意工作的‘根本性转变’。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/adobes-new-firefly-ai-assistant-can-use-creative-cloud-apps-to-complete-tasks/" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "Parasail在A轮融资中筹集3200万美元，押注‘tokenmaxxing’将催生下一代计算巨头，预示着模型和计算的碎片化未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/parasail-raises-32m-to-feed-tokenmaxxing-ai-developers/" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Gitar利用AI代理审查代码，完成900万美元融资，专注于解决AI生成代码的安全问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "AI编程初创公司Cursor正寻求以20亿美元的新一轮融资，冲刺高达500亿美元的估值。该公司开发的AI辅助编程工具增长迅速，显示出资本市场对AI生产力工具的极高热情。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeG9mRHMydU15QnYzVGQzWHRKeTMwYW92bE5ZUFJfSGpaYnVRSGZmT1BndlAwOHdfUHNGMENkWUJyTTNrZ1lZWVhoTTRZQ0tYSEw2TksxUFlPVUlBNkNnUDZpRzl1dGZiQTdBeURHRmFSUG94NWlHVUxneG9PZzcxUGg2akpVblFNYkEteEZ3Y2hZZWc?oc=5" },
 ];
-const aiBreakingDate = "2026年4月22日 12:55 CST";
+const aiBreakingDate = "2026年4月22日 13:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
