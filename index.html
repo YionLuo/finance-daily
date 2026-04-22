@@ -279,9 +279,9 @@
 
   .breaking-item {
     display: flex;
-    gap: 12px;
-    padding: 14px 20px;
-    border-bottom: 1px solid var(--border);
+    gap: 10px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border-light);
     transition: background 0.15s;
   }
 
@@ -369,36 +369,15 @@
 
   /* ============ Hero (Compact) ============ */
   .hero-compact {
-    padding: 24px 0;
+    padding: 20px 0 16px;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
+    margin-bottom: 28px;
   }
 
   .hero-desc {
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.6;
-  }
-
-  .hero-compact-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .hero-tag {
-    font-size: 12px;
-    font-weight: 500;
-    padding: 4px 12px;
-    border-radius: 100px;
-    background: var(--surface);
-    color: var(--text-secondary);
-    border: 1px solid var(--border);
   }
 
   /* Latest issue inline header */
@@ -1080,6 +1059,46 @@
     line-height: 1.8;
   }
 
+  /* ============ Breaking News Filter ============ */
+  .breaking-filters {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .filter-chip {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+
+  .filter-chip:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  .breaking-toggle {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    background: var(--code-bg);
+    border: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .breaking-toggle:hover { color: var(--accent); background: var(--accent-light); }
+
   /* ============ Deep Research Preview ============ */
   .research-preview {
     margin-bottom: 40px;
@@ -1088,16 +1107,35 @@
   .research-preview-card {
     background: var(--surface);
     border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
     border-radius: var(--radius);
-    padding: 32px;
+    padding: 28px 32px;
     cursor: pointer;
     transition: all 0.2s;
+    position: relative;
+  }
+
+  .research-preview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #7c3aed, #ec4899);
+    border-radius: var(--radius) var(--radius) 0 0;
+    opacity: 0;
+    transition: opacity 0.2s;
   }
 
   .research-preview-card:hover {
     border-color: var(--accent);
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
+  }
+
+  .research-preview-card:hover::before {
+    opacity: 1;
   }
 
   .research-preview-meta {
@@ -1375,21 +1413,13 @@
   <div class="page">
     <!-- Compact Hero -->
     <div class="hero-compact">
-      <p class="hero-desc">每日从全球头条中精选一个专题，进行深度分析研究。金融 · 科技 · 地缘 · 宏观。</p>
-      <div class="hero-compact-tags">
-        <span class="hero-tag">深度研究</span>
-        <span class="hero-tag">Breaking News</span>
-        <span class="hero-tag">金融</span>
-        <span class="hero-tag">AI/科技</span>
-        <span class="hero-tag">地缘政治</span>
-        <span class="hero-tag">宏观经济</span>
-      </div>
+      <p class="hero-desc">每日从全球头条中精选一个专题，进行深度分析研究。</p>
     </div>
 
     <div class="page-with-sidebar">
       <!-- Sidebar TOC -->
       <aside class="sidebar" id="homeSidebar">
-        <div class="sidebar-title">目录</div>
+        <div class="sidebar-title">导航</div>
         <ul class="toc-list" id="tocList">
           <li id="toc-breaking"><a class="toc-link active" data-section="sec-breaking" onclick="scrollToSection('sec-breaking')">Breaking News</a></li>
           <li id="toc-fg"><a class="toc-link" data-section="sec-fg" onclick="scrollToSection('sec-fg')">贪恐指数</a></li>
@@ -1564,13 +1594,13 @@ function renderBreakingNews() {
   const container = document.getElementById('breakingSection');
   const tocBreaking = document.getElementById('toc-breaking');
 
-  // Merge finance + AI breaking news, sorted by time descending
+  // Merge finance + AI breaking news
   const allNews = [
     ...breakingNews.map(n => ({...n, _src: 'finance'})),
     ...aiBreakingNews.map(n => ({...n, _src: 'ai'})),
   ];
 
-  // Sort by recency (handle cross-midnight): items after "now" are treated as yesterday
+  // Sort by recency (handle cross-midnight)
   const now = new Date();
   const nowMin = now.getHours() * 60 + now.getMinutes();
   allNews.sort((a, b) => {
@@ -1592,29 +1622,77 @@ function renderBreakingNews() {
   container.style.display = 'block';
   if (tocBreaking) tocBreaking.style.display = 'block';
 
-  // Use the most recent date
   const dateStr = breakingDate || aiBreakingDate || '';
+
+  // Build unique tag list for filters
+  const tagSet = new Map();
+  allNews.forEach(n => { if (n.tag && n.tagText) tagSet.set(n.tag, n.tagText); });
+
+  // Store allNews globally for filtering
+  window._allBreakingNews = allNews;
+  window._breakingFilter = 'all';
+  window._breakingExpanded = false;
+
+  const INITIAL_COUNT = 8;
+
+  function renderItems() {
+    const filter = window._breakingFilter;
+    const items = filter === 'all' ? window._allBreakingNews : window._allBreakingNews.filter(n => n.tag === filter);
+    const expanded = window._breakingExpanded;
+    const showItems = expanded ? items : items.slice(0, INITIAL_COUNT);
+    const hasMore = items.length > INITIAL_COUNT;
+
+    document.getElementById('breakingList').innerHTML = showItems.map(item => `
+      <li class="breaking-item">
+        <span class="breaking-item-time">${item.time}</span>
+        <div class="breaking-item-body">
+          <div class="breaking-item-text">
+            <span class="breaking-item-tag ${item.tag}">${item.tagText}</span>${item.text}
+          </div>
+          <div class="breaking-item-source">${item.url ? `<a href="${item.url}" target="_blank" rel="noopener">${item.source} ↗</a>` : item.source}</div>
+        </div>
+      </li>
+    `).join('');
+
+    const toggleBtn = document.getElementById('breakingToggle');
+    if (toggleBtn) {
+      if (!hasMore) { toggleBtn.style.display = 'none'; }
+      else {
+        toggleBtn.style.display = 'block';
+        toggleBtn.textContent = expanded ? `收起 ↑` : `展开全部 ${items.length} 条 ↓`;
+      }
+    }
+  }
 
   container.innerHTML = `
     <div id="sec-breaking">
       <div class="breaking-header">
         <span class="breaking-badge"><span class="dot"></span>BREAKING</span>
-        <span class="breaking-time">最近更新：${dateStr}</span>
+        <span class="breaking-time">更新于 ${dateStr}</span>
       </div>
-      <ul class="breaking-list">
-        ${allNews.slice(0, 25).map(item => `
-          <li class="breaking-item">
-            <span class="breaking-item-time">${item.time}</span>
-            <div class="breaking-item-body">
-              <div class="breaking-item-text">
-                <span class="breaking-item-tag ${item.tag}">${item.tagText}</span>${item.text}
-              </div>
-              <div class="breaking-item-source">${item.url ? `<a href="${item.url}" target="_blank" rel="noopener">${item.source} ↗</a>` : item.source}</div>
-            </div>
-          </li>
-        `).join('')}
-      </ul>
+      <div class="breaking-filters">
+        <span class="filter-chip active" onclick="filterBreaking('all', this)">全部</span>
+        ${Array.from(tagSet).map(([tag, text]) => `<span class="filter-chip" onclick="filterBreaking('${tag}', this)">${text}</span>`).join('')}
+      </div>
+      <ul class="breaking-list" id="breakingList"></ul>
+      <button class="breaking-toggle" id="breakingToggle" onclick="toggleBreaking()"></button>
     </div>`;
+
+  renderItems();
+
+  // Expose functions
+  window.filterBreaking = function(tag, el) {
+    window._breakingFilter = tag;
+    window._breakingExpanded = false;
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    renderItems();
+  };
+  window.toggleBreaking = function() {
+    window._breakingExpanded = !window._breakingExpanded;
+    renderItems();
+  };
+}
 }
 
 // ============ Fear & Greed Rendering ============
