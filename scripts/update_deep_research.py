@@ -53,8 +53,9 @@ TOPIC_SELECTION_PROMPT = """你是 Y Daily 首席分析师。从今日 Breaking 
 3. 与 AI/互联网/科技行业 或 金融市场（美股/港股）相关
 4. 不是简单的事件报道，而是可以挖掘深层逻辑的话题
 
-已发布的近期报告主题（避免重复）：
+⚠️ 绝对不能重复的近期报告主题：
 {existing_topics}
+选题必须与以上所有主题**完全不同**。不能是同一事件的不同角度，不能是同一公司的不同切入点。如果近期已经写过亚马逊/Anthropic，就不要再选任何涉及这两家公司的话题。选一个全新的领域。
 
 今日金融快讯：
 {finance_news}
@@ -462,6 +463,22 @@ def write_report(client, topic_info, brain_dump_text, research_materials):
     Stage 3b: Write the deep analysis report using reasoning model (R1).
     No tool use — pure text generation with deep thinking.
     """
+    # 素材质量检查：如果缺乏硬数据，先补搜
+    has_numbers = bool(re.findall(r'\$[\d.]+[BMT]|\d+%|\d+亿|\d+万亿|revenue|营收|利润|市值', research_materials))
+    if not has_numbers:
+        print("  ⚠️ Materials lack hard financial data, requesting supplementary search...")
+        # 用 LLM 快速搜几个关键数字
+        from news_fetcher import web_search
+        topic = topic_info.get("topic", "")
+        supplement = []
+        for q in [f"{topic} revenue 2026", f"{topic} market cap", f"{topic} quarterly earnings"]:
+            results = web_search(q, max_results=3)
+            for r in results:
+                supplement.append(f"[补充搜索] {r.get('title', '')} - {r.get('summary', '')[:200]}")
+        if supplement:
+            research_materials += "\n\n## 补充财务数据搜索\n" + "\n".join(supplement)
+            print(f"  Added {len(supplement)} supplementary results")
+
     print(f"\n=== Stage 3b: Report Writing (model: {WRITER_MODEL}) ===")
 
     prompt = WRITER_PROMPT.format(
