@@ -1616,20 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.14,
+  score: 67.97,
   rating: "greed",
-  timestamp: "2026-04-22T15:35:10+00:00",
+  timestamp: "2026-04-22T17:11:16+00:00",
   previousClose: 67.57,
   previous1Week: 57.63,
   previous1Month: 15.63,
   previous1Year: 13.6,
-  date: "2026年4月22日 23:39 CST"
+  date: "2026年4月23日 01:13 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:37", tag: "macro", tagText: "宏观", text: "德国政府将2026年经济增长预测减半，并上调通胀预期，原因是伊朗战争带来的经济冲击。这反映了欧洲最大经济体正面临地缘政治危机导致的滞胀风险。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPRm9BZ0ZpT2c5anl6VWk0Rkg3N2VFN2pqTHM0ZGp0elZnSTFZUDJIempPZ2hmRmZ6cEhuNnp5V3dBdHhwN055WnNWTnJNTndZNk1GTk9mRzVuOFRTRVJuMjJMRDJLS0Nma2dhZExtTUd6ejkzbEVPbzJkRjQwOUk2ZVZzRzNEVkhzUm92eTBpQ2FxeDVtRjBsa3JCNmpQVUNid0tiZDdkendGc2UyTmdqNEl2dmdwei0tQUNpUE5n?oc=5" },
   { time: "23:36", tag: "macro", tagText: "宏观", text: "受美伊停火延长消息提振，美国股市周三上涨。纳斯达克综合指数创下盘中及收盘历史新高，标普500指数和道琼斯工业平均指数也同步走高。市场风险偏好改善，暂时盖过了地缘政治紧张和油价飙升的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/21/stock-market-today-live-updates.html" },
+  { time: "23:28", tag: "macro", tagText: "宏观", text: "全球主要能源交易商（如维多、托克等）正在扩大信贷额度，为伊朗战争可能导致的全球石油和天然气流动长期中断做准备。这表明行业预期冲突将持续并对能源市场产生深远影响。", source: "Financial Times", url: "https://www.ft.com/content/2d857fb7-e952-4aee-8b9c-1d170b6857b5" },
   { time: "23:22", tag: "ai", tagText: "AI", text: "GE Vernova（通用电气旗下能源业务）的财报显示，其业绩因人工智能数据中心的需求激增而获得显著提振。这反映了AI算力扩张对电力基础设施的强劲拉动作用，是AI热潮向传统工业领域传导的又一例证。", source: "Investor's Business Daily", url: "https://www.investors.com/news/ge-vernova-earnings-ai-data-center-power-gev-stock/?src=A00220&yptr=yahoo" },
   { time: "23:16", tag: "macro", tagText: "宏观", text: "特朗普政府正在就一项救助方案进行深入谈判，以拯救陷入困境的超低成本航空公司Spirit Airlines。此举表明，在行业面临地缘政治和运营挑战的背景下，美国政府可能对特定航空企业进行干预。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/spirit-airlines-rescue-trump-administration.html" },
   { time: "23:09", tag: "macro", tagText: "宏观", text: "由于伊朗战争的影响，企业行为正从最初的涨价转向削减产出。从航空业到化工业，多个行业的产出开始下降，表明地缘政治冲击正从价格层面传导至实体经济层面，可能对全球供应链和经济增长构成进一步压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/first-came-the-price-rises-now-output-is-falling-in-industries-ranging-from-airlines-to-chemicals-0f187ef8?mod=mw_rss_topstories" },
@@ -1647,13 +1649,16 @@ const breakingNews = [
   { time: "16:54", tag: "macro", tagText: "宏观", text: "欧洲股市周三涨跌互现，ASMI一季度业绩超预期股价大涨8%。市场同时评估伊朗停火延长及企业财报影响，美股期货因停火延长而走高。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/european-markets-stoxx-600-ftse-dax-iran-latest-news-oil-price.html" },
   { time: "14:04", tag: "crypto", tagText: "加密", text: "加密货币市场概览：比特币价格突破77,000美元，门罗币和达世币领涨。与此同时，灰度公司表示，比特币已在2026年2月触底。", source: "FXStreet", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQS0J3ampjX3YxSDQ0Sk11Um1xNW9mTm54ZDVsd0x0dVBTc1BaYTV6N18zeDdzbnpYWHBtWlRpNHY4a3BLbUNmV3owM2ZrY2RybXd0elh3NHhBWDl3eUFmYmY3VGEwQlZJZWdheEQ1VHZvS1N0c3czME5SaDgwbWpzdUNHemxfQldlV2NTWWRZa2ZQUXZSenJidU9iWlFFZ0FycVVnVmRCbXdxT0o0aW9CYVdRMUtYNElkXzF2bTFnaE41d3YwdHZOSmV5aUJ1VjAz?oc=5" },
   { time: "13:41", tag: "macro", tagText: "宏观", text: "欧洲央行高级政策制定者、拉脱维亚央行行长Mārtiņš Kazāks表示，欧洲央行有‘奢侈’的时间等待，不必急于因伊朗战争推高的能源价格而加息。", source: "FT", url: "https://www.ft.com/content/5978f69a-83c3-43dd-98c4-d9d95eb542c7" },
-  { time: "13:30", tag: "macro", tagText: "宏观", text: "印度股市下跌：Sensex指数下跌600点，Nifty指数跌破24,450点。IT股拖累大盘，而FMCG（快速消费品）板块提供支撑。", source: "Moneycontrol.com", url: "https://news.google.com/rss/articles/CBMikwJBVV95cUxNMTdicWswV05KRVB2UEZnWXBZaXBaNjkybUVZcTg1ZU12Y2pERHd5ZHY0QnJjMGc4NzQtWkdRR1pZMDJVamhtMDdKQkt0WGoxbEFkZmZzTlZnRVpMSDRBNEJpUFhtX2VXZ0dRbXhfOGEtbVB0M0xPS2hCTzR5RnZWUGk3SXFISms5NTllOUNlNVl1eTU1MjJaZVpVSEw4cjN3a00wOVk4cFBRVkQ1Rk04aVVjSDFzbjJ2Y2JvRGxqNG9wcEdseXhsak5fVVVDU0JqWnZiT1dxTmVMUzJ1cUxVZUx0RlhiQ0ZQbGRnTE5paV9jTUN2SllIRXNBRGcxN2lNdHNRamxpdGh2eWNGblYydWJ2RdIBmAJBVV95cUxQWUpGSmNOYW1xTG82cjVqemdBVmtZRFkzQXBqLVFNT3hxbkhBTFNCQnhmTXJtRlBkdmRMNVJaMkowWFoybW51ZjVacG5YYkZmTmxxSnN6NGtPNUlmelJIc0ZfakRCTzNtN1lrakZVUElDWjNIMjhnZTdicGFtT3FqMmtlTU5KbzhsOExtdXlVTEYxdGt0cTJjZGJrN1d5UGZRcXhmS3VTVW8telcwby1sY0haajBIam1VWmxaUGpfWWlGMnczT0tBYndFQm1yZ1BDbUNEZU5zT3k1anllTHlybTI0ODE2VGJucVk2cjZ6U1hZV3hpSEp3QlFBOVB3V0dmZ0NkaGZrbkpqS3ktaFRzOUNMWlV4NnBN?oc=5" },
-  { time: "13:22", tag: "geo", tagText: "地缘", text: "伊朗驻联合国大使指责美国扣押船只的行为违反了国际法，并称华盛顿的‘持续国际不法行为’破坏了停火协议。此举加剧了美伊之间的紧张关系。", source: "FT", url: "https://www.ft.com/content/da5f559c-f340-4091-95ca-dd930627f292" },
 ];
-const breakingDate = "2026年4月22日 23:39 CST";
+const breakingDate = "2026年4月23日 01:13 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:58", tag: "ai", tagText: "AI", text: "谷歌发布面向企业IT和技术用户的Gemini Enterprise Agent Platform，这是一款新的智能体构建工具。该平台旨在让技术团队能够更高效地开发和部署企业级AI助手，标志着谷歌在企业AI解决方案上采取了更偏向技术栈的策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/" },
+  { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
+  { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
+  { time: "00:57", tag: "ai", tagText: "AI", text: "Anthropic的新网络安全模型Mythos正被多个美国联邦机构采用以发现漏洞，但据报道，美国主要的网络安全协调机构——网络安全和基础设施安全局（CISA）并未参与其中。这引发了关于该模型潜在风险及监管协调的讨论。", source: "The Verge", url: "https://www.theverge.com/policy/916758/anthropic-mythos-preview-cisa-left-out" },
+  { time: "00:38", tag: "ai", tagText: "AI", text: "谷歌Meet的AI会议记录功能现已扩展至线下会议以及Zoom和Microsoft Teams会议。通过Gemini，该功能可为各类会议生成摘要和文字记录，进一步模糊了线上与线下协作工具的界限。", source: "The Verge", url: "https://www.theverge.com/tech/916779/google-meet-ai-notetaker-in-person-meetings" },
   { time: "23:19", tag: "tech", tagText: "科技", text: "英伟达面临来自内部AI芯片的压力，这可能对其市场主导地位构成挑战。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZ1Jsa2s2a3MwV1c2UlNwYm8zeVFONndXc2lPVk9VWDRfdjFkdWNjQ0o5Nk5YY3pUMzlKVTNPUDhFZjZmWDFYYmUwV1M0dHQ5ZGllcDJKNGI3amUwOGNvZl8xcWVycVdtakYxNjltZmJpZTdrNERuQV9XdmhVOS1iZFNHeTUtck5CNmd1NVU2bw?oc=5" },
   { time: "22:22", tag: "ai", tagText: "AI", text: "Meta开始通过名为“模型能力计划”（Model Capability Initiative, MCI）的工具，追踪美国员工在电脑上的活动数据，用于训练其AI智能体。此举引发了对员工隐私和工作场所监控的担忧。", source: "The Verge", url: "https://www.theverge.com/tech/916681/meta-ai-agents-employee-tracking" },
   { time: "22:22", tag: "ai", tagText: "AI", text: "OpenAI与印度IT巨头印孚瑟斯（Infosys）达成合作，旨在将OpenAI的AI工具带给更多企业客户。合作初期将专注于软件工程、遗留系统现代化和工作流程自动化等领域。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/openai-teams-up-with-infosys-to-bring-ai-tools-to-more-businesses/" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "12:41", tag: "ai", tagText: "AI", text: "AI初创公司Core Automation正积极从顶尖AI研究机构挖角，已成功招募来自Anthropic和DeepMind的研究人员。此举表明，专注于AI自动化领域的公司正通过吸纳顶尖人才来增强其研发实力，行业人才竞争持续加剧。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZlg3ZlpGWnBYYU1GSk82bTIyNVpZcnk2M1dSUEZLRUlEYXI5Y0V6T0c3R0ZIZC1OaEhSR0E1TlJELWhxVTFCUlQ0TGIwVHYwYlJYMF9pM3Z3VTVFSzRnUjhhd0Jna2E1ekdhR3JUbDlXMXlObTVILVpkTXg2bVZpV185WF8yUm1GVjVCS2RrdWNLckVvQTg3dldRU1NkRDB1ZzY4RA?oc=5" },
   { time: "10:26", tag: "ai", tagText: "AI", text: "据报道，由杰夫·贝索斯创立的秘密AI初创公司Project Prometheus即将完成一轮高达100亿美元的巨额融资。此轮融资预计将使公司估值达到约380亿美元，显示出资本市场对顶级AI项目的持续狂热。", source: "AASTOCKS.com", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRlVZQTlNWmg5V3ZuLXR1Rkt3Z2h2bGJuSTdlR0pfVDNRT1RpU3NQYkc3eUVXRTJrNFlSelg5clVHenhteDM1MndqZWpTYnVseGJVaGJZZ3ViS1NFbmx2Z0NsdmRpZC1tRi1iU3RtVWpmNDR5U2ZCNU9VUTJHQ1FtNmpBNDdLQTlUQXc?oc=5" },
   { time: "07:10", tag: "ai", tagText: "AI", text: "亚马逊向AI公司Anthropic追加投资50亿美元，而Anthropic则承诺在未来将投入1000亿美元用于亚马逊云服务（AWS）。这笔巨额双向交易进一步巩固了双方的战略联盟，并可能重塑AI基础设施的竞争格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/anthropic-takes-5b-from-amazon-and-pledges-100b-in-cloud-spending-in-return/" },
-  { time: "06:00", tag: "tech", tagText: "科技", text: "谷歌宣布在Chrome浏览器中向澳大利亚、印度尼西亚、日本、菲律宾、新加坡、韩国和越南七个新市场推出其AI助手Gemini。此举是谷歌扩大其AI产品全球覆盖范围的重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/google-rolls-out-gemini-in-chrome-in-seven-new-countries/" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "谷歌正在开发用于AI推理的专用芯片，旨在与英伟达竞争。此举表明科技巨头正加速自研AI硬件，以降低对英伟达的依赖并优化其AI服务的性能和成本。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE05ZE9yUktReXc1OHBmNkk1UVdXRzRRYllrSEFnaE1iZUZiYTd4ZWg4UHAydnpmalp6TWFOeDhBQjNtbDdSQ2FtQlpLdV9ZRGdkNDFQNUZQMVdVenE2MnpHdDBDb2ozeGVvYUNpQVExYw?oc=5" },
-  { time: "02:15", tag: "tech", tagText: "科技", text: "激光雷达公司禾赛科技发布Picasso 6D全彩色SPAD-SoC、下一代ETX，并在空间智能与物理AI领域推出创新。这些进展旨在提升自动驾驶和机器人等领域的感知能力。", source: "The Malaysian Reserve", url: "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPbUU0UU5MSzVXb1pza0hCZ1lja0NaMzA5MVpBNHlGWmRlaEZJdTI4R04tYnFlUFI3a0RYR2RjQUVZSGNoRkFhdll0WVI1SHd6UW9yeF9JWkVXVUtJQlpiWFpLb29wbnJfQ0lkc0hkdG5sSzhGLXh4QWVHc3ZpQ0N6dllBWEtlLTZZMmx2MjJvNG1zQk9IbnU2alhzSmdNVVoxbG9XX21NaW5leGFKbDdsaGxqcVM3QndDMzVuYnJKWFhEeG90eldELWFxeC16Rlk1LUdWLVdQMUtwb1VRLU1EbzMxbXdQUGF4ZDBwellR?oc=5" },
-  { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
-  { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
 ];
-const aiBreakingDate = "2026年4月22日 23:39 CST";
+const aiBreakingDate = "2026年4月23日 01:13 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
