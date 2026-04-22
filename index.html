@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.91,
+  score: 68.14,
   rating: "greed",
-  timestamp: "2026-04-22T19:25:36+00:00",
+  timestamp: "2026-04-22T20:47:35+00:00",
   previousClose: 67.57,
   previous1Week: 57.63,
   previous1Month: 15.63,
   previous1Year: 13.6,
-  date: "2026年4月23日 03:28 CST"
+  date: "2026年4月23日 05:06 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:51", tag: "macro", tagText: "宏观", text: "IBM首席执行官阿尔温德·克里希纳表示，伊朗局势及其他不确定性因素正在影响公司前景。他同时预计，竞争对手将很快在性能和能力上追平Anthropic的Mythos AI模型。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/ibm-ceo-arvind-krishna-earnings-iran-anthropic.html" },
+  { time: "04:29", tag: "tech", tagText: "科技", text: "软件公司ServiceNow股价大跌14%，因其订阅收入受到伊朗战争影响。尽管公司盈利和收入超出预期，并持续扩展AI产品，但其利润率展望令投资者担忧。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/servicenow-now-earnings-q1-2026.html" },
+  { time: "04:02", tag: "macro", tagText: "宏观", text: "市场分析指出，此前被大肆宣扬的2026年资金从科技股轮动到其他板块的趋势可能已经结束。随着成长股重获青睐，那些作为轮动受益者的板块本身也开始表现落后。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/the-much-hyped-great-rotation-out-of-tech-for-2026-may-be-over-already.html" },
+  { time: "03:49", tag: "crypto", tagText: "加密", text: "受特朗普政府据称准备重新分类大麻物质的消息刺激，Tilray等大麻股大幅上涨。此举可能为医用大麻研究以及种植者的银行服务打开大门。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/tilray-and-other-cannabis-stocks-soar-as-trump-is-reportedly-ready-to-reclassify-the-substance-b4e1458d?mod=mw_rss_topstories" },
   { time: "03:08", tag: "macro", tagText: "宏观", text: "美国财长贝森特表示，在伊朗战争引发的市场动荡中，已有‘许多’美国盟友请求建立货币互换安排。尽管白宫随后否认阿联酋提出了此类请求，但此番言论凸显了地缘政治危机对全球金融体系的潜在压力。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/iran-war-treasury-uae-scott-bessent-currency-swaps.html" },
   { time: "03:02", tag: "macro", tagText: "宏观", text: "贝莱德指出，伊朗战争导致股债相关性升至两年来最高水平，传统的60/40投资组合策略面临挑战。该资管巨头建议投资者寻求多元化配置，以应对新的市场环境。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/blackrock-on-60/40-and-portfolio-diversifiers.html" },
   { time: "02:49", tag: "crypto", tagText: "加密", text: "美国财政部长正敦促参议院通过加密货币市场结构立法，旨在为数字资产领域提供更明确的监管框架。此举正值比特币价格回升至11周高点之际，显示出政策制定者正试图规范这一快速发展的市场。", source: "Bitcoin Magazine", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE1jczdsTmUwNHB1cEFqMS00TnAxbk5UX3RJRk40dDFGWTNYYld0LThiUllWU1dtNjlyN1k5YnZwOWRhZnUzdk1wUzhEdnZKcy1aZkh2S3ljUVd6cXVIeEh0WDZMaENsdERGZDQ5d2ZWUkxxTS1JcE00TQ?oc=5" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "21:45", tag: "geo", tagText: "地缘", text: "伊朗宣布在霍尔木兹海峡扣押了两艘船只，此举发生在特朗普总统宣布延长美伊停火协议以继续和平谈判之后。事件加剧了该关键石油运输通道的紧张局势，并可能影响停火前景。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/strait-of-hormuz-ships-attacked-iran-war.html" },
   { time: "21:23", tag: "geo", tagText: "地缘", text: "俄罗斯计划暂停通过德鲁日巴管道南段的哈萨克斯坦石油输送，该管道是供应德国柏林的主要石油来源。此举将打击向柏林供应大部分汽油、航空煤油和取暖燃料的俄罗斯石油公司炼油厂，影响欧洲能源供应。", source: "Financial Times", url: "https://www.ft.com/content/3738ba48-b4e2-493d-96b1-0a80b4e2c4b8" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "谷歌发布专为人工智能训练和推理设计的新一代TPU芯片，内置大量静态随机存取存储器，旨在挑战英伟达在AI芯片市场的主导地位。这是科技巨头在关键硬件领域竞争加剧的最新迹象。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/google-launches-training-and-inference-tpus-in-latest-shot-at-nvidia.html" },
-  { time: "19:58", tag: "macro", tagText: "宏观", text: "波音公司第一季度财报显示亏损收窄，飞机交付量上升。公司预计新的737 Max 7和Max 10型号将在今年晚些时候获得认证，并于2027年开始交付。美国联邦航空管理局也表示看到了获得关键认证的路径。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/boeing-ba-q1-2026-earnings.html" },
-  { time: "19:50", tag: "ai", tagText: "AI", text: "英国金融行为监管局（FCA）宣布将启动一项AI测试计划，并已指定八家银行参与。此举旨在评估和监管金融机构对人工智能技术的应用。", source: "Retail Banker International", url: "https://finance.yahoo.com/sectors/technology/articles/uk-fca-names-eight-banks-115428708.html" },
-  { time: "19:45", tag: "tech", tagText: "科技", text: "AT&T第一季度财报显示，其无线用户净增数超出预期，这得益于将无线服务与高速光纤服务捆绑销售的策略取得成功。公司营收符合预期，利润超出预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/att-adds-more-wireless-subscribers-than-expected-as-bundling-pays-off.html" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "数据分析公司Palantir与美国农业部签署了一份价值3亿美元的合同，以帮助保障美国的食品供应链安全。这是该公司在军事和国防核心合同之外，持续推动业务多元化的一部分。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/palantir-inks-300-million-deal-with-usda-to-safeguard-food-supply.html" },
 ];
-const breakingDate = "2026年4月23日 03:28 CST";
+const breakingDate = "2026年4月23日 05:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:29", tag: "macro", tagText: "宏观", text: "美国参议员伊丽莎白·沃伦警告称，AI领域的失败可能引发下一次金融危机。她表示自己“看到了泡沫”，并呼吁加强监管，以防止类似2008年的经济衰退重演。", source: "The Verge", url: "https://www.theverge.com/policy/917026/ai-economy-bubble-elizabeth-warren" },
+  { time: "03:52", tag: "tech", tagText: "科技", text: "SpaceX以一笔100亿美元的“合作费”和一条通往600亿美元收购的路径，抢先截胡了AI初创公司Cursor原定于本周完成的20亿美元融资轮。此举展示了科技巨头在争夺顶尖AI人才和资产方面的激进策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/how-spacex-preempted-a-2b-fundraise-with-a-60b-buyout-offer/" },
   { time: "01:30", tag: "ai", tagText: "AI", text: "谷歌为Chrome企业版引入Gemini驱动的“自动浏览”功能，将其转变为AI工作助手，可帮助员工自动化处理研究、数据录入等任务。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/" },
   { time: "00:58", tag: "ai", tagText: "AI", text: "谷歌发布面向企业IT和技术用户的Gemini Enterprise Agent Platform，这是一款新的智能体构建工具。该平台旨在让技术团队能够更高效地开发和部署企业级AI助手，标志着谷歌在企业AI解决方案上采取了更偏向技术栈的策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/" },
   { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "ai", tagText: "AI", text: "谷歌云与Mira Murati领导的Thinking Machines Lab签署了一项价值数十亿美元的新协议，以获取由英伟达最新GB300芯片驱动的AI基础设施。此举深化了双方的合作关系，旨在支持前沿AI模型的开发与训练。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "谷歌宣布将在其地图服务中大规模注入生成式AI功能。此举旨在提升用户体验，例如通过自然语言交互获取更智能的路线规划和地点推荐，标志着谷歌核心产品AI化的又一重要步骤。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-maps-is-about-to-get-a-big-dose-of-ai/" },
   { time: "16:00", tag: "ai", tagText: "AI", text: "欧洲在AI领域拥有人才和资金，但需摆脱对“美股七巨头”的依赖，才能实现突破。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMmdVNjh5LUJSSXp4RE9zMUhkWUZWbE93cE03eWdrVzZ1V0RpU1ItSzU2cDB0WktJMkQ0eVpaZzN0akZwc2duN05NQUgxS0JmclNRZWRpdEdFTjBoWEpDX05RMzFhbTFteDBGQ1VmY0hvZlVZRXBxRGNuajVJTlNIbUpuUHE2RUJCMzE2R1Z4WjdJcjRmUmg3eDhzZVBJOVU1?oc=5" },
-  { time: "13:03", tag: "ai", tagText: "AI", text: "瑞士洛桑联邦理工学院（EPFL）的研究人员在AI领域取得突破，开发出能够模拟阅读障碍（Dyslexia）的人工智能模型。这项研究有助于更深入地理解阅读障碍的神经机制，并可能为开发新的诊断和干预工具铺平道路。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMUl2Z0V4VlBkbUZBNU9BOV9RNVNqcmlIRTFYVEpzczdwY3h2RWhZaHh1VVM1ZXJScmJXdDJGSGxOcnV1VUN0OVV5Z014M2dCdDkyaTZGa0RYZDdVSnpBeGpBTEdCd0NGTi0zYlU1UXpiMUk0bDJBM0lFZmktbnFkXzNidG9acEhu?oc=5" },
-  { time: "12:41", tag: "ai", tagText: "AI", text: "AI初创公司Core Automation正积极从顶尖AI研究机构挖角，已成功招募来自Anthropic和DeepMind的研究人员。此举表明，专注于AI自动化领域的公司正通过吸纳顶尖人才来增强其研发实力，行业人才竞争持续加剧。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZlg3ZlpGWnBYYU1GSk82bTIyNVpZcnk2M1dSUEZLRUlEYXI5Y0V6T0c3R0ZIZC1OaEhSR0E1TlJELWhxVTFCUlQ0TGIwVHYwYlJYMF9pM3Z3VTVFSzRnUjhhd0Jna2E1ekdhR3JUbDlXMXlObTVILVpkTXg2bVZpV185WF8yUm1GVjVCS2RrdWNLckVvQTg3dldRU1NkRDB1ZzY4RA?oc=5" },
 ];
-const aiBreakingDate = "2026年4月23日 03:28 CST";
+const aiBreakingDate = "2026年4月23日 05:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
