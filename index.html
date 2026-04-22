@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.97,
+  score: 67.91,
   rating: "greed",
-  timestamp: "2026-04-22T17:11:16+00:00",
+  timestamp: "2026-04-22T19:25:36+00:00",
   previousClose: 67.57,
   previous1Week: 57.63,
   previous1Month: 15.63,
   previous1Year: 13.6,
-  date: "2026年4月23日 01:13 CST"
+  date: "2026年4月23日 03:28 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:08", tag: "macro", tagText: "宏观", text: "美国财长贝森特表示，在伊朗战争引发的市场动荡中，已有‘许多’美国盟友请求建立货币互换安排。尽管白宫随后否认阿联酋提出了此类请求，但此番言论凸显了地缘政治危机对全球金融体系的潜在压力。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/iran-war-treasury-uae-scott-bessent-currency-swaps.html" },
+  { time: "03:02", tag: "macro", tagText: "宏观", text: "贝莱德指出，伊朗战争导致股债相关性升至两年来最高水平，传统的60/40投资组合策略面临挑战。该资管巨头建议投资者寻求多元化配置，以应对新的市场环境。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/blackrock-on-60/40-and-portfolio-diversifiers.html" },
+  { time: "02:49", tag: "crypto", tagText: "加密", text: "美国财政部长正敦促参议院通过加密货币市场结构立法，旨在为数字资产领域提供更明确的监管框架。此举正值比特币价格回升至11周高点之际，显示出政策制定者正试图规范这一快速发展的市场。", source: "Bitcoin Magazine", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE1jczdsTmUwNHB1cEFqMS00TnAxbk5UX3RJRk40dDFGWTNYYld0LThiUllWU1dtNjlyN1k5YnZwOWRhZnUzdk1wUzhEdnZKcy1aZkh2S3ljUVd6cXVIeEh0WDZMaENsdERGZDQ5d2ZWUkxxTS1JcE00TQ?oc=5" },
+  { time: "02:46", tag: "tech", tagText: "科技", text: "Rivian宣布已在其伊利诺伊州工厂开始为客户生产新款R2纯电动汽车，并达到了一个生产里程碑。此举标志着这家电动汽车制造商在扩大产品线和提高产量方面迈出了关键一步。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/rivian-r2-ev.html" },
+  { time: "02:13", tag: "crypto", tagText: "加密", text: "加密货币亿万富翁孙宇晨起诉特朗普家族的世界自由金融公司，指控其欺诈。这场法律纠纷发生在孙宇晨与特朗普企业之间不断升级的争执背景下，凸显了加密领域与传统金融政治势力之间的复杂关系。", source: "International homepage", url: "https://www.ft.com/content/d8ba5daa-2af8-4242-b875-e4ebb4d9dbb8" },
   { time: "23:37", tag: "macro", tagText: "宏观", text: "德国政府将2026年经济增长预测减半，并上调通胀预期，原因是伊朗战争带来的经济冲击。这反映了欧洲最大经济体正面临地缘政治危机导致的滞胀风险。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPRm9BZ0ZpT2c5anl6VWk0Rkg3N2VFN2pqTHM0ZGp0elZnSTFZUDJIempPZ2hmRmZ6cEhuNnp5V3dBdHhwN055WnNWTnJNTndZNk1GTk9mRzVuOFRTRVJuMjJMRDJLS0Nma2dhZExtTUd6ejkzbEVPbzJkRjQwOUk2ZVZzRzNEVkhzUm92eTBpQ2FxeDVtRjBsa3JCNmpQVUNid0tiZDdkendGc2UyTmdqNEl2dmdwei0tQUNpUE5n?oc=5" },
   { time: "23:36", tag: "macro", tagText: "宏观", text: "受美伊停火延长消息提振，美国股市周三上涨。纳斯达克综合指数创下盘中及收盘历史新高，标普500指数和道琼斯工业平均指数也同步走高。市场风险偏好改善，暂时盖过了地缘政治紧张和油价飙升的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/21/stock-market-today-live-updates.html" },
   { time: "23:28", tag: "macro", tagText: "宏观", text: "全球主要能源交易商（如维多、托克等）正在扩大信贷额度，为伊朗战争可能导致的全球石油和天然气流动长期中断做准备。这表明行业预期冲突将持续并对能源市场产生深远影响。", source: "Financial Times", url: "https://www.ft.com/content/2d857fb7-e952-4aee-8b9c-1d170b6857b5" },
@@ -1644,20 +1649,17 @@ const breakingNews = [
   { time: "19:50", tag: "ai", tagText: "AI", text: "英国金融行为监管局（FCA）宣布将启动一项AI测试计划，并已指定八家银行参与。此举旨在评估和监管金融机构对人工智能技术的应用。", source: "Retail Banker International", url: "https://finance.yahoo.com/sectors/technology/articles/uk-fca-names-eight-banks-115428708.html" },
   { time: "19:45", tag: "tech", tagText: "科技", text: "AT&T第一季度财报显示，其无线用户净增数超出预期，这得益于将无线服务与高速光纤服务捆绑销售的策略取得成功。公司营收符合预期，利润超出预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/att-adds-more-wireless-subscribers-than-expected-as-bundling-pays-off.html" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "数据分析公司Palantir与美国农业部签署了一份价值3亿美元的合同，以帮助保障美国的食品供应链安全。这是该公司在军事和国防核心合同之外，持续推动业务多元化的一部分。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/palantir-inks-300-million-deal-with-usda-to-safeguard-food-supply.html" },
-  { time: "16:54", tag: "macro", tagText: "宏观", text: "英国3月通胀率跃升至3.3%，受伊朗战争推动燃油价格创三年多来最大涨幅。能源成本飙升正加剧英国及欧洲经济压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/uk-inflation-jumps-to-3point3percent-in-march-as-fuel-prices-surge.html" },
-  { time: "16:54", tag: "geo", tagText: "地缘", text: "新加坡外长维文警告称，若中美在太平洋开战，当前霍尔木兹海峡的冲突只是‘预演’。他是在CNBC CONVERGE LIVE活动上讨论中美关系复杂性时作出上述表态。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/cnbc-converge-live-hormuz-singapore-fm-vivian-iran-war.html" },
-  { time: "16:54", tag: "macro", tagText: "宏观", text: "欧洲股市周三涨跌互现，ASMI一季度业绩超预期股价大涨8%。市场同时评估伊朗停火延长及企业财报影响，美股期货因停火延长而走高。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/european-markets-stoxx-600-ftse-dax-iran-latest-news-oil-price.html" },
-  { time: "14:04", tag: "crypto", tagText: "加密", text: "加密货币市场概览：比特币价格突破77,000美元，门罗币和达世币领涨。与此同时，灰度公司表示，比特币已在2026年2月触底。", source: "FXStreet", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQS0J3ampjX3YxSDQ0Sk11Um1xNW9mTm54ZDVsd0x0dVBTc1BaYTV6N18zeDdzbnpYWHBtWlRpNHY4a3BLbUNmV3owM2ZrY2RybXd0elh3NHhBWDl3eUFmYmY3VGEwQlZJZWdheEQ1VHZvS1N0c3czME5SaDgwbWpzdUNHemxfQldlV2NTWWRZa2ZQUXZSenJidU9iWlFFZ0FycVVnVmRCbXdxT0o0aW9CYVdRMUtYNElkXzF2bTFnaE41d3YwdHZOSmV5aUJ1VjAz?oc=5" },
-  { time: "13:41", tag: "macro", tagText: "宏观", text: "欧洲央行高级政策制定者、拉脱维亚央行行长Mārtiņš Kazāks表示，欧洲央行有‘奢侈’的时间等待，不必急于因伊朗战争推高的能源价格而加息。", source: "FT", url: "https://www.ft.com/content/5978f69a-83c3-43dd-98c4-d9d95eb542c7" },
 ];
-const breakingDate = "2026年4月23日 01:13 CST";
+const breakingDate = "2026年4月23日 03:28 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:30", tag: "ai", tagText: "AI", text: "谷歌为Chrome企业版引入Gemini驱动的“自动浏览”功能，将其转变为AI工作助手，可帮助员工自动化处理研究、数据录入等任务。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/" },
   { time: "00:58", tag: "ai", tagText: "AI", text: "谷歌发布面向企业IT和技术用户的Gemini Enterprise Agent Platform，这是一款新的智能体构建工具。该平台旨在让技术团队能够更高效地开发和部署企业级AI助手，标志着谷歌在企业AI解决方案上采取了更偏向技术栈的策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/" },
   { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
   { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
   { time: "00:57", tag: "ai", tagText: "AI", text: "Anthropic的新网络安全模型Mythos正被多个美国联邦机构采用以发现漏洞，但据报道，美国主要的网络安全协调机构——网络安全和基础设施安全局（CISA）并未参与其中。这引发了关于该模型潜在风险及监管协调的讨论。", source: "The Verge", url: "https://www.theverge.com/policy/916758/anthropic-mythos-preview-cisa-left-out" },
+  { time: "00:46", tag: "ai", tagText: "AI", text: "谷歌宣布将为企业版Gmail引入AI概览功能，该功能可从多封邮件中提取信息，生成即时摘要，提升工作效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/ai-overviews-are-coming-to-your-gmail-at-work/" },
   { time: "00:38", tag: "ai", tagText: "AI", text: "谷歌Meet的AI会议记录功能现已扩展至线下会议以及Zoom和Microsoft Teams会议。通过Gemini，该功能可为各类会议生成摘要和文字记录，进一步模糊了线上与线下协作工具的界限。", source: "The Verge", url: "https://www.theverge.com/tech/916779/google-meet-ai-notetaker-in-person-meetings" },
   { time: "23:19", tag: "tech", tagText: "科技", text: "英伟达面临来自内部AI芯片的压力，这可能对其市场主导地位构成挑战。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZ1Jsa2s2a3MwV1c2UlNwYm8zeVFONndXc2lPVk9VWDRfdjFkdWNjQ0o5Nk5YY3pUMzlKVTNPUDhFZjZmWDFYYmUwV1M0dHQ5ZGllcDJKNGI3amUwOGNvZl8xcWVycVdtakYxNjltZmJpZTdrNERuQV9XdmhVOS1iZFNHeTUtck5CNmd1NVU2bw?oc=5" },
   { time: "22:22", tag: "ai", tagText: "AI", text: "Meta开始通过名为“模型能力计划”（Model Capability Initiative, MCI）的工具，追踪美国员工在电脑上的活动数据，用于训练其AI智能体。此举引发了对员工隐私和工作场所监控的担忧。", source: "The Verge", url: "https://www.theverge.com/tech/916681/meta-ai-agents-employee-tracking" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "16:00", tag: "ai", tagText: "AI", text: "欧洲在AI领域拥有人才和资金，但需摆脱对“美股七巨头”的依赖，才能实现突破。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMmdVNjh5LUJSSXp4RE9zMUhkWUZWbE93cE03eWdrVzZ1V0RpU1ItSzU2cDB0WktJMkQ0eVpaZzN0akZwc2duN05NQUgxS0JmclNRZWRpdEdFTjBoWEpDX05RMzFhbTFteDBGQ1VmY0hvZlVZRXBxRGNuajVJTlNIbUpuUHE2RUJCMzE2R1Z4WjdJcjRmUmg3eDhzZVBJOVU1?oc=5" },
   { time: "13:03", tag: "ai", tagText: "AI", text: "瑞士洛桑联邦理工学院（EPFL）的研究人员在AI领域取得突破，开发出能够模拟阅读障碍（Dyslexia）的人工智能模型。这项研究有助于更深入地理解阅读障碍的神经机制，并可能为开发新的诊断和干预工具铺平道路。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMUl2Z0V4VlBkbUZBNU9BOV9RNVNqcmlIRTFYVEpzczdwY3h2RWhZaHh1VVM1ZXJScmJXdDJGSGxOcnV1VUN0OVV5Z014M2dCdDkyaTZGa0RYZDdVSnpBeGpBTEdCd0NGTi0zYlU1UXpiMUk0bDJBM0lFZmktbnFkXzNidG9acEhu?oc=5" },
   { time: "12:41", tag: "ai", tagText: "AI", text: "AI初创公司Core Automation正积极从顶尖AI研究机构挖角，已成功招募来自Anthropic和DeepMind的研究人员。此举表明，专注于AI自动化领域的公司正通过吸纳顶尖人才来增强其研发实力，行业人才竞争持续加剧。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZlg3ZlpGWnBYYU1GSk82bTIyNVpZcnk2M1dSUEZLRUlEYXI5Y0V6T0c3R0ZIZC1OaEhSR0E1TlJELWhxVTFCUlQ0TGIwVHYwYlJYMF9pM3Z3VTVFSzRnUjhhd0Jna2E1ekdhR3JUbDlXMXlObTVILVpkTXg2bVZpV185WF8yUm1GVjVCS2RrdWNLckVvQTg3dldRU1NkRDB1ZzY4RA?oc=5" },
-  { time: "10:26", tag: "ai", tagText: "AI", text: "据报道，由杰夫·贝索斯创立的秘密AI初创公司Project Prometheus即将完成一轮高达100亿美元的巨额融资。此轮融资预计将使公司估值达到约380亿美元，显示出资本市场对顶级AI项目的持续狂热。", source: "AASTOCKS.com", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRlVZQTlNWmg5V3ZuLXR1Rkt3Z2h2bGJuSTdlR0pfVDNRT1RpU3NQYkc3eUVXRTJrNFlSelg5clVHenhteDM1MndqZWpTYnVseGJVaGJZZ3ViS1NFbmx2Z0NsdmRpZC1tRi1iU3RtVWpmNDR5U2ZCNU9VUTJHQ1FtNmpBNDdLQTlUQXc?oc=5" },
-  { time: "07:10", tag: "ai", tagText: "AI", text: "亚马逊向AI公司Anthropic追加投资50亿美元，而Anthropic则承诺在未来将投入1000亿美元用于亚马逊云服务（AWS）。这笔巨额双向交易进一步巩固了双方的战略联盟，并可能重塑AI基础设施的竞争格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/20/anthropic-takes-5b-from-amazon-and-pledges-100b-in-cloud-spending-in-return/" },
 ];
-const aiBreakingDate = "2026年4月23日 01:13 CST";
+const aiBreakingDate = "2026年4月23日 03:28 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
