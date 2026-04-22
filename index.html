@@ -1570,11 +1570,17 @@ function renderBreakingNews() {
     ...aiBreakingNews.map(n => ({...n, _src: 'ai'})),
   ];
 
-  // Sort by time descending (handle cross-midnight)
+  // Sort by recency (handle cross-midnight): items after "now" are treated as yesterday
+  const now = new Date();
+  const nowMin = now.getHours() * 60 + now.getMinutes();
   allNews.sort((a, b) => {
-    const ta = a.time.replace(':', '');
-    const tb = b.time.replace(':', '');
-    return tb.localeCompare(ta);
+    const [ah, am] = a.time.split(':').map(Number);
+    const [bh, bm] = b.time.split(':').map(Number);
+    const at = ah * 60 + am;
+    const bt = bh * 60 + bm;
+    const da = at <= nowMin ? nowMin - at : nowMin - at + 1440;
+    const db = bt <= nowMin ? nowMin - bt : nowMin - bt + 1440;
+    return da - db;
   });
 
   if (allNews.length === 0) {
