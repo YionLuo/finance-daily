@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 65.97,
+  score: 65.89,
   rating: "greed",
-  timestamp: "2026-04-23T18:07:41+00:00",
+  timestamp: "2026-04-23T19:59:58+00:00",
   previousClose: 68.14,
   previous1Week: 63.34,
   previous1Month: 14.13,
   previous1Year: 21.54,
-  date: "2026年4月24日 02:13 CST"
+  date: "2026年4月24日 04:11 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:28", tag: "geo", tagText: "地缘", text: "布伦特原油突破105美元，因霍尔木兹海峡紧张局势持续升温，以色列威胁发动攻击。美国与伊朗冲突升级导致该战略要道基本对油轮关闭，推动油价进一步飙升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/oil-price-iran-war-strait-hormuz.html" },
+  { time: "03:10", tag: "tech", tagText: "科技", text: "Meta宣布将裁员10%（约8000人），以‘抵消’扎克伯格在AI领域的巨额支出。公司计划今年在数据中心上投入1350亿美元，通过裁员优化成本结构。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html" },
+  { time: "02:59", tag: "geo", tagText: "地缘", text: "美国海军部长约翰·费伦因伊朗封锁事件被解职。费伦与国防部长皮特·赫格塞斯发生冲突后遭撤换，凸显美军高层在应对伊朗局势上的内部分歧。", source: "Financial Times", url: "https://www.ft.com/content/e2553227-d5d9-46dc-81c4-ca0066b13ad0" },
+  { time: "02:16", tag: "macro", tagText: "宏观", text: "精神航空律师警告公司现金‘撑不了多久’，但政府救助已在讨论中。精神航空确认与特朗普政府就救助方案进行‘非常深入的谈判’，纳税人资金可能介入。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/spirit-airlines-bankruptcy-court-rescue.html" },
   { time: "01:53", tag: "macro", tagText: "宏观", text: "美股周四从纪录高位回落，道指跌超400点，软件股领跌。ServiceNow因财报不及预期暴跌超16%，拖累Salesforce、Workday等，市场对AI变现能力的担忧加剧。油价飙升进一步打压市场情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/stock-market-today-live-updates.html" },
   { time: "01:04", tag: "tech", tagText: "科技", text: "软件股因ServiceNow和IBM财报引发AI恐慌而暴跌。ServiceNow股价重挫逾16%，拖累Salesforce、Workday和甲骨文等一众软件股，市场对AI投入能否转化为利润的疑虑升温。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html" },
   { time: "00:36", tag: "tech", tagText: "科技", text: "微软宣布首次针对美国员工的自愿买断计划，面向高级总监及以下级别、工龄加年龄满70岁的员工，最多可裁减7%的美国员工。此举旨在优化成本结构。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/microsoft-plans-first-voluntary-retirement-program-for-us-employees.html" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "18:28", tag: "geo", tagText: "地缘", text: "海湾石油和天然气生产商正争相探索替代路线，以将能源出口运出中东。霍尔木兹海峡的持续封锁迫使各国寻找绕过该海峡的管道等替代方案，但选择有限。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/strait-hormuz-closure-alternative-routes-middle-east-oil-gas-pipelines.html" },
   { time: "18:04", tag: "ai", tagText: "AI", text: "中国AI初创公司DeepSeek正寻求以约200亿美元估值进行首次融资，旨在防止研究人员被竞争对手挖角。此前已有数名核心员工离职。", source: "Financial Times", url: "https://www.ft.com/content/f7c65d8e-aed1-4767-9ea3-9715cb8a24e0" },
   { time: "17:55", tag: "tech", tagText: "科技", text: "摩根大通分析师警告称，meme股票热潮已接近特朗普‘解放日’关税后的极端水平。市场投机情绪再度升温，需警惕回调风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-meme-stock-craze-is-getting-close-to-its-post-liberation-day-extremes-according-to-jpmorgan-e189fb77?mod=mw_rss_topstories" },
-  { time: "17:42", tag: "tech", tagText: "科技", text: "SK海力士公布创纪录的第一季度业绩，但股价未能提振。尽管AI需求推动内存价格攀升，但该股2026年已累计上涨88%，市场对利好已充分消化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-good-times-roll-for-sk-hynix-with-record-breaking-quarter-but-living-up-to-expectations-isnt-easy-1f2ae731?mod=mw_rss_topstories" },
-  { time: "17:40", tag: "tech", tagText: "科技", text: "分析师试图平息市场恐慌，此前台积电表示一台高端ASML光刻机过于昂贵。这引发了对半导体设备需求的担忧，但分析师认为客户基础有限，影响可控。", source: "MarketWatch", url: "https://www.marketwatch.com/story/analysts-try-to-quell-the-panic-after-taiwan-semiconductor-said-a-high-end-asml-machine-was-too-expensive-e6e43f6e?mod=mw_rss_topstories" },
-  { time: "16:53", tag: "geo", tagText: "地缘", text: "伊朗战争持续导致霍尔木兹海峡封锁，印度和中国正为争夺日益萎缩的俄罗斯原油供应展开激烈竞争。这凸显了地缘冲突对全球能源贸易格局的深刻重塑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/india-china-russian-oil-supply-strait-hormuz-disruption.html" },
-  { time: "16:43", tag: "ai", tagText: "AI", text: "德州仪器业绩超出华尔街预期，不仅受益于数据中心需求，工业客户的强劲需求也推动了其业绩展望上调。这表明AI和自动化对传统制造业的拉动作用正在显现。", source: "MarketWatch", url: "https://www.marketwatch.com/story/texas-instruments-topped-wall-streets-outlook-on-more-than-just-data-center-demand-c033d44a" },
 ];
-const breakingDate = "2026年4月24日 02:13 CST";
+const breakingDate = "2026年4月24日 04:11 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:41", tag: "tech", tagText: "科技", text: "Meta计划在5月裁员约10%，即约8000人。这是继2023年大规模裁员后，该公司新一轮组织精简，旨在进一步削减成本并聚焦核心业务。", source: "The Verge", url: "https://www.theverge.com/tech/917690/meta-is-laying-off-10-percent-of-its-staff" },
+  { time: "02:00", tag: "ai", tagText: "AI", text: "Anthropic的Claude Mythos模型遭遇尴尬的安全漏洞。该公司此前坚称该模型在网络安全领域能力过强，以至于无法公开发布，但随后即被黑客攻破，引发对其安全策略和宣传方式的广泛质疑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布GPT-5.5模型，号称是“最智能、最直观”的版本，在编码效率和易用性上显著提升，被视为向新型人机协作方式迈进的关键一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt" },
   { time: "00:00", tag: "tech", tagText: "科技", text: "AI硬件初创公司Era完成1100万美元融资，致力于为眼镜、戒指、吊坠等多种形态的AI可穿戴设备构建统一软件平台，押注AI硬件将迎来多样化爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/era-computer-raises-11m-to-build-a-software-platform-for-ai-gadgets/" },
   { time: "22:39", tag: "macro", tagText: "宏观", text: "全球最重要的半导体指数（费城半导体指数）正经历有史以来最长的连续上涨周期。分析指出，尽管AI需求强劲，但地缘政治风险和潜在的库存调整可能成为终结这一涨势的隐患。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxNb2MzYU9qQ1A4V1Bua2ZtRjBtaTJBXzZMeGhrNUhKNmE1X19BekdRUUZ0MGVoMmJwRGtRNXFQb045aW5kbERKMzdWQS1EOURPbG11bGNVSlktMFh5TnZnU3NKbUtOQi1FMDVNaDEtSFZlTVZ2b0hoUHkxWk5taHptaXVPNE5RUmxTQVRHY19YcGtBRUdtbGhnblR3Y3JFS2l0VEE?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "15:01", tag: "ai", tagText: "AI", text: "基辅安全部门负责人警告称，如果没有AI技术的突破，无人机在未来战场上的有效性将大幅下降。他指出，随着电子战和反制措施的升级，无人机亟需AI赋能以实现自主导航、目标识别和抗干扰能力。", source: "mezha.net", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBwRjA5b3ZuLVcxOERQRmYyTENvTklaMG82UFB2d0JGVXMwVkI5OEFfUVd0cnVFYWFDY0FOel9rUXpyYzFwb215S2lOVWgyTjZTSkpIRzhwTC1UR2U5N3c0dnRuSjZuekNw?oc=5" },
   { time: "15:01", tag: "ai", tagText: "AI", text: "腾讯和阿里巴巴正瞄准AI初创公司DeepSeek，计划进行一轮重大AI融资。此举显示中国科技巨头正加速在AI领域的投资布局，以争夺下一代AI技术高地。", source: "Latest news from Azerbaijan", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRG5LaG5jeVhYb1hJVjVjT0ZuaXNsYUtzZGlhc2dVN2lLS2lBM3k3LVpwZzFkcUF3aU1sTG9jeEh5LWN0OUUwZDNabkZmYTJLejltMHByTEpkWC1oUkI0WUNzUGZGZWI4QUd5VjR6ODJyVUdTOUNka003LVJ1QmM5ei0zSQ?oc=5" },
   { time: "15:00", tag: "geo", tagText: "地缘", text: "英国政府宣布启动一项价值5亿英镑的“主权AI”专项基金，旨在支持本土AI初创企业，减少对海外科技巨头的依赖。此举是英国在脱欧后加强科技自主性和国家AI战略安全的重要举措。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxORzdwN3pZMEFYb1QyVkUzLUdqRjZuUzVVMzVGNWhTNlB0UUU1UW9Zd1kxZ0I2cFZQakdzQmhJZ2ZKZ2tCYUhWOF84S05HNWd0TWc0VDY5a1Vka0h0bnp0T0FkRnRTbXRPX21DcGIzcUVlQjUycjNaMnR5aDNKLVVGWXZMZEdkODIxWXVKR2V6WVM4Xzhxd0hvM09EdmdOajM3V0FTWjQ5ZFduUGZlcUloaGtGMmxNdWhoZGJEOWliYl9xY3k2UFQybm80U1JkYWZmbWhQa2tPVQ?oc=5" },
-  { time: "13:08", tag: "ai", tagText: "AI", text: "AI制药公司Recursion Pharmaceuticals (RXRX) 在最近的网络直播中重点介绍了其利用AI发现的药物靶点突破，引发市场对其估值的重新评估。该公司正利用其专有的AI平台加速药物发现进程。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTjVZZFBxSXo0UTlhY0VUQVRYMUdkbFc2LWl3MXZ6QWlwT25hd0VOa29YTDFfY2FWWEJKcU02a2xtRkZ6UVlZZjVZMm1uMmFGaWpLOXNXaEhnRlh4SmU4TVEyZng1X0JIM21pZGNLaFludjI0a1lEdEtDT2VIN013b2RWanlEYktraGE4T2NuRURIMTFCNFFtaUN1cnltWDFEZld3RTZNN2F5bnFLZXJQbGRtRVNKN25Ka1UzWExEUXhrX3NzZDdyY3RWUUZULVhkTkkwR1BFSUc5cjd3cUhqVkZjTnJkMWpLUzhzN0NiUdIB9AFBVV95cUxNUnZ2N2V5LXFvTUxpS3dEVFZUUHZnOWI2cjFSVU1HYndEb1JDaUl5WEFtS0VSMGpYX25ISzVLZXlzYV83eGl5SEItYkFWbTVLQzlJNVc3bzhRS2ZLcl9sa3M2LWFXRzdqeGdWWV9jaHZsTWJRRFZYRlo1WlE5bG9fMDYxZk9ROGlHZmg1VzBzMjhBRGYtbGtxWU4xQUQ3OFdDZE9aaHNsQTJ6cmRNQ0FDY2dDamc4UnE4UnJJSGtZMDBBOWJIdkIyY3hZTWlRbnJZX285aFpMWFVNWjk2V09xS2FIQlVvMWc0VFZpU05PQV9XWXlY?oc=5" },
-  { time: "12:38", tag: "tech", tagText: "科技", text: "印度应用市场正蓬勃发展，但全球平台攫取了大部分收益。非游戏应用（以流媒体和AI应用为首）是增长的主要驱动力，尽管印度用户的平均支出仍落后于全球同行。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/indias-app-market-is-booming-but-global-platforms-are-capturing-most-of-the-gains/" },
 ];
-const aiBreakingDate = "2026年4月24日 02:13 CST";
+const aiBreakingDate = "2026年4月24日 04:11 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
