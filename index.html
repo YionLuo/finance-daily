@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 66.31,
   rating: "greed",
-  timestamp: "2026-04-23T22:43:23+00:00",
+  timestamp: "2026-04-23T23:38:21+00:00",
   previousClose: 68.14,
   previous1Week: 63.34,
   previous1Month: 14.13,
   previous1Year: 21.54,
-  date: "2026年4月24日 06:59 CST"
+  date: "2026年4月24日 07:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:56", tag: "macro", tagText: "宏观", text: "日本3月核心CPI同比加速至1.8%，为五个月来首次回升，主要受伊朗战争推高能源价格影响。数据与市场预期一致，但能源成本上升正对日本经济复苏构成压力，市场关注日本央行后续利率路径。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/japan-cpi-march-inflation-iran-war-boj-rate.html" },
+  { time: "07:56", tag: "geo", tagText: "地缘", text: "美国司法部逮捕一名士兵，指控其利用内幕信息在Polymarket上押注40万美元，成功预测委内瑞拉总统马杜罗被捕。此案引发对预测市场内幕交易问题的广泛担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/doj-soldier-polymarket-bets-venezuela-maduro.html" },
+  { time: "07:56", tag: "geo", tagText: "地缘", text: "法国气象局向警方报案，因发现巴黎戴高乐机场气温数据在数分钟内异常升高，而此前Polymarket上出现针对该数据的可疑押注。事件引发对预测市场操纵天气数据的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/french-weather-forecasting-office-files-police-complaint-following-suspicious-surge-in-polymarket-bets-fb72729d" },
+  { time: "07:56", tag: "macro", tagText: "宏观", text: "特朗普对市场的影响力达到数十年来总统之最。数据显示，特朗普第二任期内的股市最佳和最差单日表现均与其言论直接相关，市场波动性显著增加。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-is-swaying-the-market-like-no-president-has-in-decades-analysis-shows-879be0bc" },
   { time: "06:59", tag: "tech", tagText: "科技", text: "特斯拉股价下跌，因公司上调2026年AI和机器人领域资本支出指引，引发市场对成本上升的担忧。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNMHdKckh1XzRsTk5COVNJUDBXRzdFZEVDd1U1SGxkQTZsVWxIenR5TWF1ZmtqSUI4TWlXWFFCSWVPYXdNd2NWYzlUQWtRc2RWekJBaWNtRUJ4WnhhcEY4aFZsRkNVSlVDSkpYc25qb2xrenBYaDNoV19udVBrZkJ5c0Q2UmhzeWkwNkY2YXVhbzlRNFliSmhKdy0zQWw4UXQtRmVMd09IaDRCNDZablRQd1Uza19YX1NMdTZBWEZWYzk3SkNtY2hiTnFRel9ueHJUMFByNUlPTGVxSTVPajY1YzhGOTdEbE81YWc?oc=5" },
   { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普宣布以色列与黎巴嫩停火协议延长三周。此前双方在白宫与美国高级官员会晤后达成一致，此举旨在缓解中东紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-israel-lebanon-ceasefire-iran-war.html" },
   { time: "05:21", tag: "tech", tagText: "科技", text: "英特尔股价盘后飙升19%，因一季度财报超预期并给出乐观指引。公司预计AI数据中心业务将推动收入激增，显示这家芯片巨头正显现增长迹象。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/intel-intc-q1-2026-earnings-report.html" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "00:06", tag: "ai", tagText: "AI", text: "OpenAI发布最新AI模型GPT-5.5，据称在编程、使用计算机和深度研究能力方面有显著提升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html" },
   { time: "23:59", tag: "macro", tagText: "宏观", text: "毕马威（KPMG）计划裁减其美国审计合伙人的10%，原因是多年来自愿退休计划参与率较低，公司被迫采取强制裁员措施。", source: "Financial Times", url: "https://www.ft.com/content/ab4f15df-4a5d-41ce-95aa-e3cbc8489409" },
   { time: "22:40", tag: "geo", tagText: "地缘", text: "白宫指控中国进行‘工业规模’的AI技术盗窃。特朗普政府官员迈克尔·克拉齐奥斯称，中国实体正在窃取美国实验室的技术。", source: "Financial Times", url: "https://www.ft.com/content/abde4e1e-c69a-4cc4-ad96-d88308314298" },
-  { time: "21:44", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic在二级市场的估值已达到1万亿美元。这一里程碑式估值反映了市场对前沿AI模型开发商的狂热追捧，尽管其尚未实现大规模盈利。", source: "Quartz", url: "https://finance.yahoo.com/markets/stocks/articles/anthropic-reaches-1-trillion-valuation-134440611.html" },
-  { time: "21:42", tag: "geo", tagText: "地缘", text: "特朗普下令海军在霍尔木兹海峡对任何布设水雷的船只进行‘射击并摧毁’。此举标志着美国与伊朗在该战略要道上的紧张局势进一步升级，该海峡因战争已基本对油轮交通关闭。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-hormuz-strait-iran-war.html" },
-  { time: "21:35", tag: "macro", tagText: "宏观", text: "美国航空下调2026年盈利预测，因伊朗冲突导致燃油成本飙升。公司预计本季度燃油价格将上涨45%，成为最新一家因燃料成本激增而下调业绩指引的航空公司。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/american-airlines-aal-q1-2026-earnings.html" },
-  { time: "21:21", tag: "macro", tagText: "宏观", text: "特朗普政府正式提议将大麻重新归类为《管制物质法》下的附表III药物。此举将放宽研究限制，但并未实现合法化或改变联邦刑事处罚，标志着毒品政策上的重大转变。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-administration-reclassifies-cannabis.html" },
 ];
-const breakingDate = "2026年4月24日 06:59 CST";
+const breakingDate = "2026年4月24日 07:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1659,6 +1659,7 @@ const aiBreakingNews = [
   { time: "06:59", tag: "ai", tagText: "AI", text: "AI初创公司Noscroll推出名为Noscroll的AI机器人，旨在通过自动阅读互联网内容来帮助用户摆脱“末日刷屏”（doomscrolling）习惯。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/meet-noscroll-an-ai-bot-that-does-your-doomscrolling-for-you/" },
   { time: "05:00", tag: "tech", tagText: "科技", text: "由技术专家Bret Taylor创立的AI客服初创公司Sierra宣布收购YC支持的法国AI初创公司Fragment，交易金额未披露，此举旨在增强其AI代理技术能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/bret-taylors-sierra-buys-yc-backed-ai-startup-fragment/" },
   { time: "03:41", tag: "tech", tagText: "科技", text: "Meta计划在5月裁员约10%，即约8000人。这是继2023年大规模裁员后，该公司新一轮组织精简，旨在进一步削减成本并聚焦核心业务。", source: "The Verge", url: "https://www.theverge.com/tech/917690/meta-is-laying-off-10-percent-of-its-staff" },
+  { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布GPT-5.5模型，在编码效率和易用性上显著提升，并在Terminal-Bench 2.0基准测试中以微弱优势击败Anthropic的Claude Mythos Preview，被视为向AI“超级应用”迈进的关键一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "Anthropic的Claude Mythos模型遭遇尴尬的安全漏洞。该公司此前坚称该模型在网络安全领域能力过强，以至于无法公开发布，但随后即被黑客攻破，引发对其安全策略和宣传方式的广泛质疑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布GPT-5.5模型，号称是“最智能、最直观”的版本，在编码效率和易用性上显著提升，被视为向新型人机协作方式迈进的关键一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt" },
   { time: "00:00", tag: "tech", tagText: "科技", text: "AI硬件初创公司Era完成1100万美元融资，致力于为眼镜、戒指、吊坠等多种形态的AI可穿戴设备构建统一软件平台，押注AI硬件将迎来多样化爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/era-computer-raises-11m-to-build-a-software-platform-for-ai-gadgets/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "17:15", tag: "ai", tagText: "AI", text: "谷歌前联合创始人（拉里·佩奇和谢尔盖·布林）为一家新的AI初创公司筹集了450万美元。这笔投资表明，两位科技巨头创始人仍在密切关注并押注前沿AI技术。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNmZkeVZNMzNvdmtaSnpOSmw0QjVVMjBUNmZtSDJoM3JIbHdxOVhuaVplWkh4dWNMaE1UTUxkZkJrUFE2R0ZZYkk2b3NmUVRPa3dQc1Y2RDk2ZDc3WGV6WTRVUm9kdWRDS0JRamJIN2FHQ0FCSy1qUEdpQzR4QVU4QUprekNvTlZVUnJ4MF9UQ21icTQ?oc=5" },
   { time: "16:50", tag: "ai", tagText: "AI", text: "索尼AI机器人在乒乓球领域取得突破，击败了精英级人类选手。该机器人展示了在高速、高精度运动中的实时决策能力，标志着AI在物理交互和运动控制领域的重大进展。", source: "Daily Sabah", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNR0NnWndGN1lfMUJ0LUpVdEx3azV5Z2RGYzc3eEM4eDJjYWhrWFhscDd1ZGMwdVp2bDIyQzhfZ2Itd1NtbjFmR3czZEdPclJ3ektOZDR3QzRUV0tHTTZvcG1tVkVISjRKMUdQVXpRbDlNUW5RX0FyMDcwZnNuVXQ1ajlqWmphdGFvYXlSYkl5eFA4Skk0MHRRSlFEN1BkdGlEVlpz0gGoAUFVX3lxTE5JOTdkaVVNWFlfd3VfUHZ1WFg1eHBoUnR6eFJhLXdvdF9iRU5OUTlLLXFkaHh3QWJBWTlDREVZS0VNSzA3R0dfTWVpZ3pYRFpGNnZ5Ulo3TnkzY04xUjVvMWF6UHdsX1RXWmxTTTRrdjdJRTRIb0NHZGowME95WTVYeWI2T1liY0NpNXNwQTVkX2lZWUp1cGpDeE56MjFVTHFuaGkxbTM2dg?oc=5" },
   { time: "16:09", tag: "ai", tagText: "AI", text: "SK海力士工程负责人安铉表示，实现AI性能最大化的突破在于将内存与逻辑芯片集成。这一观点强调了存储与计算融合对未来AI芯片架构的关键作用。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xSEhhdmU3NllWS1V0d1lVQlRYSktJZnhheXo0RksxQnlocUctak5CTzBra2hpNzUwdzB1SkhJNEpBRm9EaDdVZjVmVWlkeExEbjI4?oc=5" },
-  { time: "16:04", tag: "ai", tagText: "AI", text: "StorageChain构建了突破性的跨云AI智能层，连接微软、AWS、Dropbox等平台。该技术旨在实现多云环境下的AI数据统一管理与智能调度，提升企业AI应用效率。", source: "AiThority", url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNNV9pOUU3SlkwMlNlUmJHMVl5VDhuZEJ3X1BJcDA4VVJ4Um85M3RyWHEzUDZVZlBfUGh6aHdJMjJfeEVzb3o2a1pacWdYUGFWQzVTczV1aE1fNkhvSlhaeXNpc1dxSEZHdXA5MTVlNVZFSFR0ODd4Y1c3QWtDOHpfTmtVR2JEN2dlWF92YlZMbVZtcThyUGVjNTR3MERnb2czalExUGhlVFVvcnNUNE5GcjAyUnhfMUF5dDk1bnpoZzE4SGQ0dmZ0a2hrejRDM0RLRk1YaFNYOEdpcnlFX214TUxB?oc=5" },
 ];
-const aiBreakingDate = "2026年4月24日 06:59 CST";
+const aiBreakingDate = "2026年4月24日 07:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
