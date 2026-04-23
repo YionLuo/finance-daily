@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 65.89,
+  score: 66.31,
   rating: "greed",
-  timestamp: "2026-04-23T19:59:58+00:00",
+  timestamp: "2026-04-23T21:38:08+00:00",
   previousClose: 68.14,
   previous1Week: 63.34,
   previous1Month: 14.13,
   previous1Year: 21.54,
-  date: "2026年4月24日 04:11 CST"
+  date: "2026年4月24日 05:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普宣布以色列与黎巴嫩停火协议延长三周。此前双方在白宫与美国高级官员会晤后达成一致，此举旨在缓解中东紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-israel-lebanon-ceasefire-iran-war.html" },
+  { time: "05:21", tag: "tech", tagText: "科技", text: "英特尔股价盘后飙升19%，因一季度财报超预期并给出乐观指引。公司预计AI数据中心业务将推动收入激增，显示这家芯片巨头正显现增长迹象。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/intel-intc-q1-2026-earnings-report.html" },
+  { time: "04:48", tag: "ai", tagText: "AI", text: "华纳兄弟股东批准出售给派拉蒙的交易，这家传奇影业即将迎来时代终结。该交易已遭到好莱坞工会及部分州检察长反对，目前正等待监管批准。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-warner-bros-shareholders-ok-sale-to-paramount-a-legendary-studio-approaches-the-end-of-an-era-b228e7e8" },
+  { time: "04:47", tag: "geo", tagText: "地缘", text: "美国页岩油生产商抵制增产，尽管伊朗战争导致油价飙升。达拉斯联储调查显示，能源高管对高油价能否持续缺乏信心，不愿在当前“混乱”中扩大产量。", source: "Financial Times", url: "https://www.ft.com/content/273c0321-0678-4ac0-9ccc-432301865b4c" },
+  { time: "04:17", tag: "macro", tagText: "宏观", text: "耐克宣布第二轮裁员，将裁减约1400个岗位，主要集中在技术部门。此前公司已在1月裁减775人，表明其业务转型仍在进行中。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/nike-job-cuts-layoffs.html" },
   { time: "03:28", tag: "geo", tagText: "地缘", text: "布伦特原油突破105美元，因霍尔木兹海峡紧张局势持续升温，以色列威胁发动攻击。美国与伊朗冲突升级导致该战略要道基本对油轮关闭，推动油价进一步飙升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/oil-price-iran-war-strait-hormuz.html" },
   { time: "03:10", tag: "tech", tagText: "科技", text: "Meta宣布将裁员10%（约8000人），以‘抵消’扎克伯格在AI领域的巨额支出。公司计划今年在数据中心上投入1350亿美元，通过裁员优化成本结构。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html" },
   { time: "02:59", tag: "geo", tagText: "地缘", text: "美国海军部长约翰·费伦因伊朗封锁事件被解职。费伦与国防部长皮特·赫格塞斯发生冲突后遭撤换，凸显美军高层在应对伊朗局势上的内部分歧。", source: "Financial Times", url: "https://www.ft.com/content/e2553227-d5d9-46dc-81c4-ca0066b13ad0" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "21:35", tag: "macro", tagText: "宏观", text: "美国航空下调2026年盈利预测，因伊朗冲突导致燃油成本飙升。公司预计本季度燃油价格将上涨45%，成为最新一家因燃料成本激增而下调业绩指引的航空公司。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/american-airlines-aal-q1-2026-earnings.html" },
   { time: "21:21", tag: "macro", tagText: "宏观", text: "特朗普政府正式提议将大麻重新归类为《管制物质法》下的附表III药物。此举将放宽研究限制，但并未实现合法化或改变联邦刑事处罚，标志着毒品政策上的重大转变。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-administration-reclassifies-cannabis.html" },
   { time: "19:24", tag: "geo", tagText: "地缘", text: "法国气象局向警方报案，称巴黎戴高乐机场气温数据在几分钟内异常升高数度，疑似遭人为篡改，以影响Polymarket预测市场平台上的相关赌注。", source: "Financial Times", url: "https://www.ft.com/content/89be7df3-b7b8-4b4a-8b88-e24e877b439d" },
-  { time: "18:37", tag: "macro", tagText: "宏观", text: "CNBC最新全美经济调查显示，美国总统特朗普的整体和经济工作支持率均跌至其两个任期内的最低点。这反映出民众对其经济政策的不满情绪加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trumps-approval-rating-on-economy-and-overall-falls-to-lowest-of-his-two-terms-cnbc-survey-shows.html" },
-  { time: "18:31", tag: "geo", tagText: "地缘", text: "LVMH首席执行官阿尔诺警告称，若中东冲突得不到解决，将引发‘世界灾难’。伊朗战争已对这家奢侈品集团的第一季度销售造成冲击，并带来‘非常严重’的经济后果。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/lvmh-ceo-arnault-iran-war-middle-east-stock-luxury.html" },
-  { time: "18:28", tag: "geo", tagText: "地缘", text: "海湾石油和天然气生产商正争相探索替代路线，以将能源出口运出中东。霍尔木兹海峡的持续封锁迫使各国寻找绕过该海峡的管道等替代方案，但选择有限。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/strait-hormuz-closure-alternative-routes-middle-east-oil-gas-pipelines.html" },
-  { time: "18:04", tag: "ai", tagText: "AI", text: "中国AI初创公司DeepSeek正寻求以约200亿美元估值进行首次融资，旨在防止研究人员被竞争对手挖角。此前已有数名核心员工离职。", source: "Financial Times", url: "https://www.ft.com/content/f7c65d8e-aed1-4767-9ea3-9715cb8a24e0" },
-  { time: "17:55", tag: "tech", tagText: "科技", text: "摩根大通分析师警告称，meme股票热潮已接近特朗普‘解放日’关税后的极端水平。市场投机情绪再度升温，需警惕回调风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-meme-stock-craze-is-getting-close-to-its-post-liberation-day-extremes-according-to-jpmorgan-e189fb77?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月24日 04:11 CST";
+const breakingDate = "2026年4月24日 05:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:00", tag: "tech", tagText: "科技", text: "由技术专家Bret Taylor创立的AI客服初创公司Sierra宣布收购YC支持的法国AI初创公司Fragment，交易金额未披露，此举旨在增强其AI代理技术能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/bret-taylors-sierra-buys-yc-backed-ai-startup-fragment/" },
   { time: "03:41", tag: "tech", tagText: "科技", text: "Meta计划在5月裁员约10%，即约8000人。这是继2023年大规模裁员后，该公司新一轮组织精简，旨在进一步削减成本并聚焦核心业务。", source: "The Verge", url: "https://www.theverge.com/tech/917690/meta-is-laying-off-10-percent-of-its-staff" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "Anthropic的Claude Mythos模型遭遇尴尬的安全漏洞。该公司此前坚称该模型在网络安全领域能力过强，以至于无法公开发布，但随后即被黑客攻破，引发对其安全策略和宣传方式的广泛质疑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布GPT-5.5模型，号称是“最智能、最直观”的版本，在编码效率和易用性上显著提升，被视为向新型人机协作方式迈进的关键一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "16:00", tag: "tech", tagText: "科技", text: "分析人士提出疑问：到2030年，台积电的市值是否会超过英伟达？该讨论基于AI芯片需求激增背景下，台积电作为代工龙头的增长潜力与英伟达当前高估值之间的对比。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPNXN4WWFRSzFDMEI3S21zUkdIb0lrWko4ODBlLU1nT2FpOXQ1aHNzUV9EWFBmRjhyOG5Ydmk3YmVTRUpaT1Bzb3Y3a2xMMHlnbVU3OUtSQ1l3UEQzYnoyLW92akt0MThhQU9jS0xWX25pYUhmUlBMWmotQjBwRjhUazdManFUTkJsTVU5a1lLZnRma2ZPcERVMDFXYkJJb094STlTRmNwZWVuR3RYNHJCd3ByQ1VFbWhJSWt1eTBjamhYd3I3MXNMeTZCR3BpSjlwbnZKVw?oc=5" },
   { time: "15:01", tag: "ai", tagText: "AI", text: "基辅安全部门负责人警告称，如果没有AI技术的突破，无人机在未来战场上的有效性将大幅下降。他指出，随着电子战和反制措施的升级，无人机亟需AI赋能以实现自主导航、目标识别和抗干扰能力。", source: "mezha.net", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBwRjA5b3ZuLVcxOERQRmYyTENvTklaMG82UFB2d0JGVXMwVkI5OEFfUVd0cnVFYWFDY0FOel9rUXpyYzFwb215S2lOVWgyTjZTSkpIRzhwTC1UR2U5N3c0dnRuSjZuekNw?oc=5" },
   { time: "15:01", tag: "ai", tagText: "AI", text: "腾讯和阿里巴巴正瞄准AI初创公司DeepSeek，计划进行一轮重大AI融资。此举显示中国科技巨头正加速在AI领域的投资布局，以争夺下一代AI技术高地。", source: "Latest news from Azerbaijan", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRG5LaG5jeVhYb1hJVjVjT0ZuaXNsYUtzZGlhc2dVN2lLS2lBM3k3LVpwZzFkcUF3aU1sTG9jeEh5LWN0OUUwZDNabkZmYTJLejltMHByTEpkWC1oUkI0WUNzUGZGZWI4QUd5VjR6ODJyVUdTOUNka003LVJ1QmM5ei0zSQ?oc=5" },
-  { time: "15:00", tag: "geo", tagText: "地缘", text: "英国政府宣布启动一项价值5亿英镑的“主权AI”专项基金，旨在支持本土AI初创企业，减少对海外科技巨头的依赖。此举是英国在脱欧后加强科技自主性和国家AI战略安全的重要举措。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxORzdwN3pZMEFYb1QyVkUzLUdqRjZuUzVVMzVGNWhTNlB0UUU1UW9Zd1kxZ0I2cFZQakdzQmhJZ2ZKZ2tCYUhWOF84S05HNWd0TWc0VDY5a1Vka0h0bnp0T0FkRnRTbXRPX21DcGIzcUVlQjUycjNaMnR5aDNKLVVGWXZMZEdkODIxWXVKR2V6WVM4Xzhxd0hvM09EdmdOajM3V0FTWjQ5ZFduUGZlcUloaGtGMmxNdWhoZGJEOWliYl9xY3k2UFQybm80U1JkYWZmbWhQa2tPVQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月24日 04:11 CST";
+const aiBreakingDate = "2026年4月24日 05:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
