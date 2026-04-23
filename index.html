@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.54,
+  score: 69.46,
   rating: "greed",
-  timestamp: "2026-04-23T11:47:31+00:00",
+  timestamp: "2026-04-23T14:05:48+00:00",
   previousClose: 68.14,
   previous1Week: 63.34,
   previous1Month: 14.13,
   previous1Year: 21.54,
-  date: "2026年4月23日 20:06 CST"
+  date: "2026年4月23日 22:09 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:44", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic在二级市场的估值已达到1万亿美元。这一里程碑式估值反映了市场对前沿AI模型开发商的狂热追捧，尽管其尚未实现大规模盈利。", source: "Quartz", url: "https://finance.yahoo.com/markets/stocks/articles/anthropic-reaches-1-trillion-valuation-134440611.html" },
+  { time: "21:42", tag: "geo", tagText: "地缘", text: "特朗普下令海军在霍尔木兹海峡对任何布设水雷的船只进行‘射击并摧毁’。此举标志着美国与伊朗在该战略要道上的紧张局势进一步升级，该海峡因战争已基本对油轮交通关闭。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-hormuz-strait-iran-war.html" },
+  { time: "21:35", tag: "macro", tagText: "宏观", text: "美国航空下调2026年盈利预测，因伊朗冲突导致燃油成本飙升。公司预计本季度燃油价格将上涨45%，成为最新一家因燃料成本激增而下调业绩指引的航空公司。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/american-airlines-aal-q1-2026-earnings.html" },
+  { time: "21:21", tag: "macro", tagText: "宏观", text: "特朗普政府正式提议将大麻重新归类为《管制物质法》下的附表III药物。此举将放宽研究限制，但并未实现合法化或改变联邦刑事处罚，标志着毒品政策上的重大转变。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-administration-reclassifies-cannabis.html" },
   { time: "19:24", tag: "geo", tagText: "地缘", text: "法国气象局向警方报案，称巴黎戴高乐机场气温数据在几分钟内异常升高数度，疑似遭人为篡改，以影响Polymarket预测市场平台上的相关赌注。", source: "Financial Times", url: "https://www.ft.com/content/89be7df3-b7b8-4b4a-8b88-e24e877b439d" },
   { time: "18:37", tag: "macro", tagText: "宏观", text: "CNBC最新全美经济调查显示，美国总统特朗普的整体和经济工作支持率均跌至其两个任期内的最低点。这反映出民众对其经济政策的不满情绪加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trumps-approval-rating-on-economy-and-overall-falls-to-lowest-of-his-two-terms-cnbc-survey-shows.html" },
   { time: "18:31", tag: "geo", tagText: "地缘", text: "LVMH首席执行官阿尔诺警告称，若中东冲突得不到解决，将引发‘世界灾难’。伊朗战争已对这家奢侈品集团的第一季度销售造成冲击，并带来‘非常严重’的经济后果。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/lvmh-ceo-arnault-iran-war-middle-east-stock-luxury.html" },
@@ -1645,18 +1649,16 @@ const breakingNews = [
   { time: "12:06", tag: "geo", tagText: "科技", text: "据英国《金融时报》报道，贸易巨头维多、托克和摩科瑞等公司正设法将其部分油轮驶出霍尔木兹海峡。文章详细描述了这些油轮如何‘闯关’伊朗封锁，凸显了全球能源运输面临的巨大风险。", source: "Financial Times", url: "https://www.ft.com/content/836ea939-c1a0-4943-8608-71dc3d4d838d" },
   { time: "10:40", tag: "crypto", tagText: "加密", text: "俄罗斯已批准在对外贸易中使用加密货币，以规避西方制裁。此举可能为俄罗斯与贸易伙伴之间的跨境支付开辟新渠道，并提升加密货币在地缘政治紧张局势中的实用价值。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRmNpNVE4bzRkU3F4UFR5LUppR2h3UEJxQW5mQUJ2ZXpsd0lONEFPQmhYTnBkM2dfTUR0ampmUWFoUUJBazNvRU5FMnhtbDBPOVBuNjltTmhidkZpT0VXNGMwTFZEV1Fqd1ZMMTRrNEdLdlpTZXhDeThBLU5qSjEzNHR0VVdaeWVSd1U3RU13QXhSdUE?oc=5" },
   { time: "10:26", tag: "macro", tagText: "宏观", text: "道指、标普500和纳斯达克指数期货下跌，市场对美国与伊朗之间持续的不确定性感到担忧。特斯拉在公布财报后盘后股价下滑。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxNMzZCbTFZaFZJcGNEZkRNNXVZOGxQanFKTVFnaENHdHk0cTFNVGo1LXpvR0RHY0hZbExXb3JuZ2NQZ0ZjNnduZTB3SkN6Y0RJQ1ZsLTZzNWNfNm9tNWxJVjhnMlV0Zlh0d2hmM21sdHNCVHloU3RlWUhqaWZzOEhnZ3ZnNU15OGZuQ2FfaUJ3TWF0R0hSTGFqZjdSeTl1Ul9EV29CRVRscWRPQ1pTNHJHUHhyZnlXMEtPdHZmcVp3RzhaNnpHLTF5WXRRcGNyOU9pcFhIbjlxR1czYlVyQXJJWlkxVkwxWW9FZmsydlluVmdyRlJWWENRWEFscVZVME4w?oc=5" },
-  { time: "10:23", tag: "macro", tagText: "宏观", text: "欧洲股市预计将低开，因地区市场情绪受挫，同时油价上涨。市场持续受到地缘政治不确定性的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/european-markets-stoxx-600-ftse-dax-cac-iran-latest-oil-prices.html" },
-  { time: "09:51", tag: "geo", tagText: "地缘", text: "加拿大总理贾斯汀·特鲁多对CNBC表示，国际组织可能已不再适合其目的。加拿大正寻求重新调整其外交关系，以应对特朗普政府引发的地缘政治转变。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/justin-trudeau-canada-trade-us-trump-geopolitics-iran-war.html" },
-  { time: "09:49", tag: "tech", tagText: "科技", text: "英特尔股价上涨，因埃隆·马斯克表示其Terafab芯片制造厂将采用英特尔最新的‘14A’芯片制造技术。这对一直在为其先进制造工艺寻找大客户的英特尔来说是一个重要胜利。", source: "Financial Times", url: "https://www.ft.com/content/86fa539b-dfbe-4f29-a60e-8d572e9ddbce" },
-  { time: "09:47", tag: "macro", tagText: "宏观", text: "知名经济学家申铉松回归韩国，将出任央行要职，以应对国内经济增长放缓和通胀问题。他在国际央行界享有盛誉，其回归被视为韩国应对当前复杂经济挑战的关键举措。", source: "Financial Times", url: "https://www.ft.com/content/382e4dfb-78f7-434c-a2b2-9de966fce5ea" },
 ];
-const breakingDate = "2026年4月23日 20:06 CST";
+const breakingDate = "2026年4月23日 22:09 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
   { time: "19:55", tag: "ai", tagText: "AI", text: "微软本周在Word、Excel和PowerPoint中推出名为“Agent Mode”的增强版AI功能，此前被描述为“vibe working”。该模式是更强大的AI助手，旨在提升办公效率。", source: "The Verge", url: "https://www.theverge.com/news/917328/microsoft-agent-mode-vibe-working-office-word-excel-powerpoint" },
   { time: "18:40", tag: "ai", tagText: "AI", text: "美国商务部长表示，英伟达仍未向中国出售任何H200 AI GPU，原因是中国政府阻止进口以推动本土半导体产业发展。此举凸显中美科技脱钩加剧。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOZU9nTktDWFFPcGE4OEdnMFdGNWlhRTVzUUx4SFFrampxeGFFUy1makY1a3AtOW1pNVJSa2IydHU2QVVLbEZpOGN4OVhrdDRza203TnlJbk9TYVpjTklsc1NJN3dVMWFjdEEwVkdTSmtPZzUyVVcyNDJhZ0ctcHF0Z0hFcWZ4T3RHdEtPTy1vaVJ4MkFhRGFEVGp3REpxdGV1aGtlVzVYOS1XaXNnZnB2cW9MRW5BWUs1RFZfTFM4T09sRGU3RW9ldzk0RHItSXZERi1GTThiVUZUM01EeVFZSWFGU3c2cG1SYWt1Y01IUkhNb09rNUhnTFpaZW1Gc0FNbjl5cmRpYmFHcC1ZaW12RTR2ZHlZT3VHanNabDJZVVBBWGpSVGYxS1g2cVBWaFFac3Zuek50b3o?oc=5" },
   { time: "18:28", tag: "ai", tagText: "AI", text: "Anthropic发布名为“Mythos”的AI突破性技术，据称可能重新定义网络安全和全球风险格局。该技术被视为AI安全领域的重大进展。", source: "Businessday NG", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYU9EN3NNMHNPeG1BczVzbVdlOE1vS181SWxtaDBBd2F2VXI1aDR1Nmc2Q1RnY2VFMHRBU09mY1BnVTZZYWhFNUhvek5iZW8wbV9JZUpDaTlsc2gtY0ZfQmNvMFZuS2RBemxwbTBpOUV6LWJJN2pFLWsyYnZheGttVzliTnpvaVplVk9tOWJBQVpHZFdDWGpQNklUN3o1dzQ3ckV3OWdpV1pOTmY2ODZQWVlZTm90RzZqXzJ0YjBWZnJQbG52NTVqTm5B0gHPAUFVX3lxTFBNYnZmbFY0TG5Wa0FpcjJmUjlqT3puREtNd1BIYmVhN1JaRDFIaUFfN0pmS1AzX3d1a2V1VDJ6WTZQUW9ERmlHenBIVHk4Tk9tN2N4MG1zaXBCdXNJNVhrdXYtN3hmcTBTM3hLLVZGZWJ0dDE1eUlkc3hHaFlEUTV4R2F1UkNiQkN6TE9hdnhFZGEwSjA1YTVwNGtCUEVDSGs1SkR2OVpTRzN6S0RtaThCUWlnQTVyVDBzQUFRZm5hM3RIbzdTY3BoTWxjeUUwUQ?oc=5" },
+  { time: "18:20", tag: "ai", tagText: "AI", text: "天文学家开始大规模使用GPU进行星系搜索，这进一步加剧了全球GPU供应短缺。AI对算力的巨大需求已从商业领域扩展到科研领域，使得高性能计算资源更加稀缺。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/ai-galaxy-hunters-are-adding-to-the-global-gpu-crunch/" },
   { time: "17:15", tag: "ai", tagText: "AI", text: "谷歌前联合创始人（拉里·佩奇和谢尔盖·布林）为一家新的AI初创公司筹集了450万美元。这笔投资表明，两位科技巨头创始人仍在密切关注并押注前沿AI技术。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNmZkeVZNMzNvdmtaSnpOSmw0QjVVMjBUNmZtSDJoM3JIbHdxOVhuaVplWkh4dWNMaE1UTUxkZkJrUFE2R0ZZYkk2b3NmUVRPa3dQc1Y2RDk2ZDc3WGV6WTRVUm9kdWRDS0JRamJIN2FHQ0FCSy1qUEdpQzR4QVU4QUprekNvTlZVUnJ4MF9UQ21icTQ?oc=5" },
   { time: "16:50", tag: "ai", tagText: "AI", text: "索尼AI机器人在乒乓球领域取得突破，击败了精英级人类选手。该机器人展示了在高速、高精度运动中的实时决策能力，标志着AI在物理交互和运动控制领域的重大进展。", source: "Daily Sabah", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNR0NnWndGN1lfMUJ0LUpVdEx3azV5Z2RGYzc3eEM4eDJjYWhrWFhscDd1ZGMwdVp2bDIyQzhfZ2Itd1NtbjFmR3czZEdPclJ3ektOZDR3QzRUV0tHTTZvcG1tVkVISjRKMUdQVXpRbDlNUW5RX0FyMDcwZnNuVXQ1ajlqWmphdGFvYXlSYkl5eFA4Skk0MHRRSlFEN1BkdGlEVlpz0gGoAUFVX3lxTE5JOTdkaVVNWFlfd3VfUHZ1WFg1eHBoUnR6eFJhLXdvdF9iRU5OUTlLLXFkaHh3QWJBWTlDREVZS0VNSzA3R0dfTWVpZ3pYRFpGNnZ5Ulo3TnkzY04xUjVvMWF6UHdsX1RXWmxTTTRrdjdJRTRIb0NHZGowME95WTVYeWI2T1liY0NpNXNwQTVkX2lZWUp1cGpDeE56MjFVTHFuaGkxbTM2dg?oc=5" },
   { time: "16:09", tag: "ai", tagText: "AI", text: "SK海力士工程负责人安铉表示，实现AI性能最大化的突破在于将内存与逻辑芯片集成。这一观点强调了存储与计算融合对未来AI芯片架构的关键作用。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xSEhhdmU3NllWS1V0d1lVQlRYSktJZnhheXo0RksxQnlocUctak5CTzBra2hpNzUwdzB1SkhJNEpBRm9EaDdVZjVmVWlkeExEbjI4?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "06:25", tag: "tech", tagText: "科技", text: "X平台（原Twitter）推出由AI驱动的自定义信息流功能，以取代原有的‘社区’板块。新功能由Grok AI策划内容，并引入了新的广告位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/hands-on-with-xs-new-ai-powered-custom-feeds/" },
   { time: "04:29", tag: "macro", tagText: "宏观", text: "美国参议员伊丽莎白·沃伦警告称，AI领域的失败可能引发下一次金融危机。她表示自己“看到了泡沫”，并呼吁加强监管，以防止类似2008年的经济衰退重演。", source: "The Verge", url: "https://www.theverge.com/policy/917026/ai-economy-bubble-elizabeth-warren" },
   { time: "04:09", tag: "ai", tagText: "AI", text: "OpenAI宣布，面向其商业、企业、教育和教师计划的用户推出云端‘工作空间’智能体。这些在ChatGPT中可用的自定义机器人能够自主执行业务任务。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots" },
-  { time: "03:52", tag: "tech", tagText: "科技", text: "SpaceX以一笔100亿美元的“合作费”和一条通往600亿美元收购的路径，抢先截胡了AI初创公司Cursor原定于本周完成的20亿美元融资轮。此举展示了科技巨头在争夺顶尖AI人才和资产方面的激进策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/how-spacex-preempted-a-2b-fundraise-with-a-60b-buyout-offer/" },
-  { time: "01:30", tag: "ai", tagText: "AI", text: "谷歌为Chrome企业版引入Gemini驱动的“自动浏览”功能，将其转变为AI工作助手，可帮助员工自动化处理研究、数据录入等任务。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/" },
 ];
-const aiBreakingDate = "2026年4月23日 20:06 CST";
+const aiBreakingDate = "2026年4月23日 22:09 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
