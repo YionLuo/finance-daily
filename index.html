@@ -1618,17 +1618,23 @@
 const fearGreedData = {
   score: 68.54,
   rating: "greed",
-  timestamp: "2026-04-23T08:42:16+00:00",
+  timestamp: "2026-04-23T10:22:16+00:00",
   previousClose: 68.14,
   previous1Week: 63.34,
   previous1Month: 14.13,
   previous1Year: 21.54,
-  date: "2026年4月23日 17:00 CST"
+  date: "2026年4月23日 18:42 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:37", tag: "macro", tagText: "宏观", text: "CNBC最新全美经济调查显示，美国总统特朗普的整体和经济工作支持率均跌至其两个任期内的最低点。这反映出民众对其经济政策的不满情绪加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trumps-approval-rating-on-economy-and-overall-falls-to-lowest-of-his-two-terms-cnbc-survey-shows.html" },
+  { time: "18:31", tag: "geo", tagText: "地缘", text: "LVMH首席执行官阿尔诺警告称，若中东冲突得不到解决，将引发‘世界灾难’。伊朗战争已对这家奢侈品集团的第一季度销售造成冲击，并带来‘非常严重’的经济后果。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/lvmh-ceo-arnault-iran-war-middle-east-stock-luxury.html" },
+  { time: "18:28", tag: "geo", tagText: "地缘", text: "海湾石油和天然气生产商正争相探索替代路线，以将能源出口运出中东。霍尔木兹海峡的持续封锁迫使各国寻找绕过该海峡的管道等替代方案，但选择有限。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/strait-hormuz-closure-alternative-routes-middle-east-oil-gas-pipelines.html" },
+  { time: "17:55", tag: "tech", tagText: "科技", text: "摩根大通分析师警告称，meme股票热潮已接近特朗普‘解放日’关税后的极端水平。市场投机情绪再度升温，需警惕回调风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-meme-stock-craze-is-getting-close-to-its-post-liberation-day-extremes-according-to-jpmorgan-e189fb77?mod=mw_rss_topstories" },
+  { time: "17:42", tag: "tech", tagText: "科技", text: "SK海力士公布创纪录的第一季度业绩，但股价未能提振。尽管AI需求推动内存价格攀升，但该股2026年已累计上涨88%，市场对利好已充分消化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-good-times-roll-for-sk-hynix-with-record-breaking-quarter-but-living-up-to-expectations-isnt-easy-1f2ae731?mod=mw_rss_topstories" },
+  { time: "17:40", tag: "tech", tagText: "科技", text: "分析师试图平息市场恐慌，此前台积电表示一台高端ASML光刻机过于昂贵。这引发了对半导体设备需求的担忧，但分析师认为客户基础有限，影响可控。", source: "MarketWatch", url: "https://www.marketwatch.com/story/analysts-try-to-quell-the-panic-after-taiwan-semiconductor-said-a-high-end-asml-machine-was-too-expensive-e6e43f6e?mod=mw_rss_topstories" },
   { time: "16:53", tag: "geo", tagText: "地缘", text: "伊朗战争持续导致霍尔木兹海峡封锁，印度和中国正为争夺日益萎缩的俄罗斯原油供应展开激烈竞争。这凸显了地缘冲突对全球能源贸易格局的深刻重塑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/india-china-russian-oil-supply-strait-hormuz-disruption.html" },
   { time: "16:43", tag: "ai", tagText: "AI", text: "德州仪器业绩超出华尔街预期，不仅受益于数据中心需求，工业客户的强劲需求也推动了其业绩展望上调。这表明AI和自动化对传统制造业的拉动作用正在显现。", source: "MarketWatch", url: "https://www.marketwatch.com/story/texas-instruments-topped-wall-streets-outlook-on-more-than-just-data-center-demand-c033d44a" },
   { time: "16:42", tag: "macro", tagText: "宏观", text: "欧莱雅公布‘令人印象深刻’的财报后，股价大涨9%，有望创下18年来最大单日涨幅。分析师指出，化妆品市场并未显示出放缓迹象，消费韧性超出预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/loreal-stock-q1-earnings-beauty-sales.html" },
@@ -1643,21 +1649,19 @@ const breakingNews = [
   { time: "09:47", tag: "macro", tagText: "宏观", text: "知名经济学家申铉松回归韩国，将出任央行要职，以应对国内经济增长放缓和通胀问题。他在国际央行界享有盛誉，其回归被视为韩国应对当前复杂经济挑战的关键举措。", source: "Financial Times", url: "https://www.ft.com/content/382e4dfb-78f7-434c-a2b2-9de966fce5ea" },
   { time: "09:12", tag: "ai", tagText: "AI", text: "在SpaceX宣布可能收购AI编程初创公司Cursor之前，微软也曾考虑收购该公司。这凸显了科技巨头对AI开发工具的激烈争夺，以及AI初创公司成为战略资产的价值。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/microsoft-looked-at-buying-cursor-before-spacex-deal-sources-say.html" },
   { time: "09:09", tag: "tech", tagText: "科技", text: "分析指出，SpaceX与特斯拉正走向‘不可避免的碰撞’，因为两家公司业务日益交织，且都依赖埃隆·马斯克的领导。从股东角度看，最终合并为一家证券可能是合理的结局。", source: "Financial Times", url: "https://www.ft.com/content/6ca9125f-f6fa-47ed-9a3b-5202757c02e9" },
-  { time: "07:55", tag: "ai", tagText: "AI", text: "SK海力士公布创纪录的第一季度利润，符合市场预期，原因是AI需求旺盛推动内存价格持续攀升。这进一步印证了AI硬件需求对半导体行业的强劲拉动作用。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/sk-hynix-earnings-ai-memory-shortage-hbm-demand.html" },
-  { time: "07:13", tag: "macro", tagText: "宏观", text: "铁路巨头CSX上调全年销售展望，因伊朗战争导致燃料成本飙升，更多企业选择铁路运输以节省成本。其股价在盘后交易中上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/csx-says-more-businesses-are-shipping-via-rail-to-avoid-surging-fuel-costs-c674dbab?mod=mw_rss_topstories" },
-  { time: "06:17", tag: "geo", tagText: "地缘", text: "伊朗战争导致巴拿马运河通行费创下历史新高。亚洲买家为获取西方原油，将竞价推高至冲突前水平的五倍。这凸显了地缘冲突对全球关键航运通道成本的巨大冲击。", source: "Financial Times", url: "https://www.ft.com/content/05c0e794-4ed9-4e2a-a026-fb8575f789c3" },
-  { time: "06:05", tag: "tech", tagText: "科技", text: "特斯拉第一季度财报显示，其营收不及预期但利润超预期，汽车利润率大幅跃升。同时，公司宣布将年度资本支出预测大幅提高至250亿美元，CEO马斯克表示将加倍押注自动驾驶出租车、卡车、机器人和芯片工厂等AI相关领域。", source: "Financial Times", url: "https://www.ft.com/content/7ce83108-9f2d-48b4-8ce1-28865045bd67" },
-  { time: "05:44", tag: "geo", tagText: "地缘", text: "美国海军部长约翰·费兰已立即离开特朗普政府。此举正值伊朗战争期间，是美国国防部高层的一次重要人事变动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/navy-secretary-john-phelan-iran-war.html" },
-  { time: "05:35", tag: "crypto", tagText: "加密", text: "市场分析指出，伊朗停火协议提振了投资者对比特币的胃口，资本正通过多个渠道流入。这使得比特币不太可能出现此前几个月的剧烈逆转，更有可能积聚动能突破80,000美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-iran-cease-fire-has-boosted-investors-appetite-for-bitcoin-heres-why-it-could-break-past-80-000-soon-29c08c3e?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月23日 17:00 CST";
+const breakingDate = "2026年4月23日 18:42 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "17:15", tag: "ai", tagText: "AI", text: "谷歌前联合创始人（拉里·佩奇和谢尔盖·布林）为一家新的AI初创公司筹集了450万美元。这笔投资表明，两位科技巨头创始人仍在密切关注并押注前沿AI技术。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNmZkeVZNMzNvdmtaSnpOSmw0QjVVMjBUNmZtSDJoM3JIbHdxOVhuaVplWkh4dWNMaE1UTUxkZkJrUFE2R0ZZYkk2b3NmUVRPa3dQc1Y2RDk2ZDc3WGV6WTRVUm9kdWRDS0JRamJIN2FHQ0FCSy1qUEdpQzR4QVU4QUprekNvTlZVUnJ4MF9UQ21icTQ?oc=5" },
+  { time: "16:50", tag: "ai", tagText: "AI", text: "索尼AI机器人在乒乓球领域取得突破，击败了精英级人类选手。该机器人展示了在高速、高精度运动中的实时决策能力，标志着AI在物理交互和运动控制领域的重大进展。", source: "Daily Sabah", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNR0NnWndGN1lfMUJ0LUpVdEx3azV5Z2RGYzc3eEM4eDJjYWhrWFhscDd1ZGMwdVp2bDIyQzhfZ2Itd1NtbjFmR3czZEdPclJ3ektOZDR3QzRUV0tHTTZvcG1tVkVISjRKMUdQVXpRbDlNUW5RX0FyMDcwZnNuVXQ1ajlqWmphdGFvYXlSYkl5eFA4Skk0MHRRSlFEN1BkdGlEVlpz0gGoAUFVX3lxTE5JOTdkaVVNWFlfd3VfUHZ1WFg1eHBoUnR6eFJhLXdvdF9iRU5OUTlLLXFkaHh3QWJBWTlDREVZS0VNSzA3R0dfTWVpZ3pYRFpGNnZ5Ulo3TnkzY04xUjVvMWF6UHdsX1RXWmxTTTRrdjdJRTRIb0NHZGowME95WTVYeWI2T1liY0NpNXNwQTVkX2lZWUp1cGpDeE56MjFVTHFuaGkxbTM2dg?oc=5" },
   { time: "16:09", tag: "ai", tagText: "AI", text: "SK海力士工程负责人安铉表示，实现AI性能最大化的突破在于将内存与逻辑芯片集成。这一观点强调了存储与计算融合对未来AI芯片架构的关键作用。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xSEhhdmU3NllWS1V0d1lVQlRYSktJZnhheXo0RksxQnlocUctak5CTzBra2hpNzUwdzB1SkhJNEpBRm9EaDdVZjVmVWlkeExEbjI4?oc=5" },
   { time: "16:04", tag: "ai", tagText: "AI", text: "StorageChain构建了突破性的跨云AI智能层，连接微软、AWS、Dropbox等平台。该技术旨在实现多云环境下的AI数据统一管理与智能调度，提升企业AI应用效率。", source: "AiThority", url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNNV9pOUU3SlkwMlNlUmJHMVl5VDhuZEJ3X1BJcDA4VVJ4Um85M3RyWHEzUDZVZlBfUGh6aHdJMjJfeEVzb3o2a1pacWdYUGFWQzVTczV1aE1fNkhvSlhaeXNpc1dxSEZHdXA5MTVlNVZFSFR0ODd4Y1c3QWtDOHpfTmtVR2JEN2dlWF92YlZMbVZtcThyUGVjNTR3MERnb2czalExUGhlVFVvcnNUNE5GcjAyUnhfMUF5dDk1bnpoZzE4SGQ0dmZ0a2hrejRDM0RLRk1YaFNYOEdpcnlFX214TUxB?oc=5" },
   { time: "16:00", tag: "tech", tagText: "科技", text: "分析人士提出疑问：到2030年，台积电的市值是否会超过英伟达？该讨论基于AI芯片需求激增背景下，台积电作为代工龙头的增长潜力与英伟达当前高估值之间的对比。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPNXN4WWFRSzFDMEI3S21zUkdIb0lrWko4ODBlLU1nT2FpOXQ1aHNzUV9EWFBmRjhyOG5Ydmk3YmVTRUpaT1Bzb3Y3a2xMMHlnbVU3OUtSQ1l3UEQzYnoyLW92akt0MThhQU9jS0xWX25pYUhmUlBMWmotQjBwRjhUazdManFUTkJsTVU5a1lLZnRma2ZPcERVMDFXYkJJb094STlTRmNwZWVuR3RYNHJCd3ByQ1VFbWhJSWt1eTBjamhYd3I3MXNMeTZCR3BpSjlwbnZKVw?oc=5" },
+  { time: "15:01", tag: "ai", tagText: "AI", text: "基辅安全部门负责人警告称，如果没有AI技术的突破，无人机在未来战场上的有效性将大幅下降。他指出，随着电子战和反制措施的升级，无人机亟需AI赋能以实现自主导航、目标识别和抗干扰能力。", source: "mezha.net", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBwRjA5b3ZuLVcxOERQRmYyTENvTklaMG82UFB2d0JGVXMwVkI5OEFfUVd0cnVFYWFDY0FOel9rUXpyYzFwb215S2lOVWgyTjZTSkpIRzhwTC1UR2U5N3c0dnRuSjZuekNw?oc=5" },
   { time: "15:01", tag: "ai", tagText: "AI", text: "腾讯和阿里巴巴正瞄准AI初创公司DeepSeek，计划进行一轮重大AI融资。此举显示中国科技巨头正加速在AI领域的投资布局，以争夺下一代AI技术高地。", source: "Latest news from Azerbaijan", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRG5LaG5jeVhYb1hJVjVjT0ZuaXNsYUtzZGlhc2dVN2lLS2lBM3k3LVpwZzFkcUF3aU1sTG9jeEh5LWN0OUUwZDNabkZmYTJLejltMHByTEpkWC1oUkI0WUNzUGZGZWI4QUd5VjR6ODJyVUdTOUNka003LVJ1QmM5ei0zSQ?oc=5" },
+  { time: "15:00", tag: "geo", tagText: "地缘", text: "英国政府宣布启动一项价值5亿英镑的“主权AI”专项基金，旨在支持本土AI初创企业，减少对海外科技巨头的依赖。此举是英国在脱欧后加强科技自主性和国家AI战略安全的重要举措。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxORzdwN3pZMEFYb1QyVkUzLUdqRjZuUzVVMzVGNWhTNlB0UUU1UW9Zd1kxZ0I2cFZQakdzQmhJZ2ZKZ2tCYUhWOF84S05HNWd0TWc0VDY5a1Vka0h0bnp0T0FkRnRTbXRPX21DcGIzcUVlQjUycjNaMnR5aDNKLVVGWXZMZEdkODIxWXVKR2V6WVM4Xzhxd0hvM09EdmdOajM3V0FTWjQ5ZFduUGZlcUloaGtGMmxNdWhoZGJEOWliYl9xY3k2UFQybm80U1JkYWZmbWhQa2tPVQ?oc=5" },
   { time: "13:08", tag: "ai", tagText: "AI", text: "AI制药公司Recursion Pharmaceuticals (RXRX) 在最近的网络直播中重点介绍了其利用AI发现的药物靶点突破，引发市场对其估值的重新评估。该公司正利用其专有的AI平台加速药物发现进程。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTjVZZFBxSXo0UTlhY0VUQVRYMUdkbFc2LWl3MXZ6QWlwT25hd0VOa29YTDFfY2FWWEJKcU02a2xtRkZ6UVlZZjVZMm1uMmFGaWpLOXNXaEhnRlh4SmU4TVEyZng1X0JIM21pZGNLaFludjI0a1lEdEtDT2VIN013b2RWanlEYktraGE4T2NuRURIMTFCNFFtaUN1cnltWDFEZld3RTZNN2F5bnFLZXJQbGRtRVNKN25Ka1UzWExEUXhrX3NzZDdyY3RWUUZULVhkTkkwR1BFSUc5cjd3cUhqVkZjTnJkMWpLUzhzN0NiUdIB9AFBVV95cUxNUnZ2N2V5LXFvTUxpS3dEVFZUUHZnOWI2cjFSVU1HYndEb1JDaUl5WEFtS0VSMGpYX25ISzVLZXlzYV83eGl5SEItYkFWbTVLQzlJNVc3bzhRS2ZLcl9sa3M2LWFXRzdqeGdWWV9jaHZsTWJRRFZYRlo1WlE5bG9fMDYxZk9ROGlHZmg1VzBzMjhBRGYtbGtxWU4xQUQ3OFdDZE9aaHNsQTJ6cmRNQ0FDY2dDamc4UnE4UnJJSGtZMDBBOWJIdkIyY3hZTWlRbnJZX285aFpMWFVNWjk2V09xS2FIQlVvMWc0VFZpU05PQV9XWXlY?oc=5" },
   { time: "12:38", tag: "tech", tagText: "科技", text: "印度应用市场正蓬勃发展，但全球平台攫取了大部分收益。非游戏应用（以流媒体和AI应用为首）是增长的主要驱动力，尽管印度用户的平均支出仍落后于全球同行。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/indias-app-market-is-booming-but-global-platforms-are-capturing-most-of-the-gains/" },
   { time: "07:56", tag: "macro", tagText: "宏观", text: "特斯拉大幅提高2026年资本支出计划至250亿美元，达到历史平均水平的约三倍。公司首席财务官表示，由于此项巨额投资，特斯拉在今年剩余时间内将出现负自由现金流。此举凸显了特斯拉在自动驾驶、机器人出租车、新车型及AI基础设施等领域进行大规模投资的决心。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/tesla-just-increased-its-capex-to-25b-heres-where-the-money-is-going/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "00:58", tag: "ai", tagText: "AI", text: "谷歌发布面向企业IT和技术用户的Gemini Enterprise Agent Platform，这是一款新的智能体构建工具。该平台旨在让技术团队能够更高效地开发和部署企业级AI助手，标志着谷歌在企业AI解决方案上采取了更偏向技术栈的策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/" },
   { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
   { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
-  { time: "00:57", tag: "ai", tagText: "AI", text: "Anthropic的新网络安全模型Mythos正被多个美国联邦机构采用以发现漏洞，但据报道，美国主要的网络安全协调机构——网络安全和基础设施安全局（CISA）并未参与其中。这引发了关于该模型潜在风险及监管协调的讨论。", source: "The Verge", url: "https://www.theverge.com/policy/916758/anthropic-mythos-preview-cisa-left-out" },
-  { time: "00:46", tag: "ai", tagText: "AI", text: "谷歌宣布将为企业版Gmail引入AI概览功能，该功能可从多封邮件中提取信息，生成即时摘要，提升工作效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/ai-overviews-are-coming-to-your-gmail-at-work/" },
-  { time: "00:38", tag: "ai", tagText: "AI", text: "谷歌Meet的AI会议记录功能现已扩展至线下会议以及Zoom和Microsoft Teams会议。通过Gemini，该功能可为各类会议生成摘要和文字记录，进一步模糊了线上与线下协作工具的界限。", source: "The Verge", url: "https://www.theverge.com/tech/916779/google-meet-ai-notetaker-in-person-meetings" },
-  { time: "23:19", tag: "tech", tagText: "科技", text: "英伟达面临来自内部AI芯片的压力，这可能对其市场主导地位构成挑战。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZ1Jsa2s2a3MwV1c2UlNwYm8zeVFONndXc2lPVk9VWDRfdjFkdWNjQ0o5Nk5YY3pUMzlKVTNPUDhFZjZmWDFYYmUwV1M0dHQ5ZGllcDJKNGI3amUwOGNvZl8xcWVycVdtakYxNjltZmJpZTdrNERuQV9XdmhVOS1iZFNHeTUtck5CNmd1NVU2bw?oc=5" },
 ];
-const aiBreakingDate = "2026年4月23日 17:00 CST";
+const aiBreakingDate = "2026年4月23日 18:42 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
