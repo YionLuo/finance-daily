@@ -1616,20 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.14,
+  score: 68.06,
   rating: "greed",
-  timestamp: "2026-04-22T23:59:47+00:00",
-  previousClose: 67.57,
-  previous1Week: 57.63,
-  previous1Month: 15.63,
-  previous1Year: 13.6,
-  date: "2026年4月23日 11:40 CST"
+  timestamp: "2026-04-23T00:00:00+00:00",
+  previousClose: 68.14,
+  previous1Week: 63.34,
+  previous1Month: 14.13,
+  previous1Year: 21.54,
+  date: "2026年4月23日 14:15 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:46", tag: "crypto", tagText: "加密", text: "嘉信理财推出比特币和以太坊交易服务，每笔交易收取0.7%的费用。这是传统主流金融机构进一步接纳加密货币的重要一步。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcU9ENWNJU2ozTzd3VXlNdVlpdXVHUXMxSERlS2s5S1M4emJIM0xQQ3lSWUZiOFdOODlheVhwYzBxQlh3MFB0clk5XzFMWVB5S3dlOXNFNmpyNGFVWDZUYmNwZGdMLVNWdXM5NEd4OWpTMGpJWTRkUnNjWFE5bTVBcm02R0dXSTRwRFJ3djMxeG1DTlhi?oc=5" },
   { time: "10:40", tag: "crypto", tagText: "加密", text: "俄罗斯已批准在对外贸易中使用加密货币，以规避西方制裁。此举可能为俄罗斯与贸易伙伴之间的跨境支付开辟新渠道，并提升加密货币在地缘政治紧张局势中的实用价值。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRmNpNVE4bzRkU3F4UFR5LUppR2h3UEJxQW5mQUJ2ZXpsd0lONEFPQmhYTnBkM2dfTUR0ampmUWFoUUJBazNvRU5FMnhtbDBPOVBuNjltTmhidkZpT0VXNGMwTFZEV1Fqd1ZMMTRrNEdLdlpTZXhDeThBLU5qSjEzNHR0VVdaeWVSd1U3RU13QXhSdUE?oc=5" },
+  { time: "10:26", tag: "macro", tagText: "宏观", text: "道指、标普500和纳斯达克指数期货下跌，市场对美国与伊朗之间持续的不确定性感到担忧。特斯拉在公布财报后盘后股价下滑。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxNMzZCbTFZaFZJcGNEZkRNNXVZOGxQanFKTVFnaENHdHk0cTFNVGo1LXpvR0RHY0hZbExXb3JuZ2NQZ0ZjNnduZTB3SkN6Y0RJQ1ZsLTZzNWNfNm9tNWxJVjhnMlV0Zlh0d2hmM21sdHNCVHloU3RlWUhqaWZzOEhnZ3ZnNU15OGZuQ2FfaUJ3TWF0R0hSTGFqZjdSeTl1Ul9EV29CRVRscWRPQ1pTNHJHUHhyZnlXMEtPdHZmcVp3RzhaNnpHLTF5WXRRcGNyOU9pcFhIbjlxR1czYlVyQXJJWlkxVkwxWW9FZmsydlluVmdyRlJWWENRWEFscVZVME4w?oc=5" },
+  { time: "10:23", tag: "macro", tagText: "宏观", text: "欧洲股市预计将低开，因地区市场情绪受挫，同时油价上涨。市场持续受到地缘政治不确定性的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/european-markets-stoxx-600-ftse-dax-cac-iran-latest-oil-prices.html" },
+  { time: "09:51", tag: "geo", tagText: "地缘", text: "加拿大总理贾斯汀·特鲁多对CNBC表示，国际组织可能已不再适合其目的。加拿大正寻求重新调整其外交关系，以应对特朗普政府引发的地缘政治转变。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/justin-trudeau-canada-trade-us-trump-geopolitics-iran-war.html" },
   { time: "09:49", tag: "tech", tagText: "科技", text: "英特尔股价上涨，因埃隆·马斯克表示其Terafab芯片制造厂将采用英特尔最新的‘14A’芯片制造技术。这对一直在为其先进制造工艺寻找大客户的英特尔来说是一个重要胜利。", source: "Financial Times", url: "https://www.ft.com/content/86fa539b-dfbe-4f29-a60e-8d572e9ddbce" },
   { time: "09:47", tag: "macro", tagText: "宏观", text: "知名经济学家申铉松回归韩国，将出任央行要职，以应对国内经济增长放缓和通胀问题。他在国际央行界享有盛誉，其回归被视为韩国应对当前复杂经济挑战的关键举措。", source: "Financial Times", url: "https://www.ft.com/content/382e4dfb-78f7-434c-a2b2-9de966fce5ea" },
   { time: "09:12", tag: "ai", tagText: "AI", text: "在SpaceX宣布可能收购AI编程初创公司Cursor之前，微软也曾考虑收购该公司。这凸显了科技巨头对AI开发工具的激烈争夺，以及AI初创公司成为战略资产的价值。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/microsoft-looked-at-buying-cursor-before-spacex-deal-sources-say.html" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "04:02", tag: "macro", tagText: "宏观", text: "市场分析指出，此前被大肆宣扬的2026年资金从科技股轮动到其他板块的趋势可能已经结束。随着成长股重获青睐，那些作为轮动受益者的板块本身也开始表现落后。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/the-much-hyped-great-rotation-out-of-tech-for-2026-may-be-over-already.html" },
   { time: "03:49", tag: "crypto", tagText: "加密", text: "受特朗普政府据称准备重新分类大麻物质的消息刺激，Tilray等大麻股大幅上涨。此举可能为医用大麻研究以及种植者的银行服务打开大门。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/tilray-and-other-cannabis-stocks-soar-as-trump-is-reportedly-ready-to-reclassify-the-substance-b4e1458d?mod=mw_rss_topstories" },
   { time: "03:08", tag: "macro", tagText: "宏观", text: "美国财长贝森特表示，在伊朗战争引发的市场动荡中，已有‘许多’美国盟友请求建立货币互换安排。尽管白宫随后否认阿联酋提出了此类请求，但此番言论凸显了地缘政治危机对全球金融体系的潜在压力。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/iran-war-treasury-uae-scott-bessent-currency-swaps.html" },
-  { time: "03:02", tag: "macro", tagText: "宏观", text: "贝莱德指出，伊朗战争导致股债相关性升至两年来最高水平，传统的60/40投资组合策略面临挑战。该资管巨头建议投资者寻求多元化配置，以应对新的市场环境。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/blackrock-on-60/40-and-portfolio-diversifiers.html" },
-  { time: "02:49", tag: "crypto", tagText: "加密", text: "美国财政部长正敦促参议院通过加密货币市场结构立法，旨在为数字资产领域提供更明确的监管框架。此举正值比特币价格回升至11周高点之际，显示出政策制定者正试图规范这一快速发展的市场。", source: "Bitcoin Magazine", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE1jczdsTmUwNHB1cEFqMS00TnAxbk5UX3RJRk40dDFGWTNYYld0LThiUllWU1dtNjlyN1k5YnZwOWRhZnUzdk1wUzhEdnZKcy1aZkh2S3ljUVd6cXVIeEh0WDZMaENsdERGZDQ5d2ZWUkxxTS1JcE00TQ?oc=5" },
-  { time: "02:46", tag: "tech", tagText: "科技", text: "Rivian宣布已在其伊利诺伊州工厂开始为客户生产新款R2纯电动汽车，并达到了一个生产里程碑。此举标志着这家电动汽车制造商在扩大产品线和提高产量方面迈出了关键一步。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/rivian-r2-ev.html" },
-  { time: "02:13", tag: "crypto", tagText: "加密", text: "加密货币亿万富翁孙宇晨起诉特朗普家族的世界自由金融公司，指控其欺诈。这场法律纠纷发生在孙宇晨与特朗普企业之间不断升级的争执背景下，凸显了加密领域与传统金融政治势力之间的复杂关系。", source: "International homepage", url: "https://www.ft.com/content/d8ba5daa-2af8-4242-b875-e4ebb4d9dbb8" },
 ];
-const breakingDate = "2026年4月23日 11:40 CST";
+const breakingDate = "2026年4月23日 14:15 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:08", tag: "ai", tagText: "AI", text: "AI制药公司Recursion Pharmaceuticals (RXRX) 在最近的网络直播中重点介绍了其利用AI发现的药物靶点突破，引发市场对其估值的重新评估。该公司正利用其专有的AI平台加速药物发现进程。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTjVZZFBxSXo0UTlhY0VUQVRYMUdkbFc2LWl3MXZ6QWlwT25hd0VOa29YTDFfY2FWWEJKcU02a2xtRkZ6UVlZZjVZMm1uMmFGaWpLOXNXaEhnRlh4SmU4TVEyZng1X0JIM21pZGNLaFludjI0a1lEdEtDT2VIN013b2RWanlEYktraGE4T2NuRURIMTFCNFFtaUN1cnltWDFEZld3RTZNN2F5bnFLZXJQbGRtRVNKN25Ka1UzWExEUXhrX3NzZDdyY3RWUUZULVhkTkkwR1BFSUc5cjd3cUhqVkZjTnJkMWpLUzhzN0NiUdIB9AFBVV95cUxNUnZ2N2V5LXFvTUxpS3dEVFZUUHZnOWI2cjFSVU1HYndEb1JDaUl5WEFtS0VSMGpYX25ISzVLZXlzYV83eGl5SEItYkFWbTVLQzlJNVc3bzhRS2ZLcl9sa3M2LWFXRzdqeGdWWV9jaHZsTWJRRFZYRlo1WlE5bG9fMDYxZk9ROGlHZmg1VzBzMjhBRGYtbGtxWU4xQUQ3OFdDZE9aaHNsQTJ6cmRNQ0FDY2dDamc4UnE4UnJJSGtZMDBBOWJIdkIyY3hZTWlRbnJZX285aFpMWFVNWjk2V09xS2FIQlVvMWc0VFZpU05PQV9XWXlY?oc=5" },
+  { time: "12:38", tag: "tech", tagText: "科技", text: "印度应用市场正蓬勃发展，但全球平台攫取了大部分收益。非游戏应用（以流媒体和AI应用为首）是增长的主要驱动力，尽管印度用户的平均支出仍落后于全球同行。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/indias-app-market-is-booming-but-global-platforms-are-capturing-most-of-the-gains/" },
   { time: "07:56", tag: "macro", tagText: "宏观", text: "特斯拉大幅提高2026年资本支出计划至250亿美元，达到历史平均水平的约三倍。公司首席财务官表示，由于此项巨额投资，特斯拉在今年剩余时间内将出现负自由现金流。此举凸显了特斯拉在自动驾驶、机器人出租车、新车型及AI基础设施等领域进行大规模投资的决心。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/tesla-just-increased-its-capex-to-25b-heres-where-the-money-is-going/" },
   { time: "06:44", tag: "ai", tagText: "AI", text: "谷歌宣布为Workspace套件推出一系列由全新AI系统‘Workspace Intelligence’驱动的新自动化功能，旨在将AI打造成用户的‘办公室实习生’，提升工作效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-updates-workspace-to-make-ai-your-new-office-intern/" },
   { time: "06:25", tag: "tech", tagText: "科技", text: "X平台（原Twitter）推出由AI驱动的自定义信息流功能，以取代原有的‘社区’板块。新功能由Grok AI策划内容，并引入了新的广告位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/hands-on-with-xs-new-ai-powered-custom-feeds/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:22", tag: "ai", tagText: "AI", text: "OpenAI与印度IT巨头印孚瑟斯（Infosys）达成合作，旨在将OpenAI的AI工具带给更多企业客户。合作初期将专注于软件工程、遗留系统现代化和工作流程自动化等领域。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/openai-teams-up-with-infosys-to-bring-ai-tools-to-more-businesses/" },
   { time: "21:56", tag: "macro", tagText: "宏观", text: "英国政府宣布启动一项规模达6.75亿美元（约合5.4亿英镑）的基金，专门用于支持AI初创公司。此举旨在巩固英国在人工智能领域的全球竞争力，并推动本土创新。", source: "AI Business", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTjFhdTlUUjhNZ0h3aUdENUZwaXdRVHJjR05FbnFweXM5ZmJQaHpmbENjaXpkMHYxVjliSkxNUUJEeHBuLUxsM2NhaXQzeGlPaE1DWlR0eEc3Um1wZ00tU01jSE9SUGo1MF8ydjY4NG94aEpaMi1McVZfUTRsbUJHdlIySQ?oc=5" },
   { time: "21:06", tag: "ai", tagText: "AI", text: "Reid Hoffman在‘tokenmaxxing’辩论中表示，追踪AI代币使用可以衡量采用率，但应结合上下文，不应直接视为生产力指标。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "AI药物发现初创公司10x Science完成480万美元种子轮融资。该公司旨在帮助制药研究人员从AI生成的海量候选分子中，识别出真正有潜力的药物分子，以解决AI产出过剩但验证不足的行业痛点。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/ai-is-spitting-out-more-potential-drugs-than-ever-this-start-up-wants-to-figure-out-which-ones-matter/" },
-  { time: "20:11", tag: "tech", tagText: "科技", text: "谷歌发布第八代TPU，旨在训练和推理领域挑战英伟达。新款TPU在性能和效率上均有提升，标志着谷歌在自研AI芯片道路上迈出重要一步，加剧了与英伟达在AI硬件市场的竞争。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQlUyeHJpUklnVUJ1YXJXTHZCb1BZZGFnTENZbHloRXpibTAxazF2TFpOczRJWXFNSExwTC1VZGE0VEl0cS1lZGRFaHVldEFoT1F3TVVnUW5UUGdlTXV4bkE2OXFUSXMtcXZBd0RzMV95YXh3X1N0dmxxa2NSODcyYmN6YjdfcEFv?oc=5" },
 ];
-const aiBreakingDate = "2026年4月23日 11:40 CST";
+const aiBreakingDate = "2026年4月23日 14:15 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
