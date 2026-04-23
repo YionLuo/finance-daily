@@ -1618,20 +1618,22 @@
 const fearGreedData = {
   score: 68.54,
   rating: "greed",
-  timestamp: "2026-04-23T10:22:16+00:00",
+  timestamp: "2026-04-23T11:47:31+00:00",
   previousClose: 68.14,
   previous1Week: 63.34,
   previous1Month: 14.13,
   previous1Year: 21.54,
-  date: "2026年4月23日 18:42 CST"
+  date: "2026年4月23日 20:06 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:24", tag: "geo", tagText: "地缘", text: "法国气象局向警方报案，称巴黎戴高乐机场气温数据在几分钟内异常升高数度，疑似遭人为篡改，以影响Polymarket预测市场平台上的相关赌注。", source: "Financial Times", url: "https://www.ft.com/content/89be7df3-b7b8-4b4a-8b88-e24e877b439d" },
   { time: "18:37", tag: "macro", tagText: "宏观", text: "CNBC最新全美经济调查显示，美国总统特朗普的整体和经济工作支持率均跌至其两个任期内的最低点。这反映出民众对其经济政策的不满情绪加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trumps-approval-rating-on-economy-and-overall-falls-to-lowest-of-his-two-terms-cnbc-survey-shows.html" },
   { time: "18:31", tag: "geo", tagText: "地缘", text: "LVMH首席执行官阿尔诺警告称，若中东冲突得不到解决，将引发‘世界灾难’。伊朗战争已对这家奢侈品集团的第一季度销售造成冲击，并带来‘非常严重’的经济后果。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/lvmh-ceo-arnault-iran-war-middle-east-stock-luxury.html" },
   { time: "18:28", tag: "geo", tagText: "地缘", text: "海湾石油和天然气生产商正争相探索替代路线，以将能源出口运出中东。霍尔木兹海峡的持续封锁迫使各国寻找绕过该海峡的管道等替代方案，但选择有限。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/strait-hormuz-closure-alternative-routes-middle-east-oil-gas-pipelines.html" },
+  { time: "18:04", tag: "ai", tagText: "AI", text: "中国AI初创公司DeepSeek正寻求以约200亿美元估值进行首次融资，旨在防止研究人员被竞争对手挖角。此前已有数名核心员工离职。", source: "Financial Times", url: "https://www.ft.com/content/f7c65d8e-aed1-4767-9ea3-9715cb8a24e0" },
   { time: "17:55", tag: "tech", tagText: "科技", text: "摩根大通分析师警告称，meme股票热潮已接近特朗普‘解放日’关税后的极端水平。市场投机情绪再度升温，需警惕回调风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-meme-stock-craze-is-getting-close-to-its-post-liberation-day-extremes-according-to-jpmorgan-e189fb77?mod=mw_rss_topstories" },
   { time: "17:42", tag: "tech", tagText: "科技", text: "SK海力士公布创纪录的第一季度业绩，但股价未能提振。尽管AI需求推动内存价格攀升，但该股2026年已累计上涨88%，市场对利好已充分消化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-good-times-roll-for-sk-hynix-with-record-breaking-quarter-but-living-up-to-expectations-isnt-easy-1f2ae731?mod=mw_rss_topstories" },
   { time: "17:40", tag: "tech", tagText: "科技", text: "分析师试图平息市场恐慌，此前台积电表示一台高端ASML光刻机过于昂贵。这引发了对半导体设备需求的担忧，但分析师认为客户基础有限，影响可控。", source: "MarketWatch", url: "https://www.marketwatch.com/story/analysts-try-to-quell-the-panic-after-taiwan-semiconductor-said-a-high-end-asml-machine-was-too-expensive-e6e43f6e?mod=mw_rss_topstories" },
@@ -1647,13 +1649,14 @@ const breakingNews = [
   { time: "09:51", tag: "geo", tagText: "地缘", text: "加拿大总理贾斯汀·特鲁多对CNBC表示，国际组织可能已不再适合其目的。加拿大正寻求重新调整其外交关系，以应对特朗普政府引发的地缘政治转变。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/justin-trudeau-canada-trade-us-trump-geopolitics-iran-war.html" },
   { time: "09:49", tag: "tech", tagText: "科技", text: "英特尔股价上涨，因埃隆·马斯克表示其Terafab芯片制造厂将采用英特尔最新的‘14A’芯片制造技术。这对一直在为其先进制造工艺寻找大客户的英特尔来说是一个重要胜利。", source: "Financial Times", url: "https://www.ft.com/content/86fa539b-dfbe-4f29-a60e-8d572e9ddbce" },
   { time: "09:47", tag: "macro", tagText: "宏观", text: "知名经济学家申铉松回归韩国，将出任央行要职，以应对国内经济增长放缓和通胀问题。他在国际央行界享有盛誉，其回归被视为韩国应对当前复杂经济挑战的关键举措。", source: "Financial Times", url: "https://www.ft.com/content/382e4dfb-78f7-434c-a2b2-9de966fce5ea" },
-  { time: "09:12", tag: "ai", tagText: "AI", text: "在SpaceX宣布可能收购AI编程初创公司Cursor之前，微软也曾考虑收购该公司。这凸显了科技巨头对AI开发工具的激烈争夺，以及AI初创公司成为战略资产的价值。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/microsoft-looked-at-buying-cursor-before-spacex-deal-sources-say.html" },
-  { time: "09:09", tag: "tech", tagText: "科技", text: "分析指出，SpaceX与特斯拉正走向‘不可避免的碰撞’，因为两家公司业务日益交织，且都依赖埃隆·马斯克的领导。从股东角度看，最终合并为一家证券可能是合理的结局。", source: "Financial Times", url: "https://www.ft.com/content/6ca9125f-f6fa-47ed-9a3b-5202757c02e9" },
 ];
-const breakingDate = "2026年4月23日 18:42 CST";
+const breakingDate = "2026年4月23日 20:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:55", tag: "ai", tagText: "AI", text: "微软本周在Word、Excel和PowerPoint中推出名为“Agent Mode”的增强版AI功能，此前被描述为“vibe working”。该模式是更强大的AI助手，旨在提升办公效率。", source: "The Verge", url: "https://www.theverge.com/news/917328/microsoft-agent-mode-vibe-working-office-word-excel-powerpoint" },
+  { time: "18:40", tag: "ai", tagText: "AI", text: "美国商务部长表示，英伟达仍未向中国出售任何H200 AI GPU，原因是中国政府阻止进口以推动本土半导体产业发展。此举凸显中美科技脱钩加剧。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOZU9nTktDWFFPcGE4OEdnMFdGNWlhRTVzUUx4SFFrampxeGFFUy1makY1a3AtOW1pNVJSa2IydHU2QVVLbEZpOGN4OVhrdDRza203TnlJbk9TYVpjTklsc1NJN3dVMWFjdEEwVkdTSmtPZzUyVVcyNDJhZ0ctcHF0Z0hFcWZ4T3RHdEtPTy1vaVJ4MkFhRGFEVGp3REpxdGV1aGtlVzVYOS1XaXNnZnB2cW9MRW5BWUs1RFZfTFM4T09sRGU3RW9ldzk0RHItSXZERi1GTThiVUZUM01EeVFZSWFGU3c2cG1SYWt1Y01IUkhNb09rNUhnTFpaZW1Gc0FNbjl5cmRpYmFHcC1ZaW12RTR2ZHlZT3VHanNabDJZVVBBWGpSVGYxS1g2cVBWaFFac3Zuek50b3o?oc=5" },
+  { time: "18:28", tag: "ai", tagText: "AI", text: "Anthropic发布名为“Mythos”的AI突破性技术，据称可能重新定义网络安全和全球风险格局。该技术被视为AI安全领域的重大进展。", source: "Businessday NG", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYU9EN3NNMHNPeG1BczVzbVdlOE1vS181SWxtaDBBd2F2VXI1aDR1Nmc2Q1RnY2VFMHRBU09mY1BnVTZZYWhFNUhvek5iZW8wbV9JZUpDaTlsc2gtY0ZfQmNvMFZuS2RBemxwbTBpOUV6LWJJN2pFLWsyYnZheGttVzliTnpvaVplVk9tOWJBQVpHZFdDWGpQNklUN3o1dzQ3ckV3OWdpV1pOTmY2ODZQWVlZTm90RzZqXzJ0YjBWZnJQbG52NTVqTm5B0gHPAUFVX3lxTFBNYnZmbFY0TG5Wa0FpcjJmUjlqT3puREtNd1BIYmVhN1JaRDFIaUFfN0pmS1AzX3d1a2V1VDJ6WTZQUW9ERmlHenBIVHk4Tk9tN2N4MG1zaXBCdXNJNVhrdXYtN3hmcTBTM3hLLVZGZWJ0dDE1eUlkc3hHaFlEUTV4R2F1UkNiQkN6TE9hdnhFZGEwSjA1YTVwNGtCUEVDSGs1SkR2OVpTRzN6S0RtaThCUWlnQTVyVDBzQUFRZm5hM3RIbzdTY3BoTWxjeUUwUQ?oc=5" },
   { time: "17:15", tag: "ai", tagText: "AI", text: "谷歌前联合创始人（拉里·佩奇和谢尔盖·布林）为一家新的AI初创公司筹集了450万美元。这笔投资表明，两位科技巨头创始人仍在密切关注并押注前沿AI技术。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNmZkeVZNMzNvdmtaSnpOSmw0QjVVMjBUNmZtSDJoM3JIbHdxOVhuaVplWkh4dWNMaE1UTUxkZkJrUFE2R0ZZYkk2b3NmUVRPa3dQc1Y2RDk2ZDc3WGV6WTRVUm9kdWRDS0JRamJIN2FHQ0FCSy1qUEdpQzR4QVU4QUprekNvTlZVUnJ4MF9UQ21icTQ?oc=5" },
   { time: "16:50", tag: "ai", tagText: "AI", text: "索尼AI机器人在乒乓球领域取得突破，击败了精英级人类选手。该机器人展示了在高速、高精度运动中的实时决策能力，标志着AI在物理交互和运动控制领域的重大进展。", source: "Daily Sabah", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNR0NnWndGN1lfMUJ0LUpVdEx3azV5Z2RGYzc3eEM4eDJjYWhrWFhscDd1ZGMwdVp2bDIyQzhfZ2Itd1NtbjFmR3czZEdPclJ3ektOZDR3QzRUV0tHTTZvcG1tVkVISjRKMUdQVXpRbDlNUW5RX0FyMDcwZnNuVXQ1ajlqWmphdGFvYXlSYkl5eFA4Skk0MHRRSlFEN1BkdGlEVlpz0gGoAUFVX3lxTE5JOTdkaVVNWFlfd3VfUHZ1WFg1eHBoUnR6eFJhLXdvdF9iRU5OUTlLLXFkaHh3QWJBWTlDREVZS0VNSzA3R0dfTWVpZ3pYRFpGNnZ5Ulo3TnkzY04xUjVvMWF6UHdsX1RXWmxTTTRrdjdJRTRIb0NHZGowME95WTVYeWI2T1liY0NpNXNwQTVkX2lZWUp1cGpDeE56MjFVTHFuaGkxbTM2dg?oc=5" },
   { time: "16:09", tag: "ai", tagText: "AI", text: "SK海力士工程负责人安铉表示，实现AI性能最大化的突破在于将内存与逻辑芯片集成。这一观点强调了存储与计算融合对未来AI芯片架构的关键作用。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xSEhhdmU3NllWS1V0d1lVQlRYSktJZnhheXo0RksxQnlocUctak5CTzBra2hpNzUwdzB1SkhJNEpBRm9EaDdVZjVmVWlkeExEbjI4?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "04:09", tag: "ai", tagText: "AI", text: "OpenAI宣布，面向其商业、企业、教育和教师计划的用户推出云端‘工作空间’智能体。这些在ChatGPT中可用的自定义机器人能够自主执行业务任务。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots" },
   { time: "03:52", tag: "tech", tagText: "科技", text: "SpaceX以一笔100亿美元的“合作费”和一条通往600亿美元收购的路径，抢先截胡了AI初创公司Cursor原定于本周完成的20亿美元融资轮。此举展示了科技巨头在争夺顶尖AI人才和资产方面的激进策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/how-spacex-preempted-a-2b-fundraise-with-a-60b-buyout-offer/" },
   { time: "01:30", tag: "ai", tagText: "AI", text: "谷歌为Chrome企业版引入Gemini驱动的“自动浏览”功能，将其转变为AI工作助手，可帮助员工自动化处理研究、数据录入等任务。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/" },
-  { time: "00:58", tag: "ai", tagText: "AI", text: "谷歌发布面向企业IT和技术用户的Gemini Enterprise Agent Platform，这是一款新的智能体构建工具。该平台旨在让技术团队能够更高效地开发和部署企业级AI助手，标志着谷歌在企业AI解决方案上采取了更偏向技术栈的策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/" },
-  { time: "00:58", tag: "ai", tagText: "AI", text: "AI初创公司Creao AI获得1000万美元融资。该公司专注于SaaS领域，此轮融资将用于加速其AI产品开发和市场拓展。", source: "The SaaS News", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE5icEZHNUdJZ3dCME84OExqcmhNTkQzMTRacnVuWVJZSTRRcDR1UndPMlBVejA4S19uSkNJTktpMjFsM29JTWtrclNtVGZKc3BkUUxGOUVQOTZyWnRmanhla3o0OU1rbGltcWJ0Uy1ONTJqM0ZGbGJaWQ?oc=5" },
-  { time: "00:58", tag: "tech", tagText: "科技", text: "Epic Games为《堡垒之夜》创作者推出新的AI“对话”工具，允许开发者制作可与玩家互动的AI角色。此举延续了去年在游戏中引入AI版达斯·维德（模仿詹姆斯·厄尔·琼斯声音）的尝试，旨在增强游戏内的叙事和互动体验。", source: "The Verge", url: "https://www.theverge.com/games/914963/fortnite-ai-characters-developers-conversations" },
 ];
-const aiBreakingDate = "2026年4月23日 18:42 CST";
+const aiBreakingDate = "2026年4月23日 20:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
