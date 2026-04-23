@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 69.46,
+  score: 65.97,
   rating: "greed",
-  timestamp: "2026-04-23T14:05:48+00:00",
+  timestamp: "2026-04-23T18:07:41+00:00",
   previousClose: 68.14,
   previous1Week: 63.34,
   previous1Month: 14.13,
   previous1Year: 21.54,
-  date: "2026年4月23日 22:09 CST"
+  date: "2026年4月24日 02:13 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:53", tag: "macro", tagText: "宏观", text: "美股周四从纪录高位回落，道指跌超400点，软件股领跌。ServiceNow因财报不及预期暴跌超16%，拖累Salesforce、Workday等，市场对AI变现能力的担忧加剧。油价飙升进一步打压市场情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/stock-market-today-live-updates.html" },
+  { time: "01:04", tag: "tech", tagText: "科技", text: "软件股因ServiceNow和IBM财报引发AI恐慌而暴跌。ServiceNow股价重挫逾16%，拖累Salesforce、Workday和甲骨文等一众软件股，市场对AI投入能否转化为利润的疑虑升温。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html" },
+  { time: "00:36", tag: "tech", tagText: "科技", text: "微软宣布首次针对美国员工的自愿买断计划，面向高级总监及以下级别、工龄加年龄满70岁的员工，最多可裁减7%的美国员工。此举旨在优化成本结构。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/microsoft-plans-first-voluntary-retirement-program-for-us-employees.html" },
+  { time: "00:06", tag: "ai", tagText: "AI", text: "OpenAI发布最新AI模型GPT-5.5，据称在编程、使用计算机和深度研究能力方面有显著提升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html" },
+  { time: "23:59", tag: "macro", tagText: "宏观", text: "毕马威（KPMG）计划裁减其美国审计合伙人的10%，原因是多年来自愿退休计划参与率较低，公司被迫采取强制裁员措施。", source: "Financial Times", url: "https://www.ft.com/content/ab4f15df-4a5d-41ce-95aa-e3cbc8489409" },
+  { time: "22:40", tag: "geo", tagText: "地缘", text: "白宫指控中国进行‘工业规模’的AI技术盗窃。特朗普政府官员迈克尔·克拉齐奥斯称，中国实体正在窃取美国实验室的技术。", source: "Financial Times", url: "https://www.ft.com/content/abde4e1e-c69a-4cc4-ad96-d88308314298" },
   { time: "21:44", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic在二级市场的估值已达到1万亿美元。这一里程碑式估值反映了市场对前沿AI模型开发商的狂热追捧，尽管其尚未实现大规模盈利。", source: "Quartz", url: "https://finance.yahoo.com/markets/stocks/articles/anthropic-reaches-1-trillion-valuation-134440611.html" },
   { time: "21:42", tag: "geo", tagText: "地缘", text: "特朗普下令海军在霍尔木兹海峡对任何布设水雷的船只进行‘射击并摧毁’。此举标志着美国与伊朗在该战略要道上的紧张局势进一步升级，该海峡因战争已基本对油轮交通关闭。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-hormuz-strait-iran-war.html" },
   { time: "21:35", tag: "macro", tagText: "宏观", text: "美国航空下调2026年盈利预测，因伊朗冲突导致燃油成本飙升。公司预计本季度燃油价格将上涨45%，成为最新一家因燃料成本激增而下调业绩指引的航空公司。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/american-airlines-aal-q1-2026-earnings.html" },
@@ -1643,17 +1649,16 @@ const breakingNews = [
   { time: "17:40", tag: "tech", tagText: "科技", text: "分析师试图平息市场恐慌，此前台积电表示一台高端ASML光刻机过于昂贵。这引发了对半导体设备需求的担忧，但分析师认为客户基础有限，影响可控。", source: "MarketWatch", url: "https://www.marketwatch.com/story/analysts-try-to-quell-the-panic-after-taiwan-semiconductor-said-a-high-end-asml-machine-was-too-expensive-e6e43f6e?mod=mw_rss_topstories" },
   { time: "16:53", tag: "geo", tagText: "地缘", text: "伊朗战争持续导致霍尔木兹海峡封锁，印度和中国正为争夺日益萎缩的俄罗斯原油供应展开激烈竞争。这凸显了地缘冲突对全球能源贸易格局的深刻重塑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/india-china-russian-oil-supply-strait-hormuz-disruption.html" },
   { time: "16:43", tag: "ai", tagText: "AI", text: "德州仪器业绩超出华尔街预期，不仅受益于数据中心需求，工业客户的强劲需求也推动了其业绩展望上调。这表明AI和自动化对传统制造业的拉动作用正在显现。", source: "MarketWatch", url: "https://www.marketwatch.com/story/texas-instruments-topped-wall-streets-outlook-on-more-than-just-data-center-demand-c033d44a" },
-  { time: "16:42", tag: "macro", tagText: "宏观", text: "欧莱雅公布‘令人印象深刻’的财报后，股价大涨9%，有望创下18年来最大单日涨幅。分析师指出，化妆品市场并未显示出放缓迹象，消费韧性超出预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/loreal-stock-q1-earnings-beauty-sales.html" },
-  { time: "16:31", tag: "geo", tagText: "地缘", text: "国际能源署（IEA）署长比罗尔对CNBC表示，全球正面临‘历史上最大的能源安全威胁’。伊朗战争导致的供应中断和油价飙升，正对各国经济构成严峻挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/oil-markets-prices-fuel-shortages-iran-war-iea-chief.html" },
-  { time: "13:46", tag: "crypto", tagText: "加密", text: "嘉信理财推出比特币和以太坊交易服务，每笔交易收取0.7%的费用。这是传统主流金融机构进一步接纳加密货币的重要一步。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcU9ENWNJU2ozTzd3VXlNdVlpdXVHUXMxSERlS2s5S1M4emJIM0xQQ3lSWUZiOFdOODlheVhwYzBxQlh3MFB0clk5XzFMWVB5S3dlOXNFNmpyNGFVWDZUYmNwZGdMLVNWdXM5NEd4OWpTMGpJWTRkUnNjWFE5bTVBcm02R0dXSTRwRFJ3djMxeG1DTlhi?oc=5" },
-  { time: "12:06", tag: "geo", tagText: "科技", text: "据英国《金融时报》报道，贸易巨头维多、托克和摩科瑞等公司正设法将其部分油轮驶出霍尔木兹海峡。文章详细描述了这些油轮如何‘闯关’伊朗封锁，凸显了全球能源运输面临的巨大风险。", source: "Financial Times", url: "https://www.ft.com/content/836ea939-c1a0-4943-8608-71dc3d4d838d" },
-  { time: "10:40", tag: "crypto", tagText: "加密", text: "俄罗斯已批准在对外贸易中使用加密货币，以规避西方制裁。此举可能为俄罗斯与贸易伙伴之间的跨境支付开辟新渠道，并提升加密货币在地缘政治紧张局势中的实用价值。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRmNpNVE4bzRkU3F4UFR5LUppR2h3UEJxQW5mQUJ2ZXpsd0lONEFPQmhYTnBkM2dfTUR0ampmUWFoUUJBazNvRU5FMnhtbDBPOVBuNjltTmhidkZpT0VXNGMwTFZEV1Fqd1ZMMTRrNEdLdlpTZXhDeThBLU5qSjEzNHR0VVdaeWVSd1U3RU13QXhSdUE?oc=5" },
-  { time: "10:26", tag: "macro", tagText: "宏观", text: "道指、标普500和纳斯达克指数期货下跌，市场对美国与伊朗之间持续的不确定性感到担忧。特斯拉在公布财报后盘后股价下滑。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxNMzZCbTFZaFZJcGNEZkRNNXVZOGxQanFKTVFnaENHdHk0cTFNVGo1LXpvR0RHY0hZbExXb3JuZ2NQZ0ZjNnduZTB3SkN6Y0RJQ1ZsLTZzNWNfNm9tNWxJVjhnMlV0Zlh0d2hmM21sdHNCVHloU3RlWUhqaWZzOEhnZ3ZnNU15OGZuQ2FfaUJ3TWF0R0hSTGFqZjdSeTl1Ul9EV29CRVRscWRPQ1pTNHJHUHhyZnlXMEtPdHZmcVp3RzhaNnpHLTF5WXRRcGNyOU9pcFhIbjlxR1czYlVyQXJJWlkxVkwxWW9FZmsydlluVmdyRlJWWENRWEFscVZVME4w?oc=5" },
 ];
-const breakingDate = "2026年4月23日 22:09 CST";
+const breakingDate = "2026年4月24日 02:13 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布GPT-5.5模型，号称是“最智能、最直观”的版本，在编码效率和易用性上显著提升，被视为向新型人机协作方式迈进的关键一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt" },
+  { time: "00:00", tag: "tech", tagText: "科技", text: "AI硬件初创公司Era完成1100万美元融资，致力于为眼镜、戒指、吊坠等多种形态的AI可穿戴设备构建统一软件平台，押注AI硬件将迎来多样化爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/era-computer-raises-11m-to-build-a-software-platform-for-ai-gadgets/" },
+  { time: "22:39", tag: "macro", tagText: "宏观", text: "全球最重要的半导体指数（费城半导体指数）正经历有史以来最长的连续上涨周期。分析指出，尽管AI需求强劲，但地缘政治风险和潜在的库存调整可能成为终结这一涨势的隐患。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxNb2MzYU9qQ1A4V1Bua2ZtRjBtaTJBXzZMeGhrNUhKNmE1X19BekdRUUZ0MGVoMmJwRGtRNXFQb045aW5kbERKMzdWQS1EOURPbG11bGNVSlktMFh5TnZnU3NKbUtOQi1FMDVNaDEtSFZlTVZ2b0hoUHkxWk5taHptaXVPNE5RUmxTQVRHY19YcGtBRUdtbGhnblR3Y3JFS2l0VEE?oc=5" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "陷入困境的合规初创公司Delve再曝安全事件，其客户——AI智能体训练公司Context AI上周披露了重大数据泄露。这起事件引发对AI供应链安全审查流程的广泛质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/" },
+  { time: "21:54", tag: "ai", tagText: "AI", text: "SpaceX以600亿美元估值达成协议，获得收购AI编程初创公司Cursor的权利。Cursor是当前最热门的AI代码助手之一，此交易凸显科技巨头对AI开发工具的激烈争夺。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQakZzMDM2cjdnbThWM0hKUndMSXdFSnZpQTlUWWxZQnlkcWF1VG4xZkpaZ0NZalktd28xQUlSdkhtbzV1aGphR1VPSGY0T2F2ZkZORHFXdFhxeXVsb1RySDJ0SThRak1HRzZPZHBIZHRqMDBUbUE2SkdfWFYwSW4wSVktTEd1clpxM1lNS2ZTeFNJV0JsQmw2NUlxVjVHVS1kZzJBb3VXWnNyd1FTZV9sZ2FxV0E5enlPbUxrQTgwRzRfN0ZtWjM2bElQYmpodw?oc=5" },
   { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
   { time: "19:55", tag: "ai", tagText: "AI", text: "微软本周在Word、Excel和PowerPoint中推出名为“Agent Mode”的增强版AI功能，此前被描述为“vibe working”。该模式是更强大的AI助手，旨在提升办公效率。", source: "The Verge", url: "https://www.theverge.com/news/917328/microsoft-agent-mode-vibe-working-office-word-excel-powerpoint" },
   { time: "18:40", tag: "ai", tagText: "AI", text: "美国商务部长表示，英伟达仍未向中国出售任何H200 AI GPU，原因是中国政府阻止进口以推动本土半导体产业发展。此举凸显中美科技脱钩加剧。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOZU9nTktDWFFPcGE4OEdnMFdGNWlhRTVzUUx4SFFrampxeGFFUy1makY1a3AtOW1pNVJSa2IydHU2QVVLbEZpOGN4OVhrdDRza203TnlJbk9TYVpjTklsc1NJN3dVMWFjdEEwVkdTSmtPZzUyVVcyNDJhZ0ctcHF0Z0hFcWZ4T3RHdEtPTy1vaVJ4MkFhRGFEVGp3REpxdGV1aGtlVzVYOS1XaXNnZnB2cW9MRW5BWUs1RFZfTFM4T09sRGU3RW9ldzk0RHItSXZERi1GTThiVUZUM01EeVFZSWFGU3c2cG1SYWt1Y01IUkhNb09rNUhnTFpaZW1Gc0FNbjl5cmRpYmFHcC1ZaW12RTR2ZHlZT3VHanNabDJZVVBBWGpSVGYxS1g2cVBWaFFac3Zuek50b3o?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "15:00", tag: "geo", tagText: "地缘", text: "英国政府宣布启动一项价值5亿英镑的“主权AI”专项基金，旨在支持本土AI初创企业，减少对海外科技巨头的依赖。此举是英国在脱欧后加强科技自主性和国家AI战略安全的重要举措。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxORzdwN3pZMEFYb1QyVkUzLUdqRjZuUzVVMzVGNWhTNlB0UUU1UW9Zd1kxZ0I2cFZQakdzQmhJZ2ZKZ2tCYUhWOF84S05HNWd0TWc0VDY5a1Vka0h0bnp0T0FkRnRTbXRPX21DcGIzcUVlQjUycjNaMnR5aDNKLVVGWXZMZEdkODIxWXVKR2V6WVM4Xzhxd0hvM09EdmdOajM3V0FTWjQ5ZFduUGZlcUloaGtGMmxNdWhoZGJEOWliYl9xY3k2UFQybm80U1JkYWZmbWhQa2tPVQ?oc=5" },
   { time: "13:08", tag: "ai", tagText: "AI", text: "AI制药公司Recursion Pharmaceuticals (RXRX) 在最近的网络直播中重点介绍了其利用AI发现的药物靶点突破，引发市场对其估值的重新评估。该公司正利用其专有的AI平台加速药物发现进程。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTjVZZFBxSXo0UTlhY0VUQVRYMUdkbFc2LWl3MXZ6QWlwT25hd0VOa29YTDFfY2FWWEJKcU02a2xtRkZ6UVlZZjVZMm1uMmFGaWpLOXNXaEhnRlh4SmU4TVEyZng1X0JIM21pZGNLaFludjI0a1lEdEtDT2VIN013b2RWanlEYktraGE4T2NuRURIMTFCNFFtaUN1cnltWDFEZld3RTZNN2F5bnFLZXJQbGRtRVNKN25Ka1UzWExEUXhrX3NzZDdyY3RWUUZULVhkTkkwR1BFSUc5cjd3cUhqVkZjTnJkMWpLUzhzN0NiUdIB9AFBVV95cUxNUnZ2N2V5LXFvTUxpS3dEVFZUUHZnOWI2cjFSVU1HYndEb1JDaUl5WEFtS0VSMGpYX25ISzVLZXlzYV83eGl5SEItYkFWbTVLQzlJNVc3bzhRS2ZLcl9sa3M2LWFXRzdqeGdWWV9jaHZsTWJRRFZYRlo1WlE5bG9fMDYxZk9ROGlHZmg1VzBzMjhBRGYtbGtxWU4xQUQ3OFdDZE9aaHNsQTJ6cmRNQ0FDY2dDamc4UnE4UnJJSGtZMDBBOWJIdkIyY3hZTWlRbnJZX285aFpMWFVNWjk2V09xS2FIQlVvMWc0VFZpU05PQV9XWXlY?oc=5" },
   { time: "12:38", tag: "tech", tagText: "科技", text: "印度应用市场正蓬勃发展，但全球平台攫取了大部分收益。非游戏应用（以流媒体和AI应用为首）是增长的主要驱动力，尽管印度用户的平均支出仍落后于全球同行。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/indias-app-market-is-booming-but-global-platforms-are-capturing-most-of-the-gains/" },
-  { time: "07:56", tag: "macro", tagText: "宏观", text: "特斯拉大幅提高2026年资本支出计划至250亿美元，达到历史平均水平的约三倍。公司首席财务官表示，由于此项巨额投资，特斯拉在今年剩余时间内将出现负自由现金流。此举凸显了特斯拉在自动驾驶、机器人出租车、新车型及AI基础设施等领域进行大规模投资的决心。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/tesla-just-increased-its-capex-to-25b-heres-where-the-money-is-going/" },
-  { time: "06:44", tag: "ai", tagText: "AI", text: "谷歌宣布为Workspace套件推出一系列由全新AI系统‘Workspace Intelligence’驱动的新自动化功能，旨在将AI打造成用户的‘办公室实习生’，提升工作效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/google-updates-workspace-to-make-ai-your-new-office-intern/" },
-  { time: "06:25", tag: "tech", tagText: "科技", text: "X平台（原Twitter）推出由AI驱动的自定义信息流功能，以取代原有的‘社区’板块。新功能由Grok AI策划内容，并引入了新的广告位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/hands-on-with-xs-new-ai-powered-custom-feeds/" },
-  { time: "04:29", tag: "macro", tagText: "宏观", text: "美国参议员伊丽莎白·沃伦警告称，AI领域的失败可能引发下一次金融危机。她表示自己“看到了泡沫”，并呼吁加强监管，以防止类似2008年的经济衰退重演。", source: "The Verge", url: "https://www.theverge.com/policy/917026/ai-economy-bubble-elizabeth-warren" },
-  { time: "04:09", tag: "ai", tagText: "AI", text: "OpenAI宣布，面向其商业、企业、教育和教师计划的用户推出云端‘工作空间’智能体。这些在ChatGPT中可用的自定义机器人能够自主执行业务任务。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots" },
 ];
-const aiBreakingDate = "2026年4月23日 22:09 CST";
+const aiBreakingDate = "2026年4月24日 02:13 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
