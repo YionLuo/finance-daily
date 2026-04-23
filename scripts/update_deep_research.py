@@ -38,9 +38,15 @@ from news_fetcher import (
 
 MAX_RESEARCH_ENTRIES = 30
 WEEKDAY_MAP = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
-LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-chat")
-WRITER_MODEL = os.environ.get("WRITER_MODEL", "deepseek-reasoner")  # DeepSeek R1 reasoning model
-MAX_AGENT_ROUNDS = 12  # Safety limit for agent loop
+
+# Auto-detect model names based on API endpoint
+_base_url = os.environ.get("OPENAI_BASE_URL", "")
+_is_openrouter = "openrouter" in _base_url
+
+LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek/deepseek-chat" if _is_openrouter else "deepseek-chat")
+WRITER_MODEL = os.environ.get("WRITER_MODEL", "deepseek/deepseek-r1" if _is_openrouter else "deepseek-reasoner")
+
+MAX_AGENT_ROUNDS = 12
 
 
 # ============ Stage 1: Topic Selection (unchanged) ============
@@ -733,73 +739,364 @@ def fact_check(client, report_text):
 
 FORMAT_PROMPT = """把以下深度分析报告转换为 JSON 格式。保留所有内容，只改变格式。
 
-⚠️ 格式化时检查标点：
-- 标题和副标题中的引号必须配对（有左引号必须有右引号）
+⚠️ 格式化规则：
+- 标题和副标题中的引号必须配对
 - 中文使用中文标点（""、''），不要混用半角引号
+- sections content 中的 HTML 必须完整闭合
+- 输出必须是合法 JSON，不要输出 markdown 代码块标记
 
 === 原始报告 ===
 {report_text}
 
 === 输出 JSON ===
-严格输出以下 JSON 结构（不要 markdown 代码块）：
+严格输出以下 JSON 结构（不要 markdown 代码块、不要任何前缀文字）：
 {{
-  "title": "报告标题（从报告中提取）",
-  "subtitle": "副标题（从报告中提取）",
-  "summary": "200字以内摘要（从报告中提取或概括核心论点）",
+  "title": "报告标题（从报告中提取，如有Y Daily投研前缀请保留）",
+  "subtitle": "副标题（报告日期、服务对象等信息）",
+  "summary": "200字以内摘要（概括核心论点与交易推论）",
   "tags": [
-    {{"text": "标签", "type": "up|down|warn"}}
+    {{"text": "标签名", "type": "up|down|warn"}}
   ],
-  "keyTakeaways": ["核心判断1", "核心判断2", "核心判断3"],
-  "relatedTickers": ["股票代码1", "股票代码2"],
+  "keyTakeaways": ["核心判断1（含具体操作建议）", "核心判断2", "核心判断3"],
+  "relatedTickers": ["AAPL", "NVDA"],
   "sections": [
     {{
       "id": "sec-1",
       "title": "章节标题",
-      "content": "<p>将章节正文转为 HTML（<p>段落、<strong>加粗、<ul><li>列表）</p>"
+      "content": "<p>章节正文HTML</p>"
     }}
   ],
   "sourceIndices": []
 }}
 
-tags type: "up"=利好, "down"=利空, "warn"=警示。
-sections 的 content 用 HTML 格式，保留原文的所有分析内容和来源标注。
+tags type: "up"=利好, "down"=利空, "warn"=警示。至少3个tags。
+keyTakeaways: 至少3条。
+relatedTickers: 报告中提到的所有股票代码。
+sections: 每个一级章节（如：核心论点、事件背景、财务穿透分析、交易机会池、风险与反面力量、催化剂日历、核心判断）作为一个section。
+sections 的 content 用 HTML：<p>段落、<strong>加粗、<ul><li>列表、<table>表格、<ol>有序列表、<h3>子标题。
 """
 
 
-def format_to_json(client, report_text):
-    """Stage 4: Convert plain-text analysis into structured JSON."""
-    print("\n=== Stage 4: Format to JSON ===")
-
-    prompt = FORMAT_PROMPT.format(report_text=report_text[:12000])
-
-    response = llm_chat_with_retry(
-        client, [{"role": "user", "content": prompt}],
-        max_tokens=8192, temperature=0.1,
-    )
-
+def _clean_llm_json(response):
+    """Clean LLM response and extract JSON."""
     cleaned = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
     cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE).strip()
     # Strip <think> block if present
     think_end = cleaned.find("</think>")
     if think_end != -1:
         cleaned = cleaned[think_end + len("</think>"):].strip()
+    # Try to find JSON object boundaries
+    first_brace = cleaned.find('{')
+    if first_brace > 0:
+        cleaned = cleaned[first_brace:]
+    # Find matching closing brace
+    depth = 0
+    last_brace = -1
+    for i, c in enumerate(cleaned):
+        if c == '{':
+            depth += 1
+        elif c == '}':
+            depth -= 1
+            if depth == 0:
+                last_brace = i
+                break
+    if last_brace > 0:
+        cleaned = cleaned[:last_brace + 1]
+    return cleaned
 
-    try:
-        return json.loads(cleaned)
-    except json.JSONDecodeError as e:
-        print(f"  ERROR: JSON parse failed: {e}")
-        print(f"  Raw (first 500): {cleaned[:500]}")
-        # Fallback: create minimal structure
-        return {
-            "title": "深度分析报告",
-            "subtitle": "",
-            "summary": report_text[:200],
-            "tags": [],
-            "keyTakeaways": [],
-            "relatedTickers": [],
-            "sections": [{"id": "sec-1", "title": "分析报告", "content": f"<p>{report_text[:3000]}</p>"}],
-            "sourceIndices": [],
-        }
+
+def _md_to_html(text):
+    """Basic Markdown to HTML conversion for fallback."""
+    lines = text.split('\n')
+    html_parts = []
+    in_list = False
+    in_table = False
+    table_rows = []
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            if in_list:
+                html_parts.append('</ul>')
+                in_list = False
+            if in_table and table_rows:
+                html_parts.append(_build_table(table_rows))
+                table_rows = []
+                in_table = False
+            html_parts.append('')
+            continue
+
+        # Table row
+        if stripped.startswith('|') and stripped.endswith('|'):
+            in_table = True
+            table_rows.append(stripped)
+            continue
+        elif in_table and table_rows:
+            html_parts.append(_build_table(table_rows))
+            table_rows = []
+            in_table = False
+
+        # Headers
+        if stripped.startswith('### '):
+            if in_list:
+                html_parts.append('</ul>')
+                in_list = False
+            html_parts.append(f'<h3>{_inline_md(stripped[4:])}</h3>')
+        elif stripped.startswith('## '):
+            if in_list:
+                html_parts.append('</ul>')
+                in_list = False
+            html_parts.append(f'<h3>{_inline_md(stripped[3:])}</h3>')
+        elif stripped.startswith('# '):
+            if in_list:
+                html_parts.append('</ul>')
+                in_list = False
+            # Skip top-level title (already extracted)
+            continue
+        elif stripped.startswith('- ') or stripped.startswith('* '):
+            if not in_list:
+                html_parts.append('<ul>')
+                in_list = True
+            html_parts.append(f'<li>{_inline_md(stripped[2:])}</li>')
+        elif re.match(r'^\d+\.\s', stripped):
+            content = re.sub(r'^\d+\.\s', '', stripped)
+            if not in_list:
+                html_parts.append('<ol>')
+                in_list = True
+            html_parts.append(f'<li>{_inline_md(content)}</li>')
+        elif stripped == '---' or stripped == '***':
+            continue  # Skip horizontal rules
+        else:
+            if in_list:
+                html_parts.append('</ul>')
+                in_list = False
+            html_parts.append(f'<p>{_inline_md(stripped)}</p>')
+
+    if in_list:
+        html_parts.append('</ul>')
+    if in_table and table_rows:
+        html_parts.append(_build_table(table_rows))
+
+    return '\n'.join(html_parts)
+
+
+def _inline_md(text):
+    """Convert inline markdown (bold, italic, links) to HTML."""
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
+    text = re.sub(r'`(.+?)`', r'<code>\1</code>', text)
+    return text
+
+
+def _build_table(rows):
+    """Build HTML table from markdown table rows."""
+    if len(rows) < 2:
+        return ''
+    html = '<table><thead><tr>'
+    headers = [c.strip() for c in rows[0].strip('|').split('|')]
+    for h in headers:
+        html += f'<th>{_inline_md(h)}</th>'
+    html += '</tr></thead><tbody>'
+    for row in rows[2:]:  # Skip separator row
+        if row.strip().replace('-', '').replace('|', '').replace(' ', '') == '':
+            continue
+        cells = [c.strip() for c in row.strip('|').split('|')]
+        html += '<tr>'
+        for c in cells:
+            html += f'<td>{_inline_md(c)}</td>'
+        html += '</tr>'
+    html += '</tbody></table>'
+    return html
+
+
+def _split_md_sections(text):
+    """Split markdown text into sections by top-level headers (## or # with number)."""
+    lines = text.split('\n')
+    sections = []
+    current_title = None
+    current_lines = []
+
+    for line in lines:
+        stripped = line.strip()
+        # Match section headers: ## N. Title or ## Title
+        is_section = False
+        if re.match(r'^#{1,2}\s+(?:\d+[\.\、]?\s*)?', stripped):
+            # Skip the very first # title (report title)
+            title_text = re.sub(r'^#{1,2}\s+(?:\d+[\.\、]?\s*)?', '', stripped).strip()
+            if title_text and not stripped.startswith('### '):
+                is_section = True
+
+        if is_section:
+            if current_title is not None and current_lines:
+                sections.append((current_title, '\n'.join(current_lines)))
+            current_title = title_text
+            current_lines = []
+        else:
+            current_lines.append(line)
+
+    if current_title is not None and current_lines:
+        sections.append((current_title, '\n'.join(current_lines)))
+
+    # If no sections found, treat entire text as one section
+    if not sections:
+        sections = [("分析报告", text)]
+
+    return sections
+
+
+def _extract_title_from_md(text):
+    """Extract the first # or ## heading as title."""
+    for line in text.split('\n')[:10]:
+        stripped = line.strip()
+        if stripped.startswith('# ') and not stripped.startswith('## '):
+            return stripped[2:].strip()
+    return None
+
+
+def _extract_tickers_from_text(text):
+    """Extract stock ticker symbols from text."""
+    # Match patterns like (AAPL), (NVDA), (TSM), ticker: AAPL, etc.
+    tickers = set()
+    # US tickers in parentheses
+    for m in re.finditer(r'\(([A-Z]{1,5})\)', text):
+        t = m.group(1)
+        if len(t) >= 2 and t not in {'AI', 'US', 'EU', 'UK', 'HK', 'CN', 'GDP', 'CPI', 'PPI',
+                                       'IEA', 'IPO', 'ETF', 'CEO', 'CFO', 'CTO', 'PPA', 'IRR',
+                                       'THE', 'FOR', 'AND', 'BUT', 'NOT', 'ARE', 'WAS', 'HAS',
+                                       'PCB', 'UAE', 'IMF', 'SPR', 'LNG', 'PPA', 'TCO', 'API'}:
+            tickers.add(t)
+    return list(tickers)[:15]
+
+
+def _extract_tags_from_text(text, tickers):
+    """Extract meaningful tags from report text."""
+    tags = []
+    # Look for key phrases that indicate direction
+    up_patterns = [r'做多\s*[「""]?([^「""」\s,，]{2,8})', r'增持\s*[「""]?([^「""」\s,，]{2,8})']
+    down_patterns = [r'做空\s*[「""]?([^「""」\s,，]{2,8})', r'减仓\s*[「""]?([^「""」\s,，]{2,8})']
+    warn_patterns = [r'观望\s*[「""]?([^「""」\s,，]{2,8})', r'风险\s*[：:]\s*[「""]?([^「""」\s,，]{2,8})']
+
+    for pat in up_patterns:
+        for m in re.finditer(pat, text):
+            t = m.group(1).strip('」""')
+            if 2 <= len(t) <= 8:
+                tags.append({"text": t, "type": "up"})
+    for pat in down_patterns:
+        for m in re.finditer(pat, text):
+            t = m.group(1).strip('」""')
+            if 2 <= len(t) <= 8:
+                tags.append({"text": t, "type": "down"})
+    for pat in warn_patterns:
+        for m in re.finditer(pat, text):
+            t = m.group(1).strip('」""')
+            if 2 <= len(t) <= 8:
+                tags.append({"text": t, "type": "warn"})
+
+    # Deduplicate
+    seen = set()
+    unique_tags = []
+    for tag in tags:
+        key = tag["text"]
+        if key not in seen:
+            seen.add(key)
+            unique_tags.append(tag)
+
+    # If not enough tags, add from tickers
+    if len(unique_tags) < 3 and tickers:
+        for t in tickers[:3]:
+            if t not in seen:
+                unique_tags.append({"text": t, "type": "warn"})
+                seen.add(t)
+
+    return unique_tags[:8]
+
+
+def format_to_json(client, report_text):
+    """Stage 4: Convert plain-text analysis into structured JSON."""
+    print("\n=== Stage 4: Format to JSON ===")
+    print(f"  Report text length: {len(report_text)} chars")
+
+    # Try LLM formatting with retry
+    max_input = 24000
+    truncated = report_text[:max_input]
+    prompt = FORMAT_PROMPT.format(report_text=truncated)
+
+    for attempt in range(2):
+        if attempt > 0:
+            print(f"  Retry #{attempt}...")
+
+        response = llm_chat_with_retry(
+            client, [{"role": "user", "content": prompt}],
+            max_tokens=8192, temperature=0.1,
+        )
+
+        cleaned = _clean_llm_json(response)
+
+        try:
+            result = json.loads(cleaned)
+            # Validate: must have sections with real content
+            sections = result.get("sections", [])
+            if sections and len(sections) >= 2:
+                print(f"  ✅ JSON parsed: {len(sections)} sections, title='{result.get('title', '')[:40]}'")
+                return result
+            elif sections:
+                print(f"  ⚠️ JSON parsed but only {len(sections)} section(s), retrying...")
+            else:
+                print(f"  ⚠️ JSON parsed but no sections, retrying...")
+        except json.JSONDecodeError as e:
+            print(f"  ❌ JSON parse failed (attempt {attempt+1}): {e}")
+            print(f"  Raw (first 300): {cleaned[:300]}")
+
+    # ====== Fallback: Parse Markdown directly ======
+    print("  ⚠️ LLM formatting failed, using Markdown fallback parser")
+
+    title = _extract_title_from_md(report_text) or "深度分析报告"
+    tickers = _extract_tickers_from_text(report_text)
+    tags = _extract_tags_from_text(report_text, tickers)
+    md_sections = _split_md_sections(report_text)
+
+    sections = []
+    all_content_text = []
+    for i, (sec_title, sec_content) in enumerate(md_sections):
+        html_content = _md_to_html(sec_content)
+        sections.append({
+            "id": f"sec-{i+1}",
+            "title": f"{i+1}. {sec_title}" if not re.match(r'^\d', sec_title) else sec_title,
+            "content": html_content,
+        })
+        all_content_text.append(sec_content)
+
+    # Build summary from first 200 chars of content
+    full_text = '\n'.join(all_content_text)
+    summary_text = re.sub(r'[#*\-|]', '', full_text[:300]).strip()
+    summary_text = re.sub(r'\s+', ' ', summary_text)[:200]
+
+    # Extract key takeaways from "核心判断" or last section
+    key_takeaways = []
+    for sec_title, sec_content in md_sections:
+        if '核心判断' in sec_title or '执行摘要' in sec_title or 'Key Takeaway' in sec_title:
+            for line in sec_content.split('\n'):
+                stripped = line.strip()
+                if re.match(r'^[\d\-\*]\s*[\.\、]?\s*', stripped) and len(stripped) > 20:
+                    clean = re.sub(r'^[\d\-\*]\s*[\.\、]?\s*', '', stripped)
+                    clean = re.sub(r'\*\*(.+?)\*\*', r'\1', clean)
+                    if len(clean) > 20:
+                        key_takeaways.append(clean[:200])
+            break
+
+    result = {
+        "title": title,
+        "subtitle": "",
+        "summary": summary_text,
+        "tags": tags,
+        "keyTakeaways": key_takeaways[:5],
+        "relatedTickers": tickers,
+        "sections": sections,
+        "sourceIndices": [],
+    }
+
+    print(f"  Fallback result: {len(sections)} sections, {len(tags)} tags, {len(tickers)} tickers")
+    return result
 
 
 # ============ Main ============

@@ -349,8 +349,9 @@ FALLBACK_ENDPOINTS = [
     "https://api.deepseek.com",
 ]
 
-# Default model — can be overridden by LLM_MODEL env var
-DEFAULT_LLM_MODEL = "deepseek-chat"
+# Default model — auto-detect based on API endpoint
+_base = os.environ.get("OPENAI_BASE_URL", "")
+DEFAULT_LLM_MODEL = "deepseek/deepseek-chat" if "openrouter" in _base else "deepseek-chat"
 
 
 def create_llm_client(required=True):
