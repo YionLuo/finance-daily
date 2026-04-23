@@ -1616,20 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.06,
+  score: 68.54,
   rating: "greed",
-  timestamp: "2026-04-23T00:00:00+00:00",
+  timestamp: "2026-04-23T08:42:16+00:00",
   previousClose: 68.14,
   previous1Week: 63.34,
   previous1Month: 14.13,
   previous1Year: 21.54,
-  date: "2026年4月23日 14:15 CST"
+  date: "2026年4月23日 17:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:53", tag: "geo", tagText: "地缘", text: "伊朗战争持续导致霍尔木兹海峡封锁，印度和中国正为争夺日益萎缩的俄罗斯原油供应展开激烈竞争。这凸显了地缘冲突对全球能源贸易格局的深刻重塑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/india-china-russian-oil-supply-strait-hormuz-disruption.html" },
+  { time: "16:43", tag: "ai", tagText: "AI", text: "德州仪器业绩超出华尔街预期，不仅受益于数据中心需求，工业客户的强劲需求也推动了其业绩展望上调。这表明AI和自动化对传统制造业的拉动作用正在显现。", source: "MarketWatch", url: "https://www.marketwatch.com/story/texas-instruments-topped-wall-streets-outlook-on-more-than-just-data-center-demand-c033d44a" },
+  { time: "16:42", tag: "macro", tagText: "宏观", text: "欧莱雅公布‘令人印象深刻’的财报后，股价大涨9%，有望创下18年来最大单日涨幅。分析师指出，化妆品市场并未显示出放缓迹象，消费韧性超出预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/loreal-stock-q1-earnings-beauty-sales.html" },
+  { time: "16:31", tag: "geo", tagText: "地缘", text: "国际能源署（IEA）署长比罗尔对CNBC表示，全球正面临‘历史上最大的能源安全威胁’。伊朗战争导致的供应中断和油价飙升，正对各国经济构成严峻挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/oil-markets-prices-fuel-shortages-iran-war-iea-chief.html" },
   { time: "13:46", tag: "crypto", tagText: "加密", text: "嘉信理财推出比特币和以太坊交易服务，每笔交易收取0.7%的费用。这是传统主流金融机构进一步接纳加密货币的重要一步。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcU9ENWNJU2ozTzd3VXlNdVlpdXVHUXMxSERlS2s5S1M4emJIM0xQQ3lSWUZiOFdOODlheVhwYzBxQlh3MFB0clk5XzFMWVB5S3dlOXNFNmpyNGFVWDZUYmNwZGdMLVNWdXM5NEd4OWpTMGpJWTRkUnNjWFE5bTVBcm02R0dXSTRwRFJ3djMxeG1DTlhi?oc=5" },
+  { time: "12:06", tag: "geo", tagText: "科技", text: "据英国《金融时报》报道，贸易巨头维多、托克和摩科瑞等公司正设法将其部分油轮驶出霍尔木兹海峡。文章详细描述了这些油轮如何‘闯关’伊朗封锁，凸显了全球能源运输面临的巨大风险。", source: "Financial Times", url: "https://www.ft.com/content/836ea939-c1a0-4943-8608-71dc3d4d838d" },
   { time: "10:40", tag: "crypto", tagText: "加密", text: "俄罗斯已批准在对外贸易中使用加密货币，以规避西方制裁。此举可能为俄罗斯与贸易伙伴之间的跨境支付开辟新渠道，并提升加密货币在地缘政治紧张局势中的实用价值。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRmNpNVE4bzRkU3F4UFR5LUppR2h3UEJxQW5mQUJ2ZXpsd0lONEFPQmhYTnBkM2dfTUR0ampmUWFoUUJBazNvRU5FMnhtbDBPOVBuNjltTmhidkZpT0VXNGMwTFZEV1Fqd1ZMMTRrNEdLdlpTZXhDeThBLU5qSjEzNHR0VVdaeWVSd1U3RU13QXhSdUE?oc=5" },
   { time: "10:26", tag: "macro", tagText: "宏观", text: "道指、标普500和纳斯达克指数期货下跌，市场对美国与伊朗之间持续的不确定性感到担忧。特斯拉在公布财报后盘后股价下滑。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxNMzZCbTFZaFZJcGNEZkRNNXVZOGxQanFKTVFnaENHdHk0cTFNVGo1LXpvR0RHY0hZbExXb3JuZ2NQZ0ZjNnduZTB3SkN6Y0RJQ1ZsLTZzNWNfNm9tNWxJVjhnMlV0Zlh0d2hmM21sdHNCVHloU3RlWUhqaWZzOEhnZ3ZnNU15OGZuQ2FfaUJ3TWF0R0hSTGFqZjdSeTl1Ul9EV29CRVRscWRPQ1pTNHJHUHhyZnlXMEtPdHZmcVp3RzhaNnpHLTF5WXRRcGNyOU9pcFhIbjlxR1czYlVyQXJJWlkxVkwxWW9FZmsydlluVmdyRlJWWENRWEFscVZVME4w?oc=5" },
   { time: "10:23", tag: "macro", tagText: "宏观", text: "欧洲股市预计将低开，因地区市场情绪受挫，同时油价上涨。市场持续受到地缘政治不确定性的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/european-markets-stoxx-600-ftse-dax-cac-iran-latest-oil-prices.html" },
@@ -1644,16 +1649,15 @@ const breakingNews = [
   { time: "06:05", tag: "tech", tagText: "科技", text: "特斯拉第一季度财报显示，其营收不及预期但利润超预期，汽车利润率大幅跃升。同时，公司宣布将年度资本支出预测大幅提高至250亿美元，CEO马斯克表示将加倍押注自动驾驶出租车、卡车、机器人和芯片工厂等AI相关领域。", source: "Financial Times", url: "https://www.ft.com/content/7ce83108-9f2d-48b4-8ce1-28865045bd67" },
   { time: "05:44", tag: "geo", tagText: "地缘", text: "美国海军部长约翰·费兰已立即离开特朗普政府。此举正值伊朗战争期间，是美国国防部高层的一次重要人事变动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/navy-secretary-john-phelan-iran-war.html" },
   { time: "05:35", tag: "crypto", tagText: "加密", text: "市场分析指出，伊朗停火协议提振了投资者对比特币的胃口，资本正通过多个渠道流入。这使得比特币不太可能出现此前几个月的剧烈逆转，更有可能积聚动能突破80,000美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-iran-cease-fire-has-boosted-investors-appetite-for-bitcoin-heres-why-it-could-break-past-80-000-soon-29c08c3e?mod=mw_rss_topstories" },
-  { time: "04:51", tag: "macro", tagText: "宏观", text: "IBM首席执行官阿尔温德·克里希纳表示，伊朗局势及其他不确定性因素正在影响公司前景。他同时预计，竞争对手将很快在性能和能力上追平Anthropic的Mythos AI模型。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/ibm-ceo-arvind-krishna-earnings-iran-anthropic.html" },
-  { time: "04:29", tag: "tech", tagText: "科技", text: "软件公司ServiceNow股价大跌14%，因其订阅收入受到伊朗战争影响。尽管公司盈利和收入超出预期，并持续扩展AI产品，但其利润率展望令投资者担忧。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/servicenow-now-earnings-q1-2026.html" },
-  { time: "04:02", tag: "macro", tagText: "宏观", text: "市场分析指出，此前被大肆宣扬的2026年资金从科技股轮动到其他板块的趋势可能已经结束。随着成长股重获青睐，那些作为轮动受益者的板块本身也开始表现落后。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/the-much-hyped-great-rotation-out-of-tech-for-2026-may-be-over-already.html" },
-  { time: "03:49", tag: "crypto", tagText: "加密", text: "受特朗普政府据称准备重新分类大麻物质的消息刺激，Tilray等大麻股大幅上涨。此举可能为医用大麻研究以及种植者的银行服务打开大门。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/tilray-and-other-cannabis-stocks-soar-as-trump-is-reportedly-ready-to-reclassify-the-substance-b4e1458d?mod=mw_rss_topstories" },
-  { time: "03:08", tag: "macro", tagText: "宏观", text: "美国财长贝森特表示，在伊朗战争引发的市场动荡中，已有‘许多’美国盟友请求建立货币互换安排。尽管白宫随后否认阿联酋提出了此类请求，但此番言论凸显了地缘政治危机对全球金融体系的潜在压力。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/22/iran-war-treasury-uae-scott-bessent-currency-swaps.html" },
 ];
-const breakingDate = "2026年4月23日 14:15 CST";
+const breakingDate = "2026年4月23日 17:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:09", tag: "ai", tagText: "AI", text: "SK海力士工程负责人安铉表示，实现AI性能最大化的突破在于将内存与逻辑芯片集成。这一观点强调了存储与计算融合对未来AI芯片架构的关键作用。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xSEhhdmU3NllWS1V0d1lVQlRYSktJZnhheXo0RksxQnlocUctak5CTzBra2hpNzUwdzB1SkhJNEpBRm9EaDdVZjVmVWlkeExEbjI4?oc=5" },
+  { time: "16:04", tag: "ai", tagText: "AI", text: "StorageChain构建了突破性的跨云AI智能层，连接微软、AWS、Dropbox等平台。该技术旨在实现多云环境下的AI数据统一管理与智能调度，提升企业AI应用效率。", source: "AiThority", url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNNV9pOUU3SlkwMlNlUmJHMVl5VDhuZEJ3X1BJcDA4VVJ4Um85M3RyWHEzUDZVZlBfUGh6aHdJMjJfeEVzb3o2a1pacWdYUGFWQzVTczV1aE1fNkhvSlhaeXNpc1dxSEZHdXA5MTVlNVZFSFR0ODd4Y1c3QWtDOHpfTmtVR2JEN2dlWF92YlZMbVZtcThyUGVjNTR3MERnb2czalExUGhlVFVvcnNUNE5GcjAyUnhfMUF5dDk1bnpoZzE4SGQ0dmZ0a2hrejRDM0RLRk1YaFNYOEdpcnlFX214TUxB?oc=5" },
+  { time: "16:00", tag: "tech", tagText: "科技", text: "分析人士提出疑问：到2030年，台积电的市值是否会超过英伟达？该讨论基于AI芯片需求激增背景下，台积电作为代工龙头的增长潜力与英伟达当前高估值之间的对比。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPNXN4WWFRSzFDMEI3S21zUkdIb0lrWko4ODBlLU1nT2FpOXQ1aHNzUV9EWFBmRjhyOG5Ydmk3YmVTRUpaT1Bzb3Y3a2xMMHlnbVU3OUtSQ1l3UEQzYnoyLW92akt0MThhQU9jS0xWX25pYUhmUlBMWmotQjBwRjhUazdManFUTkJsTVU5a1lLZnRma2ZPcERVMDFXYkJJb094STlTRmNwZWVuR3RYNHJCd3ByQ1VFbWhJSWt1eTBjamhYd3I3MXNMeTZCR3BpSjlwbnZKVw?oc=5" },
+  { time: "15:01", tag: "ai", tagText: "AI", text: "腾讯和阿里巴巴正瞄准AI初创公司DeepSeek，计划进行一轮重大AI融资。此举显示中国科技巨头正加速在AI领域的投资布局，以争夺下一代AI技术高地。", source: "Latest news from Azerbaijan", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRG5LaG5jeVhYb1hJVjVjT0ZuaXNsYUtzZGlhc2dVN2lLS2lBM3k3LVpwZzFkcUF3aU1sTG9jeEh5LWN0OUUwZDNabkZmYTJLejltMHByTEpkWC1oUkI0WUNzUGZGZWI4QUd5VjR6ODJyVUdTOUNka003LVJ1QmM5ei0zSQ?oc=5" },
   { time: "13:08", tag: "ai", tagText: "AI", text: "AI制药公司Recursion Pharmaceuticals (RXRX) 在最近的网络直播中重点介绍了其利用AI发现的药物靶点突破，引发市场对其估值的重新评估。该公司正利用其专有的AI平台加速药物发现进程。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTjVZZFBxSXo0UTlhY0VUQVRYMUdkbFc2LWl3MXZ6QWlwT25hd0VOa29YTDFfY2FWWEJKcU02a2xtRkZ6UVlZZjVZMm1uMmFGaWpLOXNXaEhnRlh4SmU4TVEyZng1X0JIM21pZGNLaFludjI0a1lEdEtDT2VIN013b2RWanlEYktraGE4T2NuRURIMTFCNFFtaUN1cnltWDFEZld3RTZNN2F5bnFLZXJQbGRtRVNKN25Ka1UzWExEUXhrX3NzZDdyY3RWUUZULVhkTkkwR1BFSUc5cjd3cUhqVkZjTnJkMWpLUzhzN0NiUdIB9AFBVV95cUxNUnZ2N2V5LXFvTUxpS3dEVFZUUHZnOWI2cjFSVU1HYndEb1JDaUl5WEFtS0VSMGpYX25ISzVLZXlzYV83eGl5SEItYkFWbTVLQzlJNVc3bzhRS2ZLcl9sa3M2LWFXRzdqeGdWWV9jaHZsTWJRRFZYRlo1WlE5bG9fMDYxZk9ROGlHZmg1VzBzMjhBRGYtbGtxWU4xQUQ3OFdDZE9aaHNsQTJ6cmRNQ0FDY2dDamc4UnE4UnJJSGtZMDBBOWJIdkIyY3hZTWlRbnJZX285aFpMWFVNWjk2V09xS2FIQlVvMWc0VFZpU05PQV9XWXlY?oc=5" },
   { time: "12:38", tag: "tech", tagText: "科技", text: "印度应用市场正蓬勃发展，但全球平台攫取了大部分收益。非游戏应用（以流媒体和AI应用为首）是增长的主要驱动力，尽管印度用户的平均支出仍落后于全球同行。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/indias-app-market-is-booming-but-global-platforms-are-capturing-most-of-the-gains/" },
   { time: "07:56", tag: "macro", tagText: "宏观", text: "特斯拉大幅提高2026年资本支出计划至250亿美元，达到历史平均水平的约三倍。公司首席财务官表示，由于此项巨额投资，特斯拉在今年剩余时间内将出现负自由现金流。此举凸显了特斯拉在自动驾驶、机器人出租车、新车型及AI基础设施等领域进行大规模投资的决心。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/tesla-just-increased-its-capex-to-25b-heres-where-the-money-is-going/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "00:46", tag: "ai", tagText: "AI", text: "谷歌宣布将为企业版Gmail引入AI概览功能，该功能可从多封邮件中提取信息，生成即时摘要，提升工作效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/ai-overviews-are-coming-to-your-gmail-at-work/" },
   { time: "00:38", tag: "ai", tagText: "AI", text: "谷歌Meet的AI会议记录功能现已扩展至线下会议以及Zoom和Microsoft Teams会议。通过Gemini，该功能可为各类会议生成摘要和文字记录，进一步模糊了线上与线下协作工具的界限。", source: "The Verge", url: "https://www.theverge.com/tech/916779/google-meet-ai-notetaker-in-person-meetings" },
   { time: "23:19", tag: "tech", tagText: "科技", text: "英伟达面临来自内部AI芯片的压力，这可能对其市场主导地位构成挑战。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZ1Jsa2s2a3MwV1c2UlNwYm8zeVFONndXc2lPVk9VWDRfdjFkdWNjQ0o5Nk5YY3pUMzlKVTNPUDhFZjZmWDFYYmUwV1M0dHQ5ZGllcDJKNGI3amUwOGNvZl8xcWVycVdtakYxNjltZmJpZTdrNERuQV9XdmhVOS1iZFNHeTUtck5CNmd1NVU2bw?oc=5" },
-  { time: "22:22", tag: "ai", tagText: "AI", text: "Meta开始通过名为“模型能力计划”（Model Capability Initiative, MCI）的工具，追踪美国员工在电脑上的活动数据，用于训练其AI智能体。此举引发了对员工隐私和工作场所监控的担忧。", source: "The Verge", url: "https://www.theverge.com/tech/916681/meta-ai-agents-employee-tracking" },
-  { time: "22:22", tag: "ai", tagText: "AI", text: "OpenAI与印度IT巨头印孚瑟斯（Infosys）达成合作，旨在将OpenAI的AI工具带给更多企业客户。合作初期将专注于软件工程、遗留系统现代化和工作流程自动化等领域。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/22/openai-teams-up-with-infosys-to-bring-ai-tools-to-more-businesses/" },
-  { time: "21:56", tag: "macro", tagText: "宏观", text: "英国政府宣布启动一项规模达6.75亿美元（约合5.4亿英镑）的基金，专门用于支持AI初创公司。此举旨在巩固英国在人工智能领域的全球竞争力，并推动本土创新。", source: "AI Business", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTjFhdTlUUjhNZ0h3aUdENUZwaXdRVHJjR05FbnFweXM5ZmJQaHpmbENjaXpkMHYxVjliSkxNUUJEeHBuLUxsM2NhaXQzeGlPaE1DWlR0eEc3Um1wZ00tU01jSE9SUGo1MF8ydjY4NG94aEpaMi1McVZfUTRsbUJHdlIySQ?oc=5" },
-  { time: "21:06", tag: "ai", tagText: "AI", text: "Reid Hoffman在‘tokenmaxxing’辩论中表示，追踪AI代币使用可以衡量采用率，但应结合上下文，不应直接视为生产力指标。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/15/reid-hoffman-weighs-in-on-the-tokenmaxxing-debate/" },
 ];
-const aiBreakingDate = "2026年4月23日 14:15 CST";
+const aiBreakingDate = "2026年4月23日 17:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
