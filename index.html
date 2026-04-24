@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.09,
+  score: 66.03,
   rating: "greed",
-  timestamp: "2026-04-24T19:09:37+00:00",
+  timestamp: "2026-04-24T20:45:16+00:00",
   previousClose: 66.31,
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月25日 03:12 CST"
+  date: "2026年4月25日 05:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:48", tag: "tech", tagText: "科技", text: "英伟达股价创下自去年10月以来首个收盘纪录，市值突破5万亿美元。受英特尔强劲财报带动，芯片板块集体走高，分析师称这是芯片股的“不可思议的一周”。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/nvidia-stock-closes-at-record-pushing-market-cap-past-5-trillion.html" },
+  { time: "04:36", tag: "tech", tagText: "科技", text: "AMD股价飙升，市值突破5000亿美元大关，成为最新一家达到这一里程碑的芯片公司。英特尔财报引发的半导体板块涨势推动AMD股价走高。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amds-stock-is-red-hot-and-on-track-to-hit-a-major-milestone-0b3d9f9d" },
+  { time: "04:29", tag: "tech", tagText: "科技", text: "核能IPO新秀X-Energy上市首日股价飙升，其AI电力概念IPO定价远超预期区间并扩大发行规模。华尔街资金大量涌入，但分析师提醒首日表现不代表长期走势。", source: "MarketWatch", url: "https://www.marketwatch.com/story/theres-a-new-stock-for-the-nuclear-power-ipo-trade-and-wall-street-is-piling-in-should-you-b07269fa" },
+  { time: "04:07", tag: "macro", tagText: "宏观", text: "SLB和哈里伯顿均表示预计原油价格将长期维持高位，短期内不会回落至伊朗战争前水平。这对汽油等众多消费品价格将产生直接影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-crude-prices-wont-fall-back-to-levels-seen-before-the-iran-war-anytime-soon-9bdceed1" },
   { time: "01:32", tag: "geo", tagText: "地缘", text: "法国气象预报办公室就Polymarket上出现的可疑投注向警方报案。巴黎戴高乐国际机场的温度读数在几分钟内异常上升了几度，疑似有人试图操纵天气数据以影响预测市场结果。", source: "MarketWatch", url: "https://www.marketwatch.com/story/french-weather-forecasting-office-files-police-complaint-following-suspicious-surge-in-polymarket-bets-fb72729d?mod=mw_rss_topstories" },
   { time: "01:01", tag: "tech", tagText: "科技", text: "Meta宣布裁员10%，微软首次在51年历史中提供员工买断计划，两家公司合计裁员约2万人。此举引发市场对AI驱动的劳动力危机的担忧，显示科技巨头正加速用AI替代人工岗位。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html" },
   { time: "00:54", tag: "macro", tagText: "宏观", text: "美国财政部长贝森特为美元互换额度辩护，称其在伊朗战争冲击全球金融时至关重要。特朗普本周在CNBC上表示支持与阿联酋建立互换额度，以缓解中东紧张局势对美元流动性的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/bessent-iran-war-uae-swap-lines-gulf-asia.html" },
@@ -1645,16 +1649,13 @@ const breakingNews = [
   { time: "19:45", tag: "geo", tagText: "地缘", text: "特朗普警告称，如果英国不取消对美国科技公司的数字服务税，将对其征收“大额关税”。该税种对搜索引擎、社交媒体和在线市场在英国的收入征收2%的税。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/trump-tariffs-uk-tech-apple-google-meta.html" },
   { time: "18:09", tag: "macro", tagText: "宏观", text: "宝洁公司第三财季业绩超预期，销售额同比增长7%。公司重申全年盈利和销售预测，显示消费必需品在不确定环境下的韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/procter-gamble-pg-q3-2026-earnings.html" },
   { time: "17:53", tag: "macro", tagText: "宏观", text: "摩根大通警告称，当前油价未能反映现实，需求破坏和美国汽油价格上涨不可避免。分析师认为基于“简单数学”计算，油价需要进一步大幅上涨。霍尔木兹海峡持续封锁加剧供应担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-simple-math-why-oil-prices-need-to-rise-a-lot-more-according-to-jpmorgan-bd041c17?mod=mw_rss_topstories" },
-  { time: "17:22", tag: "tech", tagText: "科技", text: "半导体板块出现前所未有的涨势，引发市场警告。BTIG分析师指出，这种抛物线式走势“只有一种结局”。投资者需警惕回调风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/theres-never-been-a-semiconductor-rally-like-this-one-and-thats-triggering-a-number-of-warnings-bf622cfa?mod=mw_rss_topstories" },
-  { time: "17:14", tag: "ai", tagText: "AI", text: "OpenAI发布GPT-5.5，最新人工智能模型在编程、计算机使用和深度研究能力方面均有提升。此举标志着AI竞赛持续升温。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html" },
-  { time: "17:02", tag: "tech", tagText: "科技", text: "甲骨文股价2026年大幅下跌，Wedbush分析师Dan Ives建议逢低买入，给予该软件巨头跑赢大盘评级。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/oracle-is-down-big-in-2026-dan-ives-says-buy-the-dip.html" },
-  { time: "16:49", tag: "tech", tagText: "科技", text: "保时捷出售其在Bugatti Rimac的全部股份，并退出与Rimac的合作关系。此举反映汽车行业在增长放缓、成本上升和利润率压力下加速整合的趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/porsche-bugatti-bluefive-hof-capital-european-supercar-automakers.html" },
 ];
-const breakingDate = "2026年4月25日 03:12 CST";
+const breakingDate = "2026年4月25日 05:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
   { time: "02:00", tag: "ai", tagText: "AI", text: "谷歌计划向AI初创公司Anthropic投资高达400亿美元，包括现金和算力资源。此举正值AI竞争对手争相获取大规模计算能力之际，此前Anthropic已发布专注于网络安全的强大模型Mythos。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" },
+  { time: "01:49", tag: "ai", tagText: "AI", text: "AI媒体生成工具ComfyUI完成3000万美元融资，估值达5亿美元。该平台为创作者提供对AI图像、视频和音频生成的更高控制权，反映出市场对精细化AI创作工具的需求增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/comfyui-hits-500m-valuation-as-creators-seek-more-control-over-ai-generated-media/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "英特尔股价近期大涨，显示AI热潮正从英伟达芯片扩展至更广泛的半导体领域。市场认为，随着AI基础设施需求多样化，英特尔等传统芯片厂商开始受益于AI部署的下一阶段。", source: "BNN Bloomberg", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTVQ1M0pXM3BzN1BYUWNrZkxpNnp0bUtZTFFYU01lR0JhSGdDWndncHV5TWM0X1NSWk5KZ1JVUUt1RVJLbnR5Q3NWWVhpd0IzQUdNVi1VM1hwV1hRTF82NUJRaDhCU19HMXF4WnM5NTJwdlhwZ1lDV0lDMklJeXoxNTMydVpHa3pwdDU4eTdwX2UtWGJCNjFxSEdjQnV6OTJENGhCbDFQbXBEbnM1cjJEOFlTLXZ1REllSUVnRHpGb09yOGU1TExSb3hGSWw1STlY?oc=5" },
   { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "17:43", tag: "ai", tagText: "AI", text: "DeepSeek发布新一代AI模型V4预览版，称其架构改进使效率与性能大幅提升，已“缩小与前沿模型的差距”，可媲美美国领先的闭源系统。这是DeepSeek在去年震动美国AI界后的又一重大迭代，加剧全球大模型竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/" },
   { time: "11:40", tag: "ai", tagText: "AI", text: "腾讯和阿里巴巴据悉正洽谈投资AI初创公司DeepSeek，参与其2026年融资轮。两大科技巨头同时押注，凸显DeepSeek在中国AI领域的战略地位。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ0Qyd3AwYkpNSUNrZ29KSGx6ckFiX3F6YXgtNnpDQ01vaFJFZWF0UTZ1cVFDR1pNczcyRVRYZ21tT1ZEOTk3d1dlSUllS0QyQjNIZXNKeTE2U1FQM09XN3lqSW4wdkhQMHR0WmJfSnlVd2xIeVR1eDhKaHR4eHZJdWJBQy0zYnBFWkxFUG1GNjlWX0FmRGc?oc=5" },
   { time: "11:18", tag: "tech", tagText: "科技", text: "谷歌正通过整合TPU、CPU与云服务构建完整AI芯片栈，挑战英伟达在AI计算领域的统治地位。此举标志着科技巨头在AI基础设施层面的竞争进一步升级，可能重塑全球AI芯片市场格局。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTFBiN2tFNW52aG9jcUtJMXY1UFhSbFlpbmxaX0JTN0twN2lUX182VlZ4SXh0aXFNVEdIZkFfQ2VIaUJUbGxudjliNUtlZWotYndlcmtHeUVoR2ZaSWpMVDJCME8xYXJjakNfYTdpdGYwaTEyTHBNdHRzZXBR0gGOAUFVX3lxTE0tOU1pQUg0MW9NTEhNeUpsbzUwc3RibURXZFhJaGp0NVp4OGtCa1lnVWlYMFJaTjh5UXpDR3BDLURhcFhaZFB3M0lkYnBMMDI2bjBPV3JicTFVdzB2UlhOMWpVQXQzN1VMRlF0dUFKSUFBUmtfU05yaHJ0NTJpb3ZSUHZOTDFRSVAteDQwc0E?oc=5" },
-  { time: "11:15", tag: "ai", tagText: "AI", text: "DeepSeek在AI突破一年后发布最新旗舰模型，延续其快速迭代节奏，进一步加剧全球AI大模型竞争。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYlBaam5rSExHaXJZZEM3WjgydGtwVjJpNjFBY2lkOElwbUEzZS1hSDZVRW9tbVFCdFlfck5iNGJYc21mSTBSbVB1UTREbExCUEFqdDlmZjZiRjh6eVlvTUotTTlPNUcxdUJZWWNUemhGQXVqVmtvdUJZWGJ5V3pLUzNQYlIzWnIzcnFmNFZMbkJxTVZ0Q0xaRzZDRkIzdzZHZmlkMGpZdml3enNNX010dW5B?oc=5" },
 ];
-const aiBreakingDate = "2026年4月25日 03:12 CST";
+const aiBreakingDate = "2026年4月25日 05:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
