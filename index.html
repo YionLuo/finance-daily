@@ -1618,17 +1618,23 @@
 const fearGreedData = {
   score: 66.31,
   rating: "greed",
-  timestamp: "2026-04-23T23:59:54+00:00",
-  previousClose: 68.14,
-  previous1Week: 63.34,
-  previous1Month: 14.13,
-  previous1Year: 21.54,
-  date: "2026年4月24日 11:42 CST"
+  timestamp: "2026-04-24T00:00:00+00:00",
+  previousClose: 66.31,
+  previous1Week: 67.97,
+  previous1Month: 18.2,
+  previous1Year: 24.09,
+  date: "2026年4月24日 14:18 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:10", tag: "ai", tagText: "AI", text: "中国AI初创公司DeepSeek发布备受期待的V4大语言模型预览版，AI竞赛持续升温。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html" },
+  { time: "13:37", tag: "crypto", tagText: "加密", text: "加密市场面临超100亿美元比特币、以太坊、XRP和Solana期权今日到期，市场波动风险加剧。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5kSmQ4dVJ6amJzZ29PdUlfNWZRTGFxbDVDY1doRFhOa1lvdXltOWVwY1otOUJuMThOckNGZC1tY1pwTXk0YVJ6WFdzZzZDQ3NXYlFnMWd5eEVtMlE?oc=5" },
+  { time: "12:02", tag: "tech", tagText: "科技", text: "阿里巴巴将通义千问AI集成至多款汽车品牌，驾驶员可通过语音实现点餐、订酒店等免提功能。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/alibaba-qwen-ai-integration-chinese-carmakers-beijing-auto-show.html" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "波兰总理图斯克质疑美国对欧洲防务的忠诚度，呼吁欧盟加强自身《里斯本条约》第42.7条共同防御条款。", source: "Financial Times", url: "https://www.ft.com/content/1a5a2502-a45a-40c1-af6f-b30ecc34bacb" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "美国向阿根廷提供200亿美元货币互换额度，但向海湾及亚洲盟友提供类似安排将面临限制。", source: "Financial Times", url: "https://www.ft.com/content/c8490305-c430-4f30-bb1d-04178a5ed27a" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "毕马威和安永打破终身雇佣模式，开始降级表现不佳的合伙人，此举标志着专业服务行业重大变革。", source: "Financial Times", url: "https://www.ft.com/content/7de5ef19-88c5-459f-bff7-d27d55d685c6" },
   { time: "09:15", tag: "macro", tagText: "宏观", text: "美股期货涨跌互现，市场消化以色列-黎巴嫩停火延长及伊朗和平协议不确定性。道指、标普500和纳斯达克期货走势分化，英特尔、AMD等个股受关注。此前一日美股因软件股下跌和油价上涨承压。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTFAtaUJDUHYxZk1kcGdvZHlsNVl2U083MVg3MVNaanotS0J5blZfRmV6YkVTUnV2VnRQYWswZU41VVEzMkpHMGNyYm5ka2JZbzNtLU42NEpwekRjdGhnTVdEUkJ6NW9vMGoxZVNnLVlGMEZYUF9USWZF0gF8QVVfeXFMTTZzbzljVFVBZXA1Tl9VUmpBRHhqNnktcThqeE1yZVdxMWVNU2c4ZXd2d0dBcGYzdC1IOXd5TG9nSEp3c2VmdUJVSERMTnJENlBLd2ZGTENCRTc5dFo0MTFFVlRnb29RS2F4YkNQd3VhZk52SFlEQkJYRzNQNg?oc=5" },
   { time: "09:00", tag: "crypto", tagText: "加密", text: "比特币、以太坊、XRP下跌，狗狗币上涨，因霍尔木兹海峡封锁持续。分析师预测比特币可能暴跌30%至5万美元。市场避险情绪升温，加密货币走势分化。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPdVBEOE9ONTVwaEhoaFNqTmQ1VlIxTUc1SDh6YWJjTF9GaDd2Z19TZ1phSUR6Nll5b3lQSGNFVmxXcWVqOVNJRl9JODRLajI5emJubDg5OVI5aGlNSm1XZEZnZnYtTm85UkdhZXdmLWxiSjZqUkZUZGRXM29OYWJyMTJrY0tSMEM4ZE51UVpfOVE5Q1JIVDBOU0hNRzdFbVIyamNCTlVpRDk1cGtvdlhGVnV6eXEzNzNuMFZWVzNITGEyT3B6Q3Z6R05HMlZaNHZaeFlCM1hJYXk3Rmt0?oc=5" },
   { time: "07:56", tag: "macro", tagText: "宏观", text: "日本3月核心CPI同比加速至1.8%，为五个月来首次回升，主要受伊朗战争推高能源价格影响。数据与市场预期一致，但能源成本上升正对日本经济复苏构成压力，市场关注日本央行后续利率路径。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/japan-cpi-march-inflation-iran-war-boj-rate.html" },
@@ -1643,17 +1649,12 @@ const breakingNews = [
   { time: "04:17", tag: "macro", tagText: "宏观", text: "耐克宣布第二轮裁员，将裁减约1400个岗位，主要集中在技术部门。此前公司已在1月裁减775人，表明其业务转型仍在进行中。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/nike-job-cuts-layoffs.html" },
   { time: "03:28", tag: "geo", tagText: "地缘", text: "布伦特原油突破105美元，因霍尔木兹海峡紧张局势持续升温，以色列威胁发动攻击。美国与伊朗冲突升级导致该战略要道基本对油轮关闭，推动油价进一步飙升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/oil-price-iran-war-strait-hormuz.html" },
   { time: "03:10", tag: "tech", tagText: "科技", text: "Meta宣布将裁员10%（约8000人），以‘抵消’扎克伯格在AI领域的巨额支出。公司计划今年在数据中心上投入1350亿美元，通过裁员优化成本结构。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html" },
-  { time: "02:59", tag: "geo", tagText: "地缘", text: "美国海军部长约翰·费伦因伊朗封锁事件被解职。费伦与国防部长皮特·赫格塞斯发生冲突后遭撤换，凸显美军高层在应对伊朗局势上的内部分歧。", source: "Financial Times", url: "https://www.ft.com/content/e2553227-d5d9-46dc-81c4-ca0066b13ad0" },
-  { time: "02:16", tag: "macro", tagText: "宏观", text: "精神航空律师警告公司现金‘撑不了多久’，但政府救助已在讨论中。精神航空确认与特朗普政府就救助方案进行‘非常深入的谈判’，纳税人资金可能介入。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/spirit-airlines-bankruptcy-court-rescue.html" },
-  { time: "01:53", tag: "macro", tagText: "宏观", text: "美股周四从纪录高位回落，道指跌超400点，软件股领跌。ServiceNow因财报不及预期暴跌超16%，拖累Salesforce、Workday等，市场对AI变现能力的担忧加剧。油价飙升进一步打压市场情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/04/22/stock-market-today-live-updates.html" },
-  { time: "01:04", tag: "tech", tagText: "科技", text: "软件股因ServiceNow和IBM财报引发AI恐慌而暴跌。ServiceNow股价重挫逾16%，拖累Salesforce、Workday和甲骨文等一众软件股，市场对AI投入能否转化为利润的疑虑升温。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html" },
-  { time: "00:36", tag: "tech", tagText: "科技", text: "微软宣布首次针对美国员工的自愿买断计划，面向高级总监及以下级别、工龄加年龄满70岁的员工，最多可裁减7%的美国员工。此举旨在优化成本结构。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/microsoft-plans-first-voluntary-retirement-program-for-us-employees.html" },
-  { time: "00:06", tag: "ai", tagText: "AI", text: "OpenAI发布最新AI模型GPT-5.5，据称在编程、使用计算机和深度研究能力方面有显著提升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html" },
 ];
-const breakingDate = "2026年4月24日 11:42 CST";
+const breakingDate = "2026年4月24日 14:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "11:40", tag: "ai", tagText: "AI", text: "腾讯和阿里巴巴据悉正洽谈投资AI初创公司DeepSeek，参与其2026年融资轮。两大科技巨头同时押注，凸显DeepSeek在中国AI领域的战略地位。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ0Qyd3AwYkpNSUNrZ29KSGx6ckFiX3F6YXgtNnpDQ01vaFJFZWF0UTZ1cVFDR1pNczcyRVRYZ21tT1ZEOTk3d1dlSUllS0QyQjNIZXNKeTE2U1FQM09XN3lqSW4wdkhQMHR0WmJfSnlVd2xIeVR1eDhKaHR4eHZJdWJBQy0zYnBFWkxFUG1GNjlWX0FmRGc?oc=5" },
   { time: "11:15", tag: "ai", tagText: "AI", text: "DeepSeek在AI突破一年后发布最新旗舰模型，延续其快速迭代节奏，进一步加剧全球AI大模型竞争。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYlBaam5rSExHaXJZZEM3WjgydGtwVjJpNjFBY2lkOElwbUEzZS1hSDZVRW9tbVFCdFlfck5iNGJYc21mSTBSbVB1UTREbExCUEFqdDlmZjZiRjh6eVlvTUotTTlPNUcxdUJZWWNUemhGQXVqVmtvdUJZWGJ5V3pLUzNQYlIzWnIzcnFmNFZMbkJxTVZ0Q0xaRzZDRkIzdzZHZmlkMGpZdml3enNNX010dW5B?oc=5" },
   { time: "07:54", tag: "ai", tagText: "AI", text: "AI编程公司Cognition正进行融资谈判，估值高达250亿美元。该公司开发的AI编程助手Devin备受关注，此轮估值较此前大幅飙升，反映市场对AI编程工具的高度追捧。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbVBSUjgxekxSRmVhVnNjSEhYdzItNlBjRUk3YnlOV1k2cjNWMWhCNEtLeFgtUjVvVFFBcFM0RE9Wdk43WnJMRkZFd1VhcThiVDdzUG1vcGVLMGxTSFV6WGV0ZTF2WWFVNXV1dVo2a2pucXJnVnNqLUxPY21TVUxVQjNXel9kckNEMGdzdG41S3dOSHE5WjcwSGprYTEwTlc0dm1GNUZQaWhwSG42Zlc4QTVn?oc=5" },
   { time: "06:59", tag: "ai", tagText: "AI", text: "Anthropic为Claude新增连接器，使其能够直接连接用户个人应用，如Spotify、Uber Eats和TurboTax，扩展了AI在日常生活场景中的应用范围。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "18:40", tag: "ai", tagText: "AI", text: "美国商务部长表示，英伟达仍未向中国出售任何H200 AI GPU，原因是中国政府阻止进口以推动本土半导体产业发展。此举凸显中美科技脱钩加剧。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOZU9nTktDWFFPcGE4OEdnMFdGNWlhRTVzUUx4SFFrampxeGFFUy1makY1a3AtOW1pNVJSa2IydHU2QVVLbEZpOGN4OVhrdDRza203TnlJbk9TYVpjTklsc1NJN3dVMWFjdEEwVkdTSmtPZzUyVVcyNDJhZ0ctcHF0Z0hFcWZ4T3RHdEtPTy1vaVJ4MkFhRGFEVGp3REpxdGV1aGtlVzVYOS1XaXNnZnB2cW9MRW5BWUs1RFZfTFM4T09sRGU3RW9ldzk0RHItSXZERi1GTThiVUZUM01EeVFZSWFGU3c2cG1SYWt1Y01IUkhNb09rNUhnTFpaZW1Gc0FNbjl5cmRpYmFHcC1ZaW12RTR2ZHlZT3VHanNabDJZVVBBWGpSVGYxS1g2cVBWaFFac3Zuek50b3o?oc=5" },
   { time: "18:28", tag: "ai", tagText: "AI", text: "Anthropic发布名为“Mythos”的AI突破性技术，据称可能重新定义网络安全和全球风险格局。该技术被视为AI安全领域的重大进展。", source: "Businessday NG", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYU9EN3NNMHNPeG1BczVzbVdlOE1vS181SWxtaDBBd2F2VXI1aDR1Nmc2Q1RnY2VFMHRBU09mY1BnVTZZYWhFNUhvek5iZW8wbV9JZUpDaTlsc2gtY0ZfQmNvMFZuS2RBemxwbTBpOUV6LWJJN2pFLWsyYnZheGttVzliTnpvaVplVk9tOWJBQVpHZFdDWGpQNklUN3o1dzQ3ckV3OWdpV1pOTmY2ODZQWVlZTm90RzZqXzJ0YjBWZnJQbG52NTVqTm5B0gHPAUFVX3lxTFBNYnZmbFY0TG5Wa0FpcjJmUjlqT3puREtNd1BIYmVhN1JaRDFIaUFfN0pmS1AzX3d1a2V1VDJ6WTZQUW9ERmlHenBIVHk4Tk9tN2N4MG1zaXBCdXNJNVhrdXYtN3hmcTBTM3hLLVZGZWJ0dDE1eUlkc3hHaFlEUTV4R2F1UkNiQkN6TE9hdnhFZGEwSjA1YTVwNGtCUEVDSGs1SkR2OVpTRzN6S0RtaThCUWlnQTVyVDBzQUFRZm5hM3RIbzdTY3BoTWxjeUUwUQ?oc=5" },
   { time: "18:20", tag: "ai", tagText: "AI", text: "天文学家开始大规模使用GPU进行星系搜索，这进一步加剧了全球GPU供应短缺。AI对算力的巨大需求已从商业领域扩展到科研领域，使得高性能计算资源更加稀缺。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/ai-galaxy-hunters-are-adding-to-the-global-gpu-crunch/" },
-  { time: "17:15", tag: "ai", tagText: "AI", text: "谷歌前联合创始人（拉里·佩奇和谢尔盖·布林）为一家新的AI初创公司筹集了450万美元。这笔投资表明，两位科技巨头创始人仍在密切关注并押注前沿AI技术。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNmZkeVZNMzNvdmtaSnpOSmw0QjVVMjBUNmZtSDJoM3JIbHdxOVhuaVplWkh4dWNMaE1UTUxkZkJrUFE2R0ZZYkk2b3NmUVRPa3dQc1Y2RDk2ZDc3WGV6WTRVUm9kdWRDS0JRamJIN2FHQ0FCSy1qUEdpQzR4QVU4QUprekNvTlZVUnJ4MF9UQ21icTQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月24日 11:42 CST";
+const aiBreakingDate = "2026年4月24日 14:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
