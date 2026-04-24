@@ -1618,12 +1618,12 @@
 const fearGreedData = {
   score: 66.03,
   rating: "greed",
-  timestamp: "2026-04-24T21:40:14+00:00",
+  timestamp: "2026-04-24T22:35:19+00:00",
   previousClose: 66.31,
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月25日 05:57 CST"
+  date: "2026年4月25日 06:53 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,12 @@ const breakingNews = [
   { time: "19:45", tag: "geo", tagText: "地缘", text: "特朗普警告称，如果英国不取消对美国科技公司的数字服务税，将对其征收“大额关税”。该税种对搜索引擎、社交媒体和在线市场在英国的收入征收2%的税。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/trump-tariffs-uk-tech-apple-google-meta.html" },
   { time: "18:09", tag: "macro", tagText: "宏观", text: "宝洁公司第三财季业绩超预期，销售额同比增长7%。公司重申全年盈利和销售预测，显示消费必需品在不确定环境下的韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/procter-gamble-pg-q3-2026-earnings.html" },
 ];
-const breakingDate = "2026年4月25日 05:57 CST";
+const breakingDate = "2026年4月25日 06:53 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:07", tag: "ai", tagText: "AI", text: "英伟达股价因AI芯片需求飙升而大涨。市场对AI训练和推理芯片的强劲需求持续推动英伟达业绩预期，凸显其在AI硬件领域的主导地位。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxNTzR1OGhFUGJwSXhrS2M0UG5raUtRQ24ta0xjMVV4bkVZTGJ2LXNtMWlDNzZmZFFUSUdfZGtJMk4yS3Y3bFllamxDU3M5VDIzQmhIT3Y2cFNMSExLeEY1X3NnTEdXTTVYMG9OaWx6MFp4WUtIYWpucU9NQl9pLUIxYjRtLWwzTWJFc0ZKQnhhWVNyZk1nbDZTTDAyb1gzNVBBRExnd3FWS1pqb1VCSkQwazVBREFLXzNXclpxWm51TTdnWE5qbG1n?oc=5" },
+  { time: "03:52", tag: "ai", tagText: "AI", text: "Meta与AI初创公司Thinking Machines Lab之间的人才争夺战愈演愈烈，双方互相挖角。这一现象反映出AI领域顶尖人才的稀缺性以及科技巨头与初创公司之间的人才竞争白热化。", source: "TechCrunch", url: "https://techcrunch.com/2024/04/24/metas-loss-is-thinking-machines-gain/" },
   { time: "03:34", tag: "geo", tagText: "地缘", text: "以色列国防军公布AI驱动的机器人作战系统，称其为对抗真主党的突破性火炮技术。该系统将人工智能深度融入军事行动，标志着AI在战场应用中的新进展。", source: "Algemeiner.com", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUzZKYUhXWE02MThiQmdYTkNlYXpSUzBiMGNtUXZTN2NwZW0tblU0Ny1LdXhJaHpFaUY2RHB1U1h6WHh1dDItU0RpV0ZLYk85YkVDbmJhMnZGaDc1Y01hY1o0TTNjSVR0Q0x6djRjWUFTbWNOZHNmc0RkZTRUcmdrS3VoT1h1TXVHQnJyVG14dkQwd3pGMFZ1NGlQSUxpNDZxM1pOdmVWR2oxaXRYenJyTDFYUkNpVmg5WUNyaDdBOVhQVlE?oc=5" },
   { time: "02:27", tag: "ai", tagText: "AI", text: "AI编程初创公司Cognition AI在收购Windsurf后，正寻求以250亿美元估值进行新一轮融资。此交易凸显AI编程工具领域的持续火热及资本对该赛道的高度关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWtCbDFzOG9mZDV2dmpINHZNSmRGdmRfcGxycnQ4UG8xSEZzcmhuQzM1Mmo1SG44OC01VHVSWkZzaEtYRzI0OFM5LU5lR2N6Z0RZdW9vWklVa0p2TkxkT01leEk5NDJjU2xQNjJmYlhmRUJtWWNaY0dVWUR3dG5zTzZaRjcxdnVKQWc2Yy1NLVBGX3JUMFk1TQ?oc=5" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "谷歌计划向AI初创公司Anthropic投资高达400亿美元，包括现金和算力资源。此举正值AI竞争对手争相获取大规模计算能力之际，此前Anthropic已发布专注于网络安全的强大模型Mythos。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "19:55", tag: "ai", tagText: "AI", text: "微软本周在Word、Excel和PowerPoint中推出名为“Agent Mode”的增强版AI功能，此前被描述为“vibe working”。该模式是更强大的AI助手，旨在提升办公效率。", source: "The Verge", url: "https://www.theverge.com/news/917328/microsoft-agent-mode-vibe-working-office-word-excel-powerpoint" },
   { time: "19:41", tag: "tech", tagText: "科技", text: "Nothing公司推出一款AI驱动的设备端听写工具，支持超过100种语言，无需联网即可实现语音转文字，提升了隐私性和实用性。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/nothing-introduces-an-ai-powered-dictation-tool/" },
   { time: "18:40", tag: "ai", tagText: "AI", text: "美国商务部长表示，英伟达仍未向中国出售任何H200 AI GPU，原因是中国政府阻止进口以推动本土半导体产业发展。此举凸显中美科技脱钩加剧。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOZU9nTktDWFFPcGE4OEdnMFdGNWlhRTVzUUx4SFFrampxeGFFUy1makY1a3AtOW1pNVJSa2IydHU2QVVLbEZpOGN4OVhrdDRza203TnlJbk9TYVpjTklsc1NJN3dVMWFjdEEwVkdTSmtPZzUyVVcyNDJhZ0ctcHF0Z0hFcWZ4T3RHdEtPTy1vaVJ4MkFhRGFEVGp3REpxdGV1aGtlVzVYOS1XaXNnZnB2cW9MRW5BWUs1RFZfTFM4T09sRGU3RW9ldzk0RHItSXZERi1GTThiVUZUM01EeVFZSWFGU3c2cG1SYWt1Y01IUkhNb09rNUhnTFpaZW1Gc0FNbjl5cmRpYmFHcC1ZaW12RTR2ZHlZT3VHanNabDJZVVBBWGpSVGYxS1g2cVBWaFFac3Zuek50b3o?oc=5" },
-  { time: "18:28", tag: "ai", tagText: "AI", text: "Anthropic发布名为“Mythos”的AI突破性技术，据称可能重新定义网络安全和全球风险格局。该技术被视为AI安全领域的重大进展。", source: "Businessday NG", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYU9EN3NNMHNPeG1BczVzbVdlOE1vS181SWxtaDBBd2F2VXI1aDR1Nmc2Q1RnY2VFMHRBU09mY1BnVTZZYWhFNUhvek5iZW8wbV9JZUpDaTlsc2gtY0ZfQmNvMFZuS2RBemxwbTBpOUV6LWJJN2pFLWsyYnZheGttVzliTnpvaVplVk9tOWJBQVpHZFdDWGpQNklUN3o1dzQ3ckV3OWdpV1pOTmY2ODZQWVlZTm90RzZqXzJ0YjBWZnJQbG52NTVqTm5B0gHPAUFVX3lxTFBNYnZmbFY0TG5Wa0FpcjJmUjlqT3puREtNd1BIYmVhN1JaRDFIaUFfN0pmS1AzX3d1a2V1VDJ6WTZQUW9ERmlHenBIVHk4Tk9tN2N4MG1zaXBCdXNJNVhrdXYtN3hmcTBTM3hLLVZGZWJ0dDE1eUlkc3hHaFlEUTV4R2F1UkNiQkN6TE9hdnhFZGEwSjA1YTVwNGtCUEVDSGs1SkR2OVpTRzN6S0RtaThCUWlnQTVyVDBzQUFRZm5hM3RIbzdTY3BoTWxjeUUwUQ?oc=5" },
-  { time: "17:43", tag: "ai", tagText: "AI", text: "DeepSeek发布新一代AI模型V4预览版，称其架构改进使效率与性能大幅提升，已“缩小与前沿模型的差距”，可媲美美国领先的闭源系统。这是DeepSeek在去年震动美国AI界后的又一重大迭代，加剧全球大模型竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/" },
 ];
-const aiBreakingDate = "2026年4月25日 05:57 CST";
+const aiBreakingDate = "2026年4月25日 06:53 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
