@@ -1618,17 +1618,22 @@
 const fearGreedData = {
   score: 66.69,
   rating: "greed",
-  timestamp: "2026-04-24T08:49:01+00:00",
+  timestamp: "2026-04-24T10:59:16+00:00",
   previousClose: 66.31,
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月24日 17:07 CST"
+  date: "2026年4月24日 19:17 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:09", tag: "macro", tagText: "宏观", text: "宝洁公司第三财季业绩超预期，销售额同比增长7%。公司重申全年盈利和销售预测，显示消费必需品在不确定环境下的韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/procter-gamble-pg-q3-2026-earnings.html" },
+  { time: "17:53", tag: "macro", tagText: "宏观", text: "摩根大通警告称，当前油价未能反映现实，需求破坏和美国汽油价格上涨不可避免。分析师认为基于“简单数学”计算，油价需要进一步大幅上涨。霍尔木兹海峡持续封锁加剧供应担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-simple-math-why-oil-prices-need-to-rise-a-lot-more-according-to-jpmorgan-bd041c17?mod=mw_rss_topstories" },
+  { time: "17:22", tag: "tech", tagText: "科技", text: "半导体板块出现前所未有的涨势，引发市场警告。BTIG分析师指出，这种抛物线式走势“只有一种结局”。投资者需警惕回调风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/theres-never-been-a-semiconductor-rally-like-this-one-and-thats-triggering-a-number-of-warnings-bf622cfa?mod=mw_rss_topstories" },
+  { time: "17:14", tag: "ai", tagText: "AI", text: "OpenAI发布GPT-5.5，最新人工智能模型在编程、计算机使用和深度研究能力方面均有提升。此举标志着AI竞赛持续升温。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html" },
+  { time: "17:02", tag: "tech", tagText: "科技", text: "甲骨文股价2026年大幅下跌，Wedbush分析师Dan Ives建议逢低买入，给予该软件巨头跑赢大盘评级。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/oracle-is-down-big-in-2026-dan-ives-says-buy-the-dip.html" },
   { time: "16:49", tag: "tech", tagText: "科技", text: "保时捷出售其在Bugatti Rimac的全部股份，并退出与Rimac的合作关系。此举反映汽车行业在增长放缓、成本上升和利润率压力下加速整合的趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/porsche-bugatti-bluefive-hof-capital-european-supercar-automakers.html" },
   { time: "16:17", tag: "macro", tagText: "宏观", text: "欧洲股市周五开盘普遍下跌，因美国与伊朗和平协议的乐观情绪消退，投资者对中东局势不确定性感到担忧。SAP因利润超预期逆势上涨6%。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/european-stocks-iran-ceasefire-optimism-fades-.html" },
   { time: "15:40", tag: "ai", tagText: "AI", text: "加拿大AI初创公司Cohere宣布收购德国AI公司Aleph Alpha，以扩大在欧洲的业务。作为交易的一部分，Aleph Alpha的主要投资者Schwarz Group计划向Cohere的E轮融资投资6亿美元。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/cohere-aleph-alpha-germany-ai-europe-expansion.html" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "07:56", tag: "macro", tagText: "宏观", text: "日本3月核心CPI同比加速至1.8%，为五个月来首次回升，主要受伊朗战争推高能源价格影响。数据与市场预期一致，但能源成本上升正对日本经济复苏构成压力，市场关注日本央行后续利率路径。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/japan-cpi-march-inflation-iran-war-boj-rate.html" },
   { time: "07:56", tag: "geo", tagText: "地缘", text: "美国司法部逮捕一名士兵，指控其利用内幕信息在Polymarket上押注40万美元，成功预测委内瑞拉总统马杜罗被捕。此案引发对预测市场内幕交易问题的广泛担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/doj-soldier-polymarket-bets-venezuela-maduro.html" },
   { time: "07:56", tag: "geo", tagText: "地缘", text: "法国气象局向警方报案，因发现巴黎戴高乐机场气温数据在数分钟内异常升高，而此前Polymarket上出现针对该数据的可疑押注。事件引发对预测市场操纵天气数据的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/french-weather-forecasting-office-files-police-complaint-following-suspicious-surge-in-polymarket-bets-fb72729d" },
-  { time: "07:56", tag: "macro", tagText: "宏观", text: "特朗普对市场的影响力达到数十年来总统之最。数据显示，特朗普第二任期内的股市最佳和最差单日表现均与其言论直接相关，市场波动性显著增加。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-is-swaying-the-market-like-no-president-has-in-decades-analysis-shows-879be0bc" },
-  { time: "06:59", tag: "tech", tagText: "科技", text: "特斯拉股价下跌，因公司上调2026年AI和机器人领域资本支出指引，引发市场对成本上升的担忧。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNMHdKckh1XzRsTk5COVNJUDBXRzdFZEVDd1U1SGxkQTZsVWxIenR5TWF1ZmtqSUI4TWlXWFFCSWVPYXdNd2NWYzlUQWtRc2RWekJBaWNtRUJ4WnhhcEY4aFZsRkNVSlVDSkpYc25qb2xrenBYaDNoV19udVBrZkJ5c0Q2UmhzeWkwNkY2YXVhbzlRNFliSmhKdy0zQWw4UXQtRmVMd09IaDRCNDZablRQd1Uza19YX1NMdTZBWEZWYzk3SkNtY2hiTnFRel9ueHJUMFByNUlPTGVxSTVPajY1YzhGOTdEbE81YWc?oc=5" },
-  { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普宣布以色列与黎巴嫩停火协议延长三周。此前双方在白宫与美国高级官员会晤后达成一致，此举旨在缓解中东紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-israel-lebanon-ceasefire-iran-war.html" },
-  { time: "05:21", tag: "tech", tagText: "科技", text: "英特尔股价盘后飙升19%，因一季度财报超预期并给出乐观指引。公司预计AI数据中心业务将推动收入激增，显示这家芯片巨头正显现增长迹象。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/intel-intc-q1-2026-earnings-report.html" },
-  { time: "04:48", tag: "ai", tagText: "AI", text: "华纳兄弟股东批准出售给派拉蒙的交易，这家传奇影业即将迎来时代终结。该交易已遭到好莱坞工会及部分州检察长反对，目前正等待监管批准。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-warner-bros-shareholders-ok-sale-to-paramount-a-legendary-studio-approaches-the-end-of-an-era-b228e7e8" },
 ];
-const breakingDate = "2026年4月24日 17:07 CST";
+const breakingDate = "2026年4月24日 19:17 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "18:40", tag: "ai", tagText: "AI", text: "美国商务部长表示，英伟达仍未向中国出售任何H200 AI GPU，原因是中国政府阻止进口以推动本土半导体产业发展。此举凸显中美科技脱钩加剧。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOZU9nTktDWFFPcGE4OEdnMFdGNWlhRTVzUUx4SFFrampxeGFFUy1makY1a3AtOW1pNVJSa2IydHU2QVVLbEZpOGN4OVhrdDRza203TnlJbk9TYVpjTklsc1NJN3dVMWFjdEEwVkdTSmtPZzUyVVcyNDJhZ0ctcHF0Z0hFcWZ4T3RHdEtPTy1vaVJ4MkFhRGFEVGp3REpxdGV1aGtlVzVYOS1XaXNnZnB2cW9MRW5BWUs1RFZfTFM4T09sRGU3RW9ldzk0RHItSXZERi1GTThiVUZUM01EeVFZSWFGU3c2cG1SYWt1Y01IUkhNb09rNUhnTFpaZW1Gc0FNbjl5cmRpYmFHcC1ZaW12RTR2ZHlZT3VHanNabDJZVVBBWGpSVGYxS1g2cVBWaFFac3Zuek50b3o?oc=5" },
+  { time: "18:28", tag: "ai", tagText: "AI", text: "Anthropic发布名为“Mythos”的AI突破性技术，据称可能重新定义网络安全和全球风险格局。该技术被视为AI安全领域的重大进展。", source: "Businessday NG", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYU9EN3NNMHNPeG1BczVzbVdlOE1vS181SWxtaDBBd2F2VXI1aDR1Nmc2Q1RnY2VFMHRBU09mY1BnVTZZYWhFNUhvek5iZW8wbV9JZUpDaTlsc2gtY0ZfQmNvMFZuS2RBemxwbTBpOUV6LWJJN2pFLWsyYnZheGttVzliTnpvaVplVk9tOWJBQVpHZFdDWGpQNklUN3o1dzQ3ckV3OWdpV1pOTmY2ODZQWVlZTm90RzZqXzJ0YjBWZnJQbG52NTVqTm5B0gHPAUFVX3lxTFBNYnZmbFY0TG5Wa0FpcjJmUjlqT3puREtNd1BIYmVhN1JaRDFIaUFfN0pmS1AzX3d1a2V1VDJ6WTZQUW9ERmlHenBIVHk4Tk9tN2N4MG1zaXBCdXNJNVhrdXYtN3hmcTBTM3hLLVZGZWJ0dDE1eUlkc3hHaFlEUTV4R2F1UkNiQkN6TE9hdnhFZGEwSjA1YTVwNGtCUEVDSGs1SkR2OVpTRzN6S0RtaThCUWlnQTVyVDBzQUFRZm5hM3RIbzdTY3BoTWxjeUUwUQ?oc=5" },
   { time: "11:40", tag: "ai", tagText: "AI", text: "腾讯和阿里巴巴据悉正洽谈投资AI初创公司DeepSeek，参与其2026年融资轮。两大科技巨头同时押注，凸显DeepSeek在中国AI领域的战略地位。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ0Qyd3AwYkpNSUNrZ29KSGx6ckFiX3F6YXgtNnpDQ01vaFJFZWF0UTZ1cVFDR1pNczcyRVRYZ21tT1ZEOTk3d1dlSUllS0QyQjNIZXNKeTE2U1FQM09XN3lqSW4wdkhQMHR0WmJfSnlVd2xIeVR1eDhKaHR4eHZJdWJBQy0zYnBFWkxFUG1GNjlWX0FmRGc?oc=5" },
   { time: "11:18", tag: "tech", tagText: "科技", text: "谷歌正通过整合TPU、CPU与云服务构建完整AI芯片栈，挑战英伟达在AI计算领域的统治地位。此举标志着科技巨头在AI基础设施层面的竞争进一步升级，可能重塑全球AI芯片市场格局。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTFBiN2tFNW52aG9jcUtJMXY1UFhSbFlpbmxaX0JTN0twN2lUX182VlZ4SXh0aXFNVEdIZkFfQ2VIaUJUbGxudjliNUtlZWotYndlcmtHeUVoR2ZaSWpMVDJCME8xYXJjakNfYTdpdGYwaTEyTHBNdHRzZXBR0gGOAUFVX3lxTE0tOU1pQUg0MW9NTEhNeUpsbzUwc3RibURXZFhJaGp0NVp4OGtCa1lnVWlYMFJaTjh5UXpDR3BDLURhcFhaZFB3M0lkYnBMMDI2bjBPV3JicTFVdzB2UlhOMWpVQXQzN1VMRlF0dUFKSUFBUmtfU05yaHJ0NTJpb3ZSUHZOTDFRSVAteDQwc0E?oc=5" },
   { time: "11:15", tag: "ai", tagText: "AI", text: "DeepSeek在AI突破一年后发布最新旗舰模型，延续其快速迭代节奏，进一步加剧全球AI大模型竞争。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYlBaam5rSExHaXJZZEM3WjgydGtwVjJpNjFBY2lkOElwbUEzZS1hSDZVRW9tbVFCdFlfck5iNGJYc21mSTBSbVB1UTREbExCUEFqdDlmZjZiRjh6eVlvTUotTTlPNUcxdUJZWWNUemhGQXVqVmtvdUJZWGJ5V3pLUzNQYlIzWnIzcnFmNFZMbkJxTVZ0Q0xaRzZDRkIzdzZHZmlkMGpZdml3enNNX010dW5B?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "21:54", tag: "ai", tagText: "AI", text: "SpaceX以600亿美元估值达成协议，获得收购AI编程初创公司Cursor的权利。Cursor是当前最热门的AI代码助手之一，此交易凸显科技巨头对AI开发工具的激烈争夺。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQakZzMDM2cjdnbThWM0hKUndMSXdFSnZpQTlUWWxZQnlkcWF1VG4xZkpaZ0NZalktd28xQUlSdkhtbzV1aGphR1VPSGY0T2F2ZkZORHFXdFhxeXVsb1RySDJ0SThRak1HRzZPZHBIZHRqMDBUbUE2SkdfWFYwSW4wSVktTEd1clpxM1lNS2ZTeFNJV0JsQmw2NUlxVjVHVS1kZzJBb3VXWnNyd1FTZV9sZ2FxV0E5enlPbUxrQTgwRzRfN0ZtWjM2bElQYmpodw?oc=5" },
   { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
   { time: "19:55", tag: "ai", tagText: "AI", text: "微软本周在Word、Excel和PowerPoint中推出名为“Agent Mode”的增强版AI功能，此前被描述为“vibe working”。该模式是更强大的AI助手，旨在提升办公效率。", source: "The Verge", url: "https://www.theverge.com/news/917328/microsoft-agent-mode-vibe-working-office-word-excel-powerpoint" },
-  { time: "18:40", tag: "ai", tagText: "AI", text: "美国商务部长表示，英伟达仍未向中国出售任何H200 AI GPU，原因是中国政府阻止进口以推动本土半导体产业发展。此举凸显中美科技脱钩加剧。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOZU9nTktDWFFPcGE4OEdnMFdGNWlhRTVzUUx4SFFrampxeGFFUy1makY1a3AtOW1pNVJSa2IydHU2QVVLbEZpOGN4OVhrdDRza203TnlJbk9TYVpjTklsc1NJN3dVMWFjdEEwVkdTSmtPZzUyVVcyNDJhZ0ctcHF0Z0hFcWZ4T3RHdEtPTy1vaVJ4MkFhRGFEVGp3REpxdGV1aGtlVzVYOS1XaXNnZnB2cW9MRW5BWUs1RFZfTFM4T09sRGU3RW9ldzk0RHItSXZERi1GTThiVUZUM01EeVFZSWFGU3c2cG1SYWt1Y01IUkhNb09rNUhnTFpaZW1Gc0FNbjl5cmRpYmFHcC1ZaW12RTR2ZHlZT3VHanNabDJZVVBBWGpSVGYxS1g2cVBWaFFac3Zuek50b3o?oc=5" },
-  { time: "18:28", tag: "ai", tagText: "AI", text: "Anthropic发布名为“Mythos”的AI突破性技术，据称可能重新定义网络安全和全球风险格局。该技术被视为AI安全领域的重大进展。", source: "Businessday NG", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYU9EN3NNMHNPeG1BczVzbVdlOE1vS181SWxtaDBBd2F2VXI1aDR1Nmc2Q1RnY2VFMHRBU09mY1BnVTZZYWhFNUhvek5iZW8wbV9JZUpDaTlsc2gtY0ZfQmNvMFZuS2RBemxwbTBpOUV6LWJJN2pFLWsyYnZheGttVzliTnpvaVplVk9tOWJBQVpHZFdDWGpQNklUN3o1dzQ3ckV3OWdpV1pOTmY2ODZQWVlZTm90RzZqXzJ0YjBWZnJQbG52NTVqTm5B0gHPAUFVX3lxTFBNYnZmbFY0TG5Wa0FpcjJmUjlqT3puREtNd1BIYmVhN1JaRDFIaUFfN0pmS1AzX3d1a2V1VDJ6WTZQUW9ERmlHenBIVHk4Tk9tN2N4MG1zaXBCdXNJNVhrdXYtN3hmcTBTM3hLLVZGZWJ0dDE1eUlkc3hHaFlEUTV4R2F1UkNiQkN6TE9hdnhFZGEwSjA1YTVwNGtCUEVDSGs1SkR2OVpTRzN6S0RtaThCUWlnQTVyVDBzQUFRZm5hM3RIbzdTY3BoTWxjeUUwUQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月24日 17:07 CST";
+const aiBreakingDate = "2026年4月24日 19:17 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
