@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.49,
+  score: 66.66,
   rating: "greed",
-  timestamp: "2026-04-24T13:59:30+00:00",
+  timestamp: "2026-04-24T15:14:41+00:00",
   previousClose: 66.31,
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月24日 22:01 CST"
+  date: "2026年4月24日 23:18 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:18", tag: "macro", tagText: "宏观", text: "美国司法部放弃对美联储主席鲍威尔的刑事调查，扫清了特朗普提名凯文·沃什接替鲍威尔的关键障碍。此举被视为白宫与美联储对峙的缓和信号，市场预期沃什的确认程序将加速推进。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/fed-powell-doj-warsh-trump.html" },
+  { time: "22:40", tag: "geo", tagText: "地缘", text: "油价下跌，因伊朗外长预计周五晚抵达巴基斯坦讨论和平计划。特朗普表示不急于达成和平协议，但称伊朗战争对股市和油价的影响低于预期。此前以色列-黎巴嫩停火协议延长三周。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/oil-price-wti-brent-after-israel-lebanon-ceasefire-extension.html" },
+  { time: "22:24", tag: "tech", tagText: "科技", text: "马斯克与奥特曼的法律对决将于下周一开庭，陪审团遴选启动。该案涉及OpenAI的治理结构和利益冲突问题，结果可能对AI行业格局产生深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/musk-v-altman-trial-openai-lawsuit-xai.html" },
+  { time: "22:04", tag: "macro", tagText: "宏观", text: "特朗普代理劳工部长推动将高收费私募基金纳入401(k)退休计划，引发争议。批评者认为此举可能增加普通投资者的风险敞口，而支持者称可提高退休储蓄的回报潜力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/private-funds-with-high-fees-are-coming-for-your-401-k-and-trumps-acting-labor-secretary-is-cheering-them-on-be2855ae?mod=mw_rss_topstories" },
   { time: "21:36", tag: "tech", tagText: "科技", text: "英特尔股价因AI热潮飙升，突破互联网泡沫时期高点，有望创下近四十年来最大单日涨幅。CEO表示公司经过一年转型已实现“根本性”改变。华尔街对其财务前景是否实质性改善仍存争议。", source: "Financial Times", url: "https://www.ft.com/content/37261470-d1aa-4a3b-8a13-abec38f34523" },
   { time: "21:30", tag: "macro", tagText: "宏观", text: "华尔街“恐惧指数”VIX出现异常走势：标普500指数周四盘中创历史新高，但VIX仍徘徊在20附近，且较五日前有所上升。分析师认为这反映市场对地缘政治风险和科技股高估值的潜在担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/wall-streets-fear-gauge-is-doing-something-unusual-what-it-means.html" },
   { time: "21:01", tag: "ai", tagText: "AI", text: "Meta将采用数十万颗亚马逊AWS Graviton芯片用于AI基础设施，这是其最新的大规模算力采购。此前数周，Meta已向CoreWeave和Nebius承诺了480亿美元的AI投资。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/meta-will-use-hundreds-of-thousands-of-aws-graviton-chips.html" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "14:21", tag: "tech", tagText: "科技", text: "台积电股价创历史新高，因台湾放宽基金对单一股票的投资上限，此举将允许基金增持台积电股份。台积电上周公布一季度利润同比增长58%。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/tsmc-shares-record-high-taiwan-single-stock-investment-cap-for-funds.html" },
   { time: "14:10", tag: "ai", tagText: "AI", text: "中国AI初创公司DeepSeek发布备受期待的V4大语言模型预览版，AI竞赛持续升温。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html" },
   { time: "13:37", tag: "crypto", tagText: "加密", text: "加密市场面临超100亿美元比特币、以太坊、XRP和Solana期权今日到期，市场波动风险加剧。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5kSmQ4dVJ6amJzZ29PdUlfNWZRTGFxbDVDY1doRFhOa1lvdXltOWVwY1otOUJuMThOckNGZC1tY1pwTXk0YVJ6WFdzZzZDQ3NXYlFnMWd5eEVtMlE?oc=5" },
-  { time: "12:02", tag: "tech", tagText: "科技", text: "阿里巴巴将通义千问AI集成至多款汽车品牌，驾驶员可通过语音实现点餐、订酒店等免提功能。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/alibaba-qwen-ai-integration-chinese-carmakers-beijing-auto-show.html" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "波兰总理图斯克质疑美国对欧洲防务的忠诚度，呼吁欧盟加强自身《里斯本条约》第42.7条共同防御条款。", source: "Financial Times", url: "https://www.ft.com/content/1a5a2502-a45a-40c1-af6f-b30ecc34bacb" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "美国向阿根廷提供200亿美元货币互换额度，但向海湾及亚洲盟友提供类似安排将面临限制。", source: "Financial Times", url: "https://www.ft.com/content/c8490305-c430-4f30-bb1d-04178a5ed27a" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "毕马威和安永打破终身雇佣模式，开始降级表现不佳的合伙人，此举标志着专业服务行业重大变革。", source: "Financial Times", url: "https://www.ft.com/content/7de5ef19-88c5-459f-bff7-d27d55d685c6" },
 ];
-const breakingDate = "2026年4月24日 22:01 CST";
+const breakingDate = "2026年4月24日 23:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1658,12 +1658,14 @@ const aiBreakingNews = [
   { time: "21:54", tag: "ai", tagText: "AI", text: "SpaceX以600亿美元估值达成协议，获得收购AI编程初创公司Cursor的权利。Cursor是当前最热门的AI代码助手之一，此交易凸显科技巨头对AI开发工具的激烈争夺。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQakZzMDM2cjdnbThWM0hKUndMSXdFSnZpQTlUWWxZQnlkcWF1VG4xZkpaZ0NZalktd28xQUlSdkhtbzV1aGphR1VPSGY0T2F2ZkZORHFXdFhxeXVsb1RySDJ0SThRak1HRzZPZHBIZHRqMDBUbUE2SkdfWFYwSW4wSVktTEd1clpxM1lNS2ZTeFNJV0JsQmw2NUlxVjVHVS1kZzJBb3VXWnNyd1FTZV9sZ2FxV0E5enlPbUxrQTgwRzRfN0ZtWjM2bElQYmpodw?oc=5" },
   { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
   { time: "20:55", tag: "geo", tagText: "地缘", text: "乌克兰国防部情报总局局长布达诺夫表示，乌克兰在AI无人机技术方面接近取得突破，该进展可能“让俄罗斯人感到意外”，暗示其将在战场上获得新的不对称优势。", source: "UNITED24 Media", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeWhMXzFkR2dJOVFDbGtPNWVYenF2TVJudnpxU3NiS2hJRHBoVVp3YTRfd0pIUGMzTnVDNEtvQjZTbXMtdTNWOU9VOEFiZlFlelMzRS1RSXQwY3dyb3Q2UkVUV1Q5RnlzWXJMNFpRaHlxVjFLTFI2MHg5SUhhM0FJazFXMWQxd2xHMGdOU29ocDBXaHJmY2lHVjVsRjlRMzU1Q2g1QzJkVHlYRG5hZkRFTUhldG5WZnhKZTYwUGxB?oc=5" },
+  { time: "20:43", tag: "tech", tagText: "科技", text: "苹果CEO蒂姆·库克即将卸任，继任者约翰·特努斯（John Ternus）已基本确定。文章回顾了库克任内AirPods、Touch Bar等标志性产品的遗产，标志苹果进入新时代。", source: "The Verge", url: "https://www.theverge.com/podcast/917965/apple-ceo-cook-ternus-transition" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "Meta签署协议，从亚马逊采购数百万颗自研AI CPU（而非GPU），用于AI代理工作负载。此举标志着AI芯片竞争进入新阶段，科技巨头正寻求GPU之外的替代方案以应对算力需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/in-another-wild-turn-for-ai-chips-meta-signs-deal-for-millions-of-amazon-ai-cpus/" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "埃隆·马斯克与萨姆·奥尔特曼的法庭对决即将上演。马斯克作为OpenAI联合创始人，因未获CEO职位而离开，现提起诉讼，庭审将揭露OpenAI内部权力斗争及双方恩怨细节。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917755/musk-altman-openai-xai-gossip" },
   { time: "19:55", tag: "ai", tagText: "AI", text: "微软本周在Word、Excel和PowerPoint中推出名为“Agent Mode”的增强版AI功能，此前被描述为“vibe working”。该模式是更强大的AI助手，旨在提升办公效率。", source: "The Verge", url: "https://www.theverge.com/news/917328/microsoft-agent-mode-vibe-working-office-word-excel-powerpoint" },
   { time: "19:41", tag: "tech", tagText: "科技", text: "Nothing公司推出一款AI驱动的设备端听写工具，支持超过100种语言，无需联网即可实现语音转文字，提升了隐私性和实用性。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/nothing-introduces-an-ai-powered-dictation-tool/" },
   { time: "18:40", tag: "ai", tagText: "AI", text: "美国商务部长表示，英伟达仍未向中国出售任何H200 AI GPU，原因是中国政府阻止进口以推动本土半导体产业发展。此举凸显中美科技脱钩加剧。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOZU9nTktDWFFPcGE4OEdnMFdGNWlhRTVzUUx4SFFrampxeGFFUy1makY1a3AtOW1pNVJSa2IydHU2QVVLbEZpOGN4OVhrdDRza203TnlJbk9TYVpjTklsc1NJN3dVMWFjdEEwVkdTSmtPZzUyVVcyNDJhZ0ctcHF0Z0hFcWZ4T3RHdEtPTy1vaVJ4MkFhRGFEVGp3REpxdGV1aGtlVzVYOS1XaXNnZnB2cW9MRW5BWUs1RFZfTFM4T09sRGU3RW9ldzk0RHItSXZERi1GTThiVUZUM01EeVFZSWFGU3c2cG1SYWt1Y01IUkhNb09rNUhnTFpaZW1Gc0FNbjl5cmRpYmFHcC1ZaW12RTR2ZHlZT3VHanNabDJZVVBBWGpSVGYxS1g2cVBWaFFac3Zuek50b3o?oc=5" },
   { time: "18:28", tag: "ai", tagText: "AI", text: "Anthropic发布名为“Mythos”的AI突破性技术，据称可能重新定义网络安全和全球风险格局。该技术被视为AI安全领域的重大进展。", source: "Businessday NG", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYU9EN3NNMHNPeG1BczVzbVdlOE1vS181SWxtaDBBd2F2VXI1aDR1Nmc2Q1RnY2VFMHRBU09mY1BnVTZZYWhFNUhvek5iZW8wbV9JZUpDaTlsc2gtY0ZfQmNvMFZuS2RBemxwbTBpOUV6LWJJN2pFLWsyYnZheGttVzliTnpvaVplVk9tOWJBQVpHZFdDWGpQNklUN3o1dzQ3ckV3OWdpV1pOTmY2ODZQWVlZTm90RzZqXzJ0YjBWZnJQbG52NTVqTm5B0gHPAUFVX3lxTFBNYnZmbFY0TG5Wa0FpcjJmUjlqT3puREtNd1BIYmVhN1JaRDFIaUFfN0pmS1AzX3d1a2V1VDJ6WTZQUW9ERmlHenBIVHk4Tk9tN2N4MG1zaXBCdXNJNVhrdXYtN3hmcTBTM3hLLVZGZWJ0dDE1eUlkc3hHaFlEUTV4R2F1UkNiQkN6TE9hdnhFZGEwSjA1YTVwNGtCUEVDSGs1SkR2OVpTRzN6S0RtaThCUWlnQTVyVDBzQUFRZm5hM3RIbzdTY3BoTWxjeUUwUQ?oc=5" },
+  { time: "17:43", tag: "ai", tagText: "AI", text: "DeepSeek发布新一代AI模型V4预览版，称其架构改进使效率与性能大幅提升，已“缩小与前沿模型的差距”，可媲美美国领先的闭源系统。这是DeepSeek在去年震动美国AI界后的又一重大迭代，加剧全球大模型竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/" },
   { time: "11:40", tag: "ai", tagText: "AI", text: "腾讯和阿里巴巴据悉正洽谈投资AI初创公司DeepSeek，参与其2026年融资轮。两大科技巨头同时押注，凸显DeepSeek在中国AI领域的战略地位。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ0Qyd3AwYkpNSUNrZ29KSGx6ckFiX3F6YXgtNnpDQ01vaFJFZWF0UTZ1cVFDR1pNczcyRVRYZ21tT1ZEOTk3d1dlSUllS0QyQjNIZXNKeTE2U1FQM09XN3lqSW4wdkhQMHR0WmJfSnlVd2xIeVR1eDhKaHR4eHZJdWJBQy0zYnBFWkxFUG1GNjlWX0FmRGc?oc=5" },
   { time: "11:18", tag: "tech", tagText: "科技", text: "谷歌正通过整合TPU、CPU与云服务构建完整AI芯片栈，挑战英伟达在AI计算领域的统治地位。此举标志着科技巨头在AI基础设施层面的竞争进一步升级，可能重塑全球AI芯片市场格局。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTFBiN2tFNW52aG9jcUtJMXY1UFhSbFlpbmxaX0JTN0twN2lUX182VlZ4SXh0aXFNVEdIZkFfQ2VIaUJUbGxudjliNUtlZWotYndlcmtHeUVoR2ZaSWpMVDJCME8xYXJjakNfYTdpdGYwaTEyTHBNdHRzZXBR0gGOAUFVX3lxTE0tOU1pQUg0MW9NTEhNeUpsbzUwc3RibURXZFhJaGp0NVp4OGtCa1lnVWlYMFJaTjh5UXpDR3BDLURhcFhaZFB3M0lkYnBMMDI2bjBPV3JicTFVdzB2UlhOMWpVQXQzN1VMRlF0dUFKSUFBUmtfU05yaHJ0NTJpb3ZSUHZOTDFRSVAteDQwc0E?oc=5" },
   { time: "11:15", tag: "ai", tagText: "AI", text: "DeepSeek在AI突破一年后发布最新旗舰模型，延续其快速迭代节奏，进一步加剧全球AI大模型竞争。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYlBaam5rSExHaXJZZEM3WjgydGtwVjJpNjFBY2lkOElwbUEzZS1hSDZVRW9tbVFCdFlfck5iNGJYc21mSTBSbVB1UTREbExCUEFqdDlmZjZiRjh6eVlvTUotTTlPNUcxdUJZWWNUemhGQXVqVmtvdUJZWGJ5V3pLUzNQYlIzWnIzcnFmNFZMbkJxTVZ0Q0xaRzZDRkIzdzZHZmlkMGpZdml3enNNX010dW5B?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "06:59", tag: "tech", tagText: "科技", text: "全球首个确认使用后量子密码学（PQC）的勒索软件家族出现。尽管从技术角度看，使用PQC并无实际收益，但此举标志着勒索软件开始采用下一代加密技术，对网络安全防御提出新挑战。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/now-even-ransomware-is-using-post-quantum-cryptography/" },
   { time: "06:59", tag: "ai", tagText: "AI", text: "AI初创公司Noscroll推出名为Noscroll的AI机器人，旨在通过自动阅读互联网内容来帮助用户摆脱“末日刷屏”（doomscrolling）习惯。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/meet-noscroll-an-ai-bot-that-does-your-doomscrolling-for-you/" },
   { time: "05:00", tag: "tech", tagText: "科技", text: "由技术专家Bret Taylor创立的AI客服初创公司Sierra宣布收购YC支持的法国AI初创公司Fragment，交易金额未披露，此举旨在增强其AI代理技术能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/bret-taylors-sierra-buys-yc-backed-ai-startup-fragment/" },
-  { time: "03:41", tag: "tech", tagText: "科技", text: "Meta计划在5月裁员约10%，即约8000人。这是继2023年大规模裁员后，该公司新一轮组织精简，旨在进一步削减成本并聚焦核心业务。", source: "The Verge", url: "https://www.theverge.com/tech/917690/meta-is-laying-off-10-percent-of-its-staff" },
-  { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布GPT-5.5模型，在编码效率和易用性上显著提升，并在Terminal-Bench 2.0基准测试中以微弱优势击败Anthropic的Claude Mythos Preview，被视为向AI“超级应用”迈进的关键一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/" },
 ];
-const aiBreakingDate = "2026年4月24日 22:01 CST";
+const aiBreakingDate = "2026年4月24日 23:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
