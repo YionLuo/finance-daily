@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.31,
+  score: 66.69,
   rating: "greed",
-  timestamp: "2026-04-24T00:00:00+00:00",
+  timestamp: "2026-04-24T08:49:01+00:00",
   previousClose: 66.31,
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月24日 14:18 CST"
+  date: "2026年4月24日 17:07 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:49", tag: "tech", tagText: "科技", text: "保时捷出售其在Bugatti Rimac的全部股份，并退出与Rimac的合作关系。此举反映汽车行业在增长放缓、成本上升和利润率压力下加速整合的趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/porsche-bugatti-bluefive-hof-capital-european-supercar-automakers.html" },
+  { time: "16:17", tag: "macro", tagText: "宏观", text: "欧洲股市周五开盘普遍下跌，因美国与伊朗和平协议的乐观情绪消退，投资者对中东局势不确定性感到担忧。SAP因利润超预期逆势上涨6%。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/european-stocks-iran-ceasefire-optimism-fades-.html" },
+  { time: "15:40", tag: "ai", tagText: "AI", text: "加拿大AI初创公司Cohere宣布收购德国AI公司Aleph Alpha，以扩大在欧洲的业务。作为交易的一部分，Aleph Alpha的主要投资者Schwarz Group计划向Cohere的E轮融资投资6亿美元。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/cohere-aleph-alpha-germany-ai-europe-expansion.html" },
+  { time: "14:21", tag: "tech", tagText: "科技", text: "台积电股价创历史新高，因台湾放宽基金对单一股票的投资上限，此举将允许基金增持台积电股份。台积电上周公布一季度利润同比增长58%。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/tsmc-shares-record-high-taiwan-single-stock-investment-cap-for-funds.html" },
   { time: "14:10", tag: "ai", tagText: "AI", text: "中国AI初创公司DeepSeek发布备受期待的V4大语言模型预览版，AI竞赛持续升温。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html" },
   { time: "13:37", tag: "crypto", tagText: "加密", text: "加密市场面临超100亿美元比特币、以太坊、XRP和Solana期权今日到期，市场波动风险加剧。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5kSmQ4dVJ6amJzZ29PdUlfNWZRTGFxbDVDY1doRFhOa1lvdXltOWVwY1otOUJuMThOckNGZC1tY1pwTXk0YVJ6WFdzZzZDQ3NXYlFnMWd5eEVtMlE?oc=5" },
   { time: "12:02", tag: "tech", tagText: "科技", text: "阿里巴巴将通义千问AI集成至多款汽车品牌，驾驶员可通过语音实现点餐、订酒店等免提功能。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/alibaba-qwen-ai-integration-chinese-carmakers-beijing-auto-show.html" },
@@ -1645,16 +1649,13 @@ const breakingNews = [
   { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普宣布以色列与黎巴嫩停火协议延长三周。此前双方在白宫与美国高级官员会晤后达成一致，此举旨在缓解中东紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/trump-israel-lebanon-ceasefire-iran-war.html" },
   { time: "05:21", tag: "tech", tagText: "科技", text: "英特尔股价盘后飙升19%，因一季度财报超预期并给出乐观指引。公司预计AI数据中心业务将推动收入激增，显示这家芯片巨头正显现增长迹象。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/intel-intc-q1-2026-earnings-report.html" },
   { time: "04:48", tag: "ai", tagText: "AI", text: "华纳兄弟股东批准出售给派拉蒙的交易，这家传奇影业即将迎来时代终结。该交易已遭到好莱坞工会及部分州检察长反对，目前正等待监管批准。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-warner-bros-shareholders-ok-sale-to-paramount-a-legendary-studio-approaches-the-end-of-an-era-b228e7e8" },
-  { time: "04:47", tag: "geo", tagText: "地缘", text: "美国页岩油生产商抵制增产，尽管伊朗战争导致油价飙升。达拉斯联储调查显示，能源高管对高油价能否持续缺乏信心，不愿在当前“混乱”中扩大产量。", source: "Financial Times", url: "https://www.ft.com/content/273c0321-0678-4ac0-9ccc-432301865b4c" },
-  { time: "04:17", tag: "macro", tagText: "宏观", text: "耐克宣布第二轮裁员，将裁减约1400个岗位，主要集中在技术部门。此前公司已在1月裁减775人，表明其业务转型仍在进行中。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/nike-job-cuts-layoffs.html" },
-  { time: "03:28", tag: "geo", tagText: "地缘", text: "布伦特原油突破105美元，因霍尔木兹海峡紧张局势持续升温，以色列威胁发动攻击。美国与伊朗冲突升级导致该战略要道基本对油轮关闭，推动油价进一步飙升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/oil-price-iran-war-strait-hormuz.html" },
-  { time: "03:10", tag: "tech", tagText: "科技", text: "Meta宣布将裁员10%（约8000人），以‘抵消’扎克伯格在AI领域的巨额支出。公司计划今年在数据中心上投入1350亿美元，通过裁员优化成本结构。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html" },
 ];
-const breakingDate = "2026年4月24日 14:18 CST";
+const breakingDate = "2026年4月24日 17:07 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
   { time: "11:40", tag: "ai", tagText: "AI", text: "腾讯和阿里巴巴据悉正洽谈投资AI初创公司DeepSeek，参与其2026年融资轮。两大科技巨头同时押注，凸显DeepSeek在中国AI领域的战略地位。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ0Qyd3AwYkpNSUNrZ29KSGx6ckFiX3F6YXgtNnpDQ01vaFJFZWF0UTZ1cVFDR1pNczcyRVRYZ21tT1ZEOTk3d1dlSUllS0QyQjNIZXNKeTE2U1FQM09XN3lqSW4wdkhQMHR0WmJfSnlVd2xIeVR1eDhKaHR4eHZJdWJBQy0zYnBFWkxFUG1GNjlWX0FmRGc?oc=5" },
+  { time: "11:18", tag: "tech", tagText: "科技", text: "谷歌正通过整合TPU、CPU与云服务构建完整AI芯片栈，挑战英伟达在AI计算领域的统治地位。此举标志着科技巨头在AI基础设施层面的竞争进一步升级，可能重塑全球AI芯片市场格局。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTFBiN2tFNW52aG9jcUtJMXY1UFhSbFlpbmxaX0JTN0twN2lUX182VlZ4SXh0aXFNVEdIZkFfQ2VIaUJUbGxudjliNUtlZWotYndlcmtHeUVoR2ZaSWpMVDJCME8xYXJjakNfYTdpdGYwaTEyTHBNdHRzZXBR0gGOAUFVX3lxTE0tOU1pQUg0MW9NTEhNeUpsbzUwc3RibURXZFhJaGp0NVp4OGtCa1lnVWlYMFJaTjh5UXpDR3BDLURhcFhaZFB3M0lkYnBMMDI2bjBPV3JicTFVdzB2UlhOMWpVQXQzN1VMRlF0dUFKSUFBUmtfU05yaHJ0NTJpb3ZSUHZOTDFRSVAteDQwc0E?oc=5" },
   { time: "11:15", tag: "ai", tagText: "AI", text: "DeepSeek在AI突破一年后发布最新旗舰模型，延续其快速迭代节奏，进一步加剧全球AI大模型竞争。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYlBaam5rSExHaXJZZEM3WjgydGtwVjJpNjFBY2lkOElwbUEzZS1hSDZVRW9tbVFCdFlfck5iNGJYc21mSTBSbVB1UTREbExCUEFqdDlmZjZiRjh6eVlvTUotTTlPNUcxdUJZWWNUemhGQXVqVmtvdUJZWGJ5V3pLUzNQYlIzWnIzcnFmNFZMbkJxTVZ0Q0xaRzZDRkIzdzZHZmlkMGpZdml3enNNX010dW5B?oc=5" },
   { time: "07:54", tag: "ai", tagText: "AI", text: "AI编程公司Cognition正进行融资谈判，估值高达250亿美元。该公司开发的AI编程助手Devin备受关注，此轮估值较此前大幅飙升，反映市场对AI编程工具的高度追捧。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbVBSUjgxekxSRmVhVnNjSEhYdzItNlBjRUk3YnlOV1k2cjNWMWhCNEtLeFgtUjVvVFFBcFM0RE9Wdk43WnJMRkZFd1VhcThiVDdzUG1vcGVLMGxTSFV6WGV0ZTF2WWFVNXV1dVo2a2pucXJnVnNqLUxPY21TVUxVQjNXel9kckNEMGdzdG41S3dOSHE5WjcwSGprYTEwTlc0dm1GNUZQaWhwSG42Zlc4QTVn?oc=5" },
   { time: "06:59", tag: "ai", tagText: "AI", text: "Anthropic为Claude新增连接器，使其能够直接连接用户个人应用，如Spotify、Uber Eats和TurboTax，扩展了AI在日常生活场景中的应用范围。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "19:55", tag: "ai", tagText: "AI", text: "微软本周在Word、Excel和PowerPoint中推出名为“Agent Mode”的增强版AI功能，此前被描述为“vibe working”。该模式是更强大的AI助手，旨在提升办公效率。", source: "The Verge", url: "https://www.theverge.com/news/917328/microsoft-agent-mode-vibe-working-office-word-excel-powerpoint" },
   { time: "18:40", tag: "ai", tagText: "AI", text: "美国商务部长表示，英伟达仍未向中国出售任何H200 AI GPU，原因是中国政府阻止进口以推动本土半导体产业发展。此举凸显中美科技脱钩加剧。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOZU9nTktDWFFPcGE4OEdnMFdGNWlhRTVzUUx4SFFrampxeGFFUy1makY1a3AtOW1pNVJSa2IydHU2QVVLbEZpOGN4OVhrdDRza203TnlJbk9TYVpjTklsc1NJN3dVMWFjdEEwVkdTSmtPZzUyVVcyNDJhZ0ctcHF0Z0hFcWZ4T3RHdEtPTy1vaVJ4MkFhRGFEVGp3REpxdGV1aGtlVzVYOS1XaXNnZnB2cW9MRW5BWUs1RFZfTFM4T09sRGU3RW9ldzk0RHItSXZERi1GTThiVUZUM01EeVFZSWFGU3c2cG1SYWt1Y01IUkhNb09rNUhnTFpaZW1Gc0FNbjl5cmRpYmFHcC1ZaW12RTR2ZHlZT3VHanNabDJZVVBBWGpSVGYxS1g2cVBWaFFac3Zuek50b3o?oc=5" },
   { time: "18:28", tag: "ai", tagText: "AI", text: "Anthropic发布名为“Mythos”的AI突破性技术，据称可能重新定义网络安全和全球风险格局。该技术被视为AI安全领域的重大进展。", source: "Businessday NG", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYU9EN3NNMHNPeG1BczVzbVdlOE1vS181SWxtaDBBd2F2VXI1aDR1Nmc2Q1RnY2VFMHRBU09mY1BnVTZZYWhFNUhvek5iZW8wbV9JZUpDaTlsc2gtY0ZfQmNvMFZuS2RBemxwbTBpOUV6LWJJN2pFLWsyYnZheGttVzliTnpvaVplVk9tOWJBQVpHZFdDWGpQNklUN3o1dzQ3ckV3OWdpV1pOTmY2ODZQWVlZTm90RzZqXzJ0YjBWZnJQbG52NTVqTm5B0gHPAUFVX3lxTFBNYnZmbFY0TG5Wa0FpcjJmUjlqT3puREtNd1BIYmVhN1JaRDFIaUFfN0pmS1AzX3d1a2V1VDJ6WTZQUW9ERmlHenBIVHk4Tk9tN2N4MG1zaXBCdXNJNVhrdXYtN3hmcTBTM3hLLVZGZWJ0dDE1eUlkc3hHaFlEUTV4R2F1UkNiQkN6TE9hdnhFZGEwSjA1YTVwNGtCUEVDSGs1SkR2OVpTRzN6S0RtaThCUWlnQTVyVDBzQUFRZm5hM3RIbzdTY3BoTWxjeUUwUQ?oc=5" },
-  { time: "18:20", tag: "ai", tagText: "AI", text: "天文学家开始大规模使用GPU进行星系搜索，这进一步加剧了全球GPU供应短缺。AI对算力的巨大需求已从商业领域扩展到科研领域，使得高性能计算资源更加稀缺。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/ai-galaxy-hunters-are-adding-to-the-global-gpu-crunch/" },
 ];
-const aiBreakingDate = "2026年4月24日 14:18 CST";
+const aiBreakingDate = "2026年4月24日 17:07 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
