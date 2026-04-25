@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 66.03,
   rating: "greed",
-  timestamp: "2026-04-24T23:35:25+00:00",
+  timestamp: "2026-04-24T23:59:49+00:00",
   previousClose: 66.31,
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月25日 07:52 CST"
+  date: "2026年4月25日 11:27 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:00", tag: "crypto", tagText: "加密", text: "比特币有望创下一年来最佳月度表现，5亿美元USDT增发推动反弹。分析师预测比特币目标价12万美元。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQQlFoUmo3bUwxZllGZkhCWGlwblhqdnc1WGw0Ni0xbUVjVHZ2SFVBV3pQeHZZa0cxVEVHNDFqTjFfbEpjS0MwOG9qY2NFaFlfLWtjamtrb1NiUUdXeDZ0ME4xY2VPLURvSkpVdUZVSWRGOEoyVkV6LWdaMjN5TDk1UDhqZE1pd2RCeFliaFkyUzQ0V3JOYUR0UGtpVlZCZmVXdTlIMV9KSkNqSk5TUmdLSFQxdTJUZ2tPSGpva3p6bzJlT05USklyLXI1a2FEbkwt?oc=5" },
+  { time: "06:00", tag: "geo", tagText: "地缘", text: "油价因天然气供应紧张及地缘冲突风险而大幅上涨。市场担忧中东局势持续升级对能源供应的影响。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbGVxZlZOdVFkR0R0ajVCMGxkcHN2WVlnR01uTnJaU29sT1QwdWpmenIwaXRZNS1rN3RaMlhlcnlsUVRFT08ycEphQk54MktoUUxIWmVFMHpMYmVBTk8tdWtnRTZGTlpLMXUwcXg1UnhQdHZYVzR2YnBFSFFrcFhCQzQwVXVUVjNsYzY5M0ZEaFVTcDZlTTBnaTI2RXBNNmNrU1ZIMlVTRmxBdw?oc=5" },
+  { time: "06:00", tag: "ai", tagText: "AI", text: "四大会计师事务所之一选择用AI替代人类，削减福利并暂停招聘。此举标志着AI在专业服务领域的应用加速，引发对白领岗位被替代的担忧。", source: "TheStreet", url: "https://finance.yahoo.com/sectors/technology/articles/big-four-accounting-chooses-ai-223954685.html" },
   { time: "04:48", tag: "tech", tagText: "科技", text: "英伟达股价创下自去年10月以来首个收盘纪录，市值突破5万亿美元。受英特尔强劲财报带动，芯片板块集体走高，分析师称这是芯片股的“不可思议的一周”。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/nvidia-stock-closes-at-record-pushing-market-cap-past-5-trillion.html" },
   { time: "04:36", tag: "tech", tagText: "科技", text: "AMD股价飙升，市值突破5000亿美元大关，成为最新一家达到这一里程碑的芯片公司。英特尔财报引发的半导体板块涨势推动AMD股价走高。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amds-stock-is-red-hot-and-on-track-to-hit-a-major-milestone-0b3d9f9d" },
   { time: "04:29", tag: "tech", tagText: "科技", text: "核能IPO新秀X-Energy上市首日股价飙升，其AI电力概念IPO定价远超预期区间并扩大发行规模。华尔街资金大量涌入，但分析师提醒首日表现不代表长期走势。", source: "MarketWatch", url: "https://www.marketwatch.com/story/theres-a-new-stock-for-the-nuclear-power-ipo-trade-and-wall-street-is-piling-in-should-you-b07269fa" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "21:36", tag: "tech", tagText: "科技", text: "英特尔股价因AI热潮飙升，突破互联网泡沫时期高点，有望创下近四十年来最大单日涨幅。CEO表示公司经过一年转型已实现“根本性”改变。华尔街对其财务前景是否实质性改善仍存争议。", source: "Financial Times", url: "https://www.ft.com/content/37261470-d1aa-4a3b-8a13-abec38f34523" },
   { time: "21:30", tag: "macro", tagText: "宏观", text: "华尔街“恐惧指数”VIX出现异常走势：标普500指数周四盘中创历史新高，但VIX仍徘徊在20附近，且较五日前有所上升。分析师认为这反映市场对地缘政治风险和科技股高估值的潜在担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/wall-streets-fear-gauge-is-doing-something-unusual-what-it-means.html" },
   { time: "21:01", tag: "ai", tagText: "AI", text: "Meta将采用数十万颗亚马逊AWS Graviton芯片用于AI基础设施，这是其最新的大规模算力采购。此前数周，Meta已向CoreWeave和Nebius承诺了480亿美元的AI投资。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/meta-will-use-hundreds-of-thousands-of-aws-graviton-chips.html" },
-  { time: "19:46", tag: "macro", tagText: "宏观", text: "耐克宣布裁员1400人，主要涉及技术部门，这是该公司今年第二轮裁员。此前1月已裁减775个岗位。", source: "CNBC", url: "https://www.cnbc.com/2026/04/23/nike-job-cuts-layoffs.html" },
-  { time: "19:45", tag: "geo", tagText: "地缘", text: "特朗普警告称，如果英国不取消对美国科技公司的数字服务税，将对其征收“大额关税”。该税种对搜索引擎、社交媒体和在线市场在英国的收入征收2%的税。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/trump-tariffs-uk-tech-apple-google-meta.html" },
-  { time: "18:09", tag: "macro", tagText: "宏观", text: "宝洁公司第三财季业绩超预期，销售额同比增长7%。公司重申全年盈利和销售预测，显示消费必需品在不确定环境下的韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/procter-gamble-pg-q3-2026-earnings.html" },
 ];
-const breakingDate = "2026年4月25日 07:52 CST";
+const breakingDate = "2026年4月25日 11:27 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "09:57", tag: "ai", tagText: "AI", text: "中国地平线机器人发布全新自动驾驶平台，目标直指特斯拉。该平台旨在提升自动驾驶性能，标志着中国企业在智能驾驶领域与全球领导者展开直接竞争。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNEtVZjlmRTQ2N1lkdUJpdmtVTldBczZ0ZjREUDl6UU5oTVlEUzQ3TEtHZ1ZHNHNxT1htZnZadWlIOEdhbzZDc2JCclV3WGkxM2ppdFVNemVlX0hETWhGcDVmNmZ3c0pUS2hwU3ktdWxGSndOeWZWUUFuUk9CLTBhUVpRcmJReWpWRkliSlRNUmcyNmNKSGRWUzdLOGdKazdGU2hvRzgxMF9XbzVzX0ZF?oc=5" },
+  { time: "08:56", tag: "ai", tagText: "AI", text: "AI初创公司Cohere与Aleph Alpha宣布合并，并同时获得6亿美元新融资。此次合并旨在整合资源，以应对日益激烈的AI大模型市场竞争。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcUlWclNsQXBSSnl0cDhrakxlWkNhUzh1d1hhQUpTZ2hsRm9DNXl5SHU5RkhxalZscGx6ZEVPZDZQbjZSUWkyUlpqRnVTdm1FLTVlTVFJdGNNT3FEV3RBX2lWdW0wSFVQSG9SaFZuR1Vid0JzdEFVd0J2SVdGTmwyNUl0dzUzVl9fa2t5VWtzRklRM3RR?oc=5" },
   { time: "05:07", tag: "ai", tagText: "AI", text: "英伟达股价因AI芯片需求飙升而大涨。市场对AI训练和推理芯片的强劲需求持续推动英伟达业绩预期，凸显其在AI硬件领域的主导地位。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxNTzR1OGhFUGJwSXhrS2M0UG5raUtRQ24ta0xjMVV4bkVZTGJ2LXNtMWlDNzZmZFFUSUdfZGtJMk4yS3Y3bFllamxDU3M5VDIzQmhIT3Y2cFNMSExLeEY1X3NnTEdXTTVYMG9OaWx6MFp4WUtIYWpucU9NQl9pLUIxYjRtLWwzTWJFc0ZKQnhhWVNyZk1nbDZTTDAyb1gzNVBBRExnd3FWS1pqb1VCSkQwazVBREFLXzNXclpxWm51TTdnWE5qbG1n?oc=5" },
   { time: "03:52", tag: "ai", tagText: "AI", text: "AI初创公司被指夸大关键收入指标以吸引风投关注。一位创始人透露，部分公司通过操纵年度经常性收入（ARR）等数据来营造增长假象，引发行业对估值泡沫的担忧。", source: "Fast Company", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE5takhFOTdGRjEzQTRpT3ZYb19iVGNGTVowVzRocVBpM0RoX2Jmd0VnWGotSGRUNzVXNUg2c1J1QW9qTVZYdVBxVnpIaWo0TXg1S2dldnJGQmNLcHdqc2xmVDNhd3h4b2FncGsyblNCNldDNEFzcFFySjBOdVZCUQ?oc=5" },
   { time: "03:52", tag: "ai", tagText: "AI", text: "Meta与AI初创公司Thinking Machines Lab之间的人才争夺战愈演愈烈，双方互相挖角。这一现象反映出AI领域顶尖人才的稀缺性以及科技巨头与初创公司之间的人才竞争白热化。", source: "TechCrunch", url: "https://techcrunch.com/2024/04/24/metas-loss-is-thinking-machines-gain/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "20:55", tag: "geo", tagText: "地缘", text: "乌克兰国防部情报总局局长布达诺夫表示，乌克兰在AI无人机技术方面接近取得突破，该进展可能“让俄罗斯人感到意外”，暗示其将在战场上获得新的不对称优势。", source: "UNITED24 Media", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeWhMXzFkR2dJOVFDbGtPNWVYenF2TVJudnpxU3NiS2hJRHBoVVp3YTRfd0pIUGMzTnVDNEtvQjZTbXMtdTNWOU9VOEFiZlFlelMzRS1RSXQwY3dyb3Q2UkVUV1Q5RnlzWXJMNFpRaHlxVjFLTFI2MHg5SUhhM0FJazFXMWQxd2xHMGdOU29ocDBXaHJmY2lHVjVsRjlRMzU1Q2g1QzJkVHlYRG5hZkRFTUhldG5WZnhKZTYwUGxB?oc=5" },
   { time: "20:43", tag: "tech", tagText: "科技", text: "苹果CEO蒂姆·库克即将卸任，继任者约翰·特努斯（John Ternus）已基本确定。文章回顾了库克任内AirPods、Touch Bar等标志性产品的遗产，标志苹果进入新时代。", source: "The Verge", url: "https://www.theverge.com/podcast/917965/apple-ceo-cook-ternus-transition" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "美国军方在入侵伊朗的头24小时内打击了超过1000个目标，规模是20年前“震慑与畏惧”行动对伊拉克攻击的近两倍。Project Maven项目将AI深度融入目标识别与打击流程，极大加速了作战节奏，标志着AI在军事领域的应用进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917996/project-maven-military-ai-katrina-manson" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "Meta签署协议，从亚马逊采购数百万颗自研AI CPU（而非GPU），用于AI代理工作负载。此举标志着AI芯片竞争进入新阶段，科技巨头正寻求GPU之外的替代方案以应对算力需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/in-another-wild-turn-for-ai-chips-meta-signs-deal-for-millions-of-amazon-ai-cpus/" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "埃隆·马斯克与萨姆·奥尔特曼的法庭对决即将上演。马斯克作为OpenAI联合创始人，因未获CEO职位而离开，现提起诉讼，庭审将揭露OpenAI内部权力斗争及双方恩怨细节。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917755/musk-altman-openai-xai-gossip" },
 ];
-const aiBreakingDate = "2026年4月25日 07:52 CST";
+const aiBreakingDate = "2026年4月25日 11:27 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
