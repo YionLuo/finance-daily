@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月25日 23:51 CST"
+  date: "2026年4月26日 00:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:33", tag: "macro", tagText: "宏观", text: "12家卡车运输公司申请第11章或第7章破产保护，显示美国货运行业面临严峻压力。该行业受燃料成本高企、需求波动及供应链挑战影响，破产潮可能进一步冲击物流和整体经济。", source: "TheStreet", url: "https://finance.yahoo.com/economy/articles/12-trucking-firms-file-chapter-163300325.html" },
+  { time: "00:18", tag: "macro", tagText: "宏观", text: "道琼斯指数期货下跌，因美伊谈判取消及苹果、亚马逊、谷歌等科技巨头即将发布财报。市场关注AI相关收益及地缘政治风险，投资者情绪谨慎。", source: "Investor's Business Daily", url: "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-apple-amazon-google-earnings-ai-iran-talks/?src=A00220&yptr=yahoo" },
+  { time: "00:13", tag: "tech", tagText: "科技", text: "廉价股票期权暗示下周科技巨头财报后可能出现大幅波动，Meta等公司被低估。华尔街低估了潜在的价格爆发，市场预期波动性将显著上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/cheap-options-suggest-a-big-post-earnings-swing-next-week-for-these-tech-titans-d9b56126?mod=mw_rss_topstories" },
+  { time: "00:00", tag: "crypto", tagText: "加密", text: "比特币走势谨慎，美国国债收益率接近4%，测试市场强度。投资者在宏观不确定性中权衡风险，加密市场情绪转向保守。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeElaMzYycFViZkh0TEZHcHg2dDkwNmhleUt3UDNTZjZBT1p3Yk9JWVRzejJjenpVYnFodXowb2VnZlhlZkJfemc1R2c4WHZMTU9kbm5tY2xkeEw1MTNmNjVhbEdnWnBwS0otUHQ4ZTBwSDM2Rktrekw1OEl6UURZeWhsT21VaTZYazBNTm1vRWdNZzTSAZgBQVVfeXFMTmtpOFVsOG9NYjI3ODJGRVQ4VlZsS2tXS053cWVVWkFIQklHSVFXbm5NRVhub3RWSWhNTjRRelA4Wk03UC0teFlQSElZM0ktY1NoME54bG1seTdha3VkTmtSc1lqZ0JBeVdpbHFSc09HeTdqcW5DdXY4cXFGeE44WGs0UlpRb1B0N3FXckxpcVJ4OFJYWFZVX0M?oc=5" },
+  { time: "00:00", tag: "crypto", tagText: "加密", text: "Aurelion向XAUE收益协议分配4800万美元Tether Gold，显示机构对黄金支持加密产品的兴趣增加，可能推动DeFi与传统资产融合。", source: "CryptoProwl", url: "https://finance.yahoo.com/markets/crypto/articles/aurelion-allocates-48-million-tether-162100751.html" },
   { time: "23:51", tag: "macro", tagText: "宏观", text: "特朗普社交媒体发文引发市场剧烈波动，美股随之摇摆。分析人士指出，特朗普的言论对市场具有“窒息性”影响，投资者情绪高度敏感。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQa1lEV1h1ZnZwWklTQ2ZsRE91TEtDb3piU0xkaUZ2cVlzYXgxcUJOUXgxeWRwY1hQVHl2M2gxSmx6a0dpUVJjUUMxeFNuTkQ5b2dNSDIzLXdYdzdpb195RGZqcHlOb1Q2Ty0yV2Jidm1wZVZwVFpaamlRS2pDdk1QbHZ1TVo2NmlCYlRuYTlmRzk3NEZDNlFvSDNoZ0VmSkE5b0E?oc=5" },
   { time: "22:50", tag: "macro", tagText: "宏观", text: "美国蓝领工作因大学费用高企和科技行业裁员而受到追捧。报告分析了哪些蓝领职业最具稳定性（如电工、管道工），哪些风险最高（如建筑工人），指出蓝领工作并非完全不受市场波动影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-americans-turn-to-blue-collar-jobs-for-stability-heres-which-ones-offer-the-most-security-and-which-offer-the-least-b24c8b2d?mod=mw_rss_topstories" },
   { time: "22:13", tag: "macro", tagText: "宏观", text: "Invesco的九种因子策略中，除一种外，今年均跑赢标普500指数。自3月30日市场低点以来，两种策略表现尤为突出，为投资者提供了超越传统指数的新选择。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-alternative-index-strategies-are-beating-the-s-p-500-after-the-stock-markets-new-highs-9bd7295a?mod=mw_rss_topstories" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "19:00", tag: "macro", tagText: "宏观", text: "海南作为中国免税零售天堂和热带绿洲的地位面临新挑战。北京要求该岛省承担新的经济使命，不再满足于单纯的购物天堂角色，政策方向正在调整。", source: "MarketWatch", url: "https://www.marketwatch.com/story/hainan-was-chinas-shopping-paradise-for-beijing-thats-no-longer-enough-c2535a40?mod=mw_rss_topstories" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "苹果即将向投资者返还数十亿美元现金，其回购效率在大型科技公司中领先。与Alphabet并列，苹果在利用回购提升每股收益方面最为有效。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apple-will-soon-deliver-billions-more-in-cash-to-investors-heres-how-it-stacks-up-to-the-rest-of-big-tech-37adae6c?mod=mw_rss_topstories" },
   { time: "18:03", tag: "geo", tagText: "地缘", text: "美国国务院向全球发布警告，指控DeepSeek等中国公司涉嫌窃取美国AI实验室的知识产权。此举标志着中美科技竞争进一步升级，可能引发新一轮技术出口管制和贸易摩擦。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/us-global-warning-alleged-china-ai-theft.html" },
-  { time: "18:00", tag: "crypto", tagText: "加密", text: "比特币“鲨鱼”地址在市场不确定性中悄然增持。链上数据显示，持有100-1000 BTC的地址正在持续积累，显示中型投资者对后市持乐观态度。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdkUzMkxWQnR1ZlZaYUdDVW96LU5wbUVTTDNTaDBmSlNhM0NKV0JnMEEycXRWSFNUa2o4WWpJalFYdVp2Z1VncFBxUjZPNnE1R0Z3Mno0UFB1Qm1JZElZX1ZvMTk5ZHhzMU5nOS0tUTJGSFFtTnEzMXFZWEoyaVdtS2pGb09rSHc1WTJMN2VNbDBFYWlHcDhNemxCREFLTUVmVXhTdFFqYw?oc=5" },
-  { time: "17:15", tag: "crypto", tagText: "加密", text: "比特币跌破7.8万美元，MemeCore（M）暴跌15%。加密市场周末遭遇抛售压力，投资者情绪转向谨慎。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxNWmY3cU05NjJkeXNuel9kYW9UdEtuYzFNZVAyNy1FdWZpbllUZVdEek82eHFTakNOYzM5T3lQM21XNy1LbThKeUpLTVZlY0lIMmhXOXM0V19hazg0ZjZodDdoTTJCWTkzMjFMc012NHhGUEN0YWdVcU9EeWJiNFB4dzN6N2FoVGVaX3d1ZFJnX1NUN2pEclpj?oc=5" },
-  { time: "16:44", tag: "geo", tagText: "地缘", text: "伊朗否认计划在巴基斯坦与美国谈判代表会面，而美国特使维特科夫和库什纳预计将于周六抵达伊斯兰堡。美伊双方在间接接触中仍存在重大分歧，中东局势不确定性持续。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/iran-says-no-meeting-with-us-negotiators-planned-in-pakistan.html" },
-  { time: "15:07", tag: "tech", tagText: "科技", text: "小鹏汽车宣布近10万名消费者体验其驾驶AI系统，98%表示满意。这一数据表明中国智能驾驶技术正加速获得市场认可。", source: "Stock Titan", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPNF96WkxPZGhsT2k5UGF6TFFJN1ZvT3E4MHdoU2pTVjBXT0xVLTZqOGNTanRtVHcwVXB2c3U5VmJZTlUwVlNOMzMxMW9VN0UtRjVMaGdvUkxkSlpQbDVHQmFVMk1VaG0zbHZjM2NISHBiNUpBVE5zZUdFSEprMnl5ZFZheEg0VjhudHlTQkxjaUMzakVreWtYTm0wUFhCZFFueVk1UzJrenNPcll2WGNzRlQ4d25pdFdxRnFnN253?oc=5" },
-  { time: "13:20", tag: "crypto", tagText: "加密", text: "比特币ETF自2025年10月以来迎来最佳资金流入周期，净流入达24亿美元，显示机构投资者对比特币的强劲需求。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSDRPRzBmQnlBT29Icl9CZHBkMGd5dkFSV1VZMHI1RFJlb0JUSU9ER05iRjBHSkIwVnp3VmR1RDJsU1k4bkJKUGVOb1owLS1GMUtWMWVyU1Q1b29SeXR6d2tEYUt6YUc0OXFPNzJ1c18wZnF3ZmIxa2FjV0lBR2pURjFLXy13aGVoWGE4?oc=5" },
 ];
-const breakingDate = "2026年4月25日 23:51 CST";
+const breakingDate = "2026年4月26日 00:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "谷歌计划向AI初创公司Anthropic投资高达400亿美元，包括现金和算力资源。此举正值AI竞争对手争相获取大规模计算能力之际，此前Anthropic已发布专注于网络安全的强大模型Mythos。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" },
 ];
-const aiBreakingDate = "2026年4月25日 23:51 CST";
+const aiBreakingDate = "2026年4月26日 00:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
