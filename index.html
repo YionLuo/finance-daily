@@ -1623,14 +1623,17 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月26日 01:51 CST"
+  date: "2026年4月26日 03:07 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:49", tag: "geo", tagText: "地缘", text: "美国对一家中国‘茶壶’炼油厂实施制裁，因其购买伊朗石油。同时，OFAC对约40家参与伊朗影子船队的航运公司和船只实施制裁，加剧美中地缘紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/us-china-sanctions-iran-oil.html" },
+  { time: "02:28", tag: "macro", tagText: "宏观", text: "债券基金创纪录的资金流入被视为反向信号，预示2026年剩余时间债券表现可能落后于股票。投资者需警惕收益率下行风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bonds-could-lag-stocks-for-the-rest-of-2026-according-to-this-contrarian-signal-6b6c55de?mod=mw_rss_topstories" },
   { time: "01:51", tag: "macro", tagText: "宏观", text: "特朗普3月债券购买披露显示其购入至少5100万美元债券，引发市场对其个人投资与政策关联性的关注。", source: "Reuters", url: "https://finance.yahoo.com/news/trump-bought-least-51-million-173547214.html" },
   { time: "01:51", tag: "macro", tagText: "宏观", text: "市场波动加剧，主动型基金经理迎来跑赢指数基金的机会。分析指出，在动荡市场中，精明经理可避开指数基金被迫持有的板块，实现超额收益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/market-chaos-gives-skilled-managers-a-chance-to-beat-index-funds-just-like-theyre-supposed-to-do-b85cfd52?mod=mw_rss_topstories" },
+  { time: "01:41", tag: "ai", tagText: "AI", text: "分析师指出，ChatGPT时代已过，2026年AI投资真正的金矿在国防、医疗和智能体（agentics）三大领域。资金正大量涌入这些垂直应用方向。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-chatbot-era-is-over-these-3-sectors-are-the-real-ai-gold-mines-for-2026-002372c7?mod=mw_rss_topstories" },
   { time: "00:33", tag: "macro", tagText: "宏观", text: "12家卡车运输公司申请第11章或第7章破产保护，显示美国货运行业面临严峻压力。该行业受燃料成本高企、需求波动及供应链挑战影响，破产潮可能进一步冲击物流和整体经济。", source: "TheStreet", url: "https://finance.yahoo.com/economy/articles/12-trucking-firms-file-chapter-163300325.html" },
   { time: "00:18", tag: "macro", tagText: "宏观", text: "道琼斯指数期货下跌，因美伊谈判取消及苹果、亚马逊、谷歌等科技巨头即将发布财报。市场关注AI相关收益及地缘政治风险，投资者情绪谨慎。", source: "Investor's Business Daily", url: "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-apple-amazon-google-earnings-ai-iran-talks/?src=A00220&yptr=yahoo" },
   { time: "00:13", tag: "tech", tagText: "科技", text: "廉价股票期权暗示下周科技巨头财报后可能出现大幅波动，Meta等公司被低估。华尔街低估了潜在的价格爆发，市场预期波动性将显著上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/cheap-options-suggest-a-big-post-earnings-swing-next-week-for-these-tech-titans-d9b56126?mod=mw_rss_topstories" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "20:13", tag: "macro", tagText: "宏观", text: "华尔街对“新云”公司（neoclouds）态度转多，但麦肯锡警告其经济模型脆弱，风险高于其他AI投资标的。这些公司最初为应对GPU短缺而出现，但盈利能力存疑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/wall-street-is-getting-bullish-on-neoclouds-these-stocks-hold-more-risk-than-other-ai-plays.html" },
   { time: "19:46", tag: "macro", tagText: "宏观", text: "鲜为人知的ETF——Breakwave油轮运输ETF（BWET）因美伊战争飙升超600%，表现远超原油和能源股。该基金受益于霍尔木兹海峡紧张局势导致的油轮运费暴涨，成为地缘冲突下的另类投资赢家。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/crude-oil-freight-tanker-strait-hormuz-iran-war-energy-stocks.html" },
   { time: "19:30", tag: "macro", tagText: "宏观", text: "美联储主席鲍威尔最后一次新闻发布会标志着时代的终结。特朗普提名的下任主席凯文·沃什可能取消与记者的定期问答环节，美联储沟通方式面临重大转变。", source: "MarketWatch", url: "https://www.marketwatch.com/story/jerome-powells-final-fed-press-conference-marks-an-end-to-an-era-a3337a00?mod=mw_rss_topstories" },
-  { time: "19:00", tag: "geo", tagText: "地缘", text: "国防股回吐此前涨幅，市场呈现“买传闻、卖事实”格局。生产瓶颈和美国弹药资金的不确定性对武器制造商股价构成压力。", source: "Financial Times", url: "https://www.ft.com/content/1c9c4694-2ed3-4aac-8f64-2cbc5fb0e7cc" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "拥有Mythos网络工具访问权限的公司敦促联合防御基础设施。网络安全负责人警告，该工具的推广需要政府与企业之间密切协调，以应对日益严峻的网络威胁。", source: "Financial Times", url: "https://www.ft.com/content/e96bc361-d222-4190-80fe-e357fa86ef4d" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "海南作为中国免税零售天堂和热带绿洲的地位面临新挑战。北京要求该岛省承担新的经济使命，不再满足于单纯的购物天堂角色，政策方向正在调整。", source: "MarketWatch", url: "https://www.marketwatch.com/story/hainan-was-chinas-shopping-paradise-for-beijing-thats-no-longer-enough-c2535a40?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月26日 01:51 CST";
+const breakingDate = "2026年4月26日 03:07 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Perplexity在新一轮融资中估值飙升至140亿美元。该公司凭借其AI驱动的搜索引擎迅速崛起，成为生成式AI领域备受关注的明星企业之一。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi_AJBVV95cUxQa1ZkamlBR3U0eVJCbUttY0tkVEhNZDBQb2Z1MU4xYmdoRVBQcnBaOWJUX0F4ZUtEMkR1YkE4WWFZQmlhdHgtVS02VmY3SHRaQmZRSWpqRGlYZlRTZHExMllsMHZESmFLNi1XdnFjeVo0Z1lLNjVBdVBuSmpJVnJFdXY0eUdWTnBET21YVmZqSGpOai0yeUZsakluM29TOUZOeGpGaGkxZ0dWamRoc0lzcjNydXNReFdhR0MzbFN5b3RYR3doNkswT3RtYXQyaUJnQVJTU0RaQzNwRG9UZkVHQk5Ibzg5dHJuRFRRRFBTREFUb2pYd2tSdWVpNW05RUM4d3FQX193VFVDSmNvX3pNLVdwMHpJaDBYQVEzXzl0eXJKZThkRDZYb19RQkR3Zk9sTXpUX282UlRDWVdfUDhoRzFrUmMyOXRFNGdYdGNmemdJbzRGcGNXMjdIclczc0lSRDlFdTJLTW9Ya3MtWW9nR1owTUZCdll2N1pqZQ?oc=5" },
+  { time: "02:27", tag: "ai", tagText: "AI", text: "AI编程初创公司Cognition AI在收购Windsurf后，正寻求以250亿美元估值进行新一轮融资。此交易凸显AI编程工具领域的持续火热及资本对该赛道的高度关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWtCbDFzOG9mZDV2dmpINHZNSmRGdmRfcGxycnQ4UG8xSEZzcmhuQzM1Mmo1SG44OC01VHVSWkZzaEtYRzI0OFM5LU5lR2N6Z0RZdW9vWklVa0p2TkxkT01leEk5NDJjU2xQNjJmYlhmRUJtWWNaY0dVWUR3dG5zTzZaRjcxdnVKQWc2Yy1NLVBGX3JUMFk1TQ?oc=5" },
+  { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
   { time: "01:17", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman就未能及时向执法部门预警大规模枪击案嫌疑人，向加拿大Tumbler Ridge社区致信道歉，称其“深感抱歉”。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/" },
   { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
   { time: "23:03", tag: "tech", tagText: "科技", text: "TechCrunch分析指出，东京凭借SusHi Tech 2026大会成为2026年最重要的科技目的地。该大会聚焦四个明确定义的技术领域，并配有现场演示、专属展区及由实际建设者和投资者主导的会议，凸显东京在全球科技版图中的崛起。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "03:52", tag: "ai", tagText: "AI", text: "AI初创公司被指夸大关键收入指标以吸引风投关注。一位创始人透露，部分公司通过操纵年度经常性收入（ARR）等数据来营造增长假象，引发行业对估值泡沫的担忧。", source: "Fast Company", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE5takhFOTdGRjEzQTRpT3ZYb19iVGNGTVowVzRocVBpM0RoX2Jmd0VnWGotSGRUNzVXNUg2c1J1QW9qTVZYdVBxVnpIaWo0TXg1S2dldnJGQmNLcHdqc2xmVDNhd3h4b2FncGsyblNCNldDNEFzcFFySjBOdVZCUQ?oc=5" },
   { time: "03:52", tag: "ai", tagText: "AI", text: "Meta与AI初创公司Thinking Machines Lab之间的人才争夺战愈演愈烈，双方互相挖角。这一现象反映出AI领域顶尖人才的稀缺性以及科技巨头与初创公司之间的人才竞争白热化。", source: "TechCrunch", url: "https://techcrunch.com/2024/04/24/metas-loss-is-thinking-machines-gain/" },
   { time: "03:34", tag: "geo", tagText: "地缘", text: "以色列国防军公布AI驱动的机器人作战系统，称其为对抗真主党的突破性火炮技术。该系统将人工智能深度融入军事行动，标志着AI在战场应用中的新进展。", source: "Algemeiner.com", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUzZKYUhXWE02MThiQmdYTkNlYXpSUzBiMGNtUXZTN2NwZW0tblU0Ny1LdXhJaHpFaUY2RHB1U1h6WHh1dDItU0RpV0ZLYk85YkVDbmJhMnZGaDc1Y01hY1o0TTNjSVR0Q0x6djRjWUFTbWNOZHNmc0RkZTRUcmdrS3VoT1h1TXVHQnJyVG14dkQwd3pGMFZ1NGlQSUxpNDZxM1pOdmVWR2oxaXRYenJyTDFYUkNpVmg5WUNyaDdBOVhQVlE?oc=5" },
-  { time: "02:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Perplexity在新一轮融资中估值飙升至140亿美元。该公司凭借其AI驱动的搜索引擎迅速崛起，成为生成式AI领域备受关注的明星企业之一。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi_AJBVV95cUxQa1ZkamlBR3U0eVJCbUttY0tkVEhNZDBQb2Z1MU4xYmdoRVBQcnBaOWJUX0F4ZUtEMkR1YkE4WWFZQmlhdHgtVS02VmY3SHRaQmZRSWpqRGlYZlRTZHExMllsMHZESmFLNi1XdnFjeVo0Z1lLNjVBdVBuSmpJVnJFdXY0eUdWTnBET21YVmZqSGpOai0yeUZsakluM29TOUZOeGpGaGkxZ0dWamRoc0lzcjNydXNReFdhR0MzbFN5b3RYR3doNkswT3RtYXQyaUJnQVJTU0RaQzNwRG9UZkVHQk5Ibzg5dHJuRFRRRFBTREFUb2pYd2tSdWVpNW05RUM4d3FQX193VFVDSmNvX3pNLVdwMHpJaDBYQVEzXzl0eXJKZThkRDZYb19RQkR3Zk9sTXpUX282UlRDWVdfUDhoRzFrUmMyOXRFNGdYdGNmemdJbzRGcGNXMjdIclczc0lSRDlFdTJLTW9Ya3MtWW9nR1owTUZCdll2N1pqZQ?oc=5" },
-  { time: "02:27", tag: "ai", tagText: "AI", text: "AI编程初创公司Cognition AI在收购Windsurf后，正寻求以250亿美元估值进行新一轮融资。此交易凸显AI编程工具领域的持续火热及资本对该赛道的高度关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWtCbDFzOG9mZDV2dmpINHZNSmRGdmRfcGxycnQ4UG8xSEZzcmhuQzM1Mmo1SG44OC01VHVSWkZzaEtYRzI0OFM5LU5lR2N6Z0RZdW9vWklVa0p2TkxkT01leEk5NDJjU2xQNjJmYlhmRUJtWWNaY0dVWUR3dG5zTzZaRjcxdnVKQWc2Yy1NLVBGX3JUMFk1TQ?oc=5" },
-  { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
 ];
-const aiBreakingDate = "2026年4月26日 01:51 CST";
+const aiBreakingDate = "2026年4月26日 03:07 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
