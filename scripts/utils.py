@@ -351,7 +351,7 @@ FALLBACK_ENDPOINTS = [
 
 # Default model — auto-detect based on API endpoint
 _base = os.environ.get("OPENAI_BASE_URL", "")
-DEFAULT_LLM_MODEL = "deepseek/deepseek-chat" if "openrouter" in _base else "deepseek-chat"
+DEFAULT_LLM_MODEL = "deepseek/deepseek-v4-flash" if "openrouter" in _base else "deepseek-v4-flash"
 
 
 def create_llm_client(required=True):
@@ -440,7 +440,7 @@ def llm_chat_with_retry(client, messages, model=None, max_tokens=4000,
     Args:
         client: OpenAI client instance
         messages: List of message dicts
-        model: Model name (defaults to LLM_MODEL env var or deepseek-v3.2)
+        model: Model name (defaults to LLM_MODEL env var or deepseek-v4-flash)
         max_tokens: Max response tokens
         temperature: Sampling temperature
         max_retries: Maximum retry attempts
@@ -463,6 +463,7 @@ def llm_chat_with_retry(client, messages, model=None, max_tokens=4000,
                 messages=messages,
                 temperature=temperature,
                 max_tokens=max_tokens,
+                timeout=180,
             )
             content = response.choices[0].message.content
             if not content or not content.strip():

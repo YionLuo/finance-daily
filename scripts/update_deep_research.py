@@ -43,8 +43,8 @@ WEEKDAY_MAP = ["周一", "周二", "周三", "周四", "周五", "周六", "周�
 _base_url = os.environ.get("OPENAI_BASE_URL", "")
 _is_openrouter = "openrouter" in _base_url
 
-LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek/deepseek-chat" if _is_openrouter else "deepseek-chat")
-WRITER_MODEL = os.environ.get("WRITER_MODEL", "deepseek/deepseek-r1" if _is_openrouter else "deepseek-reasoner")
+LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek/deepseek-v4-flash" if _is_openrouter else "deepseek-v4-flash")
+WRITER_MODEL = os.environ.get("WRITER_MODEL", "deepseek/deepseek-v4-pro" if _is_openrouter else "deepseek-v4-pro")
 
 MAX_AGENT_ROUNDS = 12
 
@@ -98,7 +98,7 @@ def select_topic(client, breaking_news, ai_breaking_news, existing_topics):
         ai_news="\n".join(ai_lines) or "（无AI快讯）",
     )
 
-    response = llm_chat_with_retry(client, [{"role": "user", "content": prompt}], max_tokens=512, temperature=0.3)
+    response = llm_chat_with_retry(client, [{"role": "user", "content": prompt}], max_tokens=4096, temperature=0.3)
     cleaned = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
     cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE).strip()
 
@@ -346,11 +346,84 @@ def research_collect(client, topic_info, breaking_context):
     return final_materials, collected_sources
 
 
+KEY_QUESTION_PROMPT = """你是 Y Daily 的分析师。基于以下研究素材，生成这份报告必须回答的「关键问题清单」。
+
+=== 研究素材 ===
+{research_materials}
+
+=== 任务 ===
+仔细阅读素材，找出这份报告如果要做到"专业深度"，必须回答的关键问题。
+
+问题类型包括：
+1. **核心假设验证型**：报告隐含的假设（如"X 导致 Y"），需要什么数据才能验证？
+2. **财务穿透型**：涉及的公司，哪条业务线受影响？影响多少营收/利润？
+3. **反面力量型**：谁会反抗这个结论？有什么反面证据？
+4. **历史类比型**：类似事件过去发生过吗？结果如何？
+5. **催化剂型**：未来什么事件能验证/推翻核心假设？
+
+=== 输出格式（严格 JSON）===
+{{
+  "questions": [
+    {{
+      "id": "Q1",
+      "type": "假设验证型",
+      "question": "问题原文",
+      "why_crucial": "为什么这个问题必须回答（1句话）",
+      "current_status": "待搜索 / 部分回答 / 已回答",
+      "evidence_snippet": "素材中相关的片段（如果有的话）"
+    }}
+  ]
+}}
+
+生成 5-8 个问题。问题必须具体，不能泛泛而谈。
+例如❌ "英伟达未来会怎样？"
+例如✅ "Graviton 在 AI 推理场景的 benchmark 数据 vs H200，性能/成本差距是多少？当前素材是否包含此数据？"
+
+只输出 JSON，不要其他文字。
+"""
+
+def generate_key_questions(client, research_materials):
+    """Stage 3.25: Generate key questions that the report must answer."""
+    print("\n=== Stage 3.25: Generate Key Questions ===")
+
+    prompt = KEY_QUESTION_PROMPT.format(
+        research_materials=research_materials[:20000]
+    )
+
+    response = llm_chat_with_retry(
+        client,
+        [{"role": "user", "content": prompt}],
+        max_tokens=2048,
+        temperature=0.2,
+    )
+
+    # Parse JSON
+    cleaned = re.sub(r'^```(?:json)?\s*\n', '', response, flags=re.MULTILINE)
+    cleaned = re.sub(r'\n```\s*$', '', cleaned, flags=re.MULTILINE).strip()
+    think_end = cleaned.find("</think>")
+    if think_end != -1:
+        cleaned = cleaned[think_end + len("</think>"):].strip()
+
+    try:
+        result = json.loads(cleaned)
+        questions = result.get("questions", [])
+        print(f"  Generated {len(questions)} key questions:")
+        for q in questions:
+            print(f"    {q['id']} [{q['type']}] {q['question'][:60]}... (status: {q['current_status']})")
+        return questions
+    except (json.JSONDecodeError, AttributeError):
+        print("  WARNING: Failed to parse questions JSON, using fallback")
+        return []
+
+
 # ============ Stage 3b: Report Writing (reasoning model, no tools) ============
 
-WRITER_PROMPT = """你是 Y Daily 的首席分析师，服务对象是**专业投资人和交易员**。你的报告必须能直接转化为交易决策，而不只是"有观点的评论文章"。
+WRITER_PROMPT = """你是 Y Daily 的首席分析师。你的任务是产出专业、克制、有深度的投研分析报告。
 
-当前时间：{current_time}（2026 年 4 月）
+当前时间：{current_time}
+
+=== 关键问题清单（必须逐一回答，不能跳过）===
+{key_questions}
 
 === 分析框架参考 ===
 {brain_dump}
@@ -358,117 +431,84 @@ WRITER_PROMPT = """你是 Y Daily 的首席分析师，服务对象是**专业�
 === 研究素材（全部来自真实搜索，可直接引用）===
 {research_materials}
 
-=== Y Daily 的读者画像 ===
-- 对冲基金分析师、PE/VC 投研、自营交易台、严肃个人投资者
-- **不需要**科普，**需要**可执行的交易观点
-- **讨厌**"四平八稳的宏观评论"、"模棱两可的展望"、"万金油的标签"
-- **喜欢**数据、案例、财务推演、具体日期、明确概率
+=== 写作原则（严格遵守）===
+1. **围绕问题写，不要自由发挥**
+   报告的每一个章节都必须对应"关键问题清单"中的某一个或几个问题。
+   如果某个问题素材不足以回答，明确写"当前证据不足，需要关注 X 信号"，不要猜测。
 
-=== 关于数据的严格要求 ===
-- **只使用上面素材中明确包含的数据和事实**
-- 如果素材里没有具体数字，就用定性分析 + 明确标注"（基于行业逻辑推断）"
-- 绝对不要编造引用来源（Gartner/McKinsey/IDC 报告等）——除非素材中真的有
-- 历史类比、逻辑推理、对比分析优于假数据
+2. **多空观点必须并列呈现**
+   不要强行统一结论。如果证据支持多方，就写多方；支持空方，就写空方；都有，就并列。
+   每条观点必须标注证据强度：【已验证】有 2 个以上独立来源
+                             【部分验证】只有 1 个来源或数据不完整
+                             【未验证-推测】纯逻辑推导，无数据支撑
 
-=== 必须覆盖的分析维度（漏掉任何一个都算不合格）===
-1. **财务逻辑检验**：涉及大额交易/投资时，必须质疑钱从哪来、商业模型是否成立、是否存在"左手倒右手"或"卖方融资"嫌疑
-2. **产业链全景**：覆盖上下游关键玩家的受益/受损（比如谈云+AI绑定就不能漏掉英伟达/ASML和开源替代）
-3. **反面力量与替代路径**：谁会反抗、怎么反抗（监管、开源、解耦需求等）
-4. **历史类比的精确性**：必须说明类比的"适用边界"——哪里像、哪里不像
-5. **二阶效应**：A→B→C 的连锁反应
+3. **禁止输出交易指令**
+   不要写"做多 XXX"、"做空 XXX"、"建议买入/卖出"。
+   改为写："如果 X 条件被验证（见催化剂日历），则 Y 情景可能触发，对 Z 标的的影响方向是…，幅度取决于 W。"
 
-=== 🎯 交易投研的四大硬要求（这是区别"评论"与"投研"的关键）===
+4. **假设必须显式标注**
+   文中每一个"因为 A 所以 B"的推导，如果 A 是假设（未验证），必须用括号标注（假设，待验证）。
+   如果通篇都是假设，在章节开头明确标注：⚠️ 本节主要基于未验证假设，确定性低。
 
-**要求 A：具体交易机会池（Deal Pipeline / Trading Opportunities）**
-不能只说"利好半导体"这种空话。必须列出：
-- 具体的交易机会标的：并购套利标的、事件驱动机会、行业轮动方向
-- 历史对比案例：类似事件驱动了什么具体股价反应
-- 如果话题是并购/监管：梳理进行中的相关交易（Deal Pipeline），被否决的历史案例
-- 如果话题是财报：列出将在下一季度验证的关键指标
-- 如果话题是新技术：指出哪些公司的产品管线最直接受益
-- **做空标的必须具体到公司名**（从素材中已有的公司里识别，不能只说"技术壁垒较低的公司"这种虚指）
+5. **数据严格要求**（同之前）
+   - 只使用素材中明确包含的数据
+   - 无具体数字时用定性分析 + 标注"（基于行业逻辑推断，需核查）"
+   - 禁止编造引用来源
 
-**要求 B：标的财务穿透 + 定量支撑（Financial Mapping）**
-relatedTickers 列出的每个标的，**正文中必须具体解释**：
-- 这家公司的哪条业务线直接受影响？（不是"整体受益"这种空话）
-- 影响会体现在哪个财务指标上？（营收、毛利率、OpEx、FCF、EPS）
-- **定量要求**（素材有就用真数字，没有就用行业基准参考值并明确标注）：
-  - 有真实数据 → 直接引用：例如 "公司最新季度 R&D 费用为 XX 亿美元（来源：XX），若翻倍则..."
-  - 无真实数据 → 用明确的行业基准 + 标注：例如 "参考同行业平均 R&D 占比约 10-15%（行业基准，需交易员核查公司最新披露）"
-  - 禁止使用"大约""历史区间"等无来源的定量表述
-- 定性估算影响的量级：显著（>10%）/ 中等（3-10%）/ 轻微（<3%）
-- 传导的时间窗口：立即 / 1-2 季度 / 1-3 年
-- **如有条件，给出估值锚点**：提及当前 P/E 或 P/S 倍数、分析师目标价区间（若搜到）、DCF 关键假设
-- **如有条件，给出供应链份额**：XX 公司在 XX 环节占比约 XX%（或标注"需自查最新份额数据"）
+=== 报告结构（必须严格按照这个结构）===
+1. **核心问题**（1 段）
+   用 1-2 句话说明：这份报告试图回答什么关键问题？当前哪些已有答案、哪些仍不确定？
 
-**要求 C：交叉验证信号（Cross-check Signals）**
-不能只靠单一信源（如一场采访、一份公告）。必须补充：
-- 硬数据验证：近期同类交易数据、监管判例变化、资金流向、财报数据
-- 反向验证：如果这个趋势是真的，我们应该看到什么"还没发生但必然会发生"的事？
-- 如果素材只有单一信源，明确标注"核心依据仅来自单一信源，需要持续跟踪 X、Y、Z 来交叉验证"
+2. **关键假设与验证状态**（1 个小节，可用表格）
+   列出报告依赖的核心假设，每个标注：【已验证】/【部分验证】/【未验证】
+   这是读者判断报告可信度的核心参考，不能省略。
 
-**要求 D：催化剂时间表 + 极端情景（Catalysts Calendar）**
-不能用"短期/中期/长期"这种无交易价值的词。必须给出：
-- 近期可追踪的具体日期：关键财报日、监管会议日期、产品发布会、行业峰会
-- 每个催化剂可能触发的情景：Bull Case（利好） / Base Case（预期） / Bear Case（利空）
-- 如果可能，给出粗略的概率权重（如 30/50/20）
-- **极端 Bear Case 的量化下行空间**：如果核心论点失败（比如"AI 换机潮是伪需求"、"新CEO管理失败"），市值/股价的下行空间是多少？给出具体百分比范围（如 "下行 20-30%"）和对比参考（如 "相当于回到 2023 年 P/E 区间"）
-- 如果素材里没有明确日期，就写"需关注未来 N 周内的 XX 事件"
+3. **分问题深度分析**（2-4 个小节）
+   每个小节对应 1-2 个关键问题。
+   小节内先写"多方观点"（证据 + 强度标注），再写"空方观点"（证据 + 强度标注）。
+   不要强行给出结论。如果证据不足以判断，直接写"当前证据不足以判断，需等待 X 信号"。
 
-=== 🎯 针对性风险分析（避免行业共性废话）===
-"风险与反面力量"章节**必须**包含：
-1. **该事件特有的风险**（不是所有科技公司都面临的通用风险），例如：
-   - 如果涉及高管变动：新任 CEO/关键人物的个人过往决策风格、短板、可能的失误倾向
-   - 如果涉及并购/合作：这对具体交易可能的反垄断否决点
-   - 如果涉及新技术：该技术的伪需求风险、已知的技术瓶颈
-2. **排除通用风险的表述**：如果必须提及"监管风险""组织刚性""开源威胁"这种共性问题，必须说明它对这个具体事件的独特传导路径，否则不要写
-3. **极端下行情景**：如果整个核心论点反向，下行空间多少？触发条件是什么？
+4. **我们的判断**（1 段，确定性评级）
+   基于已验证的部分，给出一个总体判断，但必须附带确定性评级：
+   - 🟢 高确定性（已验证假设 ≥70%，有硬数据支撑）
+   - 🟡 中等确定性（已验证假设 40-70%，或关键数据缺失）
+   - 🔴 低确定性（主要基于未验证假设，或正反证据强度接近）
+   如果评级是🟡或🔴，必须说明"要提升确定性，需要验证 X、Y、Z"。
 
-=== 报告结构要求 ===
-直接输出中文文章。
+5. **催化剂日历与待验证信号**（1 个小节）
+   列出未来 1-2 周内可能验证关键假设的具体事件：
+   - 财报发布日（公司名 + 日期）
+   - 行业会议 / 产品发布
+   - 监管决定
+   每个事件标注：如果事件结果 X，则验证/推翻哪个假设。
 
-**必选章节**（可以合并但不能省略）：
-1. 核心论点（1-2段，结论前置）
-2. 事件背景与交叉验证（不是复述新闻，而是用多个信源相互印证/冲突）
-3. 财务穿透分析（对关注标的做具体影响推演）
-4. 交易机会池（Deal Pipeline 或事件驱动机会）
-5. 风险与反面力量
-6. 催化剂日历与情景推演
-7. 核心判断（4-5条，每条必须能直接翻译成"做多/做空/观望"的指令）
+=== 写作风格 ===
+- Stratechery 的结构感 + SemiAnalysis 的数据穿透
+- 克制。不确定就说不确定。
+- 每一个结论都必须有对应的证据强度标注。
+- 禁止："短期/中期/长期"、"存在不确定性"、"需要密切关注"（这些都是废话，改成具体描述）
 
-=== 核心判断的写法示例 ===
-❌ 差："欧盟新规将加速行业整合"（评论语言，无法交易）
-❌ 差："苹果AI战略面临挑战"（正确的废话）
-❌ 差："做空技术壁垒较低的传统供应商"（没具体名单）
-❌ 差："R&D 支出约为历史区间 7%"（无来源的数字，不如不提）
-✅ 好："做多预期：SAP 将在 12 个月内发起 2-3 起 SaaS 并购，现价对应 P/S 隐含零整合预期，估值存在重估空间，目标价上调 15%。做空预期：传统反垄断律师事务所业务将萎缩，监管套利类咨询逆势扩张。"
-✅ 好："极端 Bear Case：若端侧 AI 被证伪，苹果 P/E 从当前 30x 回落至历史中位数 22x，对应市值下行 25%。"
-
-=== 🚫 绝对禁止的写法 ===
-- "需要密切关注XX"（无实际价值）
-- "存在不确定性"（废话）
-- "短期/中期/长期"（无法交易）
-- "这是一场复杂的博弈"（什么都没说）
-- 正文中提到了股票代码但没有对应的具体影响分析
-- **无来源的定量表述**（如"约7%""历史区间10%"——必须标注来源或说明是行业基准）
-- **抽象做空名单**（如"技术壁垒较低的公司"——必须具体到公司名或"待筛选的XX类公司，标准为..."）
-- 只提行业共性风险不提特定事件独有风险
-
-=== 写作风格参考 ===
-- Stratechery（Ben Thompson）的结构感
-- Money Stuff（Matt Levine）的犀利判断
-- SemiAnalysis 的财务穿透
-- GaveKal 的交易可执行性
-
-目标长度：4000-6000 字，质量 > 长度。
+目标长度：3500-5000 字（质量 > 长度）。
 """
 
 
-def write_report(client, topic_info, brain_dump_text, research_materials):
+def write_report(client, topic_info, brain_dump_text, research_materials, key_questions=None):
     """
     Stage 3b: Write the deep analysis report using reasoning model (R1).
     No tool use — pure text generation with deep thinking.
+    key_questions: list of question dicts from generate_key_questions()
     """
+    # Format key questions for prompt
+    questions_text = ""
+    if key_questions:
+        lines = []
+        for q in key_questions:
+            status_icon = {"待搜索": "❓", "部分回答": "⚡", "已回答": "✅"}.get(q.get('current_status', ''), '❓')
+            lines.append(f"{q['id']}. [{q['type']}] {q['question']} {status_icon} {q.get('why_crucial', '')}")
+        questions_text = "\n".join(lines)
+    else:
+        questions_text = "（未生成关键问题清单，请自行判断分析重点）"
+
     # 素材质量检查：如果缺乏硬数据，先补搜
     has_numbers = bool(re.findall(r'\$[\d.]+[BMT]|\d+%|\d+亿|\d+万亿|revenue|营收|利润|市值', research_materials))
     if not has_numbers:
@@ -491,6 +531,7 @@ def write_report(client, topic_info, brain_dump_text, research_materials):
         brain_dump=brain_dump_text,
         research_materials=research_materials[:25000],
         current_time=format_date_cst(now_cst()),
+        key_questions=questions_text,
     )
 
     try:
@@ -562,8 +603,16 @@ FACT_CHECK_SYSTEM = """你是一位严格的事实核查编辑。你的工作是
   - 用了"短期/中期/长期"这种无交易价值的时间颗粒度 → logic_gap
   - 只说"需要关注"但没说关注什么具体信号 → logic_gap
   - 只说"利好/利空某行业"但没列出具体标的或交易结构 → logic_gap
+- **假设未验证却当事实用**（新增）：报告中是否有"因为 A 所以 B"，但 A 是未验证的假设？
+  - 例如：报告说"Graviton 性能优于 H200，所以 NVDA 市场份额将下降"，但素材里没有 Graviton vs H200 的 benchmark 数据
+  - 这种"逻辑跳跃"比事实错误更危险，必须标记为 assumption_not_backed
 
-第四步：输出核查结果
+第四步：检查报告内部一致性（新增）
+- 报告前面说"做多 X"，后面说"做空 X" → self_contradiction
+- 报告标注某假设"未验证"，但结论却基于该假设给出确定性判断 → consistency_gap
+- 多方和空方论据强度明显不对称，但报告没有指出 → bias_unchecked
+
+第五步：输出核查结果
 完成搜索验证后，输出 JSON：
 {{
   "total_claims": 核查的事实条数,
@@ -571,11 +620,13 @@ FACT_CHECK_SYSTEM = """你是一位严格的事实核查编辑。你的工作是
   "unverifiable": 搜索找不到佐证但也没有反证的条数,
   "false_or_fabricated": 搜索结果与声明矛盾、或完全找不到任何相关信息的条数,
   "logic_issues": 逻辑问题的条数,
+  "assumption_issues": 假设未验证却当事实用的条数,
+  "consistency_issues": 报告内部自相矛盾的条数,
   "issues": [
     {{
       "claim": "有问题的声明原文",
       "search_result": "你搜到的实际信息是什么",
-      "verdict": "false / fabricated / unverifiable / bad_analogy / missing_player / logic_gap",
+      "verdict": "false / fabricated / unverifiable / bad_analogy / missing_player / logic_gap / assumption_not_backed / self_contradiction / consistency_gap",
       "fix": "建议的修正文本（如果应该删除就写'删除此句'）"
     }}
   ]
@@ -588,6 +639,9 @@ verdict 含义：
 - bad_analogy: 历史类比不准确或有重大遗漏
 - missing_player: 分析遗漏了关键参与者
 - logic_gap: 财务/商业逻辑有漏洞
+- assumption_not_backed: 假设未验证却当事实用（如"因为 A 所以 B"，但 A 未验证）
+- self_contradiction: 报告内部自相矛盾（前面说 X，后面说非 X）
+- consistency_gap: 标注"未验证"但结论却很确定
 
 重要：只输出最终 JSON。每个 issue 都必须有 search_result 说明你搜到了什么。
 """
@@ -697,7 +751,7 @@ def fact_check(client, report_text):
             print(f"       修正: {issue.get('fix', '')[:80]}")
 
     # Apply corrections for both factual errors AND logic issues
-    fixable_issues = [i for i in issues if i.get("verdict") in ("false", "fabricated", "bad_analogy", "missing_player", "logic_gap")]
+    fixable_issues = [i for i in issues if i.get("verdict") in ("false", "fabricated", "bad_analogy", "missing_player", "logic_gap", "assumption_not_backed", "self_contradiction", "consistency_gap")]
 
     if fixable_issues:
         print(f"\n  Applying corrections for {len(fixable_issues)} false/fabricated claims...")
@@ -1186,12 +1240,15 @@ def main():
     # ====== Stage 3a: Research Collection (chat model + tools) ======
     research_materials, sources = research_collect(client, topic_info, enriched_context)
 
+    # ====== Stage 3.25: Generate Key Questions ======
+    key_questions = generate_key_questions(client, research_materials)
+
     # ====== Stage 3b: Report Writing (reasoning model) ======
     # Combine research materials with pre-fetched articles for maximum context
     full_materials = research_materials
     if prefetch_text:
         full_materials += "\n\n=== 预抓取的新闻全文（高质量来源）===\n" + prefetch_text
-    report_text = write_report(client, topic_info, brain_dump_text, full_materials)
+    report_text = write_report(client, topic_info, brain_dump_text, full_materials, key_questions)
 
     # ====== Stage 3.5: Fact Check ======
     report_text, fact_check_result = fact_check(client, report_text)
