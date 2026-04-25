@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月25日 17:06 CST"
+  date: "2026年4月25日 18:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:03", tag: "geo", tagText: "地缘", text: "美国国务院向全球发布警告，指控DeepSeek等中国公司涉嫌窃取美国AI实验室的知识产权。此举标志着中美科技竞争进一步升级，可能引发新一轮技术出口管制和贸易摩擦。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/us-global-warning-alleged-china-ai-theft.html" },
+  { time: "17:15", tag: "crypto", tagText: "加密", text: "比特币跌破7.8万美元，MemeCore（M）暴跌15%。加密市场周末遭遇抛售压力，投资者情绪转向谨慎。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxNWmY3cU05NjJkeXNuel9kYW9UdEtuYzFNZVAyNy1FdWZpbllUZVdEek82eHFTakNOYzM5T3lQM21XNy1LbThKeUpLTVZlY0lIMmhXOXM0V19hazg0ZjZodDdoTTJCWTkzMjFMc012NHhGUEN0YWdVcU9EeWJiNFB4dzN6N2FoVGVaX3d1ZFJnX1NUN2pEclpj?oc=5" },
+  { time: "16:44", tag: "geo", tagText: "地缘", text: "伊朗否认计划在巴基斯坦与美国谈判代表会面，而美国特使维特科夫和库什纳预计将于周六抵达伊斯兰堡。美伊双方在间接接触中仍存在重大分歧，中东局势不确定性持续。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/iran-says-no-meeting-with-us-negotiators-planned-in-pakistan.html" },
   { time: "15:07", tag: "tech", tagText: "科技", text: "小鹏汽车宣布近10万名消费者体验其驾驶AI系统，98%表示满意。这一数据表明中国智能驾驶技术正加速获得市场认可。", source: "Stock Titan", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPNF96WkxPZGhsT2k5UGF6TFFJN1ZvT3E4MHdoU2pTVjBXT0xVLTZqOGNTanRtVHcwVXB2c3U5VmJZTlUwVlNOMzMxMW9VN0UtRjVMaGdvUkxkSlpQbDVHQmFVMk1VaG0zbHZjM2NISHBiNUpBVE5zZUdFSEprMnl5ZFZheEg0VjhudHlTQkxjaUMzakVreWtYTm0wUFhCZFFueVk1UzJrenNPcll2WGNzRlQ4d25pdFdxRnFnN253?oc=5" },
   { time: "13:20", tag: "crypto", tagText: "加密", text: "比特币ETF自2025年10月以来迎来最佳资金流入周期，净流入达24亿美元，显示机构投资者对比特币的强劲需求。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSDRPRzBmQnlBT29Icl9CZHBkMGd5dkFSV1VZMHI1RFJlb0JUSU9ER05iRjBHSkIwVnp3VmR1RDJsU1k4bkJKUGVOb1owLS1GMUtWMWVyU1Q1b29SeXR6d2tEYUt6YUc0OXFPNzJ1c18wZnF3ZmIxa2FjV0lBR2pURjFLXy13aGVoWGE4?oc=5" },
   { time: "12:18", tag: "crypto", tagText: "加密", text: "比特币和以太坊ETF在美伊紧张局势下录得3780万美元资金流入，显示投资者在地缘风险中转向加密资产作为对冲工具。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxPX3k5emhJQ2prLTRYa2xmUHBGbFlkN3AxZ3pjOF9TNTREM0JDTE1wRjZJZUY0VmdzZlZfUmRKMWRhbjQ3ZmlEWVB3ME85UWhPWE1IZExKVjlBZFlORGlUS21mTHhlZXh5dWJJWWdoWVpXaGVaN292MWp4WnkyVDExSHNCaWdWU0EyenVkcUcwdTc0Zw?oc=5" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "01:32", tag: "geo", tagText: "地缘", text: "法国气象预报办公室就Polymarket上出现的可疑投注向警方报案。巴黎戴高乐国际机场的温度读数在几分钟内异常上升了几度，疑似有人试图操纵天气数据以影响预测市场结果。", source: "MarketWatch", url: "https://www.marketwatch.com/story/french-weather-forecasting-office-files-police-complaint-following-suspicious-surge-in-polymarket-bets-fb72729d?mod=mw_rss_topstories" },
   { time: "01:01", tag: "tech", tagText: "科技", text: "Meta宣布裁员10%，微软首次在51年历史中提供员工买断计划，两家公司合计裁员约2万人。此举引发市场对AI驱动的劳动力危机的担忧，显示科技巨头正加速用AI替代人工岗位。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html" },
   { time: "00:54", tag: "macro", tagText: "宏观", text: "美国财政部长贝森特为美元互换额度辩护，称其在伊朗战争冲击全球金融时至关重要。特朗普本周在CNBC上表示支持与阿联酋建立互换额度，以缓解中东紧张局势对美元流动性的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/bessent-iran-war-uae-swap-lines-gulf-asia.html" },
-  { time: "00:51", tag: "tech", tagText: "科技", text: "美国卫生部长小罗伯特·F·肯尼迪的儿子推出了一只与健康运动相关的基金，寻求筹集1亿美元。该基金宣称与政府“政策倡议”有关联，引发外界对利益冲突的质疑。", source: "Financial Times", url: "https://www.ft.com/content/2cf36d19-ebd8-4c99-bb6f-d32abb7e0aba" },
-  { time: "00:32", tag: "ai", tagText: "AI", text: "谷歌宣布向AI初创公司Anthropic投资高达400亿美元，以帮助其增加计算能力运行AI模型。这是谷歌对Anthropic的最大单笔投资，显示科技巨头在AI军备竞赛中不惜重金。", source: "Financial Times", url: "https://www.ft.com/content/366c73dd-4006-4ce6-9816-5004447d30b8" },
-  { time: "23:18", tag: "macro", tagText: "宏观", text: "美国司法部放弃对美联储主席鲍威尔的刑事调查，扫清了特朗普提名凯文·沃什接替鲍威尔的关键障碍。此举被视为白宫与美联储对峙的缓和信号，市场预期沃什的确认程序将加速推进。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/fed-powell-doj-warsh-trump.html" },
 ];
-const breakingDate = "2026年4月25日 17:06 CST";
+const breakingDate = "2026年4月25日 18:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
   { time: "20:55", tag: "geo", tagText: "地缘", text: "乌克兰国防部情报总局局长布达诺夫表示，乌克兰在AI无人机技术方面接近取得突破，该进展可能“让俄罗斯人感到意外”，暗示其将在战场上获得新的不对称优势。", source: "UNITED24 Media", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeWhMXzFkR2dJOVFDbGtPNWVYenF2TVJudnpxU3NiS2hJRHBoVVp3YTRfd0pIUGMzTnVDNEtvQjZTbXMtdTNWOU9VOEFiZlFlelMzRS1RSXQwY3dyb3Q2UkVUV1Q5RnlzWXJMNFpRaHlxVjFLTFI2MHg5SUhhM0FJazFXMWQxd2xHMGdOU29ocDBXaHJmY2lHVjVsRjlRMzU1Q2g1QzJkVHlYRG5hZkRFTUhldG5WZnhKZTYwUGxB?oc=5" },
 ];
-const aiBreakingDate = "2026年4月25日 17:06 CST";
+const aiBreakingDate = "2026年4月25日 18:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
