@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月26日 00:57 CST"
+  date: "2026年4月26日 01:51 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:51", tag: "macro", tagText: "宏观", text: "特朗普3月债券购买披露显示其购入至少5100万美元债券，引发市场对其个人投资与政策关联性的关注。", source: "Reuters", url: "https://finance.yahoo.com/news/trump-bought-least-51-million-173547214.html" },
+  { time: "01:51", tag: "macro", tagText: "宏观", text: "市场波动加剧，主动型基金经理迎来跑赢指数基金的机会。分析指出，在动荡市场中，精明经理可避开指数基金被迫持有的板块，实现超额收益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/market-chaos-gives-skilled-managers-a-chance-to-beat-index-funds-just-like-theyre-supposed-to-do-b85cfd52?mod=mw_rss_topstories" },
   { time: "00:33", tag: "macro", tagText: "宏观", text: "12家卡车运输公司申请第11章或第7章破产保护，显示美国货运行业面临严峻压力。该行业受燃料成本高企、需求波动及供应链挑战影响，破产潮可能进一步冲击物流和整体经济。", source: "TheStreet", url: "https://finance.yahoo.com/economy/articles/12-trucking-firms-file-chapter-163300325.html" },
   { time: "00:18", tag: "macro", tagText: "宏观", text: "道琼斯指数期货下跌，因美伊谈判取消及苹果、亚马逊、谷歌等科技巨头即将发布财报。市场关注AI相关收益及地缘政治风险，投资者情绪谨慎。", source: "Investor's Business Daily", url: "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-apple-amazon-google-earnings-ai-iran-talks/?src=A00220&yptr=yahoo" },
   { time: "00:13", tag: "tech", tagText: "科技", text: "廉价股票期权暗示下周科技巨头财报后可能出现大幅波动，Meta等公司被低估。华尔街低估了潜在的价格爆发，市场预期波动性将显著上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/cheap-options-suggest-a-big-post-earnings-swing-next-week-for-these-tech-titans-d9b56126?mod=mw_rss_topstories" },
@@ -1647,13 +1649,12 @@ const breakingNews = [
   { time: "19:00", tag: "geo", tagText: "地缘", text: "国防股回吐此前涨幅，市场呈现“买传闻、卖事实”格局。生产瓶颈和美国弹药资金的不确定性对武器制造商股价构成压力。", source: "Financial Times", url: "https://www.ft.com/content/1c9c4694-2ed3-4aac-8f64-2cbc5fb0e7cc" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "拥有Mythos网络工具访问权限的公司敦促联合防御基础设施。网络安全负责人警告，该工具的推广需要政府与企业之间密切协调，以应对日益严峻的网络威胁。", source: "Financial Times", url: "https://www.ft.com/content/e96bc361-d222-4190-80fe-e357fa86ef4d" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "海南作为中国免税零售天堂和热带绿洲的地位面临新挑战。北京要求该岛省承担新的经济使命，不再满足于单纯的购物天堂角色，政策方向正在调整。", source: "MarketWatch", url: "https://www.marketwatch.com/story/hainan-was-chinas-shopping-paradise-for-beijing-thats-no-longer-enough-c2535a40?mod=mw_rss_topstories" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "苹果即将向投资者返还数十亿美元现金，其回购效率在大型科技公司中领先。与Alphabet并列，苹果在利用回购提升每股收益方面最为有效。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apple-will-soon-deliver-billions-more-in-cash-to-investors-heres-how-it-stacks-up-to-the-rest-of-big-tech-37adae6c?mod=mw_rss_topstories" },
-  { time: "18:03", tag: "geo", tagText: "地缘", text: "美国国务院向全球发布警告，指控DeepSeek等中国公司涉嫌窃取美国AI实验室的知识产权。此举标志着中美科技竞争进一步升级，可能引发新一轮技术出口管制和贸易摩擦。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/us-global-warning-alleged-china-ai-theft.html" },
 ];
-const breakingDate = "2026年4月26日 00:57 CST";
+const breakingDate = "2026年4月26日 01:51 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:17", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman就未能及时向执法部门预警大规模枪击案嫌疑人，向加拿大Tumbler Ridge社区致信道歉，称其“深感抱歉”。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/" },
   { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
   { time: "23:03", tag: "tech", tagText: "科技", text: "TechCrunch分析指出，东京凭借SusHi Tech 2026大会成为2026年最重要的科技目的地。该大会聚焦四个明确定义的技术领域，并配有现场演示、专属展区及由实际建设者和投资者主导的会议，凸显东京在全球科技版图中的崛起。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "苹果即将上任的CEO约翰·特努斯（John Ternus）出身硬件背景，这标志着苹果可能将硬件设备重新置于战略核心。外界关注其硬件策略将如何演变，尤其是在AI时代如何平衡设备创新与服务生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/apple-under-ternus-what-comes-next-for-the-tech-giants-hardware-strategy/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "02:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Perplexity在新一轮融资中估值飙升至140亿美元。该公司凭借其AI驱动的搜索引擎迅速崛起，成为生成式AI领域备受关注的明星企业之一。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi_AJBVV95cUxQa1ZkamlBR3U0eVJCbUttY0tkVEhNZDBQb2Z1MU4xYmdoRVBQcnBaOWJUX0F4ZUtEMkR1YkE4WWFZQmlhdHgtVS02VmY3SHRaQmZRSWpqRGlYZlRTZHExMllsMHZESmFLNi1XdnFjeVo0Z1lLNjVBdVBuSmpJVnJFdXY0eUdWTnBET21YVmZqSGpOai0yeUZsakluM29TOUZOeGpGaGkxZ0dWamRoc0lzcjNydXNReFdhR0MzbFN5b3RYR3doNkswT3RtYXQyaUJnQVJTU0RaQzNwRG9UZkVHQk5Ibzg5dHJuRFRRRFBTREFUb2pYd2tSdWVpNW05RUM4d3FQX193VFVDSmNvX3pNLVdwMHpJaDBYQVEzXzl0eXJKZThkRDZYb19RQkR3Zk9sTXpUX282UlRDWVdfUDhoRzFrUmMyOXRFNGdYdGNmemdJbzRGcGNXMjdIclczc0lSRDlFdTJLTW9Ya3MtWW9nR1owTUZCdll2N1pqZQ?oc=5" },
   { time: "02:27", tag: "ai", tagText: "AI", text: "AI编程初创公司Cognition AI在收购Windsurf后，正寻求以250亿美元估值进行新一轮融资。此交易凸显AI编程工具领域的持续火热及资本对该赛道的高度关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWtCbDFzOG9mZDV2dmpINHZNSmRGdmRfcGxycnQ4UG8xSEZzcmhuQzM1Mmo1SG44OC01VHVSWkZzaEtYRzI0OFM5LU5lR2N6Z0RZdW9vWklVa0p2TkxkT01leEk5NDJjU2xQNjJmYlhmRUJtWWNaY0dVWUR3dG5zTzZaRjcxdnVKQWc2Yy1NLVBGX3JUMFk1TQ?oc=5" },
   { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
-  { time: "02:00", tag: "ai", tagText: "AI", text: "谷歌计划向AI初创公司Anthropic投资高达400亿美元，包括现金和算力资源。此举正值AI竞争对手争相获取大规模计算能力之际，此前Anthropic已发布专注于网络安全的强大模型Mythos。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" },
 ];
-const aiBreakingDate = "2026年4月26日 00:57 CST";
+const aiBreakingDate = "2026年4月26日 01:51 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
