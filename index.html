@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月25日 11:27 CST"
+  date: "2026年4月25日 13:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:18", tag: "crypto", tagText: "加密", text: "比特币和以太坊ETF在美伊紧张局势下录得3780万美元资金流入，显示投资者在地缘风险中转向加密资产作为对冲工具。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxPX3k5emhJQ2prLTRYa2xmUHBGbFlkN3AxZ3pjOF9TNTREM0JDTE1wRjZJZUY0VmdzZlZfUmRKMWRhbjQ3ZmlEWVB3ME85UWhPWE1IZExKVjlBZFlORGlUS21mTHhlZXh5dWJJWWdoWVpXaGVaN292MWp4WnkyVDExSHNCaWdWU0EyenVkcUcwdTc0Zw?oc=5" },
+  { time: "08:04", tag: "macro", tagText: "宏观", text: "美股周四收盘再创新高：纳斯达克和标普500指数均刷新历史纪录，受英特尔强劲财报引发的科技股全面上涨推动。芯片板块集体走高，市场情绪乐观。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd0pOQ0pEQTRYQmdGdVR6QW1FcnNhQkJxc1JoVFYxMVhxVjhHR3R2Y2RDNGxmSGNEQmJLUDBMd3NNNEp3WmNfaU8xa1V4WmE0TWpGcks0QlJnY1N6QUNrM3RHb3ZMYk85UWNvVTVSSTYxRmdjemJBbUdPYThXWXZadGNSLUEweWs?oc=5" },
   { time: "06:00", tag: "crypto", tagText: "加密", text: "比特币有望创下一年来最佳月度表现，5亿美元USDT增发推动反弹。分析师预测比特币目标价12万美元。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQQlFoUmo3bUwxZllGZkhCWGlwblhqdnc1WGw0Ni0xbUVjVHZ2SFVBV3pQeHZZa0cxVEVHNDFqTjFfbEpjS0MwOG9qY2NFaFlfLWtjamtrb1NiUUdXeDZ0ME4xY2VPLURvSkpVdUZVSWRGOEoyVkV6LWdaMjN5TDk1UDhqZE1pd2RCeFliaFkyUzQ0V3JOYUR0UGtpVlZCZmVXdTlIMV9KSkNqSk5TUmdLSFQxdTJUZ2tPSGpva3p6bzJlT05USklyLXI1a2FEbkwt?oc=5" },
   { time: "06:00", tag: "geo", tagText: "地缘", text: "油价因天然气供应紧张及地缘冲突风险而大幅上涨。市场担忧中东局势持续升级对能源供应的影响。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbGVxZlZOdVFkR0R0ajVCMGxkcHN2WVlnR01uTnJaU29sT1QwdWpmenIwaXRZNS1rN3RaMlhlcnlsUVRFT08ycEphQk54MktoUUxIWmVFMHpMYmVBTk8tdWtnRTZGTlpLMXUwcXg1UnhQdHZYVzR2YnBFSFFrcFhCQzQwVXVUVjNsYzY5M0ZEaFVTcDZlTTBnaTI2RXBNNmNrU1ZIMlVTRmxBdw?oc=5" },
   { time: "06:00", tag: "ai", tagText: "AI", text: "四大会计师事务所之一选择用AI替代人类，削减福利并暂停招聘。此举标志着AI在专业服务领域的应用加速，引发对白领岗位被替代的担忧。", source: "TheStreet", url: "https://finance.yahoo.com/sectors/technology/articles/big-four-accounting-chooses-ai-223954685.html" },
@@ -1647,13 +1649,12 @@ const breakingNews = [
   { time: "22:24", tag: "tech", tagText: "科技", text: "马斯克与奥特曼的法律对决将于下周一开庭，陪审团遴选启动。该案涉及OpenAI的治理结构和利益冲突问题，结果可能对AI行业格局产生深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/musk-v-altman-trial-openai-lawsuit-xai.html" },
   { time: "22:04", tag: "macro", tagText: "宏观", text: "特朗普代理劳工部长推动将高收费私募基金纳入401(k)退休计划，引发争议。批评者认为此举可能增加普通投资者的风险敞口，而支持者称可提高退休储蓄的回报潜力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/private-funds-with-high-fees-are-coming-for-your-401-k-and-trumps-acting-labor-secretary-is-cheering-them-on-be2855ae?mod=mw_rss_topstories" },
   { time: "21:36", tag: "tech", tagText: "科技", text: "英特尔股价因AI热潮飙升，突破互联网泡沫时期高点，有望创下近四十年来最大单日涨幅。CEO表示公司经过一年转型已实现“根本性”改变。华尔街对其财务前景是否实质性改善仍存争议。", source: "Financial Times", url: "https://www.ft.com/content/37261470-d1aa-4a3b-8a13-abec38f34523" },
-  { time: "21:30", tag: "macro", tagText: "宏观", text: "华尔街“恐惧指数”VIX出现异常走势：标普500指数周四盘中创历史新高，但VIX仍徘徊在20附近，且较五日前有所上升。分析师认为这反映市场对地缘政治风险和科技股高估值的潜在担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/wall-streets-fear-gauge-is-doing-something-unusual-what-it-means.html" },
-  { time: "21:01", tag: "ai", tagText: "AI", text: "Meta将采用数十万颗亚马逊AWS Graviton芯片用于AI基础设施，这是其最新的大规模算力采购。此前数周，Meta已向CoreWeave和Nebius承诺了480亿美元的AI投资。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/meta-will-use-hundreds-of-thousands-of-aws-graviton-chips.html" },
 ];
-const breakingDate = "2026年4月25日 11:27 CST";
+const breakingDate = "2026年4月25日 13:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:48", tag: "ai", tagText: "AI", text: "与斯坦福有关联的AI初创公司Human Intelligence正寻求以10亿美元估值融资1亿美元。该公司专注于通用人工智能（AGI）研发，此轮融资显示资本对前沿AI研究的高热度。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNemtJd0hnNnVGajhCbTRMX3o2WHRtc1IzTzlJZEJNODJzbVY5XzRsTXJFaUdoREpQTjRuWkRyQ2J2SktmZUxBRWg4T01xM0pmTlU0QktXS2JkTFQxTFowWFd0ZkowWUt3S2h3MTBhbXd4TlA4czRLZjJXUWRXdzZSNmpuRTNPcndYS2RuTTQtc3R0N3dMeTZQTElqNFhabC14RVZLRGJZd3dXWjdmRU9aRFdSWG5ZSDNsREJBa2pCZVA3TjFQN1E?oc=5" },
   { time: "09:57", tag: "ai", tagText: "AI", text: "中国地平线机器人发布全新自动驾驶平台，目标直指特斯拉。该平台旨在提升自动驾驶性能，标志着中国企业在智能驾驶领域与全球领导者展开直接竞争。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNEtVZjlmRTQ2N1lkdUJpdmtVTldBczZ0ZjREUDl6UU5oTVlEUzQ3TEtHZ1ZHNHNxT1htZnZadWlIOEdhbzZDc2JCclV3WGkxM2ppdFVNemVlX0hETWhGcDVmNmZ3c0pUS2hwU3ktdWxGSndOeWZWUUFuUk9CLTBhUVpRcmJReWpWRkliSlRNUmcyNmNKSGRWUzdLOGdKazdGU2hvRzgxMF9XbzVzX0ZF?oc=5" },
   { time: "08:56", tag: "ai", tagText: "AI", text: "AI初创公司Cohere与Aleph Alpha宣布合并，并同时获得6亿美元新融资。此次合并旨在整合资源，以应对日益激烈的AI大模型市场竞争。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcUlWclNsQXBSSnl0cDhrakxlWkNhUzh1d1hhQUpTZ2hsRm9DNXl5SHU5RkhxalZscGx6ZEVPZDZQbjZSUWkyUlpqRnVTdm1FLTVlTVFJdGNNT3FEV3RBX2lWdW0wSFVQSG9SaFZuR1Vid0JzdEFVd0J2SVdGTmwyNUl0dzUzVl9fa2t5VWtzRklRM3RR?oc=5" },
   { time: "05:07", tag: "ai", tagText: "AI", text: "英伟达股价因AI芯片需求飙升而大涨。市场对AI训练和推理芯片的强劲需求持续推动英伟达业绩预期，凸显其在AI硬件领域的主导地位。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxNTzR1OGhFUGJwSXhrS2M0UG5raUtRQ24ta0xjMVV4bkVZTGJ2LXNtMWlDNzZmZFFUSUdfZGtJMk4yS3Y3bFllamxDU3M5VDIzQmhIT3Y2cFNMSExLeEY1X3NnTEdXTTVYMG9OaWx6MFp4WUtIYWpucU9NQl9pLUIxYjRtLWwzTWJFc0ZKQnhhWVNyZk1nbDZTTDAyb1gzNVBBRExnd3FWS1pqb1VCSkQwazVBREFLXzNXclpxWm51TTdnWE5qbG1n?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
   { time: "20:55", tag: "geo", tagText: "地缘", text: "乌克兰国防部情报总局局长布达诺夫表示，乌克兰在AI无人机技术方面接近取得突破，该进展可能“让俄罗斯人感到意外”，暗示其将在战场上获得新的不对称优势。", source: "UNITED24 Media", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeWhMXzFkR2dJOVFDbGtPNWVYenF2TVJudnpxU3NiS2hJRHBoVVp3YTRfd0pIUGMzTnVDNEtvQjZTbXMtdTNWOU9VOEFiZlFlelMzRS1RSXQwY3dyb3Q2UkVUV1Q5RnlzWXJMNFpRaHlxVjFLTFI2MHg5SUhhM0FJazFXMWQxd2xHMGdOU29ocDBXaHJmY2lHVjVsRjlRMzU1Q2g1QzJkVHlYRG5hZkRFTUhldG5WZnhKZTYwUGxB?oc=5" },
   { time: "20:43", tag: "tech", tagText: "科技", text: "苹果CEO蒂姆·库克即将卸任，继任者约翰·特努斯（John Ternus）已基本确定。文章回顾了库克任内AirPods、Touch Bar等标志性产品的遗产，标志苹果进入新时代。", source: "The Verge", url: "https://www.theverge.com/podcast/917965/apple-ceo-cook-ternus-transition" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "美国军方在入侵伊朗的头24小时内打击了超过1000个目标，规模是20年前“震慑与畏惧”行动对伊拉克攻击的近两倍。Project Maven项目将AI深度融入目标识别与打击流程，极大加速了作战节奏，标志着AI在军事领域的应用进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917996/project-maven-military-ai-katrina-manson" },
 ];
-const aiBreakingDate = "2026年4月25日 11:27 CST";
+const aiBreakingDate = "2026年4月25日 13:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
