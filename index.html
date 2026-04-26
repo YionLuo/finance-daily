@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月27日 00:57 CST"
+  date: "2026年4月27日 01:52 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1631,6 +1631,8 @@ const fearGreedData = {
 const breakingNews = [
   { time: "23:00", tag: "crypto", tagText: "加密", text: "分析师指出，本周五大科技巨头（苹果、亚马逊、Meta等）的财报可能决定比特币的下一步走势。市场关注科技股表现对加密市场情绪的传导效应，以及宏观不确定性下的避险需求。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE5XN0NISjFuSXZPRG9JMXdLOUVEaXdhSGFBeWI3NHA4M0JWRjRxRF9HOGFwNU50MkE3ZTg0UHU5OFh5Zkswb1Q5TG1GNG5SU2o4OHZ1QmR5VHNIbDB3NGUwRVZsVEVmcDZNV1NSbkc0Yw?oc=5" },
   { time: "22:51", tag: "macro", tagText: "宏观", text: "参议员Tillis解除对美联储主席提名人Warsh的阻挠，为特朗普提名扫清障碍。此举可能加速美联储领导层更迭，影响未来货币政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/thom-tillis-kevin-warsh-federal-reserve.html" },
+  { time: "22:30", tag: "tech", tagText: "科技", text: "Credo Technology宣布以7.5亿美元收购DustPhotonics，以增强硅光子学能力。该交易反映数据中心和AI基础设施对高速光互连技术的需求激增。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/credo-technology-crdo-acquire-dustphotonics-171515412.html" },
+  { time: "22:30", tag: "ai", tagText: "AI", text: "华尔街策略师普遍看好AI交易，称市场正回归乐观情绪。AI芯片需求持续支撑科技板块，投资者聚焦本周科技巨头财报以验证AI投资回报。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/article/a-return-to-optimism-wall-street-strategists-are-bullish-on-the-ai-trade-143000172.html" },
   { time: "22:06", tag: "geo", tagText: "地缘", text: "以色列政坛变天：前总理纳夫塔利·贝内特和亚伊尔·拉皮德宣布合并政党，联手备战今年大选。这是内塔尼亚胡面临的最强挑战，可能重塑以色列政治格局。", source: "Financial Times", url: "https://www.ft.com/content/3bdeac99-19b2-45df-b0bb-a79e187f1c16" },
   { time: "18:00", tag: "macro", tagText: "宏观", text: "伊朗战争导致美国汽油价格持续高企，驾车者减少燃油消费。油价飙升对特朗普政府构成政治压力，尤其是在11月中期选举前夕，选民对高油价的不满情绪上升。", source: "Financial Times", url: "https://www.ft.com/content/97261fc6-47cc-4d0b-929c-cd8d700a0512" },
   { time: "14:35", tag: "crypto", tagText: "加密", text: "知名投资人Kevin O'Leary清仓26种山寨币，仅保留比特币和以太坊，称其余币种“没有未来”。此举引发市场对山寨币前景的广泛讨论，加密市场分化加剧。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMlExRW5WY3hJX1M0NWNyRUxPTEZQV0NFN1o3Y0E2eGVfckhKSmpQM0tFakFjYzV1MXN6bHZrbHBocW5PM0VjREhoZDNhbzRNRkJxR3hTLWlGUWJYWnItTndPMk5hX3ZRYk1PX3A3RE93V1R1SjloWXJZNXVRRTFoUE01VUwwTHlBNUg1Qjg0OFNPQ09wSXI0?oc=5" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "03:20", tag: "tech", tagText: "科技", text: "英特尔领涨科技股，推动纳斯达克走高，但道琼斯指数因油价下跌而承压。市场在科技巨头财报前夕分化明显，AI相关芯片需求持续支撑科技板块。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNcnBZckdtYlNhM282cnpYTXg3a2hQdE1vdmVXeHgzU19hTm8wcGNGNE1Jb3pOd2p4dE1VbWF5ZDFGZXM3YTUzdWdRajNuQ3B1Y3J2X0RYa2dlQjg5U0ZQYVlaa1BLNjY2QkRVdDFiYkxGREdfWXl5RVRiQkwxRnZ1SG11T1VtWDBhRkVtaTFVV19IeXdNbkpUVVZn?oc=5" },
   { time: "03:10", tag: "geo", tagText: "地缘", text: "特朗普取消美国特使赴巴基斯坦的伊朗和平谈判行程，称“如果他们想谈，打个电话就行”。此前特使Steve Witkoff和Jared Kushner原定周六抵达伊斯兰堡，但伊朗方面表示未计划会面。此举加剧美伊紧张局势，市场对中东冲突风险担忧上升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/iran-says-no-meeting-with-us-negotiators-planned-in-pakistan.html" },
   { time: "03:03", tag: "crypto", tagText: "加密", text: "比特币、Solana和XRP的ETF录得资金流入，而以太坊ETF则遭遇7590万美元流出。加密市场分化明显，投资者在宏观不确定性中重新评估各资产配置。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVGdnT1ZMMmJFUjBTMlhJa1RfNWl2U29YM3ZoRERRY2pVTkdudmV6MzJqcmdVNUNyYk56SjNNcDlfZ2NqeTJCWmJvT1Z6TC1peXd5VmNodkFYcFJyNkFsOUE4WVdnVjBRWHp1YTkxd0dJYzJvXzdCSFZQX2JzbzJzRzZoWEhWUnJIbEpTZXdqX25GcGlQaEE?oc=5" },
-  { time: "02:49", tag: "geo", tagText: "地缘", text: "美国对一家中国‘茶壶’炼油厂实施制裁，因其购买伊朗石油。同时，OFAC对约40家参与伊朗影子船队的航运公司和船只实施制裁，加剧美中地缘紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/us-china-sanctions-iran-oil.html" },
-  { time: "02:28", tag: "macro", tagText: "宏观", text: "债券基金创纪录的资金流入被视为反向信号，预示2026年剩余时间债券表现可能落后于股票。投资者需警惕收益率下行风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bonds-could-lag-stocks-for-the-rest-of-2026-according-to-this-contrarian-signal-6b6c55de?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月27日 00:57 CST";
+const breakingDate = "2026年4月27日 01:52 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "03:34", tag: "geo", tagText: "地缘", text: "以色列国防军公布AI驱动的机器人作战系统，称其为对抗真主党的突破性火炮技术。该系统将人工智能深度融入军事行动，标志着AI在战场应用中的新进展。", source: "Algemeiner.com", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUzZKYUhXWE02MThiQmdYTkNlYXpSUzBiMGNtUXZTN2NwZW0tblU0Ny1LdXhJaHpFaUY2RHB1U1h6WHh1dDItU0RpV0ZLYk85YkVDbmJhMnZGaDc1Y01hY1o0TTNjSVR0Q0x6djRjWUFTbWNOZHNmc0RkZTRUcmdrS3VoT1h1TXVHQnJyVG14dkQwd3pGMFZ1NGlQSUxpNDZxM1pOdmVWR2oxaXRYenJyTDFYUkNpVmg5WUNyaDdBOVhQVlE?oc=5" },
   { time: "02:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Perplexity在新一轮融资中估值飙升至140亿美元。该公司凭借其AI驱动的搜索引擎迅速崛起，成为生成式AI领域备受关注的明星企业之一。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi_AJBVV95cUxQa1ZkamlBR3U0eVJCbUttY0tkVEhNZDBQb2Z1MU4xYmdoRVBQcnBaOWJUX0F4ZUtEMkR1YkE4WWFZQmlhdHgtVS02VmY3SHRaQmZRSWpqRGlYZlRTZHExMllsMHZESmFLNi1XdnFjeVo0Z1lLNjVBdVBuSmpJVnJFdXY0eUdWTnBET21YVmZqSGpOai0yeUZsakluM29TOUZOeGpGaGkxZ0dWamRoc0lzcjNydXNReFdhR0MzbFN5b3RYR3doNkswT3RtYXQyaUJnQVJTU0RaQzNwRG9UZkVHQk5Ibzg5dHJuRFRRRFBTREFUb2pYd2tSdWVpNW05RUM4d3FQX193VFVDSmNvX3pNLVdwMHpJaDBYQVEzXzl0eXJKZThkRDZYb19RQkR3Zk9sTXpUX282UlRDWVdfUDhoRzFrUmMyOXRFNGdYdGNmemdJbzRGcGNXMjdIclczc0lSRDlFdTJLTW9Ya3MtWW9nR1owTUZCdll2N1pqZQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月27日 00:57 CST";
+const aiBreakingDate = "2026年4月27日 01:52 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
