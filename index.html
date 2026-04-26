@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月27日 01:52 CST"
+  date: "2026年4月27日 03:09 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:03", tag: "crypto", tagText: "加密", text: "比特币、Solana和XRP的ETF录得资金流入，而以太坊ETF则遭遇7590万美元流出。加密市场分化明显，投资者在宏观不确定性中重新评估各资产配置。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVGdnT1ZMMmJFUjBTMlhJa1RfNWl2U29YM3ZoRERRY2pVTkdudmV6MzJqcmdVNUNyYk56SjNNcDlfZ2NqeTJCWmJvT1Z6TC1peXd5VmNodkFYcFJyNkFsOUE4WVdnVjBRWHp1YTkxd0dJYzJvXzdCSFZQX2JzbzJzRzZoWEhWUnJIbEpTZXdqX25GcGlQaEE?oc=5" },
+  { time: "23:00", tag: "crypto", tagText: "加密", text: "摩根士丹利推出的比特币ETF（MSBT）有望凭借三大优势超越贝莱德的IBIT：更低的费用、更灵活的赎回机制以及机构级托管服务。比特币ETF市场竞争日趋激烈。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQYWdMSnJFLWRSUzZXWlNoZmVUOEtlYmZyaTBKeXBPOUE2OFFqdl9WVDJiMzhwSHhtWDllV21PeHl3MkNkSXJ5Y1dLMGlQU1Q1NzB6b1RHOVR6SVBnbXc4NFNZNzV6ZElzU29iaEJZSF9RVXhaX05VX2NRanBrWEdqMmFLamRPakRDaGYycEE4YlA5TU1xOFBuX2owMmFjT1RxNDdCY2lpN3Y1aHFUVUhUVEZPS3VKTUk5TURDa2FRcWp0SXphT0plZQ" },
   { time: "23:00", tag: "crypto", tagText: "加密", text: "分析师指出，本周五大科技巨头（苹果、亚马逊、Meta等）的财报可能决定比特币的下一步走势。市场关注科技股表现对加密市场情绪的传导效应，以及宏观不确定性下的避险需求。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE5XN0NISjFuSXZPRG9JMXdLOUVEaXdhSGFBeWI3NHA4M0JWRjRxRF9HOGFwNU50MkE3ZTg0UHU5OFh5Zkswb1Q5TG1GNG5SU2o4OHZ1QmR5VHNIbDB3NGUwRVZsVEVmcDZNV1NSbkc0Yw?oc=5" },
   { time: "22:51", tag: "macro", tagText: "宏观", text: "参议员Tillis解除对美联储主席提名人Warsh的阻挠，为特朗普提名扫清障碍。此举可能加速美联储领导层更迭，影响未来货币政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/thom-tillis-kevin-warsh-federal-reserve.html" },
   { time: "22:30", tag: "tech", tagText: "科技", text: "Credo Technology宣布以7.5亿美元收购DustPhotonics，以增强硅光子学能力。该交易反映数据中心和AI基础设施对高速光互连技术的需求激增。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/credo-technology-crdo-acquire-dustphotonics-171515412.html" },
@@ -1647,13 +1649,13 @@ const breakingNews = [
   { time: "11:28", tag: "geo", tagText: "地缘", text: "特朗普在2026年白宫记者协会晚宴上遭遇枪击事件，现场传出多声枪响，特朗普被特勤局紧急护送离场，一名警官中枪。嫌疑人已被拘留，特朗普本人安全无恙。该事件引发全球市场对政治风险的关注，美股期货及避险资产可能出现波动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/trump-gunshots-white-house-correspondents-dinner.html" },
   { time: "03:35", tag: "tech", tagText: "科技", text: "SpaceX与一家由4名MIT辍学生创立的AI初创公司达成600亿美元协议。该公司CEO年仅25岁，身价已达13亿美元。这笔交易凸显AI基础设施领域的巨额资本涌入。", source: "Moneywise", url: "https://finance.yahoo.com/sectors/technology/articles/spacex-just-cut-60b-deal-193500859.html" },
   { time: "03:20", tag: "tech", tagText: "科技", text: "英特尔领涨科技股，推动纳斯达克走高，但道琼斯指数因油价下跌而承压。市场在科技巨头财报前夕分化明显，AI相关芯片需求持续支撑科技板块。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNcnBZckdtYlNhM282cnpYTXg3a2hQdE1vdmVXeHgzU19hTm8wcGNGNE1Jb3pOd2p4dE1VbWF5ZDFGZXM3YTUzdWdRajNuQ3B1Y3J2X0RYa2dlQjg5U0ZQYVlaa1BLNjY2QkRVdDFiYkxGREdfWXl5RVRiQkwxRnZ1SG11T1VtWDBhRkVtaTFVV19IeXdNbkpUVVZn?oc=5" },
-  { time: "03:10", tag: "geo", tagText: "地缘", text: "特朗普取消美国特使赴巴基斯坦的伊朗和平谈判行程，称“如果他们想谈，打个电话就行”。此前特使Steve Witkoff和Jared Kushner原定周六抵达伊斯兰堡，但伊朗方面表示未计划会面。此举加剧美伊紧张局势，市场对中东冲突风险担忧上升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/iran-says-no-meeting-with-us-negotiators-planned-in-pakistan.html" },
-  { time: "03:03", tag: "crypto", tagText: "加密", text: "比特币、Solana和XRP的ETF录得资金流入，而以太坊ETF则遭遇7590万美元流出。加密市场分化明显，投资者在宏观不确定性中重新评估各资产配置。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVGdnT1ZMMmJFUjBTMlhJa1RfNWl2U29YM3ZoRERRY2pVTkdudmV6MzJqcmdVNUNyYk56SjNNcDlfZ2NqeTJCWmJvT1Z6TC1peXd5VmNodkFYcFJyNkFsOUE4WVdnVjBRWHp1YTkxd0dJYzJvXzdCSFZQX2JzbzJzRzZoWEhWUnJIbEpTZXdqX25GcGlQaEE?oc=5" },
 ];
-const breakingDate = "2026年4月27日 01:52 CST";
+const breakingDate = "2026年4月27日 03:09 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Perplexity在新一轮融资中估值飙升至140亿美元。该公司凭借其AI驱动的搜索引擎迅速崛起，成为生成式AI领域备受关注的明星企业之一。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi_AJBVV95cUxQa1ZkamlBR3U0eVJCbUttY0tkVEhNZDBQb2Z1MU4xYmdoRVBQcnBaOWJUX0F4ZUtEMkR1YkE4WWFZQmlhdHgtVS02VmY3SHRaQmZRSWpqRGlYZlRTZHExMllsMHZESmFLNi1XdnFjeVo0Z1lLNjVBdVBuSmpJVnJFdXY0eUdWTnBET21YVmZqSGpOai0yeUZsakluM29TOUZOeGpGaGkxZ0dWamRoc0lzcjNydXNReFdhR0MzbFN5b3RYR3doNkswT3RtYXQyaUJnQVJTU0RaQzNwRG9UZkVHQk5Ibzg5dHJuRFRRRFBTREFUb2pYd2tSdWVpNW05RUM4d3FQX193VFVDSmNvX3pNLVdwMHpJaDBYQVEzXzl0eXJKZThkRDZYb19RQkR3Zk9sTXpUX282UlRDWVdfUDhoRzFrUmMyOXRFNGdYdGNmemdJbzRGcGNXMjdIclczc0lSRDlFdTJLTW9Ya3MtWW9nR1owTUZCdll2N1pqZQ?oc=5" },
+  { time: "02:31", tag: "macro", tagText: "宏观", text: "埃隆·马斯克警告称，若美国不能在人工智能领域取得突破，将面临“1000%”的破产风险。这一言论凸显AI技术对国家经济安全与财政可持续性的极端重要性。", source: "Jang", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWnNJd1pzMHpRbEdrSzc2NkR6V0Nkek10RWpwNkdwQWI2RW9YazFhZGpfbk1sVWpXRVFhTWJDcGhUY1ZOME1EZHROY1NwUjVtOHlmVThZVlJtTDhOWkp5ajV3ajdXQUNGQjN4ZU03WkJsYjhRM2F5RkV5MC1EQlY5VWdoOGMtQWU4YXVyV1hOSDBvOXg0aWVFWGNwTFJHMUw4aDdfS3h3?oc=5" },
   { time: "23:52", tag: "crypto", tagText: "加密", text: "Pi Network以AI计算突破震惊行业，据MEXC报道，该项目在AI计算领域取得重大进展，引发市场广泛关注。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9nLTZZUTNLMFVDY0thMGoxcmJXZDlhdVdZcXByQmJOVG9mVnFWQ0VmaDRGd0lIeHo5Q083OU1EU2NMWVJ0c1N5ZA?oc=5" },
   { time: "23:30", tag: "tech", tagText: "科技", text: "旧金山湾区一栋13英亩房产挂牌出售，卖家要求买家以Anthropic公司股权作为支付方式，而非现金。这一罕见交易方式凸显AI初创公司股权在硅谷的极高流动性和价值认可度。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/" },
   { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "03:52", tag: "ai", tagText: "AI", text: "AI初创公司被指夸大关键收入指标以吸引风投关注。一位创始人透露，部分公司通过操纵年度经常性收入（ARR）等数据来营造增长假象，引发行业对估值泡沫的担忧。", source: "Fast Company", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE5takhFOTdGRjEzQTRpT3ZYb19iVGNGTVowVzRocVBpM0RoX2Jmd0VnWGotSGRUNzVXNUg2c1J1QW9qTVZYdVBxVnpIaWo0TXg1S2dldnJGQmNLcHdqc2xmVDNhd3h4b2FncGsyblNCNldDNEFzcFFySjBOdVZCUQ?oc=5" },
   { time: "03:52", tag: "ai", tagText: "AI", text: "Meta与AI初创公司Thinking Machines Lab之间的人才争夺战愈演愈烈，双方互相挖角。这一现象反映出AI领域顶尖人才的稀缺性以及科技巨头与初创公司之间的人才竞争白热化。", source: "TechCrunch", url: "https://techcrunch.com/2024/04/24/metas-loss-is-thinking-machines-gain/" },
   { time: "03:36", tag: "ai", tagText: "AI", text: "Motley Fool分析指出，一只“终极AI股票”今年已上涨26%，且涨势尚未结束。该报道虽未点名具体公司，但暗示在AI浪潮下，部分核心标的仍有强劲增长动力。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNY1JPa0dfRTkxQm5aNXRjLTNvYl9ZVWtfUlNjWFpFU05oU0Q4Ymg5bWpGNUNDN2dwMjBFeU90SXFMbHJKQUVwWEVVcHk5TzEyYzFUTkVrN2NkZ2pmTjFMYWpfb2RPbHVHQ0dFQVJPTmZJRkJSdWFMWmI1NDliNXJZTV95cXFxbm50Z1FiTEpzWFJCU0hiUnZUTA?oc=5" },
-  { time: "03:34", tag: "geo", tagText: "地缘", text: "以色列国防军公布AI驱动的机器人作战系统，称其为对抗真主党的突破性火炮技术。该系统将人工智能深度融入军事行动，标志着AI在战场应用中的新进展。", source: "Algemeiner.com", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUzZKYUhXWE02MThiQmdYTkNlYXpSUzBiMGNtUXZTN2NwZW0tblU0Ny1LdXhJaHpFaUY2RHB1U1h6WHh1dDItU0RpV0ZLYk85YkVDbmJhMnZGaDc1Y01hY1o0TTNjSVR0Q0x6djRjWUFTbWNOZHNmc0RkZTRUcmdrS3VoT1h1TXVHQnJyVG14dkQwd3pGMFZ1NGlQSUxpNDZxM1pOdmVWR2oxaXRYenJyTDFYUkNpVmg5WUNyaDdBOVhQVlE?oc=5" },
-  { time: "02:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Perplexity在新一轮融资中估值飙升至140亿美元。该公司凭借其AI驱动的搜索引擎迅速崛起，成为生成式AI领域备受关注的明星企业之一。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi_AJBVV95cUxQa1ZkamlBR3U0eVJCbUttY0tkVEhNZDBQb2Z1MU4xYmdoRVBQcnBaOWJUX0F4ZUtEMkR1YkE4WWFZQmlhdHgtVS02VmY3SHRaQmZRSWpqRGlYZlRTZHExMllsMHZESmFLNi1XdnFjeVo0Z1lLNjVBdVBuSmpJVnJFdXY0eUdWTnBET21YVmZqSGpOai0yeUZsakluM29TOUZOeGpGaGkxZ0dWamRoc0lzcjNydXNReFdhR0MzbFN5b3RYR3doNkswT3RtYXQyaUJnQVJTU0RaQzNwRG9UZkVHQk5Ibzg5dHJuRFRRRFBTREFUb2pYd2tSdWVpNW05RUM4d3FQX193VFVDSmNvX3pNLVdwMHpJaDBYQVEzXzl0eXJKZThkRDZYb19RQkR3Zk9sTXpUX282UlRDWVdfUDhoRzFrUmMyOXRFNGdYdGNmemdJbzRGcGNXMjdIclczc0lSRDlFdTJLTW9Ya3MtWW9nR1owTUZCdll2N1pqZQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月27日 01:52 CST";
+const aiBreakingDate = "2026年4月27日 03:09 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
