@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月26日 11:50 CST"
+  date: "2026年4月26日 14:17 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗战争冲击开心果供应，叠加迪拜巧克力热潮推高需求，导致开心果价格飙升。伊朗是主要生产国，出口路线中断令全球供应链承压。", source: "Financial Times", url: "https://www.ft.com/content/438ef32a-59e5-41b3-a0da-569716385347" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡排雷工作面临挑战，即使美国海军获得欧洲盟友协助，清除海湾水域水雷仍需数周时间。此举凸显中东航运安全风险持续升级。", source: "Financial Times", url: "https://www.ft.com/content/78a983c8-6ed5-42f3-b794-7fed9ee189ed" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "谷歌云CEO Thomas Kurian表示，凭借AI芯片和模型优势，谷歌云正加速追赶亚马逊AWS和微软Azure。AI算力需求成为云市场竞争关键变量。", source: "Financial Times", url: "https://www.ft.com/content/2429f0f0-b685-4747-b425-bf8001a2e94c" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "小米计划在欧洲推出高端电动汽车，与特斯拉展开直接竞争。小米汽车需求已超过产能，公司希望借助欧洲市场实现全球化扩张。", source: "Financial Times", url: "https://www.ft.com/content/31f80e68-dc0a-4251-a657-351e2e614fe2" },
   { time: "11:28", tag: "geo", tagText: "地缘", text: "特朗普在2026年白宫记者协会晚宴上遭遇枪击事件，现场传出多声枪响，特朗普被特勤局紧急护送离场，一名警官中枪。嫌疑人已被拘留，特朗普本人安全无恙。该事件引发全球市场对政治风险的关注，美股期货及避险资产可能出现波动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/trump-gunshots-white-house-correspondents-dinner.html" },
   { time: "03:35", tag: "tech", tagText: "科技", text: "SpaceX与一家由4名MIT辍学生创立的AI初创公司达成600亿美元协议。该公司CEO年仅25岁，身价已达13亿美元。这笔交易凸显AI基础设施领域的巨额资本涌入。", source: "Moneywise", url: "https://finance.yahoo.com/sectors/technology/articles/spacex-just-cut-60b-deal-193500859.html" },
   { time: "03:20", tag: "tech", tagText: "科技", text: "英特尔领涨科技股，推动纳斯达克走高，但道琼斯指数因油价下跌而承压。市场在科技巨头财报前夕分化明显，AI相关芯片需求持续支撑科技板块。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNcnBZckdtYlNhM282cnpYTXg3a2hQdE1vdmVXeHgzU19hTm8wcGNGNE1Jb3pOd2p4dE1VbWF5ZDFGZXM3YTUzdWdRajNuQ3B1Y3J2X0RYa2dlQjg5U0ZQYVlaa1BLNjY2QkRVdDFiYkxGREdfWXl5RVRiQkwxRnZ1SG11T1VtWDBhRkVtaTFVV19IeXdNbkpUVVZn?oc=5" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "00:18", tag: "macro", tagText: "宏观", text: "道琼斯指数期货下跌，因美伊谈判取消及苹果、亚马逊、谷歌等科技巨头即将发布财报。市场关注AI相关收益及地缘政治风险，投资者情绪谨慎。", source: "Investor's Business Daily", url: "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-apple-amazon-google-earnings-ai-iran-talks/?src=A00220&yptr=yahoo" },
   { time: "00:13", tag: "tech", tagText: "科技", text: "廉价股票期权暗示下周科技巨头财报后可能出现大幅波动，Meta等公司被低估。华尔街低估了潜在的价格爆发，市场预期波动性将显著上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/cheap-options-suggest-a-big-post-earnings-swing-next-week-for-these-tech-titans-d9b56126?mod=mw_rss_topstories" },
   { time: "00:00", tag: "crypto", tagText: "加密", text: "比特币走势谨慎，美国国债收益率接近4%，测试市场强度。投资者在宏观不确定性中权衡风险，加密市场情绪转向保守。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeElaMzYycFViZkh0TEZHcHg2dDkwNmhleUt3UDNTZjZBT1p3Yk9JWVRzejJjenpVYnFodXowb2VnZlhlZkJfemc1R2c4WHZMTU9kbm5tY2xkeEw1MTNmNjVhbEdnWnBwS0otUHQ4ZTBwSDM2Rktrekw1OEl6UURZeWhsT21VaTZYazBNTm1vRWdNZzTSAZgBQVVfeXFMTmtpOFVsOG9NYjI3ODJGRVQ4VlZsS2tXS053cWVVWkFIQklHSVFXbm5NRVhub3RWSWhNTjRRelA4Wk03UC0teFlQSElZM0ktY1NoME54bG1seTdha3VkTmtSc1lqZ0JBeVdpbHFSc09HeTdqcW5DdXY4cXFGeE44WGs0UlpRb1B0N3FXckxpcVJ4OFJYWFZVX0M?oc=5" },
-  { time: "00:00", tag: "crypto", tagText: "加密", text: "Aurelion向XAUE收益协议分配4800万美元Tether Gold，显示机构对黄金支持加密产品的兴趣增加，可能推动DeFi与传统资产融合。", source: "CryptoProwl", url: "https://finance.yahoo.com/markets/crypto/articles/aurelion-allocates-48-million-tether-162100751.html" },
-  { time: "23:51", tag: "macro", tagText: "宏观", text: "特朗普社交媒体发文引发市场剧烈波动，美股随之摇摆。分析人士指出，特朗普的言论对市场具有“窒息性”影响，投资者情绪高度敏感。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQa1lEV1h1ZnZwWklTQ2ZsRE91TEtDb3piU0xkaUZ2cVlzYXgxcUJOUXgxeWRwY1hQVHl2M2gxSmx6a0dpUVJjUUMxeFNuTkQ5b2dNSDIzLXdYdzdpb195RGZqcHlOb1Q2Ty0yV2Jidm1wZVZwVFpaamlRS2pDdk1QbHZ1TVo2NmlCYlRuYTlmRzk3NEZDNlFvSDNoZ0VmSkE5b0E?oc=5" },
-  { time: "22:50", tag: "macro", tagText: "宏观", text: "美国蓝领工作因大学费用高企和科技行业裁员而受到追捧。报告分析了哪些蓝领职业最具稳定性（如电工、管道工），哪些风险最高（如建筑工人），指出蓝领工作并非完全不受市场波动影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-americans-turn-to-blue-collar-jobs-for-stability-heres-which-ones-offer-the-most-security-and-which-offer-the-least-b24c8b2d?mod=mw_rss_topstories" },
-  { time: "22:13", tag: "macro", tagText: "宏观", text: "Invesco的九种因子策略中，除一种外，今年均跑赢标普500指数。自3月30日市场低点以来，两种策略表现尤为突出，为投资者提供了超越传统指数的新选择。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-alternative-index-strategies-are-beating-the-s-p-500-after-the-stock-markets-new-highs-9bd7295a?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月26日 11:50 CST";
+const breakingDate = "2026年4月26日 14:17 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:08", tag: "tech", tagText: "科技", text: "高通与长鑫存储（CXMT）合作开发3D DRAM NPU，旨在为AI手机硬件带来突破性性能提升。该技术有望显著增强端侧AI处理能力，推动智能手机AI应用的新一轮升级。", source: "Intelligent Living", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoVEdzTjBnRmo3c0VNNzRlLVJmRlhDV0xwUUM3dWVnTzBvNGtPVDNmT1pEc0w2RDdqenpraEE1NEhsMEsybjV0V0EyVDhYend1M0R2TC1Cc2J5TUo0YTNQMHYwMGNmOE80dmloUGdjcE8?oc=5" },
+  { time: "13:48", tag: "ai", tagText: "AI", text: "与斯坦福有关联的AI初创公司Human Intelligence正寻求以10亿美元估值融资1亿美元。该公司专注于通用人工智能（AGI）研发，此轮融资显示资本对前沿AI研究的高热度。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNemtJd0hnNnVGajhCbTRMX3o2WHRtc1IzTzlJZEJNODJzbVY5XzRsTXJFaUdoREpQTjRuWkRyQ2J2SktmZUxBRWg4T01xM0pmTlU0QktXS2JkTFQxTFowWFd0ZkowWUt3S2h3MTBhbXd4TlA4czRLZjJXUWRXdzZSNmpuRTNPcndYS2RuTTQtc3R0N3dMeTZQTElqNFhabC14RVZLRGJZd3dXWjdmRU9aRFdSWG5ZSDNsREJBa2pCZVA3TjFQN1E?oc=5" },
+  { time: "11:51", tag: "ai", tagText: "AI", text: "英伟达股价4月上涨19%，带动半导体ETF飙升40.4%。市场分析指出，AI芯片需求持续旺盛，推动相关板块大幅跑赢大盘。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNR0plSzFLSnNhOF9UNFZoUFphNmFXMW9GREdzY1JZRjFiUzQtWXhxVl8tTUpGZmVNQ1U2andPR2R6TzJ2aUxTQ2NjcGhSR09JZ0F5YnlfRk9JWmFuNUxnRUF6NmdhMVZmazVNd2c5OXlKMmNNXzN3NVFub3B1azZvWUQzLV9QeXZLQndWNTRNd2VBcVhyVDlVNUpKaHQ1WDhPRndLcVlYR2NZb1AtWnUtblNqTU9UbHJU?oc=5" },
   { time: "05:43", tag: "ai", tagText: "AI", text: "Anthropic创建了一个AI代理对代理的测试市场，让AI代理分别代表买家和卖家，使用真实资金完成真实商品的交易。该实验探索了AI自主商业的可行性，标志着AI代理在现实经济活动中迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/" },
   { time: "04:57", tag: "macro", tagText: "宏观", text: "美国缅因州州长否决了L.D. 307法案，该法案本将实施全美首个全州范围的数据中心建设禁令，有效期至2027年11月1日。否决决定缓解了AI行业对算力扩张受限的担忧，但围绕数据中心能源消耗的争议仍在持续。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/maines-governor-vetoes-data-center-moratorium/" },
   { time: "03:52", tag: "ai", tagText: "AI", text: "AI初创公司被指夸大关键收入指标以吸引风投关注。一位创始人透露，部分公司通过操纵年度经常性收入（ARR）等数据来营造增长假象，引发行业对估值泡沫的担忧。", source: "Fast Company", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE5takhFOTdGRjEzQTRpT3ZYb19iVGNGTVowVzRocVBpM0RoX2Jmd0VnWGotSGRUNzVXNUg2c1J1QW9qTVZYdVBxVnpIaWo0TXg1S2dldnJGQmNLcHdqc2xmVDNhd3h4b2FncGsyblNCNldDNEFzcFFySjBOdVZCUQ?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "陷入困境的合规初创公司Delve再曝安全事件，其客户——AI智能体训练公司Context AI上周披露了重大数据泄露。这起事件引发对AI供应链安全审查流程的广泛质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/" },
   { time: "21:54", tag: "ai", tagText: "AI", text: "SpaceX以600亿美元估值达成协议，获得收购AI编程初创公司Cursor的权利。Cursor是当前最热门的AI代码助手之一，此交易凸显科技巨头对AI开发工具的激烈争夺。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQakZzMDM2cjdnbThWM0hKUndMSXdFSnZpQTlUWWxZQnlkcWF1VG4xZkpaZ0NZalktd28xQUlSdkhtbzV1aGphR1VPSGY0T2F2ZkZORHFXdFhxeXVsb1RySDJ0SThRak1HRzZPZHBIZHRqMDBUbUE2SkdfWFYwSW4wSVktTEd1clpxM1lNS2ZTeFNJV0JsQmw2NUlxVjVHVS1kZzJBb3VXWnNyd1FTZV9sZ2FxV0E5enlPbUxrQTgwRzRfN0ZtWjM2bElQYmpodw?oc=5" },
   { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
-  { time: "20:55", tag: "geo", tagText: "地缘", text: "乌克兰国防部情报总局局长布达诺夫表示，乌克兰在AI无人机技术方面接近取得突破，该进展可能“让俄罗斯人感到意外”，暗示其将在战场上获得新的不对称优势。", source: "UNITED24 Media", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeWhMXzFkR2dJOVFDbGtPNWVYenF2TVJudnpxU3NiS2hJRHBoVVp3YTRfd0pIUGMzTnVDNEtvQjZTbXMtdTNWOU9VOEFiZlFlelMzRS1RSXQwY3dyb3Q2UkVUV1Q5RnlzWXJMNFpRaHlxVjFLTFI2MHg5SUhhM0FJazFXMWQxd2xHMGdOU29ocDBXaHJmY2lHVjVsRjlRMzU1Q2g1QzJkVHlYRG5hZkRFTUhldG5WZnhKZTYwUGxB?oc=5" },
-  { time: "14:08", tag: "tech", tagText: "科技", text: "高通与长鑫存储（CXMT）合作开发3D DRAM NPU，旨在为AI手机硬件带来突破性性能提升。该技术有望显著增强端侧AI处理能力，推动智能手机AI应用的新一轮升级。", source: "Intelligent Living", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoVEdzTjBnRmo3c0VNNzRlLVJmRlhDV0xwUUM3dWVnTzBvNGtPVDNmT1pEc0w2RDdqenpraEE1NEhsMEsybjV0V0EyVDhYend1M0R2TC1Cc2J5TUo0YTNQMHYwMGNmOE80dmloUGdjcE8?oc=5" },
-  { time: "13:48", tag: "ai", tagText: "AI", text: "与斯坦福有关联的AI初创公司Human Intelligence正寻求以10亿美元估值融资1亿美元。该公司专注于通用人工智能（AGI）研发，此轮融资显示资本对前沿AI研究的高热度。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNemtJd0hnNnVGajhCbTRMX3o2WHRtc1IzTzlJZEJNODJzbVY5XzRsTXJFaUdoREpQTjRuWkRyQ2J2SktmZUxBRWg4T01xM0pmTlU0QktXS2JkTFQxTFowWFd0ZkowWUt3S2h3MTBhbXd4TlA4czRLZjJXUWRXdzZSNmpuRTNPcndYS2RuTTQtc3R0N3dMeTZQTElqNFhabC14RVZLRGJZd3dXWjdmRU9aRFdSWG5ZSDNsREJBa2pCZVA3TjFQN1E?oc=5" },
 ];
-const aiBreakingDate = "2026年4月26日 11:50 CST";
+const aiBreakingDate = "2026年4月26日 14:17 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
