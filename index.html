@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月26日 07:50 CST"
+  date: "2026年4月26日 11:50 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "11:28", tag: "geo", tagText: "地缘", text: "特朗普在2026年白宫记者协会晚宴上遭遇枪击事件，现场传出多声枪响，特朗普被特勤局紧急护送离场，一名警官中枪。嫌疑人已被拘留，特朗普本人安全无恙。该事件引发全球市场对政治风险的关注，美股期货及避险资产可能出现波动。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/trump-gunshots-white-house-correspondents-dinner.html" },
   { time: "03:35", tag: "tech", tagText: "科技", text: "SpaceX与一家由4名MIT辍学生创立的AI初创公司达成600亿美元协议。该公司CEO年仅25岁，身价已达13亿美元。这笔交易凸显AI基础设施领域的巨额资本涌入。", source: "Moneywise", url: "https://finance.yahoo.com/sectors/technology/articles/spacex-just-cut-60b-deal-193500859.html" },
   { time: "03:20", tag: "tech", tagText: "科技", text: "英特尔领涨科技股，推动纳斯达克走高，但道琼斯指数因油价下跌而承压。市场在科技巨头财报前夕分化明显，AI相关芯片需求持续支撑科技板块。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNcnBZckdtYlNhM282cnpYTXg3a2hQdE1vdmVXeHgzU19hTm8wcGNGNE1Jb3pOd2p4dE1VbWF5ZDFGZXM3YTUzdWdRajNuQ3B1Y3J2X0RYa2dlQjg5U0ZQYVlaa1BLNjY2QkRVdDFiYkxGREdfWXl5RVRiQkwxRnZ1SG11T1VtWDBhRkVtaTFVV19IeXdNbkpUVVZn?oc=5" },
   { time: "03:10", tag: "geo", tagText: "地缘", text: "特朗普取消美国特使赴巴基斯坦的伊朗和平谈判行程，称“如果他们想谈，打个电话就行”。此前特使Steve Witkoff和Jared Kushner原定周六抵达伊斯兰堡，但伊朗方面表示未计划会面。此举加剧美伊紧张局势，市场对中东冲突风险担忧上升。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/iran-says-no-meeting-with-us-negotiators-planned-in-pakistan.html" },
@@ -1648,9 +1649,8 @@ const breakingNews = [
   { time: "23:51", tag: "macro", tagText: "宏观", text: "特朗普社交媒体发文引发市场剧烈波动，美股随之摇摆。分析人士指出，特朗普的言论对市场具有“窒息性”影响，投资者情绪高度敏感。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQa1lEV1h1ZnZwWklTQ2ZsRE91TEtDb3piU0xkaUZ2cVlzYXgxcUJOUXgxeWRwY1hQVHl2M2gxSmx6a0dpUVJjUUMxeFNuTkQ5b2dNSDIzLXdYdzdpb195RGZqcHlOb1Q2Ty0yV2Jidm1wZVZwVFpaamlRS2pDdk1QbHZ1TVo2NmlCYlRuYTlmRzk3NEZDNlFvSDNoZ0VmSkE5b0E?oc=5" },
   { time: "22:50", tag: "macro", tagText: "宏观", text: "美国蓝领工作因大学费用高企和科技行业裁员而受到追捧。报告分析了哪些蓝领职业最具稳定性（如电工、管道工），哪些风险最高（如建筑工人），指出蓝领工作并非完全不受市场波动影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-americans-turn-to-blue-collar-jobs-for-stability-heres-which-ones-offer-the-most-security-and-which-offer-the-least-b24c8b2d?mod=mw_rss_topstories" },
   { time: "22:13", tag: "macro", tagText: "宏观", text: "Invesco的九种因子策略中，除一种外，今年均跑赢标普500指数。自3月30日市场低点以来，两种策略表现尤为突出，为投资者提供了超越传统指数的新选择。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-alternative-index-strategies-are-beating-the-s-p-500-after-the-stock-markets-new-highs-9bd7295a?mod=mw_rss_topstories" },
-  { time: "21:30", tag: "tech", tagText: "科技", text: "英伟达股价创历史新高，市值再次突破5万亿美元。芯片巨头在AI算力需求持续爆发的背景下，成为本轮科技牛市的绝对龙头。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOMUJWRld4MHdKbVlyZXh4el82VURCdmcxYl85bEJiRnpRaDBVUDY1bTM2bTlrMWNPTmFkaExTeDhXQXdFVVRFanJTOHFWUk5yVWt1OFJvZlMzc3M1MFBpLUlqQzlaR2dPa1pCWmUzNkNPYlVmcXprNXlaWm9WQW5aSWR2LVgwenhld2ZLQThDU2l3WkpEdkVMc2FLQ2g2TE5tQW5hc1YwVWowblRWQXlmZWh5QlBYOXFKcDNhUHYtQ3BmOG1ZTE85TFhuaHFUT1AzQ2d3SHZnWmc4ZTZROHBiZGhB?oc=5" },
 ];
-const breakingDate = "2026年4月26日 07:50 CST";
+const breakingDate = "2026年4月26日 11:50 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "14:08", tag: "tech", tagText: "科技", text: "高通与长鑫存储（CXMT）合作开发3D DRAM NPU，旨在为AI手机硬件带来突破性性能提升。该技术有望显著增强端侧AI处理能力，推动智能手机AI应用的新一轮升级。", source: "Intelligent Living", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoVEdzTjBnRmo3c0VNNzRlLVJmRlhDV0xwUUM3dWVnTzBvNGtPVDNmT1pEc0w2RDdqenpraEE1NEhsMEsybjV0V0EyVDhYend1M0R2TC1Cc2J5TUo0YTNQMHYwMGNmOE80dmloUGdjcE8?oc=5" },
   { time: "13:48", tag: "ai", tagText: "AI", text: "与斯坦福有关联的AI初创公司Human Intelligence正寻求以10亿美元估值融资1亿美元。该公司专注于通用人工智能（AGI）研发，此轮融资显示资本对前沿AI研究的高热度。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNemtJd0hnNnVGajhCbTRMX3o2WHRtc1IzTzlJZEJNODJzbVY5XzRsTXJFaUdoREpQTjRuWkRyQ2J2SktmZUxBRWg4T01xM0pmTlU0QktXS2JkTFQxTFowWFd0ZkowWUt3S2h3MTBhbXd4TlA4czRLZjJXUWRXdzZSNmpuRTNPcndYS2RuTTQtc3R0N3dMeTZQTElqNFhabC14RVZLRGJZd3dXWjdmRU9aRFdSWG5ZSDNsREJBa2pCZVA3TjFQN1E?oc=5" },
 ];
-const aiBreakingDate = "2026年4月26日 07:50 CST";
+const aiBreakingDate = "2026年4月26日 11:50 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
