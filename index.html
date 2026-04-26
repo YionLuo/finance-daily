@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月26日 23:53 CST"
+  date: "2026年4月27日 00:57 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1631,6 +1631,7 @@ const fearGreedData = {
 const breakingNews = [
   { time: "23:00", tag: "crypto", tagText: "加密", text: "分析师指出，本周五大科技巨头（苹果、亚马逊、Meta等）的财报可能决定比特币的下一步走势。市场关注科技股表现对加密市场情绪的传导效应，以及宏观不确定性下的避险需求。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE5XN0NISjFuSXZPRG9JMXdLOUVEaXdhSGFBeWI3NHA4M0JWRjRxRF9HOGFwNU50MkE3ZTg0UHU5OFh5Zkswb1Q5TG1GNG5SU2o4OHZ1QmR5VHNIbDB3NGUwRVZsVEVmcDZNV1NSbkc0Yw?oc=5" },
   { time: "22:51", tag: "macro", tagText: "宏观", text: "参议员Tillis解除对美联储主席提名人Warsh的阻挠，为特朗普提名扫清障碍。此举可能加速美联储领导层更迭，影响未来货币政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/thom-tillis-kevin-warsh-federal-reserve.html" },
+  { time: "22:06", tag: "geo", tagText: "地缘", text: "以色列政坛变天：前总理纳夫塔利·贝内特和亚伊尔·拉皮德宣布合并政党，联手备战今年大选。这是内塔尼亚胡面临的最强挑战，可能重塑以色列政治格局。", source: "Financial Times", url: "https://www.ft.com/content/3bdeac99-19b2-45df-b0bb-a79e187f1c16" },
   { time: "18:00", tag: "macro", tagText: "宏观", text: "伊朗战争导致美国汽油价格持续高企，驾车者减少燃油消费。油价飙升对特朗普政府构成政治压力，尤其是在11月中期选举前夕，选民对高油价的不满情绪上升。", source: "Financial Times", url: "https://www.ft.com/content/97261fc6-47cc-4d0b-929c-cd8d700a0512" },
   { time: "14:35", tag: "crypto", tagText: "加密", text: "知名投资人Kevin O'Leary清仓26种山寨币，仅保留比特币和以太坊，称其余币种“没有未来”。此举引发市场对山寨币前景的广泛讨论，加密市场分化加剧。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMlExRW5WY3hJX1M0NWNyRUxPTEZQV0NFN1o3Y0E2eGVfckhKSmpQM0tFakFjYzV1MXN6bHZrbHBocW5PM0VjREhoZDNhbzRNRkJxR3hTLWlGUWJYWnItTndPMk5hX3ZRYk1PX3A3RE93V1R1SjloWXJZNXVRRTFoUE01VUwwTHlBNUg1Qjg0OFNPQ09wSXI0?oc=5" },
   { time: "12:41", tag: "macro", tagText: "宏观", text: "华尔街顶级分析师推荐三只高股息股票，称其在市场不确定性中提供稳定被动收入。这些公司具备稳健的现金流和长期分红记录，适合防御型投资者配置。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/top-wall-street-analysts-pick-these-3-stocks-for-reliable-income.html" },
@@ -1648,12 +1649,13 @@ const breakingNews = [
   { time: "03:03", tag: "crypto", tagText: "加密", text: "比特币、Solana和XRP的ETF录得资金流入，而以太坊ETF则遭遇7590万美元流出。加密市场分化明显，投资者在宏观不确定性中重新评估各资产配置。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVGdnT1ZMMmJFUjBTMlhJa1RfNWl2U29YM3ZoRERRY2pVTkdudmV6MzJqcmdVNUNyYk56SjNNcDlfZ2NqeTJCWmJvT1Z6TC1peXd5VmNodkFYcFJyNkFsOUE4WVdnVjBRWHp1YTkxd0dJYzJvXzdCSFZQX2JzbzJzRzZoWEhWUnJIbEpTZXdqX25GcGlQaEE?oc=5" },
   { time: "02:49", tag: "geo", tagText: "地缘", text: "美国对一家中国‘茶壶’炼油厂实施制裁，因其购买伊朗石油。同时，OFAC对约40家参与伊朗影子船队的航运公司和船只实施制裁，加剧美中地缘紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/04/25/us-china-sanctions-iran-oil.html" },
   { time: "02:28", tag: "macro", tagText: "宏观", text: "债券基金创纪录的资金流入被视为反向信号，预示2026年剩余时间债券表现可能落后于股票。投资者需警惕收益率下行风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bonds-could-lag-stocks-for-the-rest-of-2026-according-to-this-contrarian-signal-6b6c55de?mod=mw_rss_topstories" },
-  { time: "02:27", tag: "tech", tagText: "科技", text: "苹果投资者需关注公司新CEO John Ternus的下一步动作。Tim Cook打造了4万亿美元帝国，但Ternus必须解决苹果在AI领域的明显短板，市场期待其战略转型。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-is-what-apple-investors-need-to-know-about-whats-next-for-the-company-and-its-new-ceo-9997df15?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月26日 23:53 CST";
+const breakingDate = "2026年4月27日 00:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:52", tag: "crypto", tagText: "加密", text: "Pi Network以AI计算突破震惊行业，据MEXC报道，该项目在AI计算领域取得重大进展，引发市场广泛关注。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9nLTZZUTNLMFVDY0thMGoxcmJXZDlhdVdZcXByQmJOVG9mVnFWQ0VmaDRGd0lIeHo5Q083OU1EU2NMWVJ0c1N5ZA?oc=5" },
+  { time: "23:30", tag: "tech", tagText: "科技", text: "旧金山湾区一栋13英亩房产挂牌出售，卖家要求买家以Anthropic公司股权作为支付方式，而非现金。这一罕见交易方式凸显AI初创公司股权在硅谷的极高流动性和价值认可度。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/" },
   { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
   { time: "23:03", tag: "tech", tagText: "科技", text: "TechCrunch分析指出，东京凭借SusHi Tech 2026大会成为2026年最重要的科技目的地。该大会聚焦四个明确定义的技术领域，并配有现场演示、专属展区及由实际建设者和投资者主导的会议，凸显东京在全球科技版图中的崛起。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "苹果即将上任的CEO约翰·特努斯（John Ternus）出身硬件背景，这标志着苹果可能将硬件设备重新置于战略核心。外界关注其硬件策略将如何演变，尤其是在AI时代如何平衡设备创新与服务生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/apple-under-ternus-what-comes-next-for-the-tech-giants-hardware-strategy/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "03:36", tag: "ai", tagText: "AI", text: "Motley Fool分析指出，一只“终极AI股票”今年已上涨26%，且涨势尚未结束。该报道虽未点名具体公司，但暗示在AI浪潮下，部分核心标的仍有强劲增长动力。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNY1JPa0dfRTkxQm5aNXRjLTNvYl9ZVWtfUlNjWFpFU05oU0Q4Ymg5bWpGNUNDN2dwMjBFeU90SXFMbHJKQUVwWEVVcHk5TzEyYzFUTkVrN2NkZ2pmTjFMYWpfb2RPbHVHQ0dFQVJPTmZJRkJSdWFMWmI1NDliNXJZTV95cXFxbm50Z1FiTEpzWFJCU0hiUnZUTA?oc=5" },
   { time: "03:34", tag: "geo", tagText: "地缘", text: "以色列国防军公布AI驱动的机器人作战系统，称其为对抗真主党的突破性火炮技术。该系统将人工智能深度融入军事行动，标志着AI在战场应用中的新进展。", source: "Algemeiner.com", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUzZKYUhXWE02MThiQmdYTkNlYXpSUzBiMGNtUXZTN2NwZW0tblU0Ny1LdXhJaHpFaUY2RHB1U1h6WHh1dDItU0RpV0ZLYk85YkVDbmJhMnZGaDc1Y01hY1o0TTNjSVR0Q0x6djRjWUFTbWNOZHNmc0RkZTRUcmdrS3VoT1h1TXVHQnJyVG14dkQwd3pGMFZ1NGlQSUxpNDZxM1pOdmVWR2oxaXRYenJyTDFYUkNpVmg5WUNyaDdBOVhQVlE?oc=5" },
   { time: "02:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Perplexity在新一轮融资中估值飙升至140亿美元。该公司凭借其AI驱动的搜索引擎迅速崛起，成为生成式AI领域备受关注的明星企业之一。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi_AJBVV95cUxQa1ZkamlBR3U0eVJCbUttY0tkVEhNZDBQb2Z1MU4xYmdoRVBQcnBaOWJUX0F4ZUtEMkR1YkE4WWFZQmlhdHgtVS02VmY3SHRaQmZRSWpqRGlYZlRTZHExMllsMHZESmFLNi1XdnFjeVo0Z1lLNjVBdVBuSmpJVnJFdXY0eUdWTnBET21YVmZqSGpOai0yeUZsakluM29TOUZOeGpGaGkxZ0dWamRoc0lzcjNydXNReFdhR0MzbFN5b3RYR3doNkswT3RtYXQyaUJnQVJTU0RaQzNwRG9UZkVHQk5Ibzg5dHJuRFRRRFBTREFUb2pYd2tSdWVpNW05RUM4d3FQX193VFVDSmNvX3pNLVdwMHpJaDBYQVEzXzl0eXJKZThkRDZYb19RQkR3Zk9sTXpUX282UlRDWVdfUDhoRzFrUmMyOXRFNGdYdGNmemdJbzRGcGNXMjdIclczc0lSRDlFdTJLTW9Ya3MtWW9nR1owTUZCdll2N1pqZQ?oc=5" },
-  { time: "02:27", tag: "ai", tagText: "AI", text: "AI编程初创公司Cognition AI在收购Windsurf后，正寻求以250亿美元估值进行新一轮融资。此交易凸显AI编程工具领域的持续火热及资本对该赛道的高度关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWtCbDFzOG9mZDV2dmpINHZNSmRGdmRfcGxycnQ4UG8xSEZzcmhuQzM1Mmo1SG44OC01VHVSWkZzaEtYRzI0OFM5LU5lR2N6Z0RZdW9vWklVa0p2TkxkT01leEk5NDJjU2xQNjJmYlhmRUJtWWNaY0dVWUR3dG5zTzZaRjcxdnVKQWc2Yy1NLVBGX3JUMFk1TQ?oc=5" },
-  { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
 ];
-const aiBreakingDate = "2026年4月26日 23:53 CST";
+const aiBreakingDate = "2026年4月27日 00:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
