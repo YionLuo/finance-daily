@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月26日 18:02 CST"
+  date: "2026年4月26日 18:58 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:00", tag: "macro", tagText: "宏观", text: "伊朗战争导致美国汽油价格持续高企，驾车者减少燃油消费。油价飙升对特朗普政府构成政治压力，尤其是在11月中期选举前夕，选民对高油价的不满情绪上升。", source: "Financial Times", url: "https://www.ft.com/content/97261fc6-47cc-4d0b-929c-cd8d700a0512" },
+  { time: "14:35", tag: "crypto", tagText: "加密", text: "知名投资人Kevin O'Leary清仓26种山寨币，仅保留比特币和以太坊，称其余币种“没有未来”。此举引发市场对山寨币前景的广泛讨论，加密市场分化加剧。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMlExRW5WY3hJX1M0NWNyRUxPTEZQV0NFN1o3Y0E2eGVfckhKSmpQM0tFakFjYzV1MXN6bHZrbHBocW5PM0VjREhoZDNhbzRNRkJxR3hTLWlGUWJYWnItTndPMk5hX3ZRYk1PX3A3RE93V1R1SjloWXJZNXVRRTFoUE01VUwwTHlBNUg1Qjg0OFNPQ09wSXI0?oc=5" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗战争冲击开心果供应，叠加迪拜巧克力热潮推高需求，导致开心果价格飙升。伊朗是主要生产国，出口路线中断令全球供应链承压。", source: "Financial Times", url: "https://www.ft.com/content/438ef32a-59e5-41b3-a0da-569716385347" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡排雷工作面临挑战，即使美国海军获得欧洲盟友协助，清除海湾水域水雷仍需数周时间。此举凸显中东航运安全风险持续升级。", source: "Financial Times", url: "https://www.ft.com/content/78a983c8-6ed5-42f3-b794-7fed9ee189ed" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "谷歌云CEO Thomas Kurian表示，凭借AI芯片和模型优势，谷歌云正加速追赶亚马逊AWS和微软Azure。AI算力需求成为云市场竞争关键变量。", source: "Financial Times", url: "https://www.ft.com/content/2429f0f0-b685-4747-b425-bf8001a2e94c" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "01:41", tag: "ai", tagText: "AI", text: "分析师指出，ChatGPT时代已过，2026年AI投资真正的金矿在国防、医疗和智能体（agentics）三大领域。资金正大量涌入这些垂直应用方向。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-chatbot-era-is-over-these-3-sectors-are-the-real-ai-gold-mines-for-2026-002372c7?mod=mw_rss_topstories" },
   { time: "00:33", tag: "macro", tagText: "宏观", text: "12家卡车运输公司申请第11章或第7章破产保护，显示美国货运行业面临严峻压力。该行业受燃料成本高企、需求波动及供应链挑战影响，破产潮可能进一步冲击物流和整体经济。", source: "TheStreet", url: "https://finance.yahoo.com/economy/articles/12-trucking-firms-file-chapter-163300325.html" },
   { time: "00:18", tag: "macro", tagText: "宏观", text: "道琼斯指数期货下跌，因美伊谈判取消及苹果、亚马逊、谷歌等科技巨头即将发布财报。市场关注AI相关收益及地缘政治风险，投资者情绪谨慎。", source: "Investor's Business Daily", url: "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-apple-amazon-google-earnings-ai-iran-talks/?src=A00220&yptr=yahoo" },
-  { time: "00:13", tag: "tech", tagText: "科技", text: "廉价股票期权暗示下周科技巨头财报后可能出现大幅波动，Meta等公司被低估。华尔街低估了潜在的价格爆发，市场预期波动性将显著上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/cheap-options-suggest-a-big-post-earnings-swing-next-week-for-these-tech-titans-d9b56126?mod=mw_rss_topstories" },
-  { time: "00:00", tag: "crypto", tagText: "加密", text: "比特币走势谨慎，美国国债收益率接近4%，测试市场强度。投资者在宏观不确定性中权衡风险，加密市场情绪转向保守。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeElaMzYycFViZkh0TEZHcHg2dDkwNmhleUt3UDNTZjZBT1p3Yk9JWVRzejJjenpVYnFodXowb2VnZlhlZkJfemc1R2c4WHZMTU9kbm5tY2xkeEw1MTNmNjVhbEdnWnBwS0otUHQ4ZTBwSDM2Rktrekw1OEl6UURZeWhsT21VaTZYazBNTm1vRWdNZzTSAZgBQVVfeXFMTmtpOFVsOG9NYjI3ODJGRVQ4VlZsS2tXS053cWVVWkFIQklHSVFXbm5NRVhub3RWSWhNTjRRelA4Wk03UC0teFlQSElZM0ktY1NoME54bG1seTdha3VkTmtSc1lqZ0JBeVdpbHFSc09HeTdqcW5DdXY4cXFGeE44WGs0UlpRb1B0N3FXckxpcVJ4OFJYWFZVX0M?oc=5" },
 ];
-const breakingDate = "2026年4月26日 18:02 CST";
+const breakingDate = "2026年4月26日 18:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "21:54", tag: "ai", tagText: "AI", text: "SpaceX以600亿美元估值达成协议，获得收购AI编程初创公司Cursor的权利。Cursor是当前最热门的AI代码助手之一，此交易凸显科技巨头对AI开发工具的激烈争夺。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQakZzMDM2cjdnbThWM0hKUndMSXdFSnZpQTlUWWxZQnlkcWF1VG4xZkpaZ0NZalktd28xQUlSdkhtbzV1aGphR1VPSGY0T2F2ZkZORHFXdFhxeXVsb1RySDJ0SThRak1HRzZPZHBIZHRqMDBUbUE2SkdfWFYwSW4wSVktTEd1clpxM1lNS2ZTeFNJV0JsQmw2NUlxVjVHVS1kZzJBb3VXWnNyd1FTZV9sZ2FxV0E5enlPbUxrQTgwRzRfN0ZtWjM2bElQYmpodw?oc=5" },
   { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
 ];
-const aiBreakingDate = "2026年4月26日 18:02 CST";
+const aiBreakingDate = "2026年4月26日 18:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
