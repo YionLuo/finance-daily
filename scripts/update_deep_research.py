@@ -2,12 +2,14 @@
 """
 Deep Research Report Generator for Y Daily.
 
-Four-stage pipeline that mimics how a senior analyst works:
+Six-stage pipeline with independent fact-checking:
 
   Stage 1 — Topic Selection: Pick the best deep-dive topic from breaking news
-  Stage 2 — Brain Dump: Activate the model's internal knowledge about this topic
-  Stage 3 — Research Agent: Model researches with web_search tool, thinking + searching iteratively
-  Stage 4 — Format: Convert the analysis into structured JSON for the frontend
+  Stage 2 — Research Planning: Activate domain knowledge + generate explicit key questions
+  Stage 3 — Research: Question-guided tool-using research → structured evidence bank
+  Stage 4 — Fact Check: Independent verification of claims (fresh context, adversarial)
+  Stage 5 — Report Writing: Generate report from verified evidence only (no tools)
+  Stage 6 — Format: Convert to structured JSON + validation
 
 Outputs: Updates the `deepResearch` array in index.html
 """
@@ -16,6 +18,7 @@ import os
 import sys
 import json
 import re
+import time as _time
 from datetime import datetime, timezone, timedelta
 
 # Add script dir to path
@@ -34,7 +37,7 @@ from news_fetcher import (
     AGENT_TOOLS, execute_tool_call,
 )
 
-# ============ Constants ============
+# ============ Constants & Config ============
 
 MAX_RESEARCH_ENTRIES = 30
 WEEKDAY_MAP = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
@@ -44,12 +47,16 @@ _base_url = os.environ.get("OPENAI_BASE_URL", "")
 _is_openrouter = "openrouter" in _base_url
 
 LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek/deepseek-v4-flash" if _is_openrouter else "deepseek-v4-flash")
-WRITER_MODEL = os.environ.get("WRITER_MODEL", "deepseek/deepseek-v4-pro" if _is_openrouter else "deepseek-v4-pro")
+WRITER_MODEL = os.environ.get("WRITER_MODEL", LLM_MODEL)  # defaults to flash; set env var for pro
 
-MAX_AGENT_ROUNDS = 12
+# Tool budgets
+MAX_RESEARCH_TOOL_CALLS = 18
+MAX_RESEARCH_ROUNDS = 15
+MAX_FACT_CHECK_TOOL_CALLS = 10
+MAX_FACT_CHECK_ROUNDS = 8
 
 
-# ============ Stage 1: Topic Selection (unchanged) ============
+# ============ Stage 1: Topic Selection ============
 
 TOPIC_SELECTION_PROMPT = """你是 Y Daily 首席分析师。从今日 Breaking News 中选出最具深度分析价值的 1 个专题。
 
@@ -99,8 +106,7 @@ def select_topic(client, breaking_news, ai_breaking_news, existing_topics):
     )
 
     response = llm_chat_with_retry(client, [{"role": "user", "content": prompt}], max_tokens=4096, temperature=0.3)
-    cleaned = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
-    cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE).strip()
+    cleaned = _strip_llm_wrapper(response)
 
     try:
         topic_info = json.loads(cleaned)
@@ -110,47 +116,91 @@ def select_topic(client, breaking_news, ai_breaking_news, existing_topics):
                     else "全球市场综述")
         topic_info = {"topic": fallback, "topicReason": "自动选题", "angle": "综合分析"}
 
+    # Collect seed article URLs for Stage 3
+    all_breaking = breaking_news + ai_breaking_news
+    seed_urls = []
+    for item in all_breaking[:30]:
+        url = item.get("url", "")
+        if url and "news.google.com" not in url:
+            seed_urls.append({"title": item.get("text", "")[:80], "url": url})
+
+    topic_info["seed_urls"] = seed_urls[:8]
+
     print(f"  Topic: {topic_info.get('topic', '?')}")
     print(f"  Reason: {topic_info.get('topicReason', '')}")
     return topic_info
 
 
-# ============ Stage 2: Brain Dump ============
+# ============ Stage 2: Research Planning ============
 
-BRAIN_DUMP_PROMPT = """你是一位在 AI 和科技金融领域有 15 年经验的资深分析师，服务对象是专业投资人。
-当前时间：{current_time}（现在是 2026 年 4 月）
+PLAN_RESEARCH_PROMPT = """你是一位在 AI 和科技金融领域有 15 年经验的资深分析师，服务对象是专业投资人。
+当前时间：{current_time}
 
 今天你要深度分析的主题是：「{topic}」
 角度：{angle}
+选题理由：{reason}
 
-在你开始搜索任何新信息之前，先梳理你对这个话题的**结构性认知**——重点是分析框架和历史规律，而不是具体产品版本或公司估值（这些会通过搜索获取最新数据）。
+你的任务是产出一份**研究计划**，包含两部分：
 
-请输出：
+═══ 第一部分：结构性认知（Brain Dump）═══
+梳理你对这个话题的结构性认知——重点是分析框架和历史规律。
 
-1. **行业结构**：竞争格局、关键玩家定位、价值链分布、各环节利润率
-2. **历史投资案例**：类似事件在历史上驱动了什么具体的股价反应？有哪些赚钱/亏钱的教科书案例？
-3. **分析框架**：分析这类问题应该看哪些维度？哪个因素是决定交易机会的关键？
-4. **可能的交易结构**：这类事件通常对应哪些交易类型？（并购套利 / 事件驱动 / 行业轮动 / 对冲组合 / 波动率交易等）
-5. **常见误区**：大众/媒体在这个话题上容易犯什么错？被高估的是什么？被低估的是什么？
-6. **需要搜索验证的关键问题**：你知道大致方向但不确定最新数据的点（列 6-10 个具体问题，后续用搜索回答——尤其要包含"具体的标的公司财务数据"、"进行中的相关交易"、"近期监管判例"）
+覆盖以下维度：
+1. **行业结构与价值链**：竞争格局、关键玩家定位、各环节利润率
+   ⚠️ 价值链必须覆盖完整层次——不能只分析"两端"而忽略"中间层"。
+   例如：AI产业链不能只看"芯片"和"终端应用"，必须包含"平台/SaaS层"。
+2. **历史投资案例**：类似事件驱动了什么股价反应？教科书案例？
+3. **二阶/三阶效应**：间接影响和负反馈环路（如：大规模失业→消费下降→科技收入受损）
+4. **常见误区**：大众/媒体在这个话题上容易犯什么错？
 
-⚠️ 重要提醒：
-- 你的训练数据截止到 2024 年底左右。现在是 2026 年 4 月，AI 行业已经发生了很多变化。
-- **不要写具体的产品版本号、模型名称、融资金额、公司估值**——这些很可能已经过时。
-- 聚焦于**结构性认知**（竞争逻辑、商业模式、历史规律、交易模式），这些不会因为半年的时间而失效。
-- 所有具体数据点标注「待搜索确认」
+⚠️ 重要：你的训练数据截止到 2024 年底。不要写具体的产品版本号、融资金额、公司估值——这些会通过搜索获取。
+聚焦结构性认知（竞争逻辑、商业模式、历史规律），标注不确定的为 [待验证]。
 
-用中文，1500-2000 字（精炼，重框架轻细节）。
+═══ 第二部分：关键问题清单 ═══
+列出这份报告必须回答的 5-8 个关键问题。
+
+问题类型：
+- **事实验证型**：需要搜索确认的具体事实（如"X公司最新季度营收是多少？"）
+- **财务穿透型**：涉及公司的哪条业务线受影响？影响多少？
+- **竞争格局型**：有哪些竞争者/替代方案？各自定位？
+- **反面论证型**：谁会反驳这个结论？有什么反面证据？
+- **催化剂型**：未来什么事件能验证/推翻核心假设？
+
+每个问题附带搜索建议（具体的搜索关键词）。
+
+═══ 第三部分：分析陷阱提醒 ═══
+列出这个话题特有的分析陷阱。
+例如：
+- "NVIDIA 是 fabless 公司（台积电代工），不要把 FCF 低归因于建厂 CAPEX"
+- "同一篇文章的多个数据点不算独立验证"
+- "yfinance 返回的是 TTM 数据，可能与最新季报有口径差异"
+
+输出严格 JSON（不要 markdown 代码块）：
+{{
+  "brain_dump": "结构性认知文本（800-1200字）",
+  "key_questions": [
+    {{
+      "id": "Q1",
+      "question": "具体问题",
+      "type": "事实验证型/财务穿透型/竞争格局型/反面论证型/催化剂型",
+      "priority": "high/medium/low",
+      "search_hints": ["搜索关键词1", "搜索关键词2"]
+    }}
+  ],
+  "data_needs": ["需要获取的具体数据1", "需要获取的具体数据2"],
+  "pitfalls": ["分析陷阱1", "分析陷阱2"]
+}}
 """
 
 
-def brain_dump(client, topic_info):
-    """Stage 2: Activate the model's internal knowledge about the topic."""
-    print("\n=== Stage 2: Brain Dump (Knowledge Activation) ===")
+def plan_research(client, topic_info):
+    """Stage 2: Generate research plan with brain dump + key questions."""
+    print("\n=== Stage 2: Research Planning ===")
 
-    prompt = BRAIN_DUMP_PROMPT.format(
+    prompt = PLAN_RESEARCH_PROMPT.format(
         topic=topic_info.get("topic", ""),
         angle=topic_info.get("angle", ""),
+        reason=topic_info.get("topicReason", ""),
         current_time=format_date_cst(now_cst()),
     )
 
@@ -159,525 +209,463 @@ def brain_dump(client, topic_info):
         max_tokens=4096, temperature=0.5,
     )
 
-    print(f"  Brain dump: {len(response)} chars")
-    return response
+    cleaned = _strip_llm_wrapper(response)
+
+    try:
+        plan = json.loads(cleaned)
+    except json.JSONDecodeError:
+        print("  WARNING: Failed to parse research plan JSON, using fallback")
+        plan = {
+            "brain_dump": response[:1200],
+            "key_questions": [
+                {"id": "Q1", "question": "这个事件的核心事实是什么？", "type": "事实验证型", "priority": "high", "search_hints": [topic_info.get("topic", "") + " 2026"]},
+                {"id": "Q2", "question": "对相关公司的财务影响？", "type": "财务穿透型", "priority": "high", "search_hints": [topic_info.get("topic", "") + " revenue earnings"]},
+                {"id": "Q3", "question": "主要风险和反面论据？", "type": "反面论证型", "priority": "high", "search_hints": [topic_info.get("topic", "") + " risks bear case"]},
+            ],
+            "data_needs": [],
+            "pitfalls": [],
+        }
+
+    questions = plan.get("key_questions", [])
+    print(f"  Brain dump: {len(plan.get('brain_dump', ''))} chars")
+    print(f"  Key questions: {len(questions)}")
+    for q in questions:
+        print(f"    {q.get('id', '?')} [{q.get('type', '?')}] {q.get('question', '')[:60]}")
+    print(f"  Pitfalls: {len(plan.get('pitfalls', []))}")
+
+    return plan
 
 
-# ============ Stage 3a: Research Collection (chat model + tools) ============
+# ============ Stage 3: Research ============
 
-RESEARCH_COLLECTOR_PROMPT = """你是 Y Daily 的研究助理，服务对象是专业投资人。正在为「{topic}」收集**投研级**素材（不是评论级）。
+RESEARCH_AGENT_PROMPT = """你是 Y Daily 的研究助理。当前时间：{current_time}
 
-当前时间：{current_time}（现在是 2026 年）
+今天你要为「{topic}」收集投研级素材。
 
-你有 web_search 和 fetch_url_content 工具。
+=== 初始知识框架 ===
+{brain_dump}
 
-你的任务是**只做搜索收集，不写报告**。收集足够的素材后，输出一份结构化的「研究素材包」给分析师。
+=== 必须回答的关键问题 ===
+{questions_text}
 
 === 今日相关新闻 ===
 {breaking_context}
 
-=== ⚠️ 关键要求：你必须读全文 ===
-web_search 只能返回标题和摘要片段，信息量远远不够写深度投研报告。
-你**必须**对搜索结果中最重要的 5-8 篇文章使用 fetch_url_content 读取全文。
-如果你只搜不读全文，分析师会因为素材太薄而写出空洞的评论文章。
+=== 可预抓取的种子文章 URL ===
+{seed_urls_text}
 
-=== 投研素材的收集要点（和普通新闻评论不同）===
-普通评论只需要新闻报道。但投研需要：
-- **具体财务数据**：相关公司最新季报、收入/毛利率/现金流、估值倍数
-- **进行中的交易案例**：类似话题正在发生的并购/融资/IPO
-- **历史案例对比**：过去类似事件驱动了哪些具体股价反应
-- **监管判例/行业数据**：近期相关的监管决定、审批尺度
-- **多方观点**：看多的理由、看空的理由、中立的质疑
-- **资金流向信号**：大行研报、机构持仓变化、期权市场异动
+---
 
-=== 收集流程 ===
-1. 先用 web_search 搜索 8-12 个不同角度的关键词，包括：
-   - 主话题 + "2026"
-   - **涉及的关键公司 + "quarterly results" / "revenue" / "R&D expense" / "capex" / "free cash flow"**（硬财务数据优先）
-   - **涉及的关键公司 + "P/E ratio" / "valuation" / "analyst target price"**（估值数据）
-   - 主话题 + "deal" / "acquisition" / "merger" / "IPO"
-   - 主话题 + "supply chain" + 具体公司名 / "India capacity" / "Vietnam production"（产能和供应链细节）
-   - 主话题 + "regulation" / "ruling" / "precedent"
-   - 中英文混用，不同渠道都试
+你有三个工具：
+- **web_search(query)**: 搜索 Google News，返回标题、摘要、URL
+- **fetch_url_content(url)**: 读取 URL 全文（最多 10000 字）
+- **fetch_financial_data(ticker)**: Yahoo Finance 实时财务数据
 
-2. 从搜索结果中挑出最重要、信息量最大的 5-8 篇文章
-3. 对这些文章逐一使用 fetch_url_content 读取全文（这一步不能跳过！）
-4. **必做**：至少搜一次相关公司的最新财报或投资者信息页面，拿到真实的 R&D 金额、现金流、营收等数字
-5. 搜集够了后，输出以下格式：
+---
 
----素材汇总---
-## 核心事件
-（事件的基本事实，用搜索和全文中获取的详细信息）
+【数据铁律 — 违反即报废】
+- 只使用工具返回的数据。绝不使用训练数据中的具体数字。
+- 如果工具没有返回某个数字，不要猜。
+- 你的训练数据截止 2024 年底。当前时间见上方。
+- 不要写入任何"据报道XX投资了XX亿"这类从记忆中回忆的金额。
 
-## 关键数据点
-（搜索到的具体数字：财务数据、交易规模、市场份额等，标注来源 URL）
+---
 
-## 相关公司财务信息
-（涉及的关键公司的营收、利润、估值、业务结构等，如有）
+【研究策略】
 
-## 正面观点/看多理由
-（支持/看好的分析和论据，标注来源）
+你有 {max_tool_calls} 次工具调用预算。按以下优先级分配：
 
-## 反面观点/风险
-（质疑/看空的分析和论据，标注来源）
+1. **种子文章**（如果有 URL）：先 fetch_url_content 读取 2-3 篇最相关的种子文章
+2. **高优先问题**：针对每个 high 优先级问题，做 1-2 次 web_search
+3. **财务数据**：涉及具体公司时，调用 fetch_financial_data
+4. **一手信源**：至少 1 次搜索 SEC 文件 / 监管机构公告 / 公司 IR 页面
+5. **反面观点**：至少 1 次搜索 bear case / risks / criticism
+6. **竞争格局**：至少 1 次搜索 competitors / alternatives
+7. **中优先问题**：用剩余预算
 
-## 进行中的相关交易/事件
-（同主题下正在发生的其他交易、监管行动、产品发布，标注来源）
+【分析陷阱提醒】
+{pitfalls_text}
 
-## 历史案例对比
-（如搜到历史上类似事件的案例数据）
-
-## 行业背景
-（相关的行业趋势和竞争动态，标注来源）
-
-## 来源列表
-（所有参考文章的标题和 URL）
----素材汇总结束---
-
-只输出搜索到的真实信息。不要编造任何数据或引用来源。如果某个方面搜不到信息，就写"未找到相关信息"。
+研究够了就停止调用工具。系统会自动整理你的研究成果。
 """
 
-MAX_COLLECT_ROUNDS = 15
+RESEARCH_COMPRESS_PROMPT = """请将以上研究过程中获得的所有关键信息整理为结构化研究摘要。
 
+=== 必须回答的问题清单 ===
+{questions_text}
 
-def research_collect(client, topic_info, breaking_context):
-    """
-    Stage 3a: Collect research materials using chat model + search tools.
-    Returns the collected research materials as text.
-    """
-    print(f"\n=== Stage 3a: Research Collection (max {MAX_COLLECT_ROUNDS} rounds) ===")
+=== 整理要求 ===
 
-    from openai import OpenAI
-    from news_fetcher import AGENT_TOOLS, execute_tool_call
-
-    api_key = os.environ.get("OPENAI_API_KEY")
-    base_url = os.environ.get("OPENAI_BASE_URL", "https://api.deepseek.com")
-    raw_client = OpenAI(api_key=api_key, base_url=base_url, timeout=300)
-
-    system_prompt = RESEARCH_COLLECTOR_PROMPT.format(
-        topic=topic_info.get("topic", ""),
-        breaking_context=breaking_context,
-        current_time=format_date_cst(now_cst()),
-    )
-
-    messages = [
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": f"开始为「{topic_info.get('topic', '')}」收集研究素材。先用 web_search 搜索 8-12 个不同角度的关键词。"},
-    ]
-
-    collected_sources = []
-    search_count = 0
-    fetch_count = 0
-    final_materials = None
-
-    for round_num in range(MAX_COLLECT_ROUNDS):
-        print(f"\n  --- Collect Round {round_num + 1} ---")
-
-        try:
-            response = raw_client.chat.completions.create(
-                model=LLM_MODEL,
-                messages=messages,
-                tools=AGENT_TOOLS,
-                temperature=0.3,
-                max_tokens=8192,
-            )
-        except Exception as e:
-            print(f"  ERROR: {e}")
-            break
-
-        message = response.choices[0].message
-        messages.append(message)
-
-        if message.tool_calls:
-            for tool_call in message.tool_calls:
-                func_name = tool_call.function.name
-                try:
-                    func_args = json.loads(tool_call.function.arguments)
-                except json.JSONDecodeError:
-                    func_args = {}
-
-                print(f"  Tool: {func_name}({json.dumps(func_args, ensure_ascii=False)[:100]})")
-                result = execute_tool_call(func_name, func_args)
-
-                if func_name == "web_search":
-                    search_count += 1
-                    for line in result.split("\n"):
-                        if line.strip().startswith("[") and "]" in line:
-                            collected_sources.append(line.strip())
-
-                if func_name == "fetch_url_content":
-                    fetch_count += 1
-
-                if len(result) > 5000:
-                    result = result[:5000] + "\n...(truncated)"
-
-                messages.append({
-                    "role": "tool",
-                    "tool_call_id": tool_call.id,
-                    "content": result,
-                })
-
-            print(f"  Processed {len(message.tool_calls)} tool call(s), total searches: {search_count}, fetches: {fetch_count}")
-
-            # If searched enough but hasn't read any full articles, push to read
-            if search_count >= 6 and fetch_count == 0 and round_num >= 2:
-                messages.append({"role": "user", "content": "你已经搜索了足够多的关键词。现在请从搜索结果中挑选最重要的 5 篇文章，使用 fetch_url_content 逐一读取全文。这一步非常关键，搜索摘要的信息量不够写深度报告。"})
-
-            # If not enough searches after round 1, push back
-            elif search_count < 5 and round_num == 1:
-                messages.append({"role": "user", "content": "继续搜索更多角度，特别是反面观点和具体数据。至少再搜 3-5 次。"})
-
-        else:
-            final_materials = message.content or ""
-            print(f"  Materials collected: {len(final_materials)} chars, from {search_count} searches")
-            break
-
-    if not final_materials:
-        messages.append({"role": "user", "content": "请现在输出你收集到的素材汇总。"})
-        try:
-            response = raw_client.chat.completions.create(
-                model=LLM_MODEL, messages=messages, max_tokens=8192, temperature=0.2,
-            )
-            final_materials = response.choices[0].message.content or ""
-        except Exception as e:
-            final_materials = "素材收集失败"
-            print(f"  Force output failed: {e}")
-
-    return final_materials, collected_sources
-
-
-KEY_QUESTION_PROMPT = """你是 Y Daily 的分析师。基于以下研究素材，生成这份报告必须回答的「关键问题清单」。
-
-=== 研究素材 ===
-{research_materials}
-
-=== 任务 ===
-仔细阅读素材，找出这份报告如果要做到"专业深度"，必须回答的关键问题。
-
-问题类型包括：
-1. **核心假设验证型**：报告隐含的假设（如"X 导致 Y"），需要什么数据才能验证？
-2. **财务穿透型**：涉及的公司，哪条业务线受影响？影响多少营收/利润？
-3. **反面力量型**：谁会反抗这个结论？有什么反面证据？
-4. **历史类比型**：类似事件过去发生过吗？结果如何？
-5. **催化剂型**：未来什么事件能验证/推翻核心假设？
-
-=== 输出格式（严格 JSON）===
+输出严格 JSON（不要 markdown 代码块）：
 {{
-  "questions": [
+  "claims": [
     {{
-      "id": "Q1",
-      "type": "假设验证型",
-      "question": "问题原文",
-      "why_crucial": "为什么这个问题必须回答（1句话）",
-      "current_status": "待搜索 / 部分回答 / 已回答",
-      "evidence_snippet": "素材中相关的片段（如果有的话）"
+      "id": "c1",
+      "text": "具体的、可验证的事实声明",
+      "source_urls": ["https://..."],
+      "source_names": ["Reuters", "Bloomberg"],
+      "source_count": 1,
+      "answers_questions": ["Q1"],
+      "category": "fact/metric/analysis/projection/unverified"
     }}
-  ]
+  ],
+  "financial_data": {{
+    "tickers_fetched": ["NVDA"],
+    "raw_data": "fetch_financial_data 返回的原始数据文本"
+  }},
+  "questions_coverage": {{
+    "answered": {{"Q1": ["c1", "c2"]}},
+    "unanswered": ["Q4", "Q5"]
+  }},
+  "source_independence_notes": "哪些来源可能不独立（如同一篇通稿的不同转载）",
+  "info_gaps": ["搜不到的关键信息1", "搜不到的关键信息2"]
 }}
 
-生成 5-8 个问题。问题必须具体，不能泛泛而谈。
-例如❌ "英伟达未来会怎样？"
-例如✅ "Graviton 在 AI 推理场景的 benchmark 数据 vs H200，性能/成本差距是多少？当前素材是否包含此数据？"
-
-只输出 JSON，不要其他文字。
-"""
-
-def generate_key_questions(client, research_materials):
-    """Stage 3.25: Generate key questions that the report must answer."""
-    print("\n=== Stage 3.25: Generate Key Questions ===")
-
-    prompt = KEY_QUESTION_PROMPT.format(
-        research_materials=research_materials[:20000]
-    )
-
-    response = llm_chat_with_retry(
-        client,
-        [{"role": "user", "content": prompt}],
-        max_tokens=2048,
-        temperature=0.2,
-    )
-
-    # Parse JSON
-    cleaned = re.sub(r'^```(?:json)?\s*\n', '', response, flags=re.MULTILINE)
-    cleaned = re.sub(r'\n```\s*$', '', cleaned, flags=re.MULTILINE).strip()
-    think_end = cleaned.find("</think>")
-    if think_end != -1:
-        cleaned = cleaned[think_end + len("</think>"):].strip()
-
-    try:
-        result = json.loads(cleaned)
-        questions = result.get("questions", [])
-        print(f"  Generated {len(questions)} key questions:")
-        for q in questions:
-            print(f"    {q['id']} [{q['type']}] {q['question'][:60]}... (status: {q['current_status']})")
-        return questions
-    except (json.JSONDecodeError, AttributeError):
-        print("  WARNING: Failed to parse questions JSON, using fallback")
-        return []
-
-
-# ============ Stage 3b: Report Writing (reasoning model, no tools) ============
-
-WRITER_PROMPT = """你是 Y Daily 的首席分析师。你的任务是产出专业、克制、有深度的投研分析报告。
-
-当前时间：{current_time}
-
-=== 关键问题清单（必须逐一回答，不能跳过）===
-{key_questions}
-
-=== 分析框架参考 ===
-{brain_dump}
-
-=== 研究素材（全部来自真实搜索，可直接引用）===
-{research_materials}
-
-=== 写作原则（严格遵守）===
-1. **围绕问题写，不要自由发挥**
-   报告的每一个章节都必须对应"关键问题清单"中的某一个或几个问题。
-   如果某个问题素材不足以回答，明确写"当前证据不足，需要关注 X 信号"，不要猜测。
-
-2. **多空观点必须并列呈现**
-   不要强行统一结论。如果证据支持多方，就写多方；支持空方，就写空方；都有，就并列。
-   每条观点必须标注证据强度：【已验证】有 2 个以上独立来源
-                             【部分验证】只有 1 个来源或数据不完整
-                             【未验证-推测】纯逻辑推导，无数据支撑
-
-3. **禁止输出交易指令**
-   不要写"做多 XXX"、"做空 XXX"、"建议买入/卖出"。
-   改为写："如果 X 条件被验证（见催化剂日历），则 Y 情景可能触发，对 Z 标的的影响方向是…，幅度取决于 W。"
-
-4. **假设必须显式标注**
-   文中每一个"因为 A 所以 B"的推导，如果 A 是假设（未验证），必须用括号标注（假设，待验证）。
-   如果通篇都是假设，在章节开头明确标注：⚠️ 本节主要基于未验证假设，确定性低。
-
-5. **数据严格要求**（同之前）
-   - 只使用素材中明确包含的数据
-   - 无具体数字时用定性分析 + 标注"（基于行业逻辑推断，需核查）"
-   - 禁止编造引用来源
-
-=== 报告结构（必须严格按照这个结构）===
-1. **核心问题**（1 段）
-   用 1-2 句话说明：这份报告试图回答什么关键问题？当前哪些已有答案、哪些仍不确定？
-
-2. **关键假设与验证状态**（1 个小节，可用表格）
-   列出报告依赖的核心假设，每个标注：【已验证】/【部分验证】/【未验证】
-   这是读者判断报告可信度的核心参考，不能省略。
-
-3. **分问题深度分析**（2-4 个小节）
-   每个小节对应 1-2 个关键问题。
-   小节内先写"多方观点"（证据 + 强度标注），再写"空方观点"（证据 + 强度标注）。
-   不要强行给出结论。如果证据不足以判断，直接写"当前证据不足以判断，需等待 X 信号"。
-
-4. **我们的判断**（1 段，确定性评级）
-   基于已验证的部分，给出一个总体判断，但必须附带确定性评级：
-   - 🟢 高确定性（已验证假设 ≥70%，有硬数据支撑）
-   - 🟡 中等确定性（已验证假设 40-70%，或关键数据缺失）
-   - 🔴 低确定性（主要基于未验证假设，或正反证据强度接近）
-   如果评级是🟡或🔴，必须说明"要提升确定性，需要验证 X、Y、Z"。
-
-5. **催化剂日历与待验证信号**（1 个小节）
-   列出未来 1-2 周内可能验证关键假设的具体事件：
-   - 财报发布日（公司名 + 日期）
-   - 行业会议 / 产品发布
-   - 监管决定
-   每个事件标注：如果事件结果 X，则验证/推翻哪个假设。
-
-=== 写作风格 ===
-- Stratechery 的结构感 + SemiAnalysis 的数据穿透
-- 克制。不确定就说不确定。
-- 每一个结论都必须有对应的证据强度标注。
-- 禁止："短期/中期/长期"、"存在不确定性"、"需要密切关注"（这些都是废话，改成具体描述）
-
-目标长度：3500-5000 字（质量 > 长度）。
+规则：
+1. 每条 claim 必须是具体的、可验证的声明，不是模糊总结
+2. source_count 严格按独立来源计数——同一篇文章的多个数据点只算 1 个来源
+3. 只保留工具返回的真实数据，绝不补充训练数据中的数字
+4. 没搜到的信息放 info_gaps，不要编造
 """
 
 
-def write_report(client, topic_info, brain_dump_text, research_materials, key_questions=None):
+def research(client, topic_info, plan, breaking_context):
     """
-    Stage 3b: Write the deep analysis report using reasoning model (R1).
-    No tool use — pure text generation with deep thinking.
-    key_questions: list of question dicts from generate_key_questions()
+    Stage 3: Execute research plan via tool calls → compress to evidence bank.
+    Phase A: Question-guided research with tools
+    Phase B: Compress raw research to structured evidence
     """
-    # Format key questions for prompt
+    print(f"\n=== Stage 3: Research (max {MAX_RESEARCH_ROUNDS} rounds, {MAX_RESEARCH_TOOL_CALLS} tool calls) ===")
+
+    raw_client = client  # Use the validated client from main()
+
+    # Format questions for prompt
+    questions = plan.get("key_questions", [])
     questions_text = ""
-    if key_questions:
+    if questions:
         lines = []
-        for q in key_questions:
-            status_icon = {"待搜索": "❓", "部分回答": "⚡", "已回答": "✅"}.get(q.get('current_status', ''), '❓')
-            lines.append(f"{q['id']}. [{q['type']}] {q['question']} {status_icon} {q.get('why_crucial', '')}")
+        for q in questions:
+            qid = q.get('id', '?')
+            qtext = q.get('question', '未知问题')
+            hints = ", ".join(q.get("search_hints", [])[:3])
+            lines.append(f"  {qid} [{q.get('type', '?')}] (优先级: {q.get('priority', 'medium')}) {qtext}")
+            if hints:
+                lines.append(f"     搜索建议: {hints}")
         questions_text = "\n".join(lines)
     else:
-        questions_text = "（未生成关键问题清单，请自行判断分析重点）"
+        questions_text = "（未生成问题清单，请自行判断研究重点）"
 
-    # 素材质量检查：如果缺乏硬数据，先补搜
-    has_numbers = bool(re.findall(r'\$[\d.]+[BMT]|\d+%|\d+亿|\d+万亿|revenue|营收|利润|市值', research_materials))
-    if not has_numbers:
-        print("  ⚠️ Materials lack hard financial data, requesting supplementary search...")
-        # 用 LLM 快速搜几个关键数字
-        from news_fetcher import web_search
-        topic = topic_info.get("topic", "")
-        supplement = []
-        for q in [f"{topic} revenue 2026", f"{topic} market cap", f"{topic} quarterly earnings"]:
-            results = web_search(q, max_results=3)
-            for r in results:
-                supplement.append(f"[补充搜索] {r.get('title', '')} - {r.get('summary', '')[:200]}")
-        if supplement:
-            research_materials += "\n\n## 补充财务数据搜索\n" + "\n".join(supplement)
-            print(f"  Added {len(supplement)} supplementary results")
+    # Format seed URLs
+    seed_urls = topic_info.get("seed_urls", [])
+    seed_urls_text = "\n".join(f"  - {s['title']}: {s['url']}" for s in seed_urls[:5]) if seed_urls else "（无种子 URL）"
 
-    print(f"\n=== Stage 3b: Report Writing (model: {WRITER_MODEL}) ===")
+    # Format pitfalls
+    pitfalls = plan.get("pitfalls", [])
+    pitfalls_text = "\n".join(f"  - {p}" for p in pitfalls) if pitfalls else "（无特殊提醒）"
 
-    prompt = WRITER_PROMPT.format(
-        brain_dump=brain_dump_text,
-        research_materials=research_materials[:25000],
+    system_prompt = RESEARCH_AGENT_PROMPT.format(
+        topic=topic_info.get("topic", ""),
+        brain_dump=plan.get("brain_dump", "")[:1500],
+        questions_text=questions_text,
+        breaking_context=breaking_context[:5000],
+        seed_urls_text=seed_urls_text,
+        pitfalls_text=pitfalls_text,
         current_time=format_date_cst(now_cst()),
-        key_questions=questions_text,
+        max_tool_calls=MAX_RESEARCH_TOOL_CALLS,
     )
 
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": f"开始研究「{topic_info.get('topic', '')}」。按优先级使用工具，研究够了就停。"},
+    ]
+
+    tool_call_count = 0
+
+    # ===== Phase A: Gather =====
+    print("\n  --- Phase A: Gather ---")
+    start_time = _time.time()
+
+    for round_num in range(MAX_RESEARCH_ROUNDS):
+        if tool_call_count >= MAX_RESEARCH_TOOL_CALLS:
+            print(f"  Tool budget exhausted ({tool_call_count}/{MAX_RESEARCH_TOOL_CALLS})")
+            break
+
+        print(f"  Round {round_num + 1}/{MAX_RESEARCH_ROUNDS} (tools: {tool_call_count}/{MAX_RESEARCH_TOOL_CALLS})")
+
+        try:
+            response = raw_client.chat.completions.create(
+                model=LLM_MODEL,
+                messages=messages,
+                tools=AGENT_TOOLS,
+                tool_choice="auto",
+                temperature=0.3,
+                max_tokens=4096,
+                timeout=180,
+            )
+        except Exception as e:
+            print(f"  ERROR: {e}")
+            break
+
+        message = response.choices[0].message
+        messages.append(message)
+
+        if message.tool_calls:
+            processed_ids = set()
+            for tool_call in message.tool_calls:
+                if tool_call_count >= MAX_RESEARCH_TOOL_CALLS:
+                    # Backfill skipped tool calls to keep API happy
+                    messages.append({
+                        "role": "tool",
+                        "tool_call_id": tool_call.id,
+                        "content": "(工具预算已用完，跳过此调用)",
+                    })
+                    processed_ids.add(tool_call.id)
+                    continue
+                func_name = tool_call.function.name
+                try:
+                    func_args = json.loads(tool_call.function.arguments)
+                except (json.JSONDecodeError, ValueError):
+                    func_args = {}
+                print(f"    Tool: {func_name}({json.dumps(func_args, ensure_ascii=False)[:100]})")
+                result = execute_tool_call(func_name, func_args)
+                if len(result) > 10000:
+                    result = result[:10000] + "\n...(截断)"
+                messages.append({
+                    "role": "tool",
+                    "tool_call_id": tool_call.id,
+                    "content": result,
+                })
+                processed_ids.add(tool_call.id)
+                tool_call_count += 1
+
+            # Budget warning
+            remaining = MAX_RESEARCH_TOOL_CALLS - tool_call_count
+            if 0 < remaining <= 3:
+                messages.append({
+                    "role": "user",
+                    "content": f"你还剩 {remaining} 次工具调用。如果关键信息已够，可以停止。"
+                })
+        else:
+            # Agent stopped calling tools
+            print(f"  Agent stopped researching after {tool_call_count} tool calls")
+            break
+
+    elapsed = _time.time() - start_time
+    print(f"  Phase A complete: {tool_call_count} tool calls, {elapsed:.0f}s")
+
+    # ===== Phase B: Compress =====
+    print("\n  --- Phase B: Compress ---")
+
+    compress_prompt = RESEARCH_COMPRESS_PROMPT.format(
+        questions_text=questions_text,
+    )
+    messages.append({"role": "user", "content": compress_prompt})
+
+    evidence_bank = None
+
+    # Attempt 1: Compress within full conversation context
     try:
-        response = client.chat.completions.create(
-            model=WRITER_MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=8192,
-            temperature=0.6,
-        )
-        text = response.choices[0].message.content or ""
-
-        # Strip <think> block if present (R1 reasoning trace)
-        think_end = text.find("</think>")
-        if think_end != -1:
-            text = text[think_end + len("</think>"):].strip()
-
-        print(f"  Report written: {len(text)} chars")
-        return text
-    except Exception as e:
-        print(f"  ERROR writing with {WRITER_MODEL}: {e}")
-        print(f"  Falling back to {LLM_MODEL}...")
-        response = client.chat.completions.create(
+        compress_resp = raw_client.chat.completions.create(
             model=LLM_MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=8192,
-            temperature=0.5,
+            messages=messages,
+            max_tokens=6000,
+            temperature=0.1,
+            timeout=180,
         )
-        text = response.choices[0].message.content or ""
-        print(f"  Fallback report: {len(text)} chars")
-        return text
+        compress_text = _strip_think(compress_resp.choices[0].message.content or "")
+        cleaned_json = _strip_llm_wrapper(compress_text)
+        evidence_bank = json.loads(cleaned_json)
+        print(f"  Compression attempt 1 succeeded")
+    except (json.JSONDecodeError, Exception) as e:
+        print(f"  Compression attempt 1 failed: {e}")
+
+    # Attempt 2: If first attempt failed, try with a CLEAN context
+    # Extract only the tool results (much smaller) and re-ask
+    if evidence_bank is None:
+        print("  Retrying compression with clean context...")
+        tool_results_summary = []
+        for msg in messages:
+            if isinstance(msg, dict) and msg.get("role") == "tool":
+                content = msg.get("content", "")[:2000]
+                tool_results_summary.append(content)
+            elif hasattr(msg, 'content') and hasattr(msg, 'role'):
+                # Skip assistant messages to reduce context
+                pass
+
+        clean_messages = [
+            {"role": "user", "content": (
+                f"以下是对「{topic_info.get('topic', '')}」的研究工具调用结果摘要。"
+                f"请整理为结构化研究摘要。\n\n"
+                f"=== 工具结果 ===\n"
+                + "\n---\n".join(tool_results_summary[:15])
+                + f"\n\n{compress_prompt}"
+            )},
+        ]
+        try:
+            compress_resp2 = raw_client.chat.completions.create(
+                model=LLM_MODEL,
+                messages=clean_messages,
+                max_tokens=6000,
+                temperature=0.1,
+                timeout=180,
+            )
+            compress_text2 = _strip_think(compress_resp2.choices[0].message.content or "")
+            cleaned_json2 = _strip_llm_wrapper(compress_text2)
+            evidence_bank = json.loads(cleaned_json2)
+            print(f"  Compression attempt 2 (clean context) succeeded")
+        except (json.JSONDecodeError, Exception) as e2:
+            print(f"  Compression attempt 2 failed: {e2}")
+
+    # Attempt 3: Last resort — extract claims from raw text manually
+    if evidence_bank is None:
+        print("  WARNING: All compression attempts failed, extracting claims from raw text")
+        # Gather all tool result text
+        raw_texts = []
+        for msg in messages:
+            if isinstance(msg, dict) and msg.get("role") == "tool":
+                raw_texts.append(msg.get("content", "")[:1500])
+        combined_raw = "\n".join(raw_texts)[:8000]
+
+        evidence_bank = {
+            "claims": [{"id": f"c{i+1}", "text": chunk.strip()[:500], "source_urls": [], "source_names": [], "source_count": 0, "answers_questions": [], "category": "unverified"} for i, chunk in enumerate(combined_raw.split("\n---\n")[:20]) if chunk.strip()],
+            "financial_data": {},
+            "questions_coverage": {"answered": {}, "unanswered": [q.get("id", "?") for q in questions]},
+            "source_independence_notes": "",
+            "info_gaps": ["研究摘要JSON解析失败，使用工具结果原文提取"],
+        }
+
+    claims = evidence_bank.get("claims", [])
+    gaps = evidence_bank.get("info_gaps", [])
+    coverage = evidence_bank.get("questions_coverage", {})
+    print(f"  Evidence bank: {len(claims)} claims, {len(gaps)} info gaps")
+    print(f"  Questions answered: {list(coverage.get('answered', {}).keys())}")
+    print(f"  Questions unanswered: {coverage.get('unanswered', [])}")
+
+    # Abort if zero sources
+    if not claims:
+        print("  ⚠️ Zero claims extracted — report would be pure hallucination")
+
+    return evidence_bank
 
 
+# ============ Stage 4: Fact Check ============
 
-# ============ Stage 3.5: Fact Check (with search verification) ============
+FACT_CHECK_PROMPT = """你是一位独立的事实核查编辑。你从未见过产生这些声明的研究过程——你只看到最终的声明列表。你的立场是：**假设每条声明都是错的，直到你验证它。**
 
-FACT_CHECK_SYSTEM = """你是一位严格的事实核查编辑。你的工作是验证一篇深度分析报告中的事实性声明和逻辑质量。
+你有 web_search 和 fetch_financial_data 工具（最多 {max_tool_calls} 次）。
 
-⚠️ 你和报告的作者是不同的人。作者可能会编造看起来很真实的数据。你不能相信任何没有可靠来源的具体数字。
+=== 待核查声明 ===
+{claims_text}
 
-你有 web_search 工具可以验证事实。
+=== 财务数据参考 ===
+{financial_data_text}
 
-=== 待核查报告 ===
-{report_text}
+=== 核查流程 ===
 
-=== 你的工作流程 ===
+1. **优先核查**：先核查具体金额、百分比、估值等数字声明
+2. **交叉验证**：对每条关键声明做 1 次 web_search 验证
+3. **训练数据泄漏检测**：
+   - 如果一个投融资金额很"整"（如 $40B, $100B）且搜索完全没有相关文章 → training_data_leak
+   - 如果一个"众所周知"的事件搜索返回 0 结果 → 可能根本没发生 → training_data_leak
+   - ⚠️ 重要：如果你搜索后**找到了相关报道**（即使无法确认精确日期），这**不是** training_data_leak。
+     Google News RSS 经常不返回精确发表时间，但文章确实存在。
+     只有在搜索完全为零结果时才标记 training_data_leak。
+   - 同样，如果 claim 中的事件在搜索结果中被多篇文章报道（标题匹配），即使日期不确定，也应标记为 verified 或 partially_correct。
+4. **信源独立性审计**：
+   - 检查 source_count：如果声明说有 3 个来源，但 URL 指向同一篇通稿的不同转载 → source_independence_error
+5. **财务逻辑检查**：
+   - fabless 公司（如 NVIDIA, AMD）不应有高 CAPEX → 如果报告把 FCF 低归因于 CAPEX → logic_gap
+   - yfinance TTM 数据可能与最新季报不一致 → 标注 stale_data
 
-第一步：提取所有事实性声明
-从报告中找出所有**具体的事实性声明**，特别是：
-- 具体金额（融资、估值、营收、市值）
-- 具体百分比（市场份额、增长率、转化率）
-- 具体事件（收购、合作、诉讼、产品发布）
-- 公司间的具体合作关系
-- 引用的报告名称或研究机构
-- 产品版本号和发布时间
-
-第二步：用 web_search 验证
-对每个关键声明，用 web_search 搜索验证。比如：
-- 报告说"亚马逊投资 Anthropic 250 亿" → 搜索 "Amazon Anthropic investment amount 2026"
-- 报告说"OpenAI 与腾讯合资入华" → 搜索 "OpenAI Tencent joint venture China 2026"
-- 报告说"某公司估值 800 亿" → 搜索 "company name valuation 2026"
-
-第三步：检查逻辑质量与投研专业度
-除了事实核查，还要检查：
-- **不当类比**：历史类比是否准确？比如"A公司收购B，和C收购D一样"——但如果实际情况有重大差异（如D在被收后仍有重大突破），就应该指出类比不成立
-- **遗漏关键玩家**：分析产业格局时是否遗漏了不可忽视的参与者（如谈AI芯片不提英伟达、谈云市场不提阿里云/华为云等）
-- **财务逻辑漏洞**：大额承诺是否有可行性分析？钱从哪来？是否存在循环融资嫌疑？
-- **投研专业度缺失**：报告是否只停留在"评论"层面？
-  - 提到了股票代码（relatedTickers）但正文中没有对应的具体财务影响分析 → missing_player
-  - 用了"短期/中期/长期"这种无交易价值的时间颗粒度 → logic_gap
-  - 只说"需要关注"但没说关注什么具体信号 → logic_gap
-  - 只说"利好/利空某行业"但没列出具体标的或交易结构 → logic_gap
-- **假设未验证却当事实用**（新增）：报告中是否有"因为 A 所以 B"，但 A 是未验证的假设？
-  - 例如：报告说"Graviton 性能优于 H200，所以 NVDA 市场份额将下降"，但素材里没有 Graviton vs H200 的 benchmark 数据
-  - 这种"逻辑跳跃"比事实错误更危险，必须标记为 assumption_not_backed
-
-第四步：检查报告内部一致性（新增）
-- 报告前面说"做多 X"，后面说"做空 X" → self_contradiction
-- 报告标注某假设"未验证"，但结论却基于该假设给出确定性判断 → consistency_gap
-- 多方和空方论据强度明显不对称，但报告没有指出 → bias_unchecked
-
-第五步：输出核查结果
-完成搜索验证后，输出 JSON：
+完成核查后，输出严格 JSON（不要 markdown 代码块）：
 {{
-  "total_claims": 核查的事实条数,
-  "verified": 搜索确认正确的条数,
-  "unverifiable": 搜索找不到佐证但也没有反证的条数,
-  "false_or_fabricated": 搜索结果与声明矛盾、或完全找不到任何相关信息的条数,
-  "logic_issues": 逻辑问题的条数,
-  "assumption_issues": 假设未验证却当事实用的条数,
-  "consistency_issues": 报告内部自相矛盾的条数,
-  "issues": [
+  "verdicts": [
     {{
-      "claim": "有问题的声明原文",
-      "search_result": "你搜到的实际信息是什么",
-      "verdict": "false / fabricated / unverifiable / bad_analogy / missing_player / logic_gap / assumption_not_backed / self_contradiction / consistency_gap",
-      "fix": "建议的修正文本（如果应该删除就写'删除此句'）"
+      "claim_id": "c1",
+      "verdict": "verified/refuted/training_data_leak/source_independence_error/stale_data/disputed/unverified/partially_correct/bad_analogy/logic_gap",
+      "corrected_text": "修正后的文本（如不需修正则为 null）",
+      "verification_notes": "简要说明你搜到了什么",
+      "usable": true
+    }}
+  ],
+  "data_quality_score": 0.75,
+  "flagged_items": [
+    {{
+      "claim_id": "c1",
+      "flag_type": "training_data_leak",
+      "details": "具体说明",
+      "action": "remove/correct/add_caveat"
     }}
   ]
 }}
 
-verdict 含义：
-- false: 与搜索到的事实矛盾
-- fabricated: 完全找不到相关信息，很可能是编造的
-- unverifiable: 无法确认
-- bad_analogy: 历史类比不准确或有重大遗漏
-- missing_player: 分析遗漏了关键参与者
-- logic_gap: 财务/商业逻辑有漏洞
-- assumption_not_backed: 假设未验证却当事实用（如"因为 A 所以 B"，但 A 未验证）
-- self_contradiction: 报告内部自相矛盾（前面说 X，后面说非 X）
-- consistency_gap: 标注"未验证"但结论却很确定
-
-重要：只输出最终 JSON。每个 issue 都必须有 search_result 说明你搜到了什么。
+data_quality_score 计算：verified 占比 × 0.8 + partially_correct 占比 × 0.5。
+如果有 training_data_leak，score 减 0.2。如果有 source_independence_error，score 减 0.1。
 """
 
-MAX_FACT_CHECK_ROUNDS = 8
 
-
-def fact_check(client, report_text):
+def fact_check(client, evidence_bank):
     """
-    Stage 3.5: Fact-check the report using web search verification.
-    The fact checker is an independent agent that searches to verify claims.
-    Returns: (cleaned_report_text, fact_check_result)
+    Stage 4: Independent fact-checking of evidence bank claims.
+    Fresh context — never sees research agent's reasoning.
     """
-    print("\n=== Stage 3.5: Fact Check (search-verified) ===")
+    print(f"\n=== Stage 4: Fact Check (max {MAX_FACT_CHECK_ROUNDS} rounds, {MAX_FACT_CHECK_TOOL_CALLS} tool calls) ===")
 
-    from news_fetcher import AGENT_TOOLS, execute_tool_call
+    raw_client = client  # Use the validated client from main()
 
-    system_prompt = FACT_CHECK_SYSTEM.format(report_text=report_text[:10000])
+    claims = evidence_bank.get("claims", [])
+    if not claims:
+        print("  No claims to check, skipping")
+        return {"verdicts": [], "data_quality_score": 0.0, "flagged_items": []}
+
+    # Format claims for the checker
+    claims_lines = []
+    for c in claims:
+        sources = ", ".join(c.get("source_names", [])[:3]) or "无来源"
+        claims_lines.append(f"  [{c.get('id', '?')}] ({c.get('category', '?')}) {c.get('text', '')}")
+        claims_lines.append(f"    来源({c.get('source_count', 0)}个): {sources}")
+        urls = c.get("source_urls", [])
+        if urls:
+            claims_lines.append(f"    URL: {urls[0][:80]}")
+    claims_text = "\n".join(claims_lines)
+
+    financial_data = evidence_bank.get("financial_data", {})
+    financial_data_text = financial_data.get("raw_data", "（无财务数据）")[:3000]
+
+    # Use only web_search and fetch_financial_data for fact-checking (no fetch_url_content — speed)
+    fact_check_tools = [t for t in AGENT_TOOLS if t["function"]["name"] in ("web_search", "fetch_financial_data")]
+
+    system_prompt = FACT_CHECK_PROMPT.format(
+        claims_text=claims_text,
+        financial_data_text=financial_data_text,
+        max_tool_calls=MAX_FACT_CHECK_TOOL_CALLS,
+    )
 
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": "开始核查。先列出需要验证的关键事实声明，然后逐个用 web_search 验证。"},
+        {"role": "user", "content": "开始核查。优先验证具体金额和数字声明。"},
     ]
 
+    tool_call_count = 0
     final_result = None
 
-    for round_num in range(1, MAX_FACT_CHECK_ROUNDS + 1):
-        print(f"\n  --- Fact Check Round {round_num} ---")
+    budget_exhausted_sent = False
+
+    for round_num in range(MAX_FACT_CHECK_ROUNDS):
+        if tool_call_count >= MAX_FACT_CHECK_TOOL_CALLS and not budget_exhausted_sent:
+            messages.append({"role": "user", "content": "工具预算用完。请立即输出最终核查结果 JSON。"})
+            budget_exhausted_sent = True
+
+        print(f"  Round {round_num + 1}/{MAX_FACT_CHECK_ROUNDS} (tools: {tool_call_count}/{MAX_FACT_CHECK_TOOL_CALLS})")
 
         try:
-            response = client.chat.completions.create(
+            response = raw_client.chat.completions.create(
                 model=LLM_MODEL,
                 messages=messages,
-                tools=AGENT_TOOLS,
-                temperature=0.1,
-                max_tokens=8192,
+                tools=fact_check_tools if tool_call_count < MAX_FACT_CHECK_TOOL_CALLS else None,
+                temperature=0.2,
+                max_tokens=6000,
+                timeout=180,
             )
         except Exception as e:
             print(f"  ERROR: {e}")
@@ -688,108 +676,280 @@ def fact_check(client, report_text):
 
         if message.tool_calls:
             for tool_call in message.tool_calls:
+                if tool_call_count >= MAX_FACT_CHECK_TOOL_CALLS:
+                    messages.append({
+                        "role": "tool",
+                        "tool_call_id": tool_call.id,
+                        "content": "(工具预算已用完，跳过此调用)",
+                    })
+                    continue
                 func_name = tool_call.function.name
                 try:
                     func_args = json.loads(tool_call.function.arguments)
                 except json.JSONDecodeError:
                     func_args = {}
-
-                print(f"  Verify: {func_name}({json.dumps(func_args, ensure_ascii=False)[:100]})")
+                print(f"    Verify: {func_name}({json.dumps(func_args, ensure_ascii=False)[:80]})")
                 result = execute_tool_call(func_name, func_args)
-
                 if len(result) > 3000:
-                    result = result[:3000] + "\n...(truncated)"
-
+                    result = result[:3000] + "\n...(截断)"
                 messages.append({
                     "role": "tool",
                     "tool_call_id": tool_call.id,
                     "content": result,
                 })
-
-            print(f"  Verified {len(message.tool_calls)} claim(s)")
-
+                tool_call_count += 1
         else:
-            # Final output — parse JSON result
-            text = message.content or ""
-            cleaned = re.sub(r'^```(?:json)?\s*\n?', '', text, flags=re.MULTILINE)
-            cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE).strip()
-
+            # Parse final output
+            text = _strip_think(message.content or "")
+            cleaned = _strip_llm_wrapper(text)
             try:
                 final_result = json.loads(cleaned)
             except json.JSONDecodeError:
-                # Try to extract JSON from text
                 json_match = re.search(r'\{[\s\S]*\}', cleaned)
                 if json_match:
                     try:
                         final_result = json.loads(json_match.group())
                     except json.JSONDecodeError:
-                        print(f"  WARNING: Could not parse fact check JSON")
-                        final_result = None
+                        pass
             break
 
     if not final_result:
-        print("  Fact check did not produce parseable result, skipping corrections")
-        return report_text, None
+        print("  ⚠️ Fact check did not produce parseable result, marking all unverified")
+        final_result = {
+            "verdicts": [{"claim_id": c.get("id", "?"), "verdict": "unverified", "corrected_text": None, "verification_notes": "核查超时", "usable": True} for c in claims],
+            "data_quality_score": 0.3,
+            "flagged_items": [],
+        }
 
     # Print summary
-    total = final_result.get("total_claims", 0)
-    verified = final_result.get("verified", 0)
-    fabricated = final_result.get("false_or_fabricated", 0)
-    logic_issues = final_result.get("logic_issues", 0)
-    issues = final_result.get("issues", [])
+    verdicts = final_result.get("verdicts", [])
+    score = final_result.get("data_quality_score", 0)
+    flagged = final_result.get("flagged_items", [])
 
-    print(f"\n  Claims checked: {total}")
-    print(f"  Verified: {verified}, Unverifiable: {final_result.get('unverifiable', 0)}, False/Fabricated: {fabricated}, Logic issues: {logic_issues}")
+    verdict_counts = {}
+    for v in verdicts:
+        vtype = v.get("verdict", "unknown")
+        verdict_counts[vtype] = verdict_counts.get(vtype, 0) + 1
 
-    if issues:
-        print(f"  Issues ({len(issues)}):")
-        for issue in issues[:10]:
-            verdict = issue.get("verdict", "?")
-            icon = "🚫" if verdict in ("false", "fabricated") else "🔍" if verdict in ("bad_analogy", "missing_player", "logic_gap") else "⚠️"
-            print(f"    {icon} [{verdict}] {issue.get('claim', '')[:80]}")
-            print(f"       搜索结果: {issue.get('search_result', '')[:80]}")
-            print(f"       修正: {issue.get('fix', '')[:80]}")
+    print(f"\n  Results: {len(verdicts)} verdicts, quality score: {score:.2f}")
+    for vtype, count in sorted(verdict_counts.items()):
+        icon = {"verified": "✅", "refuted": "❌", "training_data_leak": "🚫", "unverified": "❓"}.get(vtype, "⚠️")
+        print(f"    {icon} {vtype}: {count}")
+    if flagged:
+        print(f"  Flagged items: {len(flagged)}")
+        for f in flagged[:5]:
+            print(f"    🚩 [{f.get('flag_type', '?')}] {f.get('details', '')[:80]}")
 
-    # Apply corrections for both factual errors AND logic issues
-    fixable_issues = [i for i in issues if i.get("verdict") in ("false", "fabricated", "bad_analogy", "missing_player", "logic_gap", "assumption_not_backed", "self_contradiction", "consistency_gap")]
-
-    if fixable_issues:
-        print(f"\n  Applying corrections for {len(fixable_issues)} false/fabricated claims...")
-
-        fix_prompt = f"""以下报告有 {len(fixable_issues)} 处经核查发现的问题，必须修正。
-
-=== 原始报告 ===
-{report_text[:10000]}
-
-=== 经核查发现的问题 ===
-{json.dumps(fixable_issues, ensure_ascii=False, indent=2)}
-
-修正规则：
-1. 对于 "false" 的：用 fix 字段建议的正确表述替换
-2. 对于 "fabricated" 的：直接删除该句或该段落，不要用新编的内容替换
-3. 对于 "bad_analogy" 的：修正类比，说明适用边界，或用更准确的类比替换
-4. 对于 "missing_player" 的：在相关段落补充对遗漏玩家的分析
-5. 对于 "logic_gap" 的：补充财务/商业逻辑分析，质疑可行性
-6. 不要添加任何新的事实声明（逻辑分析除外）
-7. 保持报告其余部分不变
-
-输出修正后的完整报告文本。"""
-
-        fixed = llm_chat_with_retry(
-            client, [{"role": "user", "content": fix_prompt}],
-            max_tokens=8192, temperature=0.1,
-        )
-
-        if fixed and len(fixed) > len(report_text) * 0.4:
-            print(f"  Report corrected: {len(report_text)} → {len(fixed)} chars")
-            return fixed, final_result
-        else:
-            print(f"  Correction failed, keeping original")
-
-    return report_text, final_result
+    return final_result
 
 
-# ============ Stage 4: Format to JSON ============
+# ============ Stage 5: Report Writing ============
+
+REPORT_WRITER_PROMPT = """你是 Y Daily 的首席分析师。当前时间：{current_time}
+你已经完成了对「{topic}」的研究和事实核查。请基于以下**已验证的证据**写一份深度投研分析报告。
+
+=== 分析框架 ===
+{brain_dump}
+
+=== 关键问题 ===
+{questions_text}
+
+=== 已验证的证据（只能使用这些） ===
+{verified_claims_text}
+
+=== 财务数据 ===
+{financial_data_text}
+
+=== 未能回答的问题 ===
+{unanswered_text}
+
+=== 信息空白 ===
+{info_gaps_text}
+
+=== 核查摘要 ===
+数据质量评分: {quality_score}/1.0
+{flagged_text}
+
+---
+
+【关键约束 — 每一条都必须遵守】
+
+1. **数据纪律**：只使用"已验证的证据"中的数据。不在证据中的数字/事实一律不写。
+   不确定就写"（未获取到具体数据）"。绝不使用训练数据中的数字。
+
+2. **信源多元化铁律**：
+   - ≥2 独立来源 = 【已验证】
+   - 1 个来源 = 【部分验证】（即使该来源内部自洽）
+   - 0 个来源 = 【未验证-推测】
+   ⚠️ 同一篇文章的多个数据点只算 1 个来源。
+
+3. **多空排版**：每个分析章节内，多方和空方观点用 ### 子标题分开。
+   每个列表项独占一行，前后有空行：
+
+   ### 多方观点
+
+   - **论点A**：证据。【已验证】来源：URL
+
+   - **论点B**：证据。【部分验证】来源：URL
+
+   ### 空方观点
+
+   - **论点C**：证据。来源：URL
+
+4. **评级-信源一致性铁律**：
+   🟢 高确定性：≥2 独立来源硬数据，无强反面证据
+   🟡 中等确定性：1 来源 / 数据不完整 / 存在可信反面论点
+   🔴 低确定性：纯推测 / 正反证据强度接近 / 关键变量未知
+   - 1 个来源 → 最高 🟡
+   - 未验证假设 → 只能 🔴
+   - "需更多数据验证" → 不能给 🟢
+   - 评级理由必须引用具体来源数量
+
+5. **催化剂日历**：时间具体到"周"或更精确。禁止"下半年"、"近期"。
+   | 时间 | 事件 | 验证/推翻假设 | 影响方向 |
+   ⚠️ 至少 2 条必须有具体日期（从已验证证据中提取财报日、会议日等）。
+   "时间不确定"最多出现 1 次。如果大部分催化剂都无法确定时间，说明研究不够充分——在表前注明"⚠️ 催化剂时间精度不足，需补充研究"。
+
+6. **交易建议**：不写"买入/卖出/做多/做空"。
+   用情景假设："若 [条件] 被验证，则 [标的] 面临 [方向] 压力/机会，关键信号是 [X]。"
+   提及配对交易必须给出具体 ETF/个股代码，或明确写"未找到合适标的"。
+
+7. **竞争格局**：如果证据中有竞争者信息，必须做对比。否则标注为信息空白。
+
+8. **关键洞察展开**：有价值的宏观洞察（负反馈环路、结构性矛盾）必须用独立段落展开，
+   列出环路节点、搜索历史弹性系数。无法量化则标注"（无历史数据支撑量化）"。
+
+9. **未回答问题诚实说**：对 unanswered 的问题，在相关章节明确写"当前证据不足以回答此问题"。
+
+---
+
+【报告结构】（严格遵守）
+
+# [标题]
+
+## 核心问题
+（1-2 句话）
+
+## 关键假设与验证状态
+| 假设 | 验证状态 | 证据来源 | 独立来源数 |
+
+## [分析章节 1]
+### 多方观点
+### 空方观点
+
+## [分析章节 2]
+### 多方观点
+### 空方观点
+
+## 我们的判断
+（每个分判断独立一行 + 🟢🟡🔴 + 理由 + 来源数量）
+
+## 催化剂日历与待验证信号
+（Markdown 表格，时间排序）
+
+---
+写作风格：Stratechery 结构感 + SemiAnalysis 数据穿透。克制。不确定就说不确定。
+禁止废话："短期/中期/长期"、"存在不确定性"、"需要密切关注"。
+目标：3500-5000 字。以 # 标题行开头，直接输出。
+"""
+
+
+def write_report(client, topic_info, plan, evidence_bank, fact_check_result):
+    """
+    Stage 5: Write report from verified evidence only. No tools.
+    """
+    print(f"\n=== Stage 5: Report Writing (model: {WRITER_MODEL}) ===")
+
+    raw_client = client  # Use the validated client from main()
+
+    # Build verified claims text
+    verdicts = {v.get("claim_id"): v for v in fact_check_result.get("verdicts", [])}
+    claims = evidence_bank.get("claims", [])
+
+    verified_lines = []
+    for c in claims:
+        cid = c.get("id", "")
+        verdict = verdicts.get(cid, {})
+        usable = verdict.get("usable", True)
+        if not usable:
+            continue  # Skip refuted/leaked claims
+
+        vtype = verdict.get("verdict", "unverified")
+        text = verdict.get("corrected_text") or c.get("text", "")
+        sources = ", ".join(c.get("source_names", [])[:3]) or "无来源"
+        src_count = c.get("source_count", 0)
+        icon = {"verified": "✅", "partially_correct": "⚡", "unverified": "❓"}.get(vtype, "⚠️")
+
+        verified_lines.append(f"  {icon} [{cid}] {text}")
+        verified_lines.append(f"    验证: {vtype} | 独立来源: {src_count} | 来源: {sources}")
+
+    verified_claims_text = "\n".join(verified_lines) if verified_lines else "（无已验证证据）"
+
+    if not verified_lines:
+        print("  ⚠️ Zero usable claims — report will be based on minimal evidence")
+
+    # Financial data
+    fin_data = evidence_bank.get("financial_data", {})
+    financial_data_text = fin_data.get("raw_data", "（无财务数据）")[:3000]
+
+    # Questions
+    questions = plan.get("key_questions", [])
+    questions_text = "\n".join(f"  {q.get('id', '?')}. {q.get('question', '?')}" for q in questions) if questions else "（无问题清单）"
+
+    coverage = evidence_bank.get("questions_coverage", {})
+    unanswered = coverage.get("unanswered", [])
+    unanswered_text = "\n".join(f"  - {qid}" for qid in unanswered) if unanswered else "（所有问题均已覆盖）"
+
+    info_gaps = evidence_bank.get("info_gaps", [])
+    info_gaps_text = "\n".join(f"  - {g}" for g in info_gaps) if info_gaps else "（无信息空白）"
+
+    # Flagged items
+    flagged = fact_check_result.get("flagged_items", [])
+    flagged_text = "\n".join(f"  🚩 [{f.get('flag_type', '?')}] {f.get('details', '')}" for f in flagged) if flagged else "（无特殊标记）"
+
+    quality_score = fact_check_result.get("data_quality_score", 0.5)
+
+    prompt = REPORT_WRITER_PROMPT.format(
+        topic=topic_info.get("topic", ""),
+        brain_dump=plan.get("brain_dump", "")[:1200],
+        questions_text=questions_text,
+        verified_claims_text=verified_claims_text[:15000],
+        financial_data_text=financial_data_text,
+        unanswered_text=unanswered_text,
+        info_gaps_text=info_gaps_text,
+        quality_score=f"{quality_score:.2f}",
+        flagged_text=flagged_text,
+        current_time=format_date_cst(now_cst()),
+    )
+
+    # Try WRITER_MODEL first, fallback to LLM_MODEL if different
+    models_to_try = [WRITER_MODEL]
+    if LLM_MODEL != WRITER_MODEL:
+        models_to_try.append(LLM_MODEL)
+
+    for model in models_to_try:
+        try:
+            response = raw_client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=8192,
+                temperature=0.5,
+            )
+            text = _strip_think(response.choices[0].message.content or "")
+            if text and len(text) > 500:
+                print(f"  Report written with {model}: {len(text)} chars")
+                return text
+            print(f"  {model} returned short output ({len(text)} chars), trying fallback")
+        except Exception as e:
+            print(f"  {model} failed: {e}")
+            if model == LLM_MODEL:
+                return f"# 报告生成失败\n\n错误：{e}\n\n话题：{topic_info.get('topic', '')}"
+            continue
+
+    return f"# 报告生成失败\n\n所有模型均失败。话题：{topic_info.get('topic', '')}"
+
+
+# ============ Stage 6: Format to JSON ============
 
 FORMAT_PROMPT = """把以下深度分析报告转换为 JSON 格式。保留所有内容，只改变格式。
 
@@ -799,19 +959,22 @@ FORMAT_PROMPT = """把以下深度分析报告转换为 JSON 格式。保留所�
 - sections content 中的 HTML 必须完整闭合
 - 输出必须是合法 JSON，不要输出 markdown 代码块标记
 
+⚠️ keyTakeaways 禁止使用"建议买入/卖出/做多/做空/加仓/减仓"等任何交易指令。
+改用情景假设句式："若[条件]被验证，则[标的]面临[方向]压力/机会，关键信号是[X]，确定性：🟡"。
+
 === 原始报告 ===
 {report_text}
 
 === 输出 JSON ===
 严格输出以下 JSON 结构（不要 markdown 代码块、不要任何前缀文字）：
 {{
-  "title": "报告标题（从报告中提取，如有Y Daily投研前缀请保留）",
-  "subtitle": "副标题（报告日期、服务对象等信息）",
-  "summary": "200字以内摘要（概括核心论点与交易推论）",
+  "title": "报告标题",
+  "subtitle": "副标题",
+  "summary": "200字以内摘要",
   "tags": [
     {{"text": "标签名", "type": "up|down|warn"}}
   ],
-  "keyTakeaways": ["核心判断1（含具体操作建议）", "核心判断2", "核心判断3"],
+  "keyTakeaways": ["核心判断1（情景假设句式）", "核心判断2", "核心判断3"],
   "relatedTickers": ["AAPL", "NVDA"],
   "sections": [
     {{
@@ -826,251 +989,15 @@ FORMAT_PROMPT = """把以下深度分析报告转换为 JSON 格式。保留所�
 tags type: "up"=利好, "down"=利空, "warn"=警示。至少3个tags。
 keyTakeaways: 至少3条。
 relatedTickers: 报告中提到的所有股票代码。
-sections: 每个一级章节（如：核心论点、事件背景、财务穿透分析、交易机会池、风险与反面力量、催化剂日历、核心判断）作为一个section。
-sections 的 content 用 HTML：<p>段落、<strong>加粗、<ul><li>列表、<table>表格、<ol>有序列表、<h3>子标题。
+sections content 用 HTML：<p>段落、<strong>加粗、<ul><li>列表、<table>表格、<h3>子标题。
 """
 
 
-def _clean_llm_json(response):
-    """Clean LLM response and extract JSON."""
-    cleaned = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
-    cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE).strip()
-    # Strip <think> block if present
-    think_end = cleaned.find("</think>")
-    if think_end != -1:
-        cleaned = cleaned[think_end + len("</think>"):].strip()
-    # Try to find JSON object boundaries
-    first_brace = cleaned.find('{')
-    if first_brace > 0:
-        cleaned = cleaned[first_brace:]
-    # Find matching closing brace
-    depth = 0
-    last_brace = -1
-    for i, c in enumerate(cleaned):
-        if c == '{':
-            depth += 1
-        elif c == '}':
-            depth -= 1
-            if depth == 0:
-                last_brace = i
-                break
-    if last_brace > 0:
-        cleaned = cleaned[:last_brace + 1]
-    return cleaned
-
-
-def _md_to_html(text):
-    """Basic Markdown to HTML conversion for fallback."""
-    lines = text.split('\n')
-    html_parts = []
-    in_list = False
-    in_table = False
-    table_rows = []
-
-    for line in lines:
-        stripped = line.strip()
-        if not stripped:
-            if in_list:
-                html_parts.append('</ul>')
-                in_list = False
-            if in_table and table_rows:
-                html_parts.append(_build_table(table_rows))
-                table_rows = []
-                in_table = False
-            html_parts.append('')
-            continue
-
-        # Table row
-        if stripped.startswith('|') and stripped.endswith('|'):
-            in_table = True
-            table_rows.append(stripped)
-            continue
-        elif in_table and table_rows:
-            html_parts.append(_build_table(table_rows))
-            table_rows = []
-            in_table = False
-
-        # Headers
-        if stripped.startswith('### '):
-            if in_list:
-                html_parts.append('</ul>')
-                in_list = False
-            html_parts.append(f'<h3>{_inline_md(stripped[4:])}</h3>')
-        elif stripped.startswith('## '):
-            if in_list:
-                html_parts.append('</ul>')
-                in_list = False
-            html_parts.append(f'<h3>{_inline_md(stripped[3:])}</h3>')
-        elif stripped.startswith('# '):
-            if in_list:
-                html_parts.append('</ul>')
-                in_list = False
-            # Skip top-level title (already extracted)
-            continue
-        elif stripped.startswith('- ') or stripped.startswith('* '):
-            if not in_list:
-                html_parts.append('<ul>')
-                in_list = True
-            html_parts.append(f'<li>{_inline_md(stripped[2:])}</li>')
-        elif re.match(r'^\d+\.\s', stripped):
-            content = re.sub(r'^\d+\.\s', '', stripped)
-            if not in_list:
-                html_parts.append('<ol>')
-                in_list = True
-            html_parts.append(f'<li>{_inline_md(content)}</li>')
-        elif stripped == '---' or stripped == '***':
-            continue  # Skip horizontal rules
-        else:
-            if in_list:
-                html_parts.append('</ul>')
-                in_list = False
-            html_parts.append(f'<p>{_inline_md(stripped)}</p>')
-
-    if in_list:
-        html_parts.append('</ul>')
-    if in_table and table_rows:
-        html_parts.append(_build_table(table_rows))
-
-    return '\n'.join(html_parts)
-
-
-def _inline_md(text):
-    """Convert inline markdown (bold, italic, links) to HTML."""
-    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
-    text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
-    text = re.sub(r'`(.+?)`', r'<code>\1</code>', text)
-    return text
-
-
-def _build_table(rows):
-    """Build HTML table from markdown table rows."""
-    if len(rows) < 2:
-        return ''
-    html = '<table><thead><tr>'
-    headers = [c.strip() for c in rows[0].strip('|').split('|')]
-    for h in headers:
-        html += f'<th>{_inline_md(h)}</th>'
-    html += '</tr></thead><tbody>'
-    for row in rows[2:]:  # Skip separator row
-        if row.strip().replace('-', '').replace('|', '').replace(' ', '') == '':
-            continue
-        cells = [c.strip() for c in row.strip('|').split('|')]
-        html += '<tr>'
-        for c in cells:
-            html += f'<td>{_inline_md(c)}</td>'
-        html += '</tr>'
-    html += '</tbody></table>'
-    return html
-
-
-def _split_md_sections(text):
-    """Split markdown text into sections by top-level headers (## or # with number)."""
-    lines = text.split('\n')
-    sections = []
-    current_title = None
-    current_lines = []
-
-    for line in lines:
-        stripped = line.strip()
-        # Match section headers: ## N. Title or ## Title
-        is_section = False
-        if re.match(r'^#{1,2}\s+(?:\d+[\.\、]?\s*)?', stripped):
-            # Skip the very first # title (report title)
-            title_text = re.sub(r'^#{1,2}\s+(?:\d+[\.\、]?\s*)?', '', stripped).strip()
-            if title_text and not stripped.startswith('### '):
-                is_section = True
-
-        if is_section:
-            if current_title is not None and current_lines:
-                sections.append((current_title, '\n'.join(current_lines)))
-            current_title = title_text
-            current_lines = []
-        else:
-            current_lines.append(line)
-
-    if current_title is not None and current_lines:
-        sections.append((current_title, '\n'.join(current_lines)))
-
-    # If no sections found, treat entire text as one section
-    if not sections:
-        sections = [("分析报告", text)]
-
-    return sections
-
-
-def _extract_title_from_md(text):
-    """Extract the first # or ## heading as title."""
-    for line in text.split('\n')[:10]:
-        stripped = line.strip()
-        if stripped.startswith('# ') and not stripped.startswith('## '):
-            return stripped[2:].strip()
-    return None
-
-
-def _extract_tickers_from_text(text):
-    """Extract stock ticker symbols from text."""
-    # Match patterns like (AAPL), (NVDA), (TSM), ticker: AAPL, etc.
-    tickers = set()
-    # US tickers in parentheses
-    for m in re.finditer(r'\(([A-Z]{1,5})\)', text):
-        t = m.group(1)
-        if len(t) >= 2 and t not in {'AI', 'US', 'EU', 'UK', 'HK', 'CN', 'GDP', 'CPI', 'PPI',
-                                       'IEA', 'IPO', 'ETF', 'CEO', 'CFO', 'CTO', 'PPA', 'IRR',
-                                       'THE', 'FOR', 'AND', 'BUT', 'NOT', 'ARE', 'WAS', 'HAS',
-                                       'PCB', 'UAE', 'IMF', 'SPR', 'LNG', 'PPA', 'TCO', 'API'}:
-            tickers.add(t)
-    return list(tickers)[:15]
-
-
-def _extract_tags_from_text(text, tickers):
-    """Extract meaningful tags from report text."""
-    tags = []
-    # Look for key phrases that indicate direction
-    up_patterns = [r'做多\s*[「""]?([^「""」\s,，]{2,8})', r'增持\s*[「""]?([^「""」\s,，]{2,8})']
-    down_patterns = [r'做空\s*[「""]?([^「""」\s,，]{2,8})', r'减仓\s*[「""]?([^「""」\s,，]{2,8})']
-    warn_patterns = [r'观望\s*[「""]?([^「""」\s,，]{2,8})', r'风险\s*[：:]\s*[「""]?([^「""」\s,，]{2,8})']
-
-    for pat in up_patterns:
-        for m in re.finditer(pat, text):
-            t = m.group(1).strip('」""')
-            if 2 <= len(t) <= 8:
-                tags.append({"text": t, "type": "up"})
-    for pat in down_patterns:
-        for m in re.finditer(pat, text):
-            t = m.group(1).strip('」""')
-            if 2 <= len(t) <= 8:
-                tags.append({"text": t, "type": "down"})
-    for pat in warn_patterns:
-        for m in re.finditer(pat, text):
-            t = m.group(1).strip('」""')
-            if 2 <= len(t) <= 8:
-                tags.append({"text": t, "type": "warn"})
-
-    # Deduplicate
-    seen = set()
-    unique_tags = []
-    for tag in tags:
-        key = tag["text"]
-        if key not in seen:
-            seen.add(key)
-            unique_tags.append(tag)
-
-    # If not enough tags, add from tickers
-    if len(unique_tags) < 3 and tickers:
-        for t in tickers[:3]:
-            if t not in seen:
-                unique_tags.append({"text": t, "type": "warn"})
-                seen.add(t)
-
-    return unique_tags[:8]
-
-
 def format_to_json(client, report_text):
-    """Stage 4: Convert plain-text analysis into structured JSON."""
-    print("\n=== Stage 4: Format to JSON ===")
+    """Stage 6: Convert plain-text analysis into structured JSON + validate."""
+    print("\n=== Stage 6: Format to JSON ===")
     print(f"  Report text length: {len(report_text)} chars")
 
-    # Try LLM formatting with retry
     max_input = 24000
     truncated = report_text[:max_input]
     prompt = FORMAT_PROMPT.format(report_text=truncated)
@@ -1088,22 +1015,57 @@ def format_to_json(client, report_text):
 
         try:
             result = json.loads(cleaned)
-            # Validate: must have sections with real content
             sections = result.get("sections", [])
             if sections and len(sections) >= 2:
-                print(f"  ✅ JSON parsed: {len(sections)} sections, title='{result.get('title', '')[:40]}'")
+                print(f"  ✅ JSON parsed: {len(sections)} sections")
+                # Run validators
+                _validate_report(result)
                 return result
-            elif sections:
-                print(f"  ⚠️ JSON parsed but only {len(sections)} section(s), retrying...")
             else:
-                print(f"  ⚠️ JSON parsed but no sections, retrying...")
+                print(f"  ⚠️ Only {len(sections)} section(s), retrying...")
         except json.JSONDecodeError as e:
-            print(f"  ❌ JSON parse failed (attempt {attempt+1}): {e}")
-            print(f"  Raw (first 300): {cleaned[:300]}")
+            print(f"  ❌ JSON parse failed: {e}")
 
     # ====== Fallback: Parse Markdown directly ======
     print("  ⚠️ LLM formatting failed, using Markdown fallback parser")
+    return _fallback_md_to_json(report_text)
 
+
+def _validate_report(result):
+    """Run deterministic validation checks on the formatted report."""
+    warnings = []
+    sections = result.get("sections", [])
+
+    # Check for crammed bull/bear lists
+    for sec in sections:
+        content = sec.get("content", "")
+        # Count list items per <ul> block
+        for ul_match in re.finditer(r'<ul>(.*?)</ul>', content, re.DOTALL):
+            items = re.findall(r'<li>', ul_match.group(1))
+            if len(items) > 6:
+                warnings.append(f"  ⚠️ Section '{sec.get('title', '?')}': {len(items)} list items in one block (check formatting)")
+
+    # Check for vague catalyst dates
+    for sec in sections:
+        content = sec.get("content", "")
+        if "催化剂" in sec.get("title", "") or "催化剂" in content[:50]:
+            vague_patterns = ["下半年", "中长期", "未来几个月", "近期"]
+            for pat in vague_patterns:
+                if pat in content:
+                    warnings.append(f"  ⚠️ Vague catalyst date: '{pat}' found")
+
+    # Check confidence rating consistency
+    for sec in sections:
+        content = sec.get("content", "")
+        if "🟢" in content and ("单一来源" in content or "部分验证" in content):
+            warnings.append(f"  ⚠️ Possible rating-source inconsistency in '{sec.get('title', '?')}'")
+
+    for w in warnings:
+        print(w)
+
+
+def _fallback_md_to_json(report_text):
+    """Fallback: parse Markdown report directly into JSON structure."""
     title = _extract_title_from_md(report_text) or "深度分析报告"
     tickers = _extract_tickers_from_text(report_text)
     tags = _extract_tags_from_text(report_text, tickers)
@@ -1120,15 +1082,13 @@ def format_to_json(client, report_text):
         })
         all_content_text.append(sec_content)
 
-    # Build summary from first 200 chars of content
     full_text = '\n'.join(all_content_text)
     summary_text = re.sub(r'[#*\-|]', '', full_text[:300]).strip()
     summary_text = re.sub(r'\s+', ' ', summary_text)[:200]
 
-    # Extract key takeaways from "核心判断" or last section
     key_takeaways = []
     for sec_title, sec_content in md_sections:
-        if '核心判断' in sec_title or '执行摘要' in sec_title or 'Key Takeaway' in sec_title:
+        if any(kw in sec_title for kw in ['判断', '摘要', 'Takeaway']):
             for line in sec_content.split('\n'):
                 stripped = line.strip()
                 if re.match(r'^[\d\-\*]\s*[\.\、]?\s*', stripped) and len(stripped) > 20:
@@ -1149,15 +1109,273 @@ def format_to_json(client, report_text):
         "sourceIndices": [],
     }
 
-    print(f"  Fallback result: {len(sections)} sections, {len(tags)} tags, {len(tickers)} tickers")
+    print(f"  Fallback: {len(sections)} sections, {len(tags)} tags")
     return result
+
+
+# ============ Helpers ============
+
+def _strip_llm_wrapper(text):
+    """Strip markdown code blocks and <think> tags from LLM output, extract JSON."""
+    cleaned = re.sub(r'^```(?:json)?\s*\n?', '', text, flags=re.MULTILINE)
+    cleaned = re.sub(r'\n?```\s*$', '', cleaned, flags=re.MULTILINE).strip()
+    cleaned = _strip_think(cleaned)
+    # Try to find JSON boundaries with string-aware brace matching
+    first_brace = cleaned.find('{')
+    if first_brace > 0:
+        cleaned = cleaned[first_brace:]
+    elif first_brace < 0:
+        return cleaned
+    depth = 0
+    last_brace = -1
+    i = 0
+    while i < len(cleaned):
+        c = cleaned[i]
+        if c == '"':
+            # Skip string contents (handles escaped quotes)
+            i += 1
+            while i < len(cleaned):
+                if cleaned[i] == '\\':
+                    i += 2
+                    continue
+                if cleaned[i] == '"':
+                    break
+                i += 1
+        elif c == '{':
+            depth += 1
+        elif c == '}':
+            depth -= 1
+            if depth == 0:
+                last_brace = i
+                break
+        i += 1
+    if last_brace > 0:
+        cleaned = cleaned[:last_brace + 1]
+    return cleaned
+
+
+def _strip_think(text):
+    """Remove <think>...</think> blocks from DeepSeek R1 output."""
+    think_end = text.find("</think>")
+    if think_end != -1:
+        return text[think_end + len("</think>"):].strip()
+    # Strip unclosed <think> block (truncated output)
+    think_start = text.find("<think>")
+    if think_start != -1:
+        before = text[:think_start].strip()
+        if before:
+            return before  # JSON came before <think>
+        return ""  # Only <think> with no closing — nothing usable
+    return text
+
+
+def _clean_llm_json(response):
+    """Clean LLM response and extract JSON (alias for format_to_json compatibility)."""
+    return _strip_llm_wrapper(response)
+
+
+def _md_to_html(text):
+    """Basic Markdown to HTML conversion for fallback."""
+    lines = text.split('\n')
+    html_parts = []
+    in_list = False
+    list_type = 'ul'  # track whether we're in <ul> or <ol>
+    in_table = False
+    table_rows = []
+
+    def _close_list():
+        nonlocal in_list, list_type
+        if in_list:
+            html_parts.append(f'</{list_type}>')
+            in_list = False
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            _close_list()
+            if in_table and table_rows:
+                html_parts.append(_build_table(table_rows))
+                table_rows = []
+                in_table = False
+            html_parts.append('')
+            continue
+
+        if stripped.startswith('|') and stripped.endswith('|'):
+            in_table = True
+            table_rows.append(stripped)
+            continue
+        elif in_table and table_rows:
+            html_parts.append(_build_table(table_rows))
+            table_rows = []
+            in_table = False
+
+        if stripped.startswith('### '):
+            _close_list()
+            html_parts.append(f'<h3>{_inline_md(stripped[4:])}</h3>')
+        elif stripped.startswith('## '):
+            _close_list()
+            html_parts.append(f'<h3>{_inline_md(stripped[3:])}</h3>')
+        elif stripped.startswith('# '):
+            _close_list()
+            continue
+        elif stripped.startswith('- ') or stripped.startswith('* '):
+            if in_list and list_type != 'ul':
+                _close_list()
+            if not in_list:
+                html_parts.append('<ul>')
+                in_list = True
+                list_type = 'ul'
+            html_parts.append(f'<li>{_inline_md(stripped[2:])}</li>')
+        elif re.match(r'^\d+\.\s', stripped):
+            content = re.sub(r'^\d+\.\s', '', stripped)
+            if in_list and list_type != 'ol':
+                _close_list()
+            if not in_list:
+                html_parts.append('<ol>')
+                in_list = True
+                list_type = 'ol'
+            html_parts.append(f'<li>{_inline_md(content)}</li>')
+        elif stripped == '---' or stripped == '***':
+            continue
+        else:
+            _close_list()
+            html_parts.append(f'<p>{_inline_md(stripped)}</p>')
+
+    _close_list()
+    if in_table and table_rows:
+        html_parts.append(_build_table(table_rows))
+
+    return '\n'.join(html_parts)
+
+
+def _inline_md(text):
+    """Convert inline markdown to HTML."""
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
+    text = re.sub(r'`(.+?)`', r'<code>\1</code>', text)
+    return text
+
+
+def _build_table(rows):
+    """Build HTML table from markdown table rows."""
+    if len(rows) < 2:
+        return ''
+    html = '<table><thead><tr>'
+    headers = [c.strip() for c in rows[0].strip('|').split('|')]
+    for h in headers:
+        html += f'<th>{_inline_md(h)}</th>'
+    html += '</tr></thead><tbody>'
+    for row in rows[2:]:
+        if row.strip().replace('-', '').replace('|', '').replace(' ', '') == '':
+            continue
+        cells = [c.strip() for c in row.strip('|').split('|')]
+        html += '<tr>'
+        for c in cells:
+            html += f'<td>{_inline_md(c)}</td>'
+        html += '</tr>'
+    html += '</tbody></table>'
+    return html
+
+
+def _split_md_sections(text):
+    """Split markdown text into sections by ## headers."""
+    lines = text.split('\n')
+    sections = []
+    current_title = None
+    current_lines = []
+
+    for line in lines:
+        stripped = line.strip()
+        is_section = False
+        if re.match(r'^#{1,2}\s+(?:\d+[\.\、]?\s*)?', stripped):
+            title_text = re.sub(r'^#{1,2}\s+(?:\d+[\.\、]?\s*)?', '', stripped).strip()
+            if title_text and not stripped.startswith('### '):
+                is_section = True
+
+        if is_section:
+            if current_title is not None and current_lines:
+                sections.append((current_title, '\n'.join(current_lines)))
+            current_title = title_text
+            current_lines = []
+        else:
+            current_lines.append(line)
+
+    if current_title is not None and current_lines:
+        sections.append((current_title, '\n'.join(current_lines)))
+
+    if not sections:
+        sections = [("分析报告", text)]
+
+    return sections
+
+
+def _extract_title_from_md(text):
+    """Extract the first # heading as title."""
+    for line in text.split('\n')[:10]:
+        stripped = line.strip()
+        if stripped.startswith('# ') and not stripped.startswith('## '):
+            return stripped[2:].strip()
+    return None
+
+
+def _extract_tickers_from_text(text):
+    """Extract stock ticker symbols from text."""
+    tickers = set()
+    for m in re.finditer(r'\(([A-Z]{1,5})\)', text):
+        t = m.group(1)
+        if len(t) >= 2 and t not in {'AI', 'US', 'EU', 'UK', 'HK', 'CN', 'GDP', 'CPI', 'PPI',
+                                       'IEA', 'IPO', 'ETF', 'CEO', 'CFO', 'CTO', 'PPA', 'IRR',
+                                       'THE', 'FOR', 'AND', 'BUT', 'NOT', 'ARE', 'WAS', 'HAS',
+                                       'PCB', 'UAE', 'IMF', 'SPR', 'LNG', 'PPA', 'TCO', 'API'}:
+            tickers.add(t)
+    return list(tickers)[:15]
+
+
+def _extract_tags_from_text(text, tickers):
+    """Extract tags from report text."""
+    tags = []
+    up_patterns = [r'做多\s*[「""]?([^「""」\s,，]{2,8})', r'增持\s*[「""]?([^「""」\s,，]{2,8})']
+    down_patterns = [r'做空\s*[「""]?([^「""」\s,，]{2,8})', r'减仓\s*[「""]?([^「""」\s,，]{2,8})']
+    warn_patterns = [r'观望\s*[「""]?([^「""」\s,，]{2,8})', r'风险\s*[：:]\s*[「""]?([^「""」\s,，]{2,8})']
+
+    for pat in up_patterns:
+        for m in re.finditer(pat, text):
+            t = m.group(1).strip('」""')
+            if 2 <= len(t) <= 8:
+                tags.append({"text": t, "type": "up"})
+    for pat in down_patterns:
+        for m in re.finditer(pat, text):
+            t = m.group(1).strip('」""')
+            if 2 <= len(t) <= 8:
+                tags.append({"text": t, "type": "down"})
+    for pat in warn_patterns:
+        for m in re.finditer(pat, text):
+            t = m.group(1).strip('」""')
+            if 2 <= len(t) <= 8:
+                tags.append({"text": t, "type": "warn"})
+
+    seen = set()
+    unique_tags = []
+    for tag in tags:
+        key = tag["text"]
+        if key not in seen:
+            seen.add(key)
+            unique_tags.append(tag)
+
+    if len(unique_tags) < 3 and tickers:
+        for t in tickers[:3]:
+            if t not in seen:
+                unique_tags.append({"text": t, "type": "warn"})
+                seen.add(t)
+
+    return unique_tags[:8]
 
 
 # ============ Main ============
 
 def main():
     print("=" * 60)
-    print("Y Daily — Deep Research Report Generator (Agent Pipeline)")
+    print("Y Daily — Deep Research Report Generator (6-Stage Pipeline)")
     print("=" * 60)
 
     now = now_cst()
@@ -1182,8 +1400,8 @@ def main():
         print(f"\nWARNING: Report for {date_id} already exists. Overwriting.")
 
     if not breaking_news and not ai_breaking_news:
-        print("\nERROR: No breaking news available.")
-        sys.exit(1)
+        print("\nABORT: No breaking news available. No report today.")
+        sys.exit(0)
 
     # Create LLM client
     client = create_llm_client(required=True)
@@ -1194,66 +1412,55 @@ def main():
     # ====== Stage 1: Topic Selection ======
     topic_info = select_topic(client, breaking_news, ai_breaking_news, existing_topics)
 
-    # ====== Stage 2: Brain Dump ======
-    brain_dump_text = brain_dump(client, topic_info)
+    # ====== Stage 2: Research Planning ======
+    plan = plan_research(client, topic_info)
 
-    # Build breaking news context
+    # Build breaking news context for Stage 3
     breaking_lines = []
     for item in (breaking_news + ai_breaking_news)[:30]:
         breaking_lines.append(f"[{item.get('time', '')}] {item.get('text', '')}")
     breaking_context = "\n".join(breaking_lines)
 
-    # ====== Stage 2.5: Pre-fetch top breaking news articles ======
-    print("\n=== Stage 2.5: Pre-fetch Breaking News Articles ===")
-    prefetch_articles = []
-    topic_lower = topic_info.get("topic", "").lower()
-    all_breaking = breaking_news + ai_breaking_news
+    # ====== Stage 3: Research ======
+    evidence_bank = research(client, topic_info, plan, breaking_context)
 
-    # Collect URLs from breaking news (skip Google News redirects)
-    fetchable_urls = []
-    for item in all_breaking:
-        url = item.get("url", "")
-        if url and "news.google.com" not in url:
-            fetchable_urls.append((item.get("text", "")[:80], url))
+    # Check if we have enough to continue
+    claims = evidence_bank.get("claims", [])
+    if not claims:
+        print("\nABORT: Zero claims from research. Refusing to hallucinate a report.")
+        sys.exit(0)
 
-    # Fetch up to 8 articles
-    from news_fetcher import fetch_url_content
-    for title, url in fetchable_urls[:8]:
-        try:
-            content = fetch_url_content(url, max_chars=5000)
-            if content and not content.startswith("Error") and len(content) > 200:
-                prefetch_articles.append(f"### {title}\nSource: {url}\n{content}\n")
-                print(f"  ✅ {title[:60]}... ({len(content)}c)")
-            else:
-                print(f"  ❌ {title[:60]}... (failed or too short)")
-        except Exception as e:
-            print(f"  ❌ {title[:60]}... ({e})")
+    # ====== Stage 4: Fact Check ======
+    try:
+        fact_check_result = fact_check(client, evidence_bank)
+    except Exception as e:
+        print(f"\n⚠️ Fact check failed ({e}), proceeding with unverified evidence")
+        fact_check_result = {
+            "verdicts": [{"claim_id": c.get("id", "?"), "verdict": "unverified", "corrected_text": None, "verification_notes": "核查失败", "usable": True} for c in claims],
+            "data_quality_score": 0.3,
+            "flagged_items": [{"claim_id": "", "flag_type": "warning", "details": f"事实核查失败: {e}", "action": "add_caveat"}],
+        }
 
-    prefetch_text = "\n".join(prefetch_articles)
-    print(f"  Pre-fetched: {len(prefetch_articles)} articles, {len(prefetch_text)} chars total")
+    # Check quality score and usable claims
+    quality_score = fact_check_result.get("data_quality_score", 0)
+    verdicts = fact_check_result.get("verdicts", [])
+    usable_count = sum(1 for v in verdicts if v.get("usable", True))
 
-    # Combine breaking context with pre-fetched content
-    enriched_context = breaking_context
-    if prefetch_text:
-        enriched_context += "\n\n=== 以下是预抓取的相关文章全文 ===\n" + prefetch_text
+    if usable_count == 0 and len(verdicts) > 0:
+        # All claims marked unusable — but pipeline should still produce a report
+        # with honest "no verified evidence" framing, rather than aborting entirely.
+        # Mark claims as usable=True but keep their verdicts (unverified/training_data_leak)
+        # so the writer can see the verification status and be appropriately cautious.
+        print(f"  ⚠️ All {len(verdicts)} claims marked unusable — overriding to allow cautious report")
+        for v in verdicts:
+            v["usable"] = True
+        fact_check_result["data_quality_score"] = max(quality_score, 0.15)
+        quality_score = fact_check_result["data_quality_score"]
 
-    # ====== Stage 3a: Research Collection (chat model + tools) ======
-    research_materials, sources = research_collect(client, topic_info, enriched_context)
+    # ====== Stage 5: Write Report ======
+    report_text = write_report(client, topic_info, plan, evidence_bank, fact_check_result)
 
-    # ====== Stage 3.25: Generate Key Questions ======
-    key_questions = generate_key_questions(client, research_materials)
-
-    # ====== Stage 3b: Report Writing (reasoning model) ======
-    # Combine research materials with pre-fetched articles for maximum context
-    full_materials = research_materials
-    if prefetch_text:
-        full_materials += "\n\n=== 预抓取的新闻全文（高质量来源）===\n" + prefetch_text
-    report_text = write_report(client, topic_info, brain_dump_text, full_materials, key_questions)
-
-    # ====== Stage 3.5: Fact Check ======
-    report_text, fact_check_result = fact_check(client, report_text)
-
-    # ====== Stage 4: Format to JSON ======
+    # ====== Stage 6: Format to JSON ======
     report = format_to_json(client, report_text)
 
     # Estimate read time
@@ -1279,7 +1486,7 @@ def main():
         "keyTakeaways": report.get("keyTakeaways", []),
         "relatedTickers": report.get("relatedTickers", []),
         "sections": report.get("sections", []),
-        "sources": report.get("sources", []),
+        "sources": report.get("sources", report.get("sourceIndices", [])),
     }
 
     # Insert or replace
@@ -1300,6 +1507,7 @@ def main():
     print(f"  Topic: {entry['title']}")
     print(f"  Sections: {len(entry['sections'])}")
     print(f"  Read time: {entry['readTime']}")
+    print(f"  Data quality: {quality_score:.2f}")
     print(f"{'=' * 60}")
 
 

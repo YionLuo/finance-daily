@@ -347,14 +347,169 @@ def _resolve_google_news_url(url):
     return url  # Fallback: return original
 
 
-def fetch_url_content(url, max_chars=5000):
+def fetch_financial_data(ticker: str) -> str:
+    """
+    Fetch real-time financial data via Yahoo Finance. No API key required.
+    Tries multiple methods with fallback to handle rate limits.
+    Returns key metrics: price, market cap, P/E, revenue, margins, cash flow, etc.
+    Also adds business model context notes to help avoid analytical errors.
+    """
+    ticker = ticker.strip().upper()
+    ts = __import__('datetime').datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')
+
+    # Business model context for commonly misanalyzed companies
+    BUSINESS_MODEL_NOTES = {
+        "NVDA": (
+            "⚠️ 分析提醒：NVIDIA 是 fabless 芯片设计公司（台积电代工），自身 CAPEX 相对营收极低。"
+            "如果 FCF < 净利润，更可能是营运资金变动（应收账款增长、库存变化）导致，而非'建设数据中心'。"
+            "数据中心的 CAPEX 是客户（AWS/Azure/GCP）的支出，不是 NVIDIA 的。"
+        ),
+        "AMD": (
+            "⚠️ 分析提醒：AMD 是 fabless 芯片设计公司（台积电代工），CAPEX 极低。"
+            "FCF 与净利润的差异主要来自营运资金变动和一次性项目。"
+        ),
+        "QCOM": (
+            "⚠️ 分析提醒：Qualcomm 是 fabless 芯片设计公司，无自有晶圆厂。"
+        ),
+        "INTC": (
+            "⚠️ 分析提醒：Intel 是 IDM（有自有晶圆厂），CAPEX 极高是正常的。"
+            "与 NVIDIA/AMD 的 fabless 模式不可直接类比。"
+        ),
+        "TSM": (
+            "⚠️ 分析提醒：台积电是纯代工厂（foundry），高 CAPEX 是核心商业模式。"
+            "CAPEX/营收比高达 40-50% 是行业常态，不应视为负面信号。"
+        ),
+    }
+
+    def _v(d, key):
+        x = d.get(key, {})
+        if not isinstance(x, dict):
+            return str(x) if x else "N/A"
+        return x.get("fmt") or (str(x.get("raw")) if x.get("raw") is not None else "N/A")
+
+    # Browser-like headers to avoid rate limiting
+    yahoo_headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json,text/plain,*/*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://finance.yahoo.com/",
+    }
+
+    # Method 1: Yahoo Finance v10 quoteSummary API
+    try:
+        url = f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{ticker}"
+        params = {"modules": "financialData,defaultKeyStatistics,summaryDetail,price"}
+        resp = requests.get(url, params=params, headers=yahoo_headers, timeout=TIMEOUT)
+        if resp.status_code == 200:
+            data = resp.json()
+            result_list = data.get("quoteSummary", {}).get("result", None)
+            if result_list:
+                result = result_list[0]
+                fd = result.get("financialData", {})
+                ks = result.get("defaultKeyStatistics", {})
+                sd = result.get("summaryDetail", {})
+                pr = result.get("price", {})
+                lines = [
+                    f"=== {ticker} 财务数据 (Yahoo Finance, 实时) ===",
+                    f"当前价格: {_v(pr, 'regularMarketPrice')} {_v(pr, 'currency')}",
+                    f"市值: {_v(pr, 'marketCap')}",
+                    f"P/E (TTM): {_v(sd, 'trailingPE')}",
+                    f"Forward P/E: {_v(sd, 'forwardPE')}",
+                    f"EPS (TTM): {_v(ks, 'trailingEps')}",
+                    f"营收 (TTM): {_v(fd, 'totalRevenue')}",
+                    f"毛利率: {_v(fd, 'grossMargins')}",
+                    f"营业利润率: {_v(fd, 'operatingMargins')}",
+                    f"净利率: {_v(fd, 'profitMargins')}",
+                    f"自由现金流: {_v(fd, 'freeCashflow')}",
+                    f"现金及等价物: {_v(fd, 'totalCash')}",
+                    f"总债务: {_v(fd, 'totalDebt')}",
+                    f"52周区间: {_v(sd, 'fiftyTwoWeekLow')} - {_v(sd, 'fiftyTwoWeekHigh')}",
+                    f"分析师目标价(均值): {_v(fd, 'targetMeanPrice')}",
+                    f"分析师评级: {_v(fd, 'recommendationKey')}",
+                    f"数据源: Yahoo Finance v10 (TTM数据，口径可能与10-K/10-Q有差异) | 获取时间: {ts}",
+                    f"⚠️ 注意：以上为 TTM（最近12个月滚动）数据，非最新季报原始数据。建议搜索公司最新10-K/10-Q核实关键数字。",
+                ]
+                # Add business model context if available
+                bm_note = BUSINESS_MODEL_NOTES.get(ticker, "")
+                if bm_note:
+                    lines.append(bm_note)
+                return "\n".join(lines)
+    except Exception:
+        pass
+
+    # Method 2: yfinance library (if installed)
+    try:
+        import yfinance as yf
+        t = yf.Ticker(ticker)
+        info = t.info
+        price = info.get("currentPrice") or info.get("regularMarketPrice")
+        if info and price:
+            currency = info.get("currency", "")
+            market_cap = info.get("marketCap", "N/A")
+            if isinstance(market_cap, (int, float)) and market_cap > 1e9:
+                market_cap = f"{market_cap/1e9:.1f}B"
+            lines = [
+                f"=== {ticker} 财务数据 (yfinance) ===",
+                f"当前价格: {price} {currency}",
+                f"市值: {market_cap}",
+                f"P/E (TTM): {info.get('trailingPE', 'N/A')}",
+                f"Forward P/E: {info.get('forwardPE', 'N/A')}",
+                f"EPS (TTM): {info.get('trailingEps', 'N/A')}",
+                f"营收 (TTM): {info.get('totalRevenue', 'N/A')}",
+                f"毛利率: {info.get('grossMargins', 'N/A')}",
+                f"营业利润率: {info.get('operatingMargins', 'N/A')}",
+                f"净利率: {info.get('profitMargins', 'N/A')}",
+                f"自由现金流: {info.get('freeCashflow', 'N/A')}",
+                f"现金及等价物: {info.get('totalCash', 'N/A')}",
+                f"总债务: {info.get('totalDebt', 'N/A')}",
+                f"52周区间: {info.get('fiftyTwoWeekLow', 'N/A')} - {info.get('fiftyTwoWeekHigh', 'N/A')}",
+                f"分析师目标价(均值): {info.get('targetMeanPrice', 'N/A')}",
+                f"分析师评级: {info.get('recommendationKey', 'N/A')}",
+                f"数据源: yfinance (TTM数据，口径可能与10-K/10-Q有差异) | 获取时间: {ts}",
+                f"⚠️ 注意：以上为 TTM（最近12个月滚动）数据，非最新季报原始数据。建议搜索公司最新10-K/10-Q核实关键数字。",
+            ]
+            # Add business model context if available
+            bm_note = BUSINESS_MODEL_NOTES.get(ticker, "")
+            if bm_note:
+                lines.append(bm_note)
+            return "\n".join(lines)
+    except Exception:
+        pass
+
+    # Method 3: Yahoo Finance v8 chart API (simpler, less rate-limited)
+    try:
+        chart_url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+        resp2 = requests.get(chart_url, params={"interval": "1d", "range": "5d"},
+                             headers=yahoo_headers, timeout=TIMEOUT)
+        if resp2.status_code == 200:
+            cdata = resp2.json()
+            meta = cdata.get("chart", {}).get("result", [{}])[0].get("meta", {})
+            price = meta.get("regularMarketPrice", "N/A")
+            currency = meta.get("currency", "")
+            return (
+                f"=== {ticker} 基础行情 (Yahoo Finance chart API) ===\n"
+                f"当前价格: {price} {currency}\n"
+                f"52周区间: {meta.get('fiftyTwoWeekLow', 'N/A')} - {meta.get('fiftyTwoWeekHigh', 'N/A')}\n"
+                f"注意：完整财务数据获取受限，仅提供基础行情。建议用 web_search 补充财务细节。\n"
+                f"数据源: Yahoo Finance v8 | 获取时间: {ts}"
+            )
+    except Exception:
+        pass
+
+    return (
+        f"Error: 无法获取 {ticker} 的财务数据（Yahoo Finance 限速或 ticker 不正确）。\n"
+        f"建议通过 web_search 搜索 '{ticker} revenue earnings P/E 2026' 获取相关信息。"
+    )
+
+
+def fetch_url_content(url, max_chars=10000):
     """
     Fetch and extract text content from a URL. Used by the agent to read full articles.
     Handles Google News redirect URLs automatically.
 
     Args:
         url: URL to fetch (can be a Google News redirect URL)
-        max_chars: max characters to return (default 5000 for richer content)
+        max_chars: max characters to return (default 10000 for richer content)
 
     Returns:
         str: extracted text content, or error message
@@ -430,6 +585,23 @@ AGENT_TOOLS = [
                 "required": ["url"]
             }
         }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "fetch_financial_data",
+            "description": "Fetch real-time financial data for a stock ticker via Yahoo Finance (free, no API key). Returns: current price, market cap, P/E ratio, forward P/E, EPS, revenue (TTM), gross/operating/net margins, free cash flow, cash, total debt, 52-week range, analyst target price and rating. Use this whenever the topic involves a specific company to ground your analysis in real numbers.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "ticker": {
+                        "type": "string",
+                        "description": "Stock ticker symbol, e.g. NVDA, AAPL, 0700.HK, 9988.HK, TSLA, MSFT"
+                    }
+                },
+                "required": ["ticker"]
+            }
+        }
     }
 ]
 
@@ -453,6 +625,10 @@ def execute_tool_call(tool_name, arguments):
     elif tool_name == "fetch_url_content":
         url = arguments.get("url", "")
         return fetch_url_content(url)
+
+    elif tool_name == "fetch_financial_data":
+        ticker = arguments.get("ticker", "")
+        return fetch_financial_data(ticker)
 
     else:
         return f"Unknown tool: {tool_name}"
