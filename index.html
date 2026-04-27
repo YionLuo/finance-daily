@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 67.34,
   rating: "greed",
-  timestamp: "2026-04-27T21:46:54+00:00",
+  timestamp: "2026-04-27T22:47:05+00:00",
   previousClose: 66.03,
   previous1Week: 70.89,
   previous1Month: 14.47,
   previous1Year: 34.51,
-  date: "2026年4月28日 06:03 CST"
+  date: "2026年4月28日 07:05 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:04", tag: "tech", tagText: "科技", text: "Arm股价结束七连涨，领跌纳斯达克100指数，反映AI板块整体承压以及市场担忧Arm是否能在高通-OpenAI芯片合作中扮演角色。", source: "MarketWatch", url: "https://www.marketwatch.com/story/arms-stock-snaps-a-seven-day-winning-streak-as-it-loses-some-of-its-ai-glow-8d390975" },
+  { time: "07:04", tag: "tech", tagText: "科技", text: "Bed Bath & Beyond股价大涨超30%，公司报告19个季度以来首次实现显著营收增长。但股价仍远低于meme股时代高点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bed-bath-beyond-is-seeing-new-life-as-rare-sales-growth-lifts-stock-more-than-30-3e1ee945?mod=mw_rss_topstories" },
+  { time: "07:04", tag: "tech", tagText: "科技", text: "Sun Pharma同意以全现金交易收购Organon，后者股价飙升。交易金额未披露，但标志着制药行业并购活动升温。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQRl9KLWVXajVSYmppVklnV0IwS3B5ZTFKR2F0d2p1RlZhNHBoZ3JmMVBIekQtRkVsTXd6eTdsX0ZBZlNmZU1kcEhaMjBCYXYtMFE3dFZEZWJFOXRjZHFZYnFXRk4yUTZzcldTWVZ0RFdjNnRmRlRQU1JGZUNka0pxZm5YY0wxUXNPcElTVjNKSU5leGdZMXR6N0pBN25tcGxSa3FFSVFyZVk5SUNpbFdsVnkyZDVreDVxMHZ4alRiQXdHc3pJNVlxSUpSdTZSYnI2TWx5X2Nyekp6OFRDX0xLRjF3Z0JGWDJnR0NzRGM2cktoSlJKSVU5YmhMOW1adw?oc=5" },
   { time: "05:52", tag: "tech", tagText: "科技", text: "美光科技和闪迪股价延续涨势，Melius Research报告指出，内存需求预计将持续强劲至2030年底。AI应用推动存储芯片需求旺盛，投资者看好行业前景。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/micron-and-sandisk-pop-as-memory-demand-to-remain-high-through-2030.html" },
   { time: "05:23", tag: "tech", tagText: "科技", text: "高通股价上涨，因公司据报正在为OpenAI开发芯片。AI芯片需求持续扩大，高通有望在边缘AI领域获得新增长机遇。", source: "MarketWatch", url: "https://www.marketwatch.com/story/qualcomms-stock-soars-as-an-ai-opportunity-emerges-14a6ed98?mod=mw_rss_topstories" },
   { time: "05:15", tag: "tech", tagText: "科技", text: "SiriusXM与iHeartMedia可能合并，将打造广告巨头以应对听众向流媒体和播客平台转移的趋势。此举被视为传统广播行业面临生存压力的最新信号。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-possible-siriusxm-iheartmedia-merger-would-be-the-latest-ominous-sign-for-radio-23a18d07?mod=mw_rss_topstories" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "01:31", tag: "tech", tagText: "科技", text: "马斯克诉奥特曼案开庭，陪审团遴选在加州奥克兰联邦法院启动。该案涉及OpenAI控制权及AI发展方向之争，备受科技界关注。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/musk-altman-trial-openai-jury-selection.html" },
   { time: "01:01", tag: "tech", tagText: "科技", text: "Meta宣布裁员10%，微软首次在51年历史中提供员工买断计划，两家公司合计裁员约2万人。此举引发市场对AI驱动的劳动力危机的担忧，显示科技巨头正加速用AI替代人工岗位。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html" },
   { time: "00:54", tag: "macro", tagText: "宏观", text: "美国财政部长贝森特为美元互换额度辩护，称其在伊朗战争冲击全球金融时至关重要。特朗普本周在CNBC上表示支持与阿联酋建立互换额度，以缓解中东紧张局势对美元流动性的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/24/bessent-iran-war-uae-swap-lines-gulf-asia.html" },
-  { time: "00:51", tag: "tech", tagText: "科技", text: "美国卫生部长小罗伯特·F·肯尼迪的儿子推出了一只与健康运动相关的基金，寻求筹集1亿美元。该基金宣称与政府“政策倡议”有关联，引发外界对利益冲突的质疑。", source: "Financial Times", url: "https://www.ft.com/content/2cf36d19-ebd8-4c99-bb6f-d32abb7e0aba" },
-  { time: "00:38", tag: "macro", tagText: "宏观", text: "加拿大宣布启动250亿加元主权财富基金，由马克·卡尼宣布，旨在促进经济增长。此举正值美加贸易紧张局势加剧之际，显示加拿大寻求增强经济自主性。", source: "Financial Times", url: "https://www.ft.com/content/e03d21ab-dec8-4ab1-8c99-200ba6f6c72f" },
-  { time: "00:32", tag: "ai", tagText: "AI", text: "谷歌宣布向AI初创公司Anthropic投资高达400亿美元，以帮助其增加计算能力运行AI模型。这是谷歌对Anthropic的最大单笔投资，显示科技巨头在AI军备竞赛中不惜重金。", source: "Financial Times", url: "https://www.ft.com/content/366c73dd-4006-4ce6-9816-5004447d30b8" },
 ];
-const breakingDate = "2026年4月28日 06:03 CST";
+const breakingDate = "2026年4月28日 07:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1663,6 +1663,7 @@ const aiBreakingNews = [
   { time: "01:49", tag: "ai", tagText: "AI", text: "AI媒体生成工具ComfyUI完成3000万美元融资，估值达5亿美元。该平台为创作者提供对AI图像、视频和音频生成的更高控制权，反映出市场对精细化AI创作工具的需求增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/comfyui-hits-500m-valuation-as-creators-seek-more-control-over-ai-generated-media/" },
   { time: "01:40", tag: "ai", tagText: "AI", text: "OpenAI与微软达成重大协议修订，终结了因OpenAI与亚马逊AWS达成500亿美元合作而引发的法律风险。微软获得更多收入分成，而OpenAI则获准在AWS上销售产品。同时，双方此前关于通用人工智能（AGI）的约束性条款被废除，标志着两家公司合作关系进入新阶段。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/" },
   { time: "01:24", tag: "ai", tagText: "AI", text: "前DeepMind研究员David Silver创立的英国AI实验室Ineffable Intelligence，以51亿美元估值完成11亿美元种子轮融资，创欧洲种子轮纪录。该公司致力于开发无需人类数据即可自主学习的人工智能，目标直指超级智能。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/deepminds-david-silver-just-raised-1-1b-to-build-an-ai-that-learns-without-human-data/" },
+  { time: "01:12", tag: "tech", tagText: "科技", text: "谷歌TPU V8战略细节曝光：推出两款芯片分别针对训练和推理任务，集群网络可扩展至100万颗TPU，形成对英伟达AI加速器的规模优势。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQeFlMR1hZeERLbDMzc3hsTUdxb2p4TXVwdVhaNTE4ZElxbkZkeEdzbW80akN6TVRYS1g5R01HYy1qZkRERDFLUEszT1RZUUt1cVFyUUxFcUJpZUhiTERuN0JJczJvZ3pSMzdxam9hemg5Zkw2SlRXYUpFdVB2YWVWR3JNN2ZSdmxCb1JKVEJWSjN4QXdhMzBSUGpJckt2dDltSXFTRDJyV21tVFNvb3hocGZPemtXUG5UZHBIS1h3eTdHMTNlMnh5dTN3SGpsNjVtR0xBenZ6VTRKSTBYLVVqY2c1aTA?oc=5" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "英特尔股价近期大涨，显示AI热潮正从英伟达芯片扩展至更广泛的半导体领域。市场认为，随着AI基础设施需求多样化，英特尔等传统芯片厂商开始受益于AI部署的下一阶段。", source: "BNN Bloomberg", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTVQ1M0pXM3BzN1BYUWNrZkxpNnp0bUtZTFFYU01lR0JhSGdDWndncHV5TWM0X1NSWk5KZ1JVUUt1RVJLbnR5Q3NWWVhpd0IzQUdNVi1VM1hwV1hRTF82NUJRaDhCU19HMXF4WnM5NTJwdlhwZ1lDV0lDMklJeXoxNTMydVpHa3pwdDU4eTdwX2UtWGJCNjFxSEdjQnV6OTJENGhCbDFQbXBEbnM1cjJEOFlTLXZ1REllSUVnRHpGb09yOGU1TExSb3hGSWw1STlY?oc=5" },
   { time: "00:13", tag: "ai", tagText: "AI", text: "AI主屏幕应用Skye在iPhone上线前获得投资者支持，反映出市场对更具AI感知能力的iPhone应用的兴趣。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/investors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch/" },
   { time: "23:50", tag: "ai", tagText: "AI", text: "马斯克与奥特曼就OpenAI未来走向的法律大战正式开庭，陪审团遴选于4月27日开始。这场高风险的诉讼可能改变这家领先AI初创公司的未来走向，引发行业广泛关注。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:54", tag: "ai", tagText: "AI", text: "SpaceX以600亿美元估值达成协议，获得收购AI编程初创公司Cursor的权利。Cursor是当前最热门的AI代码助手之一，此交易凸显科技巨头对AI开发工具的激烈争夺。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQakZzMDM2cjdnbThWM0hKUndMSXdFSnZpQTlUWWxZQnlkcWF1VG4xZkpaZ0NZalktd28xQUlSdkhtbzV1aGphR1VPSGY0T2F2ZkZORHFXdFhxeXVsb1RySDJ0SThRak1HRzZPZHBIZHRqMDBUbUE2SkdfWFYwSW4wSVktTEd1clpxM1lNS2ZTeFNJV0JsQmw2NUlxVjVHVS1kZzJBb3VXWnNyd1FTZV9sZ2FxV0E5enlPbUxrQTgwRzRfN0ZtWjM2bElQYmpodw?oc=5" },
   { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
   { time: "21:16", tag: "geo", tagText: "地缘", text: "中国否决了Meta以20亿美元收购AI智能体初创公司Manus的交易，结束了长达数月的审查。此举对扎克伯格进军AI智能体领域的战略构成重大打击，凸显中美科技脱钩加速。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/china-vetoes-metas-2b-manus-deal-after-months-long-probe/" },
-  { time: "21:08", tag: "ai", tagText: "AI", text: "据分析师透露，OpenAI正在研发一款以AI智能体取代传统应用程序的手机，该手机可能于2028年进入量产阶段。此举标志着AI原生硬件迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/" },
 ];
-const aiBreakingDate = "2026年4月28日 06:03 CST";
+const aiBreakingDate = "2026年4月28日 07:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
