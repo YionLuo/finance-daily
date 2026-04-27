@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.37,
+  score: 67.4,
   rating: "greed",
-  timestamp: "2026-04-27T18:10:45+00:00",
+  timestamp: "2026-04-27T20:01:48+00:00",
   previousClose: 66.03,
   previous1Week: 70.89,
   previous1Month: 14.47,
   previous1Year: 34.51,
-  date: "2026年4月28日 02:14 CST"
+  date: "2026年4月28日 04:16 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:06", tag: "geo", tagText: "地缘", text: "全球油价突破每桶108美元，因市场担忧伊朗原油储存接近极限，可能被迫减产。美国与伊朗对峙及霍尔木兹海峡封锁持续，特朗普与高级助手讨论伊朗海峡提案。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/global-oil-futures-top-100-again-after-u-s-iran-peace-talks-canceled-a50f6a7b?mod=mw_rss_topstories" },
+  { time: "02:51", tag: "macro", tagText: "宏观", text: "亿万富翁达利欧建议将最多15%资金配置黄金，因伊朗战争带来不确定性。他还警告凯文·沃什不应在“滞胀”时期降息，否则将损害央行信誉。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/billionaire-ray-dalio-says-you-should-have-up-to-15-of-your-money-in-gold-because-of-uncertainty-around-the-iran-war-f030e9a8?mod=mw_rss_topstories" },
+  { time: "02:51", tag: "geo", tagText: "地缘", text: "科尔·艾伦被指控试图在WHCD活动上刺杀特朗普，白宫将责任归咎于批评者对总统的妖魔化。特朗普要求ABC解雇深夜秀主持人吉米·基梅尔，因其在枪击前的言论。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/27/cole-allen-whcd-arraigment-trump.html" },
+  { time: "02:28", tag: "crypto", tagText: "加密", text: "比特币逼近8万美元，市场情绪改善，ZBCN、LIDO、PENGU等代币跑赢大盘。同时，比特币开发者正在讨论一项可能引发加密市场剧烈波动的技术变动。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBGc2Nnck56NFpheThhQ0NKclIyNHpNM0VxODZjM1JHalo3bmZrSTZUdllmdWlpdUNJcHlFOTV1WkNmQjROV2tUUWpSRDNpMWxwZV9XbmlzMkNEMW8?oc=5" },
+  { time: "02:28", tag: "tech", tagText: "科技", text: "Poet Technologies股价暴跌近50%，创历史最大单日跌幅，因公司披露芯片制造商Marvell将退出关键AI合作伙伴关系。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/poet-technologies-stock-craters-nearly-50-in-record-drop-as-marvell-relationship-sours-1e37d970?mod=mw_rss_topstories" },
   { time: "02:03", tag: "geo", tagText: "地缘", text: "伊朗局势持续升级：美国对伊朗实施海上封锁，伊朗方面表示若美国解除封锁并结束战争，将重新开放霍尔木兹海峡并推迟核谈判。德国总理默茨批评美国在伊朗问题上“受辱”，称准备不足的战争正损害欧洲最大经济体。Wolfe Research警告封锁可能适得其反，迫使伊朗暴力报复。全球油价突破102美元/桶，因市场担忧伊朗原油储存接近极限将被迫减产。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/trump-iran-war-strait-of-hormuz-rubio.html" },
   { time: "01:49", tag: "tech", tagText: "科技", text: "微软与OpenAI达成新协议，双方不再保持排他性合作关系。微软将停止与OpenAI的收入分成，新协议赋予双方更大灵活性，标志着AI领域巨头合作模式发生重大转变。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microsoft-and-openai-arent-breaking-up-but-theyre-not-exclusive-anymore-47d17848?mod=mw_rss_topstories" },
   { time: "01:32", tag: "geo", tagText: "地缘", text: "法国气象预报办公室就Polymarket上出现的可疑投注向警方报案。巴黎戴高乐国际机场的温度读数在几分钟内异常上升了几度，疑似有人试图操纵天气数据以影响预测市场结果。", source: "MarketWatch", url: "https://www.marketwatch.com/story/french-weather-forecasting-office-files-police-complaint-following-suspicious-surge-in-polymarket-bets-fb72729d?mod=mw_rss_topstories" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "13:20", tag: "crypto", tagText: "加密", text: "比特币ETF自2025年10月以来迎来最佳资金流入周期，净流入达24亿美元，显示机构投资者对比特币的强劲需求。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSDRPRzBmQnlBT29Icl9CZHBkMGd5dkFSV1VZMHI1RFJlb0JUSU9ER05iRjBHSkIwVnp3VmR1RDJsU1k4bkJKUGVOb1owLS1GMUtWMWVyU1Q1b29SeXR6d2tEYUt6YUc0OXFPNzJ1c18wZnF3ZmIxa2FjV0lBR2pURjFLXy13aGVoWGE4?oc=5" },
   { time: "12:18", tag: "crypto", tagText: "加密", text: "比特币和以太坊ETF在美伊紧张局势下录得3780万美元资金流入，显示投资者在地缘风险中转向加密资产作为对冲工具。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxPX3k5emhJQ2prLTRYa2xmUHBGbFlkN3AxZ3pjOF9TNTREM0JDTE1wRjZJZUY0VmdzZlZfUmRKMWRhbjQ3ZmlEWVB3ME85UWhPWE1IZExKVjlBZFlORGlUS21mTHhlZXh5dWJJWWdoWVpXaGVaN292MWp4WnkyVDExSHNCaWdWU0EyenVkcUcwdTc0Zw?oc=5" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "美国在伊朗战争中锻造能源霸权，重塑全球石油和天然气流动格局。欧洲和亚洲担忧过度依赖美国供应，能源地缘格局面临深刻调整。", source: "Financial Times", url: "https://ig.ft.com/global-energy-flows/" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "市场陷入僵局：既无极端乐观也无极端悲观的理由，投资者难以找到明确方向或对冲工具。分析认为当前市场处于“无优势、无对冲”的尴尬状态。", source: "Financial Times", url: "https://www.ft.com/content/fff7a84f-83bf-45af-9a3d-78e0cf181539" },
-  { time: "08:04", tag: "macro", tagText: "宏观", text: "美股周四收盘再创新高：纳斯达克和标普500指数均刷新历史纪录，受英特尔强劲财报引发的科技股全面上涨推动。芯片板块集体走高，市场情绪乐观。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd0pOQ0pEQTRYQmdGdVR6QW1FcnNhQkJxc1JoVFYxMVhxVjhHR3R2Y2RDNGxmSGNEQmJLUDBMd3NNNEp3WmNfaU8xa1V4WmE0TWpGcks0QlJnY1N6QUNrM3RHb3ZMYk85UWNvVTVSSTYxRmdjemJBbUdPYThXWXZadGNSLUEweWs?oc=5" },
-  { time: "06:00", tag: "crypto", tagText: "加密", text: "比特币有望创下一年来最佳月度表现，5亿美元USDT增发推动反弹。分析师预测比特币目标价12万美元。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQQlFoUmo3bUwxZllGZkhCWGlwblhqdnc1WGw0Ni0xbUVjVHZ2SFVBV3pQeHZZa0cxVEVHNDFqTjFfbEpjS0MwOG9qY2NFaFlfLWtjamtrb1NiUUdXeDZ0ME4xY2VPLURvSkpVdUZVSWRGOEoyVkV6LWdaMjN5TDk1UDhqZE1pd2RCeFliaFkyUzQ0V3JOYUR0UGtpVlZCZmVXdTlIMV9KSkNqSk5TUmdLSFQxdTJUZ2tPSGpva3p6bzJlT05USklyLXI1a2FEbkwt?oc=5" },
-  { time: "06:00", tag: "geo", tagText: "地缘", text: "油价因天然气供应紧张及地缘冲突风险而大幅上涨。市场担忧中东局势持续升级对能源供应的影响。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbGVxZlZOdVFkR0R0ajVCMGxkcHN2WVlnR01uTnJaU29sT1QwdWpmenIwaXRZNS1rN3RaMlhlcnlsUVRFT08ycEphQk54MktoUUxIWmVFMHpMYmVBTk8tdWtnRTZGTlpLMXUwcXg1UnhQdHZYVzR2YnBFSFFrcFhCQzQwVXVUVjNsYzY5M0ZEaFVTcDZlTTBnaTI2RXBNNmNrU1ZIMlVTRmxBdw?oc=5" },
-  { time: "06:00", tag: "ai", tagText: "AI", text: "四大会计师事务所之一选择用AI替代人类，削减福利并暂停招聘。此举标志着AI在专业服务领域的应用加速，引发对白领岗位被替代的担忧。", source: "TheStreet", url: "https://finance.yahoo.com/sectors/technology/articles/big-four-accounting-chooses-ai-223954685.html" },
 ];
-const breakingDate = "2026年4月28日 02:14 CST";
+const breakingDate = "2026年4月28日 04:16 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:17", tag: "ai", tagText: "AI", text: "超过600名谷歌员工联名致信CEO皮查伊，要求公司禁止五角大楼将其AI模型用于机密军事用途。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter" },
   { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "谷歌计划向AI初创公司Anthropic投资高达400亿美元，包括现金和算力资源。此举正值AI竞争对手争相获取大规模计算能力之际，此前Anthropic已发布专注于网络安全的强大模型Mythos。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" },
   { time: "01:49", tag: "ai", tagText: "AI", text: "AI媒体生成工具ComfyUI完成3000万美元融资，估值达5亿美元。该平台为创作者提供对AI图像、视频和音频生成的更高控制权，反映出市场对精细化AI创作工具的需求增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/comfyui-hits-500m-valuation-as-creators-seek-more-control-over-ai-generated-media/" },
@@ -1662,6 +1663,7 @@ const aiBreakingNews = [
   { time: "01:00", tag: "ai", tagText: "AI", text: "英特尔股价近期大涨，显示AI热潮正从英伟达芯片扩展至更广泛的半导体领域。市场认为，随着AI基础设施需求多样化，英特尔等传统芯片厂商开始受益于AI部署的下一阶段。", source: "BNN Bloomberg", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTVQ1M0pXM3BzN1BYUWNrZkxpNnp0bUtZTFFYU01lR0JhSGdDWndncHV5TWM0X1NSWk5KZ1JVUUt1RVJLbnR5Q3NWWVhpd0IzQUdNVi1VM1hwV1hRTF82NUJRaDhCU19HMXF4WnM5NTJwdlhwZ1lDV0lDMklJeXoxNTMydVpHa3pwdDU4eTdwX2UtWGJCNjFxSEdjQnV6OTJENGhCbDFQbXBEbnM1cjJEOFlTLXZ1REllSUVnRHpGb09yOGU1TExSb3hGSWw1STlY?oc=5" },
   { time: "23:50", tag: "ai", tagText: "AI", text: "马斯克与奥特曼就OpenAI未来走向的法律大战正式开庭，陪审团遴选于4月27日开始。这场高风险的诉讼可能改变这家领先AI初创公司的未来走向，引发行业广泛关注。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
   { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
+  { time: "22:29", tag: "ai", tagText: "AI", text: "Canva就其AI工具“Magic Layers”在设计中自动将“Palestine”一词替换为其他内容一事致歉。该功能旨在将平面图像分解为可编辑组件，但出现不当处理敏感词汇的问题，引发争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "陷入困境的合规初创公司Delve再曝安全事件，其客户——AI智能体训练公司Context AI上周披露了重大数据泄露。这起事件引发对AI供应链安全审查流程的广泛质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/" },
   { time: "21:54", tag: "ai", tagText: "AI", text: "SpaceX以600亿美元估值达成协议，获得收购AI编程初创公司Cursor的权利。Cursor是当前最热门的AI代码助手之一，此交易凸显科技巨头对AI开发工具的激烈争夺。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQakZzMDM2cjdnbThWM0hKUndMSXdFSnZpQTlUWWxZQnlkcWF1VG4xZkpaZ0NZalktd28xQUlSdkhtbzV1aGphR1VPSGY0T2F2ZkZORHFXdFhxeXVsb1RySDJ0SThRak1HRzZPZHBIZHRqMDBUbUE2SkdfWFYwSW4wSVktTEd1clpxM1lNS2ZTeFNJV0JsQmw2NUlxVjVHVS1kZzJBb3VXWnNyd1FTZV9sZ2FxV0E5enlPbUxrQTgwRzRfN0ZtWjM2bElQYmpodw?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "14:08", tag: "tech", tagText: "科技", text: "高通与长鑫存储（CXMT）合作开发3D DRAM NPU，旨在为AI手机硬件带来突破性性能提升。该技术有望显著增强端侧AI处理能力，推动智能手机AI应用的新一轮升级。", source: "Intelligent Living", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoVEdzTjBnRmo3c0VNNzRlLVJmRlhDV0xwUUM3dWVnTzBvNGtPVDNmT1pEc0w2RDdqenpraEE1NEhsMEsybjV0V0EyVDhYend1M0R2TC1Cc2J5TUo0YTNQMHYwMGNmOE80dmloUGdjcE8?oc=5" },
   { time: "13:48", tag: "ai", tagText: "AI", text: "与斯坦福有关联的AI初创公司Human Intelligence正寻求以10亿美元估值融资1亿美元。该公司专注于通用人工智能（AGI）研发，此轮融资显示资本对前沿AI研究的高热度。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNemtJd0hnNnVGajhCbTRMX3o2WHRtc1IzTzlJZEJNODJzbVY5XzRsTXJFaUdoREpQTjRuWkRyQ2J2SktmZUxBRWg4T01xM0pmTlU0QktXS2JkTFQxTFowWFd0ZkowWUt3S2h3MTBhbXd4TlA4czRLZjJXUWRXdzZSNmpuRTNPcndYS2RuTTQtc3R0N3dMeTZQTElqNFhabC14RVZLRGJZd3dXWjdmRU9aRFdSWG5ZSDNsREJBa2pCZVA3TjFQN1E?oc=5" },
   { time: "09:57", tag: "ai", tagText: "AI", text: "中国地平线机器人发布全新自动驾驶平台，目标直指特斯拉。该平台旨在提升自动驾驶性能，标志着中国企业在智能驾驶领域与全球领导者展开直接竞争。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNEtVZjlmRTQ2N1lkdUJpdmtVTldBczZ0ZjREUDl6UU5oTVlEUzQ3TEtHZ1ZHNHNxT1htZnZadWlIOEdhbzZDc2JCclV3WGkxM2ppdFVNemVlX0hETWhGcDVmNmZ3c0pUS2hwU3ktdWxGSndOeWZWUUFuUk9CLTBhUVpRcmJReWpWRkliSlRNUmcyNmNKSGRWUzdLOGdKazdGU2hvRzgxMF9XbzVzX0ZF?oc=5" },
-  { time: "08:56", tag: "ai", tagText: "AI", text: "AI初创公司Cohere与Aleph Alpha宣布合并，并同时获得6亿美元新融资。此次合并旨在整合资源，以应对日益激烈的AI大模型市场竞争。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcUlWclNsQXBSSnl0cDhrakxlWkNhUzh1d1hhQUpTZ2hsRm9DNXl5SHU5RkhxalZscGx6ZEVPZDZQbjZSUWkyUlpqRnVTdm1FLTVlTVFJdGNNT3FEV3RBX2lWdW0wSFVQSG9SaFZuR1Vid0JzdEFVd0J2SVdGTmwyNUl0dzUzVl9fa2t5VWtzRklRM3RR?oc=5" },
-  { time: "05:07", tag: "ai", tagText: "AI", text: "英伟达股价因AI芯片需求飙升而大涨。市场对AI训练和推理芯片的强劲需求持续推动英伟达业绩预期，凸显其在AI硬件领域的主导地位。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxNTzR1OGhFUGJwSXhrS2M0UG5raUtRQ24ta0xjMVV4bkVZTGJ2LXNtMWlDNzZmZFFUSUdfZGtJMk4yS3Y3bFllamxDU3M5VDIzQmhIT3Y2cFNMSExLeEY1X3NnTEdXTTVYMG9OaWx6MFp4WUtIYWpucU9NQl9pLUIxYjRtLWwzTWJFc0ZKQnhhWVNyZk1nbDZTTDAyb1gzNVBBRExnd3FWS1pqb1VCSkQwazVBREFLXzNXclpxWm51TTdnWE5qbG1n?oc=5" },
 ];
-const aiBreakingDate = "2026年4月28日 02:14 CST";
+const aiBreakingDate = "2026年4月28日 04:16 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
