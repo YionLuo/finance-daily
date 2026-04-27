@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 67.97,
   previous1Month: 18.2,
   previous1Year: 24.09,
-  date: "2026年4月27日 07:52 CST"
+  date: "2026年4月27日 11:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "11:41", tag: "macro", tagText: "宏观", text: "印度最大制药商太阳制药以117.5亿美元全现金收购美国Organon公司，旨在推动其全球扩张野心。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/indian-drugmaker-sun-pharma-to-buy-us-firm-organon-in-11point75-billion-deal.html" },
+  { time: "11:25", tag: "macro", tagText: "宏观", text: "中国3月工业利润同比飙升15.8%，受AI和芯片热潮推动，但全球油价上涨开始挤压依赖进口原材料的制造商利润空间。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/china-industrial-profits-march-iran-war-oil-shock.html" },
+  { time: "08:15", tag: "tech", tagText: "科技", text: "日本芯片设备制造商东京电子与一名与中国竞争对手有关联的高管解约。资深高管Jay Chen曾帮助该公司拓展中国业务，在与其有关联的初创公司信息曝光后离职。", source: "Financial Times", url: "https://www.ft.com/content/dcc1b342-0d2a-4c1d-8e69-8d201dd2dec6" },
   { time: "06:37", tag: "macro", tagText: "宏观", text: "伊朗和平谈判搁置，油价上涨，美股期货下跌。本周华尔街迎来关键一周，标普500和纳斯达克此前创下历史新高，但地缘政治紧张局势加剧令市场承压。", source: "Investor's Business Daily", url: "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-apple-amazon-google-earnings-ai-iran-talks/?src=A00220&yptr=yahoo" },
   { time: "05:50", tag: "geo", tagText: "地缘", text: "华盛顿记者晚宴发生枪击事件，嫌疑人Cole Allen被确认为游戏开发者，曾试图闯入特朗普出席的晚宴。特朗普称此事件证明其新建白宫宴会厅计划的必要性，并呼吁撤销对该项目的法律诉讼。当局称嫌疑人曾撰写“宣言”，目标针对美国官员。这是特朗普不到两年内遭遇的第三次暗杀企图。", source: "Financial Times", url: "https://www.ft.com/content/9ecca8e3-cf3a-417b-b742-0ac30c0c0845" },
   { time: "05:00", tag: "macro", tagText: "宏观", text: "本周三被称为华尔街“超级碗”：Alphabet、亚马逊、微软和Meta四大科技巨头将同时发布财报，同时美联储主席鲍威尔将召开最后一次新闻发布会。市场高度关注科技股业绩对AI投资回报的验证，以及鲍威尔卸任前对利率路径的最终表态。", source: "MarketWatch", url: "https://www.marketwatch.com/story/wall-streets-super-bowl-wednesday-alphabet-amazon-microsoft-and-meta-report-along-with-powells-last-fed-meeting-88eb1710?mod=mw_rss_topstories" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "14:35", tag: "crypto", tagText: "加密", text: "知名投资人Kevin O'Leary清仓26种山寨币，仅保留比特币和以太坊，称其余币种“没有未来”。此举引发市场对山寨币前景的广泛讨论，加密市场分化加剧。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMlExRW5WY3hJX1M0NWNyRUxPTEZQV0NFN1o3Y0E2eGVfckhKSmpQM0tFakFjYzV1MXN6bHZrbHBocW5PM0VjREhoZDNhbzRNRkJxR3hTLWlGUWJYWnItTndPMk5hX3ZRYk1PX3A3RE93V1R1SjloWXJZNXVRRTFoUE01VUwwTHlBNUg1Qjg0OFNPQ09wSXI0?oc=5" },
   { time: "12:41", tag: "macro", tagText: "宏观", text: "华尔街顶级分析师推荐三只高股息股票，称其在市场不确定性中提供稳定被动收入。这些公司具备稳健的现金流和长期分红记录，适合防御型投资者配置。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/top-wall-street-analysts-pick-these-3-stocks-for-reliable-income.html" },
   { time: "12:31", tag: "macro", tagText: "宏观", text: "首届无巴菲特伯克希尔股东大会即将召开，投资者关注两大议题：公司3月重启自2024年以来首次股票回购，以及科技投资策略。市场期待新任领导层如何延续巴菲特的价值投资理念。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/berkshire-annual-meeting-without-buffett-to-focus-on-buybacks-tech-strategy.html" },
-  { time: "12:24", tag: "tech", tagText: "科技", text: "财报季最繁忙一周来袭：苹果、亚马逊、Meta等五家“科技七巨头”成员将于本周公布业绩。市场聚焦AI相关收益及宏观不确定性下的企业指引，科技股表现或决定短期市场方向。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/earnings-playbook-five-of-mag-7-set-to-report-in-busiest-week-of-season.html" },
-  { time: "12:00", tag: "crypto", tagText: "加密", text: "分析师预测比特币可能在2026年第二季度自2023年以来首次跑赢以太坊。理由包括比特币ETF资金持续流入、宏观避险需求上升，以及以太坊面临Layer2竞争和升级不确定性。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZXRuYnRqODhRYkUtMHU1cEZPMzloVGQ3ZU05WWNZcGg0UnI2ZndocHFtNU1KWE9IQzZJcXl6RVNqY2hISm1XRl96U3QwRW13cXpMeTZEb3I3bEMtaGUtYVNrdi1LanVmZHZPenpOQmpwMTN1YzJNMVV5Ul9NenBiOEhuU1pkZGxPNTNxWnpyZ1UtRWc4VllYREJLTGEtb3PSAaQBQVVfeXFMT0hNaG11MFBpOUVvQWR3UEVnWGd5ZDZtWHhGNzdRcVJISVNBNlRqbGlfYjAtYmhSbWVQRDRUVFRBSmdrMjlzVk5pZVBWVmJQM3hSVmZFcGszVk0xRXZnclhVOXVnaUlOOFNlcVlHMEJVN1NqYy1yTU02Nm5HLVk4Rng3VVY0SW9sa284S1RfUUVtWEpkbzNzMVlSLS1HUU1jbWpGVDg?oc=5" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗战争冲击开心果供应，叠加迪拜巧克力热潮推高需求，导致开心果价格飙升。伊朗是主要生产国，出口路线中断令全球供应链承压。", source: "Financial Times", url: "https://www.ft.com/content/438ef32a-59e5-41b3-a0da-569716385347" },
 ];
-const breakingDate = "2026年4月27日 07:52 CST";
+const breakingDate = "2026年4月27日 11:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "14:08", tag: "tech", tagText: "科技", text: "高通与长鑫存储（CXMT）合作开发3D DRAM NPU，旨在为AI手机硬件带来突破性性能提升。该技术有望显著增强端侧AI处理能力，推动智能手机AI应用的新一轮升级。", source: "Intelligent Living", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoVEdzTjBnRmo3c0VNNzRlLVJmRlhDV0xwUUM3dWVnTzBvNGtPVDNmT1pEc0w2RDdqenpraEE1NEhsMEsybjV0V0EyVDhYend1M0R2TC1Cc2J5TUo0YTNQMHYwMGNmOE80dmloUGdjcE8?oc=5" },
   { time: "13:48", tag: "ai", tagText: "AI", text: "与斯坦福有关联的AI初创公司Human Intelligence正寻求以10亿美元估值融资1亿美元。该公司专注于通用人工智能（AGI）研发，此轮融资显示资本对前沿AI研究的高热度。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNemtJd0hnNnVGajhCbTRMX3o2WHRtc1IzTzlJZEJNODJzbVY5XzRsTXJFaUdoREpQTjRuWkRyQ2J2SktmZUxBRWg4T01xM0pmTlU0QktXS2JkTFQxTFowWFd0ZkowWUt3S2h3MTBhbXd4TlA4czRLZjJXUWRXdzZSNmpuRTNPcndYS2RuTTQtc3R0N3dMeTZQTElqNFhabC14RVZLRGJZd3dXWjdmRU9aRFdSWG5ZSDNsREJBa2pCZVA3TjFQN1E?oc=5" },
 ];
-const aiBreakingDate = "2026年4月27日 07:52 CST";
+const aiBreakingDate = "2026年4月27日 11:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
