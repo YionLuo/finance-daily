@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.66,
+  score: 67.17,
   rating: "greed",
-  timestamp: "2026-04-27T14:20:34+00:00",
+  timestamp: "2026-04-27T16:46:31+00:00",
   previousClose: 66.03,
   previous1Week: 70.89,
   previous1Month: 14.47,
   previous1Year: 34.51,
-  date: "2026年4月27日 22:23 CST"
+  date: "2026年4月28日 00:49 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:32", tag: "geo", tagText: "地缘", text: "全球油价突破每桶102美元，因美伊对峙及霍尔木兹海峡封锁导致伊朗原油储存接近极限，可能被迫减产。Wolfe Research警告，封锁将延长海峡关闭时间，并可能迫使伊朗最终采取暴力报复。伊朗方面表示，若美国解除封锁并结束战争，将重新开放海峡并推迟核谈判。", source: "MarketWatch", url: "https://www.marketwatch.com/story/global-oil-futures-top-100-again-after-u-s-iran-peace-talks-canceled-a50f6a7b?mod=mw_rss_topstories" },
+  { time: "23:29", tag: "ai", tagText: "AI", text: "前Google DeepMind研究员创立的AI初创公司Ineffable Intelligence以51亿美元估值完成11亿美元种子轮融资，创下种子轮融资纪录，资金将用于追求超级智能（superintelligence）研发。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/deepmind-ineffable-intelligence-record-seed-funding-nvidia-google.html" },
+  { time: "23:15", tag: "macro", tagText: "宏观", text: "市场流传的“5月卖出离场”策略今年可能失效。分析师指出，股市处于历史高位且显示进一步动能，投资者或不应遵循传统季节性规律。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/investors-usually-sell-in-may-and-go-away-why-that-may-not-work-this-year.html" },
+  { time: "23:00", tag: "ai", tagText: "AI", text: "超过560名谷歌员工签署公开信，敦促CEO桑达尔·皮查伊阻止美国军方使用其AI技术。此前五角大楼与AI公司Anthropic发生冲突，引发内部对军事AI应用的担忧。", source: "Financial Times", url: "https://www.ft.com/content/9270ce04-558c-44e8-816f-a40219cd5007" },
   { time: "22:12", tag: "ai", tagText: "AI", text: "OpenAI与微软重新修订合作协议，取消独家模型访问权并设置收入分成上限。此举标志着双方关系在OpenAI去年10月重组后发生重大转变，微软不再享有对OpenAI模型的独家使用权，OpenAI可向其他云服务商提供服务。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html" },
   { time: "22:11", tag: "tech", tagText: "科技", text: "苹果首次在3月季度夺得全球智能手机销量冠军，iPhone 17e的成功发布和供应链优化使其逆势增长，在全球智能手机市场低迷中脱颖而出。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apple-is-defying-a-global-smartphone-slump-as-shown-through-this-first-time-feat-1506a37c?mod=mw_rss_topstories" },
   { time: "21:57", tag: "macro", tagText: "宏观", text: "壳牌以164亿美元收购加拿大页岩油生产商ARC Resources，为十年来最大收购。交易将为壳牌每日增加约37万桶油当量产量，回应投资者对其增长前景的质疑，同时伊朗和谈破裂推动油价上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/shell-arc-resources-acquisition-16-billion-energy-oil.html" },
@@ -1645,16 +1649,14 @@ const breakingNews = [
   { time: "15:07", tag: "geo", tagText: "地缘", text: "朝鲜开设博物馆纪念在俄罗斯作战中阵亡的士兵，金正恩与莫斯科高级官员承诺扩大长期合作。此举显示朝俄军事同盟关系进一步深化，引发国际社会关注。", source: "Financial Times", url: "https://www.ft.com/content/294eed45-9e16-434e-81dd-5903e2a5657e" },
   { time: "14:35", tag: "crypto", tagText: "加密", text: "知名投资人Kevin O'Leary清仓26种山寨币，仅保留比特币和以太坊，称其余币种“没有未来”。此举引发市场对山寨币前景的广泛讨论，加密市场分化加剧。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMlExRW5WY3hJX1M0NWNyRUxPTEZQV0NFN1o3Y0E2eGVfckhKSmpQM0tFakFjYzV1MXN6bHZrbHBocW5PM0VjREhoZDNhbzRNRkJxR3hTLWlGUWJYWnItTndPMk5hX3ZRYk1PX3A3RE93V1R1SjloWXJZNXVRRTFoUE01VUwwTHlBNUg1Qjg0OFNPQ09wSXI0?oc=5" },
   { time: "12:41", tag: "macro", tagText: "宏观", text: "华尔街顶级分析师推荐三只高股息股票，称其在市场不确定性中提供稳定被动收入。这些公司具备稳健的现金流和长期分红记录，适合防御型投资者配置。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/top-wall-street-analysts-pick-these-3-stocks-for-reliable-income.html" },
-  { time: "12:31", tag: "macro", tagText: "宏观", text: "首届无巴菲特伯克希尔股东大会即将召开，投资者关注两大议题：公司3月重启自2024年以来首次股票回购，以及科技投资策略。市场期待新任领导层如何延续巴菲特的价值投资理念。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/berkshire-annual-meeting-without-buffett-to-focus-on-buybacks-tech-strategy.html" },
-  { time: "11:41", tag: "macro", tagText: "宏观", text: "印度最大制药商太阳制药以117.5亿美元全现金收购美国Organon公司，旨在推动其全球扩张野心。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/indian-drugmaker-sun-pharma-to-buy-us-firm-organon-in-11point75-billion-deal.html" },
-  { time: "11:25", tag: "macro", tagText: "宏观", text: "中国3月工业利润同比飙升15.8%，受AI和芯片热潮推动，但全球油价上涨开始挤压依赖进口原材料的制造商利润空间。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/china-industrial-profits-march-iran-war-oil-shock.html" },
-  { time: "08:15", tag: "tech", tagText: "科技", text: "日本芯片设备制造商东京电子与一名与中国竞争对手有关联的高管解约。资深高管Jay Chen曾帮助该公司拓展中国业务，在与其有关联的初创公司信息曝光后离职。", source: "Financial Times", url: "https://www.ft.com/content/dcc1b342-0d2a-4c1d-8e69-8d201dd2dec6" },
 ];
-const breakingDate = "2026年4月27日 22:23 CST";
+const breakingDate = "2026年4月28日 00:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:15", tag: "ai", tagText: "AI", text: "微软与OpenAI备受关注的通用人工智能（AGI）协议宣告终结。双方重新谈判合作协议，删除了关于AGI的关键条款，该条款曾规定一旦OpenAI实现AGI，微软将失去对其技术的访问权。此举标志着两家公司关系进一步疏远，OpenAI的商业独立性增强。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/918981/openai-microsoft-renegotiate-contract" },
   { time: "21:16", tag: "ai", tagText: "AI", text: "中国否决Meta以20亿美元收购AI智能体初创公司Manus的交易，结束长达数月的审查。此举打击了扎克伯格在AI智能体领域的扩张计划，凸显中美科技脱钩加速。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/china-vetoes-metas-2b-manus-deal-after-months-long-probe/" },
+  { time: "21:08", tag: "tech", tagText: "科技", text: "Canva就其AI工具“Magic Layers”在设计中自动替换“Palestine”一词致歉。该功能旨在将平面图像分解为独立可编辑组件，但被发现对特定词汇进行不当处理，引发争议。Canva表示正在修复该问题。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine" },
   { time: "21:08", tag: "ai", tagText: "AI", text: "OpenAI据悉正在研发一款以AI智能体取代传统应用程序的手机，分析师称该手机可能于2028年进入量产阶段。此举或将颠覆现有移动操作系统格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/" },
   { time: "19:50", tag: "tech", tagText: "科技", text: "英国政府宣布支持一家开发能够自主发现新知识的突破性AI的公司。此举显示英国在AI前沿基础研究领域加大投入，力图在全球AI竞赛中占据领先地位。", source: "GOV.UK", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSjZDV05FYjlQSGs1VVBOQWN1bTVMLTlzS3I0dl9KaGVaZFBIOUFSSzlCS1QwVldldFJrbkx1M211d3BkX2dZa0xpVi1vZFBwa2IyeVdUbGY5VGZLZktwRmcwMDdmLThndzJLc0tkSXN3ZW5qMGxUc0RBRENnYzZBcS1sdEFHeG5yb0F5SkI0cXYxQzVzS2NvUnlnQ0Y1UEV4eUdCbjlFQ0JfTWw5?oc=5" },
   { time: "19:50", tag: "tech", tagText: "科技", text: "一次在德克萨斯州的偶遇催生了一家估值10亿美元、获Kleiner Perkins支持的AI初创公司。该故事凸显美国AI创业生态中偶然性与顶级风投的催化作用。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQWRVVk9ERzcyWklXRFE5czlNZUF5OFNyOWRuaFZkcTZnSFJMS2w0NVZ3Z3lYWldwQ2JaQmVuTzNvNE95UHJqWm9Scmt5ejJrVHN1eS1EV1RocEZBdm1SV2hzaEptTVBVYWlBc05pR0VCMm9IYW1zQnRRWGRlQlJaTjY1ZkJrTU5kVjlGRjZaMU82MmtGaEZuZVEyVjRTQ0xqWDBTTVh5bHA5WkZDWUN3b1NuSVQyNXpJbVNHbjd5cWNkUQ?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "04:57", tag: "macro", tagText: "宏观", text: "美国缅因州州长否决了L.D. 307法案，该法案本将实施全美首个全州范围的数据中心建设禁令，有效期至2027年11月1日。否决决定缓解了AI行业对算力扩张受限的担忧，但围绕数据中心能源消耗的争议仍在持续。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/maines-governor-vetoes-data-center-moratorium/" },
   { time: "03:52", tag: "ai", tagText: "AI", text: "AI初创公司被指夸大关键收入指标以吸引风投关注。一位创始人透露，部分公司通过操纵年度经常性收入（ARR）等数据来营造增长假象，引发行业对估值泡沫的担忧。", source: "Fast Company", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE5takhFOTdGRjEzQTRpT3ZYb19iVGNGTVowVzRocVBpM0RoX2Jmd0VnWGotSGRUNzVXNUg2c1J1QW9qTVZYdVBxVnpIaWo0TXg1S2dldnJGQmNLcHdqc2xmVDNhd3h4b2FncGsyblNCNldDNEFzcFFySjBOdVZCUQ?oc=5" },
   { time: "03:52", tag: "ai", tagText: "AI", text: "Meta与AI初创公司Thinking Machines Lab之间的人才争夺战愈演愈烈，双方互相挖角。这一现象反映出AI领域顶尖人才的稀缺性以及科技巨头与初创公司之间的人才竞争白热化。", source: "TechCrunch", url: "https://techcrunch.com/2024/04/24/metas-loss-is-thinking-machines-gain/" },
-  { time: "03:36", tag: "ai", tagText: "AI", text: "Motley Fool分析指出，一只“终极AI股票”今年已上涨26%，且涨势尚未结束。该报道虽未点名具体公司，但暗示在AI浪潮下，部分核心标的仍有强劲增长动力。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNY1JPa0dfRTkxQm5aNXRjLTNvYl9ZVWtfUlNjWFpFU05oU0Q4Ymg5bWpGNUNDN2dwMjBFeU90SXFMbHJKQUVwWEVVcHk5TzEyYzFUTkVrN2NkZ2pmTjFMYWpfb2RPbHVHQ0dFQVJPTmZJRkJSdWFMWmI1NDliNXJZTV95cXFxbm50Z1FiTEpzWFJCU0hiUnZUTA?oc=5" },
-  { time: "02:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Perplexity在新一轮融资中估值飙升至140亿美元。该公司凭借其AI驱动的搜索引擎迅速崛起，成为生成式AI领域备受关注的明星企业之一。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi_AJBVV95cUxQa1ZkamlBR3U0eVJCbUttY0tkVEhNZDBQb2Z1MU4xYmdoRVBQcnBaOWJUX0F4ZUtEMkR1YkE4WWFZQmlhdHgtVS02VmY3SHRaQmZRSWpqRGlYZlRTZHExMllsMHZESmFLNi1XdnFjeVo0Z1lLNjVBdVBuSmpJVnJFdXY0eUdWTnBET21YVmZqSGpOai0yeUZsakluM29TOUZOeGpGaGkxZ0dWamRoc0lzcjNydXNReFdhR0MzbFN5b3RYR3doNkswT3RtYXQyaUJnQVJTU0RaQzNwRG9UZkVHQk5Ibzg5dHJuRFRRRFBTREFUb2pYd2tSdWVpNW05RUM4d3FQX193VFVDSmNvX3pNLVdwMHpJaDBYQVEzXzl0eXJKZThkRDZYb19RQkR3Zk9sTXpUX282UlRDWVdfUDhoRzFrUmMyOXRFNGdYdGNmemdJbzRGcGNXMjdIclczc0lSRDlFdTJLTW9Ya3MtWW9nR1owTUZCdll2N1pqZQ?oc=5" },
 ];
-const aiBreakingDate = "2026年4月27日 22:23 CST";
+const aiBreakingDate = "2026年4月28日 00:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
