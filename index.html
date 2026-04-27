@@ -1618,17 +1618,22 @@
 const fearGreedData = {
   score: 66.03,
   rating: "greed",
-  timestamp: "2026-04-24T23:59:49+00:00",
-  previousClose: 66.31,
-  previous1Week: 67.97,
-  previous1Month: 18.2,
-  previous1Year: 24.09,
-  date: "2026年4月27日 14:39 CST"
+  timestamp: "2026-04-27T09:10:46+00:00",
+  previousClose: 66.03,
+  previous1Week: 70.89,
+  previous1Month: 14.47,
+  previous1Year: 34.51,
+  date: "2026年4月27日 17:28 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:21", tag: "geo", tagText: "地缘", text: "中国阻止Meta以20亿美元收购新加坡AI初创公司Manus，该交易因Manus的中国背景被否决。此举凸显中美科技竞争加剧，中国加强对外资收购涉及本土技术企业的审查。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html" },
+  { time: "17:10", tag: "geo", tagText: "地缘", text: "台湾法院判处前东京电子员工10年监禁，因其窃取台积电商业机密。此案反映全球半导体行业技术保护与人才流动的紧张关系，对芯片供应链安全产生警示。", source: "Associated Press", url: "https://finance.yahoo.com/sectors/technology/articles/taiwan-court-sentences-ex-tokyo-091028497.html" },
+  { time: "15:54", tag: "ai", tagText: "AI", text: "新加坡银行协会正监控前沿AI模型带来的潜在威胁，包括金融欺诈、数据安全和系统性风险。此举反映全球金融监管机构对AI技术应用的警惕性上升。", source: "Reuters", url: "https://finance.yahoo.com/sectors/technology/articles/association-banks-singapore-monitoring-potential-085443620.html" },
+  { time: "15:41", tag: "macro", tagText: "宏观", text: "摩根大通建议投资者在市场因地缘政治因素下跌时继续买入，称利率预期将在下半年下降，盈利增长前景依然乐观。该行认为当前回调是布局机会。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-jpmorgan-is-telling-investors-to-keep-buying-the-dips-even-as-market-hits-new-highs-4c8b7763?mod=mw_rss_topstories" },
+  { time: "15:07", tag: "geo", tagText: "地缘", text: "朝鲜开设博物馆纪念在俄罗斯作战中阵亡的士兵，金正恩与莫斯科高级官员承诺扩大长期合作。此举显示朝俄军事同盟关系进一步深化，引发国际社会关注。", source: "Financial Times", url: "https://www.ft.com/content/294eed45-9e16-434e-81dd-5903e2a5657e" },
   { time: "14:35", tag: "crypto", tagText: "加密", text: "知名投资人Kevin O'Leary清仓26种山寨币，仅保留比特币和以太坊，称其余币种“没有未来”。此举引发市场对山寨币前景的广泛讨论，加密市场分化加剧。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMlExRW5WY3hJX1M0NWNyRUxPTEZQV0NFN1o3Y0E2eGVfckhKSmpQM0tFakFjYzV1MXN6bHZrbHBocW5PM0VjREhoZDNhbzRNRkJxR3hTLWlGUWJYWnItTndPMk5hX3ZRYk1PX3A3RE93V1R1SjloWXJZNXVRRTFoUE01VUwwTHlBNUg1Qjg0OFNPQ09wSXI0?oc=5" },
   { time: "12:41", tag: "macro", tagText: "宏观", text: "华尔街顶级分析师推荐三只高股息股票，称其在市场不确定性中提供稳定被动收入。这些公司具备稳健的现金流和长期分红记录，适合防御型投资者配置。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/top-wall-street-analysts-pick-these-3-stocks-for-reliable-income.html" },
   { time: "12:31", tag: "macro", tagText: "宏观", text: "首届无巴菲特伯克希尔股东大会即将召开，投资者关注两大议题：公司3月重启自2024年以来首次股票回购，以及科技投资策略。市场期待新任领导层如何延续巴菲特的价值投资理念。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/berkshire-annual-meeting-without-buffett-to-focus-on-buybacks-tech-strategy.html" },
@@ -1644,20 +1649,18 @@ const breakingNews = [
   { time: "02:14", tag: "geo", tagText: "地缘", text: "伊朗外长阿拉格齐短暂重返伊斯兰堡，巴基斯坦领导人正紧急斡旋重启德黑兰与华盛顿之间的停火谈判。特朗普则表示双方可以通过电话沟通。伊朗局势持续紧张，市场关注其对能源价格和地缘风险的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/irans-araghchi-briefly-returns-to-pakistan-trump-says-they-can-call.html" },
   { time: "23:00", tag: "crypto", tagText: "加密", text: "摩根士丹利推出的比特币ETF（MSBT）有望凭借三大优势超越贝莱德的IBIT：更低的费用、更灵活的赎回机制以及机构级托管服务。比特币ETF市场竞争日趋激烈。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQYWdMSnJFLWRSUzZXWlNoZmVUOEtlYmZyaTBKeXBPOUE2OFFqdl9WVDJiMzhwSHhtWDllV21PeHl3MkNkSXJ5Y1dLMGlQU1Q1NzB6b1RHOVR6SVBnbXc4NFNZNzV6ZElzU29iaEJZSF9RVXhaX05VX2NRanBrWEdqMmFLamRPakRDaGYycEE4YlA5TU1xOFBuX2owMmFjT1RxNDdCY2lpN3Y1aHFUVUhUVEZPS3VKTUk5TURDa2FRcWp0SXphT0plZQ" },
   { time: "23:00", tag: "crypto", tagText: "加密", text: "分析师指出，本周五大科技巨头（苹果、亚马逊、Meta等）的财报可能决定比特币的下一步走势。市场关注科技股表现对加密市场情绪的传导效应，以及宏观不确定性下的避险需求。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE5XN0NISjFuSXZPRG9JMXdLOUVEaXdhSGFBeWI3NHA4M0JWRjRxRF9HOGFwNU50MkE3ZTg0UHU5OFh5Zkswb1Q5TG1GNG5SU2o4OHZ1QmR5VHNIbDB3NGUwRVZsVEVmcDZNV1NSbkc0Yw?oc=5" },
-  { time: "22:51", tag: "macro", tagText: "宏观", text: "参议员Tillis解除对美联储主席提名人Warsh的阻挠，为特朗普提名扫清障碍。此举可能加速美联储领导层更迭，影响未来货币政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/thom-tillis-kevin-warsh-federal-reserve.html" },
-  { time: "22:30", tag: "tech", tagText: "科技", text: "Credo Technology宣布以7.5亿美元收购DustPhotonics，以增强硅光子学能力。该交易反映数据中心和AI基础设施对高速光互连技术的需求激增。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/credo-technology-crdo-acquire-dustphotonics-171515412.html" },
-  { time: "22:30", tag: "ai", tagText: "AI", text: "华尔街策略师普遍看好AI交易，称市场正回归乐观情绪。AI芯片需求持续支撑科技板块，投资者聚焦本周科技巨头财报以验证AI投资回报。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/article/a-return-to-optimism-wall-street-strategists-are-bullish-on-the-ai-trade-143000172.html" },
-  { time: "22:06", tag: "geo", tagText: "地缘", text: "以色列政坛变天：前总理纳夫塔利·贝内特和亚伊尔·拉皮德宣布合并政党，联手备战今年大选。这是内塔尼亚胡面临的最强挑战，可能重塑以色列政治格局。", source: "Financial Times", url: "https://www.ft.com/content/3bdeac99-19b2-45df-b0bb-a79e187f1c16" },
-  { time: "18:00", tag: "macro", tagText: "宏观", text: "伊朗战争导致美国汽油价格持续高企，驾车者减少燃油消费。油价飙升对特朗普政府构成政治压力，尤其是在11月中期选举前夕，选民对高油价的不满情绪上升。", source: "Financial Times", url: "https://www.ft.com/content/97261fc6-47cc-4d0b-929c-cd8d700a0512" },
 ];
-const breakingDate = "2026年4月27日 14:39 CST";
+const breakingDate = "2026年4月27日 17:28 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:54", tag: "tech", tagText: "科技", text: "AMCAP Global推出专有多模型AI框架，引领全球金融进入智能体时代。该框架整合多种AI模型，旨在为金融机构提供更高效的自动化交易和风险管理解决方案。", source: "StreetInsider", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQWTFfWkpVT1NhOGpxd2VlQjhRclIxSkpOemw5ZS1YSVJkSWpIVm1lSEljYmRDQXp3TF9HVGJFSF80YmJxMXR6VXdVUjVrbWFoZktGTGJCTE44VHF6VGd0T0t1YjVsdTRpd0VTcVpJd1p5dzZPZ21uZkdPbHU4TUZTUHNzZ0hkUXhtZ2xzSmhGQmtTNF9KWlBJNHoxcXIzWndlVTBJVDhWUmcyN09vVWpQTkstaEgxdXJuUnVmdkNhRUxoWS03M29GV0QwRFROQmZDNmpKa0lSWUdRX3dDbGI5dzh4YmZ1NnVHLUVXcg?oc=5" },
+  { time: "15:27", tag: "ai", tagText: "AI", text: "埃隆·马斯克与OpenAI CEO萨姆·奥尔特曼对簿公堂，就AI发展方向和控制权展开高风险法律对决。这场诉讼可能重塑AI行业格局，影响OpenAI的非营利转营利进程及AGI治理模式。", source: "Dayton Daily News", url: "https://news.google.com/rss/articles/CBMigwJBVV95cUxOb3ZMWlZwUDB1Uy1CYWFjRElIR1dSdU84NUNHNThIcjFGUzVrRkp2UVU0X0trU01saEVYSm5zbFpQb0Q0eU1iMmtrZFVNZ0NkanhiMUF0U3BBQjJYdkJ6eTc2U21wR1dqeldmVjlWeHdCdjF3SXZIdWVIVmxGREFPeTVaX2g2c1hSQm1ZUE1fUHVnMWdTUVBweGNqVWJFa3ZFcEI2QjdjZy1IcnNTeTlvU0VjbVZiT25uX0Y3Y3ZzSHQ1X1hiWE5EOWt3VzNPcHNoekhnNk5yN0Z5MVJpRUkwM0pZVUJRRHVRYm9VdzhNV0xvdmNRaVZaZkR5TjNoVVdUMTMw?oc=5" },
   { time: "14:08", tag: "tech", tagText: "科技", text: "高通与长鑫存储（CXMT）合作开发3D DRAM NPU，旨在为AI手机硬件带来突破性性能提升。该技术有望显著增强端侧AI处理能力，推动智能手机AI应用的新一轮升级。", source: "Intelligent Living", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoVEdzTjBnRmo3c0VNNzRlLVJmRlhDV0xwUUM3dWVnTzBvNGtPVDNmT1pEc0w2RDdqenpraEE1NEhsMEsybjV0V0EyVDhYend1M0R2TC1Cc2J5TUo0YTNQMHYwMGNmOE80dmloUGdjcE8?oc=5" },
   { time: "13:49", tag: "ai", tagText: "AI", text: "DeepSeek发布V4 Flash和V4 Pro大语言模型，直接挑战GPT-5.2和Gemini 3.0 Pro。此举标志着中国AI公司在基础模型领域的竞争力进一步提升，全球大模型竞赛格局再度生变。", source: "ETV Bharat", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOWGNIVU5mWEtxZWJlemtaX0lvMFhhdTJiV1ZCNjh5cWtEQXRJZDE5Um1zeFl2WkFuTWxjeE03clllbG10Tnh6c196X2M3TXA5QVBROHBJVTdhNFpabzdMWFdYamhwbXpKZy1yNm9wanBIY2wwbW5Kd0d0WmZFNzVTSGtXbktjRmZhd2VZaEdLTHRyQldMWVlfTmJoV3h5a052SUlMcDFPdEtLNTc3OUhDbXdzX2t0TzVmRFJQc3V5MkNjd2VrRVZEQXprNWlTTHV0bWoxMlFTdlNVLXRz0gHiAUFVX3lxTE1QRjRPUmF5WmpibmNJa2R6bkRiaGt1c015RkhVdjJ5bFhFUGZsWnVPWExWUXB6VUhDSl9mTUdoYVl5ODFHc3FZTmxGZDk4b05waUR5ZzNPU0ZRcHdtQ0NNRUVSQWFoTURIYk04azd3bHJyd2wxQ2xYNW5jRGRwVG1wVkFfS3ZuZnB2NWZzY0M1ZW94dGJzOGszbFlGajR5YUNtanVuOUNLQk5QcEFsNEV3STdsRnF4NlN0UXJKNS1zenJoMWFwbVlxTTJwUmZkelRjdG9TM0xlR2hQRnZmazhLOEE?oc=5" },
   { time: "13:48", tag: "ai", tagText: "AI", text: "与斯坦福有关联的AI初创公司Human Intelligence正寻求以10亿美元估值融资1亿美元。该公司专注于通用人工智能（AGI）研发，此轮融资显示资本对前沿AI研究的高热度。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNemtJd0hnNnVGajhCbTRMX3o2WHRtc1IzTzlJZEJNODJzbVY5XzRsTXJFaUdoREpQTjRuWkRyQ2J2SktmZUxBRWg4T01xM0pmTlU0QktXS2JkTFQxTFowWFd0ZkowWUt3S2h3MTBhbXd4TlA4czRLZjJXUWRXdzZSNmpuRTNPcndYS2RuTTQtc3R0N3dMeTZQTElqNFhabC14RVZLRGJZd3dXWjdmRU9aRFdSWG5ZSDNsREJBa2pCZVA3TjFQN1E?oc=5" },
   { time: "13:40", tag: "ai", tagText: "AI", text: "Q1 2026财报季后，市场对比英特尔与英伟达的AI芯片股表现。分析指出，英伟达凭借数据中心AI芯片需求持续领先，而英特尔在代工和AI加速器领域面临挑战，两家公司的股价走势分化明显。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxPcXRCRXBNSWY4RXdWTXRueWs4b2JKbTdFaEJyWHhvOVlpWU41QjlFVGVBRXhXejVJUlpQcUk5TVdxbmRHZmc5RnZNMXA4UVptMU9mTV91U2liZEdjVm1zVmFRZzFkaWlnR00tUzU5T3lvcUtxb3puc1QzTDlvazBFaDdDZXIyQzBYUzRDbmJtcWk2U2ZGeXY4?oc=5" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "AI初创公司Sereact完成1.1亿美元融资，致力于开发能预测行动后果的机器人。该技术有望大幅提升机器人在复杂环境中的自主决策能力，推动具身智能商业化进程。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNOU9wVEdUQkZqeDRfM05NRjQxQ1VLWGJTS2RibWRkTEM5XzZMdURaN3NSRFo4WV8xdlpodmdSS1pVNEpFRkhZTmhzX20wUWlDcXVJeGxjRDE0VGkxN3RCLUdrcU9SeDVqVE93TTFWeGY5QzlWdUhvOFpMT0s0cExDTWZfNjZMMTFlT0FKaVNYWk0td1I5Yl9valZtRFljS25qSEktLXJmT2xPekgtN1VyNTlaNmticmlKUTBuTkEwQnpuMDQ?oc=5" },
   { time: "06:00", tag: "macro", tagText: "宏观", text: "纳斯达克指数在英伟达、博通和亚马逊等AI股票的推动下持续上涨。分析指出，市场对人工智能相关领域的需求依然强劲，科技巨头在AI基础设施和芯片上的投入继续支撑股市走高。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVVpmOEdnQzVzVWRhcmpsaWFGY2ZvcTYycHFxRXlyZDBySWp4U3liWVowT3h0V1U5cWZCaGVQei04S05vdUNnaE92OEFPOWRkakY4LUpYbVctTkcxZHNtcVkxVF9sZENieV9obkxTajRUNkpyUE5HWXpqOVcydEtPTzE4b19tVE9VMGxMZWpvRXktbnlhMDBFRVBFM0JBUlZBa0pR?oc=5" },
   { time: "05:43", tag: "ai", tagText: "AI", text: "Anthropic创建了一个AI代理对代理的测试市场，让AI代理分别代表买家和卖家，使用真实资金完成真实商品的交易。该实验探索了AI自主商业的可行性，标志着AI代理在现实经济活动中迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/" },
   { time: "04:57", tag: "macro", tagText: "宏观", text: "美国缅因州州长否决了L.D. 307法案，该法案本将实施全美首个全州范围的数据中心建设禁令，有效期至2027年11月1日。否决决定缓解了AI行业对算力扩张受限的担忧，但围绕数据中心能源消耗的争议仍在持续。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/maines-governor-vetoes-data-center-moratorium/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
   { time: "23:03", tag: "tech", tagText: "科技", text: "TechCrunch分析指出，东京凭借SusHi Tech 2026大会成为2026年最重要的科技目的地。该大会聚焦四个明确定义的技术领域，并配有现场演示、专属展区及由实际建设者和投资者主导的会议，凸显东京在全球科技版图中的崛起。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "苹果即将上任的CEO约翰·特努斯（John Ternus）出身硬件背景，这标志着苹果可能将硬件设备重新置于战略核心。外界关注其硬件策略将如何演变，尤其是在AI时代如何平衡设备创新与服务生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/apple-under-ternus-what-comes-next-for-the-tech-giants-hardware-strategy/" },
-  { time: "22:30", tag: "tech", tagText: "科技", text: "华尔街拥抱AI交易，芯片股大幅上涨。市场对人工智能相关芯片的需求持续旺盛，推动半导体板块表现强劲，投资者情绪高涨。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOR2h4Yk5lRzhNeXVXSmN4cWI2bFRQdTI3aDlxUkl0YW5lb1NOOVBYV3g4NWt3QVBUR3Qwa2gtYTRkV3NWUEVqMTVMaWthMmR1TjRrOE11MW1BRFVrS29vMS1tSzdnbUxCNVNQZE5ja0xEemRyR1JrNjRoaVZTVUlIZmxVWndCbG52OFg0MkczUmhETXVCSTlN?oc=5" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "陷入困境的合规初创公司Delve再曝安全事件，其客户——AI智能体训练公司Context AI上周披露了重大数据泄露。这起事件引发对AI供应链安全审查流程的广泛质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/" },
 ];
-const aiBreakingDate = "2026年4月27日 14:39 CST";
+const aiBreakingDate = "2026年4月27日 17:28 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
