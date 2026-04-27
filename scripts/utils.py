@@ -67,35 +67,54 @@ def _parse_js_value(text):
     """
     Parse a raw JS text block into Python objects using node.
     This is more reliable than regex-based parsing for complex JS.
+    Uses stdin to avoid 'Argument list too long' errors with large data.
     """
     import subprocess
+    import tempfile
 
-    # Use node to evaluate JS and output JSON
-    node_script = f"""
-    try {{
-        const data = {text};
-        console.log(JSON.stringify(data));
-    }} catch(e) {{
-        console.error('PARSE_ERROR: ' + e.message);
-        process.exit(1);
-    }}
-    """
-
+    # Write JS data to a temp file, then have node read and parse it.
+    # This avoids both ARG_MAX limits (command line) and pipe buffer issues (stdin).
     node_paths = [
         "node",
         os.path.expanduser("~/.workbuddy/binaries/node/versions/22.12.0/bin/node"),
     ]
 
     for node in node_paths:
+        tmp_file = None
         try:
+            # Write JS value to a temp file
+            tmp_file = tempfile.NamedTemporaryFile(
+                mode='w', suffix='.js', delete=False, encoding='utf-8'
+            )
+            tmp_file.write(text)
+            tmp_file.close()
+
+            node_script = f"""
+            const fs = require('fs');
+            try {{
+                const raw = fs.readFileSync({json.dumps(tmp_file.name)}, 'utf8');
+                const data = eval('(' + raw + ')');
+                console.log(JSON.stringify(data));
+            }} catch(e) {{
+                console.error('PARSE_ERROR: ' + e.message);
+                process.exit(1);
+            }}
+            """
+
             result = subprocess.run(
                 [node, "-e", node_script],
-                capture_output=True, text=True, timeout=10,
+                capture_output=True, text=True, timeout=30,
             )
             if result.returncode == 0 and result.stdout.strip():
                 return json.loads(result.stdout.strip())
         except (FileNotFoundError, json.JSONDecodeError, subprocess.TimeoutExpired):
             continue
+        finally:
+            if tmp_file:
+                try:
+                    os.unlink(tmp_file.name)
+                except OSError:
+                    pass
 
     return None
 
