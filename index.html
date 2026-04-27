@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 66.03,
   rating: "greed",
-  timestamp: "2026-04-27T09:10:46+00:00",
+  timestamp: "2026-04-27T11:36:01+00:00",
   previousClose: 66.03,
   previous1Week: 70.89,
   previous1Month: 14.47,
   previous1Year: 34.51,
-  date: "2026年4月27日 17:28 CST"
+  date: "2026年4月27日 19:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:35", tag: "tech", tagText: "科技", text: "科技股涨跌互现：高通股价大涨，英伟达市值重回5万亿美元上方，市场聚焦本周“七巨头”财报。期权数据显示，本周发布财报的五只科技股看涨期权交易活跃，市场情绪偏乐观。", source: "Yahoo Finance", url: "https://finance.yahoo.com/sectors/technology/live/tech-stocks-today-nvidia-magnificent-seven-113535737.html" },
+  { time: "19:18", tag: "tech", tagText: "科技", text: "Verizon在新任CEO领导下公布意外用户增长，股价上涨。每股收益超预期，但营收略低于预期。", source: "MarketWatch", url: "https://www.marketwatch.com/story/verizons-stock-rises-as-the-company-posts-surprise-subscriber-growth-under-new-ceo-2752e52d?mod=mw_rss_topstories" },
+  { time: "19:01", tag: "tech", tagText: "科技", text: "Intellia Therapeutics宣布其基于CRISPR基因编辑技术的遗传性血管性水肿疗法在3期临床试验中达到主要终点，标志着基因编辑领域的重要里程碑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/crispr-gene-editing-intellia-trial.html" },
+  { time: "19:00", tag: "crypto", tagText: "加密", text: "比特币跌破78,000美元，此前突破尝试失败，山寨币同步下跌。加密市场整体承压，投资者在宏观不确定性和科技财报周前保持谨慎。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxNOE12djU1Z2FyNHlfWW1YN0QyRHZ4VjJtNFFqVVcyTXlQV3hfRzRwVmlSWDRYcWhycW53Y3V4WVd6ak8wdE01TmdVdHROYmQxbDVJVnJXR2lfMTlpaXdFQTFtclIzSGl0N0x1TjZKRGFuOWxXamR6Um9oY0tMa1FudjFNSTdHUms0cVVNUzM5b1kybjZVRkZ3eHBzTDc2M040UUFJUnpUUVRfUVpIRVVELUFpMnUtXzhoemx0Qg?oc=5" },
   { time: "17:21", tag: "geo", tagText: "地缘", text: "中国阻止Meta以20亿美元收购新加坡AI初创公司Manus，该交易因Manus的中国背景被否决。此举凸显中美科技竞争加剧，中国加强对外资收购涉及本土技术企业的审查。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html" },
   { time: "17:10", tag: "geo", tagText: "地缘", text: "台湾法院判处前东京电子员工10年监禁，因其窃取台积电商业机密。此案反映全球半导体行业技术保护与人才流动的紧张关系，对芯片供应链安全产生警示。", source: "Associated Press", url: "https://finance.yahoo.com/sectors/technology/articles/taiwan-court-sentences-ex-tokyo-091028497.html" },
   { time: "15:54", tag: "ai", tagText: "AI", text: "新加坡银行协会正监控前沿AI模型带来的潜在威胁，包括金融欺诈、数据安全和系统性风险。此举反映全球金融监管机构对AI技术应用的警惕性上升。", source: "Reuters", url: "https://finance.yahoo.com/sectors/technology/articles/association-banks-singapore-monitoring-potential-085443620.html" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "05:00", tag: "macro", tagText: "宏观", text: "本周三被称为华尔街“超级碗”：Alphabet、亚马逊、微软和Meta四大科技巨头将同时发布财报，同时美联储主席鲍威尔将召开最后一次新闻发布会。市场高度关注科技股业绩对AI投资回报的验证，以及鲍威尔卸任前对利率路径的最终表态。", source: "MarketWatch", url: "https://www.marketwatch.com/story/wall-streets-super-bowl-wednesday-alphabet-amazon-microsoft-and-meta-report-along-with-powells-last-fed-meeting-88eb1710?mod=mw_rss_topstories" },
   { time: "03:35", tag: "tech", tagText: "科技", text: "SpaceX与一家由4名MIT辍学生创立的AI初创公司达成600亿美元协议。该公司CEO年仅25岁，身价已达13亿美元。这笔交易凸显AI基础设施领域的巨额资本涌入。", source: "Moneywise", url: "https://finance.yahoo.com/sectors/technology/articles/spacex-just-cut-60b-deal-193500859.html" },
   { time: "03:20", tag: "tech", tagText: "科技", text: "英特尔领涨科技股，推动纳斯达克走高，但道琼斯指数因油价下跌而承压。市场在科技巨头财报前夕分化明显，AI相关芯片需求持续支撑科技板块。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNcnBZckdtYlNhM282cnpYTXg3a2hQdE1vdmVXeHgzU19hTm8wcGNGNE1Jb3pOd2p4dE1VbWF5ZDFGZXM3YTUzdWdRajNuQ3B1Y3J2X0RYa2dlQjg5U0ZQYVlaa1BLNjY2QkRVdDFiYkxGREdfWXl5RVRiQkwxRnZ1SG11T1VtWDBhRkVtaTFVV19IeXdNbkpUVVZn?oc=5" },
-  { time: "03:03", tag: "crypto", tagText: "加密", text: "比特币、Solana和XRP的ETF录得资金流入，而以太坊ETF则遭遇7590万美元流出。加密市场分化明显，投资者在宏观不确定性中重新评估各资产配置。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVGdnT1ZMMmJFUjBTMlhJa1RfNWl2U29YM3ZoRERRY2pVTkdudmV6MzJqcmdVNUNyYk56SjNNcDlfZ2NqeTJCWmJvT1Z6TC1peXd5VmNodkFYcFJyNkFsOUE4WVdnVjBRWHp1YTkxd0dJYzJvXzdCSFZQX2JzbzJzRzZoWEhWUnJIbEpTZXdqX25GcGlQaEE?oc=5" },
-  { time: "02:14", tag: "geo", tagText: "地缘", text: "伊朗外长阿拉格齐短暂重返伊斯兰堡，巴基斯坦领导人正紧急斡旋重启德黑兰与华盛顿之间的停火谈判。特朗普则表示双方可以通过电话沟通。伊朗局势持续紧张，市场关注其对能源价格和地缘风险的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/26/irans-araghchi-briefly-returns-to-pakistan-trump-says-they-can-call.html" },
-  { time: "23:00", tag: "crypto", tagText: "加密", text: "摩根士丹利推出的比特币ETF（MSBT）有望凭借三大优势超越贝莱德的IBIT：更低的费用、更灵活的赎回机制以及机构级托管服务。比特币ETF市场竞争日趋激烈。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQYWdMSnJFLWRSUzZXWlNoZmVUOEtlYmZyaTBKeXBPOUE2OFFqdl9WVDJiMzhwSHhtWDllV21PeHl3MkNkSXJ5Y1dLMGlQU1Q1NzB6b1RHOVR6SVBnbXc4NFNZNzV6ZElzU29iaEJZSF9RVXhaX05VX2NRanBrWEdqMmFLamRPakRDaGYycEE4YlA5TU1xOFBuX2owMmFjT1RxNDdCY2lpN3Y1aHFUVUhUVEZPS3VKTUk5TURDa2FRcWp0SXphT0plZQ" },
-  { time: "23:00", tag: "crypto", tagText: "加密", text: "分析师指出，本周五大科技巨头（苹果、亚马逊、Meta等）的财报可能决定比特币的下一步走势。市场关注科技股表现对加密市场情绪的传导效应，以及宏观不确定性下的避险需求。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTE5XN0NISjFuSXZPRG9JMXdLOUVEaXdhSGFBeWI3NHA4M0JWRjRxRF9HOGFwNU50MkE3ZTg0UHU5OFh5Zkswb1Q5TG1GNG5SU2o4OHZ1QmR5VHNIbDB3NGUwRVZsVEVmcDZNV1NSbkc0Yw?oc=5" },
 ];
-const breakingDate = "2026年4月27日 17:28 CST";
+const breakingDate = "2026年4月27日 19:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:00", tag: "ai", tagText: "AI", text: "Meta签署协议，购买从太空夜间传输的太阳能电力。Overview Energy与Meta的这份合同是迈向太空太阳能未来的一小步，标志着科技巨头在清洁能源领域的创新探索。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/meta-inks-deal-for-solar-power-at-night-beamed-from-space/" },
+  { time: "19:00", tag: "tech", tagText: "科技", text: "AI设计的汽车正在成形。汽车设计领域充满先进的3D可视化工具和VR雕刻平台，但普通新车仍从草图开始。传统草图经历无数次迭代，而AI正在改变这一流程。", source: "The Verge", url: "https://www.theverge.com/transportation/918411/gm-ai-car-design-nissan-neural-concept" },
   { time: "16:54", tag: "tech", tagText: "科技", text: "AMCAP Global推出专有多模型AI框架，引领全球金融进入智能体时代。该框架整合多种AI模型，旨在为金融机构提供更高效的自动化交易和风险管理解决方案。", source: "StreetInsider", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQWTFfWkpVT1NhOGpxd2VlQjhRclIxSkpOemw5ZS1YSVJkSWpIVm1lSEljYmRDQXp3TF9HVGJFSF80YmJxMXR6VXdVUjVrbWFoZktGTGJCTE44VHF6VGd0T0t1YjVsdTRpd0VTcVpJd1p5dzZPZ21uZkdPbHU4TUZTUHNzZ0hkUXhtZ2xzSmhGQmtTNF9KWlBJNHoxcXIzWndlVTBJVDhWUmcyN09vVWpQTkstaEgxdXJuUnVmdkNhRUxoWS03M29GV0QwRFROQmZDNmpKa0lSWUdRX3dDbGI5dzh4YmZ1NnVHLUVXcg?oc=5" },
   { time: "15:27", tag: "ai", tagText: "AI", text: "埃隆·马斯克与OpenAI CEO萨姆·奥尔特曼对簿公堂，就AI发展方向和控制权展开高风险法律对决。这场诉讼可能重塑AI行业格局，影响OpenAI的非营利转营利进程及AGI治理模式。", source: "Dayton Daily News", url: "https://news.google.com/rss/articles/CBMigwJBVV95cUxOb3ZMWlZwUDB1Uy1CYWFjRElIR1dSdU84NUNHNThIcjFGUzVrRkp2UVU0X0trU01saEVYSm5zbFpQb0Q0eU1iMmtrZFVNZ0NkanhiMUF0U3BBQjJYdkJ6eTc2U21wR1dqeldmVjlWeHdCdjF3SXZIdWVIVmxGREFPeTVaX2g2c1hSQm1ZUE1fUHVnMWdTUVBweGNqVWJFa3ZFcEI2QjdjZy1IcnNTeTlvU0VjbVZiT25uX0Y3Y3ZzSHQ1X1hiWE5EOWt3VzNPcHNoekhnNk5yN0Z5MVJpRUkwM0pZVUJRRHVRYm9VdzhNV0xvdmNRaVZaZkR5TjNoVVdUMTMw?oc=5" },
   { time: "14:08", tag: "tech", tagText: "科技", text: "高通与长鑫存储（CXMT）合作开发3D DRAM NPU，旨在为AI手机硬件带来突破性性能提升。该技术有望显著增强端侧AI处理能力，推动智能手机AI应用的新一轮升级。", source: "Intelligent Living", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoVEdzTjBnRmo3c0VNNzRlLVJmRlhDV0xwUUM3dWVnTzBvNGtPVDNmT1pEc0w2RDdqenpraEE1NEhsMEsybjV0V0EyVDhYend1M0R2TC1Cc2J5TUo0YTNQMHYwMGNmOE80dmloUGdjcE8?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "23:52", tag: "crypto", tagText: "加密", text: "Pi Network以AI计算突破震惊行业，据MEXC报道，该项目在AI计算领域取得重大进展，引发市场广泛关注。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9nLTZZUTNLMFVDY0thMGoxcmJXZDlhdVdZcXByQmJOVG9mVnFWQ0VmaDRGd0lIeHo5Q083OU1EU2NMWVJ0c1N5ZA?oc=5" },
   { time: "23:30", tag: "tech", tagText: "科技", text: "旧金山湾区一栋13英亩房产挂牌出售，卖家要求买家以Anthropic公司股权作为支付方式，而非现金。这一罕见交易方式凸显AI初创公司股权在硅谷的极高流动性和价值认可度。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/" },
   { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
-  { time: "23:03", tag: "tech", tagText: "科技", text: "TechCrunch分析指出，东京凭借SusHi Tech 2026大会成为2026年最重要的科技目的地。该大会聚焦四个明确定义的技术领域，并配有现场演示、专属展区及由实际建设者和投资者主导的会议，凸显东京在全球科技版图中的崛起。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/" },
-  { time: "23:00", tag: "tech", tagText: "科技", text: "苹果即将上任的CEO约翰·特努斯（John Ternus）出身硬件背景，这标志着苹果可能将硬件设备重新置于战略核心。外界关注其硬件策略将如何演变，尤其是在AI时代如何平衡设备创新与服务生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/25/apple-under-ternus-what-comes-next-for-the-tech-giants-hardware-strategy/" },
 ];
-const aiBreakingDate = "2026年4月27日 17:28 CST";
+const aiBreakingDate = "2026年4月27日 19:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
