@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 65.71,
+  score: 63.8,
   rating: "greed",
-  timestamp: "2026-04-28T18:23:10+00:00",
+  timestamp: "2026-04-28T20:13:56+00:00",
   previousClose: 67.34,
   previous1Week: 67.77,
   previous1Month: 14.47,
   previous1Year: 32.14,
-  date: "2026年4月29日 02:25 CST"
+  date: "2026年4月29日 04:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:15", tag: "geo", tagText: "地缘", text: "美国联邦通信委员会（FCC）提前数年启动对迪士尼广播执照的审查，称其关注迪士尼的多元化、公平与包容（DEI）政策是否具有歧视性。此举发生在特朗普因吉米·坎摩尔（Jimmy Kimmel）的玩笑要求解雇他之后，被视为对ABC（迪士尼旗下）的政治施压。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/fcc-begins-review-of-disney-broadcast-licenses-years-ahead-of-schedule.html" },
+  { time: "04:15", tag: "geo", tagText: "地缘", text: "前FBI局长詹姆斯·科米因在Instagram上发布数字“8647”被指控威胁特朗普生命。特朗普此前指责科米此举是“呼吁刺杀总统”。该案引发关于言论自由与政治报复的激烈辩论。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/james-comey-indicted-trump-seashell-8647.html" },
+  { time: "03:34", tag: "geo", tagText: "地缘", text: "欧盟首席贸易官员萨宾·韦扬德因拒绝认可美欧关税协议符合WTO规则而辞职。此举凸显欧盟内部对特朗普贸易政策的严重分歧。", source: "Financial Times", url: "https://www.ft.com/content/a71432de-e65b-4b42-aad7-b7b1fffd2c81" },
+  { time: "03:11", tag: "geo", tagText: "地缘", text: "美国驻乌克兰大使朱莉·戴维斯因与特朗普政府在支持乌克兰问题上的分歧而即将离职。消息人士称，她对总统缺乏对基辅的支持感到沮丧。", source: "Financial Times", url: "https://www.ft.com/content/33d5d8d4-a7db-4647-9751-c21de8ebecb8" },
   { time: "02:24", tag: "ai", tagText: "AI", text: "OpenAI据报未达营收目标，用户增长预测落空，引发科技股抛售。甲骨文、英伟达等芯片股下跌，纳斯达克指数跌超1%，标普500从纪录高位回落。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/openai-reportedly-missed-revenue-targets-shares-of-oracle-and-these-chip-stocks-are-falling.html" },
   { time: "01:47", tag: "ai", tagText: "AI", text: "OpenAI结束与微软的独家云合作，将其生成式AI模型引入亚马逊AWS。此举标志着AI行业云服务格局的重大转变，微软股价承压。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/openai-brings-models-to-aws-after-ending-exclusivity-with-microsoft.html" },
   { time: "00:50", tag: "crypto", tagText: "加密", text: "一位亿万富翁投资者警告称，“丑陋的通胀”将对比特币造成冲击。通胀压力上升可能削弱加密货币作为对冲工具的吸引力，市场情绪趋于谨慎。", source: "TheStreet", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMElrek1GREhpYzlkTlVwYjFIdTU5Y3R5R1hDQmxkNFQyY3VGTHVfUnJuWjZIMVlXNjgyTC1QOHlzeHFBSko1dXkzZ2RvTW9pWGhyMlAyMWVfVks2OURRRjAxV1RfUVFpM0ZRTXJtNTdzeUVNWTBzVjRKdURqcUhyUzE5MGFqSTVRNlhxeEE4UENEb3Y3NEdrOFR2S0dwbU5aWHc?oc=5" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "19:27", tag: "macro", tagText: "宏观", text: "可口可乐一季度业绩超预期，并上调全年盈利展望，全球饮料需求增长推动业绩。但股价过去一年仅上涨6%，受经济担忧拖累。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/coca-cola-ko-q1-2026-earnings.html" },
   { time: "19:18", tag: "macro", tagText: "宏观", text: "美股期货涨跌互现，油价继续上涨，美联储为期两天的会议今日开始。市场关注通胀压力、伊朗局势及AI板块回调对大盘的影响。", source: "Investopedia", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQ0pWbWYzOHc3ZXFKaTE2V0JKMFhOQXR2OWhsMWJZNmNVM0FPVnBtV2pYbHBvUC1uSDhPalFtUG8zcjkxUHEtSml3N0ZVX0c3RkEzdF9BTS1fMERBM3VjVXh6bVFQN1R0a245RDNzV050WUQ3ODZRRGdwZVdjOGFUdzJmcTBaZlVNWEpTYmtFR3A?oc=5" },
   { time: "19:09", tag: "macro", tagText: "宏观", text: "挪威2万亿美元主权财富基金负责人表示，当前并非选股者的市场，即使基金策略稳健，若市场下跌也将跟随下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/norway-sovereign-wealth-fund-oil-iran-war-anthropic-claude-ai-invest-stocks.html" },
-  { time: "16:49", tag: "tech", tagText: "科技", text: "英伟达市值突破5.2万亿美元，目前是整个加密货币市场总市值的两倍。比特币、以太坊和XRP等主要加密货币价格停滞不前。", source: "CCN.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUHdCdVdncVFQNzNDSVJfbTl4TFdIN1dRUlJ4dC1SdmxPWlpkdGt3LUVLdi02YUZXUW9vQWxXTVlGcDNGaHNOUVp4NkxmOW1lMXBWUnI4N2g2S1dUUXFDSGQ5SEl4eGI0X2MxM0RyOUZhVzZ6V3JvMjQ2MzBfNWstdkFWdmhMRGZUVVVydVdxR05ITkpvTndNU2FqRlVmM1o4VjZsajdhMTZ1ZjdxYk9pbWlSRkc?oc=5" },
-  { time: "16:31", tag: "ai", tagText: "AI", text: "北京阻止Meta收购中国AI初创公司Manus，被视为对中国AI初创企业将数据、人才和知识产权转移至海外的严厉警告。此举划定了中美AI竞赛的红线。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/china-blocks-meta-manus-deal-ai-tech-rivalry.html" },
-  { time: "16:18", tag: "ai", tagText: "AI", text: "高盛报告称，AI担忧正促使美国股票投资者重新思考长期增长押注。市场对AI行业竞争加剧和盈利前景不确定性的担忧升温。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/ai-fears-drive-us-stock-081813177.html" },
-  { time: "15:42", tag: "ai", tagText: "AI", text: "软银集团股价在东京交易中暴跌，创六个月来最大单日跌幅。此前有报道称OpenAI在竞争压力下未能达到多项内部目标，引发市场对AI投资回报的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/after-report-of-openai-missing-targets-one-company-sees-its-worst-share-price-decline-in-six-months-f552fe04?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月29日 02:25 CST";
+const breakingDate = "2026年4月29日 04:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:48", tag: "ai", tagText: "AI", text: "在OpenAI与微软解除独家云服务协议后仅一天，亚马逊AWS迅速宣布在其平台上提供OpenAI的全系模型产品，包括一项新的智能体服务。此举标志着AI云服务市场竞争格局的重大转变，AWS与OpenAI的联手将直接挑战微软在AI云领域的领先地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/" },
   { time: "02:17", tag: "ai", tagText: "AI", text: "超过600名谷歌员工联名致信CEO皮查伊，要求公司禁止五角大楼将其AI模型用于机密军事用途。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter" },
   { time: "02:15", tag: "ai", tagText: "AI", text: "在Anthropic拒绝让美国国防部将其AI用于国内大规模监控和自主武器后，谷歌与五角大楼签署新合同，扩大其AI在军事领域的应用。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/" },
   { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "16:13", tag: "ai", tagText: "AI", text: "哥本哈根AI初创公司Performativ完成1190万欧元A轮融资，用于扩展其AI原生财富管理操作系统。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOWFoyQkh3ZGlyX1JuWmlrVG9CTnhFRU15cmdKZmZkampjOUVZTE91VmkzUk1hcjhoRjZjZDVoSmxaRTRTUnU1RnN3TjFOWHNjNUg1TlY5c3h3YnRCVFpnLUlUNjRHS3k4bHl4bGdUTVJYVE54TVdhSzAybUp6Vk94MTVHSXE4NVNYZWJpNTEyMm9RZ3cxd0Q3VlEybDdWYlBueGxjNzVyOUdOZUFXMGk5MkZLdmJaWlJncjJmaEJaX2ZCT2FtdW5UZFNDOW9iUHZpeVNwNFJuWXJoOGwtQ3Y4?oc=5" },
   { time: "08:01", tag: "ai", tagText: "AI", text: "谷歌正在测试YouTube的AI聊天机器人搜索功能，用户可通过对话式交互获取视频结果，类似其AI模式体验。", source: "The Verge", url: "https://www.theverge.com/streaming/919441/google-ask-youtube-ai-chatbot-search" },
   { time: "05:04", tag: "tech", tagText: "科技", text: "月下载量达100万次的开源软件包element-data被发现窃取用户凭证，数百万用户可能已遭入侵，需立即检查系统安全。", source: "Biz & IT - Ars Technica", url: "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/" },
-  { time: "04:47", tag: "tech", tagText: "科技", text: "Canonical公布Ubuntu Linux AI功能计划，Ubuntu开发者Canonical的工程副总裁Jon Seager发布博文，概述了即将为这一流行Linux发行版引入的一系列AI特性。", source: "The Verge", url: "https://www.theverge.com/tech/919411/canonical-ubuntu-linux-ai-features" },
 ];
-const aiBreakingDate = "2026年4月29日 02:25 CST";
+const aiBreakingDate = "2026年4月29日 04:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
