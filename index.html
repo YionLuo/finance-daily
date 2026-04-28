@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 67.77,
   previous1Month: 14.47,
   previous1Year: 32.14,
-  date: "2026年4月28日 14:10 CST"
+  date: "2026年4月28日 14:39 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:04", tag: "tech", tagText: "科技", text: "Meta、谷歌、OpenAI等科技巨头核心员工纷纷离职创办AI初创公司，数月内融资数亿美元。AI人才争夺战加剧，大厂面临人才流失压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/meta-google-big-tech-staff-ai-labs-investors.html" },
+  { time: "12:04", tag: "macro", tagText: "宏观", text: "华尔街交易商持有的美国国债规模升至2007年以来最高水平。特朗普政府推动放松监管，促使大银行增加政府债券交易，市场流动性改善。", source: "Financial Times", url: "https://www.ft.com/content/bdbfeee1-6780-4df7-9c42-34b9bc07f233" },
+  { time: "12:04", tag: "geo", tagText: "地缘", text: "伊朗强硬派内部就与美国谈判出现分歧。尽管领导层展现团结，但议员们对核计划谈判立场不一，可能影响未来和平进程。", source: "Financial Times", url: "https://www.ft.com/content/53a428c7-5242-4e90-ba87-71730128379a" },
   { time: "11:45", tag: "macro", tagText: "宏观", text: "日本央行维持利率不变，但上调通胀预期，因伊朗战争推高能源成本。决策以6:3投票通过，符合预期。央行警告中东冲突将抑制企业利润和家庭收入，经济增长可能放缓。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html" },
   { time: "10:55", tag: "tech", tagText: "科技", text: "宁德时代（CATL）股价暴跌超8%，公司宣布在香港进行约50亿美元的股权配售计划。这是该电池巨头为扩大海外产能和研发而进行的大规模融资。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/catl-shares-slide-after-5-billion-hong-kong-share-placement-plan.html" },
   { time: "09:41", tag: "tech", tagText: "科技", text: "比亚迪在匈牙利工厂被指控存在劳工虐待问题，包括恶劣工作条件，引发欧洲议会议员关注。该调查可能影响比亚迪在欧洲的扩张计划。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/byd-eu-parliament-labor-abuse-hungary-factory-investigation.html" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "04:44", tag: "geo", tagText: "地缘", text: "英国国王查尔斯三世和王后卡米拉抵达美国进行国事访问。英国希望王室此行能帮助修复因伊朗战争而紧张的美英关系。", source: "Financial Times", url: "https://www.ft.com/content/11ba1881-9627-47eb-b171-c2802f585b97" },
   { time: "04:02", tag: "crypto", tagText: "加密", text: "比特币跌破77000美元，近期涨势出现停滞。与此同时，Fidelity Digital Assets表示在加密市场中观察到早期企稳信号。一位财富管理经理预测比特币将在2027年达到20万美元。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPbXpGQ2EzZzNHc1c1dC1nNGlWejh2cF9BZDNxaG9oYjJMcnpFblFKTl9uOGtSR2JUV3FrUW9oZTVfa0F4dzRKYlJuOFFDcXhNWGZVYWg4QlRFa1d0WlNvWEhCWFNhY0ZwcGE5UmZDcU1tN3RBUVRfYU5CWl9hM1c2UlJKWUFRblNsZXB5WnhEdElaRjl3OTU4aHhuVWc5aUJyRG4wbExSSzNlbzRndW95d2VMVXRGa3NCaUpoT1FSNjFJdXloRXZJMDNIUTljaHRTYllv?oc=5" },
   { time: "03:06", tag: "geo", tagText: "地缘", text: "全球油价突破每桶108美元，因市场担忧伊朗原油储存接近极限，可能被迫减产。美国与伊朗对峙及霍尔木兹海峡封锁持续，特朗普与高级助手讨论伊朗海峡提案。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/global-oil-futures-top-100-again-after-u-s-iran-peace-talks-canceled-a50f6a7b?mod=mw_rss_topstories" },
-  { time: "02:51", tag: "macro", tagText: "宏观", text: "亿万富翁达利欧建议将最多15%资金配置黄金，因伊朗战争带来不确定性。他还警告凯文·沃什不应在“滞胀”时期降息，否则将损害央行信誉。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/billionaire-ray-dalio-says-you-should-have-up-to-15-of-your-money-in-gold-because-of-uncertainty-around-the-iran-war-f030e9a8?mod=mw_rss_topstories" },
-  { time: "02:51", tag: "geo", tagText: "地缘", text: "科尔·艾伦被指控试图在WHCD活动上刺杀特朗普，白宫将责任归咎于批评者对总统的妖魔化。特朗普要求ABC解雇深夜秀主持人吉米·基梅尔，因其在枪击前的言论。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/27/cole-allen-whcd-arraigment-trump.html" },
-  { time: "02:28", tag: "crypto", tagText: "加密", text: "比特币逼近8万美元，市场情绪改善，ZBCN、LIDO、PENGU等代币跑赢大盘。同时，比特币开发者正在讨论一项可能引发加密市场剧烈波动的技术变动。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBGc2Nnck56NFpheThhQ0NKclIyNHpNM0VxODZjM1JHalo3bmZrSTZUdllmdWlpdUNJcHlFOTV1WkNmQjROV2tUUWpSRDNpMWxwZV9XbmlzMkNEMW8?oc=5" },
 ];
-const breakingDate = "2026年4月28日 14:10 CST";
+const breakingDate = "2026年4月28日 14:39 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "21:54", tag: "ai", tagText: "AI", text: "SpaceX以600亿美元估值达成协议，获得收购AI编程初创公司Cursor的权利。Cursor是当前最热门的AI代码助手之一，此交易凸显科技巨头对AI开发工具的激烈争夺。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQakZzMDM2cjdnbThWM0hKUndMSXdFSnZpQTlUWWxZQnlkcWF1VG4xZkpaZ0NZalktd28xQUlSdkhtbzV1aGphR1VPSGY0T2F2ZkZORHFXdFhxeXVsb1RySDJ0SThRak1HRzZPZHBIZHRqMDBUbUE2SkdfWFYwSW4wSVktTEd1clpxM1lNS2ZTeFNJV0JsQmw2NUlxVjVHVS1kZzJBb3VXWnNyd1FTZV9sZ2FxV0E5enlPbUxrQTgwRzRfN0ZtWjM2bElQYmpodw?oc=5" },
   { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
 ];
-const aiBreakingDate = "2026年4月28日 14:10 CST";
+const aiBreakingDate = "2026年4月28日 14:39 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
