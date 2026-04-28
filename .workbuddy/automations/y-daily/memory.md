@@ -1,5 +1,31 @@
 # Y Daily 健康检查执行记录
 
+## 2026-04-28 10:07
+- **状态**: ⚠️ STALE → ⚠️ 部分恢复（仅时间戳）
+- **Breaking News**: 122 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **API 状态**: once.novai.su 503（`deepseek-v4-flash` model_not_found），deepseek.com 401（key 无效）
+- **操作**: 运行 update_breaking.py，RSS 抓取成功（finance 36 篇 + AI 6 篇），LLM 分析全部失败（0 条新内容），仅更新时间戳（08:03→10:07 CST）+ Fear & Greed 数据微调，新闻条目无变化
+- **提交**: `auto: health check recovery breaking news 2026-04-28 10:07 CST` → push OK
+
+## 2026-04-28 06:06
+- **状态**: ✅ OK
+- **Breaking News**: 最后提交 3 分钟前，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-04-28 02:05
+- **状态**: ✅ OK
+- **Breaking News**: 最后提交 44 分钟前，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-04-27 17:54
+- **状态**: ✅ OK
+- **Breaking News**: 最后提交 27 分钟前，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
 ## 2026-04-15 12:16
 - **状态**: ✅ OK
 - **Breaking News**: 最后提交 43 分钟前，在 120min 阈值内
