@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.91,
+  score: 65.71,
   rating: "greed",
-  timestamp: "2026-04-28T16:58:01+00:00",
+  timestamp: "2026-04-28T18:23:10+00:00",
   previousClose: 67.34,
   previous1Week: 67.77,
   previous1Month: 14.47,
   previous1Year: 32.14,
-  date: "2026年4月29日 01:01 CST"
+  date: "2026年4月29日 02:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:24", tag: "ai", tagText: "AI", text: "OpenAI据报未达营收目标，用户增长预测落空，引发科技股抛售。甲骨文、英伟达等芯片股下跌，纳斯达克指数跌超1%，标普500从纪录高位回落。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/openai-reportedly-missed-revenue-targets-shares-of-oracle-and-these-chip-stocks-are-falling.html" },
+  { time: "01:47", tag: "ai", tagText: "AI", text: "OpenAI结束与微软的独家云合作，将其生成式AI模型引入亚马逊AWS。此举标志着AI行业云服务格局的重大转变，微软股价承压。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/openai-brings-models-to-aws-after-ending-exclusivity-with-microsoft.html" },
   { time: "00:50", tag: "crypto", tagText: "加密", text: "一位亿万富翁投资者警告称，“丑陋的通胀”将对比特币造成冲击。通胀压力上升可能削弱加密货币作为对冲工具的吸引力，市场情绪趋于谨慎。", source: "TheStreet", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMElrek1GREhpYzlkTlVwYjFIdTU5Y3R5R1hDQmxkNFQyY3VGTHVfUnJuWjZIMVlXNjgyTC1QOHlzeHFBSko1dXkzZ2RvTW9pWGhyMlAyMWVfVks2OURRRjAxV1RfUVFpM0ZRTXJtNTdzeUVNWTBzVjRKdURqcUhyUzE5MGFqSTVRNlhxeEE4UENEb3Y3NEdrOFR2S0dwbU5aWHc?oc=5" },
   { time: "00:46", tag: "macro", tagText: "宏观", text: "摩根大通CEO杰米·戴蒙警告全球债务风险积聚，可能引发“某种债券危机”。他指出当前日益增长的风险组合可能以不可预测的方式叠加，对金融市场构成重大威胁。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/jamie-dimon-bond-crisis-global-debt-risks.html" },
   { time: "00:21", tag: "geo", tagText: "地缘", text: "布伦特原油价格三周来首次突破每桶110美元。白宫重申与伊朗谈判的“红线”，市场对中东供应中断的担忧加剧，推动油价持续攀升。", source: "Financial Times", url: "https://www.ft.com/content/0244cd6d-b0da-435c-9c84-7ff4f37ec9ec" },
@@ -1647,13 +1649,14 @@ const breakingNews = [
   { time: "16:31", tag: "ai", tagText: "AI", text: "北京阻止Meta收购中国AI初创公司Manus，被视为对中国AI初创企业将数据、人才和知识产权转移至海外的严厉警告。此举划定了中美AI竞赛的红线。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/china-blocks-meta-manus-deal-ai-tech-rivalry.html" },
   { time: "16:18", tag: "ai", tagText: "AI", text: "高盛报告称，AI担忧正促使美国股票投资者重新思考长期增长押注。市场对AI行业竞争加剧和盈利前景不确定性的担忧升温。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/ai-fears-drive-us-stock-081813177.html" },
   { time: "15:42", tag: "ai", tagText: "AI", text: "软银集团股价在东京交易中暴跌，创六个月来最大单日跌幅。此前有报道称OpenAI在竞争压力下未能达到多项内部目标，引发市场对AI投资回报的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/after-report-of-openai-missing-targets-one-company-sees-its-worst-share-price-decline-in-six-months-f552fe04?mod=mw_rss_topstories" },
-  { time: "12:04", tag: "tech", tagText: "科技", text: "Meta、谷歌、OpenAI等科技巨头核心员工纷纷离职创办AI初创公司，数月内融资数亿美元。AI人才争夺战加剧，大厂面临人才流失压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/meta-google-big-tech-staff-ai-labs-investors.html" },
-  { time: "12:04", tag: "macro", tagText: "宏观", text: "华尔街交易商持有的美国国债规模升至2007年以来最高水平。特朗普政府推动放松监管，促使大银行增加政府债券交易，市场流动性改善。", source: "Financial Times", url: "https://www.ft.com/content/bdbfeee1-6780-4df7-9c42-34b9bc07f233" },
 ];
-const breakingDate = "2026年4月29日 01:01 CST";
+const breakingDate = "2026年4月29日 02:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:17", tag: "ai", tagText: "AI", text: "超过600名谷歌员工联名致信CEO皮查伊，要求公司禁止五角大楼将其AI模型用于机密军事用途。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter" },
+  { time: "02:15", tag: "ai", tagText: "AI", text: "在Anthropic拒绝让美国国防部将其AI用于国内大规模监控和自主武器后，谷歌与五角大楼签署新合同，扩大其AI在军事领域的应用。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/" },
+  { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
   { time: "23:32", tag: "ai", tagText: "AI", text: "Anthropic为Claude推出创意软件连接器，使其能直接操作Photoshop、Blender、Ableton等主流创意工具，包括Adobe Creative Cloud、Affinity、Autodesk等。此举将AI助手从对话界面扩展到实际创作流程，显著提升其在设计、音乐和3D建模等领域的实用性。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919648/anthropic-claude-creative-connectors-adobe-blender" },
   { time: "23:32", tag: "ai", tagText: "AI", text: "马斯克与奥特曼就OpenAI未来走向对簿公堂，庭审于今日开始。马斯克在2024年提起诉讼，指控OpenAI背离其非营利初心，此案可能重塑AI行业格局。双方围绕AI早期发展、功劳归属及经济利益展开激烈交锋。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
   { time: "22:29", tag: "ai", tagText: "AI", text: "Canva就其AI工具“Magic Layers”在设计中自动将“Palestine”一词替换为其他内容一事致歉。该功能旨在将平面图像分解为可编辑组件，但出现不当处理敏感词汇的问题，引发争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "08:01", tag: "ai", tagText: "AI", text: "谷歌正在测试YouTube的AI聊天机器人搜索功能，用户可通过对话式交互获取视频结果，类似其AI模式体验。", source: "The Verge", url: "https://www.theverge.com/streaming/919441/google-ask-youtube-ai-chatbot-search" },
   { time: "05:04", tag: "tech", tagText: "科技", text: "月下载量达100万次的开源软件包element-data被发现窃取用户凭证，数百万用户可能已遭入侵，需立即检查系统安全。", source: "Biz & IT - Ars Technica", url: "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/" },
   { time: "04:47", tag: "tech", tagText: "科技", text: "Canonical公布Ubuntu Linux AI功能计划，Ubuntu开发者Canonical的工程副总裁Jon Seager发布博文，概述了即将为这一流行Linux发行版引入的一系列AI特性。", source: "The Verge", url: "https://www.theverge.com/tech/919411/canonical-ubuntu-linux-ai-features" },
-  { time: "02:40", tag: "ai", tagText: "AI", text: "英伟达股价上涨4%创历史新高，受AI基础设施建设势头推动，市场关注是否迎来追赶交易机会。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNTRfVklmbGpoaEJQOVo1M3hTOEdqWUx0N2hycTRvMU84YkV3MlN3aWpkWjQzeGwxM1BHdm9vR2E4VTdVckh5SElIWTVaUEtaY3RGTDc0dTltZ2c5eDJodEowWmNxWnpUcXduZG4wWEx1eWIyeVZhQklnQUtaT3JZZXhJaTdlVE5HTzJrWnFySXJfTFRNN3BROExrTWI3ajRuV3J2MnNMUU9lT2V2Q2daZ0NfYnc2NEE5LTh5cVhjV1BXMHJyNEozMQ?oc=5" },
-  { time: "02:17", tag: "ai", tagText: "AI", text: "超过600名谷歌员工联名致信CEO皮查伊，要求公司禁止五角大楼将其AI模型用于机密军事用途。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter" },
-  { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
 ];
-const aiBreakingDate = "2026年4月29日 01:01 CST";
+const aiBreakingDate = "2026年4月29日 02:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
