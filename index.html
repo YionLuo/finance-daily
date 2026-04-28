@@ -1618,17 +1618,23 @@
 const fearGreedData = {
   score: 67.86,
   rating: "greed",
-  timestamp: "2026-04-28T09:13:01+00:00",
+  timestamp: "2026-04-28T11:38:16+00:00",
   previousClose: 67.34,
   previous1Week: 67.77,
   previous1Month: 14.47,
   previous1Year: 32.14,
-  date: "2026年4月28日 17:32 CST"
+  date: "2026年4月28日 19:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:42", tag: "macro", tagText: "宏观", text: "UPS一季度营收和利润均超华尔街预期，但维持全年业绩指引不变，股价盘前下跌。市场对包裹需求前景仍存疑虑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/ups-ups-q1-2026-earnings.html" },
+  { time: "19:29", tag: "geo", tagText: "地缘", text: "英国石油BP一季度利润翻倍，受益于伊朗战争引发的石油交易热潮。油价持续上涨，市场关注地缘冲突对能源供应的长期影响。", source: "Quartz", url: "https://finance.yahoo.com/sectors/energy/articles/bp-q1-2026-earnings-double-112910535.html" },
+  { time: "19:28", tag: "macro", tagText: "宏观", text: "通用汽车上调2026年业绩指引，因获得5亿美元关税退税，一季度盈利超华尔街预期。公司同时关注伊朗战争、关税及电动车资产减记的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/general-motors-gm-earnings-q1-2026.html" },
+  { time: "19:27", tag: "macro", tagText: "宏观", text: "可口可乐一季度业绩超预期，并上调全年盈利展望，全球饮料需求增长推动业绩。但股价过去一年仅上涨6%，受经济担忧拖累。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/coca-cola-ko-q1-2026-earnings.html" },
+  { time: "19:18", tag: "macro", tagText: "宏观", text: "美股期货涨跌互现，油价继续上涨，美联储为期两天的会议今日开始。市场关注通胀压力、伊朗局势及AI板块回调对大盘的影响。", source: "Investopedia", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQ0pWbWYzOHc3ZXFKaTE2V0JKMFhOQXR2OWhsMWJZNmNVM0FPVnBtV2pYbHBvUC1uSDhPalFtUG8zcjkxUHEtSml3N0ZVX0c3RkEzdF9BTS1fMERBM3VjVXh6bVFQN1R0a245RDNzV050WUQ3ODZRRGdwZVdjOGFUdzJmcTBaZlVNWEpTYmtFR3A?oc=5" },
+  { time: "19:09", tag: "macro", tagText: "宏观", text: "挪威2万亿美元主权财富基金负责人表示，当前并非选股者的市场，即使基金策略稳健，若市场下跌也将跟随下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/norway-sovereign-wealth-fund-oil-iran-war-anthropic-claude-ai-invest-stocks.html" },
   { time: "16:49", tag: "tech", tagText: "科技", text: "英伟达市值突破5.2万亿美元，目前是整个加密货币市场总市值的两倍。比特币、以太坊和XRP等主要加密货币价格停滞不前。", source: "CCN.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUHdCdVdncVFQNzNDSVJfbTl4TFdIN1dRUlJ4dC1SdmxPWlpkdGt3LUVLdi02YUZXUW9vQWxXTVlGcDNGaHNOUVp4NkxmOW1lMXBWUnI4N2g2S1dUUXFDSGQ5SEl4eGI0X2MxM0RyOUZhVzZ6V3JvMjQ2MzBfNWstdkFWdmhMRGZUVVVydVdxR05ITkpvTndNU2FqRlVmM1o4VjZsajdhMTZ1ZjdxYk9pbWlSRkc?oc=5" },
   { time: "16:31", tag: "ai", tagText: "AI", text: "北京阻止Meta收购中国AI初创公司Manus，被视为对中国AI初创企业将数据、人才和知识产权转移至海外的严厉警告。此举划定了中美AI竞赛的红线。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/china-blocks-meta-manus-deal-ai-tech-rivalry.html" },
   { time: "16:18", tag: "ai", tagText: "AI", text: "高盛报告称，AI担忧正促使美国股票投资者重新思考长期增长押注。市场对AI行业竞争加剧和盈利前景不确定性的担忧升温。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/ai-fears-drive-us-stock-081813177.html" },
@@ -1643,17 +1649,12 @@ const breakingNews = [
   { time: "07:04", tag: "tech", tagText: "科技", text: "Arm股价结束七连涨，领跌纳斯达克100指数，反映AI板块整体承压以及市场担忧Arm是否能在高通-OpenAI芯片合作中扮演角色。", source: "MarketWatch", url: "https://www.marketwatch.com/story/arms-stock-snaps-a-seven-day-winning-streak-as-it-loses-some-of-its-ai-glow-8d390975" },
   { time: "07:04", tag: "tech", tagText: "科技", text: "Bed Bath & Beyond股价大涨超30%，公司报告19个季度以来首次实现显著营收增长。但股价仍远低于meme股时代高点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bed-bath-beyond-is-seeing-new-life-as-rare-sales-growth-lifts-stock-more-than-30-3e1ee945?mod=mw_rss_topstories" },
   { time: "07:04", tag: "tech", tagText: "科技", text: "Sun Pharma同意以全现金交易收购Organon，后者股价飙升。交易金额未披露，但标志着制药行业并购活动升温。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQRl9KLWVXajVSYmppVklnV0IwS3B5ZTFKR2F0d2p1RlZhNHBoZ3JmMVBIekQtRkVsTXd6eTdsX0ZBZlNmZU1kcEhaMjBCYXYtMFE3dFZEZWJFOXRjZHFZYnFXRk4yUTZzcldTWVZ0RFdjNnRmRlRQU1JGZUNka0pxZm5YY0wxUXNPcElTVjNKSU5leGdZMXR6N0pBN25tcGxSa3FFSVFyZVk5SUNpbFdsVnkyZDVreDVxMHZ4alRiQXdHc3pJNVlxSUpSdTZSYnI2TWx5X2Nyekp6OFRDX0xLRjF3Z0JGWDJnR0NzRGM2cktoSlJKSVU5YmhMOW1adw?oc=5" },
-  { time: "06:00", tag: "macro", tagText: "宏观", text: "加州距离实施美国首个亿万富翁财富税更进一步。随着联邦税制改革，红州与蓝州之间的税收差距正在扩大，此举可能引发高净值人群迁移。", source: "MarketWatch", url: "https://www.marketwatch.com/story/california-is-one-step-closer-to-americas-first-billionaire-wealth-tax-and-the-divide-between-red-and-blue-state-taxes-is-getting-deeper-18ef3232" },
-  { time: "05:52", tag: "tech", tagText: "科技", text: "美光科技和闪迪股价延续涨势，Melius Research报告指出，内存需求预计将持续强劲至2030年底。AI应用推动存储芯片需求旺盛，投资者看好行业前景。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/micron-and-sandisk-pop-as-memory-demand-to-remain-high-through-2030.html" },
-  { time: "05:23", tag: "tech", tagText: "科技", text: "高通股价上涨，因公司据报正在为OpenAI开发芯片。AI芯片需求持续扩大，高通有望在边缘AI领域获得新增长机遇。", source: "MarketWatch", url: "https://www.marketwatch.com/story/qualcomms-stock-soars-as-an-ai-opportunity-emerges-14a6ed98?mod=mw_rss_topstories" },
-  { time: "05:15", tag: "tech", tagText: "科技", text: "SiriusXM与iHeartMedia可能合并，将打造广告巨头以应对听众向流媒体和播客平台转移的趋势。此举被视为传统广播行业面临生存压力的最新信号。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-possible-siriusxm-iheartmedia-merger-would-be-the-latest-ominous-sign-for-radio-23a18d07?mod=mw_rss_topstories" },
-  { time: "05:08", tag: "tech", tagText: "科技", text: "Verizon股价上涨，新CEO上任后公司意外实现用户增长。管理层表示，公司以更低成本获取客户，不再依赖“昂贵促销和免费手机”策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/verizons-stock-rises-as-the-company-posts-surprise-subscriber-growth-under-new-ceo-2752e52d?mod=mw_rss_topstories" },
-  { time: "04:53", tag: "tech", tagText: "科技", text: "达美乐披萨面临价格战压力，公司将通过“披萨创新”吸引消费者。随着消费者支出更加谨慎，快餐行业竞争加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/theres-a-pizza-price-war-going-on-and-dominos-is-feeling-the-pain-99487d92?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月28日 17:32 CST";
+const breakingDate = "2026年4月28日 19:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "18:04", tag: "ai", tagText: "AI", text: "谷歌DeepMind负责人哈萨比斯正在韩国寻求AI合作伙伴关系，此举可能涉及芯片供应、AI研发合作等，显示谷歌正加速在亚洲布局AI生态。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE5EYzRTbV9fNHlNdXp1SVo3Mk1KNERLcGUwalFJT3l6R3NfUFhrSXhWeS1wMWUzdmQ4NTJuTk1ybzFzclJOVnBxNktsUHMyLXVWOHFUcUgtSzZyRWdQLWdGQU0ycThGMkR3bDlJTkR4VFVZUWND?oc=5" },
   { time: "17:22", tag: "ai", tagText: "AI", text: "南亚科技加入英伟达Rubin AI芯片供应链，将供应LPDDR5X内存，但韩国竞争对手（三星、SK海力士）仍占据主导地位。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5jV09BUjVzMXJWU09jcEJXSlVQckJHMnFkZ1FTUFR2d3Z1eWRVSE1IQVFwMEFuUWZSa29pelpEVHRWbkFQZ1d0dnZVdXdaT2lycmIyeml0blNzY1JTNGp5Tm14OFc2MWNxZktIMURuYmZOLWhBS3RvakVB0gGOAUFVX3lxTFB1MjdfWnNCWjM1dDM5Nkx5SkxQdUl3R190anhWUTRKQ3duUWtFYkxwZHR1NW9jUUg1QzlxZWVlVGlsZW9KSHZQX1ZDYUFkOXNvazJ3TmI5bUg5LThpNnlMdG5VdHBFTDkwOXRFcEMyZExJNlU2ekxfVXFnaHJ6Z09oNmh1VGFGcENfNUhhRlE?oc=5" },
   { time: "16:13", tag: "ai", tagText: "AI", text: "哥本哈根AI初创公司Performativ完成1190万欧元A轮融资，用于扩展其AI原生财富管理操作系统。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOWFoyQkh3ZGlyX1JuWmlrVG9CTnhFRU15cmdKZmZkampjOUVZTE91VmkzUk1hcjhoRjZjZDVoSmxaRTRTUnU1RnN3TjFOWHNjNUg1TlY5c3h3YnRCVFpnLUlUNjRHS3k4bHl4bGdUTVJYVE54TVdhSzAybUp6Vk94MTVHSXE4NVNYZWJpNTEyMm9RZ3cxd0Q3VlEybDdWYlBueGxjNzVyOUdOZUFXMGk5MkZLdmJaWlJncjJmaEJaX2ZCT2FtdW5UZFNDOW9iUHZpeVNwNFJuWXJoOGwtQ3Y4?oc=5" },
   { time: "08:01", tag: "ai", tagText: "AI", text: "谷歌正在测试YouTube的AI聊天机器人搜索功能，用户可通过对话式交互获取视频结果，类似其AI模式体验。", source: "The Verge", url: "https://www.theverge.com/streaming/919441/google-ask-youtube-ai-chatbot-search" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
   { time: "22:29", tag: "ai", tagText: "AI", text: "Canva就其AI工具“Magic Layers”在设计中自动将“Palestine”一词替换为其他内容一事致歉。该功能旨在将平面图像分解为可编辑组件，但出现不当处理敏感词汇的问题，引发争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "陷入困境的合规初创公司Delve再曝安全事件，其客户——AI智能体训练公司Context AI上周披露了重大数据泄露。这起事件引发对AI供应链安全审查流程的广泛质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/" },
 ];
-const aiBreakingDate = "2026年4月28日 17:32 CST";
+const aiBreakingDate = "2026年4月28日 19:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
