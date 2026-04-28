@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.34,
+  score: 67.86,
   rating: "greed",
-  timestamp: "2026-04-28T00:00:00+00:00",
+  timestamp: "2026-04-28T09:13:01+00:00",
   previousClose: 67.34,
   previous1Week: 67.77,
   previous1Month: 14.47,
   previous1Year: 32.14,
-  date: "2026年4月28日 14:39 CST"
+  date: "2026年4月28日 17:32 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:49", tag: "tech", tagText: "科技", text: "英伟达市值突破5.2万亿美元，目前是整个加密货币市场总市值的两倍。比特币、以太坊和XRP等主要加密货币价格停滞不前。", source: "CCN.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUHdCdVdncVFQNzNDSVJfbTl4TFdIN1dRUlJ4dC1SdmxPWlpkdGt3LUVLdi02YUZXUW9vQWxXTVlGcDNGaHNOUVp4NkxmOW1lMXBWUnI4N2g2S1dUUXFDSGQ5SEl4eGI0X2MxM0RyOUZhVzZ6V3JvMjQ2MzBfNWstdkFWdmhMRGZUVVVydVdxR05ITkpvTndNU2FqRlVmM1o4VjZsajdhMTZ1ZjdxYk9pbWlSRkc?oc=5" },
+  { time: "16:31", tag: "ai", tagText: "AI", text: "北京阻止Meta收购中国AI初创公司Manus，被视为对中国AI初创企业将数据、人才和知识产权转移至海外的严厉警告。此举划定了中美AI竞赛的红线。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/china-blocks-meta-manus-deal-ai-tech-rivalry.html" },
+  { time: "16:18", tag: "ai", tagText: "AI", text: "高盛报告称，AI担忧正促使美国股票投资者重新思考长期增长押注。市场对AI行业竞争加剧和盈利前景不确定性的担忧升温。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/ai-fears-drive-us-stock-081813177.html" },
+  { time: "15:42", tag: "ai", tagText: "AI", text: "软银集团股价在东京交易中暴跌，创六个月来最大单日跌幅。此前有报道称OpenAI在竞争压力下未能达到多项内部目标，引发市场对AI投资回报的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/after-report-of-openai-missing-targets-one-company-sees-its-worst-share-price-decline-in-six-months-f552fe04?mod=mw_rss_topstories" },
   { time: "12:04", tag: "tech", tagText: "科技", text: "Meta、谷歌、OpenAI等科技巨头核心员工纷纷离职创办AI初创公司，数月内融资数亿美元。AI人才争夺战加剧，大厂面临人才流失压力。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/meta-google-big-tech-staff-ai-labs-investors.html" },
   { time: "12:04", tag: "macro", tagText: "宏观", text: "华尔街交易商持有的美国国债规模升至2007年以来最高水平。特朗普政府推动放松监管，促使大银行增加政府债券交易，市场流动性改善。", source: "Financial Times", url: "https://www.ft.com/content/bdbfeee1-6780-4df7-9c42-34b9bc07f233" },
   { time: "12:04", tag: "geo", tagText: "地缘", text: "伊朗强硬派内部就与美国谈判出现分歧。尽管领导层展现团结，但议员们对核计划谈判立场不一，可能影响未来和平进程。", source: "Financial Times", url: "https://www.ft.com/content/53a428c7-5242-4e90-ba87-71730128379a" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "05:15", tag: "tech", tagText: "科技", text: "SiriusXM与iHeartMedia可能合并，将打造广告巨头以应对听众向流媒体和播客平台转移的趋势。此举被视为传统广播行业面临生存压力的最新信号。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-possible-siriusxm-iheartmedia-merger-would-be-the-latest-ominous-sign-for-radio-23a18d07?mod=mw_rss_topstories" },
   { time: "05:08", tag: "tech", tagText: "科技", text: "Verizon股价上涨，新CEO上任后公司意外实现用户增长。管理层表示，公司以更低成本获取客户，不再依赖“昂贵促销和免费手机”策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/verizons-stock-rises-as-the-company-posts-surprise-subscriber-growth-under-new-ceo-2752e52d?mod=mw_rss_topstories" },
   { time: "04:53", tag: "tech", tagText: "科技", text: "达美乐披萨面临价格战压力，公司将通过“披萨创新”吸引消费者。随着消费者支出更加谨慎，快餐行业竞争加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/theres-a-pizza-price-war-going-on-and-dominos-is-feeling-the-pain-99487d92?mod=mw_rss_topstories" },
-  { time: "04:48", tag: "macro", tagText: "宏观", text: "Fundstrat的Tom Lee表示，标普500今年“非常可能”突破7700点。尽管面临伊朗战争等逆风，市场仍创纪录新高，投资者情绪乐观。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/tom-lee-says-its-very-probable-stocks-will-sail-past-7700-this-year.html" },
-  { time: "04:44", tag: "geo", tagText: "地缘", text: "英国国王查尔斯三世和王后卡米拉抵达美国进行国事访问。英国希望王室此行能帮助修复因伊朗战争而紧张的美英关系。", source: "Financial Times", url: "https://www.ft.com/content/11ba1881-9627-47eb-b171-c2802f585b97" },
-  { time: "04:02", tag: "crypto", tagText: "加密", text: "比特币跌破77000美元，近期涨势出现停滞。与此同时，Fidelity Digital Assets表示在加密市场中观察到早期企稳信号。一位财富管理经理预测比特币将在2027年达到20万美元。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPbXpGQ2EzZzNHc1c1dC1nNGlWejh2cF9BZDNxaG9oYjJMcnpFblFKTl9uOGtSR2JUV3FrUW9oZTVfa0F4dzRKYlJuOFFDcXhNWGZVYWg4QlRFa1d0WlNvWEhCWFNhY0ZwcGE5UmZDcU1tN3RBUVRfYU5CWl9hM1c2UlJKWUFRblNsZXB5WnhEdElaRjl3OTU4aHhuVWc5aUJyRG4wbExSSzNlbzRndW95d2VMVXRGa3NCaUpoT1FSNjFJdXloRXZJMDNIUTljaHRTYllv?oc=5" },
-  { time: "03:06", tag: "geo", tagText: "地缘", text: "全球油价突破每桶108美元，因市场担忧伊朗原油储存接近极限，可能被迫减产。美国与伊朗对峙及霍尔木兹海峡封锁持续，特朗普与高级助手讨论伊朗海峡提案。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/global-oil-futures-top-100-again-after-u-s-iran-peace-talks-canceled-a50f6a7b?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月28日 14:39 CST";
+const breakingDate = "2026年4月28日 17:32 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "17:22", tag: "ai", tagText: "AI", text: "南亚科技加入英伟达Rubin AI芯片供应链，将供应LPDDR5X内存，但韩国竞争对手（三星、SK海力士）仍占据主导地位。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5jV09BUjVzMXJWU09jcEJXSlVQckJHMnFkZ1FTUFR2d3Z1eWRVSE1IQVFwMEFuUWZSa29pelpEVHRWbkFQZ1d0dnZVdXdaT2lycmIyeml0blNzY1JTNGp5Tm14OFc2MWNxZktIMURuYmZOLWhBS3RvakVB0gGOAUFVX3lxTFB1MjdfWnNCWjM1dDM5Nkx5SkxQdUl3R190anhWUTRKQ3duUWtFYkxwZHR1NW9jUUg1QzlxZWVlVGlsZW9KSHZQX1ZDYUFkOXNvazJ3TmI5bUg5LThpNnlMdG5VdHBFTDkwOXRFcEMyZExJNlU2ekxfVXFnaHJ6Z09oNmh1VGFGcENfNUhhRlE?oc=5" },
+  { time: "16:13", tag: "ai", tagText: "AI", text: "哥本哈根AI初创公司Performativ完成1190万欧元A轮融资，用于扩展其AI原生财富管理操作系统。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOWFoyQkh3ZGlyX1JuWmlrVG9CTnhFRU15cmdKZmZkampjOUVZTE91VmkzUk1hcjhoRjZjZDVoSmxaRTRTUnU1RnN3TjFOWHNjNUg1TlY5c3h3YnRCVFpnLUlUNjRHS3k4bHl4bGdUTVJYVE54TVdhSzAybUp6Vk94MTVHSXE4NVNYZWJpNTEyMm9RZ3cxd0Q3VlEybDdWYlBueGxjNzVyOUdOZUFXMGk5MkZLdmJaWlJncjJmaEJaX2ZCT2FtdW5UZFNDOW9iUHZpeVNwNFJuWXJoOGwtQ3Y4?oc=5" },
   { time: "08:01", tag: "ai", tagText: "AI", text: "谷歌正在测试YouTube的AI聊天机器人搜索功能，用户可通过对话式交互获取视频结果，类似其AI模式体验。", source: "The Verge", url: "https://www.theverge.com/streaming/919441/google-ask-youtube-ai-chatbot-search" },
   { time: "05:04", tag: "tech", tagText: "科技", text: "月下载量达100万次的开源软件包element-data被发现窃取用户凭证，数百万用户可能已遭入侵，需立即检查系统安全。", source: "Biz & IT - Ars Technica", url: "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/" },
   { time: "04:47", tag: "tech", tagText: "科技", text: "Canonical公布Ubuntu Linux AI功能计划，Ubuntu开发者Canonical的工程副总裁Jon Seager发布博文，概述了即将为这一流行Linux发行版引入的一系列AI特性。", source: "The Verge", url: "https://www.theverge.com/tech/919411/canonical-ubuntu-linux-ai-features" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:29", tag: "ai", tagText: "AI", text: "Canva就其AI工具“Magic Layers”在设计中自动将“Palestine”一词替换为其他内容一事致歉。该功能旨在将平面图像分解为可编辑组件，但出现不当处理敏感词汇的问题，引发争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "陷入困境的合规初创公司Delve再曝安全事件，其客户——AI智能体训练公司Context AI上周披露了重大数据泄露。这起事件引发对AI供应链安全审查流程的广泛质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/" },
-  { time: "21:54", tag: "ai", tagText: "AI", text: "SpaceX以600亿美元估值达成协议，获得收购AI编程初创公司Cursor的权利。Cursor是当前最热门的AI代码助手之一，此交易凸显科技巨头对AI开发工具的激烈争夺。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQakZzMDM2cjdnbThWM0hKUndMSXdFSnZpQTlUWWxZQnlkcWF1VG4xZkpaZ0NZalktd28xQUlSdkhtbzV1aGphR1VPSGY0T2F2ZkZORHFXdFhxeXVsb1RySDJ0SThRak1HRzZPZHBIZHRqMDBUbUE2SkdfWFYwSW4wSVktTEd1clpxM1lNS2ZTeFNJV0JsQmw2NUlxVjVHVS1kZzJBb3VXWnNyd1FTZV9sZ2FxV0E5enlPbUxrQTgwRzRfN0ZtWjM2bElQYmpodw?oc=5" },
-  { time: "21:45", tag: "ai", tagText: "AI", text: "随着AI模型提供商（如Anthropic和OpenAI）开始大幅提高API调用价格并限制免费额度，数百万用户正感受到“AI货币化”带来的压力。分析指出，AI行业正从“烧钱获客”转向“榨取利润”，这可能导致用户流失和应用场景收缩。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/917380/ai-monetization-anthropic-openai-token-economics-revenue" },
 ];
-const aiBreakingDate = "2026年4月28日 14:39 CST";
+const aiBreakingDate = "2026年4月28日 17:32 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
