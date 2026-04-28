@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.86,
+  score: 68.6,
   rating: "greed",
-  timestamp: "2026-04-28T11:38:16+00:00",
+  timestamp: "2026-04-28T14:33:13+00:00",
   previousClose: 67.34,
   previous1Week: 67.77,
   previous1Month: 14.47,
   previous1Year: 32.14,
-  date: "2026年4月28日 19:56 CST"
+  date: "2026年4月28日 22:38 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:36", tag: "geo", tagText: "地缘", text: "阿联酋宣布将于5月1日退出OPEC，能源部长表示仍致力于油价稳定。阿联酋在审查其生产政策和产能后，认为退出符合国家利益。此举可能重塑全球石油市场格局。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/uae-opec-oil-iran.html" },
+  { time: "22:05", tag: "geo", tagText: "地缘", text: "瑞安航空CEO警告，若航空燃油价格因伊朗战争持续高企，欧洲航空公司可能出现“真正的倒闭”。油价飙升已严重冲击航空业成本。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/ryanair-ceo-oil-europe-airlines-fail-jet-fuel.html" },
+  { time: "22:00", tag: "macro", tagText: "宏观", text: "Spotify股价暴跌，尽管一季度盈利超预期，但疲软的业绩指引令投资者失望。市场对增长前景的担忧盖过了财报利好。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/spotify-stock-spot-earnings-beat-guidance.html" },
+  { time: "21:52", tag: "macro", tagText: "宏观", text: "CNBC调查显示，通胀可能阻碍美联储主席沃什降息的意愿。受访者平均预期今年不会有一次完整的降息。伊朗战争加剧了美国的 affordability 危机。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/inflation-could-get-in-the-way-of-warshs-desire-to-cut-interest-rates-cnbc-survey-finds.html" },
+  { time: "21:39", tag: "tech", tagText: "科技", text: "华尔街迎来“超级碗周三”：Alphabet、亚马逊、微软和Meta将同时发布财报，美联储主席鲍威尔也将召开最后一次新闻发布会。市场波动预计加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/wall-streets-super-bowl-wednesday-alphabet-amazon-microsoft-and-meta-report-along-with-powells-last-fed-meeting-88eb1710?mod=mw_rss_topstories" },
   { time: "19:42", tag: "macro", tagText: "宏观", text: "UPS一季度营收和利润均超华尔街预期，但维持全年业绩指引不变，股价盘前下跌。市场对包裹需求前景仍存疑虑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/ups-ups-q1-2026-earnings.html" },
   { time: "19:29", tag: "geo", tagText: "地缘", text: "英国石油BP一季度利润翻倍，受益于伊朗战争引发的石油交易热潮。油价持续上涨，市场关注地缘冲突对能源供应的长期影响。", source: "Quartz", url: "https://finance.yahoo.com/sectors/energy/articles/bp-q1-2026-earnings-double-112910535.html" },
   { time: "19:28", tag: "macro", tagText: "宏观", text: "通用汽车上调2026年业绩指引，因获得5亿美元关税退税，一季度盈利超华尔街预期。公司同时关注伊朗战争、关税及电动车资产减记的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/general-motors-gm-earnings-q1-2026.html" },
@@ -1644,16 +1649,18 @@ const breakingNews = [
   { time: "12:04", tag: "geo", tagText: "地缘", text: "伊朗强硬派内部就与美国谈判出现分歧。尽管领导层展现团结，但议员们对核计划谈判立场不一，可能影响未来和平进程。", source: "Financial Times", url: "https://www.ft.com/content/53a428c7-5242-4e90-ba87-71730128379a" },
   { time: "11:45", tag: "macro", tagText: "宏观", text: "日本央行维持利率不变，但上调通胀预期，因伊朗战争推高能源成本。决策以6:3投票通过，符合预期。央行警告中东冲突将抑制企业利润和家庭收入，经济增长可能放缓。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html" },
   { time: "10:55", tag: "tech", tagText: "科技", text: "宁德时代（CATL）股价暴跌超8%，公司宣布在香港进行约50亿美元的股权配售计划。这是该电池巨头为扩大海外产能和研发而进行的大规模融资。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/catl-shares-slide-after-5-billion-hong-kong-share-placement-plan.html" },
-  { time: "09:41", tag: "tech", tagText: "科技", text: "比亚迪在匈牙利工厂被指控存在劳工虐待问题，包括恶劣工作条件，引发欧洲议会议员关注。该调查可能影响比亚迪在欧洲的扩张计划。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/byd-eu-parliament-labor-abuse-hungary-factory-investigation.html" },
-  { time: "07:08", tag: "geo", tagText: "地缘", text: "2025年全球军费开支连续第11年增长，达到创纪录的2.89万亿美元。尽管美国支出下降，但欧洲重新武装的推动使全球军费创下新高。", source: "CNBC", url: "https://www.cnbc.com/2026/04/27/global-military-spending-record-2025-europe-asia-ukraine-sipri.html" },
-  { time: "07:04", tag: "tech", tagText: "科技", text: "Arm股价结束七连涨，领跌纳斯达克100指数，反映AI板块整体承压以及市场担忧Arm是否能在高通-OpenAI芯片合作中扮演角色。", source: "MarketWatch", url: "https://www.marketwatch.com/story/arms-stock-snaps-a-seven-day-winning-streak-as-it-loses-some-of-its-ai-glow-8d390975" },
-  { time: "07:04", tag: "tech", tagText: "科技", text: "Bed Bath & Beyond股价大涨超30%，公司报告19个季度以来首次实现显著营收增长。但股价仍远低于meme股时代高点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bed-bath-beyond-is-seeing-new-life-as-rare-sales-growth-lifts-stock-more-than-30-3e1ee945?mod=mw_rss_topstories" },
-  { time: "07:04", tag: "tech", tagText: "科技", text: "Sun Pharma同意以全现金交易收购Organon，后者股价飙升。交易金额未披露，但标志着制药行业并购活动升温。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQRl9KLWVXajVSYmppVklnV0IwS3B5ZTFKR2F0d2p1RlZhNHBoZ3JmMVBIekQtRkVsTXd6eTdsX0ZBZlNmZU1kcEhaMjBCYXYtMFE3dFZEZWJFOXRjZHFZYnFXRk4yUTZzcldTWVZ0RFdjNnRmRlRQU1JGZUNka0pxZm5YY0wxUXNPcElTVjNKSU5leGdZMXR6N0pBN25tcGxSa3FFSVFyZVk5SUNpbFdsVnkyZDVreDVxMHZ4alRiQXdHc3pJNVlxSUpSdTZSYnI2TWx5X2Nyekp6OFRDX0xLRjF3Z0JGWDJnR0NzRGM2cktoSlJKSVU5YmhMOW1adw?oc=5" },
 ];
-const breakingDate = "2026年4月28日 19:56 CST";
+const breakingDate = "2026年4月28日 22:38 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:29", tag: "ai", tagText: "AI", text: "Canva就其AI工具“Magic Layers”在设计中自动将“Palestine”一词替换为其他内容一事致歉。该功能旨在将平面图像分解为可编辑组件，但出现不当处理敏感词汇的问题，引发争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
+  { time: "21:57", tag: "ai", tagText: "AI", text: "英伟达股价下跌，拖累AMD、博通等AI芯片股集体走低。市场对AI芯片需求增速放缓的担忧加剧，引发板块回调。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTFBuMkdhamh2YzNLM0N0d0x3dEsyVXlwLU1FaElsNGVleHlDN01Qd0IzcEVOLVBOaWwxOU9abFVSQWc2OHFHNHBWMUtRTWFZRkprRUt0Y21VMFE5ZWswVS1QQUs4QnZiVDlNNG83dW5jTWRTOGpNQlM0eE12NFN4UQ?oc=5" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "AI法律初创公司Manifest以7.5亿美元估值完成新一轮融资。该公司利用AI技术自动化法律文件审查和合同分析，受到资本追捧。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUUUtaFNSSnNEYXN6TGE3OGZtUDhtQkNjdm1hekZqajhOSTNURXpMWllqQW9iZi1nRmVkODl5dnF5SHFvUHBmazVMcFYtc1Q3Mkt2ekRJbHFuQnBDWlZRbnNCanlST2F1U1l1TlBlSEhLeEJ5bmttbFFBQ2JFVS1fbGRzSVdhNnZvN1k4NldTeVpkTjg0czMzU29VRl9hSG13blRma1FyaGdvaHlRM0xYMVVXbmc?oc=5" },
+  { time: "20:46", tag: "tech", tagText: "科技", text: "Fabric.AI（纳斯达克：SBLX）推出突破性MicroLED互连技术，作为构建下一代“AI工厂”基础设施的第一步，并与领先MicroLED开发商Kopin Corporation（纳斯达克：KOPN）达成合作。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMinANBVV95cUxQN3BuQTFaeEJMUzBhaGdxc2xwbUZrZ0dvWjlJMW1zbm9tUHJYTjdGSk9xbnhJRmMxR1QzZnEtSGpZRHIwemtiSURtMDgyZUJDT3Vpb2FVVGdpX3NDSFFkVG1LWGR5MUFleXdfd204bHlZejZQZDBQOEZETVdzVXJBR0hDcjE3UkZtRVNySmdpLUsxWHVsWDVVUVpqQWlVcmdaNmxuVnlhVmpwbkM1VS02R1dXN3JvdGVpT3Fqa2h1dW1uWUZIUUpxSHk0TktaRS04UExFTXRid1hPbk81ZWUwbFlZa1JqdDlSTXBqazRVSFZoTjFOdGFCYkFmelAwMkZUbDBIWFRfdktheGNaSjNxQ1BHX0pxNlo4MGM0eGR3dVhUWXQ4YWJpejh5aTNiNi1pOXdYMkJtV3VrRTMzNDFkb3R5RUc2c1pEN3lablBGV0VxY1Qyd3l0NUlGWHBBaGJ6bkY2ME1ESjJSRjZxMUp6OHZSYXRQZ0pOQ0FRaWY4cUVTNk1lNjVkbjVsUjRCVHl5bTd2V0xvZG4zZTZD0gGiA0FVX3lxTE1xSlNVSE1rTFhiOHZxVEtrVnc0a0JYc2hIU1dJZXFFN3A2c3hUWVhMbTNLeGIxUVZwZlk0MFBidE0tLUhvRTFaTTVWRkNWTzh0VWlCSXdUbGlVSl9kNnNTX0JCSUV3dHZXenRLZWVxc0t0a3RSaFFpTlVnUmJzTEx4azlWQkk0S3ZZVTZZUjVxZDJ1MVEwTERMNXNkMUNDSHhxVVdjUVJrZk0wbzIwbFFWU3BaWktldE5NUFhkZWx5T3ViUHZNV0J1X3pXdnNtSEZmc2tZNmZ4VUR1WU0tdVN0OGFtTmFfT3RyNi1iZXdVU0Z1ZndDV2oteGJxZm9LZkxva3ZuOHdQSUVZRFJfTVRWVXBSUmExb2JLYTRscFVZdmJGR0NGQ0FfV2ZNczdvMno1dzE5bVFfLU5na0xEQk96MEtnWFhteTBiRFBsZTdGSWVORnZCeUlJdGFHR2U3NkJla1RrQ05EbjBxYzFFWWpKMmpRQjBhaGFRZW9mOUtKQTBJZDhkb2ZRSHVGVU8xcTJiSzRzeDBNQmFIelROckdzZVE?oc=5" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "脑机接口初创公司Neurable计划将其“读心”非侵入式神经数据采集技术授权给消费级可穿戴设备厂商。该技术可监测大脑活动，有望应用于健康监测和增强现实等领域。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/bci-startup-neurable-looks-to-license-its-mind-reading-tech-for-consumer-wearables/" },
+  { time: "19:37", tag: "ai", tagText: "AI", text: "西班牙AI视频初创公司通过业务转型，在不依赖风投的情况下实现2.3亿美元年经常性收入（ARR）。该公司从其他领域转向视频AI，成功实现盈利增长。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX1ZGWXhGNHJuenI2SHZITHk4clNhZ0paRGkzdkU2R21lSkVsOXNpR0JEeWZCd1ZTcEZDdlVPMzl1OTZRV2VBLUt4bkJRUDZWYXNzUGdMMHE5d1R3R2U0cTdaR3g3Nk56Zzh4aXZld3U4MnJjZEJvNHRqdlN0MUU4WEk2eVZBYmRjVzZvSEo4X0R6bU0wWFBLOGx4Ri1wUGdNTk02QjFQM0kwVDNBNGhPQg?oc=5" },
   { time: "18:04", tag: "ai", tagText: "AI", text: "谷歌DeepMind负责人哈萨比斯正在韩国寻求AI合作伙伴关系，此举可能涉及芯片供应、AI研发合作等，显示谷歌正加速在亚洲布局AI生态。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE5EYzRTbV9fNHlNdXp1SVo3Mk1KNERLcGUwalFJT3l6R3NfUFhrSXhWeS1wMWUzdmQ4NTJuTk1ybzFzclJOVnBxNktsUHMyLXVWOHFUcUgtSzZyRWdQLWdGQU0ycThGMkR3bDlJTkR4VFVZUWND?oc=5" },
   { time: "17:22", tag: "ai", tagText: "AI", text: "南亚科技加入英伟达Rubin AI芯片供应链，将供应LPDDR5X内存，但韩国竞争对手（三星、SK海力士）仍占据主导地位。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5jV09BUjVzMXJWU09jcEJXSlVQckJHMnFkZ1FTUFR2d3Z1eWRVSE1IQVFwMEFuUWZSa29pelpEVHRWbkFQZ1d0dnZVdXdaT2lycmIyeml0blNzY1JTNGp5Tm14OFc2MWNxZktIMURuYmZOLWhBS3RvakVB0gGOAUFVX3lxTFB1MjdfWnNCWjM1dDM5Nkx5SkxQdUl3R190anhWUTRKQ3duUWtFYkxwZHR1NW9jUUg1QzlxZWVlVGlsZW9KSHZQX1ZDYUFkOXNvazJ3TmI5bUg5LThpNnlMdG5VdHBFTDkwOXRFcEMyZExJNlU2ekxfVXFnaHJ6Z09oNmh1VGFGcENfNUhhRlE?oc=5" },
   { time: "16:13", tag: "ai", tagText: "AI", text: "哥本哈根AI初创公司Performativ完成1190万欧元A轮融资，用于扩展其AI原生财富管理操作系统。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOWFoyQkh3ZGlyX1JuWmlrVG9CTnhFRU15cmdKZmZkampjOUVZTE91VmkzUk1hcjhoRjZjZDVoSmxaRTRTUnU1RnN3TjFOWHNjNUg1TlY5c3h3YnRCVFpnLUlUNjRHS3k4bHl4bGdUTVJYVE54TVdhSzAybUp6Vk94MTVHSXE4NVNYZWJpNTEyMm9RZ3cxd0Q3VlEybDdWYlBueGxjNzVyOUdOZUFXMGk5MkZLdmJaWlJncjJmaEJaX2ZCT2FtdW5UZFNDOW9iUHZpeVNwNFJuWXJoOGwtQ3Y4?oc=5" },
@@ -1667,15 +1674,8 @@ const aiBreakingNews = [
   { time: "01:49", tag: "ai", tagText: "AI", text: "AI媒体生成工具ComfyUI完成3000万美元融资，估值达5亿美元。该平台为创作者提供对AI图像、视频和音频生成的更高控制权，反映出市场对精细化AI创作工具的需求增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/comfyui-hits-500m-valuation-as-creators-seek-more-control-over-ai-generated-media/" },
   { time: "01:40", tag: "ai", tagText: "AI", text: "OpenAI与微软达成重大协议修订，终结了因OpenAI与亚马逊AWS达成500亿美元合作而引发的法律风险。微软获得更多收入分成，而OpenAI则获准在AWS上销售产品。同时，双方此前关于通用人工智能（AGI）的约束性条款被废除，标志着两家公司合作关系进入新阶段。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/" },
   { time: "01:24", tag: "ai", tagText: "AI", text: "前DeepMind研究员David Silver创立的英国AI实验室Ineffable Intelligence，以51亿美元估值完成11亿美元种子轮融资，创欧洲种子轮纪录。该公司致力于开发无需人类数据即可自主学习的人工智能，目标直指超级智能。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/deepminds-david-silver-just-raised-1-1b-to-build-an-ai-that-learns-without-human-data/" },
-  { time: "01:12", tag: "tech", tagText: "科技", text: "谷歌TPU V8战略细节曝光：推出两款芯片分别针对训练和推理任务，集群网络可扩展至100万颗TPU，形成对英伟达AI加速器的规模优势。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQeFlMR1hZeERLbDMzc3hsTUdxb2p4TXVwdVhaNTE4ZElxbkZkeEdzbW80akN6TVRYS1g5R01HYy1qZkRERDFLUEszT1RZUUt1cVFyUUxFcUJpZUhiTERuN0JJczJvZ3pSMzdxam9hemg5Zkw2SlRXYUpFdVB2YWVWR3JNN2ZSdmxCb1JKVEJWSjN4QXdhMzBSUGpJckt2dDltSXFTRDJyV21tVFNvb3hocGZPemtXUG5UZHBIS1h3eTdHMTNlMnh5dTN3SGpsNjVtR0xBenZ6VTRKSTBYLVVqY2c1aTA?oc=5" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "英特尔股价近期大涨，显示AI热潮正从英伟达芯片扩展至更广泛的半导体领域。市场认为，随着AI基础设施需求多样化，英特尔等传统芯片厂商开始受益于AI部署的下一阶段。", source: "BNN Bloomberg", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTVQ1M0pXM3BzN1BYUWNrZkxpNnp0bUtZTFFYU01lR0JhSGdDWndncHV5TWM0X1NSWk5KZ1JVUUt1RVJLbnR5Q3NWWVhpd0IzQUdNVi1VM1hwV1hRTF82NUJRaDhCU19HMXF4WnM5NTJwdlhwZ1lDV0lDMklJeXoxNTMydVpHa3pwdDU4eTdwX2UtWGJCNjFxSEdjQnV6OTJENGhCbDFQbXBEbnM1cjJEOFlTLXZ1REllSUVnRHpGb09yOGU1TExSb3hGSWw1STlY?oc=5" },
-  { time: "00:13", tag: "ai", tagText: "AI", text: "AI主屏幕应用Skye在iPhone上线前获得投资者支持，反映出市场对更具AI感知能力的iPhone应用的兴趣。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/27/investors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch/" },
-  { time: "23:50", tag: "ai", tagText: "AI", text: "马斯克与奥特曼就OpenAI未来走向的法律大战正式开庭，陪审团遴选于4月27日开始。这场高风险的诉讼可能改变这家领先AI初创公司的未来走向，引发行业广泛关注。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
-  { time: "23:30", tag: "ai", tagText: "AI", text: "中国要求美国投资者对本土AI公司的投资必须获得政府批准。此举进一步收紧外资准入，凸显中美在AI领域的科技脱钩加速，可能影响美国资本对中国AI初创企业的支持。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfc2E3S1BXa3NFb1FmZ2RpcG1ick15TmV2MUhPd1N0aGhFVTRhMnpTVEZTbmRSVGx6VWhnRDgzUUZmRkFkX0Z6dzkxVURCaVpWaGhtam10bTdZRjljSUc3MTFObTYwWUdCTVVVUV9ERTdSaXppVm1kUDBPdElVdjA?oc=5" },
-  { time: "22:29", tag: "ai", tagText: "AI", text: "Canva就其AI工具“Magic Layers”在设计中自动将“Palestine”一词替换为其他内容一事致歉。该功能旨在将平面图像分解为可编辑组件，但出现不当处理敏感词汇的问题，引发争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
 ];
-const aiBreakingDate = "2026年4月28日 19:56 CST";
+const aiBreakingDate = "2026年4月28日 22:38 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
