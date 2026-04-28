@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 63.8,
   rating: "greed",
-  timestamp: "2026-04-28T20:13:56+00:00",
+  timestamp: "2026-04-28T21:48:48+00:00",
   previousClose: 67.34,
   previous1Week: 67.77,
   previous1Month: 14.47,
   previous1Year: 32.14,
-  date: "2026年4月29日 04:25 CST"
+  date: "2026年4月29日 06:08 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:08", tag: "geo", tagText: "地缘", text: "美国国务院计划将特朗普头像印在护照上，此举是特朗普政府将其形象和签名强加于国家象征的最新努力。", source: "Financial Times", url: "https://www.ft.com/content/33e81626-bee0-4457-8bf0-91ecea0edee8" },
+  { time: "06:08", tag: "tech", tagText: "科技", text: "埃隆·马斯克起诉OpenAI案开庭审理。马斯克在庭审中作证称，OpenAI最初是作为非营利组织创立以对抗谷歌，但后来违背了承诺，转向追求利润。OpenAI律师则辩称，此案源于马斯克未能如愿控制公司。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/openai-trial-elon-musk-sam-altman-live-updates.html" },
+  { time: "06:08", tag: "macro", tagText: "宏观", text: "星巴克公布第二财季业绩，全球同店销售额增长6.2%，超出预期，并上调全年业绩展望。公司通过推出新品、加快服务速度和改进忠诚度计划，成功吸引顾客回归。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/starbucks-sbux-q2-2026-earnings.html" },
   { time: "04:15", tag: "geo", tagText: "地缘", text: "美国联邦通信委员会（FCC）提前数年启动对迪士尼广播执照的审查，称其关注迪士尼的多元化、公平与包容（DEI）政策是否具有歧视性。此举发生在特朗普因吉米·坎摩尔（Jimmy Kimmel）的玩笑要求解雇他之后，被视为对ABC（迪士尼旗下）的政治施压。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/fcc-begins-review-of-disney-broadcast-licenses-years-ahead-of-schedule.html" },
   { time: "04:15", tag: "geo", tagText: "地缘", text: "前FBI局长詹姆斯·科米因在Instagram上发布数字“8647”被指控威胁特朗普生命。特朗普此前指责科米此举是“呼吁刺杀总统”。该案引发关于言论自由与政治报复的激烈辩论。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/james-comey-indicted-trump-seashell-8647.html" },
   { time: "03:34", tag: "geo", tagText: "地缘", text: "欧盟首席贸易官员萨宾·韦扬德因拒绝认可美欧关税协议符合WTO规则而辞职。此举凸显欧盟内部对特朗普贸易政策的严重分歧。", source: "Financial Times", url: "https://www.ft.com/content/a71432de-e65b-4b42-aad7-b7b1fffd2c81" },
@@ -1646,15 +1649,14 @@ const breakingNews = [
   { time: "19:42", tag: "macro", tagText: "宏观", text: "UPS一季度营收和利润均超华尔街预期，但维持全年业绩指引不变，股价盘前下跌。市场对包裹需求前景仍存疑虑。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/ups-ups-q1-2026-earnings.html" },
   { time: "19:29", tag: "geo", tagText: "地缘", text: "英国石油BP一季度利润翻倍，受益于伊朗战争引发的石油交易热潮。油价持续上涨，市场关注地缘冲突对能源供应的长期影响。", source: "Quartz", url: "https://finance.yahoo.com/sectors/energy/articles/bp-q1-2026-earnings-double-112910535.html" },
   { time: "19:28", tag: "macro", tagText: "宏观", text: "通用汽车上调2026年业绩指引，因获得5亿美元关税退税，一季度盈利超华尔街预期。公司同时关注伊朗战争、关税及电动车资产减记的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/general-motors-gm-earnings-q1-2026.html" },
-  { time: "19:27", tag: "macro", tagText: "宏观", text: "可口可乐一季度业绩超预期，并上调全年盈利展望，全球饮料需求增长推动业绩。但股价过去一年仅上涨6%，受经济担忧拖累。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/coca-cola-ko-q1-2026-earnings.html" },
-  { time: "19:18", tag: "macro", tagText: "宏观", text: "美股期货涨跌互现，油价继续上涨，美联储为期两天的会议今日开始。市场关注通胀压力、伊朗局势及AI板块回调对大盘的影响。", source: "Investopedia", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQ0pWbWYzOHc3ZXFKaTE2V0JKMFhOQXR2OWhsMWJZNmNVM0FPVnBtV2pYbHBvUC1uSDhPalFtUG8zcjkxUHEtSml3N0ZVX0c3RkEzdF9BTS1fMERBM3VjVXh6bVFQN1R0a245RDNzV050WUQ3ODZRRGdwZVdjOGFUdzJmcTBaZlVNWEpTYmtFR3A?oc=5" },
-  { time: "19:09", tag: "macro", tagText: "宏观", text: "挪威2万亿美元主权财富基金负责人表示，当前并非选股者的市场，即使基金策略稳健，若市场下跌也将跟随下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/norway-sovereign-wealth-fund-oil-iran-war-anthropic-claude-ai-invest-stocks.html" },
 ];
-const breakingDate = "2026年4月29日 04:25 CST";
+const breakingDate = "2026年4月29日 06:08 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:04", tag: "tech", tagText: "科技", text: "月下载量达100万次的开源软件包element-data被发现窃取用户凭证，数百万用户可能已遭入侵，需立即检查系统安全。", source: "Biz & IT - Ars Technica", url: "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/" },
   { time: "03:48", tag: "ai", tagText: "AI", text: "在OpenAI与微软解除独家云服务协议后仅一天，亚马逊AWS迅速宣布在其平台上提供OpenAI的全系模型产品，包括一项新的智能体服务。此举标志着AI云服务市场竞争格局的重大转变，AWS与OpenAI的联手将直接挑战微软在AI云领域的领先地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/" },
+  { time: "03:30", tag: "ai", tagText: "AI", text: "泰勒·斯威夫特升级法律行动，对抗AI模仿者。她成为最新一位加大力度保护自己免受AI复制品侵害的名人，此举可能为AI时代的名人肖像权保护树立先例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919827/taylor-swift-trademarks-ai-copycats" },
   { time: "02:17", tag: "ai", tagText: "AI", text: "超过600名谷歌员工联名致信CEO皮查伊，要求公司禁止五角大楼将其AI模型用于机密军事用途。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter" },
   { time: "02:15", tag: "ai", tagText: "AI", text: "在Anthropic拒绝让美国国防部将其AI用于国内大规模监控和自主武器后，谷歌与五角大楼签署新合同，扩大其AI在军事领域的应用。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/" },
   { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "18:04", tag: "ai", tagText: "AI", text: "谷歌DeepMind负责人哈萨比斯正在韩国寻求AI合作伙伴关系，此举可能涉及芯片供应、AI研发合作等，显示谷歌正加速在亚洲布局AI生态。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE5EYzRTbV9fNHlNdXp1SVo3Mk1KNERLcGUwalFJT3l6R3NfUFhrSXhWeS1wMWUzdmQ4NTJuTk1ybzFzclJOVnBxNktsUHMyLXVWOHFUcUgtSzZyRWdQLWdGQU0ycThGMkR3bDlJTkR4VFVZUWND?oc=5" },
   { time: "17:22", tag: "ai", tagText: "AI", text: "南亚科技加入英伟达Rubin AI芯片供应链，将供应LPDDR5X内存，但韩国竞争对手（三星、SK海力士）仍占据主导地位。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5jV09BUjVzMXJWU09jcEJXSlVQckJHMnFkZ1FTUFR2d3Z1eWRVSE1IQVFwMEFuUWZSa29pelpEVHRWbkFQZ1d0dnZVdXdaT2lycmIyeml0blNzY1JTNGp5Tm14OFc2MWNxZktIMURuYmZOLWhBS3RvakVB0gGOAUFVX3lxTFB1MjdfWnNCWjM1dDM5Nkx5SkxQdUl3R190anhWUTRKQ3duUWtFYkxwZHR1NW9jUUg1QzlxZWVlVGlsZW9KSHZQX1ZDYUFkOXNvazJ3TmI5bUg5LThpNnlMdG5VdHBFTDkwOXRFcEMyZExJNlU2ekxfVXFnaHJ6Z09oNmh1VGFGcENfNUhhRlE?oc=5" },
   { time: "16:13", tag: "ai", tagText: "AI", text: "哥本哈根AI初创公司Performativ完成1190万欧元A轮融资，用于扩展其AI原生财富管理操作系统。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOWFoyQkh3ZGlyX1JuWmlrVG9CTnhFRU15cmdKZmZkampjOUVZTE91VmkzUk1hcjhoRjZjZDVoSmxaRTRTUnU1RnN3TjFOWHNjNUg1TlY5c3h3YnRCVFpnLUlUNjRHS3k4bHl4bGdUTVJYVE54TVdhSzAybUp6Vk94MTVHSXE4NVNYZWJpNTEyMm9RZ3cxd0Q3VlEybDdWYlBueGxjNzVyOUdOZUFXMGk5MkZLdmJaWlJncjJmaEJaX2ZCT2FtdW5UZFNDOW9iUHZpeVNwNFJuWXJoOGwtQ3Y4?oc=5" },
-  { time: "08:01", tag: "ai", tagText: "AI", text: "谷歌正在测试YouTube的AI聊天机器人搜索功能，用户可通过对话式交互获取视频结果，类似其AI模式体验。", source: "The Verge", url: "https://www.theverge.com/streaming/919441/google-ask-youtube-ai-chatbot-search" },
-  { time: "05:04", tag: "tech", tagText: "科技", text: "月下载量达100万次的开源软件包element-data被发现窃取用户凭证，数百万用户可能已遭入侵，需立即检查系统安全。", source: "Biz & IT - Ars Technica", url: "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/" },
 ];
-const aiBreakingDate = "2026年4月29日 04:25 CST";
+const aiBreakingDate = "2026年4月29日 06:08 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
