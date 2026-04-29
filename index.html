@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 62.97,
+  score: 63.66,
   rating: "greed",
-  timestamp: "2026-04-29T18:15:27+00:00",
+  timestamp: "2026-04-29T20:05:54+00:00",
   previousClose: 63.8,
   previous1Week: 68.6,
   previous1Month: 14.47,
   previous1Year: 32.74,
-  date: "2026年4月30日 02:21 CST"
+  date: "2026年4月30日 04:17 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:16", tag: "macro", tagText: "宏观", text: "福特汽车上调2026年业绩指引，因获得13亿美元关税退税以抵消成本上升。投资者同时关注伊朗战争、关税政策及电动汽车需求放缓对公司的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/ford-motor-f-earnings-q1-2026.html" },
+  { time: "03:57", tag: "ai", tagText: "AI", text: "马斯克在OpenAI诉讼案第二日作证中称，自己当初资助OpenAI启动是“一个傻瓜”，并指控萨姆·奥尔特曼利用非营利组织的“光环效应”为自己牟利。", source: "Financial Times", url: "https://www.ft.com/content/4fac437f-a4cd-42ac-b1ae-f39957b7a42f" },
   { time: "01:47", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯就伊朗战争的成本与任务目标首次在国会作证。五角大楼官员透露，自冲突爆发以来，美国已花费约250亿美元，主要用于昂贵的导弹和防空拦截器，引发外界对美国应对其他冲突战备能力的担忧。", source: "Financial Times", url: "https://www.ft.com/content/1414942a-b314-443e-8bbc-8c13fa011d8e" },
   { time: "01:24", tag: "tech", tagText: "科技", text: "交易员为史上最大规模的财报日做准备，预计“七巨头”中的四家——Alphabet、亚马逊、Meta和微软——将在周三盘后公布业绩，相关股票单日波动规模可能高达8000亿美元。市场密切关注这些科技巨头的营收增长及AI投入回报。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/traders-brace-for-800-billion-in-earnings-related-stock-movement.html" },
   { time: "23:49", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什获得参议院银行委员会批准，为最终确认扫清关键障碍。沃什被视为特朗普的忠实盟友，其上任可能改变美联储的利率政策路径，当前主席鲍威尔面临特朗普要求大幅降息的压力。市场关注沃什是否会在货币政策中更重视资产负债表管理。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/trump-fed-nominee-kevin-warsh-senate-approval.html" },
@@ -1647,13 +1649,14 @@ const breakingNews = [
   { time: "17:48", tag: "macro", tagText: "宏观", text: "法国巴黎银行警告，油价达到200美元等三种情景可能将全球经济推入衰退。该行在最新季度展望中分析了极端地缘风险对宏观经济的冲击。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/200-oil-and-two-other-scenarios-could-tip-the-world-into-a-recession-says-this-global-bank-23a66a46?mod=mw_rss_topstories" },
   { time: "14:23", tag: "geo", tagText: "地缘", text: "阿联酋宣布退出OPEC，震惊全球能源市场。此举引发市场对OPEC未来存续的广泛质疑，并猜测其他成员国可能效仿。分析指出，阿联酋的退出与中东地缘冲突及内部产量配额争端密切相关。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/cnbc-daily-open-uae-leaves-opec-adrift.html" },
   { time: "13:59", tag: "macro", tagText: "宏观", text: "瑞银集团公布第一季度财报，净利润飙升80%至30亿美元，远超分析师预期。业绩增长主要得益于中东战争引发的市场波动，推动了该行交易业务的强劲表现。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/ubs-swiss-bank-first-quarter-earnings-profit-switzerland-trading.html" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "受伊朗战争影响，一家大型数据中心公司CEO向CNBC透露，已暂停在中东地区的投资决策。此前该地区因AI基础设施需求而蓬勃发展，如今区域不确定性给行业前景蒙上阴影。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/oaktree-owned-pure-dc-investment-decisions-gulf-data-centers.html" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "新兴市场股票指数创下历史新高，受台积电、三星和SK海力士等亚洲芯片制造商的强劲涨势推动，成功从伊朗战争引发的损失中反弹。AI芯片需求持续旺盛，SK海力士和三星表示客户希望签订长期合同以确保供应。", source: "Financial Times", url: "https://www.ft.com/content/5a003a35-a48b-4e46-a2d3-b99ae41d0e46" },
 ];
-const breakingDate = "2026年4月30日 02:21 CST";
+const breakingDate = "2026年4月30日 04:17 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:21", tag: "tech", tagText: "科技", text: "安森美半导体4月股价涨幅超过英伟达两倍，受益于汽车和工业领域芯片需求强劲，成为本月半导体板块最大黑马。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVlpaR2I3bGJEZjZ6SzFlai11MnlRVlNSYXpkVlRsZkFSaEZ6LTRCUUhtYlBNWVppN3JzYk5Ic0YxRzBRX1FPdXRxS25YRzdxVU1xdE9KMUV4T3pQeW1pSEgtcFFXT0FzQ2pDYnhHd2d3NUpzUmh0LU5wdldpQVFMZlU0M1NnaDkzMUJMUEw0bWZWN2pWMFllX3FTc3NVaWxNN2JweUpIT2I?oc=5" },
+  { time: "02:59", tag: "ai", tagText: "AI", text: "AI视频生成公司Runway CEO表示，AI视频只是前奏，下一步将是“世界模型”——能够模拟物理世界运行的AI系统。Runway已融资约8.6亿美元，估值53亿美元。", source: "TechCrunch", url: "https://techcrunch.com/podcast/equity-podcast-runway-ceo-cristobal-valenzuela-ai-video-world-models/" },
+  { time: "01:32", tag: "tech", tagText: "科技", text: "Canonical计划为Ubuntu系统加入AI功能，引发Linux用户强烈反对，部分用户要求提供不含AI功能的版本，甚至表示将停留在旧版本。", source: "The Verge", url: "https://www.theverge.com/tech/920723/linux-ubuntu-ai-features-ai-kill-switch" },
   { time: "23:35", tag: "ai", tagText: "AI", text: "马斯克与奥特曼对簿公堂：OpenAI未来走向受审。这场高风险的诉讼可能改变OpenAI及ChatGPT的未来。马斯克于2024年起诉OpenAI，指控其背离了非营利使命。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
   { time: "22:47", tag: "ai", tagText: "AI", text: "加拿大Tumbler Ridge校园枪击案七名受害者家属起诉OpenAI及CEO奥特曼，指控其疏忽导致ChatGPT被用于策划袭击。案件引发对AI安全责任的重大法律争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920479/tumbler-ridge-chagpt-openai-lawsuit" },
   { time: "22:43", tag: "ai", tagText: "AI", text: "ChatGPT下载量持续放缓，用户卸载或转向竞品，可能影响OpenAI的IPO计划。Sensor Tower数据显示，ChatGPT增长势头已大不如前。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920476/openai-chatgpt-downloads-slow-down-ipo" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "17:14", tag: "ai", tagText: "AI", text: "通用汽车计划为约400万辆美国汽车接入谷歌Gemini AI助手。覆盖2022年款及更新的凯迪拉克、雪佛兰、别克和GMC车型，这些车辆已内置谷歌系统。", source: "The Verge", url: "https://www.theverge.com/transportation/920285/general-motors-gm-gemini-ai-update" },
   { time: "13:30", tag: "ai", tagText: "AI", text: "英伟达股价创历史新高，端侧AI芯片需求推动半导体市场扩大。随着AI模型向手机、PC等终端设备迁移，英伟达等芯片厂商受益显著，市场对AI芯片的长期增长预期再度升温。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSDZoLW0zTUozRXNod2d3TkNCWU5RZllobU9FMl9ybnN0aDFWNjU4TVY1blBKU0Z2eVkzSS1kR2ctZThudkhtN0FDZy02bFF1TWs2Y0tmSzNOQTc3el9reHNDbmh4UmgwaDZpRkxFLVg5NXR6NVZFaVRVZEZTZ3hfeTlFSE9heURIRjdzM2lCZm41VGNUa0k0RFhabzFrVkE0U1E?oc=5" },
   { time: "10:10", tag: "ai", tagText: "AI", text: "Forrester预测，物理AI（Physical AI）将成为下一个重大技术突破，推动机器人、自动驾驶等领域进入新阶段。", source: "IT Brief Asia", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZThqTzlyTVlFamYzZi0zUHpRMUFab2ZiSDFmVE5CYTZmdGJqc1oxbmxwR2tMeThxZTcyUXlUS1hZRWttVUpUV2pxSGo3MVRwbzRXMm5SOWRXWjdpXzRCOFFDYTFiMldvS3U1ZGFWcEpVZ044V2RvemxjMlctUDJXalRyajRhbGR3QWc?oc=5" },
-  { time: "09:23", tag: "tech", tagText: "科技", text: "商业内幕分析指出，随着自动驾驶行业裁员潮持续，机器人初创公司正迎来从该领域招募顶尖人才的黄金窗口期。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRWRMVDJVUVZnLUF2YVhNRGRvYlB1N2d3YVpMNWVxOVNSRlBpTXgwQ3FoY3ZUN2dDbGtnYXhReGRJVkxoNU42UzBjSl84S1BuaUJUSWZWWXFfS25MTWc1Slcwc185c0w3bW15R0txa29oYWMzdjRuRFd2N0Y1VnpYVE9FdHBlN3JPVmx4UXZFQXVxeWE4WVJDbVJXTjJlejcxRnZHTnlzMXZQVWhRdmVubQ?oc=5" },
-  { time: "08:00", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，前Twitter CEO的AI初创公司成功融资，估值达到20亿美元。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQbE1FYVZqU0hDTUZyUGcyRWNMd2t2V1E1X1RFWk1PRUlYOUFDUTQyV1lIT3NLMjcweFQ2Si1fclRNQnBQNm1EckN3aEczTDdERFlsdVhTNDllZGIyR2c4bzBrRGtfU3Jld29nZ0pjeU8yRmUteExfSmQ2UTJqbWZIdWc5WkRGZ2h1VFhRbGNqR1VZM1JIeUpONEV6cnlWb0RSaGZZNF9B?oc=5" },
-  { time: "07:53", tag: "ai", tagText: "AI", text: "英伟达高级总监在韩国鼓励学生拥抱AI，不必恐惧失业，强调AI将创造新机遇而非取代人类。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcS1QTnE0OGptN3FKM3hQRFJ0aWo2VEttcTRZYzNQSGxFYzk0cE9KLVJKQ3FvUGdzaUtFYlIwYVVfcE0td1lBOFE2ckxsRFdlWnRyZU5TY25VWko1SXFsY0hBUmlYZUxLcVRMX2tjZWFQeVBQVDUwMWt1VkJaNkZUNEVBQ3BTU0NS?oc=5" },
 ];
-const aiBreakingDate = "2026年4月30日 02:21 CST";
+const aiBreakingDate = "2026年4月30日 04:17 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
