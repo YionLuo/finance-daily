@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 63.66,
   rating: "greed",
-  timestamp: "2026-04-29T20:05:54+00:00",
+  timestamp: "2026-04-29T21:50:51+00:00",
   previousClose: 63.8,
   previous1Week: 68.6,
   previous1Month: 14.47,
   previous1Year: 32.74,
-  date: "2026年4月30日 04:17 CST"
+  date: "2026年4月30日 06:08 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:08", tag: "macro", tagText: "宏观", text: "伊朗战争加剧债券市场抛售，通胀担忧使美联储未来降息前景存疑。布伦特原油突破120美元，特朗普表示将延长霍尔木兹海峡封锁，油价连续第八日上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/iran-war-is-fueling-a-bond-selloff-ahead-of-fed-chair-jerome-powells-final-press-conference-cc2dba04" },
+  { time: "06:08", tag: "tech", tagText: "科技", text: "微软、亚马逊、Alphabet财报均超预期，云业务增长强劲。微软Azure增长40%，亚马逊云收入增长28%，Alphabet云收入激增并上调全年资本支出至1900亿美元。Meta营收超预期但用户数受伊朗网络中断拖累，股价盘后跌7%。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/microsoft-msft-q3-earnings-report-2026.html" },
+  { time: "06:08", tag: "tech", tagText: "科技", text: "高通第二季度财报超预期，股价盘后涨13%。投资者关注其AI芯片业务前景，尽管当前季度指引疲软。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxQeG5kQXFZZkRLOG0wdzROb2dySGZ5NllGU25wZmZOZFdFdWZlV0tuWF9URXktZS1UMTUyWDE0ZGF6eTV1UjJFNWRab05LN2pyRmpoVU56SS1XanpfenVfTXJWNnR2b3U1eHY3OC0zTV83UGNadFFERVhOSnQzZGI5Z0F5SzhLVkdlb1VQZVdGUFpPTHFOdlJOQUg1X25IWVRLTFplc0VCNWdFMk81Y1VwdWdrVnBPNGJKanZocmpVUlpxeVVBUldNRzJfTQ?oc=5" },
+  { time: "06:08", tag: "crypto", tagText: "加密", text: "比特币创一年来最佳月度表现，但Robinhood等零售交易平台上的比特币交易量大幅下滑，散户兴趣转向其他资产。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bitcoin-is-having-its-best-month-in-a-year-but-the-retail-crowd-is-looking-elsewhere-d01aa6c1" },
   { time: "04:16", tag: "macro", tagText: "宏观", text: "福特汽车上调2026年业绩指引，因获得13亿美元关税退税以抵消成本上升。投资者同时关注伊朗战争、关税政策及电动汽车需求放缓对公司的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/ford-motor-f-earnings-q1-2026.html" },
   { time: "03:57", tag: "ai", tagText: "AI", text: "马斯克在OpenAI诉讼案第二日作证中称，自己当初资助OpenAI启动是“一个傻瓜”，并指控萨姆·奥尔特曼利用非营利组织的“光环效应”为自己牟利。", source: "Financial Times", url: "https://www.ft.com/content/4fac437f-a4cd-42ac-b1ae-f39957b7a42f" },
   { time: "01:47", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯就伊朗战争的成本与任务目标首次在国会作证。五角大楼官员透露，自冲突爆发以来，美国已花费约250亿美元，主要用于昂贵的导弹和防空拦截器，引发外界对美国应对其他冲突战备能力的担忧。", source: "Financial Times", url: "https://www.ft.com/content/1414942a-b314-443e-8bbc-8c13fa011d8e" },
@@ -1645,18 +1649,18 @@ const breakingNews = [
   { time: "21:07", tag: "macro", tagText: "宏观", text: "摩根大通CEO杰米·戴蒙警告称，由信贷引发的经济衰退将‘比人们想象的更严重’，其影响将不仅限于私人信贷领域。", source: "MarketWatch", url: "https://www.marketwatch.com/story/jpmorgans-jamie-dimon-says-a-credit-led-recession-would-be-worse-than-people-think-5a388e74?mod=mw_rss_topstories" },
   { time: "19:44", tag: "geo", tagText: "地缘", text: "全球基准原油期货突破115美元，因霍尔木兹海峡僵局持续，油轮通行无进展。特朗普发出对伊朗新威胁，报道称美国将延长对伊朗港口的封锁。布伦特原油突破114美元/桶。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-key-global-oil-contract-tops-115-as-strait-of-hormuz-impasse-continues-ce2cdf04?mod=mw_rss_topstories" },
   { time: "19:05", tag: "macro", tagText: "宏观", text: "标普500指数期货小幅走高，市场聚焦“七巨头”科技公司财报及美联储利率决议。周二标普500和纳斯达克从历史高位回落。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/28/stock-market-today-live-updates.html" },
-  { time: "19:01", tag: "macro", tagText: "宏观", text: "百胜餐饮集团第一季度盈利超预期，塔可钟同店销售额增长8%，推动公司整体业绩表现强劲。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/29/yum-brands-yum-q1-2026-earnings.html" },
-  { time: "17:48", tag: "macro", tagText: "宏观", text: "法国巴黎银行警告，油价达到200美元等三种情景可能将全球经济推入衰退。该行在最新季度展望中分析了极端地缘风险对宏观经济的冲击。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/200-oil-and-two-other-scenarios-could-tip-the-world-into-a-recession-says-this-global-bank-23a66a46?mod=mw_rss_topstories" },
-  { time: "14:23", tag: "geo", tagText: "地缘", text: "阿联酋宣布退出OPEC，震惊全球能源市场。此举引发市场对OPEC未来存续的广泛质疑，并猜测其他成员国可能效仿。分析指出，阿联酋的退出与中东地缘冲突及内部产量配额争端密切相关。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/cnbc-daily-open-uae-leaves-opec-adrift.html" },
-  { time: "13:59", tag: "macro", tagText: "宏观", text: "瑞银集团公布第一季度财报，净利润飙升80%至30亿美元，远超分析师预期。业绩增长主要得益于中东战争引发的市场波动，推动了该行交易业务的强劲表现。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/ubs-swiss-bank-first-quarter-earnings-profit-switzerland-trading.html" },
 ];
-const breakingDate = "2026年4月30日 04:17 CST";
+const breakingDate = "2026年4月30日 06:08 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:59", tag: "ai", tagText: "AI", text: "谷歌Q1付费订阅用户新增2500万，总数达3.5亿，YouTube和Google One为主要增长引擎。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/google-gains-25m-subscriptions-in-q1-driven-by-youtube-and-google-one/" },
+  { time: "04:28", tag: "ai", tagText: "AI", text: "谷歌CEO皮查伊在Alphabet财报中宣布，2026年第一季度谷歌搜索查询量创下“历史新高”，AI投资持续推动搜索业务增长。", source: "The Verge", url: "https://www.theverge.com/tech/920815/google-alphabet-q1-2026-earnings-sundar-pichai" },
   { time: "03:21", tag: "tech", tagText: "科技", text: "安森美半导体4月股价涨幅超过英伟达两倍，受益于汽车和工业领域芯片需求强劲，成为本月半导体板块最大黑马。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVlpaR2I3bGJEZjZ6SzFlai11MnlRVlNSYXpkVlRsZkFSaEZ6LTRCUUhtYlBNWVppN3JzYk5Ic0YxRzBRX1FPdXRxS25YRzdxVU1xdE9KMUV4T3pQeW1pSEgtcFFXT0FzQ2pDYnhHd2d3NUpzUmh0LU5wdldpQVFMZlU0M1NnaDkzMUJMUEw0bWZWN2pWMFllX3FTc3NVaWxNN2JweUpIT2I?oc=5" },
   { time: "02:59", tag: "ai", tagText: "AI", text: "AI视频生成公司Runway CEO表示，AI视频只是前奏，下一步将是“世界模型”——能够模拟物理世界运行的AI系统。Runway已融资约8.6亿美元，估值53亿美元。", source: "TechCrunch", url: "https://techcrunch.com/podcast/equity-podcast-runway-ceo-cristobal-valenzuela-ai-video-world-models/" },
+  { time: "02:33", tag: "ai", tagText: "AI", text: "前Twitter CEO帕拉格·阿格拉瓦尔创立的AI智能体工具公司Parallel Web Systems完成1亿美元融资，由红杉领投，估值达20亿美元。该公司距上一轮1亿美元融资仅过去五个月。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/" },
   { time: "01:32", tag: "tech", tagText: "科技", text: "Canonical计划为Ubuntu系统加入AI功能，引发Linux用户强烈反对，部分用户要求提供不含AI功能的版本，甚至表示将停留在旧版本。", source: "The Verge", url: "https://www.theverge.com/tech/920723/linux-ubuntu-ai-features-ai-kill-switch" },
+  { time: "00:10", tag: "tech", tagText: "科技", text: "宝马旗下风投BMW i Ventures宣布设立3亿美元基金，专门投资汽车领域AI初创公司，加速智能驾驶和车载AI技术布局。", source: "MLQ.ai", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSV8wb1dWbUVWcHkwQl9ZQVc0bWJ6cDdRampHUGR1bjlKQVV3N3NPc0VuNEwzd3YtNkw4d1IzMXhTUTBSX0psaGI0dFNxZjJtWTVXckw1WkFrWjJYVTlqOFV0ZHhBTzRfZGpTNlhFaWxaRmlNRlF5US12MUpSa1BUNkt1Ymx5S2I0cjJCZDl1OWxqN0Rfa3NyWndjc0lkVExYakFJVzZMXzY?oc=5" },
   { time: "23:35", tag: "ai", tagText: "AI", text: "马斯克与奥特曼对簿公堂：OpenAI未来走向受审。这场高风险的诉讼可能改变OpenAI及ChatGPT的未来。马斯克于2024年起诉OpenAI，指控其背离了非营利使命。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
   { time: "22:47", tag: "ai", tagText: "AI", text: "加拿大Tumbler Ridge校园枪击案七名受害者家属起诉OpenAI及CEO奥特曼，指控其疏忽导致ChatGPT被用于策划袭击。案件引发对AI安全责任的重大法律争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920479/tumbler-ridge-chagpt-openai-lawsuit" },
   { time: "22:43", tag: "ai", tagText: "AI", text: "ChatGPT下载量持续放缓，用户卸载或转向竞品，可能影响OpenAI的IPO计划。Sensor Tower数据显示，ChatGPT增长势头已大不如前。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920476/openai-chatgpt-downloads-slow-down-ipo" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "19:10", tag: "tech", tagText: "科技", text: "LG与英伟达正探索在机器人、AI基础设施和移动出行领域建立合作伙伴关系。", source: "Republic World", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFU4T2RQcmJ0MTQwSXVLWjVUYVplc01uY0xFQ3ZxMUEtS1l5NlpNdURJQjBGay1XR3pKOUMtWE1OcXExU050NGE1OXExeXZxckZGeGRBYl9rWWxVQkMzeFR2Njh0YnJzRnRPX1c5a0NHdG5xU01xRnBkaXVzbEtpclhnUFpNU2xuT1V3djROOWtubW5TXzZRQlBlaGY4aFlHaWZmZUpSdUUxRzZLZng5dGt2OHVCbk9XcEM2X1Fn0gHDAUFVX3lxTE5Yazg1UGdudVQ1RnlqV1VhU2NnRE1QTzdYRlh3OEZKVEVMUUZFN2hoMGxMWF84X08xQlVrUFFZME1tU2hneW9HSDkzY2psWFJOM1hZWnJSdkpaSlFQVGZvTGVjMTQ4ZjVVR195c3UwRXp5bkhpUlBoR0ZQSHRkVEZySmlXU2RtTWRRaUlWYXkxbHNQYzE5MlB3VWhKeW5YLUEtOWpOSlpNdGhmMXBla3d1ckR3Mm12LTZ5LXBic0pjWkZZYw?oc=5" },
   { time: "18:39", tag: "tech", tagText: "科技", text: "中国暂停发放新的自动驾驶出租车牌照，此前百度旗下无人驾驶出租车出现混乱。此举可能影响国内自动驾驶行业的发展节奏。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920312/china-suspends-autonomous-vehicle-permits-baidu-chaos" },
   { time: "18:04", tag: "tech", tagText: "科技", text: "GitHub上月紧急修复一个严重远程代码执行漏洞，耗时不到六小时。该漏洞由Wiz Research利用AI模型在Git内部基础设施中发现。", source: "The Verge", url: "https://www.theverge.com/news/920295/github-remote-code-execution-vulnerability-fix" },
-  { time: "17:45", tag: "ai", tagText: "AI", text: "Scout AI获1亿美元融资，训练用于军事作战的AI模型。该公司训练AI代理，使单兵能控制多辆自主战车。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/coby-adcocks-scout-ai-raises-100-million-to-train-models-for-war-we-visited-its-bootcamp/" },
-  { time: "17:14", tag: "ai", tagText: "AI", text: "通用汽车计划为约400万辆美国汽车接入谷歌Gemini AI助手。覆盖2022年款及更新的凯迪拉克、雪佛兰、别克和GMC车型，这些车辆已内置谷歌系统。", source: "The Verge", url: "https://www.theverge.com/transportation/920285/general-motors-gm-gemini-ai-update" },
-  { time: "13:30", tag: "ai", tagText: "AI", text: "英伟达股价创历史新高，端侧AI芯片需求推动半导体市场扩大。随着AI模型向手机、PC等终端设备迁移，英伟达等芯片厂商受益显著，市场对AI芯片的长期增长预期再度升温。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSDZoLW0zTUozRXNod2d3TkNCWU5RZllobU9FMl9ybnN0aDFWNjU4TVY1blBKU0Z2eVkzSS1kR2ctZThudkhtN0FDZy02bFF1TWs2Y0tmSzNOQTc3el9reHNDbmh4UmgwaDZpRkxFLVg5NXR6NVZFaVRVZEZTZ3hfeTlFSE9heURIRjdzM2lCZm41VGNUa0k0RFhabzFrVkE0U1E?oc=5" },
-  { time: "10:10", tag: "ai", tagText: "AI", text: "Forrester预测，物理AI（Physical AI）将成为下一个重大技术突破，推动机器人、自动驾驶等领域进入新阶段。", source: "IT Brief Asia", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZThqTzlyTVlFamYzZi0zUHpRMUFab2ZiSDFmVE5CYTZmdGJqc1oxbmxwR2tMeThxZTcyUXlUS1hZRWttVUpUV2pxSGo3MVRwbzRXMm5SOWRXWjdpXzRCOFFDYTFiMldvS3U1ZGFWcEpVZ044V2RvemxjMlctUDJXalRyajRhbGR3QWc?oc=5" },
 ];
-const aiBreakingDate = "2026年4月30日 04:17 CST";
+const aiBreakingDate = "2026年4月30日 06:08 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
