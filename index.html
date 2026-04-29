@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 64.03,
+  score: 63.03,
   rating: "greed",
-  timestamp: "2026-04-29T14:23:29+00:00",
+  timestamp: "2026-04-29T16:45:06+00:00",
   previousClose: 63.8,
   previous1Week: 68.6,
   previous1Month: 14.47,
   previous1Year: 32.74,
-  date: "2026年4月29日 22:25 CST"
+  date: "2026年4月30日 00:49 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:49", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什获得参议院银行委员会批准，为最终确认扫清关键障碍。沃什被视为特朗普的忠实盟友，其上任可能改变美联储的利率政策路径，当前主席鲍威尔面临特朗普要求大幅降息的压力。市场关注沃什是否会在货币政策中更重视资产负债表管理。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/trump-fed-nominee-kevin-warsh-senate-approval.html" },
+  { time: "23:38", tag: "tech", tagText: "科技", text: "恩智浦半导体（NXP）股价飙升26%，创2010年上市以来最大单日涨幅，因财报业绩超预期。强劲业绩提振了整个半导体板块情绪，美光等芯片股随之走高。分析师指出，AI和数据中心需求持续推动芯片行业复苏。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/nxp-semiconductors-stock-earnings-beat.html" },
+  { time: "23:32", tag: "tech", tagText: "科技", text: "比尔·阿克曼旗下Pershing Square的50亿美元IPO即将开始交易，为公众投资者提供直接持有其投资平台股份的机会。该平台持有10只大盘股组成的集中投资组合，被视为伯克希尔·哈撒韦式的投资模式。市场关注其上市后的表现。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/bill-ackmans-5-billion-pershing-square-ipo-to-start-trading-testing-berkshire-style-vision.html" },
+  { time: "23:22", tag: "tech", tagText: "科技", text: "康宁（Corning）与Meta（META）共同投资60亿美元扩建光缆设施，以支持AI数据中心的高速网络需求。该项目将大幅提升光缆产能，满足AI训练和推理对带宽的爆炸性需求。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/corning-glw-meta-meta-break-162304748.html" },
+  { time: "23:22", tag: "tech", tagText: "科技", text: "安森美半导体（ON）与蔚来（NIO）扩大合作，共同开发下一代900V电动汽车平台。该合作聚焦于高压功率半导体技术，旨在提升电动汽车的充电速度和续航里程，进一步巩固双方在新能源汽车产业链中的地位。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/semiconductor-nio-expand-partnership-next-162245165.html" },
+  { time: "23:00", tag: "tech", tagText: "科技", text: "亚马逊、Meta和Alphabet将在盘后公布第一季度财报。市场预期亚马逊云业务收入增长26%，Meta有望创下2021年以来最快营收增速，Alphabet预计实现2022年以来最强季度增长。投资者将密切关注AI支出规模及伊朗战争对广告业务的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/amazon-amzn-q1-earnings-report-2026.html" },
   { time: "21:54", tag: "macro", tagText: "宏观", text: "有投资者在SPDR黄金ETF（GLD）上进行百万美元级别的看空押注，卖出看涨期权同时买入看跌期权，押注金价在美联储决议前下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/a-million-dollar-gold-bear-emerges-ahead-of-the-fed-decision.html" },
   { time: "21:50", tag: "macro", tagText: "宏观", text: "美联储即将公布利率决议，市场普遍预期将维持利率在3.5%-3.75%不变。市场关注焦点在于鲍威尔是否会暗示其未来去留，以及其对经济前景的措辞。与此同时，‘七巨头’科技公司财报与美联储决议同日登场，被分析师称为今年对市场最重要的一天。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/fed-meeting-today-live-updates-warsh-powell.html" },
   { time: "21:13", tag: "tech", tagText: "科技", text: "OpenAI正加速从微软向亚马逊的生态迁移，双方合作关系虽未破裂，但OpenAI已迅速进入亚马逊的云计算和AI服务领域，这一转变从微妙变得激进。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/openai-drift-from-microsoft-to-amazon-turns-aggressive-after-subtlety.html" },
@@ -1643,21 +1649,20 @@ const breakingNews = [
   { time: "12:00", tag: "tech", tagText: "科技", text: "新兴市场股票指数创下历史新高，受台积电、三星和SK海力士等亚洲芯片制造商的强劲涨势推动，成功从伊朗战争引发的损失中反弹。AI芯片需求持续旺盛，SK海力士和三星表示客户希望签订长期合同以确保供应。", source: "Financial Times", url: "https://www.ft.com/content/5a003a35-a48b-4e46-a2d3-b99ae41d0e46" },
   { time: "11:29", tag: "geo", tagText: "地缘", text: "美国财政部警告银行，处理伊朗石油的中国“茶壶”炼油厂面临制裁风险。警告称，中国购买伊朗约90%的石油出口，其中“茶壶”炼油厂占大部分。此举旨在进一步收紧对伊朗的制裁执行。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/us-treasury-warns-sanctions-china-refineries-iran-oil-malaysian-blend.html" },
   { time: "09:23", tag: "macro", tagText: "宏观", text: "澳大利亚第一季度通胀率低于预期，但价格增速创两年新高。实际通胀数据低于经济学家预期的4.2%，市场对澳联储下一步利率行动的预期出现分歧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/australia-inflation-q1-rba-rate-hike-outlook.html" },
-  { time: "08:20", tag: "crypto", tagText: "加密", text: "Robinhood散户交易者在伊朗冲突持续期间涌入预测市场。预测市场成为Robinhood交易者寻求规避波动性的避风港。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-where-robinhoods-retail-traders-have-flocked-as-the-iran-conflict-rages-on-198adc30?mod=mw_rss_topstories" },
-  { time: "06:40", tag: "geo", tagText: "地缘", text: "美国对35个协助伊朗规避制裁的个人和实体实施新制裁。此举发生在美伊和谈陷入僵局、特朗普对伊朗停火提议不满之际，进一步加剧中东紧张局势。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcVk3REZRcV85OXdkbXhkUUtocGdLSld3OWN6VVEzYTFPRlJEdV9IczlLSjA0VEVvSmNCOGlWQVh3T0o5cmpRSzdvN3Y3RnFuVXg4ai0zODJuTUhIVWhyeExzSzQ3T1Z6enBPV0MtT3FBODNUQ1hEV2tNSksyZ3Y3LWNxSGltc184c3FUejZhQXd6MVVKSno3RVZUSUdEd2FUNmMwbG1qNFk3aVNHN19PbUlGbktxbnRLeDBFQkFwSHRiY2VmN2NFNA?oc=5" },
-  { time: "06:36", tag: "tech", tagText: "科技", text: "普渡制药因欺骗监管机构和向医生行贿以促进阿片类药物销售，被判处55亿美元罚款和罚金。该判决为阿片类药物和解铺平了道路。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/purdue-pharma-receives-5point5-billion-sentence-paving-way-for-opioid-settlement.html" },
-  { time: "06:08", tag: "geo", tagText: "地缘", text: "美国国务院计划将特朗普头像印在护照上，此举是特朗普政府将其形象和签名强加于国家象征的最新努力。", source: "Financial Times", url: "https://www.ft.com/content/33e81626-bee0-4457-8bf0-91ecea0edee8" },
-  { time: "06:08", tag: "tech", tagText: "科技", text: "埃隆·马斯克起诉OpenAI案开庭审理。马斯克在庭审中作证称，OpenAI最初是作为非营利组织创立以对抗谷歌，但后来违背了承诺，转向追求利润。OpenAI律师则辩称，此案源于马斯克未能如愿控制公司。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/openai-trial-elon-musk-sam-altman-live-updates.html" },
-  { time: "06:08", tag: "macro", tagText: "宏观", text: "星巴克公布第二财季业绩，全球同店销售额增长6.2%，超出预期，并上调全年业绩展望。公司通过推出新品、加快服务速度和改进忠诚度计划，成功吸引顾客回归。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/starbucks-sbux-q2-2026-earnings.html" },
 ];
-const breakingDate = "2026年4月29日 22:25 CST";
+const breakingDate = "2026年4月30日 00:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:35", tag: "ai", tagText: "AI", text: "马斯克与奥特曼对簿公堂：OpenAI未来走向受审。这场高风险的诉讼可能改变OpenAI及ChatGPT的未来。马斯克于2024年起诉OpenAI，指控其背离了非营利使命。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
+  { time: "22:47", tag: "ai", tagText: "AI", text: "加拿大Tumbler Ridge校园枪击案七名受害者家属起诉OpenAI及CEO奥特曼，指控其疏忽导致ChatGPT被用于策划袭击。案件引发对AI安全责任的重大法律争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920479/tumbler-ridge-chagpt-openai-lawsuit" },
+  { time: "22:43", tag: "ai", tagText: "AI", text: "ChatGPT下载量持续放缓，用户卸载或转向竞品，可能影响OpenAI的IPO计划。Sensor Tower数据显示，ChatGPT增长势头已大不如前。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920476/openai-chatgpt-downloads-slow-down-ipo" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
   { time: "21:57", tag: "ai", tagText: "AI", text: "甲骨文全面押注AI数据中心建设，其战略转型被视为判断AI泡沫是否破裂的关键风向标。这家数据库公司已孤注一掷，全面转向AI基础设施。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920378/oracle-openai-datacenter-buildout" },
   { time: "21:15", tag: "tech", tagText: "科技", text: "中国对本土AI芯片的强劲需求推动寒武纪、MetaX等公司营收增长。在美国出口管制背景下，中国科技公司加速采购国产AI芯片替代方案。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWXJickFFWlh6bHBreUc3TW41RkpTYlFPX2Y5MDcyTWQwX3ZOSEZUVkNLXzltRWJwUU14blhLMkEwZ1pfZHpNSlZpS25qdWVUbFd0UEpOUE1VbXM4Wk81bzFoNTE0S3NWa005bmNpN1dBeExxak5oUU1sNFlvb2RDazdhdmlnTmhJNU5RbE9ka0YwRVB2QlJDRUV4U3VkbTR4Zms5bVhfU3lQZ3RQ0gGsAUFVX3lxTE8wZlhFeWVGdWRvOWRiWHBQZjRzb2FFRHpmLXdlYnc3alFQd0RnWktXaklBZHJPSWU2eE45akNjVDExbUR1Vk1CTFBrMGMwa2JGbkVnbEJYdnluamlUeU5IVGRsa0JJbEhqcDVDZXROY3N1QnZLdlREWEhHRFY4NEEwcVg5ZTVJdThPMnN1Ym1vMk9sT0dLYTFfdkg4d3EtUllMd1h0dHF3M2NBeG0?oc=5" },
   { time: "21:10", tag: "tech", tagText: "科技", text: "国防初创公司Firestorm Labs获8200万美元融资，用于将无人机工厂装入集装箱，实现前线就地制造无人机。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/firestorm-labs-raises-82m-to-take-drone-factories-into-the-field/" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌照片推出AI虚拟试衣功能，利用用户相册中的衣物照片创建虚拟衣柜，让用户无需出门即可试穿自己已有的衣服。同时，谷歌还复刻了《独领风骚》中Cher的经典AI衣橱。", source: "The Verge", url: "https://www.theverge.com/tech/920420/google-photos-ai-try-on-wardrobe" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌TV新增多项Gemini AI功能，包括通过Nano Banana和Veo工具对照片和视频进行AI编辑与转换。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/more-gemini-features-are-coming-to-google-tv/" },
   { time: "19:10", tag: "tech", tagText: "科技", text: "LG与英伟达正探索在机器人、AI基础设施和移动出行领域建立合作伙伴关系。", source: "Republic World", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFU4T2RQcmJ0MTQwSXVLWjVUYVplc01uY0xFQ3ZxMUEtS1l5NlpNdURJQjBGay1XR3pKOUMtWE1OcXExU050NGE1OXExeXZxckZGeGRBYl9rWWxVQkMzeFR2Njh0YnJzRnRPX1c5a0NHdG5xU01xRnBkaXVzbEtpclhnUFpNU2xuT1V3djROOWtubW5TXzZRQlBlaGY4aFlHaWZmZUpSdUUxRzZLZng5dGt2OHVCbk9XcEM2X1Fn0gHDAUFVX3lxTE5Yazg1UGdudVQ1RnlqV1VhU2NnRE1QTzdYRlh3OEZKVEVMUUZFN2hoMGxMWF84X08xQlVrUFFZME1tU2hneW9HSDkzY2psWFJOM1hZWnJSdkpaSlFQVGZvTGVjMTQ4ZjVVR195c3UwRXp5bkhpUlBoR0ZQSHRkVEZySmlXU2RtTWRRaUlWYXkxbHNQYzE5MlB3VWhKeW5YLUEtOWpOSlpNdGhmMXBla3d1ckR3Mm12LTZ5LXBic0pjWkZZYw?oc=5" },
   { time: "18:39", tag: "tech", tagText: "科技", text: "中国暂停发放新的自动驾驶出租车牌照，此前百度旗下无人驾驶出租车出现混乱。此举可能影响国内自动驾驶行业的发展节奏。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920312/china-suspends-autonomous-vehicle-permits-baidu-chaos" },
   { time: "18:04", tag: "tech", tagText: "科技", text: "GitHub上月紧急修复一个严重远程代码执行漏洞，耗时不到六小时。该漏洞由Wiz Research利用AI模型在Git内部基础设施中发现。", source: "The Verge", url: "https://www.theverge.com/news/920295/github-remote-code-execution-vulnerability-fix" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "08:00", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，前Twitter CEO的AI初创公司成功融资，估值达到20亿美元。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQbE1FYVZqU0hDTUZyUGcyRWNMd2t2V1E1X1RFWk1PRUlYOUFDUTQyV1lIT3NLMjcweFQ2Si1fclRNQnBQNm1EckN3aEczTDdERFlsdVhTNDllZGIyR2c4bzBrRGtfU3Jld29nZ0pjeU8yRmUteExfSmQ2UTJqbWZIdWc5WkRGZ2h1VFhRbGNqR1VZM1JIeUpONEV6cnlWb0RSaGZZNF9B?oc=5" },
   { time: "07:53", tag: "ai", tagText: "AI", text: "英伟达高级总监在韩国鼓励学生拥抱AI，不必恐惧失业，强调AI将创造新机遇而非取代人类。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcS1QTnE0OGptN3FKM3hQRFJ0aWo2VEttcTRZYzNQSGxFYzk0cE9KLVJKQ3FvUGdzaUtFYlIwYVVfcE0td1lBOFE2ckxsRFdlWnRyZU5TY25VWko1SXFsY0hBUmlYZUxLcVRMX2tjZWFQeVBQVDUwMWt1VkJaNkZUNEVBQ3BTU0NS?oc=5" },
   { time: "05:04", tag: "tech", tagText: "科技", text: "月下载量达100万次的开源软件包element-data被发现窃取用户凭证，数百万用户可能已遭入侵，需立即检查系统安全。", source: "Biz & IT - Ars Technica", url: "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/" },
-  { time: "03:48", tag: "ai", tagText: "AI", text: "在OpenAI与微软解除独家云服务协议后仅一天，亚马逊AWS迅速宣布在其平台上提供OpenAI的全系模型产品，包括一项新的智能体服务。此举标志着AI云服务市场竞争格局的重大转变，AWS与OpenAI的联手将直接挑战微软在AI云领域的领先地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/" },
-  { time: "03:30", tag: "ai", tagText: "AI", text: "泰勒·斯威夫特升级法律行动，对抗AI模仿者。她成为最新一位加大力度保护自己免受AI复制品侵害的名人，此举可能为AI时代的名人肖像权保护树立先例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919827/taylor-swift-trademarks-ai-copycats" },
-  { time: "02:51", tag: "tech", tagText: "科技", text: "小米AI突破难掩芯片成本飙升之痛。尽管在AI领域取得进展，但持续上涨的芯片成本给公司盈利带来巨大压力。", source: "AD HOC NEWS", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZkluY3RxRW5wY0JQdzJpYWx3V0p5Zi1JdEhlTjh5NXYwUVhNVjE3VFVaR001bk5pMVdjT2d0ZHJCcVYzVG9hbHctTmNrYXMzd3RhSUVKR2h6VVJmaDhldWpTZ3dqWVJOYmFBMnIxaG9MS2lPUUlRdXZ5UFlaN3p1TEx5anU0SnRXS2VGRW9OTkJJdUdIdURYTWdncWc0dVpaaXBleWpzc29KMGE4U3hhc0Jfc19HS0FnOXlaY09DdnhLbnNIUFE?oc=5" },
-  { time: "02:17", tag: "ai", tagText: "AI", text: "超过600名谷歌员工联名致信CEO皮查伊，要求公司禁止五角大楼将其AI模型用于机密军事用途。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter" },
-  { time: "02:15", tag: "ai", tagText: "AI", text: "在Anthropic拒绝让美国国防部将其AI用于国内大规模监控和自主武器后，谷歌与五角大楼签署新合同，扩大其AI在军事领域的应用。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/" },
 ];
-const aiBreakingDate = "2026年4月29日 22:25 CST";
+const aiBreakingDate = "2026年4月30日 00:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
