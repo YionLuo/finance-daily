@@ -1618,18 +1618,22 @@
 const fearGreedData = {
   score: 63.8,
   rating: "greed",
-  timestamp: "2026-04-28T23:43:58+00:00",
+  timestamp: "2026-04-28T23:59:45+00:00",
   previousClose: 67.34,
   previous1Week: 67.77,
   previous1Month: 14.47,
   previous1Year: 32.14,
-  date: "2026年4月29日 08:03 CST"
+  date: "2026年4月29日 11:58 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "11:29", tag: "geo", tagText: "地缘", text: "美国财政部警告银行，处理伊朗石油的中国“茶壶”炼油厂面临制裁风险。警告称，中国购买伊朗约90%的石油出口，其中“茶壶”炼油厂占大部分。此举旨在进一步收紧对伊朗的制裁执行。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/us-treasury-warns-sanctions-china-refineries-iran-oil-malaysian-blend.html" },
+  { time: "09:23", tag: "macro", tagText: "宏观", text: "澳大利亚第一季度通胀率低于预期，但价格增速创两年新高。实际通胀数据低于经济学家预期的4.2%，市场对澳联储下一步利率行动的预期出现分歧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/australia-inflation-q1-rba-rate-hike-outlook.html" },
+  { time: "08:20", tag: "crypto", tagText: "加密", text: "Robinhood散户交易者在伊朗冲突持续期间涌入预测市场。预测市场成为Robinhood交易者寻求规避波动性的避风港。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-where-robinhoods-retail-traders-have-flocked-as-the-iran-conflict-rages-on-198adc30?mod=mw_rss_topstories" },
   { time: "06:40", tag: "geo", tagText: "地缘", text: "美国对35个协助伊朗规避制裁的个人和实体实施新制裁。此举发生在美伊和谈陷入僵局、特朗普对伊朗停火提议不满之际，进一步加剧中东紧张局势。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcVk3REZRcV85OXdkbXhkUUtocGdLSld3OWN6VVEzYTFPRlJEdV9IczlLSjA0VEVvSmNCOGlWQVh3T0o5cmpRSzdvN3Y3RnFuVXg4ai0zODJuTUhIVWhyeExzSzQ3T1Z6enBPV0MtT3FBODNUQ1hEV2tNSksyZ3Y3LWNxSGltc184c3FUejZhQXd6MVVKSno3RVZUSUdEd2FUNmMwbG1qNFk3aVNHN19PbUlGbktxbnRLeDBFQkFwSHRiY2VmN2NFNA?oc=5" },
+  { time: "06:36", tag: "tech", tagText: "科技", text: "普渡制药因欺骗监管机构和向医生行贿以促进阿片类药物销售，被判处55亿美元罚款和罚金。该判决为阿片类药物和解铺平了道路。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/purdue-pharma-receives-5point5-billion-sentence-paving-way-for-opioid-settlement.html" },
   { time: "06:08", tag: "geo", tagText: "地缘", text: "美国国务院计划将特朗普头像印在护照上，此举是特朗普政府将其形象和签名强加于国家象征的最新努力。", source: "Financial Times", url: "https://www.ft.com/content/33e81626-bee0-4457-8bf0-91ecea0edee8" },
   { time: "06:08", tag: "tech", tagText: "科技", text: "埃隆·马斯克起诉OpenAI案开庭审理。马斯克在庭审中作证称，OpenAI最初是作为非营利组织创立以对抗谷歌，但后来违背了承诺，转向追求利润。OpenAI律师则辩称，此案源于马斯克未能如愿控制公司。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/openai-trial-elon-musk-sam-altman-live-updates.html" },
   { time: "06:08", tag: "macro", tagText: "宏观", text: "星巴克公布第二财季业绩，全球同店销售额增长6.2%，超出预期，并上调全年业绩展望。公司通过推出新品、加快服务速度和改进忠诚度计划，成功吸引顾客回归。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/starbucks-sbux-q2-2026-earnings.html" },
@@ -1645,15 +1649,15 @@ const breakingNews = [
   { time: "01:47", tag: "ai", tagText: "AI", text: "OpenAI结束与微软的独家云合作，将其生成式AI模型引入亚马逊AWS。此举标志着AI行业云服务格局的重大转变，微软股价承压。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/openai-brings-models-to-aws-after-ending-exclusivity-with-microsoft.html" },
   { time: "00:50", tag: "crypto", tagText: "加密", text: "一位亿万富翁投资者警告称，“丑陋的通胀”将对比特币造成冲击。通胀压力上升可能削弱加密货币作为对冲工具的吸引力，市场情绪趋于谨慎。", source: "TheStreet", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMElrek1GREhpYzlkTlVwYjFIdTU5Y3R5R1hDQmxkNFQyY3VGTHVfUnJuWjZIMVlXNjgyTC1QOHlzeHFBSko1dXkzZ2RvTW9pWGhyMlAyMWVfVks2OURRRjAxV1RfUVFpM0ZRTXJtNTdzeUVNWTBzVjRKdURqcUhyUzE5MGFqSTVRNlhxeEE4UENEb3Y3NEdrOFR2S0dwbU5aWHc?oc=5" },
   { time: "00:46", tag: "macro", tagText: "宏观", text: "摩根大通CEO杰米·戴蒙警告全球债务风险积聚，可能引发“某种债券危机”。他指出当前日益增长的风险组合可能以不可预测的方式叠加，对金融市场构成重大威胁。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/jamie-dimon-bond-crisis-global-debt-risks.html" },
-  { time: "00:21", tag: "geo", tagText: "地缘", text: "布伦特原油价格三周来首次突破每桶110美元。白宫重申与伊朗谈判的“红线”，市场对中东供应中断的担忧加剧，推动油价持续攀升。", source: "Financial Times", url: "https://www.ft.com/content/0244cd6d-b0da-435c-9c84-7ff4f37ec9ec" },
-  { time: "22:36", tag: "geo", tagText: "地缘", text: "阿联酋宣布将于5月1日退出OPEC，能源部长表示仍致力于油价稳定。阿联酋在审查其生产政策和产能后，认为退出符合国家利益。此举可能重塑全球石油市场格局。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/uae-opec-oil-iran.html" },
-  { time: "22:05", tag: "geo", tagText: "地缘", text: "瑞安航空CEO警告，若航空燃油价格因伊朗战争持续高企，欧洲航空公司可能出现“真正的倒闭”。油价飙升已严重冲击航空业成本。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/ryanair-ceo-oil-europe-airlines-fail-jet-fuel.html" },
-  { time: "22:00", tag: "macro", tagText: "宏观", text: "Spotify股价暴跌，尽管一季度盈利超预期，但疲软的业绩指引令投资者失望。市场对增长前景的担忧盖过了财报利好。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/spotify-stock-spot-earnings-beat-guidance.html" },
 ];
-const breakingDate = "2026年4月29日 08:03 CST";
+const breakingDate = "2026年4月29日 11:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "10:10", tag: "ai", tagText: "AI", text: "Forrester预测，物理AI（Physical AI）将成为下一个重大技术突破，推动机器人、自动驾驶等领域进入新阶段。", source: "IT Brief Asia", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZThqTzlyTVlFamYzZi0zUHpRMUFab2ZiSDFmVE5CYTZmdGJqc1oxbmxwR2tMeThxZTcyUXlUS1hZRWttVUpUV2pxSGo3MVRwbzRXMm5SOWRXWjdpXzRCOFFDYTFiMldvS3U1ZGFWcEpVZ044V2RvemxjMlctUDJXalRyajRhbGR3QWc?oc=5" },
+  { time: "09:23", tag: "tech", tagText: "科技", text: "商业内幕分析指出，随着自动驾驶行业裁员潮持续，机器人初创公司正迎来从该领域招募顶尖人才的黄金窗口期。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRWRMVDJVUVZnLUF2YVhNRGRvYlB1N2d3YVpMNWVxOVNSRlBpTXgwQ3FoY3ZUN2dDbGtnYXhReGRJVkxoNU42UzBjSl84S1BuaUJUSWZWWXFfS25MTWc1Slcwc185c0w3bW15R0txa29oYWMzdjRuRFd2N0Y1VnpYVE9FdHBlN3JPVmx4UXZFQXVxeWE4WVJDbVJXTjJlejcxRnZHTnlzMXZQVWhRdmVubQ?oc=5" },
+  { time: "08:00", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，前Twitter CEO的AI初创公司成功融资，估值达到20亿美元。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQbE1FYVZqU0hDTUZyUGcyRWNMd2t2V1E1X1RFWk1PRUlYOUFDUTQyV1lIT3NLMjcweFQ2Si1fclRNQnBQNm1EckN3aEczTDdERFlsdVhTNDllZGIyR2c4bzBrRGtfU3Jld29nZ0pjeU8yRmUteExfSmQ2UTJqbWZIdWc5WkRGZ2h1VFhRbGNqR1VZM1JIeUpONEV6cnlWb0RSaGZZNF9B?oc=5" },
+  { time: "07:53", tag: "ai", tagText: "AI", text: "英伟达高级总监在韩国鼓励学生拥抱AI，不必恐惧失业，强调AI将创造新机遇而非取代人类。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcS1QTnE0OGptN3FKM3hQRFJ0aWo2VEttcTRZYzNQSGxFYzk0cE9KLVJKQ3FvUGdzaUtFYlIwYVVfcE0td1lBOFE2ckxsRFdlWnRyZU5TY25VWko1SXFsY0hBUmlYZUxLcVRMX2tjZWFQeVBQVDUwMWt1VkJaNkZUNEVBQ3BTU0NS?oc=5" },
   { time: "05:04", tag: "tech", tagText: "科技", text: "月下载量达100万次的开源软件包element-data被发现窃取用户凭证，数百万用户可能已遭入侵，需立即检查系统安全。", source: "Biz & IT - Ars Technica", url: "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/" },
   { time: "03:48", tag: "ai", tagText: "AI", text: "在OpenAI与微软解除独家云服务协议后仅一天，亚马逊AWS迅速宣布在其平台上提供OpenAI的全系模型产品，包括一项新的智能体服务。此举标志着AI云服务市场竞争格局的重大转变，AWS与OpenAI的联手将直接挑战微软在AI云领域的领先地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/" },
   { time: "03:30", tag: "ai", tagText: "AI", text: "泰勒·斯威夫特升级法律行动，对抗AI模仿者。她成为最新一位加大力度保护自己免受AI复制品侵害的名人，此举可能为AI时代的名人肖像权保护树立先例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919827/taylor-swift-trademarks-ai-copycats" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "AI法律初创公司Manifest以7.5亿美元估值完成新一轮融资。该公司利用AI技术自动化法律文件审查和合同分析，受到资本追捧。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUUUtaFNSSnNEYXN6TGE3OGZtUDhtQkNjdm1hekZqajhOSTNURXpMWllqQW9iZi1nRmVkODl5dnF5SHFvUHBmazVMcFYtc1Q3Mkt2ekRJbHFuQnBDWlZRbnNCanlST2F1U1l1TlBlSEhLeEJ5bmttbFFBQ2JFVS1fbGRzSVdhNnZvN1k4NldTeVpkTjg0czMzU29VRl9hSG13blRma1FyaGdvaHlRM0xYMVVXbmc?oc=5" },
   { time: "20:46", tag: "tech", tagText: "科技", text: "Fabric.AI（纳斯达克：SBLX）推出突破性MicroLED互连技术，作为构建下一代“AI工厂”基础设施的第一步，并与领先MicroLED开发商Kopin Corporation（纳斯达克：KOPN）达成合作。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMinANBVV95cUxQN3BuQTFaeEJMUzBhaGdxc2xwbUZrZ0dvWjlJMW1zbm9tUHJYTjdGSk9xbnhJRmMxR1QzZnEtSGpZRHIwemtiSURtMDgyZUJDT3Vpb2FVVGdpX3NDSFFkVG1LWGR5MUFleXdfd204bHlZejZQZDBQOEZETVdzVXJBR0hDcjE3UkZtRVNySmdpLUsxWHVsWDVVUVpqQWlVcmdaNmxuVnlhVmpwbkM1VS02R1dXN3JvdGVpT3Fqa2h1dW1uWUZIUUpxSHk0TktaRS04UExFTXRid1hPbk81ZWUwbFlZa1JqdDlSTXBqazRVSFZoTjFOdGFCYkFmelAwMkZUbDBIWFRfdktheGNaSjNxQ1BHX0pxNlo4MGM0eGR3dVhUWXQ4YWJpejh5aTNiNi1pOXdYMkJtV3VrRTMzNDFkb3R5RUc2c1pEN3lablBGV0VxY1Qyd3l0NUlGWHBBaGJ6bkY2ME1ESjJSRjZxMUp6OHZSYXRQZ0pOQ0FRaWY4cUVTNk1lNjVkbjVsUjRCVHl5bTd2V0xvZG4zZTZD0gGiA0FVX3lxTE1xSlNVSE1rTFhiOHZxVEtrVnc0a0JYc2hIU1dJZXFFN3A2c3hUWVhMbTNLeGIxUVZwZlk0MFBidE0tLUhvRTFaTTVWRkNWTzh0VWlCSXdUbGlVSl9kNnNTX0JCSUV3dHZXenRLZWVxc0t0a3RSaFFpTlVnUmJzTEx4azlWQkk0S3ZZVTZZUjVxZDJ1MVEwTERMNXNkMUNDSHhxVVdjUVJrZk0wbzIwbFFWU3BaWktldE5NUFhkZWx5T3ViUHZNV0J1X3pXdnNtSEZmc2tZNmZ4VUR1WU0tdVN0OGFtTmFfT3RyNi1iZXdVU0Z1ZndDV2oteGJxZm9LZkxva3ZuOHdQSUVZRFJfTVRWVXBSUmExb2JLYTRscFVZdmJGR0NGQ0FfV2ZNczdvMno1dzE5bVFfLU5na0xEQk96MEtnWFhteTBiRFBsZTdGSWVORnZCeUlJdGFHR2U3NkJla1RrQ05EbjBxYzFFWWpKMmpRQjBhaGFRZW9mOUtKQTBJZDhkb2ZRSHVGVU8xcTJiSzRzeDBNQmFIelROckdzZVE?oc=5" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "会议记录AI工具Otter推出新功能，允许用户连接Gmail、Google Drive、Notion、Jira和Salesforce账户，跨企业工具进行统一搜索查询。该功能将会议数据与日常工作数据打通，提升企业信息检索效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/otters-new-feature-lets-users-search-across-their-enterprise-tools/" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "脑机接口初创公司Neurable计划将其“读心”非侵入式神经数据采集技术授权给消费级可穿戴设备厂商。该技术可监测大脑活动，有望应用于健康监测和增强现实等领域。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/bci-startup-neurable-looks-to-license-its-mind-reading-tech-for-consumer-wearables/" },
-  { time: "19:37", tag: "ai", tagText: "AI", text: "西班牙AI视频初创公司通过业务转型，在不依赖风投的情况下实现2.3亿美元年经常性收入（ARR）。该公司从其他领域转向视频AI，成功实现盈利增长。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX1ZGWXhGNHJuenI2SHZITHk4clNhZ0paRGkzdkU2R21lSkVsOXNpR0JEeWZCd1ZTcEZDdlVPMzl1OTZRV2VBLUt4bkJRUDZWYXNzUGdMMHE5d1R3R2U0cTdaR3g3Nk56Zzh4aXZld3U4MnJjZEJvNHRqdlN0MUU4WEk2eVZBYmRjVzZvSEo4X0R6bU0wWFBLOGx4Ri1wUGdNTk02QjFQM0kwVDNBNGhPQg?oc=5" },
-  { time: "18:04", tag: "ai", tagText: "AI", text: "谷歌DeepMind负责人哈萨比斯正在韩国寻求AI合作伙伴关系，此举可能涉及芯片供应、AI研发合作等，显示谷歌正加速在亚洲布局AI生态。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE5EYzRTbV9fNHlNdXp1SVo3Mk1KNERLcGUwalFJT3l6R3NfUFhrSXhWeS1wMWUzdmQ4NTJuTk1ybzFzclJOVnBxNktsUHMyLXVWOHFUcUgtSzZyRWdQLWdGQU0ycThGMkR3bDlJTkR4VFVZUWND?oc=5" },
-  { time: "17:22", tag: "ai", tagText: "AI", text: "南亚科技加入英伟达Rubin AI芯片供应链，将供应LPDDR5X内存，但韩国竞争对手（三星、SK海力士）仍占据主导地位。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5jV09BUjVzMXJWU09jcEJXSlVQckJHMnFkZ1FTUFR2d3Z1eWRVSE1IQVFwMEFuUWZSa29pelpEVHRWbkFQZ1d0dnZVdXdaT2lycmIyeml0blNzY1JTNGp5Tm14OFc2MWNxZktIMURuYmZOLWhBS3RvakVB0gGOAUFVX3lxTFB1MjdfWnNCWjM1dDM5Nkx5SkxQdUl3R190anhWUTRKQ3duUWtFYkxwZHR1NW9jUUg1QzlxZWVlVGlsZW9KSHZQX1ZDYUFkOXNvazJ3TmI5bUg5LThpNnlMdG5VdHBFTDkwOXRFcEMyZExJNlU2ekxfVXFnaHJ6Z09oNmh1VGFGcENfNUhhRlE?oc=5" },
 ];
-const aiBreakingDate = "2026年4月29日 08:03 CST";
+const aiBreakingDate = "2026年4月29日 11:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
