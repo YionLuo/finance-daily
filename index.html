@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 63.83,
+  score: 64.03,
   rating: "greed",
-  timestamp: "2026-04-29T11:30:01+00:00",
+  timestamp: "2026-04-29T14:23:29+00:00",
   previousClose: 63.8,
   previous1Week: 68.6,
   previous1Month: 14.47,
   previous1Year: 32.74,
-  date: "2026年4月29日 19:48 CST"
+  date: "2026年4月29日 22:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:54", tag: "macro", tagText: "宏观", text: "有投资者在SPDR黄金ETF（GLD）上进行百万美元级别的看空押注，卖出看涨期权同时买入看跌期权，押注金价在美联储决议前下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/a-million-dollar-gold-bear-emerges-ahead-of-the-fed-decision.html" },
+  { time: "21:50", tag: "macro", tagText: "宏观", text: "美联储即将公布利率决议，市场普遍预期将维持利率在3.5%-3.75%不变。市场关注焦点在于鲍威尔是否会暗示其未来去留，以及其对经济前景的措辞。与此同时，‘七巨头’科技公司财报与美联储决议同日登场，被分析师称为今年对市场最重要的一天。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/fed-meeting-today-live-updates-warsh-powell.html" },
+  { time: "21:13", tag: "tech", tagText: "科技", text: "OpenAI正加速从微软向亚马逊的生态迁移，双方合作关系虽未破裂，但OpenAI已迅速进入亚马逊的云计算和AI服务领域，这一转变从微妙变得激进。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/openai-drift-from-microsoft-to-amazon-turns-aggressive-after-subtlety.html" },
+  { time: "21:07", tag: "macro", tagText: "宏观", text: "摩根大通CEO杰米·戴蒙警告称，由信贷引发的经济衰退将‘比人们想象的更严重’，其影响将不仅限于私人信贷领域。", source: "MarketWatch", url: "https://www.marketwatch.com/story/jpmorgans-jamie-dimon-says-a-credit-led-recession-would-be-worse-than-people-think-5a388e74?mod=mw_rss_topstories" },
   { time: "19:44", tag: "geo", tagText: "地缘", text: "全球基准原油期货突破115美元，因霍尔木兹海峡僵局持续，油轮通行无进展。特朗普发出对伊朗新威胁，报道称美国将延长对伊朗港口的封锁。布伦特原油突破114美元/桶。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-key-global-oil-contract-tops-115-as-strait-of-hormuz-impasse-continues-ce2cdf04?mod=mw_rss_topstories" },
   { time: "19:05", tag: "macro", tagText: "宏观", text: "标普500指数期货小幅走高，市场聚焦“七巨头”科技公司财报及美联储利率决议。周二标普500和纳斯达克从历史高位回落。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/28/stock-market-today-live-updates.html" },
   { time: "19:01", tag: "macro", tagText: "宏观", text: "百胜餐饮集团第一季度盈利超预期，塔可钟同店销售额增长8%，推动公司整体业绩表现强劲。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/29/yum-brands-yum-q1-2026-earnings.html" },
@@ -1645,15 +1649,16 @@ const breakingNews = [
   { time: "06:08", tag: "geo", tagText: "地缘", text: "美国国务院计划将特朗普头像印在护照上，此举是特朗普政府将其形象和签名强加于国家象征的最新努力。", source: "Financial Times", url: "https://www.ft.com/content/33e81626-bee0-4457-8bf0-91ecea0edee8" },
   { time: "06:08", tag: "tech", tagText: "科技", text: "埃隆·马斯克起诉OpenAI案开庭审理。马斯克在庭审中作证称，OpenAI最初是作为非营利组织创立以对抗谷歌，但后来违背了承诺，转向追求利润。OpenAI律师则辩称，此案源于马斯克未能如愿控制公司。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/openai-trial-elon-musk-sam-altman-live-updates.html" },
   { time: "06:08", tag: "macro", tagText: "宏观", text: "星巴克公布第二财季业绩，全球同店销售额增长6.2%，超出预期，并上调全年业绩展望。公司通过推出新品、加快服务速度和改进忠诚度计划，成功吸引顾客回归。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/starbucks-sbux-q2-2026-earnings.html" },
-  { time: "06:01", tag: "tech", tagText: "科技", text: "高盛已禁止其香港员工使用Anthropic的AI模型Claude。此举可能出于数据安全和合规考虑，凸显金融机构在采用生成式AI工具时的审慎态度。", source: "Financial Times", url: "https://www.ft.com/content/aa3a7a19-ab94-4069-aea4-e192ab9abc41" },
-  { time: "05:49", tag: "geo", tagText: "地缘", text: "美国国土安全部自2月以来持续停摆，国会僵局导致TSA和特勤局员工薪资面临风险。政府运作资金问题仍未解决，凸显华盛顿政治功能失调。", source: "CNBC", url: "https://www.cnbc.com/2026/04/28/dhs-tsa-shutdown-congress.html" },
-  { time: "05:40", tag: "geo", tagText: "地缘", text: "英国国王查尔斯三世在美国国会发表演讲，捍卫跨大西洋关系。此次访问正值美英因美国-以色列对伊朗战争而关系紧张之际，演讲旨在缓和盟友间的分歧。", source: "Financial Times", url: "https://www.ft.com/content/1017488d-a933-4798-9b0e-6165c77a6c76" },
-  { time: "04:52", tag: "macro", tagText: "宏观", text: "市场分析指出，标普500指数虽已回升至历史高位，但其等权重指数仍远低于前高，表明市场反弹主要由少数大盘股驱动，广度不足，投资者需警惕潜在风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-stock-markets-comeback-from-the-iran-inspired-selloff-hasnt-been-as-powerful-as-you-might-think-6138bbec?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年4月29日 19:48 CST";
+const breakingDate = "2026年4月29日 22:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
+  { time: "21:57", tag: "ai", tagText: "AI", text: "甲骨文全面押注AI数据中心建设，其战略转型被视为判断AI泡沫是否破裂的关键风向标。这家数据库公司已孤注一掷，全面转向AI基础设施。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920378/oracle-openai-datacenter-buildout" },
+  { time: "21:15", tag: "tech", tagText: "科技", text: "中国对本土AI芯片的强劲需求推动寒武纪、MetaX等公司营收增长。在美国出口管制背景下，中国科技公司加速采购国产AI芯片替代方案。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWXJickFFWlh6bHBreUc3TW41RkpTYlFPX2Y5MDcyTWQwX3ZOSEZUVkNLXzltRWJwUU14blhLMkEwZ1pfZHpNSlZpS25qdWVUbFd0UEpOUE1VbXM4Wk81bzFoNTE0S3NWa005bmNpN1dBeExxak5oUU1sNFlvb2RDazdhdmlnTmhJNU5RbE9ka0YwRVB2QlJDRUV4U3VkbTR4Zms5bVhfU3lQZ3RQ0gGsAUFVX3lxTE8wZlhFeWVGdWRvOWRiWHBQZjRzb2FFRHpmLXdlYnc3alFQd0RnWktXaklBZHJPSWU2eE45akNjVDExbUR1Vk1CTFBrMGMwa2JGbkVnbEJYdnluamlUeU5IVGRsa0JJbEhqcDVDZXROY3N1QnZLdlREWEhHRFY4NEEwcVg5ZTVJdThPMnN1Ym1vMk9sT0dLYTFfdkg4d3EtUllMd1h0dHF3M2NBeG0?oc=5" },
+  { time: "21:10", tag: "tech", tagText: "科技", text: "国防初创公司Firestorm Labs获8200万美元融资，用于将无人机工厂装入集装箱，实现前线就地制造无人机。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/firestorm-labs-raises-82m-to-take-drone-factories-into-the-field/" },
+  { time: "19:10", tag: "tech", tagText: "科技", text: "LG与英伟达正探索在机器人、AI基础设施和移动出行领域建立合作伙伴关系。", source: "Republic World", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFU4T2RQcmJ0MTQwSXVLWjVUYVplc01uY0xFQ3ZxMUEtS1l5NlpNdURJQjBGay1XR3pKOUMtWE1OcXExU050NGE1OXExeXZxckZGeGRBYl9rWWxVQkMzeFR2Njh0YnJzRnRPX1c5a0NHdG5xU01xRnBkaXVzbEtpclhnUFpNU2xuT1V3djROOWtubW5TXzZRQlBlaGY4aFlHaWZmZUpSdUUxRzZLZng5dGt2OHVCbk9XcEM2X1Fn0gHDAUFVX3lxTE5Yazg1UGdudVQ1RnlqV1VhU2NnRE1QTzdYRlh3OEZKVEVMUUZFN2hoMGxMWF84X08xQlVrUFFZME1tU2hneW9HSDkzY2psWFJOM1hZWnJSdkpaSlFQVGZvTGVjMTQ4ZjVVR195c3UwRXp5bkhpUlBoR0ZQSHRkVEZySmlXU2RtTWRRaUlWYXkxbHNQYzE5MlB3VWhKeW5YLUEtOWpOSlpNdGhmMXBla3d1ckR3Mm12LTZ5LXBic0pjWkZZYw?oc=5" },
   { time: "18:39", tag: "tech", tagText: "科技", text: "中国暂停发放新的自动驾驶出租车牌照，此前百度旗下无人驾驶出租车出现混乱。此举可能影响国内自动驾驶行业的发展节奏。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920312/china-suspends-autonomous-vehicle-permits-baidu-chaos" },
   { time: "18:04", tag: "tech", tagText: "科技", text: "GitHub上月紧急修复一个严重远程代码执行漏洞，耗时不到六小时。该漏洞由Wiz Research利用AI模型在Git内部基础设施中发现。", source: "The Verge", url: "https://www.theverge.com/news/920295/github-remote-code-execution-vulnerability-fix" },
   { time: "17:45", tag: "ai", tagText: "AI", text: "Scout AI获1亿美元融资，训练用于军事作战的AI模型。该公司训练AI代理，使单兵能控制多辆自主战车。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/coby-adcocks-scout-ai-raises-100-million-to-train-models-for-war-we-visited-its-bootcamp/" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "02:51", tag: "tech", tagText: "科技", text: "小米AI突破难掩芯片成本飙升之痛。尽管在AI领域取得进展，但持续上涨的芯片成本给公司盈利带来巨大压力。", source: "AD HOC NEWS", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZkluY3RxRW5wY0JQdzJpYWx3V0p5Zi1JdEhlTjh5NXYwUVhNVjE3VFVaR001bk5pMVdjT2d0ZHJCcVYzVG9hbHctTmNrYXMzd3RhSUVKR2h6VVJmaDhldWpTZ3dqWVJOYmFBMnIxaG9MS2lPUUlRdXZ5UFlaN3p1TEx5anU0SnRXS2VGRW9OTkJJdUdIdURYTWdncWc0dVpaaXBleWpzc29KMGE4U3hhc0Jfc19HS0FnOXlaY09DdnhLbnNIUFE?oc=5" },
   { time: "02:17", tag: "ai", tagText: "AI", text: "超过600名谷歌员工联名致信CEO皮查伊，要求公司禁止五角大楼将其AI模型用于机密军事用途。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter" },
   { time: "02:15", tag: "ai", tagText: "AI", text: "在Anthropic拒绝让美国国防部将其AI用于国内大规模监控和自主武器后，谷歌与五角大楼签署新合同，扩大其AI在军事领域的应用。此举再次引发科技界关于AI伦理与军事应用的激烈讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/" },
-  { time: "02:00", tag: "tech", tagText: "科技", text: "数百个大学子域名被劫持用于传播色情内容。安全专家指出，这源于高校对过期子域名和DNS记录的疏于管理，导致大量顶级大学网站被恶意利用。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/" },
-  { time: "23:32", tag: "ai", tagText: "AI", text: "Anthropic为Claude推出创意软件连接器，使其能直接操作Photoshop、Blender、Ableton等主流创意工具，包括Adobe Creative Cloud、Affinity、Autodesk等。此举将AI助手从对话界面扩展到实际创作流程，显著提升其在设计、音乐和3D建模等领域的实用性。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919648/anthropic-claude-creative-connectors-adobe-blender" },
-  { time: "23:32", tag: "ai", tagText: "AI", text: "马斯克与奥特曼就OpenAI未来走向对簿公堂，庭审于今日开始。马斯克在2024年提起诉讼，指控OpenAI背离其非营利初心，此案可能重塑AI行业格局。双方围绕AI早期发展、功劳归属及经济利益展开激烈交锋。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
-  { time: "22:29", tag: "ai", tagText: "AI", text: "Canva就其AI工具“Magic Layers”在设计中自动将“Palestine”一词替换为其他内容一事致歉。该功能旨在将平面图像分解为可编辑组件，但出现不当处理敏感词汇的问题，引发争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
 ];
-const aiBreakingDate = "2026年4月29日 19:48 CST";
+const aiBreakingDate = "2026年4月29日 22:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
