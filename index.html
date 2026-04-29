@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 63.03,
+  score: 62.97,
   rating: "greed",
-  timestamp: "2026-04-29T16:45:06+00:00",
+  timestamp: "2026-04-29T18:15:27+00:00",
   previousClose: 63.8,
   previous1Week: 68.6,
   previous1Month: 14.47,
   previous1Year: 32.74,
-  date: "2026年4月30日 00:49 CST"
+  date: "2026年4月30日 02:21 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:47", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯就伊朗战争的成本与任务目标首次在国会作证。五角大楼官员透露，自冲突爆发以来，美国已花费约250亿美元，主要用于昂贵的导弹和防空拦截器，引发外界对美国应对其他冲突战备能力的担忧。", source: "Financial Times", url: "https://www.ft.com/content/1414942a-b314-443e-8bbc-8c13fa011d8e" },
+  { time: "01:24", tag: "tech", tagText: "科技", text: "交易员为史上最大规模的财报日做准备，预计“七巨头”中的四家——Alphabet、亚马逊、Meta和微软——将在周三盘后公布业绩，相关股票单日波动规模可能高达8000亿美元。市场密切关注这些科技巨头的营收增长及AI投入回报。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/traders-brace-for-800-billion-in-earnings-related-stock-movement.html" },
   { time: "23:49", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什获得参议院银行委员会批准，为最终确认扫清关键障碍。沃什被视为特朗普的忠实盟友，其上任可能改变美联储的利率政策路径，当前主席鲍威尔面临特朗普要求大幅降息的压力。市场关注沃什是否会在货币政策中更重视资产负债表管理。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/trump-fed-nominee-kevin-warsh-senate-approval.html" },
   { time: "23:38", tag: "tech", tagText: "科技", text: "恩智浦半导体（NXP）股价飙升26%，创2010年上市以来最大单日涨幅，因财报业绩超预期。强劲业绩提振了整个半导体板块情绪，美光等芯片股随之走高。分析师指出，AI和数据中心需求持续推动芯片行业复苏。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/nxp-semiconductors-stock-earnings-beat.html" },
   { time: "23:32", tag: "tech", tagText: "科技", text: "比尔·阿克曼旗下Pershing Square的50亿美元IPO即将开始交易，为公众投资者提供直接持有其投资平台股份的机会。该平台持有10只大盘股组成的集中投资组合，被视为伯克希尔·哈撒韦式的投资模式。市场关注其上市后的表现。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/bill-ackmans-5-billion-pershing-square-ipo-to-start-trading-testing-berkshire-style-vision.html" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "13:59", tag: "macro", tagText: "宏观", text: "瑞银集团公布第一季度财报，净利润飙升80%至30亿美元，远超分析师预期。业绩增长主要得益于中东战争引发的市场波动，推动了该行交易业务的强劲表现。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/ubs-swiss-bank-first-quarter-earnings-profit-switzerland-trading.html" },
   { time: "13:00", tag: "geo", tagText: "地缘", text: "受伊朗战争影响，一家大型数据中心公司CEO向CNBC透露，已暂停在中东地区的投资决策。此前该地区因AI基础设施需求而蓬勃发展，如今区域不确定性给行业前景蒙上阴影。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/oaktree-owned-pure-dc-investment-decisions-gulf-data-centers.html" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "新兴市场股票指数创下历史新高，受台积电、三星和SK海力士等亚洲芯片制造商的强劲涨势推动，成功从伊朗战争引发的损失中反弹。AI芯片需求持续旺盛，SK海力士和三星表示客户希望签订长期合同以确保供应。", source: "Financial Times", url: "https://www.ft.com/content/5a003a35-a48b-4e46-a2d3-b99ae41d0e46" },
-  { time: "11:29", tag: "geo", tagText: "地缘", text: "美国财政部警告银行，处理伊朗石油的中国“茶壶”炼油厂面临制裁风险。警告称，中国购买伊朗约90%的石油出口，其中“茶壶”炼油厂占大部分。此举旨在进一步收紧对伊朗的制裁执行。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/us-treasury-warns-sanctions-china-refineries-iran-oil-malaysian-blend.html" },
-  { time: "09:23", tag: "macro", tagText: "宏观", text: "澳大利亚第一季度通胀率低于预期，但价格增速创两年新高。实际通胀数据低于经济学家预期的4.2%，市场对澳联储下一步利率行动的预期出现分歧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/australia-inflation-q1-rba-rate-hike-outlook.html" },
 ];
-const breakingDate = "2026年4月30日 00:49 CST";
+const breakingDate = "2026年4月30日 02:21 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1661,6 +1661,7 @@ const aiBreakingNews = [
   { time: "21:57", tag: "ai", tagText: "AI", text: "甲骨文全面押注AI数据中心建设，其战略转型被视为判断AI泡沫是否破裂的关键风向标。这家数据库公司已孤注一掷，全面转向AI基础设施。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920378/oracle-openai-datacenter-buildout" },
   { time: "21:15", tag: "tech", tagText: "科技", text: "中国对本土AI芯片的强劲需求推动寒武纪、MetaX等公司营收增长。在美国出口管制背景下，中国科技公司加速采购国产AI芯片替代方案。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWXJickFFWlh6bHBreUc3TW41RkpTYlFPX2Y5MDcyTWQwX3ZOSEZUVkNLXzltRWJwUU14blhLMkEwZ1pfZHpNSlZpS25qdWVUbFd0UEpOUE1VbXM4Wk81bzFoNTE0S3NWa005bmNpN1dBeExxak5oUU1sNFlvb2RDazdhdmlnTmhJNU5RbE9ka0YwRVB2QlJDRUV4U3VkbTR4Zms5bVhfU3lQZ3RQ0gGsAUFVX3lxTE8wZlhFeWVGdWRvOWRiWHBQZjRzb2FFRHpmLXdlYnc3alFQd0RnWktXaklBZHJPSWU2eE45akNjVDExbUR1Vk1CTFBrMGMwa2JGbkVnbEJYdnluamlUeU5IVGRsa0JJbEhqcDVDZXROY3N1QnZLdlREWEhHRFY4NEEwcVg5ZTVJdThPMnN1Ym1vMk9sT0dLYTFfdkg4d3EtUllMd1h0dHF3M2NBeG0?oc=5" },
   { time: "21:10", tag: "tech", tagText: "科技", text: "国防初创公司Firestorm Labs获8200万美元融资，用于将无人机工厂装入集装箱，实现前线就地制造无人机。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/firestorm-labs-raises-82m-to-take-drone-factories-into-the-field/" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "诈骗分子利用AI生成的泰勒·斯威夫特、蕾哈娜等名人深度伪造视频，在TikTok上推广可疑服务。认证公司Copyleaks发现，这些广告通常展示名人形象以诱导用户。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920351/ai-celebrity-deepfake-ads-tiktok-copyleaks" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌照片推出AI虚拟试衣功能，利用用户相册中的衣物照片创建虚拟衣柜，让用户无需出门即可试穿自己已有的衣服。同时，谷歌还复刻了《独领风骚》中Cher的经典AI衣橱。", source: "The Verge", url: "https://www.theverge.com/tech/920420/google-photos-ai-try-on-wardrobe" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌TV新增多项Gemini AI功能，包括通过Nano Banana和Veo工具对照片和视频进行AI编辑与转换。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/more-gemini-features-are-coming-to-google-tv/" },
   { time: "19:10", tag: "tech", tagText: "科技", text: "LG与英伟达正探索在机器人、AI基础设施和移动出行领域建立合作伙伴关系。", source: "Republic World", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFU4T2RQcmJ0MTQwSXVLWjVUYVplc01uY0xFQ3ZxMUEtS1l5NlpNdURJQjBGay1XR3pKOUMtWE1OcXExU050NGE1OXExeXZxckZGeGRBYl9rWWxVQkMzeFR2Njh0YnJzRnRPX1c5a0NHdG5xU01xRnBkaXVzbEtpclhnUFpNU2xuT1V3djROOWtubW5TXzZRQlBlaGY4aFlHaWZmZUpSdUUxRzZLZng5dGt2OHVCbk9XcEM2X1Fn0gHDAUFVX3lxTE5Yazg1UGdudVQ1RnlqV1VhU2NnRE1QTzdYRlh3OEZKVEVMUUZFN2hoMGxMWF84X08xQlVrUFFZME1tU2hneW9HSDkzY2psWFJOM1hZWnJSdkpaSlFQVGZvTGVjMTQ4ZjVVR195c3UwRXp5bkhpUlBoR0ZQSHRkVEZySmlXU2RtTWRRaUlWYXkxbHNQYzE5MlB3VWhKeW5YLUEtOWpOSlpNdGhmMXBla3d1ckR3Mm12LTZ5LXBic0pjWkZZYw?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "09:23", tag: "tech", tagText: "科技", text: "商业内幕分析指出，随着自动驾驶行业裁员潮持续，机器人初创公司正迎来从该领域招募顶尖人才的黄金窗口期。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRWRMVDJVUVZnLUF2YVhNRGRvYlB1N2d3YVpMNWVxOVNSRlBpTXgwQ3FoY3ZUN2dDbGtnYXhReGRJVkxoNU42UzBjSl84S1BuaUJUSWZWWXFfS25MTWc1Slcwc185c0w3bW15R0txa29oYWMzdjRuRFd2N0Y1VnpYVE9FdHBlN3JPVmx4UXZFQXVxeWE4WVJDbVJXTjJlejcxRnZHTnlzMXZQVWhRdmVubQ?oc=5" },
   { time: "08:00", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，前Twitter CEO的AI初创公司成功融资，估值达到20亿美元。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQbE1FYVZqU0hDTUZyUGcyRWNMd2t2V1E1X1RFWk1PRUlYOUFDUTQyV1lIT3NLMjcweFQ2Si1fclRNQnBQNm1EckN3aEczTDdERFlsdVhTNDllZGIyR2c4bzBrRGtfU3Jld29nZ0pjeU8yRmUteExfSmQ2UTJqbWZIdWc5WkRGZ2h1VFhRbGNqR1VZM1JIeUpONEV6cnlWb0RSaGZZNF9B?oc=5" },
   { time: "07:53", tag: "ai", tagText: "AI", text: "英伟达高级总监在韩国鼓励学生拥抱AI，不必恐惧失业，强调AI将创造新机遇而非取代人类。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcS1QTnE0OGptN3FKM3hQRFJ0aWo2VEttcTRZYzNQSGxFYzk0cE9KLVJKQ3FvUGdzaUtFYlIwYVVfcE0td1lBOFE2ckxsRFdlWnRyZU5TY25VWko1SXFsY0hBUmlYZUxLcVRMX2tjZWFQeVBQVDUwMWt1VkJaNkZUNEVBQ3BTU0NS?oc=5" },
-  { time: "05:04", tag: "tech", tagText: "科技", text: "月下载量达100万次的开源软件包element-data被发现窃取用户凭证，数百万用户可能已遭入侵，需立即检查系统安全。", source: "Biz & IT - Ars Technica", url: "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/" },
 ];
-const aiBreakingDate = "2026年4月30日 00:49 CST";
+const aiBreakingDate = "2026年4月30日 02:21 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
