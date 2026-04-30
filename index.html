@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 65.54,
+  score: 65.63,
   rating: "greed",
-  timestamp: "2026-04-30T16:39:07+00:00",
+  timestamp: "2026-04-30T18:06:52+00:00",
   previousClose: 63.66,
   previous1Week: 66.74,
   previous1Month: 13.69,
   previous1Year: 32.37,
-  date: "2026年5月1日 00:43 CST"
+  date: "2026年5月1日 02:19 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:18", tag: "macro", tagText: "宏观", text: "美国众议院通过国土安全部拨款法案，为包括TSA在内的多数机构提供资金，结束了该部门即将关门的危机。该法案此前已在参议院获得通过。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/congress-dhs-tsa-funding.html" },
+  { time: "02:18", tag: "tech", tagText: "科技", text: "苹果股价近六个月停滞不前，交易员预计周四盘后财报将引发剧烈波动。隐含波动率显示股价可能波动3.5%，远高于过去四次财报后1.8%的平均波幅。市场关注苹果AI进展及iPhone需求。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/apples-stock-has-gone-nowhere-for-6-months-traders-expect-a-wild-ride-thursday-night.html" },
+  { time: "02:18", tag: "ai", tagText: "AI", text: "OpenAI庭审最新进展：马斯克在法庭上称特斯拉、SpaceX和X平台“对社会有益”。马斯克于2024年起诉OpenAI及其CEO阿尔特曼，指控其违背了最初的非营利承诺。案件持续引发对AI治理和商业化的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/openai-trial-elon-musk-sam-altman-live-updates.html" },
   { time: "00:38", tag: "macro", tagText: "宏观", text: "美股收盘涨跌互现：道指飙升逾700点，卡特彼勒因AI电力需求业绩超预期领涨；但纳指承压，Meta暴跌9%，微软因AI支出担忧下跌，而Alphabet因云业务强劲增长7%。市场消化科技巨头财报及GDP数据，显示美国经济持续增长但通胀高企。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/stock-market-today-live-updates.html" },
   { time: "00:38", tag: "ai", tagText: "AI", text: "谷歌云增速超越微软和亚马逊，三大科技巨头云业务均超预期，AI需求加速。但市场对AI巨额资本支出的态度分化：Alphabet获投资者认可，Meta因支出增速超营收遭抛售，微软因支出担忧股价下跌。英伟达股价重挫，因投资者担忧来自谷歌和亚马逊的自研芯片竞争加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/google-microsoft-and-amazon-all-report-cloud-beats-in-earnings.html" },
   { time: "00:38", tag: "crypto", tagText: "加密", text: "私募信贷公司Blue Owl Capital股价飙升，因其披露对SpaceX的投资获得10倍回报。SpaceX计划于今年晚些时候进行创纪录的IPO。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/blue-owl-shares-private-credit-spacex-gains.html" },
@@ -1646,17 +1649,18 @@ const breakingNews = [
   { time: "16:34", tag: "geo", tagText: "地缘", text: "特朗普宣布美国正在考虑减少驻德美军人数，此举加剧了与柏林方面的紧张关系。此前德国总理默茨批评了美国在伊朗问题上的战略。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/us-reviews-cutting-troop-numbers-in-germany-amid-trumps-berlin-feud-.html" },
   { time: "14:13", tag: "geo", tagText: "地缘", text: "布伦特原油突破126美元，创四年新高。美国军方据悉将向特朗普简报对伊朗的军事行动，霍尔木兹海峡封锁持续，市场担忧长期供应中断。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/oil-prices-today-brent-wti-us-iran-war-trump.html" },
   { time: "12:57", tag: "geo", tagText: "地缘", text: "渣打银行因伊朗战争计提1.9亿美元风险拨备，但该行仍录得创纪录的季度利润。亚洲业务强劲表现抵消了中东风险敞口带来的冲击。", source: "Financial Times", url: "https://www.ft.com/content/2b20456a-b392-45f1-bf9e-e4a7efeda264" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "阿联酋退出欧佩克，与沙特阿拉伯的裂痕再次公开化。此前两国在伊朗战争期间曾展现团结，但海湾地区最关键的竞争关系现已重新浮出水面。", source: "Financial Times", url: "https://www.ft.com/content/27d986e5-a1d9-4467-8b1e-d96cec4cfb71" },
-  { time: "11:26", tag: "macro", tagText: "宏观", text: "美国众议院批准额外700亿美元用于移民执法，该法案未获得任何民主党议员支持。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/us-house-approves-70-billion-more-for-immigration-enforcement.html" },
-  { time: "10:43", tag: "macro", tagText: "宏观", text: "中国4月官方制造业PMI录得50.3，高于预期的50.1，但增速放缓且新订单指数走软，显示经济复苏基础仍需巩固。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/china-pmi-april-xi-trump-iran-war.html" },
 ];
-const breakingDate = "2026年5月1日 00:43 CST";
+const breakingDate = "2026年5月1日 02:19 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
+  { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
+  { time: "00:48", tag: "tech", tagText: "科技", text: "Meta通过去年以20亿美元收购的AI公司Manus，投放“快速轻松赚钱”广告，教用户利用AI为本地企业建站获利。此举引发争议，批评者认为Meta在推广低质量AI生成内容，可能加剧网络垃圾信息泛滥。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/915970/meta-manus-ai-ads-website-slop" },
   { time: "00:39", tag: "ai", tagText: "AI", text: "Salesforce正通过客户众包方式制定AI产品路线图。该公司认为，如果一家企业客户遇到某个问题，其他客户很可能也面临同样挑战，因此让客户主导产品方向，以更精准地满足市场需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/salesforce-is-crowdsourcing-its-ai-roadmap-with-customers/" },
   { time: "00:00", tag: "tech", tagText: "科技", text: "谷歌宣布将Gemini AI助手集成到搭载Google内置系统的汽车中，作为现有Google Assistant的升级版。该更新将提升车载语音助手的智能化水平，为用户提供更自然的交互体验。", source: "The Verge", url: "https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade" },
   { time: "23:14", tag: "tech", tagText: "科技", text: "X（原Twitter）宣布推出由AI驱动的全新广告平台，旨在通过智能化手段提升广告投放效果，推动平台收入增长。这是X在广告业务上的重要战略升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/x-announces-a-rebuilt-ad-platform-powered-by-ai/" },
+  { time: "21:42", tag: "ai", tagText: "AI", text: "OpenAI公开回应其编程模型被指示“永远不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子等”的报道，承认存在内容过滤机制。此举引发关于AI模型安全限制与透明度平衡的讨论，显示AI公司在内容治理上的两难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins" },
   { time: "19:38", tag: "ai", tagText: "AI", text: "Meta一季度财报显示用户流失2000万，但计划继续投入数十亿美元加码AI投资。尽管用户开始放弃其平台，Meta仍坚持AI战略，引发市场对其投入产出比的关注。", source: "The Verge", url: "https://www.theverge.com/tech/921089/meta-earnings-q1-2026-user-decline-ai-investments" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
   { time: "19:08", tag: "tech", tagText: "科技", text: "Spotify推出“Verified by Spotify”认证徽章，旨在打击平台上的虚假账户、垃圾信息和AI生成内容。获得认证的艺术家将在个人主页显示绿色对勾标志，表明其身份已由平台核实为真人艺术家。", source: "The Verge", url: "https://www.theverge.com/tech/921048/verified-by-spotify-badge" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "07:55", tag: "ai", tagText: "AI", text: "微软CEO萨提亚·纳德拉表示，将充分利用与OpenAI的新协议，向云客户提供OpenAI技术且无需支付额外费用。他直言“我们完全计划利用这一点”。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/satya-nadella-says-hes-ready-to-exploit-the-new-openai-deal/" },
   { time: "07:02", tag: "ai", tagText: "AI", text: "微软宣布其AI助手Copilot付费用户已超2000万，且用户活跃度持续增长，反驳了外界对Copilot使用率低的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/" },
   { time: "06:33", tag: "ai", tagText: "AI", text: "AI需求激增，但台积电正控制供应。分析指出，台积电在全球AI芯片制造中占据主导地位，其产能分配直接影响AI行业发展速度。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbXl1ak5ZbC1GM1dLb2t0STVEVklSUEVpMTRpZC16b1FtaDZlSHF2TGk0VTFqQ0xucC1QcmE5Z0lXc3g2LVpOMFJLdjVQLTMwMFk0NVBtMzZiRVBURWkzcmczeGdYQ2NGSjZfQTRKV3JQR2RXVlZEcXo3OUdSYjFEM2xMYXN4VTM5OHdSWEhhdFZ3QlVaYnBoOUZHeEZPOGZud3pPUGtYV0JUU2xZaExGbmx4cUcxYmtVOVE?oc=5" },
-  { time: "06:20", tag: "ai", tagText: "AI", text: "谷歌云季度营收首次突破200亿美元，AI需求激增是主要驱动力。但公司表示受限于基础设施容量，否则增速会更快。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/google-cloud-surpasses-20b-but-says-growth-was-capacity-constrained/" },
-  { time: "05:39", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic正在考虑新一轮融资，估值超过9000亿美元。这反映出市场对顶级AI模型公司的高度追捧。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM01iLS15LWpXdy0yM2lNQ0xndWNVWDNfWWNfSUZubUJnOVAyTUJBVmFLbC1IU3JGM0tObWd2Nzc1ZDYxekJka1VFQ2tScWtzR3RIRTRnRGdWQ3RYNzFfTmtNQ051WTYyektvQmEzb1FqdS1Qb1FNbnRwcU8wYndTSDg1MVlCZGQtV3JJRFZYRmZHb1plb3IzNDFSMU4tV2pwSUFoZTh2OV9hcHNlSW5iWE5Law?oc=5" },
-  { time: "04:59", tag: "ai", tagText: "AI", text: "谷歌Q1付费订阅用户新增2500万，总数达3.5亿，YouTube和Google One为主要增长引擎。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/google-gains-25m-subscriptions-in-q1-driven-by-youtube-and-google-one/" },
-  { time: "04:28", tag: "ai", tagText: "AI", text: "谷歌CEO皮查伊在Alphabet财报中宣布，2026年第一季度谷歌搜索查询量创下“历史新高”，AI投资持续推动搜索业务增长。", source: "The Verge", url: "https://www.theverge.com/tech/920815/google-alphabet-q1-2026-earnings-sundar-pichai" },
 ];
-const aiBreakingDate = "2026年5月1日 00:43 CST";
+const aiBreakingDate = "2026年5月1日 02:19 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
