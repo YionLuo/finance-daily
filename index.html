@@ -1618,17 +1618,18 @@
 const fearGreedData = {
   score: 66.6,
   rating: "greed",
-  timestamp: "2026-04-30T21:49:32+00:00",
+  timestamp: "2026-04-30T22:49:54+00:00",
   previousClose: 63.66,
   previous1Week: 66.74,
   previous1Month: 13.69,
   previous1Year: 32.37,
-  date: "2026年5月1日 06:05 CST"
+  date: "2026年5月1日 07:07 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:02", tag: "tech", tagText: "科技", text: "英特尔股价4月累计上涨逾一倍，创下其上市55年来的最佳单月表现。公司此前公布的财报远超预期，市场对其在AI芯片领域的复苏前景感到乐观。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/intel-has-best-month-ever-after-years-of-losing-to-tsmc-and-nvidia.html" },
   { time: "06:01", tag: "tech", tagText: "科技", text: "苹果公布第二财季财报，营收增长17%超预期，iPhone和Mac需求强劲。即将接任CEO的John Ternus表示将继续保持“审慎与纪律”。尽管iPhone销量略逊预期，但公司称这是“史上最受欢迎”的iPhone系列，营收指引高于市场预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/apple-aapl-q2-2026-earnings-report.html" },
   { time: "05:56", tag: "macro", tagText: "宏观", text: "黄金期货价格周四录得史上最大两个月跌幅。分析人士指出，尽管短期承压，但地缘政治风险和央行购金需求可能推动金价在未来五年内翻倍。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gold-posts-its-biggest-2-month-drop-ever-how-its-price-could-still-double-over-the-next-5-years-f9004621" },
   { time: "05:27", tag: "geo", tagText: "地缘", text: "美国国会赶在截止日前通过短期延期法案，延长了备受争议的《外国情报监视法》第702条。该条款允许美国政府在无需搜查令的情况下收集外国通信情报，此前因隐私问题引发激烈辩论。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/fisa-section-702-congress-extension.html" },
@@ -1648,12 +1649,12 @@ const breakingNews = [
   { time: "19:21", tag: "ai", tagText: "AI", text: "摩根大通下调Meta评级，称其巨额AI支出面临“艰难变现路径”，竞争加剧。与此同时，谷歌在AI云业务增长上超越亚马逊和微软，三大巨头AI资本支出计划合计升至7250亿美元。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/meta-platforms-gets-a-downgrade-from-jpmorgan-on-massive-ai-spending-forecast.html" },
   { time: "19:02", tag: "tech", tagText: "科技", text: "高盛交易员称，散户投资者正从“逢低买入”转向“追逐狂热”，在芯片股中下注高风险头寸，一旦市场转向可能难以脱身。", source: "MarketWatch", url: "https://www.marketwatch.com/story/forget-buy-the-dip-now-retail-investors-are-trading-the-mania-in-chip-stocks-and-its-about-to-get-messy-08ef5540" },
   { time: "18:10", tag: "macro", tagText: "科技", text: "英国央行维持利率在3.75%不变，以8比1的投票结果决定按兵不动，称已准备好应对中东能源冲击带来的通胀威胁。", source: "Financial Times", url: "https://www.ft.com/content/281962eb-d32d-4733-ad25-c4c026bcbf6e" },
-  { time: "17:13", tag: "macro", tagText: "宏观", text: "欧元区4月通胀率跃升至3%，受中东能源冲击影响；一季度GDP仅增长0.1%，低于预期，经济几近停滞。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/euro-zone-economy-inflation-growth.html" },
 ];
-const breakingDate = "2026年5月1日 06:05 CST";
+const breakingDate = "2026年5月1日 07:07 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:12", tag: "tech", tagText: "科技", text: "苹果称AI驱动Mac需求超预期，Mac mini、Mac Studio和Mac Neo下季度仍将供应受限。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/apple-was-surprised-by-ai-driven-demand-for-macs/" },
   { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
   { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
   { time: "04:06", tag: "macro", tagText: "宏观", text: "英特尔股价4月涨幅超一倍，创下其纳斯达克上市55年来最佳单月表现。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRnZ6WFZGdk01Q1dGUzNvRHVrMnpETFI1cHJJSmp2M0E5OTdHa0s4OHFLVjJkNW1CVFhFZHp2Wm9TeFJtU0VLUWUxNkZfcGZhTWNaeE9OcDhKbTBQemc0M3hNVlpCb19YZ2ZzNmVsak9xNkxzdWVxLTU3TzU0RjNTamdXYTNRaHJjMXltNEFtRzBpN3J0SjIxVzBTNzdKeW1pT0RCYkV30gGrAUFVX3lxTE5GX2pjY3hwQTFpaG1XRGh4aEE1TTdvS2NHNzQwX0RmSzNCRWdkSThrcFlHTjVvX2Y0RkxCX2RnQWplUVNBT3JrRHluUFl5czc3ay1tNDZueXhObGNWMHZIS1MxOWIwNlVvVDkybU9Rb01lSHJ1OXJuN0NCbm16ZVc1akNsekxpNmoxYkNiWE8ycUdlZVE2NHo1T1FsUDdOOE83STgybVE3WjhWdw?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "18:00", tag: "tech", tagText: "科技", text: "谷歌在AI领域取得突破，新方法使聊天机器人在对话过程中内存使用量降低六倍，且不牺牲性能。这一进展有望大幅降低AI推理成本，加速大规模部署。", source: "Live Science", url: "https://news.google.com/rss/articles/CBMijAJBVV95cUxOV1p1WDFpT09rOTNwWUtyUWhuNmF6UXFjNWhSZjRGeUw3NXk1cGZxaXlURFM1ckRjWklnUXlnTkVnaHQ0RUlZNGdrcEs0MG5DS3RwYjlZRDUtUnlsNkxibmtsa1dIZUxaUXBYMlp3TGM5ZV9OTy05TEJ5X04tWl95VWwwUjBoNkQ2WHhZTVFJYWFNMXd1bTFfSjk4amNiNzl5N0tpQXRtQmt3N3M3Y21BRlBWUkNsRTRzaEFQdjBoNzh0bFVYeEFneFhuZGMyVnZyTURERmphdlNiWGtSM2JiTjNHbU9EX1A0am1qdzRkNS1FZ3FYMGlLYTFwV0gxTWtoZEtibGtZZFNiM3Ax?oc=5" },
   { time: "15:53", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora完成4200万欧元D轮扩展融资，累计融资额突破5亿欧元。法律垂直领域的AI应用持续获得资本青睐，显示AI在专业服务领域的商业化前景。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPLW5XXzFvT2ozYi1GM3A3NzBmcWFycktVZlRCeXpzcDV1clh4Zy1HeXU5b25jN2xKVWl3ODNhVWYwNW15eE1mLXY1OUU2S3lVM2tJcHFqOVY4NDlieHJPejE0YU50cDhUQzJlcXlLc0NXYkdjYjlUTGxCWHFBVW8tYV81VmQ3aE5oZ1hxaDliQmhYYkVKdmtnb1VOWkl3M3RvbTFNUTlOcmQtM1VKbFNGUUdEY1dyZGVMVnBlei1ZSnhLTjQ2OGlHS0RUMkZuTFg0Z0I5NUE3QU5GdWdTa3c?oc=5" },
   { time: "15:00", tag: "macro", tagText: "宏观", text: "全球AI芯片短缺和需求激增正对全球经济产生实质性影响。分析指出，AI芯片供应紧张已从科技行业蔓延至制造业、汽车等多个领域，成为制约经济增长的新瓶颈。", source: "Hungarian Conservative", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxONjNjR3Bwdnc3RHJuWlk5SGs3X19qSVpHeDFSUXNReURGa2hvclBoeE1wODZ6dWNnNFJsR3ZRQTVEOXBvaVJDVXFZWmcyNV92ZWxYdWdwTUU5TURPQmRObndiWXhlOG5VSjR3OVY3WTR5UXBxSUNXUUdmM3ZyS1RhVGJsRW5CWVk1V0dIdFBQZjRVck00alFURmlMY3lpcU0?oc=5" },
-  { time: "13:00", tag: "ai", tagText: "AI", text: "英伟达投资AI法律初创公司，该公司因投放朱迪·劳广告而备受关注。此举显示英伟达正将投资触角延伸至AI垂直应用领域。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE9IY21ZYkpfWHFzZFdjaDJNYUg2T2k3NWFwOWNFTVRPTHI5dE9KX1FlZGc5czBYSFZIOUdlYTRCTEx4aGRJaC1IQnpkSDE5RkxlMjQzdXo3NjNpOXNONmcxSmt3TmRfR0g5a1hNTk1tRml6U0MtZzZJS2pn0gF_QVVfeXFMUG1JLTRyMFZCS1ZFcGtMc2JBQmV3a2JCdm1rdUU1SlVDdkt3b0oyVXNZSU9uUVF3WC1ydUxCWGZjMnlRcDU1YUFnU0hSSkdUMFVsRWZzZTJxTkg0YkJ0MFB2b2t4VTFoN2JYV3RZZGg3WjhJeW84SXotWlFCYXhUaw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月1日 06:05 CST";
+const aiBreakingDate = "2026年5月1日 07:07 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
