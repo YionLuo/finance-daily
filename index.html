@@ -1616,19 +1616,20 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 65.63,
+  score: 66.71,
   rating: "greed",
-  timestamp: "2026-04-30T18:06:52+00:00",
+  timestamp: "2026-04-30T20:04:41+00:00",
   previousClose: 63.66,
   previous1Week: 66.74,
   previous1Month: 13.69,
   previous1Year: 32.37,
-  date: "2026年5月1日 02:19 CST"
+  date: "2026年5月1日 04:16 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:25", tag: "macro", tagText: "宏观", text: "美联储主席鲍威尔誓言不会成为“影子主席”，但与前主席沃什（现任财政部长）在FOMC会议上的潜在冲突难以避免。这将是近80年来首次出现现任与前任美联储主席同场议事的情况。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/inside-the-fed-powell-and-warsh-set-to-clash.html" },
   { time: "02:18", tag: "macro", tagText: "宏观", text: "美国众议院通过国土安全部拨款法案，为包括TSA在内的多数机构提供资金，结束了该部门即将关门的危机。该法案此前已在参议院获得通过。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/congress-dhs-tsa-funding.html" },
   { time: "02:18", tag: "tech", tagText: "科技", text: "苹果股价近六个月停滞不前，交易员预计周四盘后财报将引发剧烈波动。隐含波动率显示股价可能波动3.5%，远高于过去四次财报后1.8%的平均波幅。市场关注苹果AI进展及iPhone需求。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/apples-stock-has-gone-nowhere-for-6-months-traders-expect-a-wild-ride-thursday-night.html" },
   { time: "02:18", tag: "ai", tagText: "AI", text: "OpenAI庭审最新进展：马斯克在法庭上称特斯拉、SpaceX和X平台“对社会有益”。马斯克于2024年起诉OpenAI及其CEO阿尔特曼，指控其违背了最初的非营利承诺。案件持续引发对AI治理和商业化的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/openai-trial-elon-musk-sam-altman-live-updates.html" },
@@ -1648,12 +1649,12 @@ const breakingNews = [
   { time: "17:00", tag: "crypto", tagText: "加密", text: "民主党参议员梅克利致信CFTC，要求对Kalshi和Polymarket等预测市场平台实施更严格的监管，涉及体育博彩和内幕交易问题。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/congress-kalshi-polymarket-prediction-markets-cftc.html" },
   { time: "16:34", tag: "geo", tagText: "地缘", text: "特朗普宣布美国正在考虑减少驻德美军人数，此举加剧了与柏林方面的紧张关系。此前德国总理默茨批评了美国在伊朗问题上的战略。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/us-reviews-cutting-troop-numbers-in-germany-amid-trumps-berlin-feud-.html" },
   { time: "14:13", tag: "geo", tagText: "地缘", text: "布伦特原油突破126美元，创四年新高。美国军方据悉将向特朗普简报对伊朗的军事行动，霍尔木兹海峡封锁持续，市场担忧长期供应中断。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/oil-prices-today-brent-wti-us-iran-war-trump.html" },
-  { time: "12:57", tag: "geo", tagText: "地缘", text: "渣打银行因伊朗战争计提1.9亿美元风险拨备，但该行仍录得创纪录的季度利润。亚洲业务强劲表现抵消了中东风险敞口带来的冲击。", source: "Financial Times", url: "https://www.ft.com/content/2b20456a-b392-45f1-bf9e-e4a7efeda264" },
 ];
-const breakingDate = "2026年5月1日 02:19 CST";
+const breakingDate = "2026年5月1日 04:16 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
   { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
   { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
   { time: "00:48", tag: "tech", tagText: "科技", text: "Meta通过去年以20亿美元收购的AI公司Manus，投放“快速轻松赚钱”广告，教用户利用AI为本地企业建站获利。此举引发争议，批评者认为Meta在推广低质量AI生成内容，可能加剧网络垃圾信息泛滥。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/915970/meta-manus-ai-ads-website-slop" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "08:14", tag: "ai", tagText: "AI", text: "亚马逊AWS云业务营收超预期，但资本支出同步激增。CEO表示短期内将继续加大投入，以满足AI基础设施需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/amazons-cloud-business-is-surging-and-so-is-its-capital-spending/" },
   { time: "07:55", tag: "ai", tagText: "AI", text: "微软CEO萨提亚·纳德拉表示，将充分利用与OpenAI的新协议，向云客户提供OpenAI技术且无需支付额外费用。他直言“我们完全计划利用这一点”。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/satya-nadella-says-hes-ready-to-exploit-the-new-openai-deal/" },
   { time: "07:02", tag: "ai", tagText: "AI", text: "微软宣布其AI助手Copilot付费用户已超2000万，且用户活跃度持续增长，反驳了外界对Copilot使用率低的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/" },
-  { time: "06:33", tag: "ai", tagText: "AI", text: "AI需求激增，但台积电正控制供应。分析指出，台积电在全球AI芯片制造中占据主导地位，其产能分配直接影响AI行业发展速度。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbXl1ak5ZbC1GM1dLb2t0STVEVklSUEVpMTRpZC16b1FtaDZlSHF2TGk0VTFqQ0xucC1QcmE5Z0lXc3g2LVpOMFJLdjVQLTMwMFk0NVBtMzZiRVBURWkzcmczeGdYQ2NGSjZfQTRKV3JQR2RXVlZEcXo3OUdSYjFEM2xMYXN4VTM5OHdSWEhhdFZ3QlVaYnBoOUZHeEZPOGZud3pPUGtYV0JUU2xZaExGbmx4cUcxYmtVOVE?oc=5" },
 ];
-const aiBreakingDate = "2026年5月1日 02:19 CST";
+const aiBreakingDate = "2026年5月1日 04:16 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
