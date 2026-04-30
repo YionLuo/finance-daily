@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 63.66,
   rating: "greed",
-  timestamp: "2026-04-29T23:46:04+00:00",
+  timestamp: "2026-04-29T23:59:42+00:00",
   previousClose: 63.8,
   previous1Week: 68.6,
   previous1Month: 14.47,
   previous1Year: 32.74,
-  date: "2026年4月30日 08:03 CST"
+  date: "2026年4月30日 12:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "11:26", tag: "macro", tagText: "宏观", text: "美国众议院批准额外700亿美元用于移民执法，该法案未获得任何民主党议员支持。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/us-house-approves-70-billion-more-for-immigration-enforcement.html" },
+  { time: "10:43", tag: "macro", tagText: "宏观", text: "中国4月官方制造业PMI录得50.3，高于预期的50.1，但增速放缓且新订单指数走软，显示经济复苏基础仍需巩固。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/china-pmi-april-xi-trump-iran-war.html" },
+  { time: "09:37", tag: "tech", tagText: "科技", text: "Meta一季度营收超预期，但用户数因伊朗网络中断而令人失望，资本支出低于预期，股价盘后下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/meta-q1-earnings-report-2026.html" },
   { time: "07:03", tag: "macro", tagText: "宏观", text: "美联储主席鲍威尔表示，在5月中旬主席任期结束后，他将继续担任美联储理事一段时间，以抵制特朗普总统试图迫使他完全离开美联储的压力。他警告称，攻击美联储独立性将破坏其有效运作。", source: "MarketWatch", url: "https://www.marketwatch.com/story/powell-says-hell-stay-at-fed-as-governor-after-his-term-as-chair-ends-in-mid-may-c906c044?mod=mw_rss_topstories" },
   { time: "06:44", tag: "tech", tagText: "科技", text: "SanDisk股价一年内飙升超过3000%，突破1000美元大关，成为标普500指数今年表现最佳的股票。市场猜测管理层可能宣布进行10比1的股票拆分。", source: "MarketWatch", url: "https://www.marketwatch.com/story/sandisk-shares-have-soared-over-3-000-in-a-year-is-a-stock-split-next-4607dc97?mod=mw_rss_topstories" },
   { time: "06:28", tag: "tech", tagText: "科技", text: "软银计划将其新成立的人工智能与机器人公司Roze在美国上市，最早可能在今年进行IPO。孙正义正加速布局AI领域。", source: "Financial Times", url: "https://www.ft.com/content/55c7d99c-7e68-453c-b784-33d6b9838e16" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "23:22", tag: "tech", tagText: "科技", text: "康宁（Corning）与Meta（META）共同投资60亿美元扩建光缆设施，以支持AI数据中心的高速网络需求。该项目将大幅提升光缆产能，满足AI训练和推理对带宽的爆炸性需求。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/corning-glw-meta-meta-break-162304748.html" },
   { time: "23:22", tag: "tech", tagText: "科技", text: "安森美半导体（ON）与蔚来（NIO）扩大合作，共同开发下一代900V电动汽车平台。该合作聚焦于高压功率半导体技术，旨在提升电动汽车的充电速度和续航里程，进一步巩固双方在新能源汽车产业链中的地位。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/semiconductor-nio-expand-partnership-next-162245165.html" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "亚马逊、Meta和Alphabet将在盘后公布第一季度财报。市场预期亚马逊云业务收入增长26%，Meta有望创下2021年以来最快营收增速，Alphabet预计实现2022年以来最强季度增长。投资者将密切关注AI支出规模及伊朗战争对广告业务的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/amazon-amzn-q1-earnings-report-2026.html" },
-  { time: "21:54", tag: "macro", tagText: "宏观", text: "有投资者在SPDR黄金ETF（GLD）上进行百万美元级别的看空押注，卖出看涨期权同时买入看跌期权，押注金价在美联储决议前下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/a-million-dollar-gold-bear-emerges-ahead-of-the-fed-decision.html" },
-  { time: "21:50", tag: "macro", tagText: "宏观", text: "美联储即将公布利率决议，市场普遍预期将维持利率在3.5%-3.75%不变。市场关注焦点在于鲍威尔是否会暗示其未来去留，以及其对经济前景的措辞。与此同时，‘七巨头’科技公司财报与美联储决议同日登场，被分析师称为今年对市场最重要的一天。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/fed-meeting-today-live-updates-warsh-powell.html" },
-  { time: "21:13", tag: "tech", tagText: "科技", text: "OpenAI正加速从微软向亚马逊的生态迁移，双方合作关系虽未破裂，但OpenAI已迅速进入亚马逊的云计算和AI服务领域，这一转变从微妙变得激进。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/openai-drift-from-microsoft-to-amazon-turns-aggressive-after-subtlety.html" },
 ];
-const breakingDate = "2026年4月30日 08:03 CST";
+const breakingDate = "2026年4月30日 12:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "11:58", tag: "ai", tagText: "AI", text: "软银正组建一家专门建造数据中心的机器人公司，并已考虑推动其以1000亿美元估值IPO。该公司认为，AI和机器人既是基础设施的需求方，也是建设者。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/" },
+  { time: "08:14", tag: "ai", tagText: "AI", text: "亚马逊AWS云业务营收超预期，但资本支出同步激增。CEO表示短期内将继续加大投入，以满足AI基础设施需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/amazons-cloud-business-is-surging-and-so-is-its-capital-spending/" },
   { time: "07:55", tag: "ai", tagText: "AI", text: "微软CEO萨提亚·纳德拉表示，将充分利用与OpenAI的新协议，向云客户提供OpenAI技术且无需支付额外费用。他直言“我们完全计划利用这一点”。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/satya-nadella-says-hes-ready-to-exploit-the-new-openai-deal/" },
   { time: "07:02", tag: "ai", tagText: "AI", text: "微软宣布其AI助手Copilot付费用户已超2000万，且用户活跃度持续增长，反驳了外界对Copilot使用率低的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/" },
   { time: "06:33", tag: "ai", tagText: "AI", text: "AI需求激增，但台积电正控制供应。分析指出，台积电在全球AI芯片制造中占据主导地位，其产能分配直接影响AI行业发展速度。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbXl1ak5ZbC1GM1dLb2t0STVEVklSUEVpMTRpZC16b1FtaDZlSHF2TGk0VTFqQ0xucC1QcmE5Z0lXc3g2LVpOMFJLdjVQLTMwMFk0NVBtMzZiRVBURWkzcmczeGdYQ2NGSjZfQTRKV3JQR2RXVlZEcXo3OUdSYjFEM2xMYXN4VTM5OHdSWEhhdFZ3QlVaYnBoOUZHeEZPOGZud3pPUGtYV0JUU2xZaExGbmx4cUcxYmtVOVE?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
   { time: "21:57", tag: "ai", tagText: "AI", text: "甲骨文全面押注AI数据中心建设，其战略转型被视为判断AI泡沫是否破裂的关键风向标。这家数据库公司已孤注一掷，全面转向AI基础设施。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920378/oracle-openai-datacenter-buildout" },
   { time: "21:15", tag: "tech", tagText: "科技", text: "中国对本土AI芯片的强劲需求推动寒武纪、MetaX等公司营收增长。在美国出口管制背景下，中国科技公司加速采购国产AI芯片替代方案。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWXJickFFWlh6bHBreUc3TW41RkpTYlFPX2Y5MDcyTWQwX3ZOSEZUVkNLXzltRWJwUU14blhLMkEwZ1pfZHpNSlZpS25qdWVUbFd0UEpOUE1VbXM4Wk81bzFoNTE0S3NWa005bmNpN1dBeExxak5oUU1sNFlvb2RDazdhdmlnTmhJNU5RbE9ka0YwRVB2QlJDRUV4U3VkbTR4Zms5bVhfU3lQZ3RQ0gGsAUFVX3lxTE8wZlhFeWVGdWRvOWRiWHBQZjRzb2FFRHpmLXdlYnc3alFQd0RnWktXaklBZHJPSWU2eE45akNjVDExbUR1Vk1CTFBrMGMwa2JGbkVnbEJYdnluamlUeU5IVGRsa0JJbEhqcDVDZXROY3N1QnZLdlREWEhHRFY4NEEwcVg5ZTVJdThPMnN1Ym1vMk9sT0dLYTFfdkg4d3EtUllMd1h0dHF3M2NBeG0?oc=5" },
-  { time: "21:10", tag: "tech", tagText: "科技", text: "国防初创公司Firestorm Labs获8200万美元融资，用于将无人机工厂装入集装箱，实现前线就地制造无人机。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/firestorm-labs-raises-82m-to-take-drone-factories-into-the-field/" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "诈骗分子利用AI生成的泰勒·斯威夫特、蕾哈娜等名人深度伪造视频，在TikTok上推广可疑服务。认证公司Copyleaks发现，这些广告通常展示名人形象以诱导用户。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920351/ai-celebrity-deepfake-ads-tiktok-copyleaks" },
 ];
-const aiBreakingDate = "2026年4月30日 08:03 CST";
+const aiBreakingDate = "2026年4月30日 12:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
