@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 64.23,
+  score: 65.54,
   rating: "greed",
-  timestamp: "2026-04-30T14:18:04+00:00",
+  timestamp: "2026-04-30T16:39:07+00:00",
   previousClose: 63.66,
   previous1Week: 66.74,
   previous1Month: 13.69,
   previous1Year: 32.37,
-  date: "2026年4月30日 22:21 CST"
+  date: "2026年5月1日 00:43 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:38", tag: "macro", tagText: "宏观", text: "美股收盘涨跌互现：道指飙升逾700点，卡特彼勒因AI电力需求业绩超预期领涨；但纳指承压，Meta暴跌9%，微软因AI支出担忧下跌，而Alphabet因云业务强劲增长7%。市场消化科技巨头财报及GDP数据，显示美国经济持续增长但通胀高企。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/stock-market-today-live-updates.html" },
+  { time: "00:38", tag: "ai", tagText: "AI", text: "谷歌云增速超越微软和亚马逊，三大科技巨头云业务均超预期，AI需求加速。但市场对AI巨额资本支出的态度分化：Alphabet获投资者认可，Meta因支出增速超营收遭抛售，微软因支出担忧股价下跌。英伟达股价重挫，因投资者担忧来自谷歌和亚马逊的自研芯片竞争加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/google-microsoft-and-amazon-all-report-cloud-beats-in-earnings.html" },
+  { time: "00:38", tag: "crypto", tagText: "加密", text: "私募信贷公司Blue Owl Capital股价飙升，因其披露对SpaceX的投资获得10倍回报。SpaceX计划于今年晚些时候进行创纪录的IPO。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/blue-owl-shares-private-credit-spacex-gains.html" },
   { time: "22:20", tag: "macro", tagText: "宏观", text: "美国3月核心PCE通胀率升至3.2%，创近三年新高，受伊朗战争推动油价飙升影响。一季度GDP增长放缓至2%，消费者支出降温。分析认为，通胀高企使美联储陷入两难，降息空间受限。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/pce-inflation-rate-march-2026.html" },
   { time: "22:14", tag: "macro", tagText: "宏观", text: "美国上周初请失业金人数降至57年新低，显示劳动力市场依然异常紧俏。尽管经济面临通胀和地缘风险，就业韧性为美联储维持高利率提供了支撑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-jobless-claims-sink-to-a-57-year-low-jobs-arent-easy-to-find-or-lose-a9088ff9?mod=mw_rss_topstories" },
   { time: "22:12", tag: "macro", tagText: "宏观", text: "日本政府据消息人士称已入市干预以遏制日元贬值，日元应声大幅飙升。此举显示日本当局对日元持续走弱的容忍度已达极限，市场关注后续干预力度。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxPcWpPTWpDaGZXLV9zZ0JDR05YUVI5V2dyYWp6cmtwck1wdUlvQVZNZUR0OTFYOG1oeWg1aGVvMk51R1hkeVVJcnJ5UmFpRzlpaTdyVE0xQWxORGpwWFB6SUxZUWZsQWMxTEFEZ1FHX2F4a2lkTGRmX0JlNEtvUDNHLVJyYUoxUXByTlM0R1kzYl9sTlIyZkdnWm9adExXYUtyWEg3UDIzUjhpVENibENZOXdzX1Y4X3Vfdll2MGpuOA?oc=5" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "阿联酋退出欧佩克，与沙特阿拉伯的裂痕再次公开化。此前两国在伊朗战争期间曾展现团结，但海湾地区最关键的竞争关系现已重新浮出水面。", source: "Financial Times", url: "https://www.ft.com/content/27d986e5-a1d9-4467-8b1e-d96cec4cfb71" },
   { time: "11:26", tag: "macro", tagText: "宏观", text: "美国众议院批准额外700亿美元用于移民执法，该法案未获得任何民主党议员支持。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/us-house-approves-70-billion-more-for-immigration-enforcement.html" },
   { time: "10:43", tag: "macro", tagText: "宏观", text: "中国4月官方制造业PMI录得50.3，高于预期的50.1，但增速放缓且新订单指数走软，显示经济复苏基础仍需巩固。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/china-pmi-april-xi-trump-iran-war.html" },
-  { time: "10:31", tag: "tech", tagText: "科技", text: "英伟达投资瑞典AI法律科技初创公司Legora，后者估值达56亿美元。Legora在过去12个月内融资超8亿美元，其广告由裘德·洛代言，正在全球大规模投放。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/nvidia-backs-ai-legal-tech-legora.html" },
-  { time: "10:07", tag: "macro", tagText: "宏观", text: "大众汽车一季度利润下降14%，受关税压力和来自中国的激烈竞争影响。欧洲原始设备制造商正面临多重行业逆风。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/volkswagen-q1-earnings-autos.html" },
-  { time: "09:37", tag: "tech", tagText: "科技", text: "Meta一季度营收超预期，但用户数因伊朗网络中断而令人失望，资本支出低于预期，股价盘后下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/meta-q1-earnings-report-2026.html" },
 ];
-const breakingDate = "2026年4月30日 22:21 CST";
+const breakingDate = "2026年5月1日 00:43 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:39", tag: "ai", tagText: "AI", text: "Salesforce正通过客户众包方式制定AI产品路线图。该公司认为，如果一家企业客户遇到某个问题，其他客户很可能也面临同样挑战，因此让客户主导产品方向，以更精准地满足市场需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/salesforce-is-crowdsourcing-its-ai-roadmap-with-customers/" },
+  { time: "00:00", tag: "tech", tagText: "科技", text: "谷歌宣布将Gemini AI助手集成到搭载Google内置系统的汽车中，作为现有Google Assistant的升级版。该更新将提升车载语音助手的智能化水平，为用户提供更自然的交互体验。", source: "The Verge", url: "https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade" },
+  { time: "23:14", tag: "tech", tagText: "科技", text: "X（原Twitter）宣布推出由AI驱动的全新广告平台，旨在通过智能化手段提升广告投放效果，推动平台收入增长。这是X在广告业务上的重要战略升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/x-announces-a-rebuilt-ad-platform-powered-by-ai/" },
   { time: "19:38", tag: "ai", tagText: "AI", text: "Meta一季度财报显示用户流失2000万，但计划继续投入数十亿美元加码AI投资。尽管用户开始放弃其平台，Meta仍坚持AI战略，引发市场对其投入产出比的关注。", source: "The Verge", url: "https://www.theverge.com/tech/921089/meta-earnings-q1-2026-user-decline-ai-investments" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
   { time: "19:08", tag: "tech", tagText: "科技", text: "Spotify推出“Verified by Spotify”认证徽章，旨在打击平台上的虚假账户、垃圾信息和AI生成内容。获得认证的艺术家将在个人主页显示绿色对勾标志，表明其身份已由平台核实为真人艺术家。", source: "The Verge", url: "https://www.theverge.com/tech/921048/verified-by-spotify-badge" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "05:39", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic正在考虑新一轮融资，估值超过9000亿美元。这反映出市场对顶级AI模型公司的高度追捧。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM01iLS15LWpXdy0yM2lNQ0xndWNVWDNfWWNfSUZubUJnOVAyTUJBVmFLbC1IU3JGM0tObWd2Nzc1ZDYxekJka1VFQ2tScWtzR3RIRTRnRGdWQ3RYNzFfTmtNQ051WTYyektvQmEzb1FqdS1Qb1FNbnRwcU8wYndTSDg1MVlCZGQtV3JJRFZYRmZHb1plb3IzNDFSMU4tV2pwSUFoZTh2OV9hcHNlSW5iWE5Law?oc=5" },
   { time: "04:59", tag: "ai", tagText: "AI", text: "谷歌Q1付费订阅用户新增2500万，总数达3.5亿，YouTube和Google One为主要增长引擎。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/google-gains-25m-subscriptions-in-q1-driven-by-youtube-and-google-one/" },
   { time: "04:28", tag: "ai", tagText: "AI", text: "谷歌CEO皮查伊在Alphabet财报中宣布，2026年第一季度谷歌搜索查询量创下“历史新高”，AI投资持续推动搜索业务增长。", source: "The Verge", url: "https://www.theverge.com/tech/920815/google-alphabet-q1-2026-earnings-sundar-pichai" },
-  { time: "03:21", tag: "tech", tagText: "科技", text: "安森美半导体4月股价涨幅超过英伟达两倍，受益于汽车和工业领域芯片需求强劲，成为本月半导体板块最大黑马。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVlpaR2I3bGJEZjZ6SzFlai11MnlRVlNSYXpkVlRsZkFSaEZ6LTRCUUhtYlBNWVppN3JzYk5Ic0YxRzBRX1FPdXRxS25YRzdxVU1xdE9KMUV4T3pQeW1pSEgtcFFXT0FzQ2pDYnhHd2d3NUpzUmh0LU5wdldpQVFMZlU0M1NnaDkzMUJMUEw0bWZWN2pWMFllX3FTc3NVaWxNN2JweUpIT2I?oc=5" },
-  { time: "02:59", tag: "ai", tagText: "AI", text: "AI视频生成公司Runway CEO表示，AI视频只是前奏，下一步将是“世界模型”——能够模拟物理世界运行的AI系统。Runway已融资约8.6亿美元，估值53亿美元。", source: "TechCrunch", url: "https://techcrunch.com/podcast/equity-podcast-runway-ceo-cristobal-valenzuela-ai-video-world-models/" },
-  { time: "02:33", tag: "ai", tagText: "AI", text: "前Twitter CEO帕拉格·阿格拉瓦尔创立的AI智能体工具公司Parallel Web Systems完成1亿美元融资，由红杉领投，估值达20亿美元。该公司距上一轮1亿美元融资仅过去五个月。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/" },
 ];
-const aiBreakingDate = "2026年4月30日 22:21 CST";
+const aiBreakingDate = "2026年5月1日 00:43 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
