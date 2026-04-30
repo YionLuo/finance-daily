@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 63.63,
+  score: 63.43,
   rating: "greed",
-  timestamp: "2026-04-30T00:00:00+00:00",
+  timestamp: "2026-04-30T09:03:31+00:00",
   previousClose: 63.66,
   previous1Week: 66.74,
   previous1Month: 13.69,
   previous1Year: 32.37,
-  date: "2026年4月30日 14:36 CST"
+  date: "2026年4月30日 17:23 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:13", tag: "macro", tagText: "宏观", text: "欧元区4月通胀率跃升至3%，受中东能源冲击影响；一季度GDP仅增长0.1%，低于预期，经济几近停滞。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/euro-zone-economy-inflation-growth.html" },
+  { time: "17:10", tag: "macro", tagText: "宏观", text: "摩根士丹利在美联储FOMC会议后调整了对降息的预测，认为核心通胀过于顽固，美联储难以放松政策，除非中东局势稳定。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-morgan-stanley-shifted-its-call-on-federal-reserve-rate-cuts-after-the-fomc-meeting-da657bf0?mod=mw_rss_topstories" },
+  { time: "17:00", tag: "crypto", tagText: "加密", text: "民主党参议员梅克利致信CFTC，要求对Kalshi和Polymarket等预测市场平台实施更严格的监管，涉及体育博彩和内幕交易问题。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/congress-kalshi-polymarket-prediction-markets-cftc.html" },
+  { time: "16:34", tag: "geo", tagText: "地缘", text: "特朗普宣布美国正在考虑减少驻德美军人数，此举加剧了与柏林方面的紧张关系。此前德国总理默茨批评了美国在伊朗问题上的战略。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/us-reviews-cutting-troop-numbers-in-germany-amid-trumps-berlin-feud-.html" },
   { time: "14:13", tag: "geo", tagText: "地缘", text: "布伦特原油突破126美元，创四年新高。美国军方据悉将向特朗普简报对伊朗的军事行动，霍尔木兹海峡封锁持续，市场担忧长期供应中断。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/oil-prices-today-brent-wti-us-iran-war-trump.html" },
   { time: "12:57", tag: "geo", tagText: "地缘", text: "渣打银行因伊朗战争计提1.9亿美元风险拨备，但该行仍录得创纪录的季度利润。亚洲业务强劲表现抵消了中东风险敞口带来的冲击。", source: "Financial Times", url: "https://www.ft.com/content/2b20456a-b392-45f1-bf9e-e4a7efeda264" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "阿联酋退出欧佩克，与沙特阿拉伯的裂痕再次公开化。此前两国在伊朗战争期间曾展现团结，但海湾地区最关键的竞争关系现已重新浮出水面。", source: "Financial Times", url: "https://www.ft.com/content/27d986e5-a1d9-4467-8b1e-d96cec4cfb71" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "06:08", tag: "tech", tagText: "科技", text: "高通第二季度财报超预期，股价盘后涨13%。投资者关注其AI芯片业务前景，尽管当前季度指引疲软。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxQeG5kQXFZZkRLOG0wdzROb2dySGZ5NllGU25wZmZOZFdFdWZlV0tuWF9URXktZS1UMTUyWDE0ZGF6eTV1UjJFNWRab05LN2pyRmpoVU56SS1XanpfenVfTXJWNnR2b3U1eHY3OC0zTV83UGNadFFERVhOSnQzZGI5Z0F5SzhLVkdlb1VQZVdGUFpPTHFOdlJOQUg1X25IWVRLTFplc0VCNWdFMk81Y1VwdWdrVnBPNGJKanZocmpVUlpxeVVBUldNRzJfTQ?oc=5" },
   { time: "06:08", tag: "crypto", tagText: "加密", text: "比特币创一年来最佳月度表现，但Robinhood等零售交易平台上的比特币交易量大幅下滑，散户兴趣转向其他资产。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bitcoin-is-having-its-best-month-in-a-year-but-the-retail-crowd-is-looking-elsewhere-d01aa6c1" },
   { time: "04:16", tag: "macro", tagText: "宏观", text: "福特汽车上调2026年业绩指引，因获得13亿美元关税退税以抵消成本上升。投资者同时关注伊朗战争、关税政策及电动汽车需求放缓对公司的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/ford-motor-f-earnings-q1-2026.html" },
-  { time: "03:57", tag: "ai", tagText: "AI", text: "马斯克在OpenAI诉讼案第二日作证中称，自己当初资助OpenAI启动是“一个傻瓜”，并指控萨姆·奥尔特曼利用非营利组织的“光环效应”为自己牟利。", source: "Financial Times", url: "https://www.ft.com/content/4fac437f-a4cd-42ac-b1ae-f39957b7a42f" },
-  { time: "01:47", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯就伊朗战争的成本与任务目标首次在国会作证。五角大楼官员透露，自冲突爆发以来，美国已花费约250亿美元，主要用于昂贵的导弹和防空拦截器，引发外界对美国应对其他冲突战备能力的担忧。", source: "Financial Times", url: "https://www.ft.com/content/1414942a-b314-443e-8bbc-8c13fa011d8e" },
-  { time: "01:24", tag: "tech", tagText: "科技", text: "交易员为史上最大规模的财报日做准备，预计“七巨头”中的四家——Alphabet、亚马逊、Meta和微软——将在周三盘后公布业绩，相关股票单日波动规模可能高达8000亿美元。市场密切关注这些科技巨头的营收增长及AI投入回报。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/traders-brace-for-800-billion-in-earnings-related-stock-movement.html" },
-  { time: "23:49", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什获得参议院银行委员会批准，为最终确认扫清关键障碍。沃什被视为特朗普的忠实盟友，其上任可能改变美联储的利率政策路径，当前主席鲍威尔面临特朗普要求大幅降息的压力。市场关注沃什是否会在货币政策中更重视资产负债表管理。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/trump-fed-nominee-kevin-warsh-senate-approval.html" },
 ];
-const breakingDate = "2026年4月30日 14:36 CST";
+const breakingDate = "2026年4月30日 17:23 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "15:00", tag: "macro", tagText: "宏观", text: "全球AI芯片短缺和需求激增正对全球经济产生实质性影响。分析指出，AI芯片供应紧张已从科技行业蔓延至制造业、汽车等多个领域，成为制约经济增长的新瓶颈。", source: "Hungarian Conservative", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxONjNjR3Bwdnc3RHJuWlk5SGs3X19qSVpHeDFSUXNReURGa2hvclBoeE1wODZ6dWNnNFJsR3ZRQTVEOXBvaVJDVXFZWmcyNV92ZWxYdWdwTUU5TURPQmRObndiWXhlOG5VSjR3OVY3WTR5UXBxSUNXUUdmM3ZyS1RhVGJsRW5CWVk1V0dIdFBQZjRVck00alFURmlMY3lpcU0?oc=5" },
   { time: "13:00", tag: "ai", tagText: "AI", text: "英伟达投资AI法律初创公司，该公司因投放朱迪·劳广告而备受关注。此举显示英伟达正将投资触角延伸至AI垂直应用领域。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE9IY21ZYkpfWHFzZFdjaDJNYUg2T2k3NWFwOWNFTVRPTHI5dE9KX1FlZGc5czBYSFZIOUdlYTRCTEx4aGRJaC1IQnpkSDE5RkxlMjQzdXo3NjNpOXNONmcxSmt3TmRfR0g5a1hNTk1tRml6U0MtZzZJS2pn0gF_QVVfeXFMUG1JLTRyMFZCS1ZFcGtMc2JBQmV3a2JCdm1rdUU1SlVDdkt3b0oyVXNZSU9uUVF3WC1ydUxCWGZjMnlRcDU1YUFnU0hSSkdUMFVsRWZzZTJxTkg0YkJ0MFB2b2t4VTFoN2JYV3RZZGg3WjhJeW84SXotWlFCYXhUaw?oc=5" },
   { time: "11:58", tag: "ai", tagText: "AI", text: "软银正组建一家专门建造数据中心的机器人公司，并已考虑推动其以1000亿美元估值IPO。该公司认为，AI和机器人既是基础设施的需求方，也是建设者。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/" },
   { time: "08:14", tag: "ai", tagText: "AI", text: "亚马逊AWS云业务营收超预期，但资本支出同步激增。CEO表示短期内将继续加大投入，以满足AI基础设施需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/amazons-cloud-business-is-surging-and-so-is-its-capital-spending/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:47", tag: "ai", tagText: "AI", text: "加拿大Tumbler Ridge校园枪击案七名受害者家属起诉OpenAI及CEO奥特曼，指控其疏忽导致ChatGPT被用于策划袭击。案件引发对AI安全责任的重大法律争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920479/tumbler-ridge-chagpt-openai-lawsuit" },
   { time: "22:43", tag: "ai", tagText: "AI", text: "ChatGPT下载量持续放缓，用户卸载或转向竞品，可能影响OpenAI的IPO计划。Sensor Tower数据显示，ChatGPT增长势头已大不如前。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920476/openai-chatgpt-downloads-slow-down-ipo" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
-  { time: "21:57", tag: "ai", tagText: "AI", text: "甲骨文全面押注AI数据中心建设，其战略转型被视为判断AI泡沫是否破裂的关键风向标。这家数据库公司已孤注一掷，全面转向AI基础设施。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920378/oracle-openai-datacenter-buildout" },
 ];
-const aiBreakingDate = "2026年4月30日 14:36 CST";
+const aiBreakingDate = "2026年4月30日 17:23 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
