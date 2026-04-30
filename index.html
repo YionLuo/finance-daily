@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 63.66,
   rating: "greed",
-  timestamp: "2026-04-29T21:50:51+00:00",
+  timestamp: "2026-04-29T23:46:04+00:00",
   previousClose: 63.8,
   previous1Week: 68.6,
   previous1Month: 14.47,
   previous1Year: 32.74,
-  date: "2026年4月30日 06:08 CST"
+  date: "2026年4月30日 08:03 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:03", tag: "macro", tagText: "宏观", text: "美联储主席鲍威尔表示，在5月中旬主席任期结束后，他将继续担任美联储理事一段时间，以抵制特朗普总统试图迫使他完全离开美联储的压力。他警告称，攻击美联储独立性将破坏其有效运作。", source: "MarketWatch", url: "https://www.marketwatch.com/story/powell-says-hell-stay-at-fed-as-governor-after-his-term-as-chair-ends-in-mid-may-c906c044?mod=mw_rss_topstories" },
+  { time: "06:44", tag: "tech", tagText: "科技", text: "SanDisk股价一年内飙升超过3000%，突破1000美元大关，成为标普500指数今年表现最佳的股票。市场猜测管理层可能宣布进行10比1的股票拆分。", source: "MarketWatch", url: "https://www.marketwatch.com/story/sandisk-shares-have-soared-over-3-000-in-a-year-is-a-stock-split-next-4607dc97?mod=mw_rss_topstories" },
+  { time: "06:28", tag: "tech", tagText: "科技", text: "软银计划将其新成立的人工智能与机器人公司Roze在美国上市，最早可能在今年进行IPO。孙正义正加速布局AI领域。", source: "Financial Times", url: "https://www.ft.com/content/55c7d99c-7e68-453c-b784-33d6b9838e16" },
   { time: "06:08", tag: "macro", tagText: "宏观", text: "伊朗战争加剧债券市场抛售，通胀担忧使美联储未来降息前景存疑。布伦特原油突破120美元，特朗普表示将延长霍尔木兹海峡封锁，油价连续第八日上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/iran-war-is-fueling-a-bond-selloff-ahead-of-fed-chair-jerome-powells-final-press-conference-cc2dba04" },
   { time: "06:08", tag: "tech", tagText: "科技", text: "微软、亚马逊、Alphabet财报均超预期，云业务增长强劲。微软Azure增长40%，亚马逊云收入增长28%，Alphabet云收入激增并上调全年资本支出至1900亿美元。Meta营收超预期但用户数受伊朗网络中断拖累，股价盘后跌7%。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/microsoft-msft-q3-earnings-report-2026.html" },
   { time: "06:08", tag: "tech", tagText: "科技", text: "高通第二季度财报超预期，股价盘后涨13%。投资者关注其AI芯片业务前景，尽管当前季度指引疲软。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxQeG5kQXFZZkRLOG0wdzROb2dySGZ5NllGU25wZmZOZFdFdWZlV0tuWF9URXktZS1UMTUyWDE0ZGF6eTV1UjJFNWRab05LN2pyRmpoVU56SS1XanpfenVfTXJWNnR2b3U1eHY3OC0zTV83UGNadFFERVhOSnQzZGI5Z0F5SzhLVkdlb1VQZVdGUFpPTHFOdlJOQUg1X25IWVRLTFplc0VCNWdFMk81Y1VwdWdrVnBPNGJKanZocmpVUlpxeVVBUldNRzJfTQ?oc=5" },
@@ -1646,14 +1649,16 @@ const breakingNews = [
   { time: "21:54", tag: "macro", tagText: "宏观", text: "有投资者在SPDR黄金ETF（GLD）上进行百万美元级别的看空押注，卖出看涨期权同时买入看跌期权，押注金价在美联储决议前下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/a-million-dollar-gold-bear-emerges-ahead-of-the-fed-decision.html" },
   { time: "21:50", tag: "macro", tagText: "宏观", text: "美联储即将公布利率决议，市场普遍预期将维持利率在3.5%-3.75%不变。市场关注焦点在于鲍威尔是否会暗示其未来去留，以及其对经济前景的措辞。与此同时，‘七巨头’科技公司财报与美联储决议同日登场，被分析师称为今年对市场最重要的一天。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/fed-meeting-today-live-updates-warsh-powell.html" },
   { time: "21:13", tag: "tech", tagText: "科技", text: "OpenAI正加速从微软向亚马逊的生态迁移，双方合作关系虽未破裂，但OpenAI已迅速进入亚马逊的云计算和AI服务领域，这一转变从微妙变得激进。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/openai-drift-from-microsoft-to-amazon-turns-aggressive-after-subtlety.html" },
-  { time: "21:07", tag: "macro", tagText: "宏观", text: "摩根大通CEO杰米·戴蒙警告称，由信贷引发的经济衰退将‘比人们想象的更严重’，其影响将不仅限于私人信贷领域。", source: "MarketWatch", url: "https://www.marketwatch.com/story/jpmorgans-jamie-dimon-says-a-credit-led-recession-would-be-worse-than-people-think-5a388e74?mod=mw_rss_topstories" },
-  { time: "19:44", tag: "geo", tagText: "地缘", text: "全球基准原油期货突破115美元，因霍尔木兹海峡僵局持续，油轮通行无进展。特朗普发出对伊朗新威胁，报道称美国将延长对伊朗港口的封锁。布伦特原油突破114美元/桶。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-key-global-oil-contract-tops-115-as-strait-of-hormuz-impasse-continues-ce2cdf04?mod=mw_rss_topstories" },
-  { time: "19:05", tag: "macro", tagText: "宏观", text: "标普500指数期货小幅走高，市场聚焦“七巨头”科技公司财报及美联储利率决议。周二标普500和纳斯达克从历史高位回落。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/04/28/stock-market-today-live-updates.html" },
 ];
-const breakingDate = "2026年4月30日 06:08 CST";
+const breakingDate = "2026年4月30日 08:03 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:55", tag: "ai", tagText: "AI", text: "微软CEO萨提亚·纳德拉表示，将充分利用与OpenAI的新协议，向云客户提供OpenAI技术且无需支付额外费用。他直言“我们完全计划利用这一点”。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/satya-nadella-says-hes-ready-to-exploit-the-new-openai-deal/" },
+  { time: "07:02", tag: "ai", tagText: "AI", text: "微软宣布其AI助手Copilot付费用户已超2000万，且用户活跃度持续增长，反驳了外界对Copilot使用率低的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/" },
+  { time: "06:33", tag: "ai", tagText: "AI", text: "AI需求激增，但台积电正控制供应。分析指出，台积电在全球AI芯片制造中占据主导地位，其产能分配直接影响AI行业发展速度。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbXl1ak5ZbC1GM1dLb2t0STVEVklSUEVpMTRpZC16b1FtaDZlSHF2TGk0VTFqQ0xucC1QcmE5Z0lXc3g2LVpOMFJLdjVQLTMwMFk0NVBtMzZiRVBURWkzcmczeGdYQ2NGSjZfQTRKV3JQR2RXVlZEcXo3OUdSYjFEM2xMYXN4VTM5OHdSWEhhdFZ3QlVaYnBoOUZHeEZPOGZud3pPUGtYV0JUU2xZaExGbmx4cUcxYmtVOVE?oc=5" },
+  { time: "06:20", tag: "ai", tagText: "AI", text: "谷歌云季度营收首次突破200亿美元，AI需求激增是主要驱动力。但公司表示受限于基础设施容量，否则增速会更快。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/google-cloud-surpasses-20b-but-says-growth-was-capacity-constrained/" },
+  { time: "05:39", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic正在考虑新一轮融资，估值超过9000亿美元。这反映出市场对顶级AI模型公司的高度追捧。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM01iLS15LWpXdy0yM2lNQ0xndWNVWDNfWWNfSUZubUJnOVAyTUJBVmFLbC1IU3JGM0tObWd2Nzc1ZDYxekJka1VFQ2tScWtzR3RIRTRnRGdWQ3RYNzFfTmtNQ051WTYyektvQmEzb1FqdS1Qb1FNbnRwcU8wYndTSDg1MVlCZGQtV3JJRFZYRmZHb1plb3IzNDFSMU4tV2pwSUFoZTh2OV9hcHNlSW5iWE5Law?oc=5" },
   { time: "04:59", tag: "ai", tagText: "AI", text: "谷歌Q1付费订阅用户新增2500万，总数达3.5亿，YouTube和Google One为主要增长引擎。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/google-gains-25m-subscriptions-in-q1-driven-by-youtube-and-google-one/" },
   { time: "04:28", tag: "ai", tagText: "AI", text: "谷歌CEO皮查伊在Alphabet财报中宣布，2026年第一季度谷歌搜索查询量创下“历史新高”，AI投资持续推动搜索业务增长。", source: "The Verge", url: "https://www.theverge.com/tech/920815/google-alphabet-q1-2026-earnings-sundar-pichai" },
   { time: "03:21", tag: "tech", tagText: "科技", text: "安森美半导体4月股价涨幅超过英伟达两倍，受益于汽车和工业领域芯片需求强劲，成为本月半导体板块最大黑马。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVlpaR2I3bGJEZjZ6SzFlai11MnlRVlNSYXpkVlRsZkFSaEZ6LTRCUUhtYlBNWVppN3JzYk5Ic0YxRzBRX1FPdXRxS25YRzdxVU1xdE9KMUV4T3pQeW1pSEgtcFFXT0FzQ2pDYnhHd2d3NUpzUmh0LU5wdldpQVFMZlU0M1NnaDkzMUJMUEw0bWZWN2pWMFllX3FTc3NVaWxNN2JweUpIT2I?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "21:15", tag: "tech", tagText: "科技", text: "中国对本土AI芯片的强劲需求推动寒武纪、MetaX等公司营收增长。在美国出口管制背景下，中国科技公司加速采购国产AI芯片替代方案。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWXJickFFWlh6bHBreUc3TW41RkpTYlFPX2Y5MDcyTWQwX3ZOSEZUVkNLXzltRWJwUU14blhLMkEwZ1pfZHpNSlZpS25qdWVUbFd0UEpOUE1VbXM4Wk81bzFoNTE0S3NWa005bmNpN1dBeExxak5oUU1sNFlvb2RDazdhdmlnTmhJNU5RbE9ka0YwRVB2QlJDRUV4U3VkbTR4Zms5bVhfU3lQZ3RQ0gGsAUFVX3lxTE8wZlhFeWVGdWRvOWRiWHBQZjRzb2FFRHpmLXdlYnc3alFQd0RnWktXaklBZHJPSWU2eE45akNjVDExbUR1Vk1CTFBrMGMwa2JGbkVnbEJYdnluamlUeU5IVGRsa0JJbEhqcDVDZXROY3N1QnZLdlREWEhHRFY4NEEwcVg5ZTVJdThPMnN1Ym1vMk9sT0dLYTFfdkg4d3EtUllMd1h0dHF3M2NBeG0?oc=5" },
   { time: "21:10", tag: "tech", tagText: "科技", text: "国防初创公司Firestorm Labs获8200万美元融资，用于将无人机工厂装入集装箱，实现前线就地制造无人机。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/firestorm-labs-raises-82m-to-take-drone-factories-into-the-field/" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "诈骗分子利用AI生成的泰勒·斯威夫特、蕾哈娜等名人深度伪造视频，在TikTok上推广可疑服务。认证公司Copyleaks发现，这些广告通常展示名人形象以诱导用户。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920351/ai-celebrity-deepfake-ads-tiktok-copyleaks" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌照片推出AI虚拟试衣功能，利用用户相册中的衣物照片创建虚拟衣柜，让用户无需出门即可试穿自己已有的衣服。同时，谷歌还复刻了《独领风骚》中Cher的经典AI衣橱。", source: "The Verge", url: "https://www.theverge.com/tech/920420/google-photos-ai-try-on-wardrobe" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌TV新增多项Gemini AI功能，包括通过Nano Banana和Veo工具对照片和视频进行AI编辑与转换。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/more-gemini-features-are-coming-to-google-tv/" },
-  { time: "19:10", tag: "tech", tagText: "科技", text: "LG与英伟达正探索在机器人、AI基础设施和移动出行领域建立合作伙伴关系。", source: "Republic World", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFU4T2RQcmJ0MTQwSXVLWjVUYVplc01uY0xFQ3ZxMUEtS1l5NlpNdURJQjBGay1XR3pKOUMtWE1OcXExU050NGE1OXExeXZxckZGeGRBYl9rWWxVQkMzeFR2Njh0YnJzRnRPX1c5a0NHdG5xU01xRnBkaXVzbEtpclhnUFpNU2xuT1V3djROOWtubW5TXzZRQlBlaGY4aFlHaWZmZUpSdUUxRzZLZng5dGt2OHVCbk9XcEM2X1Fn0gHDAUFVX3lxTE5Yazg1UGdudVQ1RnlqV1VhU2NnRE1QTzdYRlh3OEZKVEVMUUZFN2hoMGxMWF84X08xQlVrUFFZME1tU2hneW9HSDkzY2psWFJOM1hZWnJSdkpaSlFQVGZvTGVjMTQ4ZjVVR195c3UwRXp5bkhpUlBoR0ZQSHRkVEZySmlXU2RtTWRRaUlWYXkxbHNQYzE5MlB3VWhKeW5YLUEtOWpOSlpNdGhmMXBla3d1ckR3Mm12LTZ5LXBic0pjWkZZYw?oc=5" },
-  { time: "18:39", tag: "tech", tagText: "科技", text: "中国暂停发放新的自动驾驶出租车牌照，此前百度旗下无人驾驶出租车出现混乱。此举可能影响国内自动驾驶行业的发展节奏。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920312/china-suspends-autonomous-vehicle-permits-baidu-chaos" },
-  { time: "18:04", tag: "tech", tagText: "科技", text: "GitHub上月紧急修复一个严重远程代码执行漏洞，耗时不到六小时。该漏洞由Wiz Research利用AI模型在Git内部基础设施中发现。", source: "The Verge", url: "https://www.theverge.com/news/920295/github-remote-code-execution-vulnerability-fix" },
 ];
-const aiBreakingDate = "2026年4月30日 06:08 CST";
+const aiBreakingDate = "2026年4月30日 08:03 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
