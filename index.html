@@ -1616,21 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 63.66,
+  score: 63.63,
   rating: "greed",
-  timestamp: "2026-04-29T23:59:42+00:00",
-  previousClose: 63.8,
-  previous1Week: 68.6,
-  previous1Month: 14.47,
-  previous1Year: 32.74,
-  date: "2026年4月30日 12:01 CST"
+  timestamp: "2026-04-30T00:00:00+00:00",
+  previousClose: 63.66,
+  previous1Week: 66.74,
+  previous1Month: 13.69,
+  previous1Year: 32.37,
+  date: "2026年4月30日 14:36 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:13", tag: "geo", tagText: "地缘", text: "布伦特原油突破126美元，创四年新高。美国军方据悉将向特朗普简报对伊朗的军事行动，霍尔木兹海峡封锁持续，市场担忧长期供应中断。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/oil-prices-today-brent-wti-us-iran-war-trump.html" },
+  { time: "12:57", tag: "geo", tagText: "地缘", text: "渣打银行因伊朗战争计提1.9亿美元风险拨备，但该行仍录得创纪录的季度利润。亚洲业务强劲表现抵消了中东风险敞口带来的冲击。", source: "Financial Times", url: "https://www.ft.com/content/2b20456a-b392-45f1-bf9e-e4a7efeda264" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "阿联酋退出欧佩克，与沙特阿拉伯的裂痕再次公开化。此前两国在伊朗战争期间曾展现团结，但海湾地区最关键的竞争关系现已重新浮出水面。", source: "Financial Times", url: "https://www.ft.com/content/27d986e5-a1d9-4467-8b1e-d96cec4cfb71" },
   { time: "11:26", tag: "macro", tagText: "宏观", text: "美国众议院批准额外700亿美元用于移民执法，该法案未获得任何民主党议员支持。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/us-house-approves-70-billion-more-for-immigration-enforcement.html" },
   { time: "10:43", tag: "macro", tagText: "宏观", text: "中国4月官方制造业PMI录得50.3，高于预期的50.1，但增速放缓且新订单指数走软，显示经济复苏基础仍需巩固。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/china-pmi-april-xi-trump-iran-war.html" },
+  { time: "10:31", tag: "tech", tagText: "科技", text: "英伟达投资瑞典AI法律科技初创公司Legora，后者估值达56亿美元。Legora在过去12个月内融资超8亿美元，其广告由裘德·洛代言，正在全球大规模投放。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/nvidia-backs-ai-legal-tech-legora.html" },
+  { time: "10:07", tag: "macro", tagText: "宏观", text: "大众汽车一季度利润下降14%，受关税压力和来自中国的激烈竞争影响。欧洲原始设备制造商正面临多重行业逆风。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/volkswagen-q1-earnings-autos.html" },
   { time: "09:37", tag: "tech", tagText: "科技", text: "Meta一季度营收超预期，但用户数因伊朗网络中断而令人失望，资本支出低于预期，股价盘后下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/meta-q1-earnings-report-2026.html" },
   { time: "07:03", tag: "macro", tagText: "宏观", text: "美联储主席鲍威尔表示，在5月中旬主席任期结束后，他将继续担任美联储理事一段时间，以抵制特朗普总统试图迫使他完全离开美联储的压力。他警告称，攻击美联储独立性将破坏其有效运作。", source: "MarketWatch", url: "https://www.marketwatch.com/story/powell-says-hell-stay-at-fed-as-governor-after-his-term-as-chair-ends-in-mid-may-c906c044?mod=mw_rss_topstories" },
   { time: "06:44", tag: "tech", tagText: "科技", text: "SanDisk股价一年内飙升超过3000%，突破1000美元大关，成为标普500指数今年表现最佳的股票。市场猜测管理层可能宣布进行10比1的股票拆分。", source: "MarketWatch", url: "https://www.marketwatch.com/story/sandisk-shares-have-soared-over-3-000-in-a-year-is-a-stock-split-next-4607dc97?mod=mw_rss_topstories" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "01:47", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯就伊朗战争的成本与任务目标首次在国会作证。五角大楼官员透露，自冲突爆发以来，美国已花费约250亿美元，主要用于昂贵的导弹和防空拦截器，引发外界对美国应对其他冲突战备能力的担忧。", source: "Financial Times", url: "https://www.ft.com/content/1414942a-b314-443e-8bbc-8c13fa011d8e" },
   { time: "01:24", tag: "tech", tagText: "科技", text: "交易员为史上最大规模的财报日做准备，预计“七巨头”中的四家——Alphabet、亚马逊、Meta和微软——将在周三盘后公布业绩，相关股票单日波动规模可能高达8000亿美元。市场密切关注这些科技巨头的营收增长及AI投入回报。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/traders-brace-for-800-billion-in-earnings-related-stock-movement.html" },
   { time: "23:49", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什获得参议院银行委员会批准，为最终确认扫清关键障碍。沃什被视为特朗普的忠实盟友，其上任可能改变美联储的利率政策路径，当前主席鲍威尔面临特朗普要求大幅降息的压力。市场关注沃什是否会在货币政策中更重视资产负债表管理。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/trump-fed-nominee-kevin-warsh-senate-approval.html" },
-  { time: "23:38", tag: "tech", tagText: "科技", text: "恩智浦半导体（NXP）股价飙升26%，创2010年上市以来最大单日涨幅，因财报业绩超预期。强劲业绩提振了整个半导体板块情绪，美光等芯片股随之走高。分析师指出，AI和数据中心需求持续推动芯片行业复苏。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/nxp-semiconductors-stock-earnings-beat.html" },
-  { time: "23:32", tag: "tech", tagText: "科技", text: "比尔·阿克曼旗下Pershing Square的50亿美元IPO即将开始交易，为公众投资者提供直接持有其投资平台股份的机会。该平台持有10只大盘股组成的集中投资组合，被视为伯克希尔·哈撒韦式的投资模式。市场关注其上市后的表现。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/bill-ackmans-5-billion-pershing-square-ipo-to-start-trading-testing-berkshire-style-vision.html" },
-  { time: "23:22", tag: "tech", tagText: "科技", text: "康宁（Corning）与Meta（META）共同投资60亿美元扩建光缆设施，以支持AI数据中心的高速网络需求。该项目将大幅提升光缆产能，满足AI训练和推理对带宽的爆炸性需求。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/corning-glw-meta-meta-break-162304748.html" },
-  { time: "23:22", tag: "tech", tagText: "科技", text: "安森美半导体（ON）与蔚来（NIO）扩大合作，共同开发下一代900V电动汽车平台。该合作聚焦于高压功率半导体技术，旨在提升电动汽车的充电速度和续航里程，进一步巩固双方在新能源汽车产业链中的地位。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/semiconductor-nio-expand-partnership-next-162245165.html" },
-  { time: "23:00", tag: "tech", tagText: "科技", text: "亚马逊、Meta和Alphabet将在盘后公布第一季度财报。市场预期亚马逊云业务收入增长26%，Meta有望创下2021年以来最快营收增速，Alphabet预计实现2022年以来最强季度增长。投资者将密切关注AI支出规模及伊朗战争对广告业务的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/amazon-amzn-q1-earnings-report-2026.html" },
 ];
-const breakingDate = "2026年4月30日 12:01 CST";
+const breakingDate = "2026年4月30日 14:36 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:00", tag: "ai", tagText: "AI", text: "英伟达投资AI法律初创公司，该公司因投放朱迪·劳广告而备受关注。此举显示英伟达正将投资触角延伸至AI垂直应用领域。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE9IY21ZYkpfWHFzZFdjaDJNYUg2T2k3NWFwOWNFTVRPTHI5dE9KX1FlZGc5czBYSFZIOUdlYTRCTEx4aGRJaC1IQnpkSDE5RkxlMjQzdXo3NjNpOXNONmcxSmt3TmRfR0g5a1hNTk1tRml6U0MtZzZJS2pn0gF_QVVfeXFMUG1JLTRyMFZCS1ZFcGtMc2JBQmV3a2JCdm1rdUU1SlVDdkt3b0oyVXNZSU9uUVF3WC1ydUxCWGZjMnlRcDU1YUFnU0hSSkdUMFVsRWZzZTJxTkg0YkJ0MFB2b2t4VTFoN2JYV3RZZGg3WjhJeW84SXotWlFCYXhUaw?oc=5" },
   { time: "11:58", tag: "ai", tagText: "AI", text: "软银正组建一家专门建造数据中心的机器人公司，并已考虑推动其以1000亿美元估值IPO。该公司认为，AI和机器人既是基础设施的需求方，也是建设者。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/" },
   { time: "08:14", tag: "ai", tagText: "AI", text: "亚马逊AWS云业务营收超预期，但资本支出同步激增。CEO表示短期内将继续加大投入，以满足AI基础设施需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/amazons-cloud-business-is-surging-and-so-is-its-capital-spending/" },
   { time: "07:55", tag: "ai", tagText: "AI", text: "微软CEO萨提亚·纳德拉表示，将充分利用与OpenAI的新协议，向云客户提供OpenAI技术且无需支付额外费用。他直言“我们完全计划利用这一点”。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/29/satya-nadella-says-hes-ready-to-exploit-the-new-openai-deal/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:43", tag: "ai", tagText: "AI", text: "ChatGPT下载量持续放缓，用户卸载或转向竞品，可能影响OpenAI的IPO计划。Sensor Tower数据显示，ChatGPT增长势头已大不如前。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920476/openai-chatgpt-downloads-slow-down-ipo" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "苹果Mac mini因AI本地模型运行需求激增而严重缺货，eBay上出现大量加价转售。这款紧凑型台式机因高性价比的AI推理能力成为开发者新宠，供应短缺凸显AI硬件需求爆发。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" },
   { time: "21:57", tag: "ai", tagText: "AI", text: "甲骨文全面押注AI数据中心建设，其战略转型被视为判断AI泡沫是否破裂的关键风向标。这家数据库公司已孤注一掷，全面转向AI基础设施。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920378/oracle-openai-datacenter-buildout" },
-  { time: "21:15", tag: "tech", tagText: "科技", text: "中国对本土AI芯片的强劲需求推动寒武纪、MetaX等公司营收增长。在美国出口管制背景下，中国科技公司加速采购国产AI芯片替代方案。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWXJickFFWlh6bHBreUc3TW41RkpTYlFPX2Y5MDcyTWQwX3ZOSEZUVkNLXzltRWJwUU14blhLMkEwZ1pfZHpNSlZpS25qdWVUbFd0UEpOUE1VbXM4Wk81bzFoNTE0S3NWa005bmNpN1dBeExxak5oUU1sNFlvb2RDazdhdmlnTmhJNU5RbE9ka0YwRVB2QlJDRUV4U3VkbTR4Zms5bVhfU3lQZ3RQ0gGsAUFVX3lxTE8wZlhFeWVGdWRvOWRiWHBQZjRzb2FFRHpmLXdlYnc3alFQd0RnWktXaklBZHJPSWU2eE45akNjVDExbUR1Vk1CTFBrMGMwa2JGbkVnbEJYdnluamlUeU5IVGRsa0JJbEhqcDVDZXROY3N1QnZLdlREWEhHRFY4NEEwcVg5ZTVJdThPMnN1Ym1vMk9sT0dLYTFfdkg4d3EtUllMd1h0dHF3M2NBeG0?oc=5" },
 ];
-const aiBreakingDate = "2026年4月30日 12:01 CST";
+const aiBreakingDate = "2026年4月30日 14:36 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
