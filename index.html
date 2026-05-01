@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.31,
+  score: 66.6,
   rating: "greed",
-  timestamp: "2026-05-01T19:21:00+00:00",
+  timestamp: "2026-05-01T20:46:50+00:00",
   previousClose: 66.6,
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 03:24 CST"
+  date: "2026年5月2日 05:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:01", tag: "macro", tagText: "宏观", text: "美国汽油价格因伊朗战争飙升，加满最畅销车型需160美元。据GasBuddy数据，自2月底伊朗战争爆发以来，普通无铅汽油价格上涨近50%，周五早盘达到每加仑4.42美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/it-now-costs-160-to-fill-up-americas-top-selling-vehicle-as-the-iran-war-nears-its-10th-week-803077d2?mod=mw_rss_topstories" },
+  { time: "03:35", tag: "tech", tagText: "科技", text: "苹果正式放弃净现金中性目标，市场猜测其可能正在为重大AI收购做准备，以缩小在人工智能竞赛中的差距。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apple-just-gave-a-subtle-clue-that-a-splashy-ai-acquisition-may-be-in-the-cards-110f5ce2?mod=mw_rss_topstories" },
+  { time: "03:23", tag: "macro", tagText: "宏观", text: "特朗普表示政府已向精神航空提出“最终”救助方案，但本周与债券持有人的谈判尚未达成协议。该航空公司面临清算风险，若停运将为其他航空公司释放宝贵的机场时刻和航线资源。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/spirit-airlines-trump-bailout.html" },
   { time: "02:56", tag: "macro", tagText: "宏观", text: "新美联储主席Warsh若推动降息将面临内部激烈斗争。三位官员表态显示通胀担忧令他们对进一步降息持谨慎态度。", source: "MarketWatch", url: "https://www.marketwatch.com/story/new-fed-chair-warsh-will-have-a-fight-on-his-hands-if-he-pushes-for-interest-rate-cuts-a1fb5595?mod=mw_rss_topstories" },
   { time: "02:50", tag: "macro", tagText: "宏观", text: "私人信贷巨头Ares Management从投资者处筹集近200亿美元，房地产和基础设施投资弥补了核心业务疲软。", source: "Financial Times", url: "https://www.ft.com/content/410de46e-742e-4c00-97d8-d035ece65b72" },
   { time: "02:23", tag: "crypto", tagText: "加密", text: "比特币突破78,000美元，受风险偏好回升推动，但加密货币CEO警告涨势存在天花板。", source: "Coinpedia", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxNRVl5eTlLeVVWbmlfQTYxalB2aTNMVWFpdlNVQlplZWZLNUVlYzJFRFdoeFRMZm1vZmJBTnJhdGxTeVh2TERfYkFZNFljZldzTnRuc2pjcFN0WGV6WnlzNE9IN2cxUDdYUWVybVpKbmxIN2c1aWJHbnFVTXlMenNqdUoyRVlXcWZDa3dhdy1LM0YwRjhiNVVnS0pVcGZ1Ri00bmVUZV8tZngwLTMyWkVMOTdMOUhCekJteDdjVdIBwgFBVV95cUxQTGYxRnMzd2ZqeXBxSmw4R0gtZmx2NzhPRHJjZzA5ZXBQZzN1a0VzSDhMQzhoU09FbWtZOEMxM2pULTRVVFFOclBWS21rTkJyQkdHbm1KbVdPZlg5N011YU5xWUdJeUF6X2NQRk1ja193TU1TSGNHUlNpUm1oZGgyMVBDUThYUHJRRzZud2pDNWdHUVRGU3BLZnRfMlJLdlMweFNyYklsUHhCQ0cxX1J1dEJhUHJEeEFMUFpMTWdBc0ZMZw?oc=5" },
@@ -1646,17 +1649,17 @@ const breakingNews = [
   { time: "21:25", tag: "tech", tagText: "科技", text: "谷歌母公司Alphabet市值逼近5万亿美元，有望超越英伟达成为全球市值最高公司，标志着Mag 7内部重大格局变化。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/a-major-mag-7-shift-with-alphabets-market-cap-set-to-pass-nvidias.html" },
   { time: "21:24", tag: "geo", tagText: "地缘", text: "策略师预测特朗普和习近平最终将重新开放霍尔木兹海峡，届时美元将走低。伊朗已就和平协议草案向美方作出回应，油价下跌。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/trump-and-xi-will-eventually-reopen-the-strait-of-hormuz-and-when-they-do-the-dollar-goes-lower-predicts-this-strategist-a0540293?mod=mw_rss_topstories" },
   { time: "21:19", tag: "ai", tagText: "AI", text: "五角大楼与英伟达、微软和亚马逊签署新的军事AI合同，同时宣布与谷歌、SpaceX、OpenAI等七家公司达成协议，将其AI用于机密军事用途，打造“AI优先作战力量”。Anthropic仍被列入黑名单。", source: "International homepage", url: "https://www.ft.com/content/23d98dfa-dfe7-4a88-bae1-6d66900d74ca" },
-  { time: "20:52", tag: "macro", tagText: "宏观", text: "美联储内部出现分歧，部分投票委员反对会后声明中暗示下次利率行动将是降息，认为当前不宜释放宽松信号。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/fed-dissenters-explain-no-votes-saying-they-disagreed-with-hinting-next-move-would-be-a-cut.html" },
-  { time: "19:17", tag: "macro", tagText: "宏观", text: "埃克森美孚和雪佛龙一季度财报显示盈利下滑，因伊朗战争扰乱石油运输。油价在年初两个月低迷，但在2月28日美以攻击伊朗后突然飙升。两家公司无视特朗普增产呼吁，坚持战前策略。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/exxon-xom-chevron-cvx-q1-2026-earnings.html" },
-  { time: "19:17", tag: "tech", tagText: "科技", text: "Twilio股价飙升20%，公司称因一项AI功能需求“前所未有”，提振了因AI担忧而承压的软件板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/twilios-stock-is-soaring-the-company-says-its-because-of-unprecedented-demand-for-one-ai-function-a171d089" },
 ];
-const breakingDate = "2026年5月2日 03:24 CST";
+const breakingDate = "2026年5月2日 05:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
+  { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
   { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
+  { time: "02:04", tag: "tech", tagText: "科技", text: "Ubuntu基础设施宕机超24小时，影响关键漏洞修复通信。该漏洞可获取root权限，安全团队正紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/ubuntu-infrastructure-has-been-down-for-more-than-a-day/" },
   { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
   { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
   { time: "21:42", tag: "ai", tagText: "AI", text: "OpenAI公开回应其编程模型被指示“永远不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子等”的报道，承认存在内容过滤机制。此举引发关于AI模型安全限制与透明度平衡的讨论，显示AI公司在内容治理上的两难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
   { time: "08:31", tag: "ai", tagText: "AI", text: "AI突破性研究可提前三年检测胰腺癌。该技术通过分析医疗数据，在患者确诊前三年即发现癌症迹象，有望大幅提高胰腺癌这一致命疾病的早期诊断率和生存率。", source: "GreekReporter.com", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdHFNcGdrRDNEVmJfaml0Sld4U1dJZm9kWjRVLW1GdlhqUDVfLWtWeWhWQ1FZTDNKNXZEd0k2Ni05RkkySHJoQVJIWm1ELWhNQnNteXo5QjFfMmxPcjctVFp0SDNHUldMMFJ2NGQwN3B6cW1FQTA0UFNDRlFsUUl5Vi1KejIzTUE2U3M0QVdtSTZIUQ?oc=5" },
   { time: "07:07", tag: "ai", tagText: "AI", text: "Anthropic据悉将在两周内完成新一轮融资，估值可能超过9000亿美元。该公司要求投资者在48小时内提交认购意向，显示出AI头部企业融资热度不减。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/" },
-  { time: "06:12", tag: "tech", tagText: "科技", text: "苹果称AI驱动Mac需求超预期，Mac mini、Mac Studio和Mac Neo下季度仍将供应受限。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/apple-was-surprised-by-ai-driven-demand-for-macs/" },
-  { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
-  { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
 ];
-const aiBreakingDate = "2026年5月2日 03:24 CST";
+const aiBreakingDate = "2026年5月2日 05:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
