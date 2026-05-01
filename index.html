@@ -1616,26 +1616,31 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.49,
+  score: 66.71,
   rating: "greed",
-  timestamp: "2026-05-01T07:15:31+00:00",
+  timestamp: "2026-05-01T09:35:46+00:00",
   previousClose: 66.6,
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月1日 15:32 CST"
+  date: "2026年5月1日 17:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:01", tag: "geo", tagText: "地缘", text: "特朗普取消苏格兰威士忌关税，“以向查尔斯国王致敬”。此举预计每月为苏格兰经济挽回数百万美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/donald-trump-king-charles-queen-camilla-state-visit-scotch-whisky-tariffs.html" },
+  { time: "15:00", tag: "tech", tagText: "科技", text: "特斯拉2024年来自马斯克旗下公司（SpaceX和xAI）的收入超过5.73亿美元。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa0dTM0E4eUFmVnZ3MDBVNUtvOEpYOVV1bXpCWGw2eDhkdUZpdVdvY0dqQTRpcVIxU2xaZWJWZTBCZ2hEckluWVVPWFBkWERPS19OTDZfWmZnQmROM0o2ZjMyWGhZZ0ZjZm5PdUpYUGYwbWduR0lVX1RSdXN5dzA1clBmVm40UlY3bkdKenlmVC12ZDBVd19QTWFPWGhMbmF1UVcwaUd0OA?oc=5" },
   { time: "15:00", tag: "tech", tagText: "科技", text: "苹果CEO库克在季度财报中警告，未来几个季度将面临更严重的存储芯片短缺问题，并表示公司将考虑一系列应对选项。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/apple-ceo-warns-of-memory-crunch-well-look-at-a-range-of-options.html" },
   { time: "14:58", tag: "tech", tagText: "科技", text: "日本航空在东京羽田机场启动人形机器人试验，以应对劳动力严重短缺和人口老龄化问题，机器人将参与地面服务等工作。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/japan-airlines-humanoid-robots-haneda-labor-shortage.html" },
   { time: "14:47", tag: "tech", tagText: "科技", text: "小鹏汽车4月交付31011辆，创月度新高，试驾活动有效促进了购车转化。", source: "Stock Titan", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSFVJNm1oZ1Jld2xzMzNPUG9jaG1ZRl9WS0djcGdBN3JxdllfaGVLSXlZN0MxU0p0R2pJNlhDSDhyNzNTYmtYVXgzNlVnUXNaWGVJMG4yaUhrSEd4QlQtYzBDcGcwUnFFV0ZoN0FGbERVY3JlS3RrZzVPLWZ5SWY5bjRKX1k0cUtSVlR5OTMwd3ZPNlBGNFg0TjNJMG9hNHQ1cmtlZkRYN3U?oc=5" },
   { time: "14:36", tag: "crypto", tagText: "加密", text: "比特币反弹至77000美元上方，受股市上涨带动，但伊朗地缘风险限制了上行空间。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWXVnYlk4NUdzenNxdmlfZERUckE3V2dkckxuVEg1MDVBQVNZOW1uRUtCTFpMU2lNTXN1N0otbGNnSG5JMXJ0NUxONzRsU21Ia1hRaGFkRjBUZldFNDF0TEJWZU52V1V1N05VNGEwYTRXNDhFcE9rNGtBM1AzZGhiM0duOHdUUVp4MWlTckhheVNlcmFud1F3Tlk2dmVXTDd6Y01NSDZ2Ym1aemVMSVZza0VBMEcyMDVteFBuNGpPbDdSLWktWmRtVm9n?oc=5" },
   { time: "12:19", tag: "tech", tagText: "科技", text: "中国电动汽车价格战转向AI军备竞赛，比亚迪、小鹏等车企竞相推出车载AI功能以争夺市场，但技术正快速同质化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/china-ev-ai-features-price-war-bytedance-alibaba-doubao-volcano-engine.html" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "泽连斯基推动乌克兰加入欧盟的努力导致与盟友关系紧张。在塞浦路斯峰会上，乌总统“不得不从一些领导人那里听到一些残酷的现实”。", source: "Financial Times", url: "https://www.ft.com/content/4641fc30-6fc9-43d4-bc84-7ea0521a79b1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "普华永道将从员工健康保险计划中剔除减肥药报销。这家四大会计师事务所之一认为，这类药物已成为“文化现象”，但成本过高。", source: "Financial Times", url: "https://www.ft.com/content/8f3b462e-a4dd-489d-90d9-0733f1390bec" },
   { time: "11:48", tag: "geo", tagText: "地缘", text: "白宫称伊朗停火协议将暂停60天战争倒计时，油价上涨。根据1973年《战争权力决议》，美国总统在向国会报告部署军队后需在60天内撤军。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/oil-prices-today-brent-wti-us-iran-war-trump-war-powers-deadline.html" },
   { time: "11:17", tag: "macro", tagText: "宏观", text: "澳大利亚和日本股市上涨，投资者无视伊朗战争升级担忧，受美国强劲企业财报提振。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/asia-markets-today-asx-200-nikkei-225-labor-day-live-updates.html" },
+  { time: "09:51", tag: "macro", tagText: "宏观", text: "阿斯利康股价下跌，此前FDA顾问委员会投票反对其新抗癌药camizestrant，认为临床试验未能证明早期换用该药能提高长期生存率。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/astrazeneca-stock-az-fda-panel-cancer-drug.html" },
   { time: "08:22", tag: "tech", tagText: "科技", text: "Veeva Systems将加入标普500指数，股价飙升。该软件公司成为指数最新成员。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-s-p-500s-newest-member-is-this-under-the-radar-software-stock-b828bd5e?mod=mw_rss_topstories" },
   { time: "08:15", tag: "tech", tagText: "科技", text: "华为AI芯片销售激增，因英伟达在华业务受阻，中国科技公司大量订购华为最新AI处理器。", source: "Financial Times", url: "https://www.ft.com/content/b82fa156-d1db-40e5-bce5-3c5f8f54069b" },
   { time: "06:02", tag: "tech", tagText: "科技", text: "英特尔股价4月累计上涨逾一倍，创下其上市55年来的最佳单月表现。公司此前公布的财报远超预期，市场对其在AI芯片领域的复苏前景感到乐观。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/intel-has-best-month-ever-after-years-of-losing-to-tsmc-and-nvidia.html" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "05:27", tag: "geo", tagText: "地缘", text: "美国国会赶在截止日前通过短期延期法案，延长了备受争议的《外国情报监视法》第702条。该条款允许美国政府在无需搜查令的情况下收集外国通信情报，此前因隐私问题引发激烈辩论。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/fisa-section-702-congress-extension.html" },
   { time: "05:09", tag: "tech", tagText: "科技", text: "Reddit公布一季度财报，营收同比增长69%，超出分析师预期。广告业务增长强劲，用户参与度持续提升，推动股价盘后上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/reddit-rddt-q1-2026-earnings-report.html" },
   { time: "03:25", tag: "macro", tagText: "宏观", text: "美联储主席鲍威尔誓言不会成为“影子主席”，但与前主席沃什（现任财政部长）在FOMC会议上的潜在冲突难以避免。这将是近80年来首次出现现任与前任美联储主席同场议事的情况。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/inside-the-fed-powell-and-warsh-set-to-clash.html" },
-  { time: "02:18", tag: "macro", tagText: "宏观", text: "美国众议院通过国土安全部拨款法案，为包括TSA在内的多数机构提供资金，结束了该部门即将关门的危机。该法案此前已在参议院获得通过。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/congress-dhs-tsa-funding.html" },
-  { time: "02:18", tag: "tech", tagText: "科技", text: "苹果股价近六个月停滞不前，交易员预计周四盘后财报将引发剧烈波动。隐含波动率显示股价可能波动3.5%，远高于过去四次财报后1.8%的平均波幅。市场关注苹果AI进展及iPhone需求。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/apples-stock-has-gone-nowhere-for-6-months-traders-expect-a-wild-ride-thursday-night.html" },
-  { time: "02:18", tag: "ai", tagText: "AI", text: "OpenAI庭审最新进展：马斯克在法庭上称特斯拉、SpaceX和X平台“对社会有益”。马斯克于2024年起诉OpenAI及其CEO阿尔特曼，指控其违背了最初的非营利承诺。案件持续引发对AI治理和商业化的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/openai-trial-elon-musk-sam-altman-live-updates.html" },
-  { time: "00:38", tag: "macro", tagText: "宏观", text: "美股收盘涨跌互现：道指飙升逾700点，卡特彼勒因AI电力需求业绩超预期领涨；但纳指承压，Meta暴跌9%，微软因AI支出担忧下跌，而Alphabet因云业务强劲增长7%。市场消化科技巨头财报及GDP数据，显示美国经济持续增长但通胀高企。", source: "CNBC", url: "https://www.cnbc.com/2026/04/29/stock-market-today-live-updates.html" },
-  { time: "00:38", tag: "ai", tagText: "AI", text: "谷歌云增速超越微软和亚马逊，三大科技巨头云业务均超预期，AI需求加速。但市场对AI巨额资本支出的态度分化：Alphabet获投资者认可，Meta因支出增速超营收遭抛售，微软因支出担忧股价下跌。英伟达股价重挫，因投资者担忧来自谷歌和亚马逊的自研芯片竞争加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/google-microsoft-and-amazon-all-report-cloud-beats-in-earnings.html" },
 ];
-const breakingDate = "2026年5月1日 15:32 CST";
+const breakingDate = "2026年5月1日 17:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "19:38", tag: "ai", tagText: "AI", text: "Meta一季度财报显示用户流失2000万，但计划继续投入数十亿美元加码AI投资。尽管用户开始放弃其平台，Meta仍坚持AI战略，引发市场对其投入产出比的关注。", source: "The Verge", url: "https://www.theverge.com/tech/921089/meta-earnings-q1-2026-user-decline-ai-investments" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
 ];
-const aiBreakingDate = "2026年5月1日 15:32 CST";
+const aiBreakingDate = "2026年5月1日 17:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
