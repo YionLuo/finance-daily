@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.71,
+  score: 66.63,
   rating: "greed",
-  timestamp: "2026-05-01T11:01:01+00:00",
+  timestamp: "2026-05-01T13:45:54+00:00",
   previousClose: 66.6,
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月1日 19:17 CST"
+  date: "2026年5月1日 21:48 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:48", tag: "macro", tagText: "宏观", text: "苹果财报超预期，股价涨3%推动标普500突破7200点，开启5月交易。苹果CEO库克称iPhone销量创历史新高，并警告未来存储芯片短缺。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxOaTV1bjlqc0o1WkdsOExFMzhiU3pucGk2Wm5oNFh2WndrbDVhRm1xcTB0NVFYcXgzbWhfejh6VUtsbVlheFQ4Xzg5WmE2QUhZYjd4V1pKTlZxWmhEZm1SZWNXOTFXbHNxQUxBT3hGbHZKOFF2bEVtQ0phbTRLUUhyUA?oc=5" },
+  { time: "21:34", tag: "macro", tagText: "宏观", text: "美股4月收盘创纪录，但30年期美债收益率上升可能预示涨势终结。美银策略师警告债券市场正发出危险信号。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/stocks-closed-april-at-records-but-bonds-are-signaling-a-warning.html" },
+  { time: "21:25", tag: "tech", tagText: "科技", text: "谷歌母公司Alphabet市值逼近5万亿美元，有望超越英伟达成为全球市值最高公司，标志着Mag 7内部重大格局变化。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/a-major-mag-7-shift-with-alphabets-market-cap-set-to-pass-nvidias.html" },
+  { time: "21:24", tag: "geo", tagText: "地缘", text: "策略师预测特朗普和习近平最终将重新开放霍尔木兹海峡，届时美元将走低。伊朗已就和平协议草案向美方作出回应，油价下跌。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/trump-and-xi-will-eventually-reopen-the-strait-of-hormuz-and-when-they-do-the-dollar-goes-lower-predicts-this-strategist-a0540293?mod=mw_rss_topstories" },
+  { time: "21:19", tag: "ai", tagText: "AI", text: "五角大楼与英伟达、微软和亚马逊签署新的军事AI合同，同时宣布与谷歌、SpaceX、OpenAI等七家公司达成协议，将其AI用于机密军事用途，打造“AI优先作战力量”。Anthropic仍被列入黑名单。", source: "International homepage", url: "https://www.ft.com/content/23d98dfa-dfe7-4a88-bae1-6d66900d74ca" },
+  { time: "20:52", tag: "macro", tagText: "宏观", text: "美联储内部出现分歧，部分投票委员反对会后声明中暗示下次利率行动将是降息，认为当前不宜释放宽松信号。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/fed-dissenters-explain-no-votes-saying-they-disagreed-with-hinting-next-move-would-be-a-cut.html" },
   { time: "19:17", tag: "macro", tagText: "宏观", text: "埃克森美孚和雪佛龙一季度财报显示盈利下滑，因伊朗战争扰乱石油运输。油价在年初两个月低迷，但在2月28日美以攻击伊朗后突然飙升。两家公司无视特朗普增产呼吁，坚持战前策略。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/exxon-xom-chevron-cvx-q1-2026-earnings.html" },
   { time: "19:17", tag: "tech", tagText: "科技", text: "Twilio股价飙升20%，公司称因一项AI功能需求“前所未有”，提振了因AI担忧而承压的软件板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/twilios-stock-is-soaring-the-company-says-its-because-of-unprecedented-demand-for-one-ai-function-a171d089" },
   { time: "19:17", tag: "tech", tagText: "科技", text: "Fundstrat研究主管Tom Lee表示，投资者低估了软件公司应对AI挑战的能力，认为软件股终于迎来反弹机会，并正在买入。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-why-software-stocks-are-finally-priced-for-a-comeback-and-this-veteran-strategist-is-buying-17c9e765" },
@@ -1643,17 +1649,14 @@ const breakingNews = [
   { time: "12:19", tag: "tech", tagText: "科技", text: "中国电动汽车价格战转向AI军备竞赛，比亚迪、小鹏等车企竞相推出车载AI功能以争夺市场，但技术正快速同质化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/china-ev-ai-features-price-war-bytedance-alibaba-doubao-volcano-engine.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "泽连斯基推动乌克兰加入欧盟的努力导致与盟友关系紧张。在塞浦路斯峰会上，乌总统“不得不从一些领导人那里听到一些残酷的现实”。", source: "Financial Times", url: "https://www.ft.com/content/4641fc30-6fc9-43d4-bc84-7ea0521a79b1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "普华永道将从员工健康保险计划中剔除减肥药报销。这家四大会计师事务所之一认为，这类药物已成为“文化现象”，但成本过高。", source: "Financial Times", url: "https://www.ft.com/content/8f3b462e-a4dd-489d-90d9-0733f1390bec" },
-  { time: "11:48", tag: "geo", tagText: "地缘", text: "白宫称伊朗停火协议将暂停60天战争倒计时，油价上涨。根据1973年《战争权力决议》，美国总统在向国会报告部署军队后需在60天内撤军。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/oil-prices-today-brent-wti-us-iran-war-trump-war-powers-deadline.html" },
-  { time: "11:17", tag: "macro", tagText: "宏观", text: "澳大利亚和日本股市上涨，投资者无视伊朗战争升级担忧，受美国强劲企业财报提振。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/asia-markets-today-asx-200-nikkei-225-labor-day-live-updates.html" },
-  { time: "09:51", tag: "macro", tagText: "宏观", text: "阿斯利康股价下跌，此前FDA顾问委员会投票反对其新抗癌药camizestrant，认为临床试验未能证明早期换用该药能提高长期生存率。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/astrazeneca-stock-az-fda-panel-cancer-drug.html" },
-  { time: "08:22", tag: "tech", tagText: "科技", text: "Veeva Systems将加入标普500指数，股价飙升。该软件公司成为指数最新成员。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-s-p-500s-newest-member-is-this-under-the-radar-software-stock-b828bd5e?mod=mw_rss_topstories" },
-  { time: "08:15", tag: "tech", tagText: "科技", text: "华为AI芯片销售激增，因英伟达在华业务受阻，中国科技公司大量订购华为最新AI处理器。", source: "Financial Times", url: "https://www.ft.com/content/b82fa156-d1db-40e5-bce5-3c5f8f54069b" },
-  { time: "06:02", tag: "tech", tagText: "科技", text: "英特尔股价4月累计上涨逾一倍，创下其上市55年来的最佳单月表现。公司此前公布的财报远超预期，市场对其在AI芯片领域的复苏前景感到乐观。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/intel-has-best-month-ever-after-years-of-losing-to-tsmc-and-nvidia.html" },
 ];
-const breakingDate = "2026年5月1日 19:17 CST";
+const breakingDate = "2026年5月1日 21:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:42", tag: "ai", tagText: "AI", text: "OpenAI公开回应其编程模型被指示“永远不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子等”的报道，承认存在内容过滤机制。此举引发关于AI模型安全限制与透明度平衡的讨论，显示AI公司在内容治理上的两难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins" },
+  { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
+  { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
   { time: "17:40", tag: "tech", tagText: "科技", text: "本周热门阅读：IQE融资、AI初创公司动态、台积电出售Arm股份。电子行业媒体总结本周最受关注新闻，涵盖化合物半导体厂商IQE获得新一轮融资、AI初创企业最新进展以及台积电减持Arm股份等关键动态。", source: "Electronics Weekly", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxOdXBCeElwUTNWMkJ5ZUhacnB3aUhzVGJmb0tnLXhoUGdDT2p2UzNGTWhXYmptQjd3OFJmWF9jbVNQWnpvRm9sRkhLZVJUcXE4ZGxMbXVHMUUyVjB6RUZCY3Y2NjVyUXJuVkhDMzdsekpDb1poNmxoa1VKYlVmdlRFay1jdzRCQTI3NmxEOFRjWEx5TUxBd2JfZUtTclZ5WHl5UHVUNmRqaXdhQ21GeWtMN1JNZ2pWSC13YzhzYlJnNkZXcWl3?oc=5" },
   { time: "14:11", tag: "ai", tagText: "AI", text: "Meta高管为其AI初创公司寻求融资，估值达25亿美元。该初创公司由Meta内部高管创立，正寻求外部资本支持，反映出AI领域高管创业热潮持续升温。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVHM2LXhKWjlPb1E1dXJ2WXR6bjlmcjIyM1l6aDdiT0J2TU41MHlLdWh3QmVDT0FpbjBfMDk4LV9tQ2tqdjN1U0dBNDNfVWZVU3lnLWJOb1lFREtIRnV3ck5kOXRISHNlQnZ4V2RlanRmSS0yUGVLVVlNbDBSYVdQRExjek4yS3hDbEdoRnRDYXM1dU9NcXNqRkFXd2M5b3RoZlk0?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
   { time: "00:48", tag: "tech", tagText: "科技", text: "Meta通过去年以20亿美元收购的AI公司Manus，投放“快速轻松赚钱”广告，教用户利用AI为本地企业建站获利。此举引发争议，批评者认为Meta在推广低质量AI生成内容，可能加剧网络垃圾信息泛滥。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/915970/meta-manus-ai-ads-website-slop" },
   { time: "00:39", tag: "ai", tagText: "AI", text: "Salesforce正通过客户众包方式制定AI产品路线图。该公司认为，如果一家企业客户遇到某个问题，其他客户很可能也面临同样挑战，因此让客户主导产品方向，以更精准地满足市场需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/salesforce-is-crowdsourcing-its-ai-roadmap-with-customers/" },
-  { time: "00:00", tag: "tech", tagText: "科技", text: "谷歌宣布将Gemini AI助手集成到搭载Google内置系统的汽车中，作为现有Google Assistant的升级版。该更新将提升车载语音助手的智能化水平，为用户提供更自然的交互体验。", source: "The Verge", url: "https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade" },
-  { time: "23:14", tag: "tech", tagText: "科技", text: "X（原Twitter）宣布推出由AI驱动的全新广告平台，旨在通过智能化手段提升广告投放效果，推动平台收入增长。这是X在广告业务上的重要战略升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/x-announces-a-rebuilt-ad-platform-powered-by-ai/" },
-  { time: "21:42", tag: "ai", tagText: "AI", text: "OpenAI公开回应其编程模型被指示“永远不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子等”的报道，承认存在内容过滤机制。此举引发关于AI模型安全限制与透明度平衡的讨论，显示AI公司在内容治理上的两难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins" },
 ];
-const aiBreakingDate = "2026年5月1日 19:17 CST";
+const aiBreakingDate = "2026年5月1日 21:48 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
