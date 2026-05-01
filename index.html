@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.51,
+  score: 66.31,
   rating: "greed",
-  timestamp: "2026-05-01T17:06:05+00:00",
+  timestamp: "2026-05-01T19:21:00+00:00",
   previousClose: 66.6,
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 01:09 CST"
+  date: "2026年5月2日 03:24 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:56", tag: "macro", tagText: "宏观", text: "新美联储主席Warsh若推动降息将面临内部激烈斗争。三位官员表态显示通胀担忧令他们对进一步降息持谨慎态度。", source: "MarketWatch", url: "https://www.marketwatch.com/story/new-fed-chair-warsh-will-have-a-fight-on-his-hands-if-he-pushes-for-interest-rate-cuts-a1fb5595?mod=mw_rss_topstories" },
+  { time: "02:50", tag: "macro", tagText: "宏观", text: "私人信贷巨头Ares Management从投资者处筹集近200亿美元，房地产和基础设施投资弥补了核心业务疲软。", source: "Financial Times", url: "https://www.ft.com/content/410de46e-742e-4c00-97d8-d035ece65b72" },
+  { time: "02:23", tag: "crypto", tagText: "加密", text: "比特币突破78,000美元，受风险偏好回升推动，但加密货币CEO警告涨势存在天花板。", source: "Coinpedia", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxNRVl5eTlLeVVWbmlfQTYxalB2aTNMVWFpdlNVQlplZWZLNUVlYzJFRFdoeFRMZm1vZmJBTnJhdGxTeVh2TERfYkFZNFljZldzTnRuc2pjcFN0WGV6WnlzNE9IN2cxUDdYUWVybVpKbmxIN2c1aWJHbnFVTXlMenNqdUoyRVlXcWZDa3dhdy1LM0YwRjhiNVVnS0pVcGZ1Ri00bmVUZV8tZngwLTMyWkVMOTdMOUhCekJteDdjVdIBwgFBVV95cUxQTGYxRnMzd2ZqeXBxSmw4R0gtZmx2NzhPRHJjZzA5ZXBQZzN1a0VzSDhMQzhoU09FbWtZOEMxM2pULTRVVFFOclBWS21rTkJyQkdHbm1KbVdPZlg5N011YU5xWUdJeUF6X2NQRk1ja193TU1TSGNHUlNpUm1oZGgyMVBDUThYUHJRRzZud2pDNWdHUVRGU3BLZnRfMlJLdlMweFNyYklsUHhCQ0cxX1J1dEJhUHJEeEFMUFpMTWdBc0ZMZw?oc=5" },
   { time: "00:51", tag: "geo", tagText: "地缘", text: "特朗普宣布将对欧盟汽车进口关税提高至25%，称除非车企在美国设厂生产，否则下周即生效。此前美国最高法院已否决其“对等关税”政策，欧洲警告贸易协议可能破裂。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/trump-eu-auto-tariffs.html" },
   { time: "00:50", tag: "geo", tagText: "地缘", text: "特朗普表示伊朗“想达成协议，但我不满意”，称伊朗领导层内部存在巨大分歧，使结束美国2月底发起的战争的努力复杂化。此前伊朗已通过巴基斯坦向调解方提交更新版和平方案，油价应声下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/trump-rejects-iran-peace-deal.html" },
   { time: "23:52", tag: "macro", tagText: "科技", text: "全球石油库存持续减少，交易员警告油价可能进一步飙升，给经济带来“巨大痛苦”。市场距离关键拐点仅剩一个月，各国被迫削减消费。", source: "Financial Times", url: "https://www.ft.com/content/b26ba4ce-4324-4ea9-926d-caf036f20832" },
@@ -1646,20 +1649,22 @@ const breakingNews = [
   { time: "20:52", tag: "macro", tagText: "宏观", text: "美联储内部出现分歧，部分投票委员反对会后声明中暗示下次利率行动将是降息，认为当前不宜释放宽松信号。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/fed-dissenters-explain-no-votes-saying-they-disagreed-with-hinting-next-move-would-be-a-cut.html" },
   { time: "19:17", tag: "macro", tagText: "宏观", text: "埃克森美孚和雪佛龙一季度财报显示盈利下滑，因伊朗战争扰乱石油运输。油价在年初两个月低迷，但在2月28日美以攻击伊朗后突然飙升。两家公司无视特朗普增产呼吁，坚持战前策略。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/exxon-xom-chevron-cvx-q1-2026-earnings.html" },
   { time: "19:17", tag: "tech", tagText: "科技", text: "Twilio股价飙升20%，公司称因一项AI功能需求“前所未有”，提振了因AI担忧而承压的软件板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/twilios-stock-is-soaring-the-company-says-its-because-of-unprecedented-demand-for-one-ai-function-a171d089" },
-  { time: "19:17", tag: "tech", tagText: "科技", text: "Fundstrat研究主管Tom Lee表示，投资者低估了软件公司应对AI挑战的能力，认为软件股终于迎来反弹机会，并正在买入。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-why-software-stocks-are-finally-priced-for-a-comeback-and-this-veteran-strategist-is-buying-17c9e765" },
-  { time: "19:17", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦股价在年度股东大会前承压，95岁的巴菲特将首次不再担任舞台核心角色，标志着一个新时代的开始。新CEO Greg Abel面临巨大挑战，但分析认为其拥有“最好的成功机会”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/berkshire-hathaway-annual-meeting-new-era-warren-buffett-off-center-stage.html" },
-  { time: "19:17", tag: "crypto", tagText: "加密", text: "价值21亿美元的比特币和以太坊期权将于今日到期，可能引发加密货币市场抛售。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB4MzFzUEZiRG91TzVaWEM1OU9WSnhIRy1nanNHMWtBalZZUHp1bkdJd3EtdVl3dUpUOWtRRF9nMkxmeEIyREhQWXYzeDQ0TzZOTTNlTkNtRzVsQU0" },
 ];
-const breakingDate = "2026年5月2日 01:09 CST";
+const breakingDate = "2026年5月2日 03:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
+  { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
+  { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
+  { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
   { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
   { time: "21:42", tag: "ai", tagText: "AI", text: "OpenAI公开回应其编程模型被指示“永远不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子等”的报道，承认存在内容过滤机制。此举引发关于AI模型安全限制与透明度平衡的讨论，显示AI公司在内容治理上的两难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins" },
   { time: "21:30", tag: "ai", tagText: "AI", text: "AI在科学领域取得重大突破，成功解决了一个极具挑战性的数学难题。该成果被认为将推动多个科学领域的研究进展，展示了AI在基础科学研究中的巨大潜力。", source: "Bioengineer.org", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQanpfMzFENHZ0MHVzcl9KOFF0NVdfb0Z0akxCandLblZxNWVmZWNyeGo3Tk1fZ0Z0NlQwT1hBS2JXckhPdXZmemtkc2J6UXZmcEo1UmZpNzNBenB5SVZDX3ozRFBaWUR2QTFIX0RiVUhwcjMtUnpIdXUyYnRncjYwYUtIVURvM0tSaUZmc0pzUjU2b1ppR0Y0MUV3?oc=5" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
+  { time: "19:00", tag: "tech", tagText: "科技", text: "本周十大融资轮次：国防科技领跑，太空安全初创公司True Anomaly以6亿美元融资位居榜首。多家国防科技公司完成大额交易，显示该领域投资热度持续升温。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxORF9sMElYdG5uU1VOLXB6bm40U01aMlppOGlTWDFtcVI0SjE0ZWlZSWtwSTY3Y2JaWjM4SWo0ZzNJVGx6M1hPMHBRbXVKcVRxQUktaW9aWXpnTldNZEVUaGtvMnJ5R2lvNkpYcjVYbS0xaW13aVhkX2ExLTFwR3k1NVozQ0V5d1VYdGxXLXFHTHBLUQ?oc=5" },
   { time: "17:40", tag: "tech", tagText: "科技", text: "本周热门阅读：IQE融资、AI初创公司动态、台积电出售Arm股份。电子行业媒体总结本周最受关注新闻，涵盖化合物半导体厂商IQE获得新一轮融资、AI初创企业最新进展以及台积电减持Arm股份等关键动态。", source: "Electronics Weekly", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxOdXBCeElwUTNWMkJ5ZUhacnB3aUhzVGJmb0tnLXhoUGdDT2p2UzNGTWhXYmptQjd3OFJmWF9jbVNQWnpvRm9sRkhLZVJUcXE4ZGxMbXVHMUUyVjB6RUZCY3Y2NjVyUXJuVkhDMzdsekpDb1poNmxoa1VKYlVmdlRFay1jdzRCQTI3NmxEOFRjWEx5TUxBd2JfZUtTclZ5WHl5UHVUNmRqaXdhQ21GeWtMN1JNZ2pWSC13YzhzYlJnNkZXcWl3?oc=5" },
   { time: "14:11", tag: "ai", tagText: "AI", text: "Meta高管为其AI初创公司寻求融资，估值达25亿美元。该初创公司由Meta内部高管创立，正寻求外部资本支持，反映出AI领域高管创业热潮持续升温。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVHM2LXhKWjlPb1E1dXJ2WXR6bjlmcjIyM1l6aDdiT0J2TU41MHlLdWh3QmVDT0FpbjBfMDk4LV9tQ2tqdjN1U0dBNDNfVWZVU3lnLWJOb1lFREtIRnV3ck5kOXRISHNlQnZ4V2RlanRmSS0yUGVLVVlNbDBSYVdQRExjek4yS3hDbEdoRnRDYXM1dU9NcXNqRkFXd2M5b3RoZlk0?oc=5" },
   { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "06:12", tag: "tech", tagText: "科技", text: "苹果称AI驱动Mac需求超预期，Mac mini、Mac Studio和Mac Neo下季度仍将供应受限。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/apple-was-surprised-by-ai-driven-demand-for-macs/" },
   { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
   { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
-  { time: "04:06", tag: "macro", tagText: "宏观", text: "英特尔股价4月涨幅超一倍，创下其纳斯达克上市55年来最佳单月表现。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRnZ6WFZGdk01Q1dGUzNvRHVrMnpETFI1cHJJSmp2M0E5OTdHa0s4OHFLVjJkNW1CVFhFZHp2Wm9TeFJtU0VLUWUxNkZfcGZhTWNaeE9OcDhKbTBQemc0M3hNVlpCb19YZ2ZzNmVsak9xNkxzdWVxLTU3TzU0RjNTamdXYTNRaHJjMXltNEFtRzBpN3J0SjIxVzBTNzdKeW1pT0RCYkV30gGrAUFVX3lxTE5GX2pjY3hwQTFpaG1XRGh4aEE1TTdvS2NHNzQwX0RmSzNCRWdkSThrcFlHTjVvX2Y0RkxCX2RnQWplUVNBT3JrRHluUFl5czc3ay1tNDZueXhObGNWMHZIS1MxOWIwNlVvVDkybU9Rb01lSHJ1OXJuN0NCbm16ZVc1akNsekxpNmoxYkNiWE8ycUdlZVE2NHo1T1FsUDdOOE83STgybVE3WjhWdw?oc=5" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
-  { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
-  { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
-  { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
 ];
-const aiBreakingDate = "2026年5月2日 01:09 CST";
+const aiBreakingDate = "2026年5月2日 03:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
