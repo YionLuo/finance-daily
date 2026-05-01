@@ -1618,18 +1618,20 @@
 const fearGreedData = {
   score: 66.6,
   rating: "greed",
-  timestamp: "2026-05-01T20:46:50+00:00",
+  timestamp: "2026-05-01T21:41:48+00:00",
   previousClose: 66.6,
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 05:04 CST"
+  date: "2026年5月2日 06:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:27", tag: "geo", tagText: "地缘", text: "美国警告欧洲，因伊朗战争消耗库存，对欧武器交付将延迟，可能包括用于乌克兰防御俄罗斯的军火。", source: "Financial Times", url: "https://www.ft.com/content/f87a8b04-e683-4e0e-8c66-647d23bfc2ff" },
   { time: "05:01", tag: "macro", tagText: "宏观", text: "美国汽油价格因伊朗战争飙升，加满最畅销车型需160美元。据GasBuddy数据，自2月底伊朗战争爆发以来，普通无铅汽油价格上涨近50%，周五早盘达到每加仑4.42美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/it-now-costs-160-to-fill-up-americas-top-selling-vehicle-as-the-iran-war-nears-its-10th-week-803077d2?mod=mw_rss_topstories" },
+  { time: "04:59", tag: "geo", tagText: "地缘", text: "美国检察官Pirro尽管调查受阻，仍持续向美联储主席鲍威尔施压。她预计将立即对阻止其调查美联储成本超支的裁决提出上诉。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/fed-powell-pirro-investigation.html" },
   { time: "03:35", tag: "tech", tagText: "科技", text: "苹果正式放弃净现金中性目标，市场猜测其可能正在为重大AI收购做准备，以缩小在人工智能竞赛中的差距。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apple-just-gave-a-subtle-clue-that-a-splashy-ai-acquisition-may-be-in-the-cards-110f5ce2?mod=mw_rss_topstories" },
   { time: "03:23", tag: "macro", tagText: "宏观", text: "特朗普表示政府已向精神航空提出“最终”救助方案，但本周与债券持有人的谈判尚未达成协议。该航空公司面临清算风险，若停运将为其他航空公司释放宝贵的机场时刻和航线资源。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/spirit-airlines-trump-bailout.html" },
   { time: "02:56", tag: "macro", tagText: "宏观", text: "新美联储主席Warsh若推动降息将面临内部激烈斗争。三位官员表态显示通胀担忧令他们对进一步降息持谨慎态度。", source: "MarketWatch", url: "https://www.marketwatch.com/story/new-fed-chair-warsh-will-have-a-fight-on-his-hands-if-he-pushes-for-interest-rate-cuts-a1fb5595?mod=mw_rss_topstories" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "21:48", tag: "macro", tagText: "宏观", text: "苹果财报超预期，股价涨3%推动标普500突破7200点，开启5月交易。苹果CEO库克称iPhone销量创历史新高，并警告未来存储芯片短缺。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxOaTV1bjlqc0o1WkdsOExFMzhiU3pucGk2Wm5oNFh2WndrbDVhRm1xcTB0NVFYcXgzbWhfejh6VUtsbVlheFQ4Xzg5WmE2QUhZYjd4V1pKTlZxWmhEZm1SZWNXOTFXbHNxQUxBT3hGbHZKOFF2bEVtQ0phbTRLUUhyUA?oc=5" },
   { time: "21:34", tag: "macro", tagText: "宏观", text: "美股4月收盘创纪录，但30年期美债收益率上升可能预示涨势终结。美银策略师警告债券市场正发出危险信号。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/stocks-closed-april-at-records-but-bonds-are-signaling-a-warning.html" },
   { time: "21:25", tag: "tech", tagText: "科技", text: "谷歌母公司Alphabet市值逼近5万亿美元，有望超越英伟达成为全球市值最高公司，标志着Mag 7内部重大格局变化。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/a-major-mag-7-shift-with-alphabets-market-cap-set-to-pass-nvidias.html" },
-  { time: "21:24", tag: "geo", tagText: "地缘", text: "策略师预测特朗普和习近平最终将重新开放霍尔木兹海峡，届时美元将走低。伊朗已就和平协议草案向美方作出回应，油价下跌。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/trump-and-xi-will-eventually-reopen-the-strait-of-hormuz-and-when-they-do-the-dollar-goes-lower-predicts-this-strategist-a0540293?mod=mw_rss_topstories" },
-  { time: "21:19", tag: "ai", tagText: "AI", text: "五角大楼与英伟达、微软和亚马逊签署新的军事AI合同，同时宣布与谷歌、SpaceX、OpenAI等七家公司达成协议，将其AI用于机密军事用途，打造“AI优先作战力量”。Anthropic仍被列入黑名单。", source: "International homepage", url: "https://www.ft.com/content/23d98dfa-dfe7-4a88-bae1-6d66900d74ca" },
 ];
-const breakingDate = "2026年5月2日 05:04 CST";
+const breakingDate = "2026年5月2日 06:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "08:31", tag: "ai", tagText: "AI", text: "AI突破性研究可提前三年检测胰腺癌。该技术通过分析医疗数据，在患者确诊前三年即发现癌症迹象，有望大幅提高胰腺癌这一致命疾病的早期诊断率和生存率。", source: "GreekReporter.com", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdHFNcGdrRDNEVmJfaml0Sld4U1dJZm9kWjRVLW1GdlhqUDVfLWtWeWhWQ1FZTDNKNXZEd0k2Ni05RkkySHJoQVJIWm1ELWhNQnNteXo5QjFfMmxPcjctVFp0SDNHUldMMFJ2NGQwN3B6cW1FQTA0UFNDRlFsUUl5Vi1KejIzTUE2U3M0QVdtSTZIUQ?oc=5" },
   { time: "07:07", tag: "ai", tagText: "AI", text: "Anthropic据悉将在两周内完成新一轮融资，估值可能超过9000亿美元。该公司要求投资者在48小时内提交认购意向，显示出AI头部企业融资热度不减。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/" },
 ];
-const aiBreakingDate = "2026年5月2日 05:04 CST";
+const aiBreakingDate = "2026年5月2日 06:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
