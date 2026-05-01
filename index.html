@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.63,
+  score: 66.83,
   rating: "greed",
-  timestamp: "2026-05-01T13:45:54+00:00",
+  timestamp: "2026-05-01T15:05:01+00:00",
   previousClose: 66.6,
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月1日 21:48 CST"
+  date: "2026年5月1日 23:08 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:48", tag: "macro", tagText: "宏观", text: "尽管受伊朗战争影响，美国制造业4月连续第四个月扩张，创四年来最长增长纪录，但复苏面临油价上涨和通胀上升的新障碍。", source: "MarketWatch", url: "https://www.marketwatch.com/story/embattled-u-s-manufacturers-show-their-metal-grow-fourth-month-in-a-row-despite-iran-war-8c79a878?mod=mw_rss_topstories" },
+  { time: "22:18", tag: "tech", tagText: "科技", text: "Roblox股价暴跌18%，因儿童安全措施拖累预订量。该公司面临超过140起联邦诉讼，指控其未能防止儿童剥削，上月刚与阿拉巴马州和西弗吉尼亚州达成和解。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/roblox-rblx-stock-child-safety-earnings.html" },
+  { time: "22:14", tag: "macro", tagText: "宏观", text: "特朗普签署行政令，为缺乏雇主提供退休计划的数百万工人创建退休储蓄渠道。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-to-sign-order-creating-retirement-plans-for-workers-who-lack-them-c7f33603?mod=mw_rss_topstories" },
+  { time: "22:08", tag: "tech", tagText: "科技", text: "参议员Chris Coons就英伟达H200芯片对华销售问题致信商务部长卢特尼克，要求其澄清与英伟达CEO黄仁勋此前给出的不同说法。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/nvidia-chips-jensen-huang-h200-lutnick-chris-coons.html" },
+  { time: "22:03", tag: "macro", tagText: "宏观", text: "美联储洛根表示，央行下一次利率行动可能是降息或加息，暗示政策路径不确定性上升。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/feds-logan-says-central-banks-140326919.html" },
   { time: "21:48", tag: "macro", tagText: "宏观", text: "苹果财报超预期，股价涨3%推动标普500突破7200点，开启5月交易。苹果CEO库克称iPhone销量创历史新高，并警告未来存储芯片短缺。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxOaTV1bjlqc0o1WkdsOExFMzhiU3pucGk2Wm5oNFh2WndrbDVhRm1xcTB0NVFYcXgzbWhfejh6VUtsbVlheFQ4Xzg5WmE2QUhZYjd4V1pKTlZxWmhEZm1SZWNXOTFXbHNxQUxBT3hGbHZKOFF2bEVtQ0phbTRLUUhyUA?oc=5" },
   { time: "21:34", tag: "macro", tagText: "宏观", text: "美股4月收盘创纪录，但30年期美债收益率上升可能预示涨势终结。美银策略师警告债券市场正发出危险信号。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/stocks-closed-april-at-records-but-bonds-are-signaling-a-warning.html" },
   { time: "21:25", tag: "tech", tagText: "科技", text: "谷歌母公司Alphabet市值逼近5万亿美元，有望超越英伟达成为全球市值最高公司，标志着Mag 7内部重大格局变化。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/01/a-major-mag-7-shift-with-alphabets-market-cap-set-to-pass-nvidias.html" },
@@ -1644,17 +1649,14 @@ const breakingNews = [
   { time: "15:00", tag: "tech", tagText: "科技", text: "特斯拉2024年来自马斯克旗下公司（SpaceX和xAI）的收入超过5.73亿美元。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa0dTM0E4eUFmVnZ3MDBVNUtvOEpYOVV1bXpCWGw2eDhkdUZpdVdvY0dqQTRpcVIxU2xaZWJWZTBCZ2hEckluWVVPWFBkWERPS19OTDZfWmZnQmROM0o2ZjMyWGhZZ0ZjZm5PdUpYUGYwbWduR0lVX1RSdXN5dzA1clBmVm40UlY3bkdKenlmVC12ZDBVd19QTWFPWGhMbmF1UVcwaUd0OA?oc=5" },
   { time: "15:00", tag: "tech", tagText: "科技", text: "苹果CEO库克在季度财报中警告，未来几个季度将面临更严重的存储芯片短缺问题，并表示公司将考虑一系列应对选项。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/apple-ceo-warns-of-memory-crunch-well-look-at-a-range-of-options.html" },
   { time: "14:58", tag: "tech", tagText: "科技", text: "日本航空在东京羽田机场启动人形机器人试验，以应对劳动力严重短缺和人口老龄化问题，机器人将参与地面服务等工作。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/japan-airlines-humanoid-robots-haneda-labor-shortage.html" },
-  { time: "14:47", tag: "tech", tagText: "科技", text: "小鹏汽车4月交付31011辆，创月度新高，试驾活动有效促进了购车转化。", source: "Stock Titan", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSFVJNm1oZ1Jld2xzMzNPUG9jaG1ZRl9WS0djcGdBN3JxdllfaGVLSXlZN0MxU0p0R2pJNlhDSDhyNzNTYmtYVXgzNlVnUXNaWGVJMG4yaUhrSEd4QlQtYzBDcGcwUnFFV0ZoN0FGbERVY3JlS3RrZzVPLWZ5SWY5bjRKX1k0cUtSVlR5OTMwd3ZPNlBGNFg0TjNJMG9hNHQ1cmtlZkRYN3U?oc=5" },
-  { time: "14:36", tag: "crypto", tagText: "加密", text: "比特币反弹至77000美元上方，受股市上涨带动，但伊朗地缘风险限制了上行空间。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWXVnYlk4NUdzenNxdmlfZERUckE3V2dkckxuVEg1MDVBQVNZOW1uRUtCTFpMU2lNTXN1N0otbGNnSG5JMXJ0NUxONzRsU21Ia1hRaGFkRjBUZldFNDF0TEJWZU52V1V1N05VNGEwYTRXNDhFcE9rNGtBM1AzZGhiM0duOHdUUVp4MWlTckhheVNlcmFud1F3Tlk2dmVXTDd6Y01NSDZ2Ym1aemVMSVZza0VBMEcyMDVteFBuNGpPbDdSLWktWmRtVm9n?oc=5" },
-  { time: "12:19", tag: "tech", tagText: "科技", text: "中国电动汽车价格战转向AI军备竞赛，比亚迪、小鹏等车企竞相推出车载AI功能以争夺市场，但技术正快速同质化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/china-ev-ai-features-price-war-bytedance-alibaba-doubao-volcano-engine.html" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "泽连斯基推动乌克兰加入欧盟的努力导致与盟友关系紧张。在塞浦路斯峰会上，乌总统“不得不从一些领导人那里听到一些残酷的现实”。", source: "Financial Times", url: "https://www.ft.com/content/4641fc30-6fc9-43d4-bc84-7ea0521a79b1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "普华永道将从员工健康保险计划中剔除减肥药报销。这家四大会计师事务所之一认为，这类药物已成为“文化现象”，但成本过高。", source: "Financial Times", url: "https://www.ft.com/content/8f3b462e-a4dd-489d-90d9-0733f1390bec" },
 ];
-const breakingDate = "2026年5月1日 21:48 CST";
+const breakingDate = "2026年5月1日 23:08 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
   { time: "21:42", tag: "ai", tagText: "AI", text: "OpenAI公开回应其编程模型被指示“永远不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子等”的报道，承认存在内容过滤机制。此举引发关于AI模型安全限制与透明度平衡的讨论，显示AI公司在内容治理上的两难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins" },
+  { time: "21:30", tag: "ai", tagText: "AI", text: "AI在科学领域取得重大突破，成功解决了一个极具挑战性的数学难题。该成果被认为将推动多个科学领域的研究进展，展示了AI在基础科学研究中的巨大潜力。", source: "Bioengineer.org", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQanpfMzFENHZ0MHVzcl9KOFF0NVdfb0Z0akxCandLblZxNWVmZWNyeGo3Tk1fZ0Z0NlQwT1hBS2JXckhPdXZmemtkc2J6UXZmcEo1UmZpNzNBenB5SVZDX3ozRFBaWUR2QTFIX0RiVUhwcjMtUnpIdXUyYnRncjYwYUtIVURvM0tSaUZmc0pzUjU2b1ppR0Y0MUV3?oc=5" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
   { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
   { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
-  { time: "00:48", tag: "tech", tagText: "科技", text: "Meta通过去年以20亿美元收购的AI公司Manus，投放“快速轻松赚钱”广告，教用户利用AI为本地企业建站获利。此举引发争议，批评者认为Meta在推广低质量AI生成内容，可能加剧网络垃圾信息泛滥。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/915970/meta-manus-ai-ads-website-slop" },
-  { time: "00:39", tag: "ai", tagText: "AI", text: "Salesforce正通过客户众包方式制定AI产品路线图。该公司认为，如果一家企业客户遇到某个问题，其他客户很可能也面临同样挑战，因此让客户主导产品方向，以更精准地满足市场需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/salesforce-is-crowdsourcing-its-ai-roadmap-with-customers/" },
 ];
-const aiBreakingDate = "2026年5月1日 21:48 CST";
+const aiBreakingDate = "2026年5月1日 23:08 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
