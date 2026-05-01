@@ -1618,17 +1618,22 @@
 const fearGreedData = {
   score: 66.71,
   rating: "greed",
-  timestamp: "2026-05-01T09:35:46+00:00",
+  timestamp: "2026-05-01T11:01:01+00:00",
   previousClose: 66.6,
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月1日 17:55 CST"
+  date: "2026年5月1日 19:17 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:17", tag: "macro", tagText: "宏观", text: "埃克森美孚和雪佛龙一季度财报显示盈利下滑，因伊朗战争扰乱石油运输。油价在年初两个月低迷，但在2月28日美以攻击伊朗后突然飙升。两家公司无视特朗普增产呼吁，坚持战前策略。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/exxon-xom-chevron-cvx-q1-2026-earnings.html" },
+  { time: "19:17", tag: "tech", tagText: "科技", text: "Twilio股价飙升20%，公司称因一项AI功能需求“前所未有”，提振了因AI担忧而承压的软件板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/twilios-stock-is-soaring-the-company-says-its-because-of-unprecedented-demand-for-one-ai-function-a171d089" },
+  { time: "19:17", tag: "tech", tagText: "科技", text: "Fundstrat研究主管Tom Lee表示，投资者低估了软件公司应对AI挑战的能力，认为软件股终于迎来反弹机会，并正在买入。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-why-software-stocks-are-finally-priced-for-a-comeback-and-this-veteran-strategist-is-buying-17c9e765" },
+  { time: "19:17", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦股价在年度股东大会前承压，95岁的巴菲特将首次不再担任舞台核心角色，标志着一个新时代的开始。新CEO Greg Abel面临巨大挑战，但分析认为其拥有“最好的成功机会”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/berkshire-hathaway-annual-meeting-new-era-warren-buffett-off-center-stage.html" },
+  { time: "19:17", tag: "crypto", tagText: "加密", text: "价值21亿美元的比特币和以太坊期权将于今日到期，可能引发加密货币市场抛售。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB4MzFzUEZiRG91TzVaWEM1OU9WSnhIRy1nanNHMWtBalZZUHp1bkdJd3EtdVl3dUpUOWtRRF9nMkxmeEIyREhQWXYzeDQ0TzZOTTNlTkNtRzVsQU0" },
   { time: "17:01", tag: "geo", tagText: "地缘", text: "特朗普取消苏格兰威士忌关税，“以向查尔斯国王致敬”。此举预计每月为苏格兰经济挽回数百万美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/donald-trump-king-charles-queen-camilla-state-visit-scotch-whisky-tariffs.html" },
   { time: "15:00", tag: "tech", tagText: "科技", text: "特斯拉2024年来自马斯克旗下公司（SpaceX和xAI）的收入超过5.73亿美元。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa0dTM0E4eUFmVnZ3MDBVNUtvOEpYOVV1bXpCWGw2eDhkdUZpdVdvY0dqQTRpcVIxU2xaZWJWZTBCZ2hEckluWVVPWFBkWERPS19OTDZfWmZnQmROM0o2ZjMyWGhZZ0ZjZm5PdUpYUGYwbWduR0lVX1RSdXN5dzA1clBmVm40UlY3bkdKenlmVC12ZDBVd19QTWFPWGhMbmF1UVcwaUd0OA?oc=5" },
   { time: "15:00", tag: "tech", tagText: "科技", text: "苹果CEO库克在季度财报中警告，未来几个季度将面临更严重的存储芯片短缺问题，并表示公司将考虑一系列应对选项。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/apple-ceo-warns-of-memory-crunch-well-look-at-a-range-of-options.html" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "08:22", tag: "tech", tagText: "科技", text: "Veeva Systems将加入标普500指数，股价飙升。该软件公司成为指数最新成员。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-s-p-500s-newest-member-is-this-under-the-radar-software-stock-b828bd5e?mod=mw_rss_topstories" },
   { time: "08:15", tag: "tech", tagText: "科技", text: "华为AI芯片销售激增，因英伟达在华业务受阻，中国科技公司大量订购华为最新AI处理器。", source: "Financial Times", url: "https://www.ft.com/content/b82fa156-d1db-40e5-bce5-3c5f8f54069b" },
   { time: "06:02", tag: "tech", tagText: "科技", text: "英特尔股价4月累计上涨逾一倍，创下其上市55年来的最佳单月表现。公司此前公布的财报远超预期，市场对其在AI芯片领域的复苏前景感到乐观。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/intel-has-best-month-ever-after-years-of-losing-to-tsmc-and-nvidia.html" },
-  { time: "06:01", tag: "tech", tagText: "科技", text: "苹果公布第二财季财报，营收增长17%超预期，iPhone和Mac需求强劲。即将接任CEO的John Ternus表示将继续保持“审慎与纪律”。尽管iPhone销量略逊预期，但公司称这是“史上最受欢迎”的iPhone系列，营收指引高于市场预期。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/apple-aapl-q2-2026-earnings-report.html" },
-  { time: "05:56", tag: "macro", tagText: "宏观", text: "黄金期货价格周四录得史上最大两个月跌幅。分析人士指出，尽管短期承压，但地缘政治风险和央行购金需求可能推动金价在未来五年内翻倍。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gold-posts-its-biggest-2-month-drop-ever-how-its-price-could-still-double-over-the-next-5-years-f9004621" },
-  { time: "05:27", tag: "geo", tagText: "地缘", text: "美国国会赶在截止日前通过短期延期法案，延长了备受争议的《外国情报监视法》第702条。该条款允许美国政府在无需搜查令的情况下收集外国通信情报，此前因隐私问题引发激烈辩论。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/fisa-section-702-congress-extension.html" },
-  { time: "05:09", tag: "tech", tagText: "科技", text: "Reddit公布一季度财报，营收同比增长69%，超出分析师预期。广告业务增长强劲，用户参与度持续提升，推动股价盘后上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/reddit-rddt-q1-2026-earnings-report.html" },
-  { time: "03:25", tag: "macro", tagText: "宏观", text: "美联储主席鲍威尔誓言不会成为“影子主席”，但与前主席沃什（现任财政部长）在FOMC会议上的潜在冲突难以避免。这将是近80年来首次出现现任与前任美联储主席同场议事的情况。", source: "CNBC", url: "https://www.cnbc.com/2026/04/30/inside-the-fed-powell-and-warsh-set-to-clash.html" },
 ];
-const breakingDate = "2026年5月1日 17:55 CST";
+const breakingDate = "2026年5月1日 19:17 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
+  { time: "17:40", tag: "tech", tagText: "科技", text: "本周热门阅读：IQE融资、AI初创公司动态、台积电出售Arm股份。电子行业媒体总结本周最受关注新闻，涵盖化合物半导体厂商IQE获得新一轮融资、AI初创企业最新进展以及台积电减持Arm股份等关键动态。", source: "Electronics Weekly", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxOdXBCeElwUTNWMkJ5ZUhacnB3aUhzVGJmb0tnLXhoUGdDT2p2UzNGTWhXYmptQjd3OFJmWF9jbVNQWnpvRm9sRkhLZVJUcXE4ZGxMbXVHMUUyVjB6RUZCY3Y2NjVyUXJuVkhDMzdsekpDb1poNmxoa1VKYlVmdlRFay1jdzRCQTI3NmxEOFRjWEx5TUxBd2JfZUtTclZ5WHl5UHVUNmRqaXdhQ21GeWtMN1JNZ2pWSC13YzhzYlJnNkZXcWl3?oc=5" },
   { time: "14:11", tag: "ai", tagText: "AI", text: "Meta高管为其AI初创公司寻求融资，估值达25亿美元。该初创公司由Meta内部高管创立，正寻求外部资本支持，反映出AI领域高管创业热潮持续升温。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVHM2LXhKWjlPb1E1dXJ2WXR6bjlmcjIyM1l6aDdiT0J2TU41MHlLdWh3QmVDT0FpbjBfMDk4LV9tQ2tqdjN1U0dBNDNfVWZVU3lnLWJOb1lFREtIRnV3ck5kOXRISHNlQnZ4V2RlanRmSS0yUGVLVVlNbDBSYVdQRExjek4yS3hDbEdoRnRDYXM1dU9NcXNqRkFXd2M5b3RoZlk0?oc=5" },
   { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
   { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "00:00", tag: "tech", tagText: "科技", text: "谷歌宣布将Gemini AI助手集成到搭载Google内置系统的汽车中，作为现有Google Assistant的升级版。该更新将提升车载语音助手的智能化水平，为用户提供更自然的交互体验。", source: "The Verge", url: "https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade" },
   { time: "23:14", tag: "tech", tagText: "科技", text: "X（原Twitter）宣布推出由AI驱动的全新广告平台，旨在通过智能化手段提升广告投放效果，推动平台收入增长。这是X在广告业务上的重要战略升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/x-announces-a-rebuilt-ad-platform-powered-by-ai/" },
   { time: "21:42", tag: "ai", tagText: "AI", text: "OpenAI公开回应其编程模型被指示“永远不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子等”的报道，承认存在内容过滤机制。此举引发关于AI模型安全限制与透明度平衡的讨论，显示AI公司在内容治理上的两难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins" },
-  { time: "19:38", tag: "ai", tagText: "AI", text: "Meta一季度财报显示用户流失2000万，但计划继续投入数十亿美元加码AI投资。尽管用户开始放弃其平台，Meta仍坚持AI战略，引发市场对其投入产出比的关注。", source: "The Verge", url: "https://www.theverge.com/tech/921089/meta-earnings-q1-2026-user-decline-ai-investments" },
-  { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
 ];
-const aiBreakingDate = "2026年5月1日 17:55 CST";
+const aiBreakingDate = "2026年5月1日 19:17 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
