@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月3日 03:14 CST"
+  date: "2026年5月3日 04:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:45", tag: "macro", tagText: "宏观", text: "高盛警告称，标普500指数突破7100点属于“泡沫”，并指出华尔街此前发出类似警告后市场曾出现暴跌。当前市场情绪过热，投资者需警惕回调风险。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-says-p-500s-194500078.html" },
+  { time: "03:06", tag: "macro", tagText: "宏观", text: "美联储官员古尔斯比表示，近期通胀数据是“坏消息”，暗示通胀压力可能持续。市场对美联储未来加息路径的担忧加剧，投资者需关注美联储后续沟通。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/recent-inflation-data-bad-news-190611607.html" },
   { time: "02:36", tag: "geo", tagText: "地缘", text: "特朗普政府加速向中东盟友批准86亿美元军售，以在伊朗战争期间巩固地区伙伴。与此同时，美国警告欧洲其武器运输将面临延迟。此举凸显美国在中东冲突中优先支持区域盟友的战略调整。", source: "Financial Times", url: "https://www.ft.com/content/a9a3273f-d5c3-4277-932d-27b1969e975f" },
   { time: "01:59", tag: "geo", tagText: "地缘", text: "伊朗提出霍尔木兹海峡协议方案，特朗普表示不满意但倾向于非军事解决途径。伊朗外长称德黑兰已准备好在外交上接触，前提是美国改变其做法。霍尔木兹海峡局势仍是全球能源市场的关键风险点。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/trump-iran-strait-of-hormuz.html" },
   { time: "01:56", tag: "geo", tagText: "地缘", text: "美国国防部计划从德国撤出5000名士兵，以报复德国总理默茨对美国-以色列对伊朗战争行动的批评。此举标志着美德关系因伊朗冲突进一步恶化，凸显北约内部裂痕。", source: "Financial Times", url: "https://www.ft.com/content/4cabedc3-0119-4c3f-9867-094b7e1398f6" },
@@ -1647,13 +1649,13 @@ const breakingNews = [
   { time: "20:00", tag: "tech", tagText: "科技", text: "埃隆·马斯克在马斯克诉奥特曼案的第一周庭审中占据主导地位，连续三天出庭作证。马斯克指控OpenAI背离非营利初衷，称“你不能就这么偷走一个慈善机构”。此案对AI治理和开源理念具有深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "日本卫浴制造商Toto因供应半导体制造关键部件——静电卡盘，意外成为AI热潮赢家。该公司正受益于内存芯片繁荣，同时推进“永不需清洁的马桶”目标，跨界科技与家居领域。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-japanese-toilet-maker-seeking-the-perfect-flush-is-moonlighting-as-a-hot-ai-play-30d11f1a" },
   { time: "19:30", tag: "geo", tagText: "地缘", text: "美国参议员林赛·格雷厄姆警告称，如果伊朗不屈服，美国应“完成工作”。这位鹰派共和党人是对美国总统有影响力的关键人物，其言论加剧了市场对中东冲突进一步升级的担忧。", source: "Financial Times", url: "https://www.ft.com/content/359e5fdd-b56f-46cb-b3fd-70b367f3e2ef" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "GLP-1减肥药常见副作用脱发正催生新兴市场。制药公司和消费品企业纷纷推出针对减肥相关脱发的治疗产品，这一此前未被充分开发的细分市场正快速增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/hair-loss-glp-1s.html" },
-  { time: "17:30", tag: "macro", tagText: "宏观", text: "日本央行刚刚出手将日元从约40年低点“救起”，但高油价可能很快撕掉这块“创可贴”。市场担忧高油价将加剧日本通胀压力，使日元再度承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/japan-just-put-a-band-aid-on-the-yen-why-high-oil-prices-could-soon-rip-it-off-21374282?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月3日 03:14 CST";
+const breakingDate = "2026年5月3日 04:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
+  { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
   { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "07:06", tag: "ai", tagText: "AI", text: "福布斯发布2026年AI 50强榜单，评选出全球最具影响力的人工智能公司。该榜单涵盖从基础模型到行业应用的各领域领军企业，反映了当前AI产业的最新格局与增长趋势。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5uUGIzcFRTdFZwdkxZTnpHdUpfVmhCQ21iczlSQjJrMnlSa19sYzB4S2JuVC1wSWo1UFhRWnlpVWtrb0NIN1RmS2Nn?oc=5" },
   { time: "07:06", tag: "ai", tagText: "AI", text: "Replit CEO Amjad Masad在TechCrunch活动上谈及Cursor交易、与苹果的竞争，并明确表示更倾向于保持独立而非出售公司。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/01/replits-amjad-masad-on-the-cursor-deal-fighting-apple-and-why-hed-rather-not-sell/" },
   { time: "06:13", tag: "ai", tagText: "AI", text: "Meta收购人形机器人初创公司Assured Robot Intelligence，以增强其机器人AI模型能力，进一步推进人形AI机器人战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" },
-  { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
-  { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
 ];
-const aiBreakingDate = "2026年5月3日 03:14 CST";
+const aiBreakingDate = "2026年5月3日 04:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
