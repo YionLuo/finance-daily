@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月3日 01:02 CST"
+  date: "2026年5月3日 01:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:56", tag: "geo", tagText: "地缘", text: "美国国防部计划从德国撤出5000名士兵，以报复德国总理默茨对美国-以色列对伊朗战争行动的批评。此举标志着美德关系因伊朗冲突进一步恶化，凸显北约内部裂痕。", source: "Financial Times", url: "https://www.ft.com/content/4cabedc3-0119-4c3f-9867-094b7e1398f6" },
+  { time: "01:56", tag: "macro", tagText: "宏观", text: "市场分析指出，通胀即将上升，美联储需在加息前向市场明确传达信号，以帮助投资者管理风险。当前市场对利率路径存在不确定性，美联储沟通策略至关重要。", source: "MarketWatch", url: "https://www.marketwatch.com/story/higher-inflation-is-on-the-way-the-fed-needs-to-make-this-clearer-before-it-raises-rates-142c6884" },
   { time: "00:15", tag: "macro", tagText: "宏观", text: "美国汽油价格在五个支持特朗普的州涨幅最快，同时消费者信心跌至历史最低点。高油价正在侵蚀美国人的退税收入，加剧家庭财务压力，成为影响中期选举的重要经济议题。", source: "Moneywise", url: "https://finance.yahoo.com/sectors/energy/articles/gas-prices-surging-fastest-5-161500357.html" },
   { time: "00:13", tag: "macro", tagText: "宏观", text: "精神航空（Spirit Airlines）宣布取消所有未来航班并立即停业。分析指出，该公司犯下关键战略错误，导致其最终走向破产清算，成为美国航空业近年来最大的倒闭事件之一。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spirit-airlines-made-this-critical-mistake-that-drove-its-demise-df3ea39d" },
   { time: "23:55", tag: "macro", tagText: "宏观", text: "OPEC+消息人士称，尽管霍尔木兹海峡因美伊战争关闭导致海湾石油供应中断，OPEC+仍计划再次提高石油产量配额。分析指出，由于实际供应受阻，增产在很大程度上将停留在纸面上。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/opec-set-for-another-oil-output-quota-hike-despite-hormuz-closure.html" },
@@ -1647,13 +1649,12 @@ const breakingNews = [
   { time: "15:51", tag: "crypto", tagText: "加密", text: "比特币突破78,000美元，受ETF资金流入推动，4月成为自2025年4月以来表现最佳月份。参议院通过《Clarity Act》扫清监管障碍，进一步提振市场情绪。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbW5JY3dxdEItR2hYeFJPSUFvNnZPS1pMMFh2Z3AteDJzV096VDRNbWFoQmdKZVQxYWVrblUwZUJkNkFkTXpPbW43c1VzdjJ0Q1hWYTlqLXRVVUFvalpQMkk1elJLTmd1WkxKcmJTc1JleUdKNUphbXBCWkZ5a3BIcFNhY25LaWFTX0RlVmRRb1ZDOGQtZWg0M0l0RmJwbHozd2hnSkRzTmpfOXpJMVpheEU5U3JOVERydnl4eE1hVllCbU11blhFUnRZLXhQZw?oc=5" },
   { time: "12:03", tag: "geo", tagText: "地缘", text: "《金融时报》评论文章指出，伊朗战争提醒我们，地理事实而非数字技术正在塑造我们的生活。这场冲突凸显了物理世界对全球供应链、能源安全和地缘格局的深刻影响，数字时代的乐观叙事正遭遇现实反击。", source: "Financial Times", url: "https://www.ft.com/content/ee833531-4554-40d1-834f-659aeadb0ba6" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "华尔街交易员在商品市场收益上远超欧洲同行。受伊朗战争引发的油价剧烈波动影响，欧洲最大投行在商品交易领域错失良机，而美国投行则抓住波动实现三倍于欧洲对手的收益。", source: "Financial Times", url: "https://www.ft.com/content/232bc04a-d2b9-42a2-a38f-eca48c734eb4" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗战争重创肯尼亚经济，其玫瑰和茶叶出口遭受严重打击。冲突导致海湾市场崩溃，并推高航空货运和海运成本，肯尼亚的鲜花和茶叶产业面临出口停滞和成本飙升的双重困境。", source: "Financial Times", url: "https://www.ft.com/content/3b0438dc-7d8a-4564-9ce6-9d66b735eaae" },
-  { time: "10:00", tag: "macro", tagText: "科技", text: "《金融时报》评论称，欧元迫切需要抓住机遇发展成为储备资产。在当前全球地缘动荡和美元体系面临挑战的背景下，欧洲应推动欧元国际化，以增强金融自主性和全球影响力。", source: "Financial Times", url: "https://www.ft.com/content/5f02bb2e-f621-4369-8ce0-55f6d6b839c7" },
 ];
-const breakingDate = "2026年5月3日 01:02 CST";
+const breakingDate = "2026年5月3日 01:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:10", tag: "tech", tagText: "科技", text: "4月25日至5月2日，18家印度初创公司从投资者处筹集超2.32亿美元资金，涵盖游戏、金融科技、AI、气候科技、体育科技、深度科技、能源科技、借贷、股票经纪等多个领域。", source: "instagram.com", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1vUy00YjVXSW10Tmt2aHhzVDkyVDJ0d1owcG1HMzRxUGQyQVhUWFd1NmMtcFAxLUNjVzFlWHNzMFpjMWxZY0dXdENLQ1FGckZncUE?oc=5" },
   { time: "00:00", tag: "tech", tagText: "科技", text: "TechCrunch发布2025年最佳AI语音输入应用评测。AI驱动的语音输入应用在回复邮件、记笔记甚至通过语音编程方面表现出色，文章对多款应用进行了测试和排名。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/" },
   { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
   { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
-  { time: "02:04", tag: "tech", tagText: "科技", text: "Ubuntu基础设施宕机超24小时，影响关键漏洞修复通信。该漏洞可获取root权限，安全团队正紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/ubuntu-infrastructure-has-been-down-for-more-than-a-day/" },
 ];
-const aiBreakingDate = "2026年5月3日 01:02 CST";
+const aiBreakingDate = "2026年5月3日 01:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
