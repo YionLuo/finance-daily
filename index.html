@@ -1623,14 +1623,17 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 22:59 CST"
+  date: "2026年5月2日 23:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:55", tag: "macro", tagText: "宏观", text: "OPEC+消息人士称，尽管霍尔木兹海峡因美伊战争关闭导致海湾石油供应中断，OPEC+仍计划再次提高石油产量配额。分析指出，由于实际供应受阻，增产在很大程度上将停留在纸面上。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/opec-set-for-another-oil-output-quota-hike-despite-hormuz-closure.html" },
+  { time: "23:30", tag: "tech", tagText: "科技", text: "市场分析指出，满足AI巨大能源需求的三家工业公司正从中获利。在AI应用成为焦点的同时，大资金正流向支撑AI运行的工业基础设施领域，这些公司为AI的电力需求“保持照明”并赚取丰厚回报。", source: "MarketWatch", url: "https://www.marketwatch.com/story/big-techs-ai-build-out-needs-these-3-companies-to-keep-the-lights-on-and-theyre-cashing-in-e46bcba2?mod=mw_rss_topstories" },
   { time: "22:00", tag: "geo", tagText: "地缘", text: "美国经济在伊朗战争、油价飙升、高关税和通胀压力下仍表现出韧性，被形容为“不沉的经济”。尽管面临多重冲击，消费者支出和企业活动未出现明显裂痕。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-unsinkable-u-s-economy-oil-prices-are-surging-iran-tensions-are-rising-but-it-wont-crack-ee27477f?mod=mw_rss_topstories" },
   { time: "21:41", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦2026年股东大会召开，现金储备创纪录达3800亿美元，格雷格·阿贝尔首次以CEO身份接替巴菲特主持大会。公司财报超预期，但股票销售连续第14个季度净卖出，市场关注后巴菲特时代投资策略。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/warren-buffett-berkshire-hathaway-annual-meeting-2026-live-updates.html" },
+  { time: "21:39", tag: "macro", tagText: "宏观", text: "私人信贷市场正转向“金融炼金术”以应对“峰值焦虑”。随着违约率上升，信贷经理们开始采用创造性会计手段来掩盖损失，专家警告投资者可能无法区分基金回报是源于投资技巧还是巧妙的会计操作。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/private-credit-turns-to-financial-alchemy-as-an-antidote-to-peak-anxiety.html" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌因其对SpaceX和Anthropic的早期投资，被专家称为“披着风投基金外衣的上市公司”。这些投资被视为上市公司有史以来最成功的风险押注之一，凸显科技巨头通过战略投资获取增长的新模式。", source: "MarketWatch", url: "https://www.marketwatch.com/story/google-is-now-a-glorified-venture-capital-fund-thanks-to-its-spacex-and-anthropic-stakes-b13f3d56?mod=mw_rss_topstories" },
   { time: "20:00", tag: "crypto", tagText: "加密", text: "分析师指出，稳定币的增长在当前市场环境下可能比比特币更重要。稳定币的扩张被视为加密货币生态系统成熟和采用扩大的关键指标，其流动性对市场健康至关重要。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUDdGRU9QczV4SXBzTVRrWFlfcjhTT1RNb2hldE5PSVNPdWdzckRqMFBQQkpyU3U0d3NhZFhmNC1qcXY3WTdwaDh1R0MwdEU3d1NzOFR2WW45NDJ1N251V29LT0xrdXBTdGpleTdQbWtHalRXX04zdmZXeW15cDhEblBQOEZJaG1EMEZCUXNR?oc=5" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "埃隆·马斯克在马斯克诉奥特曼案的第一周庭审中占据主导地位，连续三天出庭作证。马斯克指控OpenAI背离非营利初衷，称“你不能就这么偷走一个慈善机构”。此案对AI治理和开源理念具有深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "09:57", tag: "crypto", tagText: "加密", text: "Ark Invest发布报告称，机构需求将推动比特币市值到2030年达到16万亿美元。比特币目前维持在78,000美元上方，科技股创新高提振风险偏好。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPazJYVGdxaDdLZTY0Rmk2dTJCMkt2Nkd4aUdmYkJocUZJWGg0cWVfNHhzSGhOU2U3VUtzOXdNd253LVBnbG5GYlhBejF4NXhaTEJ3aVpVajQ0NUYyTDFvaFJzQzAtTmtyaUNtQzl3UWJlMUt2UThKVG84bVU1NlNzUHlFaFpXWXRjUW9Hd0haUkR6aG4zREFTQ2IzWTZLb1k5d09mSlMtR1c5U0VFNldCTzF3a0JSZXFaX2N2MGJZSDUwR0hzQTl1WA?oc=5" },
   { time: "09:00", tag: "tech", tagText: "科技", text: "GameStop据传有意收购eBay以寻求业务转型。面对消费者偏好变化，eBay在适应方面表现更佳，而GameStop正试图通过这一潜在收购重获市场相关性，但交易能否成行仍存变数。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gamestop-is-hungry-for-relevance-is-buying-ebay-the-answer-de7004a0?mod=mw_rss_topstories" },
   { time: "09:00", tag: "macro", tagText: "科技", text: "《金融时报》分析文章探讨中国是否正在推进食品领域的“脱钩”。如果中国以推行产业政策的力度推进食品自给自足，将彻底颠覆全球农业经济格局，对国际农产品贸易产生深远影响。", source: "Financial Times", url: "https://www.ft.com/content/637215a5-4814-49c4-ae24-c6a96adb56cf" },
-  { time: "07:59", tag: "geo", tagText: "地缘", text: "特朗普因德国总理默茨批评美国对伊朗战争，宣布将从德国撤出5000名美军，作为报复措施。此举标志着美欧关系因伊朗冲突进一步恶化。", source: "Financial Times", url: "https://www.ft.com/content/4cabedc3-0119-4c3f-9867-094b7e1398f6" },
-  { time: "06:26", tag: "tech", tagText: "科技", text: "台积电正在权衡在亚利桑那州扩大封装产能，同时推迟下一代EUV光刻机的投资。这一决策反映了全球芯片制造格局在地缘政治压力下的调整，以及先进封装技术日益增长的战略重要性。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPdnZBMjFIWUlhS240cnlzYjIwRElYQjNWcXlxSFhGS2F5OVVFbC1id1ViZGIxMFNnQnVpdzFOTTZiNGNOTERGbDFMendac002d2hnTWxUNHoxVWFfekptTnNoYUJNSnMtR01zdU53MjJwTWdwSk1GbzViZUktd3l6dGdrU2J6SXBPYWZsNnJ5Ulo0X296ekdMU3ZYYkVfMjhVMi1WSU53ZGpsdWRuRHZMN3hqZ0pHSWxFTHlPazRPLXVZZ1MzOHFFcWFzR3A3VWl3N3RBNm54U0UtUElaWHB4cDk0b0R3eVNRYjlvU9IB8gFBVV95cUxPQld6dEVXM3M2WlotMjBkYVlqbmRmN0hpWHpKYkFwb2dXZUVIN0VialVBLTA0RUhPb0kyTWhuWTJYQVpaOXkxVnlpZzNFdVV0UnRYSFRodFE1dHJmQmVVYjBtUkQyeVdDcjktZUpEbFlCWTNhZzdEaENFbTFpanpDWTJOQjgzbzJDRUtwM0l0bzR3QThKbVZDUGt1ZnNVbVRxU21UY2Z4QXV2cjZzLTVIeDRyYkktb3lETHFXU1VqbjZTYW41cUMxdF9IazR2Nk52bkV4Ujl5V2UtNExqa1BneTM4MHFGM1ZWWGVnOWI2bFNVQQ?oc=5" },
-  { time: "05:27", tag: "geo", tagText: "地缘", text: "美国警告欧洲，因伊朗战争消耗库存，对欧武器交付将延迟，可能包括用于乌克兰防御俄罗斯的军火。", source: "Financial Times", url: "https://www.ft.com/content/f87a8b04-e683-4e0e-8c66-647d23bfc2ff" },
 ];
-const breakingDate = "2026年5月2日 22:59 CST";
+const breakingDate = "2026年5月2日 23:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "02:04", tag: "tech", tagText: "科技", text: "Ubuntu基础设施宕机超24小时，影响关键漏洞修复通信。该漏洞可获取root权限，安全团队正紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/ubuntu-infrastructure-has-been-down-for-more-than-a-day/" },
   { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
 ];
-const aiBreakingDate = "2026年5月2日 22:59 CST";
+const aiBreakingDate = "2026年5月2日 23:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
