@@ -1623,14 +1623,17 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月3日 01:57 CST"
+  date: "2026年5月3日 03:14 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:36", tag: "geo", tagText: "地缘", text: "特朗普政府加速向中东盟友批准86亿美元军售，以在伊朗战争期间巩固地区伙伴。与此同时，美国警告欧洲其武器运输将面临延迟。此举凸显美国在中东冲突中优先支持区域盟友的战略调整。", source: "Financial Times", url: "https://www.ft.com/content/a9a3273f-d5c3-4277-932d-27b1969e975f" },
+  { time: "01:59", tag: "geo", tagText: "地缘", text: "伊朗提出霍尔木兹海峡协议方案，特朗普表示不满意但倾向于非军事解决途径。伊朗外长称德黑兰已准备好在外交上接触，前提是美国改变其做法。霍尔木兹海峡局势仍是全球能源市场的关键风险点。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/trump-iran-strait-of-hormuz.html" },
   { time: "01:56", tag: "geo", tagText: "地缘", text: "美国国防部计划从德国撤出5000名士兵，以报复德国总理默茨对美国-以色列对伊朗战争行动的批评。此举标志着美德关系因伊朗冲突进一步恶化，凸显北约内部裂痕。", source: "Financial Times", url: "https://www.ft.com/content/4cabedc3-0119-4c3f-9867-094b7e1398f6" },
   { time: "01:56", tag: "macro", tagText: "宏观", text: "市场分析指出，通胀即将上升，美联储需在加息前向市场明确传达信号，以帮助投资者管理风险。当前市场对利率路径存在不确定性，美联储沟通策略至关重要。", source: "MarketWatch", url: "https://www.marketwatch.com/story/higher-inflation-is-on-the-way-the-fed-needs-to-make-this-clearer-before-it-raises-rates-142c6884" },
+  { time: "01:53", tag: "macro", tagText: "宏观", text: "美股主要指数在短暂盘整后创下新高，苹果和博通等科技股进入买入区间。市场在消化伊朗战争和通胀担忧后重拾升势，投资者关注美联储未来利率路径。", source: "Investor's Business Daily", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQN3VxMG12QTUwQ204MURmTmh4NXQ1akc2MVlRUTh6X0wyTDZad3JOOFZrMEMxVzBtZVJOenBGbU12WjItVW1hQ0t0RWF3ZUgwMnNTNXVIX3VJOXB2UzNXSTNRQlNvOGtrWWJEbFpEa2E0UFZXQmxNUlJnQlFYLVRhWC03WEhMUm5LQXluOV9ab2tIRkNMemk3MWUwSXdheXExbHAybmhxWjd3RlNR?oc=5" },
   { time: "00:15", tag: "macro", tagText: "宏观", text: "美国汽油价格在五个支持特朗普的州涨幅最快，同时消费者信心跌至历史最低点。高油价正在侵蚀美国人的退税收入，加剧家庭财务压力，成为影响中期选举的重要经济议题。", source: "Moneywise", url: "https://finance.yahoo.com/sectors/energy/articles/gas-prices-surging-fastest-5-161500357.html" },
   { time: "00:13", tag: "macro", tagText: "宏观", text: "精神航空（Spirit Airlines）宣布取消所有未来航班并立即停业。分析指出，该公司犯下关键战略错误，导致其最终走向破产清算，成为美国航空业近年来最大的倒闭事件之一。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spirit-airlines-made-this-critical-mistake-that-drove-its-demise-df3ea39d" },
   { time: "23:55", tag: "macro", tagText: "宏观", text: "OPEC+消息人士称，尽管霍尔木兹海峡因美伊战争关闭导致海湾石油供应中断，OPEC+仍计划再次提高石油产量配额。分析指出，由于实际供应受阻，增产在很大程度上将停留在纸面上。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/opec-set-for-another-oil-output-quota-hike-despite-hormuz-closure.html" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "19:30", tag: "geo", tagText: "地缘", text: "美国参议员林赛·格雷厄姆警告称，如果伊朗不屈服，美国应“完成工作”。这位鹰派共和党人是对美国总统有影响力的关键人物，其言论加剧了市场对中东冲突进一步升级的担忧。", source: "Financial Times", url: "https://www.ft.com/content/359e5fdd-b56f-46cb-b3fd-70b367f3e2ef" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "GLP-1减肥药常见副作用脱发正催生新兴市场。制药公司和消费品企业纷纷推出针对减肥相关脱发的治疗产品，这一此前未被充分开发的细分市场正快速增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/hair-loss-glp-1s.html" },
   { time: "17:30", tag: "macro", tagText: "宏观", text: "日本央行刚刚出手将日元从约40年低点“救起”，但高油价可能很快撕掉这块“创可贴”。市场担忧高油价将加剧日本通胀压力，使日元再度承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/japan-just-put-a-band-aid-on-the-yen-why-high-oil-prices-could-soon-rip-it-off-21374282?mod=mw_rss_topstories" },
-  { time: "15:51", tag: "crypto", tagText: "加密", text: "比特币突破78,000美元，受ETF资金流入推动，4月成为自2025年4月以来表现最佳月份。参议院通过《Clarity Act》扫清监管障碍，进一步提振市场情绪。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbW5JY3dxdEItR2hYeFJPSUFvNnZPS1pMMFh2Z3AteDJzV096VDRNbWFoQmdKZVQxYWVrblUwZUJkNkFkTXpPbW43c1VzdjJ0Q1hWYTlqLXRVVUFvalpQMkk1elJLTmd1WkxKcmJTc1JleUdKNUphbXBCWkZ5a3BIcFNhY25LaWFTX0RlVmRRb1ZDOGQtZWg0M0l0RmJwbHozd2hnSkRzTmpfOXpJMVpheEU5U3JOVERydnl4eE1hVllCbU11blhFUnRZLXhQZw?oc=5" },
-  { time: "12:03", tag: "geo", tagText: "地缘", text: "《金融时报》评论文章指出，伊朗战争提醒我们，地理事实而非数字技术正在塑造我们的生活。这场冲突凸显了物理世界对全球供应链、能源安全和地缘格局的深刻影响，数字时代的乐观叙事正遭遇现实反击。", source: "Financial Times", url: "https://www.ft.com/content/ee833531-4554-40d1-834f-659aeadb0ba6" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "华尔街交易员在商品市场收益上远超欧洲同行。受伊朗战争引发的油价剧烈波动影响，欧洲最大投行在商品交易领域错失良机，而美国投行则抓住波动实现三倍于欧洲对手的收益。", source: "Financial Times", url: "https://www.ft.com/content/232bc04a-d2b9-42a2-a38f-eca48c734eb4" },
 ];
-const breakingDate = "2026年5月3日 01:57 CST";
+const breakingDate = "2026年5月3日 03:14 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
+  { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
+  { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
   { time: "00:10", tag: "tech", tagText: "科技", text: "4月25日至5月2日，18家印度初创公司从投资者处筹集超2.32亿美元资金，涵盖游戏、金融科技、AI、气候科技、体育科技、深度科技、能源科技、借贷、股票经纪等多个领域。", source: "instagram.com", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1vUy00YjVXSW10Tmt2aHhzVDkyVDJ0d1owcG1HMzRxUGQyQVhUWFd1NmMtcFAxLUNjVzFlWHNzMFpjMWxZY0dXdENLQ1FGckZncUE?oc=5" },
   { time: "00:00", tag: "tech", tagText: "科技", text: "TechCrunch发布2025年最佳AI语音输入应用评测。AI驱动的语音输入应用在回复邮件、记笔记甚至通过语音编程方面表现出色，文章对多款应用进行了测试和排名。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/" },
   { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "06:13", tag: "ai", tagText: "AI", text: "Meta收购人形机器人初创公司Assured Robot Intelligence，以增强其机器人AI模型能力，进一步推进人形AI机器人战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" },
   { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
   { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
-  { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
-  { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
 ];
-const aiBreakingDate = "2026年5月3日 01:57 CST";
+const aiBreakingDate = "2026年5月3日 03:14 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
