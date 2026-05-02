@@ -1623,14 +1623,17 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 23:57 CST"
+  date: "2026年5月3日 01:02 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:15", tag: "macro", tagText: "宏观", text: "美国汽油价格在五个支持特朗普的州涨幅最快，同时消费者信心跌至历史最低点。高油价正在侵蚀美国人的退税收入，加剧家庭财务压力，成为影响中期选举的重要经济议题。", source: "Moneywise", url: "https://finance.yahoo.com/sectors/energy/articles/gas-prices-surging-fastest-5-161500357.html" },
+  { time: "00:13", tag: "macro", tagText: "宏观", text: "精神航空（Spirit Airlines）宣布取消所有未来航班并立即停业。分析指出，该公司犯下关键战略错误，导致其最终走向破产清算，成为美国航空业近年来最大的倒闭事件之一。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spirit-airlines-made-this-critical-mistake-that-drove-its-demise-df3ea39d" },
   { time: "23:55", tag: "macro", tagText: "宏观", text: "OPEC+消息人士称，尽管霍尔木兹海峡因美伊战争关闭导致海湾石油供应中断，OPEC+仍计划再次提高石油产量配额。分析指出，由于实际供应受阻，增产在很大程度上将停留在纸面上。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/opec-set-for-another-oil-output-quota-hike-despite-hormuz-closure.html" },
   { time: "23:30", tag: "tech", tagText: "科技", text: "市场分析指出，满足AI巨大能源需求的三家工业公司正从中获利。在AI应用成为焦点的同时，大资金正流向支撑AI运行的工业基础设施领域，这些公司为AI的电力需求“保持照明”并赚取丰厚回报。", source: "MarketWatch", url: "https://www.marketwatch.com/story/big-techs-ai-build-out-needs-these-3-companies-to-keep-the-lights-on-and-theyre-cashing-in-e46bcba2?mod=mw_rss_topstories" },
+  { time: "22:35", tag: "geo", tagText: "地缘", text: "伊朗战争导致航空燃油成本飙升和航线中断，机票价格大幅上涨。旅行专家建议消费者谨慎决策，推迟购票可能面临更高价格风险，中东冲突对全球航空业的影响持续扩大。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/iran-war-airfare-travel-airlines-plane-tickets-when-to-buy.html" },
   { time: "22:00", tag: "geo", tagText: "地缘", text: "美国经济在伊朗战争、油价飙升、高关税和通胀压力下仍表现出韧性，被形容为“不沉的经济”。尽管面临多重冲击，消费者支出和企业活动未出现明显裂痕。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-unsinkable-u-s-economy-oil-prices-are-surging-iran-tensions-are-rising-but-it-wont-crack-ee27477f?mod=mw_rss_topstories" },
   { time: "21:41", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦2026年股东大会召开，现金储备创纪录达3800亿美元，格雷格·阿贝尔首次以CEO身份接替巴菲特主持大会。公司财报超预期，但股票销售连续第14个季度净卖出，市场关注后巴菲特时代投资策略。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/warren-buffett-berkshire-hathaway-annual-meeting-2026-live-updates.html" },
   { time: "21:39", tag: "macro", tagText: "宏观", text: "私人信贷市场正转向“金融炼金术”以应对“峰值焦虑”。随着违约率上升，信贷经理们开始采用创造性会计手段来掩盖损失，专家警告投资者可能无法区分基金回报是源于投资技巧还是巧妙的会计操作。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/private-credit-turns-to-financial-alchemy-as-an-antidote-to-peak-anxiety.html" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "12:00", tag: "macro", tagText: "宏观", text: "华尔街交易员在商品市场收益上远超欧洲同行。受伊朗战争引发的油价剧烈波动影响，欧洲最大投行在商品交易领域错失良机，而美国投行则抓住波动实现三倍于欧洲对手的收益。", source: "Financial Times", url: "https://www.ft.com/content/232bc04a-d2b9-42a2-a38f-eca48c734eb4" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗战争重创肯尼亚经济，其玫瑰和茶叶出口遭受严重打击。冲突导致海湾市场崩溃，并推高航空货运和海运成本，肯尼亚的鲜花和茶叶产业面临出口停滞和成本飙升的双重困境。", source: "Financial Times", url: "https://www.ft.com/content/3b0438dc-7d8a-4564-9ce6-9d66b735eaae" },
   { time: "10:00", tag: "macro", tagText: "科技", text: "《金融时报》评论称，欧元迫切需要抓住机遇发展成为储备资产。在当前全球地缘动荡和美元体系面临挑战的背景下，欧洲应推动欧元国际化，以增强金融自主性和全球影响力。", source: "Financial Times", url: "https://www.ft.com/content/5f02bb2e-f621-4369-8ce0-55f6d6b839c7" },
-  { time: "09:57", tag: "crypto", tagText: "加密", text: "Ark Invest发布报告称，机构需求将推动比特币市值到2030年达到16万亿美元。比特币目前维持在78,000美元上方，科技股创新高提振风险偏好。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPazJYVGdxaDdLZTY0Rmk2dTJCMkt2Nkd4aUdmYkJocUZJWGg0cWVfNHhzSGhOU2U3VUtzOXdNd253LVBnbG5GYlhBejF4NXhaTEJ3aVpVajQ0NUYyTDFvaFJzQzAtTmtyaUNtQzl3UWJlMUt2UThKVG84bVU1NlNzUHlFaFpXWXRjUW9Hd0haUkR6aG4zREFTQ2IzWTZLb1k5d09mSlMtR1c5U0VFNldCTzF3a0JSZXFaX2N2MGJZSDUwR0hzQTl1WA?oc=5" },
-  { time: "09:00", tag: "tech", tagText: "科技", text: "GameStop据传有意收购eBay以寻求业务转型。面对消费者偏好变化，eBay在适应方面表现更佳，而GameStop正试图通过这一潜在收购重获市场相关性，但交易能否成行仍存变数。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gamestop-is-hungry-for-relevance-is-buying-ebay-the-answer-de7004a0?mod=mw_rss_topstories" },
-  { time: "09:00", tag: "macro", tagText: "科技", text: "《金融时报》分析文章探讨中国是否正在推进食品领域的“脱钩”。如果中国以推行产业政策的力度推进食品自给自足，将彻底颠覆全球农业经济格局，对国际农产品贸易产生深远影响。", source: "Financial Times", url: "https://www.ft.com/content/637215a5-4814-49c4-ae24-c6a96adb56cf" },
 ];
-const breakingDate = "2026年5月2日 23:57 CST";
+const breakingDate = "2026年5月3日 01:02 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:00", tag: "tech", tagText: "科技", text: "TechCrunch发布2025年最佳AI语音输入应用评测。AI驱动的语音输入应用在回复邮件、记笔记甚至通过语音编程方面表现出色，文章对多款应用进行了测试和排名。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/" },
   { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
   { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
   { time: "02:04", tag: "tech", tagText: "科技", text: "Ubuntu基础设施宕机超24小时，影响关键漏洞修复通信。该漏洞可获取root权限，安全团队正紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/ubuntu-infrastructure-has-been-down-for-more-than-a-day/" },
-  { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
 ];
-const aiBreakingDate = "2026年5月2日 23:57 CST";
+const aiBreakingDate = "2026年5月3日 01:02 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
