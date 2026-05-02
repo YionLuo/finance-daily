@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 16:27 CST"
+  date: "2026年5月2日 18:06 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:51", tag: "crypto", tagText: "加密", text: "比特币突破78,000美元，受ETF资金流入推动，4月成为自2025年4月以来表现最佳月份。参议院通过《Clarity Act》扫清监管障碍，进一步提振市场情绪。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbW5JY3dxdEItR2hYeFJPSUFvNnZPS1pMMFh2Z3AteDJzV096VDRNbWFoQmdKZVQxYWVrblUwZUJkNkFkTXpPbW43c1VzdjJ0Q1hWYTlqLXRVVUFvalpQMkk1elJLTmd1WkxKcmJTc1JleUdKNUphbXBCWkZ5a3BIcFNhY25LaWFTX0RlVmRRb1ZDOGQtZWg0M0l0RmJwbHozd2hnSkRzTmpfOXpJMVpheEU5U3JOVERydnl4eE1hVllCbU11blhFUnRZLXhQZw?oc=5" },
   { time: "12:03", tag: "geo", tagText: "地缘", text: "《金融时报》评论文章指出，伊朗战争提醒我们，地理事实而非数字技术正在塑造我们的生活。这场冲突凸显了物理世界对全球供应链、能源安全和地缘格局的深刻影响，数字时代的乐观叙事正遭遇现实反击。", source: "Financial Times", url: "https://www.ft.com/content/ee833531-4554-40d1-834f-659aeadb0ba6" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "华尔街交易员在商品市场收益上远超欧洲同行。受伊朗战争引发的油价剧烈波动影响，欧洲最大投行在商品交易领域错失良机，而美国投行则抓住波动实现三倍于欧洲对手的收益。", source: "Financial Times", url: "https://www.ft.com/content/232bc04a-d2b9-42a2-a38f-eca48c734eb4" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗战争重创肯尼亚经济，其玫瑰和茶叶出口遭受严重打击。冲突导致海湾市场崩溃，并推高航空货运和海运成本，肯尼亚的鲜花和茶叶产业面临出口停滞和成本飙升的双重困境。", source: "Financial Times", url: "https://www.ft.com/content/3b0438dc-7d8a-4564-9ce6-9d66b735eaae" },
@@ -1648,9 +1649,8 @@ const breakingNews = [
   { time: "02:50", tag: "macro", tagText: "宏观", text: "私人信贷巨头Ares Management从投资者处筹集近200亿美元，房地产和基础设施投资弥补了核心业务疲软。", source: "Financial Times", url: "https://www.ft.com/content/410de46e-742e-4c00-97d8-d035ece65b72" },
   { time: "02:23", tag: "crypto", tagText: "加密", text: "比特币突破78,000美元，受风险偏好回升推动，但加密货币CEO警告涨势存在天花板。", source: "Coinpedia", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxNRVl5eTlLeVVWbmlfQTYxalB2aTNMVWFpdlNVQlplZWZLNUVlYzJFRFdoeFRMZm1vZmJBTnJhdGxTeVh2TERfYkFZNFljZldzTnRuc2pjcFN0WGV6WnlzNE9IN2cxUDdYUWVybVpKbmxIN2c1aWJHbnFVTXlMenNqdUoyRVlXcWZDa3dhdy1LM0YwRjhiNVVnS0pVcGZ1Ri00bmVUZV8tZngwLTMyWkVMOTdMOUhCekJteDdjVdIBwgFBVV95cUxQTGYxRnMzd2ZqeXBxSmw4R0gtZmx2NzhPRHJjZzA5ZXBQZzN1a0VzSDhMQzhoU09FbWtZOEMxM2pULTRVVFFOclBWS21rTkJyQkdHbm1KbVdPZlg5N011YU5xWUdJeUF6X2NQRk1ja193TU1TSGNHUlNpUm1oZGgyMVBDUThYUHJRRzZud2pDNWdHUVRGU3BLZnRfMlJLdlMweFNyYklsUHhCQ0cxX1J1dEJhUHJEeEFMUFpMTWdBc0ZMZw?oc=5" },
   { time: "00:51", tag: "geo", tagText: "地缘", text: "特朗普宣布将对欧盟汽车进口关税提高至25%，称除非车企在美国设厂生产，否则下周即生效。此前美国最高法院已否决其“对等关税”政策，欧洲警告贸易协议可能破裂。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/trump-eu-auto-tariffs.html" },
-  { time: "00:50", tag: "geo", tagText: "地缘", text: "特朗普表示伊朗“想达成协议，但我不满意”，称伊朗领导层内部存在巨大分歧，使结束美国2月底发起的战争的努力复杂化。此前伊朗已通过巴基斯坦向调解方提交更新版和平方案，油价应声下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/trump-rejects-iran-peace-deal.html" },
 ];
-const breakingDate = "2026年5月2日 16:27 CST";
+const breakingDate = "2026年5月2日 18:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
 ];
-const aiBreakingDate = "2026年5月2日 16:27 CST";
+const aiBreakingDate = "2026年5月2日 18:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
