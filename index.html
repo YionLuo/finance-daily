@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 18:06 CST"
+  date: "2026年5月2日 19:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:30", tag: "geo", tagText: "地缘", text: "美国参议员林赛·格雷厄姆警告称，如果伊朗不屈服，美国应“完成工作”。这位鹰派共和党人是对美国总统有影响力的关键人物，其言论加剧了市场对中东冲突进一步升级的担忧。", source: "Financial Times", url: "https://www.ft.com/content/359e5fdd-b56f-46cb-b3fd-70b367f3e2ef" },
+  { time: "17:30", tag: "macro", tagText: "宏观", text: "日本央行刚刚出手将日元从约40年低点“救起”，但高油价可能很快撕掉这块“创可贴”。市场担忧高油价将加剧日本通胀压力，使日元再度承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/japan-just-put-a-band-aid-on-the-yen-why-high-oil-prices-could-soon-rip-it-off-21374282?mod=mw_rss_topstories" },
   { time: "15:51", tag: "crypto", tagText: "加密", text: "比特币突破78,000美元，受ETF资金流入推动，4月成为自2025年4月以来表现最佳月份。参议院通过《Clarity Act》扫清监管障碍，进一步提振市场情绪。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbW5JY3dxdEItR2hYeFJPSUFvNnZPS1pMMFh2Z3AteDJzV096VDRNbWFoQmdKZVQxYWVrblUwZUJkNkFkTXpPbW43c1VzdjJ0Q1hWYTlqLXRVVUFvalpQMkk1elJLTmd1WkxKcmJTc1JleUdKNUphbXBCWkZ5a3BIcFNhY25LaWFTX0RlVmRRb1ZDOGQtZWg0M0l0RmJwbHozd2hnSkRzTmpfOXpJMVpheEU5U3JOVERydnl4eE1hVllCbU11blhFUnRZLXhQZw?oc=5" },
   { time: "12:03", tag: "geo", tagText: "地缘", text: "《金融时报》评论文章指出，伊朗战争提醒我们，地理事实而非数字技术正在塑造我们的生活。这场冲突凸显了物理世界对全球供应链、能源安全和地缘格局的深刻影响，数字时代的乐观叙事正遭遇现实反击。", source: "Financial Times", url: "https://www.ft.com/content/ee833531-4554-40d1-834f-659aeadb0ba6" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "华尔街交易员在商品市场收益上远超欧洲同行。受伊朗战争引发的油价剧烈波动影响，欧洲最大投行在商品交易领域错失良机，而美国投行则抓住波动实现三倍于欧洲对手的收益。", source: "Financial Times", url: "https://www.ft.com/content/232bc04a-d2b9-42a2-a38f-eca48c734eb4" },
@@ -1647,13 +1649,15 @@ const breakingNews = [
   { time: "03:23", tag: "macro", tagText: "宏观", text: "特朗普表示政府已向精神航空提出“最终”救助方案，但本周与债券持有人的谈判尚未达成协议。该航空公司面临清算风险，若停运将为其他航空公司释放宝贵的机场时刻和航线资源。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/spirit-airlines-trump-bailout.html" },
   { time: "02:56", tag: "macro", tagText: "宏观", text: "新美联储主席Warsh若推动降息将面临内部激烈斗争。三位官员表态显示通胀担忧令他们对进一步降息持谨慎态度。", source: "MarketWatch", url: "https://www.marketwatch.com/story/new-fed-chair-warsh-will-have-a-fight-on-his-hands-if-he-pushes-for-interest-rate-cuts-a1fb5595?mod=mw_rss_topstories" },
   { time: "02:50", tag: "macro", tagText: "宏观", text: "私人信贷巨头Ares Management从投资者处筹集近200亿美元，房地产和基础设施投资弥补了核心业务疲软。", source: "Financial Times", url: "https://www.ft.com/content/410de46e-742e-4c00-97d8-d035ece65b72" },
-  { time: "02:23", tag: "crypto", tagText: "加密", text: "比特币突破78,000美元，受风险偏好回升推动，但加密货币CEO警告涨势存在天花板。", source: "Coinpedia", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxNRVl5eTlLeVVWbmlfQTYxalB2aTNMVWFpdlNVQlplZWZLNUVlYzJFRFdoeFRMZm1vZmJBTnJhdGxTeVh2TERfYkFZNFljZldzTnRuc2pjcFN0WGV6WnlzNE9IN2cxUDdYUWVybVpKbmxIN2c1aWJHbnFVTXlMenNqdUoyRVlXcWZDa3dhdy1LM0YwRjhiNVVnS0pVcGZ1Ri00bmVUZV8tZngwLTMyWkVMOTdMOUhCekJteDdjVdIBwgFBVV95cUxQTGYxRnMzd2ZqeXBxSmw4R0gtZmx2NzhPRHJjZzA5ZXBQZzN1a0VzSDhMQzhoU09FbWtZOEMxM2pULTRVVFFOclBWS21rTkJyQkdHbm1KbVdPZlg5N011YU5xWUdJeUF6X2NQRk1ja193TU1TSGNHUlNpUm1oZGgyMVBDUThYUHJRRzZud2pDNWdHUVRGU3BLZnRfMlJLdlMweFNyYklsUHhCQ0cxX1J1dEJhUHJEeEFMUFpMTWdBc0ZMZw?oc=5" },
-  { time: "00:51", tag: "geo", tagText: "地缘", text: "特朗普宣布将对欧盟汽车进口关税提高至25%，称除非车企在美国设厂生产，否则下周即生效。此前美国最高法院已否决其“对等关税”政策，欧洲警告贸易协议可能破裂。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/trump-eu-auto-tariffs.html" },
 ];
-const breakingDate = "2026年5月2日 18:06 CST";
+const breakingDate = "2026年5月2日 19:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
+  { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
+  { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
+  { time: "18:10", tag: "crypto", tagText: "加密", text: "MEXC发文称，AI的下一个突破可能来自Pi Network的全球劳动力网络，暗示其分布式用户群体可为AI训练和数据标注提供新资源。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5LVFlaYXpWcnlIcW54U0otT0EySWlaT2ZwcC1IU1dQWTdhNlJWTkx1eFhSRWxycUwzRVZlWTBsMVRUQ2w1dTdFRg?oc=5" },
   { time: "12:35", tag: "ai", tagText: "AI", text: "AI突破：可在症状出现前3年检测出胰腺癌。据Times Now报道，一项新的人工智能技术能够在胰腺癌患者出现任何症状之前三年就发现病变，有望大幅提高早期诊断率和生存率。", source: "Times Now", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNN1JwTHhzdS1heDJFdzRHb2lKWG95Yk9JT19kNFVMeGxlRFVoRkNOUm1XQUNaWUVWcXhzWFpKMVlCOWtxTG9fSlhWaWJSenJGVjNpcHFfaDU2V1RyRjRJZ3NFcVREbVJsOE1ScllqM1lvaVlRdUc3clB3WEhwWXI2WVBxbnJjSWhoY2tiNTVIeUZjckNPalYxYUo5OXBoM2NSb1JrNXAxcDQ0NnN0SXc0VEZIdnpXby1KNVRtN04tVGZIcnBmRFNCODEtcVJ3X2F3cHRUMU1nWjbSAd4BQVVfeXFMTktITFozcVNrbnRvOXFqSURQakNpZTc4NTV3VFB2bVVDRlE2ZzJmdzM5UHJOcXhGZWtNRnZsZ2p2eHlaOXJSdVNhRk9McTdHbjRvR05MQ0xLZGJRY1JwaDJINDREM3RvUmJSblNKWFloZ01zLWt0bU9Bd3dTSGw0cmRUeWZpYlVHX1hsMkFUVlctV0lJS3ZtU3FuU3hVV0doU2dsNnhqZG50eVpiblVXUzhqcW92T054T0RlczdrYXB5SDVtbGJqenFZS1YtRFNneVhrcDNvNk55ZXJoYThR?oc=5" },
   { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
   { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
   { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
   { time: "21:42", tag: "ai", tagText: "AI", text: "OpenAI公开回应其编程模型被指示“永远不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子等”的报道，承认存在内容过滤机制。此举引发关于AI模型安全限制与透明度平衡的讨论，显示AI公司在内容治理上的两难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins" },
-  { time: "21:30", tag: "ai", tagText: "AI", text: "AI在科学领域取得重大突破，成功解决了一个极具挑战性的数学难题。该成果被认为将推动多个科学领域的研究进展，展示了AI在基础科学研究中的巨大潜力。", source: "Bioengineer.org", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQanpfMzFENHZ0MHVzcl9KOFF0NVdfb0Z0akxCandLblZxNWVmZWNyeGo3Tk1fZ0Z0NlQwT1hBS2JXckhPdXZmemtkc2J6UXZmcEo1UmZpNzNBenB5SVZDX3ozRFBaWUR2QTFIX0RiVUhwcjMtUnpIdXUyYnRncjYwYUtIVURvM0tSaUZmc0pzUjU2b1ppR0Y0MUV3?oc=5" },
-  { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
-  { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
-  { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
 ];
-const aiBreakingDate = "2026年5月2日 18:06 CST";
+const aiBreakingDate = "2026年5月2日 19:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
