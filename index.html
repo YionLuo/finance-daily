@@ -1623,13 +1623,16 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 19:54 CST"
+  date: "2026年5月2日 21:41 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:41", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦2026年股东大会召开，现金储备创纪录达3800亿美元，格雷格·阿贝尔首次以CEO身份接替巴菲特主持大会。公司财报超预期，但股票销售连续第14个季度净卖出，市场关注后巴菲特时代投资策略。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/warren-buffett-berkshire-hathaway-annual-meeting-2026-live-updates.html" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "日本卫浴制造商Toto因供应半导体制造关键部件——静电卡盘，意外成为AI热潮赢家。该公司正受益于内存芯片繁荣，同时推进“永不需清洁的马桶”目标，跨界科技与家居领域。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-japanese-toilet-maker-seeking-the-perfect-flush-is-moonlighting-as-a-hot-ai-play-30d11f1a" },
   { time: "19:30", tag: "geo", tagText: "地缘", text: "美国参议员林赛·格雷厄姆警告称，如果伊朗不屈服，美国应“完成工作”。这位鹰派共和党人是对美国总统有影响力的关键人物，其言论加剧了市场对中东冲突进一步升级的担忧。", source: "Financial Times", url: "https://www.ft.com/content/359e5fdd-b56f-46cb-b3fd-70b367f3e2ef" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "GLP-1减肥药常见副作用脱发正催生新兴市场。制药公司和消费品企业纷纷推出针对减肥相关脱发的治疗产品，这一此前未被充分开发的细分市场正快速增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/hair-loss-glp-1s.html" },
   { time: "17:30", tag: "macro", tagText: "宏观", text: "日本央行刚刚出手将日元从约40年低点“救起”，但高油价可能很快撕掉这块“创可贴”。市场担忧高油价将加剧日本通胀压力，使日元再度承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/japan-just-put-a-band-aid-on-the-yen-why-high-oil-prices-could-soon-rip-it-off-21374282?mod=mw_rss_topstories" },
   { time: "15:51", tag: "crypto", tagText: "加密", text: "比特币突破78,000美元，受ETF资金流入推动，4月成为自2025年4月以来表现最佳月份。参议院通过《Clarity Act》扫清监管障碍，进一步提振市场情绪。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbW5JY3dxdEItR2hYeFJPSUFvNnZPS1pMMFh2Z3AteDJzV096VDRNbWFoQmdKZVQxYWVrblUwZUJkNkFkTXpPbW43c1VzdjJ0Q1hWYTlqLXRVVUFvalpQMkk1elJLTmd1WkxKcmJTc1JleUdKNUphbXBCWkZ5a3BIcFNhY25LaWFTX0RlVmRRb1ZDOGQtZWg0M0l0RmJwbHozd2hnSkRzTmpfOXpJMVpheEU5U3JOVERydnl4eE1hVllCbU11blhFUnRZLXhQZw?oc=5" },
   { time: "12:03", tag: "geo", tagText: "地缘", text: "《金融时报》评论文章指出，伊朗战争提醒我们，地理事实而非数字技术正在塑造我们的生活。这场冲突凸显了物理世界对全球供应链、能源安全和地缘格局的深刻影响，数字时代的乐观叙事正遭遇现实反击。", source: "Financial Times", url: "https://www.ft.com/content/ee833531-4554-40d1-834f-659aeadb0ba6" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "04:59", tag: "geo", tagText: "地缘", text: "美国检察官Pirro尽管调查受阻，仍持续向美联储主席鲍威尔施压。她预计将立即对阻止其调查美联储成本超支的裁决提出上诉。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/fed-powell-pirro-investigation.html" },
   { time: "04:58", tag: "macro", tagText: "宏观", text: "埃克森美孚CEO警告，由于伊朗战争影响，市场尚未看到油价全面冲击，预计油价将进一步上涨。油价已因冲突升级风险飙升，又因和平希望暴跌，循环往复。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/exxon-ceo-iran-war-oil-strait-hormuz.html" },
   { time: "03:35", tag: "tech", tagText: "科技", text: "苹果正式放弃净现金中性目标，市场猜测其可能正在为重大AI收购做准备，以缩小在人工智能竞赛中的差距。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apple-just-gave-a-subtle-clue-that-a-splashy-ai-acquisition-may-be-in-the-cards-110f5ce2?mod=mw_rss_topstories" },
-  { time: "03:23", tag: "macro", tagText: "宏观", text: "特朗普表示政府已向精神航空提出“最终”救助方案，但本周与债券持有人的谈判尚未达成协议。该航空公司面临清算风险，若停运将为其他航空公司释放宝贵的机场时刻和航线资源。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/spirit-airlines-trump-bailout.html" },
-  { time: "02:56", tag: "macro", tagText: "宏观", text: "新美联储主席Warsh若推动降息将面临内部激烈斗争。三位官员表态显示通胀担忧令他们对进一步降息持谨慎态度。", source: "MarketWatch", url: "https://www.marketwatch.com/story/new-fed-chair-warsh-will-have-a-fight-on-his-hands-if-he-pushes-for-interest-rate-cuts-a1fb5595?mod=mw_rss_topstories" },
-  { time: "02:50", tag: "macro", tagText: "宏观", text: "私人信贷巨头Ares Management从投资者处筹集近200亿美元，房地产和基础设施投资弥补了核心业务疲软。", source: "Financial Times", url: "https://www.ft.com/content/410de46e-742e-4c00-97d8-d035ece65b72" },
 ];
-const breakingDate = "2026年5月2日 19:54 CST";
+const breakingDate = "2026年5月2日 21:41 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1658,6 +1658,7 @@ const aiBreakingNews = [
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
   { time: "18:10", tag: "crypto", tagText: "加密", text: "MEXC发文称，AI的下一个突破可能来自Pi Network的全球劳动力网络，暗示其分布式用户群体可为AI训练和数据标注提供新资源。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5LVFlaYXpWcnlIcW54U0otT0EySWlaT2ZwcC1IU1dQWTdhNlJWTkx1eFhSRWxycUwzRVZlWTBsMVRUQ2w1dTdFRg?oc=5" },
+  { time: "17:07", tag: "tech", tagText: "科技", text: "Fast Company发文警告用户应停止让ChatGPT等AI聊天机器人使用个人数据进行训练，并提供了具体操作指南，强调数据隐私风险及如何关闭相关设置。", source: "fastcompany.com", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPQmZ1dEFDYzQ0aXZhOFZBekxLOVh1VGdDcTZCUGhZaUZxamQ3SXY2WHRIS0xtbmlRbGdqYWYzWjc0ODlDNVA4SGx4Ni1USktuaDNoeXpLbWluM0gyVVpKbThfZWItb0o0YWNKMk9OUGs1bTQ5c0VGTzh4dGFDakVwNkpjcXdaMnUzbzBDZmxKbGxvdzlPQm1VcVBEUkhGZlpzQ2hoVV9mYl8tUmtOazhVLTZaR3hDZlRLcUMxbDN0XzhmN2J5NTN4NkpOakdOenVNVGtzSA?oc=5" },
   { time: "12:35", tag: "ai", tagText: "AI", text: "AI突破：可在症状出现前3年检测出胰腺癌。据Times Now报道，一项新的人工智能技术能够在胰腺癌患者出现任何症状之前三年就发现病变，有望大幅提高早期诊断率和生存率。", source: "Times Now", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNN1JwTHhzdS1heDJFdzRHb2lKWG95Yk9JT19kNFVMeGxlRFVoRkNOUm1XQUNaWUVWcXhzWFpKMVlCOWtxTG9fSlhWaWJSenJGVjNpcHFfaDU2V1RyRjRJZ3NFcVREbVJsOE1ScllqM1lvaVlRdUc3clB3WEhwWXI2WVBxbnJjSWhoY2tiNTVIeUZjckNPalYxYUo5OXBoM2NSb1JrNXAxcDQ0NnN0SXc0VEZIdnpXby1KNVRtN04tVGZIcnBmRFNCODEtcVJ3X2F3cHRUMU1nWjbSAd4BQVVfeXFMTktITFozcVNrbnRvOXFqSURQakNpZTc4NTV3VFB2bVVDRlE2ZzJmdzM5UHJOcXhGZWtNRnZsZ2p2eHlaOXJSdVNhRk9McTdHbjRvR05MQ0xLZGJRY1JwaDJINDREM3RvUmJSblNKWFloZ01zLWt0bU9Bd3dTSGw0cmRUeWZpYlVHX1hsMkFUVlctV0lJS3ZtU3FuU3hVV0doU2dsNnhqZG50eVpiblVXUzhqcW92T054T0RlczdrYXB5SDVtbGJqenFZS1YtRFNneVhrcDNvNk55ZXJoYThR?oc=5" },
   { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
   { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "02:04", tag: "tech", tagText: "科技", text: "Ubuntu基础设施宕机超24小时，影响关键漏洞修复通信。该漏洞可获取root权限，安全团队正紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/ubuntu-infrastructure-has-been-down-for-more-than-a-day/" },
   { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
   { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
-  { time: "21:42", tag: "ai", tagText: "AI", text: "OpenAI公开回应其编程模型被指示“永远不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子等”的报道，承认存在内容过滤机制。此举引发关于AI模型安全限制与透明度平衡的讨论，显示AI公司在内容治理上的两难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins" },
 ];
-const aiBreakingDate = "2026年5月2日 19:54 CST";
+const aiBreakingDate = "2026年5月2日 21:41 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
