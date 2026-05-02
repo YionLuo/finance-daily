@@ -1623,13 +1623,19 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 11:41 CST"
+  date: "2026年5月2日 14:18 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:03", tag: "geo", tagText: "地缘", text: "《金融时报》评论文章指出，伊朗战争提醒我们，地理事实而非数字技术正在塑造我们的生活。这场冲突凸显了物理世界对全球供应链、能源安全和地缘格局的深刻影响，数字时代的乐观叙事正遭遇现实反击。", source: "Financial Times", url: "https://www.ft.com/content/ee833531-4554-40d1-834f-659aeadb0ba6" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "华尔街交易员在商品市场收益上远超欧洲同行。受伊朗战争引发的油价剧烈波动影响，欧洲最大投行在商品交易领域错失良机，而美国投行则抓住波动实现三倍于欧洲对手的收益。", source: "Financial Times", url: "https://www.ft.com/content/232bc04a-d2b9-42a2-a38f-eca48c734eb4" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗战争重创肯尼亚经济，其玫瑰和茶叶出口遭受严重打击。冲突导致海湾市场崩溃，并推高航空货运和海运成本，肯尼亚的鲜花和茶叶产业面临出口停滞和成本飙升的双重困境。", source: "Financial Times", url: "https://www.ft.com/content/3b0438dc-7d8a-4564-9ce6-9d66b735eaae" },
+  { time: "10:00", tag: "macro", tagText: "科技", text: "《金融时报》评论称，欧元迫切需要抓住机遇发展成为储备资产。在当前全球地缘动荡和美元体系面临挑战的背景下，欧洲应推动欧元国际化，以增强金融自主性和全球影响力。", source: "Financial Times", url: "https://www.ft.com/content/5f02bb2e-f621-4369-8ce0-55f6d6b839c7" },
   { time: "09:57", tag: "crypto", tagText: "加密", text: "Ark Invest发布报告称，机构需求将推动比特币市值到2030年达到16万亿美元。比特币目前维持在78,000美元上方，科技股创新高提振风险偏好。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPazJYVGdxaDdLZTY0Rmk2dTJCMkt2Nkd4aUdmYkJocUZJWGg0cWVfNHhzSGhOU2U3VUtzOXdNd253LVBnbG5GYlhBejF4NXhaTEJ3aVpVajQ0NUYyTDFvaFJzQzAtTmtyaUNtQzl3UWJlMUt2UThKVG84bVU1NlNzUHlFaFpXWXRjUW9Hd0haUkR6aG4zREFTQ2IzWTZLb1k5d09mSlMtR1c5U0VFNldCTzF3a0JSZXFaX2N2MGJZSDUwR0hzQTl1WA?oc=5" },
+  { time: "09:00", tag: "tech", tagText: "科技", text: "GameStop据传有意收购eBay以寻求业务转型。面对消费者偏好变化，eBay在适应方面表现更佳，而GameStop正试图通过这一潜在收购重获市场相关性，但交易能否成行仍存变数。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gamestop-is-hungry-for-relevance-is-buying-ebay-the-answer-de7004a0?mod=mw_rss_topstories" },
+  { time: "09:00", tag: "macro", tagText: "科技", text: "《金融时报》分析文章探讨中国是否正在推进食品领域的“脱钩”。如果中国以推行产业政策的力度推进食品自给自足，将彻底颠覆全球农业经济格局，对国际农产品贸易产生深远影响。", source: "Financial Times", url: "https://www.ft.com/content/637215a5-4814-49c4-ae24-c6a96adb56cf" },
   { time: "07:59", tag: "geo", tagText: "地缘", text: "特朗普因德国总理默茨批评美国对伊朗战争，宣布将从德国撤出5000名美军，作为报复措施。此举标志着美欧关系因伊朗冲突进一步恶化。", source: "Financial Times", url: "https://www.ft.com/content/4cabedc3-0119-4c3f-9867-094b7e1398f6" },
   { time: "05:27", tag: "geo", tagText: "地缘", text: "美国警告欧洲，因伊朗战争消耗库存，对欧武器交付将延迟，可能包括用于乌克兰防御俄罗斯的军火。", source: "Financial Times", url: "https://www.ft.com/content/f87a8b04-e683-4e0e-8c66-647d23bfc2ff" },
   { time: "05:01", tag: "macro", tagText: "宏观", text: "美国汽油价格因伊朗战争飙升，加满最畅销车型需160美元。据GasBuddy数据，自2月底伊朗战争爆发以来，普通无铅汽油价格上涨近50%，周五早盘达到每加仑4.42美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/it-now-costs-160-to-fill-up-americas-top-selling-vehicle-as-the-iran-war-nears-its-10th-week-803077d2?mod=mw_rss_topstories" },
@@ -1643,17 +1649,12 @@ const breakingNews = [
   { time: "00:51", tag: "geo", tagText: "地缘", text: "特朗普宣布将对欧盟汽车进口关税提高至25%，称除非车企在美国设厂生产，否则下周即生效。此前美国最高法院已否决其“对等关税”政策，欧洲警告贸易协议可能破裂。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/trump-eu-auto-tariffs.html" },
   { time: "00:50", tag: "geo", tagText: "地缘", text: "特朗普表示伊朗“想达成协议，但我不满意”，称伊朗领导层内部存在巨大分歧，使结束美国2月底发起的战争的努力复杂化。此前伊朗已通过巴基斯坦向调解方提交更新版和平方案，油价应声下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/trump-rejects-iran-peace-deal.html" },
   { time: "23:52", tag: "macro", tagText: "科技", text: "全球石油库存持续减少，交易员警告油价可能进一步飙升，给经济带来“巨大痛苦”。市场距离关键拐点仅剩一个月，各国被迫削减消费。", source: "Financial Times", url: "https://www.ft.com/content/b26ba4ce-4324-4ea9-926d-caf036f20832" },
-  { time: "23:11", tag: "macro", tagText: "科技", text: "英国对美出口在特朗普“解放日”关税冲击后暴跌25%，英国目前与其最大贸易伙伴出现贸易逆差。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/uk-exports-us-fall-25-trump-tariffs-liberation-day.html" },
-  { time: "22:48", tag: "macro", tagText: "宏观", text: "尽管受伊朗战争影响，美国制造业4月连续第四个月扩张，创四年来最长增长纪录，但复苏面临油价上涨和通胀上升的新障碍。", source: "MarketWatch", url: "https://www.marketwatch.com/story/embattled-u-s-manufacturers-show-their-metal-grow-fourth-month-in-a-row-despite-iran-war-8c79a878?mod=mw_rss_topstories" },
-  { time: "22:18", tag: "tech", tagText: "科技", text: "Roblox股价暴跌18%，因儿童安全措施拖累预订量。该公司面临超过140起联邦诉讼，指控其未能防止儿童剥削，上月刚与阿拉巴马州和西弗吉尼亚州达成和解。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/roblox-rblx-stock-child-safety-earnings.html" },
-  { time: "22:14", tag: "macro", tagText: "宏观", text: "特朗普签署行政令，为缺乏雇主提供退休计划的数百万工人创建退休储蓄渠道。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-to-sign-order-creating-retirement-plans-for-workers-who-lack-them-c7f33603?mod=mw_rss_topstories" },
-  { time: "22:08", tag: "tech", tagText: "科技", text: "参议员Chris Coons就英伟达H200芯片对华销售问题致信商务部长卢特尼克，要求其澄清与英伟达CEO黄仁勋此前给出的不同说法。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/nvidia-chips-jensen-huang-h200-lutnick-chris-coons.html" },
-  { time: "22:03", tag: "macro", tagText: "宏观", text: "美联储洛根表示，央行下一次利率行动可能是降息或加息，暗示政策路径不确定性上升。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/feds-logan-says-central-banks-140326919.html" },
 ];
-const breakingDate = "2026年5月2日 11:41 CST";
+const breakingDate = "2026年5月2日 14:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:35", tag: "ai", tagText: "AI", text: "AI突破：可在症状出现前3年检测出胰腺癌。据Times Now报道，一项新的人工智能技术能够在胰腺癌患者出现任何症状之前三年就发现病变，有望大幅提高早期诊断率和生存率。", source: "Times Now", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNN1JwTHhzdS1heDJFdzRHb2lKWG95Yk9JT19kNFVMeGxlRFVoRkNOUm1XQUNaWUVWcXhzWFpKMVlCOWtxTG9fSlhWaWJSenJGVjNpcHFfaDU2V1RyRjRJZ3NFcVREbVJsOE1ScllqM1lvaVlRdUc3clB3WEhwWXI2WVBxbnJjSWhoY2tiNTVIeUZjckNPalYxYUo5OXBoM2NSb1JrNXAxcDQ0NnN0SXc0VEZIdnpXby1KNVRtN04tVGZIcnBmRFNCODEtcVJ3X2F3cHRUMU1nWjbSAd4BQVVfeXFMTktITFozcVNrbnRvOXFqSURQakNpZTc4NTV3VFB2bVVDRlE2ZzJmdzM5UHJOcXhGZWtNRnZsZ2p2eHlaOXJSdVNhRk9McTdHbjRvR05MQ0xLZGJRY1JwaDJINDREM3RvUmJSblNKWFloZ01zLWt0bU9Bd3dTSGw0cmRUeWZpYlVHX1hsMkFUVlctV0lJS3ZtU3FuU3hVV0doU2dsNnhqZG50eVpiblVXUzhqcW92T054T0RlczdrYXB5SDVtbGJqenFZS1YtRFNneVhrcDNvNk55ZXJoYThR?oc=5" },
   { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
   { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
   { time: "07:06", tag: "ai", tagText: "AI", text: "福布斯发布2026年AI 50强榜单，评选出全球最具影响力的人工智能公司。该榜单涵盖从基础模型到行业应用的各领域领军企业，反映了当前AI产业的最新格局与增长趋势。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5uUGIzcFRTdFZwdkxZTnpHdUpfVmhCQ21iczlSQjJrMnlSa19sYzB4S2JuVC1wSWo1UFhRWnlpVWtrb0NIN1RmS2Nn?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "本周十大融资轮次：国防科技领跑，太空安全初创公司True Anomaly以6亿美元融资位居榜首。多家国防科技公司完成大额交易，显示该领域投资热度持续升温。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxORF9sMElYdG5uU1VOLXB6bm40U01aMlppOGlTWDFtcVI0SjE0ZWlZSWtwSTY3Y2JaWjM4SWo0ZzNJVGx6M1hPMHBRbXVKcVRxQUktaW9aWXpnTldNZEVUaGtvMnJ5R2lvNkpYcjVYbS0xaW13aVhkX2ExLTFwR3k1NVozQ0V5d1VYdGxXLXFHTHBLUQ?oc=5" },
-  { time: "17:40", tag: "tech", tagText: "科技", text: "本周热门阅读：IQE融资、AI初创公司动态、台积电出售Arm股份。电子行业媒体总结本周最受关注新闻，涵盖化合物半导体厂商IQE获得新一轮融资、AI初创企业最新进展以及台积电减持Arm股份等关键动态。", source: "Electronics Weekly", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxOdXBCeElwUTNWMkJ5ZUhacnB3aUhzVGJmb0tnLXhoUGdDT2p2UzNGTWhXYmptQjd3OFJmWF9jbVNQWnpvRm9sRkhLZVJUcXE4ZGxMbXVHMUUyVjB6RUZCY3Y2NjVyUXJuVkhDMzdsekpDb1poNmxoa1VKYlVmdlRFay1jdzRCQTI3NmxEOFRjWEx5TUxBd2JfZUtTclZ5WHl5UHVUNmRqaXdhQ21GeWtMN1JNZ2pWSC13YzhzYlJnNkZXcWl3?oc=5" },
 ];
-const aiBreakingDate = "2026年5月2日 11:41 CST";
+const aiBreakingDate = "2026年5月2日 14:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
