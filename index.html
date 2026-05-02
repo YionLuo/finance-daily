@@ -1623,13 +1623,17 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月2日 21:41 CST"
+  date: "2026年5月2日 22:59 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:00", tag: "geo", tagText: "地缘", text: "美国经济在伊朗战争、油价飙升、高关税和通胀压力下仍表现出韧性，被形容为“不沉的经济”。尽管面临多重冲击，消费者支出和企业活动未出现明显裂痕。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-unsinkable-u-s-economy-oil-prices-are-surging-iran-tensions-are-rising-but-it-wont-crack-ee27477f?mod=mw_rss_topstories" },
   { time: "21:41", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦2026年股东大会召开，现金储备创纪录达3800亿美元，格雷格·阿贝尔首次以CEO身份接替巴菲特主持大会。公司财报超预期，但股票销售连续第14个季度净卖出，市场关注后巴菲特时代投资策略。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/warren-buffett-berkshire-hathaway-annual-meeting-2026-live-updates.html" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌因其对SpaceX和Anthropic的早期投资，被专家称为“披着风投基金外衣的上市公司”。这些投资被视为上市公司有史以来最成功的风险押注之一，凸显科技巨头通过战略投资获取增长的新模式。", source: "MarketWatch", url: "https://www.marketwatch.com/story/google-is-now-a-glorified-venture-capital-fund-thanks-to-its-spacex-and-anthropic-stakes-b13f3d56?mod=mw_rss_topstories" },
+  { time: "20:00", tag: "crypto", tagText: "加密", text: "分析师指出，稳定币的增长在当前市场环境下可能比比特币更重要。稳定币的扩张被视为加密货币生态系统成熟和采用扩大的关键指标，其流动性对市场健康至关重要。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUDdGRU9QczV4SXBzTVRrWFlfcjhTT1RNb2hldE5PSVNPdWdzckRqMFBQQkpyU3U0d3NhZFhmNC1qcXY3WTdwaDh1R0MwdEU3d1NzOFR2WW45NDJ1N251V29LT0xrdXBTdGpleTdQbWtHalRXX04zdmZXeW15cDhEblBQOEZJaG1EMEZCUXNR?oc=5" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "埃隆·马斯克在马斯克诉奥特曼案的第一周庭审中占据主导地位，连续三天出庭作证。马斯克指控OpenAI背离非营利初衷，称“你不能就这么偷走一个慈善机构”。此案对AI治理和开源理念具有深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "日本卫浴制造商Toto因供应半导体制造关键部件——静电卡盘，意外成为AI热潮赢家。该公司正受益于内存芯片繁荣，同时推进“永不需清洁的马桶”目标，跨界科技与家居领域。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-japanese-toilet-maker-seeking-the-perfect-flush-is-moonlighting-as-a-hot-ai-play-30d11f1a" },
   { time: "19:30", tag: "geo", tagText: "地缘", text: "美国参议员林赛·格雷厄姆警告称，如果伊朗不屈服，美国应“完成工作”。这位鹰派共和党人是对美国总统有影响力的关键人物，其言论加剧了市场对中东冲突进一步升级的担忧。", source: "Financial Times", url: "https://www.ft.com/content/359e5fdd-b56f-46cb-b3fd-70b367f3e2ef" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "GLP-1减肥药常见副作用脱发正催生新兴市场。制药公司和消费品企业纷纷推出针对减肥相关脱发的治疗产品，这一此前未被充分开发的细分市场正快速增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/hair-loss-glp-1s.html" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "07:59", tag: "geo", tagText: "地缘", text: "特朗普因德国总理默茨批评美国对伊朗战争，宣布将从德国撤出5000名美军，作为报复措施。此举标志着美欧关系因伊朗冲突进一步恶化。", source: "Financial Times", url: "https://www.ft.com/content/4cabedc3-0119-4c3f-9867-094b7e1398f6" },
   { time: "06:26", tag: "tech", tagText: "科技", text: "台积电正在权衡在亚利桑那州扩大封装产能，同时推迟下一代EUV光刻机的投资。这一决策反映了全球芯片制造格局在地缘政治压力下的调整，以及先进封装技术日益增长的战略重要性。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPdnZBMjFIWUlhS240cnlzYjIwRElYQjNWcXlxSFhGS2F5OVVFbC1id1ViZGIxMFNnQnVpdzFOTTZiNGNOTERGbDFMendac002d2hnTWxUNHoxVWFfekptTnNoYUJNSnMtR01zdU53MjJwTWdwSk1GbzViZUktd3l6dGdrU2J6SXBPYWZsNnJ5Ulo0X296ekdMU3ZYYkVfMjhVMi1WSU53ZGpsdWRuRHZMN3hqZ0pHSWxFTHlPazRPLXVZZ1MzOHFFcWFzR3A3VWl3N3RBNm54U0UtUElaWHB4cDk0b0R3eVNRYjlvU9IB8gFBVV95cUxPQld6dEVXM3M2WlotMjBkYVlqbmRmN0hpWHpKYkFwb2dXZUVIN0VialVBLTA0RUhPb0kyTWhuWTJYQVpaOXkxVnlpZzNFdVV0UnRYSFRodFE1dHJmQmVVYjBtUkQyeVdDcjktZUpEbFlCWTNhZzdEaENFbTFpanpDWTJOQjgzbzJDRUtwM0l0bzR3QThKbVZDUGt1ZnNVbVRxU21UY2Z4QXV2cjZzLTVIeDRyYkktb3lETHFXU1VqbjZTYW41cUMxdF9IazR2Nk52bkV4Ujl5V2UtNExqa1BneTM4MHFGM1ZWWGVnOWI2bFNVQQ?oc=5" },
   { time: "05:27", tag: "geo", tagText: "地缘", text: "美国警告欧洲，因伊朗战争消耗库存，对欧武器交付将延迟，可能包括用于乌克兰防御俄罗斯的军火。", source: "Financial Times", url: "https://www.ft.com/content/f87a8b04-e683-4e0e-8c66-647d23bfc2ff" },
-  { time: "05:01", tag: "macro", tagText: "宏观", text: "美国汽油价格因伊朗战争飙升，加满最畅销车型需160美元。据GasBuddy数据，自2月底伊朗战争爆发以来，普通无铅汽油价格上涨近50%，周五早盘达到每加仑4.42美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/it-now-costs-160-to-fill-up-americas-top-selling-vehicle-as-the-iran-war-nears-its-10th-week-803077d2?mod=mw_rss_topstories" },
-  { time: "04:59", tag: "geo", tagText: "地缘", text: "美国检察官Pirro尽管调查受阻，仍持续向美联储主席鲍威尔施压。她预计将立即对阻止其调查美联储成本超支的裁决提出上诉。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/fed-powell-pirro-investigation.html" },
-  { time: "04:58", tag: "macro", tagText: "宏观", text: "埃克森美孚CEO警告，由于伊朗战争影响，市场尚未看到油价全面冲击，预计油价将进一步上涨。油价已因冲突升级风险飙升，又因和平希望暴跌，循环往复。", source: "CNBC", url: "https://www.cnbc.com/2026/05/01/exxon-ceo-iran-war-oil-strait-hormuz.html" },
-  { time: "03:35", tag: "tech", tagText: "科技", text: "苹果正式放弃净现金中性目标，市场猜测其可能正在为重大AI收购做准备，以缩小在人工智能竞赛中的差距。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apple-just-gave-a-subtle-clue-that-a-splashy-ai-acquisition-may-be-in-the-cards-110f5ce2?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月2日 21:41 CST";
+const breakingDate = "2026年5月2日 22:59 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
   { time: "02:04", tag: "tech", tagText: "科技", text: "Ubuntu基础设施宕机超24小时，影响关键漏洞修复通信。该漏洞可获取root权限，安全团队正紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/ubuntu-infrastructure-has-been-down-for-more-than-a-day/" },
   { time: "01:46", tag: "tech", tagText: "科技", text: "Stripe推出数字钱包Link，支持用户绑定银行卡、银行账户和订阅服务，并授权自主AI代理通过审批流程安全消费。此举为AI代理在电商和支付场景中的商业化铺平道路，标志着支付基础设施向AI原生方向演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/" },
-  { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
 ];
-const aiBreakingDate = "2026年5月2日 21:41 CST";
+const aiBreakingDate = "2026年5月2日 22:59 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
