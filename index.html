@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月4日 01:57 CST"
+  date: "2026年5月4日 03:13 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:58", tag: "crypto", tagText: "加密", text: "伊朗紧张局势推动能源价格飙升24%，影响加密货币市场前景。能源成本上升可能对加密挖矿及整体市场情绪产生压力。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxQX0hZd2duVHN6Y1U4M0NLUHctMEZXMEtFVUpuSzkyVU5wVnhuQS04RVNVNXFDTDRwRUh4TktBemNMaUhJYkJBc19KeDE1enI5d0NKTjhKNEpNeG5hSXVCOG1uR0VJZURuekNfYnc2NWV3VE93QzFjZWtJTkMzeGF0djJ4cGRSZFJma09nVWU1VTk4allkUDBGTnZyOTVlVkgw?oc=5" },
   { time: "23:47", tag: "macro", tagText: "宏观", text: "美国财政部长斯科特·贝森特向全体美国人发出紧急信息，内容涉及当前经济政策与财政前景。具体细节尚未完全披露，但市场对此高度关注。", source: "TheStreet", url: "https://finance.yahoo.com/economy/policy/articles/scott-bessent-pressing-message-americans-174700323.html" },
   { time: "23:30", tag: "geo", tagText: "地缘", text: "特朗普表示正在审查伊朗和平计划，但同时不排除发动新一轮打击的可能性。伊朗冲突已进入第10周，短期内无结束迹象。", source: "Financial Times", url: "https://www.ft.com/content/fb1aae4a-ec0c-48ed-bf0a-6639071499d3" },
   { time: "22:59", tag: "geo", tagText: "地缘", text: "美国司法部长皮罗在调查特朗普遇刺案中披露了新的证据，涉及子弹来源争议。同时，嫌疑人科尔·艾伦对“自杀预防措施”提出质疑。案件细节持续发酵。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/trump-assassination-cole-allen-suicide-pirro.html" },
@@ -1648,12 +1649,14 @@ const breakingNews = [
   { time: "19:28", tag: "geo", tagText: "地缘", text: "OPEC+在阿联酋意外退出后的首次会议上宣布，将每日增产18.8万桶。阿联酋上周的突然退出加剧了市场对产量前景的担忧，此次增产幅度相对温和，未能完全缓解供应不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/opec-announces-188000-barrels-per-day-output-increase-.html" },
   { time: "19:04", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦新任CEO格雷格·阿贝尔在首次股东大会上明确表示，公司不会分拆，并将延续沃伦·巴菲特的投资理念与遗产。巴菲特虽未全程主导，但仍是大会的精神核心。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/berkshire-annual-meeting-greg-abel-rules-out-break-up-stressing-continuity-with-buffett.html" },
   { time: "19:00", tag: "geo", tagText: "地缘", text: "美国政治面临身份认同危机，两党极端派在越来越多议题上立场趋同。这种重叠可能重塑传统政治格局，影响未来政策制定方向，并加剧选民对主流政党的疏离感。", source: "Financial Times", url: "https://www.ft.com/content/68f5fb2d-6434-47f2-bc5a-2115dd3c82a3" },
-  { time: "18:46", tag: "geo", tagText: "地缘", text: "美国阻挠策略导致全球航运碳税谈判陷入僵局。一年前由多数国家达成的协议在法律上无法获得通过，国际航运业减排进程面临重大不确定性。", source: "Financial Times", url: "https://www.ft.com/content/05631ee7-fcea-46f7-8dfb-7aac365d5960" },
 ];
-const breakingDate = "2026年5月4日 01:57 CST";
+const breakingDate = "2026年5月4日 03:13 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
+  { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
+  { time: "02:00", tag: "ai", tagText: "AI", text: "哈佛大学最新研究显示，AI大模型在急诊室诊断中的准确率超过了两名人类医生。该研究评估了多个大语言模型在真实急诊病例中的表现，发现至少一个模型的诊断准确性优于人类医生，引发对AI辅助医疗诊断潜力的新讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "一款名为DualShot Recorder的iPhone相机应用在发布后12小时内登顶App Store付费应用榜首，成为2026年现象级爆款。该应用由网络知名“松鼠老爹”Derrick Downey Jr.开发。", source: "AI | The Verge", url: "https://www.theverge.com/tech/921690/dualshot-recorder-iphone-camera-app-derrick-downey-jr" },
   { time: "20:08", tag: "geo", tagText: "地缘", text: "英伟达CEO黄仁勋表示，由于美国出口管制政策，英伟达在中国市场份额已降至“零”，并称该政策“已在很大程度上适得其反”。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMijAJBVV95cUxQclBGT2JyeVpXbkktdWQtTE4tQjBGX3NiN2tnMkdSZzNuUk9aTkxZNTk0ZGtpeE1IT2kzNXZXMGV3WERoMkR1QkRmT0xVOFZsUGJSeHUxWnA3ZnJialB0cVBCQmZhNEhxaGpIQlk1Qlhtc3hKYnFQTXJOZXBaUVVTWk4zaGhzdkJUUXpFcFVidnFnb1ZYOEJmVl9IbU56U0EtdFB0UzVNRFdtN3RoV0duUGpiTXNTZUNnQU0ya1hkWW41UWFURmFfbWNTeHpZUGVTR1djWVQwWDEwYU0wVWstVFhqUm5xWEdxLW4yMjlwTFlpa3ptYUxfZGJVYk01YVNTTTJrZXI2WGlOdFAx?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "梅奥诊所开发出AI模型，能在全球最致命癌症之一变得可见之前进行检测，有望大幅提高早期诊断率和患者生存率。", source: "KROC-AM", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE1Eb0lqdlIyelRHcXRCQ1hmczliT0gydTYxU1pvQjZHbGc1eWRXT1JWQ00yanJfamptNExSeDlYWm5PdkwyVUtpaS1JdDZIZ1FDallqQmtkS2lGenBrOENteFBtR3pNNnotc1ozOWlCdk1kZw?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "06:05", tag: "ai", tagText: "AI", text: "NYU教授Gary Marcus将大型科技公司7000亿美元的AI支出狂潮称为“史上最大的资本错配”，质疑巨额投资回报前景。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOejFoRnZUcEgyZUpMODlldVVDcWctNDRLMGlDWXZEMUZGOFU1THRUWHk2RGE3U2dTZEVzeDFnbnpvWmV6TzlTRjIzcFI5djNqYjE2WF96WW1jYzNnOE13dGRVeFJFZ2JDYld0djBvaGNHNjExZXZYTmwzQk93a0dXWnR5eW5NRmFKVl9FaElWX2NqMHJkbVVaOQ?oc=5" },
   { time: "05:54", tag: "ai", tagText: "AI", text: "奥斯卡主办方宣布，由AI生成的演员和剧本将不再具备参评资格，这对AI电影制作人Tilly Norwood等人是重大打击。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/" },
   { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
-  { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
-  { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
 ];
-const aiBreakingDate = "2026年5月4日 01:57 CST";
+const aiBreakingDate = "2026年5月4日 03:13 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
