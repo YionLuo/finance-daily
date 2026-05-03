@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月3日 07:56 CST"
+  date: "2026年5月3日 12:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "09:19", tag: "geo", tagText: "地缘", text: "特朗普称正在审查伊朗和平计划，但不排除发动新一轮打击。美伊冲突已进入第十周，能源价格持续飙升，短期内无结束迹象。", source: "Financial Times", url: "https://www.ft.com/content/fb1aae4a-ec0c-48ed-bf0a-6639071499d3" },
   { time: "07:31", tag: "tech", tagText: "科技", text: "亚马逊占Rivian 2026年第一季度营收超过50%，知名做空者Jim Chanos对此评论“哎呀”。该数据凸显Rivian对亚马逊订单的极度依赖，引发市场对其业务独立性的担忧。", source: "Benzinga", url: "https://finance.yahoo.com/markets/stocks/articles/amazon-accounted-over-50-rivians-233132615.html" },
   { time: "06:55", tag: "crypto", tagText: "加密", text: "CryptoQuant警告称，比特币4月的上涨具有投机性，回调风险正在上升。分析指出当前市场情绪过热，投资者需警惕价格修正的可能性。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxONVdmQk5hdlJJVHplY2JIcEJpZ09iNVVDSUgzTkNwQkQ3MTJpd0xiTlMyVnhMNzR4TFpidHEtd0s4VURycmZiTkJxQzN5S1l4ZlZWdU9QWk80cjFYTjViaVk4QVFZNm1lNE9nT0YxUV8wb2hoNV9UWHlvek0xem9GM1BoLU9IR1FRZ3BaRFB3dnd4LW9ycG1zX29BV3hZNzg4amc?oc=5" },
   { time: "03:45", tag: "macro", tagText: "宏观", text: "高盛警告称，标普500指数突破7100点属于“泡沫”，并指出华尔街此前发出类似警告后市场曾出现暴跌。当前市场情绪过热，投资者需警惕回调风险。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-says-p-500s-194500078.html" },
@@ -1648,14 +1649,17 @@ const breakingNews = [
   { time: "21:39", tag: "macro", tagText: "宏观", text: "私人信贷市场正转向“金融炼金术”以应对“峰值焦虑”。随着违约率上升，信贷经理们开始采用创造性会计手段来掩盖损失，专家警告投资者可能无法区分基金回报是源于投资技巧还是巧妙的会计操作。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/private-credit-turns-to-financial-alchemy-as-an-antidote-to-peak-anxiety.html" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌因其对SpaceX和Anthropic的早期投资，被专家称为“披着风投基金外衣的上市公司”。这些投资被视为上市公司有史以来最成功的风险押注之一，凸显科技巨头通过战略投资获取增长的新模式。", source: "MarketWatch", url: "https://www.marketwatch.com/story/google-is-now-a-glorified-venture-capital-fund-thanks-to-its-spacex-and-anthropic-stakes-b13f3d56?mod=mw_rss_topstories" },
   { time: "20:00", tag: "crypto", tagText: "加密", text: "分析师指出，稳定币的增长在当前市场环境下可能比比特币更重要。稳定币的扩张被视为加密货币生态系统成熟和采用扩大的关键指标，其流动性对市场健康至关重要。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUDdGRU9QczV4SXBzTVRrWFlfcjhTT1RNb2hldE5PSVNPdWdzckRqMFBQQkpyU3U0d3NhZFhmNC1qcXY3WTdwaDh1R0MwdEU3d1NzOFR2WW45NDJ1N251V29LT0xrdXBTdGpleTdQbWtHalRXX04zdmZXeW15cDhEblBQOEZJaG1EMEZCUXNR?oc=5" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "埃隆·马斯克在马斯克诉奥特曼案的第一周庭审中占据主导地位，连续三天出庭作证。马斯克指控OpenAI背离非营利初衷，称“你不能就这么偷走一个慈善机构”。此案对AI治理和开源理念具有深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html" },
 ];
-const breakingDate = "2026年5月3日 07:56 CST";
+const breakingDate = "2026年5月3日 12:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
+  { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
+  { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
   { time: "07:06", tag: "ai", tagText: "AI", text: "福布斯发布2026年AI 50强榜单，评选出全球最具影响力的人工智能公司。该榜单涵盖从基础模型到行业应用的各领域领军企业，反映了当前AI产业的最新格局与增长趋势。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5uUGIzcFRTdFZwdkxZTnpHdUpfVmhCQ21iczlSQjJrMnlSa19sYzB4S2JuVC1wSWo1UFhRWnlpVWtrb0NIN1RmS2Nn?oc=5" },
   { time: "06:13", tag: "ai", tagText: "AI", text: "Meta收购人形机器人初创公司Assured Robot Intelligence，以增强其机器人AI模型能力，进一步推进人形AI机器人战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" },
+  { time: "06:05", tag: "ai", tagText: "AI", text: "NYU教授Gary Marcus将大型科技公司7000亿美元的AI支出狂潮称为“史上最大的资本错配”，质疑巨额投资回报前景。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOejFoRnZUcEgyZUpMODlldVVDcWctNDRLMGlDWXZEMUZGOFU1THRUWHk2RGE3U2dTZEVzeDFnbnpvWmV6TzlTRjIzcFI5djNqYjE2WF96WW1jYzNnOE13dGRVeFJFZ2JDYld0djBvaGNHNjExZXZYTmwzQk93a0dXWnR5eW5NRmFKVl9FaElWX2NqMHJkbVVaOQ?oc=5" },
   { time: "05:54", tag: "ai", tagText: "AI", text: "奥斯卡主办方宣布，由AI生成的演员和剧本将不再具备参评资格，这对AI电影制作人Tilly Norwood等人是重大打击。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/" },
   { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
   { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
   { time: "18:10", tag: "crypto", tagText: "加密", text: "MEXC发文称，AI的下一个突破可能来自Pi Network的全球劳动力网络，暗示其分布式用户群体可为AI训练和数据标注提供新资源。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5LVFlaYXpWcnlIcW54U0otT0EySWlaT2ZwcC1IU1dQWTdhNlJWTkx1eFhSRWxycUwzRVZlWTBsMVRUQ2w1dTdFRg?oc=5" },
   { time: "17:07", tag: "tech", tagText: "科技", text: "Fast Company发文警告用户应停止让ChatGPT等AI聊天机器人使用个人数据进行训练，并提供了具体操作指南，强调数据隐私风险及如何关闭相关设置。", source: "fastcompany.com", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPQmZ1dEFDYzQ0aXZhOFZBekxLOVh1VGdDcTZCUGhZaUZxamQ3SXY2WHRIS0xtbmlRbGdqYWYzWjc0ODlDNVA4SGx4Ni1USktuaDNoeXpLbWluM0gyVVpKbThfZWItb0o0YWNKMk9OUGs1bTQ5c0VGTzh4dGFDakVwNkpjcXdaMnUzbzBDZmxKbGxvdzlPQm1VcVBEUkhGZlpzQ2hoVV9mYl8tUmtOazhVLTZaR3hDZlRLcUMxbDN0XzhmN2J5NTN4NkpOakdOenVNVGtzSA?oc=5" },
-  { time: "12:35", tag: "ai", tagText: "AI", text: "AI突破：可在症状出现前3年检测出胰腺癌。据Times Now报道，一项新的人工智能技术能够在胰腺癌患者出现任何症状之前三年就发现病变，有望大幅提高早期诊断率和生存率。", source: "Times Now", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNN1JwTHhzdS1heDJFdzRHb2lKWG95Yk9JT19kNFVMeGxlRFVoRkNOUm1XQUNaWUVWcXhzWFpKMVlCOWtxTG9fSlhWaWJSenJGVjNpcHFfaDU2V1RyRjRJZ3NFcVREbVJsOE1ScllqM1lvaVlRdUc3clB3WEhwWXI2WVBxbnJjSWhoY2tiNTVIeUZjckNPalYxYUo5OXBoM2NSb1JrNXAxcDQ0NnN0SXc0VEZIdnpXby1KNVRtN04tVGZIcnBmRFNCODEtcVJ3X2F3cHRUMU1nWjbSAd4BQVVfeXFMTktITFozcVNrbnRvOXFqSURQakNpZTc4NTV3VFB2bVVDRlE2ZzJmdzM5UHJOcXhGZWtNRnZsZ2p2eHlaOXJSdVNhRk9McTdHbjRvR05MQ0xLZGJRY1JwaDJINDREM3RvUmJSblNKWFloZ01zLWt0bU9Bd3dTSGw0cmRUeWZpYlVHX1hsMkFUVlctV0lJS3ZtU3FuU3hVV0doU2dsNnhqZG50eVpiblVXUzhqcW92T054T0RlczdrYXB5SDVtbGJqenFZS1YtRFNneVhrcDNvNk55ZXJoYThR?oc=5" },
-  { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
-  { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
-  { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
 ];
-const aiBreakingDate = "2026年5月3日 07:56 CST";
+const aiBreakingDate = "2026年5月3日 12:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
