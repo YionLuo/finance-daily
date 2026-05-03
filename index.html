@@ -1623,17 +1623,22 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月3日 19:54 CST"
+  date: "2026年5月3日 21:42 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:23", tag: "macro", tagText: "宏观", text: "医疗成本飙升迫使企业削减福利，Zoom和德勤等公司已缩减慷慨的带薪育儿假。这一趋势反映出企业在高通胀环境下为控制开支而牺牲员工福利，可能影响劳动力市场及家庭财务规划。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/healthcare-costs-parental-paid-leave-employee-benefits-cuts.html" },
+  { time: "20:06", tag: "macro", tagText: "宏观", text: "美国民众担忧社保基金被用于填补联邦预算缺口。华盛顿围绕社保资金可持续性提出多项改革方案，但任何挪用社保资金的举动都可能引发政治争议，并影响数百万退休人员的财务安全。", source: "MarketWatch", url: "https://www.marketwatch.com/story/were-worried-the-honey-pot-will-run-dry-does-the-trump-administration-use-my-social-security-to-fund-federal-programs-1cd01b8f?mod=mw_rss_topstories" },
+  { time: "19:36", tag: "geo", tagText: "地缘", text: "特朗普政府以国家安全为由扩大对风电场的打压，美国国防部已搁置165个风电项目。此举是总统打击该行业的最新举措，可能阻碍美国可再生能源发展，并加剧与清洁能源行业的冲突。", source: "Financial Times", url: "https://www.ft.com/content/74d8cf6f-aa17-4a24-a621-e26b1bad2e1e" },
   { time: "19:28", tag: "geo", tagText: "地缘", text: "OPEC+在阿联酋意外退出后的首次会议上宣布，将每日增产18.8万桶。阿联酋上周的突然退出加剧了市场对产量前景的担忧，此次增产幅度相对温和，未能完全缓解供应不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/opec-announces-188000-barrels-per-day-output-increase-.html" },
   { time: "19:04", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦新任CEO格雷格·阿贝尔在首次股东大会上明确表示，公司不会分拆，并将延续沃伦·巴菲特的投资理念与遗产。巴菲特虽未全程主导，但仍是大会的精神核心。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/berkshire-annual-meeting-greg-abel-rules-out-break-up-stressing-continuity-with-buffett.html" },
+  { time: "19:00", tag: "geo", tagText: "地缘", text: "美国政治面临身份认同危机，两党极端派在越来越多议题上立场趋同。这种重叠可能重塑传统政治格局，影响未来政策制定方向，并加剧选民对主流政党的疏离感。", source: "Financial Times", url: "https://www.ft.com/content/68f5fb2d-6434-47f2-bc5a-2115dd3c82a3" },
   { time: "18:46", tag: "geo", tagText: "地缘", text: "美国阻挠策略导致全球航运碳税谈判陷入僵局。一年前由多数国家达成的协议在法律上无法获得通过，国际航运业减排进程面临重大不确定性。", source: "Financial Times", url: "https://www.ft.com/content/05631ee7-fcea-46f7-8dfb-7aac365d5960" },
   { time: "17:20", tag: "geo", tagText: "地缘", text: "以色列批准从洛克希德·马丁和波音公司采购F-35和F-15IA战斗机的计划，这是其1190亿美元军事强化计划的第一步。此举旨在应对中东地区持续升级的冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/israel-approves-plan-to-buy-fighter-jets-from-lockheed-boeing.html" },
   { time: "17:11", tag: "ai", tagText: "AI", text: "摩根士丹利预测，中国股票即将迎来人工智能（AI）领域的重大利好。该投行同时上调了两家中国AI模型开发公司的目标股价，认为AI技术突破将显著提振市场信心。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/chinese-stocks-are-about-to-get-a-big-ai-boost-morgan-stanley-predicts.html" },
+  { time: "17:00", tag: "geo", tagText: "地缘", text: "美国司法部自特朗普重返白宫以来流失了四分之一的律师，数千人因政府聚焦移民和打击政敌的议程而辞职或被解雇。这一大规模人才流失可能削弱司法部的执法能力和独立性。", source: "Financial Times", url: "https://www.ft.com/content/a1316aae-83d9-4e2a-87aa-93de964bbbe0" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "底特律汽车制造商警告称，伊朗战争将导致从铝到塑料和油漆等大宗商品价格飙升，造成约50亿美元的成本冲击。该行业正面临供应链成本全面上涨的压力。", source: "Financial Times", url: "https://www.ft.com/content/a24a24f6-064b-4f00-a339-edf597596d5a" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "投资者大举涌入清洁能源基金，资金流入规模创五年新高。伊朗战争引发的能源安全担忧取代气候变化，成为推动可再生能源投资的主要动力。", source: "Financial Times", url: "https://www.ft.com/content/9921f2b5-c910-4cec-a50f-cad453935a1a" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "国际货币基金组织批评欧盟各国政府忽视其关于能源补贴的警告，敦促各国将支持措施精准针对最脆弱群体，而非采用昂贵的全面补贴方案。", source: "Financial Times", url: "https://www.ft.com/content/8b4cb5a2-67ab-4313-bce1-b77f542eeed5" },
@@ -1644,16 +1649,14 @@ const breakingNews = [
   { time: "06:55", tag: "crypto", tagText: "加密", text: "CryptoQuant警告称，比特币4月的上涨具有投机性，回调风险正在上升。分析指出当前市场情绪过热，投资者需警惕价格修正的可能性。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxONVdmQk5hdlJJVHplY2JIcEJpZ09iNVVDSUgzTkNwQkQ3MTJpd0xiTlMyVnhMNzR4TFpidHEtd0s4VURycmZiTkJxQzN5S1l4ZlZWdU9QWk80cjFYTjViaVk4QVFZNm1lNE9nT0YxUV8wb2hoNV9UWHlvek0xem9GM1BoLU9IR1FRZ3BaRFB3dnd4LW9ycG1zX29BV3hZNzg4amc?oc=5" },
   { time: "03:45", tag: "macro", tagText: "宏观", text: "高盛警告称，标普500指数突破7100点属于“泡沫”，并指出华尔街此前发出类似警告后市场曾出现暴跌。当前市场情绪过热，投资者需警惕回调风险。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-says-p-500s-194500078.html" },
   { time: "03:06", tag: "macro", tagText: "宏观", text: "美联储官员古尔斯比表示，近期通胀数据是“坏消息”，暗示通胀压力可能持续。市场对美联储未来加息路径的担忧加剧，投资者需关注美联储后续沟通。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/recent-inflation-data-bad-news-190611607.html" },
-  { time: "02:36", tag: "geo", tagText: "地缘", text: "特朗普政府加速向中东盟友批准86亿美元军售，以在伊朗战争期间巩固地区伙伴。与此同时，美国警告欧洲其武器运输将面临延迟。此举凸显美国在中东冲突中优先支持区域盟友的战略调整。", source: "Financial Times", url: "https://www.ft.com/content/a9a3273f-d5c3-4277-932d-27b1969e975f" },
-  { time: "01:59", tag: "geo", tagText: "地缘", text: "伊朗提出霍尔木兹海峡协议方案，特朗普表示不满意但倾向于非军事解决途径。伊朗外长称德黑兰已准备好在外交上接触，前提是美国改变其做法。霍尔木兹海峡局势仍是全球能源市场的关键风险点。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/trump-iran-strait-of-hormuz.html" },
-  { time: "01:56", tag: "geo", tagText: "地缘", text: "美国国防部计划从德国撤出5000名士兵，以报复德国总理默茨对美国-以色列对伊朗战争行动的批评。此举标志着美德关系因伊朗冲突进一步恶化，凸显北约内部裂痕。", source: "Financial Times", url: "https://www.ft.com/content/4cabedc3-0119-4c3f-9867-094b7e1398f6" },
-  { time: "01:56", tag: "macro", tagText: "宏观", text: "市场分析指出，通胀即将上升，美联储需在加息前向市场明确传达信号，以帮助投资者管理风险。当前市场对利率路径存在不确定性，美联储沟通策略至关重要。", source: "MarketWatch", url: "https://www.marketwatch.com/story/higher-inflation-is-on-the-way-the-fed-needs-to-make-this-clearer-before-it-raises-rates-142c6884" },
-  { time: "01:53", tag: "macro", tagText: "宏观", text: "美股主要指数在短暂盘整后创下新高，苹果和博通等科技股进入买入区间。市场在消化伊朗战争和通胀担忧后重拾升势，投资者关注美联储未来利率路径。", source: "Investor's Business Daily", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQN3VxMG12QTUwQ204MURmTmh4NXQ1akc2MVlRUTh6X0wyTDZad3JOOFZrMEMxVzBtZVJOenBGbU12WjItVW1hQ0t0RWF3ZUgwMnNTNXVIX3VJOXB2UzNXSTNRQlNvOGtrWWJEbFpEa2E0UFZXQmxNUlJnQlFYLVRhWC03WEhMUm5LQXluOV9ab2tIRkNMemk3MWUwSXdheXExbHAybmhxWjd3RlNR?oc=5" },
 ];
-const breakingDate = "2026年5月3日 19:54 CST";
+const breakingDate = "2026年5月3日 21:42 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:00", tag: "tech", tagText: "科技", text: "一款名为DualShot Recorder的iPhone相机应用在发布后12小时内登顶App Store付费应用榜首，成为2026年现象级爆款。该应用由网络知名“松鼠老爹”Derrick Downey Jr.开发。", source: "AI | The Verge", url: "https://www.theverge.com/tech/921690/dualshot-recorder-iphone-camera-app-derrick-downey-jr" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "梅奥诊所开发出AI模型，能在全球最致命癌症之一变得可见之前进行检测，有望大幅提高早期诊断率和患者生存率。", source: "KROC-AM", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE1Eb0lqdlIyelRHcXRCQ1hmczliT0gydTYxU1pvQjZHbGc1eWRXT1JWQ00yanJfamptNExSeDlYWm5PdkwyVUtpaS1JdDZIZ1FDallqQmtkS2lGenBrOENteFBtR3pNNnotc1ozOWlCdk1kZw?oc=5" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "AI生成的音乐正大量涌入流媒体平台，但听众接受度存疑。行业观察指出，AI音乐泛滥引发关于内容质量、版权和听众体验的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
   { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
-  { time: "00:10", tag: "tech", tagText: "科技", text: "4月25日至5月2日，18家印度初创公司从投资者处筹集超2.32亿美元资金，涵盖游戏、金融科技、AI、气候科技、体育科技、深度科技、能源科技、借贷、股票经纪等多个领域。", source: "instagram.com", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1vUy00YjVXSW10Tmt2aHhzVDkyVDJ0d1owcG1HMzRxUGQyQVhUWFd1NmMtcFAxLUNjVzFlWHNzMFpjMWxZY0dXdENLQ1FGckZncUE?oc=5" },
-  { time: "00:00", tag: "tech", tagText: "科技", text: "TechCrunch发布2025年最佳AI语音输入应用评测。AI驱动的语音输入应用在回复邮件、记笔记甚至通过语音编程方面表现出色，文章对多款应用进行了测试和排名。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/" },
-  { time: "22:09", tag: "ai", tagText: "AI", text: "五角大楼与OpenAI、谷歌、英伟达等多家AI公司达成机密协议，允许军方在机密环境中使用其AI工具。Anthropic未在合作名单中。此举标志着美国国防部大规模采用商用AI技术进入新阶段。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" },
 ];
-const aiBreakingDate = "2026年5月3日 19:54 CST";
+const aiBreakingDate = "2026年5月3日 21:42 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
