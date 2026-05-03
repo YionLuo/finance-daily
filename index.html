@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月3日 21:42 CST"
+  date: "2026年5月3日 23:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:19", tag: "macro", tagText: "宏观", text: "精神航空（Spirit Airlines）在政府救助失败后于夜间停止运营，正式宣告倒闭。该公司在最后时刻试图寻求联邦援助未果，成为美国航空业近年最大破产事件之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/spirit-airlines-shutdown-inside-the-final-hours.html" },
   { time: "20:23", tag: "macro", tagText: "宏观", text: "医疗成本飙升迫使企业削减福利，Zoom和德勤等公司已缩减慷慨的带薪育儿假。这一趋势反映出企业在高通胀环境下为控制开支而牺牲员工福利，可能影响劳动力市场及家庭财务规划。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/healthcare-costs-parental-paid-leave-employee-benefits-cuts.html" },
   { time: "20:06", tag: "macro", tagText: "宏观", text: "美国民众担忧社保基金被用于填补联邦预算缺口。华盛顿围绕社保资金可持续性提出多项改革方案，但任何挪用社保资金的举动都可能引发政治争议，并影响数百万退休人员的财务安全。", source: "MarketWatch", url: "https://www.marketwatch.com/story/were-worried-the-honey-pot-will-run-dry-does-the-trump-administration-use-my-social-security-to-fund-federal-programs-1cd01b8f?mod=mw_rss_topstories" },
   { time: "19:36", tag: "geo", tagText: "地缘", text: "特朗普政府以国家安全为由扩大对风电场的打压，美国国防部已搁置165个风电项目。此举是总统打击该行业的最新举措，可能阻碍美国可再生能源发展，并加剧与清洁能源行业的冲突。", source: "Financial Times", url: "https://www.ft.com/content/74d8cf6f-aa17-4a24-a621-e26b1bad2e1e" },
@@ -1648,13 +1649,13 @@ const breakingNews = [
   { time: "07:31", tag: "tech", tagText: "科技", text: "亚马逊占Rivian 2026年第一季度营收超过50%，知名做空者Jim Chanos对此评论“哎呀”。该数据凸显Rivian对亚马逊订单的极度依赖，引发市场对其业务独立性的担忧。", source: "Benzinga", url: "https://finance.yahoo.com/markets/stocks/articles/amazon-accounted-over-50-rivians-233132615.html" },
   { time: "06:55", tag: "crypto", tagText: "加密", text: "CryptoQuant警告称，比特币4月的上涨具有投机性，回调风险正在上升。分析指出当前市场情绪过热，投资者需警惕价格修正的可能性。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxONVdmQk5hdlJJVHplY2JIcEJpZ09iNVVDSUgzTkNwQkQ3MTJpd0xiTlMyVnhMNzR4TFpidHEtd0s4VURycmZiTkJxQzN5S1l4ZlZWdU9QWk80cjFYTjViaVk4QVFZNm1lNE9nT0YxUV8wb2hoNV9UWHlvek0xem9GM1BoLU9IR1FRZ3BaRFB3dnd4LW9ycG1zX29BV3hZNzg4amc?oc=5" },
   { time: "03:45", tag: "macro", tagText: "宏观", text: "高盛警告称，标普500指数突破7100点属于“泡沫”，并指出华尔街此前发出类似警告后市场曾出现暴跌。当前市场情绪过热，投资者需警惕回调风险。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-says-p-500s-194500078.html" },
-  { time: "03:06", tag: "macro", tagText: "宏观", text: "美联储官员古尔斯比表示，近期通胀数据是“坏消息”，暗示通胀压力可能持续。市场对美联储未来加息路径的担忧加剧，投资者需关注美联储后续沟通。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/recent-inflation-data-bad-news-190611607.html" },
 ];
-const breakingDate = "2026年5月3日 21:42 CST";
+const breakingDate = "2026年5月3日 23:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
   { time: "21:00", tag: "tech", tagText: "科技", text: "一款名为DualShot Recorder的iPhone相机应用在发布后12小时内登顶App Store付费应用榜首，成为2026年现象级爆款。该应用由网络知名“松鼠老爹”Derrick Downey Jr.开发。", source: "AI | The Verge", url: "https://www.theverge.com/tech/921690/dualshot-recorder-iphone-camera-app-derrick-downey-jr" },
+  { time: "20:08", tag: "geo", tagText: "地缘", text: "英伟达CEO黄仁勋表示，由于美国出口管制政策，英伟达在中国市场份额已降至“零”，并称该政策“已在很大程度上适得其反”。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMijAJBVV95cUxQclBGT2JyeVpXbkktdWQtTE4tQjBGX3NiN2tnMkdSZzNuUk9aTkxZNTk0ZGtpeE1IT2kzNXZXMGV3WERoMkR1QkRmT0xVOFZsUGJSeHUxWnA3ZnJialB0cVBCQmZhNEhxaGpIQlk1Qlhtc3hKYnFQTXJOZXBaUVVTWk4zaGhzdkJUUXpFcFVidnFnb1ZYOEJmVl9IbU56U0EtdFB0UzVNRFdtN3RoV0duUGpiTXNTZUNnQU0ya1hkWW41UWFURmFfbWNTeHpZUGVTR1djWVQwWDEwYU0wVWstVFhqUm5xWEdxLW4yMjlwTFlpa3ptYUxfZGJVYk01YVNTTTJrZXI2WGlOdFAx?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "梅奥诊所开发出AI模型，能在全球最致命癌症之一变得可见之前进行检测，有望大幅提高早期诊断率和患者生存率。", source: "KROC-AM", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE1Eb0lqdlIyelRHcXRCQ1hmczliT0gydTYxU1pvQjZHbGc1eWRXT1JWQ00yanJfamptNExSeDlYWm5PdkwyVUtpaS1JdDZIZ1FDallqQmtkS2lGenBrOENteFBtR3pNNnotc1ozOWlCdk1kZw?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "AI生成的音乐正大量涌入流媒体平台，但听众接受度存疑。行业观察指出，AI音乐泛滥引发关于内容质量、版权和听众体验的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "04:14", tag: "ai", tagText: "AI", text: "瑞典法律AI初创公司Legora估值达56亿美元，与竞争对手Harvey的竞争白热化，双方已展开广告战并互相进入对方核心市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
-  { time: "02:16", tag: "ai", tagText: "AI", text: "马斯克在加州联邦法庭作证，承认其AI初创公司xAI使用OpenAI的模型通过“蒸馏”技术训练Grok。该技术允许小型模型模仿大型模型的能力，是当前前沿AI实验室防止竞争对手复制的焦点议题。此案可能影响AI行业模型共享与竞争的边界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation" },
 ];
-const aiBreakingDate = "2026年5月3日 21:42 CST";
+const aiBreakingDate = "2026年5月3日 23:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
