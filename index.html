@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月3日 12:04 CST"
+  date: "2026年5月3日 14:36 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "底特律汽车制造商警告称，伊朗战争将导致从铝到塑料和油漆等大宗商品价格飙升，造成约50亿美元的成本冲击。该行业正面临供应链成本全面上涨的压力。", source: "Financial Times", url: "https://www.ft.com/content/a24a24f6-064b-4f00-a339-edf597596d5a" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "投资者大举涌入清洁能源基金，资金流入规模创五年新高。伊朗战争引发的能源安全担忧取代气候变化，成为推动可再生能源投资的主要动力。", source: "Financial Times", url: "https://www.ft.com/content/9921f2b5-c910-4cec-a50f-cad453935a1a" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "国际货币基金组织批评欧盟各国政府忽视其关于能源补贴的警告，敦促各国将支持措施精准针对最脆弱群体，而非采用昂贵的全面补贴方案。", source: "Financial Times", url: "https://www.ft.com/content/8b4cb5a2-67ab-4313-bce1-b77f542eeed5" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "内存芯片成本上涨引发市场对任天堂Switch 2售价上调的担忧，尽管新主机销售强劲，但投资者对利润率前景持悲观态度，导致公司股价承压。", source: "Financial Times", url: "https://www.ft.com/content/1dd9f27e-ddef-43ab-80f5-c30b6a82b4d2" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "BAE系统公司旗下瑞典赫格隆工厂正扩大产能，以应对欧洲多国军队的大规模联合订单。该工厂正加速生产，助力欧洲重新武装。", source: "Financial Times", url: "https://www.ft.com/content/626ba18f-13b7-4e1a-bd3d-895239353aa1" },
   { time: "09:19", tag: "geo", tagText: "地缘", text: "特朗普称正在审查伊朗和平计划，但不排除发动新一轮打击。美伊冲突已进入第十周，能源价格持续飙升，短期内无结束迹象。", source: "Financial Times", url: "https://www.ft.com/content/fb1aae4a-ec0c-48ed-bf0a-6639071499d3" },
   { time: "07:31", tag: "tech", tagText: "科技", text: "亚马逊占Rivian 2026年第一季度营收超过50%，知名做空者Jim Chanos对此评论“哎呀”。该数据凸显Rivian对亚马逊订单的极度依赖，引发市场对其业务独立性的担忧。", source: "Benzinga", url: "https://finance.yahoo.com/markets/stocks/articles/amazon-accounted-over-50-rivians-233132615.html" },
   { time: "06:55", tag: "crypto", tagText: "加密", text: "CryptoQuant警告称，比特币4月的上涨具有投机性，回调风险正在上升。分析指出当前市场情绪过热，投资者需警惕价格修正的可能性。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxONVdmQk5hdlJJVHplY2JIcEJpZ09iNVVDSUgzTkNwQkQ3MTJpd0xiTlMyVnhMNzR4TFpidHEtd0s4VURycmZiTkJxQzN5S1l4ZlZWdU9QWk80cjFYTjViaVk4QVFZNm1lNE9nT0YxUV8wb2hoNV9UWHlvek0xem9GM1BoLU9IR1FRZ3BaRFB3dnd4LW9ycG1zX29BV3hZNzg4amc?oc=5" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "23:55", tag: "macro", tagText: "宏观", text: "OPEC+消息人士称，尽管霍尔木兹海峡因美伊战争关闭导致海湾石油供应中断，OPEC+仍计划再次提高石油产量配额。分析指出，由于实际供应受阻，增产在很大程度上将停留在纸面上。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/opec-set-for-another-oil-output-quota-hike-despite-hormuz-closure.html" },
   { time: "23:30", tag: "tech", tagText: "科技", text: "市场分析指出，满足AI巨大能源需求的三家工业公司正从中获利。在AI应用成为焦点的同时，大资金正流向支撑AI运行的工业基础设施领域，这些公司为AI的电力需求“保持照明”并赚取丰厚回报。", source: "MarketWatch", url: "https://www.marketwatch.com/story/big-techs-ai-build-out-needs-these-3-companies-to-keep-the-lights-on-and-theyre-cashing-in-e46bcba2?mod=mw_rss_topstories" },
   { time: "22:35", tag: "geo", tagText: "地缘", text: "伊朗战争导致航空燃油成本飙升和航线中断，机票价格大幅上涨。旅行专家建议消费者谨慎决策，推迟购票可能面临更高价格风险，中东冲突对全球航空业的影响持续扩大。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/iran-war-airfare-travel-airlines-plane-tickets-when-to-buy.html" },
-  { time: "22:00", tag: "geo", tagText: "地缘", text: "美国经济在伊朗战争、油价飙升、高关税和通胀压力下仍表现出韧性，被形容为“不沉的经济”。尽管面临多重冲击，消费者支出和企业活动未出现明显裂痕。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-unsinkable-u-s-economy-oil-prices-are-surging-iran-tensions-are-rising-but-it-wont-crack-ee27477f?mod=mw_rss_topstories" },
-  { time: "21:41", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦2026年股东大会召开，现金储备创纪录达3800亿美元，格雷格·阿贝尔首次以CEO身份接替巴菲特主持大会。公司财报超预期，但股票销售连续第14个季度净卖出，市场关注后巴菲特时代投资策略。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/warren-buffett-berkshire-hathaway-annual-meeting-2026-live-updates.html" },
-  { time: "21:39", tag: "macro", tagText: "宏观", text: "私人信贷市场正转向“金融炼金术”以应对“峰值焦虑”。随着违约率上升，信贷经理们开始采用创造性会计手段来掩盖损失，专家警告投资者可能无法区分基金回报是源于投资技巧还是巧妙的会计操作。", source: "CNBC", url: "https://www.cnbc.com/2026/05/02/private-credit-turns-to-financial-alchemy-as-an-antidote-to-peak-anxiety.html" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌因其对SpaceX和Anthropic的早期投资，被专家称为“披着风投基金外衣的上市公司”。这些投资被视为上市公司有史以来最成功的风险押注之一，凸显科技巨头通过战略投资获取增长的新模式。", source: "MarketWatch", url: "https://www.marketwatch.com/story/google-is-now-a-glorified-venture-capital-fund-thanks-to-its-spacex-and-anthropic-stakes-b13f3d56?mod=mw_rss_topstories" },
-  { time: "20:00", tag: "crypto", tagText: "加密", text: "分析师指出，稳定币的增长在当前市场环境下可能比比特币更重要。稳定币的扩张被视为加密货币生态系统成熟和采用扩大的关键指标，其流动性对市场健康至关重要。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUDdGRU9QczV4SXBzTVRrWFlfcjhTT1RNb2hldE5PSVNPdWdzckRqMFBQQkpyU3U0d3NhZFhmNC1qcXY3WTdwaDh1R0MwdEU3d1NzOFR2WW45NDJ1N251V29LT0xrdXBTdGpleTdQbWtHalRXX04zdmZXeW15cDhEblBQOEZJaG1EMEZCUXNR?oc=5" },
 ];
-const breakingDate = "2026年5月3日 12:04 CST";
+const breakingDate = "2026年5月3日 14:36 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:39", tag: "ai", tagText: "AI", text: "韩国政府宣布向本土AI初创公司Upstage注资3.806亿美元，以支持其在大模型领域的研发和商业化。Upstage是韩国领先的AI企业之一，此举显示韩国正加大力度扶持本土AI产业，以在全球AI竞赛中追赶中美。", source: "The Korea Times", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQeG84c0tac1plZ2ZIUU5BejU0d3M1bGppWUNhODl0c01nTnRidzlCZ3J0RFBiYXZFOUVwbkRWOU04ZVM2aXVEejMzZmRIUkJZTnFKVExFdmd6NVVYOVFEcXIwcG5iRHFEUWVQUERteWlXM1VfNGNHY2RrTFZkQ2pubUpuMnNndWc4Q1RpUzlBcFotZFE2cjBBTnVaNzVuZHpJQXfSAacBQVVfeXFMUGUtc2VNdS1sSXFnVFpGaXRIOE9TckU5Z2hDWld6dzIwSW1FeWpWYzdRY0JaM0pkZTZlT0lEazN4dkU1bVVsSU8yUUZKWUUzemFrSFNTbnUxRkxFQVVqQ21rSlBDanItT0RUWDJLemhnSGJpS0hQcHFVTnVlREpYdzlXTEdTNFdJTHhaSEdfejhTUi0zMzdwOFJSY0E3OHZjZi1rblhyaEU?oc=5" },
   { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
   { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
   { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
   { time: "18:10", tag: "crypto", tagText: "加密", text: "MEXC发文称，AI的下一个突破可能来自Pi Network的全球劳动力网络，暗示其分布式用户群体可为AI训练和数据标注提供新资源。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5LVFlaYXpWcnlIcW54U0otT0EySWlaT2ZwcC1IU1dQWTdhNlJWTkx1eFhSRWxycUwzRVZlWTBsMVRUQ2w1dTdFRg?oc=5" },
-  { time: "17:07", tag: "tech", tagText: "科技", text: "Fast Company发文警告用户应停止让ChatGPT等AI聊天机器人使用个人数据进行训练，并提供了具体操作指南，强调数据隐私风险及如何关闭相关设置。", source: "fastcompany.com", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPQmZ1dEFDYzQ0aXZhOFZBekxLOVh1VGdDcTZCUGhZaUZxamQ3SXY2WHRIS0xtbmlRbGdqYWYzWjc0ODlDNVA4SGx4Ni1USktuaDNoeXpLbWluM0gyVVpKbThfZWItb0o0YWNKMk9OUGs1bTQ5c0VGTzh4dGFDakVwNkpjcXdaMnUzbzBDZmxKbGxvdzlPQm1VcVBEUkhGZlpzQ2hoVV9mYl8tUmtOazhVLTZaR3hDZlRLcUMxbDN0XzhmN2J5NTN4NkpOakdOenVNVGtzSA?oc=5" },
 ];
-const aiBreakingDate = "2026年5月3日 12:04 CST";
+const aiBreakingDate = "2026年5月3日 14:36 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
