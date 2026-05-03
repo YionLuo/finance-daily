@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月4日 04:57 CST"
+  date: "2026年5月4日 05:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普宣布美国将于周一启动“人道主义”行动，引导被困在霍尔木兹海峡的船只离开。数月来，由于伊朗冲突导致海峡关闭，大量船舶无法通行，全球关键供应链受到严重干扰。特朗普称与伊朗的“非常积极的讨论”仍在继续。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/trump-iran-strait-of-hormuz-trapped-ships.html" },
+  { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普批准建设“Keystone Light”美加石油管道。该管道项目旨在加强北美能源运输能力，是特朗普政府扩大国内及周边能源基础设施的重要举措。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/trump-approves-keystone-light-canada-210000853.html" },
   { time: "02:14", tag: "macro", tagText: "宏观", text: "市场在AI支出热潮推动下持续走高，但分析师警告，第一季度盈利虽亮眼，2026年盈利上调高度集中于少数大型科技公司。若AI支出放缓或盈利增长广度不足，可能动摇当前涨势。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-market-is-riding-high-on-an-ai-spending-boom-but-what-could-crack-this-rally-531b0854?mod=mw_rss_topstories" },
   { time: "01:58", tag: "crypto", tagText: "加密", text: "伊朗紧张局势推动能源价格飙升24%，影响加密货币市场前景。能源成本上升可能对加密挖矿及整体市场情绪产生压力。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxQX0hZd2duVHN6Y1U4M0NLUHctMEZXMEtFVUpuSzkyVU5wVnhuQS04RVNVNXFDTDRwRUh4TktBemNMaUhJYkJBc19KeDE1enI5d0NKTjhKNEpNeG5hSXVCOG1uR0VJZURuekNfYnc2NWV3VE93QzFjZWtJTkMzeGF0djJ4cGRSZFJma09nVWU1VTk4allkUDBGTnZyOTVlVkgw?oc=5" },
   { time: "23:47", tag: "macro", tagText: "宏观", text: "美国财政部长斯科特·贝森特向全体美国人发出紧急信息，内容涉及当前经济政策与财政前景。具体细节尚未完全披露，但市场对此高度关注。", source: "TheStreet", url: "https://finance.yahoo.com/economy/policy/articles/scott-bessent-pressing-message-americans-174700323.html" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "20:23", tag: "macro", tagText: "宏观", text: "医疗成本飙升迫使企业削减福利，Zoom和德勤等公司已缩减慷慨的带薪育儿假。这一趋势反映出企业在高通胀环境下为控制开支而牺牲员工福利，可能影响劳动力市场及家庭财务规划。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/healthcare-costs-parental-paid-leave-employee-benefits-cuts.html" },
   { time: "20:06", tag: "macro", tagText: "宏观", text: "美国民众担忧社保基金被用于填补联邦预算缺口。华盛顿围绕社保资金可持续性提出多项改革方案，但任何挪用社保资金的举动都可能引发政治争议，并影响数百万退休人员的财务安全。", source: "MarketWatch", url: "https://www.marketwatch.com/story/were-worried-the-honey-pot-will-run-dry-does-the-trump-administration-use-my-social-security-to-fund-federal-programs-1cd01b8f?mod=mw_rss_topstories" },
   { time: "19:36", tag: "geo", tagText: "地缘", text: "特朗普政府以国家安全为由扩大对风电场的打压，美国国防部已搁置165个风电项目。此举是总统打击该行业的最新举措，可能阻碍美国可再生能源发展，并加剧与清洁能源行业的冲突。", source: "Financial Times", url: "https://www.ft.com/content/74d8cf6f-aa17-4a24-a621-e26b1bad2e1e" },
-  { time: "19:28", tag: "geo", tagText: "地缘", text: "OPEC+在阿联酋意外退出后的首次会议上宣布，将每日增产18.8万桶。阿联酋上周的突然退出加剧了市场对产量前景的担忧，此次增产幅度相对温和，未能完全缓解供应不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/opec-announces-188000-barrels-per-day-output-increase-.html" },
-  { time: "19:04", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦新任CEO格雷格·阿贝尔在首次股东大会上明确表示，公司不会分拆，并将延续沃伦·巴菲特的投资理念与遗产。巴菲特虽未全程主导，但仍是大会的精神核心。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/berkshire-annual-meeting-greg-abel-rules-out-break-up-stressing-continuity-with-buffett.html" },
 ];
-const breakingDate = "2026年5月4日 04:57 CST";
+const breakingDate = "2026年5月4日 05:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "06:13", tag: "ai", tagText: "AI", text: "Meta收购人形机器人初创公司Assured Robot Intelligence，以增强其机器人AI模型能力，进一步推进人形AI机器人战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" },
   { time: "06:05", tag: "ai", tagText: "AI", text: "NYU教授Gary Marcus将大型科技公司7000亿美元的AI支出狂潮称为“史上最大的资本错配”，质疑巨额投资回报前景。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOejFoRnZUcEgyZUpMODlldVVDcWctNDRLMGlDWXZEMUZGOFU1THRUWHk2RGE3U2dTZEVzeDFnbnpvWmV6TzlTRjIzcFI5djNqYjE2WF96WW1jYzNnOE13dGRVeFJFZ2JDYld0djBvaGNHNjExZXZYTmwzQk93a0dXWnR5eW5NRmFKVl9FaElWX2NqMHJkbVVaOQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月4日 04:57 CST";
+const aiBreakingDate = "2026年5月4日 05:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
