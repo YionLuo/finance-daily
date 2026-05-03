@@ -1623,13 +1623,16 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月3日 23:57 CST"
+  date: "2026年5月4日 01:02 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:41", tag: "geo", tagText: "地缘", text: "美国司法部长皮罗在调查美联储主席鲍威尔的刑事案件中改变法律策略，似乎放弃上诉计划。此举可能影响对美联储独立性的政治压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/pirro-fed-powell.html" },
+  { time: "22:39", tag: "geo", tagText: "地缘", text: "美国取消远程导弹部署计划，使欧洲在对抗俄罗斯方面暴露弱点。北约威慑能力受到削弱，欧洲重新武装进程面临新挑战。", source: "Financial Times", url: "https://www.ft.com/content/9651dfac-90c7-416f-bfcc-dfb1eaf0a9f7" },
   { time: "22:19", tag: "macro", tagText: "宏观", text: "精神航空（Spirit Airlines）在政府救助失败后于夜间停止运营，正式宣告倒闭。该公司在最后时刻试图寻求联邦援助未果，成为美国航空业近年最大破产事件之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/spirit-airlines-shutdown-inside-the-final-hours.html" },
+  { time: "22:08", tag: "crypto", tagText: "加密", text: "比特币面临风险，TD Sequential指标闪现关键看跌信号。技术分析显示加密货币市场可能面临短期回调压力。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVzdlTmJVNnhxeHNyMG84aVZiT3Z0VENzR0dqbkgtWmMwSTJ2WXVZU3FqcnYtNFNkaG1LRUlVY19UOFdRdGVSX3FXaUt2bmFzd2hkbWpGWkRuS3A3Z2hBWG5xVExSU3ZRaWFseFdGajBhbHFjNXZWYmJLd1VaN2FaSjdBaU1GYXRsVzFwaHFkOVlSYXp1aEdOcmFGOEFCV2tCekZURFJ3Uno?oc=5" },
   { time: "22:08", tag: "macro", tagText: "宏观", text: "伊朗战争导致中东供应中断，美国墨西哥湾原油出口量飙升至创纪录水平，大量油轮涌向该地区。美国正借此填补全球原油供应缺口。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/us-crude-oil-exports-surge-to-record-as-tankers-flock-to-gulf-coast.html" },
   { time: "21:56", tag: "macro", tagText: "宏观", text: "美联储副主席巴尔警告称，私人信贷市场的压力可能引发“心理传染”，导致风险迅速蔓延至更广泛的金融体系。监管层对影子银行领域的脆弱性保持高度警惕。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/stress-private-credit-could-spark-145636025.html" },
   { time: "21:33", tag: "macro", tagText: "宏观", text: "标普500指数成分股第一季度利润创至少15年来最高水平，但涨幅主要由三家大型科技公司推动。市场对盈利增长的可持续性及广度存在疑虑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/s-p-500-profits-havent-been-this-rich-in-at-least-15-years-but-theres-more-to-the-story-c3ccaf3b?mod=mw_rss_topstories" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "17:00", tag: "geo", tagText: "地缘", text: "美国司法部自特朗普重返白宫以来流失了四分之一的律师，数千人因政府聚焦移民和打击政敌的议程而辞职或被解雇。这一大规模人才流失可能削弱司法部的执法能力和独立性。", source: "Financial Times", url: "https://www.ft.com/content/a1316aae-83d9-4e2a-87aa-93de964bbbe0" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "底特律汽车制造商警告称，伊朗战争将导致从铝到塑料和油漆等大宗商品价格飙升，造成约50亿美元的成本冲击。该行业正面临供应链成本全面上涨的压力。", source: "Financial Times", url: "https://www.ft.com/content/a24a24f6-064b-4f00-a339-edf597596d5a" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "投资者大举涌入清洁能源基金，资金流入规模创五年新高。伊朗战争引发的能源安全担忧取代气候变化，成为推动可再生能源投资的主要动力。", source: "Financial Times", url: "https://www.ft.com/content/9921f2b5-c910-4cec-a50f-cad453935a1a" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "国际货币基金组织批评欧盟各国政府忽视其关于能源补贴的警告，敦促各国将支持措施精准针对最脆弱群体，而非采用昂贵的全面补贴方案。", source: "Financial Times", url: "https://www.ft.com/content/8b4cb5a2-67ab-4313-bce1-b77f542eeed5" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "内存芯片成本上涨引发市场对任天堂Switch 2售价上调的担忧，尽管新主机销售强劲，但投资者对利润率前景持悲观态度，导致公司股价承压。", source: "Financial Times", url: "https://www.ft.com/content/1dd9f27e-ddef-43ab-80f5-c30b6a82b4d2" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "BAE系统公司旗下瑞典赫格隆工厂正扩大产能，以应对欧洲多国军队的大规模联合订单。该工厂正加速生产，助力欧洲重新武装。", source: "Financial Times", url: "https://www.ft.com/content/626ba18f-13b7-4e1a-bd3d-895239353aa1" },
 ];
-const breakingDate = "2026年5月3日 23:57 CST";
+const breakingDate = "2026年5月4日 01:02 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
 ];
-const aiBreakingDate = "2026年5月3日 23:57 CST";
+const aiBreakingDate = "2026年5月4日 01:02 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
