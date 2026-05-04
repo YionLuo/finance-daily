@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.2,
+  score: 64.09,
   rating: "greed",
-  timestamp: "2026-05-04T14:21:56+00:00",
+  timestamp: "2026-05-04T16:52:48+00:00",
   previousClose: 66.6,
   previous1Week: 67.54,
   previous1Month: 23.74,
   previous1Year: 38.29,
-  date: "2026年5月4日 22:25 CST"
+  date: "2026年5月5日 00:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:46", tag: "ai", tagText: "AI", text: "Anthropic与高盛、黑石等机构合作，成立15亿美元AI合资企业，专注于为私募股权拥有的公司提供AI解决方案。此举是Anthropic深化企业AI市场领先地位的最新努力，与OpenAI的竞争日趋激烈。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html" },
+  { time: "00:39", tag: "tech", tagText: "科技", text: "亚马逊宣布将其供应链网络向外部公司开放，直接与UPS和联邦快递竞争。消息导致UPS和联邦快递股价周一大幅下跌，市场担忧亚马逊物流将抢占市场份额。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/ups-fedex-amazon-logistics.html" },
+  { time: "00:31", tag: "macro", tagText: "宏观", text: "精神航空（Spirit Airlines）的倒闭将使竞争对手获得更多定价权，并可能进一步推高机票价格。分析师预计，随着行业运力减少，航空公司将竞相争夺精神航空的客户，票价上涨压力加大。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/spirit-airlines-flights-rivals.html" },
+  { time: "00:15", tag: "tech", tagText: "科技", text: "美光科技（Micron）在美国顶级公司排名中迅速攀升。去年年初，美光甚至不在前100名之列，但受益于AI芯片需求激增，其市值和排名已大幅提升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-just-how-quickly-micron-has-risen-up-the-ranks-of-the-top-u-s-companies-fd95ae8d?mod=mw_rss_topstories" },
   { time: "22:22", tag: "macro", tagText: "宏观", text: "尽管高关税、顽固通胀、政府停摆及伊朗战争冲击，美国经济仍表现出韧性，未被击垮。分析认为，消费者支出和企业盈利的强劲支撑了经济基本面。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-unsinkable-u-s-economy-oil-prices-are-surging-iran-tensions-are-rising-but-it-wont-crack-ee27477f?mod=mw_rss_topstories" },
   { time: "22:18", tag: "tech", tagText: "科技", text: "苹果正式放弃净现金中性目标，暗示可能进行更大规模的AI收购。市场猜测苹果将寻求更具变革性的并购，以加速AI领域布局。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apple-just-gave-a-subtle-clue-that-a-splashy-ai-acquisition-may-be-in-the-cards-110f5ce2?mod=mw_rss_topstories" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "花旗量化分析团队指出，市场正处于定价滞胀的早期阶段。能源价格飙升和经济增长放缓的迹象加剧了市场对滞胀风险的担忧，可能影响未来资产配置。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-markets-are-in-the-early-stages-of-pricing-in-stagflation-this-wall-street-giant-finds-25bc7626?mod=mw_rss_topstories" },
@@ -1645,15 +1649,15 @@ const breakingNews = [
   { time: "09:32", tag: "crypto", tagText: "加密", text: "贝莱德（BlackRock）的比特币交易所交易产品（ETP）资产管理规模达到11亿美元，创下里程碑，进一步提振了机构投资者对加密货币的兴趣。此举被视为主流金融对数字资产接纳度提升的重要信号。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcWZ4U0EwQ19jOXphZXJmbXVlM21JTzBDOEtvbEJ6d1h2bXNKNU5ZdTR3dmluQWs3ekNsZUQ5TVVrTlhTN0M1OVZ4OEVIY3BjZV9jdTc5RDhVUEFRQXM3b3FOX2xuRm1wWFR0N3NVN1FCTEtKWW03VDBOOTkzbHU0c0hOby1IVjYxOGpzV3BhbG1neUljc2VZZVNNSER0SHM?oc=5" },
   { time: "09:10", tag: "macro", tagText: "宏观", text: "美股期货周一涨跌互现，标普500和纳斯达克指数期货小幅走高，此前两大指数上周五均创下历史新高。市场关注美伊局势最新进展，特朗普宣布的霍尔木兹海峡“自由计划”成为焦点，投资者评估其对能源价格和全球供应链的潜在影响。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOb2c0RTVlcS1FOG5adTZUckpJTWxiYnFyWGtNeW51ZHhOMWllVmFSdkt5SDBaUDE5c3FuWFRpUUh2ZzNDdTdETHZQWnNKUW1LNmtKTnJlTmtNZXVQTk5Ld0lHNnBnSEI1NHhOX0NhTnZncmVhSTc2U05ZMjA2ZnRHTGx2eEdOMDN5Ry1La21LOGhlRGZHSGg0?oc=5" },
   { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普宣布美国将于周一启动“人道主义”行动，引导被困在霍尔木兹海峡的船只离开。数月来，由于伊朗冲突导致海峡关闭，大量船舶无法通行，全球关键供应链受到严重干扰。特朗普称与伊朗的“非常积极的讨论”仍在继续。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/trump-iran-strait-of-hormuz-trapped-ships.html" },
-  { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普批准建设“Keystone Light”美加石油管道。该管道项目旨在加强北美能源运输能力，是特朗普政府扩大国内及周边能源基础设施的重要举措。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/trump-approves-keystone-light-canada-210000853.html" },
-  { time: "03:55", tag: "geo", tagText: "地缘", text: "OPEC+宣布6月将小幅增产原油，但分析认为此举主要是象征性的。由于与伊朗的战争持续抑制全球石油供应，实际增产效果有限，市场反应平淡。", source: "MarketWatch", url: "https://www.marketwatch.com/story/opec-announces-modest-boost-in-oil-production-but-heres-why-its-a-mostly-symbolic-move-2bcb4b5b?mod=mw_rss_topstories" },
-  { time: "03:11", tag: "macro", tagText: "宏观", text: "格雷格·阿贝尔在首次主持伯克希尔·哈撒韦年度股东大会后获得股东积极评价。但投资者对其如何运用公司巨额现金储备仍缺乏明确指引，引发市场关注。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/berkshire-ceo-greg-abel-earns-solid-first-scorecard-after-first-annual-meeting.html" },
-  { time: "03:10", tag: "tech", tagText: "科技", text: "据《华尔街日报》报道，游戏驿站（GameStop）拟以约560亿美元收购电商平台eBay，以寻求业务转型和重获市场相关性。该消息引发市场对游戏驿站战略调整的广泛关注。", source: "Investor's Business Daily", url: "https://www.investors.com/news/gamestop-stock-gears-up-for-ebay-takeover-offer/?src=A00220&yptr=yahoo" },
 ];
-const breakingDate = "2026年5月4日 22:25 CST";
+const breakingDate = "2026年5月5日 00:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:45", tag: "ai", tagText: "AI", text: "企业AI客服创企Sierra获9.5亿美元融资，估值超10亿美元。该公司由前Salesforce联合首席执行官Bret Taylor创立，计划利用这笔资金成为“AI驱动客户体验的全球标准”。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" },
+  { time: "23:59", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI同日宣布，分别与资产管理公司成立合资企业，以更积极地推广其企业级AI服务。此举标志着两大AI巨头在企业市场的竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" },
+  { time: "23:51", tag: "tech", tagText: "科技", text: "Roomba发明者Colin Angle推出全新机器人伴侣“Familiar”，该机器人并非用于清洁，而是作为情感陪伴机器人进入家庭。Angle曾将5000万台家用机器人送入千家万户，此次回归聚焦于AI驱动的社交陪伴领域。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922947/roomba-creator-new-robot-familiar-machines-magic-ai-launch" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "DoorDash推出多项AI新工具，帮助商家加速入驻流程、自动编辑菜品照片以提升卖相，并利用现有内容快速创建新网站。此举旨在降低商家运营门槛，提升平台效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/doordash-adds-ai-tools-to-speed-up-merchant-onboarding-edit-photos-of-dishes/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "一款名为DualShot Recorder的iPhone相机应用在发布后12小时内登顶App Store付费应用榜首，成为2026年现象级爆款。该应用由网络知名“松鼠老爹”Derrick Downey Jr.开发。", source: "AI | The Verge", url: "https://www.theverge.com/tech/921690/dualshot-recorder-iphone-camera-app-derrick-downey-jr" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "梅奥诊所开发出AI模型，能在全球最致命癌症之一变得可见之前进行检测，有望大幅提高早期诊断率和患者生存率。", source: "KROC-AM", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE1Eb0lqdlIyelRHcXRCQ1hmczliT0gydTYxU1pvQjZHbGc1eWRXT1JWQ00yanJfamptNExSeDlYWm5PdkwyVUtpaS1JdDZIZ1FDallqQmtkS2lGenBrOENteFBtR3pNNnotc1ozOWlCdk1kZw?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "AI生成的音乐正大量涌入流媒体平台，但听众接受度存疑。行业观察指出，AI音乐泛滥引发关于内容质量、版权和听众体验的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "06:13", tag: "ai", tagText: "AI", text: "Meta收购人形机器人初创公司Assured Robot Intelligence，以增强其机器人AI模型能力，进一步推进人形AI机器人战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" },
   { time: "06:05", tag: "ai", tagText: "AI", text: "NYU教授Gary Marcus将大型科技公司7000亿美元的AI支出狂潮称为“史上最大的资本错配”，质疑巨额投资回报前景。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOejFoRnZUcEgyZUpMODlldVVDcWctNDRLMGlDWXZEMUZGOFU1THRUWHk2RGE3U2dTZEVzeDFnbnpvWmV6TzlTRjIzcFI5djNqYjE2WF96WW1jYzNnOE13dGRVeFJFZ2JDYld0djBvaGNHNjExZXZYTmwzQk93a0dXWnR5eW5NRmFKVl9FaElWX2NqMHJkbVVaOQ?oc=5" },
   { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
-  { time: "04:16", tag: "tech", tagText: "科技", text: "热门网络漫画《This is fine》的创作者指控AI初创公司Artisan未经授权使用其作品进行广告宣传。Artisan此前曾因发布“停止雇佣人类”的广告引发争议。该事件再次引发关于AI公司使用艺术家作品版权的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/03/this-is-fine-creator-says-ai-startup-stole-his-art/" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审持续，双方陆续披露邮件、照片及公司文件等证据，案件走向可能影响OpenAI未来及ChatGPT的发展方向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" },
-  { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
-  { time: "02:00", tag: "ai", tagText: "AI", text: "哈佛大学最新研究显示，AI大模型在急诊室诊断中的准确率超过了两名人类医生。该研究评估了多个大语言模型在真实急诊病例中的表现，发现至少一个模型的诊断准确性优于人类医生，引发对AI辅助医疗诊断潜力的新讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/" },
 ];
-const aiBreakingDate = "2026年5月4日 22:25 CST";
+const aiBreakingDate = "2026年5月5日 00:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
