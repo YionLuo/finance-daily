@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 66.11,
   rating: "greed",
-  timestamp: "2026-05-04T09:12:31+00:00",
+  timestamp: "2026-05-04T11:42:46+00:00",
   previousClose: 66.6,
   previous1Week: 67.54,
   previous1Month: 23.74,
   previous1Year: 38.29,
-  date: "2026年5月4日 17:29 CST"
+  date: "2026年5月4日 20:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "花旗量化分析团队指出，市场正处于定价滞胀的早期阶段。能源价格飙升和经济增长放缓的迹象加剧了市场对滞胀风险的担忧，可能影响未来资产配置。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-markets-are-in-the-early-stages-of-pricing-in-stagflation-this-wall-street-giant-finds-25bc7626?mod=mw_rss_topstories" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什对央行独立性发表独特看法，引发前美联储官员的困惑和担忧。市场密切关注其政策立场可能对利率路径产生的影响。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/04/fed-kevin-warsh-interest-rates.html" },
+  { time: "19:00", tag: "tech", tagText: "科技", text: "马斯克在奥克兰审判前寻求与OpenAI达成和解，相关法庭文件披露。AI领域竞争持续白热化，半导体公司财报和AI支出成为市场焦点。", source: "Reuters", url: "https://finance.yahoo.com/sectors/technology/articles/musk-sought-settlement-openai-oakland-111227702.html" },
+  { time: "18:00", tag: "macro", tagText: "宏观", text: "阿联酋表示正在与美国讨论货币互换额度。此举可能加强两国金融合作，并在中东紧张局势下为市场提供流动性支持。", source: "Reuters", url: "https://finance.yahoo.com/news/uae-says-discussing-currency-swap-104604015.html" },
   { time: "17:29", tag: "geo", tagText: "地缘", text: "伊朗警告美国海军不要进入霍尔木兹海峡，此前特朗普宣布美国将“引导”被困船只通过该水道。英国海上贸易行动办公室称，一艘油轮在阿联酋富查伊拉以北遭炮弹击中。油价随之上涨，市场对霍尔木兹海峡封锁的担忧加剧。", source: "Financial Times", url: "https://www.ft.com/content/483a0aa0-f1c8-4960-be68-c6ea3e9ea3d5" },
   { time: "17:29", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦现金储备创纪录达3970亿美元，且并非唯一不愿投资股市的公司。这一信号被解读为巴菲特对当前市场估值持谨慎态度，建议投资者保持耐心。", source: "MarketWatch", url: "https://www.marketwatch.com/story/berkshire-hathaway-is-now-sitting-on-a-record-397-billion-in-cash-and-its-not-the-only-firm-reluctant-to-invest-in-the-stock-market-1a9e459a?mod=mw_rss_topstories" },
   { time: "17:29", tag: "ai", tagText: "AI", text: "SK海力士股价大涨13%，因美国科技公司释放强劲AI支出信号。AI芯片需求持续旺盛，推动存储芯片制造商股价飙升。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-shares-rally-12-061453943.html" },
@@ -1645,15 +1649,16 @@ const breakingNews = [
   { time: "03:10", tag: "tech", tagText: "科技", text: "据《华尔街日报》报道，游戏驿站（GameStop）拟以约560亿美元收购电商平台eBay，以寻求业务转型和重获市场相关性。该消息引发市场对游戏驿站战略调整的广泛关注。", source: "Investor's Business Daily", url: "https://www.investors.com/news/gamestop-stock-gears-up-for-ebay-takeover-offer/?src=A00220&yptr=yahoo" },
   { time: "02:14", tag: "macro", tagText: "宏观", text: "市场在AI支出热潮推动下持续走高，但分析师警告，第一季度盈利虽亮眼，2026年盈利上调高度集中于少数大型科技公司。若AI支出放缓或盈利增长广度不足，可能动摇当前涨势。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-market-is-riding-high-on-an-ai-spending-boom-but-what-could-crack-this-rally-531b0854?mod=mw_rss_topstories" },
   { time: "01:58", tag: "crypto", tagText: "加密", text: "伊朗紧张局势推动能源价格飙升24%，影响加密货币市场前景。能源成本上升可能对加密挖矿及整体市场情绪产生压力。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxQX0hZd2duVHN6Y1U4M0NLUHctMEZXMEtFVUpuSzkyVU5wVnhuQS04RVNVNXFDTDRwRUh4TktBemNMaUhJYkJBc19KeDE1enI5d0NKTjhKNEpNeG5hSXVCOG1uR0VJZURuekNfYnc2NWV3VE93QzFjZWtJTkMzeGF0djJ4cGRSZFJma09nVWU1VTk4allkUDBGTnZyOTVlVkgw?oc=5" },
-  { time: "23:47", tag: "macro", tagText: "宏观", text: "美国财政部长斯科特·贝森特向全体美国人发出紧急信息，内容涉及当前经济政策与财政前景。具体细节尚未完全披露，但市场对此高度关注。", source: "TheStreet", url: "https://finance.yahoo.com/economy/policy/articles/scott-bessent-pressing-message-americans-174700323.html" },
-  { time: "23:30", tag: "geo", tagText: "地缘", text: "特朗普表示正在审查伊朗和平计划，但同时不排除发动新一轮打击的可能性。伊朗冲突已进入第10周，短期内无结束迹象。", source: "Financial Times", url: "https://www.ft.com/content/fb1aae4a-ec0c-48ed-bf0a-6639071499d3" },
-  { time: "22:59", tag: "geo", tagText: "地缘", text: "美国司法部长皮罗在调查特朗普遇刺案中披露了新的证据，涉及子弹来源争议。同时，嫌疑人科尔·艾伦对“自杀预防措施”提出质疑。案件细节持续发酵。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/trump-assassination-cole-allen-suicide-pirro.html" },
-  { time: "22:41", tag: "geo", tagText: "地缘", text: "美国司法部长皮罗在调查美联储主席鲍威尔的刑事案件中改变法律策略，似乎放弃上诉计划。此举可能影响对美联储独立性的政治压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/pirro-fed-powell.html" },
 ];
-const breakingDate = "2026年5月4日 17:29 CST";
+const breakingDate = "2026年5月4日 20:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:00", tag: "ai", tagText: "AI", text: "梅奥诊所开发出AI模型，能在全球最致命癌症之一变得可见之前进行检测，有望大幅提高早期诊断率和患者生存率。", source: "KROC-AM", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE1Eb0lqdlIyelRHcXRCQ1hmczliT0gydTYxU1pvQjZHbGc1eWRXT1JWQ00yanJfamptNExSeDlYWm5PdkwyVUtpaS1JdDZIZ1FDallqQmtkS2lGenBrOENteFBtR3pNNnotc1ozOWlCdk1kZw?oc=5" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "AI生成的音乐正大量涌入流媒体平台，但听众接受度存疑。行业观察指出，AI音乐泛滥引发关于内容质量、版权和听众体验的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it" },
+  { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
+  { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
+  { time: "18:44", tag: "ai", tagText: "AI", text: "AI计算初创公司Tsavorite获Pavestone 500万美元融资，用于扩展其AI计算平台。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQ2Jwd09UVHBWRTNNTHRBN1dUemVsUHFkTnMtUjBBRzh2YXg4TmdkNVljZ2czdU1aQXNtcURYUVVlSzZJNm1Tc2xjb0FaVGxBN095dlB3STZjM3cxcS1GMFdRVmxBTXVzVjJBMm5SU2dLeGVSQVFZcWhnaUhxcVhQWkxpQ2gwb25Cay1SdEtlcEJqdjFLYVRCSExybU1UT25XSktLclZsbGZYdDdNNGdxRC1nWEt1SXE3QWV4MkltOEJLbDR3eG1yMnZmbENoUkF3OTVNNWVjR2MtVjBiY3fSAeMBQVVfeXFMTWotckhrOU1wRFVCNm5rVllTbXQwdHU5emRGSjBQLXBJNGtrOGZrYUliZE9XNkVoV3ktaUZudXhBWjM2Rnc2UEhWU3pweHNKeHRDZWZwUzdtdTFoZWNna2lOdlhabzE3bWhvRU9DaGtLOHB1S1BIRHJmSDVqM0lFQ2lIVEZwQmt3dXZSQlltczNIcVVOdXRJUEhfejdTVzlYYm9CX2Y3VDA5SVFHVENlcWFydnpyZDZzdFFxUkg2a3g0STl0ZzJhR2h1SDBYWHJxcklPNlBEbkl0czRyX3FLcURxSEE?oc=5" },
   { time: "14:29", tag: "ai", tagText: "AI", text: "Alphabet宣布将投入1900亿美元用于AI基础设施建设，此举将利好三家半导体股票。该投资规模远超市场预期，显示科技巨头在AI领域的军备竞赛进一步升级。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNVzRhTXh1dXBvM1VqUXVEYmxEdmVSTk5Mc3JwY1RraU5hbmhlTGdfclVnS0pXOUJqLXExVWJBSFJEZm9fRlJkQldyY0psdkczZXRhcGZkY1pzTS1OTE5OTjNvUHJSOFVzTWJ2SGpmdFIzR3B5VmZCLS1NWEwyOVItWWpEV3hqZWhFRnBCWlRldlhzX1JzUk9oZg?oc=5" },
   { time: "12:06", tag: "tech", tagText: "科技", text: "教育领域长期追求但难以实现的“个性化”数学学习，如今被寄望于AI带来突破。报道指出，此前相关尝试多被夸大且效果不佳，但AI技术可能提供新的解决方案。", source: "Education Week", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSlRnODZDUUZvWUNkTzM3eHY3MW9lQ3lFZGxaU0w0M3d2TnRLNWdwV1kxeG9RVy11VXo5Z21aTjk3cndUdXBPbDRxZUd5eDlqTmRkdjdyUlZTS0c2cXlpaHRpeW9JUnlyOHBmOEswclFqSEhfaE1wV08wMUs5bnVFQkxpdDFVa1JWamstQ3g0X3BYamlPWmNDYWJmZFRGYUt1Z1hHRmhOZGdLLXpNUjZtVzVxVEcxQkZCMjk2Z1VnWnBsVGdRQTdNUFFrV3Y?oc=5" },
   { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI宣布为ChatGPT账户推出新的高级安全保护措施，包括与安全密钥提供商Yubico合作，提供可选的额外安全层。此举旨在增强用户账户安全性，应对日益增长的网络安全威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "哈佛大学最新研究显示，AI大模型在急诊室诊断中的准确率超过了两名人类医生。该研究评估了多个大语言模型在真实急诊病例中的表现，发现至少一个模型的诊断准确性优于人类医生，引发对AI辅助医疗诊断潜力的新讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "一款名为DualShot Recorder的iPhone相机应用在发布后12小时内登顶App Store付费应用榜首，成为2026年现象级爆款。该应用由网络知名“松鼠老爹”Derrick Downey Jr.开发。", source: "AI | The Verge", url: "https://www.theverge.com/tech/921690/dualshot-recorder-iphone-camera-app-derrick-downey-jr" },
-  { time: "20:08", tag: "geo", tagText: "地缘", text: "英伟达CEO黄仁勋表示，由于美国出口管制政策，英伟达在中国市场份额已降至“零”，并称该政策“已在很大程度上适得其反”。", source: "Tom's Hardware", url: "https://news.google.com/rss/articles/CBMijAJBVV95cUxQclBGT2JyeVpXbkktdWQtTE4tQjBGX3NiN2tnMkdSZzNuUk9aTkxZNTk0ZGtpeE1IT2kzNXZXMGV3WERoMkR1QkRmT0xVOFZsUGJSeHUxWnA3ZnJialB0cVBCQmZhNEhxaGpIQlk1Qlhtc3hKYnFQTXJOZXBaUVVTWk4zaGhzdkJUUXpFcFVidnFnb1ZYOEJmVl9IbU56U0EtdFB0UzVNRFdtN3RoV0duUGpiTXNTZUNnQU0ya1hkWW41UWFURmFfbWNTeHpZUGVTR1djWVQwWDEwYU0wVWstVFhqUm5xWEdxLW4yMjlwTFlpa3ptYUxfZGJVYk01YVNTTTJrZXI2WGlOdFAx?oc=5" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "梅奥诊所开发出AI模型，能在全球最致命癌症之一变得可见之前进行检测，有望大幅提高早期诊断率和患者生存率。", source: "KROC-AM", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE1Eb0lqdlIyelRHcXRCQ1hmczliT0gydTYxU1pvQjZHbGc1eWRXT1JWQ00yanJfamptNExSeDlYWm5PdkwyVUtpaS1JdDZIZ1FDallqQmtkS2lGenBrOENteFBtR3pNNnotc1ozOWlCdk1kZw?oc=5" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "AI生成的音乐正大量涌入流媒体平台，但听众接受度存疑。行业观察指出，AI音乐泛滥引发关于内容质量、版权和听众体验的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it" },
-  { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
-  { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
 ];
-const aiBreakingDate = "2026年5月4日 17:29 CST";
+const aiBreakingDate = "2026年5月4日 20:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
