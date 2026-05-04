@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月4日 07:58 CST"
+  date: "2026年5月4日 12:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "09:37", tag: "macro", tagText: "宏观", text: "伊朗战争持续拖累亚洲经济，该地区严重依赖进口能源，通胀急剧上升正打击增长前景。供应链中断和能源成本飙升对多个亚洲国家的制造业和消费造成压力，经济下行风险加大。", source: "Financial Times", url: "https://www.ft.com/content/c38d86b3-81fc-46fd-af0e-7b66e140676b" },
+  { time: "09:32", tag: "crypto", tagText: "加密", text: "贝莱德（BlackRock）的比特币交易所交易产品（ETP）资产管理规模达到11亿美元，创下里程碑，进一步提振了机构投资者对加密货币的兴趣。此举被视为主流金融对数字资产接纳度提升的重要信号。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcWZ4U0EwQ19jOXphZXJmbXVlM21JTzBDOEtvbEJ6d1h2bXNKNU5ZdTR3dmluQWs3ekNsZUQ5TVVrTlhTN0M1OVZ4OEVIY3BjZV9jdTc5RDhVUEFRQXM3b3FOX2xuRm1wWFR0N3NVN1FCTEtKWW03VDBOOTkzbHU0c0hOby1IVjYxOGpzV3BhbG1neUljc2VZZVNNSER0SHM?oc=5" },
+  { time: "09:10", tag: "macro", tagText: "宏观", text: "美股期货周一涨跌互现，标普500和纳斯达克指数期货小幅走高，此前两大指数上周五均创下历史新高。市场关注美伊局势最新进展，特朗普宣布的霍尔木兹海峡“自由计划”成为焦点，投资者评估其对能源价格和全球供应链的潜在影响。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOb2c0RTVlcS1FOG5adTZUckpJTWxiYnFyWGtNeW51ZHhOMWllVmFSdkt5SDBaUDE5c3FuWFRpUUh2ZzNDdTdETHZQWnNKUW1LNmtKTnJlTmtNZXVQTk5Ld0lHNnBnSEI1NHhOX0NhTnZncmVhSTc2U05ZMjA2ZnRHTGx2eEdOMDN5Ry1La21LOGhlRGZHSGg0?oc=5" },
   { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普宣布美国将于周一启动“人道主义”行动，引导被困在霍尔木兹海峡的船只离开。数月来，由于伊朗冲突导致海峡关闭，大量船舶无法通行，全球关键供应链受到严重干扰。特朗普称与伊朗的“非常积极的讨论”仍在继续。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/trump-iran-strait-of-hormuz-trapped-ships.html" },
   { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普批准建设“Keystone Light”美加石油管道。该管道项目旨在加强北美能源运输能力，是特朗普政府扩大国内及周边能源基础设施的重要举措。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/trump-approves-keystone-light-canada-210000853.html" },
   { time: "03:55", tag: "geo", tagText: "地缘", text: "OPEC+宣布6月将小幅增产原油，但分析认为此举主要是象征性的。由于与伊朗的战争持续抑制全球石油供应，实际增产效果有限，市场反应平淡。", source: "MarketWatch", url: "https://www.marketwatch.com/story/opec-announces-modest-boost-in-oil-production-but-heres-why-its-a-mostly-symbolic-move-2bcb4b5b?mod=mw_rss_topstories" },
@@ -1646,14 +1649,15 @@ const breakingNews = [
   { time: "22:08", tag: "macro", tagText: "宏观", text: "伊朗战争导致中东供应中断，美国墨西哥湾原油出口量飙升至创纪录水平，大量油轮涌向该地区。美国正借此填补全球原油供应缺口。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/us-crude-oil-exports-surge-to-record-as-tankers-flock-to-gulf-coast.html" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "全球银行正通过私募交易和风险转移等方式，积极削减对AI数据中心债务的敞口，以避免因过度集中而“窒息”。此举反映出金融机构对AI泡沫风险的警惕。", source: "Financial Times", url: "https://www.ft.com/content/08aba5e4-5834-4e79-a48d-989a2c5bad0f" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "英伟达亚洲供应链的繁荣推动科技股上涨，AI支出持续增加。同时，特斯拉Model X成为美国二手市场销售最快的车型，反映出电动车市场结构性变化。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxQeVZvSE1tV1Q4NFdRZUJzc3NucWk0VVhnNlV2RWNKRHlSaTdfak9Ca05QN2RYQ1UxbUNRdGhpLVpyeS1sR3dNdGhuMmJIN3I3MHBPT3RBekw3a2V1cmFEUUtQOVZIWXFOdUIyWkN6WDZLZUZNaVBJbGZneHhoamdtM3MyRHJMRWNZOWgxbXc2Q1piTjZzcF9NeGp3S1hhczJLNndiZ01zVQ?oc=5" },
-  { time: "21:56", tag: "macro", tagText: "宏观", text: "美联储副主席巴尔警告称，私人信贷市场的压力可能引发“心理传染”，导致风险迅速蔓延至更广泛的金融体系。监管层对影子银行领域的脆弱性保持高度警惕。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/stress-private-credit-could-spark-145636025.html" },
-  { time: "21:33", tag: "macro", tagText: "宏观", text: "标普500指数成分股第一季度利润创至少15年来最高水平，但涨幅主要由三家大型科技公司推动。市场对盈利增长的可持续性及广度存在疑虑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/s-p-500-profits-havent-been-this-rich-in-at-least-15-years-but-theres-more-to-the-story-c3ccaf3b?mod=mw_rss_topstories" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "华尔街分析师认为，强劲的企业盈利正在为人工智能交易注入新动力，市场有望进一步上涨。AI相关股票仍是资金追逐的核心热点。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNGVYd1Y5RUJXYVFlLUdVXzZ0REh3OV9CUkszVlZRUndlWmVMVGl3eEVCN2xxWGZsbUxNZ1g3cnRhQ21GQVBNWkNKX0JsVkM1eU1xajgwZXdhN1JiaGZKZmtQaGNZTmRXcFRTaEtpdjZHQzFMclB2dzNVM0l3RjBNeUVkeU56SWdYbUdheEdGV0k3T2RVS2VoRnAtd0dzVjhFNjJpV1hwbEs4OVRYeDB2VGhKLVM5bFI3Z20tdTFsQWhiUTM3RjFkcllreThKVVJDaVJ1OEZB?oc=5" },
 ];
-const breakingDate = "2026年5月4日 07:58 CST";
+const breakingDate = "2026年5月4日 12:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
+  { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
+  { time: "11:04", tag: "ai", tagText: "AI", text: "尽管Agentic AI和生成式AI在东南亚逐渐兴起，但该地区的初创企业融资依然低迷。DealStreetAsia报道指出，资金紧张的局面并未因AI热潮而显著改善。", source: "DealStreetAsia", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSjlVZVZGdE9sSnRsb0JvYTJkOVM1b253MnZ0eWFySXdGV0VSX3FTejgtbUNCZDRIZHJ5a2NoZ2tma1JqM3REY3BRM2FHRXZkY3FOQmowZXJuNEMyUTJaWGNDUFlwZmMwajJYY3lNV0lMbmdTejhabVlMbWNLMkN5ZW1ENWxJTkdXbXFFYWk3U0xpQQ?oc=5" },
+  { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
   { time: "07:06", tag: "ai", tagText: "AI", text: "福布斯发布2026年AI 50强榜单，评选出全球最具影响力的人工智能公司。该榜单涵盖从基础模型到行业应用的各领域领军企业，反映了当前AI产业的最新格局与增长趋势。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5uUGIzcFRTdFZwdkxZTnpHdUpfVmhCQ21iczlSQjJrMnlSa19sYzB4S2JuVC1wSWo1UFhRWnlpVWtrb0NIN1RmS2Nn?oc=5" },
   { time: "06:13", tag: "ai", tagText: "AI", text: "Meta收购人形机器人初创公司Assured Robot Intelligence，以增强其机器人AI模型能力，进一步推进人形AI机器人战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" },
   { time: "06:05", tag: "ai", tagText: "AI", text: "NYU教授Gary Marcus将大型科技公司7000亿美元的AI支出狂潮称为“史上最大的资本错配”，质疑巨额投资回报前景。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOejFoRnZUcEgyZUpMODlldVVDcWctNDRLMGlDWXZEMUZGOFU1THRUWHk2RGE3U2dTZEVzeDFnbnpvWmV6TzlTRjIzcFI5djNqYjE2WF96WW1jYzNnOE13dGRVeFJFZ2JDYld0djBvaGNHNjExZXZYTmwzQk93a0dXWnR5eW5NRmFKVl9FaElWX2NqMHJkbVVaOQ?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
   { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
   { time: "14:29", tag: "ai", tagText: "AI", text: "Alphabet宣布将投入1900亿美元用于AI基础设施建设，此举将利好三家半导体股票。该投资规模远超市场预期，显示科技巨头在AI领域的军备竞赛进一步升级。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNVzRhTXh1dXBvM1VqUXVEYmxEdmVSTk5Mc3JwY1RraU5hbmhlTGdfclVnS0pXOUJqLXExVWJBSFJEZm9fRlJkQldyY0psdkczZXRhcGZkY1pzTS1OTE5OTjNvUHJSOFVzTWJ2SGpmdFIzR3B5VmZCLS1NWEwyOVItWWpEV3hqZWhFRnBCWlRldlhzX1JzUk9oZg?oc=5" },
-  { time: "13:39", tag: "ai", tagText: "AI", text: "韩国政府宣布向本土AI初创公司Upstage注资3.806亿美元，以支持其在大模型领域的研发和商业化。Upstage是韩国领先的AI企业之一，此举显示韩国正加大力度扶持本土AI产业，以在全球AI竞赛中追赶中美。", source: "The Korea Times", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQeG84c0tac1plZ2ZIUU5BejU0d3M1bGppWUNhODl0c01nTnRidzlCZ3J0RFBiYXZFOUVwbkRWOU04ZVM2aXVEejMzZmRIUkJZTnFKVExFdmd6NVVYOVFEcXIwcG5iRHFEUWVQUERteWlXM1VfNGNHY2RrTFZkQ2pubUpuMnNndWc4Q1RpUzlBcFotZFE2cjBBTnVaNzVuZHpJQXfSAacBQVVfeXFMUGUtc2VNdS1sSXFnVFpGaXRIOE9TckU5Z2hDWld6dzIwSW1FeWpWYzdRY0JaM0pkZTZlT0lEazN4dkU1bVVsSU8yUUZKWUUzemFrSFNTbnUxRkxFQVVqQ21rSlBDanItT0RUWDJLemhnSGJpS0hQcHFVTnVlREpYdzlXTEdTNFdJTHhaSEdfejhTUi0zMzdwOFJSY0E3OHZjZi1rblhyaEU?oc=5" },
-  { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
-  { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
-  { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
 ];
-const aiBreakingDate = "2026年5月4日 07:58 CST";
+const aiBreakingDate = "2026年5月4日 12:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
