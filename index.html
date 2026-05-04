@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 64.17,
+  score: 62.91,
   rating: "greed",
-  timestamp: "2026-05-04T18:21:28+00:00",
+  timestamp: "2026-05-04T20:13:38+00:00",
   previousClose: 66.6,
   previous1Week: 67.54,
   previous1Month: 23.74,
   previous1Year: 38.29,
-  date: "2026年5月5日 02:25 CST"
+  date: "2026年5月5日 04:24 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:18", tag: "macro", tagText: "宏观", text: "美国债券市场发出警告信号：通胀加速可能迫使美联储在年底前加息。尽管股市持续上涨，但债券收益率曲线显示市场对价格压力的担忧加剧，美联储可能不得不采取行动抑制通胀。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-chart-is-a-flashing-warning-sign-that-the-fed-might-yet-rattle-the-markets-with-rate-hikes-by-year-end-94c25b10?mod=mw_rss_topstories" },
+  { time: "04:14", tag: "tech", tagText: "科技", text: "Pinterest一季度财报超预期，营收和用户增长强劲，公司发布乐观业绩指引。此前Pinterest在1月裁员近15%并缩减办公空间，将更多资源投入AI领域。股价盘后大涨17%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/pinterest-pins-q1-earnings-report-2026.html" },
+  { time: "04:14", tag: "macro", tagText: "宏观", text: "美国牛肉价格接近历史高位，司法部正在调查是否存在价格操纵行为。夏季烧烤季来临、牛群数量减少、干旱、野火以及加工厂关闭等因素共同推高了肉类价格。", source: "MarketWatch", url: "https://www.marketwatch.com/story/beef-prices-are-near-record-levels-the-doj-wants-to-know-if-something-shady-is-afoot-964a74d5?mod=mw_rss_topstories" },
+  { time: "04:12", tag: "tech", tagText: "科技", text: "Palantir公布一季度财报，营收同比增长85%，创2020年上市以来最快增速，利润也超出预期。增长主要受美国政府部门销售推动。公司股价盘后上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/palantir-pltr-q1-earnings-report-2026.html" },
   { time: "02:24", tag: "geo", tagText: "地缘", text: "中东局势急剧升级：伊朗声称击中美国军舰，并向阿联酋发射导弹；美国则击沉伊朗快艇。霍尔木兹海峡危机重燃，油价飙升至每桶114美元以上，道琼斯指数暴跌逾500点。市场恐慌情绪蔓延，标普500和纳斯达克指数同步下挫。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/iran-war-uae-trump-ceasefire-missiles.html" },
   { time: "02:24", tag: "tech", tagText: "科技", text: "GameStop向eBay提出每股125美元、总价约560亿美元的收购要约，计划为这家在线市场注入“创业精神”。eBay正在评估这一非邀约收购提议，消息推动eBay股价大涨。", source: "Financial Times", url: "https://www.ft.com/content/31bfd02e-a02e-45fd-ad46-51544b1a3a8a" },
   { time: "02:24", tag: "ai", tagText: "AI", text: "法庭文件显示，马斯克曾威胁要让OpenAI的奥特曼和布罗克曼成为“美国最令人憎恨的人”。此前马斯克试图在最后一刻启动和解谈判，但未能成功。AI领域法律战持续升级。", source: "Financial Times", url: "https://www.ft.com/content/5c24fa13-ae43-4d5a-9b68-b6ebae227dce" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "17:29", tag: "geo", tagText: "地缘", text: "伊朗警告美国海军不要进入霍尔木兹海峡，此前特朗普宣布美国将“引导”被困船只通过该水道。英国海上贸易行动办公室称，一艘油轮在阿联酋富查伊拉以北遭炮弹击中。油价随之上涨，市场对霍尔木兹海峡封锁的担忧加剧。", source: "Financial Times", url: "https://www.ft.com/content/483a0aa0-f1c8-4960-be68-c6ea3e9ea3d5" },
   { time: "17:29", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦现金储备创纪录达3970亿美元，且并非唯一不愿投资股市的公司。这一信号被解读为巴菲特对当前市场估值持谨慎态度，建议投资者保持耐心。", source: "MarketWatch", url: "https://www.marketwatch.com/story/berkshire-hathaway-is-now-sitting-on-a-record-397-billion-in-cash-and-its-not-the-only-firm-reluctant-to-invest-in-the-stock-market-1a9e459a?mod=mw_rss_topstories" },
   { time: "17:29", tag: "ai", tagText: "AI", text: "SK海力士股价大涨13%，因美国科技公司释放强劲AI支出信号。AI芯片需求持续旺盛，推动存储芯片制造商股价飙升。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-shares-rally-12-061453943.html" },
-  { time: "17:29", tag: "geo", tagText: "地缘", text: "航空公司大幅削减航班，因中东危机导致燃油短缺担忧加剧。数百万个座位被取消，全球航空旅行陷入混乱。", source: "Financial Times", url: "https://www.ft.com/content/481022cf-83f6-4d55-8a76-08f6d22b20e6" },
-  { time: "14:26", tag: "macro", tagText: "宏观", text: "印度作为全球第三大二氧化碳排放国，正因极端热浪和伊朗战争导致的能源供应紧张而燃烧更多煤炭。电力需求激增，而大部分电力来自燃煤电厂，加剧了全球减排压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/india-coal-power-heatwave-lng-supply-demand-prices-generation.html" },
-  { time: "14:20", tag: "crypto", tagText: "加密", text: "比特币价格突破8万美元，加密货币市场整体上涨，部分原因是美伊紧张局势下投资者寻求替代资产，以及特朗普宣布的“自由计划”提振了市场情绪。贝莱德的比特币ETP资产管理规模达到11亿美元，进一步推动了机构兴趣。", source: "Invezz", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOW0yTEVibm5xTzg1NVQwSmVnRlVoQ2JXay1yVGtCWVhiNWo0T0lQUy00TldfQjFqYVM2YUQ1M1d1ZlliOXZUMFV1Yzl0ckR3amg5NHh2a25QTTROMDJmcnhhMzY3VFlmTk9wZ1F4dnIyR2QxSHBCWjJwdGZCV1JfdFN1ZEpOVVRkY0dmVU1adGNXclhLWkduREl4d0x3WHV6RUIxQkNncw?oc=5" },
-  { time: "09:37", tag: "macro", tagText: "宏观", text: "伊朗战争持续拖累亚洲经济，该地区严重依赖进口能源，通胀急剧上升正打击增长前景。供应链中断和能源成本飙升对多个亚洲国家的制造业和消费造成压力，经济下行风险加大。", source: "Financial Times", url: "https://www.ft.com/content/c38d86b3-81fc-46fd-af0e-7b66e140676b" },
 ];
-const breakingDate = "2026年5月5日 02:25 CST";
+const breakingDate = "2026年5月5日 04:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:12", tag: "ai", tagText: "AI", text: "Appfigures数据显示，图像AI模型发布带来的应用下载量是聊天机器人升级的6.5倍，但多数应用未能将这一流量转化为收入。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/" },
+  { time: "00:57", tag: "ai", tagText: "AI", text: "GameStop提出以560亿美元收购eBay，但自身营收下滑且门店关闭，外界质疑其支付能力。", source: "Ars Technica", url: "https://arstechnica.com/tech-policy/2026/05/gamestop-offers-56-billion-for-ebay-struggles-to-explain-how-itll-pay-for-it/" },
   { time: "00:45", tag: "ai", tagText: "AI", text: "企业AI客服创企Sierra获9.5亿美元融资，估值超10亿美元。该公司由前Salesforce联合首席执行官Bret Taylor创立，计划利用这笔资金成为“AI驱动客户体验的全球标准”。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" },
   { time: "23:59", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI同日宣布，分别与资产管理公司成立合资企业，以更积极地推广其企业级AI服务。此举标志着两大AI巨头在企业市场的竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" },
   { time: "23:51", tag: "tech", tagText: "科技", text: "Roomba发明者Colin Angle推出全新机器人伴侣“Familiar”，该机器人并非用于清洁，而是作为情感陪伴机器人进入家庭。Angle曾将5000万台家用机器人送入千家万户，此次回归聚焦于AI驱动的社交陪伴领域。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922947/roomba-creator-new-robot-familiar-machines-magic-ai-launch" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
   { time: "08:43", tag: "ai", tagText: "AI", text: "OpenAI庭审中，马斯克唯一的AI专家证人、知名研究员Stuart Russell作证称，政府必须约束前沿AI实验室，并警告AGI军备竞赛的风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/elon-musks-only-expert-witness-at-the-openai-trial-fears-an-agi-arms-race/" },
   { time: "08:36", tag: "ai", tagText: "AI", text: "OpenAI庭审新进展：马斯克在寻求和解后向Altman和Brockman发送威胁性短信，称他们将成为“全美最令人憎恨的人”。该案庭审正在进行，可能改变OpenAI及ChatGPT的未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/elon-musk-sent-ominous-texts-to-greg-brockman-sam-altman-after-asking-for-a-settlement-openai-claims/" },
-  { time: "07:57", tag: "tech", tagText: "科技", text: "MoneyFlare宣布在AI驱动的加密货币和股票交易领域取得重大突破，推出功能强大的全自动交易机器人，旨在提升交易效率和收益。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMilAJBVV95cUxOemM4NlNsdVRFSFJDXzRYN00wZS1DUkFZcnV6UjZuOWJpakVQRU9TdW9IOWY2bS1FNWtGRU5SRGo0ZkRQZ2hBck1jRWNrcEUtNzFqUnJkbk0wVUFWWWZpNmY2OFNUUkNCaGRTM2l4V2h0Vld1S0I4eFM2c3NRUTltMVZ0aWRMcDlBSzBvRFF4TWJ6TE1vckFTM2NqMGxGZnkycTVRdzdBX0hMMlFJeHN5V1p1YzI1UEhCRjh5VEFXa0N5cXB0UmFOYzM4VHpDUThfOE5ZT0ZPTkRibmtwMGNhWUNvck5XYVJXUDRqUzVxODZOSHJDMEVOWU9Oemc1dXowUzlMSldycllXTUg4cWxGQXdEdUPSAZoCQVVfeXFMTjdsNXN3elllY25MaDJmaEQwdTVIWjctbjdWd25kV3dnaWtvVzRkWTFvZ0l3UmVQUFgwZkZMOHlOX1I5aHU1YUhlQ2M3WWh0Z2N1MHgzOXBhaWNLZ243ZXNYckptQWhLLWVvWUV5Y0RYWUhmdGdsUjNVWlBPZUF4aVpyQmRjbm9yQnpEemZEdjctWHpWYk1wZzZPQ0xGMnNNbGRELVF1d2JGWlJXUXVsNUpyc1hDeDR2YXNGMEQ1c1NSVHJxaklMbElNSS03dkg5SG12VkI3R3psRm1YcFZRdFZyZGpuQU9OOE92N0JUTkhoM0FGbWJzNkRQd05YN0RnQzMybTdYRmtuYlR0NGJybHJVelBxOXJ5NFlB?oc=5" },
-  { time: "07:20", tag: "ai", tagText: "AI", text: "AI音乐初创公司Suno据悉在新一轮融资中估值有望达到50亿美元，反映出资本市场对AI生成内容赛道的持续追捧。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxPTjk5bS1vYS1lRXgxZkVNMnl1TnplSEM4VG5oamwyRll3bG55WWFORTJLdEE5N1lWRGVEMGZJSXI3VGw3VXhkU2VoTl9tRk1WNXVoUEZDbS1QQzl5TnlEN1lJZW40T0Nmd1NIb3lWMDI4Rm91ZmhhaS16MjgyM01UdjZTazJWVVl5bmdVaGFCaS1ac0VKMklST1RKbXV3MVYwQjAwUUZvWHc3NllCbk04NUZSWmJpenJBSndvRmV4YTdLcVR3amZj?oc=5" },
 ];
-const aiBreakingDate = "2026年5月5日 02:25 CST";
+const aiBreakingDate = "2026年5月5日 04:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
