@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 66.03,
   previous1Month: 13.77,
   previous1Year: 41.26,
-  date: "2026年5月4日 12:01 CST"
+  date: "2026年5月4日 14:49 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:26", tag: "macro", tagText: "宏观", text: "印度作为全球第三大二氧化碳排放国，正因极端热浪和伊朗战争导致的能源供应紧张而燃烧更多煤炭。电力需求激增，而大部分电力来自燃煤电厂，加剧了全球减排压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/india-coal-power-heatwave-lng-supply-demand-prices-generation.html" },
+  { time: "14:20", tag: "crypto", tagText: "加密", text: "比特币价格突破8万美元，加密货币市场整体上涨，部分原因是美伊紧张局势下投资者寻求替代资产，以及特朗普宣布的“自由计划”提振了市场情绪。贝莱德的比特币ETP资产管理规模达到11亿美元，进一步推动了机构兴趣。", source: "Invezz", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOW0yTEVibm5xTzg1NVQwSmVnRlVoQ2JXay1yVGtCWVhiNWo0T0lQUy00TldfQjFqYVM2YUQ1M1d1ZlliOXZUMFV1Yzl0ckR3amg5NHh2a25QTTROMDJmcnhhMzY3VFlmTk9wZ1F4dnIyR2QxSHBCWjJwdGZCV1JfdFN1ZEpOVVRkY0dmVU1adGNXclhLWkduREl4d0x3WHV6RUIxQkNncw?oc=5" },
   { time: "09:37", tag: "macro", tagText: "宏观", text: "伊朗战争持续拖累亚洲经济，该地区严重依赖进口能源，通胀急剧上升正打击增长前景。供应链中断和能源成本飙升对多个亚洲国家的制造业和消费造成压力，经济下行风险加大。", source: "Financial Times", url: "https://www.ft.com/content/c38d86b3-81fc-46fd-af0e-7b66e140676b" },
   { time: "09:32", tag: "crypto", tagText: "加密", text: "贝莱德（BlackRock）的比特币交易所交易产品（ETP）资产管理规模达到11亿美元，创下里程碑，进一步提振了机构投资者对加密货币的兴趣。此举被视为主流金融对数字资产接纳度提升的重要信号。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcWZ4U0EwQ19jOXphZXJmbXVlM21JTzBDOEtvbEJ6d1h2bXNKNU5ZdTR3dmluQWs3ekNsZUQ5TVVrTlhTN0M1OVZ4OEVIY3BjZV9jdTc5RDhVUEFRQXM3b3FOX2xuRm1wWFR0N3NVN1FCTEtKWW03VDBOOTkzbHU0c0hOby1IVjYxOGpzV3BhbG1neUljc2VZZVNNSER0SHM?oc=5" },
   { time: "09:10", tag: "macro", tagText: "宏观", text: "美股期货周一涨跌互现，标普500和纳斯达克指数期货小幅走高，此前两大指数上周五均创下历史新高。市场关注美伊局势最新进展，特朗普宣布的霍尔木兹海峡“自由计划”成为焦点，投资者评估其对能源价格和全球供应链的潜在影响。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOb2c0RTVlcS1FOG5adTZUckpJTWxiYnFyWGtNeW51ZHhOMWllVmFSdkt5SDBaUDE5c3FuWFRpUUh2ZzNDdTdETHZQWnNKUW1LNmtKTnJlTmtNZXVQTk5Ld0lHNnBnSEI1NHhOX0NhTnZncmVhSTc2U05ZMjA2ZnRHTGx2eEdOMDN5Ry1La21LOGhlRGZHSGg0?oc=5" },
@@ -1647,13 +1649,13 @@ const breakingNews = [
   { time: "22:19", tag: "macro", tagText: "宏观", text: "精神航空（Spirit Airlines）在政府救助失败后于夜间停止运营，正式宣告倒闭。该公司在最后时刻试图寻求联邦援助未果，成为美国航空业近年最大破产事件之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/spirit-airlines-shutdown-inside-the-final-hours.html" },
   { time: "22:08", tag: "crypto", tagText: "加密", text: "比特币面临风险，TD Sequential指标闪现关键看跌信号。技术分析显示加密货币市场可能面临短期回调压力。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVzdlTmJVNnhxeHNyMG84aVZiT3Z0VENzR0dqbkgtWmMwSTJ2WXVZU3FqcnYtNFNkaG1LRUlVY19UOFdRdGVSX3FXaUt2bmFzd2hkbWpGWkRuS3A3Z2hBWG5xVExSU3ZRaWFseFdGajBhbHFjNXZWYmJLd1VaN2FaSjdBaU1GYXRsVzFwaHFkOVlSYXp1aEdOcmFGOEFCV2tCekZURFJ3Uno?oc=5" },
   { time: "22:08", tag: "macro", tagText: "宏观", text: "伊朗战争导致中东供应中断，美国墨西哥湾原油出口量飙升至创纪录水平，大量油轮涌向该地区。美国正借此填补全球原油供应缺口。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/us-crude-oil-exports-surge-to-record-as-tankers-flock-to-gulf-coast.html" },
-  { time: "22:00", tag: "macro", tagText: "宏观", text: "全球银行正通过私募交易和风险转移等方式，积极削减对AI数据中心债务的敞口，以避免因过度集中而“窒息”。此举反映出金融机构对AI泡沫风险的警惕。", source: "Financial Times", url: "https://www.ft.com/content/08aba5e4-5834-4e79-a48d-989a2c5bad0f" },
-  { time: "22:00", tag: "tech", tagText: "科技", text: "英伟达亚洲供应链的繁荣推动科技股上涨，AI支出持续增加。同时，特斯拉Model X成为美国二手市场销售最快的车型，反映出电动车市场结构性变化。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxQeVZvSE1tV1Q4NFdRZUJzc3NucWk0VVhnNlV2RWNKRHlSaTdfak9Ca05QN2RYQ1UxbUNRdGhpLVpyeS1sR3dNdGhuMmJIN3I3MHBPT3RBekw3a2V1cmFEUUtQOVZIWXFOdUIyWkN6WDZLZUZNaVBJbGZneHhoamdtM3MyRHJMRWNZOWgxbXc2Q1piTjZzcF9NeGp3S1hhczJLNndiZ01zVQ?oc=5" },
 ];
-const breakingDate = "2026年5月4日 12:01 CST";
+const breakingDate = "2026年5月4日 14:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:29", tag: "ai", tagText: "AI", text: "Alphabet宣布将投入1900亿美元用于AI基础设施建设，此举将利好三家半导体股票。该投资规模远超市场预期，显示科技巨头在AI领域的军备竞赛进一步升级。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNVzRhTXh1dXBvM1VqUXVEYmxEdmVSTk5Mc3JwY1RraU5hbmhlTGdfclVnS0pXOUJqLXExVWJBSFJEZm9fRlJkQldyY0psdkczZXRhcGZkY1pzTS1OTE5OTjNvUHJSOFVzTWJ2SGpmdFIzR3B5VmZCLS1NWEwyOVItWWpEV3hqZWhFRnBCWlRldlhzX1JzUk9oZg?oc=5" },
+  { time: "12:06", tag: "tech", tagText: "科技", text: "教育领域长期追求但难以实现的“个性化”数学学习，如今被寄望于AI带来突破。报道指出，此前相关尝试多被夸大且效果不佳，但AI技术可能提供新的解决方案。", source: "Education Week", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSlRnODZDUUZvWUNkTzM3eHY3MW9lQ3lFZGxaU0w0M3d2TnRLNWdwV1kxeG9RVy11VXo5Z21aTjk3cndUdXBPbDRxZUd5eDlqTmRkdjdyUlZTS0c2cXlpaHRpeW9JUnlyOHBmOEswclFqSEhfaE1wV08wMUs5bnVFQkxpdDFVa1JWamstQ3g0X3BYamlPWmNDYWJmZFRGYUt1Z1hHRmhOZGdLLXpNUjZtVzVxVEcxQkZCMjk2Z1VnWnBsVGdRQTdNUFFrV3Y?oc=5" },
   { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
   { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
   { time: "11:04", tag: "ai", tagText: "AI", text: "尽管Agentic AI和生成式AI在东南亚逐渐兴起，但该地区的初创企业融资依然低迷。DealStreetAsia报道指出，资金紧张的局面并未因AI热潮而显著改善。", source: "DealStreetAsia", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSjlVZVZGdE9sSnRsb0JvYTJkOVM1b253MnZ0eWFySXdGV0VSX3FTejgtbUNCZDRIZHJ5a2NoZ2tma1JqM3REY3BRM2FHRXZkY3FOQmowZXJuNEMyUTJaWGNDUFlwZmMwajJYY3lNV0lMbmdTejhabVlMbWNLMkN5ZW1ENWxJTkdXbXFFYWk3U0xpQQ?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "ai", tagText: "AI", text: "AI生成的音乐正大量涌入流媒体平台，但听众接受度存疑。行业观察指出，AI音乐泛滥引发关于内容质量、版权和听众体验的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
-  { time: "19:09", tag: "ai", tagText: "AI", text: "OpenAI将推出前沿网络安全模型GPT-5.5-Cyber，CEO奥特曼表示该模型不会向公众开放，首批仅面向特定关键网络防御者群体。此举凸显AI安全能力的分级管控趋势。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/921073/openai-sam-altman-new-cybersecurity-model-gpt-5-5-cyber" },
-  { time: "14:29", tag: "ai", tagText: "AI", text: "Alphabet宣布将投入1900亿美元用于AI基础设施建设，此举将利好三家半导体股票。该投资规模远超市场预期，显示科技巨头在AI领域的军备竞赛进一步升级。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNVzRhTXh1dXBvM1VqUXVEYmxEdmVSTk5Mc3JwY1RraU5hbmhlTGdfclVnS0pXOUJqLXExVWJBSFJEZm9fRlJkQldyY0psdkczZXRhcGZkY1pzTS1OTE5OTjNvUHJSOFVzTWJ2SGpmdFIzR3B5VmZCLS1NWEwyOVItWWpEV3hqZWhFRnBCWlRldlhzX1JzUk9oZg?oc=5" },
 ];
-const aiBreakingDate = "2026年5月4日 12:01 CST";
+const aiBreakingDate = "2026年5月4日 14:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
