@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 64.09,
+  score: 64.17,
   rating: "greed",
-  timestamp: "2026-05-04T16:52:48+00:00",
+  timestamp: "2026-05-04T18:21:28+00:00",
   previousClose: 66.6,
   previous1Week: 67.54,
   previous1Month: 23.74,
   previous1Year: 38.29,
-  date: "2026年5月5日 00:57 CST"
+  date: "2026年5月5日 02:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:24", tag: "geo", tagText: "地缘", text: "中东局势急剧升级：伊朗声称击中美国军舰，并向阿联酋发射导弹；美国则击沉伊朗快艇。霍尔木兹海峡危机重燃，油价飙升至每桶114美元以上，道琼斯指数暴跌逾500点。市场恐慌情绪蔓延，标普500和纳斯达克指数同步下挫。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/iran-war-uae-trump-ceasefire-missiles.html" },
+  { time: "02:24", tag: "tech", tagText: "科技", text: "GameStop向eBay提出每股125美元、总价约560亿美元的收购要约，计划为这家在线市场注入“创业精神”。eBay正在评估这一非邀约收购提议，消息推动eBay股价大涨。", source: "Financial Times", url: "https://www.ft.com/content/31bfd02e-a02e-45fd-ad46-51544b1a3a8a" },
+  { time: "02:24", tag: "ai", tagText: "AI", text: "法庭文件显示，马斯克曾威胁要让OpenAI的奥特曼和布罗克曼成为“美国最令人憎恨的人”。此前马斯克试图在最后一刻启动和解谈判，但未能成功。AI领域法律战持续升级。", source: "Financial Times", url: "https://www.ft.com/content/5c24fa13-ae43-4d5a-9b68-b6ebae227dce" },
   { time: "00:46", tag: "ai", tagText: "AI", text: "Anthropic与高盛、黑石等机构合作，成立15亿美元AI合资企业，专注于为私募股权拥有的公司提供AI解决方案。此举是Anthropic深化企业AI市场领先地位的最新努力，与OpenAI的竞争日趋激烈。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html" },
   { time: "00:39", tag: "tech", tagText: "科技", text: "亚马逊宣布将其供应链网络向外部公司开放，直接与UPS和联邦快递竞争。消息导致UPS和联邦快递股价周一大幅下跌，市场担忧亚马逊物流将抢占市场份额。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/ups-fedex-amazon-logistics.html" },
   { time: "00:31", tag: "macro", tagText: "宏观", text: "精神航空（Spirit Airlines）的倒闭将使竞争对手获得更多定价权，并可能进一步推高机票价格。分析师预计，随着行业运力减少，航空公司将竞相争夺精神航空的客户，票价上涨压力加大。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/spirit-airlines-flights-rivals.html" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "14:26", tag: "macro", tagText: "宏观", text: "印度作为全球第三大二氧化碳排放国，正因极端热浪和伊朗战争导致的能源供应紧张而燃烧更多煤炭。电力需求激增，而大部分电力来自燃煤电厂，加剧了全球减排压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/india-coal-power-heatwave-lng-supply-demand-prices-generation.html" },
   { time: "14:20", tag: "crypto", tagText: "加密", text: "比特币价格突破8万美元，加密货币市场整体上涨，部分原因是美伊紧张局势下投资者寻求替代资产，以及特朗普宣布的“自由计划”提振了市场情绪。贝莱德的比特币ETP资产管理规模达到11亿美元，进一步推动了机构兴趣。", source: "Invezz", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOW0yTEVibm5xTzg1NVQwSmVnRlVoQ2JXay1yVGtCWVhiNWo0T0lQUy00TldfQjFqYVM2YUQ1M1d1ZlliOXZUMFV1Yzl0ckR3amg5NHh2a25QTTROMDJmcnhhMzY3VFlmTk9wZ1F4dnIyR2QxSHBCWjJwdGZCV1JfdFN1ZEpOVVRkY0dmVU1adGNXclhLWkduREl4d0x3WHV6RUIxQkNncw?oc=5" },
   { time: "09:37", tag: "macro", tagText: "宏观", text: "伊朗战争持续拖累亚洲经济，该地区严重依赖进口能源，通胀急剧上升正打击增长前景。供应链中断和能源成本飙升对多个亚洲国家的制造业和消费造成压力，经济下行风险加大。", source: "Financial Times", url: "https://www.ft.com/content/c38d86b3-81fc-46fd-af0e-7b66e140676b" },
-  { time: "09:32", tag: "crypto", tagText: "加密", text: "贝莱德（BlackRock）的比特币交易所交易产品（ETP）资产管理规模达到11亿美元，创下里程碑，进一步提振了机构投资者对加密货币的兴趣。此举被视为主流金融对数字资产接纳度提升的重要信号。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcWZ4U0EwQ19jOXphZXJmbXVlM21JTzBDOEtvbEJ6d1h2bXNKNU5ZdTR3dmluQWs3ekNsZUQ5TVVrTlhTN0M1OVZ4OEVIY3BjZV9jdTc5RDhVUEFRQXM3b3FOX2xuRm1wWFR0N3NVN1FCTEtKWW03VDBOOTkzbHU0c0hOby1IVjYxOGpzV3BhbG1neUljc2VZZVNNSER0SHM?oc=5" },
-  { time: "09:10", tag: "macro", tagText: "宏观", text: "美股期货周一涨跌互现，标普500和纳斯达克指数期货小幅走高，此前两大指数上周五均创下历史新高。市场关注美伊局势最新进展，特朗普宣布的霍尔木兹海峡“自由计划”成为焦点，投资者评估其对能源价格和全球供应链的潜在影响。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOb2c0RTVlcS1FOG5adTZUckpJTWxiYnFyWGtNeW51ZHhOMWllVmFSdkt5SDBaUDE5c3FuWFRpUUh2ZzNDdTdETHZQWnNKUW1LNmtKTnJlTmtNZXVQTk5Ld0lHNnBnSEI1NHhOX0NhTnZncmVhSTc2U05ZMjA2ZnRHTGx2eEdOMDN5Ry1La21LOGhlRGZHSGg0?oc=5" },
-  { time: "05:55", tag: "geo", tagText: "地缘", text: "特朗普宣布美国将于周一启动“人道主义”行动，引导被困在霍尔木兹海峡的船只离开。数月来，由于伊朗冲突导致海峡关闭，大量船舶无法通行，全球关键供应链受到严重干扰。特朗普称与伊朗的“非常积极的讨论”仍在继续。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/trump-iran-strait-of-hormuz-trapped-ships.html" },
 ];
-const breakingDate = "2026年5月5日 00:57 CST";
+const breakingDate = "2026年5月5日 02:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1670,12 +1670,12 @@ const aiBreakingNews = [
   { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
   { time: "11:04", tag: "ai", tagText: "AI", text: "尽管Agentic AI和生成式AI在东南亚逐渐兴起，但该地区的初创企业融资依然低迷。DealStreetAsia报道指出，资金紧张的局面并未因AI热潮而显著改善。", source: "DealStreetAsia", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSjlVZVZGdE9sSnRsb0JvYTJkOVM1b253MnZ0eWFySXdGV0VSX3FTejgtbUNCZDRIZHJ5a2NoZ2tma1JqM3REY3BRM2FHRXZkY3FOQmowZXJuNEMyUTJaWGNDUFlwZmMwajJYY3lNV0lMbmdTejhabVlMbWNLMkN5ZW1ENWxJTkdXbXFFYWk3U0xpQQ?oc=5" },
   { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
-  { time: "07:06", tag: "ai", tagText: "AI", text: "福布斯发布2026年AI 50强榜单，评选出全球最具影响力的人工智能公司。该榜单涵盖从基础模型到行业应用的各领域领军企业，反映了当前AI产业的最新格局与增长趋势。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5uUGIzcFRTdFZwdkxZTnpHdUpfVmhCQ21iczlSQjJrMnlSa19sYzB4S2JuVC1wSWo1UFhRWnlpVWtrb0NIN1RmS2Nn?oc=5" },
-  { time: "06:13", tag: "ai", tagText: "AI", text: "Meta收购人形机器人初创公司Assured Robot Intelligence，以增强其机器人AI模型能力，进一步推进人形AI机器人战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" },
-  { time: "06:05", tag: "ai", tagText: "AI", text: "NYU教授Gary Marcus将大型科技公司7000亿美元的AI支出狂潮称为“史上最大的资本错配”，质疑巨额投资回报前景。", source: "moneywise.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOejFoRnZUcEgyZUpMODlldVVDcWctNDRLMGlDWXZEMUZGOFU1THRUWHk2RGE3U2dTZEVzeDFnbnpvWmV6TzlTRjIzcFI5djNqYjE2WF96WW1jYzNnOE13dGRVeFJFZ2JDYld0djBvaGNHNjExZXZYTmwzQk93a0dXWnR5eW5NRmFKVl9FaElWX2NqMHJkbVVaOQ?oc=5" },
-  { time: "04:20", tag: "tech", tagText: "科技", text: "近年来最严重的Linux安全漏洞“CopyFail”曝光，威胁多租户服务器、CI/CD工作流及Kubernetes容器等，全球安全团队紧急应对。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/04/as-the-most-severe-linux-threat-in-years-surfaces-the-world-scrambles/" },
+  { time: "08:43", tag: "ai", tagText: "AI", text: "OpenAI庭审中，马斯克唯一的AI专家证人、知名研究员Stuart Russell作证称，政府必须约束前沿AI实验室，并警告AGI军备竞赛的风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/elon-musks-only-expert-witness-at-the-openai-trial-fears-an-agi-arms-race/" },
+  { time: "08:36", tag: "ai", tagText: "AI", text: "OpenAI庭审新进展：马斯克在寻求和解后向Altman和Brockman发送威胁性短信，称他们将成为“全美最令人憎恨的人”。该案庭审正在进行，可能改变OpenAI及ChatGPT的未来。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/elon-musk-sent-ominous-texts-to-greg-brockman-sam-altman-after-asking-for-a-settlement-openai-claims/" },
+  { time: "07:57", tag: "tech", tagText: "科技", text: "MoneyFlare宣布在AI驱动的加密货币和股票交易领域取得重大突破，推出功能强大的全自动交易机器人，旨在提升交易效率和收益。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMilAJBVV95cUxOemM4NlNsdVRFSFJDXzRYN00wZS1DUkFZcnV6UjZuOWJpakVQRU9TdW9IOWY2bS1FNWtGRU5SRGo0ZkRQZ2hBck1jRWNrcEUtNzFqUnJkbk0wVUFWWWZpNmY2OFNUUkNCaGRTM2l4V2h0Vld1S0I4eFM2c3NRUTltMVZ0aWRMcDlBSzBvRFF4TWJ6TE1vckFTM2NqMGxGZnkycTVRdzdBX0hMMlFJeHN5V1p1YzI1UEhCRjh5VEFXa0N5cXB0UmFOYzM4VHpDUThfOE5ZT0ZPTkRibmtwMGNhWUNvck5XYVJXUDRqUzVxODZOSHJDMEVOWU9Oemc1dXowUzlMSldycllXTUg4cWxGQXdEdUPSAZoCQVVfeXFMTjdsNXN3elllY25MaDJmaEQwdTVIWjctbjdWd25kV3dnaWtvVzRkWTFvZ0l3UmVQUFgwZkZMOHlOX1I5aHU1YUhlQ2M3WWh0Z2N1MHgzOXBhaWNLZ243ZXNYckptQWhLLWVvWUV5Y0RYWUhmdGdsUjNVWlBPZUF4aVpyQmRjbm9yQnpEemZEdjctWHpWYk1wZzZPQ0xGMnNNbGRELVF1d2JGWlJXUXVsNUpyc1hDeDR2YXNGMEQ1c1NSVHJxaklMbElNSS03dkg5SG12VkI3R3psRm1YcFZRdFZyZGpuQU9OOE92N0JUTkhoM0FGbWJzNkRQd05YN0RnQzMybTdYRmtuYlR0NGJybHJVelBxOXJ5NFlB?oc=5" },
+  { time: "07:20", tag: "ai", tagText: "AI", text: "AI音乐初创公司Suno据悉在新一轮融资中估值有望达到50亿美元，反映出资本市场对AI生成内容赛道的持续追捧。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxPTjk5bS1vYS1lRXgxZkVNMnl1TnplSEM4VG5oamwyRll3bG55WWFORTJLdEE5N1lWRGVEMGZJSXI3VGw3VXhkU2VoTl9tRk1WNXVoUEZDbS1QQzl5TnlEN1lJZW40T0Nmd1NIb3lWMDI4Rm91ZmhhaS16MjgyM01UdjZTazJWVVl5bmdVaGFCaS1ac0VKMklST1RKbXV3MVYwQjAwUUZvWHc3NllCbk04NUZSWmJpenJBSndvRmV4YTdLcVR3amZj?oc=5" },
 ];
-const aiBreakingDate = "2026年5月5日 00:57 CST";
+const aiBreakingDate = "2026年5月5日 02:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
