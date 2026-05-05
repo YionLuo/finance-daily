@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 62.91,
+  score: 62.83,
   rating: "greed",
-  timestamp: "2026-05-04T23:59:58+00:00",
-  previousClose: 66.6,
-  previous1Week: 67.54,
+  timestamp: "2026-05-05T00:00:00+00:00",
+  previousClose: 62.91,
+  previous1Week: 63.69,
   previous1Month: 23.74,
-  previous1Year: 38.29,
-  date: "2026年5月5日 11:45 CST"
+  previous1Year: 53.06,
+  date: "2026年5月5日 14:26 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:01", tag: "macro", tagText: "宏观", text: "汇丰银行（HSBC）一季度税前利润94亿美元，略低于市场预期，主要因与欺诈相关的信贷损失增加。财报发布后，汇丰股价下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/hsbc-q1-earnings-banking-finance.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "LVMH正从买家转为卖家，考虑出售Marc Jacobs和Fenty等品牌，这是其历史上最大规模的收缩之一。奢侈品行业寒冬持续，企业面临需求下滑压力。", source: "Financial Times", url: "https://www.ft.com/content/bc50fc15-9779-4969-9f81-eb834941c625" },
+  { time: "11:43", tag: "tech", tagText: "科技", text: "据彭博社报道，苹果正考虑使用英特尔和三星来制造其主设备芯片，以减少对台积电的依赖。此举可能重塑全球芯片代工格局。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNbVJxOGk4THdJTWJmM3hMY0Y4WmNFb1Qxd1lhcmtWSFhfYjktZndDMFhnbXVRcGxVOThLVElIb0xYTjNoLXZFQTVCeUNfMnNOUVFhcmVFNGwyUkdyazNpOUpxXzk0OFhMb0JYc0NETHVCaE9MS0JmdmZha2pBenIzQW1kb1BtTlNYa2VpY3VtTjRrdGlfV3VySTlaaFV3VTF4S1lBUG5lMU9EakpWRk5SclVnWGNuUm8zUmhB?oc=5" },
   { time: "09:03", tag: "crypto", tagText: "加密", text: "渣打银行旗下风投部门SC Ventures战略入股加密货币做市商GSR。此举标志着传统金融机构进一步深入数字资产领域，为加密市场带来更多机构背书和流动性支持。", source: "bloomingbit", url: "https://news.google.com/rss/articles/CBMiVEFVX3lxTE01R1VVOHZYY0MtN3JfbmFQYWVnYnhEUzJBZC1hcllMYUozYThoUVY1U28wcEZWOFVmR21INzB1Wjd4bmJoelRuellOelB6MWlLcWwtSA?oc=5" },
   { time: "08:27", tag: "tech", tagText: "科技", text: "比亚迪（BYD）4月乘用车EV交付量连续第八个月下滑，而Stellantis支持的零跑汽车（Leapmotor）则录得创纪录交付量。中国电动汽车市场竞争日益激烈，比亚迪面临来自新势力及传统车企转型的双重压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/byd-april-sales-exports-china-ev-rivals-leapmotor-zeekr.html" },
   { time: "08:03", tag: "macro", tagText: "宏观", text: "马斯克与美国证券交易委员会（SEC）提议以150万美元和解其未及时披露推特持股的诉讼。SEC此前指控马斯克等待过久才披露其持有推特大量股份，涉嫌证券欺诈。和解金额远低于市场预期。", source: "Financial Times", url: "https://www.ft.com/content/a760cb3e-b949-4120-b637-32e7464227cb" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "02:24", tag: "ai", tagText: "AI", text: "法庭文件显示，马斯克曾威胁要让OpenAI的奥特曼和布罗克曼成为“美国最令人憎恨的人”。此前马斯克试图在最后一刻启动和解谈判，但未能成功。AI领域法律战持续升级。", source: "Financial Times", url: "https://www.ft.com/content/5c24fa13-ae43-4d5a-9b68-b6ebae227dce" },
   { time: "00:46", tag: "ai", tagText: "AI", text: "Anthropic与高盛、黑石等机构合作，成立15亿美元AI合资企业，专注于为私募股权拥有的公司提供AI解决方案。此举是Anthropic深化企业AI市场领先地位的最新努力，与OpenAI的竞争日趋激烈。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html" },
   { time: "00:39", tag: "tech", tagText: "科技", text: "亚马逊宣布将其供应链网络向外部公司开放，直接与UPS和联邦快递竞争。消息导致UPS和联邦快递股价周一大幅下跌，市场担忧亚马逊物流将抢占市场份额。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/ups-fedex-amazon-logistics.html" },
-  { time: "00:31", tag: "macro", tagText: "宏观", text: "精神航空（Spirit Airlines）的倒闭将使竞争对手获得更多定价权，并可能进一步推高机票价格。分析师预计，随着行业运力减少，航空公司将竞相争夺精神航空的客户，票价上涨压力加大。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/spirit-airlines-flights-rivals.html" },
-  { time: "00:15", tag: "tech", tagText: "科技", text: "美光科技（Micron）在美国顶级公司排名中迅速攀升。去年年初，美光甚至不在前100名之列，但受益于AI芯片需求激增，其市值和排名已大幅提升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-just-how-quickly-micron-has-risen-up-the-ranks-of-the-top-u-s-companies-fd95ae8d?mod=mw_rss_topstories" },
-  { time: "22:22", tag: "macro", tagText: "宏观", text: "尽管高关税、顽固通胀、政府停摆及伊朗战争冲击，美国经济仍表现出韧性，未被击垮。分析认为，消费者支出和企业盈利的强劲支撑了经济基本面。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-unsinkable-u-s-economy-oil-prices-are-surging-iran-tensions-are-rising-but-it-wont-crack-ee27477f?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月5日 11:45 CST";
+const breakingDate = "2026年5月5日 14:26 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:09", tag: "geo", tagText: "地缘", text: "因不满Meta收购中国AI初创公司Manus，中国政府呼吁本土初创企业拒绝Meta的资金支持。此举反映中美在AI领域的竞争加剧，以及中国对关键技术外流的担忧。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMiygJBVV95cUxQZ29OeEFpSVBNbC11LXk5TmgwclRGb2pFSmNVeXhGVmYtZGoxSExHSG9pRGFWcUlvdnRZN1kyLUUwckZRa2FNVnI5WlNCQ0djaUVsRjVnUVhrV3RoN29YemUydVFjTGc2MndiNXlsQTdKU0ctUnpWS2Z2eS04UkRKelB6TnFjMTR1YTRFMTNMMjByMkVQSXY0Mk5GTXlUa3VlUmRWWENrTWNOZWI1M3VjcjF3dU11YlU2UE9JNkY4TEpFMTNVdUYxdUlWc09IVGZELVNnYVJ6NFVZWDVXOFBKWHRjZ0R4Zm9yMzVXRENULUM1WGMxZUR6UFYyTHlNTWhXdGMzWk8wcEtQWDZvRndGdlE5NFE1OW9Ma29YWlU4aEY0QXpReXQzOHo3RGxGNHVsU3lfb3NKdXM1ckRCdE1FMk1RS0FzXzBUUnfSAc8CQVVfeXFMT1NkNU1HUmRfS0xQelBWUHl3ak1TUjVMWkZpWGZtWC1URXZkME11U2o3UGc1M3NmU3Y1a2pQNnp6dkd6V1ppTHRjT2djRmIwczd2STVFWWFTTXd6ZGY5T1VxYTBVQlRXUHRGbDBkckFKWlJNMGlkZkFkdEtTRkRjMzE4VWV4LVVKT2V5dUxpNmVUMU0wUzJvSVY2SFlIbjZYWGl5T1RKRU5YRTZ1bTdJNTVDVjZnYWp6UkJkT0F2S0NWRDAwd0N4NFEzSnM1TjFtcGVud09fZzFoc2dYQmZ0cUhYWmY4aXJzMmVnZXpiWUo0eUh2TENuOTE1NGxNcWw1WWNlaWNZME5haDJsekhXck5LcEFzY05XVzdFOEdnSW1HcFdJaUFjUllpTWlMZ1EzOVdDQmplNWhDSHU1QkE2ckRONXAyNUpvS05aMTh3eGM?oc=5" },
   { time: "11:45", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋回应AI取代工作担忧，称AI正在‘创造大量就业机会’。他认为关于AI消灭工作的说法被严重夸大，AI将催生新岗位而非消灭就业。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/as-workers-worry-about-ai-nvidias-jensen-huang-says-ai-is-creating-an-enormous-number-of-jobs/" },
   { time: "11:45", tag: "tech", tagText: "科技", text: "俄勒冈州初创公司Panthalassa获1.4亿美元融资，由彼得·蒂尔领投，计划建设海上波浪能数据中心，为AI计算提供绿色能源。该项目旨在解决AI算力激增带来的电力消耗问题。", source: "GeekWire", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPaklIUXhWOGQ4NWRuZWtzTGtLLUdld0x3dktKZE1EaGg2VUttMW1nSVN2ckt0dUkyX3FoWkE0Vi1xX1JWZTZ5QUZhZ1ViY3VkaVdwcVBNdEMzV1Qzb1l6SUpvSWgxbGlPb0ZqdkNwUlY1cDg0NWR5M1BzUE9GZlFtRl8tMnBPVUlFS25Wc3ZvakQ1TF9oWGNIVWJWOHVWLWZVQURNbTJHWUFvMHZ3MHVKSWZOQjdYRkxKOUVB?oc=5" },
   { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "ai", tagText: "AI", text: "AI生成的音乐正大量涌入流媒体平台，但听众接受度存疑。行业观察指出，AI音乐泛滥引发关于内容质量、版权和听众体验的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
   { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
-  { time: "18:44", tag: "ai", tagText: "AI", text: "AI计算初创公司Tsavorite获Pavestone 500万美元融资，用于扩展其AI计算平台。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQ2Jwd09UVHBWRTNNTHRBN1dUemVsUHFkTnMtUjBBRzh2YXg4TmdkNVljZ2czdU1aQXNtcURYUVVlSzZJNm1Tc2xjb0FaVGxBN095dlB3STZjM3cxcS1GMFdRVmxBTXVzVjJBMm5SU2dLeGVSQVFZcWhnaUhxcVhQWkxpQ2gwb25Cay1SdEtlcEJqdjFLYVRCSExybU1UT25XSktLclZsbGZYdDdNNGdxRC1nWEt1SXE3QWV4MkltOEJLbDR3eG1yMnZmbENoUkF3OTVNNWVjR2MtVjBiY3fSAeMBQVVfeXFMTWotckhrOU1wRFVCNm5rVllTbXQwdHU5emRGSjBQLXBJNGtrOGZrYUliZE9XNkVoV3ktaUZudXhBWjM2Rnc2UEhWU3pweHNKeHRDZWZwUzdtdTFoZWNna2lOdlhabzE3bWhvRU9DaGtLOHB1S1BIRHJmSDVqM0lFQ2lIVEZwQmt3dXZSQlltczNIcVVOdXRJUEhfejdTVzlYYm9CX2Y3VDA5SVFHVENlcWFydnpyZDZzdFFxUkg2a3g0STl0ZzJhR2h1SDBYWHJxcklPNlBEbkl0czRyX3FLcURxSEE?oc=5" },
 ];
-const aiBreakingDate = "2026年5月5日 11:45 CST";
+const aiBreakingDate = "2026年5月5日 14:26 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
