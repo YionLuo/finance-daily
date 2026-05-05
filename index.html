@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 62.17,
   rating: "greed",
-  timestamp: "2026-05-05T08:54:46+00:00",
+  timestamp: "2026-05-05T11:04:46+00:00",
   previousClose: 62.91,
   previous1Week: 63.69,
   previous1Month: 23.74,
   previous1Year: 53.06,
-  date: "2026年5月5日 17:15 CST"
+  date: "2026年5月5日 19:23 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:23", tag: "macro", tagText: "宏观", text: "英国长期借贷成本升至1998年以来最高水平。30年期英国国债收益率触及28年新高，市场预期英国央行将加息两到三次以应对通胀威胁。", source: "Financial Times", url: "https://www.ft.com/content/755ebf5e-566a-4209-811e-f277a456fa6f" },
+  { time: "19:23", tag: "macro", tagText: "宏观", text: "美国检察官皮罗在美联储调查中改变策略，选择不对此前阻止其向美联储发出传票的裁决提出上诉。此举不太可能令美联储主席鲍威尔满意。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/pirro-fed-powell.html" },
+  { time: "19:23", tag: "macro", tagText: "宏观", text: "美国石油消费量下降，伊朗冲突可能进一步减少其对碳氢化合物的需求。美国对原油的依赖程度降低，汽油和柴油等衍生品消费也在下降，尽管油价仍是美国人的主要困扰。", source: "MarketWatch", url: "https://www.marketwatch.com/story/america-is-using-less-oil-and-the-iran-conflict-could-further-reduce-its-thirst-for-hydrocarbons-3bed1c7a?mod=mw_rss_topstories" },
+  { time: "19:23", tag: "tech", tagText: "科技", text: "PayPal股价大涨，逼近三个月高点，因新纪元首份财报显示关键支付量指标改善。市场对其业绩反应积极。", source: "MarketWatch", url: "https://www.marketwatch.com/story/paypals-stock-rallies-after-first-earnings-report-of-the-new-era-heres-what-to-know-4310d291?mod=mw_rss_topstories" },
   { time: "16:20", tag: "geo", tagText: "地缘", text: "印度总理莫迪在关键的西孟加拉邦地方选举中取得历史性胜利，巩固了其政治地位。分析人士认为，这为推进经济改革和吸引外资铺平了道路。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/modi-wins-in-west-bengal-for-the-first-time.html" },
   { time: "16:07", tag: "macro", tagText: "宏观", text: "摩根士丹利分析指出，美股持续上涨的原因在于盈利增长预期稳步提升，导致标普500指数市盈率压缩，且增长更为广泛和可持续。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-is-why-stocks-keep-rallying-according-to-morgan-stanley-6e7cc6a5?mod=mw_rss_topstories" },
   { time: "15:16", tag: "macro", tagText: "宏观", text: "意大利裕信银行（UniCredit）CEO表示，全面控制德国商业银行（Commerzbank）并非预期情景。该行正对德国竞争对手发起收购要约，但遭到德国方面的抵制。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/unicredit-takeover-commerzbank-ceo-control-scenario.html" },
@@ -1645,15 +1649,15 @@ const breakingNews = [
   { time: "05:07", tag: "macro", tagText: "宏观", text: "化肥价格触及2026年新高，美国农民减少种植面积，食品通胀危机可能加剧。投资者正关注相关股票以对冲粮食短缺风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-silent-crisis-taxing-your-grocery-bill-could-get-a-lot-louder-93ddd167?mod=mw_rss_topstories" },
   { time: "05:02", tag: "tech", tagText: "科技", text: "特斯拉宣布其自动驾驶系统达到马斯克此前设定的“安全无监督自动驾驶”关键里程碑，但分析师指出，该公司在实现真正的商业化落地方面仍面临诸多技术和监管障碍。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-just-hit-a-symbolic-self-driving-milestone-real-world-success-will-be-tougher-5fb93525?mod=mw_rss_topstories" },
   { time: "04:18", tag: "macro", tagText: "宏观", text: "美国债券市场发出警告信号：通胀加速可能迫使美联储在年底前加息。尽管股市持续上涨，但债券收益率曲线显示市场对价格压力的担忧加剧，美联储可能不得不采取行动抑制通胀。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-chart-is-a-flashing-warning-sign-that-the-fed-might-yet-rattle-the-markets-with-rate-hikes-by-year-end-94c25b10?mod=mw_rss_topstories" },
-  { time: "04:14", tag: "tech", tagText: "科技", text: "Pinterest一季度财报超预期，营收和用户增长强劲，公司发布乐观业绩指引。此前Pinterest在1月裁员近15%并缩减办公空间，将更多资源投入AI领域。股价盘后大涨17%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/pinterest-pins-q1-earnings-report-2026.html" },
-  { time: "04:14", tag: "macro", tagText: "宏观", text: "美国牛肉价格接近历史高位，司法部正在调查是否存在价格操纵行为。夏季烧烤季来临、牛群数量减少、干旱、野火以及加工厂关闭等因素共同推高了肉类价格。", source: "MarketWatch", url: "https://www.marketwatch.com/story/beef-prices-are-near-record-levels-the-doj-wants-to-know-if-something-shady-is-afoot-964a74d5?mod=mw_rss_topstories" },
-  { time: "04:12", tag: "tech", tagText: "科技", text: "Palantir公布一季度财报，营收同比增长85%，创2020年上市以来最快增速，利润也超出预期。增长主要受美国政府部门销售推动。公司股价盘后上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/palantir-pltr-q1-earnings-report-2026.html" },
-  { time: "02:24", tag: "geo", tagText: "地缘", text: "中东局势急剧升级：伊朗声称击中美国军舰，并向阿联酋发射导弹；美国则击沉伊朗快艇。霍尔木兹海峡危机重燃，油价飙升至每桶114美元以上，道琼斯指数暴跌逾500点。市场恐慌情绪蔓延，标普500和纳斯达克指数同步下挫。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/iran-war-uae-trump-ceasefire-missiles.html" },
 ];
-const breakingDate = "2026年5月5日 17:15 CST";
+const breakingDate = "2026年5月5日 19:23 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:00", tag: "ai", tagText: "AI", text: "4月AI初创企业融资额创年内第三高，多笔十亿美元级AI融资轮推动整体市场。Crunchbase数据显示，4月成为过去一年中初创企业融资额第三高的月份，主要得益于多笔AI领域的大额融资。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOV21aUHFzUUhLWmV2RWtiRXI2bEdoUUFnU2FYU21JZDdxZmI3ZF9OU2FFV1pJdGRxak5PbVVVOUdXRXA1LVRzLUF1c2JFOEFmdThwV3lIM1Z3Q2l2T29ZNXdSS0pueC1ZYmk3MVplc3VvOER5Nk9RbUc3dUdSeU1rcWxnV3pUNHlqVTRMaDRLbGN3VlY1Q21lN2IxNG1pT2s4N3pLZk5QNjFESlZaV2Y0RHJwSUg0X25uUkMyU04tOWRwQQ?oc=5" },
+  { time: "18:08", tag: "ai", tagText: "AI", text: "Google DeepMind员工投票成立工会，旨在阻止公司AI技术被用于以色列和美国军方。员工在致谷歌管理层的信中表达了这一诉求，标志着AI伦理与军事应用之间的矛盾进一步激化。", source: "The Verge", url: "https://www.theverge.com/tech/923918/google-deepmind-union-bid-ai-military-israel" },
+  { time: "17:38", tag: "ai", tagText: "AI", text: "印度AI初创公司Jurisphere获220万美元融资，专注于法律科技领域。该公司利用AI技术为法律行业提供解决方案，此次融资将用于产品开发和市场拓展。", source: "Tech in Asia", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSUE1ZXVDellUS1JIeUl3eFlqRzl2cjB3eG1yV0l4bVJ3b1ZYbmNnZ215VzJKMGpDY05VaWFnUlQ4Q3VfQl9SLWNNLTlZQzZ6WWxsdDlEOTFtbWxiMlhkTUc5N211ektGUXZuSi1XYnRiUi1xN0ZXWjIzQ3d6S3U3Y1FpYmpvSkwy?oc=5" },
+  { time: "17:18", tag: "tech", tagText: "科技", text: "昆虫大脑研究取得突破，有望提升AI与机器人效率。科学家通过解析昆虫大脑的运作机制，为开发更高效、低能耗的AI算法和机器人控制系统提供了新思路。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxNa28zSnBoRnB1LU1yNmN3Sk93RmRnRWFLZWctVmlEak1wdVhRUGFlS0FwMkV5aUtHeVlmUS1OajhIMkV0WERNMDhIVVl1WnhOcmV6aEx2NXpSRWh3UFpGVnZVSTBSM2RMZG44cVFKQ1pkenBtQnd6MjRjd2dxeVNvS0ZkY1NHUk0?oc=5" },
   { time: "16:23", tag: "tech", tagText: "科技", text: "一名青少年利用AI突破性技术，在太空中发现了150万个隐藏天体，动摇了人类对已知宇宙的认知。该发现由AI算法分析海量天文数据得出，引发科学界广泛关注。", source: "USA Herald", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMzhLMkpudUF2WWpycDJKYXZCMDBiMDI4WThiUjdHbm16WVhMaWxvNl9Xc19UNTg0eHBnMGswSUx4WHlCREdQN0VnQjVRN0NrZ0FjendaLXVZTU15VGZpV1RhSFByRlNnang0cU5mbHV4OUhoZlZLdmR5NEZuTlc1aGk1bWNYSGUwNlBEeGROV2NHa2ducWl3akdRUThMMmdOYm5rZ2hxS2lFbmRHOEx3eWFZWTJDa29nUEV0NmNVT2loTDJlUE9RZkp4MzQzVWs?oc=5" },
   { time: "12:09", tag: "geo", tagText: "地缘", text: "因不满Meta收购中国AI初创公司Manus，中国政府呼吁本土初创企业拒绝Meta的资金支持。此举反映中美在AI领域的竞争加剧，以及中国对关键技术外流的担忧。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMiygJBVV95cUxQZ29OeEFpSVBNbC11LXk5TmgwclRGb2pFSmNVeXhGVmYtZGoxSExHSG9pRGFWcUlvdnRZN1kyLUUwckZRa2FNVnI5WlNCQ0djaUVsRjVnUVhrV3RoN29YemUydVFjTGc2MndiNXlsQTdKU0ctUnpWS2Z2eS04UkRKelB6TnFjMTR1YTRFMTNMMjByMkVQSXY0Mk5GTXlUa3VlUmRWWENrTWNOZWI1M3VjcjF3dU11YlU2UE9JNkY4TEpFMTNVdUYxdUlWc09IVGZELVNnYVJ6NFVZWDVXOFBKWHRjZ0R4Zm9yMzVXRENULUM1WGMxZUR6UFYyTHlNTWhXdGMzWk8wcEtQWDZvRndGdlE5NFE1OW9Ma29YWlU4aEY0QXpReXQzOHo3RGxGNHVsU3lfb3NKdXM1ckRCdE1FMk1RS0FzXzBUUnfSAc8CQVVfeXFMT1NkNU1HUmRfS0xQelBWUHl3ak1TUjVMWkZpWGZtWC1URXZkME11U2o3UGc1M3NmU3Y1a2pQNnp6dkd6V1ppTHRjT2djRmIwczd2STVFWWFTTXd6ZGY5T1VxYTBVQlRXUHRGbDBkckFKWlJNMGlkZkFkdEtTRkRjMzE4VWV4LVVKT2V5dUxpNmVUMU0wUzJvSVY2SFlIbjZYWGl5T1RKRU5YRTZ1bTdJNTVDVjZnYWp6UkJkT0F2S0NWRDAwd0N4NFEzSnM1TjFtcGVud09fZzFoc2dYQmZ0cUhYWmY4aXJzMmVnZXpiWUo0eUh2TENuOTE1NGxNcWw1WWNlaWNZME5haDJsekhXck5LcEFzY05XVzdFOEdnSW1HcFdJaUFjUllpTWlMZ1EzOVdDQmplNWhDSHU1QkE2ckRONXAyNUpvS05aMTh3eGM?oc=5" },
   { time: "11:45", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋回应AI取代工作担忧，称AI正在‘创造大量就业机会’。他认为关于AI消灭工作的说法被严重夸大，AI将催生新岗位而非消灭就业。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/as-workers-worry-about-ai-nvidias-jensen-huang-says-ai-is-creating-an-enormous-number-of-jobs/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "23:59", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI同日宣布，分别与资产管理公司成立合资企业，以更积极地推广其企业级AI服务。此举标志着两大AI巨头在企业市场的竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" },
   { time: "23:51", tag: "tech", tagText: "科技", text: "Roomba发明者Colin Angle推出全新机器人伴侣“Familiar”，该机器人并非用于清洁，而是作为情感陪伴机器人进入家庭。Angle曾将5000万台家用机器人送入千家万户，此次回归聚焦于AI驱动的社交陪伴领域。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922947/roomba-creator-new-robot-familiar-machines-magic-ai-launch" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "DoorDash推出多项AI新工具，帮助商家加速入驻流程、自动编辑菜品照片以提升卖相，并利用现有内容快速创建新网站。此举旨在降低商家运营门槛，提升平台效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/doordash-adds-ai-tools-to-speed-up-merchant-onboarding-edit-photos-of-dishes/" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "一款名为DualShot Recorder的iPhone相机应用在发布后12小时内登顶App Store付费应用榜首，成为2026年现象级爆款。该应用由网络知名“松鼠老爹”Derrick Downey Jr.开发。", source: "AI | The Verge", url: "https://www.theverge.com/tech/921690/dualshot-recorder-iphone-camera-app-derrick-downey-jr" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "梅奥诊所开发出AI模型，能在全球最致命癌症之一变得可见之前进行检测，有望大幅提高早期诊断率和患者生存率。", source: "KROC-AM", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE1Eb0lqdlIyelRHcXRCQ1hmczliT0gydTYxU1pvQjZHbGc1eWRXT1JWQ00yanJfamptNExSeDlYWm5PdkwyVUtpaS1JdDZIZ1FDallqQmtkS2lGenBrOENteFBtR3pNNnotc1ozOWlCdk1kZw?oc=5" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "AI生成的音乐正大量涌入流媒体平台，但听众接受度存疑。行业观察指出，AI音乐泛滥引发关于内容质量、版权和听众体验的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it" },
-  { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
 ];
-const aiBreakingDate = "2026年5月5日 17:15 CST";
+const aiBreakingDate = "2026年5月5日 19:23 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
