@@ -1616,20 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 62.83,
+  score: 62.17,
   rating: "greed",
-  timestamp: "2026-05-05T00:00:00+00:00",
+  timestamp: "2026-05-05T08:54:46+00:00",
   previousClose: 62.91,
   previous1Week: 63.69,
   previous1Month: 23.74,
   previous1Year: 53.06,
-  date: "2026年5月5日 14:26 CST"
+  date: "2026年5月5日 17:15 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:20", tag: "geo", tagText: "地缘", text: "印度总理莫迪在关键的西孟加拉邦地方选举中取得历史性胜利，巩固了其政治地位。分析人士认为，这为推进经济改革和吸引外资铺平了道路。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/modi-wins-in-west-bengal-for-the-first-time.html" },
+  { time: "16:07", tag: "macro", tagText: "宏观", text: "摩根士丹利分析指出，美股持续上涨的原因在于盈利增长预期稳步提升，导致标普500指数市盈率压缩，且增长更为广泛和可持续。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-is-why-stocks-keep-rallying-according-to-morgan-stanley-6e7cc6a5?mod=mw_rss_topstories" },
+  { time: "15:16", tag: "macro", tagText: "宏观", text: "意大利裕信银行（UniCredit）CEO表示，全面控制德国商业银行（Commerzbank）并非预期情景。该行正对德国竞争对手发起收购要约，但遭到德国方面的抵制。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/unicredit-takeover-commerzbank-ceo-control-scenario.html" },
   { time: "14:01", tag: "macro", tagText: "宏观", text: "汇丰银行（HSBC）一季度税前利润94亿美元，略低于市场预期，主要因与欺诈相关的信贷损失增加。财报发布后，汇丰股价下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/hsbc-q1-earnings-banking-finance.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "企业高管警告称，持续的能源冲击将加大将成本转嫁给消费者的压力，消费者面临更多价格上涨的痛苦。", source: "Financial Times", url: "https://www.ft.com/content/f2d0d112-6e04-4f88-878e-30cb34ce1c2a" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "LVMH正从买家转为卖家，考虑出售Marc Jacobs和Fenty等品牌，这是其历史上最大规模的收缩之一。奢侈品行业寒冬持续，企业面临需求下滑压力。", source: "Financial Times", url: "https://www.ft.com/content/bc50fc15-9779-4969-9f81-eb834941c625" },
   { time: "11:43", tag: "tech", tagText: "科技", text: "据彭博社报道，苹果正考虑使用英特尔和三星来制造其主设备芯片，以减少对台积电的依赖。此举可能重塑全球芯片代工格局。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNbVJxOGk4THdJTWJmM3hMY0Y4WmNFb1Qxd1lhcmtWSFhfYjktZndDMFhnbXVRcGxVOThLVElIb0xYTjNoLXZFQTVCeUNfMnNOUVFhcmVFNGwyUkdyazNpOUpxXzk0OFhMb0JYc0NETHVCaE9MS0JmdmZha2pBenIzQW1kb1BtTlNYa2VpY3VtTjRrdGlfV3VySTlaaFV3VTF4S1lBUG5lMU9EakpWRk5SclVnWGNuUm8zUmhB?oc=5" },
   { time: "09:03", tag: "crypto", tagText: "加密", text: "渣打银行旗下风投部门SC Ventures战略入股加密货币做市商GSR。此举标志着传统金融机构进一步深入数字资产领域，为加密市场带来更多机构背书和流动性支持。", source: "bloomingbit", url: "https://news.google.com/rss/articles/CBMiVEFVX3lxTE01R1VVOHZYY0MtN3JfbmFQYWVnYnhEUzJBZC1hcllMYUozYThoUVY1U28wcEZWOFVmR21INzB1Wjd4bmJoelRuellOelB6MWlLcWwtSA?oc=5" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "04:14", tag: "macro", tagText: "宏观", text: "美国牛肉价格接近历史高位，司法部正在调查是否存在价格操纵行为。夏季烧烤季来临、牛群数量减少、干旱、野火以及加工厂关闭等因素共同推高了肉类价格。", source: "MarketWatch", url: "https://www.marketwatch.com/story/beef-prices-are-near-record-levels-the-doj-wants-to-know-if-something-shady-is-afoot-964a74d5?mod=mw_rss_topstories" },
   { time: "04:12", tag: "tech", tagText: "科技", text: "Palantir公布一季度财报，营收同比增长85%，创2020年上市以来最快增速，利润也超出预期。增长主要受美国政府部门销售推动。公司股价盘后上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/palantir-pltr-q1-earnings-report-2026.html" },
   { time: "02:24", tag: "geo", tagText: "地缘", text: "中东局势急剧升级：伊朗声称击中美国军舰，并向阿联酋发射导弹；美国则击沉伊朗快艇。霍尔木兹海峡危机重燃，油价飙升至每桶114美元以上，道琼斯指数暴跌逾500点。市场恐慌情绪蔓延，标普500和纳斯达克指数同步下挫。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/iran-war-uae-trump-ceasefire-missiles.html" },
-  { time: "02:24", tag: "tech", tagText: "科技", text: "GameStop向eBay提出每股125美元、总价约560亿美元的收购要约，计划为这家在线市场注入“创业精神”。eBay正在评估这一非邀约收购提议，消息推动eBay股价大涨。", source: "Financial Times", url: "https://www.ft.com/content/31bfd02e-a02e-45fd-ad46-51544b1a3a8a" },
-  { time: "02:24", tag: "ai", tagText: "AI", text: "法庭文件显示，马斯克曾威胁要让OpenAI的奥特曼和布罗克曼成为“美国最令人憎恨的人”。此前马斯克试图在最后一刻启动和解谈判，但未能成功。AI领域法律战持续升级。", source: "Financial Times", url: "https://www.ft.com/content/5c24fa13-ae43-4d5a-9b68-b6ebae227dce" },
-  { time: "00:46", tag: "ai", tagText: "AI", text: "Anthropic与高盛、黑石等机构合作，成立15亿美元AI合资企业，专注于为私募股权拥有的公司提供AI解决方案。此举是Anthropic深化企业AI市场领先地位的最新努力，与OpenAI的竞争日趋激烈。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html" },
-  { time: "00:39", tag: "tech", tagText: "科技", text: "亚马逊宣布将其供应链网络向外部公司开放，直接与UPS和联邦快递竞争。消息导致UPS和联邦快递股价周一大幅下跌，市场担忧亚马逊物流将抢占市场份额。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/ups-fedex-amazon-logistics.html" },
 ];
-const breakingDate = "2026年5月5日 14:26 CST";
+const breakingDate = "2026年5月5日 17:15 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:23", tag: "tech", tagText: "科技", text: "一名青少年利用AI突破性技术，在太空中发现了150万个隐藏天体，动摇了人类对已知宇宙的认知。该发现由AI算法分析海量天文数据得出，引发科学界广泛关注。", source: "USA Herald", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMzhLMkpudUF2WWpycDJKYXZCMDBiMDI4WThiUjdHbm16WVhMaWxvNl9Xc19UNTg0eHBnMGswSUx4WHlCREdQN0VnQjVRN0NrZ0FjendaLXVZTU15VGZpV1RhSFByRlNnang0cU5mbHV4OUhoZlZLdmR5NEZuTlc1aGk1bWNYSGUwNlBEeGROV2NHa2ducWl3akdRUThMMmdOYm5rZ2hxS2lFbmRHOEx3eWFZWTJDa29nUEV0NmNVT2loTDJlUE9RZkp4MzQzVWs?oc=5" },
   { time: "12:09", tag: "geo", tagText: "地缘", text: "因不满Meta收购中国AI初创公司Manus，中国政府呼吁本土初创企业拒绝Meta的资金支持。此举反映中美在AI领域的竞争加剧，以及中国对关键技术外流的担忧。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMiygJBVV95cUxQZ29OeEFpSVBNbC11LXk5TmgwclRGb2pFSmNVeXhGVmYtZGoxSExHSG9pRGFWcUlvdnRZN1kyLUUwckZRa2FNVnI5WlNCQ0djaUVsRjVnUVhrV3RoN29YemUydVFjTGc2MndiNXlsQTdKU0ctUnpWS2Z2eS04UkRKelB6TnFjMTR1YTRFMTNMMjByMkVQSXY0Mk5GTXlUa3VlUmRWWENrTWNOZWI1M3VjcjF3dU11YlU2UE9JNkY4TEpFMTNVdUYxdUlWc09IVGZELVNnYVJ6NFVZWDVXOFBKWHRjZ0R4Zm9yMzVXRENULUM1WGMxZUR6UFYyTHlNTWhXdGMzWk8wcEtQWDZvRndGdlE5NFE1OW9Ma29YWlU4aEY0QXpReXQzOHo3RGxGNHVsU3lfb3NKdXM1ckRCdE1FMk1RS0FzXzBUUnfSAc8CQVVfeXFMT1NkNU1HUmRfS0xQelBWUHl3ak1TUjVMWkZpWGZtWC1URXZkME11U2o3UGc1M3NmU3Y1a2pQNnp6dkd6V1ppTHRjT2djRmIwczd2STVFWWFTTXd6ZGY5T1VxYTBVQlRXUHRGbDBkckFKWlJNMGlkZkFkdEtTRkRjMzE4VWV4LVVKT2V5dUxpNmVUMU0wUzJvSVY2SFlIbjZYWGl5T1RKRU5YRTZ1bTdJNTVDVjZnYWp6UkJkT0F2S0NWRDAwd0N4NFEzSnM1TjFtcGVud09fZzFoc2dYQmZ0cUhYWmY4aXJzMmVnZXpiWUo0eUh2TENuOTE1NGxNcWw1WWNlaWNZME5haDJsekhXck5LcEFzY05XVzdFOEdnSW1HcFdJaUFjUllpTWlMZ1EzOVdDQmplNWhDSHU1QkE2ckRONXAyNUpvS05aMTh3eGM?oc=5" },
   { time: "11:45", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋回应AI取代工作担忧，称AI正在‘创造大量就业机会’。他认为关于AI消灭工作的说法被严重夸大，AI将催生新岗位而非消灭就业。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/as-workers-worry-about-ai-nvidias-jensen-huang-says-ai-is-creating-an-enormous-number-of-jobs/" },
   { time: "11:45", tag: "tech", tagText: "科技", text: "俄勒冈州初创公司Panthalassa获1.4亿美元融资，由彼得·蒂尔领投，计划建设海上波浪能数据中心，为AI计算提供绿色能源。该项目旨在解决AI算力激增带来的电力消耗问题。", source: "GeekWire", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPaklIUXhWOGQ4NWRuZWtzTGtLLUdld0x3dktKZE1EaGg2VUttMW1nSVN2ckt0dUkyX3FoWkE0Vi1xX1JWZTZ5QUZhZ1ViY3VkaVdwcVBNdEMzV1Qzb1l6SUpvSWgxbGlPb0ZqdkNwUlY1cDg0NWR5M1BzUE9GZlFtRl8tMnBPVUlFS25Wc3ZvakQ1TF9oWGNIVWJWOHVWLWZVQURNbTJHWUFvMHZ3MHVKSWZOQjdYRkxKOUVB?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "ai", tagText: "AI", text: "梅奥诊所开发出AI模型，能在全球最致命癌症之一变得可见之前进行检测，有望大幅提高早期诊断率和患者生存率。", source: "KROC-AM", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE1Eb0lqdlIyelRHcXRCQ1hmczliT0gydTYxU1pvQjZHbGc1eWRXT1JWQ00yanJfamptNExSeDlYWm5PdkwyVUtpaS1JdDZIZ1FDallqQmtkS2lGenBrOENteFBtR3pNNnotc1ozOWlCdk1kZw?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "AI生成的音乐正大量涌入流媒体平台，但听众接受度存疑。行业观察指出，AI音乐泛滥引发关于内容质量、版权和听众体验的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it" },
   { time: "19:25", tag: "ai", tagText: "AI", text: "基督教内容创作者正利用Fiverr等平台外包AI生成的“低质量内容”（AI slop），通过雇佣零工制作AI生成的圣经视频等内容，引发关于AI内容质量与伦理的讨论。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/920881/ai-generated-bible-videos-christian-creators-fiverr-slop" },
-  { time: "19:18", tag: "ai", tagText: "AI", text: "微软在Word中推出专为法律团队设计的AI代理“Legal Agent”，可处理文档编辑、谈判历史及复杂文件，旨在帮助法律团队更高效地处理工作，微软希望借此赢得律师群体的信任。", source: "AI | The Verge", url: "https://www.theverge.com/news/921944/microsoft-word-legal-agent-ai" },
 ];
-const aiBreakingDate = "2026年5月5日 14:26 CST";
+const aiBreakingDate = "2026年5月5日 17:15 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
