@@ -1616,21 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.26,
+  score: 67.06,
   rating: "greed",
-  timestamp: "2026-05-05T18:15:17+00:00",
+  timestamp: "2026-05-05T20:00:42+00:00",
   previousClose: 62.91,
   previous1Week: 63.69,
   previous1Month: 23.74,
   previous1Year: 53.06,
-  date: "2026年5月6日 02:20 CST"
+  date: "2026年5月6日 04:14 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:00", tag: "tech", tagText: "科技", text: "美光科技股价飙升，市值突破7000亿美元，成为美国最具价值的科技公司之一。市场对AI芯片所需内存的旺盛需求推动了内存股的加速上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/micron-zooms-past-700-billion-market-cap-rally-in-memory-stocks-.html" },
+  { time: "03:55", tag: "macro", tagText: "宏观", text: "油价持续高于110美元/桶，开始重新影响股市。分析师指出，股票与油价之间的相关性（目前处于20年来最严重的倒挂状态）正在逆转，能源成本上升可能对市场构成压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/oil-prices-above-110-are-starting-to-matter-to-the-stock-market-again.html" },
+  { time: "03:15", tag: "geo", tagText: "地缘", text: "美国宣布“自由计划”，试图引导油轮通过霍尔木兹海峡，以缓解因伊朗战争导致的航运中断。但专家对该计划能否成功持怀疑态度，目前仍有数百艘船只被困在海峡两侧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/iran-war-strait-of-hormuz-project-freedom.html" },
+  { time: "02:45", tag: "tech", tagText: "科技", text: "半导体股近期涨势迅猛，一个衡量半导体板块的指数在25日内的滚动涨幅已创下自2000年3月9日（即互联网泡沫破裂前一天）以来的最高水平。市场担忧历史可能重演。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-last-time-semiconductor-stocks-rose-this-far-this-quickly-the-dot-com-bubble-burst-d7b6666b?mod=mw_rss_topstories" },
   { time: "02:00", tag: "geo", tagText: "地缘", text: "全球石油储备正以创纪录速度下降，跌至近八年低点。尽管需求崩溃，但中东战争持续对供应造成压力，夏季旅行季前供应紧张局势加剧。", source: "Financial Times", url: "https://www.ft.com/content/3beeb26f-6c35-46a9-b116-42edbe6552fd" },
   { time: "01:49", tag: "ai", tagText: "AI", text: "Anthropic CEO Dario Amodei警告称，AI已暴露了软件公司、政府和银行系统中数万个漏洞，创造了网络安全的“危险时刻”，呼吁各方立即采取行动修复。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/anthropic-ceo-cyber-moment-of-danger-mythos-vulnerabilities.html" },
+  { time: "01:42", tag: "macro", tagText: "宏观", text: "美国参议员蒂姆·斯科特批评美联储主席鲍威尔在任期结束后继续留任美联储理事的决定，称其正在犯一个“重大错误”。鲍威尔此前表示计划在主席任期于本月届满后继续留在美联储董事会。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/tim-scott-jerome-powell-fed.html" },
   { time: "01:00", tag: "tech", tagText: "科技", text: "美国联邦检察官指控股票借贷运营商Val Sklarov涉嫌4.5亿美元欺诈，称其出售了作为贷款抵押品的股票。此案凸显了金融市场的监管漏洞。", source: "Financial Times", url: "https://www.ft.com/content/8e71321f-9823-4dda-9a71-9fdc34920122" },
   { time: "00:28", tag: "macro", tagText: "宏观", text: "美国证券交易委员会（SEC）提议允许上市公司选择不发布季度财报，改为半年报。此举旨在减轻企业短期业绩压力，鼓励长期投资，但可能影响市场透明度。", source: "Reuters", url: "https://finance.yahoo.com/news/us-sec-proposes-allowing-public-160620575.html" },
   { time: "00:26", tag: "tech", tagText: "科技", text: "预测市场交易员押注2026年科技行业裁员人数将超过44.7万人，继Coinbase之后，更多科技公司可能宣布大规模裁员。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/after-coinbase-prediction-markets-traders-see-more-tech-layoffs.html" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "19:23", tag: "macro", tagText: "宏观", text: "美国石油消费量下降，伊朗冲突可能进一步减少其对碳氢化合物的需求。美国对原油的依赖程度降低，汽油和柴油等衍生品消费也在下降，尽管油价仍是美国人的主要困扰。", source: "MarketWatch", url: "https://www.marketwatch.com/story/america-is-using-less-oil-and-the-iran-conflict-could-further-reduce-its-thirst-for-hydrocarbons-3bed1c7a?mod=mw_rss_topstories" },
   { time: "19:23", tag: "tech", tagText: "科技", text: "PayPal股价大涨，逼近三个月高点，因新纪元首份财报显示关键支付量指标改善。市场对其业绩反应积极。", source: "MarketWatch", url: "https://www.marketwatch.com/story/paypals-stock-rallies-after-first-earnings-report-of-the-new-era-heres-what-to-know-4310d291?mod=mw_rss_topstories" },
   { time: "16:20", tag: "geo", tagText: "地缘", text: "印度总理莫迪在关键的西孟加拉邦地方选举中取得历史性胜利，巩固了其政治地位。分析人士认为，这为推进经济改革和吸引外资铺平了道路。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/modi-wins-in-west-bengal-for-the-first-time.html" },
-  { time: "16:07", tag: "macro", tagText: "宏观", text: "摩根士丹利分析指出，美股持续上涨的原因在于盈利增长预期稳步提升，导致标普500指数市盈率压缩，且增长更为广泛和可持续。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-is-why-stocks-keep-rallying-according-to-morgan-stanley-6e7cc6a5?mod=mw_rss_topstories" },
-  { time: "15:16", tag: "macro", tagText: "宏观", text: "意大利裕信银行（UniCredit）CEO表示，全面控制德国商业银行（Commerzbank）并非预期情景。该行正对德国竞争对手发起收购要约，但遭到德国方面的抵制。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/unicredit-takeover-commerzbank-ceo-control-scenario.html" },
-  { time: "14:01", tag: "macro", tagText: "宏观", text: "汇丰银行（HSBC）一季度税前利润94亿美元，略低于市场预期，主要因与欺诈相关的信贷损失增加。财报发布后，汇丰股价下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/hsbc-q1-earnings-banking-finance.html" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "企业高管警告称，持续的能源冲击将加大将成本转嫁给消费者的压力，消费者面临更多价格上涨的痛苦。", source: "Financial Times", url: "https://www.ft.com/content/f2d0d112-6e04-4f88-878e-30cb34ce1c2a" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "LVMH正从买家转为卖家，考虑出售Marc Jacobs和Fenty等品牌，这是其历史上最大规模的收缩之一。奢侈品行业寒冬持续，企业面临需求下滑压力。", source: "Financial Times", url: "https://www.ft.com/content/bc50fc15-9779-4969-9f81-eb834941c625" },
 ];
-const breakingDate = "2026年5月6日 02:20 CST";
+const breakingDate = "2026年5月6日 04:14 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "17:18", tag: "tech", tagText: "科技", text: "昆虫大脑研究取得突破，有望提升AI与机器人效率。科学家通过解析昆虫大脑的运作机制，为开发更高效、低能耗的AI算法和机器人控制系统提供了新思路。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxNa28zSnBoRnB1LU1yNmN3Sk93RmRnRWFLZWctVmlEak1wdVhRUGFlS0FwMkV5aUtHeVlmUS1OajhIMkV0WERNMDhIVVl1WnhOcmV6aEx2NXpSRWh3UFpGVnZVSTBSM2RMZG44cVFKQ1pkenBtQnd6MjRjd2dxeVNvS0ZkY1NHUk0?oc=5" },
   { time: "16:23", tag: "tech", tagText: "科技", text: "一名青少年利用AI突破性技术，在太空中发现了150万个隐藏天体，动摇了人类对已知宇宙的认知。该发现由AI算法分析海量天文数据得出，引发科学界广泛关注。", source: "USA Herald", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMzhLMkpudUF2WWpycDJKYXZCMDBiMDI4WThiUjdHbm16WVhMaWxvNl9Xc19UNTg0eHBnMGswSUx4WHlCREdQN0VnQjVRN0NrZ0FjendaLXVZTU15VGZpV1RhSFByRlNnang0cU5mbHV4OUhoZlZLdmR5NEZuTlc1aGk1bWNYSGUwNlBEeGROV2NHa2ducWl3akdRUThMMmdOYm5rZ2hxS2lFbmRHOEx3eWFZWTJDa29nUEV0NmNVT2loTDJlUE9RZkp4MzQzVWs?oc=5" },
 ];
-const aiBreakingDate = "2026年5月6日 02:20 CST";
+const aiBreakingDate = "2026年5月6日 04:14 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
