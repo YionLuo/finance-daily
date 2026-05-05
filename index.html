@@ -1618,12 +1618,12 @@
 const fearGreedData = {
   score: 62.91,
   rating: "greed",
-  timestamp: "2026-05-04T21:53:36+00:00",
+  timestamp: "2026-05-04T23:43:45+00:00",
   previousClose: 66.6,
   previous1Week: 67.54,
   previous1Month: 23.74,
   previous1Year: 38.29,
-  date: "2026年5月5日 06:11 CST"
+  date: "2026年5月5日 08:03 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1631,6 +1631,8 @@ const fearGreedData = {
 const breakingNews = [
   { time: "05:53", tag: "macro", tagText: "宏观", text: "美国信贷市场分化加剧：信用良好（超级优级）与信用不良（次级）人群之间的财务健康差距已超过2019年水平。分析认为，这一趋势反映出经济复苏的不均衡，低收入群体正承受更大的通胀和利率压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-what-the-growing-gap-between-americans-with-good-and-bad-credit-says-about-the-economy-3fa60ff7?mod=mw_rss_topstories" },
   { time: "05:38", tag: "crypto", tagText: "加密", text: "Circle等加密股领涨，因稳定币法案（Clarity Act）取得关键进展，重新点燃市场对监管明朗化的希望。比特币自1月以来首次突破80,000美元关口。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bitcoin-busted-through-80-000-for-the-first-time-since-january-heres-the-crucial-level-it-needs-to-hold-right-now-038c252f?mod=mw_rss_topstories" },
+  { time: "05:07", tag: "macro", tagText: "宏观", text: "化肥价格触及2026年新高，美国农民减少种植面积，食品通胀危机可能加剧。投资者正关注相关股票以对冲粮食短缺风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-silent-crisis-taxing-your-grocery-bill-could-get-a-lot-louder-93ddd167?mod=mw_rss_topstories" },
+  { time: "05:02", tag: "tech", tagText: "科技", text: "特斯拉宣布其自动驾驶系统达到马斯克此前设定的“安全无监督自动驾驶”关键里程碑，但分析师指出，该公司在实现真正的商业化落地方面仍面临诸多技术和监管障碍。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-just-hit-a-symbolic-self-driving-milestone-real-world-success-will-be-tougher-5fb93525?mod=mw_rss_topstories" },
   { time: "04:18", tag: "macro", tagText: "宏观", text: "美国债券市场发出警告信号：通胀加速可能迫使美联储在年底前加息。尽管股市持续上涨，但债券收益率曲线显示市场对价格压力的担忧加剧，美联储可能不得不采取行动抑制通胀。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-chart-is-a-flashing-warning-sign-that-the-fed-might-yet-rattle-the-markets-with-rate-hikes-by-year-end-94c25b10?mod=mw_rss_topstories" },
   { time: "04:14", tag: "tech", tagText: "科技", text: "Pinterest一季度财报超预期，营收和用户增长强劲，公司发布乐观业绩指引。此前Pinterest在1月裁员近15%并缩减办公空间，将更多资源投入AI领域。股价盘后大涨17%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/pinterest-pins-q1-earnings-report-2026.html" },
   { time: "04:14", tag: "macro", tagText: "宏观", text: "美国牛肉价格接近历史高位，司法部正在调查是否存在价格操纵行为。夏季烧烤季来临、牛群数量减少、干旱、野火以及加工厂关闭等因素共同推高了肉类价格。", source: "MarketWatch", url: "https://www.marketwatch.com/story/beef-prices-are-near-record-levels-the-doj-wants-to-know-if-something-shady-is-afoot-964a74d5?mod=mw_rss_topstories" },
@@ -1647,16 +1649,17 @@ const breakingNews = [
   { time: "19:00", tag: "macro", tagText: "宏观", text: "花旗量化分析团队指出，市场正处于定价滞胀的早期阶段。能源价格飙升和经济增长放缓的迹象加剧了市场对滞胀风险的担忧，可能影响未来资产配置。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-markets-are-in-the-early-stages-of-pricing-in-stagflation-this-wall-street-giant-finds-25bc7626?mod=mw_rss_topstories" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什对央行独立性发表独特看法，引发前美联储官员的困惑和担忧。市场密切关注其政策立场可能对利率路径产生的影响。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/04/fed-kevin-warsh-interest-rates.html" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "马斯克在奥克兰审判前寻求与OpenAI达成和解，相关法庭文件披露。AI领域竞争持续白热化，半导体公司财报和AI支出成为市场焦点。", source: "Reuters", url: "https://finance.yahoo.com/sectors/technology/articles/musk-sought-settlement-openai-oakland-111227702.html" },
-  { time: "18:00", tag: "macro", tagText: "宏观", text: "阿联酋表示正在与美国讨论货币互换额度。此举可能加强两国金融合作，并在中东紧张局势下为市场提供流动性支持。", source: "Reuters", url: "https://finance.yahoo.com/news/uae-says-discussing-currency-swap-104604015.html" },
-  { time: "17:29", tag: "geo", tagText: "地缘", text: "伊朗警告美国海军不要进入霍尔木兹海峡，此前特朗普宣布美国将“引导”被困船只通过该水道。英国海上贸易行动办公室称，一艘油轮在阿联酋富查伊拉以北遭炮弹击中。油价随之上涨，市场对霍尔木兹海峡封锁的担忧加剧。", source: "Financial Times", url: "https://www.ft.com/content/483a0aa0-f1c8-4960-be68-c6ea3e9ea3d5" },
 ];
-const breakingDate = "2026年5月5日 06:11 CST";
+const breakingDate = "2026年5月5日 08:03 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:49", tag: "ai", tagText: "AI", text: "Greg Brockman在马斯克诉OpenAI案中出庭作证，其日记成为关键证据。Brockman的证词被指“做了所有事，唯独不回答问题”，成为马斯克一方迄今最有力的证人。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/923684/musk-brockman-altman-openai-trial" },
+  { time: "07:01", tag: "ai", tagText: "AI", text: "一项新研究显示，AI在急诊室诊断患者方面的准确率已超越人类医生。该成果标志着AI在医疗诊断领域取得重大突破，有望大幅提升急诊效率和诊断精度。", source: "SingularityHub", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxNcE5PaklLV0pPOUQtUUVMN0pDZ0Zid0NVcUhmU2NOVzdoNDhHMDVwOGJYbTFzdGgwUFNvVVUzd18tRl80U3lrUUpMNjFIUFVseGxvc05KS2o5SFZNdzBpSTg0aFFJcXZxLTZ5LWlkSl9tdlAxMEUydjFZLWZjSmd4Rm5NeVlBNmRhdHEwMFZ1cFZMdw?oc=5" },
   { time: "05:53", tag: "ai", tagText: "AI", text: "OpenAI的合作伙伴、AI芯片制造商Cerebras正筹备大规模IPO，估值可能达到266亿美元或更高。该公司与OpenAI关系密切，此次上市备受市场关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/openais-cozy-partner-cerebras-is-on-track-for-a-blockbuster-ipo/" },
   { time: "05:07", tag: "ai", tagText: "AI", text: "伯恩斯坦分析师指出，AI代理正推动芯片需求“爆表”，供应完全跟不上。这一趋势加剧了市场对芯片短缺的担忧，并可能进一步推高相关硬件价格。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdnc4dmNNRHBlemNyWkxRUTNEYUU0R2pxSl95bU1OT1k3R05iVm5fM25Td2o1OG5GV0NIUnpYX1FtRGgxX3lQTHNVWjZqLWpQanhVSnRYdzljV3Y1WG5qcFRORWNOQmQ5cHc1NDNXMXNCUURnbVZtTXA5aVVIV2JwT3ROWHNYRGh0WEdkZFQ4d0xqTFJKLW1PYUMxRUQ0WkZuVjdDM2tKTjJsZzdsRE1TMEJMMFVRbmJaTlVHVEJZV3cydw?oc=5" },
   { time: "03:12", tag: "ai", tagText: "AI", text: "Appfigures数据显示，图像AI模型发布带来的应用下载量是聊天机器人升级的6.5倍，但多数应用未能将这一流量转化为收入。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/" },
+  { time: "01:10", tag: "ai", tagText: "AI", text: "弗吉尼亚大学达顿商学院报告指出，AI在“常规科学”领域表现出色，但真正的突破性创新仍属于人类。该观点为当前AI热潮提供了冷静思考，强调人类在科研中的不可替代性。", source: "Darden Report Online", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZFNCaHFwYktHaHd5d2NOQnk3UkV3VHRGdlJFdy00eUxuZjB5V2pjS2dSd2h0NmtkZTV1cnc3dTBGZTJlX3J5Y05CWDRvUVhsd0VhZU02LWdGUFdIemtwcHVmLVZUVTJqcEVSVHBnUTNUVlVQd3l0R0tVYVpOQkJrdUVlcHRrVU9nRmdlYlg2NEpQZHNIQ2doUTlSWllfSDlPNm1LVTJtYWF5ODd4UnVIZXBES1V5QQ?oc=5" },
   { time: "00:57", tag: "ai", tagText: "AI", text: "GameStop提出以560亿美元收购eBay，但自身营收下滑且门店关闭，外界质疑其支付能力。", source: "Ars Technica", url: "https://arstechnica.com/tech-policy/2026/05/gamestop-offers-56-billion-for-ebay-struggles-to-explain-how-itll-pay-for-it/" },
   { time: "00:45", tag: "ai", tagText: "AI", text: "企业AI客服创企Sierra获9.5亿美元融资，估值超10亿美元。该公司由前Salesforce联合首席执行官Bret Taylor创立，计划利用这笔资金成为“AI驱动客户体验的全球标准”。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" },
   { time: "23:59", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI同日宣布，分别与资产管理公司成立合资企业，以更积极地推广其企业级AI服务。此举标志着两大AI巨头在企业市场的竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "14:29", tag: "ai", tagText: "AI", text: "Alphabet宣布将投入1900亿美元用于AI基础设施建设，此举将利好三家半导体股票。该投资规模远超市场预期，显示科技巨头在AI领域的军备竞赛进一步升级。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNVzRhTXh1dXBvM1VqUXVEYmxEdmVSTk5Mc3JwY1RraU5hbmhlTGdfclVnS0pXOUJqLXExVWJBSFJEZm9fRlJkQldyY0psdkczZXRhcGZkY1pzTS1OTE5OTjNvUHJSOFVzTWJ2SGpmdFIzR3B5VmZCLS1NWEwyOVItWWpEV3hqZWhFRnBCWlRldlhzX1JzUk9oZg?oc=5" },
   { time: "12:06", tag: "tech", tagText: "科技", text: "教育领域长期追求但难以实现的“个性化”数学学习，如今被寄望于AI带来突破。报道指出，此前相关尝试多被夸大且效果不佳，但AI技术可能提供新的解决方案。", source: "Education Week", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSlRnODZDUUZvWUNkTzM3eHY3MW9lQ3lFZGxaU0w0M3d2TnRLNWdwV1kxeG9RVy11VXo5Z21aTjk3cndUdXBPbDRxZUd5eDlqTmRkdjdyUlZTS0c2cXlpaHRpeW9JUnlyOHBmOEswclFqSEhfaE1wV08wMUs5bnVFQkxpdDFVa1JWamstQ3g0X3BYamlPWmNDYWJmZFRGYUt1Z1hHRmhOZGdLLXpNUjZtVzVxVEcxQkZCMjk2Z1VnWnBsVGdRQTdNUFFrV3Y?oc=5" },
   { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
-  { time: "11:37", tag: "ai", tagText: "AI", text: "华为2026年AI芯片营收目标增长60%，在中国市场挑战英伟达。据金融时报报道，华为AI芯片销售激增，而英伟达在华业务陷入停滞。华为正加速抢占中国AI芯片市场份额。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQy05d1UzSnZVRm90NURLeEVNbDkyZG5ESTJPQk9KQW9sY0NSeDdDdThBNUVwS0lPTmtyaXpHQnA5SXpLSkxfTDhuN3dLc0g1Q3FuX2VORkZEYlBKMmdnNGNubjJYZU1NYVFIaTBuMGtJUjhPRFhBZFVIZmtGOEQxa0k2Z0c?oc=5" },
-  { time: "11:04", tag: "ai", tagText: "AI", text: "尽管Agentic AI和生成式AI在东南亚逐渐兴起，但该地区的初创企业融资依然低迷。DealStreetAsia报道指出，资金紧张的局面并未因AI热潮而显著改善。", source: "DealStreetAsia", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSjlVZVZGdE9sSnRsb0JvYTJkOVM1b253MnZ0eWFySXdGV0VSX3FTejgtbUNCZDRIZHJ5a2NoZ2tma1JqM3REY3BRM2FHRXZkY3FOQmowZXJuNEMyUTJaWGNDUFlwZmMwajJYY3lNV0lMbmdTejhabVlMbWNLMkN5ZW1ENWxJTkdXbXFFYWk3U0xpQQ?oc=5" },
-  { time: "10:00", tag: "ai", tagText: "AI", text: "ChatGPT Images 2.0在印度大受欢迎，但在其他地区尚未成为爆款。印度用户广泛使用该功能创作头像、电影级肖像等个性化视觉内容，而全球其他市场反响相对平淡。", source: "TechCrunch", url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" },
 ];
-const aiBreakingDate = "2026年5月5日 06:11 CST";
+const aiBreakingDate = "2026年5月5日 08:03 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
