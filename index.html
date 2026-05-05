@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 62.17,
+  score: 67.2,
   rating: "greed",
-  timestamp: "2026-05-05T11:04:46+00:00",
+  timestamp: "2026-05-05T16:45:15+00:00",
   previousClose: 62.91,
   previous1Week: 63.69,
   previous1Month: 23.74,
   previous1Year: 53.06,
-  date: "2026年5月5日 19:23 CST"
+  date: "2026年5月6日 00:49 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:28", tag: "macro", tagText: "宏观", text: "美国证券交易委员会（SEC）提议允许上市公司选择不发布季度财报，改为半年报。此举旨在减轻企业短期业绩压力，鼓励长期投资，但可能影响市场透明度。", source: "Reuters", url: "https://finance.yahoo.com/news/us-sec-proposes-allowing-public-160620575.html" },
+  { time: "00:26", tag: "tech", tagText: "科技", text: "预测市场交易员押注2026年科技行业裁员人数将超过44.7万人，继Coinbase之后，更多科技公司可能宣布大规模裁员。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/after-coinbase-prediction-markets-traders-see-more-tech-layoffs.html" },
+  { time: "00:23", tag: "tech", tagText: "科技", text: "Palantir股价盘后下跌，尽管第一季度财报显示美国政府业务销售强劲，但分析师指出其国际商业业务表现滞后，且高估值令市场担忧。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/palantir-stock-pltr-palantir-earnings-news-q12026/?src=A00220&yptr=yahoo" },
+  { time: "00:19", tag: "macro", tagText: "宏观", text: "纳斯达克指数创下历史收盘新高，科技股领涨。油价从高位回落，因美国淡化中东紧张局势，强劲的企业财报进一步提振市场情绪。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE5uU0UtNFRUY1h0ekRTUjB2YXZhVnRMemxBS25paWJpVWdkc2RTUDc2OEI4cjVqU01IaTFDUHQzQXRrcFBtLUt4VEF4NDNOWHhBd2NwY05OMmdJSVFNV3hhbkdrcFpNcWZ6b2pVOFZBZllvM3BXNEFZ0gF8QVVfeXFMTlRWcndjWDVIN04tWHo1eEg4ekFRVWFjSFBIRUdvUERiY2Z1emVtcjcwS1ZqRGJtRjlQbU9ZQm9VaHZBd3NIZVRQT01YcnpCSm9taE45Qk5ub3lNT202MXF3aGdtYXY1aHdLTW1BMUdURW42SlRHZkFxbVVWQg?oc=5" },
+  { time: "00:13", tag: "ai", tagText: "AI", text: "特朗普政府进一步介入AI监管，计划对谷歌、微软和xAI的AI模型进行测试。白宫还考虑成立新的AI工作组，探索在模型发布前进行审查和监管。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html" },
+  { time: "00:09", tag: "tech", tagText: "科技", text: "微软Xbox CEO Asha Sharma宣布领导层全面改组，承认该部门与开发者和玩家沟通不足，需改变工作方式以应对销量下滑。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/microsoft-xbox-ceo-asha-sharma-executive-overhaul.html" },
   { time: "19:23", tag: "macro", tagText: "宏观", text: "英国长期借贷成本升至1998年以来最高水平。30年期英国国债收益率触及28年新高，市场预期英国央行将加息两到三次以应对通胀威胁。", source: "Financial Times", url: "https://www.ft.com/content/755ebf5e-566a-4209-811e-f277a456fa6f" },
   { time: "19:23", tag: "macro", tagText: "宏观", text: "美国检察官皮罗在美联储调查中改变策略，选择不对此前阻止其向美联储发出传票的裁决提出上诉。此举不太可能令美联储主席鲍威尔满意。", source: "CNBC", url: "https://www.cnbc.com/2026/05/03/pirro-fed-powell.html" },
   { time: "19:23", tag: "macro", tagText: "宏观", text: "美国石油消费量下降，伊朗冲突可能进一步减少其对碳氢化合物的需求。美国对原油的依赖程度降低，汽油和柴油等衍生品消费也在下降，尽管油价仍是美国人的主要困扰。", source: "MarketWatch", url: "https://www.marketwatch.com/story/america-is-using-less-oil-and-the-iran-conflict-could-further-reduce-its-thirst-for-hydrocarbons-3bed1c7a?mod=mw_rss_topstories" },
@@ -1643,17 +1649,21 @@ const breakingNews = [
   { time: "09:03", tag: "crypto", tagText: "加密", text: "渣打银行旗下风投部门SC Ventures战略入股加密货币做市商GSR。此举标志着传统金融机构进一步深入数字资产领域，为加密市场带来更多机构背书和流动性支持。", source: "bloomingbit", url: "https://news.google.com/rss/articles/CBMiVEFVX3lxTE01R1VVOHZYY0MtN3JfbmFQYWVnYnhEUzJBZC1hcllMYUozYThoUVY1U28wcEZWOFVmR21INzB1Wjd4bmJoelRuellOelB6MWlLcWwtSA?oc=5" },
   { time: "08:27", tag: "tech", tagText: "科技", text: "比亚迪（BYD）4月乘用车EV交付量连续第八个月下滑，而Stellantis支持的零跑汽车（Leapmotor）则录得创纪录交付量。中国电动汽车市场竞争日益激烈，比亚迪面临来自新势力及传统车企转型的双重压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/byd-april-sales-exports-china-ev-rivals-leapmotor-zeekr.html" },
   { time: "08:03", tag: "macro", tagText: "宏观", text: "马斯克与美国证券交易委员会（SEC）提议以150万美元和解其未及时披露推特持股的诉讼。SEC此前指控马斯克等待过久才披露其持有推特大量股份，涉嫌证券欺诈。和解金额远低于市场预期。", source: "Financial Times", url: "https://www.ft.com/content/a760cb3e-b949-4120-b637-32e7464227cb" },
-  { time: "07:38", tag: "ai", tagText: "AI", text: "亚马逊CEO安迪·贾西（Andy Jassy）表示，公司大规模AI支出是“千载难逢”的机遇，最终将为投资者带来丰厚回报。亚马逊正全力投入AI基础设施和模型开发，以巩固其在云计算和电商领域的领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/05/04/andy-jassy-amazon-investors-rewarded-ai-spending.html" },
-  { time: "05:53", tag: "macro", tagText: "宏观", text: "美国信贷市场分化加剧：信用良好（超级优级）与信用不良（次级）人群之间的财务健康差距已超过2019年水平。分析认为，这一趋势反映出经济复苏的不均衡，低收入群体正承受更大的通胀和利率压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-what-the-growing-gap-between-americans-with-good-and-bad-credit-says-about-the-economy-3fa60ff7?mod=mw_rss_topstories" },
-  { time: "05:38", tag: "crypto", tagText: "加密", text: "Circle等加密股领涨，因稳定币法案（Clarity Act）取得关键进展，重新点燃市场对监管明朗化的希望。比特币自1月以来首次突破80,000美元关口。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bitcoin-busted-through-80-000-for-the-first-time-since-january-heres-the-crucial-level-it-needs-to-hold-right-now-038c252f?mod=mw_rss_topstories" },
-  { time: "05:07", tag: "macro", tagText: "宏观", text: "化肥价格触及2026年新高，美国农民减少种植面积，食品通胀危机可能加剧。投资者正关注相关股票以对冲粮食短缺风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-silent-crisis-taxing-your-grocery-bill-could-get-a-lot-louder-93ddd167?mod=mw_rss_topstories" },
-  { time: "05:02", tag: "tech", tagText: "科技", text: "特斯拉宣布其自动驾驶系统达到马斯克此前设定的“安全无监督自动驾驶”关键里程碑，但分析师指出，该公司在实现真正的商业化落地方面仍面临诸多技术和监管障碍。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-just-hit-a-symbolic-self-driving-milestone-real-world-success-will-be-tougher-5fb93525?mod=mw_rss_topstories" },
-  { time: "04:18", tag: "macro", tagText: "宏观", text: "美国债券市场发出警告信号：通胀加速可能迫使美联储在年底前加息。尽管股市持续上涨，但债券收益率曲线显示市场对价格压力的担忧加剧，美联储可能不得不采取行动抑制通胀。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-chart-is-a-flashing-warning-sign-that-the-fed-might-yet-rattle-the-markets-with-rate-hikes-by-year-end-94c25b10?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月5日 19:23 CST";
+const breakingDate = "2026年5月6日 00:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:45", tag: "ai", tagText: "AI", text: "企业AI客服创企Sierra获9.5亿美元融资，估值超10亿美元。该公司由前Salesforce联合首席执行官Bret Taylor创立，计划利用这笔资金成为“AI驱动客户体验的全球标准”。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" },
+  { time: "23:59", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI同日宣布，分别与资产管理公司成立合资企业，以更积极地推广其企业级AI服务。此举标志着两大AI巨头在企业市场的竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" },
+  { time: "23:51", tag: "tech", tagText: "科技", text: "Roomba发明者Colin Angle推出全新机器人伴侣“Familiar”，该机器人并非用于清洁，而是作为情感陪伴机器人进入家庭。Angle曾将5000万台家用机器人送入千家万户，此次回归聚焦于AI驱动的社交陪伴领域。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922947/roomba-creator-new-robot-familiar-machines-magic-ai-launch" },
+  { time: "23:49", tag: "ai", tagText: "AI", text: "PayPal宣布将重新成为一家科技公司，核心战略转向AI。公司计划通过自动化和重组节省15亿美元，同时裁员并升级技术栈，以推动AI主导的转型。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/" },
+  { time: "23:44", tag: "ai", tagText: "AI", text: "彼得·蒂尔的Founders Fund创纪录募集60亿美元，专门用于投资后期AI初创公司。此举显示顶级风投对AI商业化前景的强烈信心。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQejI2TlFhZXJTMUY4OXJZdEhtRzVYVVo2U3dOOGE5dmpLa3UyV3RkLUtQcHJXblk2Vi1hY0M2VV9SR3docjNZblpqc1F0VVpWckZCTk1tWm53STVuWU5ELThpZHI0akZENGx6dWg5ZjRUQmhwZ3NGZ1pydDc1TmhoWmdxLUx5NHM3S0dR?oc=5" },
+  { time: "22:54", tag: "tech", tagText: "科技", text: "据供应链分析师郭明錤透露，OpenAI计划推出自有品牌手机，专为ChatGPT优化，预计2027年面世。这将是OpenAI的首款硬件产品，而非此前传闻的Jony Ive合作设备。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/924063/openai-phone-rumors-2027-ming-chi-kuo" },
+  { time: "22:27", tag: "ai", tagText: "AI", text: "Meta将利用AI分析用户身高和骨骼结构，以识别未成年人。该系统已在部分国家运行，Meta计划逐步推广，旨在加强年龄验证和青少年保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/meta-will-use-ai-to-analyze-height-and-bone-structure-to-identify-if-users-are-underage/" },
+  { time: "22:26", tag: "ai", tagText: "AI", text: "谷歌DeepMind、微软和xAI同意，在公开发布新AI模型前允许美国政府进行审查。美国商务部宣布此举，标志着AI监管进入新阶段，旨在防范潜在风险。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review" },
+  { time: "22:20", tag: "ai", tagText: "AI", text: "AI语音公司ElevenLabs披露新投资者名单，包括贝莱德、演员杰米·福克斯和伊娃·朗格利亚。公司年化收入已达5亿美元，正扩大企业客户群，语音AI正成为关键交互界面。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "DoorDash推出多项AI新工具，帮助商家加速入驻流程、自动编辑菜品照片以提升卖相，并利用现有内容快速创建新网站。此举旨在降低商家运营门槛，提升平台效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/doordash-adds-ai-tools-to-speed-up-merchant-onboarding-edit-photos-of-dishes/" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "4月AI初创企业融资额创年内第三高，多笔十亿美元级AI融资轮推动整体市场。Crunchbase数据显示，4月成为过去一年中初创企业融资额第三高的月份，主要得益于多笔AI领域的大额融资。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOV21aUHFzUUhLWmV2RWtiRXI2bEdoUUFnU2FYU21JZDdxZmI3ZF9OU2FFV1pJdGRxak5PbVVVOUdXRXA1LVRzLUF1c2JFOEFmdThwV3lIM1Z3Q2l2T29ZNXdSS0pueC1ZYmk3MVplc3VvOER5Nk9RbUc3dUdSeU1rcWxnV3pUNHlqVTRMaDRLbGN3VlY1Q21lN2IxNG1pT2s4N3pLZk5QNjFESlZaV2Y0RHJwSUg0X25uUkMyU04tOWRwQQ?oc=5" },
   { time: "18:08", tag: "ai", tagText: "AI", text: "Google DeepMind员工投票成立工会，旨在阻止公司AI技术被用于以色列和美国军方。员工在致谷歌管理层的信中表达了这一诉求，标志着AI伦理与军事应用之间的矛盾进一步激化。", source: "The Verge", url: "https://www.theverge.com/tech/923918/google-deepmind-union-bid-ai-military-israel" },
   { time: "17:38", tag: "ai", tagText: "AI", text: "印度AI初创公司Jurisphere获220万美元融资，专注于法律科技领域。该公司利用AI技术为法律行业提供解决方案，此次融资将用于产品开发和市场拓展。", source: "Tech in Asia", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSUE1ZXVDellUS1JIeUl3eFlqRzl2cjB3eG1yV0l4bVJ3b1ZYbmNnZ215VzJKMGpDY05VaWFnUlQ4Q3VfQl9SLWNNLTlZQzZ6WWxsdDlEOTFtbWxiMlhkTUc5N211ektGUXZuSi1XYnRiUi1xN0ZXWjIzQ3d6S3U3Y1FpYmpvSkwy?oc=5" },
@@ -1664,18 +1674,8 @@ const aiBreakingNews = [
   { time: "11:45", tag: "tech", tagText: "科技", text: "俄勒冈州初创公司Panthalassa获1.4亿美元融资，由彼得·蒂尔领投，计划建设海上波浪能数据中心，为AI计算提供绿色能源。该项目旨在解决AI算力激增带来的电力消耗问题。", source: "GeekWire", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPaklIUXhWOGQ4NWRuZWtzTGtLLUdld0x3dktKZE1EaGg2VUttMW1nSVN2ckt0dUkyX3FoWkE0Vi1xX1JWZTZ5QUZhZ1ViY3VkaVdwcVBNdEMzV1Qzb1l6SUpvSWgxbGlPb0ZqdkNwUlY1cDg0NWR5M1BzUE9GZlFtRl8tMnBPVUlFS25Wc3ZvakQ1TF9oWGNIVWJWOHVWLWZVQURNbTJHWUFvMHZ3MHVKSWZOQjdYRkxKOUVB?oc=5" },
   { time: "11:40", tag: "tech", tagText: "科技", text: "三星芯片利润因AI需求飙升48倍，与英伟达竞争加剧。三星电子最新财报显示，受AI芯片需求强劲推动，其半导体业务利润同比暴增48倍，同时正加速与英伟达在AI芯片领域的竞争。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcmJoN0NUYlY3UFNscEdwSjJuMDJhdFdLNTB6Z3NrbTRDU1FUUC16blFuU0FPSDFfOXVqTGJyWkJtbW9LX0tFTUE0UVNBUFNSaUtsY0pGdzdJc0Nhc2xDVmZwXzVleUlSdjRXdFpzaHdfNEo0UGE3SVB5R1E0d1FCMTZBa3hTM3R3TGJ3b3U1S1U5MlczOTA4cl8tM2xEUkVlRXo4?oc=5" },
   { time: "07:49", tag: "ai", tagText: "AI", text: "Greg Brockman在马斯克诉OpenAI案中出庭作证，其日记成为关键证据。Brockman的证词被指“做了所有事，唯独不回答问题”，成为马斯克一方迄今最有力的证人。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/923684/musk-brockman-altman-openai-trial" },
-  { time: "07:01", tag: "ai", tagText: "AI", text: "一项新研究显示，AI在急诊室诊断患者方面的准确率已超越人类医生。该成果标志着AI在医疗诊断领域取得重大突破，有望大幅提升急诊效率和诊断精度。", source: "SingularityHub", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxNcE5PaklLV0pPOUQtUUVMN0pDZ0Zid0NVcUhmU2NOVzdoNDhHMDVwOGJYbTFzdGgwUFNvVVUzd18tRl80U3lrUUpMNjFIUFVseGxvc05KS2o5SFZNdzBpSTg0aFFJcXZxLTZ5LWlkSl9tdlAxMEUydjFZLWZjSmd4Rm5NeVlBNmRhdHEwMFZ1cFZMdw?oc=5" },
-  { time: "05:53", tag: "ai", tagText: "AI", text: "OpenAI的合作伙伴、AI芯片制造商Cerebras正筹备大规模IPO，估值可能达到266亿美元或更高。该公司与OpenAI关系密切，此次上市备受市场关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/openais-cozy-partner-cerebras-is-on-track-for-a-blockbuster-ipo/" },
-  { time: "05:07", tag: "ai", tagText: "AI", text: "伯恩斯坦分析师指出，AI代理正推动芯片需求“爆表”，供应完全跟不上。这一趋势加剧了市场对芯片短缺的担忧，并可能进一步推高相关硬件价格。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdnc4dmNNRHBlemNyWkxRUTNEYUU0R2pxSl95bU1OT1k3R05iVm5fM25Td2o1OG5GV0NIUnpYX1FtRGgxX3lQTHNVWjZqLWpQanhVSnRYdzljV3Y1WG5qcFRORWNOQmQ5cHc1NDNXMXNCUURnbVZtTXA5aVVIV2JwT3ROWHNYRGh0WEdkZFQ4d0xqTFJKLW1PYUMxRUQ0WkZuVjdDM2tKTjJsZzdsRE1TMEJMMFVRbmJaTlVHVEJZV3cydw?oc=5" },
-  { time: "03:12", tag: "ai", tagText: "AI", text: "Appfigures数据显示，图像AI模型发布带来的应用下载量是聊天机器人升级的6.5倍，但多数应用未能将这一流量转化为收入。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/" },
-  { time: "01:10", tag: "ai", tagText: "AI", text: "弗吉尼亚大学达顿商学院报告指出，AI在“常规科学”领域表现出色，但真正的突破性创新仍属于人类。该观点为当前AI热潮提供了冷静思考，强调人类在科研中的不可替代性。", source: "Darden Report Online", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZFNCaHFwYktHaHd5d2NOQnk3UkV3VHRGdlJFdy00eUxuZjB5V2pjS2dSd2h0NmtkZTV1cnc3dTBGZTJlX3J5Y05CWDRvUVhsd0VhZU02LWdGUFdIemtwcHVmLVZUVTJqcEVSVHBnUTNUVlVQd3l0R0tVYVpOQkJrdUVlcHRrVU9nRmdlYlg2NEpQZHNIQ2doUTlSWllfSDlPNm1LVTJtYWF5ODd4UnVIZXBES1V5QQ?oc=5" },
-  { time: "00:57", tag: "ai", tagText: "AI", text: "GameStop提出以560亿美元收购eBay，但自身营收下滑且门店关闭，外界质疑其支付能力。", source: "Ars Technica", url: "https://arstechnica.com/tech-policy/2026/05/gamestop-offers-56-billion-for-ebay-struggles-to-explain-how-itll-pay-for-it/" },
-  { time: "00:45", tag: "ai", tagText: "AI", text: "企业AI客服创企Sierra获9.5亿美元融资，估值超10亿美元。该公司由前Salesforce联合首席执行官Bret Taylor创立，计划利用这笔资金成为“AI驱动客户体验的全球标准”。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" },
-  { time: "23:59", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI同日宣布，分别与资产管理公司成立合资企业，以更积极地推广其企业级AI服务。此举标志着两大AI巨头在企业市场的竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" },
-  { time: "23:51", tag: "tech", tagText: "科技", text: "Roomba发明者Colin Angle推出全新机器人伴侣“Familiar”，该机器人并非用于清洁，而是作为情感陪伴机器人进入家庭。Angle曾将5000万台家用机器人送入千家万户，此次回归聚焦于AI驱动的社交陪伴领域。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922947/roomba-creator-new-robot-familiar-machines-magic-ai-launch" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "DoorDash推出多项AI新工具，帮助商家加速入驻流程、自动编辑菜品照片以提升卖相，并利用现有内容快速创建新网站。此举旨在降低商家运营门槛，提升平台效率。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/doordash-adds-ai-tools-to-speed-up-merchant-onboarding-edit-photos-of-dishes/" },
 ];
-const aiBreakingDate = "2026年5月5日 19:23 CST";
+const aiBreakingDate = "2026年5月6日 00:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
