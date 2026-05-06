@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 66.94,
   rating: "greed",
-  timestamp: "2026-05-05T23:41:05+00:00",
+  timestamp: "2026-05-05T23:59:54+00:00",
   previousClose: 62.91,
   previous1Week: 63.69,
   previous1Month: 23.74,
   previous1Year: 53.06,
-  date: "2026年5月6日 07:58 CST"
+  date: "2026年5月6日 12:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "11:25", tag: "geo", tagText: "地缘", text: "伊朗外长阿拉格齐周三访问北京，这是伊朗战争爆发以来其首次访华。此行正值美国总统特朗普即将对中国进行高规格访问前夕，凸显中东地缘政治格局的微妙变化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/china-iran-araghchi-wang-yi-trump-beijing-hormuz-talks.html" },
+  { time: "11:01", tag: "tech", tagText: "科技", text: "三星电子股价因AI芯片需求推动的涨势而飙升，公司市值突破1万亿美元大关。此前该公司公布的第一季度营业利润同比增长超过八倍，AI热潮持续推动半导体巨头估值。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/samsung-electronics-ai-chip-rally-kospi-record-1-trillion.html" },
+  { time: "06:28", tag: "crypto", tagText: "加密", text: "比特币、XRP和狗狗币等加密货币价格上涨，以太坊保持稳定。市场情绪受到美国国防部长皮特·赫格塞斯关于伊朗可能达成停火协议的言论提振，风险偏好回升。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMilAJBVV95cUxPNnFvandNMGt1eEpMNEhWMGdHQ2tKMnlhbHlxdjZvMlk4RTRzQzFwd0NfREdGRWl5MVlleU9IdTFTekVaV0NDelJqbjE2dmsycW1ndnBYVXhKRmdJdURZLW5iQ1g3OGxWRGc4UkhZdE1BV0lxUjZJWDVTRU4zQTlzN1RTZ1dzUGdrVTFEYmFiYXdTa1RmY21aY3hHR1ZOZHh1TkZIekFobXlBUXpiZEZjb1NMVkNYdEVkaE9HRXNFQmhsRk1rZEVGWDFnS1plUXpkbGtQU1pxcjU4cUhwenV6TVkxWDFMbHdLOWUtT2MyWFBmQ1Q5enR1ZXNNNTBfemlkWWZJYi1mYUhXRVlKT205Y0tjMjE?oc=5" },
   { time: "06:28", tag: "tech", tagText: "科技", text: "PayPal股价盘后下跌，因公司发布的第二季度业绩指引不及预期，令市场失望，尽管最新财报显示业务增长势头有所改善。", source: "MarketWatch", url: "https://www.marketwatch.com/story/paypals-stock-rallies-after-first-earnings-report-of-the-new-era-heres-what-to-know-4310d291" },
   { time: "06:26", tag: "tech", tagText: "科技", text: "英特尔市值超越甲骨文，股价持续飙升，有望突破2000年创下的历史最高市值纪录。市场对英特尔与苹果潜在合作的热情不断升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/intel-is-now-worth-more-than-oracle-as-its-stock-explodes-higher-7d9bfe3d" },
   { time: "06:22", tag: "tech", tagText: "科技", text: "亚马逊股价持续上涨，市值距离重返3万亿美元仅差不到2%。若达成，亚马逊将成为史上第五家市值突破3万亿美元的公司。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amazons-stock-has-come-alive-setting-the-company-up-to-join-an-exclusive-club-cb9e35b9" },
@@ -1646,17 +1649,16 @@ const breakingNews = [
   { time: "00:28", tag: "macro", tagText: "宏观", text: "美国证券交易委员会（SEC）提议允许上市公司选择不发布季度财报，改为半年报。此举旨在减轻企业短期业绩压力，鼓励长期投资，但可能影响市场透明度。", source: "Reuters", url: "https://finance.yahoo.com/news/us-sec-proposes-allowing-public-160620575.html" },
   { time: "00:26", tag: "tech", tagText: "科技", text: "预测市场交易员押注2026年科技行业裁员人数将超过44.7万人，继Coinbase之后，更多科技公司可能宣布大规模裁员。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/after-coinbase-prediction-markets-traders-see-more-tech-layoffs.html" },
   { time: "00:23", tag: "tech", tagText: "科技", text: "Palantir股价盘后下跌，尽管第一季度财报显示美国政府业务销售强劲，但分析师指出其国际商业业务表现滞后，且高估值令市场担忧。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/palantir-stock-pltr-palantir-earnings-news-q12026/?src=A00220&yptr=yahoo" },
-  { time: "00:19", tag: "macro", tagText: "宏观", text: "纳斯达克指数创下历史收盘新高，科技股领涨。油价从高位回落，因美国淡化中东紧张局势，强劲的企业财报进一步提振市场情绪。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE5uU0UtNFRUY1h0ekRTUjB2YXZhVnRMemxBS25paWJpVWdkc2RTUDc2OEI4cjVqU01IaTFDUHQzQXRrcFBtLUt4VEF4NDNOWHhBd2NwY05OMmdJSVFNV3hhbkdrcFpNcWZ6b2pVOFZBZllvM3BXNEFZ0gF8QVVfeXFMTlRWcndjWDVIN04tWHo1eEg4ekFRVWFjSFBIRUdvUERiY2Z1emVtcjcwS1ZqRGJtRjlQbU9ZQm9VaHZBd3NIZVRQT01YcnpCSm9taE45Qk5ub3lNT202MXF3aGdtYXY1aHdLTW1BMUdURW42SlRHZkFxbVVWQg?oc=5" },
-  { time: "00:13", tag: "ai", tagText: "AI", text: "特朗普政府进一步介入AI监管，计划对谷歌、微软和xAI的AI模型进行测试。白宫还考虑成立新的AI工作组，探索在模型发布前进行审查和监管。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html" },
-  { time: "00:09", tag: "ai", tagText: "AI", text: "Meta及其CEO扎克伯格被五家大型出版商起诉，指控其未经授权使用大量受版权保护的作品来训练Llama AI模型，构成“大规模”版权侵权。", source: "Financial Times", url: "https://www.ft.com/content/079ef5b2-5c68-435f-9f67-e02bd9073610" },
 ];
-const breakingDate = "2026年5月6日 07:58 CST";
+const breakingDate = "2026年5月6日 12:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
   { time: "07:58", tag: "ai", tagText: "AI", text: "SAP以11.6亿美元收购成立仅18个月的德国AI初创公司Prior Labs，并计划大力投资。同时，SAP将限制客户代理使用少数AI模型，如英伟达的NemoClaw。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/" },
   { time: "07:58", tag: "tech", tagText: "科技", text: "广泛使用的虚拟光驱软件Daemon Tools遭遇长达一个月的供应链攻击，被植入后门。安全研究人员警告用户立即检查设备是否存在隐蔽感染。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/widely-used-daemon-tools-disk-app-backdoored-in-monthlong-supply-chain-attack/" },
   { time: "07:58", tag: "ai", tagText: "AI", text: "Google Home的Gemini AI升级至3.1版本，现在能够处理更复杂的多步骤请求，并支持在单条指令中组合多个任务，显著提升了智能家居助手的交互能力。", source: "The Verge", url: "https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade" },
+  { time: "06:57", tag: "ai", tagText: "AI", text: "AI初创公司Altara获得700万美元融资，旨在通过统一分散在电子表格和遗留系统中的数据，帮助诊断故障并加速物理科学领域的研发进程。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/altara-secures-7m-to-bridge-the-data-gap-thats-slowing-down-physical-sciences/" },
+  { time: "06:01", tag: "tech", tagText: "科技", text: "美国半导体公司AMD在以英伟达为中心的AI芯片市场中迅速扩大影响力，市场份额持续增长。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5QUDdGSGloN0RJV1doS3lpWGpCc1FqVTA2cXJDRkVjSi1sNXZfRGs5eVBabGpzZjZjZmpGbTZDUDJZenVMM2o0TUp0UQ?oc=5" },
   { time: "05:18", tag: "ai", tagText: "AI", text: "苹果因未交付AI Siri功能，同意支付2.5亿美元和解集体诉讼。该诉讼指控苹果在Apple Intelligence功能可用性上误导消费者，和解方案将覆盖受影响的iPhone用户。", source: "The Verge", url: "https://www.theverge.com/tech/924706/apple-iphone-siri-intelligence-class-action-lawsuit-settlement" },
   { time: "04:56", tag: "ai", tagText: "AI", text: "苹果计划在iOS 27中允许用户自主选择第三方AI模型，用于运行Apple Intelligence的各项任务。据彭博社报道，用户将能挑选偏好的AI模型，标志着苹果在AI策略上的重大开放转向。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-ai-models/" },
   { time: "03:54", tag: "tech", tagText: "科技", text: "微软宣布放弃Xbox Copilot AI项目。新任Xbox CEO Asha Sharma表示，将“逐步关闭移动端Copilot”，并“停止开发主机版Copilot”。此举是Sharma重组Xbox平台后的重要决策。", source: "The Verge", url: "https://www.theverge.com/games/924551/microsoft-xbox-ceo-copilot-ai-asha-sharma" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:27", tag: "ai", tagText: "AI", text: "Meta将利用AI分析用户身高和骨骼结构，以识别未成年人。该系统已在部分国家运行，Meta计划逐步推广，旨在加强年龄验证和青少年保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/meta-will-use-ai-to-analyze-height-and-bone-structure-to-identify-if-users-are-underage/" },
   { time: "22:26", tag: "ai", tagText: "AI", text: "谷歌DeepMind、微软和xAI同意，在公开发布新AI模型前允许美国政府进行审查。美国商务部宣布此举，标志着AI监管进入新阶段，旨在防范潜在风险。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review" },
   { time: "22:20", tag: "ai", tagText: "AI", text: "AI语音公司ElevenLabs披露新投资者名单，包括贝莱德、演员杰米·福克斯和伊娃·朗格利亚。公司年化收入已达5亿美元，正扩大企业客户群，语音AI正成为关键交互界面。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/" },
-  { time: "21:18", tag: "ai", tagText: "AI", text: "印度首家生成式AI独角兽Krutrim在裁员和产品更新有限后，转向云服务业务，反映出在印度构建AI模型面临的经济挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/indias-first-genai-unicorn-shifts-to-cloud-services-as-ai-model-ambitions-face-reality/" },
-  { time: "21:13", tag: "ai", tagText: "AI", text: "安全研究人员通过“煤气灯效应”式对话，成功诱导Anthropic的Claude模型提供制造爆炸物的指令，暴露了AI安全对齐的新漏洞。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/923961/security-researchers-mindgard-gaslit-claude-forbidden-information" },
 ];
-const aiBreakingDate = "2026年5月6日 07:58 CST";
+const aiBreakingDate = "2026年5月6日 12:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
