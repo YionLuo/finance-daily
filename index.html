@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.54,
+  score: 68.37,
   rating: "greed",
-  timestamp: "2026-05-06T18:17:19+00:00",
+  timestamp: "2026-05-06T20:22:48+00:00",
   previousClose: 66.94,
   previous1Week: 63.37,
   previous1Month: 22.54,
   previous1Year: 54.66,
-  date: "2026年5月7日 02:27 CST"
+  date: "2026年5月7日 04:43 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:35", tag: "ai", tagText: "AI", text: "特朗普政府据报正考虑对AI采取更激进的监管方式，可能通过行政令加强对人工智能模型的监管，标志着政策方向的重大转变。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-how-far-the-trump-administrations-startling-turn-on-ai-regulation-might-go-15ce46be" },
+  { time: "04:32", tag: "macro", tagText: "宏观", text: "美股三大指数全线上涨：道指涨600点，标普500和纳指均创历史新高，AI交易热潮推动市场强劲反弹。道指已正式脱离回调区间，向50000点关口迈进。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/doordash-dash-earnings-q1-2026.html" },
+  { time: "04:32", tag: "ai", tagText: "AI", text: "AMD股价大涨19%，CEO苏姿丰将长期CPU需求预测翻倍，称AI推动数据中心需求激增，大幅上调业绩展望。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/amd-lisa-su-stock-forecast-earnings.html" },
+  { time: "04:13", tag: "tech", tagText: "科技", text: "Snap发布谨慎业绩指引，称与AI初创公司Perplexity的合作已终止，中东地缘政治局势带来不确定性，股价承压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/snap-q1-earnings-report-2026.html" },
+  { time: "03:31", tag: "ai", tagText: "AI", text: "SpaceX将向AI初创公司Anthropic出租数据中心容量，以帮助其快速增加计算能力，满足业务增长需求。", source: "Financial Times", url: "https://www.ft.com/content/aa0239b8-0d57-4dc8-8c1a-ed7ac4d689fb" },
   { time: "01:56", tag: "tech", tagText: "科技", text: "据文件披露，埃隆·马斯克在德克萨斯州的巨型芯片工厂Terafab建设成本可能高达1190亿美元。该工厂旨在为特斯拉、SpaceX和xAI制造芯片，是马斯克在AI和半导体领域布局的关键一步。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/elon-musks-spacex-chip-fab-in-texas-to-cost-up-to-119-billion.html" },
   { time: "01:44", tag: "geo", tagText: "地缘", text: "美国燃料出口创下历史新高，霍尔木兹海峡关闭导致亚洲和欧洲买家抢购美国石油产品。这一趋势为美国石油公司带来丰厚利润，但也给特朗普政府带来政治压力，因国内汽油价格已超过每加仑4.50美元。", source: "Financial Times", url: "https://www.ft.com/content/cfc92825-68f6-4660-89ef-3854b3ead8dc" },
   { time: "01:08", tag: "macro", tagText: "宏观", text: "美国银行警告称，SpaceX和Anthropic等超级IPO可能标志着当前牛市行情的终结。该行指出，为加快指数纳入而修改规则以及调整自由流通股乘数等操作，具有“晚期市场操纵”的特征。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/spacex-and-anthropic-mega-ipos-could-mark-end-of-bull-run-bank-of-america-suggests.html" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "19:31", tag: "geo", tagText: "地缘", text: "欧盟计划逐步淘汰中国技术的方案可能使该集团损失超过4000亿美元。中国一项研究警告称，此举将严重冲击欧洲经济，并可能引发贸易报复。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/eu-plan-phase-chinese-tech-113148624.html" },
   { time: "17:17", tag: "geo", tagText: "地缘", text: "据报道，美国与伊朗接近达成协议，内容包括伊朗暂停核浓缩活动及美国解除制裁。受此消息影响，国际油价大幅下跌，美股期货上涨。此前特朗普宣布暂停在霍尔木兹海峡的护航行动，进一步提振了市场对和平协议的预期。", source: "Financial Times", url: "https://www.ft.com/content/8dd8d23a-2c5d-42c5-aedb-bbc1f49fcbea" },
   { time: "16:05", tag: "macro", tagText: "宏观", text: "诺和诺德公布财报，其新推出的Wegovy减肥药片销售额远超预期，创下减肥药史上最快上市速度。公司上调2026年业绩展望，股价大涨7%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/wegovy-glp1-weight-loss-novo-nordisk-earnings-stock-nvo-ozempic.html" },
-  { time: "15:32", tag: "crypto", tagText: "加密", text: "MicroStrategy创始人Michael Saylor此前曾表示“永远不卖比特币”，如今却改口称可能出售，以展示比特币的韧性。市场可能对其言论做出不同解读。", source: "MarketWatch", url: "https://www.marketwatch.com/story/michael-saylor-said-he-would-never-sell-bitcoin-now-he-says-he-might-f05776fc" },
-  { time: "14:13", tag: "ai", tagText: "AI", text: "贝莱德高管Tony Kim表示，AI正在像“同时启动10个曼哈顿计划”一样重塑全球经济，这一趋势将持续加速。", source: "MarketWatch", url: "https://www.marketwatch.com/story/like-10-manhattan-projects-going-off-all-at-once-how-ai-is-rewiring-the-global-economy-says-this-blackrock-exec-a07da7ef?mod=mw_rss_topstories" },
-  { time: "13:50", tag: "ai", tagText: "AI", text: "中国AI公司DeepSeek估值接近450亿美元，国家大基金正牵头投资谈判，腾讯等投资者寻求入股。", source: "Financial Times", url: "https://www.ft.com/content/daaf2e0a-4a0d-4d7c-a85b-445480f6b9c7" },
-  { time: "11:58", tag: "macro", tagText: "宏观", text: "汉莎航空警告称，中东冲突导致其第一季度额外燃油成本近20亿美元，对运营构成“巨大挑战”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/lufthansa-q1-middle-east-conflict-2-billion-fuel-cost.html" },
-  { time: "11:29", tag: "tech", tagText: "科技", text: "苹果同意支付2.5亿美元和解股东诉讼，该诉讼指控苹果在Siri AI功能上存在延迟披露，误导投资者。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTjFhbThnNnVycmlVUFRjLVZnV0IxU19GM0pEQ0lnenpWcWpNNXYxUENaVGhyTGJ4RkppZGFsRVo1OE5aN1ZVYnVLTzVkeXFBMFJ2UllZeDExWHB5a0oySmI1c080RlBnQWYzRW4zUld4dDlOMTdNOHB5bmpjSFV6UUlRUGFJX0ZJZWpUSDB2ejJmd2tOX2h2dXBadVJQVTJ4c2dzZi1fYmw?oc=5" },
 ];
-const breakingDate = "2026年5月7日 02:27 CST";
+const breakingDate = "2026年5月7日 04:43 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:55", tag: "ai", tagText: "AI", text: "OpenAI前CTO Mira Murati在法庭作证称，CEO Sam Altman曾就新AI模型的安全标准向她撒谎。该证词在马斯克诉奥特曼案中播放，案件审理可能改变OpenAI及ChatGPT的未来走向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925338/openai-musk-v-altman-mira-murati" },
+  { time: "02:23", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Greg Brockman公开披露埃隆·马斯克离开OpenAI的内幕细节，包括创始人间激烈的谈判过程。这一罕见公开的幕后故事揭示了公司早期分裂的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/" },
   { time: "01:23", tag: "tech", tagText: "科技", text: "SpaceX计划在德克萨斯州建设名为“Terafab”的芯片工厂，总投资可能高达1190亿美元。该项目被描述为“多阶段、下一代、垂直整合的半导体制造和先进计算设施”，标志着SpaceX向芯片制造领域的大规模扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/spacex-may-spend-up-to-119-billion-on-terafab-chip-factory-in-texas/" },
   { time: "01:20", tag: "ai", tagText: "AI", text: "中国AI实验室DeepSeek首轮融资估值或达450亿美元。据多家媒体报道，中国国家支持的芯片基金正洽谈领投此轮融资。DeepSeek因在2025年初以极低成本和算力训练出媲美美国大模型的语言模型而声名鹊起。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/" },
   { time: "23:37", tag: "ai", tagText: "AI", text: "OpenAI创始人Sam Altman与Elon Musk对簿公堂，双方就OpenAI的未来走向展开激烈法庭辩论。Musk于2024年起诉OpenAI，指控其背离了非营利初衷，此案结果可能深刻影响ChatGPT及OpenAI的发展方向。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "14:34", tag: "ai", tagText: "AI", text: "马克·洛尔（Marc Lore）表示，AI将很快让任何人都能开设餐厅。其创立的Wonder公司计划将机器人厨房转变为AI驱动的“餐厅工厂”，用户只需通过提示即可创建虚拟食品品牌。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/marc-lore-says-that-ai-will-soon-enable-anyone-open-a-restaurant/" },
   { time: "14:30", tag: "ai", tagText: "AI", text: "韩国AI初创企业引领风险投资激增，带动韩国风投总额突破1万亿韩元。AI领域成为韩国风险投资市场的主要增长引擎，显示出资本对AI赛道的高度集中。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaE1rRFd4alA1eGRBZy1NRnUxWENXVUxtQ2pkdGROR3JCdlFuRzVHd0M0bmU5OEFJTkd2ZS1jREdUSG9QcnByZGN3SWNfZ05TYXdiNWpjR3IxQkx6RUQyZGQ5UDdSa1c3VldyeS1OYWN2RWs3V0VfZkpoLTZWelJMTkktVFQ3QmVQ?oc=5" },
   { time: "13:45", tag: "tech", tagText: "科技", text: "华为正在抢占英伟达的AI芯片市场。据韩国《朝鲜日报》报道，华为在AI芯片领域持续发力，逐步蚕食英伟达的市场份额，尤其是在中国市场的替代效应显著。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRGR2OGtfNFhadGl1MXUwLUZ4VGFHa1N0bzVabXVUcWZWaV8wTENhQ3A4bnRvSkpDaDhsblgycUdpdTUyV3pzeFRyb2pmeVJDTHRKX1FXR0VJS0U0NS1DRzl2T2p5UW1RZE5zOXRBZC0xeVNqN1FhYkZqU19uSGJsNVpWeWQ4Z0Y3?oc=5" },
-  { time: "07:58", tag: "ai", tagText: "AI", text: "SAP以11.6亿美元收购成立仅18个月的德国AI初创公司Prior Labs，并计划大力投资。同时，SAP将限制客户代理使用少数AI模型，如英伟达的NemoClaw。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/" },
-  { time: "07:58", tag: "tech", tagText: "科技", text: "广泛使用的虚拟光驱软件Daemon Tools遭遇长达一个月的供应链攻击，被植入后门。安全研究人员警告用户立即检查设备是否存在隐蔽感染。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/widely-used-daemon-tools-disk-app-backdoored-in-monthlong-supply-chain-attack/" },
 ];
-const aiBreakingDate = "2026年5月7日 02:27 CST";
+const aiBreakingDate = "2026年5月7日 04:43 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
