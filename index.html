@@ -1618,19 +1618,22 @@
 const fearGreedData = {
   score: 68.37,
   rating: "greed",
-  timestamp: "2026-05-06T21:47:55+00:00",
+  timestamp: "2026-05-06T22:48:00+00:00",
   previousClose: 66.94,
   previous1Week: 63.37,
   previous1Month: 22.54,
   previous1Year: 54.66,
-  date: "2026年5月7日 06:05 CST"
+  date: "2026年5月7日 07:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:12", tag: "tech", tagText: "科技", text: "英伟达将向康宁投资高达32亿美元，作为大规模光纤交易的一部分，将新建3座专注于AI的工厂。康宁将在美国开设三家全新的先进制造工厂，专门为英伟达生产光学技术产品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-corning-optical-factories-nc-texas-ai.html" },
+  { time: "05:47", tag: "macro", tagText: "宏观", text: "空客赢得加拿大史上最大飞机订单，价值190亿美元。亚航订购150架A220-300客机，极大提振了加拿大制造业。", source: "Financial Times", url: "https://www.ft.com/content/19c4dab7-0141-4c40-9d2f-180ff33cdd63" },
   { time: "05:38", tag: "geo", tagText: "地缘", text: "以色列自停火以来首次空袭贝鲁特。此前以军持续打击黎巴嫩南部目标，但自4月8日以来未攻击首都。此举标志着中东局势再度升级。", source: "Financial Times", url: "https://www.ft.com/content/69308a1e-95d0-4bcd-8f4f-9624993cef7c" },
   { time: "05:38", tag: "macro", tagText: "宏观", text: "美国司法部起诉30人涉嫌利用华尔街律所机密交易材料进行内幕交易。司法部称，来自精英律所的律师协助提供了机密交易细节。", source: "Financial Times", url: "https://www.ft.com/content/d2fbe2c3-103a-4d09-b510-db58c5f8697d" },
+  { time: "05:25", tag: "tech", tagText: "科技", text: "芯片板块惊人涨势中，英伟达却落后。自4月27日以来，英伟达股价持平，而英特尔和美光同期涨幅超过30%。分析师指出，市场资金正轮动至其他半导体股票。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-is-falling-behind-as-semiconductors-surge-heres-what-analysts-say-is-going-on.html" },
   { time: "05:03", tag: "tech", tagText: "科技", text: "Arm股价飙升，公司称其首款数据中心CPU已获得超过20亿美元的客户需求。这一消息推动芯片设计公司股价大幅上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/arms-stock-soars-as-the-company-puts-a-big-number-on-its-newest-venture-21bce404" },
   { time: "04:50", tag: "macro", tagText: "宏观", text: "华纳兄弟探索公司因与派拉蒙交易及重组成本，录得29亿美元净亏损。派拉蒙同意支付奈飞终止费，但该成本在交易完成前仍计入华纳账目。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/warner-bros-discovery-net-loss-paramount-deal.html" },
   { time: "04:45", tag: "macro", tagText: "宏观", text: "黄金时机指标触及底部，历史数据显示随后往往出现强劲反弹。黄金和黄金矿商股在投资者极度悲观时表现最佳，这种“极端悲观情绪”为市场提供了反向利好。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-gold-timing-indicator-just-hit-a-bottom-and-history-says-a-strong-rally-is-next-f39c8768" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "00:50", tag: "macro", tagText: "宏观", text: "美国航空公司3月航空燃油支出环比激增56.4%，政府数据显示伊朗战争爆发后燃料成本飙升。纽约联储研究指出，持续上涨的汽油价格对低收入家庭冲击更大，后者被迫削减其他消费以应对。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/airlines-jet-fuel-iran-war.html" },
   { time: "00:50", tag: "macro", tagText: "宏观", text: "Apollo CEO Marc Rowan警告市场面临意外冲击风险上升，正以防御性姿态布局以应对预期中的回调，并抨击竞争对手保险公司的“恶劣”行为。巴克莱也指出，能源价格若不回落，股市涨势难以为继，市场存在危险的自满情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/apollo-ceo-rowan-market-correction-rival-insurers.html" },
   { time: "00:50", tag: "crypto", tagText: "加密", text: "比特币突破8.1万美元，市场主导率升至61%。分析师指出，只有比特币主导率回落，山寨币季节才有可能到来。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxNeFpWZnVDczBuQ1ExOXFWelNQc0tySDVIM2g4VURtcFFTS3V2eEo0UWlHMnZGaHBBLTMtbWRBVXJQT081ak1BczQ1Z0lmOG14bnVuSllkVXR6ZXFTdUJNb1V2M0lIUzN0WXpudXp0bjZfN1BSVy1Xbk5LVzJHUVJXbUNlR09PYy0xYVU3aFNVS1bSAZYBQVVfeXFMT2xzR0I1QUVPb0hMQVR2NU1INGZzZVBDTHBUYkRuQWZJNGswUURCWjIydlFuTkVuUnYtd19OeERKTlVvaHJaUE9tY0dRY3Bpa3RiTmhneThCTzZyNDVNOHNxZzhwRExqdENweGxlaDdOdUVnejRNbmxUNG1Sejh5eGVrTnR2UkhjaG1Yb0lSbEFwLVFwbEl3?oc=5" },
-  { time: "00:50", tag: "macro", tagText: "宏观", text: "CNN创始人泰德·特纳去世，享年87岁。这位富有魅力的亿万富翁创立了美国首个24小时新闻网络，彻底改变了媒体和政治格局。", source: "Financial Times", url: "https://www.ft.com/content/c22855ad-44be-4e1d-869e-178a27e110db" },
-  { time: "00:48", tag: "geo", tagText: "地缘", text: "美国国务卿马可·卢比奥将访问梵蒂冈，此举被视为其2028年总统竞选造势的一部分。卢比奥目前是接替特朗普的热门人选，尽管副总统JD·万斯也被视为潜在继任者。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/marco-rubio-vatican-2028-election-trump.html" },
-  { time: "22:09", tag: "macro", tagText: "宏观", text: "美国汽车债务总额飙升至1.68万亿美元，创历史新高。更昂贵的车辆、更高的利率和更长的贷款期限正严重挤压美国消费者的财务状况。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/car-payments-squeeze-americans.html" },
 ];
-const breakingDate = "2026年5月7日 06:05 CST";
+const breakingDate = "2026年5月7日 07:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "18:13", tag: "tech", tagText: "科技", text: "谷歌Chrome浏览器因内置AI功能，可能自动下载高达4GB的AI模型文件，导致用户电脑存储空间被大量占用。", source: "The Verge", url: "https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features" },
   { time: "16:30", tag: "ai", tagText: "AI", text: "AI在数学领域取得突破性进展，成功解决一项高难度数学挑战。该成果标志着AI在逻辑推理和复杂问题求解能力上的重大进步，对基础科学和工程应用具有深远影响。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVUNhSXBKVzhHUHFKSGs4NzN1cWQ0ZW9vdkJVTWZNbTkwWV9GSmFnVlZRV2RIOGx4ZjA1UWZrOGY0cjd5UFhGdy1HVUxINzBFOTUzWE9FaGw0WXFCaGVfMHNyMFBCYnNZNHA0OVFETW40WHVuMndDSldBYWFqQ1B5aGRPZGRBUQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月7日 06:05 CST";
+const aiBreakingDate = "2026年5月7日 07:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
