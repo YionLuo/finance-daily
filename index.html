@@ -1618,17 +1618,23 @@
 const fearGreedData = {
   score: 68.37,
   rating: "greed",
-  timestamp: "2026-05-06T20:22:48+00:00",
+  timestamp: "2026-05-06T21:47:55+00:00",
   previousClose: 66.94,
   previous1Week: 63.37,
   previous1Month: 22.54,
   previous1Year: 54.66,
-  date: "2026年5月7日 04:43 CST"
+  date: "2026年5月7日 06:05 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:38", tag: "geo", tagText: "地缘", text: "以色列自停火以来首次空袭贝鲁特。此前以军持续打击黎巴嫩南部目标，但自4月8日以来未攻击首都。此举标志着中东局势再度升级。", source: "Financial Times", url: "https://www.ft.com/content/69308a1e-95d0-4bcd-8f4f-9624993cef7c" },
+  { time: "05:38", tag: "macro", tagText: "宏观", text: "美国司法部起诉30人涉嫌利用华尔街律所机密交易材料进行内幕交易。司法部称，来自精英律所的律师协助提供了机密交易细节。", source: "Financial Times", url: "https://www.ft.com/content/d2fbe2c3-103a-4d09-b510-db58c5f8697d" },
+  { time: "05:03", tag: "tech", tagText: "科技", text: "Arm股价飙升，公司称其首款数据中心CPU已获得超过20亿美元的客户需求。这一消息推动芯片设计公司股价大幅上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/arms-stock-soars-as-the-company-puts-a-big-number-on-its-newest-venture-21bce404" },
+  { time: "04:50", tag: "macro", tagText: "宏观", text: "华纳兄弟探索公司因与派拉蒙交易及重组成本，录得29亿美元净亏损。派拉蒙同意支付奈飞终止费，但该成本在交易完成前仍计入华纳账目。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/warner-bros-discovery-net-loss-paramount-deal.html" },
+  { time: "04:45", tag: "macro", tagText: "宏观", text: "黄金时机指标触及底部，历史数据显示随后往往出现强劲反弹。黄金和黄金矿商股在投资者极度悲观时表现最佳，这种“极端悲观情绪”为市场提供了反向利好。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-gold-timing-indicator-just-hit-a-bottom-and-history-says-a-strong-rally-is-next-f39c8768" },
+  { time: "04:45", tag: "tech", tagText: "科技", text: "Fortinet股价飙升，财报缓解了市场对AI颠覆其业务的担忧。“日益复杂的威胁环境”推动了对该公司网络安全产品的需求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fortinets-stock-rockets-as-earnings-help-dispel-fears-of-ai-disruption-8a8f0107" },
   { time: "04:35", tag: "ai", tagText: "AI", text: "特朗普政府据报正考虑对AI采取更激进的监管方式，可能通过行政令加强对人工智能模型的监管，标志着政策方向的重大转变。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-how-far-the-trump-administrations-startling-turn-on-ai-regulation-might-go-15ce46be" },
   { time: "04:32", tag: "macro", tagText: "宏观", text: "美股三大指数全线上涨：道指涨600点，标普500和纳指均创历史新高，AI交易热潮推动市场强劲反弹。道指已正式脱离回调区间，向50000点关口迈进。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/doordash-dash-earnings-q1-2026.html" },
   { time: "04:32", tag: "ai", tagText: "AI", text: "AMD股价大涨19%，CEO苏姿丰将长期CPU需求预测翻倍，称AI推动数据中心需求激增，大幅上调业绩展望。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/amd-lisa-su-stock-forecast-earnings.html" },
@@ -1643,17 +1649,15 @@ const breakingNews = [
   { time: "00:50", tag: "macro", tagText: "宏观", text: "CNN创始人泰德·特纳去世，享年87岁。这位富有魅力的亿万富翁创立了美国首个24小时新闻网络，彻底改变了媒体和政治格局。", source: "Financial Times", url: "https://www.ft.com/content/c22855ad-44be-4e1d-869e-178a27e110db" },
   { time: "00:48", tag: "geo", tagText: "地缘", text: "美国国务卿马可·卢比奥将访问梵蒂冈，此举被视为其2028年总统竞选造势的一部分。卢比奥目前是接替特朗普的热门人选，尽管副总统JD·万斯也被视为潜在继任者。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/marco-rubio-vatican-2028-election-trump.html" },
   { time: "22:09", tag: "macro", tagText: "宏观", text: "美国汽车债务总额飙升至1.68万亿美元，创历史新高。更昂贵的车辆、更高的利率和更长的贷款期限正严重挤压美国消费者的财务状况。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/car-payments-squeeze-americans.html" },
-  { time: "21:49", tag: "macro", tagText: "宏观", text: "美国4月ADP私营部门就业人数增加10.9万人，高于市场预期，进一步证明劳动力市场稳定，降低了美联储降息的紧迫性。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/private-payrolls-rose-by-109000-in-april-topping-expectations-adp-says.html" },
-  { time: "19:45", tag: "ai", tagText: "AI", text: "英伟达与康宁达成大规模光纤交易，康宁将在美国新建三座先进制造工厂，专门为英伟达生产光学技术产品。此举可能成为AI基础设施领域的游戏规则改变者。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-corning-optical-factories-nc-texas-ai.html" },
-  { time: "19:35", tag: "tech", tagText: "科技", text: "迪士尼股价大涨5%，新CEO Josh D'Amaro在首份财报中公布长期愿景，流媒体和主题公园业务推动营收超预期。公司计划加大内容投资并利用新技术拓展客户。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/disney-dis-earnings-q2-2026.html" },
-  { time: "19:31", tag: "geo", tagText: "地缘", text: "欧盟计划逐步淘汰中国技术的方案可能使该集团损失超过4000亿美元。中国一项研究警告称，此举将严重冲击欧洲经济，并可能引发贸易报复。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/eu-plan-phase-chinese-tech-113148624.html" },
-  { time: "17:17", tag: "geo", tagText: "地缘", text: "据报道，美国与伊朗接近达成协议，内容包括伊朗暂停核浓缩活动及美国解除制裁。受此消息影响，国际油价大幅下跌，美股期货上涨。此前特朗普宣布暂停在霍尔木兹海峡的护航行动，进一步提振了市场对和平协议的预期。", source: "Financial Times", url: "https://www.ft.com/content/8dd8d23a-2c5d-42c5-aedb-bbc1f49fcbea" },
-  { time: "16:05", tag: "macro", tagText: "宏观", text: "诺和诺德公布财报，其新推出的Wegovy减肥药片销售额远超预期，创下减肥药史上最快上市速度。公司上调2026年业绩展望，股价大涨7%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/wegovy-glp1-weight-loss-novo-nordisk-earnings-stock-nvo-ozempic.html" },
 ];
-const breakingDate = "2026年5月7日 04:43 CST";
+const breakingDate = "2026年5月7日 06:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:55", tag: "ai", tagText: "AI", text: "IAC董事长Barry Diller为OpenAI CEO Sam Altman辩护，但同时警告称，随着AGI（通用人工智能）临近，“信任已无关紧要”，必须为其设立安全护栏。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/barry-diller-trusts-sam-altman-but-trust-is-irrelevant-as-agi-nears-he-says/" },
+  { time: "05:43", tag: "ai", tagText: "AI", text: "Snap宣布，其与AI搜索公司Perplexity价值4亿美元的整合协议已“友好终止”。该协议原计划将Perplexity的AI搜索集成到Snapchat中，于去年11月公布。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/snap-says-its-400m-deal-with-perplexity-amicably-ended/" },
+  { time: "05:32", tag: "ai", tagText: "AI", text: "分析指出，马斯克的xAI公司实际业务重心可能已从训练AI模型转向建设数据中心，其商业模式正演变为“新云服务”提供商。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/is-xai-a-neocloud-now/" },
+  { time: "05:21", tag: "tech", tagText: "科技", text: "谷歌关闭了实验性AI项目Project Mariner，该功能旨在帮助用户自动执行跨网页任务。此举标志着谷歌在AI代理产品策略上的调整。", source: "The Verge", url: "https://www.theverge.com/tech/925559/google-project-mariner-shut-down" },
   { time: "02:55", tag: "ai", tagText: "AI", text: "OpenAI前CTO Mira Murati在法庭作证称，CEO Sam Altman曾就新AI模型的安全标准向她撒谎。该证词在马斯克诉奥特曼案中播放，案件审理可能改变OpenAI及ChatGPT的未来走向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925338/openai-musk-v-altman-mira-murati" },
   { time: "02:23", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Greg Brockman公开披露埃隆·马斯克离开OpenAI的内幕细节，包括创始人间激烈的谈判过程。这一罕见公开的幕后故事揭示了公司早期分裂的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/" },
   { time: "01:23", tag: "tech", tagText: "科技", text: "SpaceX计划在德克萨斯州建设名为“Terafab”的芯片工厂，总投资可能高达1190亿美元。该项目被描述为“多阶段、下一代、垂直整合的半导体制造和先进计算设施”，标志着SpaceX向芯片制造领域的大规模扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/spacex-may-spend-up-to-119-billion-on-terafab-chip-factory-in-texas/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "18:13", tag: "ai", tagText: "AI", text: "英国谢菲尔德大学研究人员提出，昆虫大脑的神经机制可为AI技术带来变革性突破，有望开发出更高效、低能耗的智能系统。", source: "BBC", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wb1NfMmFVdjdqRGI3X200azdvTm9IaWNGcUktZWdXdzdfNWQ1ZW9XM3V4MlRsNmVWN0dLaU9NSnhhVWY1a2FVWi1NSHdGNWtFNmRjdW9uZjlKQQ?oc=5" },
   { time: "18:13", tag: "tech", tagText: "科技", text: "谷歌Chrome浏览器因内置AI功能，可能自动下载高达4GB的AI模型文件，导致用户电脑存储空间被大量占用。", source: "The Verge", url: "https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features" },
   { time: "16:30", tag: "ai", tagText: "AI", text: "AI在数学领域取得突破性进展，成功解决一项高难度数学挑战。该成果标志着AI在逻辑推理和复杂问题求解能力上的重大进步，对基础科学和工程应用具有深远影响。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVUNhSXBKVzhHUHFKSGs4NzN1cWQ0ZW9vdkJVTWZNbTkwWV9GSmFnVlZRV2RIOGx4ZjA1UWZrOGY0cjd5UFhGdy1HVUxINzBFOTUzWE9FaGw0WXFCaGVfMHNyMFBCYnNZNHA0OVFETW40WHVuMndDSldBYWFqQ1B5aGRPZGRBUQ?oc=5" },
-  { time: "15:30", tag: "ai", tagText: "AI", text: "芬兰AI实验室QuTwo完成2500万欧元天使轮融资，估值达3.25亿欧元（约3.8亿美元）。该公司由前AMD Silo AI CEO Peter Sarlin创立，此轮融资凸显市场对顶级AI人才和实验室的追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/peter-sarlins-qutwo-reaches-380m-valuation-in-angel-round/" },
-  { time: "14:34", tag: "ai", tagText: "AI", text: "马克·洛尔（Marc Lore）表示，AI将很快让任何人都能开设餐厅。其创立的Wonder公司计划将机器人厨房转变为AI驱动的“餐厅工厂”，用户只需通过提示即可创建虚拟食品品牌。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/marc-lore-says-that-ai-will-soon-enable-anyone-open-a-restaurant/" },
-  { time: "14:30", tag: "ai", tagText: "AI", text: "韩国AI初创企业引领风险投资激增，带动韩国风投总额突破1万亿韩元。AI领域成为韩国风险投资市场的主要增长引擎，显示出资本对AI赛道的高度集中。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaE1rRFd4alA1eGRBZy1NRnUxWENXVUxtQ2pkdGROR3JCdlFuRzVHd0M0bmU5OEFJTkd2ZS1jREdUSG9QcnByZGN3SWNfZ05TYXdiNWpjR3IxQkx6RUQyZGQ5UDdSa1c3VldyeS1OYWN2RWs3V0VfZkpoLTZWelJMTkktVFQ3QmVQ?oc=5" },
-  { time: "13:45", tag: "tech", tagText: "科技", text: "华为正在抢占英伟达的AI芯片市场。据韩国《朝鲜日报》报道，华为在AI芯片领域持续发力，逐步蚕食英伟达的市场份额，尤其是在中国市场的替代效应显著。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRGR2OGtfNFhadGl1MXUwLUZ4VGFHa1N0bzVabXVUcWZWaV8wTENhQ3A4bnRvSkpDaDhsblgycUdpdTUyV3pzeFRyb2pmeVJDTHRKX1FXR0VJS0U0NS1DRzl2T2p5UW1RZE5zOXRBZC0xeVNqN1FhYkZqU19uSGJsNVpWeWQ4Z0Y3?oc=5" },
 ];
-const aiBreakingDate = "2026年5月7日 04:43 CST";
+const aiBreakingDate = "2026年5月7日 06:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
