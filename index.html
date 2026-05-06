@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.91,
+  score: 67.26,
   rating: "greed",
-  timestamp: "2026-05-06T00:00:00+00:00",
+  timestamp: "2026-05-06T09:16:46+00:00",
   previousClose: 66.94,
   previous1Week: 63.37,
   previous1Month: 22.54,
   previous1Year: 54.66,
-  date: "2026年5月6日 14:40 CST"
+  date: "2026年5月6日 17:35 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:17", tag: "geo", tagText: "地缘", text: "据报道，美国与伊朗接近达成协议，内容包括伊朗暂停核浓缩活动及美国解除制裁。受此消息影响，国际油价大幅下跌，美股期货上涨。此前特朗普宣布暂停在霍尔木兹海峡的护航行动，进一步提振了市场对和平协议的预期。", source: "Financial Times", url: "https://www.ft.com/content/8dd8d23a-2c5d-42c5-aedb-bbc1f49fcbea" },
+  { time: "16:05", tag: "macro", tagText: "宏观", text: "诺和诺德公布财报，其新推出的Wegovy减肥药片销售额远超预期，创下减肥药史上最快上市速度。公司上调2026年业绩展望，股价大涨7%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/wegovy-glp1-weight-loss-novo-nordisk-earnings-stock-nvo-ozempic.html" },
+  { time: "15:32", tag: "crypto", tagText: "加密", text: "MicroStrategy创始人Michael Saylor此前曾表示“永远不卖比特币”，如今却改口称可能出售，以展示比特币的韧性。市场可能对其言论做出不同解读。", source: "MarketWatch", url: "https://www.marketwatch.com/story/michael-saylor-said-he-would-never-sell-bitcoin-now-he-says-he-might-f05776fc" },
   { time: "14:13", tag: "ai", tagText: "AI", text: "贝莱德高管Tony Kim表示，AI正在像“同时启动10个曼哈顿计划”一样重塑全球经济，这一趋势将持续加速。", source: "MarketWatch", url: "https://www.marketwatch.com/story/like-10-manhattan-projects-going-off-all-at-once-how-ai-is-rewiring-the-global-economy-says-this-blackrock-exec-a07da7ef?mod=mw_rss_topstories" },
   { time: "13:50", tag: "ai", tagText: "AI", text: "中国AI公司DeepSeek估值接近450亿美元，国家大基金正牵头投资谈判，腾讯等投资者寻求入股。", source: "Financial Times", url: "https://www.ft.com/content/daaf2e0a-4a0d-4d7c-a85b-445480f6b9c7" },
   { time: "11:58", tag: "macro", tagText: "宏观", text: "汉莎航空警告称，中东冲突导致其第一季度额外燃油成本近20亿美元，对运营构成“巨大挑战”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/lufthansa-q1-middle-east-conflict-2-billion-fuel-cost.html" },
@@ -1646,15 +1649,15 @@ const breakingNews = [
   { time: "03:55", tag: "macro", tagText: "宏观", text: "油价持续高于110美元/桶，开始重新影响股市。分析师指出，股票与油价之间的相关性（目前处于20年来最严重的倒挂状态）正在逆转，能源成本上升可能对市场构成压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/oil-prices-above-110-are-starting-to-matter-to-the-stock-market-again.html" },
   { time: "03:15", tag: "geo", tagText: "地缘", text: "美国宣布“自由计划”，试图引导油轮通过霍尔木兹海峡，以缓解因伊朗战争导致的航运中断。但专家对该计划能否成功持怀疑态度，目前仍有数百艘船只被困在海峡两侧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/iran-war-strait-of-hormuz-project-freedom.html" },
   { time: "02:45", tag: "tech", tagText: "科技", text: "半导体股近期涨势迅猛，一个衡量半导体板块的指数在25日内的滚动涨幅已创下自2000年3月9日（即互联网泡沫破裂前一天）以来的最高水平。市场担忧历史可能重演。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-last-time-semiconductor-stocks-rose-this-far-this-quickly-the-dot-com-bubble-burst-d7b6666b?mod=mw_rss_topstories" },
-  { time: "02:00", tag: "geo", tagText: "地缘", text: "全球石油储备正以创纪录速度下降，跌至近八年低点。尽管需求崩溃，但中东战争持续对供应造成压力，夏季旅行季前供应紧张局势加剧。", source: "Financial Times", url: "https://www.ft.com/content/3beeb26f-6c35-46a9-b116-42edbe6552fd" },
-  { time: "01:49", tag: "ai", tagText: "AI", text: "Anthropic CEO Dario Amodei警告称，AI已暴露了软件公司、政府和银行系统中数万个漏洞，创造了网络安全的“危险时刻”，呼吁各方立即采取行动修复。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/anthropic-ceo-cyber-moment-of-danger-mythos-vulnerabilities.html" },
-  { time: "01:42", tag: "macro", tagText: "宏观", text: "美国参议员蒂姆·斯科特批评美联储主席鲍威尔在任期结束后继续留任美联储理事的决定，称其正在犯一个“重大错误”。鲍威尔此前表示计划在主席任期于本月届满后继续留在美联储董事会。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/tim-scott-jerome-powell-fed.html" },
 ];
-const breakingDate = "2026年5月6日 14:40 CST";
+const breakingDate = "2026年5月6日 17:35 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:30", tag: "ai", tagText: "AI", text: "AI在数学领域取得突破性进展，成功解决一项高难度数学挑战。该成果标志着AI在逻辑推理和复杂问题求解能力上的重大进步，对基础科学和工程应用具有深远影响。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVUNhSXBKVzhHUHFKSGs4NzN1cWQ0ZW9vdkJVTWZNbTkwWV9GSmFnVlZRV2RIOGx4ZjA1UWZrOGY0cjd5UFhGdy1HVUxINzBFOTUzWE9FaGw0WXFCaGVfMHNyMFBCYnNZNHA0OVFETW40WHVuMndDSldBYWFqQ1B5aGRPZGRBUQ?oc=5" },
+  { time: "15:30", tag: "ai", tagText: "AI", text: "芬兰AI实验室QuTwo完成2500万欧元天使轮融资，估值达3.25亿欧元（约3.8亿美元）。该公司由前AMD Silo AI CEO Peter Sarlin创立，此轮融资凸显市场对顶级AI人才和实验室的追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/peter-sarlins-qutwo-reaches-380m-valuation-in-angel-round/" },
   { time: "14:34", tag: "ai", tagText: "AI", text: "马克·洛尔（Marc Lore）表示，AI将很快让任何人都能开设餐厅。其创立的Wonder公司计划将机器人厨房转变为AI驱动的“餐厅工厂”，用户只需通过提示即可创建虚拟食品品牌。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/marc-lore-says-that-ai-will-soon-enable-anyone-open-a-restaurant/" },
+  { time: "14:30", tag: "ai", tagText: "AI", text: "韩国AI初创企业引领风险投资激增，带动韩国风投总额突破1万亿韩元。AI领域成为韩国风险投资市场的主要增长引擎，显示出资本对AI赛道的高度集中。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaE1rRFd4alA1eGRBZy1NRnUxWENXVUxtQ2pkdGROR3JCdlFuRzVHd0M0bmU5OEFJTkd2ZS1jREdUSG9QcnByZGN3SWNfZ05TYXdiNWpjR3IxQkx6RUQyZGQ5UDdSa1c3VldyeS1OYWN2RWs3V0VfZkpoLTZWelJMTkktVFQ3QmVQ?oc=5" },
   { time: "13:45", tag: "tech", tagText: "科技", text: "华为正在抢占英伟达的AI芯片市场。据韩国《朝鲜日报》报道，华为在AI芯片领域持续发力，逐步蚕食英伟达的市场份额，尤其是在中国市场的替代效应显著。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRGR2OGtfNFhadGl1MXUwLUZ4VGFHa1N0bzVabXVUcWZWaV8wTENhQ3A4bnRvSkpDaDhsblgycUdpdTUyV3pzeFRyb2pmeVJDTHRKX1FXR0VJS0U0NS1DRzl2T2p5UW1RZE5zOXRBZC0xeVNqN1FhYkZqU19uSGJsNVpWeWQ4Z0Y3?oc=5" },
   { time: "07:58", tag: "ai", tagText: "AI", text: "SAP以11.6亿美元收购成立仅18个月的德国AI初创公司Prior Labs，并计划大力投资。同时，SAP将限制客户代理使用少数AI模型，如英伟达的NemoClaw。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/" },
   { time: "07:58", tag: "tech", tagText: "科技", text: "广泛使用的虚拟光驱软件Daemon Tools遭遇长达一个月的供应链攻击，被植入后门。安全研究人员警告用户立即检查设备是否存在隐蔽感染。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/widely-used-daemon-tools-disk-app-backdoored-in-monthlong-supply-chain-attack/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "23:59", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI同日宣布，分别与资产管理公司成立合资企业，以更积极地推广其企业级AI服务。此举标志着两大AI巨头在企业市场的竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" },
   { time: "23:51", tag: "tech", tagText: "科技", text: "Roomba发明者Colin Angle推出全新机器人伴侣“Familiar”，该机器人并非用于清洁，而是作为情感陪伴机器人进入家庭。Angle曾将5000万台家用机器人送入千家万户，此次回归聚焦于AI驱动的社交陪伴领域。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922947/roomba-creator-new-robot-familiar-machines-magic-ai-launch" },
   { time: "23:49", tag: "ai", tagText: "AI", text: "PayPal宣布将重新成为一家科技公司，核心战略转向AI。公司计划通过自动化和重组节省15亿美元，同时裁员并升级技术栈，以推动AI主导的转型。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/" },
-  { time: "23:44", tag: "ai", tagText: "AI", text: "彼得·蒂尔的Founders Fund创纪录募集60亿美元，专门用于投资后期AI初创公司。此举显示顶级风投对AI商业化前景的强烈信心。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQejI2TlFhZXJTMUY4OXJZdEhtRzVYVVo2U3dOOGE5dmpLa3UyV3RkLUtQcHJXblk2Vi1hY0M2VV9SR3docjNZblpqc1F0VVpWckZCTk1tWm53STVuWU5ELThpZHI0akZENGx6dWg5ZjRUQmhwZ3NGZ1pydDc1TmhoWmdxLUx5NHM3S0dR?oc=5" },
-  { time: "22:54", tag: "tech", tagText: "科技", text: "据供应链分析师郭明錤透露，OpenAI计划推出自有品牌手机，专为ChatGPT优化，预计2027年面世。这将是OpenAI的首款硬件产品，而非此前传闻的Jony Ive合作设备。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/924063/openai-phone-rumors-2027-ming-chi-kuo" },
-  { time: "22:27", tag: "ai", tagText: "AI", text: "Meta将利用AI分析用户身高和骨骼结构，以识别未成年人。该系统已在部分国家运行，Meta计划逐步推广，旨在加强年龄验证和青少年保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/meta-will-use-ai-to-analyze-height-and-bone-structure-to-identify-if-users-are-underage/" },
 ];
-const aiBreakingDate = "2026年5月6日 14:40 CST";
+const aiBreakingDate = "2026年5月6日 17:35 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
