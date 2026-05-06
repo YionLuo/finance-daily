@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 67.26,
   rating: "greed",
-  timestamp: "2026-05-06T09:16:46+00:00",
+  timestamp: "2026-05-06T11:42:01+00:00",
   previousClose: 66.94,
   previous1Week: 63.37,
   previous1Month: 22.54,
   previous1Year: 54.66,
-  date: "2026年5月6日 17:35 CST"
+  date: "2026年5月6日 19:59 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:45", tag: "ai", tagText: "AI", text: "英伟达与康宁达成大规模光纤交易，康宁将在美国新建三座先进制造工厂，专门为英伟达生产光学技术产品。此举可能成为AI基础设施领域的游戏规则改变者。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-corning-optical-factories-nc-texas-ai.html" },
+  { time: "19:35", tag: "tech", tagText: "科技", text: "迪士尼股价大涨5%，新CEO Josh D'Amaro在首份财报中公布长期愿景，流媒体和主题公园业务推动营收超预期。公司计划加大内容投资并利用新技术拓展客户。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/disney-dis-earnings-q2-2026.html" },
+  { time: "19:31", tag: "geo", tagText: "地缘", text: "欧盟计划逐步淘汰中国技术的方案可能使该集团损失超过4000亿美元。中国一项研究警告称，此举将严重冲击欧洲经济，并可能引发贸易报复。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/eu-plan-phase-chinese-tech-113148624.html" },
   { time: "17:17", tag: "geo", tagText: "地缘", text: "据报道，美国与伊朗接近达成协议，内容包括伊朗暂停核浓缩活动及美国解除制裁。受此消息影响，国际油价大幅下跌，美股期货上涨。此前特朗普宣布暂停在霍尔木兹海峡的护航行动，进一步提振了市场对和平协议的预期。", source: "Financial Times", url: "https://www.ft.com/content/8dd8d23a-2c5d-42c5-aedb-bbc1f49fcbea" },
   { time: "16:05", tag: "macro", tagText: "宏观", text: "诺和诺德公布财报，其新推出的Wegovy减肥药片销售额远超预期，创下减肥药史上最快上市速度。公司上调2026年业绩展望，股价大涨7%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/wegovy-glp1-weight-loss-novo-nordisk-earnings-stock-nvo-ozempic.html" },
   { time: "15:32", tag: "crypto", tagText: "加密", text: "MicroStrategy创始人Michael Saylor此前曾表示“永远不卖比特币”，如今却改口称可能出售，以展示比特币的韧性。市场可能对其言论做出不同解读。", source: "MarketWatch", url: "https://www.marketwatch.com/story/michael-saylor-said-he-would-never-sell-bitcoin-now-he-says-he-might-f05776fc" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "06:09", tag: "tech", tagText: "科技", text: "超微电脑（Super Micro）股价盘后大涨18%，因公司发布超预期的季度业绩指引，营收同比翻倍以上，并指出美国本土制造取得进展。华尔街对其利润率复苏表示欢迎。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/super-micro-smci-q3-earnings-report-2026.html" },
   { time: "06:09", tag: "tech", tagText: "科技", text: "电动汽车制造商Lucid Group表示将调整生产计划，以更好地匹配客户对其豪华电动车的需求，原因是库存水平过高。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/lucid-lcid-q1-2026.html" },
   { time: "04:00", tag: "tech", tagText: "科技", text: "美光科技股价飙升，市值突破7000亿美元，成为美国最具价值的科技公司之一。市场对AI芯片所需内存的旺盛需求推动了内存股的加速上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/micron-zooms-past-700-billion-market-cap-rally-in-memory-stocks-.html" },
-  { time: "03:55", tag: "macro", tagText: "宏观", text: "油价持续高于110美元/桶，开始重新影响股市。分析师指出，股票与油价之间的相关性（目前处于20年来最严重的倒挂状态）正在逆转，能源成本上升可能对市场构成压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/oil-prices-above-110-are-starting-to-matter-to-the-stock-market-again.html" },
-  { time: "03:15", tag: "geo", tagText: "地缘", text: "美国宣布“自由计划”，试图引导油轮通过霍尔木兹海峡，以缓解因伊朗战争导致的航运中断。但专家对该计划能否成功持怀疑态度，目前仍有数百艘船只被困在海峡两侧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/iran-war-strait-of-hormuz-project-freedom.html" },
-  { time: "02:45", tag: "tech", tagText: "科技", text: "半导体股近期涨势迅猛，一个衡量半导体板块的指数在25日内的滚动涨幅已创下自2000年3月9日（即互联网泡沫破裂前一天）以来的最高水平。市场担忧历史可能重演。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-last-time-semiconductor-stocks-rose-this-far-this-quickly-the-dot-com-bubble-burst-d7b6666b?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月6日 17:35 CST";
+const breakingDate = "2026年5月6日 19:59 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:19", tag: "tech", tagText: "科技", text: "三星电子在AI芯片需求推动下，市值突破1万亿美元大关，对英伟达在AI芯片市场的主导地位构成挑战。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEZKQUJIc1NvMUVYSV9uVGMyc1NjZXRYd3BoRmNhTWMwWUEtRjdKS1lmYkd2dmd0V2xWNk5aUEkyU0J3Mjk3YmcwRzdkdTRUenNyMTZXN2k4XzZpa1VTODI0eTRaVkN4cndtMTlockUwLUxXUW4zcDlDTHkyOXA1TTF6Y1BrUFYyZGNUTzEya2xCZ0YtS2J3?oc=5" },
+  { time: "18:13", tag: "tech", tagText: "科技", text: "谷歌Chrome浏览器因内置AI功能，可能自动下载高达4GB的AI模型文件，导致用户电脑存储空间被大量占用。", source: "The Verge", url: "https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features" },
   { time: "16:30", tag: "ai", tagText: "AI", text: "AI在数学领域取得突破性进展，成功解决一项高难度数学挑战。该成果标志着AI在逻辑推理和复杂问题求解能力上的重大进步，对基础科学和工程应用具有深远影响。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVUNhSXBKVzhHUHFKSGs4NzN1cWQ0ZW9vdkJVTWZNbTkwWV9GSmFnVlZRV2RIOGx4ZjA1UWZrOGY0cjd5UFhGdy1HVUxINzBFOTUzWE9FaGw0WXFCaGVfMHNyMFBCYnNZNHA0OVFETW40WHVuMndDSldBYWFqQ1B5aGRPZGRBUQ?oc=5" },
   { time: "15:30", tag: "ai", tagText: "AI", text: "芬兰AI实验室QuTwo完成2500万欧元天使轮融资，估值达3.25亿欧元（约3.8亿美元）。该公司由前AMD Silo AI CEO Peter Sarlin创立，此轮融资凸显市场对顶级AI人才和实验室的追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/peter-sarlins-qutwo-reaches-380m-valuation-in-angel-round/" },
   { time: "14:34", tag: "ai", tagText: "AI", text: "马克·洛尔（Marc Lore）表示，AI将很快让任何人都能开设餐厅。其创立的Wonder公司计划将机器人厨房转变为AI驱动的“餐厅工厂”，用户只需通过提示即可创建虚拟食品品牌。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/marc-lore-says-that-ai-will-soon-enable-anyone-open-a-restaurant/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "00:52", tag: "ai", tagText: "AI", text: "五家大型图书出版商及一位作者对Meta提起集体诉讼，指控其AI模型“逐字”复制受版权保护的书籍，构成“历史上最大规模的版权侵权之一”。", source: "The Verge", url: "https://www.theverge.com/tech/924230/meta-publishers-lawsuit-ai-copyright" },
   { time: "00:45", tag: "ai", tagText: "AI", text: "企业AI客服创企Sierra获9.5亿美元融资，估值超10亿美元。该公司由前Salesforce联合首席执行官Bret Taylor创立，计划利用这笔资金成为“AI驱动客户体验的全球标准”。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" },
   { time: "23:59", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI同日宣布，分别与资产管理公司成立合资企业，以更积极地推广其企业级AI服务。此举标志着两大AI巨头在企业市场的竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" },
-  { time: "23:51", tag: "tech", tagText: "科技", text: "Roomba发明者Colin Angle推出全新机器人伴侣“Familiar”，该机器人并非用于清洁，而是作为情感陪伴机器人进入家庭。Angle曾将5000万台家用机器人送入千家万户，此次回归聚焦于AI驱动的社交陪伴领域。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/922947/roomba-creator-new-robot-familiar-machines-magic-ai-launch" },
-  { time: "23:49", tag: "ai", tagText: "AI", text: "PayPal宣布将重新成为一家科技公司，核心战略转向AI。公司计划通过自动化和重组节省15亿美元，同时裁员并升级技术栈，以推动AI主导的转型。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/" },
 ];
-const aiBreakingDate = "2026年5月6日 17:35 CST";
+const aiBreakingDate = "2026年5月6日 19:59 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
