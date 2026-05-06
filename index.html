@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 63.37,
   previous1Month: 22.54,
   previous1Year: 54.66,
-  date: "2026年5月6日 14:03 CST"
+  date: "2026年5月6日 14:40 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:13", tag: "ai", tagText: "AI", text: "贝莱德高管Tony Kim表示，AI正在像“同时启动10个曼哈顿计划”一样重塑全球经济，这一趋势将持续加速。", source: "MarketWatch", url: "https://www.marketwatch.com/story/like-10-manhattan-projects-going-off-all-at-once-how-ai-is-rewiring-the-global-economy-says-this-blackrock-exec-a07da7ef?mod=mw_rss_topstories" },
+  { time: "13:50", tag: "ai", tagText: "AI", text: "中国AI公司DeepSeek估值接近450亿美元，国家大基金正牵头投资谈判，腾讯等投资者寻求入股。", source: "Financial Times", url: "https://www.ft.com/content/daaf2e0a-4a0d-4d7c-a85b-445480f6b9c7" },
+  { time: "11:58", tag: "macro", tagText: "宏观", text: "汉莎航空警告称，中东冲突导致其第一季度额外燃油成本近20亿美元，对运营构成“巨大挑战”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/lufthansa-q1-middle-east-conflict-2-billion-fuel-cost.html" },
+  { time: "11:29", tag: "tech", tagText: "科技", text: "苹果同意支付2.5亿美元和解股东诉讼，该诉讼指控苹果在Siri AI功能上存在延迟披露，误导投资者。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTjFhbThnNnVycmlVUFRjLVZnV0IxU19GM0pEQ0lnenpWcWpNNXYxUENaVGhyTGJ4RkppZGFsRVo1OE5aN1ZVYnVLTzVkeXFBMFJ2UllZeDExWHB5a0oySmI1c080RlBnQWYzRW4zUld4dDlOMTdNOHB5bmpjSFV6UUlRUGFJX0ZJZWpUSDB2ejJmd2tOX2h2dXBadVJQVTJ4c2dzZi1fYmw?oc=5" },
   { time: "11:25", tag: "geo", tagText: "地缘", text: "伊朗外长阿拉格齐周三访问北京，这是伊朗战争爆发以来其首次访华。此行正值美国总统特朗普即将对中国进行高规格访问前夕，凸显中东地缘政治格局的微妙变化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/china-iran-araghchi-wang-yi-trump-beijing-hormuz-talks.html" },
   { time: "11:01", tag: "tech", tagText: "科技", text: "三星电子股价因AI芯片需求推动的涨势而飙升，公司市值突破1万亿美元大关。此前该公司公布的第一季度营业利润同比增长超过八倍，AI热潮持续推动半导体巨头估值。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/samsung-electronics-ai-chip-rally-kospi-record-1-trillion.html" },
   { time: "06:28", tag: "crypto", tagText: "加密", text: "比特币、XRP和狗狗币等加密货币价格上涨，以太坊保持稳定。市场情绪受到美国国防部长皮特·赫格塞斯关于伊朗可能达成停火协议的言论提振，风险偏好回升。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMilAJBVV95cUxPNnFvandNMGt1eEpMNEhWMGdHQ2tKMnlhbHlxdjZvMlk4RTRzQzFwd0NfREdGRWl5MVlleU9IdTFTekVaV0NDelJqbjE2dmsycW1ndnBYVXhKRmdJdURZLW5iQ1g3OGxWRGc4UkhZdE1BV0lxUjZJWDVTRU4zQTlzN1RTZ1dzUGdrVTFEYmFiYXdTa1RmY21aY3hHR1ZOZHh1TkZIekFobXlBUXpiZEZjb1NMVkNYdEVkaE9HRXNFQmhsRk1rZEVGWDFnS1plUXpkbGtQU1pxcjU4cUhwenV6TVkxWDFMbHdLOWUtT2MyWFBmQ1Q5enR1ZXNNNTBfemlkWWZJYi1mYUhXRVlKT205Y0tjMjE?oc=5" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "02:00", tag: "geo", tagText: "地缘", text: "全球石油储备正以创纪录速度下降，跌至近八年低点。尽管需求崩溃，但中东战争持续对供应造成压力，夏季旅行季前供应紧张局势加剧。", source: "Financial Times", url: "https://www.ft.com/content/3beeb26f-6c35-46a9-b116-42edbe6552fd" },
   { time: "01:49", tag: "ai", tagText: "AI", text: "Anthropic CEO Dario Amodei警告称，AI已暴露了软件公司、政府和银行系统中数万个漏洞，创造了网络安全的“危险时刻”，呼吁各方立即采取行动修复。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/anthropic-ceo-cyber-moment-of-danger-mythos-vulnerabilities.html" },
   { time: "01:42", tag: "macro", tagText: "宏观", text: "美国参议员蒂姆·斯科特批评美联储主席鲍威尔在任期结束后继续留任美联储理事的决定，称其正在犯一个“重大错误”。鲍威尔此前表示计划在主席任期于本月届满后继续留在美联储董事会。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/tim-scott-jerome-powell-fed.html" },
-  { time: "01:00", tag: "tech", tagText: "科技", text: "美国联邦检察官指控股票借贷运营商Val Sklarov涉嫌4.5亿美元欺诈，称其出售了作为贷款抵押品的股票。此案凸显了金融市场的监管漏洞。", source: "Financial Times", url: "https://www.ft.com/content/8e71321f-9823-4dda-9a71-9fdc34920122" },
-  { time: "00:28", tag: "macro", tagText: "宏观", text: "美国证券交易委员会（SEC）提议允许上市公司选择不发布季度财报，改为半年报。此举旨在减轻企业短期业绩压力，鼓励长期投资，但可能影响市场透明度。", source: "Reuters", url: "https://finance.yahoo.com/news/us-sec-proposes-allowing-public-160620575.html" },
-  { time: "00:26", tag: "tech", tagText: "科技", text: "预测市场交易员押注2026年科技行业裁员人数将超过44.7万人，继Coinbase之后，更多科技公司可能宣布大规模裁员。", source: "CNBC", url: "https://www.cnbc.com/2026/05/05/after-coinbase-prediction-markets-traders-see-more-tech-layoffs.html" },
-  { time: "00:23", tag: "tech", tagText: "科技", text: "Palantir股价盘后下跌，尽管第一季度财报显示美国政府业务销售强劲，但分析师指出其国际商业业务表现滞后，且高估值令市场担忧。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/palantir-stock-pltr-palantir-earnings-news-q12026/?src=A00220&yptr=yahoo" },
 ];
-const breakingDate = "2026年5月6日 14:03 CST";
+const breakingDate = "2026年5月6日 14:40 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:34", tag: "ai", tagText: "AI", text: "马克·洛尔（Marc Lore）表示，AI将很快让任何人都能开设餐厅。其创立的Wonder公司计划将机器人厨房转变为AI驱动的“餐厅工厂”，用户只需通过提示即可创建虚拟食品品牌。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/marc-lore-says-that-ai-will-soon-enable-anyone-open-a-restaurant/" },
+  { time: "13:45", tag: "tech", tagText: "科技", text: "华为正在抢占英伟达的AI芯片市场。据韩国《朝鲜日报》报道，华为在AI芯片领域持续发力，逐步蚕食英伟达的市场份额，尤其是在中国市场的替代效应显著。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRGR2OGtfNFhadGl1MXUwLUZ4VGFHa1N0bzVabXVUcWZWaV8wTENhQ3A4bnRvSkpDaDhsblgycUdpdTUyV3pzeFRyb2pmeVJDTHRKX1FXR0VJS0U0NS1DRzl2T2p5UW1RZE5zOXRBZC0xeVNqN1FhYkZqU19uSGJsNVpWeWQ4Z0Y3?oc=5" },
   { time: "07:58", tag: "ai", tagText: "AI", text: "SAP以11.6亿美元收购成立仅18个月的德国AI初创公司Prior Labs，并计划大力投资。同时，SAP将限制客户代理使用少数AI模型，如英伟达的NemoClaw。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/" },
   { time: "07:58", tag: "tech", tagText: "科技", text: "广泛使用的虚拟光驱软件Daemon Tools遭遇长达一个月的供应链攻击，被植入后门。安全研究人员警告用户立即检查设备是否存在隐蔽感染。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/widely-used-daemon-tools-disk-app-backdoored-in-monthlong-supply-chain-attack/" },
   { time: "07:58", tag: "ai", tagText: "AI", text: "Google Home的Gemini AI升级至3.1版本，现在能够处理更复杂的多步骤请求，并支持在单条指令中组合多个任务，显著提升了智能家居助手的交互能力。", source: "The Verge", url: "https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "23:44", tag: "ai", tagText: "AI", text: "彼得·蒂尔的Founders Fund创纪录募集60亿美元，专门用于投资后期AI初创公司。此举显示顶级风投对AI商业化前景的强烈信心。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQejI2TlFhZXJTMUY4OXJZdEhtRzVYVVo2U3dOOGE5dmpLa3UyV3RkLUtQcHJXblk2Vi1hY0M2VV9SR3docjNZblpqc1F0VVpWckZCTk1tWm53STVuWU5ELThpZHI0akZENGx6dWg5ZjRUQmhwZ3NGZ1pydDc1TmhoWmdxLUx5NHM3S0dR?oc=5" },
   { time: "22:54", tag: "tech", tagText: "科技", text: "据供应链分析师郭明錤透露，OpenAI计划推出自有品牌手机，专为ChatGPT优化，预计2027年面世。这将是OpenAI的首款硬件产品，而非此前传闻的Jony Ive合作设备。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/924063/openai-phone-rumors-2027-ming-chi-kuo" },
   { time: "22:27", tag: "ai", tagText: "AI", text: "Meta将利用AI分析用户身高和骨骼结构，以识别未成年人。该系统已在部分国家运行，Meta计划逐步推广，旨在加强年龄验证和青少年保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/meta-will-use-ai-to-analyze-height-and-bone-structure-to-identify-if-users-are-underage/" },
-  { time: "22:26", tag: "ai", tagText: "AI", text: "谷歌DeepMind、微软和xAI同意，在公开发布新AI模型前允许美国政府进行审查。美国商务部宣布此举，标志着AI监管进入新阶段，旨在防范潜在风险。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review" },
-  { time: "22:20", tag: "ai", tagText: "AI", text: "AI语音公司ElevenLabs披露新投资者名单，包括贝莱德、演员杰米·福克斯和伊娃·朗格利亚。公司年化收入已达5亿美元，正扩大企业客户群，语音AI正成为关键交互界面。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/" },
 ];
-const aiBreakingDate = "2026年5月6日 14:03 CST";
+const aiBreakingDate = "2026年5月6日 14:40 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
