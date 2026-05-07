@@ -1,5 +1,56 @@
 # Y Daily 健康检查执行记录
 
+## 2026-05-07 06:10
+- **状态**: ✅ OK
+- **Breaking News**: 最后提交 5 分钟前，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-07 02:09
+- **状态**: ✅ OK
+- **Breaking News**: 最后提交 79 分钟前，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-06 22:07
+- **状态**: ⚠️ STALE → ⚠️ 部分恢复（仅时间戳+Fear&Greed）
+- **Breaking News**: 127 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **API 状态**: once.novai.su 503（`deepseek-v4-flash` model_not_found），deepseek.com 401（key 无效）
+- **操作**: 运行 update_breaking.py，RSS 抓取成功（finance 43 篇 + AI 10 篇），LLM 分析全部失败（0 条新内容），仅更新时间戳（18:05→22:07 CST）+ Fear & Greed 69.03（greed），新闻条目无变化
+- **提交**: `auto: health check recovery breaking news 2026-05-06 22:07 CST` → push OK
+- **注意**: API 端点 `once.novai.su` 持续 503（deepseek-v4-flash 不可用），今日已连续多次 LLM 不可用
+
+## 2026-05-06 18:05
+- **状态**: ✅ OK
+- **Breaking News**: 最后提交 29 分钟前，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-06 14:01
+- **状态**: ⚠️ STALE → ⚠️ 部分恢复（仅时间戳+Fear&Greed）
+- **Breaking News**: 121 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **API 状态**: once.novai.su 503（`deepseek-v4-flash` model_not_found），deepseek.com 401（key 无效）
+- **操作**: 运行 update_breaking.py，RSS 抓取成功（finance 27 篇 + AI 1 篇），LLM 分析全部失败（0 条新内容），仅更新时间戳（12:00→14:03 CST）+ Fear & Greed 66.91（greed），新闻条目无变化
+- **提交**: `auto: health check recovery breaking news 2026-05-06 14:03 CST` → push OK
+- **注意**: API 端点 `once.novai.su` 持续 503（deepseek-v4-flash 不可用），已连续多次 LLM 不可用
+
+## 2026-05-03 19:51
+- **状态**: ✅ OK
+- **Breaking News**: 最后提交 98 分钟前，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-04-28 14:10
+- **状态**: ⚠️ STALE → ⚠️ 部分恢复（仅时间戳）
+- **Breaking News**: 127 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **API 状态**: once.novai.su 503（`deepseek-v4-flash` model_not_found），deepseek.com 401（key 无效）
+- **操作**: 运行 update_breaking.py，RSS 抓取成功（finance 22 篇 + AI 2 篇），LLM 分析全部失败（0 条新内容），仅更新时间戳（10:07→14:10 CST）+ Fear & Greed 67.34（greed），新闻条目无变化
+- **提交**: `auto: health check recovery breaking news 2026-04-28 14:10 CST` → push OK
+- **注意**: API 端点 `once.novai.su` 持续 503（deepseek-v4-flash 不可用），今日已连续 3 次 LLM 不可用
+
 ## 2026-04-28 10:07
 - **状态**: ⚠️ STALE → ⚠️ 部分恢复（仅时间戳）
 - **Breaking News**: 122 分钟前最后提交，超过 120min 阈值
