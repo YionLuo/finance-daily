@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.63,
+  score: 69.49,
   rating: "greed",
-  timestamp: "2026-05-07T11:41:46+00:00",
+  timestamp: "2026-05-07T14:36:46+00:00",
   previousClose: 68.37,
   previous1Week: 66.69,
   previous1Month: 27.6,
   previous1Year: 54.14,
-  date: "2026年5月7日 19:58 CST"
+  date: "2026年5月7日 22:42 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:20", tag: "macro", tagText: "宏观", text: "知名教授Scott Galloway警告美国股市将在未来两年内崩盘，标普500指数中40%的股票面临风险，建议投资者保护资产。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/scott-galloway-warns-us-stock-142000861.html" },
+  { time: "22:18", tag: "macro", tagText: "宏观", text: "美国二手车价格今年首次下跌，汽油价格飙升和电动汽车兴趣上升推动市场变化。Cox Automotive表示，可负担性仍是买家主要担忧，推动对老旧车辆和电动车的需求增加。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/used-car-prices-gas.html" },
+  { time: "22:13", tag: "geo", tagText: "地缘", text: "非洲首富丹格特计划将其价值130亿美元的水泥帝国在伦敦上市，称英国上市规则改革使该计划更具吸引力。", source: "Financial Times", url: "https://www.ft.com/content/966d1c99-dd70-42a7-afd5-e3524a7566a1" },
+  { time: "22:09", tag: "geo", tagText: "地缘", text: "德国航天公司OHB威胁称，如果欧盟批准空客、泰雷兹和莱昂纳多的卫星合并案，将采取法律行动。此举凸显欧洲航天产业整合引发的竞争担忧。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/germanys-ohb-consider-legal-action-140950223.html" },
+  { time: "22:00", tag: "tech", tagText: "科技", text: "华尔街银行计划就资本规则进行最后推动。该规则将影响银行持有资本金的要求，可能对金融业产生重大影响。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/wall-street-banks-plan-final-130339051.html" },
   { time: "19:55", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什提交69页财务文件，但未披露巨额财富来源，留下约1亿美元谜团。尽管存在透明度争议，参议院仍预计将确认其任命。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-undisclosed-wealth-leaves-a-100-million-mystery-atop-the-federal-reserve-19f0dc78?mod=mw_rss_topstories" },
   { time: "19:30", tag: "macro", tagText: "宏观", text: "标普500指数期货小幅走高，此前该指数再创历史新高。市场关注美伊谈判进展，同时通胀担忧有所缓解。AI板块连续两日上涨后，市场情绪谨慎乐观。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9KaHgtMWs1aERlakNrX19EYUlqOVc4YzAtN2VZMWNIaTVoWkRsc2FlV3I2WVk0bkV6aXU1OXhKaFlsZlgtSFM3Zm9ES3NfUzFaNXNVYUlKT0tQZlR2ODVHOXZwUnhfTm1Ga1lKNi1ZMkkyaDl5ZEN30gF8QVVfeXFMUEpWWllrM0JFZDUwQzFwZUFkUnE5bExwWU9lVlBGMlhLQzE3U3JwMHpBM25SV2pMdW1Rd3EzR3R3aS1KLUZaSDFlT2tXVElvWE1aNmNYbzJxb2pPWDdPZUFxRDluU3p5UW9ldkhqT3dRZ25MSDIzOGVxR0VlQQ?oc=5" },
   { time: "19:17", tag: "macro", tagText: "宏观", text: "麦当劳第一季度财报超预期，尽管面临“充满挑战的环境”。该公司股价过去一年下跌10%，受经济担忧拖累。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/mcdonalds-mcd-q1-2026-earnings.html" },
@@ -1644,16 +1649,19 @@ const breakingNews = [
   { time: "11:25", tag: "macro", tagText: "宏观", text: "日本股市在黄金周假期后补涨，日经225指数飙升逾5%至历史新高，突破62000点。软银集团股价暴涨超16%，科技股领涨。市场暂时忽略中东紧张局势，聚焦于AI驱动的增长预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/japan-softbank-tech-shares-nikkei-to-record-high.html" },
   { time: "07:45", tag: "geo", tagText: "地缘", text: "亚太市场预计上涨，投资者权衡特朗普对伊朗的威胁与和平希望。中东紧张局势再度升温，但市场暂时忽略该风险，聚焦于潜在外交突破。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/asia-pacific-markets-today-live-updates-nikkei-225-kospi-hang-seng-index.html" },
   { time: "07:36", tag: "geo", tagText: "地缘", text: "交易员指出周三原油市场出现可疑活动：在Axios报道导致油价下跌前的一小时内，价值17亿美元的原油合约易手。专家称交易量异常飙升，引发市场操纵担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/traders-point-to-suspicious-activity-in-the-oil-market-on-wednesday-3a6821d9?mod=mw_rss_topstories" },
-  { time: "06:30", tag: "tech", tagText: "科技", text: "Anthropic CEO Dario Amodei在公司开发者大会上表示，第一季度业务增长了80倍，这解释了公司面临的算力困难。公司正“尽可能快地”增加计算能力。此前有报道称，SpaceX将向Anthropic出租数据中心容量以支持其增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/anthropic-ceo-dario-amodei-says-company-crew-80-fold-in-first-quarter.html" },
-  { time: "06:12", tag: "crypto", tagText: "加密", text: "特朗普兄弟支持的American Bitcoin公司因挖矿收入增强而收窄亏损。该公司在比特币挖矿业务上取得进展，财务状况有所改善。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTjZwRHRvRjgzUmpFOWpRLTRQWFB2NkU0MWVmZ3hTU0wyZkYwendudnU1ZXhqZVpzUkhYR2oxR05oRGtRc3FQS2RURUduQnYtTTJJZGNMRWt3T3dPdDI2Nm9iSWJURWNXOU5kWEh3MWxmZE1XQUw5SmtnZmkzZWd0LV9sTEpCMTNwbG1zZHFaQVhDUWVacGZuZUxVY0FoOW5QQ1ZWd0lBOWtkcHk0RlBYNFdfUi14UF9uUmRnMA?oc=5" },
-  { time: "06:12", tag: "tech", tagText: "科技", text: "英伟达将向康宁投资高达32亿美元，作为大规模光纤交易的一部分，将新建3座专注于AI的工厂。康宁将在美国开设三家全新的先进制造工厂，专门为英伟达生产光学技术产品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-corning-optical-factories-nc-texas-ai.html" },
-  { time: "05:47", tag: "macro", tagText: "宏观", text: "空客赢得加拿大史上最大飞机订单，价值190亿美元。亚航订购150架A220-300客机，极大提振了加拿大制造业。", source: "Financial Times", url: "https://www.ft.com/content/19c4dab7-0141-4c40-9d2f-180ff33cdd63" },
-  { time: "05:38", tag: "geo", tagText: "地缘", text: "以色列自停火以来首次空袭贝鲁特。此前以军持续打击黎巴嫩南部目标，但自4月8日以来未攻击首都。此举标志着中东局势再度升级。", source: "Financial Times", url: "https://www.ft.com/content/69308a1e-95d0-4bcd-8f4f-9624993cef7c" },
 ];
-const breakingDate = "2026年5月7日 19:58 CST";
+const breakingDate = "2026年5月7日 22:42 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
+  { time: "21:44", tag: "ai", tagText: "AI", text: "中国AI初创公司Moonshot AI以200亿美元估值完成20亿美元融资，其年化经常性收入在4月突破2亿美元，由付费订阅和API使用量快速增长驱动。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/" },
+  { time: "21:30", tag: "ai", tagText: "AI", text: "Aurora CEO Chris Ursson表示，自动驾驶卡车终于准备好规模化部署，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。", source: "TechCrunch", url: "https://techcrunch.com/podcast/auroras-chris-urmson-on-why-self-driving-trucks-are-finally-ready-to-scale/" },
+  { time: "21:03", tag: "ai", tagText: "AI", text: "演员Jamie Foxx参与AI语音克隆初创公司ElevenLabs的D轮融资，该公司估值持续攀升，明星资本加速涌入AI赛道。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPcXBiT0VfQkh2OE5OYWU3SWwxTlZKLXFmME12aGNpbTdIdTRNMHJBODk5OU1rcEVrQ0FfVmUyZUVRMDVMakpadHVGdFRfSkpEZFhhYXNMQVJmYnVyLUx2N0hOckNqUllCeUZOazJldmEyMUVLTHVaVEVMNzZFOWdoVXBTRlAtUFo1dXVvV1N1VGtIQXZhX0dvRmxTV3dzR2RmVU5JTHBhNHBvaDJzZG1zMEJ4S3RvTW9OZ0VNeTc4bnhhNTBnVFdTSEIxbWI4ZnJISjdOVWFEaVpUS3BmUEJqT1BvTFRxZUo5dDdJ?oc=5" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "Spotify推出新工具，允许用户通过OpenAI Codex或Claude Code等AI代理创建播客并直接导入Spotify，旨在成为AI生成个人音频内容的核心平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/spotify-wants-to-become-the-home-for-ai-generated-personal-audio/" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "AI财务运营初创公司Fazeshift完成1700万美元融资，投资者押注其以应收账款为切入点的AI驱动财务自动化方案。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxQLThkRUJqLTZRNjFlNjRvZjg3Q3RCVzFtbHJSekxlbzhQdTVkakFCNWtPT2V5UWVaQjlHMWlETUV2QUE0Z3ZOVHhUZ21ERlQ5bU9NRWtTZ2RXaXpvRGlKNGJzTVd5M0ZWNktLR0JBSk12NE9oVmNxY2g3WklWeF9ETFJHNlZlODNYcXlYZU9WSG9oTDYtQjRuMEY4Z1FEUQ?oc=5" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌更新AI搜索功能，将直接引用Reddit等来源的“观点预览”，使用户能更便捷地找到来自可信来源的信息。", source: "The Verge", url: "https://www.theverge.com/tech/924993/google-ai-search-mode-overviews-update-reddit-links" },
+  { time: "20:20", tag: "ai", tagText: "AI", text: "Spotify的AI DJ功能新增法语、德语、意大利语和巴西葡萄牙语支持，进一步拓展国际市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/spotifys-ai-dj-now-supports-french-german-italian-and-brazilian-portuguese/" },
   { time: "19:45", tag: "ai", tagText: "AI", text: "微软进行最新领导层重组，Office和LinkedIn负责人Ryan Roslansky扩大职权范围，现同时掌管Teams业务。", source: "The Verge", url: "https://www.theverge.com/tech/924931/microsoft-office-copilot-windows-reorg-shuffle" },
   { time: "19:19", tag: "tech", tagText: "科技", text: "三星电子在AI芯片需求推动下，市值突破1万亿美元大关，对英伟达在AI芯片市场的主导地位构成挑战。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEZKQUJIc1NvMUVYSV9uVGMyc1NjZXRYd3BoRmNhTWMwWUEtRjdKS1lmYkd2dmd0V2xWNk5aUEkyU0J3Mjk3YmcwRzdkdTRUenNyMTZXN2k4XzZpa1VTODI0eTRaVkN4cndtMTlockUwLUxXUW4zcDlDTHkyOXA1TTF6Y1BrUFYyZGNUTzEya2xCZ0YtS2J3?oc=5" },
   { time: "18:13", tag: "ai", tagText: "AI", text: "英国谢菲尔德大学研究人员提出，昆虫大脑的神经机制可为AI技术带来变革性突破，有望开发出更高效、低能耗的智能系统。", source: "BBC", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wb1NfMmFVdjdqRGI3X200azdvTm9IaWNGcUktZWdXdzdfNWQ1ZW9XM3V4MlRsNmVWN0dLaU9NSnhhVWY1a2FVWi1NSHdGNWtFNmRjdW9uZjlKQQ?oc=5" },
@@ -1666,16 +1674,8 @@ const aiBreakingNews = [
   { time: "02:55", tag: "ai", tagText: "AI", text: "OpenAI前CTO Mira Murati在法庭作证称，CEO Sam Altman曾就新AI模型的安全标准向她撒谎。该证词在马斯克诉奥特曼案中播放，案件审理可能改变OpenAI及ChatGPT的未来走向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925338/openai-musk-v-altman-mira-murati" },
   { time: "02:23", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Greg Brockman公开披露埃隆·马斯克离开OpenAI的内幕细节，包括创始人间激烈的谈判过程。这一罕见公开的幕后故事揭示了公司早期分裂的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/" },
   { time: "01:23", tag: "tech", tagText: "科技", text: "SpaceX计划在德克萨斯州建设名为“Terafab”的芯片工厂，总投资可能高达1190亿美元。该项目被描述为“多阶段、下一代、垂直整合的半导体制造和先进计算设施”，标志着SpaceX向芯片制造领域的大规模扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/spacex-may-spend-up-to-119-billion-on-terafab-chip-factory-in-texas/" },
-  { time: "01:20", tag: "ai", tagText: "AI", text: "中国AI实验室DeepSeek首轮融资估值或达450亿美元。据多家媒体报道，中国国家支持的芯片基金正洽谈领投此轮融资。DeepSeek因在2025年初以极低成本和算力训练出媲美美国大模型的语言模型而声名鹊起。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/" },
-  { time: "23:37", tag: "ai", tagText: "AI", text: "OpenAI创始人Sam Altman与Elon Musk对簿公堂，双方就OpenAI的未来走向展开激烈法庭辩论。Musk于2024年起诉OpenAI，指控其背离了非营利初衷，此案结果可能深刻影响ChatGPT及OpenAI的发展方向。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
-  { time: "23:27", tag: "ai", tagText: "AI", text: "Tinder母公司Match Group表示，由于AI工具“成本高昂”，将放缓今年剩余时间的招聘计划。此举反映出AI技术的高投入正在对科技公司的运营策略产生实质性影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/tinder-owner-match-group-is-slowing-hiring-to-pay-for-its-increased-use-of-ai-tools/" },
-  { time: "23:12", tag: "ai", tagText: "AI", text: "苹果公司同意支付2.5亿美元，以和解一桩关于Siri AI功能延迟推出的集体诉讼。原告指控苹果在Siri的AI功能上过度承诺，未能按时交付。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/apple-to-pay-250m-to-settle-lawsuit-over-siris-delayed-ai-features/" },
-  { time: "22:46", tag: "ai", tagText: "AI", text: "获Khosla Ventures投资的机器人AI初创公司Genesis AI发布首个模型GENE-26.5，并展示了一套机械手执行复杂任务的演示。该公司此前完成1.05亿美元种子轮融资，旨在构建机器人基础AI，此次展示标志着其向全栈式机器人AI公司迈进。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/khosla-backed-robotics-startup-genesis-ai-has-gone-full-stack-demo-shows/" },
-  { time: "22:44", tag: "tech", tagText: "科技", text: "中国自动驾驶公司QCraft宣布将其自动驾驶技术栈扩展至物理AI前沿领域。此举标志着该公司从单纯的自动驾驶向更广泛的机器人及物理世界AI应用领域拓展。", source: "Robotics & Automation News", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMlNFa0gyN1FUb0pQV0ZzQkY0d2x6YUlaZ3VYWlF2VXNBNG1OaXNBZVlLS010Y19mQ0xxN1hYUG5mdk94ZVZXdmN2UkF2dWNZZEVPUkVpQ1hHQzlENEthYWtaVDNFUjM0SkF2R3YyVXJza2FuUFlIaXcxMG9Qb2g1QjB4WkRZckhqOU1pM2JnOHRDQ3M5VXMyMmxiSTFCd2RiYy1zRWNSNERoNmREeFpnT3ZyU05QNjhndnFyRlNESGNjb285MTZ2Tll3?oc=5" },
-  { time: "21:03", tag: "ai", tagText: "AI", text: "演员Jamie Foxx参与AI语音克隆初创公司ElevenLabs的D轮融资，该公司估值持续攀升，明星资本加速涌入AI赛道。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPcXBiT0VfQkh2OE5OYWU3SWwxTlZKLXFmME12aGNpbTdIdTRNMHJBODk5OU1rcEVrQ0FfVmUyZUVRMDVMakpadHVGdFRfSkpEZFhhYXNMQVJmYnVyLUx2N0hOckNqUllCeUZOazJldmEyMUVLTHVaVEVMNzZFOWdoVXBTRlAtUFo1dXVvV1N1VGtIQXZhX0dvRmxTV3dzR2RmVU5JTHBhNHBvaDJzZG1zMEJ4S3RvTW9OZ0VNeTc4bnhhNTBnVFdTSEIxbWI4ZnJISjdOVWFEaVpUS3BmUEJqT1BvTFRxZUo5dDdJ?oc=5" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌更新AI搜索功能，将直接引用Reddit等来源的“观点预览”，使用户能更便捷地找到来自可信来源的信息。", source: "The Verge", url: "https://www.theverge.com/tech/924993/google-ai-search-mode-overviews-update-reddit-links" },
 ];
-const aiBreakingDate = "2026年5月7日 19:58 CST";
+const aiBreakingDate = "2026年5月7日 22:42 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
