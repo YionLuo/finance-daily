@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 27.6,
   previous1Year: 54.14,
-  date: "2026年5月7日 14:13 CST"
+  date: "2026年5月7日 14:47 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:35", tag: "geo", tagText: "地缘", text: "伊朗战争推高油价，壳牌季度利润超预期，但宣布削减股票回购。伦敦上市的壳牌成为最新一家受益于地缘政治波动的大型能源公司。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/oil-giant-shell-tops-quarterly-profit-estimates-as-iran-war-drives-price-surge.html" },
+  { time: "14:00", tag: "geo", tagText: "地缘", text: "阿联酋航空在伊朗战争导致部分航线停飞、航空燃油价格飙升的背景下，仍录得创纪录的季度利润。该航司表示，在冲突导致空域关闭后，大部分航班已恢复。", source: "Financial Times", url: "https://www.ft.com/content/17cb8949-7698-45a2-b9b8-832187e4e624" },
+  { time: "13:47", tag: "macro", tagText: "宏观", text: "亚洲开发银行宣布一项700亿美元的新能源和数字基础设施计划，目标在2035年前推动亚洲及太平洋地区发展。东南亚将成为该计划的主要受益区域。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/adb-70-billion-plan-southeast-asia-digital-infrastructure-power.html" },
+  { time: "13:00", tag: "tech", tagText: "科技", text: "挪威国家石油公司Equinor向CNBC表示，预计伊朗战争将为其能源转型业务带来提振。风电巨头也迎来盈利超预期，地缘冲突加速了全球能源结构转型。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/iran-war-renewables-wind-oil-gas-equinor-orsted.html" },
   { time: "11:25", tag: "macro", tagText: "宏观", text: "日本股市在黄金周假期后补涨，日经225指数飙升逾5%至历史新高，突破62000点。软银集团股价暴涨超16%，科技股领涨。市场暂时忽略中东紧张局势，聚焦于AI驱动的增长预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/japan-softbank-tech-shares-nikkei-to-record-high.html" },
   { time: "07:45", tag: "geo", tagText: "地缘", text: "亚太市场预计上涨，投资者权衡特朗普对伊朗的威胁与和平希望。中东紧张局势再度升温，但市场暂时忽略该风险，聚焦于潜在外交突破。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/asia-pacific-markets-today-live-updates-nikkei-225-kospi-hang-seng-index.html" },
   { time: "07:36", tag: "geo", tagText: "地缘", text: "交易员指出周三原油市场出现可疑活动：在Axios报道导致油价下跌前的一小时内，价值17亿美元的原油合约易手。专家称交易量异常飙升，引发市场操纵担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/traders-point-to-suspicious-activity-in-the-oil-market-on-wednesday-3a6821d9?mod=mw_rss_topstories" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "04:45", tag: "tech", tagText: "科技", text: "Fortinet股价飙升，财报缓解了市场对AI颠覆其业务的担忧。“日益复杂的威胁环境”推动了对该公司网络安全产品的需求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fortinets-stock-rockets-as-earnings-help-dispel-fears-of-ai-disruption-8a8f0107" },
   { time: "04:35", tag: "ai", tagText: "AI", text: "特朗普政府据报正考虑对AI采取更激进的监管方式，可能通过行政令加强对人工智能模型的监管，标志着政策方向的重大转变。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-how-far-the-trump-administrations-startling-turn-on-ai-regulation-might-go-15ce46be" },
   { time: "04:32", tag: "macro", tagText: "宏观", text: "美股三大指数全线上涨：道指涨600点，标普500和纳指均创历史新高，AI交易热潮推动市场强劲反弹。道指已正式脱离回调区间，向50000点关口迈进。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/doordash-dash-earnings-q1-2026.html" },
-  { time: "04:32", tag: "ai", tagText: "AI", text: "AMD股价大涨19%，CEO苏姿丰将长期CPU需求预测翻倍，称AI推动数据中心需求激增，大幅上调业绩展望。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/amd-lisa-su-stock-forecast-earnings.html" },
-  { time: "04:13", tag: "tech", tagText: "科技", text: "Snap发布谨慎业绩指引，称与AI初创公司Perplexity的合作已终止，中东地缘政治局势带来不确定性，股价承压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/snap-q1-earnings-report-2026.html" },
-  { time: "03:31", tag: "ai", tagText: "AI", text: "SpaceX将向AI初创公司Anthropic出租数据中心容量，以帮助其快速增加计算能力，满足业务增长需求。", source: "Financial Times", url: "https://www.ft.com/content/aa0239b8-0d57-4dc8-8c1a-ed7ac4d689fb" },
-  { time: "01:56", tag: "tech", tagText: "科技", text: "据文件披露，埃隆·马斯克在德克萨斯州的巨型芯片工厂Terafab建设成本可能高达1190亿美元。该工厂旨在为特斯拉、SpaceX和xAI制造芯片，是马斯克在AI和半导体领域布局的关键一步。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/elon-musks-spacex-chip-fab-in-texas-to-cost-up-to-119-billion.html" },
 ];
-const breakingDate = "2026年5月7日 14:13 CST";
+const breakingDate = "2026年5月7日 14:47 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:35", tag: "ai", tagText: "AI", text: "瑞典斯德哥尔摩AI初创公司Pit结束隐身模式，获得由a16z领投的1360万欧元融资，提供“AI产品团队即服务”模式。该公司旨在帮助企业快速组建和部署AI产品团队，加速AI应用落地。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQY1JCV3c0LXFSa1ZTYlZ6UFdUQnluUzZvcXd1akFSemhHNmFFa3JjbFBEYzFZOGxOZGRYejkwaGhCd05tazJEQk9OVEwyMWJoU0pQS0VMUlhEd0N0VjlYWERWcEdERWQ5cVhuNmI1SGhPdi1iRnp6bWZURC1RZm9OSE1DNzlMUGVtZ2xZNEZEbDBaTTFfMHpfRHpUM05weEkzeVpRcWpYa0dUXzgxRWRXQ05FNDJsay1wWWRQLXJybFBlR0lTNUlCajluTWp3Sy01UVZiS0VDMA?oc=5" },
+  { time: "13:25", tag: "ai", tagText: "AI", text: "在米尔肯全球会议上，五位覆盖AI供应链各环节的行业领袖与TechCrunch对话，探讨了AI经济当前面临的瓶颈，包括芯片短缺、能源限制、模型训练成本飙升以及商业化落地困难等问题，指出AI发展正遭遇多重结构性挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/five-architects-of-the-ai-economy-explain-where-the-wheels-are-coming-off/" },
   { time: "05:55", tag: "ai", tagText: "AI", text: "IAC董事长Barry Diller为OpenAI CEO Sam Altman辩护，但同时警告称，随着AGI（通用人工智能）临近，“信任已无关紧要”，必须为其设立安全护栏。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/barry-diller-trusts-sam-altman-but-trust-is-irrelevant-as-agi-nears-he-says/" },
   { time: "05:43", tag: "ai", tagText: "AI", text: "Snap宣布，其与AI搜索公司Perplexity价值4亿美元的整合协议已“友好终止”。该协议原计划将Perplexity的AI搜索集成到Snapchat中，于去年11月公布。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/snap-says-its-400m-deal-with-perplexity-amicably-ended/" },
   { time: "05:32", tag: "ai", tagText: "AI", text: "分析指出，马斯克的xAI公司实际业务重心可能已从训练AI模型转向建设数据中心，其商业模式正演变为“新云服务”提供商。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/is-xai-a-neocloud-now/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "19:45", tag: "ai", tagText: "AI", text: "微软进行最新领导层重组，Office和LinkedIn负责人Ryan Roslansky扩大职权范围，现同时掌管Teams业务。", source: "The Verge", url: "https://www.theverge.com/tech/924931/microsoft-office-copilot-windows-reorg-shuffle" },
   { time: "19:19", tag: "tech", tagText: "科技", text: "三星电子在AI芯片需求推动下，市值突破1万亿美元大关，对英伟达在AI芯片市场的主导地位构成挑战。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEZKQUJIc1NvMUVYSV9uVGMyc1NjZXRYd3BoRmNhTWMwWUEtRjdKS1lmYkd2dmd0V2xWNk5aUEkyU0J3Mjk3YmcwRzdkdTRUenNyMTZXN2k4XzZpa1VTODI0eTRaVkN4cndtMTlockUwLUxXUW4zcDlDTHkyOXA1TTF6Y1BrUFYyZGNUTzEya2xCZ0YtS2J3?oc=5" },
   { time: "18:13", tag: "ai", tagText: "AI", text: "英国谢菲尔德大学研究人员提出，昆虫大脑的神经机制可为AI技术带来变革性突破，有望开发出更高效、低能耗的智能系统。", source: "BBC", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wb1NfMmFVdjdqRGI3X200azdvTm9IaWNGcUktZWdXdzdfNWQ1ZW9XM3V4MlRsNmVWN0dLaU9NSnhhVWY1a2FVWi1NSHdGNWtFNmRjdW9uZjlKQQ?oc=5" },
-  { time: "18:13", tag: "tech", tagText: "科技", text: "谷歌Chrome浏览器因内置AI功能，可能自动下载高达4GB的AI模型文件，导致用户电脑存储空间被大量占用。", source: "The Verge", url: "https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features" },
-  { time: "16:30", tag: "ai", tagText: "AI", text: "AI在数学领域取得突破性进展，成功解决一项高难度数学挑战。该成果标志着AI在逻辑推理和复杂问题求解能力上的重大进步，对基础科学和工程应用具有深远影响。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVUNhSXBKVzhHUHFKSGs4NzN1cWQ0ZW9vdkJVTWZNbTkwWV9GSmFnVlZRV2RIOGx4ZjA1UWZrOGY0cjd5UFhGdy1HVUxINzBFOTUzWE9FaGw0WXFCaGVfMHNyMFBCYnNZNHA0OVFETW40WHVuMndDSldBYWFqQ1B5aGRPZGRBUQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月7日 14:13 CST";
+const aiBreakingDate = "2026年5月7日 14:47 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
