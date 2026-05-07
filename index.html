@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 69.49,
+  score: 68.31,
   rating: "greed",
-  timestamp: "2026-05-07T14:36:46+00:00",
+  timestamp: "2026-05-07T16:54:57+00:00",
   previousClose: 68.37,
   previous1Week: 66.69,
   previous1Month: 27.6,
   previous1Year: 54.14,
-  date: "2026年5月7日 22:42 CST"
+  date: "2026年5月8日 01:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:46", tag: "ai", tagText: "AI", text: "对冲基金大佬保罗·都铎·琼斯警告美国在AI监管方面已落后，称‘我们本应已经行动’。美国正与中国展开激烈竞争，争夺AI创新领导地位，但监管缺位可能带来风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/paul-tudor-jones-ai-regulation-warning.html" },
+  { time: "00:42", tag: "tech", tagText: "科技", text: "Meta股东面临警示信号：扎克伯格推出‘Multi Mark’AI克隆体。评论认为，用数字替身取代真实领导并非创新，而是逃避责任的高科技手段，对股东构成重大风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/zuckerbergs-multi-mark-ai-clone-is-a-huge-red-flag-for-meta-shareholders-53e58b30" },
+  { time: "00:27", tag: "tech", tagText: "科技", text: "SpaceX即将进行的IPO可能催生一批新公司。SpaceX员工和前员工拥有‘疯狂的人脉网络’，IPO后将获得大量现金，有望推动更多‘迷你SpaceX’初创企业涌现。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-spacex-mafia-is-here-elon-musks-big-ipo-could-launch-a-constellation-of-new-companies-83def501" },
+  { time: "00:22", tag: "geo", tagText: "地缘", text: "波音CEO凯利·奥特伯格预计将随特朗普总统下周访问中国。这一行程凸显美中贸易关系及航空业合作的重要性，波音正寻求扩大在华业务。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/trump-china-boeing-kelly-ortberg.html" },
+  { time: "00:21", tag: "macro", tagText: "宏观", text: "花旗集团以温和的利润目标令投资者失望。这家华尔街银行试图说服投资者其长达数年的转型中最艰难的部分已经完成，但市场对其增长前景持怀疑态度。", source: "Financial Times", url: "https://www.ft.com/content/05471ceb-3aac-4d68-9840-a329b429d240" },
   { time: "22:20", tag: "macro", tagText: "宏观", text: "知名教授Scott Galloway警告美国股市将在未来两年内崩盘，标普500指数中40%的股票面临风险，建议投资者保护资产。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/scott-galloway-warns-us-stock-142000861.html" },
   { time: "22:18", tag: "macro", tagText: "宏观", text: "美国二手车价格今年首次下跌，汽油价格飙升和电动汽车兴趣上升推动市场变化。Cox Automotive表示，可负担性仍是买家主要担忧，推动对老旧车辆和电动车的需求增加。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/used-car-prices-gas.html" },
   { time: "22:13", tag: "geo", tagText: "地缘", text: "非洲首富丹格特计划将其价值130亿美元的水泥帝国在伦敦上市，称英国上市规则改革使该计划更具吸引力。", source: "Financial Times", url: "https://www.ft.com/content/966d1c99-dd70-42a7-afd5-e3524a7566a1" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "17:05", tag: "crypto", tagText: "加密", text: "比特币从8.1万美元反弹，TON周涨幅达三位数。市场在伊朗停火乐观情绪下，加密货币涨跌互现，狗狗币下跌4%。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbW1VMW1jZXdfWTFRaWpDYUtRcWd1NkxtR2daQ2dNV3pMNlVmbnZIRkswSldwaFlXbFlncGFNNENXMUlUQ0RYYm9fb09QbGMzNmUydmRMOVRzMnpZZmFSR3R1X2JWeWo2b2Z4VnBmTjhOOGN5WVpqZUFlXzF2NEhGNEs0alA5SlV2cTVoN05IWUxKVXloNkdkXzFWNkM0NmJUMEJv?oc=5" },
   { time: "14:35", tag: "geo", tagText: "地缘", text: "伊朗战争推高油价，壳牌季度利润超预期，但宣布削减股票回购。伦敦上市的壳牌成为最新一家受益于地缘政治波动的大型能源公司。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/oil-giant-shell-tops-quarterly-profit-estimates-as-iran-war-drives-price-surge.html" },
   { time: "14:00", tag: "geo", tagText: "地缘", text: "阿联酋航空在伊朗战争导致部分航线停飞、航空燃油价格飙升的背景下，仍录得创纪录的季度利润。该航司表示，在冲突导致空域关闭后，大部分航班已恢复。", source: "Financial Times", url: "https://www.ft.com/content/17cb8949-7698-45a2-b9b8-832187e4e624" },
-  { time: "13:47", tag: "macro", tagText: "宏观", text: "亚洲开发银行宣布一项700亿美元的新能源和数字基础设施计划，目标在2035年前推动亚洲及太平洋地区发展。东南亚将成为该计划的主要受益区域。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/adb-70-billion-plan-southeast-asia-digital-infrastructure-power.html" },
-  { time: "13:00", tag: "tech", tagText: "科技", text: "挪威国家石油公司Equinor向CNBC表示，预计伊朗战争将为其能源转型业务带来提振。风电巨头也迎来盈利超预期，地缘冲突加速了全球能源结构转型。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/iran-war-renewables-wind-oil-gas-equinor-orsted.html" },
-  { time: "11:25", tag: "macro", tagText: "宏观", text: "日本股市在黄金周假期后补涨，日经225指数飙升逾5%至历史新高，突破62000点。软银集团股价暴涨超16%，科技股领涨。市场暂时忽略中东紧张局势，聚焦于AI驱动的增长预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/japan-softbank-tech-shares-nikkei-to-record-high.html" },
-  { time: "07:45", tag: "geo", tagText: "地缘", text: "亚太市场预计上涨，投资者权衡特朗普对伊朗的威胁与和平希望。中东紧张局势再度升温，但市场暂时忽略该风险，聚焦于潜在外交突破。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/asia-pacific-markets-today-live-updates-nikkei-225-kospi-hang-seng-index.html" },
-  { time: "07:36", tag: "geo", tagText: "地缘", text: "交易员指出周三原油市场出现可疑活动：在Axios报道导致油价下跌前的一小时内，价值17亿美元的原油合约易手。专家称交易量异常飙升，引发市场操纵担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/traders-point-to-suspicious-activity-in-the-oil-market-on-wednesday-3a6821d9?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月7日 22:42 CST";
+const breakingDate = "2026年5月8日 01:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:05", tag: "tech", tagText: "科技", text: "Mozilla安全研究人员表示，Anthropic的AI模型Mythos在Firefox中发现了大量高危漏洞，彻底改变了该浏览器的网络安全策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/how-anthropics-mythos-has-rewritten-firefoxs-approach-to-cybersecurity/" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
   { time: "21:44", tag: "ai", tagText: "AI", text: "中国AI初创公司Moonshot AI以200亿美元估值完成20亿美元融资，其年化经常性收入在4月突破2亿美元，由付费订阅和API使用量快速增长驱动。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/" },
   { time: "21:30", tag: "ai", tagText: "AI", text: "Aurora CEO Chris Ursson表示，自动驾驶卡车终于准备好规模化部署，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。", source: "TechCrunch", url: "https://techcrunch.com/podcast/auroras-chris-urmson-on-why-self-driving-trucks-are-finally-ready-to-scale/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "05:21", tag: "tech", tagText: "科技", text: "谷歌关闭了实验性AI项目Project Mariner，该功能旨在帮助用户自动执行跨网页任务。此举标志着谷歌在AI代理产品策略上的调整。", source: "The Verge", url: "https://www.theverge.com/tech/925559/google-project-mariner-shut-down" },
   { time: "02:55", tag: "ai", tagText: "AI", text: "OpenAI前CTO Mira Murati在法庭作证称，CEO Sam Altman曾就新AI模型的安全标准向她撒谎。该证词在马斯克诉奥特曼案中播放，案件审理可能改变OpenAI及ChatGPT的未来走向。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925338/openai-musk-v-altman-mira-murati" },
   { time: "02:23", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Greg Brockman公开披露埃隆·马斯克离开OpenAI的内幕细节，包括创始人间激烈的谈判过程。这一罕见公开的幕后故事揭示了公司早期分裂的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/" },
-  { time: "01:23", tag: "tech", tagText: "科技", text: "SpaceX计划在德克萨斯州建设名为“Terafab”的芯片工厂，总投资可能高达1190亿美元。该项目被描述为“多阶段、下一代、垂直整合的半导体制造和先进计算设施”，标志着SpaceX向芯片制造领域的大规模扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/spacex-may-spend-up-to-119-billion-on-terafab-chip-factory-in-texas/" },
 ];
-const aiBreakingDate = "2026年5月7日 22:42 CST";
+const aiBreakingDate = "2026年5月8日 01:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
