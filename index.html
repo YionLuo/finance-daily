@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.94,
+  score: 67.66,
   rating: "greed",
-  timestamp: "2026-05-07T18:46:02+00:00",
+  timestamp: "2026-05-07T20:07:33+00:00",
   previousClose: 68.37,
   previous1Week: 66.69,
   previous1Month: 27.6,
   previous1Year: 54.14,
-  date: "2026年5月8日 02:52 CST"
+  date: "2026年5月8日 04:22 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:18", tag: "ai", tagText: "AI", text: "CoreWeave第一季度营收同比翻倍超预期，该公司持续举债数十亿美元扩建数据中心，为领先AI公司提供算力服务。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/coreweave-crwv-q1-earnings-report-2026.html" },
+  { time: "04:18", tag: "ai", tagText: "AI", text: "Block财报显示增长提速，三个月前大规模裁员后，目前100%员工在工作中使用AI。这被视为对AI大规模投入的潜在验证。", source: "MarketWatch", url: "https://www.marketwatch.com/story/block-earnings-show-a-growth-pickup-in-a-potential-validation-of-the-massive-ai-push-76466c8d" },
+  { time: "04:10", tag: "macro", tagText: "宏观", text: "Airbnb第一季度营收超预期，但因伊朗战争导致中东地区取消预订增加，公司警告区域业务疲软。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/airbnb-abnb-earnings-q1-2026.html" },
+  { time: "03:26", tag: "geo", tagText: "地缘", text: "壳牌CEO警告称，因伊朗战争导致霍尔木兹海峡持续关闭，石油市场已短缺近10亿桶，且缺口每日加深。市场密切关注美伊能否达成协议恢复能源运输。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/shell-ceo-iran-war-oil-lost-shortage.html" },
+  { time: "03:16", tag: "tech", tagText: "科技", text: "英伟达股价相对半导体行业的折价幅度接近两年来最大，在极端半导体板块反弹中被明显抛在后面。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-just-how-much-nvidia-has-been-left-behind-in-the-extreme-semiconductor-rally-01deb8b8" },
   { time: "02:10", tag: "crypto", tagText: "加密", text: "亿万富翁投资者预测比特币将达到100万美元，此前他已成功预测市场底部。该预测基于对宏观经济趋势和机构采用加速的判断。", source: "TheStreet", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOVZQZmFCNjNpU3lqSXVNbnJHZlZZVFVqaTZnVGFCQWMwRGZRWGNEd1dKdXpNS0lGRlZBNnNaSkFHYVo0Q0xfZW1NSGtxWXRpRXRjckVaS2xYaHE2R2NyYnhHZnpQTkNiUlpXMG1oMmxVaGZwcWI5cFpfZWg3Wk4yZVFRRzhBcVFXaHdfcUk1RUFpZWk5WlhPc1JjYUg0R1RHMURSUnFsRVpyTG8?oc=5" },
   { time: "01:51", tag: "macro", tagText: "宏观", text: "Shake Shack股价暴跌30%，因公司报告运营亏损。CEO罗布·林奇表示，冬季风暴和门店扩张计划上调拖累了业绩。牛肉价格高企和消费者信心低迷是主要原因。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/shake-shack-shak-shares-drop-earnings-report.html" },
   { time: "01:41", tag: "macro", tagText: "宏观", text: "eBay永久封禁GameStop CEO瑞安·科恩，称其将社区置于风险之中。科恩周一提出以555亿美元收购eBay，同时通过其账户销售GameStop相关商品。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ebay-permanently-bans-gamestop-ceo-ryan-cohen-for-putting-its-community-at-risk-following-takeover-attempt-71b44c37?mod=mw_rss_topstories" },
@@ -1644,17 +1649,16 @@ const breakingNews = [
   { time: "22:09", tag: "geo", tagText: "地缘", text: "德国航天公司OHB威胁称，如果欧盟批准空客、泰雷兹和莱昂纳多的卫星合并案，将采取法律行动。此举凸显欧洲航天产业整合引发的竞争担忧。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/germanys-ohb-consider-legal-action-140950223.html" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "华尔街银行计划就资本规则进行最后推动。该规则将影响银行持有资本金的要求，可能对金融业产生重大影响。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/wall-street-banks-plan-final-130339051.html" },
   { time: "19:55", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什提交69页财务文件，但未披露巨额财富来源，留下约1亿美元谜团。尽管存在透明度争议，参议院仍预计将确认其任命。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-undisclosed-wealth-leaves-a-100-million-mystery-atop-the-federal-reserve-19f0dc78?mod=mw_rss_topstories" },
-  { time: "19:30", tag: "macro", tagText: "宏观", text: "标普500指数期货小幅走高，此前该指数再创历史新高。市场关注美伊谈判进展，同时通胀担忧有所缓解。AI板块连续两日上涨后，市场情绪谨慎乐观。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9KaHgtMWs1aERlakNrX19EYUlqOVc4YzAtN2VZMWNIaTVoWkRsc2FlV3I2WVk0bkV6aXU1OXhKaFlsZlgtSFM3Zm9ES3NfUzFaNXNVYUlKT0tQZlR2ODVHOXZwUnhfTm1Ga1lKNi1ZMkkyaDl5ZEN30gF8QVVfeXFMUEpWWllrM0JFZDUwQzFwZUFkUnE5bExwWU9lVlBGMlhLQzE3U3JwMHpBM25SV2pMdW1Rd3EzR3R3aS1KLUZaSDFlT2tXVElvWE1aNmNYbzJxb2pPWDdPZUFxRDluU3p5UW9ldkhqT3dRZ25MSDIzOGVxR0VlQQ?oc=5" },
-  { time: "19:17", tag: "macro", tagText: "宏观", text: "麦当劳第一季度财报超预期，尽管面临“充满挑战的环境”。该公司股价过去一年下跌10%，受经济担忧拖累。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/mcdonalds-mcd-q1-2026-earnings.html" },
-  { time: "17:05", tag: "geo", tagText: "地缘", text: "油价跌破100美元，美股上涨，市场对美伊达成停火协议抱有希望。伊朗正在审查一项华盛顿支持的提议，特朗普称该提议可能结束冲突。", source: "Financial Times", url: "https://www.ft.com/content/21131ff4-35e1-4e5c-b827-1e07c9153e8e" },
-  { time: "17:05", tag: "geo", tagText: "地缘", text: "马士基警告伊朗冲突的经济影响将持续数月。全球第二大集装箱航运公司表示，其成本每月增加5亿美元。", source: "Financial Times", url: "https://www.ft.com/content/dbc47c3a-fd89-4c4d-8246-91de6850df24" },
-  { time: "17:05", tag: "tech", tagText: "科技", text: "欧盟据报正考虑限制使用美国云平台处理敏感政府数据。欧洲内部要求关键工作负载摆脱对美国云服务商依赖的呼声日益高涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html" },
 ];
-const breakingDate = "2026年5月8日 02:52 CST";
+const breakingDate = "2026年5月8日 04:22 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:39", tag: "tech", tagText: "科技", text: "据彭博社Mark Gurman报道，苹果传闻中配备摄像头的AirPods已接近早期量产测试阶段，目前测试人员正在“积极使用”原型机。该产品旨在为AI功能提供视觉数据输入，标志着苹果在AI可穿戴设备领域的重要布局。", source: "The Verge", url: "https://www.theverge.com/tech/926376/apple-airpods-cameras-ai-production" },
+  { time: "03:26", tag: "tech", tagText: "科技", text: "SpaceX计划投资至少550亿美元在得克萨斯州建设名为“Terafab”的AI芯片制造工厂，正式进军AI芯片制造业务。这一巨额投资计划显示了Elon Musk在AI硬件领域的雄心。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/926356/spacex-terafab-plant-cost-ai-chips" },
+  { time: "02:57", tag: "ai", tagText: "AI", text: "Perplexity的“个人电脑”AI代理功能现已向所有Mac用户开放。该功能将AI代理直接带到Mac桌面，使用户能够通过自然语言指令完成复杂任务，进一步拓展了AI在个人计算领域的应用场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/perplexitys-personal-computer-is-now-available-everyone-on-mac/" },
   { time: "02:23", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Greg Brockman公开披露埃隆·马斯克离开OpenAI的内幕细节，包括创始人间激烈的谈判过程。这一罕见公开的幕后故事揭示了公司早期分裂的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/" },
+  { time: "02:06", tag: "tech", tagText: "科技", text: "Bumble CEO Whitney Wolfe Herd宣布公司将取消传统的“左滑右滑”匹配模式，转而全面拥抱AI。Bumble正在开发名为“Bee”的AI约会助手，旨在通过人工智能技术重塑在线交友体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/bumble-is-getting-rid-of-the-swipe-ceo-says/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI为ChatGPT推出可选安全功能“可信联系人”，允许成年用户指定一位紧急联系人，用于在检测到心理健康或安全风险时发出警报。该功能旨在为有需要的用户提供及时的外部支持。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification" },
   { time: "01:40", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman与Elon Musk就OpenAI未来走向的法庭对决正式开庭。Musk于2024年提起诉讼，指控OpenAI背离了其非营利初心。此案可能深刻影响OpenAI及ChatGPT的未来发展方向。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
   { time: "00:05", tag: "tech", tagText: "科技", text: "Mozilla安全研究人员表示，Anthropic的AI模型Mythos在Firefox中发现了大量高危漏洞，彻底改变了该浏览器的网络安全策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/how-anthropics-mythos-has-rewritten-firefoxs-approach-to-cybersecurity/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "19:19", tag: "tech", tagText: "科技", text: "三星电子在AI芯片需求推动下，市值突破1万亿美元大关，对英伟达在AI芯片市场的主导地位构成挑战。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEZKQUJIc1NvMUVYSV9uVGMyc1NjZXRYd3BoRmNhTWMwWUEtRjdKS1lmYkd2dmd0V2xWNk5aUEkyU0J3Mjk3YmcwRzdkdTRUenNyMTZXN2k4XzZpa1VTODI0eTRaVkN4cndtMTlockUwLUxXUW4zcDlDTHkyOXA1TTF6Y1BrUFYyZGNUTzEya2xCZ0YtS2J3?oc=5" },
   { time: "18:13", tag: "ai", tagText: "AI", text: "英国谢菲尔德大学研究人员提出，昆虫大脑的神经机制可为AI技术带来变革性突破，有望开发出更高效、低能耗的智能系统。", source: "BBC", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wb1NfMmFVdjdqRGI3X200azdvTm9IaWNGcUktZWdXdzdfNWQ1ZW9XM3V4MlRsNmVWN0dLaU9NSnhhVWY1a2FVWi1NSHdGNWtFNmRjdW9uZjlKQQ?oc=5" },
   { time: "14:35", tag: "ai", tagText: "AI", text: "瑞典斯德哥尔摩AI初创公司Pit结束隐身模式，获得由a16z领投的1360万欧元融资，提供“AI产品团队即服务”模式。该公司旨在帮助企业快速组建和部署AI产品团队，加速AI应用落地。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQY1JCV3c0LXFSa1ZTYlZ6UFdUQnluUzZvcXd1akFSemhHNmFFa3JjbFBEYzFZOGxOZGRYejkwaGhCd05tazJEQk9OVEwyMWJoU0pQS0VMUlhEd0N0VjlYWERWcEdERWQ5cVhuNmI1SGhPdi1iRnp6bWZURC1RZm9OSE1DNzlMUGVtZ2xZNEZEbDBaTTFfMHpfRHpUM05weEkzeVpRcWpYa0dUXzgxRWRXQ05FNDJsay1wWWRQLXJybFBlR0lTNUlCajluTWp3Sy01UVZiS0VDMA?oc=5" },
-  { time: "13:25", tag: "ai", tagText: "AI", text: "在米尔肯全球会议上，五位覆盖AI供应链各环节的行业领袖与TechCrunch对话，探讨了AI经济当前面临的瓶颈，包括芯片短缺、能源限制、模型训练成本飙升以及商业化落地困难等问题，指出AI发展正遭遇多重结构性挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/five-architects-of-the-ai-economy-explain-where-the-wheels-are-coming-off/" },
-  { time: "05:55", tag: "ai", tagText: "AI", text: "IAC董事长Barry Diller为OpenAI CEO Sam Altman辩护，但同时警告称，随着AGI（通用人工智能）临近，“信任已无关紧要”，必须为其设立安全护栏。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/barry-diller-trusts-sam-altman-but-trust-is-irrelevant-as-agi-nears-he-says/" },
-  { time: "05:43", tag: "ai", tagText: "AI", text: "Snap宣布，其与AI搜索公司Perplexity价值4亿美元的整合协议已“友好终止”。该协议原计划将Perplexity的AI搜索集成到Snapchat中，于去年11月公布。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/snap-says-its-400m-deal-with-perplexity-amicably-ended/" },
-  { time: "05:32", tag: "ai", tagText: "AI", text: "分析指出，马斯克的xAI公司实际业务重心可能已从训练AI模型转向建设数据中心，其商业模式正演变为“新云服务”提供商。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/is-xai-a-neocloud-now/" },
 ];
-const aiBreakingDate = "2026年5月8日 02:52 CST";
+const aiBreakingDate = "2026年5月8日 04:22 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
