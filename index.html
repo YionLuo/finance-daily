@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 68.31,
+  score: 68.63,
   rating: "greed",
-  timestamp: "2026-05-07T00:00:00+00:00",
+  timestamp: "2026-05-07T09:24:01+00:00",
   previousClose: 68.37,
   previous1Week: 66.69,
   previous1Month: 27.6,
   previous1Year: 54.14,
-  date: "2026年5月7日 14:47 CST"
+  date: "2026年5月7日 17:43 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:05", tag: "geo", tagText: "地缘", text: "油价跌破100美元，美股上涨，市场对美伊达成停火协议抱有希望。伊朗正在审查一项华盛顿支持的提议，特朗普称该提议可能结束冲突。", source: "Financial Times", url: "https://www.ft.com/content/21131ff4-35e1-4e5c-b827-1e07c9153e8e" },
+  { time: "17:05", tag: "geo", tagText: "地缘", text: "马士基警告伊朗冲突的经济影响将持续数月。全球第二大集装箱航运公司表示，其成本每月增加5亿美元。", source: "Financial Times", url: "https://www.ft.com/content/dbc47c3a-fd89-4c4d-8246-91de6850df24" },
+  { time: "17:05", tag: "tech", tagText: "科技", text: "欧盟据报正考虑限制使用美国云平台处理敏感政府数据。欧洲内部要求关键工作负载摆脱对美国云服务商依赖的呼声日益高涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html" },
+  { time: "17:05", tag: "macro", tagText: "宏观", text: "韩国股市在全球排名中超越加拿大。科技股比重更高、对新行业敞口更大，使韩国指数在2026年成为全球表现最佳的股市之一，而加拿大仍以银行等传统行业为主。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-the-latest-stock-market-to-be-leapfrogged-by-south-korea-in-the-world-rankings-c5c18e22?mod=mw_rss_topstories" },
+  { time: "17:05", tag: "crypto", tagText: "加密", text: "比特币从8.1万美元反弹，TON周涨幅达三位数。市场在伊朗停火乐观情绪下，加密货币涨跌互现，狗狗币下跌4%。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbW1VMW1jZXdfWTFRaWpDYUtRcWd1NkxtR2daQ2dNV3pMNlVmbnZIRkswSldwaFlXbFlncGFNNENXMUlUQ0RYYm9fb09QbGMzNmUydmRMOVRzMnpZZmFSR3R1X2JWeWo2b2Z4VnBmTjhOOGN5WVpqZUFlXzF2NEhGNEs0alA5SlV2cTVoN05IWUxKVXloNkdkXzFWNkM0NmJUMEJv?oc=5" },
   { time: "14:35", tag: "geo", tagText: "地缘", text: "伊朗战争推高油价，壳牌季度利润超预期，但宣布削减股票回购。伦敦上市的壳牌成为最新一家受益于地缘政治波动的大型能源公司。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/oil-giant-shell-tops-quarterly-profit-estimates-as-iran-war-drives-price-surge.html" },
   { time: "14:00", tag: "geo", tagText: "地缘", text: "阿联酋航空在伊朗战争导致部分航线停飞、航空燃油价格飙升的背景下，仍录得创纪录的季度利润。该航司表示，在冲突导致空域关闭后，大部分航班已恢复。", source: "Financial Times", url: "https://www.ft.com/content/17cb8949-7698-45a2-b9b8-832187e4e624" },
   { time: "13:47", tag: "macro", tagText: "宏观", text: "亚洲开发银行宣布一项700亿美元的新能源和数字基础设施计划，目标在2035年前推动亚洲及太平洋地区发展。东南亚将成为该计划的主要受益区域。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/adb-70-billion-plan-southeast-asia-digital-infrastructure-power.html" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "05:38", tag: "macro", tagText: "宏观", text: "美国司法部起诉30人涉嫌利用华尔街律所机密交易材料进行内幕交易。司法部称，来自精英律所的律师协助提供了机密交易细节。", source: "Financial Times", url: "https://www.ft.com/content/d2fbe2c3-103a-4d09-b510-db58c5f8697d" },
   { time: "05:25", tag: "tech", tagText: "科技", text: "芯片板块惊人涨势中，英伟达却落后。自4月27日以来，英伟达股价持平，而英特尔和美光同期涨幅超过30%。分析师指出，市场资金正轮动至其他半导体股票。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-is-falling-behind-as-semiconductors-surge-heres-what-analysts-say-is-going-on.html" },
   { time: "05:03", tag: "tech", tagText: "科技", text: "Arm股价飙升，公司称其首款数据中心CPU已获得超过20亿美元的客户需求。这一消息推动芯片设计公司股价大幅上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/arms-stock-soars-as-the-company-puts-a-big-number-on-its-newest-venture-21bce404" },
-  { time: "04:50", tag: "macro", tagText: "宏观", text: "华纳兄弟探索公司因与派拉蒙交易及重组成本，录得29亿美元净亏损。派拉蒙同意支付奈飞终止费，但该成本在交易完成前仍计入华纳账目。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/warner-bros-discovery-net-loss-paramount-deal.html" },
-  { time: "04:45", tag: "macro", tagText: "宏观", text: "黄金时机指标触及底部，历史数据显示随后往往出现强劲反弹。黄金和黄金矿商股在投资者极度悲观时表现最佳，这种“极端悲观情绪”为市场提供了反向利好。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-gold-timing-indicator-just-hit-a-bottom-and-history-says-a-strong-rally-is-next-f39c8768" },
-  { time: "04:45", tag: "tech", tagText: "科技", text: "Fortinet股价飙升，财报缓解了市场对AI颠覆其业务的担忧。“日益复杂的威胁环境”推动了对该公司网络安全产品的需求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fortinets-stock-rockets-as-earnings-help-dispel-fears-of-ai-disruption-8a8f0107" },
-  { time: "04:35", tag: "ai", tagText: "AI", text: "特朗普政府据报正考虑对AI采取更激进的监管方式，可能通过行政令加强对人工智能模型的监管，标志着政策方向的重大转变。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-how-far-the-trump-administrations-startling-turn-on-ai-regulation-might-go-15ce46be" },
-  { time: "04:32", tag: "macro", tagText: "宏观", text: "美股三大指数全线上涨：道指涨600点，标普500和纳指均创历史新高，AI交易热潮推动市场强劲反弹。道指已正式脱离回调区间，向50000点关口迈进。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/doordash-dash-earnings-q1-2026.html" },
 ];
-const breakingDate = "2026年5月7日 14:47 CST";
+const breakingDate = "2026年5月7日 17:43 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "19:19", tag: "tech", tagText: "科技", text: "三星电子在AI芯片需求推动下，市值突破1万亿美元大关，对英伟达在AI芯片市场的主导地位构成挑战。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEZKQUJIc1NvMUVYSV9uVGMyc1NjZXRYd3BoRmNhTWMwWUEtRjdKS1lmYkd2dmd0V2xWNk5aUEkyU0J3Mjk3YmcwRzdkdTRUenNyMTZXN2k4XzZpa1VTODI0eTRaVkN4cndtMTlockUwLUxXUW4zcDlDTHkyOXA1TTF6Y1BrUFYyZGNUTzEya2xCZ0YtS2J3?oc=5" },
   { time: "18:13", tag: "ai", tagText: "AI", text: "英国谢菲尔德大学研究人员提出，昆虫大脑的神经机制可为AI技术带来变革性突破，有望开发出更高效、低能耗的智能系统。", source: "BBC", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wb1NfMmFVdjdqRGI3X200azdvTm9IaWNGcUktZWdXdzdfNWQ1ZW9XM3V4MlRsNmVWN0dLaU9NSnhhVWY1a2FVWi1NSHdGNWtFNmRjdW9uZjlKQQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月7日 14:47 CST";
+const aiBreakingDate = "2026年5月7日 17:43 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
