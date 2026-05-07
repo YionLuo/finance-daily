@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 68.37,
   rating: "greed",
-  timestamp: "2026-05-06T22:48:00+00:00",
+  timestamp: "2026-05-06T23:43:01+00:00",
   previousClose: 66.94,
   previous1Week: 63.37,
   previous1Month: 22.54,
   previous1Year: 54.66,
-  date: "2026年5月7日 07:04 CST"
+  date: "2026年5月7日 08:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:45", tag: "geo", tagText: "地缘", text: "亚太市场预计上涨，投资者权衡特朗普对伊朗的威胁与和平希望。中东紧张局势再度升温，但市场暂时忽略该风险，聚焦于潜在外交突破。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/asia-pacific-markets-today-live-updates-nikkei-225-kospi-hang-seng-index.html" },
+  { time: "07:36", tag: "geo", tagText: "地缘", text: "交易员指出周三原油市场出现可疑活动：在Axios报道导致油价下跌前的一小时内，价值17亿美元的原油合约易手。专家称交易量异常飙升，引发市场操纵担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/traders-point-to-suspicious-activity-in-the-oil-market-on-wednesday-3a6821d9?mod=mw_rss_topstories" },
+  { time: "06:12", tag: "crypto", tagText: "加密", text: "特朗普兄弟支持的American Bitcoin公司因挖矿收入增强而收窄亏损。该公司在比特币挖矿业务上取得进展，财务状况有所改善。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTjZwRHRvRjgzUmpFOWpRLTRQWFB2NkU0MWVmZ3hTU0wyZkYwendudnU1ZXhqZVpzUkhYR2oxR05oRGtRc3FQS2RURUduQnYtTTJJZGNMRWt3T3dPdDI2Nm9iSWJURWNXOU5kWEh3MWxmZE1XQUw5SmtnZmkzZWd0LV9sTEpCMTNwbG1zZHFaQVhDUWVacGZuZUxVY0FoOW5QQ1ZWd0lBOWtkcHk0RlBYNFdfUi14UF9uUmRnMA?oc=5" },
   { time: "06:12", tag: "tech", tagText: "科技", text: "英伟达将向康宁投资高达32亿美元，作为大规模光纤交易的一部分，将新建3座专注于AI的工厂。康宁将在美国开设三家全新的先进制造工厂，专门为英伟达生产光学技术产品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-corning-optical-factories-nc-texas-ai.html" },
   { time: "05:47", tag: "macro", tagText: "宏观", text: "空客赢得加拿大史上最大飞机订单，价值190亿美元。亚航订购150架A220-300客机，极大提振了加拿大制造业。", source: "Financial Times", url: "https://www.ft.com/content/19c4dab7-0141-4c40-9d2f-180ff33cdd63" },
   { time: "05:38", tag: "geo", tagText: "地缘", text: "以色列自停火以来首次空袭贝鲁特。此前以军持续打击黎巴嫩南部目标，但自4月8日以来未攻击首都。此举标志着中东局势再度升级。", source: "Financial Times", url: "https://www.ft.com/content/69308a1e-95d0-4bcd-8f4f-9624993cef7c" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "01:56", tag: "tech", tagText: "科技", text: "据文件披露，埃隆·马斯克在德克萨斯州的巨型芯片工厂Terafab建设成本可能高达1190亿美元。该工厂旨在为特斯拉、SpaceX和xAI制造芯片，是马斯克在AI和半导体领域布局的关键一步。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/elon-musks-spacex-chip-fab-in-texas-to-cost-up-to-119-billion.html" },
   { time: "01:44", tag: "geo", tagText: "地缘", text: "美国燃料出口创下历史新高，霍尔木兹海峡关闭导致亚洲和欧洲买家抢购美国石油产品。这一趋势为美国石油公司带来丰厚利润，但也给特朗普政府带来政治压力，因国内汽油价格已超过每加仑4.50美元。", source: "Financial Times", url: "https://www.ft.com/content/cfc92825-68f6-4660-89ef-3854b3ead8dc" },
   { time: "01:08", tag: "macro", tagText: "宏观", text: "美国银行警告称，SpaceX和Anthropic等超级IPO可能标志着当前牛市行情的终结。该行指出，为加快指数纳入而修改规则以及调整自由流通股乘数等操作，具有“晚期市场操纵”的特征。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/spacex-and-anthropic-mega-ipos-could-mark-end-of-bull-run-bank-of-america-suggests.html" },
-  { time: "00:50", tag: "macro", tagText: "宏观", text: "美国航空公司3月航空燃油支出环比激增56.4%，政府数据显示伊朗战争爆发后燃料成本飙升。纽约联储研究指出，持续上涨的汽油价格对低收入家庭冲击更大，后者被迫削减其他消费以应对。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/airlines-jet-fuel-iran-war.html" },
-  { time: "00:50", tag: "macro", tagText: "宏观", text: "Apollo CEO Marc Rowan警告市场面临意外冲击风险上升，正以防御性姿态布局以应对预期中的回调，并抨击竞争对手保险公司的“恶劣”行为。巴克莱也指出，能源价格若不回落，股市涨势难以为继，市场存在危险的自满情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/apollo-ceo-rowan-market-correction-rival-insurers.html" },
-  { time: "00:50", tag: "crypto", tagText: "加密", text: "比特币突破8.1万美元，市场主导率升至61%。分析师指出，只有比特币主导率回落，山寨币季节才有可能到来。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxNeFpWZnVDczBuQ1ExOXFWelNQc0tySDVIM2g4VURtcFFTS3V2eEo0UWlHMnZGaHBBLTMtbWRBVXJQT081ak1BczQ1Z0lmOG14bnVuSllkVXR6ZXFTdUJNb1V2M0lIUzN0WXpudXp0bjZfN1BSVy1Xbk5LVzJHUVJXbUNlR09PYy0xYVU3aFNVS1bSAZYBQVVfeXFMT2xzR0I1QUVPb0hMQVR2NU1INGZzZVBDTHBUYkRuQWZJNGswUURCWjIydlFuTkVuUnYtd19OeERKTlVvaHJaUE9tY0dRY3Bpa3RiTmhneThCTzZyNDVNOHNxZzhwRExqdENweGxlaDdOdUVnejRNbmxUNG1Sejh5eGVrTnR2UkhjaG1Yb0lSbEFwLVFwbEl3?oc=5" },
 ];
-const breakingDate = "2026年5月7日 07:04 CST";
+const breakingDate = "2026年5月7日 08:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "18:13", tag: "tech", tagText: "科技", text: "谷歌Chrome浏览器因内置AI功能，可能自动下载高达4GB的AI模型文件，导致用户电脑存储空间被大量占用。", source: "The Verge", url: "https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features" },
   { time: "16:30", tag: "ai", tagText: "AI", text: "AI在数学领域取得突破性进展，成功解决一项高难度数学挑战。该成果标志着AI在逻辑推理和复杂问题求解能力上的重大进步，对基础科学和工程应用具有深远影响。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVUNhSXBKVzhHUHFKSGs4NzN1cWQ0ZW9vdkJVTWZNbTkwWV9GSmFnVlZRV2RIOGx4ZjA1UWZrOGY0cjd5UFhGdy1HVUxINzBFOTUzWE9FaGw0WXFCaGVfMHNyMFBCYnNZNHA0OVFETW40WHVuMndDSldBYWFqQ1B5aGRPZGRBUQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月7日 07:04 CST";
+const aiBreakingDate = "2026年5月7日 08:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
