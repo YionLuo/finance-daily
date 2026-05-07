@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 68.63,
   rating: "greed",
-  timestamp: "2026-05-07T09:24:01+00:00",
+  timestamp: "2026-05-07T11:41:46+00:00",
   previousClose: 68.37,
   previous1Week: 66.69,
   previous1Month: 27.6,
   previous1Year: 54.14,
-  date: "2026年5月7日 17:43 CST"
+  date: "2026年5月7日 19:58 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:55", tag: "macro", tagText: "宏观", text: "美联储主席提名人凯文·沃什提交69页财务文件，但未披露巨额财富来源，留下约1亿美元谜团。尽管存在透明度争议，参议院仍预计将确认其任命。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-undisclosed-wealth-leaves-a-100-million-mystery-atop-the-federal-reserve-19f0dc78?mod=mw_rss_topstories" },
+  { time: "19:30", tag: "macro", tagText: "宏观", text: "标普500指数期货小幅走高，此前该指数再创历史新高。市场关注美伊谈判进展，同时通胀担忧有所缓解。AI板块连续两日上涨后，市场情绪谨慎乐观。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9KaHgtMWs1aERlakNrX19EYUlqOVc4YzAtN2VZMWNIaTVoWkRsc2FlV3I2WVk0bkV6aXU1OXhKaFlsZlgtSFM3Zm9ES3NfUzFaNXNVYUlKT0tQZlR2ODVHOXZwUnhfTm1Ga1lKNi1ZMkkyaDl5ZEN30gF8QVVfeXFMUEpWWllrM0JFZDUwQzFwZUFkUnE5bExwWU9lVlBGMlhLQzE3U3JwMHpBM25SV2pMdW1Rd3EzR3R3aS1KLUZaSDFlT2tXVElvWE1aNmNYbzJxb2pPWDdPZUFxRDluU3p5UW9ldkhqT3dRZ25MSDIzOGVxR0VlQQ?oc=5" },
+  { time: "19:17", tag: "macro", tagText: "宏观", text: "麦当劳第一季度财报超预期，尽管面临“充满挑战的环境”。该公司股价过去一年下跌10%，受经济担忧拖累。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/mcdonalds-mcd-q1-2026-earnings.html" },
   { time: "17:05", tag: "geo", tagText: "地缘", text: "油价跌破100美元，美股上涨，市场对美伊达成停火协议抱有希望。伊朗正在审查一项华盛顿支持的提议，特朗普称该提议可能结束冲突。", source: "Financial Times", url: "https://www.ft.com/content/21131ff4-35e1-4e5c-b827-1e07c9153e8e" },
   { time: "17:05", tag: "geo", tagText: "地缘", text: "马士基警告伊朗冲突的经济影响将持续数月。全球第二大集装箱航运公司表示，其成本每月增加5亿美元。", source: "Financial Times", url: "https://www.ft.com/content/dbc47c3a-fd89-4c4d-8246-91de6850df24" },
   { time: "17:05", tag: "tech", tagText: "科技", text: "欧盟据报正考虑限制使用美国云平台处理敏感政府数据。欧洲内部要求关键工作负载摆脱对美国云服务商依赖的呼声日益高涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "06:12", tag: "tech", tagText: "科技", text: "英伟达将向康宁投资高达32亿美元，作为大规模光纤交易的一部分，将新建3座专注于AI的工厂。康宁将在美国开设三家全新的先进制造工厂，专门为英伟达生产光学技术产品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-corning-optical-factories-nc-texas-ai.html" },
   { time: "05:47", tag: "macro", tagText: "宏观", text: "空客赢得加拿大史上最大飞机订单，价值190亿美元。亚航订购150架A220-300客机，极大提振了加拿大制造业。", source: "Financial Times", url: "https://www.ft.com/content/19c4dab7-0141-4c40-9d2f-180ff33cdd63" },
   { time: "05:38", tag: "geo", tagText: "地缘", text: "以色列自停火以来首次空袭贝鲁特。此前以军持续打击黎巴嫩南部目标，但自4月8日以来未攻击首都。此举标志着中东局势再度升级。", source: "Financial Times", url: "https://www.ft.com/content/69308a1e-95d0-4bcd-8f4f-9624993cef7c" },
-  { time: "05:38", tag: "macro", tagText: "宏观", text: "美国司法部起诉30人涉嫌利用华尔街律所机密交易材料进行内幕交易。司法部称，来自精英律所的律师协助提供了机密交易细节。", source: "Financial Times", url: "https://www.ft.com/content/d2fbe2c3-103a-4d09-b510-db58c5f8697d" },
-  { time: "05:25", tag: "tech", tagText: "科技", text: "芯片板块惊人涨势中，英伟达却落后。自4月27日以来，英伟达股价持平，而英特尔和美光同期涨幅超过30%。分析师指出，市场资金正轮动至其他半导体股票。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-is-falling-behind-as-semiconductors-surge-heres-what-analysts-say-is-going-on.html" },
-  { time: "05:03", tag: "tech", tagText: "科技", text: "Arm股价飙升，公司称其首款数据中心CPU已获得超过20亿美元的客户需求。这一消息推动芯片设计公司股价大幅上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/arms-stock-soars-as-the-company-puts-a-big-number-on-its-newest-venture-21bce404" },
 ];
-const breakingDate = "2026年5月7日 17:43 CST";
+const breakingDate = "2026年5月7日 19:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:45", tag: "ai", tagText: "AI", text: "微软进行最新领导层重组，Office和LinkedIn负责人Ryan Roslansky扩大职权范围，现同时掌管Teams业务。", source: "The Verge", url: "https://www.theverge.com/tech/924931/microsoft-office-copilot-windows-reorg-shuffle" },
+  { time: "19:19", tag: "tech", tagText: "科技", text: "三星电子在AI芯片需求推动下，市值突破1万亿美元大关，对英伟达在AI芯片市场的主导地位构成挑战。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEZKQUJIc1NvMUVYSV9uVGMyc1NjZXRYd3BoRmNhTWMwWUEtRjdKS1lmYkd2dmd0V2xWNk5aUEkyU0J3Mjk3YmcwRzdkdTRUenNyMTZXN2k4XzZpa1VTODI0eTRaVkN4cndtMTlockUwLUxXUW4zcDlDTHkyOXA1TTF6Y1BrUFYyZGNUTzEya2xCZ0YtS2J3?oc=5" },
+  { time: "18:13", tag: "ai", tagText: "AI", text: "英国谢菲尔德大学研究人员提出，昆虫大脑的神经机制可为AI技术带来变革性突破，有望开发出更高效、低能耗的智能系统。", source: "BBC", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wb1NfMmFVdjdqRGI3X200azdvTm9IaWNGcUktZWdXdzdfNWQ1ZW9XM3V4MlRsNmVWN0dLaU9NSnhhVWY1a2FVWi1NSHdGNWtFNmRjdW9uZjlKQQ?oc=5" },
   { time: "14:35", tag: "ai", tagText: "AI", text: "瑞典斯德哥尔摩AI初创公司Pit结束隐身模式，获得由a16z领投的1360万欧元融资，提供“AI产品团队即服务”模式。该公司旨在帮助企业快速组建和部署AI产品团队，加速AI应用落地。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQY1JCV3c0LXFSa1ZTYlZ6UFdUQnluUzZvcXd1akFSemhHNmFFa3JjbFBEYzFZOGxOZGRYejkwaGhCd05tazJEQk9OVEwyMWJoU0pQS0VMUlhEd0N0VjlYWERWcEdERWQ5cVhuNmI1SGhPdi1iRnp6bWZURC1RZm9OSE1DNzlMUGVtZ2xZNEZEbDBaTTFfMHpfRHpUM05weEkzeVpRcWpYa0dUXzgxRWRXQ05FNDJsay1wWWRQLXJybFBlR0lTNUlCajluTWp3Sy01UVZiS0VDMA?oc=5" },
   { time: "13:25", tag: "ai", tagText: "AI", text: "在米尔肯全球会议上，五位覆盖AI供应链各环节的行业领袖与TechCrunch对话，探讨了AI经济当前面临的瓶颈，包括芯片短缺、能源限制、模型训练成本飙升以及商业化落地困难等问题，指出AI发展正遭遇多重结构性挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/five-architects-of-the-ai-economy-explain-where-the-wheels-are-coming-off/" },
   { time: "05:55", tag: "ai", tagText: "AI", text: "IAC董事长Barry Diller为OpenAI CEO Sam Altman辩护，但同时警告称，随着AGI（通用人工智能）临近，“信任已无关紧要”，必须为其设立安全护栏。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/barry-diller-trusts-sam-altman-but-trust-is-irrelevant-as-agi-nears-he-says/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "22:44", tag: "tech", tagText: "科技", text: "中国自动驾驶公司QCraft宣布将其自动驾驶技术栈扩展至物理AI前沿领域。此举标志着该公司从单纯的自动驾驶向更广泛的机器人及物理世界AI应用领域拓展。", source: "Robotics & Automation News", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMlNFa0gyN1FUb0pQV0ZzQkY0d2x6YUlaZ3VYWlF2VXNBNG1OaXNBZVlLS010Y19mQ0xxN1hYUG5mdk94ZVZXdmN2UkF2dWNZZEVPUkVpQ1hHQzlENEthYWtaVDNFUjM0SkF2R3YyVXJza2FuUFlIaXcxMG9Qb2g1QjB4WkRZckhqOU1pM2JnOHRDQ3M5VXMyMmxiSTFCd2RiYy1zRWNSNERoNmREeFpnT3ZyU05QNjhndnFyRlNESGNjb285MTZ2Tll3?oc=5" },
   { time: "21:03", tag: "ai", tagText: "AI", text: "演员Jamie Foxx参与AI语音克隆初创公司ElevenLabs的D轮融资，该公司估值持续攀升，明星资本加速涌入AI赛道。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPcXBiT0VfQkh2OE5OYWU3SWwxTlZKLXFmME12aGNpbTdIdTRNMHJBODk5OU1rcEVrQ0FfVmUyZUVRMDVMakpadHVGdFRfSkpEZFhhYXNMQVJmYnVyLUx2N0hOckNqUllCeUZOazJldmEyMUVLTHVaVEVMNzZFOWdoVXBTRlAtUFo1dXVvV1N1VGtIQXZhX0dvRmxTV3dzR2RmVU5JTHBhNHBvaDJzZG1zMEJ4S3RvTW9OZ0VNeTc4bnhhNTBnVFdTSEIxbWI4ZnJISjdOVWFEaVpUS3BmUEJqT1BvTFRxZUo5dDdJ?oc=5" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌更新AI搜索功能，将直接引用Reddit等来源的“观点预览”，使用户能更便捷地找到来自可信来源的信息。", source: "The Verge", url: "https://www.theverge.com/tech/924993/google-ai-search-mode-overviews-update-reddit-links" },
-  { time: "19:45", tag: "ai", tagText: "AI", text: "微软进行最新领导层重组，Office和LinkedIn负责人Ryan Roslansky扩大职权范围，现同时掌管Teams业务。", source: "The Verge", url: "https://www.theverge.com/tech/924931/microsoft-office-copilot-windows-reorg-shuffle" },
-  { time: "19:19", tag: "tech", tagText: "科技", text: "三星电子在AI芯片需求推动下，市值突破1万亿美元大关，对英伟达在AI芯片市场的主导地位构成挑战。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEZKQUJIc1NvMUVYSV9uVGMyc1NjZXRYd3BoRmNhTWMwWUEtRjdKS1lmYkd2dmd0V2xWNk5aUEkyU0J3Mjk3YmcwRzdkdTRUenNyMTZXN2k4XzZpa1VTODI0eTRaVkN4cndtMTlockUwLUxXUW4zcDlDTHkyOXA1TTF6Y1BrUFYyZGNUTzEya2xCZ0YtS2J3?oc=5" },
-  { time: "18:13", tag: "ai", tagText: "AI", text: "英国谢菲尔德大学研究人员提出，昆虫大脑的神经机制可为AI技术带来变革性突破，有望开发出更高效、低能耗的智能系统。", source: "BBC", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wb1NfMmFVdjdqRGI3X200azdvTm9IaWNGcUktZWdXdzdfNWQ1ZW9XM3V4MlRsNmVWN0dLaU9NSnhhVWY1a2FVWi1NSHdGNWtFNmRjdW9uZjlKQQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月7日 17:43 CST";
+const aiBreakingDate = "2026年5月7日 19:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
