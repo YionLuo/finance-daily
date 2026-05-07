@@ -1623,14 +1623,16 @@ const fearGreedData = {
   previous1Week: 63.37,
   previous1Month: 22.54,
   previous1Year: 54.66,
-  date: "2026年5月7日 10:11 CST"
+  date: "2026年5月7日 11:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "11:25", tag: "macro", tagText: "宏观", text: "日本股市在黄金周假期后补涨，日经225指数飙升逾5%至历史新高，突破62000点。软银集团股价暴涨超16%，科技股领涨。市场暂时忽略中东紧张局势，聚焦于AI驱动的增长预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/japan-softbank-tech-shares-nikkei-to-record-high.html" },
   { time: "07:45", tag: "geo", tagText: "地缘", text: "亚太市场预计上涨，投资者权衡特朗普对伊朗的威胁与和平希望。中东紧张局势再度升温，但市场暂时忽略该风险，聚焦于潜在外交突破。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/asia-pacific-markets-today-live-updates-nikkei-225-kospi-hang-seng-index.html" },
   { time: "07:36", tag: "geo", tagText: "地缘", text: "交易员指出周三原油市场出现可疑活动：在Axios报道导致油价下跌前的一小时内，价值17亿美元的原油合约易手。专家称交易量异常飙升，引发市场操纵担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/traders-point-to-suspicious-activity-in-the-oil-market-on-wednesday-3a6821d9?mod=mw_rss_topstories" },
+  { time: "06:30", tag: "tech", tagText: "科技", text: "Anthropic CEO Dario Amodei在公司开发者大会上表示，第一季度业务增长了80倍，这解释了公司面临的算力困难。公司正“尽可能快地”增加计算能力。此前有报道称，SpaceX将向Anthropic出租数据中心容量以支持其增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/anthropic-ceo-dario-amodei-says-company-crew-80-fold-in-first-quarter.html" },
   { time: "06:12", tag: "crypto", tagText: "加密", text: "特朗普兄弟支持的American Bitcoin公司因挖矿收入增强而收窄亏损。该公司在比特币挖矿业务上取得进展，财务状况有所改善。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTjZwRHRvRjgzUmpFOWpRLTRQWFB2NkU0MWVmZ3hTU0wyZkYwendudnU1ZXhqZVpzUkhYR2oxR05oRGtRc3FQS2RURUduQnYtTTJJZGNMRWt3T3dPdDI2Nm9iSWJURWNXOU5kWEh3MWxmZE1XQUw5SmtnZmkzZWd0LV9sTEpCMTNwbG1zZHFaQVhDUWVacGZuZUxVY0FoOW5QQ1ZWd0lBOWtkcHk0RlBYNFdfUi14UF9uUmRnMA?oc=5" },
   { time: "06:12", tag: "tech", tagText: "科技", text: "英伟达将向康宁投资高达32亿美元，作为大规模光纤交易的一部分，将新建3座专注于AI的工厂。康宁将在美国开设三家全新的先进制造工厂，专门为英伟达生产光学技术产品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/nvidia-corning-optical-factories-nc-texas-ai.html" },
   { time: "05:47", tag: "macro", tagText: "宏观", text: "空客赢得加拿大史上最大飞机订单，价值190亿美元。亚航订购150架A220-300客机，极大提振了加拿大制造业。", source: "Financial Times", url: "https://www.ft.com/content/19c4dab7-0141-4c40-9d2f-180ff33cdd63" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "04:13", tag: "tech", tagText: "科技", text: "Snap发布谨慎业绩指引，称与AI初创公司Perplexity的合作已终止，中东地缘政治局势带来不确定性，股价承压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/snap-q1-earnings-report-2026.html" },
   { time: "03:31", tag: "ai", tagText: "AI", text: "SpaceX将向AI初创公司Anthropic出租数据中心容量，以帮助其快速增加计算能力，满足业务增长需求。", source: "Financial Times", url: "https://www.ft.com/content/aa0239b8-0d57-4dc8-8c1a-ed7ac4d689fb" },
   { time: "01:56", tag: "tech", tagText: "科技", text: "据文件披露，埃隆·马斯克在德克萨斯州的巨型芯片工厂Terafab建设成本可能高达1190亿美元。该工厂旨在为特斯拉、SpaceX和xAI制造芯片，是马斯克在AI和半导体领域布局的关键一步。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/elon-musks-spacex-chip-fab-in-texas-to-cost-up-to-119-billion.html" },
-  { time: "01:44", tag: "geo", tagText: "地缘", text: "美国燃料出口创下历史新高，霍尔木兹海峡关闭导致亚洲和欧洲买家抢购美国石油产品。这一趋势为美国石油公司带来丰厚利润，但也给特朗普政府带来政治压力，因国内汽油价格已超过每加仑4.50美元。", source: "Financial Times", url: "https://www.ft.com/content/cfc92825-68f6-4660-89ef-3854b3ead8dc" },
-  { time: "01:08", tag: "macro", tagText: "宏观", text: "美国银行警告称，SpaceX和Anthropic等超级IPO可能标志着当前牛市行情的终结。该行指出，为加快指数纳入而修改规则以及调整自由流通股乘数等操作，具有“晚期市场操纵”的特征。", source: "CNBC", url: "https://www.cnbc.com/2026/05/06/spacex-and-anthropic-mega-ipos-could-mark-end-of-bull-run-bank-of-america-suggests.html" },
 ];
-const breakingDate = "2026年5月7日 10:11 CST";
+const breakingDate = "2026年5月7日 11:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "18:13", tag: "tech", tagText: "科技", text: "谷歌Chrome浏览器因内置AI功能，可能自动下载高达4GB的AI模型文件，导致用户电脑存储空间被大量占用。", source: "The Verge", url: "https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features" },
   { time: "16:30", tag: "ai", tagText: "AI", text: "AI在数学领域取得突破性进展，成功解决一项高难度数学挑战。该成果标志着AI在逻辑推理和复杂问题求解能力上的重大进步，对基础科学和工程应用具有深远影响。", source: "Mirage News", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVUNhSXBKVzhHUHFKSGs4NzN1cWQ0ZW9vdkJVTWZNbTkwWV9GSmFnVlZRV2RIOGx4ZjA1UWZrOGY0cjd5UFhGdy1HVUxINzBFOTUzWE9FaGw0WXFCaGVfMHNyMFBCYnNZNHA0OVFETW40WHVuMndDSldBYWFqQ1B5aGRPZGRBUQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月7日 10:11 CST";
+const aiBreakingDate = "2026年5月7日 11:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
