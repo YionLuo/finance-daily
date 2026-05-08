@@ -1616,21 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.6,
+  score: 66.77,
   rating: "greed",
-  timestamp: "2026-05-08T00:00:00+00:00",
+  timestamp: "2026-05-08T08:28:31+00:00",
   previousClose: 67.63,
   previous1Week: 66.09,
   previous1Month: 34.43,
   previous1Year: 57.66,
-  date: "2026年5月8日 14:06 CST"
+  date: "2026年5月8日 16:45 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:04", tag: "geo", tagText: "地缘", text: "英国地方选举结果出炉，首相斯塔默领导的工党遭遇惨败，失去约200个席位和8个议会控制权。法拉奇领导的改革党异军突起。市场担忧政治不确定性，英国国债面临债券义警压力。", source: "Financial Times", url: "https://www.ft.com/content/63a73c94-a927-4683-be1a-9ed0e53442de" },
+  { time: "14:28", tag: "tech", tagText: "科技", text: "任天堂宣布Switch 2在美国和日本涨价，美国售价从449.99美元升至499.99美元，日本从49,980日元升至59,980日元。公司预计内存短缺将导致游戏机销量下滑。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/nintendo-switch-2-price-hike-sales-fall-memory-crunch.html" },
   { time: "13:43", tag: "geo", tagText: "地缘", text: "美伊在霍尔木兹海峡交火，脆弱停火协议面临破裂风险。油价应声反弹，WTI原油大涨。阿联酋拦截了伊朗发射的无人机和导弹。特朗普声称停火协议仍然有效，但市场对霍尔木兹海峡持续关闭的担忧加剧，交易员开始押注“NACHO”交易，即预期石油供应中断将长期化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html" },
   { time: "13:43", tag: "macro", tagText: "宏观", text: "丰田汽车第四财季利润远不及预期，同比暴跌49%，受美国关税政策冲击。尽管营收同比增长1.89%，但关税成本严重侵蚀了这家全球最大汽车制造商的盈利能力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/toyota-1q-2026-earnings.html" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "分析师称，科技股在经历强劲财报季后，估值可能迎来多年最佳买入机会。微软Azure云服务增长40%，但1900亿美元资本支出令前景蒙阴。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/us-tech-stocks-cheap-stellar-earnings-where-next.html" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "硅谷巨头AI军备竞赛导致自由现金流降至十年低点。微软、谷歌、亚马逊等公司合计年度资本支出高达7250亿美元，从轻资产的现金牛转变为重资产的基础设施投资者，引发市场对投资回报率的担忧。微软Azure云服务增速达40%，但1900亿美元的资本支出前景令投资者感到不安。", source: "Financial Times", url: "https://www.ft.com/content/b3dfaba9-17a2-4fac-90fe-4ab3ca7c9494" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic正在考虑一笔使其估值接近1万亿美元的交易。随着收入激增，这家ChatGPT竞争对手Claude的开发商收到了大量投资意向，其估值可能超越OpenAI。", source: "Financial Times", url: "https://www.ft.com/content/a40cafcc-0fa4-4e70-9e24-90d826aea56d" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "特朗普的两个儿子支持一只10亿美元的投资工具，专门投向AI和无人机等特朗普总统倡导的行业。埃里克·特朗普和小唐纳德·特朗普投资了这家实体，旨在引导资金进入符合其父亲政治议程的领域。", source: "Financial Times", url: "https://www.ft.com/content/d73183b6-d610-4caa-949d-186cbd59c970" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "05:59", tag: "crypto", tagText: "加密", text: "Coinbase公布第一季度财报，意外录得亏损，交易收入同比下降40%，反映加密货币市场持续低迷。股价盘后下跌4%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/coinbase-coin-earnings-q1-2026.html" },
   { time: "05:56", tag: "tech", tagText: "科技", text: "法国检方将对埃隆·马斯克及其社交平台X的调查升级为刑事调查，指控其涉嫌共谋传播有害的AI深度伪造内容。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/french-prosecutors-probe-of-elon-musk-x-now-a-criminal-investigation.html" },
   { time: "04:18", tag: "ai", tagText: "AI", text: "CoreWeave第一季度营收同比翻倍超预期，该公司持续举债数十亿美元扩建数据中心，为领先AI公司提供算力服务。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/coreweave-crwv-q1-earnings-report-2026.html" },
-  { time: "04:18", tag: "ai", tagText: "AI", text: "Block财报显示增长提速，三个月前大规模裁员后，目前100%员工在工作中使用AI。这被视为对AI大规模投入的潜在验证。", source: "MarketWatch", url: "https://www.marketwatch.com/story/block-earnings-show-a-growth-pickup-in-a-potential-validation-of-the-massive-ai-push-76466c8d" },
-  { time: "04:10", tag: "macro", tagText: "宏观", text: "Airbnb第一季度营收超预期，但因伊朗战争导致中东地区取消预订增加，公司警告区域业务疲软。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/airbnb-abnb-earnings-q1-2026.html" },
-  { time: "03:26", tag: "geo", tagText: "地缘", text: "壳牌CEO警告称，因伊朗战争导致霍尔木兹海峡持续关闭，石油市场已短缺近10亿桶，且缺口每日加深。市场密切关注美伊能否达成协议恢复能源运输。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/shell-ceo-iran-war-oil-lost-shortage.html" },
 ];
-const breakingDate = "2026年5月8日 14:06 CST";
+const breakingDate = "2026年5月8日 16:45 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:25", tag: "ai", tagText: "AI", text: "台积电4月营收同比增长17.5%，超出市场预期。这一强劲数据被视为AI芯片需求持续旺盛的信号，对英伟达及其他AI芯片股构成利好，缓解了此前市场对AI支出放缓的担忧。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSzQ4MnVqWjY5NnlfaWE2RDRQVEZBQkd3clVCRjBwTFVaYktMNnBVZTctaVFTV2Y1anZQOEZ3VTVLSmZ3NXF4OVJ6U0ljNEFzRmxxd1VyR0dqOFhJQl80Ul84SjIzVVNKMHV6enZzY0xsNlptUkxVOXhoRG5scm5lZ2FhY3l0UmJxTXpXSzM0ZDBvYW1ndXktM0tFRmItTlo3blhkRlFMRHVVLUZPMkYyYzBzaw?oc=5" },
   { time: "12:42", tag: "ai", tagText: "AI", text: "AI医疗自动化公司Basata引发行业讨论：其系统可自动处理患者预约、病历整理等后台工作，但面临“增强员工”与“取代岗位”之间的伦理边界问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/the-back-office-problem-that-explains-why-specialists-never-call-you-back/" },
   { time: "10:58", tag: "ai", tagText: "AI", text: "比利时企业AI工作流初创公司Tekst完成1150万欧元A轮融资，专注于为企业提供自动化AI工作流解决方案，进一步推动欧洲企业AI应用落地。", source: "Beinsure", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTFBJN1had0tYMVFyVm5yeGY1OUVaV1lGZTV0cGg4M2dLTHpwbVJlTmdLREVHTzRLQ3lQcmgzb2Zmak9PMHRSVVNUd3o4QWZvWG9nN1pnSHN0VXZiUW9qZVJXcVlob19jMUpqN3JCd1FPSmJHeDM5OVdoVWRGUGJ1UQ?oc=5" },
   { time: "07:33", tag: "ai", tagText: "AI", text: "前OpenAI研究员创办仅六周的初创公司正寻求融资，目标估值高达40亿美元。该消息由The Information报道，凸显AI领域人才创业的极高估值泡沫。", source: "The Information", url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcXByeVk0R1p5NGR5eFpkTjQwRVVZb3l4RVZaT2Y3SVY1WDZ2bUo1ajhfX0psUEVUZFR0c0lxd0JFc3VFOEU2dFNYMWliRkppUHgzQWJwa2E3blJSLUdnQ1dQd0VrWjlwdEhmR3hrRzZSdnRiaXRrU3JRaUdoZzZCTTltSUh6RC05eHhlQ2k3ZFBQeDdCZEVMZlp0SjIwcG0tMzdNNGhsTFlFUzBGZGk0cERUN00zNElfd0E?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:44", tag: "ai", tagText: "AI", text: "中国AI初创公司Moonshot AI以200亿美元估值完成20亿美元融资，其年化经常性收入在4月突破2亿美元，由付费订阅和API使用量快速增长驱动。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/" },
   { time: "21:30", tag: "ai", tagText: "AI", text: "Aurora CEO Chris Ursson表示，自动驾驶卡车终于准备好规模化部署，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。", source: "TechCrunch", url: "https://techcrunch.com/podcast/auroras-chris-urmson-on-why-self-driving-trucks-are-finally-ready-to-scale/" },
   { time: "21:03", tag: "ai", tagText: "AI", text: "演员Jamie Foxx参与AI语音克隆初创公司ElevenLabs的D轮融资，该公司估值持续攀升，明星资本加速涌入AI赛道。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPcXBiT0VfQkh2OE5OYWU3SWwxTlZKLXFmME12aGNpbTdIdTRNMHJBODk5OU1rcEVrQ0FfVmUyZUVRMDVMakpadHVGdFRfSkpEZFhhYXNMQVJmYnVyLUx2N0hOckNqUllCeUZOazJldmEyMUVLTHVaVEVMNzZFOWdoVXBTRlAtUFo1dXVvV1N1VGtIQXZhX0dvRmxTV3dzR2RmVU5JTHBhNHBvaDJzZG1zMEJ4S3RvTW9OZ0VNeTc4bnhhNTBnVFdTSEIxbWI4ZnJISjdOVWFEaVpUS3BmUEJqT1BvTFRxZUo5dDdJ?oc=5" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "Spotify推出新工具，允许用户通过OpenAI Codex或Claude Code等AI代理创建播客并直接导入Spotify，旨在成为AI生成个人音频内容的核心平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/spotify-wants-to-become-the-home-for-ai-generated-personal-audio/" },
 ];
-const aiBreakingDate = "2026年5月8日 14:06 CST";
+const aiBreakingDate = "2026年5月8日 16:45 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
