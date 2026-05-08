@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 67.63,
   rating: "greed",
-  timestamp: "2026-05-07T21:52:44+00:00",
+  timestamp: "2026-05-07T23:42:50+00:00",
   previousClose: 68.37,
   previous1Week: 66.69,
   previous1Month: 27.6,
   previous1Year: 54.14,
-  date: "2026年5月8日 06:12 CST"
+  date: "2026年5月8日 08:02 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:09", tag: "macro", tagText: "宏观", text: "美国国际贸易法院裁定，特朗普依据《贸易法》第122条征收的10%全球关税“未经法律授权”，属于非法。此举可能对特朗普的贸易政策产生重大影响。", source: "Financial Times", url: "https://www.ft.com/content/a53ed6cc-bbef-4527-a19c-8041118e3661" },
+  { time: "06:34", tag: "macro", tagText: "宏观", text: "特朗普延长与欧盟的贸易协议最后期限，同时发出新威胁：若欧盟未能在7月4日前落实协议，将对其征收“高得多”的关税。", source: "Financial Times", url: "https://www.ft.com/content/10714a34-2976-4edd-bede-e892eff02d45" },
+  { time: "06:21", tag: "tech", tagText: "科技", text: "Rocket Lab股价上涨，公司称上季度签署的发射合同数量超过整个去年全年，显示其业务正在快速扩张。", source: "MarketWatch", url: "https://www.marketwatch.com/story/rocket-labs-stock-rises-upon-new-signs-its-business-is-expanding-rapidly-dc7abdfc" },
+  { time: "06:10", tag: "tech", tagText: "科技", text: "Datadog股价盘后飙升31%，因公司公布超预期财报，成为AI软件领域赢家。其业绩也带动Snowflake和MongoDB等其他云基础设施公司股价上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/ai-winners-software-datadog-stock.html" },
   { time: "06:09", tag: "macro", tagText: "宏观", text: "美股期货小幅下跌，交易员关注美伊紧张局势及即将公布的4月非农就业报告。标普500指数从纪录高位回落，油价上涨令市场承压。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE15TjdWQUxkNlpmcVJpdDNRT05HSlBHb2pnMVQ4eEE5RHEtYUl3MmRNVEJnQUxYQkg3blhEcWdLY0N0WTFqbHdKaDdGQ1Z4N0lGSkYyRktRWkM3eXo2TzZxeXZyQ0lTTnFWb2M5UFlFa0RQOTNKNHU00gF8QVVfeXFMUDhJS1VhMmZYVVRKZG84LVZzeTRXX2FWaG1DZ0R5VEx3MUVDT1JTVklMVWdhb2J1T0RqMG9SVENjV0R0YTg0VVg4VDBvbUxnYnVKT0FJQ2YtMWd5c281UmF1ZHJaMWtkQi1nS2JaRXRiVnJRcWRaa0RBYkxwNA?oc=5" },
   { time: "06:07", tag: "tech", tagText: "科技", text: "英伟达宣布对AI基础设施公司IREN进行重大投资，以建设5吉瓦全球AI工厂网络。IREN股价飙升13%，尽管该公司营收不及预期，但英伟达的入股完全盖过了这一利空。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/iren-stock-ai-infrastructure-nvidia.html" },
   { time: "06:06", tag: "tech", tagText: "科技", text: "云计算公司Cloudflare宣布裁员20%，称此举是押注AI的重大战略调整，而非成本削减。但投资者并不买账，股价下跌。", source: "MarketWatch", url: "https://www.marketwatch.com/story/cloudflare-to-cut-20-of-staff-in-a-big-bet-on-ai-investors-arent-sold-501d4aa3?mod=mw_rss_topstories" },
@@ -1645,17 +1649,15 @@ const breakingNews = [
   { time: "01:40", tag: "geo", tagText: "地缘", text: "特朗普叫停‘自由计划’，因沙特拒绝支持。沙特表示不允许美军使用其基地或领空执行在霍尔木兹海峡引导商船的计划，导致该计划搁浅。", source: "Financial Times", url: "https://www.ft.com/content/13070f17-854d-460e-b97f-9ea535d93e64" },
   { time: "00:46", tag: "ai", tagText: "AI", text: "对冲基金大佬保罗·都铎·琼斯警告美国在AI监管方面已落后，称‘我们本应已经行动’。美国正与中国展开激烈竞争，争夺AI创新领导地位，但监管缺位可能带来风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/paul-tudor-jones-ai-regulation-warning.html" },
   { time: "00:42", tag: "tech", tagText: "科技", text: "Meta股东面临警示信号：扎克伯格推出‘Multi Mark’AI克隆体。评论认为，用数字替身取代真实领导并非创新，而是逃避责任的高科技手段，对股东构成重大风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/zuckerbergs-multi-mark-ai-clone-is-a-huge-red-flag-for-meta-shareholders-53e58b30" },
-  { time: "00:27", tag: "tech", tagText: "科技", text: "SpaceX即将进行的IPO可能催生一批新公司。SpaceX员工和前员工拥有‘疯狂的人脉网络’，IPO后将获得大量现金，有望推动更多‘迷你SpaceX’初创企业涌现。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-spacex-mafia-is-here-elon-musks-big-ipo-could-launch-a-constellation-of-new-companies-83def501" },
-  { time: "00:22", tag: "geo", tagText: "地缘", text: "波音CEO凯利·奥特伯格预计将随特朗普总统下周访问中国。这一行程凸显美中贸易关系及航空业合作的重要性，波音正寻求扩大在华业务。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/trump-china-boeing-kelly-ortberg.html" },
-  { time: "00:21", tag: "macro", tagText: "宏观", text: "花旗集团以温和的利润目标令投资者失望。这家华尔街银行试图说服投资者其长达数年的转型中最艰难的部分已经完成，但市场对其增长前景持怀疑态度。", source: "Financial Times", url: "https://www.ft.com/content/05471ceb-3aac-4d68-9840-a329b429d240" },
-  { time: "22:20", tag: "macro", tagText: "宏观", text: "知名教授Scott Galloway警告美国股市将在未来两年内崩盘，标普500指数中40%的股票面临风险，建议投资者保护资产。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/scott-galloway-warns-us-stock-142000861.html" },
 ];
-const breakingDate = "2026年5月8日 06:12 CST";
+const breakingDate = "2026年5月8日 08:02 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:22", tag: "ai", tagText: "AI", text: "OpenAI在API中推出新的语音智能功能，可应用于客服、教育和创作者平台等多个领域。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/" },
   { time: "05:23", tag: "ai", tagText: "AI", text: "一项新研究展示了如何利用强化学习（RL）让一个仅70亿参数的小模型充当“调度员”，智能地将复杂任务路由分配给GPT-5、Claude和Gemini等大型模型，实现高效协同工作。", source: "VentureBeat", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQSGRXUmp5Q2N2QktwUnF0Q0x6NGtsRjVPTWlFcmhfckw1OTNyR1hnbExmbFFZR3dGVjVzWTFlelFwMnhxQU1JR3RiUzlKRnN3RVE4RDBrejdFcExzVHdBSV9oTFNzSVJVb0huSE5nVHhqb09aZVd0YnNXdWtndFA2M3ExcEdYdm9ocFZJWTBnb1p3Ml9RYm9TNkhWVFV4MF9nR1FYSWdYb0tXSDVnckpmZUlIS203VV96MGtrZkxvMl8?oc=5" },
   { time: "05:02", tag: "ai", tagText: "AI", text: "欧洲电动滑板车巨头Voi的联合创始人创立了AI初创公司Pit，该公司获得a16z领投的1600万美元种子轮融资，提供“AI产品团队即服务”模式，成为斯德哥尔摩最新的AI新星。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/voi-founders-new-ai-startup-pit-has-become-the-latest-rising-star-out-of-stockholm/" },
+  { time: "03:55", tag: "tech", tagText: "科技", text: "Mira Murati在法庭证词中披露了2023年Sam Altman被OpenAI董事会解雇的更多内幕细节，为Elon Musk诉OpenAI案提供了关键证据。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/926383/mira-murati-sam-altman-musk-trial-ouster" },
   { time: "03:39", tag: "tech", tagText: "科技", text: "据彭博社Mark Gurman报道，苹果传闻中配备摄像头的AirPods已接近早期量产测试阶段，目前测试人员正在“积极使用”原型机。该产品旨在为AI功能提供视觉数据输入，标志着苹果在AI可穿戴设备领域的重要布局。", source: "The Verge", url: "https://www.theverge.com/tech/926376/apple-airpods-cameras-ai-production" },
   { time: "03:26", tag: "tech", tagText: "科技", text: "SpaceX计划投资至少550亿美元在得克萨斯州建设名为“Terafab”的AI芯片制造工厂，正式进军AI芯片制造业务。这一巨额投资计划显示了Elon Musk在AI硬件领域的雄心。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/926356/spacex-terafab-plant-cost-ai-chips" },
   { time: "02:57", tag: "ai", tagText: "AI", text: "Perplexity的“个人电脑”AI代理功能现已向所有Mac用户开放。该功能将AI代理直接带到Mac桌面，使用户能够通过自然语言指令完成复杂任务，进一步拓展了AI在个人计算领域的应用场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/perplexitys-personal-computer-is-now-available-everyone-on-mac/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "AI财务运营初创公司Fazeshift完成1700万美元融资，投资者押注其以应收账款为切入点的AI驱动财务自动化方案。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxQLThkRUJqLTZRNjFlNjRvZjg3Q3RCVzFtbHJSekxlbzhQdTVkakFCNWtPT2V5UWVaQjlHMWlETUV2QUE0Z3ZOVHhUZ21ERlQ5bU9NRWtTZ2RXaXpvRGlKNGJzTVd5M0ZWNktLR0JBSk12NE9oVmNxY2g3WklWeF9ETFJHNlZlODNYcXlYZU9WSG9oTDYtQjRuMEY4Z1FEUQ?oc=5" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌更新AI搜索功能，将直接引用Reddit等来源的“观点预览”，使用户能更便捷地找到来自可信来源的信息。", source: "The Verge", url: "https://www.theverge.com/tech/924993/google-ai-search-mode-overviews-update-reddit-links" },
   { time: "20:20", tag: "ai", tagText: "AI", text: "Spotify的AI DJ功能新增法语、德语、意大利语和巴西葡萄牙语支持，进一步拓展国际市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/spotifys-ai-dj-now-supports-french-german-italian-and-brazilian-portuguese/" },
-  { time: "19:45", tag: "ai", tagText: "AI", text: "微软进行最新领导层重组，Office和LinkedIn负责人Ryan Roslansky扩大职权范围，现同时掌管Teams业务。", source: "The Verge", url: "https://www.theverge.com/tech/924931/microsoft-office-copilot-windows-reorg-shuffle" },
-  { time: "19:19", tag: "tech", tagText: "科技", text: "三星电子在AI芯片需求推动下，市值突破1万亿美元大关，对英伟达在AI芯片市场的主导地位构成挑战。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEZKQUJIc1NvMUVYSV9uVGMyc1NjZXRYd3BoRmNhTWMwWUEtRjdKS1lmYkd2dmd0V2xWNk5aUEkyU0J3Mjk3YmcwRzdkdTRUenNyMTZXN2k4XzZpa1VTODI0eTRaVkN4cndtMTlockUwLUxXUW4zcDlDTHkyOXA1TTF6Y1BrUFYyZGNUTzEya2xCZ0YtS2J3?oc=5" },
 ];
-const aiBreakingDate = "2026年5月8日 06:12 CST";
+const aiBreakingDate = "2026年5月8日 08:02 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
