@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.77,
+  score: 67.94,
   rating: "greed",
-  timestamp: "2026-05-08T11:58:46+00:00",
+  timestamp: "2026-05-08T14:58:26+00:00",
   previousClose: 67.63,
   previous1Week: 66.09,
   previous1Month: 34.43,
   previous1Year: 57.66,
-  date: "2026年5月8日 20:16 CST"
+  date: "2026年5月8日 23:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:49", tag: "tech", tagText: "科技", text: "德文能源公司（Devon Energy）完成对Coterra Energy的580亿美元并购交易，成为美国能源行业又一重大整合案例。", source: "Offshore Technology", url: "https://finance.yahoo.com/markets/stocks/articles/devon-energy-completes-58bn-merger-144921166.html" },
+  { time: "22:41", tag: "tech", tagText: "科技", text: "追踪存储芯片板块的Roundhill Memory ETF（DRAM）单日吸引10亿美元资金流入，自4月2日推出以来总规模已超50亿美元，成为自比特币热潮以来最热门的ETF。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/the-hottest-etf-since-bitcoin-mania-just-added-1-billion-in-a-day.html" },
+  { time: "22:37", tag: "macro", tagText: "宏观", text: "美国4月非农就业新增11.5万人，远超预期的5.5万，连续第二个月超预期增长。强劲数据推动标普500和纳斯达克指数再创历史新高，美股有望连续第六周上涨。但报告显示能源价格高企和战争风险仍是通胀隐忧，市场预计美联储将继续按兵不动。", source: "Financial Times", url: "https://www.ft.com/content/245e5c30-0a0b-43cd-b4b5-13f023c0b42d" },
+  { time: "22:30", tag: "macro", tagText: "宏观", text: "美国5月密歇根大学消费者信心指数创下历史新低，因伊朗战争导致汽油价格飙升，严重打击了消费者对经济前景的预期。共和党人的信心也降至特朗普2024年当选以来的最低点。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/consumer-sentiment-falls-to-fresh-record-low-in-may-as-surging-gas-prices-hit-outlook.html" },
+  { time: "22:04", tag: "ai", tagText: "AI", text: "Anthropic推出的AI模型Mythos引发网络安全恐慌，银行、软件巨头和政府纷纷应对新型网络攻击。专家指出，此类威胁早已存在，但Mythos的出现加速了行业对AI安全风险的重视。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html" },
+  { time: "22:01", tag: "ai", tagText: "AI", text: "对冲基金TCI大幅减持微软股份，将其在科技巨头的持仓从10%削减至1%，价值约80亿美元。该基金警告称AI颠覆性影响可能对微软构成风险。", source: "Financial Times", url: "https://www.ft.com/content/ac5d90a9-b010-4529-9616-706420920681" },
   { time: "19:57", tag: "geo", tagText: "地缘", text: "伊朗问题或成特朗普-习近平峰会焦点，关税与稀土议题可能被推迟。由于伊朗战争，美国企业关注的稀土和供应链等重大议题在峰会议程上可能退居次要位置。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/iran-focus-at-trump-xi-summit-may-delay-progress-on-tariffs-rare-earths.html" },
   { time: "19:01", tag: "macro", tagText: "宏观", text: "美国多州打击针对富裕投资者的QSBS税收减免政策。《一揽子大美丽法案》大幅扩大了合格小型企业股票（QSBS）的税收优惠，但纽约州和俄勒冈州等已开始针对该激励措施采取行动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/tax-break-wealthy-investors-qsbs.html" },
   { time: "18:36", tag: "macro", tagText: "宏观", text: "美国银行数据显示，近期美国消费者信用卡和借记卡支出突然下滑，该行尚不确定具体原因。这一意外疲软信号引发市场对经济放缓的担忧。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/spending-in-the-u-s-just-slumped-and-bank-of-america-isnt-sure-why-ea384b24?mod=mw_rss_topstories" },
@@ -1643,18 +1649,14 @@ const breakingNews = [
   { time: "12:00", tag: "tech", tagText: "科技", text: "硅谷巨头AI军备竞赛导致自由现金流降至十年低点。微软、谷歌、亚马逊等公司合计年度资本支出高达7250亿美元，从轻资产的现金牛转变为重资产的基础设施投资者，引发市场对投资回报率的担忧。微软Azure云服务增速达40%，但1900亿美元的资本支出前景令投资者感到不安。", source: "Financial Times", url: "https://www.ft.com/content/b3dfaba9-17a2-4fac-90fe-4ab3ca7c9494" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic正在考虑一笔使其估值接近1万亿美元的交易。随着收入激增，这家ChatGPT竞争对手Claude的开发商收到了大量投资意向，其估值可能超越OpenAI。", source: "Financial Times", url: "https://www.ft.com/content/a40cafcc-0fa4-4e70-9e24-90d826aea56d" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "特朗普的两个儿子支持一只10亿美元的投资工具，专门投向AI和无人机等特朗普总统倡导的行业。埃里克·特朗普和小唐纳德·特朗普投资了这家实体，旨在引导资金进入符合其父亲政治议程的领域。", source: "Financial Times", url: "https://www.ft.com/content/d73183b6-d610-4caa-949d-186cbd59c970" },
-  { time: "11:59", tag: "macro", tagText: "宏观", text: "麦格理集团大宗商品主管西蒙·赖特获得3500万澳元（约合2350万美元）年薪，超过其CEO。在能源市场动荡的背景下，这家被称为“百万富翁工厂”的投行利润飙升，大宗商品部门贡献了主要收益。", source: "Financial Times", url: "https://www.ft.com/content/3785a37f-3409-4b3e-b2fb-6b4200c4375e" },
-  { time: "11:00", tag: "tech", tagText: "科技", text: "韩国金融科技集团Toss宣布，计划在三年内让“刷脸支付”成为主流，并最终在韩国淘汰实体信用卡。该公司认为面部识别技术已足够成熟和安全，将彻底改变支付方式。", source: "Financial Times", url: "https://www.ft.com/content/f48b4605-1aa9-4549-9197-fc1c2a361b90" },
-  { time: "07:09", tag: "macro", tagText: "宏观", text: "美国国际贸易法院裁定，特朗普依据《贸易法》第122条征收的10%全球关税“未经法律授权”，属于非法。此举可能对特朗普的贸易政策产生重大影响。", source: "Financial Times", url: "https://www.ft.com/content/a53ed6cc-bbef-4527-a19c-8041118e3661" },
-  { time: "06:34", tag: "macro", tagText: "宏观", text: "特朗普延长与欧盟的贸易协议最后期限，同时发出新威胁：若欧盟未能在7月4日前落实协议，将对其征收“高得多”的关税。", source: "Financial Times", url: "https://www.ft.com/content/10714a34-2976-4edd-bede-e892eff02d45" },
-  { time: "06:21", tag: "tech", tagText: "科技", text: "Rocket Lab股价上涨，公司称上季度签署的发射合同数量超过整个去年全年，显示其业务正在快速扩张。", source: "MarketWatch", url: "https://www.marketwatch.com/story/rocket-labs-stock-rises-upon-new-signs-its-business-is-expanding-rapidly-dc7abdfc" },
-  { time: "06:10", tag: "tech", tagText: "科技", text: "Datadog股价盘后飙升31%，因公司公布超预期财报，成为AI软件领域赢家。其业绩也带动Snowflake和MongoDB等其他云基础设施公司股价上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/ai-winners-software-datadog-stock.html" },
 ];
-const breakingDate = "2026年5月8日 20:16 CST";
+const breakingDate = "2026年5月8日 23:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
   { time: "19:44", tag: "ai", tagText: "AI", text: "多方证据显示英伟达AI芯片霸主地位或将终结。The Motley Fool分析指出，随着竞争对手AMD、英特尔以及定制AI芯片（如谷歌TPU、亚马逊Trainium）的崛起，加上客户自研芯片趋势加速，英伟达在AI芯片市场的垄断地位正面临前所未有的挑战。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR29YLVItanpwVGNnNXBBVE40MXR4MU9ENDk3b0d2WXlmWm9TSzBVeGstLXRKSVBudVJzMHZ1VFJQNjV0OXd2anJmTzliUGI5Z2g2TnRaN2J1Mkc0VmZPdEJ1S0hlem14dFhrNEhtODN2d28zM0xXbGgzZHBNR1VYOFMxX1h1VFFIWEpoT1pXdUtmMTBiVDVuMA?oc=5" },
+  { time: "18:04", tag: "tech", tagText: "科技", text: "一位亿万富翁AI科技创始人在诉讼反驳中称，被解雇的员工曾大肆挥霍公司资金。该案件引发对AI初创公司内部管理和创始人责任的广泛关注。", source: "The Columbus Dispatch", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVlhEUlhMeXRScFRUMjVoUnZFRzNUMDd6cUFnYXJweTJjSGlGcFFKX0h2WGtFb3ZCZ3lKeEcweEE3bm9vaEoyYnVLV01fcHVRSTk2M2RCQ1ZOSnZmeC1zeDBuVmxSb2FFOEN1RnYwU29vUGxDTkVqd3lZcjdEcFA5UHBXV25MSVE4bU4wUUNmeWZ6V1FtaW5Vd1FPSlctOGFrMi1BZEZHRlZvUG1pR2xSb25zRGQwTU4zX2s3d1AwVmlDM1pxMGw2TGktSQ?oc=5" },
   { time: "16:52", tag: "tech", tagText: "科技", text: "Torc Robotics正推动自动驾驶卡车走向商业现实，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。该公司CEO表示，自动驾驶卡车终于准备好规模化部署，标志着货运行业自动化迈出关键一步。", source: "Robotics & Automation News", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcC01bVRaZDVIMGZzbU1uRVpTc1NKdnp2OVpQbmM5cnNYWHgxT0k0MEJ3ZEFKUkdLMV8xRld6cmVLY0JHR2RaZHRCekYwWXprcGFibGNBNjJva2hsRTlVdk91THU3Uy04QVFBOW00Qk1vdTREdnJ0UFd4SzdGRmtlZko2R1lNclZDVDhhQ1JXazBZYTBTVVNXNkZJaWwwdFY4TndUek1PblBTVnFsNFVwd045Q0ZaZFJnUVBPSDdzajdqR2xDY0hLUWtJRlYteHpnWkhB?oc=5" },
   { time: "15:56", tag: "ai", tagText: "AI", text: "美国怀疑英伟达芯片通过泰国走私至阿里巴巴，加剧中美科技紧张局势。据知情人士透露，美国政府正在调查英伟达AI芯片是否通过泰国中转，最终流入阿里巴巴手中，此举可能违反出口管制规定。该调查若证实，将进一步加剧中美在AI芯片领域的博弈。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVXA2dy1BelpvR2lNdlNoZzB2NnJtWWRJOXg4ZUViWTZyQ3FDcVE3dGdEeGRFTUphLTg4dGgyNXQ1VkMzdXhRNG9MQVVNaXQ4cTNRSFFhYklBLVhGYjdRTkFjVWp4S2pjd3ZIQjZjT3c3bmtaU1Jhakxuel95UWt6Ymc0QQ?oc=5" },
   { time: "13:25", tag: "ai", tagText: "AI", text: "台积电4月营收同比增长17.5%，超出市场预期。这一强劲数据被视为AI芯片需求持续旺盛的信号，对英伟达及其他AI芯片股构成利好，缓解了此前市场对AI支出放缓的担忧。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSzQ4MnVqWjY5NnlfaWE2RDRQVEZBQkd3clVCRjBwTFVaYktMNnBVZTctaVFTV2Y1anZQOEZ3VTVLSmZ3NXF4OVJ6U0ljNEFzRmxxd1VyR0dqOFhJQl80Ul84SjIzVVNKMHV6enZzY0xsNlptUkxVOXhoRG5scm5lZ2FhY3l0UmJxTXpXSzM0ZDBvYW1ndXktM0tFRmItTlo3blhkRlFMRHVVLUZPMkYyYzBzaw?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "02:06", tag: "tech", tagText: "科技", text: "Bumble CEO Whitney Wolfe Herd宣布公司将取消传统的“左滑右滑”匹配模式，转而全面拥抱AI。Bumble正在开发名为“Bee”的AI约会助手，旨在通过人工智能技术重塑在线交友体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/bumble-is-getting-rid-of-the-swipe-ceo-says/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI为ChatGPT推出可选安全功能“可信联系人”，允许成年用户指定一位紧急联系人，用于在检测到心理健康或安全风险时发出警报。该功能旨在为有需要的用户提供及时的外部支持。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification" },
   { time: "01:40", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman与Elon Musk就OpenAI未来走向的法庭对决正式开庭。Musk于2024年提起诉讼，指控OpenAI背离了其非营利初心。此案可能深刻影响OpenAI及ChatGPT的未来发展方向。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
-  { time: "00:05", tag: "tech", tagText: "科技", text: "Mozilla安全研究人员表示，Anthropic的AI模型Mythos在Firefox中发现了大量高危漏洞，彻底改变了该浏览器的网络安全策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/how-anthropics-mythos-has-rewritten-firefoxs-approach-to-cybersecurity/" },
-  { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
 ];
-const aiBreakingDate = "2026年5月8日 20:16 CST";
+const aiBreakingDate = "2026年5月8日 23:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
