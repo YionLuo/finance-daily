@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.94,
+  score: 67.57,
   rating: "greed",
-  timestamp: "2026-05-08T14:58:26+00:00",
+  timestamp: "2026-05-08T16:14:30+00:00",
   previousClose: 67.63,
   previous1Week: 66.09,
   previous1Month: 34.43,
   previous1Year: 57.66,
-  date: "2026年5月8日 23:01 CST"
+  date: "2026年5月9日 00:24 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:40", tag: "tech", tagText: "科技", text: "亚马逊AWS位于弗吉尼亚州北部的数据中心因过热发生故障，导致FanDuel、Coinbase等平台交易中断。AWS表示正在努力修复，预计恢复需要数小时。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/aws-outage-data-center-fanduel-coinbase.html" },
+  { time: "23:33", tag: "tech", tagText: "科技", text: "网络安全公司Cloudflare宣布将裁员超过1100人，这是最新一起因AI转型而进行的大规模裁员。受此消息影响，Cloudflare股价下跌。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/cloudflare-stock-layoffs-ai-jobs/?src=A00220&yptr=yahoo" },
+  { time: "23:30", tag: "macro", tagText: "宏观", text: "有“债券之王”之称的Jeffrey Gundlach表示，如果美国财政部激进地重组债务，他此前实施的债券互换计划将是“英雄交易”。他认为美国政府资金困境正在恶化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-the-hero-trade-that-works-if-the-treasury-radically-restructures-debt-according-to-jeffrey-gundlach-3e363200?mod=mw_rss_topstories" },
+  { time: "22:52", tag: "macro", tagText: "宏观", text: "弗吉尼亚州最高法院驳回了民主党提出的重新划分国会选区的请求。在持续的重划选区之争中，弗吉尼亚州曾被民主党视为在2026年中期选举中增加多达四个众议院席位的机会。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/virginia-redistricting-decision-supreme-court.html" },
   { time: "22:49", tag: "tech", tagText: "科技", text: "德文能源公司（Devon Energy）完成对Coterra Energy的580亿美元并购交易，成为美国能源行业又一重大整合案例。", source: "Offshore Technology", url: "https://finance.yahoo.com/markets/stocks/articles/devon-energy-completes-58bn-merger-144921166.html" },
   { time: "22:41", tag: "tech", tagText: "科技", text: "追踪存储芯片板块的Roundhill Memory ETF（DRAM）单日吸引10亿美元资金流入，自4月2日推出以来总规模已超50亿美元，成为自比特币热潮以来最热门的ETF。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/the-hottest-etf-since-bitcoin-mania-just-added-1-billion-in-a-day.html" },
   { time: "22:37", tag: "macro", tagText: "宏观", text: "美国4月非农就业新增11.5万人，远超预期的5.5万，连续第二个月超预期增长。强劲数据推动标普500和纳斯达克指数再创历史新高，美股有望连续第六周上涨。但报告显示能源价格高企和战争风险仍是通胀隐忧，市场预计美联储将继续按兵不动。", source: "Financial Times", url: "https://www.ft.com/content/245e5c30-0a0b-43cd-b4b5-13f023c0b42d" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "14:28", tag: "tech", tagText: "科技", text: "任天堂宣布Switch 2在美国和日本涨价，美国售价从449.99美元升至499.99美元，日本从49,980日元升至59,980日元。公司预计内存短缺将导致游戏机销量下滑。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/nintendo-switch-2-price-hike-sales-fall-memory-crunch.html" },
   { time: "13:43", tag: "geo", tagText: "地缘", text: "美伊在霍尔木兹海峡交火，脆弱停火协议面临破裂风险。油价应声反弹，WTI原油大涨。阿联酋拦截了伊朗发射的无人机和导弹。特朗普声称停火协议仍然有效，但市场对霍尔木兹海峡持续关闭的担忧加剧，交易员开始押注“NACHO”交易，即预期石油供应中断将长期化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html" },
   { time: "13:43", tag: "macro", tagText: "宏观", text: "丰田汽车第四财季利润远不及预期，同比暴跌49%，受美国关税政策冲击。尽管营收同比增长1.89%，但关税成本严重侵蚀了这家全球最大汽车制造商的盈利能力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/toyota-1q-2026-earnings.html" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "分析师称，科技股在经历强劲财报季后，估值可能迎来多年最佳买入机会。微软Azure云服务增长40%，但1900亿美元资本支出令前景蒙阴。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/us-tech-stocks-cheap-stellar-earnings-where-next.html" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "硅谷巨头AI军备竞赛导致自由现金流降至十年低点。微软、谷歌、亚马逊等公司合计年度资本支出高达7250亿美元，从轻资产的现金牛转变为重资产的基础设施投资者，引发市场对投资回报率的担忧。微软Azure云服务增速达40%，但1900亿美元的资本支出前景令投资者感到不安。", source: "Financial Times", url: "https://www.ft.com/content/b3dfaba9-17a2-4fac-90fe-4ab3ca7c9494" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic正在考虑一笔使其估值接近1万亿美元的交易。随着收入激增，这家ChatGPT竞争对手Claude的开发商收到了大量投资意向，其估值可能超越OpenAI。", source: "Financial Times", url: "https://www.ft.com/content/a40cafcc-0fa4-4e70-9e24-90d826aea56d" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "特朗普的两个儿子支持一只10亿美元的投资工具，专门投向AI和无人机等特朗普总统倡导的行业。埃里克·特朗普和小唐纳德·特朗普投资了这家实体，旨在引导资金进入符合其父亲政治议程的领域。", source: "Financial Times", url: "https://www.ft.com/content/d73183b6-d610-4caa-949d-186cbd59c970" },
 ];
-const breakingDate = "2026年5月8日 23:01 CST";
+const breakingDate = "2026年5月9日 00:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:25", tag: "ai", tagText: "AI", text: "法庭文件披露，微软曾担心OpenAI会转投亚马逊并“说Azure坏话”。微软CEO纳德拉与OpenAI CEO奥特曼在合作初期，微软内部对OpenAI可能选择亚马逊AWS而非Azure表示担忧，相关细节在正在进行的诉讼中被公开。", source: "The Verge", url: "https://www.theverge.com/report/926771/microsoft-openai-amazon-worries-shit-talk-azure" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
   { time: "19:44", tag: "ai", tagText: "AI", text: "多方证据显示英伟达AI芯片霸主地位或将终结。The Motley Fool分析指出，随着竞争对手AMD、英特尔以及定制AI芯片（如谷歌TPU、亚马逊Trainium）的崛起，加上客户自研芯片趋势加速，英伟达在AI芯片市场的垄断地位正面临前所未有的挑战。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR29YLVItanpwVGNnNXBBVE40MXR4MU9ENDk3b0d2WXlmWm9TSzBVeGstLXRKSVBudVJzMHZ1VFJQNjV0OXd2anJmTzliUGI5Z2g2TnRaN2J1Mkc0VmZPdEJ1S0hlem14dFhrNEhtODN2d28zM0xXbGgzZHBNR1VYOFMxX1h1VFFIWEpoT1pXdUtmMTBiVDVuMA?oc=5" },
   { time: "18:04", tag: "tech", tagText: "科技", text: "一位亿万富翁AI科技创始人在诉讼反驳中称，被解雇的员工曾大肆挥霍公司资金。该案件引发对AI初创公司内部管理和创始人责任的广泛关注。", source: "The Columbus Dispatch", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVlhEUlhMeXRScFRUMjVoUnZFRzNUMDd6cUFnYXJweTJjSGlGcFFKX0h2WGtFb3ZCZ3lKeEcweEE3bm9vaEoyYnVLV01fcHVRSTk2M2RCQ1ZOSnZmeC1zeDBuVmxSb2FFOEN1RnYwU29vUGxDTkVqd3lZcjdEcFA5UHBXV25MSVE4bU4wUUNmeWZ6V1FtaW5Vd1FPSlctOGFrMi1BZEZHRlZvUG1pR2xSb25zRGQwTU4zX2s3d1AwVmlDM1pxMGw2TGktSQ?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "02:23", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Greg Brockman公开披露埃隆·马斯克离开OpenAI的内幕细节，包括创始人间激烈的谈判过程。这一罕见公开的幕后故事揭示了公司早期分裂的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/" },
   { time: "02:06", tag: "tech", tagText: "科技", text: "Bumble CEO Whitney Wolfe Herd宣布公司将取消传统的“左滑右滑”匹配模式，转而全面拥抱AI。Bumble正在开发名为“Bee”的AI约会助手，旨在通过人工智能技术重塑在线交友体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/bumble-is-getting-rid-of-the-swipe-ceo-says/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI为ChatGPT推出可选安全功能“可信联系人”，允许成年用户指定一位紧急联系人，用于在检测到心理健康或安全风险时发出警报。该功能旨在为有需要的用户提供及时的外部支持。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification" },
-  { time: "01:40", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman与Elon Musk就OpenAI未来走向的法庭对决正式开庭。Musk于2024年提起诉讼，指控OpenAI背离了其非营利初心。此案可能深刻影响OpenAI及ChatGPT的未来发展方向。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
 ];
-const aiBreakingDate = "2026年5月8日 23:01 CST";
+const aiBreakingDate = "2026年5月9日 00:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
