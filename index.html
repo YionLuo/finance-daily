@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.57,
+  score: 67.2,
   rating: "greed",
-  timestamp: "2026-05-08T16:14:30+00:00",
+  timestamp: "2026-05-08T18:13:41+00:00",
   previousClose: 67.63,
   previous1Week: 66.09,
   previous1Month: 34.43,
   previous1Year: 57.66,
-  date: "2026年5月9日 00:24 CST"
+  date: "2026年5月9日 02:18 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:35", tag: "macro", tagText: "宏观", text: "知名投资者迈克尔·伯里（Michael Burry）表示，当前市场感觉像“1999-2000年泡沫的最后几个月”。他警告市场可能面临类似互联网泡沫破裂的风险。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOU2loS051REVRa01tOXRjZTg4QzN5UjZlUE85WXV6WXRTYWdqTnA3Mlk3cWs1RGpOTVJCMHdCM3Z5TU0ydndEZHRNcjFERnNXd2ZMa3ZqQVlmcTEtRWx3enpTWm5HRVlHNDdSbXI3d1VhMUtmZXpwclA1WmZuSUF4Tm1DbzRVNjlkMDM1QWt5MFRLUVBlZk9GSGxNa0NtZHphQ25fMUFHb1dBZnNiM3lZdnpJYTMyUnJIODZ3Y1VkN1nSAcYBQVVfeXFMT05aRFdsWl8zLTBnM2VLUldDby1IdE1icXozSi1JbERCbml3bDNVR2lDX1oxUG5Fa1I5QnJKWUUxaWl4cVpVT0FDTV9UakdrOE9fMW1ud2tLM2ZUUGxZVk9LTTRjVDFtUG96TDhoT1NRM3BKUE5HZTBtSE9wSjdQMEhndHJGcjItVXo0MXB5bER4TjNqYkFodVJKNzVMZXV3VHJFblg3TzVPYW1SazNlcGZiOE5NLWo2U1VReGg0TWd6RVdiTUVR?oc=5" },
+  { time: "01:01", tag: "geo", tagText: "地缘", text: "特朗普威胁称，如果欧盟未能在7月4日新截止日期前批准与美国达成的贸易协议，将对欧盟征收“高得多”的关税。此外，在联邦贸易法院否决其最新关税计划后，特朗普预计将加速推进新一轮关税措施。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/trump-tariffs-trade-eu-europe-deal.html" },
   { time: "23:40", tag: "tech", tagText: "科技", text: "亚马逊AWS位于弗吉尼亚州北部的数据中心因过热发生故障，导致FanDuel、Coinbase等平台交易中断。AWS表示正在努力修复，预计恢复需要数小时。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/aws-outage-data-center-fanduel-coinbase.html" },
   { time: "23:33", tag: "tech", tagText: "科技", text: "网络安全公司Cloudflare宣布将裁员超过1100人，这是最新一起因AI转型而进行的大规模裁员。受此消息影响，Cloudflare股价下跌。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/cloudflare-stock-layoffs-ai-jobs/?src=A00220&yptr=yahoo" },
   { time: "23:30", tag: "macro", tagText: "宏观", text: "有“债券之王”之称的Jeffrey Gundlach表示，如果美国财政部激进地重组债务，他此前实施的债券互换计划将是“英雄交易”。他认为美国政府资金困境正在恶化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-the-hero-trade-that-works-if-the-treasury-radically-restructures-debt-according-to-jeffrey-gundlach-3e363200?mod=mw_rss_topstories" },
@@ -1647,13 +1649,15 @@ const breakingNews = [
   { time: "16:57", tag: "macro", tagText: "宏观", text: "动量股遭遇五年来最大逆转之一。此前已有充分警告显示动量股涨势过快，周四市场回调。分析师关注后续走势，历史数据显示此类大幅逆转后市场往往面临进一步波动。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/momentum-stocks-just-saw-one-of-the-biggest-reversals-in-five-years-what-usually-happens-next-37c222bd?mod=mw_rss_topstories" },
   { time: "15:04", tag: "geo", tagText: "地缘", text: "英国地方选举结果出炉，首相斯塔默领导的工党遭遇惨败，失去约200个席位和8个议会控制权。法拉奇领导的改革党异军突起。市场担忧政治不确定性，英国国债面临债券义警压力。", source: "Financial Times", url: "https://www.ft.com/content/63a73c94-a927-4683-be1a-9ed0e53442de" },
   { time: "14:28", tag: "tech", tagText: "科技", text: "任天堂宣布Switch 2在美国和日本涨价，美国售价从449.99美元升至499.99美元，日本从49,980日元升至59,980日元。公司预计内存短缺将导致游戏机销量下滑。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/nintendo-switch-2-price-hike-sales-fall-memory-crunch.html" },
-  { time: "13:43", tag: "geo", tagText: "地缘", text: "美伊在霍尔木兹海峡交火，脆弱停火协议面临破裂风险。油价应声反弹，WTI原油大涨。阿联酋拦截了伊朗发射的无人机和导弹。特朗普声称停火协议仍然有效，但市场对霍尔木兹海峡持续关闭的担忧加剧，交易员开始押注“NACHO”交易，即预期石油供应中断将长期化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html" },
-  { time: "13:43", tag: "macro", tagText: "宏观", text: "丰田汽车第四财季利润远不及预期，同比暴跌49%，受美国关税政策冲击。尽管营收同比增长1.89%，但关税成本严重侵蚀了这家全球最大汽车制造商的盈利能力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/toyota-1q-2026-earnings.html" },
 ];
-const breakingDate = "2026年5月9日 00:24 CST";
+const breakingDate = "2026年5月9日 02:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:06", tag: "tech", tagText: "科技", text: "Bumble CEO Whitney Wolfe Herd宣布公司将取消传统的“左滑右滑”匹配模式，转而全面拥抱AI。Bumble正在开发名为“Bee”的AI约会助手，旨在通过人工智能技术重塑在线交友体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/bumble-is-getting-rid-of-the-swipe-ceo-says/" },
+  { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI为ChatGPT推出可选安全功能“可信联系人”，允许成年用户指定一位紧急联系人，用于在检测到心理健康或安全风险时发出警报。该功能旨在为有需要的用户提供及时的外部支持。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification" },
+  { time: "01:05", tag: "tech", tagText: "科技", text: "索尼在财报发布会上表示，将AI视为开发PlayStation游戏的“强大工具”，并详细介绍了如何评估AI在游戏制作中的应用，包括生成式AI技术。", source: "The Verge", url: "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games" },
+  { time: "23:46", tag: "ai", tagText: "AI", text: "本周企业AI领域掀起淘金热，Anthropic和OpenAI相继宣布成立新的合资企业，瞄准企业级AI市场，各方巨头争相分食企业AI蛋糕。", source: "TechCrunch", url: "https://techcrunch.com/podcast/the-peoples-airline-and-the-enterprise-ai-gold-rush/" },
   { time: "23:25", tag: "ai", tagText: "AI", text: "法庭文件披露，微软曾担心OpenAI会转投亚马逊并“说Azure坏话”。微软CEO纳德拉与OpenAI CEO奥特曼在合作初期，微软内部对OpenAI可能选择亚马逊AWS而非Azure表示担忧，相关细节在正在进行的诉讼中被公开。", source: "The Verge", url: "https://www.theverge.com/report/926771/microsoft-openai-amazon-worries-shit-talk-azure" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
   { time: "19:44", tag: "ai", tagText: "AI", text: "多方证据显示英伟达AI芯片霸主地位或将终结。The Motley Fool分析指出，随着竞争对手AMD、英特尔以及定制AI芯片（如谷歌TPU、亚马逊Trainium）的崛起，加上客户自研芯片趋势加速，英伟达在AI芯片市场的垄断地位正面临前所未有的挑战。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR29YLVItanpwVGNnNXBBVE40MXR4MU9ENDk3b0d2WXlmWm9TSzBVeGstLXRKSVBudVJzMHZ1VFJQNjV0OXd2anJmTzliUGI5Z2g2TnRaN2J1Mkc0VmZPdEJ1S0hlem14dFhrNEhtODN2d28zM0xXbGgzZHBNR1VYOFMxX1h1VFFIWEpoT1pXdUtmMTBiVDVuMA?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "03:55", tag: "tech", tagText: "科技", text: "Mira Murati在法庭证词中披露了2023年Sam Altman被OpenAI董事会解雇的更多内幕细节，为Elon Musk诉OpenAI案提供了关键证据。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/926383/mira-murati-sam-altman-musk-trial-ouster" },
   { time: "03:39", tag: "tech", tagText: "科技", text: "据彭博社Mark Gurman报道，苹果传闻中配备摄像头的AirPods已接近早期量产测试阶段，目前测试人员正在“积极使用”原型机。该产品旨在为AI功能提供视觉数据输入，标志着苹果在AI可穿戴设备领域的重要布局。", source: "The Verge", url: "https://www.theverge.com/tech/926376/apple-airpods-cameras-ai-production" },
   { time: "03:26", tag: "tech", tagText: "科技", text: "SpaceX计划投资至少550亿美元在得克萨斯州建设名为“Terafab”的AI芯片制造工厂，正式进军AI芯片制造业务。这一巨额投资计划显示了Elon Musk在AI硬件领域的雄心。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/926356/spacex-terafab-plant-cost-ai-chips" },
-  { time: "02:57", tag: "ai", tagText: "AI", text: "Perplexity的“个人电脑”AI代理功能现已向所有Mac用户开放。该功能将AI代理直接带到Mac桌面，使用户能够通过自然语言指令完成复杂任务，进一步拓展了AI在个人计算领域的应用场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/perplexitys-personal-computer-is-now-available-everyone-on-mac/" },
-  { time: "02:23", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Greg Brockman公开披露埃隆·马斯克离开OpenAI的内幕细节，包括创始人间激烈的谈判过程。这一罕见公开的幕后故事揭示了公司早期分裂的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/" },
-  { time: "02:06", tag: "tech", tagText: "科技", text: "Bumble CEO Whitney Wolfe Herd宣布公司将取消传统的“左滑右滑”匹配模式，转而全面拥抱AI。Bumble正在开发名为“Bee”的AI约会助手，旨在通过人工智能技术重塑在线交友体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/bumble-is-getting-rid-of-the-swipe-ceo-says/" },
-  { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI为ChatGPT推出可选安全功能“可信联系人”，允许成年用户指定一位紧急联系人，用于在检测到心理健康或安全风险时发出警报。该功能旨在为有需要的用户提供及时的外部支持。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification" },
 ];
-const aiBreakingDate = "2026年5月9日 00:24 CST";
+const aiBreakingDate = "2026年5月9日 02:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
