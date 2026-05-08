@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 66.77,
   rating: "greed",
-  timestamp: "2026-05-08T08:28:31+00:00",
+  timestamp: "2026-05-08T10:28:46+00:00",
   previousClose: 67.63,
   previous1Week: 66.09,
   previous1Month: 34.43,
   previous1Year: 57.66,
-  date: "2026年5月8日 16:45 CST"
+  date: "2026年5月8日 18:46 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:36", tag: "macro", tagText: "宏观", text: "美国银行数据显示，近期美国消费者信用卡和借记卡支出突然下滑，该行尚不确定具体原因。这一意外疲软信号引发市场对经济放缓的担忧。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/spending-in-the-u-s-just-slumped-and-bank-of-america-isnt-sure-why-ea384b24?mod=mw_rss_topstories" },
+  { time: "18:15", tag: "crypto", tagText: "加密", text: "比特币跌破80,000美元，加密货币交易员纷纷涌入对冲。与此同时，Revolut平台出现技术故障，部分用户看到比特币价格暴跌至2美分，引发短暂恐慌。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRkJmSmZwR3J4dnYwcGFQbHNfanc1SmMwTkt6cWlidHBWb1pxVnNQbkV3ekw5anlXTFZQYks5RV9QSDN3YktkcWlQZEVlZmswZTcyT2QzMzVxTC15QmFjQ1VqN0VFaEowS0sxTUJLMUpNODNVUTl4dWo4Z0Y4dkRaODgzdWRhMS1LMDZla2U0WUgwTmFzV3N0Q2J6WVRQZkkzVUczdVBTQjEweThhNGl2ZFF3dHgzclhPb29ZME1vT3p3Q1E?oc=5" },
+  { time: "16:57", tag: "macro", tagText: "宏观", text: "动量股遭遇五年来最大逆转之一。此前已有充分警告显示动量股涨势过快，周四市场回调。分析师关注后续走势，历史数据显示此类大幅逆转后市场往往面临进一步波动。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/momentum-stocks-just-saw-one-of-the-biggest-reversals-in-five-years-what-usually-happens-next-37c222bd?mod=mw_rss_topstories" },
   { time: "15:04", tag: "geo", tagText: "地缘", text: "英国地方选举结果出炉，首相斯塔默领导的工党遭遇惨败，失去约200个席位和8个议会控制权。法拉奇领导的改革党异军突起。市场担忧政治不确定性，英国国债面临债券义警压力。", source: "Financial Times", url: "https://www.ft.com/content/63a73c94-a927-4683-be1a-9ed0e53442de" },
   { time: "14:28", tag: "tech", tagText: "科技", text: "任天堂宣布Switch 2在美国和日本涨价，美国售价从449.99美元升至499.99美元，日本从49,980日元升至59,980日元。公司预计内存短缺将导致游戏机销量下滑。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/nintendo-switch-2-price-hike-sales-fall-memory-crunch.html" },
   { time: "13:43", tag: "geo", tagText: "地缘", text: "美伊在霍尔木兹海峡交火，脆弱停火协议面临破裂风险。油价应声反弹，WTI原油大涨。阿联酋拦截了伊朗发射的无人机和导弹。特朗普声称停火协议仍然有效，但市场对霍尔木兹海峡持续关闭的担忧加剧，交易员开始押注“NACHO”交易，即预期石油供应中断将长期化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "06:09", tag: "macro", tagText: "宏观", text: "美股期货小幅下跌，交易员关注美伊紧张局势及即将公布的4月非农就业报告。标普500指数从纪录高位回落，油价上涨令市场承压。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE15TjdWQUxkNlpmcVJpdDNRT05HSlBHb2pnMVQ4eEE5RHEtYUl3MmRNVEJnQUxYQkg3blhEcWdLY0N0WTFqbHdKaDdGQ1Z4N0lGSkYyRktRWkM3eXo2TzZxeXZyQ0lTTnFWb2M5UFlFa0RQOTNKNHU00gF8QVVfeXFMUDhJS1VhMmZYVVRKZG84LVZzeTRXX2FWaG1DZ0R5VEx3MUVDT1JTVklMVWdhb2J1T0RqMG9SVENjV0R0YTg0VVg4VDBvbUxnYnVKT0FJQ2YtMWd5c281UmF1ZHJaMWtkQi1nS2JaRXRiVnJRcWRaa0RBYkxwNA?oc=5" },
   { time: "06:07", tag: "tech", tagText: "科技", text: "英伟达宣布对AI基础设施公司IREN进行重大投资，以建设5吉瓦全球AI工厂网络。IREN股价飙升13%，尽管该公司营收不及预期，但英伟达的入股完全盖过了这一利空。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/iren-stock-ai-infrastructure-nvidia.html" },
   { time: "06:06", tag: "tech", tagText: "科技", text: "云计算公司Cloudflare宣布裁员20%，称此举是押注AI的重大战略调整，而非成本削减。但投资者并不买账，股价下跌。", source: "MarketWatch", url: "https://www.marketwatch.com/story/cloudflare-to-cut-20-of-staff-in-a-big-bet-on-ai-investors-arent-sold-501d4aa3?mod=mw_rss_topstories" },
-  { time: "05:59", tag: "crypto", tagText: "加密", text: "Coinbase公布第一季度财报，意外录得亏损，交易收入同比下降40%，反映加密货币市场持续低迷。股价盘后下跌4%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/coinbase-coin-earnings-q1-2026.html" },
-  { time: "05:56", tag: "tech", tagText: "科技", text: "法国检方将对埃隆·马斯克及其社交平台X的调查升级为刑事调查，指控其涉嫌共谋传播有害的AI深度伪造内容。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/french-prosecutors-probe-of-elon-musk-x-now-a-criminal-investigation.html" },
-  { time: "04:18", tag: "ai", tagText: "AI", text: "CoreWeave第一季度营收同比翻倍超预期，该公司持续举债数十亿美元扩建数据中心，为领先AI公司提供算力服务。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/coreweave-crwv-q1-earnings-report-2026.html" },
 ];
-const breakingDate = "2026年5月8日 16:45 CST";
+const breakingDate = "2026年5月8日 18:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:52", tag: "tech", tagText: "科技", text: "Torc Robotics正推动自动驾驶卡车走向商业现实，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。该公司CEO表示，自动驾驶卡车终于准备好规模化部署，标志着货运行业自动化迈出关键一步。", source: "Robotics & Automation News", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcC01bVRaZDVIMGZzbU1uRVpTc1NKdnp2OVpQbmM5cnNYWHgxT0k0MEJ3ZEFKUkdLMV8xRld6cmVLY0JHR2RaZHRCekYwWXprcGFibGNBNjJva2hsRTlVdk91THU3Uy04QVFBOW00Qk1vdTREdnJ0UFd4SzdGRmtlZko2R1lNclZDVDhhQ1JXazBZYTBTVVNXNkZJaWwwdFY4TndUek1PblBTVnFsNFVwd045Q0ZaZFJnUVBPSDdzajdqR2xDY0hLUWtJRlYteHpnWkhB?oc=5" },
   { time: "13:25", tag: "ai", tagText: "AI", text: "台积电4月营收同比增长17.5%，超出市场预期。这一强劲数据被视为AI芯片需求持续旺盛的信号，对英伟达及其他AI芯片股构成利好，缓解了此前市场对AI支出放缓的担忧。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSzQ4MnVqWjY5NnlfaWE2RDRQVEZBQkd3clVCRjBwTFVaYktMNnBVZTctaVFTV2Y1anZQOEZ3VTVLSmZ3NXF4OVJ6U0ljNEFzRmxxd1VyR0dqOFhJQl80Ul84SjIzVVNKMHV6enZzY0xsNlptUkxVOXhoRG5scm5lZ2FhY3l0UmJxTXpXSzM0ZDBvYW1ndXktM0tFRmItTlo3blhkRlFMRHVVLUZPMkYyYzBzaw?oc=5" },
   { time: "12:42", tag: "ai", tagText: "AI", text: "AI医疗自动化公司Basata引发行业讨论：其系统可自动处理患者预约、病历整理等后台工作，但面临“增强员工”与“取代岗位”之间的伦理边界问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/the-back-office-problem-that-explains-why-specialists-never-call-you-back/" },
   { time: "10:58", tag: "ai", tagText: "AI", text: "比利时企业AI工作流初创公司Tekst完成1150万欧元A轮融资，专注于为企业提供自动化AI工作流解决方案，进一步推动欧洲企业AI应用落地。", source: "Beinsure", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTFBJN1had0tYMVFyVm5yeGY1OUVaV1lGZTV0cGg4M2dLTHpwbVJlTmdLREVHTzRLQ3lQcmgzb2Zmak9PMHRSVVNUd3o4QWZvWG9nN1pnSHN0VXZiUW9qZVJXcVlob19jMUpqN3JCd1FPSmJHeDM5OVdoVWRGUGJ1UQ?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
   { time: "21:44", tag: "ai", tagText: "AI", text: "中国AI初创公司Moonshot AI以200亿美元估值完成20亿美元融资，其年化经常性收入在4月突破2亿美元，由付费订阅和API使用量快速增长驱动。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/" },
   { time: "21:30", tag: "ai", tagText: "AI", text: "Aurora CEO Chris Ursson表示，自动驾驶卡车终于准备好规模化部署，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。", source: "TechCrunch", url: "https://techcrunch.com/podcast/auroras-chris-urmson-on-why-self-driving-trucks-are-finally-ready-to-scale/" },
-  { time: "21:03", tag: "ai", tagText: "AI", text: "演员Jamie Foxx参与AI语音克隆初创公司ElevenLabs的D轮融资，该公司估值持续攀升，明星资本加速涌入AI赛道。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPcXBiT0VfQkh2OE5OYWU3SWwxTlZKLXFmME12aGNpbTdIdTRNMHJBODk5OU1rcEVrQ0FfVmUyZUVRMDVMakpadHVGdFRfSkpEZFhhYXNMQVJmYnVyLUx2N0hOckNqUllCeUZOazJldmEyMUVLTHVaVEVMNzZFOWdoVXBTRlAtUFo1dXVvV1N1VGtIQXZhX0dvRmxTV3dzR2RmVU5JTHBhNHBvaDJzZG1zMEJ4S3RvTW9OZ0VNeTc4bnhhNTBnVFdTSEIxbWI4ZnJISjdOVWFEaVpUS3BmUEJqT1BvTFRxZUo5dDdJ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月8日 16:45 CST";
+const aiBreakingDate = "2026年5月8日 18:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
