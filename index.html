@@ -1618,18 +1618,21 @@
 const fearGreedData = {
   score: 66.77,
   rating: "greed",
-  timestamp: "2026-05-08T10:28:46+00:00",
+  timestamp: "2026-05-08T11:58:46+00:00",
   previousClose: 67.63,
   previous1Week: 66.09,
   previous1Month: 34.43,
   previous1Year: 57.66,
-  date: "2026年5月8日 18:46 CST"
+  date: "2026年5月8日 20:16 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:57", tag: "geo", tagText: "地缘", text: "伊朗问题或成特朗普-习近平峰会焦点，关税与稀土议题可能被推迟。由于伊朗战争，美国企业关注的稀土和供应链等重大议题在峰会议程上可能退居次要位置。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/iran-focus-at-trump-xi-summit-may-delay-progress-on-tariffs-rare-earths.html" },
+  { time: "19:01", tag: "macro", tagText: "宏观", text: "美国多州打击针对富裕投资者的QSBS税收减免政策。《一揽子大美丽法案》大幅扩大了合格小型企业股票（QSBS）的税收优惠，但纽约州和俄勒冈州等已开始针对该激励措施采取行动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/tax-break-wealthy-investors-qsbs.html" },
   { time: "18:36", tag: "macro", tagText: "宏观", text: "美国银行数据显示，近期美国消费者信用卡和借记卡支出突然下滑，该行尚不确定具体原因。这一意外疲软信号引发市场对经济放缓的担忧。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/spending-in-the-u-s-just-slumped-and-bank-of-america-isnt-sure-why-ea384b24?mod=mw_rss_topstories" },
+  { time: "18:17", tag: "tech", tagText: "科技", text: "Uber支持的电动自行车初创公司Lime提交IPO申请。这家运营亮绿色电动自行车和滑板车的公司计划今年在美国上市。", source: "Financial Times", url: "https://www.ft.com/content/6622a3fa-5dbf-4790-90c3-618a70f7f11c" },
   { time: "18:15", tag: "crypto", tagText: "加密", text: "比特币跌破80,000美元，加密货币交易员纷纷涌入对冲。与此同时，Revolut平台出现技术故障，部分用户看到比特币价格暴跌至2美分，引发短暂恐慌。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRkJmSmZwR3J4dnYwcGFQbHNfanc1SmMwTkt6cWlidHBWb1pxVnNQbkV3ekw5anlXTFZQYks5RV9QSDN3YktkcWlQZEVlZmswZTcyT2QzMzVxTC15QmFjQ1VqN0VFaEowS0sxTUJLMUpNODNVUTl4dWo4Z0Y4dkRaODgzdWRhMS1LMDZla2U0WUgwTmFzV3N0Q2J6WVRQZkkzVUczdVBTQjEweThhNGl2ZFF3dHgzclhPb29ZME1vT3p3Q1E?oc=5" },
   { time: "16:57", tag: "macro", tagText: "宏观", text: "动量股遭遇五年来最大逆转之一。此前已有充分警告显示动量股涨势过快，周四市场回调。分析师关注后续走势，历史数据显示此类大幅逆转后市场往往面临进一步波动。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/momentum-stocks-just-saw-one-of-the-biggest-reversals-in-five-years-what-usually-happens-next-37c222bd?mod=mw_rss_topstories" },
   { time: "15:04", tag: "geo", tagText: "地缘", text: "英国地方选举结果出炉，首相斯塔默领导的工党遭遇惨败，失去约200个席位和8个议会控制权。法拉奇领导的改革党异军突起。市场担忧政治不确定性，英国国债面临债券义警压力。", source: "Financial Times", url: "https://www.ft.com/content/63a73c94-a927-4683-be1a-9ed0e53442de" },
@@ -1646,15 +1649,14 @@ const breakingNews = [
   { time: "06:34", tag: "macro", tagText: "宏观", text: "特朗普延长与欧盟的贸易协议最后期限，同时发出新威胁：若欧盟未能在7月4日前落实协议，将对其征收“高得多”的关税。", source: "Financial Times", url: "https://www.ft.com/content/10714a34-2976-4edd-bede-e892eff02d45" },
   { time: "06:21", tag: "tech", tagText: "科技", text: "Rocket Lab股价上涨，公司称上季度签署的发射合同数量超过整个去年全年，显示其业务正在快速扩张。", source: "MarketWatch", url: "https://www.marketwatch.com/story/rocket-labs-stock-rises-upon-new-signs-its-business-is-expanding-rapidly-dc7abdfc" },
   { time: "06:10", tag: "tech", tagText: "科技", text: "Datadog股价盘后飙升31%，因公司公布超预期财报，成为AI软件领域赢家。其业绩也带动Snowflake和MongoDB等其他云基础设施公司股价上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/ai-winners-software-datadog-stock.html" },
-  { time: "06:09", tag: "macro", tagText: "宏观", text: "美股期货小幅下跌，交易员关注美伊紧张局势及即将公布的4月非农就业报告。标普500指数从纪录高位回落，油价上涨令市场承压。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE15TjdWQUxkNlpmcVJpdDNRT05HSlBHb2pnMVQ4eEE5RHEtYUl3MmRNVEJnQUxYQkg3blhEcWdLY0N0WTFqbHdKaDdGQ1Z4N0lGSkYyRktRWkM3eXo2TzZxeXZyQ0lTTnFWb2M5UFlFa0RQOTNKNHU00gF8QVVfeXFMUDhJS1VhMmZYVVRKZG84LVZzeTRXX2FWaG1DZ0R5VEx3MUVDT1JTVklMVWdhb2J1T0RqMG9SVENjV0R0YTg0VVg4VDBvbUxnYnVKT0FJQ2YtMWd5c281UmF1ZHJaMWtkQi1nS2JaRXRiVnJRcWRaa0RBYkxwNA?oc=5" },
-  { time: "06:07", tag: "tech", tagText: "科技", text: "英伟达宣布对AI基础设施公司IREN进行重大投资，以建设5吉瓦全球AI工厂网络。IREN股价飙升13%，尽管该公司营收不及预期，但英伟达的入股完全盖过了这一利空。", source: "CNBC", url: "https://www.cnbc.com/2026/05/07/iren-stock-ai-infrastructure-nvidia.html" },
-  { time: "06:06", tag: "tech", tagText: "科技", text: "云计算公司Cloudflare宣布裁员20%，称此举是押注AI的重大战略调整，而非成本削减。但投资者并不买账，股价下跌。", source: "MarketWatch", url: "https://www.marketwatch.com/story/cloudflare-to-cut-20-of-staff-in-a-big-bet-on-ai-investors-arent-sold-501d4aa3?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月8日 18:46 CST";
+const breakingDate = "2026年5月8日 20:16 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:44", tag: "ai", tagText: "AI", text: "多方证据显示英伟达AI芯片霸主地位或将终结。The Motley Fool分析指出，随着竞争对手AMD、英特尔以及定制AI芯片（如谷歌TPU、亚马逊Trainium）的崛起，加上客户自研芯片趋势加速，英伟达在AI芯片市场的垄断地位正面临前所未有的挑战。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR29YLVItanpwVGNnNXBBVE40MXR4MU9ENDk3b0d2WXlmWm9TSzBVeGstLXRKSVBudVJzMHZ1VFJQNjV0OXd2anJmTzliUGI5Z2g2TnRaN2J1Mkc0VmZPdEJ1S0hlem14dFhrNEhtODN2d28zM0xXbGgzZHBNR1VYOFMxX1h1VFFIWEpoT1pXdUtmMTBiVDVuMA?oc=5" },
   { time: "16:52", tag: "tech", tagText: "科技", text: "Torc Robotics正推动自动驾驶卡车走向商业现实，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。该公司CEO表示，自动驾驶卡车终于准备好规模化部署，标志着货运行业自动化迈出关键一步。", source: "Robotics & Automation News", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcC01bVRaZDVIMGZzbU1uRVpTc1NKdnp2OVpQbmM5cnNYWHgxT0k0MEJ3ZEFKUkdLMV8xRld6cmVLY0JHR2RaZHRCekYwWXprcGFibGNBNjJva2hsRTlVdk91THU3Uy04QVFBOW00Qk1vdTREdnJ0UFd4SzdGRmtlZko2R1lNclZDVDhhQ1JXazBZYTBTVVNXNkZJaWwwdFY4TndUek1PblBTVnFsNFVwd045Q0ZaZFJnUVBPSDdzajdqR2xDY0hLUWtJRlYteHpnWkhB?oc=5" },
+  { time: "15:56", tag: "ai", tagText: "AI", text: "美国怀疑英伟达芯片通过泰国走私至阿里巴巴，加剧中美科技紧张局势。据知情人士透露，美国政府正在调查英伟达AI芯片是否通过泰国中转，最终流入阿里巴巴手中，此举可能违反出口管制规定。该调查若证实，将进一步加剧中美在AI芯片领域的博弈。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVXA2dy1BelpvR2lNdlNoZzB2NnJtWWRJOXg4ZUViWTZyQ3FDcVE3dGdEeGRFTUphLTg4dGgyNXQ1VkMzdXhRNG9MQVVNaXQ4cTNRSFFhYklBLVhGYjdRTkFjVWp4S2pjd3ZIQjZjT3c3bmtaU1Jhakxuel95UWt6Ymc0QQ?oc=5" },
   { time: "13:25", tag: "ai", tagText: "AI", text: "台积电4月营收同比增长17.5%，超出市场预期。这一强劲数据被视为AI芯片需求持续旺盛的信号，对英伟达及其他AI芯片股构成利好，缓解了此前市场对AI支出放缓的担忧。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSzQ4MnVqWjY5NnlfaWE2RDRQVEZBQkd3clVCRjBwTFVaYktMNnBVZTctaVFTV2Y1anZQOEZ3VTVLSmZ3NXF4OVJ6U0ljNEFzRmxxd1VyR0dqOFhJQl80Ul84SjIzVVNKMHV6enZzY0xsNlptUkxVOXhoRG5scm5lZ2FhY3l0UmJxTXpXSzM0ZDBvYW1ndXktM0tFRmItTlo3blhkRlFMRHVVLUZPMkYyYzBzaw?oc=5" },
   { time: "12:42", tag: "ai", tagText: "AI", text: "AI医疗自动化公司Basata引发行业讨论：其系统可自动处理患者预约、病历整理等后台工作，但面临“增强员工”与“取代岗位”之间的伦理边界问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/the-back-office-problem-that-explains-why-specialists-never-call-you-back/" },
   { time: "10:58", tag: "ai", tagText: "AI", text: "比利时企业AI工作流初创公司Tekst完成1150万欧元A轮融资，专注于为企业提供自动化AI工作流解决方案，进一步推动欧洲企业AI应用落地。", source: "Beinsure", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTFBJN1had0tYMVFyVm5yeGY1OUVaV1lGZTV0cGg4M2dLTHpwbVJlTmdLREVHTzRLQ3lQcmgzb2Zmak9PMHRSVVNUd3o4QWZvWG9nN1pnSHN0VXZiUW9qZVJXcVlob19jMUpqN3JCd1FPSmJHeDM5OVdoVWRGUGJ1UQ?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "01:40", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman与Elon Musk就OpenAI未来走向的法庭对决正式开庭。Musk于2024年提起诉讼，指控OpenAI背离了其非营利初心。此案可能深刻影响OpenAI及ChatGPT的未来发展方向。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
   { time: "00:05", tag: "tech", tagText: "科技", text: "Mozilla安全研究人员表示，Anthropic的AI模型Mythos在Firefox中发现了大量高危漏洞，彻底改变了该浏览器的网络安全策略。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/how-anthropics-mythos-has-rewritten-firefoxs-approach-to-cybersecurity/" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
-  { time: "21:44", tag: "ai", tagText: "AI", text: "中国AI初创公司Moonshot AI以200亿美元估值完成20亿美元融资，其年化经常性收入在4月突破2亿美元，由付费订阅和API使用量快速增长驱动。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/" },
-  { time: "21:30", tag: "ai", tagText: "AI", text: "Aurora CEO Chris Ursson表示，自动驾驶卡车终于准备好规模化部署，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。", source: "TechCrunch", url: "https://techcrunch.com/podcast/auroras-chris-urmson-on-why-self-driving-trucks-are-finally-ready-to-scale/" },
 ];
-const aiBreakingDate = "2026年5月8日 18:46 CST";
+const aiBreakingDate = "2026年5月8日 20:16 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
