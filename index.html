@@ -1616,20 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.14,
+  score: 66.91,
   rating: "greed",
-  timestamp: "2026-05-08T19:59:59+00:00",
-  previousClose: 67.63,
-  previous1Week: 66.09,
-  previous1Month: 34.43,
+  timestamp: "2026-05-08T21:49:34+00:00",
+  previousClose: 67.57,
+  previous1Week: 71.17,
+  previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月9日 04:13 CST"
+  date: "2026年5月9日 06:08 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:55", tag: "tech", tagText: "科技", text: "英特尔股价因与苹果达成芯片制造合作的消息飙升14%，创下历史新高。该交易标志着英特尔业务转型的关键转折点，使其与三星、台积电并列成为全球仅有的三家能生产AI所需最先进芯片的公司。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/intel-stock-apple-chip-deal.html" },
+  { time: "05:44", tag: "macro", tagText: "宏观", text: "美联储降息理由正迅速减少。周五强劲的非农就业报告显示，劳动力市场依然坚挺，而通胀压力持续存在，尤其是生活成本高企令消费者承压。市场对美联储近期降息的预期进一步降温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/the-federal-reserve-is-quickly-running-out-of-reasons-to-cut-interest-rates.html" },
+  { time: "05:44", tag: "macro", tagText: "宏观", text: "黄金价格重新站上关键趋势线。分析师指出，在经历伊朗冲突以来的疲软期后，金价突破重要短期技术位，可能预示着上涨动能正在恢复。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gold-has-climbed-back-above-a-key-trend-line-are-more-gains-on-the-way-6627e0f5" },
+  { time: "05:13", tag: "geo", tagText: "地缘", text: "土耳其公布新型洲际弹道导弹“Yıldırımhan”，宣传视频显示其可打击美国本土核设施。该导弹射程据称远超土耳其现有能力，引发地缘战略关注。", source: "Financial Times", url: "https://www.ft.com/content/d2136091-9fd2-4923-b168-50539e5b27ab" },
   { time: "04:07", tag: "tech", tagText: "科技", text: "华尔街出现“AI芯片领导权更替”，英特尔、AMD和美光本周大幅上涨，而英伟达表现落后。投资者押注CPU制造商和存储芯片公司将推动AI下一阶段发展。美光本周涨幅超30%，创2008年以来最佳单周表现，存储芯片板块因全球短缺而出现抛物线式上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/wall-street-ai-chip-love-moves-from-nvidia-to-intel-amd-and-micron.html" },
+  { time: "04:06", tag: "geo", tagText: "地缘", text: "特朗普-习近平峰会是投资者等待美伊战争解决方案的下一个关键节点。特朗普结束伊朗冲突的明确意愿是股市在战争持续期间仍保持稳定的原因之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/stock-market-next-week-outlook-for-may-11-15-2026-.html" },
   { time: "03:59", tag: "geo", tagText: "地缘", text: "LNG运输船开始试探伊朗在霍尔木兹海峡的封锁。巴基斯坦因预期海湾运输将恢复而取消了现货市场采购计划。伊朗战争已打破原油市场每桶100美元的定价基准，分析师建议通过汽油和其他成品油价格来更准确衡量冲击影响。", source: "Financial Times", url: "https://www.ft.com/content/ee5b1b48-3e10-47ad-bde0-b7a8c384ba0d" },
   { time: "03:41", tag: "geo", tagText: "地缘", text: "特朗普宣布俄罗斯和乌克兰已同意实施为期三天的停火并进行战俘交换。但外界普遍怀疑普京是否愿意承诺更持久的和平协议。", source: "Financial Times", url: "https://www.ft.com/content/7e9cb5d9-277e-43ba-9ba1-5f45f3bef7f9" },
   { time: "03:23", tag: "macro", tagText: "宏观", text: "自营交易巨头简街（Jane Street）一季度交易收入翻倍，盈利达100亿美元，巩固其作为华尔街最赚钱自营交易公司之一的地位。", source: "Financial Times", url: "https://www.ft.com/content/fe483e68-097a-4b80-ad3a-0792dda8f94a" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "22:37", tag: "macro", tagText: "宏观", text: "美国4月非农就业新增11.5万人，远超预期的5.5万，连续第二个月超预期增长。强劲数据推动标普500和纳斯达克指数再创历史新高，美股有望连续第六周上涨。但报告显示能源价格高企和战争风险仍是通胀隐忧，市场预计美联储将继续按兵不动。", source: "Financial Times", url: "https://www.ft.com/content/245e5c30-0a0b-43cd-b4b5-13f023c0b42d" },
   { time: "22:30", tag: "macro", tagText: "宏观", text: "美国5月密歇根大学消费者信心指数创下历史新低，因伊朗战争导致汽油价格飙升，严重打击了消费者对经济前景的预期。共和党人的信心也降至特朗普2024年当选以来的最低点。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/consumer-sentiment-falls-to-fresh-record-low-in-may-as-surging-gas-prices-hit-outlook.html" },
   { time: "22:04", tag: "ai", tagText: "AI", text: "Anthropic推出的AI模型Mythos引发网络安全恐慌，银行、软件巨头和政府纷纷应对新型网络攻击。专家指出，此类威胁早已存在，但Mythos的出现加速了行业对AI安全风险的重视。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html" },
-  { time: "22:01", tag: "ai", tagText: "AI", text: "对冲基金TCI大幅减持微软股份，将其在科技巨头的持仓从10%削减至1%，价值约80亿美元。该基金警告称AI颠覆性影响可能对微软构成风险。", source: "Financial Times", url: "https://www.ft.com/content/ac5d90a9-b010-4529-9616-706420920681" },
-  { time: "19:57", tag: "geo", tagText: "地缘", text: "伊朗问题或成特朗普-习近平峰会焦点，关税与稀土议题可能被推迟。由于伊朗战争，美国企业关注的稀土和供应链等重大议题在峰会议程上可能退居次要位置。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/iran-focus-at-trump-xi-summit-may-delay-progress-on-tariffs-rare-earths.html" },
-  { time: "19:01", tag: "macro", tagText: "宏观", text: "美国多州打击针对富裕投资者的QSBS税收减免政策。《一揽子大美丽法案》大幅扩大了合格小型企业股票（QSBS）的税收优惠，但纽约州和俄勒冈州等已开始针对该激励措施采取行动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/tax-break-wealthy-investors-qsbs.html" },
-  { time: "18:36", tag: "macro", tagText: "宏观", text: "美国银行数据显示，近期美国消费者信用卡和借记卡支出突然下滑，该行尚不确定具体原因。这一意外疲软信号引发市场对经济放缓的担忧。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/spending-in-the-u-s-just-slumped-and-bank-of-america-isnt-sure-why-ea384b24?mod=mw_rss_topstories" },
-  { time: "18:17", tag: "tech", tagText: "科技", text: "Uber支持的电动自行车初创公司Lime提交IPO申请。这家运营亮绿色电动自行车和滑板车的公司计划今年在美国上市。", source: "Financial Times", url: "https://www.ft.com/content/6622a3fa-5dbf-4790-90c3-618a70f7f11c" },
 ];
-const breakingDate = "2026年5月9日 04:13 CST";
+const breakingDate = "2026年5月9日 06:08 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1659,10 +1659,13 @@ const aiBreakingNews = [
   { time: "03:39", tag: "tech", tagText: "科技", text: "据彭博社Mark Gurman报道，苹果传闻中配备摄像头的AirPods已接近早期量产测试阶段，目前测试人员正在“积极使用”原型机。该产品旨在为AI功能提供视觉数据输入，标志着苹果在AI可穿戴设备领域的重要布局。", source: "The Verge", url: "https://www.theverge.com/tech/926376/apple-airpods-cameras-ai-production" },
   { time: "03:26", tag: "tech", tagText: "科技", text: "SpaceX计划投资至少550亿美元在得克萨斯州建设名为“Terafab”的AI芯片制造工厂，正式进军AI芯片制造业务。这一巨额投资计划显示了Elon Musk在AI硬件领域的雄心。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/926356/spacex-terafab-plant-cost-ai-chips" },
   { time: "02:45", tag: "ai", tagText: "AI", text: "AI数据中心建设热潮持续，科技巨头大规模扩建高能耗服务器仓库，但由此引发的能源消耗、电网压力及社区争议也在全球范围内加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" },
+  { time: "02:33", tag: "tech", tagText: "科技", text: "网络攻击导致学习平台Canvas瘫痪，正值期末考试期间，全美多所学校和大学被迫推迟年终考试。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/chaos-erupts-as-cyberattack-disrupts-learning-platform-canvas-amid-finals/" },
   { time: "02:33", tag: "ai", tagText: "AI", text: "Cloudflare宣布首次大规模裁员，CEO Matthew Prince表示，由于AI带来的效率提升，公司不再需要1100个支持岗位。尽管公司营收创下历史新高，仍决定裁减人员。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/" },
+  { time: "02:24", tag: "tech", tagText: "科技", text: "英伟达股价获分析师上调目标价，因AI芯片需求持续激增。市场对英伟达下一代AI芯片的预期推动股价进一步走高。", source: "AD HOC NEWS", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRHhuT0o5MjdKZ29OR25oZ3VkNWhsWGFzaTRVa0lla3YwQVFwQzdxdU1oc0JqaXR0d1ZhQmxvR3p4dXRnQi1SMjZTYk43Uk1iSWR2dTQxMFhmelE1ZFloY09YdjFfMEdiMG5TTVVwMUVveHBqSHM0dGJfWlVEcXV6NURqdFdqdmVJcHpQeG01eWczNmNCZUQ4ZXF3bzhybEpQWGtweGxYQm1rYVdoeW84YUlFQjBaTmhoenAyVk9STDRmZW5J?oc=5" },
   { time: "02:06", tag: "tech", tagText: "科技", text: "Bumble CEO Whitney Wolfe Herd宣布公司将取消传统的“左滑右滑”匹配模式，转而全面拥抱AI。Bumble正在开发名为“Bee”的AI约会助手，旨在通过人工智能技术重塑在线交友体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/bumble-is-getting-rid-of-the-swipe-ceo-says/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI为ChatGPT推出可选安全功能“可信联系人”，允许成年用户指定一位紧急联系人，用于在检测到心理健康或安全风险时发出警报。该功能旨在为有需要的用户提供及时的外部支持。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification" },
   { time: "01:05", tag: "tech", tagText: "科技", text: "索尼在财报发布会上表示，将AI视为开发PlayStation游戏的“强大工具”，并详细介绍了如何评估AI在游戏制作中的应用，包括生成式AI技术。", source: "The Verge", url: "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games" },
+  { time: "00:55", tag: "tech", tagText: "科技", text: "一只超级半导体股票表现碾压英伟达、AMD和博通，引发市场关注。该股近期涨幅惊人，成为半导体板块新焦点。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZDBJMHc1OTdWTWNDQTVrT2VkMkxwSkZGdDFYNDRyNUpLVVhOYV9CUjJvaFA4Zm5sTlZLQnk2R1BORTNhcTBhVElKV3ZvWnl3NmQ3VkVRT0d4Qm5pRlFFWUxLUlVrekd1eWg5UzFnTkFaRV8wYWR1RGhhWEFEMnJQQ2pwYTcwNWpIZzJ4a2RxME83dl9sZjloWERNUkJIS2FiOUxHZzFHam5EcGhm?oc=5" },
   { time: "23:46", tag: "ai", tagText: "AI", text: "本周企业AI领域掀起淘金热，Anthropic和OpenAI相继宣布成立新的合资企业，瞄准企业级AI市场，各方巨头争相分食企业AI蛋糕。", source: "TechCrunch", url: "https://techcrunch.com/podcast/the-peoples-airline-and-the-enterprise-ai-gold-rush/" },
   { time: "23:25", tag: "ai", tagText: "AI", text: "法庭文件披露，微软曾担心OpenAI会转投亚马逊并“说Azure坏话”。微软CEO纳德拉与OpenAI CEO奥特曼在合作初期，微软内部对OpenAI可能选择亚马逊AWS而非Azure表示担忧，相关细节在正在进行的诉讼中被公开。", source: "The Verge", url: "https://www.theverge.com/report/926771/microsoft-openai-amazon-worries-shit-talk-azure" },
   { time: "22:43", tag: "ai", tagText: "AI", text: "AI驱动的杂货初创公司Vori完成2200万美元B轮融资，利用人工智能技术优化生鲜采购和库存管理，进一步推动零售业的智能化转型。", source: "afrotech.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE1pLVFTT0lGQ1RobXY4dTVyb1RmYV85bzMtdGhIdElLVHdkVWp2SGxzY0c2OTdhNDJvX1hKcTNKUUFlWDVkODZ4bjVNRVNCUHo5bUlUeWZxaTBxQTRDWTJEbjBCMXRRazNWTjJVdlIwMWhUZ01CQUNxbFEwNXg?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "18:04", tag: "tech", tagText: "科技", text: "一位亿万富翁AI科技创始人在诉讼反驳中称，被解雇的员工曾大肆挥霍公司资金。该案件引发对AI初创公司内部管理和创始人责任的广泛关注。", source: "The Columbus Dispatch", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVlhEUlhMeXRScFRUMjVoUnZFRzNUMDd6cUFnYXJweTJjSGlGcFFKX0h2WGtFb3ZCZ3lKeEcweEE3bm9vaEoyYnVLV01fcHVRSTk2M2RCQ1ZOSnZmeC1zeDBuVmxSb2FFOEN1RnYwU29vUGxDTkVqd3lZcjdEcFA5UHBXV25MSVE4bU4wUUNmeWZ6V1FtaW5Vd1FPSlctOGFrMi1BZEZHRlZvUG1pR2xSb25zRGQwTU4zX2s3d1AwVmlDM1pxMGw2TGktSQ?oc=5" },
   { time: "16:52", tag: "tech", tagText: "科技", text: "Torc Robotics正推动自动驾驶卡车走向商业现实，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。该公司CEO表示，自动驾驶卡车终于准备好规模化部署，标志着货运行业自动化迈出关键一步。", source: "Robotics & Automation News", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcC01bVRaZDVIMGZzbU1uRVpTc1NKdnp2OVpQbmM5cnNYWHgxT0k0MEJ3ZEFKUkdLMV8xRld6cmVLY0JHR2RaZHRCekYwWXprcGFibGNBNjJva2hsRTlVdk91THU3Uy04QVFBOW00Qk1vdTREdnJ0UFd4SzdGRmtlZko2R1lNclZDVDhhQ1JXazBZYTBTVVNXNkZJaWwwdFY4TndUek1PblBTVnFsNFVwd045Q0ZaZFJnUVBPSDdzajdqR2xDY0hLUWtJRlYteHpnWkhB?oc=5" },
   { time: "15:56", tag: "ai", tagText: "AI", text: "美国怀疑英伟达芯片通过泰国走私至阿里巴巴，加剧中美科技紧张局势。据知情人士透露，美国政府正在调查英伟达AI芯片是否通过泰国中转，最终流入阿里巴巴手中，此举可能违反出口管制规定。该调查若证实，将进一步加剧中美在AI芯片领域的博弈。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVXA2dy1BelpvR2lNdlNoZzB2NnJtWWRJOXg4ZUViWTZyQ3FDcVE3dGdEeGRFTUphLTg4dGgyNXQ1VkMzdXhRNG9MQVVNaXQ4cTNRSFFhYklBLVhGYjdRTkFjVWp4S2pjd3ZIQjZjT3c3bmtaU1Jhakxuel95UWt6Ymc0QQ?oc=5" },
-  { time: "13:25", tag: "ai", tagText: "AI", text: "台积电4月营收同比增长17.5%，超出市场预期。这一强劲数据被视为AI芯片需求持续旺盛的信号，对英伟达及其他AI芯片股构成利好，缓解了此前市场对AI支出放缓的担忧。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSzQ4MnVqWjY5NnlfaWE2RDRQVEZBQkd3clVCRjBwTFVaYktMNnBVZTctaVFTV2Y1anZQOEZ3VTVLSmZ3NXF4OVJ6U0ljNEFzRmxxd1VyR0dqOFhJQl80Ul84SjIzVVNKMHV6enZzY0xsNlptUkxVOXhoRG5scm5lZ2FhY3l0UmJxTXpXSzM0ZDBvYW1ndXktM0tFRmItTlo3blhkRlFMRHVVLUZPMkYyYzBzaw?oc=5" },
-  { time: "12:42", tag: "ai", tagText: "AI", text: "AI医疗自动化公司Basata引发行业讨论：其系统可自动处理患者预约、病历整理等后台工作，但面临“增强员工”与“取代岗位”之间的伦理边界问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/the-back-office-problem-that-explains-why-specialists-never-call-you-back/" },
-  { time: "10:58", tag: "ai", tagText: "AI", text: "比利时企业AI工作流初创公司Tekst完成1150万欧元A轮融资，专注于为企业提供自动化AI工作流解决方案，进一步推动欧洲企业AI应用落地。", source: "Beinsure", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTFBJN1had0tYMVFyVm5yeGY1OUVaV1lGZTV0cGg4M2dLTHpwbVJlTmdLREVHTzRLQ3lQcmgzb2Zmak9PMHRSVVNUd3o4QWZvWG9nN1pnSHN0VXZiUW9qZVJXcVlob19jMUpqN3JCd1FPSmJHeDM5OVdoVWRGUGJ1UQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月9日 04:13 CST";
+const aiBreakingDate = "2026年5月9日 06:08 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
