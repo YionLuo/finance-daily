@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月9日 19:57 CST"
+  date: "2026年5月9日 21:46 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:46", tag: "macro", tagText: "宏观", text: "美联储5月通胀预测出炉，华尔街前景恶化。最新预测显示通胀压力持续高企，市场对美联储降息预期进一步降温。", source: "Motley Fool", url: "https://finance.yahoo.com/economy/policy/articles/oof-federal-reserves-may-inflation-132600416.html" },
+  { time: "21:00", tag: "macro", tagText: "宏观", text: "华尔街推出‘NACHO’交易策略，押注油价上涨和通胀持续。该策略受墨西哥美食启发，反映市场对能源价格和通胀粘性的预期。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/introducing-the-nacho-trade-how-wall-street-is-betting-on-higher-oil-prices-and-persistent-inflation-eb915434?mod=mw_rss_topstories" },
+  { time: "21:00", tag: "macro", tagText: "宏观", text: "美国经济在伊朗战争逆风中依然坚挺，持续扩张。尽管面临地缘政治障碍，经济数据仍显示韧性。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-unsinkable-u-s-economy-cruises-on-despite-headwinds-from-the-iran-war-dac45af5?mod=mw_rss_topstories" },
+  { time: "20:44", tag: "geo", tagText: "地缘", text: "伊朗战争将从根本上改变全球能源市场。伊朗封锁霍尔木兹海峡已导致近10亿桶石油损失，短缺日益严重，石油高管分析关键影响。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/09/iran-war-oil-gas-energy-security.html" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "英伟达积极扮演AI投资者角色，今年股权投资已超400亿美元。该公司向AI基础设施公司大举注资，同时签署商业合作协议。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html" },
   { time: "19:15", tag: "tech", tagText: "科技", text: "德国无人机初创公司Helsing估值将达180亿美元，计划在最新一轮融资中筹集12亿美元。该公司获Spotify创始人丹尼尔·埃克支持，投资者正大举涌入国防科技领域。", source: "Financial Times", url: "https://www.ft.com/content/0ca32fa3-cf28-4105-b1f9-ec5bc0c9158c" },
   { time: "18:00", tag: "tech", tagText: "科技", text: "纽约证券交易所计划在华尔街开设私人会员俱乐部，选址于翻新的金库内。此举旨在打造专属社交中心，与纳斯达克竞争利润丰厚的科技公司IPO业务。", source: "Financial Times", url: "https://www.ft.com/content/d8e49edb-feb9-4bfb-9f91-f10169c0961d" },
   { time: "14:30", tag: "crypto", tagText: "加密", text: "加密货币Pepeto交易所宣布升级，声称达到币安级别水平。与此同时，市场关注以太坊价格能否在本月突破3000美元大关。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMikgJBVV95cUxQajRvTW1BN2R0Z2MyNHFZT3h3cUVvb1JoYW9SdW9lb1NSTWE2VG92Yms0RWhfekdkaVNzODJSY21oN1RoMU5BaXZGX1FDWGVkUEpBY21PUFNfcDFSR3dHaEEtVHBWaWlVRmstOUxIRXZFNVhfMzBTdDdPV0lfbTRDU3JKUjA1Z2dnRmMyWF9qTEYtME9TQW9rQjJkeHNSQnpxbS1iT3B5UDhJSmRMRzFXay1JUlcweFhEOWVxTWZpMFlRaGdmdm5Yd0ItM3JFMTMtVF9kcm5lZ2M5bWkwTEhRWGlUem14b0oybEVMZ25jWm1GeEE5MTVoSFA0dW11RXNqV2Q3TTE1LXZHN0xUb3pKTmlR?oc=5" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "05:55", tag: "tech", tagText: "科技", text: "英特尔股价因与苹果达成芯片制造合作的消息飙升14%，创下历史新高。该交易标志着英特尔业务转型的关键转折点，使其与三星、台积电并列成为全球仅有的三家能生产AI所需最先进芯片的公司。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/intel-stock-apple-chip-deal.html" },
   { time: "05:44", tag: "macro", tagText: "宏观", text: "美联储降息理由正迅速减少。周五强劲的非农就业报告显示，劳动力市场依然坚挺，而通胀压力持续存在，尤其是生活成本高企令消费者承压。市场对美联储近期降息的预期进一步降温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/the-federal-reserve-is-quickly-running-out-of-reasons-to-cut-interest-rates.html" },
   { time: "05:44", tag: "macro", tagText: "宏观", text: "黄金价格重新站上关键趋势线。分析师指出，在经历伊朗冲突以来的疲软期后，金价突破重要短期技术位，可能预示着上涨动能正在恢复。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gold-has-climbed-back-above-a-key-trend-line-are-more-gains-on-the-way-6627e0f5" },
-  { time: "05:13", tag: "geo", tagText: "地缘", text: "土耳其公布新型洲际弹道导弹“Yıldırımhan”，宣传视频显示其可打击美国本土核设施。该导弹射程据称远超土耳其现有能力，引发地缘战略关注。", source: "Financial Times", url: "https://www.ft.com/content/d2136091-9fd2-4923-b168-50539e5b27ab" },
-  { time: "04:28", tag: "macro", tagText: "宏观", text: "Dunkin'品牌所有者Inspire Brands已秘密提交IPO申请。该公司旗下还拥有Arby's、Buffalo Wild Wings、Baskin Robbins、Sonic Drive-In和Jimmy John's等连锁餐饮品牌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/dunkin-owner-inspire-brands-confidentially-files-for-ipo.html" },
-  { time: "04:07", tag: "tech", tagText: "科技", text: "华尔街出现“AI芯片领导权更替”，英特尔、AMD和美光本周大幅上涨，而英伟达表现落后。投资者押注CPU制造商和存储芯片公司将推动AI下一阶段发展。美光本周涨幅超30%，创2008年以来最佳单周表现，存储芯片板块因全球短缺而出现抛物线式上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/wall-street-ai-chip-love-moves-from-nvidia-to-intel-amd-and-micron.html" },
-  { time: "04:06", tag: "geo", tagText: "地缘", text: "特朗普-习近平峰会是投资者等待美伊战争解决方案的下一个关键节点。特朗普结束伊朗冲突的明确意愿是股市在战争持续期间仍保持稳定的原因之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/stock-market-next-week-outlook-for-may-11-15-2026-.html" },
-  { time: "03:59", tag: "geo", tagText: "地缘", text: "LNG运输船开始试探伊朗在霍尔木兹海峡的封锁。巴基斯坦因预期海湾运输将恢复而取消了现货市场采购计划。伊朗战争已打破原油市场每桶100美元的定价基准，分析师建议通过汽油和其他成品油价格来更准确衡量冲击影响。", source: "Financial Times", url: "https://www.ft.com/content/ee5b1b48-3e10-47ad-bde0-b7a8c384ba0d" },
 ];
-const breakingDate = "2026年5月9日 19:57 CST";
+const breakingDate = "2026年5月9日 21:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:43", tag: "ai", tagText: "AI", text: "AI驱动的杂货初创公司Vori完成2200万美元B轮融资，利用人工智能技术优化生鲜采购和库存管理，进一步推动零售业的智能化转型。", source: "afrotech.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE1pLVFTT0lGQ1RobXY4dTVyb1RmYV85bzMtdGhIdElLVHdkVWp2SGxzY0c2OTdhNDJvX1hKcTNKUUFlWDVkODZ4bjVNRVNCUHo5bUlUeWZxaTBxQTRDWTJEbjBCMXRRazNWTjJVdlIwMWhUZ01CQUNxbFEwNXg?oc=5" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
 ];
-const aiBreakingDate = "2026年5月9日 19:57 CST";
+const aiBreakingDate = "2026年5月9日 21:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
