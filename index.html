@@ -1618,21 +1618,24 @@
 const fearGreedData = {
   score: 66.91,
   rating: "greed",
-  timestamp: "2026-05-08T21:49:34+00:00",
+  timestamp: "2026-05-08T23:44:50+00:00",
   previousClose: 67.57,
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月9日 06:08 CST"
+  date: "2026年5月9日 08:05 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:51", tag: "geo", tagText: "地缘", text: "英国工党在地方选举中遭遇惨败，改革党领袖法拉奇在英格兰议会取得重大进展，苏格兰和威尔士的民族主义政党也取得胜利。多名工党议员呼吁首相斯塔默辞职。", source: "Financial Times", url: "https://www.ft.com/content/8958faa6-cbde-499b-8016-b89ef857a22b" },
+  { time: "06:29", tag: "geo", tagText: "地缘", text: "特朗普预计将解雇美国食品药品监督管理局（FDA）局长马卡里。马卡里此前与反堕胎倡导者发生冲突，成为最新一位被解职的高级卫生官员。", source: "Financial Times", url: "https://www.ft.com/content/83c91e61-4397-4fcc-833f-c5c82acb4447" },
   { time: "05:55", tag: "tech", tagText: "科技", text: "英特尔股价因与苹果达成芯片制造合作的消息飙升14%，创下历史新高。该交易标志着英特尔业务转型的关键转折点，使其与三星、台积电并列成为全球仅有的三家能生产AI所需最先进芯片的公司。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/intel-stock-apple-chip-deal.html" },
   { time: "05:44", tag: "macro", tagText: "宏观", text: "美联储降息理由正迅速减少。周五强劲的非农就业报告显示，劳动力市场依然坚挺，而通胀压力持续存在，尤其是生活成本高企令消费者承压。市场对美联储近期降息的预期进一步降温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/the-federal-reserve-is-quickly-running-out-of-reasons-to-cut-interest-rates.html" },
   { time: "05:44", tag: "macro", tagText: "宏观", text: "黄金价格重新站上关键趋势线。分析师指出，在经历伊朗冲突以来的疲软期后，金价突破重要短期技术位，可能预示着上涨动能正在恢复。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gold-has-climbed-back-above-a-key-trend-line-are-more-gains-on-the-way-6627e0f5" },
   { time: "05:13", tag: "geo", tagText: "地缘", text: "土耳其公布新型洲际弹道导弹“Yıldırımhan”，宣传视频显示其可打击美国本土核设施。该导弹射程据称远超土耳其现有能力，引发地缘战略关注。", source: "Financial Times", url: "https://www.ft.com/content/d2136091-9fd2-4923-b168-50539e5b27ab" },
+  { time: "04:28", tag: "macro", tagText: "宏观", text: "Dunkin'品牌所有者Inspire Brands已秘密提交IPO申请。该公司旗下还拥有Arby's、Buffalo Wild Wings、Baskin Robbins、Sonic Drive-In和Jimmy John's等连锁餐饮品牌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/dunkin-owner-inspire-brands-confidentially-files-for-ipo.html" },
   { time: "04:07", tag: "tech", tagText: "科技", text: "华尔街出现“AI芯片领导权更替”，英特尔、AMD和美光本周大幅上涨，而英伟达表现落后。投资者押注CPU制造商和存储芯片公司将推动AI下一阶段发展。美光本周涨幅超30%，创2008年以来最佳单周表现，存储芯片板块因全球短缺而出现抛物线式上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/wall-street-ai-chip-love-moves-from-nvidia-to-intel-amd-and-micron.html" },
   { time: "04:06", tag: "geo", tagText: "地缘", text: "特朗普-习近平峰会是投资者等待美伊战争解决方案的下一个关键节点。特朗普结束伊朗冲突的明确意愿是股市在战争持续期间仍保持稳定的原因之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/stock-market-next-week-outlook-for-may-11-15-2026-.html" },
   { time: "03:59", tag: "geo", tagText: "地缘", text: "LNG运输船开始试探伊朗在霍尔木兹海峡的封锁。巴基斯坦因预期海湾运输将恢复而取消了现货市场采购计划。伊朗战争已打破原油市场每桶100美元的定价基准，分析师建议通过汽油和其他成品油价格来更准确衡量冲击影响。", source: "Financial Times", url: "https://www.ft.com/content/ee5b1b48-3e10-47ad-bde0-b7a8c384ba0d" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "22:52", tag: "macro", tagText: "宏观", text: "弗吉尼亚州最高法院驳回了民主党提出的重新划分国会选区的请求。在持续的重划选区之争中，弗吉尼亚州曾被民主党视为在2026年中期选举中增加多达四个众议院席位的机会。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/virginia-redistricting-decision-supreme-court.html" },
   { time: "22:49", tag: "tech", tagText: "科技", text: "德文能源公司（Devon Energy）完成对Coterra Energy的580亿美元并购交易，成为美国能源行业又一重大整合案例。", source: "Offshore Technology", url: "https://finance.yahoo.com/markets/stocks/articles/devon-energy-completes-58bn-merger-144921166.html" },
   { time: "22:41", tag: "tech", tagText: "科技", text: "追踪存储芯片板块的Roundhill Memory ETF（DRAM）单日吸引10亿美元资金流入，自4月2日推出以来总规模已超50亿美元，成为自比特币热潮以来最热门的ETF。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/the-hottest-etf-since-bitcoin-mania-just-added-1-billion-in-a-day.html" },
-  { time: "22:37", tag: "macro", tagText: "宏观", text: "美国4月非农就业新增11.5万人，远超预期的5.5万，连续第二个月超预期增长。强劲数据推动标普500和纳斯达克指数再创历史新高，美股有望连续第六周上涨。但报告显示能源价格高企和战争风险仍是通胀隐忧，市场预计美联储将继续按兵不动。", source: "Financial Times", url: "https://www.ft.com/content/245e5c30-0a0b-43cd-b4b5-13f023c0b42d" },
-  { time: "22:30", tag: "macro", tagText: "宏观", text: "美国5月密歇根大学消费者信心指数创下历史新低，因伊朗战争导致汽油价格飙升，严重打击了消费者对经济前景的预期。共和党人的信心也降至特朗普2024年当选以来的最低点。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/consumer-sentiment-falls-to-fresh-record-low-in-may-as-surging-gas-prices-hit-outlook.html" },
-  { time: "22:04", tag: "ai", tagText: "AI", text: "Anthropic推出的AI模型Mythos引发网络安全恐慌，银行、软件巨头和政府纷纷应对新型网络攻击。专家指出，此类威胁早已存在，但Mythos的出现加速了行业对AI安全风险的重视。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html" },
 ];
-const breakingDate = "2026年5月9日 06:08 CST";
+const breakingDate = "2026年5月9日 08:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:59", tag: "tech", tagText: "科技", text: "被裁Oracle员工试图协商更优遣散费遭拒。部分员工因被公司归类为远程工作者，无法享受WARN法案规定的两个月提前通知保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/08/laid-off-oracle-workers-tried-to-negotiate-better-severance-oracle-said-no/" },
   { time: "04:02", tag: "tech", tagText: "科技", text: "英特尔股价过去一年暴涨490%，华尔街押注其复苏的力度远超公司实际转型进展。分析师警告，市场预期可能已过度超前于英特尔的真实业务表现。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/08/intels-comeback-story-is-even-wilder-than-it-seems/" },
   { time: "03:55", tag: "tech", tagText: "科技", text: "Mira Murati在法庭证词中披露了2023年Sam Altman被OpenAI董事会解雇的更多内幕细节，为Elon Musk诉OpenAI案提供了关键证据。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/926383/mira-murati-sam-altman-musk-trial-ouster" },
   { time: "03:39", tag: "tech", tagText: "科技", text: "据彭博社Mark Gurman报道，苹果传闻中配备摄像头的AirPods已接近早期量产测试阶段，目前测试人员正在“积极使用”原型机。该产品旨在为AI功能提供视觉数据输入，标志着苹果在AI可穿戴设备领域的重要布局。", source: "The Verge", url: "https://www.theverge.com/tech/926376/apple-airpods-cameras-ai-production" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "19:44", tag: "ai", tagText: "AI", text: "多方证据显示英伟达AI芯片霸主地位或将终结。The Motley Fool分析指出，随着竞争对手AMD、英特尔以及定制AI芯片（如谷歌TPU、亚马逊Trainium）的崛起，加上客户自研芯片趋势加速，英伟达在AI芯片市场的垄断地位正面临前所未有的挑战。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR29YLVItanpwVGNnNXBBVE40MXR4MU9ENDk3b0d2WXlmWm9TSzBVeGstLXRKSVBudVJzMHZ1VFJQNjV0OXd2anJmTzliUGI5Z2g2TnRaN2J1Mkc0VmZPdEJ1S0hlem14dFhrNEhtODN2d28zM0xXbGgzZHBNR1VYOFMxX1h1VFFIWEpoT1pXdUtmMTBiVDVuMA?oc=5" },
   { time: "18:04", tag: "tech", tagText: "科技", text: "一位亿万富翁AI科技创始人在诉讼反驳中称，被解雇的员工曾大肆挥霍公司资金。该案件引发对AI初创公司内部管理和创始人责任的广泛关注。", source: "The Columbus Dispatch", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVlhEUlhMeXRScFRUMjVoUnZFRzNUMDd6cUFnYXJweTJjSGlGcFFKX0h2WGtFb3ZCZ3lKeEcweEE3bm9vaEoyYnVLV01fcHVRSTk2M2RCQ1ZOSnZmeC1zeDBuVmxSb2FFOEN1RnYwU29vUGxDTkVqd3lZcjdEcFA5UHBXV25MSVE4bU4wUUNmeWZ6V1FtaW5Vd1FPSlctOGFrMi1BZEZHRlZvUG1pR2xSb25zRGQwTU4zX2s3d1AwVmlDM1pxMGw2TGktSQ?oc=5" },
   { time: "16:52", tag: "tech", tagText: "科技", text: "Torc Robotics正推动自动驾驶卡车走向商业现实，目前已有少量无人驾驶卡车在达拉斯和休斯顿之间运输货物。该公司CEO表示，自动驾驶卡车终于准备好规模化部署，标志着货运行业自动化迈出关键一步。", source: "Robotics & Automation News", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcC01bVRaZDVIMGZzbU1uRVpTc1NKdnp2OVpQbmM5cnNYWHgxT0k0MEJ3ZEFKUkdLMV8xRld6cmVLY0JHR2RaZHRCekYwWXprcGFibGNBNjJva2hsRTlVdk91THU3Uy04QVFBOW00Qk1vdTREdnJ0UFd4SzdGRmtlZko2R1lNclZDVDhhQ1JXazBZYTBTVVNXNkZJaWwwdFY4TndUek1PblBTVnFsNFVwd045Q0ZaZFJnUVBPSDdzajdqR2xDY0hLUWtJRlYteHpnWkhB?oc=5" },
-  { time: "15:56", tag: "ai", tagText: "AI", text: "美国怀疑英伟达芯片通过泰国走私至阿里巴巴，加剧中美科技紧张局势。据知情人士透露，美国政府正在调查英伟达AI芯片是否通过泰国中转，最终流入阿里巴巴手中，此举可能违反出口管制规定。该调查若证实，将进一步加剧中美在AI芯片领域的博弈。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVXA2dy1BelpvR2lNdlNoZzB2NnJtWWRJOXg4ZUViWTZyQ3FDcVE3dGdEeGRFTUphLTg4dGgyNXQ1VkMzdXhRNG9MQVVNaXQ4cTNRSFFhYklBLVhGYjdRTkFjVWp4S2pjd3ZIQjZjT3c3bmtaU1Jhakxuel95UWt6Ymc0QQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月9日 06:08 CST";
+const aiBreakingDate = "2026年5月9日 08:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
