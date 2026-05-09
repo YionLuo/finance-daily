@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月10日 03:17 CST"
+  date: "2026年5月10日 04:57 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,12 @@ const breakingNews = [
   { time: "12:00", tag: "macro", tagText: "宏观", text: "中国4月出口同比增长14%，远超预期，贸易顺差强劲。数据表明美国关税未能削弱中国制造业实力，为即将举行的特朗普-习近平峰会提供了重要经济背景。", source: "Financial Times", url: "https://www.ft.com/content/c1a18633-09d4-4875-878a-8a06c157a8ab" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗依靠数百艘小型快艇组成的“蚊子舰队”维持对全球能源市场的扼制。这些快速、灵活的船只对霍尔木兹海峡的航运构成持续威胁，是伊朗对抗美国海军的关键非对称力量。", source: "Financial Times", url: "https://www.ft.com/content/2e95626f-2f95-470d-9854-5d272d0ef7cd" },
 ];
-const breakingDate = "2026年5月10日 03:17 CST";
+const breakingDate = "2026年5月10日 04:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:02", tag: "tech", tagText: "科技", text: "英特尔股价过去一年暴涨490%，华尔街押注其复苏的力度远超公司实际转型进展。分析师警告，市场预期可能已过度超前于英特尔的真实业务表现。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/08/intels-comeback-story-is-even-wilder-than-it-seems/" },
+  { time: "03:55", tag: "tech", tagText: "科技", text: "Mira Murati在法庭证词中披露了2023年Sam Altman被OpenAI董事会解雇的更多内幕细节，为Elon Musk诉OpenAI案提供了关键证据。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/926383/mira-murati-sam-altman-musk-trial-ouster" },
   { time: "02:45", tag: "ai", tagText: "AI", text: "AI数据中心建设热潮持续，科技巨头大规模扩建高能耗服务器仓库，但由此引发的能源消耗、电网压力及社区争议也在全球范围内加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" },
   { time: "02:33", tag: "tech", tagText: "科技", text: "网络攻击导致学习平台Canvas瘫痪，正值期末考试期间，全美多所学校和大学被迫推迟年终考试。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/chaos-erupts-as-cyberattack-disrupts-learning-platform-canvas-amid-finals/" },
   { time: "02:33", tag: "ai", tagText: "AI", text: "Cloudflare宣布首次大规模裁员，CEO Matthew Prince表示，由于AI带来的效率提升，公司不再需要1100个支持岗位。尽管公司营收创下历史新高，仍决定裁减人员。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "18:04", tag: "tech", tagText: "科技", text: "一位亿万富翁AI科技创始人在诉讼反驳中称，被解雇的员工曾大肆挥霍公司资金。该案件引发对AI初创公司内部管理和创始人责任的广泛关注。", source: "The Columbus Dispatch", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVlhEUlhMeXRScFRUMjVoUnZFRzNUMDd6cUFnYXJweTJjSGlGcFFKX0h2WGtFb3ZCZ3lKeEcweEE3bm9vaEoyYnVLV01fcHVRSTk2M2RCQ1ZOSnZmeC1zeDBuVmxSb2FFOEN1RnYwU29vUGxDTkVqd3lZcjdEcFA5UHBXV25MSVE4bU4wUUNmeWZ6V1FtaW5Vd1FPSlctOGFrMi1BZEZHRlZvUG1pR2xSb25zRGQwTU4zX2s3d1AwVmlDM1pxMGw2TGktSQ?oc=5" },
   { time: "07:35", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic估值逼近1万亿美元，引发市场狂热。该公司正成为AI领域融资热潮的焦点，投资者对其前景高度看好。", source: "AI CERTs", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOHBJbFVfeWtPcXVZS0lpNXVTVDVHcTFQRVVfZEtvTnBacXpKeW82UWs3bUNNSGc5cWEzVlpadS1BeTJrang3akg0eDQ4SXBLaDhaa3I2S3N6Q0N2VGN5YXEtblZibXNLemhHNmFoLXU5RkhBOGlzVy1wVFAyMUg0X1BmVHdaZElDMS1z?oc=5" },
   { time: "06:59", tag: "tech", tagText: "科技", text: "被裁Oracle员工试图协商更优遣散费遭拒。部分员工因被公司归类为远程工作者，无法享受WARN法案规定的两个月提前通知保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/08/laid-off-oracle-workers-tried-to-negotiate-better-severance-oracle-said-no/" },
-  { time: "04:02", tag: "tech", tagText: "科技", text: "英特尔股价过去一年暴涨490%，华尔街押注其复苏的力度远超公司实际转型进展。分析师警告，市场预期可能已过度超前于英特尔的真实业务表现。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/08/intels-comeback-story-is-even-wilder-than-it-seems/" },
-  { time: "03:55", tag: "tech", tagText: "科技", text: "Mira Murati在法庭证词中披露了2023年Sam Altman被OpenAI董事会解雇的更多内幕细节，为Elon Musk诉OpenAI案提供了关键证据。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/926383/mira-murati-sam-altman-musk-trial-ouster" },
 ];
-const aiBreakingDate = "2026年5月10日 03:17 CST";
+const aiBreakingDate = "2026年5月10日 04:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
