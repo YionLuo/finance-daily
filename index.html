@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月9日 11:52 CST"
+  date: "2026年5月9日 14:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:22", tag: "crypto", tagText: "加密", text: "法官批准Aave转移与朝鲜黑客攻击相关的7100万美元以太坊。该裁决为处理被扣押的加密货币资产扫清了法律障碍，涉及此前Lazarus Group的洗钱案。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZi1xM19pc0tqTU16bGxnbmFqN1RjMktyRXRmNmIteDV2SHdRRGp3bXV1VEZFUkN0cnR3NTRfekp2YVVrem95Vk1iRkJPZTBqS2hKZUVxcFZtdHphVmlieEFNWkZaTTZ2LU02bUNiMm1vZkdZeElSNmdVS2VPS3B3NVZRUUV4UUdLVS0zT0EyWVlubkcxMU1IR1ltbFdSb3c1VjRQZ2NPQ3lnRnBCenJncjZaR0t1WXJfc1ZpVWRtS0ppZVk?oc=5" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "中国4月出口同比增长14%，远超预期，贸易顺差强劲。数据表明美国关税未能削弱中国制造业实力，为即将举行的特朗普-习近平峰会提供了重要经济背景。", source: "Financial Times", url: "https://www.ft.com/content/c1a18633-09d4-4875-878a-8a06c157a8ab" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗依靠数百艘小型快艇组成的“蚊子舰队”维持对全球能源市场的扼制。这些快速、灵活的船只对霍尔木兹海峡的航运构成持续威胁，是伊朗对抗美国海军的关键非对称力量。", source: "Financial Times", url: "https://www.ft.com/content/2e95626f-2f95-470d-9854-5d272d0ef7cd" },
   { time: "10:59", tag: "geo", tagText: "地缘", text: "美国国务院宣布对多家中国公司实施制裁，指控这些公司向伊朗提供卫星图像，使德黑兰能够对中东地区的美国军队进行打击。此举进一步加剧了中美之间的地缘政治紧张局势。", source: "Financial Times", url: "https://www.ft.com/content/f0774270-bf41-41da-98ba-b4cb034cbf67" },
   { time: "10:52", tag: "crypto", tagText: "加密", text: "比特币在交易中发生“闪崩”，价格一度暴跌至0.02美元，引发市场剧烈震荡。尽管随后价格迅速回升至8万美元以上，但此次异常波动的原因尚不明确，市场对加密货币的稳定性产生新的担忧。", source: "TradingKey", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxQc1Z6bHV2aFNTQ2RidGl2MnNaLU5fQ09GbmJKNnFkLXV4TkJTZGcwMWpZT1JDX3NVSTVBZ0doSWY1QW9iVVg2NUUxN0VYWFVBN3ZiMFgxZHpFQkJMcmlmcmRjcUR3dE9jQWRfY2xZQUIzejR5OW9wTGlpVndOZnZTQ01OcmdlYVFjQVZpWnQwT3JBbzV4OW1aMmxPYnpkZDlnZzZPbVc0Vk5GTUIwT182dldBSTJQSzRrTkdWZDJmXzN6ZjhjQjJGdGhyWm1TS0k?oc=5" },
   { time: "09:08", tag: "macro", tagText: "宏观", text: "美股芯片股持续飙升，推动纳斯达克指数再创历史新高。标普500指数和纳斯达克指数均实现连续第六周上涨，强劲的就业数据进一步提振了市场情绪。投资者正密切关注即将举行的特朗普与习近平峰会。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOemJZVUVtWVBuQmlKNmx4UjV1OUM5d0xnTENEbUd5YnNKaHBCYnFfdXVrNS1qc05WX2V3VmdQZTBwODBaQXVDcERCenFVVkFMSWJIWWs2YXVuWUpkbV9wemZLTWw0eE5pUExrWFV5MXpTV3hZVTRJMjFyZU1zZEtQV2JHMW5xZ0JpNEg4TEhNMEFOb0x3MmpzcFJkaU83d3ZCWUNUclcxZlJRaUg5NHFzNEJzeWlVYkRLUWVESnI0SEtRRndkNUpuTHZSZmhJSDV0NVl5RWdLY1Z0N1VhUUNXdVVHTlRzd0FXYnRmQmt6SV9QVWs?oc=5" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "03:23", tag: "macro", tagText: "宏观", text: "自营交易巨头简街（Jane Street）一季度交易收入翻倍，盈利达100亿美元，巩固其作为华尔街最赚钱自营交易公司之一的地位。", source: "Financial Times", url: "https://www.ft.com/content/fe483e68-097a-4b80-ad3a-0792dda8f94a" },
   { time: "01:35", tag: "macro", tagText: "宏观", text: "知名投资者迈克尔·伯里（Michael Burry）表示，当前市场感觉像“1999-2000年泡沫的最后几个月”。他警告市场可能面临类似互联网泡沫破裂的风险。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOU2loS051REVRa01tOXRjZTg4QzN5UjZlUE85WXV6WXRTYWdqTnA3Mlk3cWs1RGpOTVJCMHdCM3Z5TU0ydndEZHRNcjFERnNXd2ZMa3ZqQVlmcTEtRWx3enpTWm5HRVlHNDdSbXI3d1VhMUtmZXpwclA1WmZuSUF4Tm1DbzRVNjlkMDM1QWt5MFRLUVBlZk9GSGxNa0NtZHphQ25fMUFHb1dBZnNiM3lZdnpJYTMyUnJIODZ3Y1VkN1nSAcYBQVVfeXFMT05aRFdsWl8zLTBnM2VLUldDby1IdE1icXozSi1JbERCbml3bDNVR2lDX1oxUG5Fa1I5QnJKWUUxaWl4cVpVT0FDTV9UakdrOE9fMW1ud2tLM2ZUUGxZVk9LTTRjVDFtUG96TDhoT1NRM3BKUE5HZTBtSE9wSjdQMEhndHJGcjItVXo0MXB5bER4TjNqYkFodVJKNzVMZXV3VHJFblg3TzVPYW1SazNlcGZiOE5NLWo2U1VReGg0TWd6RVdiTUVR?oc=5" },
   { time: "01:01", tag: "geo", tagText: "地缘", text: "特朗普威胁称，如果欧盟未能在7月4日新截止日期前批准与美国达成的贸易协议，将对欧盟征收“高得多”的关税。此外，在联邦贸易法院否决其最新关税计划后，特朗普预计将加速推进新一轮关税措施。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/trump-tariffs-trade-eu-europe-deal.html" },
-  { time: "23:40", tag: "tech", tagText: "科技", text: "亚马逊AWS位于弗吉尼亚州北部的数据中心因过热发生故障，导致FanDuel、Coinbase等平台交易中断。AWS表示正在努力修复，预计恢复需要数小时。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/aws-outage-data-center-fanduel-coinbase.html" },
-  { time: "23:33", tag: "tech", tagText: "科技", text: "网络安全公司Cloudflare宣布将裁员超过1100人，这是最新一起因AI转型而进行的大规模裁员。受此消息影响，Cloudflare股价下跌。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/cloudflare-stock-layoffs-ai-jobs/?src=A00220&yptr=yahoo" },
-  { time: "23:30", tag: "macro", tagText: "宏观", text: "有“债券之王”之称的Jeffrey Gundlach表示，如果美国财政部激进地重组债务，他此前实施的债券互换计划将是“英雄交易”。他认为美国政府资金困境正在恶化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-the-hero-trade-that-works-if-the-treasury-radically-restructures-debt-according-to-jeffrey-gundlach-3e363200?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月9日 11:52 CST";
+const breakingDate = "2026年5月9日 14:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "19:44", tag: "ai", tagText: "AI", text: "多方证据显示英伟达AI芯片霸主地位或将终结。The Motley Fool分析指出，随着竞争对手AMD、英特尔以及定制AI芯片（如谷歌TPU、亚马逊Trainium）的崛起，加上客户自研芯片趋势加速，英伟达在AI芯片市场的垄断地位正面临前所未有的挑战。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR29YLVItanpwVGNnNXBBVE40MXR4MU9ENDk3b0d2WXlmWm9TSzBVeGstLXRKSVBudVJzMHZ1VFJQNjV0OXd2anJmTzliUGI5Z2g2TnRaN2J1Mkc0VmZPdEJ1S0hlem14dFhrNEhtODN2d28zM0xXbGgzZHBNR1VYOFMxX1h1VFFIWEpoT1pXdUtmMTBiVDVuMA?oc=5" },
   { time: "18:04", tag: "tech", tagText: "科技", text: "一位亿万富翁AI科技创始人在诉讼反驳中称，被解雇的员工曾大肆挥霍公司资金。该案件引发对AI初创公司内部管理和创始人责任的广泛关注。", source: "The Columbus Dispatch", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVlhEUlhMeXRScFRUMjVoUnZFRzNUMDd6cUFnYXJweTJjSGlGcFFKX0h2WGtFb3ZCZ3lKeEcweEE3bm9vaEoyYnVLV01fcHVRSTk2M2RCQ1ZOSnZmeC1zeDBuVmxSb2FFOEN1RnYwU29vUGxDTkVqd3lZcjdEcFA5UHBXV25MSVE4bU4wUUNmeWZ6V1FtaW5Vd1FPSlctOGFrMi1BZEZHRlZvUG1pR2xSb25zRGQwTU4zX2s3d1AwVmlDM1pxMGw2TGktSQ?oc=5" },
 ];
-const aiBreakingDate = "2026年5月9日 11:52 CST";
+const aiBreakingDate = "2026年5月9日 14:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
