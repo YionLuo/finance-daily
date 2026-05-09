@@ -1623,13 +1623,16 @@ const fearGreedData = {
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月9日 18:14 CST"
+  date: "2026年5月9日 19:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:15", tag: "tech", tagText: "科技", text: "德国无人机初创公司Helsing估值将达180亿美元，计划在最新一轮融资中筹集12亿美元。该公司获Spotify创始人丹尼尔·埃克支持，投资者正大举涌入国防科技领域。", source: "Financial Times", url: "https://www.ft.com/content/0ca32fa3-cf28-4105-b1f9-ec5bc0c9158c" },
   { time: "18:00", tag: "tech", tagText: "科技", text: "纽约证券交易所计划在华尔街开设私人会员俱乐部，选址于翻新的金库内。此举旨在打造专属社交中心，与纳斯达克竞争利润丰厚的科技公司IPO业务。", source: "Financial Times", url: "https://www.ft.com/content/d8e49edb-feb9-4bfb-9f91-f10169c0961d" },
+  { time: "14:30", tag: "crypto", tagText: "加密", text: "加密货币Pepeto交易所宣布升级，声称达到币安级别水平。与此同时，市场关注以太坊价格能否在本月突破3000美元大关。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMikgJBVV95cUxQajRvTW1BN2R0Z2MyNHFZT3h3cUVvb1JoYW9SdW9lb1NSTWE2VG92Yms0RWhfekdkaVNzODJSY21oN1RoMU5BaXZGX1FDWGVkUEpBY21PUFNfcDFSR3dHaEEtVHBWaWlVRmstOUxIRXZFNVhfMzBTdDdPV0lfbTRDU3JKUjA1Z2dnRmMyWF9qTEYtME9TQW9rQjJkeHNSQnpxbS1iT3B5UDhJSmRMRzFXay1JUlcweFhEOWVxTWZpMFlRaGdmdm5Yd0ItM3JFMTMtVF9kcm5lZ2M5bWkwTEhRWGlUem14b0oybEVMZ25jWm1GeEE5MTVoSFA0dW11RXNqV2Q3TTE1LXZHN0xUb3pKTmlR?oc=5" },
+  { time: "14:30", tag: "tech", tagText: "科技", text: "特斯拉股价周五上涨4%，受中国销售数据强劲及半挂卡车交易新进展推动，市场情绪回暖。", source: "Foreign Policy Journal", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPcDhuY3BkSGpfb0RHZzFFdWJoRWc2eGFzOW9oQU5HclIzeEVZdE5DM1NmaEt0UTlHcEZ0RmNmaDNibGNndWJEQmlKUXQtY2UxSVNJZzNIMjlFb0M3RmJJbjU0MlREWDk2TmJPUWlieE1rcHMwUkRfYmNSeXAtTUhMdlZNTHZCTERnMXdYaG1oRE5STXZ3dHk0bDVNQXhuekdieUVGN1FHN3NjSG4xOHFkMF9sTFJOa0xtNUNPNDhydVFtcmV5UUVoczYxLXJab2Q3X2ZsQ0hURXZLM3JiZzlN?oc=5" },
   { time: "12:22", tag: "crypto", tagText: "加密", text: "法官批准Aave转移与朝鲜黑客攻击相关的7100万美元以太坊。该裁决为处理被扣押的加密货币资产扫清了法律障碍，涉及此前Lazarus Group的洗钱案。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZi1xM19pc0tqTU16bGxnbmFqN1RjMktyRXRmNmIteDV2SHdRRGp3bXV1VEZFUkN0cnR3NTRfekp2YVVrem95Vk1iRkJPZTBqS2hKZUVxcFZtdHphVmlieEFNWkZaTTZ2LU02bUNiMm1vZkdZeElSNmdVS2VPS3B3NVZRUUV4UUdLVS0zT0EyWVlubkcxMU1IR1ltbFdSb3c1VjRQZ2NPQ3lnRnBCenJncjZaR0t1WXJfc1ZpVWRtS0ppZVk?oc=5" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "中国4月出口同比增长14%，远超预期，贸易顺差强劲。数据表明美国关税未能削弱中国制造业实力，为即将举行的特朗普-习近平峰会提供了重要经济背景。", source: "Financial Times", url: "https://www.ft.com/content/c1a18633-09d4-4875-878a-8a06c157a8ab" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗依靠数百艘小型快艇组成的“蚊子舰队”维持对全球能源市场的扼制。这些快速、灵活的船只对霍尔木兹海峡的航运构成持续威胁，是伊朗对抗美国海军的关键非对称力量。", source: "Financial Times", url: "https://www.ft.com/content/2e95626f-2f95-470d-9854-5d272d0ef7cd" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "04:07", tag: "tech", tagText: "科技", text: "华尔街出现“AI芯片领导权更替”，英特尔、AMD和美光本周大幅上涨，而英伟达表现落后。投资者押注CPU制造商和存储芯片公司将推动AI下一阶段发展。美光本周涨幅超30%，创2008年以来最佳单周表现，存储芯片板块因全球短缺而出现抛物线式上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/wall-street-ai-chip-love-moves-from-nvidia-to-intel-amd-and-micron.html" },
   { time: "04:06", tag: "geo", tagText: "地缘", text: "特朗普-习近平峰会是投资者等待美伊战争解决方案的下一个关键节点。特朗普结束伊朗冲突的明确意愿是股市在战争持续期间仍保持稳定的原因之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/08/stock-market-next-week-outlook-for-may-11-15-2026-.html" },
   { time: "03:59", tag: "geo", tagText: "地缘", text: "LNG运输船开始试探伊朗在霍尔木兹海峡的封锁。巴基斯坦因预期海湾运输将恢复而取消了现货市场采购计划。伊朗战争已打破原油市场每桶100美元的定价基准，分析师建议通过汽油和其他成品油价格来更准确衡量冲击影响。", source: "Financial Times", url: "https://www.ft.com/content/ee5b1b48-3e10-47ad-bde0-b7a8c384ba0d" },
-  { time: "03:41", tag: "geo", tagText: "地缘", text: "特朗普宣布俄罗斯和乌克兰已同意实施为期三天的停火并进行战俘交换。但外界普遍怀疑普京是否愿意承诺更持久的和平协议。", source: "Financial Times", url: "https://www.ft.com/content/7e9cb5d9-277e-43ba-9ba1-5f45f3bef7f9" },
-  { time: "03:23", tag: "macro", tagText: "宏观", text: "自营交易巨头简街（Jane Street）一季度交易收入翻倍，盈利达100亿美元，巩固其作为华尔街最赚钱自营交易公司之一的地位。", source: "Financial Times", url: "https://www.ft.com/content/fe483e68-097a-4b80-ad3a-0792dda8f94a" },
-  { time: "01:35", tag: "macro", tagText: "宏观", text: "知名投资者迈克尔·伯里（Michael Burry）表示，当前市场感觉像“1999-2000年泡沫的最后几个月”。他警告市场可能面临类似互联网泡沫破裂的风险。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOU2loS051REVRa01tOXRjZTg4QzN5UjZlUE85WXV6WXRTYWdqTnA3Mlk3cWs1RGpOTVJCMHdCM3Z5TU0ydndEZHRNcjFERnNXd2ZMa3ZqQVlmcTEtRWx3enpTWm5HRVlHNDdSbXI3d1VhMUtmZXpwclA1WmZuSUF4Tm1DbzRVNjlkMDM1QWt5MFRLUVBlZk9GSGxNa0NtZHphQ25fMUFHb1dBZnNiM3lZdnpJYTMyUnJIODZ3Y1VkN1nSAcYBQVVfeXFMT05aRFdsWl8zLTBnM2VLUldDby1IdE1icXozSi1JbERCbml3bDNVR2lDX1oxUG5Fa1I5QnJKWUUxaWl4cVpVT0FDTV9UakdrOE9fMW1ud2tLM2ZUUGxZVk9LTTRjVDFtUG96TDhoT1NRM3BKUE5HZTBtSE9wSjdQMEhndHJGcjItVXo0MXB5bER4TjNqYkFodVJKNzVMZXV3VHJFblg3TzVPYW1SazNlcGZiOE5NLWo2U1VReGg0TWd6RVdiTUVR?oc=5" },
 ];
-const breakingDate = "2026年5月9日 18:14 CST";
+const breakingDate = "2026年5月9日 19:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:44", tag: "ai", tagText: "AI", text: "多方证据显示英伟达AI芯片霸主地位或将终结。The Motley Fool分析指出，随着竞争对手AMD、英特尔以及定制AI芯片（如谷歌TPU、亚马逊Trainium）的崛起，加上客户自研芯片趋势加速，英伟达在AI芯片市场的垄断地位正面临前所未有的挑战。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR29YLVItanpwVGNnNXBBVE40MXR4MU9ENDk3b0d2WXlmWm9TSzBVeGstLXRKSVBudVJzMHZ1VFJQNjV0OXd2anJmTzliUGI5Z2g2TnRaN2J1Mkc0VmZPdEJ1S0hlem14dFhrNEhtODN2d28zM0xXbGgzZHBNR1VYOFMxX1h1VFFIWEpoT1pXdUtmMTBiVDVuMA?oc=5" },
   { time: "18:04", tag: "tech", tagText: "科技", text: "一位亿万富翁AI科技创始人在诉讼反驳中称，被解雇的员工曾大肆挥霍公司资金。该案件引发对AI初创公司内部管理和创始人责任的广泛关注。", source: "The Columbus Dispatch", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVlhEUlhMeXRScFRUMjVoUnZFRzNUMDd6cUFnYXJweTJjSGlGcFFKX0h2WGtFb3ZCZ3lKeEcweEE3bm9vaEoyYnVLV01fcHVRSTk2M2RCQ1ZOSnZmeC1zeDBuVmxSb2FFOEN1RnYwU29vUGxDTkVqd3lZcjdEcFA5UHBXV25MSVE4bU4wUUNmeWZ6V1FtaW5Vd1FPSlctOGFrMi1BZEZHRlZvUG1pR2xSb25zRGQwTU4zX2s3d1AwVmlDM1pxMGw2TGktSQ?oc=5" },
   { time: "07:35", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic估值逼近1万亿美元，引发市场狂热。该公司正成为AI领域融资热潮的焦点，投资者对其前景高度看好。", source: "AI CERTs", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOHBJbFVfeWtPcXVZS0lpNXVTVDVHcTFQRVVfZEtvTnBacXpKeW82UWs3bUNNSGc5cWEzVlpadS1BeTJrang3akg0eDQ4SXBLaDhaa3I2S3N6Q0N2VGN5YXEtblZibXNLemhHNmFoLXU5RkhBOGlzVy1wVFAyMUg0X1BmVHdaZElDMS1z?oc=5" },
   { time: "06:59", tag: "tech", tagText: "科技", text: "被裁Oracle员工试图协商更优遣散费遭拒。部分员工因被公司归类为远程工作者，无法享受WARN法案规定的两个月提前通知保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/08/laid-off-oracle-workers-tried-to-negotiate-better-severance-oracle-said-no/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "23:25", tag: "ai", tagText: "AI", text: "法庭文件披露，微软曾担心OpenAI会转投亚马逊并“说Azure坏话”。微软CEO纳德拉与OpenAI CEO奥特曼在合作初期，微软内部对OpenAI可能选择亚马逊AWS而非Azure表示担忧，相关细节在正在进行的诉讼中被公开。", source: "The Verge", url: "https://www.theverge.com/report/926771/microsoft-openai-amazon-worries-shit-talk-azure" },
   { time: "22:43", tag: "ai", tagText: "AI", text: "AI驱动的杂货初创公司Vori完成2200万美元B轮融资，利用人工智能技术优化生鲜采购和库存管理，进一步推动零售业的智能化转型。", source: "afrotech.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE1pLVFTT0lGQ1RobXY4dTVyb1RmYV85bzMtdGhIdElLVHdkVWp2SGxzY0c2OTdhNDJvX1hKcTNKUUFlWDVkODZ4bjVNRVNCUHo5bUlUeWZxaTBxQTRDWTJEbjBCMXRRazNWTjJVdlIwMWhUZ01CQUNxbFEwNXg?oc=5" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "谷歌发布售价99美元的Fitbit Air健康追踪手环，主打无屏幕设计和AI健康指导功能，直接对标Whoop手环。", source: "The Verge", url: "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers" },
-  { time: "19:44", tag: "ai", tagText: "AI", text: "多方证据显示英伟达AI芯片霸主地位或将终结。The Motley Fool分析指出，随着竞争对手AMD、英特尔以及定制AI芯片（如谷歌TPU、亚马逊Trainium）的崛起，加上客户自研芯片趋势加速，英伟达在AI芯片市场的垄断地位正面临前所未有的挑战。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR29YLVItanpwVGNnNXBBVE40MXR4MU9ENDk3b0d2WXlmWm9TSzBVeGstLXRKSVBudVJzMHZ1VFJQNjV0OXd2anJmTzliUGI5Z2g2TnRaN2J1Mkc0VmZPdEJ1S0hlem14dFhrNEhtODN2d28zM0xXbGgzZHBNR1VYOFMxX1h1VFFIWEpoT1pXdUtmMTBiVDVuMA?oc=5" },
 ];
-const aiBreakingDate = "2026年5月9日 18:14 CST";
+const aiBreakingDate = "2026年5月9日 19:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
