@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月11日 00:05 CST"
+  date: "2026年5月11日 01:09 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1642,18 +1642,21 @@ const breakingNews = [
   { time: "17:09", tag: "macro", tagText: "宏观", text: "沙特阿美Q1利润飙升26%，因关键管道满负荷运转抵消伊朗战争冲击。公司表示其东西向管道成功绕开霍尔木兹海峡，在伊朗封锁下保障了石油出口，缓解了全球能源危机。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/saudi-aramco-q1-profit-jumps-26percent-as-key-pipeline-reaches-capacity.html" },
   { time: "17:09", tag: "geo", tagText: "地缘", text: "载有汉坦病毒的邮轮“MV Hondius”抵达特内里费岛进行疏散。各国政府正准备对本国公民实施撤侨和隔离程序。", source: "Financial Times", url: "https://www.ft.com/content/b5fdd84f-69bd-47ae-bd7b-df30ba3d758c" },
   { time: "17:07", tag: "macro", tagText: "宏观", text: "坦克制造商KNDS推动德国政府在其IPO前决定是否入股。德国家族股东希望推进这家由法国支持的集团上市，估值在150亿至200亿欧元之间。", source: "Financial Times", url: "https://www.ft.com/content/81f58094-c0c1-4163-b43d-e802e79de793" },
+  { time: "16:56", tag: "ai", tagText: "AI", text: "随着英伟达财报临近，高盛指出五个潜在催化剂：AI基础设施需求持续强劲、数据中心收入增长、新产品周期、毛利率改善以及企业AI采用加速。英伟达股价近期表现落后，但市场对其财报抱有期待。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-nvidia-earnings-draw-closer-here-are-5-things-investors-need-to-watch-d11d8136?mod=mw_rss_topstories" },
   { time: "16:00", tag: "macro", tagText: "宏观", text: "华尔街顶级律所因内幕交易风险受关注。报道指出，并购咨询业务已成为巨大法律产业，但律所内部机密信息易被滥用，形成内幕交易输送管道。", source: "Financial Times", url: "https://www.ft.com/content/35d63fa0-7175-4204-9ba8-5a0c1f10ba5a" },
   { time: "15:37", tag: "tech", tagText: "科技", text: "华尔街分析师看好英伟达前景，预测其市值可能达到20万亿美元。尽管近期股价波动，专家认为AI芯片需求将持续推动公司增长。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNLTY5Rmp2S0NDTkRQWFVpaU5FTFNLUkYtSzJhcUNaNEF6dE1uRlZNOGFCUVJvbURqZjFYZV92bG9XNHM2NVc0VjcxNk1MNU53N2kwMWZZcERrMjl6R0EwTW9nYTRlN1J0MFlUWkhPWHRBTW9uX2wtTUlncDN5RzBsX19Sd0MwdkR4c3ZVWHFQbFgycDg?oc=5" },
   { time: "14:30", tag: "crypto", tagText: "加密", text: "加密货币Pepeto交易所宣布升级，声称达到币安级别水平。与此同时，市场关注以太坊价格能否在本月突破3000美元大关。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMikgJBVV95cUxQajRvTW1BN2R0Z2MyNHFZT3h3cUVvb1JoYW9SdW9lb1NSTWE2VG92Yms0RWhfekdkaVNzODJSY21oN1RoMU5BaXZGX1FDWGVkUEpBY21PUFNfcDFSR3dHaEEtVHBWaWlVRmstOUxIRXZFNVhfMzBTdDdPV0lfbTRDU3JKUjA1Z2dnRmMyWF9qTEYtME9TQW9rQjJkeHNSQnpxbS1iT3B5UDhJSmRMRzFXay1JUlcweFhEOWVxTWZpMFlRaGdmdm5Yd0ItM3JFMTMtVF9kcm5lZ2M5bWkwTEhRWGlUem14b0oybEVMZ25jWm1GeEE5MTVoSFA0dW11RXNqV2Q3TTE1LXZHN0xUb3pKTmlR?oc=5" },
   { time: "14:30", tag: "tech", tagText: "科技", text: "特斯拉股价周五上涨4%，受中国销售数据强劲及半挂卡车交易新进展推动，市场情绪回暖。", source: "Foreign Policy Journal", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPcDhuY3BkSGpfb0RHZzFFdWJoRWc2eGFzOW9oQU5HclIzeEVZdE5DM1NmaEt0UTlHcEZ0RmNmaDNibGNndWJEQmlKUXQtY2UxSVNJZzNIMjlFb0M3RmJJbjU0MlREWDk2TmJPUWlieE1rcHMwUkRfYmNSeXAtTUhMdlZNTHZCTERnMXdYaG1oRE5STXZ3dHk0bDVNQXhuekdieUVGN1FHN3NjSG4xOHFkMF9sTFJOa0xtNUNPNDhydVFtcmV5UUVoczYxLXJab2Q3X2ZsQ0hURXZLM3JiZzlN?oc=5" },
   { time: "14:26", tag: "macro", tagText: "宏观", text: "边疆航空一架空客A321在丹佛起飞时撞上跑道上的行人，飞行员中止起飞。机舱内报告有烟雾，事故原因正在调查中。", source: "CNBC", url: "https://www.cnbc.com/2026/05/09/frontier-airlines-plane-engine-fire-pedestrian.html" },
-  { time: "14:00", tag: "ai", tagText: "AI", text: "OpenAI诉讼案进入最后一周庭审，马斯克起诉指控其背离非营利初衷，CEO奥特曼将出庭作证。此案揭示了这家估值8520亿美元AI巨头背后的激烈竞争与治理争议。", source: "International homepage", url: "https://www.ft.com/content/c68bd831-434d-486c-86df-54d0369391ef" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "德国在总理与特朗普关系恶化后，正推动新一轮采购美制“战斧”巡航导弹。国防部长计划访问华盛顿，以加强欧洲自主防务能力。", source: "International homepage", url: "https://www.ft.com/content/c64f6c88-36f8-4721-a201-4cd77992fa90" },
+  { time: "14:23", tag: "geo", tagText: "地缘", text: "分析认为，特朗普发起的贸易战及中东动荡正为中国创造战略机遇。北京可能将中东不稳定转化为经济优势，在美伊对峙中寻求扩大自身影响力。", source: "Financial Times", url: "https://www.ft.com/content/27ecd13b-c544-4304-8f76-0f2d4ed296e1" },
 ];
-const breakingDate = "2026年5月11日 00:05 CST";
+const breakingDate = "2026年5月11日 01:09 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:05", tag: "tech", tagText: "科技", text: "索尼在财报发布会上表示，将AI视为开发PlayStation游戏的“强大工具”，并详细介绍了如何评估AI在游戏制作中的应用，包括生成式AI技术。", source: "The Verge", url: "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games" },
+  { time: "00:55", tag: "tech", tagText: "科技", text: "一只超级半导体股票表现碾压英伟达、AMD和博通，引发市场关注。该股近期涨幅惊人，成为半导体板块新焦点。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZDBJMHc1OTdWTWNDQTVrT2VkMkxwSkZGdDFYNDRyNUpLVVhOYV9CUjJvaFA4Zm5sTlZLQnk2R1BORTNhcTBhVElKV3ZvWnl3NmQ3VkVRT0d4Qm5pRlFFWUxLUlVrekd1eWg5UzFnTkFaRV8wYWR1RGhhWEFEMnJQQ2pwYTcwNWpIZzJ4a2RxME83dl9sZjloWERNUkJIS2FiOUxHZzFHam5EcGhm?oc=5" },
+  { time: "23:34", tag: "ai", tagText: "AI", text: "xAI与Anthropic达成重大交易，引发市场对其背后SpaceX意图的质疑。TechCrunch评论认为，该交易可能更多出于商业利益而非技术协同，市场对此持怀疑态度。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/" },
   { time: "20:08", tag: "macro", tagText: "宏观", text: "电影《大空头》原型迈克尔·伯里发出半导体泡沫警告，认为当前AI芯片的狂热行情可能与2000年互联网泡沫相似，引发市场对AI芯片股估值过高的担忧。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTE94c1VWcVhIUE93eFp3dEFxcXFvYlFadmV3S2tzRUZlR09Idy1BOVA3ejFIVksxWVRNMmhFdGdadndVSnJKR0dmZENMbXNEM25JS0lXQnJhZEpzR3VTZHR3aUhkcnlDb1RxMHhudGRB?oc=5" },
   { time: "18:02", tag: "ai", tagText: "AI", text: "摩根士丹利发布研报，对比英伟达与AMD的AI芯片股前景，指出其中一家更具优势。报告认为，在AI芯片需求持续爆发的背景下，两家公司虽均受益，但一家在市场份额、产品路线图或客户粘性上占据上风，具体细节引发市场关注。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxPX2VIc1pCNThoMTZvaUJ6WGJVWk9lYmxzQzl2NzdJUjVhX1lubGZucjBMbUhtUkVfazZSbWdyRjFyNTgzSXJqZ3RrMkZGejBUMGxKd3d4R2NuMkkyVEtaeWlELXExelpiWUZ5ZVlGckV3MldWejExamxwTXc3bThqREFORnU0ZWdWMjNYWGhzMHl4NmZvS084RTlR?oc=5" },
   { time: "15:20", tag: "tech", tagText: "科技", text: "苹果与英特尔达成芯片合作协议，挑战台积电在半导体制造领域的主导地位。此举可能重塑全球芯片代工格局，对台积电的市场份额构成直接威胁。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRThoUlk0U1d6UHlPdWpIZTBVU3dDMGZEWXFZUVRJWFYwZjNDUmVZWV8ycER3MUY2ZTdHN2ROdkR5V3YtcWJKczNaLXRfeVdxSXROdEZ2REJHVWk4bVRINlBfYVJhZ0FwM2E1djhsZWd1ckQtOWFhVjBHRUFycmYxQzhLWUtmQVZP?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "02:24", tag: "tech", tagText: "科技", text: "英伟达股价获分析师上调目标价，因AI芯片需求持续激增。市场对英伟达下一代AI芯片的预期推动股价进一步走高。", source: "AD HOC NEWS", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRHhuT0o5MjdKZ29OR25oZ3VkNWhsWGFzaTRVa0lla3YwQVFwQzdxdU1oc0JqaXR0d1ZhQmxvR3p4dXRnQi1SMjZTYk43Uk1iSWR2dTQxMFhmelE1ZFloY09YdjFfMEdiMG5TTVVwMUVveHBqSHM0dGJfWlVEcXV6NURqdFdqdmVJcHpQeG01eWczNmNCZUQ4ZXF3bzhybEpQWGtweGxYQm1rYVdoeW84YUlFQjBaTmhoenAyVk9STDRmZW5J?oc=5" },
   { time: "02:11", tag: "crypto", tagText: "加密", text: "MoneyFlare推出突破性AI加密货币交易应用，号称可实现一键启动全自动量化交易。该应用利用人工智能技术，旨在简化加密货币交易流程，吸引普通用户参与量化投资。", source: "markets.businessinsider.com", url: "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPTVhOcTFIWV9NM2lFOU9Pd1hOSEx0djk5TDNQMEZlQk9CM25WRzNOWlg1U1hfNjdDbHhMSGRuTGNLN3F2dGhEQjNwcF9tN1NKNFJ3SHB1VW5iMDJXRmtRQlgycmdXSVNjdFhtNElPVE4yQVhFb2JaczM3ak9MdHZOQS1fdGlsQ05vZ2hPSGNjUjZqUG5MMjNQdFI3SDFYbGVweFlZZ3JSRFdqYlpBYjNON2wzbE1xRTVLWm9uRUhQMml0ZDRuNmUyVzV6LWxYWllMNzF3eXpndU1NX1FObzlUcUE1NmhJZzJhcmVkYWxXZmFVMmJjelNFUlVfOA?oc=5" },
   { time: "02:06", tag: "tech", tagText: "科技", text: "Bumble CEO Whitney Wolfe Herd宣布公司将取消传统的“左滑右滑”匹配模式，转而全面拥抱AI。Bumble正在开发名为“Bee”的AI约会助手，旨在通过人工智能技术重塑在线交友体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/bumble-is-getting-rid-of-the-swipe-ceo-says/" },
-  { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI为ChatGPT推出可选安全功能“可信联系人”，允许成年用户指定一位紧急联系人，用于在检测到心理健康或安全风险时发出警报。该功能旨在为有需要的用户提供及时的外部支持。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification" },
-  { time: "01:05", tag: "tech", tagText: "科技", text: "索尼在财报发布会上表示，将AI视为开发PlayStation游戏的“强大工具”，并详细介绍了如何评估AI在游戏制作中的应用，包括生成式AI技术。", source: "The Verge", url: "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games" },
-  { time: "00:55", tag: "tech", tagText: "科技", text: "一只超级半导体股票表现碾压英伟达、AMD和博通，引发市场关注。该股近期涨幅惊人，成为半导体板块新焦点。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZDBJMHc1OTdWTWNDQTVrT2VkMkxwSkZGdDFYNDRyNUpLVVhOYV9CUjJvaFA4Zm5sTlZLQnk2R1BORTNhcTBhVElKV3ZvWnl3NmQ3VkVRT0d4Qm5pRlFFWUxLUlVrekd1eWg5UzFnTkFaRV8wYWR1RGhhWEFEMnJQQ2pwYTcwNWpIZzJ4a2RxME83dl9sZjloWERNUkJIS2FiOUxHZzFHam5EcGhm?oc=5" },
 ];
-const aiBreakingDate = "2026年5月11日 00:05 CST";
+const aiBreakingDate = "2026年5月11日 01:09 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
