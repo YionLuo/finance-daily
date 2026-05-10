@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月10日 19:08 CST"
+  date: "2026年5月10日 21:49 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:00", tag: "macro", tagText: "宏观", text: "太平洋投资管理公司(Pimco)和富兰克林坦伯顿警告称，若伊朗战争持续推高能源价格和通胀，美联储可能被迫加息而非降息。这一观点与市场对降息的普遍预期相悖，可能引发全球资产重新定价。", source: "Financial Times", url: "https://www.ft.com/content/ba919246-ff50-4b8d-931c-43ee8d37795d" },
+  { time: "20:22", tag: "tech", tagText: "科技", text: "eBay永久封禁GameStop CEO Ryan Cohen的账户，理由是其行为“危及社区安全”。Cohen此前提出以555亿美元收购eBay，并通过其账户销售GameStop相关商品。此举加剧了两家公司之间的紧张关系。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ebay-permanently-bans-gamestop-ceo-ryan-cohen-for-putting-its-community-at-risk-following-takeover-attempt-71b44c37?mod=mw_rss_topstories" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "Alphabet股价一年内飙升160%，反映出市场对其在AI领域“拥有全栈能力”的重新估值。谷歌在AI热潮初期被视为落后者，但投资者现在押注其搜索巨头地位将使其成为AI时代的明确赢家。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/alphabet-160percent-rally-in-year-reflects-value-of-owning-most-of-ai-stack.html" },
+  { time: "19:00", tag: "tech", tagText: "科技", text: "存储芯片制造商正面临“超级周期”，预计将带来“暴利收益”。受芯片价格上涨推动，利润率预期上调至2027年，相关股票一周内飙升30%。AI需求驱动的存储芯片短缺是主要推动力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/memory-chip-makers-are-looking-at-a-supercycle-and-windfall-gains-the-stocks-jumped-30percent-in-one-week.html" },
   { time: "18:47", tag: "geo", tagText: "地缘", text: "一艘卡塔尔能源公司运营的油轮安全通过霍尔木兹海峡，驶往巴基斯坦。美国正等待伊朗对和平提议的回应，该海峡是伊朗威胁封锁的关键能源通道。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/tanker-crosses-strait-of-hormuz-as-us-awaits-iran-response-.html" },
   { time: "17:09", tag: "macro", tagText: "宏观", text: "沙特阿美Q1利润飙升26%，因关键管道满负荷运转抵消伊朗战争冲击。公司表示其东西向管道成功绕开霍尔木兹海峡，在伊朗封锁下保障了石油出口，缓解了全球能源危机。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/saudi-aramco-q1-profit-jumps-26percent-as-key-pipeline-reaches-capacity.html" },
   { time: "17:09", tag: "geo", tagText: "地缘", text: "载有汉坦病毒的邮轮“MV Hondius”抵达特内里费岛进行疏散。各国政府正准备对本国公民实施撤侨和隔离程序。", source: "Financial Times", url: "https://www.ft.com/content/b5fdd84f-69bd-47ae-bd7b-df30ba3d758c" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗依靠数百艘小型快艇组成的“蚊子舰队”维持对全球能源市场的扼制。这些快速、灵活的船只对霍尔木兹海峡的航运构成持续威胁，是伊朗对抗美国海军的关键非对称力量。", source: "Financial Times", url: "https://www.ft.com/content/2e95626f-2f95-470d-9854-5d272d0ef7cd" },
   { time: "10:52", tag: "crypto", tagText: "加密", text: "秘鲁280亿美元加密市场中，稳定币占比已达90%。这一趋势显示拉美地区对锚定法币的数字资产需求激增，主要用于价值储存和跨境支付。", source: "Bitcoin News", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdzZtVmxMM1BOY3lIdm1Ua2R4UVRkbTc2X3BNSXhFcWdPS05QSXhsY3FZVE9vRWx2SXlDS3Z6VFVjUkhYV2RVaGhfb0l2MU9kbVJGM3d5R1h2dE5aOGVFT2w5bU9YdUNfWW9IdUNPcUJuUUdoQmh6WTQ0cGxpT2psUmdEa0gyU1FJdUJ6V2pjUmU5b2U4WXc?oc=5" },
   { time: "10:00", tag: "crypto", tagText: "加密", text: "加密货币市场保持韧性，比特币持稳于8万美元附近。尽管宏观不确定性持续，加密资产展现出抗跌能力。", source: "BusinessToday Malaysia", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxQYXNLdVFpQ2RXMG1ES2wwZzBmUHdKOEczZkN0cmdyWWV3QjViVXBkUDZnanVqYWxqeFA3UXdVMkZfZG13VS1aWGdjSmxlOGJCSU45ZXZWSUxRbkl6RFo1WkpqSVdNUGN1YmlLNXQ1SWxaSnFHMjFXQkIxdU1WbkFBYU5hRnZkZVBEQlFHcmlQRndERktmc3NQZ2tVRG9jUmpvU0VhU3dxYk1SSmloWFBrakxSaXA5Zw?oc=5" },
-  { time: "08:33", tag: "crypto", tagText: "加密", text: "韩国比特币溢价升至2%，为战前市场冲击以来首次。该指标反映韩国散户对加密货币的强劲需求，显示市场情绪回暖。", source: "Bitcoin News", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZGZYUTRtazNhQV9CdkxaZTlfTTNpdkJydlJEQWNpdDF3eTcyeHlja3RUcXNGMVBQOEZ4MlFVNTJPMnBrMG1lY0F6eHNkUUtpeDlaUF9tbGdsNVU0T1JVaHRCaUFxUTJqa0lBUk5JR2NUaUZKSHN2YU0wOE12M2s4THNtVmkydlpsbjRCT3dQR1Y0VEgzZmwwejB3dnBWMURxZVo2NGE2V2o?oc=5" },
-  { time: "03:11", tag: "geo", tagText: "地缘", text: "普京表示认为乌克兰冲突即将结束。他在对记者讲话时称“事情正在走向终点”，这是俄方近期最明确的停战信号之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/09/putin-says-he-thinks-the-ukraine-conflict-is-coming-to-an-end.html" },
-  { time: "02:24", tag: "crypto", tagText: "加密", text: "比特币触及罕见的10年融资利率极端水平，历史数据显示此类信号通常预示价格复苏。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5xVDk1RlNPWl85VE5FTHFMNERNUHcxWHRIbjJWRG1QaWhVTnZENUdhUlZkM3JYQ3liM0dZczNGUGlvRzBRcXp0OERYZDJxZkFhX2NrcVNqcmU?oc=5" },
-  { time: "00:11", tag: "macro", tagText: "宏观", text: "美股期货维持高位，市场关注伊朗局势及特朗普-习近平峰会。苹果、英伟达、波音等个股处于买入区间。", source: "Investor's Business Daily", url: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNT212QXFVWWtZeF9LclY0NTZGSU9xNHd6XzRLemhWdW1yRS01b0ZqUEJBVFpsUHJqWEo4ckppeW14N3RuT1RzaDZ5aGgxUkhlYVpNOGJMUVBhaUdoSkc2RUZUN0xWSmpmeTQtX1RTSC05T3JEZDBrZUZSM0N0T0psWE1xbzNqa2h3Z0hNeV9TaXU3VFNJeFkwUHg5aGVSU1V0REVjUEkwa2d3OTJoYV9kb3FNaExHaHNL?oc=5" },
 ];
-const breakingDate = "2026年5月10日 19:08 CST";
+const breakingDate = "2026年5月10日 21:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:08", tag: "macro", tagText: "宏观", text: "电影《大空头》原型迈克尔·伯里发出半导体泡沫警告，认为当前AI芯片的狂热行情可能与2000年互联网泡沫相似，引发市场对AI芯片股估值过高的担忧。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTE94c1VWcVhIUE93eFp3dEFxcXFvYlFadmV3S2tzRUZlR09Idy1BOVA3ejFIVksxWVRNMmhFdGdadndVSnJKR0dmZENMbXNEM25JS0lXQnJhZEpzR3VTZHR3aUhkcnlDb1RxMHhudGRB?oc=5" },
   { time: "18:02", tag: "ai", tagText: "AI", text: "摩根士丹利发布研报，对比英伟达与AMD的AI芯片股前景，指出其中一家更具优势。报告认为，在AI芯片需求持续爆发的背景下，两家公司虽均受益，但一家在市场份额、产品路线图或客户粘性上占据上风，具体细节引发市场关注。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxPX2VIc1pCNThoMTZvaUJ6WGJVWk9lYmxzQzl2NzdJUjVhX1lubGZucjBMbUhtUkVfazZSbWdyRjFyNTgzSXJqZ3RrMkZGejBUMGxKd3d4R2NuMkkyVEtaeWlELXExelpiWUZ5ZVlGckV3MldWejExamxwTXc3bThqREFORnU0ZWdWMjNYWGhzMHl4NmZvS084RTlR?oc=5" },
   { time: "15:20", tag: "tech", tagText: "科技", text: "苹果与英特尔达成芯片合作协议，挑战台积电在半导体制造领域的主导地位。此举可能重塑全球芯片代工格局，对台积电的市场份额构成直接威胁。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRThoUlk0U1d6UHlPdWpIZTBVU3dDMGZEWXFZUVRJWFYwZjNDUmVZWV8ycER3MUY2ZTdHN2ROdkR5V3YtcWJKczNaLXRfeVdxSXROdEZ2REJHVWk4bVRINlBfYVJhZ0FwM2E1djhsZWd1ckQtOWFhVjBHRUFycmYxQzhLWUtmQVZP?oc=5" },
   { time: "10:42", tag: "ai", tagText: "AI", text: "韩亚金融集团推出聚焦AI的初创企业扶持计划，旨在推动人工智能领域的创新和创业生态发展。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxPb1F2aVgyUVduUU9sbmEzdVl1NU5lR3YzT1Zuc2VCRy01TEE4SXpHX1kwTTBJX2wxT3MxdVFpRnpZcHU3bkRvTnZTekdFajBIQThsYlpiWmMtSU56ZVgzZE52SEZYV29nSl9ZQVJkV1NVTmNsRW9XLWx6M1EyQmt1MjNIWlFDZlpOanF0b3E4WUs5OWx6SjdF?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI为ChatGPT推出可选安全功能“可信联系人”，允许成年用户指定一位紧急联系人，用于在检测到心理健康或安全风险时发出警报。该功能旨在为有需要的用户提供及时的外部支持。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification" },
   { time: "01:05", tag: "tech", tagText: "科技", text: "索尼在财报发布会上表示，将AI视为开发PlayStation游戏的“强大工具”，并详细介绍了如何评估AI在游戏制作中的应用，包括生成式AI技术。", source: "The Verge", url: "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games" },
   { time: "00:55", tag: "tech", tagText: "科技", text: "一只超级半导体股票表现碾压英伟达、AMD和博通，引发市场关注。该股近期涨幅惊人，成为半导体板块新焦点。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZDBJMHc1OTdWTWNDQTVrT2VkMkxwSkZGdDFYNDRyNUpLVVhOYV9CUjJvaFA4Zm5sTlZLQnk2R1BORTNhcTBhVElKV3ZvWnl3NmQ3VkVRT0d4Qm5pRlFFWUxLUlVrekd1eWg5UzFnTkFaRV8wYWR1RGhhWEFEMnJQQ2pwYTcwNWpIZzJ4a2RxME83dl9sZjloWERNUkJIS2FiOUxHZzFHam5EcGhm?oc=5" },
-  { time: "23:29", tag: "tech", tagText: "科技", text: "英伟达正将AI投资转化为供应链武器。通过向AI初创公司提供资金支持，英伟达不仅巩固了自身在AI芯片市场的地位，还间接影响了整个AI生态系统的供应链格局，引发业界对市场垄断的担忧。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdkZmTmVMNlRxTEtDZDdUN3UweDItOGtWajZ3VklKa212SURvcjBGMGg1cXlIcWdER2xkVkFoelR4UC1vNXRudnNXZ0otanBtQU96RFU1b250dTdmVUJhODMwVzMxWDdkOEJhamhJZ2d0RjBiNDlxc0VENmFyTy1od2tHSEJtOWxWeGtB?oc=5" },
 ];
-const aiBreakingDate = "2026年5月10日 19:08 CST";
+const aiBreakingDate = "2026年5月10日 21:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
