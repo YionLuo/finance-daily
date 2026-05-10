@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月10日 15:31 CST"
+  date: "2026年5月10日 17:46 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:09", tag: "macro", tagText: "宏观", text: "沙特阿美Q1利润飙升26%，因关键管道满负荷运转抵消伊朗战争冲击。公司表示其东西向管道成功绕开霍尔木兹海峡，在伊朗封锁下保障了石油出口，缓解了全球能源危机。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/saudi-aramco-q1-profit-jumps-26percent-as-key-pipeline-reaches-capacity.html" },
+  { time: "17:09", tag: "geo", tagText: "地缘", text: "载有汉坦病毒的邮轮“MV Hondius”抵达特内里费岛进行疏散。各国政府正准备对本国公民实施撤侨和隔离程序。", source: "Financial Times", url: "https://www.ft.com/content/b5fdd84f-69bd-47ae-bd7b-df30ba3d758c" },
+  { time: "17:07", tag: "macro", tagText: "宏观", text: "坦克制造商KNDS推动德国政府在其IPO前决定是否入股。德国家族股东希望推进这家由法国支持的集团上市，估值在150亿至200亿欧元之间。", source: "Financial Times", url: "https://www.ft.com/content/81f58094-c0c1-4163-b43d-e802e79de793" },
   { time: "14:30", tag: "crypto", tagText: "加密", text: "加密货币Pepeto交易所宣布升级，声称达到币安级别水平。与此同时，市场关注以太坊价格能否在本月突破3000美元大关。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMikgJBVV95cUxQajRvTW1BN2R0Z2MyNHFZT3h3cUVvb1JoYW9SdW9lb1NSTWE2VG92Yms0RWhfekdkaVNzODJSY21oN1RoMU5BaXZGX1FDWGVkUEpBY21PUFNfcDFSR3dHaEEtVHBWaWlVRmstOUxIRXZFNVhfMzBTdDdPV0lfbTRDU3JKUjA1Z2dnRmMyWF9qTEYtME9TQW9rQjJkeHNSQnpxbS1iT3B5UDhJSmRMRzFXay1JUlcweFhEOWVxTWZpMFlRaGdmdm5Yd0ItM3JFMTMtVF9kcm5lZ2M5bWkwTEhRWGlUem14b0oybEVMZ25jWm1GeEE5MTVoSFA0dW11RXNqV2Q3TTE1LXZHN0xUb3pKTmlR?oc=5" },
   { time: "14:30", tag: "tech", tagText: "科技", text: "特斯拉股价周五上涨4%，受中国销售数据强劲及半挂卡车交易新进展推动，市场情绪回暖。", source: "Foreign Policy Journal", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPcDhuY3BkSGpfb0RHZzFFdWJoRWc2eGFzOW9oQU5HclIzeEVZdE5DM1NmaEt0UTlHcEZ0RmNmaDNibGNndWJEQmlKUXQtY2UxSVNJZzNIMjlFb0M3RmJJbjU0MlREWDk2TmJPUWlieE1rcHMwUkRfYmNSeXAtTUhMdlZNTHZCTERnMXdYaG1oRE5STXZ3dHk0bDVNQXhuekdieUVGN1FHN3NjSG4xOHFkMF9sTFJOa0xtNUNPNDhydVFtcmV5UUVoczYxLXJab2Q3X2ZsQ0hURXZLM3JiZzlN?oc=5" },
   { time: "14:26", tag: "macro", tagText: "宏观", text: "边疆航空一架空客A321在丹佛起飞时撞上跑道上的行人，飞行员中止起飞。机舱内报告有烟雾，事故原因正在调查中。", source: "CNBC", url: "https://www.cnbc.com/2026/05/09/frontier-airlines-plane-engine-fire-pedestrian.html" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "22:40", tag: "crypto", tagText: "加密", text: "某巨鲸向币安转入1.8亿美元以太坊，引发市场对抛售的担忧。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcXU1YWwybkhvQXIxNl82eEVIdHBESlZRT2V1X2lxWVdEYUlOU3Q2YXA2OXlPdTNhMGF0OU1zZmFMX1BjNEN1ZVhnLVNVZDNMeDhBQ0huVTI5SzQyQUJsZnAzaDEyRVZGek1VZzRtYzAyOUh2WlFvcDdVNVdvQ2ZtOWViRUR6R2xLbmpOYzh6QzZPZG5ydDZwbUhZT28?oc=5" },
   { time: "22:26", tag: "crypto", tagText: "加密", text: "CME将允许交易者押注比特币波动性，而不仅仅是价格。此举为加密货币衍生品市场提供新的风险管理工具。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5PVl84YW9pRU9rYWEtWUd2UnhVVjlYalVrNXQ1bXZ2OFk1SXNBeGdrYWx4bmwtTzExckUxaFQyMWFEekxDRGhsZVpUMWF4dFJFSjI5U3VzMTI?oc=5" },
   { time: "21:46", tag: "macro", tagText: "宏观", text: "美联储5月通胀预测出炉，华尔街前景恶化。最新预测显示通胀压力持续高企，市场对美联储降息预期进一步降温。", source: "Motley Fool", url: "https://finance.yahoo.com/economy/policy/articles/oof-federal-reserves-may-inflation-132600416.html" },
-  { time: "21:00", tag: "macro", tagText: "宏观", text: "华尔街推出‘NACHO’交易策略，押注油价上涨和通胀持续。该策略受墨西哥美食启发，反映市场对能源价格和通胀粘性的预期。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/introducing-the-nacho-trade-how-wall-street-is-betting-on-higher-oil-prices-and-persistent-inflation-eb915434?mod=mw_rss_topstories" },
-  { time: "21:00", tag: "macro", tagText: "宏观", text: "美国经济在伊朗战争逆风中依然坚挺，持续扩张。尽管面临地缘政治障碍，经济数据仍显示韧性。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-unsinkable-u-s-economy-cruises-on-despite-headwinds-from-the-iran-war-dac45af5?mod=mw_rss_topstories" },
-  { time: "20:44", tag: "geo", tagText: "地缘", text: "伊朗战争将从根本上改变全球能源市场。伊朗封锁霍尔木兹海峡已导致近10亿桶石油损失，短缺日益严重，石油高管分析关键影响。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/09/iran-war-oil-gas-energy-security.html" },
 ];
-const breakingDate = "2026年5月10日 15:31 CST";
+const breakingDate = "2026年5月10日 17:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "23:29", tag: "tech", tagText: "科技", text: "英伟达正将AI投资转化为供应链武器。通过向AI初创公司提供资金支持，英伟达不仅巩固了自身在AI芯片市场的地位，还间接影响了整个AI生态系统的供应链格局，引发业界对市场垄断的担忧。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdkZmTmVMNlRxTEtDZDdUN3UweDItOGtWajZ3VklKa212SURvcjBGMGg1cXlIcWdER2xkVkFoelR4UC1vNXRudnNXZ0otanBtQU96RFU1b250dTdmVUJhODMwVzMxWDdkOEJhamhJZ2d0RjBiNDlxc0VENmFyTy1od2tHSEJtOWxWeGtB?oc=5" },
   { time: "22:43", tag: "ai", tagText: "AI", text: "英伟达今年已在AI股权交易上承诺投入400亿美元，持续加码AI生态投资，成为该领域最大的企业投资者之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/" },
 ];
-const aiBreakingDate = "2026年5月10日 15:31 CST";
+const aiBreakingDate = "2026年5月10日 17:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
