@@ -1623,15 +1623,19 @@ const fearGreedData = {
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月10日 21:49 CST"
+  date: "2026年5月10日 23:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:00", tag: "macro", tagText: "宏观", text: "高盛预计，由于经济前景不稳及AI成本压力迫使企业重新考虑支出，今年标普500指数成分股的回购总额仅增长3%。大型科技公司对AI的巨额资本支出正在挤压股东回报，投资者可能面临分红和回购减少的局面。", source: "MarketWatch", url: "https://www.marketwatch.com/story/big-techs-ai-spending-is-depriving-investors-of-juicy-payouts-39d17305?mod=mw_rss_topstories" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "Netflix宣布其无广告标准套餐价格上调至20美元/月。分析指出，流媒体经济正接近一个临界点：含广告的廉价套餐为Netflix等平台带来的利润已不亚于甚至超过纯订阅模式，传统电视的商业模式正在回归。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/netflix-20-dollar-streaming-plan-price.html" },
   { time: "21:00", tag: "macro", tagText: "宏观", text: "太平洋投资管理公司(Pimco)和富兰克林坦伯顿警告称，若伊朗战争持续推高能源价格和通胀，美联储可能被迫加息而非降息。这一观点与市场对降息的普遍预期相悖，可能引发全球资产重新定价。", source: "Financial Times", url: "https://www.ft.com/content/ba919246-ff50-4b8d-931c-43ee8d37795d" },
   { time: "20:22", tag: "tech", tagText: "科技", text: "eBay永久封禁GameStop CEO Ryan Cohen的账户，理由是其行为“危及社区安全”。Cohen此前提出以555亿美元收购eBay，并通过其账户销售GameStop相关商品。此举加剧了两家公司之间的紧张关系。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ebay-permanently-bans-gamestop-ceo-ryan-cohen-for-putting-its-community-at-risk-following-takeover-attempt-71b44c37?mod=mw_rss_topstories" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "美国证券交易委员会(SEC)推迟对预测市场ETF的审批决定，这让人联想到比特币ETF此前漫长的审批拉锯战。监管机构对这类新型金融产品的谨慎态度，反映出对市场操纵和投资者保护的持续担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/sec-prediction-markets-etfs-trading-launch-delay.html" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "Alphabet股价一年内飙升160%，反映出市场对其在AI领域“拥有全栈能力”的重新估值。谷歌在AI热潮初期被视为落后者，但投资者现在押注其搜索巨头地位将使其成为AI时代的明确赢家。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/alphabet-160percent-rally-in-year-reflects-value-of-owning-most-of-ai-stack.html" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "4月美国零售业新增近2.2万个就业岗位，占当月总就业增长的五分之一。然而，消费者信心和支出数据正发出警告信号，零售商的招聘热潮与消费疲软形成矛盾，可能预示着经济前景的不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/retailer-hiring-consumer-warning-jobs-report.html" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "存储芯片制造商正面临“超级周期”，预计将带来“暴利收益”。受芯片价格上涨推动，利润率预期上调至2027年，相关股票一周内飙升30%。AI需求驱动的存储芯片短缺是主要推动力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/memory-chip-makers-are-looking-at-a-supercycle-and-windfall-gains-the-stocks-jumped-30percent-in-one-week.html" },
   { time: "18:47", tag: "geo", tagText: "地缘", text: "一艘卡塔尔能源公司运营的油轮安全通过霍尔木兹海峡，驶往巴基斯坦。美国正等待伊朗对和平提议的回应，该海峡是伊朗威胁封锁的关键能源通道。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/tanker-crosses-strait-of-hormuz-as-us-awaits-iran-response-.html" },
   { time: "17:09", tag: "macro", tagText: "宏观", text: "沙特阿美Q1利润飙升26%，因关键管道满负荷运转抵消伊朗战争冲击。公司表示其东西向管道成功绕开霍尔木兹海峡，在伊朗封锁下保障了石油出口，缓解了全球能源危机。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/saudi-aramco-q1-profit-jumps-26percent-as-key-pipeline-reaches-capacity.html" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "14:00", tag: "ai", tagText: "AI", text: "OpenAI诉讼案进入最后一周庭审，马斯克起诉指控其背离非营利初衷，CEO奥特曼将出庭作证。此案揭示了这家估值8520亿美元AI巨头背后的激烈竞争与治理争议。", source: "International homepage", url: "https://www.ft.com/content/c68bd831-434d-486c-86df-54d0369391ef" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "德国在总理与特朗普关系恶化后，正推动新一轮采购美制“战斧”巡航导弹。国防部长计划访问华盛顿，以加强欧洲自主防务能力。", source: "International homepage", url: "https://www.ft.com/content/c64f6c88-36f8-4721-a201-4cd77992fa90" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "小型科技股表现远超大盘股，涨幅惊人。市场资金正从大型科技龙头转向更具增长潜力的中小盘科技公司。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-smaller-tech-stocks-are-punching-well-above-their-weight-acefe98d?mod=mw_rss_topstories" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "中国4月出口同比增长14%，远超预期，贸易顺差强劲。数据表明美国关税未能削弱中国制造业实力，为即将举行的特朗普-习近平峰会提供了重要经济背景。", source: "Financial Times", url: "https://www.ft.com/content/c1a18633-09d4-4875-878a-8a06c157a8ab" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗依靠数百艘小型快艇组成的“蚊子舰队”维持对全球能源市场的扼制。这些快速、灵活的船只对霍尔木兹海峡的航运构成持续威胁，是伊朗对抗美国海军的关键非对称力量。", source: "Financial Times", url: "https://www.ft.com/content/2e95626f-2f95-470d-9854-5d272d0ef7cd" },
-  { time: "10:52", tag: "crypto", tagText: "加密", text: "秘鲁280亿美元加密市场中，稳定币占比已达90%。这一趋势显示拉美地区对锚定法币的数字资产需求激增，主要用于价值储存和跨境支付。", source: "Bitcoin News", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdzZtVmxMM1BOY3lIdm1Ua2R4UVRkbTc2X3BNSXhFcWdPS05QSXhsY3FZVE9vRWx2SXlDS3Z6VFVjUkhYV2RVaGhfb0l2MU9kbVJGM3d5R1h2dE5aOGVFT2w5bU9YdUNfWW9IdUNPcUJuUUdoQmh6WTQ0cGxpT2psUmdEa0gyU1FJdUJ6V2pjUmU5b2U4WXc?oc=5" },
-  { time: "10:00", tag: "crypto", tagText: "加密", text: "加密货币市场保持韧性，比特币持稳于8万美元附近。尽管宏观不确定性持续，加密资产展现出抗跌能力。", source: "BusinessToday Malaysia", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxQYXNLdVFpQ2RXMG1ES2wwZzBmUHdKOEczZkN0cmdyWWV3QjViVXBkUDZnanVqYWxqeFA3UXdVMkZfZG13VS1aWGdjSmxlOGJCSU45ZXZWSUxRbkl6RFo1WkpqSVdNUGN1YmlLNXQ1SWxaSnFHMjFXQkIxdU1WbkFBYU5hRnZkZVBEQlFHcmlQRndERktmc3NQZ2tVRG9jUmpvU0VhU3dxYk1SSmloWFBrakxSaXA5Zw?oc=5" },
 ];
-const breakingDate = "2026年5月10日 21:49 CST";
+const breakingDate = "2026年5月10日 23:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "01:05", tag: "tech", tagText: "科技", text: "索尼在财报发布会上表示，将AI视为开发PlayStation游戏的“强大工具”，并详细介绍了如何评估AI在游戏制作中的应用，包括生成式AI技术。", source: "The Verge", url: "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games" },
   { time: "00:55", tag: "tech", tagText: "科技", text: "一只超级半导体股票表现碾压英伟达、AMD和博通，引发市场关注。该股近期涨幅惊人，成为半导体板块新焦点。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZDBJMHc1OTdWTWNDQTVrT2VkMkxwSkZGdDFYNDRyNUpLVVhOYV9CUjJvaFA4Zm5sTlZLQnk2R1BORTNhcTBhVElKV3ZvWnl3NmQ3VkVRT0d4Qm5pRlFFWUxLUlVrekd1eWg5UzFnTkFaRV8wYWR1RGhhWEFEMnJQQ2pwYTcwNWpIZzJ4a2RxME83dl9sZjloWERNUkJIS2FiOUxHZzFHam5EcGhm?oc=5" },
 ];
-const aiBreakingDate = "2026年5月10日 21:49 CST";
+const aiBreakingDate = "2026年5月10日 23:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
