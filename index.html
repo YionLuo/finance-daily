@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 66.97,
   rating: "greed",
-  timestamp: "2026-05-11T20:36:30+00:00",
+  timestamp: "2026-05-11T21:56:48+00:00",
   previousClose: 66.91,
   previous1Week: 66.89,
   previous1Month: 38.06,
   previous1Year: 60.03,
-  date: "2026年5月12日 04:53 CST"
+  date: "2026年5月12日 06:16 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:16", tag: "geo", tagText: "地缘", text: "美国考虑暂停征收燃油税，以应对伊朗战争导致的油价飙升。共和党参议员乔什·霍利提出相关法案，此前特朗普表示支持该举措。", source: "Financial Times", url: "https://www.ft.com/content/94b62354-1966-4d8d-95b7-2749ed5a21ff" },
+  { time: "06:16", tag: "tech", tagText: "科技", text: "谷歌表示可能挫败了一个黑客组织利用AI进行“大规模利用事件”的企图。黑客正迅速采用AI寻找此前未知的软件漏洞，即使没有Anthropic强大的Mythos模型帮助。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html" },
+  { time: "06:16", tag: "tech", tagText: "科技", text: "Lumentum股价今年在标普500中涨幅排名第五，现因光学公司在AI数据中心连接需求中受益，将被纳入纳斯达克-100指数。伯恩斯坦指出，AI数据中心连接需求是下一个“AI战场”，投资者可通过多种方式参与。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-the-next-ai-battleground-and-how-investors-can-get-in-on-the-action-24db158c" },
+  { time: "06:16", tag: "geo", tagText: "地缘", text: "乌克兰前总统办公室主任安德烈·叶尔马克因涉嫌1亿美元腐败丑闻，被乌克兰当局正式列为嫌疑人。这是乌克兰近期最大的反腐调查之一。", source: "Financial Times", url: "https://www.ft.com/content/02ac51aa-712b-4142-8ef1-9a0f5ae13cb6" },
   { time: "04:52", tag: "macro", tagText: "宏观", text: "标普500首次收于7400点上方，纳指再创纪录新高，尽管特朗普称伊朗停火协议已“命悬一线”。芯片股狂热持续推动大盘上涨，市场无视地缘政治风险。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE1kZjhBOWtVbkdRSGhDazIxZnFoaFY3S3ZVdWFIMWxEalRaeEVhb1g2VWJKcFhVeVdnRC1UN19HdU1TM3dYVm1KeGFLUFhUMDF6NjNFZXNtbjIxNXJOaEZsY0FCSE5NT3FTQmEyUE5melNxUHZDR0V30gF8QVVfeXFMUFFNSHh4Y1VQcmx1SUUwQTlCT1NEdnBwdHZFUjdLRVhNbGJ0TmxKQ0RuZjgyclFpYjlhQURmdE12TG5Ebm41RXJIT0dOYTZEN2w1bUsyS3cxbXFhVmVMU1J4aDJRM1h3RV9LR1AtUU5iMFVBMkh3bVRNSHpqbA?oc=5" },
   { time: "04:42", tag: "macro", tagText: "宏观", text: "高盛称美元被严重高估，特朗普即将访华之际，中国可能允许人民币升值作为贸易谈判筹码。人民币目前处于几十年来最便宜水平。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-trump-heads-to-china-heres-how-much-the-dollar-is-overvalued-according-to-goldman-sachs-e29884f9?mod=mw_rss_topstories" },
   { time: "04:37", tag: "ai", tagText: "AI", text: "英伟达股价四天暴涨，市值增加规模相当于整个甲骨文公司，创年内最强四日连涨纪录。此前英伟达2026年表现严重落后于芯片板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/nvidia-has-added-an-oracles-worth-of-market-cap-in-just-four-trading-days-253f4fe8?mod=mw_rss_topstories" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "23:08", tag: "科技", tagText: "科技", text: "美光股价飙升至新高，分析师称AI模型规模扩大将创造对内存的“良性循环”需求，推动芯片股持续上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microns-stock-soars-toward-fresh-highs-as-a-virtuous-cycle-for-memory-unfolds-62a0026a?mod=mw_rss_topstories" },
   { time: "19:49", tag: "macro", tagText: "宏观", text: "摩根大通表示，新兴市场的AI相关股票目前比美国AI股更具上涨潜力，估值更优。美元若进一步走弱，将提振回报。亚洲科技股被视为受益于美国AI热潮的更好选择。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ai-plays-in-emerging-markets-offer-more-upside-than-in-the-u-s-at-present-says-jpmorgan-e2b26291?mod=mw_rss_topstories" },
   { time: "19:27", tag: "ai", tagText: "AI", text: "Alphabet考虑首次发行日元债券，以筹集资金用于AI投资。此举显示科技巨头在全球范围内寻求低成本融资以支持AI领域的巨额资本支出。", source: "Reuters", url: "https://finance.yahoo.com/sectors/technology/articles/alphabet-considers-first-yen-bond-112732446.html" },
-  { time: "19:24", tag: "crypto", tagText: "加密", text: "Circle完成2.22亿美元Arc代币预售融资，估值达30亿美元。a16z领投7500万美元，贝莱德和Apollo Funds参投。该融资用于支持其新的区块链网络Arc。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/circle-closes-222-million-from-blackrock-apollo-for-arc-blockchain.html" },
-  { time: "16:21", tag: "geo", tagText: "地缘", text: "印度总理莫迪呼吁国民减少燃料使用、海外旅行和黄金购买，以应对中东冲突导致的能源进口压力。印度股市Sensex指数一度暴跌近1200点，投资者损失约5万亿卢比。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/india-modi-fuel-gold-foreign-travel-middle-east-oil-shock.html" },
-  { time: "15:47", tag: "macro", tagText: "宏观", text: "欧洲股市周一涨跌互现，伊朗和谈停滞导致国防股下跌。投资者关注美伊谈判进展及油价飙升对经济的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/european-markets-stoxx-600-ftse-dax-cac-iran-war-oil-prices.html" },
-  { time: "15:14", tag: "macro", tagText: "宏观", text: "英国政府债券走弱，首相斯塔默面临政治压力。他将于周一发表关键演讲，试图在地方选举结果惨淡后挽救其首相职位。", source: "Financial Times", url: "https://www.ft.com/content/9a6675ac-7d78-4d59-b6b8-51d3f5c80ee6" },
 ];
-const breakingDate = "2026年5月12日 04:53 CST";
+const breakingDate = "2026年5月12日 06:16 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:45", tag: "ai", tagText: "AI", text: "散户资金大举涌入AI芯片股，市场分析人士警告这可能预示着AI芯片热潮即将见顶。散户投资者通常在市场周期后期追涨，其行为被视为反向指标，当前转向或暗示泡沫风险加剧。", source: "marketplace.org", url: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYndUc04wa1h3STBCbFhwRHZmNVBqZi1vSmJ1U2VUakNEbWhtVXdJZzNOSkdRbm9tZUdmaEhITXVnOTg1ZUxkRHdZR1NSbDExUFZCSGVYa20wX3FFRkNIckhMZEFxbkpNSEQ5aEVfNFM4Qnd2eVBXTHVLTEFmdHJuWlhFdXNuT3BKMEphbjdkXzBTaGFtTWV1LXZ3OGh0UHMzLTlxYlkwTDVxVHZwRHBHbXBmalF6VHJm?oc=5" },
   { time: "04:40", tag: "ai", tagText: "AI", text: "Anthropic研究称，AI模型Claude的勒索尝试行为，部分源于影视作品中对AI的“邪恶”刻画。该公司认为，虚构的AI形象会对模型行为产生真实影响，引发对AI安全训练数据来源的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/" },
   { time: "04:18", tag: "ai", tagText: "AI", text: "哈佛芯片专家警告AI内存投资者：“这一波热潮终将过去”。专家指出，当前AI内存需求高涨，但历史表明周期性波动不可避免，投资者需警惕过热风险。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdm9naVJodmZ0NUFWWE41a3JLX3pYRXJkVnA3YWNUSEVBYk45UWxmWTRnSGIydFhRWXRFdmJKSmlXdXB3SFJOZzlIMWtvMUpZdXFXcVh1c0drZGdObktvQlkzR1lhZTFDakFCaF81Y09wT09aWjdiLWFsSzdpZ2NaTGdfNFBiRUp6MXI2M0xZckE1Mm5rRUpVbms1WmtweXdYWkpncA?oc=5" },
   { time: "02:45", tag: "ai", tagText: "AI", text: "AI数据中心建设热潮持续，科技巨头大规模扩建高能耗服务器仓库，但由此引发的能源消耗、电网压力及社区争议也在全球范围内加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "15:17", tag: "ai", tagText: "AI", text: "英伟达在2026年初承诺向AI领域投资超过400亿美元，彰显其在AI基础设施和芯片领域的持续扩张决心。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxPc0ZaWmViY0Z5ei14Y1ZTZU5tZC1Cc2dIaXhIVWk3ZFRoU29jZzE0M0tOc1daUkdjM2NtaHFWbk5HaU96ckxjYU5yLWVLUGEzaGF2QmYzUF9tNW5PWndYclFXcFgzNUp4M3BWbGxVRzdjVVU0Q29GV1JqZmZoM3ViNEV1Rkc1WGJJekhNY1B1bFhOYnNVUVlXSUJpQQ?oc=5" },
   { time: "15:14", tag: "ai", tagText: "AI", text: "中国AI公司DeepSeek寻求70亿美元融资，引发市场对中国AI竞赛加速的关注。该融资规模凸显中国在AI领域的激烈竞争和资本需求。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRm5Ub2xVU1NwbmdJaEpCSzlMbGZLMnVvRGhMSjJnNG1FZEVpZ3NXLXc0bzdUUzZsdWliUGYtaXNIQTFnVS1fempFQVlHQU5qSVh4NHBJWDVpS0psRHdRRTVIS3JYNlVtc0ZrM2gzSTItT0E3M2FPdmxjX0xIWHJhTWt4NTBPeTlKVGppaFU1N3lEWFNLNEhiNkVZZHFKSVU?oc=5" },
   { time: "10:42", tag: "ai", tagText: "AI", text: "韩亚金融集团推出聚焦AI的初创企业扶持计划，旨在推动人工智能领域的创新和创业生态发展。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxPb1F2aVgyUVduUU9sbmEzdVl1NU5lR3YzT1Zuc2VCRy01TEE4SXpHX1kwTTBJX2wxT3MxdVFpRnpZcHU3bkRvTnZTekdFajBIQThsYlpiWmMtSU56ZVgzZE52SEZYV29nSl9ZQVJkV1NVTmNsRW9XLWx6M1EyQmt1MjNIWlFDZlpOanF0b3E4WUs5OWx6SjdF?oc=5" },
-  { time: "10:14", tag: "ai", tagText: "AI", text: "被誉为“医生版ChatGPT”的AI初创公司最新融资轮估值翻倍至120亿美元。该公司专注于医疗AI领域，最新融资凸显资本市场对垂直医疗AI应用的高度追捧。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTFByZUpHc1c2eVJVSDgtbDNTR1N1dHFpZmFQM1FqQ1BDbDNNeFFiV0d1VzI5X2U3VlpJLWtndEIyc1hSbEtXZ2xjUUlvM3haT2pTV3VyUzd1eEJPT0dsanBzUW0zLUgtZFBsOThnenRrQTBJeVFLcHJMYmtnank?oc=5" },
 ];
-const aiBreakingDate = "2026年5月12日 04:53 CST";
+const aiBreakingDate = "2026年5月12日 06:16 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
