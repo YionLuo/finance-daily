@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 71.17,
   previous1Month: 29.17,
   previous1Year: 57.66,
-  date: "2026年5月11日 07:00 CST"
+  date: "2026年5月11日 08:02 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:00", tag: "geo", tagText: "地缘", text: "特朗普将于周三抵达北京，与习近平举行第二次面对面峰会。预计特朗普将就伊朗战争问题向中方施压，寻求中国协助解决冲突。", source: "Financial Times", url: "https://www.ft.com/content/09c91701-114b-45e9-9aa1-767ef95a5217" },
   { time: "06:59", tag: "macro", tagText: "宏观", text: "华尔街推出新交易策略‘NACHO’，押注油价上涨和通胀持续。该策略名称受墨西哥美食启发，反映市场对伊朗战争导致能源供应紧张和通胀压力长期化的预期。", source: "MarketWatch", url: "https://www.marketwatch.com/story/introducing-the-nacho-trade-how-wall-street-is-betting-on-higher-oil-prices-and-persistent-inflation-eb915434?mod=mw_rss_topstories" },
   { time: "06:59", tag: "macro", tagText: "宏观", text: "分析文章指出，美联储主席鲍威尔面临抗击通胀与维护美联储独立性的双重挑战，且可能在这两条战线上均告失利。特朗普的施压和持续的通胀压力正威胁美联储的独立性及政策有效性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/powells-legacy-as-fed-chair-is-fighting-inflation-and-trump-he-may-lose-the-battle-against-both-aeb32f89?mod=mw_rss_topstories" },
   { time: "03:59", tag: "crypto", tagText: "加密", text: "若比特币再跌5000美元，65.6亿美元加密多头仓位面临清算风险。当前比特币在8万美元附近震荡，市场关注回调是否加剧。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1OalZjbFphOHp0SjlRNmVLV1NLRzg0WExTNmFxSkRrOGYzWVpuRk5DM1dRZ1BxcElmQk9pOVNLNUpSRVUtRHNTSg?oc=5" },
@@ -1648,9 +1649,8 @@ const breakingNews = [
   { time: "19:00", tag: "tech", tagText: "科技", text: "存储芯片制造商正面临“超级周期”，预计将带来“暴利收益”。受芯片价格上涨推动，利润率预期上调至2027年，相关股票一周内飙升30%。AI需求驱动的存储芯片短缺是主要推动力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/memory-chip-makers-are-looking-at-a-supercycle-and-windfall-gains-the-stocks-jumped-30percent-in-one-week.html" },
   { time: "18:47", tag: "geo", tagText: "地缘", text: "一艘卡塔尔能源公司运营的油轮安全通过霍尔木兹海峡，驶往巴基斯坦。美国正等待伊朗对和平提议的回应，该海峡是伊朗威胁封锁的关键能源通道。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/tanker-crosses-strait-of-hormuz-as-us-awaits-iran-response-.html" },
   { time: "17:09", tag: "macro", tagText: "宏观", text: "沙特阿美Q1利润飙升26%，因关键管道满负荷运转抵消伊朗战争冲击。公司表示其东西向管道成功绕开霍尔木兹海峡，在伊朗封锁下保障了石油出口，缓解了全球能源危机。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/saudi-aramco-q1-profit-jumps-26percent-as-key-pipeline-reaches-capacity.html" },
-  { time: "17:09", tag: "geo", tagText: "地缘", text: "载有汉坦病毒的邮轮“MV Hondius”抵达特内里费岛进行疏散。各国政府正准备对本国公民实施撤侨和隔离程序。", source: "Financial Times", url: "https://www.ft.com/content/b5fdd84f-69bd-47ae-bd7b-df30ba3d758c" },
 ];
-const breakingDate = "2026年5月11日 07:00 CST";
+const breakingDate = "2026年5月11日 08:02 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "10:42", tag: "ai", tagText: "AI", text: "韩亚金融集团推出聚焦AI的初创企业扶持计划，旨在推动人工智能领域的创新和创业生态发展。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxPb1F2aVgyUVduUU9sbmEzdVl1NU5lR3YzT1Zuc2VCRy01TEE4SXpHX1kwTTBJX2wxT3MxdVFpRnpZcHU3bkRvTnZTekdFajBIQThsYlpiWmMtSU56ZVgzZE52SEZYV29nSl9ZQVJkV1NVTmNsRW9XLWx6M1EyQmt1MjNIWlFDZlpOanF0b3E4WUs5OWx6SjdF?oc=5" },
   { time: "10:14", tag: "ai", tagText: "AI", text: "被誉为“医生版ChatGPT”的AI初创公司最新融资轮估值翻倍至120亿美元。该公司专注于医疗AI领域，最新融资凸显资本市场对垂直医疗AI应用的高度追捧。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTFByZUpHc1c2eVJVSDgtbDNTR1N1dHFpZmFQM1FqQ1BDbDNNeFFiV0d1VzI5X2U3VlpJLWtndEIyc1hSbEtXZ2xjUUlvM3haT2pTV3VyUzd1eEJPT0dsanBzUW0zLUgtZFBsOThnenRrQTBJeVFLcHJMYmtnank?oc=5" },
 ];
-const aiBreakingDate = "2026年5月11日 07:00 CST";
+const aiBreakingDate = "2026年5月11日 08:02 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
