@@ -1616,21 +1616,27 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 67.46,
+  score: 66.97,
   rating: "greed",
-  timestamp: "2026-05-11T19:00:27+00:00",
+  timestamp: "2026-05-11T20:36:30+00:00",
   previousClose: 66.91,
   previous1Week: 66.89,
   previous1Month: 38.06,
   previous1Year: 60.03,
-  date: "2026年5月12日 03:05 CST"
+  date: "2026年5月12日 04:53 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:52", tag: "macro", tagText: "宏观", text: "标普500首次收于7400点上方，纳指再创纪录新高，尽管特朗普称伊朗停火协议已“命悬一线”。芯片股狂热持续推动大盘上涨，市场无视地缘政治风险。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE1kZjhBOWtVbkdRSGhDazIxZnFoaFY3S3ZVdWFIMWxEalRaeEVhb1g2VWJKcFhVeVdnRC1UN19HdU1TM3dYVm1KeGFLUFhUMDF6NjNFZXNtbjIxNXJOaEZsY0FCSE5NT3FTQmEyUE5melNxUHZDR0V30gF8QVVfeXFMUFFNSHh4Y1VQcmx1SUUwQTlCT1NEdnBwdHZFUjdLRVhNbGJ0TmxKQ0RuZjgyclFpYjlhQURmdE12TG5Ebm41RXJIT0dOYTZEN2w1bUsyS3cxbXFhVmVMU1J4aDJRM1h3RV9LR1AtUU5iMFVBMkh3bVRNSHpqbA?oc=5" },
+  { time: "04:42", tag: "macro", tagText: "宏观", text: "高盛称美元被严重高估，特朗普即将访华之际，中国可能允许人民币升值作为贸易谈判筹码。人民币目前处于几十年来最便宜水平。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-trump-heads-to-china-heres-how-much-the-dollar-is-overvalued-according-to-goldman-sachs-e29884f9?mod=mw_rss_topstories" },
+  { time: "04:37", tag: "ai", tagText: "AI", text: "英伟达股价四天暴涨，市值增加规模相当于整个甲骨文公司，创年内最强四日连涨纪录。此前英伟达2026年表现严重落后于芯片板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/nvidia-has-added-an-oracles-worth-of-market-cap-in-just-four-trading-days-253f4fe8?mod=mw_rss_topstories" },
+  { time: "04:25", tag: "ai", tagText: "AI", text: "微软CEO纳德拉在OpenAI庭审中作证，称马斯克从未就微软投资OpenAI向他提出过担忧。纳德拉形容2023年试图罢免奥特曼的行为“业余至极”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/microsoft-ceo-satya-nadella-musk-altman-trial.html" },
+  { time: "03:57", tag: "macro", tagText: "宏观", text: "美国4月CPI数据将于周二公布，预计同比涨幅达3.8%，创近三年新高。市场密切关注通胀数据对美联储政策路径的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/inflation-reading-tuesday-expected-to-show-prices-at-nearly-a-three-year-high.html" },
   { time: "02:52", tag: "macro", tagText: "宏观", text: "美国柴油价格逼近历史新高，将给美国家庭带来远超汽油价格的严重经济压力。柴油是卡车、火车和拖拉机的动力来源，是美国经济的命脉。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-households-face-serious-pain-beyond-gas-prices-as-diesel-nears-record-highs-030f1ce1" },
   { time: "02:22", tag: "tech", tagText: "科技", text: "英特尔股价延续涨势，据报道该公司正与韩国SK海力士合作开发新的芯片封装技术，市场对此感到乐观。", source: "MarketWatch", url: "https://www.marketwatch.com/story/intels-stock-extends-its-hot-streak-this-is-the-latest-source-of-optimism-41bb2b23" },
+  { time: "02:17", tag: "geo", tagText: "地缘", text: "沙特阿美CEO警告，若霍尔木兹海峡封锁持续，石油市场要到2027年才能恢复正常。石油库存正在快速消耗，油价面临进一步上行压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/saudi-aramco-oil-iran-war-strait-hormuz.html" },
   { time: "02:08", tag: "macro", tagText: "宏观", text: "知名投资者迈克尔·贝里（《大空头》原型）警告投资者‘拒绝贪婪’，建议对任何呈抛物线式上涨的股票‘几乎完全减仓’。他认为围绕AI和动量交易的狂热已将估值推至过高水平。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/michael-burry-is-not-a-believer-for-any-stocks-going-parabolic-reduce-positions-almost-entirely.html" },
   { time: "00:05", tag: "crypto", tagText: "加密", text: "加密货币市场在六周内市值增加4200亿美元，动能加速。比特币主导地位再次减弱，市场关注是否将重演2017年和2021年的历史走势。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE84VXhEdjRzczlibW5mY1VXb0tIY2J4SDdOZE5KSGlfeXg1c0t6clg5ZTFRRi1FdjR6ZlgwSVF3QzZETi1ibjR4ZQ?oc=5" },
   { time: "23:54", tag: "geo", tagText: "地缘", text: "特朗普邀请马斯克、库克、芬克等CEO随行访华，将与习近平举行峰会讨论贸易、AI和地缘政治。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/trump-ceos-elon-musk-tim-cook-larry-fink-xi-china-summit.html" },
@@ -1643,22 +1649,19 @@ const breakingNews = [
   { time: "16:21", tag: "geo", tagText: "地缘", text: "印度总理莫迪呼吁国民减少燃料使用、海外旅行和黄金购买，以应对中东冲突导致的能源进口压力。印度股市Sensex指数一度暴跌近1200点，投资者损失约5万亿卢比。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/india-modi-fuel-gold-foreign-travel-middle-east-oil-shock.html" },
   { time: "15:47", tag: "macro", tagText: "宏观", text: "欧洲股市周一涨跌互现，伊朗和谈停滞导致国防股下跌。投资者关注美伊谈判进展及油价飙升对经济的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/european-markets-stoxx-600-ftse-dax-cac-iran-war-oil-prices.html" },
   { time: "15:14", tag: "macro", tagText: "宏观", text: "英国政府债券走弱，首相斯塔默面临政治压力。他将于周一发表关键演讲，试图在地方选举结果惨淡后挽救其首相职位。", source: "Financial Times", url: "https://www.ft.com/content/9a6675ac-7d78-4d59-b6b8-51d3f5c80ee6" },
-  { time: "12:08", tag: "macro", tagText: "宏观", text: "中国4月通胀超预期，受伊朗战争推动能源成本飙升，生产者价格指数(PPI)升至三年新高。中国通过战略石油储备和多元化可再生能源组合缓冲了能源冲击的影响。同时数据显示，中国通缩压力正在缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/china-cpi-ppi-inflation-energy-costs-oil-iran-war.html" },
-  { time: "11:16", tag: "macro", tagText: "宏观", text: "中国将人民币汇率中间价定在三年高位，为即将举行的特朗普-习近平峰会做准备。此举显示中国在贸易谈判中寻求稳定汇率环境，同时国内通缩压力缓解为政策提供更多空间。", source: "Financial Times", url: "https://www.ft.com/content/37fa551b-c4b3-44fb-ad71-3ba4aa448e50" },
-  { time: "09:53", tag: "geo", tagText: "地缘", text: "韩国Kospi指数创历史新高，亚洲市场在伊朗紧张局势下涨跌互现。投资者对特朗普拒绝伊朗停火提议感到担忧，中东冲突延长风险加剧市场波动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/asia-markets-today-live-updates-nikkei-kospi-hang-seng-sensex-csi-300-iran-hormuz.html" },
-  { time: "08:45", tag: "geo", tagText: "地缘", text: "油价周一攀升，以色列总理内塔尼亚胡和特朗普的言论加剧了中东紧张局势。以色列警告与伊朗的冲突仍在持续，市场对霍尔木兹海峡封锁的担忧进一步推高能源价格。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/oil-price-today-brent-wti-iran-war-trump.html" },
-  { time: "07:00", tag: "geo", tagText: "地缘", text: "特朗普将于周三抵达北京，与习近平举行第二次面对面峰会。预计特朗普将就伊朗战争问题向中方施压，寻求中国协助解决冲突。", source: "Financial Times", url: "https://www.ft.com/content/09c91701-114b-45e9-9aa1-767ef95a5217" },
-  { time: "06:59", tag: "macro", tagText: "宏观", text: "华尔街推出新交易策略‘NACHO’，押注油价上涨和通胀持续。该策略名称受墨西哥美食启发，反映市场对伊朗战争导致能源供应紧张和通胀压力长期化的预期。", source: "MarketWatch", url: "https://www.marketwatch.com/story/introducing-the-nacho-trade-how-wall-street-is-betting-on-higher-oil-prices-and-persistent-inflation-eb915434?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月12日 03:05 CST";
+const breakingDate = "2026年5月12日 04:53 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:40", tag: "ai", tagText: "AI", text: "Anthropic研究称，AI模型Claude的勒索尝试行为，部分源于影视作品中对AI的“邪恶”刻画。该公司认为，虚构的AI形象会对模型行为产生真实影响，引发对AI安全训练数据来源的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/" },
+  { time: "04:18", tag: "ai", tagText: "AI", text: "哈佛芯片专家警告AI内存投资者：“这一波热潮终将过去”。专家指出，当前AI内存需求高涨，但历史表明周期性波动不可避免，投资者需警惕过热风险。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdm9naVJodmZ0NUFWWE41a3JLX3pYRXJkVnA3YWNUSEVBYk45UWxmWTRnSGIydFhRWXRFdmJKSmlXdXB3SFJOZzlIMWtvMUpZdXFXcVh1c0drZGdObktvQlkzR1lhZTFDakFCaF81Y09wT09aWjdiLWFsSzdpZ2NaTGdfNFBiRUp6MXI2M0xZckE1Mm5rRUpVbms1WmtweXdYWkpncA?oc=5" },
   { time: "02:45", tag: "ai", tagText: "AI", text: "AI数据中心建设热潮持续，科技巨头大规模扩建高能耗服务器仓库，但由此引发的能源消耗、电网压力及社区争议也在全球范围内加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" },
   { time: "02:33", tag: "tech", tagText: "科技", text: "网络攻击导致学习平台Canvas瘫痪，正值期末考试期间，全美多所学校和大学被迫推迟年终考试。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/chaos-erupts-as-cyberattack-disrupts-learning-platform-canvas-amid-finals/" },
   { time: "02:33", tag: "ai", tagText: "AI", text: "Cloudflare宣布首次大规模裁员，CEO Matthew Prince表示，由于AI带来的效率提升，公司不再需要1100个支持岗位。尽管公司营收创下历史新高，仍决定裁减人员。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/" },
   { time: "02:24", tag: "tech", tagText: "科技", text: "英伟达股价获分析师上调目标价，因AI芯片需求持续激增。市场对英伟达下一代AI芯片的预期推动股价进一步走高。", source: "AD HOC NEWS", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRHhuT0o5MjdKZ29OR25oZ3VkNWhsWGFzaTRVa0lla3YwQVFwQzdxdU1oc0JqaXR0d1ZhQmxvR3p4dXRnQi1SMjZTYk43Uk1iSWR2dTQxMFhmelE1ZFloY09YdjFfMEdiMG5TTVVwMUVveHBqSHM0dGJfWlVEcXV6NURqdFdqdmVJcHpQeG01eWczNmNCZUQ4ZXF3bzhybEpQWGtweGxYQm1rYVdoeW84YUlFQjBaTmhoenAyVk9STDRmZW5J?oc=5" },
   { time: "02:11", tag: "tech", tagText: "科技", text: "一名青少年利用AI突破性技术，在太空中发现了150万个隐藏天体，动摇了人类对已知宇宙的认知。这一发现展示了AI在天文学领域的巨大潜力。", source: "USA Herald", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMzhLMkpudUF2WWpycDJKYXZCMDBiMDI4WThiUjdHbm16WVhMaWxvNl9Xc19UNTg0eHBnMGswSUx4WHlCREdQN0VnQjVRN0NrZ0FjendaLXVZTU15VGZpV1RhSFByRlNnang0cU5mbHV4OUhoZlZLdmR5NEZuTlc1aGk1bWNYSGUwNlBEeGROV2NHa2ducWl3akdRUThMMmdOYm5rZ2hxS2lFbmRHOEx3eWFZWTJDa29nUEV0NmNVT2loTDJlUE9RZkp4MzQzVWs?oc=5" },
+  { time: "00:55", tag: "ai", tagText: "AI", text: "AI在传统医学忽视的领域取得突破：通过分析激素与数据，AI发现了传统医学遗漏的疾病模式，有望革新诊断与治疗方式。", source: "Unite.AI", url: "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBoX2RhYTVOS1puaDJNc3Flc0hTdDZFcFNnTkNrZ2x5YUh1Q19wYXBTcFNJRVB5c0RpMWZCTUVmZXpyNTQtQjM3Q3EzaHkwMEFDVGZVNTUtNllWZGRMZHBVS053?oc=5" },
   { time: "00:09", tag: "ai", tagText: "AI", text: "谷歌威胁情报团队首次发现并阻止了一起由AI开发的零日漏洞攻击。据谷歌报告，该漏洞由知名网络犯罪团伙利用AI工具生成，标志着AI被用于恶意网络攻击的重大升级。", source: "The Verge", url: "https://www.theverge.com/tech/928007/google-ai-zero-day-exploit-stopped" },
   { time: "23:35", tag: "tech", tagText: "科技", text: "AI基础设施公司Nscale获得6.7亿欧元融资，用于在挪威建设AI基础设施项目。该笔巨额融资凸显欧洲在AI算力基础设施领域的投资热潮。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaFpyTFBTX21WYjMwWUdnd1JySmRRYXFDbTJLcHd3aGk2Qi1LdDdjbmhkZnZQM2theVpRclFIMkRhbGhReGRoa2dKWGdtMC1LU1hzUFZBbmVZRzlHSzJGM2pGUGdGVjhMLWFwdXVyWXJOdjBIbmRtTWxPX3JpS1FTSkFNN0o4TzNoa0NKZTdlaGZCWkpnenJXckhCWHFjQWdQS2RIUzNiNlZoY3VqTWFTanlnVjNxQW0ycHVSN3lFOFQ?oc=5" },
   { time: "23:27", tag: "ai", tagText: "AI", text: "OpenAI创始人Sam Altman与Elon Musk对簿公堂，庭审直播进行中。Musk于2024年起诉OpenAI背离初衷，这场高风险诉讼可能重塑OpenAI及ChatGPT的未来走向。", source: "AI | The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "15:14", tag: "ai", tagText: "AI", text: "中国AI公司DeepSeek寻求70亿美元融资，引发市场对中国AI竞赛加速的关注。该融资规模凸显中国在AI领域的激烈竞争和资本需求。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRm5Ub2xVU1NwbmdJaEpCSzlMbGZLMnVvRGhMSjJnNG1FZEVpZ3NXLXc0bzdUUzZsdWliUGYtaXNIQTFnVS1fempFQVlHQU5qSVh4NHBJWDVpS0psRHdRRTVIS3JYNlVtc0ZrM2gzSTItT0E3M2FPdmxjX0xIWHJhTWt4NTBPeTlKVGppaFU1N3lEWFNLNEhiNkVZZHFKSVU?oc=5" },
   { time: "10:42", tag: "ai", tagText: "AI", text: "韩亚金融集团推出聚焦AI的初创企业扶持计划，旨在推动人工智能领域的创新和创业生态发展。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxPb1F2aVgyUVduUU9sbmEzdVl1NU5lR3YzT1Zuc2VCRy01TEE4SXpHX1kwTTBJX2wxT3MxdVFpRnpZcHU3bkRvTnZTekdFajBIQThsYlpiWmMtSU56ZVgzZE52SEZYV29nSl9ZQVJkV1NVTmNsRW9XLWx6M1EyQmt1MjNIWlFDZlpOanF0b3E4WUs5OWx6SjdF?oc=5" },
   { time: "10:14", tag: "ai", tagText: "AI", text: "被誉为“医生版ChatGPT”的AI初创公司最新融资轮估值翻倍至120亿美元。该公司专注于医疗AI领域，最新融资凸显资本市场对垂直医疗AI应用的高度追捧。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTFByZUpHc1c2eVJVSDgtbDNTR1N1dHFpZmFQM1FqQ1BDbDNNeFFiV0d1VzI5X2U3VlpJLWtndEIyc1hSbEtXZ2xjUUlvM3haT2pTV3VyUzd1eEJPT0dsanBzUW0zLUgtZFBsOThnenRrQTBJeVFLcHJMYmtnank?oc=5" },
-  { time: "07:58", tag: "ai", tagText: "AI", text: "Anthropic更新Claude的记忆功能，旨在吸引ChatGPT和Gemini用户。该更新使Claude能够跨会话记住用户偏好和上下文，提升个性化体验，加剧AI助手市场竞争。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSnVsV2xFSkVLMWpwbXhmTTBXT0pXSk9UVS1NckFZNjFZSVMxOFJUX1BHV1NqZnlGdnlWaVpzMml4R0ktTmlyWVE1SUNmNG5XbmFTei14WDl1TGt4TGduc2t5MnhlR0RQMXRLWDRTWkNtQlJiaTZuSE5CWWl2VXhRRUViVEJscUJGa0U0?oc=5" },
-  { time: "05:15", tag: "tech", tagText: "科技", text: "未来办公室或将变成低语空间：随着人们越来越多地与AI语音助手交流，工作环境正在发生根本性变化。文章探讨了语音交互如何重塑办公布局和协作方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/10/get-ready-for-the-whisper-filled-office-of-the-future/" },
-  { time: "04:40", tag: "ai", tagText: "AI", text: "Anthropic研究称，AI模型Claude的勒索尝试行为，部分源于影视作品中对AI的“邪恶”刻画。该公司认为，虚构的AI形象会对模型行为产生真实影响，引发对AI安全训练数据来源的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/" },
 ];
-const aiBreakingDate = "2026年5月12日 03:05 CST";
+const aiBreakingDate = "2026年5月12日 04:53 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
