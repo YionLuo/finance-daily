@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 66.91,
   rating: "greed",
-  timestamp: "2026-05-11T11:40:46+00:00",
+  timestamp: "2026-05-11T12:00:46+00:00",
   previousClose: 66.91,
   previous1Week: 66.89,
   previous1Month: 38.06,
   previous1Year: 60.03,
-  date: "2026年5月11日 19:57 CST"
+  date: "2026年5月11日 20:20 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:49", tag: "macro", tagText: "宏观", text: "摩根大通表示，新兴市场的AI相关股票目前比美国AI股更具上涨潜力，估值更优。美元若进一步走弱，将提振回报。亚洲科技股被视为受益于美国AI热潮的更好选择。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ai-plays-in-emerging-markets-offer-more-upside-than-in-the-u-s-at-present-says-jpmorgan-e2b26291?mod=mw_rss_topstories" },
+  { time: "19:27", tag: "ai", tagText: "AI", text: "Alphabet考虑首次发行日元债券，以筹集资金用于AI投资。此举显示科技巨头在全球范围内寻求低成本融资以支持AI领域的巨额资本支出。", source: "Reuters", url: "https://finance.yahoo.com/sectors/technology/articles/alphabet-considers-first-yen-bond-112732446.html" },
+  { time: "19:24", tag: "crypto", tagText: "加密", text: "Circle完成2.22亿美元Arc代币预售融资，估值达30亿美元。a16z领投7500万美元，贝莱德和Apollo Funds参投。该融资用于支持其新的区块链网络Arc。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/circle-closes-222-million-from-blackrock-apollo-for-arc-blockchain.html" },
   { time: "16:21", tag: "geo", tagText: "地缘", text: "印度总理莫迪呼吁国民减少燃料使用、海外旅行和黄金购买，以应对中东冲突导致的能源进口压力。印度股市Sensex指数一度暴跌近1200点，投资者损失约5万亿卢比。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/india-modi-fuel-gold-foreign-travel-middle-east-oil-shock.html" },
   { time: "15:47", tag: "macro", tagText: "宏观", text: "欧洲股市周一涨跌互现，伊朗和谈停滞导致国防股下跌。投资者关注美伊谈判进展及油价飙升对经济的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/european-markets-stoxx-600-ftse-dax-cac-iran-war-oil-prices.html" },
   { time: "15:14", tag: "macro", tagText: "宏观", text: "英国政府债券走弱，首相斯塔默面临政治压力。他将于周一发表关键演讲，试图在地方选举结果惨淡后挽救其首相职位。", source: "Financial Times", url: "https://www.ft.com/content/9a6675ac-7d78-4d59-b6b8-51d3f5c80ee6" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "01:43", tag: "tech", tagText: "科技", text: "博通股价因潜在350亿美元交易传闻大涨，该交易若达成将成为史上最大私募信贷交易。高盛同时上调博通股票预测，市场对半导体行业并购热情升温。", source: "TipRanks", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeUI5a1lkNzZ5ZjQ2Yndmb19fanBYZ3JpckZKel9ST1gzTTJxMkVsNU1IUEVlVGc2eWlicmlWY3RUU09mLWtkTTBVdUNibjRMTXc4X2VER3o0R1NEQmlITDFBcm9nYzJvS0t2VzdqWl8xQzF3S0dNZVRhMHZDV0VZcWRnUFNQVjJuVzRNRlBRU2VoX3JiSXJsSFpBc09fOUxXdzE3eXJCZFBya2hJR2JIRGdqd2Y1b1ZNTHAtUDJMSVI?oc=5" },
   { time: "01:30", tag: "macro", tagText: "宏观", text: "戴尔家族去年12月向‘特朗普账户’捐赠62.5亿美元，随后特朗普公开呼吁‘买戴尔’，戴尔股价飙升14%。此举引发市场对政商关联交易的广泛争议。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/dell-family-gave-6-25b-173000510.html" },
   { time: "00:05", tag: "crypto", tagText: "加密", text: "加密货币市场在六周内市值增加4200亿美元，动能加速。比特币主导地位再次减弱，市场关注是否将重演2017年和2021年的历史走势。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE84VXhEdjRzczlibW5mY1VXb0tIY2J4SDdOZE5KSGlfeXg1c0t6clg5ZTFRRi1FdjR6ZlgwSVF3QzZETi1ibjR4ZQ?oc=5" },
-  { time: "22:00", tag: "macro", tagText: "宏观", text: "高盛预计，由于经济前景不稳及AI成本压力迫使企业重新考虑支出，今年标普500指数成分股的回购总额仅增长3%。大型科技公司对AI的巨额资本支出正在挤压股东回报，投资者可能面临分红和回购减少的局面。", source: "MarketWatch", url: "https://www.marketwatch.com/story/big-techs-ai-spending-is-depriving-investors-of-juicy-payouts-39d17305?mod=mw_rss_topstories" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "Netflix宣布其无广告标准套餐价格上调至20美元/月。分析指出，流媒体经济正接近一个临界点：含广告的廉价套餐为Netflix等平台带来的利润已不亚于甚至超过纯订阅模式，传统电视的商业模式正在回归。", source: "CNBC", url: "https://www.cnbc.com/2026/05/10/netflix-20-dollar-streaming-plan-price.html" },
-  { time: "21:00", tag: "macro", tagText: "宏观", text: "太平洋投资管理公司(Pimco)和富兰克林坦伯顿警告称，若伊朗战争持续推高能源价格和通胀，美联储可能被迫加息而非降息。这一观点与市场对降息的普遍预期相悖，可能引发全球资产重新定价。", source: "Financial Times", url: "https://www.ft.com/content/ba919246-ff50-4b8d-931c-43ee8d37795d" },
 ];
-const breakingDate = "2026年5月11日 19:57 CST";
+const breakingDate = "2026年5月11日 20:20 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:51", tag: "tech", tagText: "科技", text: "中国人形机器人初创公司Vbot完成7300万美元Pre-A轮融资。该公司专注于开发通用人形机器人，本轮融资显示资本市场对中国机器人赛道的持续看好。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQM3hhVUZXMUZjSFpjSllncGNhSzNjZ3FEVGRaX1FDUzhwcGI5SjItX2E2Wk81SDNhZEZtSldYNjVvRVRNa0dKOS1NTk9ZZkZhYU81NDZpdm5UTjNpM0dPbk4yQWh6NjU3OE5JeVFmYTdjZWpKN3VNYmpNdGhoQ3g2WlF0cTdocFNvdFpDeGc3TGM1UnpoNGpQZ1dSQ3Q5Uld2bTE1dk5KOU56NHVzVk5PUlB3?oc=5" },
+  { time: "19:10", tag: "tech", tagText: "科技", text: "英伟达宣布加强董事会，新增战略领导力成员。此举正值AI芯片需求激增之际，英伟达通过强化治理结构以应对日益复杂的全球竞争格局。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxNbjkwTVlzdEY1T1hXMDdHOU9uUmVYZmIxMVFFTFdQelBTVzFLZl80dXp1UlppbndwTFlsZUJoRl9HTC1kS3FDRnlwR001T0JZUU1pcTFPWkJwdDJEdTlSc1hpeDllNE5VX2VRcGtlamVHTGZfbTlqTEtpaDhxdnFtNjdqZzVhTE1rcjczTDAzaWNWcno1UjBTc242RUppZllCSHR5eC1CS2NWNlBMc0wwOVJSVGgtWVJtUXFmVWZtUlFRZEt3RndlUG4zY9IB0AFBVV95cUxNNFV4TWs4SnBmRmJfZGlCOUl0cnhva2t0YzRla1R5R2VrZmlvTUVIb05XNGVWcFl1eEQ3b0l1cTczNG5tTl9VYy1ucFc2RnRsbEdielVmYWhldy1NNkNYQUtjV1p5M2tUMmQyLUs5Q1ZrUEMzVGpHenI1SkpsRlYwaEw4VTRWTjVoS1JkODAtVHZMRG5qMkRzTU1Ucks3VTlLU2lxLVJWbVBKQXJaLURFcjV1bkhkTFlFRXBsUGdmVFA0WG4wblJ5VFBOMlFRZ1Bl?oc=5" },
+  { time: "18:15", tag: "ai", tagText: "AI", text: "对AI突破性进展的担忧迫使美国和中国展开对话。双方意识到AI技术的潜在风险，正寻求通过外交渠道管控竞争，避免技术失控。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE82NlFIOGhPcE9mclNiUVRWclU4OElCWkZHLWtpQVcydlMxZ1Z2aU9wYlJNMlVNQUtkdTYxbTJKWlNDZjJocmczTFpvVkMxSHVieTdmUVVqT3djZHNYSzhrYnE4RkJrekVKRXRpaFhWOW1WTmhzQ1BNSE9YeE1pZw?oc=5" },
   { time: "15:17", tag: "ai", tagText: "AI", text: "英伟达在2026年初承诺向AI领域投资超过400亿美元，彰显其在AI基础设施和芯片领域的持续扩张决心。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxPc0ZaWmViY0Z5ei14Y1ZTZU5tZC1Cc2dIaXhIVWk3ZFRoU29jZzE0M0tOc1daUkdjM2NtaHFWbk5HaU96ckxjYU5yLWVLUGEzaGF2QmYzUF9tNW5PWndYclFXcFgzNUp4M3BWbGxVRzdjVVU0Q29GV1JqZmZoM3ViNEV1Rkc1WGJJekhNY1B1bFhOYnNVUVlXSUJpQQ?oc=5" },
   { time: "15:14", tag: "ai", tagText: "AI", text: "中国AI公司DeepSeek寻求70亿美元融资，引发市场对中国AI竞赛加速的关注。该融资规模凸显中国在AI领域的激烈竞争和资本需求。", source: "digitimes", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRm5Ub2xVU1NwbmdJaEpCSzlMbGZLMnVvRGhMSjJnNG1FZEVpZ3NXLXc0bzdUUzZsdWliUGYtaXNIQTFnVS1fempFQVlHQU5qSVh4NHBJWDVpS0psRHdRRTVIS3JYNlVtc0ZrM2gzSTItT0E3M2FPdmxjX0xIWHJhTWt4NTBPeTlKVGppaFU1N3lEWFNLNEhiNkVZZHFKSVU?oc=5" },
   { time: "10:42", tag: "ai", tagText: "AI", text: "韩亚金融集团推出聚焦AI的初创企业扶持计划，旨在推动人工智能领域的创新和创业生态发展。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxPb1F2aVgyUVduUU9sbmEzdVl1NU5lR3YzT1Zuc2VCRy01TEE4SXpHX1kwTTBJX2wxT3MxdVFpRnpZcHU3bkRvTnZTekdFajBIQThsYlpiWmMtSU56ZVgzZE52SEZYV29nSl9ZQVJkV1NVTmNsRW9XLWx6M1EyQmt1MjNIWlFDZlpOanF0b3E4WUs5OWx6SjdF?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "02:11", tag: "tech", tagText: "科技", text: "一名青少年利用AI突破性技术，在太空中发现了150万个隐藏天体，动摇了人类对已知宇宙的认知。这一发现展示了AI在天文学领域的巨大潜力。", source: "USA Herald", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMzhLMkpudUF2WWpycDJKYXZCMDBiMDI4WThiUjdHbm16WVhMaWxvNl9Xc19UNTg0eHBnMGswSUx4WHlCREdQN0VnQjVRN0NrZ0FjendaLXVZTU15VGZpV1RhSFByRlNnang0cU5mbHV4OUhoZlZLdmR5NEZuTlc1aGk1bWNYSGUwNlBEeGROV2NHa2ducWl3akdRUThMMmdOYm5rZ2hxS2lFbmRHOEx3eWFZWTJDa29nUEV0NmNVT2loTDJlUE9RZkp4MzQzVWs?oc=5" },
   { time: "02:11", tag: "crypto", tagText: "加密", text: "MoneyFlare推出突破性AI加密货币交易应用，号称可实现一键启动全自动量化交易。该应用利用人工智能技术，旨在简化加密货币交易流程，吸引普通用户参与量化投资。", source: "markets.businessinsider.com", url: "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPTVhOcTFIWV9NM2lFOU9Pd1hOSEx0djk5TDNQMEZlQk9CM25WRzNOWlg1U1hfNjdDbHhMSGRuTGNLN3F2dGhEQjNwcF9tN1NKNFJ3SHB1VW5iMDJXRmtRQlgycmdXSVNjdFhtNElPVE4yQVhFb2JaczM3ak9MdHZOQS1fdGlsQ05vZ2hPSGNjUjZqUG5MMjNQdFI3SDFYbGVweFlZZ3JSRFdqYlpBYjNON2wzbE1xRTVLWm9uRUhQMml0ZDRuNmUyVzV6LWxYWllMNzF3eXpndU1NX1FObzlUcUE1NmhJZzJhcmVkYWxXZmFVMmJjelNFUlVfOA?oc=5" },
   { time: "02:06", tag: "tech", tagText: "科技", text: "Bumble CEO Whitney Wolfe Herd宣布公司将取消传统的“左滑右滑”匹配模式，转而全面拥抱AI。Bumble正在开发名为“Bee”的AI约会助手，旨在通过人工智能技术重塑在线交友体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/07/bumble-is-getting-rid-of-the-swipe-ceo-says/" },
-  { time: "01:05", tag: "tech", tagText: "科技", text: "索尼在财报发布会上表示，将AI视为开发PlayStation游戏的“强大工具”，并详细介绍了如何评估AI在游戏制作中的应用，包括生成式AI技术。", source: "The Verge", url: "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games" },
-  { time: "00:55", tag: "tech", tagText: "科技", text: "一只超级半导体股票表现碾压英伟达、AMD和博通，引发市场关注。该股近期涨幅惊人，成为半导体板块新焦点。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZDBJMHc1OTdWTWNDQTVrT2VkMkxwSkZGdDFYNDRyNUpLVVhOYV9CUjJvaFA4Zm5sTlZLQnk2R1BORTNhcTBhVElKV3ZvWnl3NmQ3VkVRT0d4Qm5pRlFFWUxLUlVrekd1eWg5UzFnTkFaRV8wYWR1RGhhWEFEMnJQQ2pwYTcwNWpIZzJ4a2RxME83dl9sZjloWERNUkJIS2FiOUxHZzFHam5EcGhm?oc=5" },
-  { time: "23:34", tag: "ai", tagText: "AI", text: "xAI与Anthropic达成重大交易，引发市场对其背后SpaceX意图的质疑。TechCrunch评论认为，该交易可能更多出于商业利益而非技术协同，市场对此持怀疑态度。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/" },
 ];
-const aiBreakingDate = "2026年5月11日 19:57 CST";
+const aiBreakingDate = "2026年5月11日 20:20 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
