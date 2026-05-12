@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 65.91,
   rating: "greed",
-  timestamp: "2026-05-12T07:37:31+00:00",
+  timestamp: "2026-05-12T10:22:46+00:00",
   previousClose: 66.97,
   previous1Week: 67.26,
   previous1Month: 38.06,
   previous1Year: 64.49,
-  date: "2026年5月12日 15:54 CST"
+  date: "2026年5月12日 18:40 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:16", tag: "macro", tagText: "宏观", text: "美股期货周二小幅下跌，市场等待即将公布的CPI通胀数据。经济学家预计4月CPI同比上涨3.7%。芯片股从高位回落，国债收益率上升，油价上涨加剧通胀担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/stock-market-today-live-updates.html" },
+  { time: "18:10", tag: "crypto", tagText: "加密", text: "ETH/BTC比率跌至10个月低点，以太坊持续跑输比特币。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxQYlFpZzhKS3JheHE3NmpIWTlkaEo4dHZyVkN2STg5XzFUeXlKWUJySFZfZ3piaXRJa1RJOFVBU3A1SU85aUxhZ3VJUWd2aXVlNHVNOUF2WnA2RTMwbHFZWW5wZ2NuNWhtUEIxQ3diWXFlODZoODlpVW5qdEFhU205MmVtM0wzMkhQQnplOFdkdTh3ZGZpNngxaldyZE1pd0ZqV0tqdkxMMTVwNWE4VFVZSW1tTFBtY2dheW5iSU9TRQ?oc=5" },
+  { time: "18:10", tag: "tech", tagText: "科技", text: "eBay拒绝了GameStop提出的560亿美元激进收购要约，理由是对该交易的融资能力存疑。GameStop的市值远小于eBay。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/ebay-rejects-gamestops-takeover-bid.html" },
   { time: "15:43", tag: "geo", tagText: "地缘", text: "特朗普称伊朗停火协议已“命悬一线”，美伊和平协议前景渺茫。欧洲股市周二开盘大幅下挫，油价延续涨势，市场担忧中东冲突长期化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/europe-markets-stoxx-600-ftse-dax-cac-iran-news-oil-prices.html" },
   { time: "15:38", tag: "macro", tagText: "宏观", text: "英国首相斯塔默面临党内逼宫，首相职位岌岌可危。受此影响，英国国债价格大幅下跌、英镑走弱，市场担忧领导权争夺可能引发债券市场进一步动荡。财政大臣里夫斯的盟友表示，即便斯塔默下台，里夫斯也应留任以稳定市场。", source: "Financial Times", url: "https://www.ft.com/content/c2455a7b-8cb5-42f9-9515-6ae664341e26" },
   { time: "12:43", tag: "macro", tagText: "宏观", text: "美国参议院本周预计将确认凯文·沃什接替鲍威尔出任美联储主席。沃什将面临通胀再度抬头和特朗普要求降息的双重压力。", source: "FT", url: "https://www.ft.com/content/af3bc83f-8a3c-4280-aa80-9d16bbd0cb6d" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "06:16", tag: "tech", tagText: "科技", text: "Lumentum股价今年在标普500中涨幅排名第五，现因光学公司在AI数据中心连接需求中受益，将被纳入纳斯达克-100指数。伯恩斯坦指出，AI数据中心连接需求是下一个“AI战场”，投资者可通过多种方式参与。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-the-next-ai-battleground-and-how-investors-can-get-in-on-the-action-24db158c" },
   { time: "06:16", tag: "geo", tagText: "地缘", text: "乌克兰前总统办公室主任安德烈·叶尔马克因涉嫌1亿美元腐败丑闻，被乌克兰当局正式列为嫌疑人。这是乌克兰近期最大的反腐调查之一。", source: "Financial Times", url: "https://www.ft.com/content/02ac51aa-712b-4142-8ef1-9a0f5ae13cb6" },
   { time: "04:52", tag: "macro", tagText: "宏观", text: "标普500首次收于7400点上方，纳指再创纪录新高，尽管特朗普称伊朗停火协议已“命悬一线”。芯片股狂热持续推动大盘上涨，市场无视地缘政治风险。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE1kZjhBOWtVbkdRSGhDazIxZnFoaFY3S3ZVdWFIMWxEalRaeEVhb1g2VWJKcFhVeVdnRC1UN19HdU1TM3dYVm1KeGFLUFhUMDF6NjNFZXNtbjIxNXJOaEZsY0FCSE5NT3FTQmEyUE5melNxUHZDR0V30gF8QVVfeXFMUFFNSHh4Y1VQcmx1SUUwQTlCT1NEdnBwdHZFUjdLRVhNbGJ0TmxKQ0RuZjgyclFpYjlhQURmdE12TG5Ebm41RXJIT0dOYTZEN2w1bUsyS3cxbXFhVmVMU1J4aDJRM1h3RV9LR1AtUU5iMFVBMkh3bVRNSHpqbA?oc=5" },
-  { time: "04:42", tag: "macro", tagText: "宏观", text: "高盛称美元被严重高估，特朗普即将访华之际，中国可能允许人民币升值作为贸易谈判筹码。人民币目前处于几十年来最便宜水平。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-trump-heads-to-china-heres-how-much-the-dollar-is-overvalued-according-to-goldman-sachs-e29884f9?mod=mw_rss_topstories" },
-  { time: "04:37", tag: "ai", tagText: "AI", text: "英伟达股价四天暴涨，市值增加规模相当于整个甲骨文公司，创年内最强四日连涨纪录。此前英伟达2026年表现严重落后于芯片板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/nvidia-has-added-an-oracles-worth-of-market-cap-in-just-four-trading-days-253f4fe8?mod=mw_rss_topstories" },
-  { time: "04:25", tag: "ai", tagText: "AI", text: "微软CEO纳德拉在OpenAI庭审中作证，称马斯克从未就微软投资OpenAI向他提出过担忧。纳德拉形容2023年试图罢免奥特曼的行为“业余至极”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/microsoft-ceo-satya-nadella-musk-altman-trial.html" },
 ];
-const breakingDate = "2026年5月12日 15:54 CST";
+const breakingDate = "2026年5月12日 18:40 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "17:50", tag: "ai", tagText: "AI", text: "AI芯片股全面暴涨，分析师称内存需求是背后推手。从GPU到HBM内存，各类AI芯片相关股票集体飙升，市场对AI基础设施的持续投入推动整个产业链进入“超新星”爆发阶段。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOT3plVnVPUmt3dUc5LUJMN043bzBXWFB2ZzROUExyOUZaam5QWHFOTE9DNWYxUlFwMTdqeHdyd01UcjJjWlNJRWxoWjBBLXRSYk0xTHpMU2ZBSFRHMnRQZjdub0RpLVBVR1JJNG1CT2lVRExxRVE2bWQ4UmtUNnA3dlpPVC1qd0k5bUpvRVp5MmtCSXVUWm9DOVRNSURlVGwyNWw1TDF0Ym9sZGZzc1E?oc=5" },
+  { time: "15:44", tag: "ai", tagText: "AI", text: "韩国KB资产运用推出现代汽车“物理AI”ETF，在韩国交易所上市。该ETF聚焦将AI技术应用于实体机器人、自动驾驶等物理世界的领域，标志着韩国资本市场对AI应用场景的细分投资趋势。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX0kxQzlwUUo3UlpSSVdtUVBlMFl0OFlaZVFHNWNJRzhmYUhGUnE3ZDVLSWJMbi0wYjQ4RDNVQW1id202ak1pampuRVg2VDkwY0dfRkVrVzdBdE9FRURrRlJxYkhaYjk4RDRvNDBwYVVtaWZMVjhYaFlkaVdpY3F3YdIBlAFBVV95cUxQV2pLSnJZX0pWMzNFU24zT2pNeDlsdWJneGR5T19UQkNZRWNjMy1FczlzZ3otdjV5SmRkcFRFejZOUFR3Slpzd3VSbWMwdzY1WjRUSlBRTFk3X0o2cDBJWndhMlFBbTlzRjFLRGx1eXpoVGhKS1kwR08xcnR1aFRkR29vcW5UZ0l6VUdfa3daUk5sdVNx?oc=5" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "中国AI公司寻求摆脱英伟达依赖，DeepSeek转向采用华为芯片。此举标志着中美科技脱钩背景下，中国AI产业链自主化进程加速。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNE04ZENNS19LcWJoZ3dtMXVJaFVMUThJeHZ2bC1qekF0ZThDR2FhWWxSQTRKdTBibzliSFY3ZXJaU1NJNnNUSkRHNHhFeHlRTmQwekhQSE5tZ1RHc1d6b2pXZVFtRi14bGJpZXN4QXoxY2ZhOHFOMkRabGxWQThtZmJiNkdhOFU?oc=5" },
   { time: "08:09", tag: "crypto", tagText: "加密", text: "乘AI热潮东风，Robinhood秘密提交其第二只风险投资基金IPO申请，该基金将专注于成长阶段和早期初创企业。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/riding-an-ai-rally-robinhood-preps-second-retail-venture-ipo/" },
   { time: "07:05", tag: "ai", tagText: "AI", text: "OpenAI发布Daybreak安全AI计划，旨在利用今年3月推出的Codex Security AI代理，在攻击者发现漏洞之前主动检测并修补漏洞，提升AI系统安全性。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/928342/openai-daybreak-security-ai" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "00:09", tag: "ai", tagText: "AI", text: "谷歌威胁情报团队首次发现并阻止了一起由AI开发的零日漏洞攻击。据谷歌报告，该漏洞由知名网络犯罪团伙利用AI工具生成，标志着AI被用于恶意网络攻击的重大升级。", source: "The Verge", url: "https://www.theverge.com/tech/928007/google-ai-zero-day-exploit-stopped" },
   { time: "23:35", tag: "tech", tagText: "科技", text: "AI基础设施公司Nscale获得6.7亿欧元融资，用于在挪威建设AI基础设施项目。该笔巨额融资凸显欧洲在AI算力基础设施领域的投资热潮。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaFpyTFBTX21WYjMwWUdnd1JySmRRYXFDbTJLcHd3aGk2Qi1LdDdjbmhkZnZQM2theVpRclFIMkRhbGhReGRoa2dKWGdtMC1LU1hzUFZBbmVZRzlHSzJGM2pGUGdGVjhMLWFwdXVyWXJOdjBIbmRtTWxPX3JpS1FTSkFNN0o4TzNoa0NKZTdlaGZCWkpnenJXckhCWHFjQWdQS2RIUzNiNlZoY3VqTWFTanlnVjNxQW0ycHVSN3lFOFQ?oc=5" },
   { time: "23:27", tag: "ai", tagText: "AI", text: "OpenAI创始人Sam Altman与Elon Musk对簿公堂，庭审直播进行中。Musk于2024年起诉OpenAI背离初衷，这场高风险诉讼可能重塑OpenAI及ChatGPT的未来走向。", source: "AI | The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
-  { time: "23:02", tag: "tech", tagText: "科技", text: "经典社交新闻网站Digg再次回归，此次转型为AI新闻聚合平台。Digg试图通过聚焦AI内容重新吸引用户，但此前多次转型均未成功。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/digg-tries-again-this-time-as-an-ai-news-aggregator/" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "太空数据中心初创公司Cowboy Space获2.75亿美元融资。该公司计划将数据中心送入轨道，但首先需要解决火箭运力不足的问题，自行建造运载火箭。", source: "AI News & Artificial Intelligence | TechCrunch", url: "https://techcrunch.com/2026/05/11/there-arent-enough-rockets-for-space-data-centers-cowboy-space-raised-275-million-to-build-them/" },
 ];
-const aiBreakingDate = "2026年5月12日 15:54 CST";
+const aiBreakingDate = "2026年5月12日 18:40 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
