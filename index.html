@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 65.91,
   rating: "greed",
-  timestamp: "2026-05-12T10:22:46+00:00",
+  timestamp: "2026-05-12T12:53:01+00:00",
   previousClose: 66.97,
   previous1Week: 67.26,
   previous1Month: 38.06,
   previous1Year: 64.49,
-  date: "2026年5月12日 18:40 CST"
+  date: "2026年5月12日 21:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:50", tag: "ai", tagText: "AI", text: "Sam Altman在马斯克诉OpenAI案中出庭作证。该案涉及OpenAI从非营利组织向营利性公司转型的争议，马斯克指控其背离了最初的开源使命。", source: "Quartz", url: "https://finance.yahoo.com/sectors/technology/articles/sam-altman-testifies-musk-v-125031464.html" },
+  { time: "20:46", tag: "tech", tagText: "科技", text: "Under Armour股价大跌，因成本飙升侵蚀利润，一季度亏损超预期，且未来展望低于市场预期。", source: "MarketWatch", url: "https://www.marketwatch.com/story/under-armours-stock-tumbles-as-surging-costs-eat-away-at-earnings-077ce337" },
+  { time: "20:28", tag: "tech", tagText: "科技", text: "亚马逊加速配送竞赛，在美国数十个城市推出30分钟极速送货服务。此前亚马逊已通过两日达和次日达培养用户习惯，现进一步缩短配送时间。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/amazon-launches-ultrafast-30-minute-delivery-in-dozens-of-us-cities.html" },
+  { time: "20:05", tag: "tech", tagText: "科技", text: "Hims & Hers股价暴跌15%，因一季度亏损且盈利指引疲弱。该公司3月与诺和诺德达成协议，在其平台销售GLP-1减肥药Wegovy。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/hims-hers-plummets-16percent-after-first-quarter-loss-weak-guidance-.html" },
   { time: "18:16", tag: "macro", tagText: "宏观", text: "美股期货周二小幅下跌，市场等待即将公布的CPI通胀数据。经济学家预计4月CPI同比上涨3.7%。芯片股从高位回落，国债收益率上升，油价上涨加剧通胀担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/stock-market-today-live-updates.html" },
   { time: "18:10", tag: "crypto", tagText: "加密", text: "ETH/BTC比率跌至10个月低点，以太坊持续跑输比特币。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxQYlFpZzhKS3JheHE3NmpIWTlkaEo4dHZyVkN2STg5XzFUeXlKWUJySFZfZ3piaXRJa1RJOFVBU3A1SU85aUxhZ3VJUWd2aXVlNHVNOUF2WnA2RTMwbHFZWW5wZ2NuNWhtUEIxQ3diWXFlODZoODlpVW5qdEFhU205MmVtM0wzMkhQQnplOFdkdTh3ZGZpNngxaldyZE1pd0ZqV0tqdkxMMTVwNWE4VFVZSW1tTFBtY2dheW5iSU9TRQ?oc=5" },
   { time: "18:10", tag: "tech", tagText: "科技", text: "eBay拒绝了GameStop提出的560亿美元激进收购要约，理由是对该交易的融资能力存疑。GameStop的市值远小于eBay。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/ebay-rejects-gamestops-takeover-bid.html" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "07:27", tag: "geo", tagText: "地缘", text: "英国首相斯塔默为挽救其首相职位做最后努力，准备召开关键内阁会议。工党内部情绪‘相当糟糕’，斯塔默面临严峻政治危机。", source: "Financial Times", url: "https://www.ft.com/content/9c4c7a97-c564-4a7f-9866-1182a84e7812" },
   { time: "06:29", tag: "macro", tagText: "宏观", text: "布伦特原油期货图表出现36年未见的罕见技术形态。分析师回顾上次出现该形态时的市场走势，探讨其对当前油价可能意味着什么。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oil-price-charts-produced-a-pattern-not-seen-in-36-years-what-happened-last-time-763cdc40?mod=mw_rss_topstories" },
   { time: "06:16", tag: "geo", tagText: "地缘", text: "美国考虑暂停征收燃油税，以应对伊朗战争导致的油价飙升。共和党参议员乔什·霍利提出相关法案，此前特朗普表示支持该举措。", source: "Financial Times", url: "https://www.ft.com/content/94b62354-1966-4d8d-95b7-2749ed5a21ff" },
-  { time: "06:16", tag: "tech", tagText: "科技", text: "谷歌表示可能挫败了一个黑客组织利用AI进行“大规模利用事件”的企图。黑客正迅速采用AI寻找此前未知的软件漏洞，即使没有Anthropic强大的Mythos模型帮助。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html" },
-  { time: "06:16", tag: "tech", tagText: "科技", text: "Lumentum股价今年在标普500中涨幅排名第五，现因光学公司在AI数据中心连接需求中受益，将被纳入纳斯达克-100指数。伯恩斯坦指出，AI数据中心连接需求是下一个“AI战场”，投资者可通过多种方式参与。", source: "MarketWatch", url: "https://www.marketwatch.com/story/heres-the-next-ai-battleground-and-how-investors-can-get-in-on-the-action-24db158c" },
-  { time: "06:16", tag: "geo", tagText: "地缘", text: "乌克兰前总统办公室主任安德烈·叶尔马克因涉嫌1亿美元腐败丑闻，被乌克兰当局正式列为嫌疑人。这是乌克兰近期最大的反腐调查之一。", source: "Financial Times", url: "https://www.ft.com/content/02ac51aa-712b-4142-8ef1-9a0f5ae13cb6" },
-  { time: "04:52", tag: "macro", tagText: "宏观", text: "标普500首次收于7400点上方，纳指再创纪录新高，尽管特朗普称伊朗停火协议已“命悬一线”。芯片股狂热持续推动大盘上涨，市场无视地缘政治风险。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE1kZjhBOWtVbkdRSGhDazIxZnFoaFY3S3ZVdWFIMWxEalRaeEVhb1g2VWJKcFhVeVdnRC1UN19HdU1TM3dYVm1KeGFLUFhUMDF6NjNFZXNtbjIxNXJOaEZsY0FCSE5NT3FTQmEyUE5melNxUHZDR0V30gF8QVVfeXFMUFFNSHh4Y1VQcmx1SUUwQTlCT1NEdnBwdHZFUjdLRVhNbGJ0TmxKQ0RuZjgyclFpYjlhQURmdE12TG5Ebm41RXJIT0dOYTZEN2w1bUsyS3cxbXFhVmVMU1J4aDJRM1h3RV9LR1AtUU5iMFVBMkh3bVRNSHpqbA?oc=5" },
 ];
-const breakingDate = "2026年5月12日 18:40 CST";
+const breakingDate = "2026年5月12日 21:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:30", tag: "ai", tagText: "AI", text: "法国AI安全初创公司White Circle获OpenAI、Anthropic及DeepMind高管1100万美元投资，用于开发企业AI监控与安全解决方案。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNcVZKTHRkcXBtNlBNbUJFT08xdmF3Z3ZKNFhXS2NkVktNYU5PU2tTU190aVNQZUV4c0lyTURKbjJMY0llU2lUR2xMZ1BNbnZMZGlyQ1JTUldPZ2c3cUI0SHV0MWlhYjhXbmdhNUVJZXpnVGhJYmp5bHJRYzJRSHdFUEFHSlQ0RXlWcG9PdFNFZEJiTDROOE9CSWlmTXVfclJOcnhHNEN3UEUzU196MkdObFlDRmpIelVkQmlRRWV5d3FQYWp0NGVXLWs4ZnNONHJMSVBOcTNQOHhkeTA?oc=5" },
+  { time: "19:30", tag: "ai", tagText: "AI", text: "AI语音初创公司Vapi估值达5亿美元，其企业业务自2025年初增长10倍，亚马逊Ring在40多家竞品中选择了其AI平台用于客户支持与销售电话。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/vapi-hits-500m-valuation-as-amazon-ring-chose-its-ai-platform-over-40-rivals/" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "欧洲AI融资持续增长，Crunchbase分析指出，资金涌入有望提振该地区初创企业生态，但能否真正推动欧洲AI产业崛起仍待观察。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVVBLTS1aVThmd2gwamlZN3JYTVNzeDR2N2hQbWFqMnFyT2hZa2ktRmlYb2VJeS1VVVFxa1UwbVpPZlVPVjFrMWtoV1ZLTTJqRU56cEh2SWpqWmZHS0U4ME4xRmg0dU56RV9rSmQtOE9MSVdHUWg5dXhnc3ZmbFNHNlJUWkFZdmtLWmVNNXlKcExmUjNIbmhGUE1oQW9jc3NPYzVSWGVwR04yUnVEODdnenFPeHZlZw?oc=5" },
   { time: "17:50", tag: "ai", tagText: "AI", text: "AI芯片股全面暴涨，分析师称内存需求是背后推手。从GPU到HBM内存，各类AI芯片相关股票集体飙升，市场对AI基础设施的持续投入推动整个产业链进入“超新星”爆发阶段。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOT3plVnVPUmt3dUc5LUJMN043bzBXWFB2ZzROUExyOUZaam5QWHFOTE9DNWYxUlFwMTdqeHdyd01UcjJjWlNJRWxoWjBBLXRSYk0xTHpMU2ZBSFRHMnRQZjdub0RpLVBVR1JJNG1CT2lVRExxRVE2bWQ4UmtUNnA3dlpPVC1qd0k5bUpvRVp5MmtCSXVUWm9DOVRNSURlVGwyNWw1TDF0Ym9sZGZzc1E?oc=5" },
   { time: "15:44", tag: "ai", tagText: "AI", text: "韩国KB资产运用推出现代汽车“物理AI”ETF，在韩国交易所上市。该ETF聚焦将AI技术应用于实体机器人、自动驾驶等物理世界的领域，标志着韩国资本市场对AI应用场景的细分投资趋势。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX0kxQzlwUUo3UlpSSVdtUVBlMFl0OFlaZVFHNWNJRzhmYUhGUnE3ZDVLSWJMbi0wYjQ4RDNVQW1id202ak1pampuRVg2VDkwY0dfRkVrVzdBdE9FRURrRlJxYkhaYjk4RDRvNDBwYVVtaWZMVjhYaFlkaVdpY3F3YdIBlAFBVV95cUxQV2pLSnJZX0pWMzNFU24zT2pNeDlsdWJneGR5T19UQkNZRWNjMy1FczlzZ3otdjV5SmRkcFRFejZOUFR3Slpzd3VSbWMwdzY1WjRUSlBRTFk3X0o2cDBJWndhMlFBbTlzRjFLRGx1eXpoVGhKS1kwR08xcnR1aFRkR29vcW5UZ0l6VUdfa3daUk5sdVNx?oc=5" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "中国AI公司寻求摆脱英伟达依赖，DeepSeek转向采用华为芯片。此举标志着中美科技脱钩背景下，中国AI产业链自主化进程加速。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNE04ZENNS19LcWJoZ3dtMXVJaFVMUThJeHZ2bC1qekF0ZThDR2FhWWxSQTRKdTBibzliSFY3ZXJaU1NJNnNUSkRHNHhFeHlRTmQwekhQSE5tZ1RHc1d6b2pXZVFtRi14bGJpZXN4QXoxY2ZhOHFOMkRabGxWQThtZmJiNkdhOFU?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "02:24", tag: "tech", tagText: "科技", text: "英伟达股价获分析师上调目标价，因AI芯片需求持续激增。市场对英伟达下一代AI芯片的预期推动股价进一步走高。", source: "AD HOC NEWS", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRHhuT0o5MjdKZ29OR25oZ3VkNWhsWGFzaTRVa0lla3YwQVFwQzdxdU1oc0JqaXR0d1ZhQmxvR3p4dXRnQi1SMjZTYk43Uk1iSWR2dTQxMFhmelE1ZFloY09YdjFfMEdiMG5TTVVwMUVveHBqSHM0dGJfWlVEcXV6NURqdFdqdmVJcHpQeG01eWczNmNCZUQ4ZXF3bzhybEpQWGtweGxYQm1rYVdoeW84YUlFQjBaTmhoenAyVk9STDRmZW5J?oc=5" },
   { time: "02:11", tag: "tech", tagText: "科技", text: "一名青少年利用AI突破性技术，在太空中发现了150万个隐藏天体，动摇了人类对已知宇宙的认知。这一发现展示了AI在天文学领域的巨大潜力。", source: "USA Herald", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMzhLMkpudUF2WWpycDJKYXZCMDBiMDI4WThiUjdHbm16WVhMaWxvNl9Xc19UNTg0eHBnMGswSUx4WHlCREdQN0VnQjVRN0NrZ0FjendaLXVZTU15VGZpV1RhSFByRlNnang0cU5mbHV4OUhoZlZLdmR5NEZuTlc1aGk1bWNYSGUwNlBEeGROV2NHa2ducWl3akdRUThMMmdOYm5rZ2hxS2lFbmRHOEx3eWFZWTJDa29nUEV0NmNVT2loTDJlUE9RZkp4MzQzVWs?oc=5" },
   { time: "00:55", tag: "ai", tagText: "AI", text: "AI在传统医学忽视的领域取得突破：通过分析激素与数据，AI发现了传统医学遗漏的疾病模式，有望革新诊断与治疗方式。", source: "Unite.AI", url: "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBoX2RhYTVOS1puaDJNc3Flc0hTdDZFcFNnTkNrZ2x5YUh1Q19wYXBTcFNJRVB5c0RpMWZCTUVmZXpyNTQtQjM3Q3EzaHkwMEFDVGZVNTUtNllWZGRMZHBVS053?oc=5" },
-  { time: "00:09", tag: "ai", tagText: "AI", text: "谷歌威胁情报团队首次发现并阻止了一起由AI开发的零日漏洞攻击。据谷歌报告，该漏洞由知名网络犯罪团伙利用AI工具生成，标志着AI被用于恶意网络攻击的重大升级。", source: "The Verge", url: "https://www.theverge.com/tech/928007/google-ai-zero-day-exploit-stopped" },
-  { time: "23:35", tag: "tech", tagText: "科技", text: "AI基础设施公司Nscale获得6.7亿欧元融资，用于在挪威建设AI基础设施项目。该笔巨额融资凸显欧洲在AI算力基础设施领域的投资热潮。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaFpyTFBTX21WYjMwWUdnd1JySmRRYXFDbTJLcHd3aGk2Qi1LdDdjbmhkZnZQM2theVpRclFIMkRhbGhReGRoa2dKWGdtMC1LU1hzUFZBbmVZRzlHSzJGM2pGUGdGVjhMLWFwdXVyWXJOdjBIbmRtTWxPX3JpS1FTSkFNN0o4TzNoa0NKZTdlaGZCWkpnenJXckhCWHFjQWdQS2RIUzNiNlZoY3VqTWFTanlnVjNxQW0ycHVSN3lFOFQ?oc=5" },
-  { time: "23:27", tag: "ai", tagText: "AI", text: "OpenAI创始人Sam Altman与Elon Musk对簿公堂，庭审直播进行中。Musk于2024年起诉OpenAI背离初衷，这场高风险诉讼可能重塑OpenAI及ChatGPT的未来走向。", source: "AI | The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
 ];
-const aiBreakingDate = "2026年5月12日 18:40 CST";
+const aiBreakingDate = "2026年5月12日 21:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
