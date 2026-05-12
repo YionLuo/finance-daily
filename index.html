@@ -1616,24 +1616,27 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.89,
+  score: 65.91,
   rating: "greed",
-  timestamp: "2026-05-12T00:00:00+00:00",
+  timestamp: "2026-05-12T07:37:31+00:00",
   previousClose: 66.97,
   previous1Week: 67.26,
   previous1Month: 38.06,
   previous1Year: 64.49,
-  date: "2026年5月12日 12:43 CST"
+  date: "2026年5月12日 15:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:43", tag: "geo", tagText: "地缘", text: "特朗普称伊朗停火协议已“命悬一线”，美伊和平协议前景渺茫。欧洲股市周二开盘大幅下挫，油价延续涨势，市场担忧中东冲突长期化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/europe-markets-stoxx-600-ftse-dax-cac-iran-news-oil-prices.html" },
+  { time: "15:38", tag: "macro", tagText: "宏观", text: "英国首相斯塔默面临党内逼宫，首相职位岌岌可危。受此影响，英国国债价格大幅下跌、英镑走弱，市场担忧领导权争夺可能引发债券市场进一步动荡。财政大臣里夫斯的盟友表示，即便斯塔默下台，里夫斯也应留任以稳定市场。", source: "Financial Times", url: "https://www.ft.com/content/c2455a7b-8cb5-42f9-9515-6ae664341e26" },
   { time: "12:43", tag: "macro", tagText: "宏观", text: "美国参议院本周预计将确认凯文·沃什接替鲍威尔出任美联储主席。沃什将面临通胀再度抬头和特朗普要求降息的双重压力。", source: "FT", url: "https://www.ft.com/content/af3bc83f-8a3c-4280-aa80-9d16bbd0cb6d" },
   { time: "12:43", tag: "geo", tagText: "地缘", text: "对冲基金押注生物燃料，以从伊朗石油价格冲击中获利。交易员预计，随着对替代燃料来源的需求上升，玉米和大豆价格将飙升。", source: "FT", url: "https://www.ft.com/content/d6a00598-3c42-4d0d-ae6a-82ea8f086f0c" },
   { time: "12:43", tag: "macro", tagText: "宏观", text: "日本财务大臣与美财长贝森特会晤后表示，美方对日元政策表达了“理解”。日元随后走弱。", source: "FT", url: "https://www.ft.com/content/5c42387d-d5c2-40fc-a783-0be17b50af12" },
   { time: "12:43", tag: "ai", tagText: "AI", text: "亚马逊员工被曝使用内部AI工具MeshClaw将任务委托给AI代理，以虚增AI使用评分并提升公司内部AI排行榜排名。", source: "FT", url: "https://www.ft.com/content/8ee0d3ef-9548-422d-8ff1-ebd48ad4b2ca" },
   { time: "12:43", tag: "tech", tagText: "科技", text: "激进投资者卡尔·伊坎正洽谈融资，拟对温蒂汉堡发起私有化收购。该汉堡连锁店股价过去五年已下跌70%，伊坎视其为价值投资机会。", source: "FT", url: "https://www.ft.com/content/90d77d04-bc5b-4c98-aa67-b3483605489b" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普失去贸易“超级权力”。美国最高法院作出不利裁决，限制总统单边关税权力。国会不满情绪上升，选民不满，特朗普试图挽回局面。", source: "Financial Times", url: "https://www.ft.com/content/66a5c6c7-1b2b-47cc-9e07-77a87625fdfa" },
   { time: "07:49", tag: "ai", tagText: "AI", text: "科技巨头7000亿美元AI能源争夺战催生‘电力版英伟达’，GE Vernova和Bloom Energy等基础设施巨头成为AI电网新守门人。分析师推荐5只受益于AI电力需求激增的股票。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
   { time: "07:31", tag: "tech", tagText: "科技", text: "BuzzFeed股价盘后暴涨超130%，此前Byron Allen家族办公室同意收购该公司多数股权，为这家陷入困境的媒体公司提供救命稻草。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buzzfeeds-stock-more-than-doubles-as-beleaguered-media-company-gets-a-lifeline-7dea1e61?mod=mw_rss_topstories" },
   { time: "07:27", tag: "geo", tagText: "地缘", text: "英国首相斯塔默为挽救其首相职位做最后努力，准备召开关键内阁会议。工党内部情绪‘相当糟糕’，斯塔默面临严峻政治危机。", source: "Financial Times", url: "https://www.ft.com/content/9c4c7a97-c564-4a7f-9866-1182a84e7812" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "04:42", tag: "macro", tagText: "宏观", text: "高盛称美元被严重高估，特朗普即将访华之际，中国可能允许人民币升值作为贸易谈判筹码。人民币目前处于几十年来最便宜水平。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-trump-heads-to-china-heres-how-much-the-dollar-is-overvalued-according-to-goldman-sachs-e29884f9?mod=mw_rss_topstories" },
   { time: "04:37", tag: "ai", tagText: "AI", text: "英伟达股价四天暴涨，市值增加规模相当于整个甲骨文公司，创年内最强四日连涨纪录。此前英伟达2026年表现严重落后于芯片板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/nvidia-has-added-an-oracles-worth-of-market-cap-in-just-four-trading-days-253f4fe8?mod=mw_rss_topstories" },
   { time: "04:25", tag: "ai", tagText: "AI", text: "微软CEO纳德拉在OpenAI庭审中作证，称马斯克从未就微软投资OpenAI向他提出过担忧。纳德拉形容2023年试图罢免奥特曼的行为“业余至极”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/microsoft-ceo-satya-nadella-musk-altman-trial.html" },
-  { time: "03:57", tag: "macro", tagText: "宏观", text: "美国4月CPI数据将于周二公布，预计同比涨幅达3.8%，创近三年新高。市场密切关注通胀数据对美联储政策路径的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/inflation-reading-tuesday-expected-to-show-prices-at-nearly-a-three-year-high.html" },
-  { time: "02:52", tag: "macro", tagText: "宏观", text: "美国柴油价格逼近历史新高，将给美国家庭带来远超汽油价格的严重经济压力。柴油是卡车、火车和拖拉机的动力来源，是美国经济的命脉。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-households-face-serious-pain-beyond-gas-prices-as-diesel-nears-record-highs-030f1ce1" },
-  { time: "02:22", tag: "tech", tagText: "科技", text: "英特尔股价延续涨势，据报道该公司正与韩国SK海力士合作开发新的芯片封装技术，市场对此感到乐观。", source: "MarketWatch", url: "https://www.marketwatch.com/story/intels-stock-extends-its-hot-streak-this-is-the-latest-source-of-optimism-41bb2b23" },
 ];
-const breakingDate = "2026年5月12日 12:43 CST";
+const breakingDate = "2026年5月12日 15:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "23:02", tag: "tech", tagText: "科技", text: "经典社交新闻网站Digg再次回归，此次转型为AI新闻聚合平台。Digg试图通过聚焦AI内容重新吸引用户，但此前多次转型均未成功。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/digg-tries-again-this-time-as-an-ai-news-aggregator/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "太空数据中心初创公司Cowboy Space获2.75亿美元融资。该公司计划将数据中心送入轨道，但首先需要解决火箭运力不足的问题，自行建造运载火箭。", source: "AI News & Artificial Intelligence | TechCrunch", url: "https://techcrunch.com/2026/05/11/there-arent-enough-rockets-for-space-data-centers-cowboy-space-raised-275-million-to-build-them/" },
 ];
-const aiBreakingDate = "2026年5月12日 12:43 CST";
+const aiBreakingDate = "2026年5月12日 15:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
