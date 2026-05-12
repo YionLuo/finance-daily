@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 67.26,
   previous1Month: 38.06,
   previous1Year: 64.49,
-  date: "2026年5月12日 12:08 CST"
+  date: "2026年5月12日 12:43 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:43", tag: "macro", tagText: "宏观", text: "美国参议院本周预计将确认凯文·沃什接替鲍威尔出任美联储主席。沃什将面临通胀再度抬头和特朗普要求降息的双重压力。", source: "FT", url: "https://www.ft.com/content/af3bc83f-8a3c-4280-aa80-9d16bbd0cb6d" },
+  { time: "12:43", tag: "geo", tagText: "地缘", text: "对冲基金押注生物燃料，以从伊朗石油价格冲击中获利。交易员预计，随着对替代燃料来源的需求上升，玉米和大豆价格将飙升。", source: "FT", url: "https://www.ft.com/content/d6a00598-3c42-4d0d-ae6a-82ea8f086f0c" },
+  { time: "12:43", tag: "macro", tagText: "宏观", text: "日本财务大臣与美财长贝森特会晤后表示，美方对日元政策表达了“理解”。日元随后走弱。", source: "FT", url: "https://www.ft.com/content/5c42387d-d5c2-40fc-a783-0be17b50af12" },
+  { time: "12:43", tag: "ai", tagText: "AI", text: "亚马逊员工被曝使用内部AI工具MeshClaw将任务委托给AI代理，以虚增AI使用评分并提升公司内部AI排行榜排名。", source: "FT", url: "https://www.ft.com/content/8ee0d3ef-9548-422d-8ff1-ebd48ad4b2ca" },
+  { time: "12:43", tag: "tech", tagText: "科技", text: "激进投资者卡尔·伊坎正洽谈融资，拟对温蒂汉堡发起私有化收购。该汉堡连锁店股价过去五年已下跌70%，伊坎视其为价值投资机会。", source: "FT", url: "https://www.ft.com/content/90d77d04-bc5b-4c98-aa67-b3483605489b" },
   { time: "07:49", tag: "ai", tagText: "AI", text: "科技巨头7000亿美元AI能源争夺战催生‘电力版英伟达’，GE Vernova和Bloom Energy等基础设施巨头成为AI电网新守门人。分析师推荐5只受益于AI电力需求激增的股票。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
   { time: "07:31", tag: "tech", tagText: "科技", text: "BuzzFeed股价盘后暴涨超130%，此前Byron Allen家族办公室同意收购该公司多数股权，为这家陷入困境的媒体公司提供救命稻草。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buzzfeeds-stock-more-than-doubles-as-beleaguered-media-company-gets-a-lifeline-7dea1e61?mod=mw_rss_topstories" },
   { time: "07:27", tag: "geo", tagText: "地缘", text: "英国首相斯塔默为挽救其首相职位做最后努力，准备召开关键内阁会议。工党内部情绪‘相当糟糕’，斯塔默面临严峻政治危机。", source: "Financial Times", url: "https://www.ft.com/content/9c4c7a97-c564-4a7f-9866-1182a84e7812" },
@@ -1644,17 +1649,15 @@ const breakingNews = [
   { time: "03:57", tag: "macro", tagText: "宏观", text: "美国4月CPI数据将于周二公布，预计同比涨幅达3.8%，创近三年新高。市场密切关注通胀数据对美联储政策路径的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/inflation-reading-tuesday-expected-to-show-prices-at-nearly-a-three-year-high.html" },
   { time: "02:52", tag: "macro", tagText: "宏观", text: "美国柴油价格逼近历史新高，将给美国家庭带来远超汽油价格的严重经济压力。柴油是卡车、火车和拖拉机的动力来源，是美国经济的命脉。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-households-face-serious-pain-beyond-gas-prices-as-diesel-nears-record-highs-030f1ce1" },
   { time: "02:22", tag: "tech", tagText: "科技", text: "英特尔股价延续涨势，据报道该公司正与韩国SK海力士合作开发新的芯片封装技术，市场对此感到乐观。", source: "MarketWatch", url: "https://www.marketwatch.com/story/intels-stock-extends-its-hot-streak-this-is-the-latest-source-of-optimism-41bb2b23" },
-  { time: "02:17", tag: "geo", tagText: "地缘", text: "沙特阿美CEO警告，若霍尔木兹海峡封锁持续，石油市场要到2027年才能恢复正常。石油库存正在快速消耗，油价面临进一步上行压力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/saudi-aramco-oil-iran-war-strait-hormuz.html" },
-  { time: "02:08", tag: "macro", tagText: "宏观", text: "知名投资者迈克尔·贝里（《大空头》原型）警告投资者‘拒绝贪婪’，建议对任何呈抛物线式上涨的股票‘几乎完全减仓’。他认为围绕AI和动量交易的狂热已将估值推至过高水平。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/michael-burry-is-not-a-believer-for-any-stocks-going-parabolic-reduce-positions-almost-entirely.html" },
-  { time: "00:05", tag: "crypto", tagText: "加密", text: "加密货币市场在六周内市值增加4200亿美元，动能加速。比特币主导地位再次减弱，市场关注是否将重演2017年和2021年的历史走势。", source: "MEXC", url: "https://news.google.com/rss/articles/CBMiSEFVX3lxTE84VXhEdjRzczlibW5mY1VXb0tIY2J4SDdOZE5KSGlfeXg1c0t6clg5ZTFRRi1FdjR6ZlgwSVF3QzZETi1ibjR4ZQ?oc=5" },
-  { time: "23:54", tag: "geo", tagText: "地缘", text: "特朗普邀请马斯克、库克、芬克等CEO随行访华，将与习近平举行峰会讨论贸易、AI和地缘政治。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/trump-ceos-elon-musk-tim-cook-larry-fink-xi-china-summit.html" },
-  { time: "23:49", tag: "宏观", tagText: "宏观", text: "摩根大通牵头银行团削减对陷入困境的KKR私募信贷基金（FSK）的信贷额度，该基金因亏损加剧成为私募信贷领域最明显的风险点之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/kkr-private-credit-fund-fsk-jpmorgan-chase-credit.html" },
 ];
-const breakingDate = "2026年5月12日 12:08 CST";
+const breakingDate = "2026年5月12日 12:43 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:00", tag: "ai", tagText: "AI", text: "中国AI公司寻求摆脱英伟达依赖，DeepSeek转向采用华为芯片。此举标志着中美科技脱钩背景下，中国AI产业链自主化进程加速。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNE04ZENNS19LcWJoZ3dtMXVJaFVMUThJeHZ2bC1qekF0ZThDR2FhWWxSQTRKdTBibzliSFY3ZXJaU1NJNnNUSkRHNHhFeHlRTmQwekhQSE5tZ1RHc1d6b2pXZVFtRi14bGJpZXN4QXoxY2ZhOHFOMkRabGxWQThtZmJiNkdhOFU?oc=5" },
+  { time: "08:09", tag: "crypto", tagText: "加密", text: "乘AI热潮东风，Robinhood秘密提交其第二只风险投资基金IPO申请，该基金将专注于成长阶段和早期初创企业。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/riding-an-ai-rally-robinhood-preps-second-retail-venture-ipo/" },
   { time: "07:05", tag: "ai", tagText: "AI", text: "OpenAI发布Daybreak安全AI计划，旨在利用今年3月推出的Codex Security AI代理，在攻击者发现漏洞之前主动检测并修补漏洞，提升AI系统安全性。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/928342/openai-daybreak-security-ai" },
+  { time: "07:04", tag: "tech", tagText: "科技", text: "通用汽车裁减数百名IT员工，同时招聘具备更强AI技能的人才。新岗位聚焦AI原生开发、数据工程、云工程及提示工程等领域，显示传统车企加速AI转型。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/gm-just-laid-off-hundreds-of-it-workers-to-hire-those-with-stronger-ai-skills/" },
   { time: "06:28", tag: "tech", tagText: "科技", text: "Linux系统两周内再曝严重安全漏洞，生产版本补丁已陆续上线，官方敦促用户尽快安装修复。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks/" },
   { time: "06:19", tag: "ai", tagText: "AI", text: "前OpenAI CTO Mira Murati创立的AI公司Thinking Machines宣布正在开发“交互模型”，旨在重新定义AI与人类的交互方式，但具体细节尚未披露。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/928309/mira-murati-thinking-machines-ai-interaction-model" },
   { time: "04:45", tag: "ai", tagText: "AI", text: "散户资金大举涌入AI芯片股，市场分析人士警告这可能预示着AI芯片热潮即将见顶。散户投资者通常在市场周期后期追涨，其行为被视为反向指标，当前转向或暗示泡沫风险加剧。", source: "marketplace.org", url: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYndUc04wa1h3STBCbFhwRHZmNVBqZi1vSmJ1U2VUakNEbWhtVXdJZzNOSkdRbm9tZUdmaEhITXVnOTg1ZUxkRHdZR1NSbDExUFZCSGVYa20wX3FFRkNIckhMZEFxbkpNSEQ5aEVfNFM4Qnd2eVBXTHVLTEFmdHJuWlhFdXNuT3BKMEphbjdkXzBTaGFtTWV1LXZ3OGh0UHMzLTlxYlkwTDVxVHZwRHBHbXBmalF6VHJm?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "23:27", tag: "ai", tagText: "AI", text: "OpenAI创始人Sam Altman与Elon Musk对簿公堂，庭审直播进行中。Musk于2024年起诉OpenAI背离初衷，这场高风险诉讼可能重塑OpenAI及ChatGPT的未来走向。", source: "AI | The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
   { time: "23:02", tag: "tech", tagText: "科技", text: "经典社交新闻网站Digg再次回归，此次转型为AI新闻聚合平台。Digg试图通过聚焦AI内容重新吸引用户，但此前多次转型均未成功。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/digg-tries-again-this-time-as-an-ai-news-aggregator/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "太空数据中心初创公司Cowboy Space获2.75亿美元融资。该公司计划将数据中心送入轨道，但首先需要解决火箭运力不足的问题，自行建造运载火箭。", source: "AI News & Artificial Intelligence | TechCrunch", url: "https://techcrunch.com/2026/05/11/there-arent-enough-rockets-for-space-data-centers-cowboy-space-raised-275-million-to-build-them/" },
-  { time: "19:51", tag: "tech", tagText: "科技", text: "中国人形机器人初创公司Vbot完成7300万美元Pre-A轮融资。该公司专注于开发通用人形机器人，本轮融资显示资本市场对中国机器人赛道的持续看好。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQM3hhVUZXMUZjSFpjSllncGNhSzNjZ3FEVGRaX1FDUzhwcGI5SjItX2E2Wk81SDNhZEZtSldYNjVvRVRNa0dKOS1NTk9ZZkZhYU81NDZpdm5UTjNpM0dPbk4yQWh6NjU3OE5JeVFmYTdjZWpKN3VNYmpNdGhoQ3g2WlF0cTdocFNvdFpDeGc3TGM1UnpoNGpQZ1dSQ3Q5Uld2bTE1dk5KOU56NHVzVk5PUlB3?oc=5" },
-  { time: "19:10", tag: "tech", tagText: "科技", text: "英伟达宣布加强董事会，新增战略领导力成员。此举正值AI芯片需求激增之际，英伟达通过强化治理结构以应对日益复杂的全球竞争格局。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxNbjkwTVlzdEY1T1hXMDdHOU9uUmVYZmIxMVFFTFdQelBTVzFLZl80dXp1UlppbndwTFlsZUJoRl9HTC1kS3FDRnlwR001T0JZUU1pcTFPWkJwdDJEdTlSc1hpeDllNE5VX2VRcGtlamVHTGZfbTlqTEtpaDhxdnFtNjdqZzVhTE1rcjczTDAzaWNWcno1UjBTc242RUppZllCSHR5eC1CS2NWNlBMc0wwOVJSVGgtWVJtUXFmVWZtUlFRZEt3RndlUG4zY9IB0AFBVV95cUxNNFV4TWs4SnBmRmJfZGlCOUl0cnhva2t0YzRla1R5R2VrZmlvTUVIb05XNGVWcFl1eEQ3b0l1cTczNG5tTl9VYy1ucFc2RnRsbEdielVmYWhldy1NNkNYQUtjV1p5M2tUMmQyLUs5Q1ZrUEMzVGpHenI1SkpsRlYwaEw4VTRWTjVoS1JkODAtVHZMRG5qMkRzTU1Ucks3VTlLU2lxLVJWbVBKQXJaLURFcjV1bkhkTFlFRXBsUGdmVFA0WG4wblJ5VFBOMlFRZ1Bl?oc=5" },
-  { time: "18:15", tag: "ai", tagText: "AI", text: "对AI突破性进展的担忧迫使美国和中国展开对话。双方意识到AI技术的潜在风险，正寻求通过外交渠道管控竞争，避免技术失控。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE82NlFIOGhPcE9mclNiUVRWclU4OElCWkZHLWtpQVcydlMxZ1Z2aU9wYlJNMlVNQUtkdTYxbTJKWlNDZjJocmczTFpvVkMxSHVieTdmUVVqT3djZHNYSzhrYnE4RkJrekVKRXRpaFhWOW1WTmhzQ1BNSE9YeE1pZw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月12日 12:08 CST";
+const aiBreakingDate = "2026年5月12日 12:43 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
