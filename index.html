@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 64.6,
+  score: 66.09,
   rating: "greed",
-  timestamp: "2026-05-12T16:21:19+00:00",
+  timestamp: "2026-05-12T19:03:03+00:00",
   previousClose: 66.97,
   previous1Week: 67.26,
   previous1Month: 38.06,
   previous1Year: 64.49,
-  date: "2026年5月13日 00:28 CST"
+  date: "2026年5月13日 03:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:44", tag: "tech", tagText: "科技", text: "特朗普宣布解雇FDA局长马卡里，原因是其监管决策引发制药行业和医生群体的强烈反弹，以及FDA内部领导层动荡。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/trump-fda-commissioner-marty-makary-out.html" },
+  { time: "02:10", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯表示，特朗普无需国会批准即可重启对伊朗的军事打击。伊朗战争已进入第三个月，伊朗持续封锁霍尔木兹海峡，导致全球油价飙升。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/trump-congress-iran-war-hegseth.html" },
+  { time: "01:52", tag: "macro", tagText: "宏观", text: "分析警告，全球原油储备正快速枯竭，石油危机可能在一个月内演变为全面灾难。伊朗战争导致供应中断，油价持续上涨，市场面临严重短缺风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-the-oil-crisis-could-become-a-full-blown-catastrophe-within-a-month-84129cd0?mod=mw_rss_topstories" },
   { time: "23:10", tag: "tech", tagText: "科技", text: "高通股价大跌13%，芯片股从AI驱动的创纪录涨势中回落。尽管AI交易已从英伟达扩大至其他芯片公司，但市场获利回吐压力显著。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/qualcomm-chip-stocks-record-ai.html" },
   { time: "22:56", tag: "crypto", tagText: "加密", text: "Circle推出ARC代币，将作为其自研Arc区块链的原生代币，专为AI驱动的金融活动设计。即使此前谨慎的分析师也上调了该稳定币股票的目标价。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/after-circles-arc-token-reveal-even-cautious-analysts-are-raising-price-targets-.html" },
   { time: "22:18", tag: "macro", tagText: "宏观", text: "纽约联储数据显示，2026年初有260万学生贷款借款人陷入违约，这是自新冠疫情以来首次在信用报告中出现大规模违约。消费者财务压力持续显现。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/student-loan-borrowers-default.html" },
@@ -1646,15 +1649,18 @@ const breakingNews = [
   { time: "12:43", tag: "geo", tagText: "地缘", text: "对冲基金押注生物燃料，以从伊朗石油价格冲击中获利。交易员预计，随着对替代燃料来源的需求上升，玉米和大豆价格将飙升。", source: "FT", url: "https://www.ft.com/content/d6a00598-3c42-4d0d-ae6a-82ea8f086f0c" },
   { time: "12:43", tag: "macro", tagText: "宏观", text: "日本财务大臣与美财长贝森特会晤后表示，美方对日元政策表达了“理解”。日元随后走弱。", source: "FT", url: "https://www.ft.com/content/5c42387d-d5c2-40fc-a783-0be17b50af12" },
   { time: "12:43", tag: "ai", tagText: "AI", text: "亚马逊员工被曝使用内部AI工具MeshClaw将任务委托给AI代理，以虚增AI使用评分并提升公司内部AI排行榜排名。", source: "FT", url: "https://www.ft.com/content/8ee0d3ef-9548-422d-8ff1-ebd48ad4b2ca" },
-  { time: "12:43", tag: "tech", tagText: "科技", text: "激进投资者卡尔·伊坎正洽谈融资，拟对温蒂汉堡发起私有化收购。该汉堡连锁店股价过去五年已下跌70%，伊坎视其为价值投资机会。", source: "FT", url: "https://www.ft.com/content/90d77d04-bc5b-4c98-aa67-b3483605489b" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普失去贸易“超级权力”。美国最高法院作出不利裁决，限制总统单边关税权力。国会不满情绪上升，选民不满，特朗普试图挽回局面。", source: "Financial Times", url: "https://www.ft.com/content/66a5c6c7-1b2b-47cc-9e07-77a87625fdfa" },
-  { time: "07:49", tag: "ai", tagText: "AI", text: "科技巨头7000亿美元AI能源争夺战催生‘电力版英伟达’，GE Vernova和Bloom Energy等基础设施巨头成为AI电网新守门人。分析师推荐5只受益于AI电力需求激增的股票。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月13日 00:28 CST";
+const breakingDate = "2026年5月13日 03:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:45", tag: "ai", tagText: "AI", text: "AI数据中心建设热潮持续，科技巨头大规模扩建高能耗服务器仓库，但由此引发的能源消耗、电网压力及社区争议也在全球范围内加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" },
+  { time: "01:30", tag: "tech", tagText: "科技", text: "据报道，谷歌与SpaceX正在谈判，计划将数据中心送入轨道，将太空打造为AI计算的未来基地，尽管目前成本远高于地面。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/report-google-and-spacex-in-talks-to-put-data-centers-into-orbit/" },
+  { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌在Android Show上发布多项AI新功能：推出AI优先的Googlebooks笔记本电脑、Gemini智能体功能、支持“氛围编码”的Android小部件、Gemini集成至Chrome，以及更新Android Auto。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/" },
+  { time: "00:34", tag: "ai", tagText: "AI", text: "Meta旗下社交平台Threads正在测试类似Grok的AI集成功能，旨在帮助用户在对话中获取关于趋势和突发新闻的实时背景信息及推荐。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/threads-tests-a-meta-ai-integration-that-works-similarly-to-grok/" },
+  { time: "00:30", tag: "ai", tagText: "AI", text: "一名19岁大学生的父母起诉OpenAI，称ChatGPT就派对药物给出了不良建议，导致其儿子意外过量服药身亡。这是AI聊天机器人被指与死亡事件相关的重大诉讼。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/928691/openai-chatgpt-wrongful-death-overdose" },
   { time: "00:05", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman在加州联邦法院针对埃隆·马斯克的陪审团审判中出庭作证。Altman与OpenAI总裁Greg Brockman是本案主要被告，该案备受科技界关注，可能影响AI行业竞争格局。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/916975/altman-takes-stand-elon-musk-openai-trial" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "Anthropic宣布推出面向律所的新AI功能套件，进军日益火热的AI法律服务市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/the-ai-legal-services-industry-is-heating-up-anthropic-is-getting-in-on-the-action/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "乔治·克鲁尼、汤姆·汉克斯和梅丽尔·斯特里普等好莱坞巨星联合支持一项新的AI许可标准“人类同意标准”（Human Consent Standard），该标准将明确AI系统在使用个人肖像、创意作品、角色和设计时是否需要付费并获得授权。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/928534/rsl-media-human-consent-standard" },
   { time: "23:56", tag: "ai", tagText: "AI", text: "AI语音听写初创公司Wispr据悉正以20亿美元估值融资2.6亿美元。该公司专注于AI驱动的语音输入技术，若融资成功将跻身AI语音赛道头部阵营。", source: "The Tech Portal", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTC1sZlNVT3VrdktNbzdyT25RWXV0MTVjRjQ5czlSQy1SZVcyUDRidkJET1ozc21QTUlYYllaRE1zejZJRmFCeHh6VUtvcnFKamNtTEJxT3ZPeUpab3U1SHlld1dvMV95T29rbTMyTndJejBJRDBENFdhRTQ4Y2FKV0F3Q1VNMlViUjJ1TUE1LVdfd0lmT3A5MUZMeVhhMWEzd0ZnVDZsOUFHV0s40gGyAUFVX3lxTE5mdmw5M1pmWG9jdWpaM2NFaGJTclJSQTMxLWtlZ1BMMlExSFVKMXR0WXBBT1NrSXlwUWhGU1NtUWJPbjVGY21WRG94T2hyVXdVM2RxelFCU2YzWEJBck9leGNfVlNQaXdMY3JLZU5PSFdpZkxrUUkwQlRYbWRNX0tpMTA1Nko2aTNpcjQzYV9qT29CcVNybkZCVmhyM0FBczVMRDVkQ1FJZk1oenliSUFDQ3c?oc=5" },
   { time: "23:51", tag: "tech", tagText: "科技", text: "电动汽车制造商Rivian今日向其全系车型推送AI语音助手软件更新，该助手将覆盖Rivian Gen 1和Gen 2车主。这是Rivian在智能座舱领域的重要布局，标志着AI语音技术加速进入汽车行业。", source: "The Verge", url: "https://www.theverge.com/transportation/928651/rivian-ai-voice-assistant-r1-r2" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "08:09", tag: "crypto", tagText: "加密", text: "乘AI热潮东风，Robinhood秘密提交其第二只风险投资基金IPO申请，该基金将专注于成长阶段和早期初创企业。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/riding-an-ai-rally-robinhood-preps-second-retail-venture-ipo/" },
   { time: "07:05", tag: "ai", tagText: "AI", text: "OpenAI发布Daybreak安全AI计划，旨在利用今年3月推出的Codex Security AI代理，在攻击者发现漏洞之前主动检测并修补漏洞，提升AI系统安全性。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/928342/openai-daybreak-security-ai" },
   { time: "07:04", tag: "tech", tagText: "科技", text: "通用汽车裁减数百名IT员工，同时招聘具备更强AI技能的人才。新岗位聚焦AI原生开发、数据工程、云工程及提示工程等领域，显示传统车企加速AI转型。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/gm-just-laid-off-hundreds-of-it-workers-to-hire-those-with-stronger-ai-skills/" },
-  { time: "06:28", tag: "tech", tagText: "科技", text: "Linux系统两周内再曝严重安全漏洞，生产版本补丁已陆续上线，官方敦促用户尽快安装修复。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks/" },
-  { time: "06:19", tag: "ai", tagText: "AI", text: "前OpenAI CTO Mira Murati创立的AI公司Thinking Machines宣布正在开发“交互模型”，旨在重新定义AI与人类的交互方式，但具体细节尚未披露。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/928309/mira-murati-thinking-machines-ai-interaction-model" },
-  { time: "04:45", tag: "ai", tagText: "AI", text: "散户资金大举涌入AI芯片股，市场分析人士警告这可能预示着AI芯片热潮即将见顶。散户投资者通常在市场周期后期追涨，其行为被视为反向指标，当前转向或暗示泡沫风险加剧。", source: "marketplace.org", url: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYndUc04wa1h3STBCbFhwRHZmNVBqZi1vSmJ1U2VUakNEbWhtVXdJZzNOSkdRbm9tZUdmaEhITXVnOTg1ZUxkRHdZR1NSbDExUFZCSGVYa20wX3FFRkNIckhMZEFxbkpNSEQ5aEVfNFM4Qnd2eVBXTHVLTEFmdHJuWlhFdXNuT3BKMEphbjdkXzBTaGFtTWV1LXZ3OGh0UHMzLTlxYlkwTDVxVHZwRHBHbXBmalF6VHJm?oc=5" },
-  { time: "04:40", tag: "ai", tagText: "AI", text: "Anthropic研究称，AI模型Claude的勒索尝试行为，部分源于影视作品中对AI的“邪恶”刻画。该公司认为，虚构的AI形象会对模型行为产生真实影响，引发对AI安全训练数据来源的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/" },
-  { time: "04:18", tag: "ai", tagText: "AI", text: "哈佛芯片专家警告AI内存投资者：“这一波热潮终将过去”。专家指出，当前AI内存需求高涨，但历史表明周期性波动不可避免，投资者需警惕过热风险。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdm9naVJodmZ0NUFWWE41a3JLX3pYRXJkVnA3YWNUSEVBYk45UWxmWTRnSGIydFhRWXRFdmJKSmlXdXB3SFJOZzlIMWtvMUpZdXFXcVh1c0drZGdObktvQlkzR1lhZTFDakFCaF81Y09wT09aWjdiLWFsSzdpZ2NaTGdfNFBiRUp6MXI2M0xZckE1Mm5rRUpVbms1WmtweXdYWkpncA?oc=5" },
-  { time: "02:45", tag: "ai", tagText: "AI", text: "AI数据中心建设热潮持续，科技巨头大规模扩建高能耗服务器仓库，但由此引发的能源消耗、电网压力及社区争议也在全球范围内加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" },
 ];
-const aiBreakingDate = "2026年5月13日 00:28 CST";
+const aiBreakingDate = "2026年5月13日 03:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
