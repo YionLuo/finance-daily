@@ -1618,17 +1618,18 @@
 const fearGreedData = {
   score: 66.6,
   rating: "greed",
-  timestamp: "2026-05-12T20:28:42+00:00",
+  timestamp: "2026-05-12T22:03:35+00:00",
   previousClose: 66.97,
   previous1Week: 67.26,
   previous1Month: 38.06,
   previous1Year: 64.49,
-  date: "2026年5月13日 04:48 CST"
+  date: "2026年5月13日 06:20 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:19", tag: "geo", tagText: "地缘", text: "英国首相斯塔默在四名大臣辞职后勉强保住权力，计划与卫生大臣斯特里廷举行紧急会议，此前他向挑战者发起领导权争夺挑战。", source: "Financial Times", url: "https://www.ft.com/content/87c4bea0-421f-4cdc-b5b5-98221a9142f5" },
   { time: "04:18", tag: "macro", tagText: "宏观", text: "美国4月CPI同比飙升至3.8%，创三年新高，受特朗普对伊战争导致汽油价格飙升推动。通胀增速已超过工资增速，市场担忧物价压力将持续。经济学家此前预期为3.7%。", source: "Financial Times", url: "https://www.ft.com/content/ce609605-8f82-42d7-8364-5ca5fbfb02cb" },
   { time: "04:18", tag: "tech", tagText: "科技", text: "铜价创历史新高，受AI数据中心需求推动。花旗预计铜价将升至每吨15000美元，较周二收盘价再涨约7%。AI能源争夺战催生新一代基础设施巨头。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/this-metal-just-set-a-new-record-boosted-by-ai-data-center-demand.html" },
   { time: "04:04", tag: "crypto", tagText: "加密", text: "比特币市场主导率回升至58%以上，表明加密市场进入整合阶段。与此同时，Anchorage Digital高管警告，SpaceX、OpenAI、Anthropic等IPO可能从加密市场抽走大量资金。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9QTDlyaUlNNFROcW1hTTE5eFV5XzFsS3FXRTJPM0tBN3NXdExub1RJYlhhdmJvMXhkSlkwbzN0cDIxcXoxRzU1WThSLWRTOWl4eHJUVm5WYm0?oc=5" },
@@ -1648,9 +1649,8 @@ const breakingNews = [
   { time: "18:16", tag: "macro", tagText: "宏观", text: "美股期货周二小幅下跌，市场等待即将公布的CPI通胀数据。经济学家预计4月CPI同比上涨3.7%。芯片股从高位回落，国债收益率上升，油价上涨加剧通胀担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/stock-market-today-live-updates.html" },
   { time: "18:10", tag: "crypto", tagText: "加密", text: "ETH/BTC比率跌至10个月低点，以太坊持续跑输比特币。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxQYlFpZzhKS3JheHE3NmpIWTlkaEo4dHZyVkN2STg5XzFUeXlKWUJySFZfZ3piaXRJa1RJOFVBU3A1SU85aUxhZ3VJUWd2aXVlNHVNOUF2WnA2RTMwbHFZWW5wZ2NuNWhtUEIxQ3diWXFlODZoODlpVW5qdEFhU205MmVtM0wzMkhQQnplOFdkdTh3ZGZpNngxaldyZE1pd0ZqV0tqdkxMMTVwNWE4VFVZSW1tTFBtY2dheW5iSU9TRQ?oc=5" },
   { time: "18:10", tag: "tech", tagText: "科技", text: "eBay拒绝了GameStop提出的560亿美元激进收购要约，理由是对该交易的融资能力存疑。GameStop的市值远小于eBay。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/ebay-rejects-gamestops-takeover-bid.html" },
-  { time: "15:43", tag: "geo", tagText: "地缘", text: "特朗普称伊朗停火协议已“命悬一线”，美伊和平协议前景渺茫。欧洲股市周二开盘大幅下挫，油价延续涨势，市场担忧中东冲突长期化。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/europe-markets-stoxx-600-ftse-dax-cac-iran-news-oil-prices.html" },
 ];
-const breakingDate = "2026年5月13日 04:48 CST";
+const breakingDate = "2026年5月13日 06:20 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "12:00", tag: "ai", tagText: "AI", text: "中国AI公司寻求摆脱英伟达依赖，DeepSeek转向采用华为芯片。此举标志着中美科技脱钩背景下，中国AI产业链自主化进程加速。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNE04ZENNS19LcWJoZ3dtMXVJaFVMUThJeHZ2bC1qekF0ZThDR2FhWWxSQTRKdTBibzliSFY3ZXJaU1NJNnNUSkRHNHhFeHlRTmQwekhQSE5tZ1RHc1d6b2pXZVFtRi14bGJpZXN4QXoxY2ZhOHFOMkRabGxWQThtZmJiNkdhOFU?oc=5" },
   { time: "08:09", tag: "crypto", tagText: "加密", text: "乘AI热潮东风，Robinhood秘密提交其第二只风险投资基金IPO申请，该基金将专注于成长阶段和早期初创企业。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/riding-an-ai-rally-robinhood-preps-second-retail-venture-ipo/" },
 ];
-const aiBreakingDate = "2026年5月13日 04:48 CST";
+const aiBreakingDate = "2026年5月13日 06:20 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
