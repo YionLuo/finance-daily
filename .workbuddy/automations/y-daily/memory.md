@@ -1,5 +1,33 @@
 # Y Daily 健康检查执行记录
 
+## 2026-05-12 08:06
+- **状态**: ✅ OK
+- **Breaking News**: 110 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-12 04:07
+- **状态**: ✅ OK
+- **Breaking News**: 62 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-11 23:58
+- **状态**: ✅ OK（Breaking News 正常）
+- **Breaking News**: 110 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: MISSING（today's report not found），但 API 不可用无法恢复
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无需恢复（Breaking News 正常，日报 API 不可用跳过）
+
+## 2026-05-11 19:55
+- **状态**: ⚠️ STALE → ⚠️ 部分恢复（仅时间戳+Fear&Greed）
+- **Breaking News**: 204 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **API 状态**: once.novai.su 503（`deepseek-v4-flash` model_not_found），deepseek.com 401（key 无效）
+- **操作**: 运行 update_breaking.py，RSS 抓取成功（finance 51 篇 + AI 6 篇），LLM 分析全部失败（0 条新内容），仅更新时间戳（15:54→19:57 CST）+ Fear & Greed 66.91（greed），新闻条目无变化
+- **提交**: `auto: health check recovery breaking news 2026-05-11 19:57 CST` → push OK
+- **注意**: API 端点 `once.novai.su` 持续 503（deepseek-v4-flash 不可用），已连续多次 LLM 不可用
+
 ## 2026-05-11 15:52
 - **状态**: ⚠️ STALE → ⚠️ 部分恢复（仅时间戳+Fear&Greed）
 - **Breaking News**: 214 分钟前最后提交，超过 120min 阈值
