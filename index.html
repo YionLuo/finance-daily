@@ -1618,18 +1618,20 @@
 const fearGreedData = {
   score: 66.6,
   rating: "greed",
-  timestamp: "2026-05-12T22:03:35+00:00",
+  timestamp: "2026-05-12T23:53:53+00:00",
   previousClose: 66.97,
   previous1Week: 67.26,
   previous1Month: 38.06,
   previous1Year: 64.49,
-  date: "2026年5月13日 06:20 CST"
+  date: "2026年5月13日 08:11 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
   { time: "06:19", tag: "geo", tagText: "地缘", text: "英国首相斯塔默在四名大臣辞职后勉强保住权力，计划与卫生大臣斯特里廷举行紧急会议，此前他向挑战者发起领导权争夺挑战。", source: "Financial Times", url: "https://www.ft.com/content/87c4bea0-421f-4cdc-b5b5-98221a9142f5" },
+  { time: "04:33", tag: "geo", tagText: "地缘", text: "密歇根州议员提出两党法案，以安全为由禁止中国关联车辆和技术进入美国市场。此举正值特朗普准备访问北京之际，中美贸易紧张局势持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/trump-congress-china-evs-byd.html" },
+  { time: "04:19", tag: "tech", tagText: "科技", text: "英特尔股价下跌，拖累芯片板块遭遇今年最糟糕单日表现。分析师指出“买家疲劳”以及对最新通胀数据可能影响未来数据中心支出承诺的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-intels-stock-is-falling-and-guiding-the-chip-sector-toward-its-worst-day-of-the-year-aa8812e4?mod=mw_rss_topstories" },
   { time: "04:18", tag: "macro", tagText: "宏观", text: "美国4月CPI同比飙升至3.8%，创三年新高，受特朗普对伊战争导致汽油价格飙升推动。通胀增速已超过工资增速，市场担忧物价压力将持续。经济学家此前预期为3.7%。", source: "Financial Times", url: "https://www.ft.com/content/ce609605-8f82-42d7-8364-5ca5fbfb02cb" },
   { time: "04:18", tag: "tech", tagText: "科技", text: "铜价创历史新高，受AI数据中心需求推动。花旗预计铜价将升至每吨15000美元，较周二收盘价再涨约7%。AI能源争夺战催生新一代基础设施巨头。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/this-metal-just-set-a-new-record-boosted-by-ai-data-center-demand.html" },
   { time: "04:04", tag: "crypto", tagText: "加密", text: "比特币市场主导率回升至58%以上，表明加密市场进入整合阶段。与此同时，Anchorage Digital高管警告，SpaceX、OpenAI、Anthropic等IPO可能从加密市场抽走大量资金。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9QTDlyaUlNNFROcW1hTTE5eFV5XzFsS3FXRTJPM0tBN3NXdExub1RJYlhhdmJvMXhkSlkwbzN0cDIxcXoxRzU1WThSLWRTOWl4eHJUVm5WYm0?oc=5" },
@@ -1647,15 +1649,16 @@ const breakingNews = [
   { time: "20:28", tag: "tech", tagText: "科技", text: "亚马逊加速配送竞赛，在美国数十个城市推出30分钟极速送货服务。此前亚马逊已通过两日达和次日达培养用户习惯，现进一步缩短配送时间。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/amazon-launches-ultrafast-30-minute-delivery-in-dozens-of-us-cities.html" },
   { time: "20:05", tag: "tech", tagText: "科技", text: "Hims & Hers股价暴跌15%，因一季度亏损且盈利指引疲弱。该公司3月与诺和诺德达成协议，在其平台销售GLP-1减肥药Wegovy。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/hims-hers-plummets-16percent-after-first-quarter-loss-weak-guidance-.html" },
   { time: "18:16", tag: "macro", tagText: "宏观", text: "美股期货周二小幅下跌，市场等待即将公布的CPI通胀数据。经济学家预计4月CPI同比上涨3.7%。芯片股从高位回落，国债收益率上升，油价上涨加剧通胀担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/11/stock-market-today-live-updates.html" },
-  { time: "18:10", tag: "crypto", tagText: "加密", text: "ETH/BTC比率跌至10个月低点，以太坊持续跑输比特币。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxQYlFpZzhKS3JheHE3NmpIWTlkaEo4dHZyVkN2STg5XzFUeXlKWUJySFZfZ3piaXRJa1RJOFVBU3A1SU85aUxhZ3VJUWd2aXVlNHVNOUF2WnA2RTMwbHFZWW5wZ2NuNWhtUEIxQ3diWXFlODZoODlpVW5qdEFhU205MmVtM0wzMkhQQnplOFdkdTh3ZGZpNngxaldyZE1pd0ZqV0tqdkxMMTVwNWE4VFVZSW1tTFBtY2dheW5iSU9TRQ?oc=5" },
-  { time: "18:10", tag: "tech", tagText: "科技", text: "eBay拒绝了GameStop提出的560亿美元激进收购要约，理由是对该交易的融资能力存疑。GameStop的市值远小于eBay。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/ebay-rejects-gamestops-takeover-bid.html" },
 ];
-const breakingDate = "2026年5月13日 06:20 CST";
+const breakingDate = "2026年5月13日 08:11 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:09", tag: "crypto", tagText: "加密", text: "乘AI热潮东风，Robinhood秘密提交其第二只风险投资基金IPO申请，该基金将专注于成长阶段和早期初创企业。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/riding-an-ai-rally-robinhood-preps-second-retail-venture-ipo/" },
+  { time: "06:47", tag: "tech", tagText: "科技", text: "比利时微电子研究中心imec展示3D CCD内存技术突破，该技术专为AI应用设计，有望大幅提升AI芯片的存储性能与能效。", source: "New Electronics", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYUQ2c1VUTVBkeGw4dGQyNkRqVno2bndEMFBzTTF5UnNhcE9TYlJfeHR6UUxOc3g5VFpxRHJXU3pGWm5kX0tYTExiakhZWDkyY1RFODlFS1NNdUZsWElpbi1TeDFZdUJEcUFaUS1QQVRiR0VHcjNib1BkTEFFaFo3eGsxSE1ob1FaOEQ2ZjgyUDdDQUtPeVJNYnhsenJkbDFKZUhZd2pqandBczA?oc=5" },
   { time: "02:45", tag: "ai", tagText: "AI", text: "AI数据中心建设热潮持续，科技巨头大规模扩建高能耗服务器仓库，但由此引发的能源消耗、电网压力及社区争议也在全球范围内加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" },
   { time: "02:34", tag: "ai", tagText: "AI", text: "Anthropic警告投资者，Open Doors Partners、Unicorns Exchange等多家二级交易平台未经授权提供其股票交易，提醒投资者警惕非官方渠道的股份购买风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/anthropic-warns-investors-against-secondary-platforms-offering-access-to-its-shares/" },
+  { time: "02:12", tag: "macro", tagText: "宏观", text: "分析师指出，英伟达主导了第一波AI ETF热潮，而Alphabet（谷歌）可能塑造下一波AI ETF格局。随着AI竞争从硬件向应用层转移，谷歌在AI生态中的布局正吸引更多资金关注。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMmZ3OXVTV0JPVkhBVHk2dGoxZ18yVFRsbUZ0SHhkc3NLV08zV0k2Ym4tbjNIVzNaZVR3ckRySW5vY3F2TU5hR2xUT1hVZk1jbFE2cUFOajE4SXNzZWVyZFlKR0RyMTlFNlpLQm9TOVhYZ0lGQW5haGdoM2pRYlo5S0Q5NE96VmpIZ2Npb1dsVllmRENVUEY5WXM2Z1hMMWE0dmh6elZBdEpJZTc1Q3dSOWxmVUxEcjRzUDB1MXhYS00?oc=5" },
   { time: "01:30", tag: "tech", tagText: "科技", text: "据报道，谷歌与SpaceX正在谈判，计划将数据中心送入轨道，将太空打造为AI计算的未来基地，尽管目前成本远高于地面。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/report-google-and-spacex-in-talks-to-put-data-centers-into-orbit/" },
   { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌在Android Show上发布多项AI新功能：推出AI优先的Googlebooks笔记本电脑、Gemini智能体功能、支持“氛围编码”的Android小部件、Gemini集成至Chrome，以及更新Android Auto。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/" },
   { time: "00:34", tag: "ai", tagText: "AI", text: "Meta旗下社交平台Threads正在测试类似Grok的AI集成功能，旨在帮助用户在对话中获取关于趋势和突发新闻的实时背景信息及推荐。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/threads-tests-a-meta-ai-integration-that-works-similarly-to-grok/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "19:30", tag: "ai", tagText: "AI", text: "AI语音初创公司Vapi估值达5亿美元，其企业业务自2025年初增长10倍，亚马逊Ring在40多家竞品中选择了其AI平台用于客户支持与销售电话。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/vapi-hits-500m-valuation-as-amazon-ring-chose-its-ai-platform-over-40-rivals/" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "欧洲AI融资持续增长，Crunchbase分析指出，资金涌入有望提振该地区初创企业生态，但能否真正推动欧洲AI产业崛起仍待观察。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVVBLTS1aVThmd2gwamlZN3JYTVNzeDR2N2hQbWFqMnFyT2hZa2ktRmlYb2VJeS1VVVFxa1UwbVpPZlVPVjFrMWtoV1ZLTTJqRU56cEh2SWpqWmZHS0U4ME4xRmg0dU56RV9rSmQtOE9MSVdHUWg5dXhnc3ZmbFNHNlJUWkFZdmtLWmVNNXlKcExmUjNIbmhGUE1oQW9jc3NPYzVSWGVwR04yUnVEODdnenFPeHZlZw?oc=5" },
   { time: "17:50", tag: "ai", tagText: "AI", text: "AI芯片股全面暴涨，分析师称内存需求是背后推手。从GPU到HBM内存，各类AI芯片相关股票集体飙升，市场对AI基础设施的持续投入推动整个产业链进入“超新星”爆发阶段。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOT3plVnVPUmt3dUc5LUJMN043bzBXWFB2ZzROUExyOUZaam5QWHFOTE9DNWYxUlFwMTdqeHdyd01UcjJjWlNJRWxoWjBBLXRSYk0xTHpMU2ZBSFRHMnRQZjdub0RpLVBVR1JJNG1CT2lVRExxRVE2bWQ4UmtUNnA3dlpPVC1qd0k5bUpvRVp5MmtCSXVUWm9DOVRNSURlVGwyNWw1TDF0Ym9sZGZzc1E?oc=5" },
-  { time: "15:44", tag: "ai", tagText: "AI", text: "韩国KB资产运用推出现代汽车“物理AI”ETF，在韩国交易所上市。该ETF聚焦将AI技术应用于实体机器人、自动驾驶等物理世界的领域，标志着韩国资本市场对AI应用场景的细分投资趋势。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX0kxQzlwUUo3UlpSSVdtUVBlMFl0OFlaZVFHNWNJRzhmYUhGUnE3ZDVLSWJMbi0wYjQ4RDNVQW1id202ak1pampuRVg2VDkwY0dfRkVrVzdBdE9FRURrRlJxYkhaYjk4RDRvNDBwYVVtaWZMVjhYaFlkaVdpY3F3YdIBlAFBVV95cUxQV2pLSnJZX0pWMzNFU24zT2pNeDlsdWJneGR5T19UQkNZRWNjMy1FczlzZ3otdjV5SmRkcFRFejZOUFR3Slpzd3VSbWMwdzY1WjRUSlBRTFk3X0o2cDBJWndhMlFBbTlzRjFLRGx1eXpoVGhKS1kwR08xcnR1aFRkR29vcW5UZ0l6VUdfa3daUk5sdVNx?oc=5" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "中国AI公司寻求摆脱英伟达依赖，DeepSeek转向采用华为芯片。此举标志着中美科技脱钩背景下，中国AI产业链自主化进程加速。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNE04ZENNS19LcWJoZ3dtMXVJaFVMUThJeHZ2bC1qekF0ZThDR2FhWWxSQTRKdTBibzliSFY3ZXJaU1NJNnNUSkRHNHhFeHlRTmQwekhQSE5tZ1RHc1d6b2pXZVFtRi14bGJpZXN4QXoxY2ZhOHFOMkRabGxWQThtZmJiNkdhOFU?oc=5" },
-  { time: "08:09", tag: "crypto", tagText: "加密", text: "乘AI热潮东风，Robinhood秘密提交其第二只风险投资基金IPO申请，该基金将专注于成长阶段和早期初创企业。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/11/riding-an-ai-rally-robinhood-preps-second-retail-venture-ipo/" },
 ];
-const aiBreakingDate = "2026年5月13日 06:20 CST";
+const aiBreakingDate = "2026年5月13日 08:11 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
