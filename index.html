@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 65.54,
+  score: 66.17,
   rating: "greed",
-  timestamp: "2026-05-13T11:15:01+00:00",
+  timestamp: "2026-05-13T14:49:10+00:00",
   previousClose: 66.6,
   previous1Week: 68.74,
   previous1Month: 40.97,
   previous1Year: 68.2,
-  date: "2026年5月13日 19:35 CST"
+  date: "2026年5月13日 22:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:40", tag: "geo", tagText: "地缘", text: "OPEC预计今年石油需求增长放缓，因伊朗封锁霍尔木兹海峡导致波斯湾供应中断，产量下降超30%。全球需求面临严重制约。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/opec-oil-strait-hormuz-iran-war-saudi-arabia-uae.html" },
+  { time: "22:38", tag: "macro", tagText: "宏观", text: "美国4月生产者价格指数（PPI）同比飙升6%，创2022年以来最大涨幅，远超预期。批发通胀数据冲击市场，道指下跌，但芯片股反弹推动纳指走高。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/ppi-inflation-report-april-2026-.html" },
+  { time: "22:02", tag: "ai", tagText: "AI", text: "AI能源争夺战催生新一代基础设施巨头，GE Vernova、Bloom Energy等5只股票成为赢家。科技巨头7000亿美元AI能源投资推动这些‘电力界的英伟达’股价飙升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
+  { time: "21:51", tag: "tech", tagText: "科技", text: "国防科技公司Anduril估值翻倍至超600亿美元，正为特朗普1850亿美元的‘金穹’防御系统研发天基拦截器，国防科技融资热潮持续。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/anduril-valuation-defense-tech-funding-boom.html" },
+  { time: "21:42", tag: "macro", tagText: "宏观", text: "半导体股在美股市场中的影响力达到历史最高水平，分析警告这种高度集中可能带来风险。AI驱动的芯片股已成为标普500指数上涨的主要动力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/semiconductor-names-have-never-before-held-this-much-sway-over-the-stock-market-history-shows-that-could-be-a-problem-bc492950?mod=mw_rss_topstories" },
   { time: "19:25", tag: "geo", tagText: "地缘", text: "普京首次以‘先生’称呼泽连斯基，摩根士丹利认为这标志着俄乌和平谈判氛围出现重大转变。经过四年多的战争，任何持久和平协议都将对股市、能源价格和大宗商品产生巨大影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/putin-addresses-zelensky-as-mister-for-the-first-time-morgan-stanley-says-it-means-a-vibe-shift-in-peace-negotiations-47c14f56?mod=mw_rss_topstories" },
   { time: "19:02", tag: "macro", tagText: "宏观", text: "油价基本持平，市场关注特朗普访华进展及伊朗局势。此前伊朗战争导致霍尔木兹海峡封锁，油价持续承压。", source: "Reuters", url: "https://finance.yahoo.com/news/oil-prices-slip-teetering-iran-010021136.html" },
   { time: "19:01", tag: "tech", tagText: "科技", text: "比亚迪称其‘闪充’技术将帮助电动汽车从燃油车手中夺取市场份额，该技术可在五分钟内完成充电。此举进一步加剧电动车行业竞争。", source: "Financial Times", url: "https://www.ft.com/content/ce9a2318-287c-4c07-89ae-3d8582ed5501" },
@@ -1644,18 +1649,18 @@ const breakingNews = [
   { time: "08:30", tag: "crypto", tagText: "加密", text: "美国国会议员将于周二讨论比特币及加密货币市场结构问题，可能涉及监管框架和投资者保护等关键议题。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE5HSGU1ekJwM0RRSHE1b3ZINXJyUXNrSzZqSE14NkJMajQ1RE1LdThZb0lQdDljWTJkSUJSM2d1c3YxTHMyTGw0RUVTd1NENnVhYVBhWlVwZ3VJZmlJSks5TnNvQWlIaW55Y19OaXlCX0FVTksyMVJj?oc=5" },
   { time: "06:19", tag: "geo", tagText: "地缘", text: "英国首相斯塔默在四名大臣辞职后勉强保住权力，计划与卫生大臣斯特里廷举行紧急会议，此前他向挑战者发起领导权争夺挑战。", source: "Financial Times", url: "https://www.ft.com/content/87c4bea0-421f-4cdc-b5b5-98221a9142f5" },
   { time: "04:33", tag: "geo", tagText: "地缘", text: "密歇根州议员提出两党法案，以安全为由禁止中国关联车辆和技术进入美国市场。此举正值特朗普准备访问北京之际，中美贸易紧张局势持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/trump-congress-china-evs-byd.html" },
-  { time: "04:19", tag: "tech", tagText: "科技", text: "英特尔股价下跌，拖累芯片板块遭遇今年最糟糕单日表现。分析师指出“买家疲劳”以及对最新通胀数据可能影响未来数据中心支出承诺的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-intels-stock-is-falling-and-guiding-the-chip-sector-toward-its-worst-day-of-the-year-aa8812e4?mod=mw_rss_topstories" },
-  { time: "04:18", tag: "macro", tagText: "宏观", text: "美国4月CPI同比飙升至3.8%，创三年新高，受特朗普对伊战争导致汽油价格飙升推动。通胀增速已超过工资增速，市场担忧物价压力将持续。经济学家此前预期为3.7%。", source: "Financial Times", url: "https://www.ft.com/content/ce609605-8f82-42d7-8364-5ca5fbfb02cb" },
-  { time: "04:18", tag: "tech", tagText: "科技", text: "铜价创历史新高，受AI数据中心需求推动。花旗预计铜价将升至每吨15000美元，较周二收盘价再涨约7%。AI能源争夺战催生新一代基础设施巨头。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/this-metal-just-set-a-new-record-boosted-by-ai-data-center-demand.html" },
-  { time: "04:04", tag: "crypto", tagText: "加密", text: "比特币市场主导率回升至58%以上，表明加密市场进入整合阶段。与此同时，Anchorage Digital高管警告，SpaceX、OpenAI、Anthropic等IPO可能从加密市场抽走大量资金。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9QTDlyaUlNNFROcW1hTTE5eFV5XzFsS3FXRTJPM0tBN3NXdExub1RJYlhhdmJvMXhkSlkwbzN0cDIxcXoxRzU1WThSLWRTOWl4eHJUVm5WYm0?oc=5" },
-  { time: "04:02", tag: "tech", tagText: "科技", text: "Waymo因软件故障导致部分无人驾驶出租车可能驶入积水路面，自愿召回约3800辆Robotaxi。这是自动驾驶领域罕见的大规模安全召回事件。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/waymo-recalls-3800-robotaxis-after-able-drive-into-standing-water.html" },
 ];
-const breakingDate = "2026年5月13日 19:35 CST";
+const breakingDate = "2026年5月13日 22:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "亚马逊将Alexa Plus集成至Amazon.com购物体验，用户输入查询后将直接获得基于大语言模型的AI购物助手服务，标志着电商AI化的重要一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/929457/amazon-announces-alexa-for-shopping-ai-assistant-rufus" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "WhatsApp在Meta AI聊天中新增“隐身模式”，该模式下对话不会被保存，关闭聊天后消息默认消失，强化用户隐私保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/whatsapp-adds-an-incognito-mode-in-meta-ai-chats/" },
+  { time: "18:00", tag: "ai", tagText: "AI", text: "新型内存聚焦ETF年内飙升90%，其CEO称存储芯片是AI发展的“最大瓶颈”，市场关注度从英伟达等算力芯片转向存储领域。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbUhMR01kVXpPbG5vTEYtdFluWXdHNE1fVXRFc0h6aTF0ZG4tRVJUVTQwRWo2SklLejFCRmNCRnR3OWJsdGJPTE5KcUJTUXJFbTdRa0lNakhWX0cwQXVTc25QVW9XNnlPdmV5VlV6Um45NlhpSl9GZkZKdWRnN2NEYW9Lc0RUNDZvbURTOE9QQV9Ba0NtMGRfZ3U0YWZ1SHppcGNGSTI2TG10ellMd2lMZkNBMzdtcDJoSkJNLVZxNEg0RTFsdXJ3eXdUX0VseF82YTlqSlVERnZEaVVf?oc=5" },
   { time: "17:28", tag: "ai", tagText: "AI", text: "以色列AI突破有望彻底改变睡眠呼吸暂停诊断方式。该技术利用人工智能分析相关数据，旨在提高诊断准确率并降低传统检测的复杂性，为全球数亿患者带来更便捷的筛查方案。", source: "i24NEWS", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRTZyei1qZm40MmVieXlaLWw0Q3RSXzMxZ3p4WFBvbGc5a2RsTU9TeWZQTy05eWwzUFhQZUV0V3pHaG9DR09tYnJOWjZYWW9INWs3TFJ6NjNDTWZQWUk2YThNLXI4M2hEc2Q5NmFod2VkcXFiM2lxRE4ySXNOcmFzdjdNTDk0ckFSLTBabzNNcFpFeF9DZjgzLVZFMWxEeXpOaGJxTkE5YlVVRFJwdGtHc05VQnc?oc=5" },
   { time: "17:24", tag: "ai", tagText: "AI", text: "奇瑞汽车（EXEED母公司）宣布与英伟达达成合作，共同推进驾驶辅助、物理AI及机器人技术。双方将结合英伟达的AI计算平台与奇瑞的整车研发能力，加速智能驾驶和自动化技术的落地。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMihwJBVV95cUxNYzNBMk9DWjdWeXRTYV9TdzV1SmZIU2wtelY4cjlOemZmVmxxazlSME84dk9oSUxqcV9mUVQ0SjRZUjFGUGE5TGVTaGpmU09RTi1iLUdKRmROYS1WcWVqdEJvamo4bEJFcnRNOFpENWlWNnc5aHhXTkZUSzlNZkFGSUxOOF9tdTZWMFp2VmxrRTNOdXZRYXhCcVA0cDJfZFVfWnVnaHllNDh0RV8tU0VHVWYwUzdiQTlYNDYtVVFjSWRRYldXRURlWXc3Y1ZhQzE3RDNsU0pEMlU3X1N6cmxtY3cyRE44d1BFcmFLeTA3amFKT2JuaHpUYXBZUVVZTHNyV3ZxSHlXNA?oc=5" },
+  { time: "17:00", tag: "ai", tagText: "AI", text: "AI初创公司Poppy推出主动式AI助手，可连接日历、邮件、消息等服务，根据用户生活动态主动推送提醒、建议和任务，旨在全面管理数字生活。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/poppy-debuts-a-proactive-ai-assistant-to-help-organize-your-digital-life/" },
   { time: "16:45", tag: "ai", tagText: "AI", text: "主权AI基金支持DeepMind创始人Demis Hassabis旗下初创公司Isomorphic Labs。该笔投资旨在推动AI在药物发现领域的应用，标志着政府层面加大对前沿AI科学项目的战略扶持。", source: "Computer Weekly", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUHVZMVRSQmFlblNib3IyMnlZbnU0VUZHcVAyVVpRY2dIVmFScGRKSGVWSHlpengxNTB4WWd1MUxZeVVrWGNXdTRtYjdMNnZJcmVnaUZqQTFkZEc1Mnl2emhySWRvN2hIMDRCZFd1dUp3RjBiWFFqQ1VHQUxTRktRS3gtbUZNempkZm5sN2lCVXlFbWpnSnFJOG5WQVd4QWNia1E?oc=5" },
   { time: "15:40", tag: "ai", tagText: "AI", text: "网络安全AI初创公司Exaforce完成1.25亿美元B轮融资。该公司专注于利用AI技术检测和防御网络威胁，此轮融资规模显示市场对AI安全赛道的高度关注。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPT3ZydGctYkUwMlBlQlNCYkhzaEVGM2V2UHZaUTduM18xWDVHeE9wNHBHTU9lUEdzV1JBTkk0UmNnNUdnelQ0TTNWazQ3V251dU5McXlleVNSeEtrRmpYWW5QTFJXa0FvdXVYYzRwSWY4dFF1clVkZkl1WXZwVzdnU2FTMXBVZHNWdlhVWVFyMU9FcWhqUWRKSw?oc=5" },
   { time: "14:46", tag: "ai", tagText: "AI", text: "中国开发出AI驱动的废水处理技术，可将污染废水转化为有价值的肥料。该技术利用人工智能优化处理流程，在净化水质的同时回收养分，兼具环保与经济效益。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOalBPQUhGbnZCYmRPRXBJeTgzX280VmNvcS1pbzduZnBtd3lITDJscGk2UVlwSl9Ea1UtRFFpaUo0ZzVtV0FwUWl2UjFzanFTZlNCZWpWbjhqMnVjR21JRGNRcS1zR0JiNERzcmZzOEtOdkdyd2tXVy1HdXEzLVRRS05NOFFGU2I2ZUp4ODdFUThDOURKdjUxeXMwV0dFNXo2cHRieGxBTWRhNDdnQmNJX04yM2JrUU5sWWRlYWVJV0pCQWNQaFFoRlgzUm5ONEg5QVl1eWtRcF9qZ2hSdW5zdzZwVGQ1X2czdW90aFVaSjlfbG4x0gH6AUFVX3lxTE9lTGRVWGtxaW8xV0hySGxUMVRybDdQOGlDSU9HVkp3MW5rUDAxSHpmQko2S1hnMFB4RXItSTVESXQ3RU5oYUFGVEgzb29xUlNtLW9aWWZoWW50VGRVQWZjbVRqWlJxNkFfSlV6N0ZOR0NsUzlYTTNOd2xMdGFkQVdqdmVhb2lITXhSWUUyMUc5blp6ZkhBVGFTSUozVUNfbGJ3MVVHZ3lkOWc0VlBJdDl0aDFCWnJwSFF1QkJtM05QWGJIV09iRDI4V3FZRy05YllJU1JnOEJVRmtZMThmZzhHdThvTlpUeC1wSE9XOUgyanBob284aDl0M0E?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "07:47", tag: "tech", tagText: "科技", text: "韩国GINT公司加入韩华航空航天物理AI业务，共同开发越野自主机器人。双方将结合GINT的机器人技术与韩华的军工航天资源，推动物理AI在极端环境下的商业化应用。", source: "벤처스퀘어", url: "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0xcGxBYk04VktLaThZVzNFcUQtU095WGlhcTdFQldDcEI1QV9Ga0ZLODlsbDJhY3dsSVBkTmpSWVhWeksyZDNmOEZLUnpONWRwODg4?oc=5" },
   { time: "06:47", tag: "tech", tagText: "科技", text: "比利时微电子研究中心imec展示3D CCD内存技术突破，该技术专为AI应用设计，有望大幅提升AI芯片的存储性能与能效。", source: "New Electronics", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYUQ2c1VUTVBkeGw4dGQyNkRqVno2bndEMFBzTTF5UnNhcE9TYlJfeHR6UUxOc3g5VFpxRHJXU3pGWm5kX0tYTExiakhZWDkyY1RFODlFS1NNdUZsWElpbi1TeDFZdUJEcUFaUS1QQVRiR0VHcjNib1BkTEFFaFo3eGsxSE1ob1FaOEQ2ZjgyUDdDQUtPeVJNYnhsenJkbDFKZUhZd2pqandBczA?oc=5" },
   { time: "02:45", tag: "ai", tagText: "AI", text: "AI数据中心建设热潮持续，科技巨头大规模扩建高能耗服务器仓库，但由此引发的能源消耗、电网压力及社区争议也在全球范围内加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" },
-  { time: "02:34", tag: "ai", tagText: "AI", text: "Anthropic警告投资者，Open Doors Partners、Unicorns Exchange等多家二级交易平台未经授权提供其股票交易，提醒投资者警惕非官方渠道的股份购买风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/anthropic-warns-investors-against-secondary-platforms-offering-access-to-its-shares/" },
-  { time: "02:12", tag: "macro", tagText: "宏观", text: "分析师指出，英伟达主导了第一波AI ETF热潮，而Alphabet（谷歌）可能塑造下一波AI ETF格局。随着AI竞争从硬件向应用层转移，谷歌在AI生态中的布局正吸引更多资金关注。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMmZ3OXVTV0JPVkhBVHk2dGoxZ18yVFRsbUZ0SHhkc3NLV08zV0k2Ym4tbjNIVzNaZVR3ckRySW5vY3F2TU5hR2xUT1hVZk1jbFE2cUFOajE4SXNzZWVyZFlKR0RyMTlFNlpLQm9TOVhYZ0lGQW5haGdoM2pRYlo5S0Q5NE96VmpIZ2Npb1dsVllmRENVUEY5WXM2Z1hMMWE0dmh6elZBdEpJZTc1Q3dSOWxmVUxEcjRzUDB1MXhYS00?oc=5" },
-  { time: "01:30", tag: "tech", tagText: "科技", text: "据报道，谷歌与SpaceX正在谈判，计划将数据中心送入轨道，将太空打造为AI计算的未来基地，尽管目前成本远高于地面。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/report-google-and-spacex-in-talks-to-put-data-centers-into-orbit/" },
-  { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌在Android Show上发布多项AI新功能：推出AI优先的Googlebooks笔记本电脑、Gemini智能体功能、支持“氛围编码”的Android小部件、Gemini集成至Chrome，以及更新Android Auto。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/" },
-  { time: "00:34", tag: "ai", tagText: "AI", text: "Meta旗下社交平台Threads正在测试类似Grok的AI集成功能，旨在帮助用户在对话中获取关于趋势和突发新闻的实时背景信息及推荐。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/threads-tests-a-meta-ai-integration-that-works-similarly-to-grok/" },
 ];
-const aiBreakingDate = "2026年5月13日 19:35 CST";
+const aiBreakingDate = "2026年5月13日 22:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
