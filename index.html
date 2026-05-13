@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.09,
+  score: 65.86,
   rating: "greed",
-  timestamp: "2026-05-13T19:59:57+00:00",
+  timestamp: "2026-05-13T22:00:58+00:00",
   previousClose: 66.6,
   previous1Week: 68.74,
   previous1Month: 40.97,
   previous1Year: 68.2,
-  date: "2026年5月14日 04:06 CST"
+  date: "2026年5月14日 06:21 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:19", tag: "geo", tagText: "地缘", text: "英国首相斯塔默在四名大臣辞职后勉强保住权力，计划与卫生大臣斯特里廷举行紧急会议，此前他向挑战者发起领导权争夺挑战。", source: "Financial Times", url: "https://www.ft.com/content/87c4bea0-421f-4cdc-b5b5-98221a9142f5" },
+  { time: "04:33", tag: "geo", tagText: "地缘", text: "密歇根州议员提出两党法案，以安全为由禁止中国关联车辆和技术进入美国市场。此举正值特朗普准备访问北京之际，中美贸易紧张局势持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/trump-congress-china-evs-byd.html" },
   { time: "22:40", tag: "geo", tagText: "地缘", text: "OPEC预计今年石油需求增长放缓，因伊朗封锁霍尔木兹海峡导致波斯湾供应中断，产量下降超30%。全球需求面临严重制约。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/opec-oil-strait-hormuz-iran-war-saudi-arabia-uae.html" },
   { time: "22:38", tag: "macro", tagText: "宏观", text: "美国4月生产者价格指数（PPI）同比飙升6%，创2022年以来最大涨幅，远超预期。批发通胀数据冲击市场，道指下跌，但芯片股反弹推动纳指走高。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/ppi-inflation-report-april-2026-.html" },
   { time: "22:02", tag: "ai", tagText: "AI", text: "AI能源争夺战催生新一代基础设施巨头，GE Vernova、Bloom Energy等5只股票成为赢家。科技巨头7000亿美元AI能源投资推动这些‘电力界的英伟达’股价飙升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "11:00", tag: "geo", tagText: "地缘", text: "特朗普计划在访华期间与习近平讨论对台军售问题，引发亚洲盟友不安。此举将打破美国长期以来的外交惯例，可能改变台海安全格局。", source: "Financial Times", url: "https://www.ft.com/content/156bf437-b5a8-40de-98c5-1ffe47d88b70" },
   { time: "10:00", tag: "geo", tagText: "地缘", text: "俄罗斯和乌克兰对美国主导的和平谈判态度转冷，双方对特朗普的外交斡旋失去信心，即使伊朗战争结束也难以推动和谈进程。", source: "Financial Times", url: "https://www.ft.com/content/09273889-e9b5-4317-b989-911c84df36fa" },
   { time: "08:30", tag: "crypto", tagText: "加密", text: "美国国会议员将于周二讨论比特币及加密货币市场结构问题，可能涉及监管框架和投资者保护等关键议题。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE5HSGU1ekJwM0RRSHE1b3ZINXJyUXNrSzZqSE14NkJMajQ1RE1LdThZb0lQdDljWTJkSUJSM2d1c3YxTHMyTGw0RUVTd1NENnVhYVBhWlVwZ3VJZmlJSks5TnNvQWlIaW55Y19OaXlCX0FVTksyMVJj?oc=5" },
-  { time: "06:19", tag: "geo", tagText: "地缘", text: "英国首相斯塔默在四名大臣辞职后勉强保住权力，计划与卫生大臣斯特里廷举行紧急会议，此前他向挑战者发起领导权争夺挑战。", source: "Financial Times", url: "https://www.ft.com/content/87c4bea0-421f-4cdc-b5b5-98221a9142f5" },
-  { time: "04:33", tag: "geo", tagText: "地缘", text: "密歇根州议员提出两党法案，以安全为由禁止中国关联车辆和技术进入美国市场。此举正值特朗普准备访问北京之际，中美贸易紧张局势持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/trump-congress-china-evs-byd.html" },
 ];
-const breakingDate = "2026年5月14日 04:06 CST";
+const breakingDate = "2026年5月14日 06:21 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "07:47", tag: "tech", tagText: "科技", text: "韩国GINT公司加入韩华航空航天物理AI业务，共同开发越野自主机器人。双方将结合GINT的机器人技术与韩华的军工航天资源，推动物理AI在极端环境下的商业化应用。", source: "벤처스퀘어", url: "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0xcGxBYk04VktLaThZVzNFcUQtU095WGlhcTdFQldDcEI1QV9Ga0ZLODlsbDJhY3dsSVBkTmpSWVhWeksyZDNmOEZLUnpONWRwODg4?oc=5" },
   { time: "06:47", tag: "tech", tagText: "科技", text: "比利时微电子研究中心imec展示3D CCD内存技术突破，该技术专为AI应用设计，有望大幅提升AI芯片的存储性能与能效。", source: "New Electronics", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYUQ2c1VUTVBkeGw4dGQyNkRqVno2bndEMFBzTTF5UnNhcE9TYlJfeHR6UUxOc3g5VFpxRHJXU3pGWm5kX0tYTExiakhZWDkyY1RFODlFS1NNdUZsWElpbi1TeDFZdUJEcUFaUS1QQVRiR0VHcjNib1BkTEFFaFo3eGsxSE1ob1FaOEQ2ZjgyUDdDQUtPeVJNYnhsenJkbDFKZUhZd2pqandBczA?oc=5" },
 ];
-const aiBreakingDate = "2026年5月14日 04:06 CST";
+const aiBreakingDate = "2026年5月14日 06:21 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
