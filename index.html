@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 65.54,
   rating: "greed",
-  timestamp: "2026-05-13T07:49:31+00:00",
+  timestamp: "2026-05-13T11:15:01+00:00",
   previousClose: 66.6,
   previous1Week: 68.74,
   previous1Month: 40.97,
   previous1Year: 68.2,
-  date: "2026年5月13日 16:07 CST"
+  date: "2026年5月13日 19:35 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:25", tag: "geo", tagText: "地缘", text: "普京首次以‘先生’称呼泽连斯基，摩根士丹利认为这标志着俄乌和平谈判氛围出现重大转变。经过四年多的战争，任何持久和平协议都将对股市、能源价格和大宗商品产生巨大影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/putin-addresses-zelensky-as-mister-for-the-first-time-morgan-stanley-says-it-means-a-vibe-shift-in-peace-negotiations-47c14f56?mod=mw_rss_topstories" },
+  { time: "19:02", tag: "macro", tagText: "宏观", text: "油价基本持平，市场关注特朗普访华进展及伊朗局势。此前伊朗战争导致霍尔木兹海峡封锁，油价持续承压。", source: "Reuters", url: "https://finance.yahoo.com/news/oil-prices-slip-teetering-iran-010021136.html" },
+  { time: "19:01", tag: "tech", tagText: "科技", text: "比亚迪称其‘闪充’技术将帮助电动汽车从燃油车手中夺取市场份额，该技术可在五分钟内完成充电。此举进一步加剧电动车行业竞争。", source: "Financial Times", url: "https://www.ft.com/content/ce9a2318-287c-4c07-89ae-3d8582ed5501" },
+  { time: "18:49", tag: "tech", tagText: "科技", text: "阿里巴巴公布财报，核心利润暴跌84%，因在AI和电商领域大幅投资。尽管云和AI业务增长加速，但盈利能力严重承压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/alibaba-earnings-march-quarter-ai-cloud-growth.html" },
   { time: "15:39", tag: "macro", tagText: "宏观", text: "摩根大通CEO戴蒙警告，如果英国首相斯塔默被赶下台，该行可能重新考虑其在伦敦的新办公室计划。斯塔默的领导地位面临压力，引发英国债券市场担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/jamie-dimon-says-jp-morgan-may-rethink-london-office-if-starmer-ousted.html" },
   { time: "15:29", tag: "ai", tagText: "AI", text: "软银公布财报，其愿景基金年度收益达460亿美元，主要得益于对OpenAI投资价值的巨大增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/softbank-earnings-fy-2025-vision-fund-openai-stake.html" },
   { time: "12:14", tag: "geo", tagText: "地缘", text: "英伟达CEO黄仁勋应特朗普总统邀请，加入其本周访华代表团。此前黄仁勋并未出现在公布的商界领袖名单中，此举凸显芯片巨头在中美科技博弈中的关键角色。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html" },
@@ -1645,16 +1649,16 @@ const breakingNews = [
   { time: "04:18", tag: "tech", tagText: "科技", text: "铜价创历史新高，受AI数据中心需求推动。花旗预计铜价将升至每吨15000美元，较周二收盘价再涨约7%。AI能源争夺战催生新一代基础设施巨头。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/this-metal-just-set-a-new-record-boosted-by-ai-data-center-demand.html" },
   { time: "04:04", tag: "crypto", tagText: "加密", text: "比特币市场主导率回升至58%以上，表明加密市场进入整合阶段。与此同时，Anchorage Digital高管警告，SpaceX、OpenAI、Anthropic等IPO可能从加密市场抽走大量资金。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9QTDlyaUlNNFROcW1hTTE5eFV5XzFsS3FXRTJPM0tBN3NXdExub1RJYlhhdmJvMXhkSlkwbzN0cDIxcXoxRzU1WThSLWRTOWl4eHJUVm5WYm0?oc=5" },
   { time: "04:02", tag: "tech", tagText: "科技", text: "Waymo因软件故障导致部分无人驾驶出租车可能驶入积水路面，自愿召回约3800辆Robotaxi。这是自动驾驶领域罕见的大规模安全召回事件。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/waymo-recalls-3800-robotaxis-after-able-drive-into-standing-water.html" },
-  { time: "03:47", tag: "tech", tagText: "科技", text: "交易所将推出计算机芯片期货合约，允许交易者对冲GPU租赁费率等运营成本。随着AI推动芯片成本飙升，该工具为市场提供新的风险管理手段。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/new-futures-market-for-semiconductors-comes-as-ai-drives-costs-skyward.html" },
-  { time: "02:44", tag: "tech", tagText: "科技", text: "特朗普宣布解雇FDA局长马卡里，原因是其监管决策引发制药行业和医生群体的强烈反弹，以及FDA内部领导层动荡。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/trump-fda-commissioner-marty-makary-out.html" },
-  { time: "02:10", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯表示，特朗普无需国会批准即可重启对伊朗的军事打击。伊朗战争已进入第三个月，伊朗持续封锁霍尔木兹海峡，导致全球油价飙升。", source: "CNBC", url: "https://www.cnbc.com/2026/05/12/trump-congress-iran-war-hegseth.html" },
-  { time: "01:52", tag: "macro", tagText: "宏观", text: "分析警告，全球原油储备正快速枯竭，石油危机可能在一个月内演变为全面灾难。伊朗战争导致供应中断，油价持续上涨，市场面临严重短缺风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-the-oil-crisis-could-become-a-full-blown-catastrophe-within-a-month-84129cd0?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月13日 16:07 CST";
+const breakingDate = "2026年5月13日 19:35 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "17:28", tag: "ai", tagText: "AI", text: "以色列AI突破有望彻底改变睡眠呼吸暂停诊断方式。该技术利用人工智能分析相关数据，旨在提高诊断准确率并降低传统检测的复杂性，为全球数亿患者带来更便捷的筛查方案。", source: "i24NEWS", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRTZyei1qZm40MmVieXlaLWw0Q3RSXzMxZ3p4WFBvbGc5a2RsTU9TeWZQTy05eWwzUFhQZUV0V3pHaG9DR09tYnJOWjZYWW9INWs3TFJ6NjNDTWZQWUk2YThNLXI4M2hEc2Q5NmFod2VkcXFiM2lxRE4ySXNOcmFzdjdNTDk0ckFSLTBabzNNcFpFeF9DZjgzLVZFMWxEeXpOaGJxTkE5YlVVRFJwdGtHc05VQnc?oc=5" },
+  { time: "17:24", tag: "ai", tagText: "AI", text: "奇瑞汽车（EXEED母公司）宣布与英伟达达成合作，共同推进驾驶辅助、物理AI及机器人技术。双方将结合英伟达的AI计算平台与奇瑞的整车研发能力，加速智能驾驶和自动化技术的落地。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMihwJBVV95cUxNYzNBMk9DWjdWeXRTYV9TdzV1SmZIU2wtelY4cjlOemZmVmxxazlSME84dk9oSUxqcV9mUVQ0SjRZUjFGUGE5TGVTaGpmU09RTi1iLUdKRmROYS1WcWVqdEJvamo4bEJFcnRNOFpENWlWNnc5aHhXTkZUSzlNZkFGSUxOOF9tdTZWMFp2VmxrRTNOdXZRYXhCcVA0cDJfZFVfWnVnaHllNDh0RV8tU0VHVWYwUzdiQTlYNDYtVVFjSWRRYldXRURlWXc3Y1ZhQzE3RDNsU0pEMlU3X1N6cmxtY3cyRE44d1BFcmFLeTA3amFKT2JuaHpUYXBZUVVZTHNyV3ZxSHlXNA?oc=5" },
+  { time: "16:45", tag: "ai", tagText: "AI", text: "主权AI基金支持DeepMind创始人Demis Hassabis旗下初创公司Isomorphic Labs。该笔投资旨在推动AI在药物发现领域的应用，标志着政府层面加大对前沿AI科学项目的战略扶持。", source: "Computer Weekly", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUHVZMVRSQmFlblNib3IyMnlZbnU0VUZHcVAyVVpRY2dIVmFScGRKSGVWSHlpengxNTB4WWd1MUxZeVVrWGNXdTRtYjdMNnZJcmVnaUZqQTFkZEc1Mnl2emhySWRvN2hIMDRCZFd1dUp3RjBiWFFqQ1VHQUxTRktRS3gtbUZNempkZm5sN2lCVXlFbWpnSnFJOG5WQVd4QWNia1E?oc=5" },
   { time: "15:40", tag: "ai", tagText: "AI", text: "网络安全AI初创公司Exaforce完成1.25亿美元B轮融资。该公司专注于利用AI技术检测和防御网络威胁，此轮融资规模显示市场对AI安全赛道的高度关注。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPT3ZydGctYkUwMlBlQlNCYkhzaEVGM2V2UHZaUTduM18xWDVHeE9wNHBHTU9lUEdzV1JBTkk0UmNnNUdnelQ0TTNWazQ3V251dU5McXlleVNSeEtrRmpYWW5QTFJXa0FvdXVYYzRwSWY4dFF1clVkZkl1WXZwVzdnU2FTMXBVZHNWdlhVWVFyMU9FcWhqUWRKSw?oc=5" },
+  { time: "14:46", tag: "ai", tagText: "AI", text: "中国开发出AI驱动的废水处理技术，可将污染废水转化为有价值的肥料。该技术利用人工智能优化处理流程，在净化水质的同时回收养分，兼具环保与经济效益。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOalBPQUhGbnZCYmRPRXBJeTgzX280VmNvcS1pbzduZnBtd3lITDJscGk2UVlwSl9Ea1UtRFFpaUo0ZzVtV0FwUWl2UjFzanFTZlNCZWpWbjhqMnVjR21JRGNRcS1zR0JiNERzcmZzOEtOdkdyd2tXVy1HdXEzLVRRS05NOFFGU2I2ZUp4ODdFUThDOURKdjUxeXMwV0dFNXo2cHRieGxBTWRhNDdnQmNJX04yM2JrUU5sWWRlYWVJV0pCQWNQaFFoRlgzUm5ONEg5QVl1eWtRcF9qZ2hSdW5zdzZwVGQ1X2czdW90aFVaSjlfbG4x0gH6AUFVX3lxTE9lTGRVWGtxaW8xV0hySGxUMVRybDdQOGlDSU9HVkp3MW5rUDAxSHpmQko2S1hnMFB4RXItSTVESXQ3RU5oYUFGVEgzb29xUlNtLW9aWWZoWW50VGRVQWZjbVRqWlJxNkFfSlV6N0ZOR0NsUzlYTTNOd2xMdGFkQVdqdmVhb2lITXhSWUUyMUc5blp6ZkhBVGFTSUozVUNfbGJ3MVVHZ3lkOWc0VlBJdDl0aDFCWnJwSFF1QkJtM05QWGJIV09iRDI4V3FZRy05YllJU1JnOEJVRmtZMThmZzhHdThvTlpUeC1wSE9XOUgyanBob284aDl0M0E?oc=5" },
   { time: "14:01", tag: "tech", tagText: "科技", text: "西澳大利亚州研究人员取得重大AI突破，通过常见骨扫描可早期检测心脏病。该技术利用AI分析常规骨密度扫描中的钙化信号，有望大幅降低心脏病筛查成本并提高早期发现率。", source: "The West Australian", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUDJOYVVzNFpoNXFpTW1TbVNwYi1GYXdNVHZEeHhZWDdUSnhDOFcxRXJCOU1xUjN2RFZLdGdZc05TcktXeUowbjhqRWxMZThsLTFSTHktRENYOHo4SGx1Y2NDR1J1SjNFY1U5ZVZEQTJWOWZRcUhkd2VvbXNRamhBNHhnZklYR2VSM0hJbWM0MFV2UzNYOFRxVTdtSi1CZnQwd2JlUmRWQ240dC1IUmFQemtyNWdHUFVyQ0tWYXZtcDg4cTY1LW45VFNUaEhCZU8zWDNlN04wSUpRZm1vNWdF0gHkAUFVX3lxTFBzOENybGhLOWVfbmgzSmVYVThKbkRHTkkyYTJDanQwLV9kU0dLaWxab3RzSlY5MUJza2Zzd2lLYkR1THJEX2lqelI1ME51ZW9OTjN5eThjU1dkbEZWaWpnU2l5dGhWMWJnb3lCTTk1bFVlb2tpeV9tQ05PX1dJUjM4Ty1QTTVNcjYwR1JTTXdPTUJRQ1BCQnFrNU5CUG11TjhvWUpFNXJwMFotYS1iaHEyWXJpZ21jZGxpRXZGcFliRUdUMWNlYXlDaU54TlRlWVVMUlM5bXhwWmdfVDVtcVZrT2loMw?oc=5" },
   { time: "13:00", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用AI优化航班调度与空域管理，旨在提升欧洲空管效率并减少延误。", source: "Business Wire", url: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNYlpoMGVTYUpIa1lxeUdHR3BEUHlzdTh5enNfYXE0Q0VuekZHdnh4NHJveTdLb0NRenZUUWpXZ2I1MkVsSkM0Tk4tWHNrbnVFYTAxczVEUjgwTGY2bmExa1NkR3k3Z0U2V0UycTF4cWxGaFZxZC1wWnZ5S29zM3RzeVpsSnJnS0JJNnQwRzFQM2RnaDFYVEhiLTVIRU9MS1F4Z0YzTFYtc3VfdUZ2TnhjZUJKSG9ha1FUQ1pqRTM3SklwTlFHeGk3UWp1Sng0LWRWdDh5OWJwMnI4YnNXZHg4ZFpWUmdBYzVaWkE?oc=5" },
   { time: "12:27", tag: "geo", tagText: "地缘", text: "美国怀疑英伟达芯片通过泰国走私至阿里巴巴，泰国商业新闻援引消息称，美方正在调查相关供应链路径，此举可能加剧中美科技脱钩风险。", source: "Thailand Business News", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdm9HQ25TYzRqWDNGZS0zSkZta25aa3RCd1FHeUdqdHk0cEtOSlRtZU1YLWtmT1ZEMzc0R3VON3V2elAwNXFERW9HNVM3eFZPcmotOS1QQTRrcTZiNkk1M3kwZGxNQ3BKWTFhTXRxMTgyNmRpMW9IOXo2bHB1cFNBNlVOeWVONkxpQVprSGVUSDlaaVdZSGhxaGlHcDNUaDRzX0RqMThkeUNVQ3FEVXc?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "01:30", tag: "tech", tagText: "科技", text: "据报道，谷歌与SpaceX正在谈判，计划将数据中心送入轨道，将太空打造为AI计算的未来基地，尽管目前成本远高于地面。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/report-google-and-spacex-in-talks-to-put-data-centers-into-orbit/" },
   { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌在Android Show上发布多项AI新功能：推出AI优先的Googlebooks笔记本电脑、Gemini智能体功能、支持“氛围编码”的Android小部件、Gemini集成至Chrome，以及更新Android Auto。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/" },
   { time: "00:34", tag: "ai", tagText: "AI", text: "Meta旗下社交平台Threads正在测试类似Grok的AI集成功能，旨在帮助用户在对话中获取关于趋势和突发新闻的实时背景信息及推荐。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/threads-tests-a-meta-ai-integration-that-works-similarly-to-grok/" },
-  { time: "00:30", tag: "ai", tagText: "AI", text: "一名19岁大学生的父母起诉OpenAI，称ChatGPT就派对药物给出了不良建议，导致其儿子意外过量服药身亡。这是AI聊天机器人被指与死亡事件相关的重大诉讼。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/928691/openai-chatgpt-wrongful-death-overdose" },
-  { time: "00:10", tag: "macro", tagText: "宏观", text: "芯片股从AI驱动的创纪录涨势中回落，高通股价大跌13%。市场对AI芯片需求持续但短期获利回吐压力显现，引发投资者对板块估值过高的担忧。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5wNzh5am9QTFNKWmtGYXRPeU5XS0liYXF4MTdhWWxrLTNLNUl5RGcxNDc0eS1UQm5hZ3hYM2szUl8ySTdIRXJiSXl4bC1hajN4alo3MGpPaGVIamtfbnhCSVFtVTRsY0hIWG1PdHNkd2lJb21jOHfSAXtBVV95cUxNcTZLblVRbjRLNGlGNUpNNjVuaUZXNmpTMm5oTnB4d3BGVC1NWDc0TWlnTXBBNnpTS0lEWkgwb3ZqNGw1cGNTdmZQOFFjbzVPcG1qZlJyaG0yVkU0THJSZlpWcHlEMnppZDI2WFJreXoxZUJqUlROTERnU2c?oc=5" },
-  { time: "00:05", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman在加州联邦法院针对埃隆·马斯克的陪审团审判中出庭作证。Altman与OpenAI总裁Greg Brockman是本案主要被告，该案备受科技界关注，可能影响AI行业竞争格局。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/916975/altman-takes-stand-elon-musk-openai-trial" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "Anthropic宣布推出面向律所的新AI功能套件，进军日益火热的AI法律服务市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/12/the-ai-legal-services-industry-is-heating-up-anthropic-is-getting-in-on-the-action/" },
 ];
-const aiBreakingDate = "2026年5月13日 16:07 CST";
+const aiBreakingDate = "2026年5月13日 19:35 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
