@@ -1618,19 +1618,21 @@
 const fearGreedData = {
   score: 66.14,
   rating: "greed",
-  timestamp: "2026-05-14T21:03:08+00:00",
+  timestamp: "2026-05-14T22:48:03+00:00",
   previousClose: 65.86,
   previous1Week: 66.4,
   previous1Month: 47.26,
   previous1Year: 70.4,
-  date: "2026年5月15日 05:19 CST"
+  date: "2026年5月15日 07:07 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
   { time: "04:43", tag: "tech", tagText: "科技", text: "消息人士称，马斯克旗下可重复使用火箭公司SpaceX最快将于下周提交IPO招股说明书，预计将创下美股史上最大规模上市纪录。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/spacex-ipo-prospectus-could-land-as-soon-as-next-week-sources-say.html" },
+  { time: "04:23", tag: "crypto", tagText: "加密", text: "加密货币交易所Gemini股价大涨，此前Winklevoss Capital Fund向其投资1亿美元。该公司季度营收超预期，亏损幅度也小于分析师预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/gemini-surges-after-winklevoss-capital-invests-100-million-in-the-crypto-exchange.html" },
   { time: "04:20", tag: "geo", tagText: "地缘", text: "美国民主党议员要求商务部长卢特尼克辞职，指控其在杰弗里·爱泼斯坦相关采访中撒谎。白宫此前表示，特朗普总统继续支持卢特尼克。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/howard-lutnick-jeffrey-epstein-commerce-trump.html" },
+  { time: "04:02", tag: "tech", tagText: "科技", text: "由Egon Durban领导的财团将以99亿美元估值收购拉斯维加斯突袭者队25%的股份。First Football将出售其持有的该球队全部股份。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/group-led-by-egon-durban-to-buy-25percent-of-las-vegas-raiders-at-9point9-billion-valuation-sources.html" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "美联储理事米兰宣布辞职，支持沃什接任主席。债券市场认为美联储在通胀问题上落后于曲线，希望新主席转向紧缩立场。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/fed-governor-miran-submits-resignation-throws-support-behind-warsh-as-new-chair.html" },
   { time: "02:30", tag: "macro", tagText: "宏观", text: "美股三大指数全线上涨，道指重新站上50000点大关，标普500和纳斯达克指数创历史新高。思科领涨科技股，AI交易热潮回归。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE1WWXpTOXhVMVBOUC12VUhqTUduSTBPaUs5MExwVWt0ZWgxTHIzbGQ2SDJmOXVFci1qemdfbnJQVFlYX29UcjY1NExiTkJLV09FUnp3emNSdmtVZk1SbGc1RFRBZTFLSXZ2VTJpSWp6ZXF4UHRadTU40gF8QVVfeXFMT0diamtoaHFvSGdVY3ZGSG55SjZyVzAxeVA3RlhUb3JHLUtodnpZaEZ3X0xqMlJfOHk4LU9YUF9yQUVkNXdDUmVmQk1rQjhlN3plT0tGWkJQNzdMRkpwTzJrNkp5aXFCRmF3SkhqSjFHZktqZnljM19aZzB6dw?oc=5" },
   { time: "01:57", tag: "geo", tagText: "地缘", text: "特朗普称中国将订购200架波音飞机，但波音股价因订单规模不及预期而大跌，创六个月最大单日跌幅。市场此前期待更大订单。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/china-boeing-order-airplanes-737-max-trump-says.html" },
@@ -1647,13 +1649,12 @@ const breakingNews = [
   { time: "21:42", tag: "macro", tagText: "宏观", text: "半导体股在美股市场中的影响力达到历史最高水平，分析警告这种高度集中可能带来风险。AI驱动的芯片股已成为标普500指数上涨的主要动力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/semiconductor-names-have-never-before-held-this-much-sway-over-the-stock-market-history-shows-that-could-be-a-problem-bc492950?mod=mw_rss_topstories" },
   { time: "19:25", tag: "geo", tagText: "地缘", text: "普京首次以‘先生’称呼泽连斯基，摩根士丹利认为这标志着俄乌和平谈判氛围出现重大转变。经过四年多的战争，任何持久和平协议都将对股市、能源价格和大宗商品产生巨大影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/putin-addresses-zelensky-as-mister-for-the-first-time-morgan-stanley-says-it-means-a-vibe-shift-in-peace-negotiations-47c14f56?mod=mw_rss_topstories" },
   { time: "19:02", tag: "macro", tagText: "宏观", text: "油价基本持平，市场关注特朗普访华进展及伊朗局势。此前伊朗战争导致霍尔木兹海峡封锁，油价持续承压。", source: "Reuters", url: "https://finance.yahoo.com/news/oil-prices-slip-teetering-iran-010021136.html" },
-  { time: "19:01", tag: "tech", tagText: "科技", text: "比亚迪称其‘闪充’技术将帮助电动汽车从燃油车手中夺取市场份额，该技术可在五分钟内完成充电。此举进一步加剧电动车行业竞争。", source: "Financial Times", url: "https://www.ft.com/content/ce9a2318-287c-4c07-89ae-3d8582ed5501" },
-  { time: "18:49", tag: "tech", tagText: "科技", text: "阿里巴巴公布财报，核心利润暴跌84%，因在AI和电商领域大幅投资。尽管云和AI业务增长加速，但盈利能力严重承压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/alibaba-earnings-march-quarter-ai-cloud-growth.html" },
 ];
-const breakingDate = "2026年5月15日 05:19 CST";
+const breakingDate = "2026年5月15日 07:07 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:30", tag: "ai", tagText: "AI", text: "马斯克旗下SpaceXAI自合并以来已流失超50名员工，引发外界对其领导层变动、员工倦怠及人才被挖角的担忧。该事件凸显了AI领域激烈的人才竞争和整合风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/" },
   { time: "05:00", tag: "ai", tagText: "AI", text: "OpenAI将Codex AI编程工具集成至ChatGPT移动应用，用户现可通过手机远程控制桌面端代码编写和应用操作。此举紧随Anthropic类似功能走红之后，旨在提升移动端AI开发体验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview" },
   { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
   { time: "03:12", tag: "ai", tagText: "AI", text: "据彭博社报道，OpenAI已聘请外部律师事务所，准备对苹果采取法律行动。这并非OpenAI首次与合作伙伴关系破裂，此前已有类似先例。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple-it-wouldnt-be-the-first-partner-to-feel-burned/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "18:00", tag: "ai", tagText: "AI", text: "新型内存聚焦ETF年内飙升90%，其CEO称存储芯片是AI发展的“最大瓶颈”，市场关注度从英伟达等算力芯片转向存储领域。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbUhMR01kVXpPbG5vTEYtdFluWXdHNE1fVXRFc0h6aTF0ZG4tRVJUVTQwRWo2SklLejFCRmNCRnR3OWJsdGJPTE5KcUJTUXJFbTdRa0lNakhWX0cwQXVTc25QVW9XNnlPdmV5VlV6Um45NlhpSl9GZkZKdWRnN2NEYW9Lc0RUNDZvbURTOE9QQV9Ba0NtMGRfZ3U0YWZ1SHppcGNGSTI2TG10ellMd2lMZkNBMzdtcDJoSkJNLVZxNEg0RTFsdXJ3eXdUX0VseF82YTlqSlVERnZEaVVf?oc=5" },
   { time: "17:28", tag: "ai", tagText: "AI", text: "以色列AI突破有望彻底改变睡眠呼吸暂停诊断方式。该技术利用人工智能分析相关数据，旨在提高诊断准确率并降低传统检测的复杂性，为全球数亿患者带来更便捷的筛查方案。", source: "i24NEWS", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRTZyei1qZm40MmVieXlaLWw0Q3RSXzMxZ3p4WFBvbGc5a2RsTU9TeWZQTy05eWwzUFhQZUV0V3pHaG9DR09tYnJOWjZYWW9INWs3TFJ6NjNDTWZQWUk2YThNLXI4M2hEc2Q5NmFod2VkcXFiM2lxRE4ySXNOcmFzdjdNTDk0ckFSLTBabzNNcFpFeF9DZjgzLVZFMWxEeXpOaGJxTkE5YlVVRFJwdGtHc05VQnc?oc=5" },
   { time: "17:24", tag: "ai", tagText: "AI", text: "奇瑞汽车（EXEED母公司）宣布与英伟达达成合作，共同推进驾驶辅助、物理AI及机器人技术。双方将结合英伟达的AI计算平台与奇瑞的整车研发能力，加速智能驾驶和自动化技术的落地。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMihwJBVV95cUxNYzNBMk9DWjdWeXRTYV9TdzV1SmZIU2wtelY4cjlOemZmVmxxazlSME84dk9oSUxqcV9mUVQ0SjRZUjFGUGE5TGVTaGpmU09RTi1iLUdKRmROYS1WcWVqdEJvamo4bEJFcnRNOFpENWlWNnc5aHhXTkZUSzlNZkFGSUxOOF9tdTZWMFp2VmxrRTNOdXZRYXhCcVA0cDJfZFVfWnVnaHllNDh0RV8tU0VHVWYwUzdiQTlYNDYtVVFjSWRRYldXRURlWXc3Y1ZhQzE3RDNsU0pEMlU3X1N6cmxtY3cyRE44d1BFcmFLeTA3amFKT2JuaHpUYXBZUVVZTHNyV3ZxSHlXNA?oc=5" },
-  { time: "17:00", tag: "ai", tagText: "AI", text: "AI初创公司Poppy推出主动式AI助手，可连接日历、邮件、消息等服务，根据用户生活动态主动推送提醒、建议和任务，旨在全面管理数字生活。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/poppy-debuts-a-proactive-ai-assistant-to-help-organize-your-digital-life/" },
 ];
-const aiBreakingDate = "2026年5月15日 05:19 CST";
+const aiBreakingDate = "2026年5月15日 07:07 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
