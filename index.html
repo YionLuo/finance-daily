@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.09,
+  score: 66.14,
   rating: "greed",
-  timestamp: "2026-05-14T19:57:47+00:00",
+  timestamp: "2026-05-14T21:03:08+00:00",
   previousClose: 65.86,
   previous1Week: 66.4,
   previous1Month: 47.26,
   previous1Year: 70.4,
-  date: "2026年5月15日 04:00 CST"
+  date: "2026年5月15日 05:19 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:43", tag: "tech", tagText: "科技", text: "消息人士称，马斯克旗下可重复使用火箭公司SpaceX最快将于下周提交IPO招股说明书，预计将创下美股史上最大规模上市纪录。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/spacex-ipo-prospectus-could-land-as-soon-as-next-week-sources-say.html" },
+  { time: "04:20", tag: "geo", tagText: "地缘", text: "美国民主党议员要求商务部长卢特尼克辞职，指控其在杰弗里·爱泼斯坦相关采访中撒谎。白宫此前表示，特朗普总统继续支持卢特尼克。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/howard-lutnick-jeffrey-epstein-commerce-trump.html" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "美联储理事米兰宣布辞职，支持沃什接任主席。债券市场认为美联储在通胀问题上落后于曲线，希望新主席转向紧缩立场。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/fed-governor-miran-submits-resignation-throws-support-behind-warsh-as-new-chair.html" },
   { time: "02:30", tag: "macro", tagText: "宏观", text: "美股三大指数全线上涨，道指重新站上50000点大关，标普500和纳斯达克指数创历史新高。思科领涨科技股，AI交易热潮回归。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE1WWXpTOXhVMVBOUC12VUhqTUduSTBPaUs5MExwVWt0ZWgxTHIzbGQ2SDJmOXVFci1qemdfbnJQVFlYX29UcjY1NExiTkJLV09FUnp3emNSdmtVZk1SbGc1RFRBZTFLSXZ2VTJpSWp6ZXF4UHRadTU40gF8QVVfeXFMT0diamtoaHFvSGdVY3ZGSG55SjZyVzAxeVA3RlhUb3JHLUtodnpZaEZ3X0xqMlJfOHk4LU9YUF9yQUVkNXdDUmVmQk1rQjhlN3plT0tGWkJQNzdMRkpwTzJrNkp5aXFCRmF3SkhqSjFHZktqZnljM19aZzB6dw?oc=5" },
   { time: "01:57", tag: "geo", tagText: "地缘", text: "特朗普称中国将订购200架波音飞机，但波音股价因订单规模不及预期而大跌，创六个月最大单日跌幅。市场此前期待更大订单。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/china-boeing-order-airplanes-737-max-trump-says.html" },
@@ -1647,15 +1649,15 @@ const breakingNews = [
   { time: "19:02", tag: "macro", tagText: "宏观", text: "油价基本持平，市场关注特朗普访华进展及伊朗局势。此前伊朗战争导致霍尔木兹海峡封锁，油价持续承压。", source: "Reuters", url: "https://finance.yahoo.com/news/oil-prices-slip-teetering-iran-010021136.html" },
   { time: "19:01", tag: "tech", tagText: "科技", text: "比亚迪称其‘闪充’技术将帮助电动汽车从燃油车手中夺取市场份额，该技术可在五分钟内完成充电。此举进一步加剧电动车行业竞争。", source: "Financial Times", url: "https://www.ft.com/content/ce9a2318-287c-4c07-89ae-3d8582ed5501" },
   { time: "18:49", tag: "tech", tagText: "科技", text: "阿里巴巴公布财报，核心利润暴跌84%，因在AI和电商领域大幅投资。尽管云和AI业务增长加速，但盈利能力严重承压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/alibaba-earnings-march-quarter-ai-cloud-growth.html" },
-  { time: "15:39", tag: "macro", tagText: "宏观", text: "摩根大通CEO戴蒙警告，如果英国首相斯塔默被赶下台，该行可能重新考虑其在伦敦的新办公室计划。斯塔默的领导地位面临压力，引发英国债券市场担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/jamie-dimon-says-jp-morgan-may-rethink-london-office-if-starmer-ousted.html" },
-  { time: "15:29", tag: "ai", tagText: "AI", text: "软银公布财报，其愿景基金年度收益达460亿美元，主要得益于对OpenAI投资价值的巨大增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/softbank-earnings-fy-2025-vision-fund-openai-stake.html" },
 ];
-const breakingDate = "2026年5月15日 04:00 CST";
+const breakingDate = "2026年5月15日 05:19 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:00", tag: "ai", tagText: "AI", text: "OpenAI将Codex AI编程工具集成至ChatGPT移动应用，用户现可通过手机远程控制桌面端代码编写和应用操作。此举紧随Anthropic类似功能走红之后，旨在提升移动端AI开发体验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview" },
   { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
   { time: "03:12", tag: "ai", tagText: "AI", text: "据彭博社报道，OpenAI已聘请外部律师事务所，准备对苹果采取法律行动。这并非OpenAI首次与合作伙伴关系破裂，此前已有类似先例。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple-it-wouldnt-be-the-first-partner-to-feel-burned/" },
+  { time: "03:00", tag: "ai", tagText: "AI", text: "AI语音初创公司Wispr正寻求新一轮融资，估值目标达20亿美元。该公司专注于AI语音交互技术，此轮融资若完成将使其成为该赛道的重要玩家。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMic0FVX3lxTE03eHA0VnFjZXlPWDBaeWxBQkhWZnRySndiaFZvazdTdDA5NmtZLXFOazFOS0o1enVBTk13cERQd0dxNzZzc1B5YnFxZU16MFpLdF9kNUtKMFVJbldaQld5b3lSS3ozd1lLMVctaGF0UjZQMk0?oc=5" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "微软开始取消部分员工的Claude Code许可证。微软自去年12月起向数千名开发者开放了Anthropic的AI编程工具，此次调整可能意味着其内部AI工具策略的转变。", source: "The Verge", url: "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad" },
   { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
   { time: "01:40", tag: "ai", tagText: "AI", text: "一项互动地图工具上线，帮助公众查找自家附近的AI数据中心。此前，俄勒冈州居民因谷歌大规模建设数据中心引发争议，该工具旨在提高数据中心选址的透明度。", source: "The Verge", url: "https://www.theverge.com/policy/930629/data-center-policy-map-interactive" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "17:28", tag: "ai", tagText: "AI", text: "以色列AI突破有望彻底改变睡眠呼吸暂停诊断方式。该技术利用人工智能分析相关数据，旨在提高诊断准确率并降低传统检测的复杂性，为全球数亿患者带来更便捷的筛查方案。", source: "i24NEWS", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRTZyei1qZm40MmVieXlaLWw0Q3RSXzMxZ3p4WFBvbGc5a2RsTU9TeWZQTy05eWwzUFhQZUV0V3pHaG9DR09tYnJOWjZYWW9INWs3TFJ6NjNDTWZQWUk2YThNLXI4M2hEc2Q5NmFod2VkcXFiM2lxRE4ySXNOcmFzdjdNTDk0ckFSLTBabzNNcFpFeF9DZjgzLVZFMWxEeXpOaGJxTkE5YlVVRFJwdGtHc05VQnc?oc=5" },
   { time: "17:24", tag: "ai", tagText: "AI", text: "奇瑞汽车（EXEED母公司）宣布与英伟达达成合作，共同推进驾驶辅助、物理AI及机器人技术。双方将结合英伟达的AI计算平台与奇瑞的整车研发能力，加速智能驾驶和自动化技术的落地。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMihwJBVV95cUxNYzNBMk9DWjdWeXRTYV9TdzV1SmZIU2wtelY4cjlOemZmVmxxazlSME84dk9oSUxqcV9mUVQ0SjRZUjFGUGE5TGVTaGpmU09RTi1iLUdKRmROYS1WcWVqdEJvamo4bEJFcnRNOFpENWlWNnc5aHhXTkZUSzlNZkFGSUxOOF9tdTZWMFp2VmxrRTNOdXZRYXhCcVA0cDJfZFVfWnVnaHllNDh0RV8tU0VHVWYwUzdiQTlYNDYtVVFjSWRRYldXRURlWXc3Y1ZhQzE3RDNsU0pEMlU3X1N6cmxtY3cyRE44d1BFcmFLeTA3amFKT2JuaHpUYXBZUVVZTHNyV3ZxSHlXNA?oc=5" },
   { time: "17:00", tag: "ai", tagText: "AI", text: "AI初创公司Poppy推出主动式AI助手，可连接日历、邮件、消息等服务，根据用户生活动态主动推送提醒、建议和任务，旨在全面管理数字生活。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/poppy-debuts-a-proactive-ai-assistant-to-help-organize-your-digital-life/" },
-  { time: "16:45", tag: "ai", tagText: "AI", text: "主权AI基金支持DeepMind创始人Demis Hassabis旗下初创公司Isomorphic Labs。该笔投资旨在推动AI在药物发现领域的应用，标志着政府层面加大对前沿AI科学项目的战略扶持。", source: "Computer Weekly", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUHVZMVRSQmFlblNib3IyMnlZbnU0VUZHcVAyVVpRY2dIVmFScGRKSGVWSHlpengxNTB4WWd1MUxZeVVrWGNXdTRtYjdMNnZJcmVnaUZqQTFkZEc1Mnl2emhySWRvN2hIMDRCZFd1dUp3RjBiWFFqQ1VHQUxTRktRS3gtbUZNempkZm5sN2lCVXlFbWpnSnFJOG5WQVd4QWNia1E?oc=5" },
-  { time: "15:40", tag: "ai", tagText: "AI", text: "网络安全AI初创公司Exaforce完成1.25亿美元B轮融资。该公司专注于利用AI技术检测和防御网络威胁，此轮融资规模显示市场对AI安全赛道的高度关注。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPT3ZydGctYkUwMlBlQlNCYkhzaEVGM2V2UHZaUTduM18xWDVHeE9wNHBHTU9lUEdzV1JBTkk0UmNnNUdnelQ0TTNWazQ3V251dU5McXlleVNSeEtrRmpYWW5QTFJXa0FvdXVYYzRwSWY4dFF1clVkZkl1WXZwVzdnU2FTMXBVZHNWdlhVWVFyMU9FcWhqUWRKSw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月15日 04:00 CST";
+const aiBreakingDate = "2026年5月15日 05:19 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
