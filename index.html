@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 65.8,
+  score: 64.37,
   rating: "greed",
-  timestamp: "2026-05-14T00:00:00+00:00",
+  timestamp: "2026-05-14T07:31:46+00:00",
   previousClose: 65.86,
   previous1Week: 66.4,
   previous1Month: 47.26,
   previous1Year: 70.4,
-  date: "2026年5月14日 12:54 CST"
+  date: "2026年5月14日 15:51 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:39", tag: "macro", tagText: "宏观", text: "摩根大通CEO戴蒙警告，如果英国首相斯塔默被赶下台，该行可能重新考虑其在伦敦的新办公室计划。斯塔默的领导地位面临压力，引发英国债券市场担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/jamie-dimon-says-jp-morgan-may-rethink-london-office-if-starmer-ousted.html" },
+  { time: "15:29", tag: "ai", tagText: "AI", text: "软银公布财报，其愿景基金年度收益达460亿美元，主要得益于对OpenAI投资价值的巨大增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/softbank-earnings-fy-2025-vision-fund-openai-stake.html" },
   { time: "12:14", tag: "geo", tagText: "地缘", text: "英伟达CEO黄仁勋应特朗普总统邀请，加入其本周访华代表团。此前黄仁勋并未出现在公布的商界领袖名单中，此举凸显芯片巨头在中美科技博弈中的关键角色。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "分析指出，全球失衡问题处于地缘经济和地缘政治几乎所有重要议题的交汇点，其影响日益凸显。", source: "Financial Times", url: "https://www.ft.com/content/1bbd3463-1022-4c98-9840-df9b671a3d41" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "欧洲少数AI概念股大幅上涨，美国科技热潮正向全球蔓延，投资者在长期落后于华尔街的欧洲市场寻找赢家。", source: "Financial Times", url: "https://www.ft.com/content/adabe0fe-3418-4f06-8c08-98db21250a49" },
@@ -1647,13 +1649,15 @@ const breakingNews = [
   { time: "19:02", tag: "macro", tagText: "宏观", text: "油价基本持平，市场关注特朗普访华进展及伊朗局势。此前伊朗战争导致霍尔木兹海峡封锁，油价持续承压。", source: "Reuters", url: "https://finance.yahoo.com/news/oil-prices-slip-teetering-iran-010021136.html" },
   { time: "19:01", tag: "tech", tagText: "科技", text: "比亚迪称其‘闪充’技术将帮助电动汽车从燃油车手中夺取市场份额，该技术可在五分钟内完成充电。此举进一步加剧电动车行业竞争。", source: "Financial Times", url: "https://www.ft.com/content/ce9a2318-287c-4c07-89ae-3d8582ed5501" },
   { time: "18:49", tag: "tech", tagText: "科技", text: "阿里巴巴公布财报，核心利润暴跌84%，因在AI和电商领域大幅投资。尽管云和AI业务增长加速，但盈利能力严重承压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/alibaba-earnings-march-quarter-ai-cloud-growth.html" },
-  { time: "15:39", tag: "macro", tagText: "宏观", text: "摩根大通CEO戴蒙警告，如果英国首相斯塔默被赶下台，该行可能重新考虑其在伦敦的新办公室计划。斯塔默的领导地位面临压力，引发英国债券市场担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/jamie-dimon-says-jp-morgan-may-rethink-london-office-if-starmer-ousted.html" },
-  { time: "15:29", tag: "ai", tagText: "AI", text: "软银公布财报，其愿景基金年度收益达460亿美元，主要得益于对OpenAI投资价值的巨大增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/softbank-earnings-fy-2025-vision-fund-openai-stake.html" },
 ];
-const breakingDate = "2026年5月14日 12:54 CST";
+const breakingDate = "2026年5月14日 15:51 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "15:40", tag: "ai", tagText: "AI", text: "网络安全AI初创公司Exaforce完成1.25亿美元B轮融资。该公司专注于利用AI技术检测和防御网络威胁，此轮融资规模显示市场对AI安全赛道的高度关注。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPT3ZydGctYkUwMlBlQlNCYkhzaEVGM2V2UHZaUTduM18xWDVHeE9wNHBHTU9lUEdzV1JBTkk0UmNnNUdnelQ0TTNWazQ3V251dU5McXlleVNSeEtrRmpYWW5QTFJXa0FvdXVYYzRwSWY4dFF1clVkZkl1WXZwVzdnU2FTMXBVZHNWdlhVWVFyMU9FcWhqUWRKSw?oc=5" },
+  { time: "14:46", tag: "ai", tagText: "AI", text: "中国开发出AI驱动的废水处理技术，可将污染废水转化为有价值的肥料。该技术利用人工智能优化处理流程，在净化水质的同时回收养分，兼具环保与经济效益。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOalBPQUhGbnZCYmRPRXBJeTgzX280VmNvcS1pbzduZnBtd3lITDJscGk2UVlwSl9Ea1UtRFFpaUo0ZzVtV0FwUWl2UjFzanFTZlNCZWpWbjhqMnVjR21JRGNRcS1zR0JiNERzcmZzOEtOdkdyd2tXVy1HdXEzLVRRS05NOFFGU2I2ZUp4ODdFUThDOURKdjUxeXMwV0dFNXo2cHRieGxBTWRhNDdnQmNJX04yM2JrUU5sWWRlYWVJV0pCQWNQaFFoRlgzUm5ONEg5QVl1eWtRcF9qZ2hSdW5zdzZwVGQ1X2czdW90aFVaSjlfbG4x0gH6AUFVX3lxTE9lTGRVWGtxaW8xV0hySGxUMVRybDdQOGlDSU9HVkp3MW5rUDAxSHpmQko2S1hnMFB4RXItSTVESXQ3RU5oYUFGVEgzb29xUlNtLW9aWWZoWW50VGRVQWZjbVRqWlJxNkFfSlV6N0ZOR0NsUzlYTTNOd2xMdGFkQVdqdmVhb2lITXhSWUUyMUc5blp6ZkhBVGFTSUozVUNfbGJ3MVVHZ3lkOWc0VlBJdDl0aDFCWnJwSFF1QkJtM05QWGJIV09iRDI4V3FZRy05YllJU1JnOEJVRmtZMThmZzhHdThvTlpUeC1wSE9XOUgyanBob284aDl0M0E?oc=5" },
+  { time: "14:01", tag: "tech", tagText: "科技", text: "西澳大利亚州研究人员取得重大AI突破，通过常见骨扫描可早期检测心脏病。该技术利用AI分析常规骨密度扫描中的钙化信号，有望大幅降低心脏病筛查成本并提高早期发现率。", source: "The West Australian", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUDJOYVVzNFpoNXFpTW1TbVNwYi1GYXdNVHZEeHhZWDdUSnhDOFcxRXJCOU1xUjN2RFZLdGdZc05TcktXeUowbjhqRWxMZThsLTFSTHktRENYOHo4SGx1Y2NDR1J1SjNFY1U5ZVZEQTJWOWZRcUhkd2VvbXNRamhBNHhnZklYR2VSM0hJbWM0MFV2UzNYOFRxVTdtSi1CZnQwd2JlUmRWQ240dC1IUmFQemtyNWdHUFVyQ0tWYXZtcDg4cTY1LW45VFNUaEhCZU8zWDNlN04wSUpRZm1vNWdF0gHkAUFVX3lxTFBzOENybGhLOWVfbmgzSmVYVThKbkRHTkkyYTJDanQwLV9kU0dLaWxab3RzSlY5MUJza2Zzd2lLYkR1THJEX2lqelI1ME51ZW9OTjN5eThjU1dkbEZWaWpnU2l5dGhWMWJnb3lCTTk1bFVlb2tpeV9tQ05PX1dJUjM4Ty1QTTVNcjYwR1JTTXdPTUJRQ1BCQnFrNU5CUG11TjhvWUpFNXJwMFotYS1iaHEyWXJpZ21jZGxpRXZGcFliRUdUMWNlYXlDaU54TlRlWVVMUlM5bXhwWmdfVDVtcVZrT2loMw?oc=5" },
+  { time: "13:00", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用AI优化航班调度与空域管理，旨在提升欧洲空管效率并减少延误。", source: "Business Wire", url: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNYlpoMGVTYUpIa1lxeUdHR3BEUHlzdTh5enNfYXE0Q0VuekZHdnh4NHJveTdLb0NRenZUUWpXZ2I1MkVsSkM0Tk4tWHNrbnVFYTAxczVEUjgwTGY2bmExa1NkR3k3Z0U2V0UycTF4cWxGaFZxZC1wWnZ5S29zM3RzeVpsSnJnS0JJNnQwRzFQM2RnaDFYVEhiLTVIRU9MS1F4Z0YzTFYtc3VfdUZ2TnhjZUJKSG9ha1FUQ1pqRTM3SklwTlFHeGk3UWp1Sng0LWRWdDh5OWJwMnI4YnNXZHg4ZFpWUmdBYzVaWkE?oc=5" },
   { time: "12:27", tag: "geo", tagText: "地缘", text: "美国怀疑英伟达芯片通过泰国走私至阿里巴巴，泰国商业新闻援引消息称，美方正在调查相关供应链路径，此举可能加剧中美科技脱钩风险。", source: "Thailand Business News", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdm9HQ25TYzRqWDNGZS0zSkZta25aa3RCd1FHeUdqdHk0cEtOSlRtZU1YLWtmT1ZEMzc0R3VON3V2elAwNXFERW9HNVM3eFZPcmotOS1QQTRrcTZiNkk1M3kwZGxNQ3BKWTFhTXRxMTgyNmRpMW9IOXo2bHB1cFNBNlVOeWVONkxpQVprSGVUSDlaaVdZSGhxaGlHcDNUaDRzX0RqMThkeUNVQ3FEVXc?oc=5" },
   { time: "11:10", tag: "geo", tagText: "地缘", text: "英伟达CEO黄仁勋将随特朗普访问中国，此前特朗普亲自致电邀请。此行正值中美科技博弈关键期，市场关注英伟达在华业务前景及芯片出口管制走向。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcDBNbUVpbzdDZDJZTVpvY01ESVlZNHM5TjAzY2xVdFVrbWs4UXhRMmpYQUhnQW9uSGF1NUtEMnd0N0VaNlVWX0tJNmQ0cGVJd3lvQ2xQWU1VX3M3aUlwc3VjeUgtYy0wMTNkUm1qQXdWVW9nSGJXWmdrSXZfSTdCbVI0SFpMcDdWXy1Ec1dOb0NqTVJyOVdfMVRTN2xjc2poZUUxRDBjT3NiZ2g0NWQydndORF9zai1RUFpGemZR?oc=5" },
   { time: "10:10", tag: "tech", tagText: "科技", text: "新加坡多家深科技企业瞄准美国市场扩张，涵盖AI机器人、3D仿真等领域。这些公司利用新加坡的研发优势，寻求在美落地商业化，反映亚洲AI初创企业加速全球化布局的趋势。", source: "The Straits Times", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxOb29IdWxHelotTVRSeVJvaW9TZjAxbFh6VzYtWGpMLUloSW01UHlUczhxOHdSeDlIMEwtTXNTOXJtY2VLbFlYLU5qY3lpalctTEI1ckxETWpVMmNCNllTODBEVU44bmxxZmZaV1V4aVAxQjBPZUJSdW9BYW0xc2tFRmo0WVNVekNxUDU4bDRZM0tjVUwwTk9KaXlWeFFhdklWRGRxbklBd1F4MldYT0c1ZmZuR01pa2QteFZmYTJMOURQX2dOMDkwWW12bHRRQQ?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "17:24", tag: "ai", tagText: "AI", text: "奇瑞汽车（EXEED母公司）宣布与英伟达达成合作，共同推进驾驶辅助、物理AI及机器人技术。双方将结合英伟达的AI计算平台与奇瑞的整车研发能力，加速智能驾驶和自动化技术的落地。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMihwJBVV95cUxNYzNBMk9DWjdWeXRTYV9TdzV1SmZIU2wtelY4cjlOemZmVmxxazlSME84dk9oSUxqcV9mUVQ0SjRZUjFGUGE5TGVTaGpmU09RTi1iLUdKRmROYS1WcWVqdEJvamo4bEJFcnRNOFpENWlWNnc5aHhXTkZUSzlNZkFGSUxOOF9tdTZWMFp2VmxrRTNOdXZRYXhCcVA0cDJfZFVfWnVnaHllNDh0RV8tU0VHVWYwUzdiQTlYNDYtVVFjSWRRYldXRURlWXc3Y1ZhQzE3RDNsU0pEMlU3X1N6cmxtY3cyRE44d1BFcmFLeTA3amFKT2JuaHpUYXBZUVVZTHNyV3ZxSHlXNA?oc=5" },
   { time: "17:00", tag: "ai", tagText: "AI", text: "AI初创公司Poppy推出主动式AI助手，可连接日历、邮件、消息等服务，根据用户生活动态主动推送提醒、建议和任务，旨在全面管理数字生活。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/poppy-debuts-a-proactive-ai-assistant-to-help-organize-your-digital-life/" },
   { time: "16:45", tag: "ai", tagText: "AI", text: "主权AI基金支持DeepMind创始人Demis Hassabis旗下初创公司Isomorphic Labs。该笔投资旨在推动AI在药物发现领域的应用，标志着政府层面加大对前沿AI科学项目的战略扶持。", source: "Computer Weekly", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUHVZMVRSQmFlblNib3IyMnlZbnU0VUZHcVAyVVpRY2dIVmFScGRKSGVWSHlpengxNTB4WWd1MUxZeVVrWGNXdTRtYjdMNnZJcmVnaUZqQTFkZEc1Mnl2emhySWRvN2hIMDRCZFd1dUp3RjBiWFFqQ1VHQUxTRktRS3gtbUZNempkZm5sN2lCVXlFbWpnSnFJOG5WQVd4QWNia1E?oc=5" },
-  { time: "15:40", tag: "ai", tagText: "AI", text: "网络安全AI初创公司Exaforce完成1.25亿美元B轮融资。该公司专注于利用AI技术检测和防御网络威胁，此轮融资规模显示市场对AI安全赛道的高度关注。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPT3ZydGctYkUwMlBlQlNCYkhzaEVGM2V2UHZaUTduM18xWDVHeE9wNHBHTU9lUEdzV1JBTkk0UmNnNUdnelQ0TTNWazQ3V251dU5McXlleVNSeEtrRmpYWW5QTFJXa0FvdXVYYzRwSWY4dFF1clVkZkl1WXZwVzdnU2FTMXBVZHNWdlhVWVFyMU9FcWhqUWRKSw?oc=5" },
-  { time: "14:46", tag: "ai", tagText: "AI", text: "中国开发出AI驱动的废水处理技术，可将污染废水转化为有价值的肥料。该技术利用人工智能优化处理流程，在净化水质的同时回收养分，兼具环保与经济效益。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOalBPQUhGbnZCYmRPRXBJeTgzX280VmNvcS1pbzduZnBtd3lITDJscGk2UVlwSl9Ea1UtRFFpaUo0ZzVtV0FwUWl2UjFzanFTZlNCZWpWbjhqMnVjR21JRGNRcS1zR0JiNERzcmZzOEtOdkdyd2tXVy1HdXEzLVRRS05NOFFGU2I2ZUp4ODdFUThDOURKdjUxeXMwV0dFNXo2cHRieGxBTWRhNDdnQmNJX04yM2JrUU5sWWRlYWVJV0pCQWNQaFFoRlgzUm5ONEg5QVl1eWtRcF9qZ2hSdW5zdzZwVGQ1X2czdW90aFVaSjlfbG4x0gH6AUFVX3lxTE9lTGRVWGtxaW8xV0hySGxUMVRybDdQOGlDSU9HVkp3MW5rUDAxSHpmQko2S1hnMFB4RXItSTVESXQ3RU5oYUFGVEgzb29xUlNtLW9aWWZoWW50VGRVQWZjbVRqWlJxNkFfSlV6N0ZOR0NsUzlYTTNOd2xMdGFkQVdqdmVhb2lITXhSWUUyMUc5blp6ZkhBVGFTSUozVUNfbGJ3MVVHZ3lkOWc0VlBJdDl0aDFCWnJwSFF1QkJtM05QWGJIV09iRDI4V3FZRy05YllJU1JnOEJVRmtZMThmZzhHdThvTlpUeC1wSE9XOUgyanBob284aDl0M0E?oc=5" },
-  { time: "14:01", tag: "tech", tagText: "科技", text: "西澳大利亚州研究人员取得重大AI突破，通过常见骨扫描可早期检测心脏病。该技术利用AI分析常规骨密度扫描中的钙化信号，有望大幅降低心脏病筛查成本并提高早期发现率。", source: "The West Australian", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUDJOYVVzNFpoNXFpTW1TbVNwYi1GYXdNVHZEeHhZWDdUSnhDOFcxRXJCOU1xUjN2RFZLdGdZc05TcktXeUowbjhqRWxMZThsLTFSTHktRENYOHo4SGx1Y2NDR1J1SjNFY1U5ZVZEQTJWOWZRcUhkd2VvbXNRamhBNHhnZklYR2VSM0hJbWM0MFV2UzNYOFRxVTdtSi1CZnQwd2JlUmRWQ240dC1IUmFQemtyNWdHUFVyQ0tWYXZtcDg4cTY1LW45VFNUaEhCZU8zWDNlN04wSUpRZm1vNWdF0gHkAUFVX3lxTFBzOENybGhLOWVfbmgzSmVYVThKbkRHTkkyYTJDanQwLV9kU0dLaWxab3RzSlY5MUJza2Zzd2lLYkR1THJEX2lqelI1ME51ZW9OTjN5eThjU1dkbEZWaWpnU2l5dGhWMWJnb3lCTTk1bFVlb2tpeV9tQ05PX1dJUjM4Ty1QTTVNcjYwR1JTTXdPTUJRQ1BCQnFrNU5CUG11TjhvWUpFNXJwMFotYS1iaHEyWXJpZ21jZGxpRXZGcFliRUdUMWNlYXlDaU54TlRlWVVMUlM5bXhwWmdfVDVtcVZrT2loMw?oc=5" },
-  { time: "13:00", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用AI优化航班调度与空域管理，旨在提升欧洲空管效率并减少延误。", source: "Business Wire", url: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNYlpoMGVTYUpIa1lxeUdHR3BEUHlzdTh5enNfYXE0Q0VuekZHdnh4NHJveTdLb0NRenZUUWpXZ2I1MkVsSkM0Tk4tWHNrbnVFYTAxczVEUjgwTGY2bmExa1NkR3k3Z0U2V0UycTF4cWxGaFZxZC1wWnZ5S29zM3RzeVpsSnJnS0JJNnQwRzFQM2RnaDFYVEhiLTVIRU9MS1F4Z0YzTFYtc3VfdUZ2TnhjZUJKSG9ha1FUQ1pqRTM3SklwTlFHeGk3UWp1Sng0LWRWdDh5OWJwMnI4YnNXZHg4ZFpWUmdBYzVaWkE?oc=5" },
 ];
-const aiBreakingDate = "2026年5月14日 12:54 CST";
+const aiBreakingDate = "2026年5月14日 15:51 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
