@@ -1618,12 +1618,12 @@
 const fearGreedData = {
   score: 64.37,
   rating: "greed",
-  timestamp: "2026-05-14T07:31:46+00:00",
+  timestamp: "2026-05-14T10:12:01+00:00",
   previousClose: 65.86,
   previous1Week: 66.4,
   previous1Month: 47.26,
   previous1Year: 70.4,
-  date: "2026年5月14日 15:51 CST"
+  date: "2026年5月14日 18:29 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,15 @@ const breakingNews = [
   { time: "19:01", tag: "tech", tagText: "科技", text: "比亚迪称其‘闪充’技术将帮助电动汽车从燃油车手中夺取市场份额，该技术可在五分钟内完成充电。此举进一步加剧电动车行业竞争。", source: "Financial Times", url: "https://www.ft.com/content/ce9a2318-287c-4c07-89ae-3d8582ed5501" },
   { time: "18:49", tag: "tech", tagText: "科技", text: "阿里巴巴公布财报，核心利润暴跌84%，因在AI和电商领域大幅投资。尽管云和AI业务增长加速，但盈利能力严重承压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/alibaba-earnings-march-quarter-ai-cloud-growth.html" },
 ];
-const breakingDate = "2026年5月14日 15:51 CST";
+const breakingDate = "2026年5月14日 18:29 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "18:00", tag: "ai", tagText: "AI", text: "新型内存聚焦ETF年内飙升90%，其CEO称存储芯片是AI发展的“最大瓶颈”，市场关注度从英伟达等算力芯片转向存储领域。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbUhMR01kVXpPbG5vTEYtdFluWXdHNE1fVXRFc0h6aTF0ZG4tRVJUVTQwRWo2SklLejFCRmNCRnR3OWJsdGJPTE5KcUJTUXJFbTdRa0lNakhWX0cwQXVTc25QVW9XNnlPdmV5VlV6Um45NlhpSl9GZkZKdWRnN2NEYW9Lc0RUNDZvbURTOE9QQV9Ba0NtMGRfZ3U0YWZ1SHppcGNGSTI2TG10ellMd2lMZkNBMzdtcDJoSkJNLVZxNEg0RTFsdXJ3eXdUX0VseF82YTlqSlVERnZEaVVf?oc=5" },
+  { time: "17:28", tag: "ai", tagText: "AI", text: "以色列AI突破有望彻底改变睡眠呼吸暂停诊断方式。该技术利用人工智能分析相关数据，旨在提高诊断准确率并降低传统检测的复杂性，为全球数亿患者带来更便捷的筛查方案。", source: "i24NEWS", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRTZyei1qZm40MmVieXlaLWw0Q3RSXzMxZ3p4WFBvbGc5a2RsTU9TeWZQTy05eWwzUFhQZUV0V3pHaG9DR09tYnJOWjZYWW9INWs3TFJ6NjNDTWZQWUk2YThNLXI4M2hEc2Q5NmFod2VkcXFiM2lxRE4ySXNOcmFzdjdNTDk0ckFSLTBabzNNcFpFeF9DZjgzLVZFMWxEeXpOaGJxTkE5YlVVRFJwdGtHc05VQnc?oc=5" },
+  { time: "17:24", tag: "ai", tagText: "AI", text: "奇瑞汽车（EXEED母公司）宣布与英伟达达成合作，共同推进驾驶辅助、物理AI及机器人技术。双方将结合英伟达的AI计算平台与奇瑞的整车研发能力，加速智能驾驶和自动化技术的落地。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMihwJBVV95cUxNYzNBMk9DWjdWeXRTYV9TdzV1SmZIU2wtelY4cjlOemZmVmxxazlSME84dk9oSUxqcV9mUVQ0SjRZUjFGUGE5TGVTaGpmU09RTi1iLUdKRmROYS1WcWVqdEJvamo4bEJFcnRNOFpENWlWNnc5aHhXTkZUSzlNZkFGSUxOOF9tdTZWMFp2VmxrRTNOdXZRYXhCcVA0cDJfZFVfWnVnaHllNDh0RV8tU0VHVWYwUzdiQTlYNDYtVVFjSWRRYldXRURlWXc3Y1ZhQzE3RDNsU0pEMlU3X1N6cmxtY3cyRE44d1BFcmFLeTA3amFKT2JuaHpUYXBZUVVZTHNyV3ZxSHlXNA?oc=5" },
+  { time: "17:00", tag: "ai", tagText: "AI", text: "AI初创公司Poppy推出主动式AI助手，可连接日历、邮件、消息等服务，根据用户生活动态主动推送提醒、建议和任务，旨在全面管理数字生活。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/poppy-debuts-a-proactive-ai-assistant-to-help-organize-your-digital-life/" },
+  { time: "16:45", tag: "ai", tagText: "AI", text: "主权AI基金支持DeepMind创始人Demis Hassabis旗下初创公司Isomorphic Labs。该笔投资旨在推动AI在药物发现领域的应用，标志着政府层面加大对前沿AI科学项目的战略扶持。", source: "Computer Weekly", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUHVZMVRSQmFlblNib3IyMnlZbnU0VUZHcVAyVVpRY2dIVmFScGRKSGVWSHlpengxNTB4WWd1MUxZeVVrWGNXdTRtYjdMNnZJcmVnaUZqQTFkZEc1Mnl2emhySWRvN2hIMDRCZFd1dUp3RjBiWFFqQ1VHQUxTRktRS3gtbUZNempkZm5sN2lCVXlFbWpnSnFJOG5WQVd4QWNia1E?oc=5" },
   { time: "15:40", tag: "ai", tagText: "AI", text: "网络安全AI初创公司Exaforce完成1.25亿美元B轮融资。该公司专注于利用AI技术检测和防御网络威胁，此轮融资规模显示市场对AI安全赛道的高度关注。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPT3ZydGctYkUwMlBlQlNCYkhzaEVGM2V2UHZaUTduM18xWDVHeE9wNHBHTU9lUEdzV1JBTkk0UmNnNUdnelQ0TTNWazQ3V251dU5McXlleVNSeEtrRmpYWW5QTFJXa0FvdXVYYzRwSWY4dFF1clVkZkl1WXZwVzdnU2FTMXBVZHNWdlhVWVFyMU9FcWhqUWRKSw?oc=5" },
   { time: "14:46", tag: "ai", tagText: "AI", text: "中国开发出AI驱动的废水处理技术，可将污染废水转化为有价值的肥料。该技术利用人工智能优化处理流程，在净化水质的同时回收养分，兼具环保与经济效益。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOalBPQUhGbnZCYmRPRXBJeTgzX280VmNvcS1pbzduZnBtd3lITDJscGk2UVlwSl9Ea1UtRFFpaUo0ZzVtV0FwUWl2UjFzanFTZlNCZWpWbjhqMnVjR21JRGNRcS1zR0JiNERzcmZzOEtOdkdyd2tXVy1HdXEzLVRRS05NOFFGU2I2ZUp4ODdFUThDOURKdjUxeXMwV0dFNXo2cHRieGxBTWRhNDdnQmNJX04yM2JrUU5sWWRlYWVJV0pCQWNQaFFoRlgzUm5ONEg5QVl1eWtRcF9qZ2hSdW5zdzZwVGQ1X2czdW90aFVaSjlfbG4x0gH6AUFVX3lxTE9lTGRVWGtxaW8xV0hySGxUMVRybDdQOGlDSU9HVkp3MW5rUDAxSHpmQko2S1hnMFB4RXItSTVESXQ3RU5oYUFGVEgzb29xUlNtLW9aWWZoWW50VGRVQWZjbVRqWlJxNkFfSlV6N0ZOR0NsUzlYTTNOd2xMdGFkQVdqdmVhb2lITXhSWUUyMUc5blp6ZkhBVGFTSUozVUNfbGJ3MVVHZ3lkOWc0VlBJdDl0aDFCWnJwSFF1QkJtM05QWGJIV09iRDI4V3FZRy05YllJU1JnOEJVRmtZMThmZzhHdThvTlpUeC1wSE9XOUgyanBob284aDl0M0E?oc=5" },
   { time: "14:01", tag: "tech", tagText: "科技", text: "西澳大利亚州研究人员取得重大AI突破，通过常见骨扫描可早期检测心脏病。该技术利用AI分析常规骨密度扫描中的钙化信号，有望大幅降低心脏病筛查成本并提高早期发现率。", source: "The West Australian", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUDJOYVVzNFpoNXFpTW1TbVNwYi1GYXdNVHZEeHhZWDdUSnhDOFcxRXJCOU1xUjN2RFZLdGdZc05TcktXeUowbjhqRWxMZThsLTFSTHktRENYOHo4SGx1Y2NDR1J1SjNFY1U5ZVZEQTJWOWZRcUhkd2VvbXNRamhBNHhnZklYR2VSM0hJbWM0MFV2UzNYOFRxVTdtSi1CZnQwd2JlUmRWQ240dC1IUmFQemtyNWdHUFVyQ0tWYXZtcDg4cTY1LW45VFNUaEhCZU8zWDNlN04wSUpRZm1vNWdF0gHkAUFVX3lxTFBzOENybGhLOWVfbmgzSmVYVThKbkRHTkkyYTJDanQwLV9kU0dLaWxab3RzSlY5MUJza2Zzd2lLYkR1THJEX2lqelI1ME51ZW9OTjN5eThjU1dkbEZWaWpnU2l5dGhWMWJnb3lCTTk1bFVlb2tpeV9tQ05PX1dJUjM4Ty1QTTVNcjYwR1JTTXdPTUJRQ1BCQnFrNU5CUG11TjhvWUpFNXJwMFotYS1iaHEyWXJpZ21jZGxpRXZGcFliRUdUMWNlYXlDaU54TlRlWVVMUlM5bXhwWmdfVDVtcVZrT2loMw?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "亚马逊将Alexa Plus集成至Amazon.com购物体验，用户输入查询后将直接获得基于大语言模型的AI购物助手服务，标志着电商AI化的重要一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/929457/amazon-announces-alexa-for-shopping-ai-assistant-rufus" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "WhatsApp在Meta AI聊天中新增“隐身模式”，该模式下对话不会被保存，关闭聊天后消息默认消失，强化用户隐私保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/whatsapp-adds-an-incognito-mode-in-meta-ai-chats/" },
-  { time: "18:00", tag: "ai", tagText: "AI", text: "新型内存聚焦ETF年内飙升90%，其CEO称存储芯片是AI发展的“最大瓶颈”，市场关注度从英伟达等算力芯片转向存储领域。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbUhMR01kVXpPbG5vTEYtdFluWXdHNE1fVXRFc0h6aTF0ZG4tRVJUVTQwRWo2SklLejFCRmNCRnR3OWJsdGJPTE5KcUJTUXJFbTdRa0lNakhWX0cwQXVTc25QVW9XNnlPdmV5VlV6Um45NlhpSl9GZkZKdWRnN2NEYW9Lc0RUNDZvbURTOE9QQV9Ba0NtMGRfZ3U0YWZ1SHppcGNGSTI2TG10ellMd2lMZkNBMzdtcDJoSkJNLVZxNEg0RTFsdXJ3eXdUX0VseF82YTlqSlVERnZEaVVf?oc=5" },
-  { time: "17:28", tag: "ai", tagText: "AI", text: "以色列AI突破有望彻底改变睡眠呼吸暂停诊断方式。该技术利用人工智能分析相关数据，旨在提高诊断准确率并降低传统检测的复杂性，为全球数亿患者带来更便捷的筛查方案。", source: "i24NEWS", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRTZyei1qZm40MmVieXlaLWw0Q3RSXzMxZ3p4WFBvbGc5a2RsTU9TeWZQTy05eWwzUFhQZUV0V3pHaG9DR09tYnJOWjZYWW9INWs3TFJ6NjNDTWZQWUk2YThNLXI4M2hEc2Q5NmFod2VkcXFiM2lxRE4ySXNOcmFzdjdNTDk0ckFSLTBabzNNcFpFeF9DZjgzLVZFMWxEeXpOaGJxTkE5YlVVRFJwdGtHc05VQnc?oc=5" },
-  { time: "17:24", tag: "ai", tagText: "AI", text: "奇瑞汽车（EXEED母公司）宣布与英伟达达成合作，共同推进驾驶辅助、物理AI及机器人技术。双方将结合英伟达的AI计算平台与奇瑞的整车研发能力，加速智能驾驶和自动化技术的落地。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMihwJBVV95cUxNYzNBMk9DWjdWeXRTYV9TdzV1SmZIU2wtelY4cjlOemZmVmxxazlSME84dk9oSUxqcV9mUVQ0SjRZUjFGUGE5TGVTaGpmU09RTi1iLUdKRmROYS1WcWVqdEJvamo4bEJFcnRNOFpENWlWNnc5aHhXTkZUSzlNZkFGSUxOOF9tdTZWMFp2VmxrRTNOdXZRYXhCcVA0cDJfZFVfWnVnaHllNDh0RV8tU0VHVWYwUzdiQTlYNDYtVVFjSWRRYldXRURlWXc3Y1ZhQzE3RDNsU0pEMlU3X1N6cmxtY3cyRE44d1BFcmFLeTA3amFKT2JuaHpUYXBZUVVZTHNyV3ZxSHlXNA?oc=5" },
-  { time: "17:00", tag: "ai", tagText: "AI", text: "AI初创公司Poppy推出主动式AI助手，可连接日历、邮件、消息等服务，根据用户生活动态主动推送提醒、建议和任务，旨在全面管理数字生活。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/poppy-debuts-a-proactive-ai-assistant-to-help-organize-your-digital-life/" },
-  { time: "16:45", tag: "ai", tagText: "AI", text: "主权AI基金支持DeepMind创始人Demis Hassabis旗下初创公司Isomorphic Labs。该笔投资旨在推动AI在药物发现领域的应用，标志着政府层面加大对前沿AI科学项目的战略扶持。", source: "Computer Weekly", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUHVZMVRSQmFlblNib3IyMnlZbnU0VUZHcVAyVVpRY2dIVmFScGRKSGVWSHlpengxNTB4WWd1MUxZeVVrWGNXdTRtYjdMNnZJcmVnaUZqQTFkZEc1Mnl2emhySWRvN2hIMDRCZFd1dUp3RjBiWFFqQ1VHQUxTRktRS3gtbUZNempkZm5sN2lCVXlFbWpnSnFJOG5WQVd4QWNia1E?oc=5" },
 ];
-const aiBreakingDate = "2026年5月14日 15:51 CST";
+const aiBreakingDate = "2026年5月14日 18:29 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
