@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 64.74,
+  score: 64.6,
   rating: "greed",
-  timestamp: "2026-05-15T16:54:49+00:00",
+  timestamp: "2026-05-15T18:42:56+00:00",
   previousClose: 66.14,
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月16日 00:58 CST"
+  date: "2026年5月16日 02:47 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1643,19 +1643,23 @@ const breakingNews = [
   { time: "19:27", tag: "macro", tagText: "宏观", text: "前高盛策略师杰夫·柯里表示，大宗商品处于结构性牛市，能源股是布局AI基础设施建设的最佳方式，建议资本从消耗大宗商品的公司流向拥有大宗商品的公司。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-munificent-7-why-energy-stocks-are-the-best-way-to-play-the-ai-build-out-says-former-goldman-strategist-ecf3d3b2?mod=mw_rss_topstories" },
   { time: "19:27", tag: "tech", tagText: "科技", text: "亿万富翁对冲基金经理比尔·阿克曼表示，其旗下Pershing Square Capital Management已在第一季度建仓微软股票。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/bill-ackman-says-he-built-microsoft-position-in-first-quarter.html" },
   { time: "19:27", tag: "macro", tagText: "宏观", text: "施罗德计划在仅三年后退出中国共同基金业务，这家伦敦上市公司将被总部位于美国的资产管理公司Nuveen以100亿英镑收购。", source: "Financial Times", url: "https://www.ft.com/content/af307ee3-1b50-436e-a2a2-70a197ab5c4d" },
+  { time: "18:29", tag: "geo", tagText: "地缘", text: "美国国务院宣布，以色列与黎巴嫩已同意将4月16日特朗普总统宣布的停火协议延长45天。此举为中东紧张局势带来短暂缓和，但市场仍关注霍尔木兹海峡危机。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/israel-lebanon-agree-to-extend-ceasefire-by-45-days-us-state-dept.html" },
+  { time: "18:14", tag: "crypto", tagText: "加密", text: "加密货币市场普跌，比特币跌破8万美元关口，瑞波币、Solana和以太坊同步下跌。市场避险情绪升温，资金从风险资产流出。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQ0l2UmlFal9XZlJYMjV4SEUwajdQbkhDY3pibXAzZlVCQW9aQ09rRGhlS3ZQbllPMmJOYms5blFXaWVRM1pna1pmeVE1dVlSVmp2azBQSGozOEtlNXJNZ1BQMHQ3cUxYRl92Rjc2VmJKSWtpR0lzaVBacFQ2cDRLNGdNRGRMSnFPY3hhVU01WHF3cFA3Mzd0UjZmUlhyajRYdmlIanhKR0RsQVlwS21iM3F0MnM2NnQzRk5xdWVsTQ?oc=5" },
+  { time: "17:40", tag: "macro", tagText: "宏观", text: "通胀数据超预期飙升后，联邦基金期货市场首次定价美联储下一次利率行动为加息，最早可能在12月。市场对通胀前景的担忧急剧升温，此前市场普遍预期降息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/traders-now-see-next-fed-interest-rate-move-as-a-hike-following-inflation-surge.html" },
+  { time: "17:29", tag: "geo", tagText: "地缘", text: "全球债券市场暴跌，因市场担忧伊朗战争引发通胀冲击。特朗普访华未能推动霍尔木兹海峡重新开放，油价飙升加剧通胀恐慌，交易员开始定价美联储加息。市场同时期待特朗普在伊朗冲突上转变立场。", source: "Financial Times", url: "https://www.ft.com/content/02015e49-fe11-488f-9e45-9fe70943d155" },
   { time: "15:58", tag: "macro", tagText: "宏观", text: "美股期货下跌，特朗普与习近平峰会结束后收益率上升。道指、标普500和纳斯达克期货均走低，市场对峰会成果的评估趋于谨慎。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPN2JFWmx4U0FKS1Q0SmdBbndnRzA5TTZXQno2T3ZOZDFJZmRhRC1scFJiQmRPc1RrWG1vWmtYQW9fcWNqNGk1VlhzTjkxeWlPcXNuamlVR1ozTVZ1QkFxb282OW14OXc4aDZTS2piWk9Jc0tpckVLRE50MTFZQlc0ZF9vZWNweW96djZyWnpxcUVWV1I1dnZNZV9JT1RnSVVCSEFjcXNBTHBadTVhYm1WekdKdVg2dkFGQWFmQmczNlRYT3c?oc=5" },
   { time: "12:12", tag: "geo", tagText: "地缘", text: "特朗普盟友寄望习近平帮助化解霍尔木兹海峡危机。伊朗战争导致该海峡封锁，引发石油供应冲击和能源危机，威胁共和党中期选举前景。特朗普称中国同意购买美国原油以缓解供应紧张，油价应声上涨。", source: "Financial Times", url: "https://www.ft.com/content/e7ad9ab0-5a28-42ce-b90e-ac9f6bda75eb" },
-  { time: "12:12", tag: "macro", tagText: "宏观", text: "亚太股市下跌，韩国Kospi指数从8000点关口回落，投资者关注特朗普与习近平第二天的高风险会谈。市场对贸易协议细节和地缘政治不确定性保持谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/asia-markets-live-updates-today-trump-xi-nikkei-225-kospi-hang-seng-index.html" },
-  { time: "12:12", tag: "tech", tagText: "科技", text: "Anthropic同意以9000亿美元估值完成300亿美元融资，Dragoneer、Greenoaks、Sequoia Capital和Altimeter Capital领投。这是AI领域最大规模融资之一，显示市场对前沿AI实验室的持续追捧。", source: "Financial Times", url: "https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847" },
-  { time: "12:12", tag: "geo", tagText: "地缘", text: "CIA局长罕见访问古巴，要求进行‘根本性变革’。这是10年来第二位美国官员访问该岛国，正值古巴因四个月封锁导致柴油耗尽、面临严重能源危机之际。", source: "Financial Times", url: "https://www.ft.com/content/fad11ebd-9844-4432-94d0-e87865e456b5" },
-  { time: "11:11", tag: "macro", tagText: "宏观", text: "美联储候任主席沃什认为，美联储应保持沉默，持续的‘念咒’式沟通弊大于利。市场关注其未来政策立场。", source: "Financial Times", url: "https://www.ft.com/content/216c5568-9900-4b69-b4ad-479d860ec225" },
 ];
-const breakingDate = "2026年5月16日 00:58 CST";
+const breakingDate = "2026年5月16日 02:47 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
+  { time: "02:21", tag: "ai", tagText: "AI", text: "OpenAI再次进行高管重组，总裁Greg Brockman正式负责所有产品事务，旨在赢得AI代理之战。此次重组整合了部分业务部门，反映出OpenAI在AI代理领域的激烈竞争压力。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle" },
+  { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
   { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
+  { time: "22:01", tag: "geo", tagText: "地缘", text: "分析师预测英伟达将在中国市场卷土重来，称其为“AI教父”，并认为这将引发新一轮全球科技热潮。尽管中美科技关系紧张，市场仍对英伟达在华业务前景持乐观态度。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNX2lLcDdnWTdjdXNKa3kyTHlIMFNQU2huYmJSb1B0R1Jzc3ZBdFBFdVBwMXE3OU1JNTQ0TVBxdEVQVGpHUzJIalVBclVvb2Y1TGZISktOMDV0eURfT3QySVFXWXAwSW1wMHdZREVWNHF3ZkVFRkZPVzBjMF85YlJWLXhyVTQ4dFQ4NVk0MW1LVGZzSXczZy1YZ2JGTWRGMEdFNmxLNFlJU2hfT19jYWZMTWpRMTBfSFJudFNUYUFUVnh6c3U5ZDJ2WW43WnR5OXNSa21iaW5WYWJoYTFNVWtfZ1FJODNRSVBoc0ZSVXVucW1BcVM4N2RGNQ?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "英国政府支持David Silver领导的估值8.14亿英镑的AI初创公司，引发关于技术主权和国家安全的热议。支持者认为此举可确保英国在AI领域的竞争力，反对者则担忧关键技术和数据外流风险。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVFpGVEEzNGVJckNVaC05dWRBN2FiV3U3NzNScXNhZmdFSU9uczgtQXo5VlBka2lGMXdudk5raFVUZGVER2dKb01XdHo3OXBOVExEWmN5SGE3UXpOenFDbTk3UU9wazBRRWFTemZFRVlWdTNzbEFxVmlfeUV4eTJyT25Sd0hBdUlmMm1na2hSaVhrNnlWNzhR?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "05:30", tag: "ai", tagText: "AI", text: "马斯克旗下SpaceXAI自合并以来已流失超50名员工，引发外界对其领导层变动、员工倦怠及人才被挖角的担忧。该事件凸显了AI领域激烈的人才竞争和整合风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/" },
   { time: "05:00", tag: "ai", tagText: "AI", text: "OpenAI将Codex AI编程工具集成至ChatGPT移动应用，用户现可通过手机远程控制桌面端代码编写和应用操作。此举紧随Anthropic类似功能走红之后，旨在提升移动端AI开发体验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview" },
   { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
-  { time: "03:12", tag: "ai", tagText: "AI", text: "据彭博社报道，OpenAI已聘请外部律师事务所，准备对苹果采取法律行动。这并非OpenAI首次与合作伙伴关系破裂，此前已有类似先例。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple-it-wouldnt-be-the-first-partner-to-feel-burned/" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "AI语音初创公司Wispr正寻求新一轮融资，估值目标达20亿美元。该公司专注于AI语音交互技术，此轮融资若完成将使其成为该赛道的重要玩家。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMic0FVX3lxTE03eHA0VnFjZXlPWDBaeWxBQkhWZnRySndiaFZvazdTdDA5NmtZLXFOazFOS0o1enVBTk13cERQd0dxNzZzc1B5YnFxZU16MFpLdF9kNUtKMFVJbldaQld5b3lSS3ozd1lLMVctaGF0UjZQMk0?oc=5" },
-  { time: "03:00", tag: "tech", tagText: "科技", text: "微软开始取消部分员工的Claude Code许可证。微软自去年12月起向数千名开发者开放了Anthropic的AI编程工具，此次调整可能意味着其内部AI工具策略的转变。", source: "The Verge", url: "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad" },
-  { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
 ];
-const aiBreakingDate = "2026年5月16日 00:58 CST";
+const aiBreakingDate = "2026年5月16日 02:47 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
