@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 65.17,
+  score: 64.74,
   rating: "greed",
-  timestamp: "2026-05-15T14:24:25+00:00",
+  timestamp: "2026-05-15T16:54:49+00:00",
   previousClose: 66.14,
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月15日 22:29 CST"
+  date: "2026年5月16日 00:58 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:54", tag: "geo", tagText: "地缘", text: "特朗普在与习近平会晤后表示，对是否保卫台湾‘不予置评’，并暗示可能重新考虑对台14亿美元军售案。此举引发市场对美台关系及地区局势的广泛关注。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/trump-china-xi-taiwan.html" },
+  { time: "00:51", tag: "tech", tagText: "科技", text: "芯片股领跌美股，Arm、英特尔等大幅下挫，拖累纳指和标普500走低。此前一日两大指数刚创下收盘新高，市场情绪因通胀担忧和收益率飙升迅速逆转。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMizwJBVV95cUxPdGVkaDA5UGVLc2xWLUw1MWdfY0tiMm9QUXByQThUdWxTM2ZxV2NfUGRUaUduNEdsR245djhGSkY3V0NnRXNyNzkteGtXWjBtY0JoLXl2c0Y1VTgtWFRnbVREbTBaaHdYaUVIS1VxSXJfNWJkSFo4TEMtQklCNjNPampjV25wOVJseG1jckVEc3cwREdROGR0U3lZT0hRdEMxWGllZWFFRHd2VmlKanEyWkwwRjVIZjNMdVV2cndKamRTQWg4dVBxZ05VaFJHWjloR2drTUpVT3l3OE9jZzQ1OGlib2FDc3VLMHh2ZHFHazIzZTg5aEtiZk5NcHFiNEJDS0FQUE5aR0VQNVYyaWo0TUE5QzViQTltTmx2UGlxc0hkajkwZkg0MFNHYWhoakc2SkJLaDU3MGRPUVNDZ1RnNkphRGlqem5GZFNWYTVCSdIB1AJBVV95cUxOTENGNktJNW9UQUpKTnRLTElfd3FlVVEza09oa0QzeXduSkVmS1pQZUhLN1hNTkxhM0tYdlJfN2hyeWV2VlFiU2p3bFpFUGg4R0R5NFM2Zlhtd3Q2MmlIaW9EZ1BEWV9JOEF2Rk5RWE5jWTJ6Vnc3c1BXVG1QSUZ6dGlNNXBDNjZ2b2NiSmEtNTlBeTNJWGs5ZWFWT2dfSHBQYWo0TnE0RkRBbzlNNUxEaVVwWDRzZU1uWlJoRUVoQllsNWF4di1BLTZPa1c4Q2FnQWVNeDIwT2FWZ3FnU1RmV3B2UnVUZXV1UVZHMmpoQVlWVm00dWMta2hkeWNtbjdGUm44X0FEdTc4N19JZVozeHA2WHgzTWpHVEZqYmFvVlJJV1d0R3F2TDE2ZFJZSUQtX2szS1RTanRiN1FCWVE2LVRNSVFZYUtjdzN3OVliUVZKaFR4?oc=5" },
+  { time: "00:49", tag: "tech", tagText: "科技", text: "加拿大将允许每年进口4.9万辆中国产电动汽车用于零售，关税税率仅为6.1%。部分加拿大经销商对此表示欢迎，认为这将为消费者提供更多高性价比选择。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/chinese-evs-canada.html" },
+  { time: "00:36", tag: "ai", tagText: "AI", text: "安永（EY）撤回一份研究报告，因研究人员发现其中存在AI幻觉。这是专业服务公司因新技术误导而出现的最新案例，凸显AI在严肃商业分析中的可靠性风险。", source: "Financial Times", url: "https://www.ft.com/content/a61cbcae-95e4-4449-86e1-ef40fb306f4e" },
+  { time: "00:30", tag: "macro", tagText: "宏观", text: "花旗集团CEO随特朗普访华后，北京终于批准了她多年来一直推动的一项交易。此举被视为中美商业关系回暖的积极信号，但具体交易细节尚未披露。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/citis-ceo-went-china-trump-163000102.html" },
   { time: "22:06", tag: "macro", tagText: "宏观", text: "美股三大指数全线下挫，道指、标普500和纳斯达克期货走低。10年期美债收益率突破4.5%，30年期收益率突破5.1%创近一年新高。油价因霍尔木兹海峡危机持续上涨，市场对通胀和利率前景感到担忧。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ3g3VGctU3NxazdUQWk3NkV0cnpDQjJVQU1wc2FJaXN6SUNNTVd1eHI0bjBJZkxadDU5ZjVHUHdId3FHOS1uX21vd0NGTXZHMDNMSnJ1V2FlNVpna1BDUExDYm55UXZueVFRNVBKcWxDTzFablljMzJhRTI2X19iWkhTQ0xpeThMZXpLaGN4T2ZPY0dpeFZxY1VsU25JS0Q4Q3UzMFRUWFlFSW02UklhQUlSRHMtWUdWa3BZdUlNaERfUQ" },
   { time: "21:41", tag: "geo", tagText: "地缘", text: "印度总理莫迪访问阿联酋期间，双方深化了防务和能源合作。此举正值中东局势紧张、霍尔木兹海峡危机持续之际。", source: "Reuters", url: "https://finance.yahoo.com/news/india-signs-pacts-uae-defence-075529375.html" },
   { time: "21:36", tag: "geo", tagText: "地缘", text: "特朗普披露第一季度大规模股票交易，包括买入至少100万美元的波音和英伟达股票。这些公司预计将从其中国之行中获益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-discloses-big-buys-of-shares-in-boeing-and-nvidia-as-the-companies-look-set-to-gain-from-his-china-trip-1081bd1d" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "12:12", tag: "tech", tagText: "科技", text: "Anthropic同意以9000亿美元估值完成300亿美元融资，Dragoneer、Greenoaks、Sequoia Capital和Altimeter Capital领投。这是AI领域最大规模融资之一，显示市场对前沿AI实验室的持续追捧。", source: "Financial Times", url: "https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847" },
   { time: "12:12", tag: "geo", tagText: "地缘", text: "CIA局长罕见访问古巴，要求进行‘根本性变革’。这是10年来第二位美国官员访问该岛国，正值古巴因四个月封锁导致柴油耗尽、面临严重能源危机之际。", source: "Financial Times", url: "https://www.ft.com/content/fad11ebd-9844-4432-94d0-e87865e456b5" },
   { time: "11:11", tag: "macro", tagText: "宏观", text: "美联储候任主席沃什认为，美联储应保持沉默，持续的‘念咒’式沟通弊大于利。市场关注其未来政策立场。", source: "Financial Times", url: "https://www.ft.com/content/216c5568-9900-4b69-b4ad-479d860ec225" },
-  { time: "04:43", tag: "tech", tagText: "科技", text: "消息人士称，马斯克旗下可重复使用火箭公司SpaceX最快将于下周提交IPO招股说明书，预计将创下美股史上最大规模上市纪录。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/spacex-ipo-prospectus-could-land-as-soon-as-next-week-sources-say.html" },
-  { time: "04:23", tag: "crypto", tagText: "加密", text: "加密货币交易所Gemini股价大涨，此前Winklevoss Capital Fund向其投资1亿美元。该公司季度营收超预期，亏损幅度也小于分析师预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/gemini-surges-after-winklevoss-capital-invests-100-million-in-the-crypto-exchange.html" },
-  { time: "04:20", tag: "geo", tagText: "地缘", text: "美国民主党议员要求商务部长卢特尼克辞职，指控其在杰弗里·爱泼斯坦相关采访中撒谎。白宫此前表示，特朗普总统继续支持卢特尼克。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/howard-lutnick-jeffrey-epstein-commerce-trump.html" },
-  { time: "04:02", tag: "tech", tagText: "科技", text: "由Egon Durban领导的财团将以99亿美元估值收购拉斯维加斯突袭者队25%的股份。First Football将出售其持有的该球队全部股份。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/group-led-by-egon-durban-to-buy-25percent-of-las-vegas-raiders-at-9point9-billion-valuation-sources.html" },
-  { time: "03:00", tag: "macro", tagText: "宏观", text: "美联储理事米兰宣布辞职，支持沃什接任主席。债券市场认为美联储在通胀问题上落后于曲线，希望新主席转向紧缩立场。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/fed-governor-miran-submits-resignation-throws-support-behind-warsh-as-new-chair.html" },
 ];
-const breakingDate = "2026年5月15日 22:29 CST";
+const breakingDate = "2026年5月16日 00:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "英国政府支持David Silver领导的估值8.14亿英镑的AI初创公司，引发关于技术主权和国家安全的热议。支持者认为此举可确保英国在AI领域的竞争力，反对者则担忧关键技术和数据外流风险。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVFpGVEEzNGVJckNVaC05dWRBN2FiV3U3NzNScXNhZmdFSU9uczgtQXo5VlBka2lGMXdudk5raFVUZGVER2dKb01XdHo3OXBOVExEWmN5SGE3UXpOenFDbTk3UU9wazBRRWFTemZFRVlWdTNzbEFxVmlfeUV4eTJyT25Sd0hBdUlmMm1na2hSaVhrNnlWNzhR?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "03:00", tag: "ai", tagText: "AI", text: "AI语音初创公司Wispr正寻求新一轮融资，估值目标达20亿美元。该公司专注于AI语音交互技术，此轮融资若完成将使其成为该赛道的重要玩家。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMic0FVX3lxTE03eHA0VnFjZXlPWDBaeWxBQkhWZnRySndiaFZvazdTdDA5NmtZLXFOazFOS0o1enVBTk13cERQd0dxNzZzc1B5YnFxZU16MFpLdF9kNUtKMFVJbldaQld5b3lSS3ozd1lLMVctaGF0UjZQMk0?oc=5" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "微软开始取消部分员工的Claude Code许可证。微软自去年12月起向数千名开发者开放了Anthropic的AI编程工具，此次调整可能意味着其内部AI工具策略的转变。", source: "The Verge", url: "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad" },
   { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
-  { time: "01:40", tag: "ai", tagText: "AI", text: "一项互动地图工具上线，帮助公众查找自家附近的AI数据中心。此前，俄勒冈州居民因谷歌大规模建设数据中心引发争议，该工具旨在提高数据中心选址的透明度。", source: "The Verge", url: "https://www.theverge.com/policy/930629/data-center-policy-map-interactive" },
-  { time: "01:30", tag: "ai", tagText: "AI", text: "AI芯片公司Cerebras在2026年首个大型科技IPO中融资55亿美元，上市首日股价暴涨108%。该公司在英伟达主导的市场中凭借独特的大芯片架构脱颖而出，此次IPO被视为今年科技股上市的风向标。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/cerebras-raises-5-5b-kicking-off-2026s-ipo-season-with-a-bang/" },
 ];
-const aiBreakingDate = "2026年5月15日 22:29 CST";
+const aiBreakingDate = "2026年5月16日 00:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
