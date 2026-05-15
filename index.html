@@ -1616,19 +1616,20 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 64.6,
+  score: 62.91,
   rating: "greed",
-  timestamp: "2026-05-15T18:42:56+00:00",
+  timestamp: "2026-05-15T20:10:07+00:00",
   previousClose: 66.14,
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月16日 02:47 CST"
+  date: "2026年5月16日 04:21 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:05", tag: "tech", tagText: "科技", text: "英伟达竞争对手Cerebras在华尔街惊艳上市，首日表现强劲，显示出市场对AI芯片的旺盛需求。该公司芯片与英伟达的竞争关系引发广泛关注，但分析师警告其股价估值过高，存在炒作风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/nvidia-cerebras-stock-price-ipo.html" },
   { time: "00:54", tag: "geo", tagText: "地缘", text: "特朗普在与习近平会晤后表示，对是否保卫台湾‘不予置评’，并暗示可能重新考虑对台14亿美元军售案。此举引发市场对美台关系及地区局势的广泛关注。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/trump-china-xi-taiwan.html" },
   { time: "00:51", tag: "tech", tagText: "科技", text: "芯片股领跌美股，Arm、英特尔等大幅下挫，拖累纳指和标普500走低。此前一日两大指数刚创下收盘新高，市场情绪因通胀担忧和收益率飙升迅速逆转。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMizwJBVV95cUxPdGVkaDA5UGVLc2xWLUw1MWdfY0tiMm9QUXByQThUdWxTM2ZxV2NfUGRUaUduNEdsR245djhGSkY3V0NnRXNyNzkteGtXWjBtY0JoLXl2c0Y1VTgtWFRnbVREbTBaaHdYaUVIS1VxSXJfNWJkSFo4TEMtQklCNjNPampjV25wOVJseG1jckVEc3cwREdROGR0U3lZT0hRdEMxWGllZWFFRHd2VmlKanEyWkwwRjVIZjNMdVV2cndKamRTQWg4dVBxZ05VaFJHWjloR2drTUpVT3l3OE9jZzQ1OGlib2FDc3VLMHh2ZHFHazIzZTg5aEtiZk5NcHFiNEJDS0FQUE5aR0VQNVYyaWo0TUE5QzViQTltTmx2UGlxc0hkajkwZkg0MFNHYWhoakc2SkJLaDU3MGRPUVNDZ1RnNkphRGlqem5GZFNWYTVCSdIB1AJBVV95cUxOTENGNktJNW9UQUpKTnRLTElfd3FlVVEza09oa0QzeXduSkVmS1pQZUhLN1hNTkxhM0tYdlJfN2hyeWV2VlFiU2p3bFpFUGg4R0R5NFM2Zlhtd3Q2MmlIaW9EZ1BEWV9JOEF2Rk5RWE5jWTJ6Vnc3c1BXVG1QSUZ6dGlNNXBDNjZ2b2NiSmEtNTlBeTNJWGs5ZWFWT2dfSHBQYWo0TnE0RkRBbzlNNUxEaVVwWDRzZU1uWlJoRUVoQllsNWF4di1BLTZPa1c4Q2FnQWVNeDIwT2FWZ3FnU1RmV3B2UnVUZXV1UVZHMmpoQVlWVm00dWMta2hkeWNtbjdGUm44X0FEdTc4N19JZVozeHA2WHgzTWpHVEZqYmFvVlJJV1d0R3F2TDE2ZFJZSUQtX2szS1RTanRiN1FCWVE2LVRNSVFZYUtjdzN3OVliUVZKaFR4?oc=5" },
   { time: "00:49", tag: "tech", tagText: "科技", text: "加拿大将允许每年进口4.9万辆中国产电动汽车用于零售，关税税率仅为6.1%。部分加拿大经销商对此表示欢迎，认为这将为消费者提供更多高性价比选择。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/chinese-evs-canada.html" },
@@ -1648,14 +1649,16 @@ const breakingNews = [
   { time: "17:40", tag: "macro", tagText: "宏观", text: "通胀数据超预期飙升后，联邦基金期货市场首次定价美联储下一次利率行动为加息，最早可能在12月。市场对通胀前景的担忧急剧升温，此前市场普遍预期降息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/traders-now-see-next-fed-interest-rate-move-as-a-hike-following-inflation-surge.html" },
   { time: "17:29", tag: "geo", tagText: "地缘", text: "全球债券市场暴跌，因市场担忧伊朗战争引发通胀冲击。特朗普访华未能推动霍尔木兹海峡重新开放，油价飙升加剧通胀恐慌，交易员开始定价美联储加息。市场同时期待特朗普在伊朗冲突上转变立场。", source: "Financial Times", url: "https://www.ft.com/content/02015e49-fe11-488f-9e45-9fe70943d155" },
   { time: "15:58", tag: "macro", tagText: "宏观", text: "美股期货下跌，特朗普与习近平峰会结束后收益率上升。道指、标普500和纳斯达克期货均走低，市场对峰会成果的评估趋于谨慎。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPN2JFWmx4U0FKS1Q0SmdBbndnRzA5TTZXQno2T3ZOZDFJZmRhRC1scFJiQmRPc1RrWG1vWmtYQW9fcWNqNGk1VlhzTjkxeWlPcXNuamlVR1ozTVZ1QkFxb282OW14OXc4aDZTS2piWk9Jc0tpckVLRE50MTFZQlc0ZF9vZWNweW96djZyWnpxcUVWV1I1dnZNZV9JT1RnSVVCSEFjcXNBTHBadTVhYm1WekdKdVg2dkFGQWFmQmczNlRYT3c?oc=5" },
-  { time: "12:12", tag: "geo", tagText: "地缘", text: "特朗普盟友寄望习近平帮助化解霍尔木兹海峡危机。伊朗战争导致该海峡封锁，引发石油供应冲击和能源危机，威胁共和党中期选举前景。特朗普称中国同意购买美国原油以缓解供应紧张，油价应声上涨。", source: "Financial Times", url: "https://www.ft.com/content/e7ad9ab0-5a28-42ce-b90e-ac9f6bda75eb" },
 ];
-const breakingDate = "2026年5月16日 02:47 CST";
+const breakingDate = "2026年5月16日 04:21 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
+  { time: "03:41", tag: "ai", tagText: "AI", text: "英伟达竞争对手Cerebras在IPO首日暴涨后引发市场关注。该公司专注于AI训练芯片，其晶圆级处理器技术被视为英伟达GPU的潜在替代方案，但面临客户集中和盈利压力等挑战。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcXV0NE01V0lZRlVGdkY5WW9QNC1IdjR4SW9UZjJLTGtWc3ZTd2UxNVRPTkduTVpzRmt0QmNuRG1MVEJnQkwyX0llQlpMX3ppRG1Tc2tzNm51alpYVHpwN3I4b1dSMjVwNFNmb0Ntd0oxdlE3VTF6empiVm53eWdpUlRlSWJqSTJtbFNNNHdXUFR6RXpqQW5aTTY2NE1kYVlsWXZhdg?oc=5" },
   { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
   { time: "02:21", tag: "ai", tagText: "AI", text: "OpenAI再次进行高管重组，总裁Greg Brockman正式负责所有产品事务，旨在赢得AI代理之战。此次重组整合了部分业务部门，反映出OpenAI在AI代理领域的激烈竞争压力。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle" },
+  { time: "02:14", tag: "ai", tagText: "AI", text: "太浩湖——硅谷最受欢迎的度假胜地——即将面临能源危机。随着AI数据中心需求激增，当地电力价格大幅上涨，而该地区原有的能源供应商即将退出，新供应商尚未确定，居民和企业面临电费飙升困境。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/silicon-valleys-vacationland-needs-a-new-energy-provider-just-as-ai-is-driving-prices-up/" },
   { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
   { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "10:55", tag: "macro", tagText: "宏观", text: "道琼斯指数期货下跌，美国10年期国债收益率突破4.5%。此前英伟达股价持续上涨，AI芯片公司Cerebras上市首日暴涨。市场同时关注正在进行的特朗普与习近平峰会。", source: "Investor's Business Daily", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR0Q0STBtcHNkZDlCUWs2MnE4LVlhTEdtLU1ZS25mZFB6SHl0MXhXakMwYVpLWGJQRnZfbC1ZZjQxUXpWS001OG5IZlRPSmdpd3g1WlRIX19sVzZwcl8tb2JDd0xialRCY3RsSWhSSWNKRllZUnJ5NWF3T0pac0YtajFIaEdZTkxZRDJST01WMmRPMWxIRmMtb2dHZjNyTjd3Z1JTOEJUNWRnYlR0Q3lpZ2JmbkxJNkNaS2o2TnVOeTNqTTVkMzVr?oc=5" },
   { time: "07:46", tag: "ai", tagText: "AI", text: "知名财经评论员Cramer支持英伟达在中国销售AI芯片，认为无论政策结果如何，英伟达股票都能继续上涨。这一表态正值市场对中美科技合作前景高度关注之际。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUDRxaFR1TXhFeHNqa1NoZEhBX0gwRTlwcnRmcDN5Y1J2S0FXR0x2WWc3aVlxLWJiTjh3WE5ZQkQ5d2doOXQ3ZUVwS0EwRHgzd0wzamZWUmhTRWtBZFpoX2VWRHhxc2w2V2tqMEJuTWo0dng1QVk1UmF1SEVDRTRSdV9rdWtsZDdqWF9SS0poUUtzLXpOd3lRTmNudmdTMUE1bHZxb2dvWE9OdXhTdnZsSmJ2ZUs1VVp5Mm80?oc=5" },
   { time: "07:39", tag: "ai", tagText: "AI", text: "AI训练数据提供商Wirestock完成2300万美元融资。该公司专注于为AI模型提供高质量训练数据，此轮融资反映出市场对AI基础设施上游数据环节的持续关注。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYmlqOUVVbmNFamRIVlM1UmpfTjJRNVdTcENNN2FiV1RiNHlYUkJsZEJwcndUcHN3cW5VamJsNXROWUtnZ091OWhfbnoyUjZ2ejZUd3c1cXMxR1VPVEdCQlJOUmZhMkFoNkxmQzFlMkFOTG8tVnlORUFIUC1TU1pKWHJKcmU1M1Rrc1NlNml3eGFEcHR4ZFE?oc=5" },
-  { time: "05:30", tag: "ai", tagText: "AI", text: "马斯克旗下SpaceXAI自合并以来已流失超50名员工，引发外界对其领导层变动、员工倦怠及人才被挖角的担忧。该事件凸显了AI领域激烈的人才竞争和整合风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/" },
-  { time: "05:00", tag: "ai", tagText: "AI", text: "OpenAI将Codex AI编程工具集成至ChatGPT移动应用，用户现可通过手机远程控制桌面端代码编写和应用操作。此举紧随Anthropic类似功能走红之后，旨在提升移动端AI开发体验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview" },
-  { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
 ];
-const aiBreakingDate = "2026年5月16日 02:47 CST";
+const aiBreakingDate = "2026年5月16日 04:21 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
