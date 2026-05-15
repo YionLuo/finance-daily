@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.14,
+  score: 66.06,
   rating: "greed",
-  timestamp: "2026-05-14T22:48:03+00:00",
-  previousClose: 65.86,
-  previous1Week: 66.4,
-  previous1Month: 47.26,
-  previous1Year: 70.4,
-  date: "2026年5月15日 07:07 CST"
+  timestamp: "2026-05-15T00:00:00+00:00",
+  previousClose: 66.14,
+  previous1Week: 66.69,
+  previous1Month: 56.2,
+  previous1Year: 69.14,
+  date: "2026年5月15日 12:13 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:12", tag: "geo", tagText: "地缘", text: "特朗普盟友寄望习近平帮助化解霍尔木兹海峡危机。伊朗战争导致该海峡封锁，引发石油供应冲击和能源危机，威胁共和党中期选举前景。特朗普称中国同意购买美国原油以缓解供应紧张，油价应声上涨。", source: "Financial Times", url: "https://www.ft.com/content/e7ad9ab0-5a28-42ce-b90e-ac9f6bda75eb" },
+  { time: "12:12", tag: "macro", tagText: "宏观", text: "亚太股市下跌，韩国Kospi指数从8000点关口回落，投资者关注特朗普与习近平第二天的高风险会谈。市场对贸易协议细节和地缘政治不确定性保持谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/asia-markets-live-updates-today-trump-xi-nikkei-225-kospi-hang-seng-index.html" },
+  { time: "12:12", tag: "tech", tagText: "科技", text: "Anthropic同意以9000亿美元估值完成300亿美元融资，Dragoneer、Greenoaks、Sequoia Capital和Altimeter Capital领投。这是AI领域最大规模融资之一，显示市场对前沿AI实验室的持续追捧。", source: "Financial Times", url: "https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847" },
+  { time: "12:12", tag: "geo", tagText: "地缘", text: "CIA局长罕见访问古巴，要求进行‘根本性变革’。这是10年来第二位美国官员访问该岛国，正值古巴因四个月封锁导致柴油耗尽、面临严重能源危机之际。", source: "Financial Times", url: "https://www.ft.com/content/fad11ebd-9844-4432-94d0-e87865e456b5" },
   { time: "04:43", tag: "tech", tagText: "科技", text: "消息人士称，马斯克旗下可重复使用火箭公司SpaceX最快将于下周提交IPO招股说明书，预计将创下美股史上最大规模上市纪录。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/spacex-ipo-prospectus-could-land-as-soon-as-next-week-sources-say.html" },
   { time: "04:23", tag: "crypto", tagText: "加密", text: "加密货币交易所Gemini股价大涨，此前Winklevoss Capital Fund向其投资1亿美元。该公司季度营收超预期，亏损幅度也小于分析师预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/gemini-surges-after-winklevoss-capital-invests-100-million-in-the-crypto-exchange.html" },
   { time: "04:20", tag: "geo", tagText: "地缘", text: "美国民主党议员要求商务部长卢特尼克辞职，指控其在杰弗里·爱泼斯坦相关采访中撒谎。白宫此前表示，特朗普总统继续支持卢特尼克。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/howard-lutnick-jeffrey-epstein-commerce-trump.html" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "22:40", tag: "geo", tagText: "地缘", text: "OPEC预计今年石油需求增长放缓，因伊朗封锁霍尔木兹海峡导致波斯湾供应中断，产量下降超30%。全球需求面临严重制约。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/opec-oil-strait-hormuz-iran-war-saudi-arabia-uae.html" },
   { time: "22:38", tag: "macro", tagText: "宏观", text: "美国4月生产者价格指数（PPI）同比飙升6%，创2022年以来最大涨幅，远超预期。批发通胀数据冲击市场，道指下跌，但芯片股反弹推动纳指走高。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/ppi-inflation-report-april-2026-.html" },
   { time: "22:02", tag: "ai", tagText: "AI", text: "AI能源争夺战催生新一代基础设施巨头，GE Vernova、Bloom Energy等5只股票成为赢家。科技巨头7000亿美元AI能源投资推动这些‘电力界的英伟达’股价飙升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
-  { time: "21:51", tag: "tech", tagText: "科技", text: "国防科技公司Anduril估值翻倍至超600亿美元，正为特朗普1850亿美元的‘金穹’防御系统研发天基拦截器，国防科技融资热潮持续。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/anduril-valuation-defense-tech-funding-boom.html" },
-  { time: "21:42", tag: "macro", tagText: "宏观", text: "半导体股在美股市场中的影响力达到历史最高水平，分析警告这种高度集中可能带来风险。AI驱动的芯片股已成为标普500指数上涨的主要动力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/semiconductor-names-have-never-before-held-this-much-sway-over-the-stock-market-history-shows-that-could-be-a-problem-bc492950?mod=mw_rss_topstories" },
-  { time: "19:25", tag: "geo", tagText: "地缘", text: "普京首次以‘先生’称呼泽连斯基，摩根士丹利认为这标志着俄乌和平谈判氛围出现重大转变。经过四年多的战争，任何持久和平协议都将对股市、能源价格和大宗商品产生巨大影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/putin-addresses-zelensky-as-mister-for-the-first-time-morgan-stanley-says-it-means-a-vibe-shift-in-peace-negotiations-47c14f56?mod=mw_rss_topstories" },
-  { time: "19:02", tag: "macro", tagText: "宏观", text: "油价基本持平，市场关注特朗普访华进展及伊朗局势。此前伊朗战争导致霍尔木兹海峡封锁，油价持续承压。", source: "Reuters", url: "https://finance.yahoo.com/news/oil-prices-slip-teetering-iran-010021136.html" },
 ];
-const breakingDate = "2026年5月15日 07:07 CST";
+const breakingDate = "2026年5月15日 12:13 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "10:55", tag: "macro", tagText: "宏观", text: "道琼斯指数期货下跌，美国10年期国债收益率突破4.5%。此前英伟达股价持续上涨，AI芯片公司Cerebras上市首日暴涨。市场同时关注正在进行的特朗普与习近平峰会。", source: "Investor's Business Daily", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR0Q0STBtcHNkZDlCUWs2MnE4LVlhTEdtLU1ZS25mZFB6SHl0MXhXakMwYVpLWGJQRnZfbC1ZZjQxUXpWS001OG5IZlRPSmdpd3g1WlRIX19sVzZwcl8tb2JDd0xialRCY3RsSWhSSWNKRllZUnJ5NWF3T0pac0YtajFIaEdZTkxZRDJST01WMmRPMWxIRmMtb2dHZjNyTjd3Z1JTOEJUNWRnYlR0Q3lpZ2JmbkxJNkNaS2o2TnVOeTNqTTVkMzVr?oc=5" },
+  { time: "07:46", tag: "ai", tagText: "AI", text: "知名财经评论员Cramer支持英伟达在中国销售AI芯片，认为无论政策结果如何，英伟达股票都能继续上涨。这一表态正值市场对中美科技合作前景高度关注之际。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUDRxaFR1TXhFeHNqa1NoZEhBX0gwRTlwcnRmcDN5Y1J2S0FXR0x2WWc3aVlxLWJiTjh3WE5ZQkQ5d2doOXQ3ZUVwS0EwRHgzd0wzamZWUmhTRWtBZFpoX2VWRHhxc2w2V2tqMEJuTWo0dng1QVk1UmF1SEVDRTRSdV9rdWtsZDdqWF9SS0poUUtzLXpOd3lRTmNudmdTMUE1bHZxb2dvWE9OdXhTdnZsSmJ2ZUs1VVp5Mm80?oc=5" },
+  { time: "07:39", tag: "ai", tagText: "AI", text: "AI训练数据提供商Wirestock完成2300万美元融资。该公司专注于为AI模型提供高质量训练数据，此轮融资反映出市场对AI基础设施上游数据环节的持续关注。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYmlqOUVVbmNFamRIVlM1UmpfTjJRNVdTcENNN2FiV1RiNHlYUkJsZEJwcndUcHN3cW5VamJsNXROWUtnZ091OWhfbnoyUjZ2ejZUd3c1cXMxR1VPVEdCQlJOUmZhMkFoNkxmQzFlMkFOTG8tVnlORUFIUC1TU1pKWHJKcmU1M1Rrc1NlNml3eGFEcHR4ZFE?oc=5" },
   { time: "05:30", tag: "ai", tagText: "AI", text: "马斯克旗下SpaceXAI自合并以来已流失超50名员工，引发外界对其领导层变动、员工倦怠及人才被挖角的担忧。该事件凸显了AI领域激烈的人才竞争和整合风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/" },
   { time: "05:00", tag: "ai", tagText: "AI", text: "OpenAI将Codex AI编程工具集成至ChatGPT移动应用，用户现可通过手机远程控制桌面端代码编写和应用操作。此举紧随Anthropic类似功能走红之后，旨在提升移动端AI开发体验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview" },
   { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "tech", tagText: "科技", text: "亚马逊将Alexa Plus集成至Amazon.com购物体验，用户输入查询后将直接获得基于大语言模型的AI购物助手服务，标志着电商AI化的重要一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/929457/amazon-announces-alexa-for-shopping-ai-assistant-rufus" },
   { time: "20:07", tag: "tech", tagText: "科技", text: "中国公司正加速自主研发AI芯片，即使英伟达可能重返中国市场也未放缓步伐。在中美科技脱钩背景下，中国本土芯片企业持续加大投入，推动国产替代进程，这一趋势可能重塑全球AI芯片供应链格局。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUDRTd3E0NmJ6d0M1Qi1kcm5VeVBqY2pGazBjY3JfMkE3MGlKeUd2VTh1Vy1xUEZFeWtLZzRub1ItMVRCRE45UXpLVno1MGtna29OQmlkZkw4aEpPSktEWkJ6Yy1LQ2pic2VaNkVHSjVySTRwLUxLcXBNRGhNRFRfVXBWcEpPYnV2TDE2TU15UFFrVGw0VmJtUWNZdXpZWl9feXJCM2JBYm1maTJVSGxtY0JHLVE?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "WhatsApp在Meta AI聊天中新增“隐身模式”，该模式下对话不会被保存，关闭聊天后消息默认消失，强化用户隐私保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/whatsapp-adds-an-incognito-mode-in-meta-ai-chats/" },
-  { time: "18:00", tag: "ai", tagText: "AI", text: "新型内存聚焦ETF年内飙升90%，其CEO称存储芯片是AI发展的“最大瓶颈”，市场关注度从英伟达等算力芯片转向存储领域。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbUhMR01kVXpPbG5vTEYtdFluWXdHNE1fVXRFc0h6aTF0ZG4tRVJUVTQwRWo2SklLejFCRmNCRnR3OWJsdGJPTE5KcUJTUXJFbTdRa0lNakhWX0cwQXVTc25QVW9XNnlPdmV5VlV6Um45NlhpSl9GZkZKdWRnN2NEYW9Lc0RUNDZvbURTOE9QQV9Ba0NtMGRfZ3U0YWZ1SHppcGNGSTI2TG10ellMd2lMZkNBMzdtcDJoSkJNLVZxNEg0RTFsdXJ3eXdUX0VseF82YTlqSlVERnZEaVVf?oc=5" },
-  { time: "17:28", tag: "ai", tagText: "AI", text: "以色列AI突破有望彻底改变睡眠呼吸暂停诊断方式。该技术利用人工智能分析相关数据，旨在提高诊断准确率并降低传统检测的复杂性，为全球数亿患者带来更便捷的筛查方案。", source: "i24NEWS", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRTZyei1qZm40MmVieXlaLWw0Q3RSXzMxZ3p4WFBvbGc5a2RsTU9TeWZQTy05eWwzUFhQZUV0V3pHaG9DR09tYnJOWjZYWW9INWs3TFJ6NjNDTWZQWUk2YThNLXI4M2hEc2Q5NmFod2VkcXFiM2lxRE4ySXNOcmFzdjdNTDk0ckFSLTBabzNNcFpFeF9DZjgzLVZFMWxEeXpOaGJxTkE5YlVVRFJwdGtHc05VQnc?oc=5" },
-  { time: "17:24", tag: "ai", tagText: "AI", text: "奇瑞汽车（EXEED母公司）宣布与英伟达达成合作，共同推进驾驶辅助、物理AI及机器人技术。双方将结合英伟达的AI计算平台与奇瑞的整车研发能力，加速智能驾驶和自动化技术的落地。", source: "The Manila Times", url: "https://news.google.com/rss/articles/CBMihwJBVV95cUxNYzNBMk9DWjdWeXRTYV9TdzV1SmZIU2wtelY4cjlOemZmVmxxazlSME84dk9oSUxqcV9mUVQ0SjRZUjFGUGE5TGVTaGpmU09RTi1iLUdKRmROYS1WcWVqdEJvamo4bEJFcnRNOFpENWlWNnc5aHhXTkZUSzlNZkFGSUxOOF9tdTZWMFp2VmxrRTNOdXZRYXhCcVA0cDJfZFVfWnVnaHllNDh0RV8tU0VHVWYwUzdiQTlYNDYtVVFjSWRRYldXRURlWXc3Y1ZhQzE3RDNsU0pEMlU3X1N6cmxtY3cyRE44d1BFcmFLeTA3amFKT2JuaHpUYXBZUVVZTHNyV3ZxSHlXNA?oc=5" },
 ];
-const aiBreakingDate = "2026年5月15日 07:07 CST";
+const aiBreakingDate = "2026年5月15日 12:13 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
