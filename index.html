@@ -1618,17 +1618,22 @@
 const fearGreedData = {
   score: 65.34,
   rating: "greed",
-  timestamp: "2026-05-15T07:53:46+00:00",
+  timestamp: "2026-05-15T11:09:16+00:00",
   previousClose: 66.14,
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月15日 16:12 CST"
+  date: "2026年5月15日 19:27 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:27", tag: "geo", tagText: "地缘", text: "伊朗战争导致全球集装箱航运路线发生重大转变，船只越来越多地绕行印度、斯里兰卡并通过巴拿马运河，商品价格可能进一步上涨。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/container-shipping-routes-are-shifting-due-to-the-iran-war-prices-of-goods-could-go-higher-4fc8b20b?mod=mw_rss_topstories" },
+  { time: "19:27", tag: "geo", tagText: "地缘", text: "阿联酋加速建设第二条西东石油管道，以绕过霍尔木兹海峡。当前全球能源供应持续承压，该海峡的通行严重受限。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/uae-west-east-oil-pipeline-strait-hormuz-iran-war.html" },
+  { time: "19:27", tag: "macro", tagText: "宏观", text: "前高盛策略师杰夫·柯里表示，大宗商品处于结构性牛市，能源股是布局AI基础设施建设的最佳方式，建议资本从消耗大宗商品的公司流向拥有大宗商品的公司。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-munificent-7-why-energy-stocks-are-the-best-way-to-play-the-ai-build-out-says-former-goldman-strategist-ecf3d3b2?mod=mw_rss_topstories" },
+  { time: "19:27", tag: "tech", tagText: "科技", text: "亿万富翁对冲基金经理比尔·阿克曼表示，其旗下Pershing Square Capital Management已在第一季度建仓微软股票。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/bill-ackman-says-he-built-microsoft-position-in-first-quarter.html" },
+  { time: "19:27", tag: "macro", tagText: "宏观", text: "施罗德计划在仅三年后退出中国共同基金业务，这家伦敦上市公司将被总部位于美国的资产管理公司Nuveen以100亿英镑收购。", source: "Financial Times", url: "https://www.ft.com/content/af307ee3-1b50-436e-a2a2-70a197ab5c4d" },
   { time: "15:58", tag: "macro", tagText: "宏观", text: "美股期货下跌，特朗普与习近平峰会结束后收益率上升。道指、标普500和纳斯达克期货均走低，市场对峰会成果的评估趋于谨慎。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPN2JFWmx4U0FKS1Q0SmdBbndnRzA5TTZXQno2T3ZOZDFJZmRhRC1scFJiQmRPc1RrWG1vWmtYQW9fcWNqNGk1VlhzTjkxeWlPcXNuamlVR1ozTVZ1QkFxb282OW14OXc4aDZTS2piWk9Jc0tpckVLRE50MTFZQlc0ZF9vZWNweW96djZyWnpxcUVWV1I1dnZNZV9JT1RnSVVCSEFjcXNBTHBadTVhYm1WekdKdVg2dkFGQWFmQmczNlRYT3c?oc=5" },
   { time: "12:12", tag: "geo", tagText: "地缘", text: "特朗普盟友寄望习近平帮助化解霍尔木兹海峡危机。伊朗战争导致该海峡封锁，引发石油供应冲击和能源危机，威胁共和党中期选举前景。特朗普称中国同意购买美国原油以缓解供应紧张，油价应声上涨。", source: "Financial Times", url: "https://www.ft.com/content/e7ad9ab0-5a28-42ce-b90e-ac9f6bda75eb" },
   { time: "12:12", tag: "macro", tagText: "宏观", text: "亚太股市下跌，韩国Kospi指数从8000点关口回落，投资者关注特朗普与习近平第二天的高风险会谈。市场对贸易协议细节和地缘政治不确定性保持谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/asia-markets-live-updates-today-trump-xi-nikkei-225-kospi-hang-seng-index.html" },
@@ -1644,16 +1649,15 @@ const breakingNews = [
   { time: "01:57", tag: "geo", tagText: "地缘", text: "特朗普称中国将订购200架波音飞机，但波音股价因订单规模不及预期而大跌，创六个月最大单日跌幅。市场此前期待更大订单。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/china-boeing-order-airplanes-737-max-trump-says.html" },
   { time: "01:55", tag: "crypto", tagText: "加密", text: "美国参议院银行委员会以15比9的投票结果推进《清晰法案》（Clarity Act），该法案旨在为加密货币行业建立明确的监管规则，被视为加密行业的一项重大立法胜利。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/clarity-act-congress-crypto-senate.html" },
   { time: "01:51", tag: "ai", tagText: "AI", text: "AI芯片公司Cerebras在纳斯达克上市首日股价暴涨超100%，市值突破1000亿美元。此次IPO是AI领域最受瞩目的纯AI芯片公司上市事件，显示市场对AI相关股票需求依然强劲。", source: "Financial Times", url: "https://www.ft.com/content/4848fbef-d9af-46ee-b6ef-ad344a7a3814" },
-  { time: "01:49", tag: "tech", tagText: "科技", text: "福特汽车股价两日飙升20%，公司宣布成立新子公司，专注于为数据中心提供储能电池，实现从电动汽车业务向AI能源存储的战略转型。市场将其视为AI概念“网红股”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/ford-surges-20percent-in-two-days-it-might-be-an-ai-meme-stock-after-energy-pivot.html" },
-  { time: "01:30", tag: "macro", tagText: "宏观", text: "美国当局准备结束对印度亿万富翁阿达尼的欺诈案件。阿达尼曾游说特朗普政府，并承诺在美国投资数十亿美元。", source: "Financial Times", url: "https://www.ft.com/content/4d9bfc38-9f14-42a5-8962-6f6ce83f3eb0" },
-  { time: "01:10", tag: "macro", tagText: "宏观", text: "特朗普披露其个人股票交易记录，显示他大量买入波音和英伟达股票，每笔交易金额至少100万美元。此举正值其访华期间，相关公司有望从此次行程中获益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-discloses-big-buys-of-shares-in-boeing-and-nvidia-as-the-companies-look-set-to-gain-from-his-china-trip-1081bd1d?mod=mw_rss_topstories" },
-  { time: "01:10", tag: "ai", tagText: "AI", text: "马斯克因前往中国而缺席OpenAI庭审，其律师当庭向法官致歉。马斯克起诉OpenAI联合创始人奥特曼等人违反公司非营利承诺。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/musk-lawyer-trial-jury-china-trip-openai-altman.html" },
-  { time: "22:40", tag: "geo", tagText: "地缘", text: "OPEC预计今年石油需求增长放缓，因伊朗封锁霍尔木兹海峡导致波斯湾供应中断，产量下降超30%。全球需求面临严重制约。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/opec-oil-strait-hormuz-iran-war-saudi-arabia-uae.html" },
 ];
-const breakingDate = "2026年5月15日 16:12 CST";
+const breakingDate = "2026年5月15日 19:27 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:00", tag: "ai", tagText: "AI", text: "AI研究论文质量提升反而引发学术界危机：一篇论文因被过度引用而成为问题，揭示AI生成内容泛滥正在破坏同行评审体系，科学家面临辨别真伪的困境。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem" },
+  { time: "18:59", tag: "macro", tagText: "宏观", text: "通胀担忧引发获利了结，芯片股普遍下跌。市场对美联储可能继续加息的预期升温，导致投资者抛售此前涨幅较大的半导体板块。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMTY0UnlCOFgteFlXMGlWdHpDLW5PbkhLQ1J0M0o2Wi01ZGozS2RRdWd5dHRIUmhCVHJwYVdaUjQxSUwzd0ZNdENubFp5c2F5QXpoTERDUk9xMi12VDRjcGJvWVRsdE9yMGZVZ180c3R2ZHE1V25YSE1sUnEzWlFrM1MxWUlQaVRrNk01YndnSVFjcEl5OXgxbndGYzRoLWZZbXptZHVhR3oxbVlIQVl3?oc=5" },
+  { time: "16:24", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用人工智能优化航班调度和空域管理，旨在提升欧洲航空系统的效率和安全性。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNWFQZjI2M0tUVkRuUDNVRUZyS2VSb1BvMFcyeF9hRm9mbmdfN1BqMHV1NU1EVWkycEtLYmlnSnpSMW02cHFBODBiV1NINEhmSS1PNGIzdm82ckNMVmFEUU9UWVlZcDdOLVpSc19FNTMxelhjcUc1YWI1Y1EzcE11Vkw5WFRHU0ppZFRtcV83dkxzUm1UaVBmVmlnRnFURWo1bzk1NzNQLWZ2ZERrNS0xMkJyTTI3SEM0UlNpLXVFc0JqdW50b1ZmRkVjOW8?oc=5" },
+  { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
   { time: "10:55", tag: "macro", tagText: "宏观", text: "道琼斯指数期货下跌，美国10年期国债收益率突破4.5%。此前英伟达股价持续上涨，AI芯片公司Cerebras上市首日暴涨。市场同时关注正在进行的特朗普与习近平峰会。", source: "Investor's Business Daily", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR0Q0STBtcHNkZDlCUWs2MnE4LVlhTEdtLU1ZS25mZFB6SHl0MXhXakMwYVpLWGJQRnZfbC1ZZjQxUXpWS001OG5IZlRPSmdpd3g1WlRIX19sVzZwcl8tb2JDd0xialRCY3RsSWhSSWNKRllZUnJ5NWF3T0pac0YtajFIaEdZTkxZRDJST01WMmRPMWxIRmMtb2dHZjNyTjd3Z1JTOEJUNWRnYlR0Q3lpZ2JmbkxJNkNaS2o2TnVOeTNqTTVkMzVr?oc=5" },
   { time: "07:46", tag: "ai", tagText: "AI", text: "知名财经评论员Cramer支持英伟达在中国销售AI芯片，认为无论政策结果如何，英伟达股票都能继续上涨。这一表态正值市场对中美科技合作前景高度关注之际。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUDRxaFR1TXhFeHNqa1NoZEhBX0gwRTlwcnRmcDN5Y1J2S0FXR0x2WWc3aVlxLWJiTjh3WE5ZQkQ5d2doOXQ3ZUVwS0EwRHgzd0wzamZWUmhTRWtBZFpoX2VWRHhxc2w2V2tqMEJuTWo0dng1QVk1UmF1SEVDRTRSdV9rdWtsZDdqWF9SS0poUUtzLXpOd3lRTmNudmdTMUE1bHZxb2dvWE9OdXhTdnZsSmJ2ZUs1VVp5Mm80?oc=5" },
   { time: "07:39", tag: "ai", tagText: "AI", text: "AI训练数据提供商Wirestock完成2300万美元融资。该公司专注于为AI模型提供高质量训练数据，此轮融资反映出市场对AI基础设施上游数据环节的持续关注。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYmlqOUVVbmNFamRIVlM1UmpfTjJRNVdTcENNN2FiV1RiNHlYUkJsZEJwcndUcHN3cW5VamJsNXROWUtnZ091OWhfbnoyUjZ2ejZUd3c1cXMxR1VPVEdCQlJOUmZhMkFoNkxmQzFlMkFOTG8tVnlORUFIUC1TU1pKWHJKcmU1M1Rrc1NlNml3eGFEcHR4ZFE?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "23:46", tag: "ai", tagText: "AI", text: "马斯克与奥特曼就OpenAI未来走向的法庭对决正式开庭。马斯克于2024年提起诉讼，指控OpenAI背离了最初的非营利使命。此案结果可能深刻影响OpenAI及ChatGPT的未来发展方向，是AI行业最具影响力的法律战之一。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
   { time: "23:25", tag: "ai", tagText: "AI", text: "盖洛普最新民调显示，超过70%的美国民众反对在其社区建设AI数据中心，仅7%表示强烈支持。这一数据凸显了AI基础设施建设面临的巨大社会阻力，科技巨头在扩张数据中心时正遭遇日益严重的“邻避效应”。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930477/ai-data-centers-gallup-survey-70-percent-opposition" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
-  { time: "21:01", tag: "ai", tagText: "AI", text: "巴伦周刊发文称英伟达的涨势才刚刚开始，当前股价仍然便宜。尽管英伟达已是全球市值最高的公司之一，但分析师认为其在AI芯片领域的统治地位和持续增长潜力尚未被充分定价。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE9BZmZvVlFoRVI0ZXlhQTRTU1pqS244TU5aZjNkbGNYZHpma3czaklBRWxoUUR5VVFwVnZCZFRLd2J4RkVZVDczMldrazMzQWtpUzRIeE8tUTd0TXZURm56OHd5WjJYVWZwZm5RMXZueVZ4V3JsWFhOMg?oc=5" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "亚马逊将Alexa Plus集成至Amazon.com购物体验，用户输入查询后将直接获得基于大语言模型的AI购物助手服务，标志着电商AI化的重要一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/929457/amazon-announces-alexa-for-shopping-ai-assistant-rufus" },
-  { time: "20:07", tag: "tech", tagText: "科技", text: "中国公司正加速自主研发AI芯片，即使英伟达可能重返中国市场也未放缓步伐。在中美科技脱钩背景下，中国本土芯片企业持续加大投入，推动国产替代进程，这一趋势可能重塑全球AI芯片供应链格局。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUDRTd3E0NmJ6d0M1Qi1kcm5VeVBqY2pGazBjY3JfMkE3MGlKeUd2VTh1Vy1xUEZFeWtLZzRub1ItMVRCRE45UXpLVno1MGtna29OQmlkZkw4aEpPSktEWkJ6Yy1LQ2pic2VaNkVHSjVySTRwLUxLcXBNRGhNRFRfVXBWcEpPYnV2TDE2TU15UFFrVGw0VmJtUWNZdXpZWl9feXJCM2JBYm1maTJVSGxtY0JHLVE?oc=5" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "WhatsApp在Meta AI聊天中新增“隐身模式”，该模式下对话不会被保存，关闭聊天后消息默认消失，强化用户隐私保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/whatsapp-adds-an-incognito-mode-in-meta-ai-chats/" },
 ];
-const aiBreakingDate = "2026年5月15日 16:12 CST";
+const aiBreakingDate = "2026年5月15日 19:27 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
