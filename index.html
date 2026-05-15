@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 65.34,
+  score: 65.17,
   rating: "greed",
-  timestamp: "2026-05-15T11:09:16+00:00",
+  timestamp: "2026-05-15T14:24:25+00:00",
   previousClose: 66.14,
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月15日 19:27 CST"
+  date: "2026年5月15日 22:29 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:06", tag: "macro", tagText: "宏观", text: "美股三大指数全线下挫，道指、标普500和纳斯达克期货走低。10年期美债收益率突破4.5%，30年期收益率突破5.1%创近一年新高。油价因霍尔木兹海峡危机持续上涨，市场对通胀和利率前景感到担忧。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ3g3VGctU3NxazdUQWk3NkV0cnpDQjJVQU1wc2FJaXN6SUNNTVd1eHI0bjBJZkxadDU5ZjVHUHdId3FHOS1uX21vd0NGTXZHMDNMSnJ1V2FlNVpna1BDUExDYm55UXZueVFRNVBKcWxDTzFablljMzJhRTI2X19iWkhTQ0xpeThMZXpLaGN4T2ZPY0dpeFZxY1VsU25JS0Q4Q3UzMFRUWFlFSW02UklhQUlSRHMtWUdWa3BZdUlNaERfUQ" },
+  { time: "21:41", tag: "geo", tagText: "地缘", text: "印度总理莫迪访问阿联酋期间，双方深化了防务和能源合作。此举正值中东局势紧张、霍尔木兹海峡危机持续之际。", source: "Reuters", url: "https://finance.yahoo.com/news/india-signs-pacts-uae-defence-075529375.html" },
+  { time: "21:36", tag: "geo", tagText: "地缘", text: "特朗普披露第一季度大规模股票交易，包括买入至少100万美元的波音和英伟达股票。这些公司预计将从其中国之行中获益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-discloses-big-buys-of-shares-in-boeing-and-nvidia-as-the-companies-look-set-to-gain-from-his-china-trip-1081bd1d" },
+  { time: "21:17", tag: "macro", tagText: "宏观", text: "星巴克宣布将在美国裁员300人，并关闭部分区域支持办公室。公司表示此举将有助于咖啡连锁店恢复盈利增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/starbucks-to-lay-off-300-us-employees-close-some-regional-offices.html" },
   { time: "19:27", tag: "geo", tagText: "地缘", text: "伊朗战争导致全球集装箱航运路线发生重大转变，船只越来越多地绕行印度、斯里兰卡并通过巴拿马运河，商品价格可能进一步上涨。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/container-shipping-routes-are-shifting-due-to-the-iran-war-prices-of-goods-could-go-higher-4fc8b20b?mod=mw_rss_topstories" },
   { time: "19:27", tag: "geo", tagText: "地缘", text: "阿联酋加速建设第二条西东石油管道，以绕过霍尔木兹海峡。当前全球能源供应持续承压，该海峡的通行严重受限。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/uae-west-east-oil-pipeline-strait-hormuz-iran-war.html" },
   { time: "19:27", tag: "macro", tagText: "宏观", text: "前高盛策略师杰夫·柯里表示，大宗商品处于结构性牛市，能源股是布局AI基础设施建设的最佳方式，建议资本从消耗大宗商品的公司流向拥有大宗商品的公司。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-munificent-7-why-energy-stocks-are-the-best-way-to-play-the-ai-build-out-says-former-goldman-strategist-ecf3d3b2?mod=mw_rss_topstories" },
@@ -1645,15 +1649,15 @@ const breakingNews = [
   { time: "04:20", tag: "geo", tagText: "地缘", text: "美国民主党议员要求商务部长卢特尼克辞职，指控其在杰弗里·爱泼斯坦相关采访中撒谎。白宫此前表示，特朗普总统继续支持卢特尼克。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/howard-lutnick-jeffrey-epstein-commerce-trump.html" },
   { time: "04:02", tag: "tech", tagText: "科技", text: "由Egon Durban领导的财团将以99亿美元估值收购拉斯维加斯突袭者队25%的股份。First Football将出售其持有的该球队全部股份。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/group-led-by-egon-durban-to-buy-25percent-of-las-vegas-raiders-at-9point9-billion-valuation-sources.html" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "美联储理事米兰宣布辞职，支持沃什接任主席。债券市场认为美联储在通胀问题上落后于曲线，希望新主席转向紧缩立场。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/fed-governor-miran-submits-resignation-throws-support-behind-warsh-as-new-chair.html" },
-  { time: "02:30", tag: "macro", tagText: "宏观", text: "美股三大指数全线上涨，道指重新站上50000点大关，标普500和纳斯达克指数创历史新高。思科领涨科技股，AI交易热潮回归。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE1WWXpTOXhVMVBOUC12VUhqTUduSTBPaUs5MExwVWt0ZWgxTHIzbGQ2SDJmOXVFci1qemdfbnJQVFlYX29UcjY1NExiTkJLV09FUnp3emNSdmtVZk1SbGc1RFRBZTFLSXZ2VTJpSWp6ZXF4UHRadTU40gF8QVVfeXFMT0diamtoaHFvSGdVY3ZGSG55SjZyVzAxeVA3RlhUb3JHLUtodnpZaEZ3X0xqMlJfOHk4LU9YUF9yQUVkNXdDUmVmQk1rQjhlN3plT0tGWkJQNzdMRkpwTzJrNkp5aXFCRmF3SkhqSjFHZktqZnljM19aZzB6dw?oc=5" },
-  { time: "01:57", tag: "geo", tagText: "地缘", text: "特朗普称中国将订购200架波音飞机，但波音股价因订单规模不及预期而大跌，创六个月最大单日跌幅。市场此前期待更大订单。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/china-boeing-order-airplanes-737-max-trump-says.html" },
-  { time: "01:55", tag: "crypto", tagText: "加密", text: "美国参议院银行委员会以15比9的投票结果推进《清晰法案》（Clarity Act），该法案旨在为加密货币行业建立明确的监管规则，被视为加密行业的一项重大立法胜利。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/clarity-act-congress-crypto-senate.html" },
-  { time: "01:51", tag: "ai", tagText: "AI", text: "AI芯片公司Cerebras在纳斯达克上市首日股价暴涨超100%，市值突破1000亿美元。此次IPO是AI领域最受瞩目的纯AI芯片公司上市事件，显示市场对AI相关股票需求依然强劲。", source: "Financial Times", url: "https://www.ft.com/content/4848fbef-d9af-46ee-b6ef-ad344a7a3814" },
 ];
-const breakingDate = "2026年5月15日 19:27 CST";
+const breakingDate = "2026年5月15日 22:29 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "英国政府支持David Silver领导的估值8.14亿英镑的AI初创公司，引发关于技术主权和国家安全的热议。支持者认为此举可确保英国在AI领域的竞争力，反对者则担忧关键技术和数据外流风险。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVFpGVEEzNGVJckNVaC05dWRBN2FiV3U3NzNScXNhZmdFSU9uczgtQXo5VlBka2lGMXdudk5raFVUZGVER2dKb01XdHo3OXBOVExEWmN5SGE3UXpOenFDbTk3UU9wazBRRWFTemZFRVlWdTNzbEFxVmlfeUV4eTJyT25Sd0hBdUlmMm1na2hSaVhrNnlWNzhR?oc=5" },
+  { time: "19:00", tag: "tech", tagText: "科技", text: "初创公司Osaurus发布Mac应用，允许用户在同一界面内结合使用本地和云端AI模型，并将用户的记忆、文件和工具保留在本地硬件上，兼顾隐私与性能。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "AI研究论文质量提升反而引发学术界危机：一篇论文因被过度引用而成为问题，揭示AI生成内容泛滥正在破坏同行评审体系，科学家面临辨别真伪的困境。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem" },
   { time: "18:59", tag: "macro", tagText: "宏观", text: "通胀担忧引发获利了结，芯片股普遍下跌。市场对美联储可能继续加息的预期升温，导致投资者抛售此前涨幅较大的半导体板块。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMTY0UnlCOFgteFlXMGlWdHpDLW5PbkhLQ1J0M0o2Wi01ZGozS2RRdWd5dHRIUmhCVHJwYVdaUjQxSUwzd0ZNdENubFp5c2F5QXpoTERDUk9xMi12VDRjcGJvWVRsdE9yMGZVZ180c3R2ZHE1V25YSE1sUnEzWlFrM1MxWUlQaVRrNk01YndnSVFjcEl5OXgxbndGYzRoLWZZbXptZHVhR3oxbVlIQVl3?oc=5" },
   { time: "16:24", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用人工智能优化航班调度和空域管理，旨在提升欧洲航空系统的效率和安全性。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNWFQZjI2M0tUVkRuUDNVRUZyS2VSb1BvMFcyeF9hRm9mbmdfN1BqMHV1NU1EVWkycEtLYmlnSnpSMW02cHFBODBiV1NINEhmSS1PNGIzdm82ckNMVmFEUU9UWVlZcDdOLVpSc19FNTMxelhjcUc1YWI1Y1EzcE11Vkw5WFRHU0ppZFRtcV83dkxzUm1UaVBmVmlnRnFURWo1bzk1NzNQLWZ2ZERrNS0xMkJyTTI3SEM0UlNpLXVFc0JqdW50b1ZmRkVjOW8?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
   { time: "01:40", tag: "ai", tagText: "AI", text: "一项互动地图工具上线，帮助公众查找自家附近的AI数据中心。此前，俄勒冈州居民因谷歌大规模建设数据中心引发争议，该工具旨在提高数据中心选址的透明度。", source: "The Verge", url: "https://www.theverge.com/policy/930629/data-center-policy-map-interactive" },
   { time: "01:30", tag: "ai", tagText: "AI", text: "AI芯片公司Cerebras在2026年首个大型科技IPO中融资55亿美元，上市首日股价暴涨108%。该公司在英伟达主导的市场中凭借独特的大芯片架构脱颖而出，此次IPO被视为今年科技股上市的风向标。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/cerebras-raises-5-5b-kicking-off-2026s-ipo-season-with-a-bang/" },
-  { time: "00:46", tag: "ai", tagText: "AI", text: "思科在公布创纪录季度营收的同一天宣布裁员近4000人。公司CFO称此次重组并非为节省成本，而是将资源转向AI领域。这一举动反映了传统科技巨头在AI浪潮下的战略调整：一边是业绩新高，一边是人员优化。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/cisco-announces-record-revenue-and-4000-layoffs-in-the-same-day/" },
-  { time: "23:46", tag: "ai", tagText: "AI", text: "马斯克与奥特曼就OpenAI未来走向的法庭对决正式开庭。马斯克于2024年提起诉讼，指控OpenAI背离了最初的非营利使命。此案结果可能深刻影响OpenAI及ChatGPT的未来发展方向，是AI行业最具影响力的法律战之一。", source: "The Verge", url: "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit" },
-  { time: "23:25", tag: "ai", tagText: "AI", text: "盖洛普最新民调显示，超过70%的美国民众反对在其社区建设AI数据中心，仅7%表示强烈支持。这一数据凸显了AI基础设施建设面临的巨大社会阻力，科技巨头在扩张数据中心时正遭遇日益严重的“邻避效应”。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930477/ai-data-centers-gallup-survey-70-percent-opposition" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
 ];
-const aiBreakingDate = "2026年5月15日 19:27 CST";
+const aiBreakingDate = "2026年5月15日 22:29 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
