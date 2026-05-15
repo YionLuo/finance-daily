@@ -1616,23 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 66.06,
+  score: 65.34,
   rating: "greed",
-  timestamp: "2026-05-15T00:00:00+00:00",
+  timestamp: "2026-05-15T07:53:46+00:00",
   previousClose: 66.14,
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月15日 12:13 CST"
+  date: "2026年5月15日 16:12 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:58", tag: "macro", tagText: "宏观", text: "美股期货下跌，特朗普与习近平峰会结束后收益率上升。道指、标普500和纳斯达克期货均走低，市场对峰会成果的评估趋于谨慎。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPN2JFWmx4U0FKS1Q0SmdBbndnRzA5TTZXQno2T3ZOZDFJZmRhRC1scFJiQmRPc1RrWG1vWmtYQW9fcWNqNGk1VlhzTjkxeWlPcXNuamlVR1ozTVZ1QkFxb282OW14OXc4aDZTS2piWk9Jc0tpckVLRE50MTFZQlc0ZF9vZWNweW96djZyWnpxcUVWV1I1dnZNZV9JT1RnSVVCSEFjcXNBTHBadTVhYm1WekdKdVg2dkFGQWFmQmczNlRYT3c?oc=5" },
   { time: "12:12", tag: "geo", tagText: "地缘", text: "特朗普盟友寄望习近平帮助化解霍尔木兹海峡危机。伊朗战争导致该海峡封锁，引发石油供应冲击和能源危机，威胁共和党中期选举前景。特朗普称中国同意购买美国原油以缓解供应紧张，油价应声上涨。", source: "Financial Times", url: "https://www.ft.com/content/e7ad9ab0-5a28-42ce-b90e-ac9f6bda75eb" },
   { time: "12:12", tag: "macro", tagText: "宏观", text: "亚太股市下跌，韩国Kospi指数从8000点关口回落，投资者关注特朗普与习近平第二天的高风险会谈。市场对贸易协议细节和地缘政治不确定性保持谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/asia-markets-live-updates-today-trump-xi-nikkei-225-kospi-hang-seng-index.html" },
   { time: "12:12", tag: "tech", tagText: "科技", text: "Anthropic同意以9000亿美元估值完成300亿美元融资，Dragoneer、Greenoaks、Sequoia Capital和Altimeter Capital领投。这是AI领域最大规模融资之一，显示市场对前沿AI实验室的持续追捧。", source: "Financial Times", url: "https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847" },
   { time: "12:12", tag: "geo", tagText: "地缘", text: "CIA局长罕见访问古巴，要求进行‘根本性变革’。这是10年来第二位美国官员访问该岛国，正值古巴因四个月封锁导致柴油耗尽、面临严重能源危机之际。", source: "Financial Times", url: "https://www.ft.com/content/fad11ebd-9844-4432-94d0-e87865e456b5" },
+  { time: "11:11", tag: "macro", tagText: "宏观", text: "美联储候任主席沃什认为，美联储应保持沉默，持续的‘念咒’式沟通弊大于利。市场关注其未来政策立场。", source: "Financial Times", url: "https://www.ft.com/content/216c5568-9900-4b69-b4ad-479d860ec225" },
   { time: "04:43", tag: "tech", tagText: "科技", text: "消息人士称，马斯克旗下可重复使用火箭公司SpaceX最快将于下周提交IPO招股说明书，预计将创下美股史上最大规模上市纪录。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/spacex-ipo-prospectus-could-land-as-soon-as-next-week-sources-say.html" },
   { time: "04:23", tag: "crypto", tagText: "加密", text: "加密货币交易所Gemini股价大涨，此前Winklevoss Capital Fund向其投资1亿美元。该公司季度营收超预期，亏损幅度也小于分析师预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/gemini-surges-after-winklevoss-capital-invests-100-million-in-the-crypto-exchange.html" },
   { time: "04:20", tag: "geo", tagText: "地缘", text: "美国民主党议员要求商务部长卢特尼克辞职，指控其在杰弗里·爱泼斯坦相关采访中撒谎。白宫此前表示，特朗普总统继续支持卢特尼克。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/howard-lutnick-jeffrey-epstein-commerce-trump.html" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "01:10", tag: "macro", tagText: "宏观", text: "特朗普披露其个人股票交易记录，显示他大量买入波音和英伟达股票，每笔交易金额至少100万美元。此举正值其访华期间，相关公司有望从此次行程中获益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-discloses-big-buys-of-shares-in-boeing-and-nvidia-as-the-companies-look-set-to-gain-from-his-china-trip-1081bd1d?mod=mw_rss_topstories" },
   { time: "01:10", tag: "ai", tagText: "AI", text: "马斯克因前往中国而缺席OpenAI庭审，其律师当庭向法官致歉。马斯克起诉OpenAI联合创始人奥特曼等人违反公司非营利承诺。", source: "CNBC", url: "https://www.cnbc.com/2026/05/14/musk-lawyer-trial-jury-china-trip-openai-altman.html" },
   { time: "22:40", tag: "geo", tagText: "地缘", text: "OPEC预计今年石油需求增长放缓，因伊朗封锁霍尔木兹海峡导致波斯湾供应中断，产量下降超30%。全球需求面临严重制约。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/opec-oil-strait-hormuz-iran-war-saudi-arabia-uae.html" },
-  { time: "22:38", tag: "macro", tagText: "宏观", text: "美国4月生产者价格指数（PPI）同比飙升6%，创2022年以来最大涨幅，远超预期。批发通胀数据冲击市场，道指下跌，但芯片股反弹推动纳指走高。", source: "CNBC", url: "https://www.cnbc.com/2026/05/13/ppi-inflation-report-april-2026-.html" },
-  { time: "22:02", tag: "ai", tagText: "AI", text: "AI能源争夺战催生新一代基础设施巨头，GE Vernova、Bloom Energy等5只股票成为赢家。科技巨头7000亿美元AI能源投资推动这些‘电力界的英伟达’股价飙升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月15日 12:13 CST";
+const breakingDate = "2026年5月15日 16:12 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "20:07", tag: "tech", tagText: "科技", text: "中国公司正加速自主研发AI芯片，即使英伟达可能重返中国市场也未放缓步伐。在中美科技脱钩背景下，中国本土芯片企业持续加大投入，推动国产替代进程，这一趋势可能重塑全球AI芯片供应链格局。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUDRTd3E0NmJ6d0M1Qi1kcm5VeVBqY2pGazBjY3JfMkE3MGlKeUd2VTh1Vy1xUEZFeWtLZzRub1ItMVRCRE45UXpLVno1MGtna29OQmlkZkw4aEpPSktEWkJ6Yy1LQ2pic2VaNkVHSjVySTRwLUxLcXBNRGhNRFRfVXBWcEpPYnV2TDE2TU15UFFrVGw0VmJtUWNZdXpZWl9feXJCM2JBYm1maTJVSGxtY0JHLVE?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "WhatsApp在Meta AI聊天中新增“隐身模式”，该模式下对话不会被保存，关闭聊天后消息默认消失，强化用户隐私保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/whatsapp-adds-an-incognito-mode-in-meta-ai-chats/" },
 ];
-const aiBreakingDate = "2026年5月15日 12:13 CST";
+const aiBreakingDate = "2026年5月15日 16:12 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
