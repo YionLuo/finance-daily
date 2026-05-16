@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月16日 20:00 CST"
+  date: "2026年5月16日 21:52 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:52", tag: "macro", tagText: "宏观", text: "凯文·沃什即将就任美联储主席，面临内部关于降息的激烈分歧。通胀飙升和国债收益率飙升，联邦公开市场委员会（FOMC）内部对放松政策持抵制态度，一场‘家庭内斗’在所难免。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/kevin-warsh-comes-into-the-fed-facing-a-big-family-fight-over-cutting-interest-rates.html" },
+  { time: "21:13", tag: "geo", tagText: "地缘", text: "阿联酋表示，其退出OPEC的决定是基于战略经济考量，而非政治因素。阿联酋于1967年加入OPEC，上月宣布于5月1日正式退出。此举可能重塑全球石油市场格局，引发对OPEC影响力的进一步讨论。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/uae-decision-to-leave-opec-was-not-a-political-move.html" },
+  { time: "21:00", tag: "macro", tagText: "宏观", text: "高油价和通胀持续施压，但经济学家指出，只要美国消费者继续支出，经济仍可维持增长。伊朗战争已持续近三个月，汽油价格从2.98美元飙升至4.39美元，市场担忧若消费放缓，数周内可能陷入全面衰退。", source: "MarketWatch", url: "https://www.marketwatch.com/story/high-gas-prices-and-inflation-are-stressing-people-out-but-the-economy-will-be-fine-as-long-as-they-keep-spending-4f4b66e3?mod=mw_rss_topstories" },
+  { time: "19:54", tag: "geo", tagText: "地缘", text: "以色列空袭击毙了策划10月7日袭击的最后一名哈马斯高级领导人伊兹·丁·哈达德，给脆弱的停火协议带来更大压力。此举可能进一步加剧中东紧张局势，影响全球能源和金融市场。", source: "Financial Times", url: "https://www.ft.com/content/e36df354-4d50-4399-b9dd-5beda50688b9" },
   { time: "19:00", tag: "geo", tagText: "地缘", text: "特朗普加大对古巴施压，利用威胁和利诱手段迫使这个燃料短缺的共产主义岛国开放经济。", source: "Financial Times", url: "https://www.ft.com/content/fb62a4c4-6615-434e-a259-bc813a27ac6a" },
   { time: "17:54", tag: "crypto", tagText: "加密", text: "比特币跌至两周低点，山寨币大幅下挫。此前Strategy公司（原MicroStrategy）悄然确认计划出售比特币，引发市场恐慌性抛售。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOanVMbndjbkZNRFlncUxhVWZTNFVmMFNKdnlaSlh3SGNENXZJb24wRXNXemZjVm1TdWJfNTE4RlJDYVpybXAzUHJ6RzR2blFwNWRMNWhCODZDZ2lwV2xkT05wUW12YTQwcEp4MTNfbG8yX0N6NHRoX2R4TzNuaFNCNXdfWVc5YV9VV0FOT3pWeWpaam9GaWNEenVJNUYtVUgtMlpMR0Rlai1QcUMxaEtyR18yd3NOSmg0dlNWWU5LQ2NZdzJXZnFHeWJxTGRuLVpGTWs1ek9lT2RTdw?oc=5" },
   { time: "17:54", tag: "tech", tagText: "科技", text: "亿万富翁对冲基金经理比尔·阿克曼旗下Pershing Square Capital Management在第一季度市场抛售期间建仓微软股票，押注人工智能和云计算的增长前景。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/bill-ackman-says-he-built-microsoft-position-in-first-quarter.html" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "04:43", tag: "macro", tagText: "宏观", text: "美股三大指数周五全线重挫，道指暴跌超500点，标普500和纳斯达克指数大幅收跌。美国油价攀升至每桶105美元，10年期美债收益率飙升，科技股承压领跌。市场对通胀前景的担忧急剧升温，此前一日两大指数刚创下收盘新高。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ3g3VGctU3NxazdUQWk3NkV0cnpDQjJVQU1wc2FJaXN6SUNNTVd1eHI0bjBJZkxadDU5ZjVHUHdId3FHOS1uX21vd0NGTXZHMDNMSnJ1V2FlNVpna1BDUExDYm55UXZueVFRNVBKcWxDTzFablljMzJhRTI2X19iWkhTQ0xpeThMZXpLaGN4T2ZPY0dpeFZxY1VsU25JS0Q4Q3UzMFRUWFlFSW02UklhQUlSRHMtWUdWa3BZdUlNaERfUQ?oc=5" },
   { time: "04:41", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦接班人阿贝尔押注达美航空，建仓价值约26亿美元的股票，使达美成为伯克希尔第14大持仓。此举与巴菲特2020年清仓所有美国航空股的决定形成鲜明对比。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/berkshire-hathaway-returns-to-airlines-with-2point6-billion-stake-in-delta-air-lines.html" },
   { time: "04:30", tag: "crypto", tagText: "加密", text: "加密货币市场出现大规模去杠杆，过去24小时内超过3.88亿美元的多头头寸被清算。韩国媒体称，随着股市创历史性上涨，投资者正从加密市场转向股票市场，导致加密市场降温。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMic0FVX3lxTE1IWENocmUxSHpIRmtwd1BaU3MwNjZfRXhVLVpjV3JhMkNHeDlLaV9hZ0ZwZVVVcDZEazIzVFVvTFpRNWRRT05pZkFaV1NIV1FabGM5cEEyX0w0R1QzNFFsdzBObV8zZXJ0MkR1eExpcDgycU0?oc=5" },
-  { time: "04:29", tag: "geo", tagText: "地缘", text: "乔治·索罗斯旗下基金在第一季度买入了伯克希尔·哈撒韦股票，这是巴菲特去世后的首次。同时，该基金增持了英伟达和苹果的股份，其总持仓价值在下跌市场中有所增长。", source: "MarketWatch", url: "https://www.marketwatch.com/story/george-soross-fund-buys-berkshire-hathaway-stock-now-that-buffett-is-gone-48a247e3?bg={b5d0e3b0-8b3c-4b3a-9c0a-3e5b6c7d8e9f}" },
-  { time: "03:05", tag: "tech", tagText: "科技", text: "英伟达竞争对手Cerebras在华尔街惊艳上市，首日表现强劲，显示出市场对AI芯片的旺盛需求。该公司芯片与英伟达的竞争关系引发广泛关注，但分析师警告其股价估值过高，存在炒作风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/nvidia-cerebras-stock-price-ipo.html" },
-  { time: "03:00", tag: "tech", tagText: "科技", text: "光学股正在暴涨，投资者正迅速涌入一只投资光子学和光刻技术公司的新ETF。该领域被视为科技行业最具爆发力的领域之一，受益于AI芯片和先进制造对光学技术的强劲需求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/optical-stocks-are-booming-heres-how-to-invest-in-one-of-the-most-explosive-areas-of-tech-13374178" },
-  { time: "00:54", tag: "geo", tagText: "地缘", text: "特朗普在与习近平会晤后表示，对是否保卫台湾‘不予置评’，并暗示可能重新考虑对台14亿美元军售案。此举引发市场对美台关系及地区局势的广泛关注。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/trump-china-xi-taiwan.html" },
 ];
-const breakingDate = "2026年5月16日 20:00 CST";
+const breakingDate = "2026年5月16日 21:52 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
 ];
-const aiBreakingDate = "2026年5月16日 20:00 CST";
+const aiBreakingDate = "2026年5月16日 21:52 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
