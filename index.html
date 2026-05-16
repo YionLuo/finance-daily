@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月16日 23:07 CST"
+  date: "2026年5月17日 01:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:45", tag: "ai", tagText: "AI", text: "AI电力需求催生新投资机会，GE Vernova和Bloom Energy等基础设施公司成为AI电网的新守门人。科技巨头7000亿美元AI能源争夺战中，5只股票被视为‘电力领域的英伟达’，有望持续受益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
+  { time: "23:24", tag: "macro", tagText: "宏观", text: "伊朗战争推高汽油和能源价格，2027年社会保障生活成本调整（COLA）预计将上升至4.2%。食品杂货成本上涨也推动了这一预测，通胀压力持续影响美国退休人群。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-securitys-cola-could-rise-in-2027-boosted-by-war-impact-and-inflation-b5db35a6?mod=mw_rss_topstories" },
   { time: "22:50", tag: "geo", tagText: "地缘", text: "特朗普称习近平同意伊朗必须开放霍尔木兹海峡，但无迹象表明中国将介入施压。伊朗战争持续近三个月，全球石油库存可能因海峡封锁在5月底接近历史低点，油价已攀升至每桶105美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/trump-says-xi-agrees-iran-must-open-strait-but-no-sign-china-will-weigh-in.html" },
   { time: "22:01", tag: "geo", tagText: "地缘", text: "债券市场对伊朗局势发出警告，能源地缘政治资深专家Daleep Singh指出，能源与市场交汇点正面临严重风险。全球石油库存可能因霍尔木兹海峡封锁在5月底创下历史新低，UBS警告供应危机迫在眉睫。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/the-bond-market-is-flashing-a-warning-energy-geopolitics-expert-warns.html" },
   { time: "21:52", tag: "macro", tagText: "宏观", text: "凯文·沃什即将就任美联储主席，面临内部关于降息的激烈分歧。通胀飙升和国债收益率飙升，联邦公开市场委员会（FOMC）内部对放松政策持抵制态度，一场‘家庭内斗’在所难免。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/kevin-warsh-comes-into-the-fed-facing-a-big-family-fight-over-cutting-interest-rates.html" },
@@ -1647,13 +1649,15 @@ const breakingNews = [
   { time: "08:23", tag: "macro", tagText: "宏观", text: "NextEra Energy与Dominion Energy正在洽谈合并，若达成将创建一家市值约4000亿美元的美国公用事业巨头。谈判正值人工智能数据中心推动电力需求激增之际。", source: "Financial Times", url: "https://www.ft.com/content/37ba1609-ffa7-42ae-b63c-b2c628c584e1" },
   { time: "07:22", tag: "macro", tagText: "宏观", text: "美国联邦检察官正在调查贝莱德旗下私人信贷基金BlackRock TCP Capital Corp的估值实践。华尔街监管机构对私人信贷市场的审查力度持续加大。", source: "Financial Times", url: "https://www.ft.com/content/59ab31ca-e5d3-4d22-b943-02c139db6822" },
   { time: "06:35", tag: "macro", tagText: "宏观", text: "特朗普提名的美联储人选反对让鲍威尔继续担任临时主席的安排。美联储此前表示，现任主席鲍威尔将担任临时主席，直至凯文·沃什最早于下周宣誓就任。此举加剧了市场对美联储独立性和政策连续性的担忧。", source: "Financial Times", url: "https://www.ft.com/content/9baac6fa-a302-4621-bc71-23a60e704703" },
-  { time: "04:48", tag: "macro", tagText: "宏观", text: "对冲基金Appaloosa清仓了达美航空、美国航空和联合航空的持仓，理由是航空业面临燃油成本飙升。与此同时，该基金大举增持了亚马逊和优步的股票。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-hedge-fund-just-dumped-the-big-three-airline-stocks-as-the-industry-faces-soaring-fuel-costs-4ae4f9ba?mod=mw_rss_topstories" },
-  { time: "04:43", tag: "macro", tagText: "宏观", text: "美股三大指数周五全线重挫，道指暴跌超500点，标普500和纳斯达克指数大幅收跌。美国油价攀升至每桶105美元，10年期美债收益率飙升，科技股承压领跌。市场对通胀前景的担忧急剧升温，此前一日两大指数刚创下收盘新高。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ3g3VGctU3NxazdUQWk3NkV0cnpDQjJVQU1wc2FJaXN6SUNNTVd1eHI0bjBJZkxadDU5ZjVHUHdId3FHOS1uX21vd0NGTXZHMDNMSnJ1V2FlNVpna1BDUExDYm55UXZueVFRNVBKcWxDTzFablljMzJhRTI2X19iWkhTQ0xpeThMZXpLaGN4T2ZPY0dpeFZxY1VsU25JS0Q4Q3UzMFRUWFlFSW02UklhQUlSRHMtWUdWa3BZdUlNaERfUQ?oc=5" },
 ];
-const breakingDate = "2026年5月16日 23:07 CST";
+const breakingDate = "2026年5月17日 01:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
+  { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
+  { time: "23:37", tag: "tech", tagText: "科技", text: "索尼回应Xperia 1 XIII AI相机助手争议，澄清该功能不会编辑照片，而是辅助用户拍摄。此前索尼因演示引发误解，被质疑过度依赖AI处理图像。", source: "AI | The Verge", url: "https://www.theverge.com/tech/932133/sony-xperia-1-xiii-ai-camera-assistant" },
   { time: "22:01", tag: "geo", tagText: "地缘", text: "分析师预测英伟达将在中国市场卷土重来，称其为“AI教父”，并认为这将引发新一轮全球科技热潮。尽管中美科技关系紧张，市场仍对英伟达在华业务前景持乐观态度。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNX2lLcDdnWTdjdXNKa3kyTHlIMFNQU2huYmJSb1B0R1Jzc3ZBdFBFdVBwMXE3OU1JNTQ0TVBxdEVQVGpHUzJIalVBclVvb2Y1TGZISktOMDV0eURfT3QySVFXWXAwSW1wMHdZREVWNHF3ZkVFRkZPVzBjMF85YlJWLXhyVTQ4dFQ4NVk0MW1LVGZzSXczZy1YZ2JGTWRGMEdFNmxLNFlJU2hfT19jYWZMTWpRMTBfSFJudFNUYUFUVnh6c3U5ZDJ2WW43WnR5OXNSa21iaW5WYWJoYTFNVWtfZ1FJODNRSVBoc0ZSVXVucW1BcVM4N2RGNQ?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "03:41", tag: "ai", tagText: "AI", text: "英伟达竞争对手Cerebras在IPO首日暴涨后引发市场关注。该公司专注于AI训练芯片，其晶圆级处理器技术被视为英伟达GPU的潜在替代方案，但面临客户集中和盈利压力等挑战。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcXV0NE01V0lZRlVGdkY5WW9QNC1IdjR4SW9UZjJLTGtWc3ZTd2UxNVRPTkduTVpzRmt0QmNuRG1MVEJnQkwyX0llQlpMX3ppRG1Tc2tzNm51alpYVHpwN3I4b1dSMjVwNFNmb0Ntd0oxdlE3VTF6empiVm53eWdpUlRlSWJqSTJtbFNNNHdXUFR6RXpqQW5aTTY2NE1kYVlsWXZhdg?oc=5" },
   { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
   { time: "02:21", tag: "ai", tagText: "AI", text: "OpenAI再次进行高管重组，总裁Greg Brockman正式负责所有产品事务，旨在赢得AI代理之战。此次重组整合了部分业务部门，反映出OpenAI在AI代理领域的激烈竞争压力。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle" },
-  { time: "02:14", tag: "ai", tagText: "AI", text: "太浩湖——硅谷最受欢迎的度假胜地——即将面临能源危机。随着AI数据中心需求激增，当地电力价格大幅上涨，而该地区原有的能源供应商即将退出，新供应商尚未确定，居民和企业面临电费飙升困境。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/silicon-valleys-vacationland-needs-a-new-energy-provider-just-as-ai-is-driving-prices-up/" },
-  { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
-  { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
 ];
-const aiBreakingDate = "2026年5月16日 23:07 CST";
+const aiBreakingDate = "2026年5月17日 01:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
