@@ -1623,13 +1623,15 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月17日 01:10 CST"
+  date: "2026年5月17日 03:19 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:43", tag: "geo", tagText: "地缘", text: "中国商务部表示，中美已同意通过降低关税扩大农业贸易，这是特朗普与习近平峰会后释放的信号。此举有望缓解两国贸易紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/china-signals-tariff-cuts-advances-in-farm-market-access-after-trump-xi-summit.html" },
   { time: "23:45", tag: "ai", tagText: "AI", text: "AI电力需求催生新投资机会，GE Vernova和Bloom Energy等基础设施公司成为AI电网的新守门人。科技巨头7000亿美元AI能源争夺战中，5只股票被视为‘电力领域的英伟达’，有望持续受益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
+  { time: "23:40", tag: "tech", tagText: "科技", text: "苹果股价上涨1%，因在中国618购物节前意外下调iPhone 17价格。此举旨在提振在华销售，应对竞争加剧的市场环境。", source: "foreignpolicyjournal.com", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOVThTamF0bEVBRms2VE0tSFY2YkR3cFN6dXdnTi03U1A3SDYxdjExLWJwRkVnWnRKMXh1YklMME4wTzQ5bnpvNTZvVWx4M3h5S3ktU1JaUnRqa1pBLTFPTE5Sczd1NDNJTDBtYi1EREhZeHF0ZTUzX1hpWEU1V1Q4dnY3SUZNSWZzYWZSMV84bl9ySGhMOHFKQ0NIeTNhbm52c0VIdVR5VTFjbW5JQXN0NXBhVmZwcExYcDhfVDZsckYycWdUaTBETXZJX2o3cERIV3JJU1RmQXRmMGlSLWpQdjB4a2hkQmN0VUMyUw?oc=5" },
   { time: "23:24", tag: "macro", tagText: "宏观", text: "伊朗战争推高汽油和能源价格，2027年社会保障生活成本调整（COLA）预计将上升至4.2%。食品杂货成本上涨也推动了这一预测，通胀压力持续影响美国退休人群。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-securitys-cola-could-rise-in-2027-boosted-by-war-impact-and-inflation-b5db35a6?mod=mw_rss_topstories" },
   { time: "22:50", tag: "geo", tagText: "地缘", text: "特朗普称习近平同意伊朗必须开放霍尔木兹海峡，但无迹象表明中国将介入施压。伊朗战争持续近三个月，全球石油库存可能因海峡封锁在5月底接近历史低点，油价已攀升至每桶105美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/trump-says-xi-agrees-iran-must-open-strait-but-no-sign-china-will-weigh-in.html" },
   { time: "22:01", tag: "geo", tagText: "地缘", text: "债券市场对伊朗局势发出警告，能源地缘政治资深专家Daleep Singh指出，能源与市场交汇点正面临严重风险。全球石油库存可能因霍尔木兹海峡封锁在5月底创下历史新低，UBS警告供应危机迫在眉睫。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/the-bond-market-is-flashing-a-warning-energy-geopolitics-expert-warns.html" },
@@ -1647,13 +1649,14 @@ const breakingNews = [
   { time: "12:00", tag: "macro", tagText: "宏观", text: "英国《金融时报》分析文章探讨全球生育率同步下降的原因，指出住房成本、智能手机普及等因素是推动这一人口结构转变的关键。这一趋势正在深刻改变世界。", source: "International homepage", url: "https://www.ft.com/content/fba35eca-df3a-4ad6-b42d-eb08eb7c9ad3" },
   { time: "09:42", tag: "macro", tagText: "宏观", text: "美国食品药品监督管理局（FDA）在局长Marty Makary离职数日后，对药品和生物制品监管高层进行改组。这是该机构近期领导层动荡的最新举措。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/fda-shuffles-top-drug-biologics-leaders-in-latest-leadership-shakeup.html" },
   { time: "08:23", tag: "macro", tagText: "宏观", text: "NextEra Energy与Dominion Energy正在洽谈合并，若达成将创建一家市值约4000亿美元的美国公用事业巨头。谈判正值人工智能数据中心推动电力需求激增之际。", source: "Financial Times", url: "https://www.ft.com/content/37ba1609-ffa7-42ae-b63c-b2c628c584e1" },
-  { time: "07:22", tag: "macro", tagText: "宏观", text: "美国联邦检察官正在调查贝莱德旗下私人信贷基金BlackRock TCP Capital Corp的估值实践。华尔街监管机构对私人信贷市场的审查力度持续加大。", source: "Financial Times", url: "https://www.ft.com/content/59ab31ca-e5d3-4d22-b943-02c139db6822" },
-  { time: "06:35", tag: "macro", tagText: "宏观", text: "特朗普提名的美联储人选反对让鲍威尔继续担任临时主席的安排。美联储此前表示，现任主席鲍威尔将担任临时主席，直至凯文·沃什最早于下周宣誓就任。此举加剧了市场对美联储独立性和政策连续性的担忧。", source: "Financial Times", url: "https://www.ft.com/content/9baac6fa-a302-4621-bc71-23a60e704703" },
 ];
-const breakingDate = "2026年5月17日 01:10 CST";
+const breakingDate = "2026年5月17日 03:19 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
+  { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
+  { time: "02:21", tag: "ai", tagText: "AI", text: "OpenAI再次进行高管重组，总裁Greg Brockman正式负责所有产品事务，旨在赢得AI代理之战。此次重组整合了部分业务部门，反映出OpenAI在AI代理领域的激烈竞争压力。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle" },
   { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
   { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "06:25", tag: "tech", tagText: "科技", text: "YouTube将AI深度伪造检测工具扩展至所有成年用户。该工具可让用户主动搜索平台上可能存在的、利用AI生成的自身肖像内容，覆盖范围从特定人群扩大至18岁以上全体用户。", source: "The Verge", url: "https://www.theverge.com/news/931884/youtube-likeness-detection-ai-deepfake-expansion-all-adults" },
   { time: "04:38", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv宣布新规：将禁止上传充斥AI生成低质量内容（AI slop）的研究者。平台将对存在“无可辩驳证据”表明作者滥用AI生成论文的行为采取封禁措施，以遏制AI垃圾论文泛滥，维护学术质量。", source: "The Verge", url: "https://www.theverge.com/science/931766/arxiv-ai-slop-ban-researchers" },
   { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
-  { time: "03:41", tag: "ai", tagText: "AI", text: "英伟达竞争对手Cerebras在IPO首日暴涨后引发市场关注。该公司专注于AI训练芯片，其晶圆级处理器技术被视为英伟达GPU的潜在替代方案，但面临客户集中和盈利压力等挑战。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcXV0NE01V0lZRlVGdkY5WW9QNC1IdjR4SW9UZjJLTGtWc3ZTd2UxNVRPTkduTVpzRmt0QmNuRG1MVEJnQkwyX0llQlpMX3ppRG1Tc2tzNm51alpYVHpwN3I4b1dSMjVwNFNmb0Ntd0oxdlE3VTF6empiVm53eWdpUlRlSWJqSTJtbFNNNHdXUFR6RXpqQW5aTTY2NE1kYVlsWXZhdg?oc=5" },
-  { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
-  { time: "02:21", tag: "ai", tagText: "AI", text: "OpenAI再次进行高管重组，总裁Greg Brockman正式负责所有产品事务，旨在赢得AI代理之战。此次重组整合了部分业务部门，反映出OpenAI在AI代理领域的激烈竞争压力。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle" },
 ];
-const aiBreakingDate = "2026年5月17日 01:10 CST";
+const aiBreakingDate = "2026年5月17日 03:19 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
