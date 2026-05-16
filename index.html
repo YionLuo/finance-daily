@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月16日 21:52 CST"
+  date: "2026年5月16日 23:07 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:50", tag: "geo", tagText: "地缘", text: "特朗普称习近平同意伊朗必须开放霍尔木兹海峡，但无迹象表明中国将介入施压。伊朗战争持续近三个月，全球石油库存可能因海峡封锁在5月底接近历史低点，油价已攀升至每桶105美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/trump-says-xi-agrees-iran-must-open-strait-but-no-sign-china-will-weigh-in.html" },
+  { time: "22:01", tag: "geo", tagText: "地缘", text: "债券市场对伊朗局势发出警告，能源地缘政治资深专家Daleep Singh指出，能源与市场交汇点正面临严重风险。全球石油库存可能因霍尔木兹海峡封锁在5月底创下历史新低，UBS警告供应危机迫在眉睫。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/the-bond-market-is-flashing-a-warning-energy-geopolitics-expert-warns.html" },
   { time: "21:52", tag: "macro", tagText: "宏观", text: "凯文·沃什即将就任美联储主席，面临内部关于降息的激烈分歧。通胀飙升和国债收益率飙升，联邦公开市场委员会（FOMC）内部对放松政策持抵制态度，一场‘家庭内斗’在所难免。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/kevin-warsh-comes-into-the-fed-facing-a-big-family-fight-over-cutting-interest-rates.html" },
   { time: "21:13", tag: "geo", tagText: "地缘", text: "阿联酋表示，其退出OPEC的决定是基于战略经济考量，而非政治因素。阿联酋于1967年加入OPEC，上月宣布于5月1日正式退出。此举可能重塑全球石油市场格局，引发对OPEC影响力的进一步讨论。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/uae-decision-to-leave-opec-was-not-a-political-move.html" },
   { time: "21:00", tag: "macro", tagText: "宏观", text: "高油价和通胀持续施压，但经济学家指出，只要美国消费者继续支出，经济仍可维持增长。伊朗战争已持续近三个月，汽油价格从2.98美元飙升至4.39美元，市场担忧若消费放缓，数周内可能陷入全面衰退。", source: "MarketWatch", url: "https://www.marketwatch.com/story/high-gas-prices-and-inflation-are-stressing-people-out-but-the-economy-will-be-fine-as-long-as-they-keep-spending-4f4b66e3?mod=mw_rss_topstories" },
@@ -1647,13 +1649,14 @@ const breakingNews = [
   { time: "06:35", tag: "macro", tagText: "宏观", text: "特朗普提名的美联储人选反对让鲍威尔继续担任临时主席的安排。美联储此前表示，现任主席鲍威尔将担任临时主席，直至凯文·沃什最早于下周宣誓就任。此举加剧了市场对美联储独立性和政策连续性的担忧。", source: "Financial Times", url: "https://www.ft.com/content/9baac6fa-a302-4621-bc71-23a60e704703" },
   { time: "04:48", tag: "macro", tagText: "宏观", text: "对冲基金Appaloosa清仓了达美航空、美国航空和联合航空的持仓，理由是航空业面临燃油成本飙升。与此同时，该基金大举增持了亚马逊和优步的股票。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-hedge-fund-just-dumped-the-big-three-airline-stocks-as-the-industry-faces-soaring-fuel-costs-4ae4f9ba?mod=mw_rss_topstories" },
   { time: "04:43", tag: "macro", tagText: "宏观", text: "美股三大指数周五全线重挫，道指暴跌超500点，标普500和纳斯达克指数大幅收跌。美国油价攀升至每桶105美元，10年期美债收益率飙升，科技股承压领跌。市场对通胀前景的担忧急剧升温，此前一日两大指数刚创下收盘新高。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ3g3VGctU3NxazdUQWk3NkV0cnpDQjJVQU1wc2FJaXN6SUNNTVd1eHI0bjBJZkxadDU5ZjVHUHdId3FHOS1uX21vd0NGTXZHMDNMSnJ1V2FlNVpna1BDUExDYm55UXZueVFRNVBKcWxDTzFablljMzJhRTI2X19iWkhTQ0xpeThMZXpLaGN4T2ZPY0dpeFZxY1VsU25JS0Q4Q3UzMFRUWFlFSW02UklhQUlSRHMtWUdWa3BZdUlNaERfUQ?oc=5" },
-  { time: "04:41", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦接班人阿贝尔押注达美航空，建仓价值约26亿美元的股票，使达美成为伯克希尔第14大持仓。此举与巴菲特2020年清仓所有美国航空股的决定形成鲜明对比。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/berkshire-hathaway-returns-to-airlines-with-2point6-billion-stake-in-delta-air-lines.html" },
-  { time: "04:30", tag: "crypto", tagText: "加密", text: "加密货币市场出现大规模去杠杆，过去24小时内超过3.88亿美元的多头头寸被清算。韩国媒体称，随着股市创历史性上涨，投资者正从加密市场转向股票市场，导致加密市场降温。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMic0FVX3lxTE1IWENocmUxSHpIRmtwd1BaU3MwNjZfRXhVLVpjV3JhMkNHeDlLaV9hZ0ZwZVVVcDZEazIzVFVvTFpRNWRRT05pZkFaV1NIV1FabGM5cEEyX0w0R1QzNFFsdzBObV8zZXJ0MkR1eExpcDgycU0?oc=5" },
 ];
-const breakingDate = "2026年5月16日 21:52 CST";
+const breakingDate = "2026年5月16日 23:07 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:01", tag: "geo", tagText: "地缘", text: "分析师预测英伟达将在中国市场卷土重来，称其为“AI教父”，并认为这将引发新一轮全球科技热潮。尽管中美科技关系紧张，市场仍对英伟达在华业务前景持乐观态度。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNX2lLcDdnWTdjdXNKa3kyTHlIMFNQU2huYmJSb1B0R1Jzc3ZBdFBFdVBwMXE3OU1JNTQ0TVBxdEVQVGpHUzJIalVBclVvb2Y1TGZISktOMDV0eURfT3QySVFXWXAwSW1wMHdZREVWNHF3ZkVFRkZPVzBjMF85YlJWLXhyVTQ4dFQ4NVk0MW1LVGZzSXczZy1YZ2JGTWRGMEdFNmxLNFlJU2hfT19jYWZMTWpRMTBfSFJudFNUYUFUVnh6c3U5ZDJ2WW43WnR5OXNSa21iaW5WYWJoYTFNVWtfZ1FJODNRSVBoc0ZSVXVucW1BcVM4N2RGNQ?oc=5" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "英国政府支持David Silver领导的估值8.14亿英镑的AI初创公司，引发关于技术主权和国家安全的热议。支持者认为此举可确保英国在AI领域的竞争力，反对者则担忧关键技术和数据外流风险。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVFpGVEEzNGVJckNVaC05dWRBN2FiV3U3NzNScXNhZmdFSU9uczgtQXo5VlBka2lGMXdudk5raFVUZGVER2dKb01XdHo3OXBOVExEWmN5SGE3UXpOenFDbTk3UU9wazBRRWFTemZFRVlWdTNzbEFxVmlfeUV4eTJyT25Sd0hBdUlmMm1na2hSaVhrNnlWNzhR?oc=5" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "初创公司Osaurus发布Mac应用，允许用户在同一界面内结合使用本地和云端AI模型，并将用户的记忆、文件和工具保留在本地硬件上，兼顾隐私与性能。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "AI研究论文质量提升反而引发学术界危机：一篇论文因被过度引用而成为问题，揭示AI生成内容泛滥正在破坏同行评审体系，科学家面临辨别真伪的困境。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
   { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
-  { time: "22:01", tag: "geo", tagText: "地缘", text: "分析师预测英伟达将在中国市场卷土重来，称其为“AI教父”，并认为这将引发新一轮全球科技热潮。尽管中美科技关系紧张，市场仍对英伟达在华业务前景持乐观态度。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNX2lLcDdnWTdjdXNKa3kyTHlIMFNQU2huYmJSb1B0R1Jzc3ZBdFBFdVBwMXE3OU1JNTQ0TVBxdEVQVGpHUzJIalVBclVvb2Y1TGZISktOMDV0eURfT3QySVFXWXAwSW1wMHdZREVWNHF3ZkVFRkZPVzBjMF85YlJWLXhyVTQ4dFQ4NVk0MW1LVGZzSXczZy1YZ2JGTWRGMEdFNmxLNFlJU2hfT19jYWZMTWpRMTBfSFJudFNUYUFUVnh6c3U5ZDJ2WW43WnR5OXNSa21iaW5WYWJoYTFNVWtfZ1FJODNRSVBoc0ZSVXVucW1BcVM4N2RGNQ?oc=5" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
 ];
-const aiBreakingDate = "2026年5月16日 21:52 CST";
+const aiBreakingDate = "2026年5月16日 23:07 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
