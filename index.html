@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 62.91,
   rating: "greed",
-  timestamp: "2026-05-15T23:45:13+00:00",
+  timestamp: "2026-05-15T23:59:54+00:00",
   previousClose: 66.14,
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月16日 08:02 CST"
+  date: "2026年5月16日 11:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "09:42", tag: "macro", tagText: "宏观", text: "美国食品药品监督管理局（FDA）在局长Marty Makary离职数日后，对药品和生物制品监管高层进行改组。这是该机构近期领导层动荡的最新举措。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/fda-shuffles-top-drug-biologics-leaders-in-latest-leadership-shakeup.html" },
+  { time: "08:23", tag: "macro", tagText: "宏观", text: "NextEra Energy与Dominion Energy正在洽谈合并，若达成将创建一家市值约4000亿美元的美国公用事业巨头。谈判正值人工智能数据中心推动电力需求激增之际。", source: "Financial Times", url: "https://www.ft.com/content/37ba1609-ffa7-42ae-b63c-b2c628c584e1" },
+  { time: "07:22", tag: "macro", tagText: "宏观", text: "美国联邦检察官正在调查贝莱德旗下私人信贷基金BlackRock TCP Capital Corp的估值实践。华尔街监管机构对私人信贷市场的审查力度持续加大。", source: "Financial Times", url: "https://www.ft.com/content/59ab31ca-e5d3-4d22-b943-02c139db6822" },
   { time: "06:35", tag: "macro", tagText: "宏观", text: "特朗普提名的美联储人选反对让鲍威尔继续担任临时主席的安排。美联储此前表示，现任主席鲍威尔将担任临时主席，直至凯文·沃什最早于下周宣誓就任。此举加剧了市场对美联储独立性和政策连续性的担忧。", source: "Financial Times", url: "https://www.ft.com/content/9baac6fa-a302-4621-bc71-23a60e704703" },
   { time: "04:48", tag: "macro", tagText: "宏观", text: "对冲基金Appaloosa清仓了达美航空、美国航空和联合航空的持仓，理由是航空业面临燃油成本飙升。与此同时，该基金大举增持了亚马逊和优步的股票。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-hedge-fund-just-dumped-the-big-three-airline-stocks-as-the-industry-faces-soaring-fuel-costs-4ae4f9ba?mod=mw_rss_topstories" },
   { time: "04:43", tag: "macro", tagText: "宏观", text: "美股三大指数周五全线重挫，道指暴跌超500点，标普500和纳斯达克指数大幅收跌。美国油价攀升至每桶105美元，10年期美债收益率飙升，科技股承压领跌。市场对通胀前景的担忧急剧升温，此前一日两大指数刚创下收盘新高。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ3g3VGctU3NxazdUQWk3NkV0cnpDQjJVQU1wc2FJaXN6SUNNTVd1eHI0bjBJZkxadDU5ZjVHUHdId3FHOS1uX21vd0NGTXZHMDNMSnJ1V2FlNVpna1BDUExDYm55UXZueVFRNVBKcWxDTzFablljMzJhRTI2X19iWkhTQ0xpeThMZXpLaGN4T2ZPY0dpeFZxY1VsU25JS0Q4Q3UzMFRUWFlFSW02UklhQUlSRHMtWUdWa3BZdUlNaERfUQ?oc=5" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "21:41", tag: "geo", tagText: "地缘", text: "印度总理莫迪访问阿联酋期间，双方深化了防务和能源合作。此举正值中东局势紧张、霍尔木兹海峡危机持续之际。", source: "Reuters", url: "https://finance.yahoo.com/news/india-signs-pacts-uae-defence-075529375.html" },
   { time: "21:36", tag: "geo", tagText: "地缘", text: "特朗普披露第一季度大规模股票交易，包括买入至少100万美元的波音和英伟达股票。这些公司预计将从其中国之行中获益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-discloses-big-buys-of-shares-in-boeing-and-nvidia-as-the-companies-look-set-to-gain-from-his-china-trip-1081bd1d" },
   { time: "21:17", tag: "macro", tagText: "宏观", text: "星巴克宣布将在美国裁员300人，并关闭部分区域支持办公室。公司表示此举将有助于咖啡连锁店恢复盈利增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/starbucks-to-lay-off-300-us-employees-close-some-regional-offices.html" },
-  { time: "19:27", tag: "geo", tagText: "地缘", text: "伊朗战争导致全球集装箱航运路线发生重大转变，船只越来越多地绕行印度、斯里兰卡并通过巴拿马运河，商品价格可能进一步上涨。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/container-shipping-routes-are-shifting-due-to-the-iran-war-prices-of-goods-could-go-higher-4fc8b20b?mod=mw_rss_topstories" },
-  { time: "19:27", tag: "geo", tagText: "地缘", text: "阿联酋加速建设第二条西东石油管道，以绕过霍尔木兹海峡。当前全球能源供应持续承压，该海峡的通行严重受限。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/uae-west-east-oil-pipeline-strait-hormuz-iran-war.html" },
-  { time: "19:27", tag: "macro", tagText: "宏观", text: "前高盛策略师杰夫·柯里表示，大宗商品处于结构性牛市，能源股是布局AI基础设施建设的最佳方式，建议资本从消耗大宗商品的公司流向拥有大宗商品的公司。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-munificent-7-why-energy-stocks-are-the-best-way-to-play-the-ai-build-out-says-former-goldman-strategist-ecf3d3b2?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月16日 08:02 CST";
+const breakingDate = "2026年5月16日 11:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "16:24", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用人工智能优化航班调度和空域管理，旨在提升欧洲航空系统的效率和安全性。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNWFQZjI2M0tUVkRuUDNVRUZyS2VSb1BvMFcyeF9hRm9mbmdfN1BqMHV1NU1EVWkycEtLYmlnSnpSMW02cHFBODBiV1NINEhmSS1PNGIzdm82ckNMVmFEUU9UWVlZcDdOLVpSc19FNTMxelhjcUc1YWI1Y1EzcE11Vkw5WFRHU0ppZFRtcV83dkxzUm1UaVBmVmlnRnFURWo1bzk1NzNQLWZ2ZERrNS0xMkJyTTI3SEM0UlNpLXVFc0JqdW50b1ZmRkVjOW8?oc=5" },
   { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月16日 08:02 CST";
+const aiBreakingDate = "2026年5月16日 11:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
