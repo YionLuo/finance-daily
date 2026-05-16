@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月16日 11:55 CST"
+  date: "2026年5月16日 14:29 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "北约秘书长马克·吕特下周将在布鲁塞尔与欧洲主要防务集团会面，敦促其加大投资和生产，以应对持续的地缘政治紧张局势和乌克兰战争带来的武器需求。此举旨在推动欧洲军工产业加速扩产。", source: "International homepage", url: "https://www.ft.com/content/d6ec23af-9b0e-49cd-b53d-a8a1786d5f5e" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "英国《金融时报》发表评论文章指出，在战争、政治及其他领域，取得决定性胜利正变得越来越困难，世界正进入一个“僵局世纪”。文章呼吁重新思考多边机构的治理方式，以应对当前“狗咬狗”式的全球秩序。", source: "International homepage", url: "https://www.ft.com/content/ef39e535-f040-4ade-91b1-61fea53bd31a" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "英国《金融时报》分析文章探讨全球生育率同步下降的原因，指出住房成本、智能手机普及等因素是推动这一人口结构转变的关键。这一趋势正在深刻改变世界。", source: "International homepage", url: "https://www.ft.com/content/fba35eca-df3a-4ad6-b42d-eb08eb7c9ad3" },
   { time: "09:42", tag: "macro", tagText: "宏观", text: "美国食品药品监督管理局（FDA）在局长Marty Makary离职数日后，对药品和生物制品监管高层进行改组。这是该机构近期领导层动荡的最新举措。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/fda-shuffles-top-drug-biologics-leaders-in-latest-leadership-shakeup.html" },
   { time: "08:23", tag: "macro", tagText: "宏观", text: "NextEra Energy与Dominion Energy正在洽谈合并，若达成将创建一家市值约4000亿美元的美国公用事业巨头。谈判正值人工智能数据中心推动电力需求激增之际。", source: "Financial Times", url: "https://www.ft.com/content/37ba1609-ffa7-42ae-b63c-b2c628c584e1" },
   { time: "07:22", tag: "macro", tagText: "宏观", text: "美国联邦检察官正在调查贝莱德旗下私人信贷基金BlackRock TCP Capital Corp的估值实践。华尔街监管机构对私人信贷市场的审查力度持续加大。", source: "Financial Times", url: "https://www.ft.com/content/59ab31ca-e5d3-4d22-b943-02c139db6822" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "00:36", tag: "ai", tagText: "AI", text: "安永（EY）撤回一份研究报告，因研究人员发现其中存在AI幻觉。这是专业服务公司因新技术误导而出现的最新案例，凸显AI在严肃商业分析中的可靠性风险。", source: "Financial Times", url: "https://www.ft.com/content/a61cbcae-95e4-4449-86e1-ef40fb306f4e" },
   { time: "00:30", tag: "macro", tagText: "宏观", text: "花旗集团CEO随特朗普访华后，北京终于批准了她多年来一直推动的一项交易。此举被视为中美商业关系回暖的积极信号，但具体交易细节尚未披露。", source: "Moneywise", url: "https://finance.yahoo.com/markets/stocks/articles/citis-ceo-went-china-trump-163000102.html" },
   { time: "22:06", tag: "macro", tagText: "宏观", text: "美股三大指数全线下挫，道指、标普500和纳斯达克期货走低。10年期美债收益率突破4.5%，30年期收益率突破5.1%创近一年新高。油价因霍尔木兹海峡危机持续上涨，市场对通胀和利率前景感到担忧。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ3g3VGctU3NxazdUQWk3NkV0cnpDQjJVQU1wc2FJaXN6SUNNTVd1eHI0bjBJZkxadDU5ZjVHUHdId3FHOS1uX21vd0NGTXZHMDNMSnJ1V2FlNVpna1BDUExDYm55UXZueVFRNVBKcWxDTzFablljMzJhRTI2X19iWkhTQ0xpeThMZXpLaGN4T2ZPY0dpeFZxY1VsU25JS0Q4Q3UzMFRUWFlFSW02UklhQUlSRHMtWUdWa3BZdUlNaERfUQ" },
-  { time: "21:41", tag: "geo", tagText: "地缘", text: "印度总理莫迪访问阿联酋期间，双方深化了防务和能源合作。此举正值中东局势紧张、霍尔木兹海峡危机持续之际。", source: "Reuters", url: "https://finance.yahoo.com/news/india-signs-pacts-uae-defence-075529375.html" },
-  { time: "21:36", tag: "geo", tagText: "地缘", text: "特朗普披露第一季度大规模股票交易，包括买入至少100万美元的波音和英伟达股票。这些公司预计将从其中国之行中获益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-discloses-big-buys-of-shares-in-boeing-and-nvidia-as-the-companies-look-set-to-gain-from-his-china-trip-1081bd1d" },
-  { time: "21:17", tag: "macro", tagText: "宏观", text: "星巴克宣布将在美国裁员300人，并关闭部分区域支持办公室。公司表示此举将有助于咖啡连锁店恢复盈利增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/starbucks-to-lay-off-300-us-employees-close-some-regional-offices.html" },
 ];
-const breakingDate = "2026年5月16日 11:55 CST";
+const breakingDate = "2026年5月16日 14:29 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "16:24", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用人工智能优化航班调度和空域管理，旨在提升欧洲航空系统的效率和安全性。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNWFQZjI2M0tUVkRuUDNVRUZyS2VSb1BvMFcyeF9hRm9mbmdfN1BqMHV1NU1EVWkycEtLYmlnSnpSMW02cHFBODBiV1NINEhmSS1PNGIzdm82ckNMVmFEUU9UWVlZcDdOLVpSc19FNTMxelhjcUc1YWI1Y1EzcE11Vkw5WFRHU0ppZFRtcV83dkxzUm1UaVBmVmlnRnFURWo1bzk1NzNQLWZ2ZERrNS0xMkJyTTI3SEM0UlNpLXVFc0JqdW50b1ZmRkVjOW8?oc=5" },
   { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月16日 11:55 CST";
+const aiBreakingDate = "2026年5月16日 14:29 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
