@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月16日 18:23 CST"
+  date: "2026年5月16日 20:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:00", tag: "geo", tagText: "地缘", text: "特朗普加大对古巴施压，利用威胁和利诱手段迫使这个燃料短缺的共产主义岛国开放经济。", source: "Financial Times", url: "https://www.ft.com/content/fb62a4c4-6615-434e-a259-bc813a27ac6a" },
+  { time: "17:54", tag: "crypto", tagText: "加密", text: "比特币跌至两周低点，山寨币大幅下挫。此前Strategy公司（原MicroStrategy）悄然确认计划出售比特币，引发市场恐慌性抛售。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOanVMbndjbkZNRFlncUxhVWZTNFVmMFNKdnlaSlh3SGNENXZJb24wRXNXemZjVm1TdWJfNTE4RlJDYVpybXAzUHJ6RzR2blFwNWRMNWhCODZDZ2lwV2xkT05wUW12YTQwcEp4MTNfbG8yX0N6NHRoX2R4TzNuaFNCNXdfWVc5YV9VV0FOT3pWeWpaam9GaWNEenVJNUYtVUgtMlpMR0Rlai1QcUMxaEtyR18yd3NOSmg0dlNWWU5LQ2NZdzJXZnFHeWJxTGRuLVpGTWs1ek9lT2RTdw?oc=5" },
   { time: "17:54", tag: "tech", tagText: "科技", text: "亿万富翁对冲基金经理比尔·阿克曼旗下Pershing Square Capital Management在第一季度市场抛售期间建仓微软股票，押注人工智能和云计算的增长前景。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/bill-ackman-says-he-built-microsoft-position-in-first-quarter.html" },
   { time: "17:26", tag: "geo", tagText: "地缘", text: "俄罗斯总统普京将于5月19日至20日访问北京，与中国国家主席习近平会晤。此行紧随美国总统特朗普访华之后，凸显中俄在美中关系紧张背景下的战略协调。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/russias-putin-to-meet-chinas-xi-in-beijing-from-may-19-20.html" },
   { time: "15:55", tag: "macro", tagText: "宏观", text: "标普500和纳斯达克指数期货小幅回落，但SPY和QQQ市场情绪仍保持看涨。投资者关注美光(MU)、Cerebras(CBRS)等个股，英伟达和沃尔玛即将公布的财报成为市场焦点。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxPd2Q0YmpkOFM2U2dqbmpDRVk4emtfLUVrajNVdFVTTFBSOWxRdHV6a0cxLXFEUWxIYTlaa3BuSjFzZV9YMVB0SFpzM29DTmgzY2xDOEdlQmk3bnp1ekFWMnpQT1lESDJsdnFyd3ZWM2pRa3NjV3VfcWs5UFkxcnVEVWl1aHJTNTZ5c1YxRVBxajlMMFFIcnR2T1dWbmhOcGZxZUsyR1lpbGJZdmtUbWJqOVJKQkRnVnlhcnhHWlpfaVNDY2xSNWgzZmxuRTc?oc=5" },
@@ -1647,13 +1649,14 @@ const breakingNews = [
   { time: "03:05", tag: "tech", tagText: "科技", text: "英伟达竞争对手Cerebras在华尔街惊艳上市，首日表现强劲，显示出市场对AI芯片的旺盛需求。该公司芯片与英伟达的竞争关系引发广泛关注，但分析师警告其股价估值过高，存在炒作风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/nvidia-cerebras-stock-price-ipo.html" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "光学股正在暴涨，投资者正迅速涌入一只投资光子学和光刻技术公司的新ETF。该领域被视为科技行业最具爆发力的领域之一，受益于AI芯片和先进制造对光学技术的强劲需求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/optical-stocks-are-booming-heres-how-to-invest-in-one-of-the-most-explosive-areas-of-tech-13374178" },
   { time: "00:54", tag: "geo", tagText: "地缘", text: "特朗普在与习近平会晤后表示，对是否保卫台湾‘不予置评’，并暗示可能重新考虑对台14亿美元军售案。此举引发市场对美台关系及地区局势的广泛关注。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/trump-china-xi-taiwan.html" },
-  { time: "00:51", tag: "tech", tagText: "科技", text: "芯片股领跌美股，Arm、英特尔等大幅下挫，拖累纳指和标普500走低。此前一日两大指数刚创下收盘新高，市场情绪因通胀担忧和收益率飙升迅速逆转。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMizwJBVV95cUxPdGVkaDA5UGVLc2xWLUw1MWdfY0tiMm9QUXByQThUdWxTM2ZxV2NfUGRUaUduNEdsR245djhGSkY3V0NnRXNyNzkteGtXWjBtY0JoLXl2c0Y1VTgtWFRnbVREbTBaaHdYaUVIS1VxSXJfNWJkSFo4TEMtQklCNjNPampjV25wOVJseG1jckVEc3cwREdROGR0U3lZT0hRdEMxWGllZWFFRHd2VmlKanEyWkwwRjVIZjNMdVV2cndKamRTQWg4dVBxZ05VaFJHWjloR2drTUpVT3l3OE9jZzQ1OGlib2FDc3VLMHh2ZHFHazIzZTg5aEtiZk5NcHFiNEJDS0FQUE5aR0VQNVYyaWo0TUE5QzViQTltTmx2UGlxc0hkajkwZkg0MFNHYWhoakc2SkJLaDU3MGRPUVNDZ1RnNkphRGlqem5GZFNWYTVCSdIB1AJBVV95cUxOTENGNktJNW9UQUpKTnRLTElfd3FlVVEza09oa0QzeXduSkVmS1pQZUhLN1hNTkxhM0tYdlJfN2hyeWV2VlFiU2p3bFpFUGg4R0R5NFM2Zlhtd3Q2MmlIaW9EZ1BEWV9JOEF2Rk5RWE5jWTJ6Vnc3c1BXVG1QSUZ6dGlNNXBDNjZ2b2NiSmEtNTlBeTNJWGs5ZWFWT2dfSHBQYWo0TnE0RkRBbzlNNUxEaVVwWDRzZU1uWlJoRUVoQllsNWF4di1BLTZPa1c4Q2FnQWVNeDIwT2FWZ3FnU1RmV3B2UnVUZXV1UVZHMmpoQVlWVm00dWMta2hkeWNtbjdGUm44X0FEdTc4N19JZVozeHA2WHgzTWpHVEZqYmFvVlJJV1d0R3F2TDE2ZFJZSUQtX2szS1RTanRiN1FCWVE2LVRNSVFZYUtjdzN3OVliUVZKaFR4?oc=5" },
-  { time: "00:49", tag: "tech", tagText: "科技", text: "加拿大将允许每年进口4.9万辆中国产电动汽车用于零售，关税税率仅为6.1%。部分加拿大经销商对此表示欢迎，认为这将为消费者提供更多高性价比选择。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/chinese-evs-canada.html" },
 ];
-const breakingDate = "2026年5月16日 18:23 CST";
+const breakingDate = "2026年5月16日 20:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:00", tag: "ai", tagText: "AI", text: "英国政府支持David Silver领导的估值8.14亿英镑的AI初创公司，引发关于技术主权和国家安全的热议。支持者认为此举可确保英国在AI领域的竞争力，反对者则担忧关键技术和数据外流风险。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVFpGVEEzNGVJckNVaC05dWRBN2FiV3U3NzNScXNhZmdFSU9uczgtQXo5VlBka2lGMXdudk5raFVUZGVER2dKb01XdHo3OXBOVExEWmN5SGE3UXpOenFDbTk3UU9wazBRRWFTemZFRVlWdTNzbEFxVmlfeUV4eTJyT25Sd0hBdUlmMm1na2hSaVhrNnlWNzhR?oc=5" },
+  { time: "19:00", tag: "tech", tagText: "科技", text: "初创公司Osaurus发布Mac应用，允许用户在同一界面内结合使用本地和云端AI模型，并将用户的记忆、文件和工具保留在本地硬件上，兼顾隐私与性能。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "AI研究论文质量提升反而引发学术界危机：一篇论文因被过度引用而成为问题，揭示AI生成内容泛滥正在破坏同行评审体系，科学家面临辨别真伪的困境。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem" },
   { time: "16:24", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用人工智能优化航班调度和空域管理，旨在提升欧洲航空系统的效率和安全性。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNWFQZjI2M0tUVkRuUDNVRUZyS2VSb1BvMFcyeF9hRm9mbmdfN1BqMHV1NU1EVWkycEtLYmlnSnpSMW02cHFBODBiV1NINEhmSS1PNGIzdm82ckNMVmFEUU9UWVlZcDdOLVpSc19FNTMxelhjcUc1YWI1Y1EzcE11Vkw5WFRHU0ppZFRtcV83dkxzUm1UaVBmVmlnRnFURWo1bzk1NzNQLWZ2ZERrNS0xMkJyTTI3SEM0UlNpLXVFc0JqdW50b1ZmRkVjOW8?oc=5" },
   { time: "16:09", tag: "ai", tagText: "AI", text: "英伟达2026年5月财报前瞻：AI芯片巨头面临市场高预期压力。分析师关注其数据中心业务增长及下一代芯片路线图，市场对业绩指引高度敏感。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMibEFVX3lxTFBpeWxKaFFuTV9yRmFINExrLUpBRk1uU1ltMFF0NG1vTmFUSGtrWnBKMkNBX0ozYUdXbHBkSVc4X0hySHVQMTFFaWtBOVA4U0JydXMzRnQ3N2pzQ2hFZzZpR042QmhwMmI5ODlzNQ?oc=5" },
   { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "22:01", tag: "geo", tagText: "地缘", text: "分析师预测英伟达将在中国市场卷土重来，称其为“AI教父”，并认为这将引发新一轮全球科技热潮。尽管中美科技关系紧张，市场仍对英伟达在华业务前景持乐观态度。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNX2lLcDdnWTdjdXNKa3kyTHlIMFNQU2huYmJSb1B0R1Jzc3ZBdFBFdVBwMXE3OU1JNTQ0TVBxdEVQVGpHUzJIalVBclVvb2Y1TGZISktOMDV0eURfT3QySVFXWXAwSW1wMHdZREVWNHF3ZkVFRkZPVzBjMF85YlJWLXhyVTQ4dFQ4NVk0MW1LVGZzSXczZy1YZ2JGTWRGMEdFNmxLNFlJU2hfT19jYWZMTWpRMTBfSFJudFNUYUFUVnh6c3U5ZDJ2WW43WnR5OXNSa21iaW5WYWJoYTFNVWtfZ1FJODNRSVBoc0ZSVXVucW1BcVM4N2RGNQ?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "英国政府支持David Silver领导的估值8.14亿英镑的AI初创公司，引发关于技术主权和国家安全的热议。支持者认为此举可确保英国在AI领域的竞争力，反对者则担忧关键技术和数据外流风险。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVFpGVEEzNGVJckNVaC05dWRBN2FiV3U3NzNScXNhZmdFSU9uczgtQXo5VlBka2lGMXdudk5raFVUZGVER2dKb01XdHo3OXBOVExEWmN5SGE3UXpOenFDbTk3UU9wazBRRWFTemZFRVlWdTNzbEFxVmlfeUV4eTJyT25Sd0hBdUlmMm1na2hSaVhrNnlWNzhR?oc=5" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "初创公司Osaurus发布Mac应用，允许用户在同一界面内结合使用本地和云端AI模型，并将用户的记忆、文件和工具保留在本地硬件上，兼顾隐私与性能。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "AI研究论文质量提升反而引发学术界危机：一篇论文因被过度引用而成为问题，揭示AI生成内容泛滥正在破坏同行评审体系，科学家面临辨别真伪的困境。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem" },
 ];
-const aiBreakingDate = "2026年5月16日 18:23 CST";
+const aiBreakingDate = "2026年5月16日 20:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
