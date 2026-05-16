@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月17日 03:19 CST"
+  date: "2026年5月17日 05:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:00", tag: "macro", tagText: "宏观", text: "4月通胀数据飙升，市场认为美联储主席凯文·沃什及美联储已无借口不加息。债券市场不会等待央行对抗通胀，加息压力骤增。", source: "MarketWatch", url: "https://www.marketwatch.com/story/warsh-faces-rate-pressure-as-aprils-inflation-spike-leaves-the-fed-with-zero-excuses-9610ddb6?mod=mw_rss_topstories" },
+  { time: "05:00", tag: "macro", tagText: "宏观", text: "分析指出，官方CPI掩盖了医疗、保险和能源领域两位数的价格涨幅，实际通胀对退休储蓄的冲击远超预期。3.8%的通胀率对退休组合的实际影响可能高达8%，传统退休策略正悄然侵蚀资产。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-3-8-inflation-actually-feels-like-an-8-hit-to-your-retirement-savings-9e0ba615?mod=mw_rss_topstories" },
+  { time: "05:00", tag: "ai", tagText: "AI", text: "报告显示，8000亿美元的人工智能支出正在推动GDP和股市上涨，但与此同时实际工资下降，美国消费者削减商品支出。AI投资热潮与普通民众经济感受出现明显背离。", source: "Moneywise", url: "https://finance.yahoo.com/economy/articles/800b-ai-spending-juicing-gdp-193500398.html" },
   { time: "01:43", tag: "geo", tagText: "地缘", text: "中国商务部表示，中美已同意通过降低关税扩大农业贸易，这是特朗普与习近平峰会后释放的信号。此举有望缓解两国贸易紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/china-signals-tariff-cuts-advances-in-farm-market-access-after-trump-xi-summit.html" },
   { time: "23:45", tag: "ai", tagText: "AI", text: "AI电力需求催生新投资机会，GE Vernova和Bloom Energy等基础设施公司成为AI电网的新守门人。科技巨头7000亿美元AI能源争夺战中，5只股票被视为‘电力领域的英伟达’，有望持续受益。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
   { time: "23:40", tag: "tech", tagText: "科技", text: "苹果股价上涨1%，因在中国618购物节前意外下调iPhone 17价格。此举旨在提振在华销售，应对竞争加剧的市场环境。", source: "foreignpolicyjournal.com", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOVThTamF0bEVBRms2VE0tSFY2YkR3cFN6dXdnTi03U1A3SDYxdjExLWJwRkVnWnRKMXh1YklMME4wTzQ5bnpvNTZvVWx4M3h5S3ktU1JaUnRqa1pBLTFPTE5Sczd1NDNJTDBtYi1EREhZeHF0ZTUzX1hpWEU1V1Q4dnY3SUZNSWZzYWZSMV84bl9ySGhMOHFKQ0NIeTNhbm52c0VIdVR5VTFjbW5JQXN0NXBhVmZwcExYcDhfVDZsckYycWdUaTBETXZJX2o3cERIV3JJU1RmQXRmMGlSLWpQdjB4a2hkQmN0VUMyUw?oc=5" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "15:55", tag: "macro", tagText: "宏观", text: "标普500和纳斯达克指数期货小幅回落，但SPY和QQQ市场情绪仍保持看涨。投资者关注美光(MU)、Cerebras(CBRS)等个股，英伟达和沃尔玛即将公布的财报成为市场焦点。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxPd2Q0YmpkOFM2U2dqbmpDRVk4emtfLUVrajNVdFVTTFBSOWxRdHV6a0cxLXFEUWxIYTlaa3BuSjFzZV9YMVB0SFpzM29DTmgzY2xDOEdlQmk3bnp1ekFWMnpQT1lESDJsdnFyd3ZWM2pRa3NjV3VfcWs5UFkxcnVEVWl1aHJTNTZ5c1YxRVBxajlMMFFIcnR2T1dWbmhOcGZxZUsyR1lpbGJZdmtUbWJqOVJKQkRnVnlhcnhHWlpfaVNDY2xSNWgzZmxuRTc?oc=5" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "北约秘书长马克·吕特下周将在布鲁塞尔与欧洲主要防务集团会面，敦促其加大投资和生产，以应对持续的地缘政治紧张局势和乌克兰战争带来的武器需求。此举旨在推动欧洲军工产业加速扩产。", source: "International homepage", url: "https://www.ft.com/content/d6ec23af-9b0e-49cd-b53d-a8a1786d5f5e" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "英国《金融时报》发表评论文章指出，在战争、政治及其他领域，取得决定性胜利正变得越来越困难，世界正进入一个“僵局世纪”。文章呼吁重新思考多边机构的治理方式，以应对当前“狗咬狗”式的全球秩序。", source: "International homepage", url: "https://www.ft.com/content/ef39e535-f040-4ade-91b1-61fea53bd31a" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "英国《金融时报》分析文章探讨全球生育率同步下降的原因，指出住房成本、智能手机普及等因素是推动这一人口结构转变的关键。这一趋势正在深刻改变世界。", source: "International homepage", url: "https://www.ft.com/content/fba35eca-df3a-4ad6-b42d-eb08eb7c9ad3" },
-  { time: "09:42", tag: "macro", tagText: "宏观", text: "美国食品药品监督管理局（FDA）在局长Marty Makary离职数日后，对药品和生物制品监管高层进行改组。这是该机构近期领导层动荡的最新举措。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/fda-shuffles-top-drug-biologics-leaders-in-latest-leadership-shakeup.html" },
-  { time: "08:23", tag: "macro", tagText: "宏观", text: "NextEra Energy与Dominion Energy正在洽谈合并，若达成将创建一家市值约4000亿美元的美国公用事业巨头。谈判正值人工智能数据中心推动电力需求激增之际。", source: "Financial Times", url: "https://www.ft.com/content/37ba1609-ffa7-42ae-b63c-b2c628c584e1" },
 ];
-const breakingDate = "2026年5月17日 03:19 CST";
+const breakingDate = "2026年5月17日 05:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:38", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv宣布新规：将禁止上传充斥AI生成低质量内容（AI slop）的研究者。平台将对存在“无可辩驳证据”表明作者滥用AI生成论文的行为采取封禁措施，以遏制AI垃圾论文泛滥，维护学术质量。", source: "The Verge", url: "https://www.theverge.com/science/931766/arxiv-ai-slop-ban-researchers" },
+  { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
   { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
   { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
   { time: "02:21", tag: "ai", tagText: "AI", text: "OpenAI再次进行高管重组，总裁Greg Brockman正式负责所有产品事务，旨在赢得AI代理之战。此次重组整合了部分业务部门，反映出OpenAI在AI代理领域的激烈竞争压力。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle" },
@@ -1661,6 +1663,7 @@ const aiBreakingNews = [
   { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
   { time: "23:37", tag: "tech", tagText: "科技", text: "索尼回应Xperia 1 XIII AI相机助手争议，澄清该功能不会编辑照片，而是辅助用户拍摄。此前索尼因演示引发误解，被质疑过度依赖AI处理图像。", source: "AI | The Verge", url: "https://www.theverge.com/tech/932133/sony-xperia-1-xiii-ai-camera-assistant" },
+  { time: "23:17", tag: "ai", tagText: "AI", text: "AI淘金热中的赢家与输家：当前AI热潮的氛围并不乐观，即使在科技行业内部也是如此。文章分析了AI领域资源分配不均、泡沫风险及行业分化加剧的现象。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/the-haves-and-have-nots-of-the-ai-gold-rush/" },
   { time: "22:01", tag: "geo", tagText: "地缘", text: "分析师预测英伟达将在中国市场卷土重来，称其为“AI教父”，并认为这将引发新一轮全球科技热潮。尽管中美科技关系紧张，市场仍对英伟达在华业务前景持乐观态度。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNX2lLcDdnWTdjdXNKa3kyTHlIMFNQU2huYmJSb1B0R1Jzc3ZBdFBFdVBwMXE3OU1JNTQ0TVBxdEVQVGpHUzJIalVBclVvb2Y1TGZISktOMDV0eURfT3QySVFXWXAwSW1wMHdZREVWNHF3ZkVFRkZPVzBjMF85YlJWLXhyVTQ4dFQ4NVk0MW1LVGZzSXczZy1YZ2JGTWRGMEdFNmxLNFlJU2hfT19jYWZMTWpRMTBfSFJudFNUYUFUVnh6c3U5ZDJ2WW43WnR5OXNSa21iaW5WYWJoYTFNVWtfZ1FJODNRSVBoc0ZSVXVucW1BcVM4N2RGNQ?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "16:09", tag: "ai", tagText: "AI", text: "英伟达2026年5月财报前瞻：AI芯片巨头面临市场高预期压力。分析师关注其数据中心业务增长及下一代芯片路线图，市场对业绩指引高度敏感。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMibEFVX3lxTFBpeWxKaFFuTV9yRmFINExrLUpBRk1uU1ltMFF0NG1vTmFUSGtrWnBKMkNBX0ozYUdXbHBkSVc4X0hySHVQMTFFaWtBOVA4U0JydXMzRnQ3N2pzQ2hFZzZpR042QmhwMmI5ODlzNQ?oc=5" },
   { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
   { time: "07:46", tag: "ai", tagText: "AI", text: "知名财经评论员Cramer支持英伟达在中国销售AI芯片，认为无论政策结果如何，英伟达股票都能继续上涨。这一表态正值市场对中美科技合作前景高度关注之际。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUDRxaFR1TXhFeHNqa1NoZEhBX0gwRTlwcnRmcDN5Y1J2S0FXR0x2WWc3aVlxLWJiTjh3WE5ZQkQ5d2doOXQ3ZUVwS0EwRHgzd0wzamZWUmhTRWtBZFpoX2VWRHhxc2w2V2tqMEJuTWo0dng1QVk1UmF1SEVDRTRSdV9rdWtsZDdqWF9SS0poUUtzLXpOd3lRTmNudmdTMUE1bHZxb2dvWE9OdXhTdnZsSmJ2ZUs1VVp5Mm80?oc=5" },
-  { time: "06:25", tag: "tech", tagText: "科技", text: "YouTube将AI深度伪造检测工具扩展至所有成年用户。该工具可让用户主动搜索平台上可能存在的、利用AI生成的自身肖像内容，覆盖范围从特定人群扩大至18岁以上全体用户。", source: "The Verge", url: "https://www.theverge.com/news/931884/youtube-likeness-detection-ai-deepfake-expansion-all-adults" },
-  { time: "04:38", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv宣布新规：将禁止上传充斥AI生成低质量内容（AI slop）的研究者。平台将对存在“无可辩驳证据”表明作者滥用AI生成论文的行为采取封禁措施，以遏制AI垃圾论文泛滥，维护学术质量。", source: "The Verge", url: "https://www.theverge.com/science/931766/arxiv-ai-slop-ban-researchers" },
-  { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
 ];
-const aiBreakingDate = "2026年5月17日 03:19 CST";
+const aiBreakingDate = "2026年5月17日 05:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
