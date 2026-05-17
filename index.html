@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月18日 03:22 CST"
+  date: "2026年5月18日 05:05 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1632,6 +1632,7 @@ const breakingNews = [
   { time: "03:12", tag: "crypto", tagText: "加密", text: "意大利最大银行在2026年第一季度增加了比特币、以太坊和XRP的敞口，显示传统金融机构对加密资产的兴趣持续升温。", source: "CryptoProwl", url: "https://finance.yahoo.com/markets/crypto/articles/italy-largest-bank-adds-bitcoin-183100354.html" },
   { time: "03:10", tag: "ai", tagText: "AI", text: "AI能源需求催生新投资机会：GE Vernova、Bloom Energy等基础设施公司成为AI电网的新“守门人”，在科技巨头7000亿美元AI能源争夺战中脱颖而出，被视为“电力领域的英伟达”。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
   { time: "03:08", tag: "macro", tagText: "宏观", text: "市场分析人士警告，AI对就业市场的冲击加剧，传统3-6个月的应急储蓄已不足够，建议储备18个月的现金缓冲以应对潜在的失业风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/you-now-need-18-months-of-emergency-savings-because-of-how-much-ai-is-disrupting-the-workforce-86dbac97?mod=mw_rss_topstories" },
+  { time: "03:01", tag: "macro", tagText: "宏观", text: "市场分析警告，伊朗战争可能带来高达3000亿美元的经济冲击，推高抵押贷款利率并挤压工资。能源成本飙升将加剧通胀压力，影响美国家庭可负担性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-iran-war-could-be-a-300-billion-shock-driving-up-mortgage-rates-and-squeezing-wages-06afc027?mod=mw_rss_topstories" },
   { time: "01:43", tag: "geo", tagText: "地缘", text: "特朗普警告伊朗“抓紧行动”，否则“将一无所有”。此前特朗普曾威胁打击伊朗民用基础设施，此举可能构成战争罪。同时，伊朗能源危机进入新阶段，夏季高峰临近，石油库存告急，紧急措施蔓延。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/trump-warns-iran-wont-be-anything-left.html" },
   { time: "01:00", tag: "macro", tagText: "宏观", text: "英国《金融时报》分析指出，伊朗战争导致的能源供应紧张将进一步恶化，能源危机将持续加深。全球市场面临油价飙升和供应链中断风险。", source: "Financial Times", url: "https://www.ft.com/content/08665686-f673-46ca-9dba-fd34e1546e7c" },
   { time: "23:06", tag: "geo", tagText: "地缘", text: "阿联酋报告称，一架无人机袭击了巴拉卡核电站，击中其外围的发电机并引发火灾。当局称未造成人员伤亡，辐射水平正常。此次袭击发生在伊朗战争僵局持续的背景下，加剧了中东地区的紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/abu-dhabi-says-drone-strike-caused-fire-at-nuclear-power-plant.html" },
@@ -1648,12 +1649,13 @@ const breakingNews = [
   { time: "18:11", tag: "crypto", tagText: "加密", text: "XRP在某一关键指标上大幅领先以太坊和Solana，但分析师质疑这一优势能否转化为持有者的实际收益。市场关注XRP在支付领域的采用进展，但整体加密市场情绪仍受宏观利率环境影响。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMGVOaF9FMTFzMTZUdnRBWFFnZkhwR3pEYXYydHlzbWxDY3RqZTl2eklOczFRczBRZnk1N1RsTGI5aUFEMlgzalJ6UmtFQVVIQXJseWhJcDhNTGgzTmdldnBFN0VfWVV1SDRjdVNIOWhhbWF2aUdQUU9LelktMUxBdGVGclVKMjdqZDFGREg3WlE0OGU2YzNv?oc=5" },
   { time: "13:27", tag: "tech", tagText: "科技", text: "小鹏汽车（XPEV）在创纪录利润率后发布谨慎的第一季度展望，引发市场对其投资叙事的质疑。投资者关注其未来增长前景是否面临压力。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUkJfaFZjc3VUdnJTUHJRTTVSN2xGaTBWMFBRLXdET0VlcE45TENQNUlIN3NwbjBVUlM1Y3E1YlBpa1BranU4Z3JZS3NxZ2VzcnBac0QxSVlCSTRnUUJ6RTNUUmg1UXdfSVRLbkJTZXpjNFdmdEZ5ZEEtSUx6ZkJ0YkVhM1FYWnFTVmY5LUFMXzB6TnBHSGlvSHB3SU12QkZmNjVtVkZhNDltWmNoOHNhcG0xOGtLVzlOYWRUeHVWMjNrMlnSAcgBQVVfeXFMTXBrOFdJRlZ6aDQ0dmNqNVFxYWNISUw2bFJaWnlLWU1fSTQxR2FyeE1fQnRjSEdrUWhFNk9mRkJMVm5iZTBHVnpENnNlVXZLZzRENkFpdWZ2X2NiZVRfLXFZVnRiRlpCd256cFVhanFXX0RpSFdUekZrMmlOb2dFcWJFVUxGdFBnV19Nb3VMenM2bUtqN0VBTXVvYVZEWDY3bWJKOGJYUFc5MEliaWh6Yl83RE9LNzRpdDZ0ZllPYzNYM0xicU9VYy0?oc=5" },
   { time: "13:09", tag: "tech", tagText: "科技", text: "特斯拉更新Model Y定价，预计将对股价产生影响。市场关注此举是否反映需求变化或竞争压力，投资者需警惕短期波动。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTFlJYVZ0U0xxZlN6bkRYdUI0S3lmMjBtY2VreVdYeXVvNEdYM0pwdURwWVVYS0s4dmNwX0N5cDNwMjRXa1ItWXV1QTViYUREODhHMWo2aWlWRmtNalA5OFJnak1QN1NtSnBxdlhPYWtMQWZPUGpnblJnVXJMcG4zUkJDZTM2UFJGbDRqV1puclo5VTZtOWZmdGo1dw?oc=5" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "海湾地区货运费率飙升，航运公司被迫改用卡车运输货物，企业面临数千美元的额外成本，而卡车的运力仅为轮船的一小部分。", source: "Financial Times", url: "https://www.ft.com/content/0c2adc44-5dcf-4273-943e-9899a1ce44ff" },
 ];
-const breakingDate = "2026年5月18日 03:22 CST";
+const breakingDate = "2026年5月18日 05:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:55", tag: "ai", tagText: "AI", text: "2026年全球新诞生的98家独角兽初创公司中，AI公司占比超过四分之一，显示人工智能领域仍是资本追逐的核心赛道。", source: "Digital Journal", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaTd4ZHpscVEtWFBlX2tUbnZOYUJIN1dNWjUwMFhmQ0t2QzJBRHhNbndJVE9wZ3ROeDAyVTg5bnpYeW5wN01VWGc5ZUhTTnBxNGVTTDhzT0dmZjZ1ek5xdDNTN3dQV0NLZEJaMXpEYm1TX1FReXA5ZnlFd09maXY4OW5YQlppV3B2Qlg1N0FIeTU5WTZGVnpqY1k0cTNuV3Y5bHM0bjdqVV84ZkRrRkNlS0gyWlN0OTBZSVRieW9zaVFzM2h3RXA5OFlR?oc=5" },
+  { time: "03:46", tag: "ai", tagText: "AI", text: "埃隆·马斯克与OpenAI的诉讼进入尾声，庭审焦点集中在OpenAI CEO萨姆·奥尔特曼是否值得信任。信任问题成为该案核心争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/17/why-trust-is-a-big-question-at-the-elon-musk-openai-trial/" },
   { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
   { time: "02:40", tag: "ai", tagText: "AI", text: "苹果计划为升级版Siri引入自动删除聊天记录功能，试图以隐私保护作为AI领域的差异化优势，在落后于竞争对手的情况下争取用户信任。", source: "The Verge", url: "https://www.theverge.com/tech/932207/siri-apple-intelligence-auto-deleting-chats" },
   { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "19:00", tag: "ai", tagText: "AI", text: "AI研究论文质量提升反而引发学术界危机：一篇论文因被过度引用而成为问题，揭示AI生成内容泛滥正在破坏同行评审体系，科学家面临辨别真伪的困境。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem" },
   { time: "16:24", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用人工智能优化航班调度和空域管理，旨在提升欧洲航空系统的效率和安全性。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNWFQZjI2M0tUVkRuUDNVRUZyS2VSb1BvMFcyeF9hRm9mbmdfN1BqMHV1NU1EVWkycEtLYmlnSnpSMW02cHFBODBiV1NINEhmSS1PNGIzdm82ckNMVmFEUU9UWVlZcDdOLVpSc19FNTMxelhjcUc1YWI1Y1EzcE11Vkw5WFRHU0ppZFRtcV83dkxzUm1UaVBmVmlnRnFURWo1bzk1NzNQLWZ2ZERrNS0xMkJyTTI3SEM0UlNpLXVFc0JqdW50b1ZmRkVjOW8?oc=5" },
   { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
-  { time: "14:07", tag: "geo", tagText: "地缘", text: "中美峰会未提及半导体出口管制议题，引发市场对两国科技博弈走向的猜测。此次峰会未就芯片限制达成任何共识或声明，显示双方在该敏感领域仍存在深刻分歧。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNazFlSHR6czQ0cm1Dck5laXpLYkxrNEF6SENHY281Sk5sekYtLXhrZjM2NWhTZzh1bHRrdzNlRC1fbXpZeU1SeGpWNTdCcjJ2anY3NGZETWFTS3lkX0NSOXJKZzVaXzc3cE9OaVBYZmd0UUxuRE5ocHJ6cUE3U1J2V0s3R0xoMzZt?oc=5" },
-  { time: "07:46", tag: "ai", tagText: "AI", text: "知名财经评论员Cramer支持英伟达在中国销售AI芯片，认为无论政策结果如何，英伟达股票都能继续上涨。这一表态正值市场对中美科技合作前景高度关注之际。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUDRxaFR1TXhFeHNqa1NoZEhBX0gwRTlwcnRmcDN5Y1J2S0FXR0x2WWc3aVlxLWJiTjh3WE5ZQkQ5d2doOXQ3ZUVwS0EwRHgzd0wzamZWUmhTRWtBZFpoX2VWRHhxc2w2V2tqMEJuTWo0dng1QVk1UmF1SEVDRTRSdV9rdWtsZDdqWF9SS0poUUtzLXpOd3lRTmNudmdTMUE1bHZxb2dvWE9OdXhTdnZsSmJ2ZUs1VVp5Mm80?oc=5" },
 ];
-const aiBreakingDate = "2026年5月18日 03:22 CST";
+const aiBreakingDate = "2026年5月18日 05:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
