@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月17日 08:01 CST"
+  date: "2026年5月17日 12:14 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "11:17", tag: "geo", tagText: "地缘", text: "特朗普支持的挑战者在初选中击败路易斯安那州共和党参议员比尔·卡西迪，后者因投票支持弹劾特朗普而被特朗普称为“不忠”。这一结果进一步巩固了特朗普对共和党的控制，可能影响未来国会立法走向。", source: "Financial Times", url: "https://www.ft.com/content/e2aca448-a6db-4322-b14f-f461c827f347" },
   { time: "06:59", tag: "geo", tagText: "地缘", text: "委内瑞拉公布石油法草案，允许能源部为每个项目单独设定税率。此举旨在吸引外资、增加产量，但可能引发对政策稳定性的担忧。", source: "Reuters", url: "https://finance.yahoo.com/sectors/energy/articles/venezuelas-draft-oil-law-lets-225931582.html" },
   { time: "06:46", tag: "tech", tagText: "科技", text: "台积电减持Vanguard股份，以集中资源聚焦AI芯片核心业务。此举显示台积电正进一步将战略重心转向人工智能领域。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOMXlZNXVxT19ycTlzSTdJRlVhWDZpWGdVcVg3cTJLUXY1LXkwSU1iUXI4Z2V5TjVRVDhkV2Y2UnBYYlZiNVNEcThpX1JpUnlaZTlxaVB0NVcwd3ZPNXVvbWRpYUVkV1gwMWhpb09GaG1hdGdPYUQ1S3YxU0R2Ni1kUUpHb3FjRC1pcDFjSmlFcHdqeFhtTGRwS1dOanpOWVhSY2xJY2NyQlJQU2ozbU9VR1RPVzEycEEydkFEV19jYUVIVVFrMTdnb3NCaEVfRWtnYnpDaGxUNzMzdkRxSlI0UnNtLUtvTkVVd2fSAe8BQVVfeXFMUGhid0U3c3JXOXl3eUwxdko3U195Y193cEsyUm9hRl9jWjA1Vmd4bjh4QWExOHRLUE1wMEFZaFY5U3UxTy1mSWJzbUNjSHNqdlgwWDNxbW9IR0dDTTh6bVdsVzNianpCYzhmRVFWSUprYi15cHY4M2Vza3NfaWtvMHpDRkRlQWk5MFlaVVBBN2pxZ3JQM2xma0QzX0t4S0J6ZTl6ZDdKLWVmU2ZFQUcxczF4NmhwMXBCd2ZrVXZvQWVGSDdEM1RIQXFSSm0tbndzVnRYOHd5TkZCQk9BSGppOFRPdkxFMXY1SHcwVGlnazA?oc=5" },
   { time: "06:23", tag: "tech", tagText: "科技", text: "凯西·伍德旗下ARK基金抛售4060万美元热门半导体股票。此举可能反映其对半导体板块估值或短期前景的谨慎态度。", source: "thestreet.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYi1La0FRWWE3SEZQblliZWxfVFZ4cVlRbUpEaURwSlFDRnIzdktxcXJid3ZtWXNQalNOUy1NLXdRSkRWR2x2c0xFcUhEWEVSdlVjbE9JX1l0NTd3ckpoQjJrYkxpelM2cTBmcEJOblJ1ckpIbUZ2QlllMDg4QlVSbEUwcndhR3Fidjd0TnFPcUdJWGhSRjJoTUgwRi00Zl8zUi0tSy1aMU5HUGRYeUFicUtB?oc=5" },
@@ -1648,9 +1649,8 @@ const breakingNews = [
   { time: "21:00", tag: "macro", tagText: "宏观", text: "高油价和通胀持续施压，但经济学家指出，只要美国消费者继续支出，经济仍可维持增长。伊朗战争已持续近三个月，汽油价格从2.98美元飙升至4.39美元，市场担忧若消费放缓，数周内可能陷入全面衰退。", source: "MarketWatch", url: "https://www.marketwatch.com/story/high-gas-prices-and-inflation-are-stressing-people-out-but-the-economy-will-be-fine-as-long-as-they-keep-spending-4f4b66e3?mod=mw_rss_topstories" },
   { time: "19:54", tag: "geo", tagText: "地缘", text: "以色列空袭击毙了策划10月7日袭击的最后一名哈马斯高级领导人伊兹·丁·哈达德，给脆弱的停火协议带来更大压力。此举可能进一步加剧中东紧张局势，影响全球能源和金融市场。", source: "Financial Times", url: "https://www.ft.com/content/e36df354-4d50-4399-b9dd-5beda50688b9" },
   { time: "19:00", tag: "geo", tagText: "地缘", text: "特朗普加大对古巴施压，利用威胁和利诱手段迫使这个燃料短缺的共产主义岛国开放经济。", source: "Financial Times", url: "https://www.ft.com/content/fb62a4c4-6615-434e-a259-bc813a27ac6a" },
-  { time: "17:54", tag: "crypto", tagText: "加密", text: "比特币跌至两周低点，山寨币大幅下挫。此前Strategy公司（原MicroStrategy）悄然确认计划出售比特币，引发市场恐慌性抛售。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOanVMbndjbkZNRFlncUxhVWZTNFVmMFNKdnlaSlh3SGNENXZJb24wRXNXemZjVm1TdWJfNTE4RlJDYVpybXAzUHJ6RzR2blFwNWRMNWhCODZDZ2lwV2xkT05wUW12YTQwcEp4MTNfbG8yX0N6NHRoX2R4TzNuaFNCNXdfWVc5YV9VV0FOT3pWeWpaam9GaWNEenVJNUYtVUgtMlpMR0Rlai1QcUMxaEtyR18yd3NOSmg0dlNWWU5LQ2NZdzJXZnFHeWJxTGRuLVpGTWs1ek9lT2RTdw?oc=5" },
 ];
-const breakingDate = "2026年5月17日 08:01 CST";
+const breakingDate = "2026年5月17日 12:14 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "16:09", tag: "ai", tagText: "AI", text: "英伟达2026年5月财报前瞻：AI芯片巨头面临市场高预期压力。分析师关注其数据中心业务增长及下一代芯片路线图，市场对业绩指引高度敏感。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMibEFVX3lxTFBpeWxKaFFuTV9yRmFINExrLUpBRk1uU1ltMFF0NG1vTmFUSGtrWnBKMkNBX0ozYUdXbHBkSVc4X0hySHVQMTFFaWtBOVA4U0JydXMzRnQ3N2pzQ2hFZzZpR042QmhwMmI5ODlzNQ?oc=5" },
   { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月17日 08:01 CST";
+const aiBreakingDate = "2026年5月17日 12:14 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
