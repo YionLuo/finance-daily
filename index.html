@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月18日 01:10 CST"
+  date: "2026年5月18日 03:22 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:12", tag: "crypto", tagText: "加密", text: "意大利最大银行在2026年第一季度增加了比特币、以太坊和XRP的敞口，显示传统金融机构对加密资产的兴趣持续升温。", source: "CryptoProwl", url: "https://finance.yahoo.com/markets/crypto/articles/italy-largest-bank-adds-bitcoin-183100354.html" },
+  { time: "03:10", tag: "ai", tagText: "AI", text: "AI能源需求催生新投资机会：GE Vernova、Bloom Energy等基础设施公司成为AI电网的新“守门人”，在科技巨头7000亿美元AI能源争夺战中脱颖而出，被视为“电力领域的英伟达”。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
+  { time: "03:08", tag: "macro", tagText: "宏观", text: "市场分析人士警告，AI对就业市场的冲击加剧，传统3-6个月的应急储蓄已不足够，建议储备18个月的现金缓冲以应对潜在的失业风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/you-now-need-18-months-of-emergency-savings-because-of-how-much-ai-is-disrupting-the-workforce-86dbac97?mod=mw_rss_topstories" },
+  { time: "01:43", tag: "geo", tagText: "地缘", text: "特朗普警告伊朗“抓紧行动”，否则“将一无所有”。此前特朗普曾威胁打击伊朗民用基础设施，此举可能构成战争罪。同时，伊朗能源危机进入新阶段，夏季高峰临近，石油库存告急，紧急措施蔓延。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/trump-warns-iran-wont-be-anything-left.html" },
+  { time: "01:00", tag: "macro", tagText: "宏观", text: "英国《金融时报》分析指出，伊朗战争导致的能源供应紧张将进一步恶化，能源危机将持续加深。全球市场面临油价飙升和供应链中断风险。", source: "Financial Times", url: "https://www.ft.com/content/08665686-f673-46ca-9dba-fd34e1546e7c" },
   { time: "23:06", tag: "geo", tagText: "地缘", text: "阿联酋报告称，一架无人机袭击了巴拉卡核电站，击中其外围的发电机并引发火灾。当局称未造成人员伤亡，辐射水平正常。此次袭击发生在伊朗战争僵局持续的背景下，加剧了中东地区的紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/abu-dhabi-says-drone-strike-caused-fire-at-nuclear-power-plant.html" },
   { time: "22:52", tag: "geo", tagText: "地缘", text: "世界卫生组织宣布，刚果和乌干达爆发的罕见埃博拉病毒株疫情为国际关注的突发公共卫生事件。该疫情已导致约80人死亡，引发全球卫生警报。", source: "MarketWatch", url: "https://www.marketwatch.com/story/health-officials-declare-ebola-outbreak-a-public-health-emergency-36fb9a91?mod=mw_rss_topstories" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "沃尔玛和塔吉特即将公布的财报将揭示伊朗战争如何改变消费者购物习惯。沃尔玛表示，当汽油价格达到每加仑4.5至5美元时，顾客开始削减支出。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/walmart-and-target-are-about-to-show-just-how-much-shopping-habits-have-changed-due-to-the-iran-war-105b34d9?mod=mw_rss_topstories" },
@@ -1644,16 +1649,15 @@ const breakingNews = [
   { time: "13:27", tag: "tech", tagText: "科技", text: "小鹏汽车（XPEV）在创纪录利润率后发布谨慎的第一季度展望，引发市场对其投资叙事的质疑。投资者关注其未来增长前景是否面临压力。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUkJfaFZjc3VUdnJTUHJRTTVSN2xGaTBWMFBRLXdET0VlcE45TENQNUlIN3NwbjBVUlM1Y3E1YlBpa1BranU4Z3JZS3NxZ2VzcnBac0QxSVlCSTRnUUJ6RTNUUmg1UXdfSVRLbkJTZXpjNFdmdEZ5ZEEtSUx6ZkJ0YkVhM1FYWnFTVmY5LUFMXzB6TnBHSGlvSHB3SU12QkZmNjVtVkZhNDltWmNoOHNhcG0xOGtLVzlOYWRUeHVWMjNrMlnSAcgBQVVfeXFMTXBrOFdJRlZ6aDQ0dmNqNVFxYWNISUw2bFJaWnlLWU1fSTQxR2FyeE1fQnRjSEdrUWhFNk9mRkJMVm5iZTBHVnpENnNlVXZLZzRENkFpdWZ2X2NiZVRfLXFZVnRiRlpCd256cFVhanFXX0RpSFdUekZrMmlOb2dFcWJFVUxGdFBnV19Nb3VMenM2bUtqN0VBTXVvYVZEWDY3bWJKOGJYUFc5MEliaWh6Yl83RE9LNzRpdDZ0ZllPYzNYM0xicU9VYy0?oc=5" },
   { time: "13:09", tag: "tech", tagText: "科技", text: "特斯拉更新Model Y定价，预计将对股价产生影响。市场关注此举是否反映需求变化或竞争压力，投资者需警惕短期波动。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTFlJYVZ0U0xxZlN6bkRYdUI0S3lmMjBtY2VreVdYeXVvNEdYM0pwdURwWVVYS0s4dmNwX0N5cDNwMjRXa1ItWXV1QTViYUREODhHMWo2aWlWRmtNalA5OFJnak1QN1NtSnBxdlhPYWtMQWZPUGpnblJnVXJMcG4zUkJDZTM2UFJGbDRqV1puclo5VTZtOWZmdGo1dw?oc=5" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "海湾地区货运费率飙升，航运公司被迫改用卡车运输货物，企业面临数千美元的额外成本，而卡车的运力仅为轮船的一小部分。", source: "Financial Times", url: "https://www.ft.com/content/0c2adc44-5dcf-4273-943e-9899a1ce44ff" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "贝恩资本完成其最大亚洲基金的募集，筹资105亿美元，较目标多出21亿美元，显示全球资本对亚洲市场的持续看好。", source: "Financial Times", url: "https://www.ft.com/content/cf65b157-6a10-4525-851b-508333ee94d0" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "日本国债收益率创历史新高，引发市场对资金回流的押注。基金经理预计日本投资者将抛售美国国债，转而投资日本国债。", source: "Financial Times", url: "https://www.ft.com/content/6e363bc3-3114-4ddf-9f3b-67f031b3ef92" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "中国数据中心公司DayOne计划利用新加坡旨在吸引亚洲上市的新规，在新加坡和美国进行双重IPO，目标筹资50亿美元。", source: "Financial Times", url: "https://www.ft.com/content/602baf9f-9e66-428e-baec-6c2850d5fad5" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "中国两轮电动车企业雅迪计划在匈牙利建厂，借助电动踏板车在亚洲和南美日益增长的需求，进军欧洲市场。", source: "Financial Times", url: "https://www.ft.com/content/bb0341b1-e808-45b4-b5f9-c9b88c04d2ae" },
-  { time: "11:17", tag: "geo", tagText: "地缘", text: "特朗普支持的挑战者在初选中击败路易斯安那州共和党参议员比尔·卡西迪，后者因投票支持弹劾特朗普而被特朗普称为“不忠”。这一结果进一步巩固了特朗普对共和党的控制，可能影响未来国会立法走向。", source: "Financial Times", url: "https://www.ft.com/content/e2aca448-a6db-4322-b14f-f461c827f347" },
 ];
-const breakingDate = "2026年5月18日 01:10 CST";
+const breakingDate = "2026年5月18日 03:22 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
+  { time: "02:40", tag: "ai", tagText: "AI", text: "苹果计划为升级版Siri引入自动删除聊天记录功能，试图以隐私保护作为AI领域的差异化优势，在落后于竞争对手的情况下争取用户信任。", source: "The Verge", url: "https://www.theverge.com/tech/932207/siri-apple-intelligence-auto-deleting-chats" },
+  { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
+  { time: "01:22", tag: "ai", tagText: "AI", text: "前谷歌CEO埃里克·施密特在亚利桑那大学毕业典礼上发表演讲，当谈及AI时遭到学生持续嘘声。这一事件反映出年轻一代对AI主导未来的普遍担忧和抵触情绪。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932203/university-of-arizona-students-boo-eric-schmidt-ai-commencement" },
   { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
   { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
   { time: "00:32", tag: "ai", tagText: "AI", text: "TechCrunch报道称，AI技能军备竞赛正向汽车行业蔓延。随着自动驾驶和智能座舱技术发展，汽车行业对AI人才的需求急剧上升，成为新的竞争焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/17/techcrunch-mobility-the-ai-skills-arms-race-is-coming-for-automotive/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
   { time: "14:07", tag: "geo", tagText: "地缘", text: "中美峰会未提及半导体出口管制议题，引发市场对两国科技博弈走向的猜测。此次峰会未就芯片限制达成任何共识或声明，显示双方在该敏感领域仍存在深刻分歧。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNazFlSHR6czQ0cm1Dck5laXpLYkxrNEF6SENHY281Sk5sekYtLXhrZjM2NWhTZzh1bHRrdzNlRC1fbXpZeU1SeGpWNTdCcjJ2anY3NGZETWFTS3lkX0NSOXJKZzVaXzc3cE9OaVBYZmd0UUxuRE5ocHJ6cUE3U1J2V0s3R0xoMzZt?oc=5" },
   { time: "07:46", tag: "ai", tagText: "AI", text: "知名财经评论员Cramer支持英伟达在中国销售AI芯片，认为无论政策结果如何，英伟达股票都能继续上涨。这一表态正值市场对中美科技合作前景高度关注之际。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUDRxaFR1TXhFeHNqa1NoZEhBX0gwRTlwcnRmcDN5Y1J2S0FXR0x2WWc3aVlxLWJiTjh3WE5ZQkQ5d2doOXQ3ZUVwS0EwRHgzd0wzamZWUmhTRWtBZFpoX2VWRHhxc2w2V2tqMEJuTWo0dng1QVk1UmF1SEVDRTRSdV9rdWtsZDdqWF9SS0poUUtzLXpOd3lRTmNudmdTMUE1bHZxb2dvWE9OdXhTdnZsSmJ2ZUs1VVp5Mm80?oc=5" },
-  { time: "04:38", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv宣布新规：将禁止上传充斥AI生成低质量内容（AI slop）的研究者。平台将对存在“无可辩驳证据”表明作者滥用AI生成论文的行为采取封禁措施，以遏制AI垃圾论文泛滥，维护学术质量。", source: "The Verge", url: "https://www.theverge.com/science/931766/arxiv-ai-slop-ban-researchers" },
-  { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
-  { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
-  { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
 ];
-const aiBreakingDate = "2026年5月18日 01:10 CST";
+const aiBreakingDate = "2026年5月18日 03:22 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
