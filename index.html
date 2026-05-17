@@ -1623,18 +1623,21 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月17日 23:08 CST"
+  date: "2026年5月18日 01:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:06", tag: "geo", tagText: "地缘", text: "阿联酋报告称，一架无人机袭击了巴拉卡核电站，击中其外围的发电机并引发火灾。当局称未造成人员伤亡，辐射水平正常。此次袭击发生在伊朗战争僵局持续的背景下，加剧了中东地区的紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/abu-dhabi-says-drone-strike-caused-fire-at-nuclear-power-plant.html" },
+  { time: "22:52", tag: "geo", tagText: "地缘", text: "世界卫生组织宣布，刚果和乌干达爆发的罕见埃博拉病毒株疫情为国际关注的突发公共卫生事件。该疫情已导致约80人死亡，引发全球卫生警报。", source: "MarketWatch", url: "https://www.marketwatch.com/story/health-officials-declare-ebola-outbreak-a-public-health-emergency-36fb9a91?mod=mw_rss_topstories" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "沃尔玛和塔吉特即将公布的财报将揭示伊朗战争如何改变消费者购物习惯。沃尔玛表示，当汽油价格达到每加仑4.5至5美元时，顾客开始削减支出。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/walmart-and-target-are-about-to-show-just-how-much-shopping-habits-have-changed-due-to-the-iran-war-105b34d9?mod=mw_rss_topstories" },
   { time: "21:46", tag: "geo", tagText: "地缘", text: "北美最大通勤铁路系统——长岛铁路（LIRR）因五个工会罢工已连续关闭两天，周一早高峰即将来临，数百万通勤者面临出行混乱。罢工于周五午夜后开始，服务纽约市及东部郊区。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/long-island-rail-road-lirr-shutdown-union-strike.html" },
   { time: "21:30", tag: "macro", tagText: "宏观", text: "尽管固定利率抵押贷款名义上不变，但不断上涨的房产税和飙升的房屋保险成本正推高房主每月实际还款额。许多房主面临托管账户短缺，导致月供意外增加。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/mortgage-escrow-shortages.html" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "英伟达财报和谷歌开发者大会将成为本周市场焦点，AI热潮持续主导市场情绪。同时，美光预计将成为标普500指数盈利增长的第二大贡献者，仅次于英伟达，但英伟达的影响力可能减弱。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/3-big-things-were-watching-in-the-stock-market-for-the-week-ahead.html" },
   { time: "20:14", tag: "macro", tagText: "宏观", text: "G7财长将于周一在巴黎召开会议，正值长期借贷成本飙升之际。欧元集团主席警告称，霍尔木兹海峡长期关闭将带来严重经济后果，强调重新开放该海峡是“重中之重”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/opening-strait-of-hormuz-is-of-utmost-importance-eurogroup-head.html" },
   { time: "20:00", tag: "geo", tagText: "地缘", text: "美国军事工业复合体正经历颠覆性变革，国防领域正在发生巨大且利润丰厚的转变。在颠覆时代，国防工业正经历深刻变革，带来丰厚利润。", source: "Financial Times", url: "https://www.ft.com/content/713d7483-0ca6-46ae-b287-c501b5d81644" },
+  { time: "19:36", tag: "ai", tagText: "AI", text: "数据显示，与人工智能相关的裁员并不一定能提振公司股价，这揭示了一个令人不安的现实：市场对AI驱动的效率提升反应复杂，投资者需谨慎看待此类消息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/ai-related-layoffs-a-boost-for-stocks-not-necessarily.html" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "英伟达即将公布的财报可能刺破期权泡沫。分析师警告，市场对AI芯片股的极端投机情绪和大量未平仓期权合约，若财报不及预期，可能引发剧烈波动，波及整个科技板块。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNU1RxaE8zbFFtOVRtNTY1YnBBVFI0SlYxeXRQb2YtQkxuRDJmQUJFYl93NVBnUzFJNmxDcFliZldxOHJxaklJa2JBaGNwMmpWYWdrZWVqR2hoZ3NpaVhXX0F3XzNrWnh5Z25rU010ZkhMRGs3UkU1Sml2N2p3c01MX09uVXJWRDM5?oc=5" },
   { time: "18:49", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基声称对莫斯科致命无人机袭击负责，称这是对俄罗斯轰炸基辅的“完全正当”报复。袭击加剧了俄乌冲突的升级风险，可能进一步扰动全球能源和粮食市场。", source: "Financial Times", url: "https://www.ft.com/content/c7e98e0b-90c4-4602-86d7-5a99b1b0b7ab" },
   { time: "18:11", tag: "crypto", tagText: "加密", text: "XRP在某一关键指标上大幅领先以太坊和Solana，但分析师质疑这一优势能否转化为持有者的实际收益。市场关注XRP在支付领域的采用进展，但整体加密市场情绪仍受宏观利率环境影响。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMGVOaF9FMTFzMTZUdnRBWFFnZkhwR3pEYXYydHlzbWxDY3RqZTl2eklOczFRczBRZnk1N1RsTGI5aUFEMlgzalJ6UmtFQVVIQXJseWhJcDhNTGgzTmdldnBFN0VfWVV1SDRjdVNIOWhhbWF2aUdQUU9LelktMUxBdGVGclVKMjdqZDFGREg3WlE0OGU2YzNv?oc=5" },
@@ -1646,14 +1649,15 @@ const breakingNews = [
   { time: "12:00", tag: "tech", tagText: "科技", text: "中国数据中心公司DayOne计划利用新加坡旨在吸引亚洲上市的新规，在新加坡和美国进行双重IPO，目标筹资50亿美元。", source: "Financial Times", url: "https://www.ft.com/content/602baf9f-9e66-428e-baec-6c2850d5fad5" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "中国两轮电动车企业雅迪计划在匈牙利建厂，借助电动踏板车在亚洲和南美日益增长的需求，进军欧洲市场。", source: "Financial Times", url: "https://www.ft.com/content/bb0341b1-e808-45b4-b5f9-c9b88c04d2ae" },
   { time: "11:17", tag: "geo", tagText: "地缘", text: "特朗普支持的挑战者在初选中击败路易斯安那州共和党参议员比尔·卡西迪，后者因投票支持弹劾特朗普而被特朗普称为“不忠”。这一结果进一步巩固了特朗普对共和党的控制，可能影响未来国会立法走向。", source: "Financial Times", url: "https://www.ft.com/content/e2aca448-a6db-4322-b14f-f461c827f347" },
-  { time: "06:59", tag: "geo", tagText: "地缘", text: "委内瑞拉公布石油法草案，允许能源部为每个项目单独设定税率。此举旨在吸引外资、增加产量，但可能引发对政策稳定性的担忧。", source: "Reuters", url: "https://finance.yahoo.com/sectors/energy/articles/venezuelas-draft-oil-law-lets-225931582.html" },
-  { time: "06:46", tag: "tech", tagText: "科技", text: "台积电减持Vanguard股份，以集中资源聚焦AI芯片核心业务。此举显示台积电正进一步将战略重心转向人工智能领域。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOMXlZNXVxT19ycTlzSTdJRlVhWDZpWGdVcVg3cTJLUXY1LXkwSU1iUXI4Z2V5TjVRVDhkV2Y2UnBYYlZiNVNEcThpX1JpUnlaZTlxaVB0NVcwd3ZPNXVvbWRpYUVkV1gwMWhpb09GaG1hdGdPYUQ1S3YxU0R2Ni1kUUpHb3FjRC1pcDFjSmlFcHdqeFhtTGRwS1dOanpOWVhSY2xJY2NyQlJQU2ozbU9VR1RPVzEycEEydkFEV19jYUVIVVFrMTdnb3NCaEVfRWtnYnpDaGxUNzMzdkRxSlI0UnNtLUtvTkVVd2fSAe8BQVVfeXFMUGhid0U3c3JXOXl3eUwxdko3U195Y193cEsyUm9hRl9jWjA1Vmd4bjh4QWExOHRLUE1wMEFZaFY5U3UxTy1mSWJzbUNjSHNqdlgwWDNxbW9IR0dDTTh6bVdsVzNianpCYzhmRVFWSUprYi15cHY4M2Vza3NfaWtvMHpDRkRlQWk5MFlaVVBBN2pxZ3JQM2xma0QzX0t4S0J6ZTl6ZDdKLWVmU2ZFQUcxczF4NmhwMXBCd2ZrVXZvQWVGSDdEM1RIQXFSSm0tbndzVnRYOHd5TkZCQk9BSGppOFRPdkxFMXY1SHcwVGlnazA?oc=5" },
-  { time: "06:23", tag: "tech", tagText: "科技", text: "凯西·伍德旗下ARK基金抛售4060万美元热门半导体股票。此举可能反映其对半导体板块估值或短期前景的谨慎态度。", source: "thestreet.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYi1La0FRWWE3SEZQblliZWxfVFZ4cVlRbUpEaURwSlFDRnIzdktxcXJid3ZtWXNQalNOUy1NLXdRSkRWR2x2c0xFcUhEWEVSdlVjbE9JX1l0NTd3ckpoQjJrYkxpelM2cTBmcEJOblJ1ckpIbUZ2QlllMDg4QlVSbEUwcndhR3Fidjd0TnFPcUdJWGhSRjJoTUgwRi00Zl8zUi0tSy1aMU5HUGRYeUFicUtB?oc=5" },
 ];
-const breakingDate = "2026年5月17日 23:08 CST";
+const breakingDate = "2026年5月18日 01:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
+  { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
+  { time: "00:32", tag: "ai", tagText: "AI", text: "TechCrunch报道称，AI技能军备竞赛正向汽车行业蔓延。随着自动驾驶和智能座舱技术发展，汽车行业对AI人才的需求急剧上升，成为新的竞争焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/17/techcrunch-mobility-the-ai-skills-arms-race-is-coming-for-automotive/" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
   { time: "22:01", tag: "ai", tagText: "AI", text: "达拉斯研究人员利用人工智能更早检测心力衰竭迹象。该技术通过分析医疗数据，有望在症状出现前识别心脏问题，为早期干预和治疗提供可能。", source: "Dallas Express", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSVAxWXp3QnRVT0Z0ZlJQc21UQ3BzVWxfdTRxdVZYOU9Ec1EzSGo5Y1hQU3kwZFdjNjhjSXc1UUdvUVlCdU5lQ19Hd1VYNGFDMjlLUk9nUXpMNHpGWmpUemYzNjc3NlBLeGl2bGZfTTc0Tzh0Um9QSXB0X20zbXRWeGgwY0k4T2R2dENHajVUZUNyTDFvRmwyRkxDcFh1VFVIMUlUeENYUUhDWWt4aUc4RHBn?oc=5" },
   { time: "22:01", tag: "geo", tagText: "地缘", text: "分析师预测英伟达将在中国市场卷土重来，称其为“AI教父”，并认为这将引发新一轮全球科技热潮。尽管中美科技关系紧张，市场仍对英伟达在华业务前景持乐观态度。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNX2lLcDdnWTdjdXNKa3kyTHlIMFNQU2huYmJSb1B0R1Jzc3ZBdFBFdVBwMXE3OU1JNTQ0TVBxdEVQVGpHUzJIalVBclVvb2Y1TGZISktOMDV0eURfT3QySVFXWXAwSW1wMHdZREVWNHF3ZkVFRkZPVzBjMF85YlJWLXhyVTQ4dFQ4NVk0MW1LVGZzSXczZy1YZ2JGTWRGMEdFNmxLNFlJU2hfT19jYWZMTWpRMTBfSFJudFNUYUFUVnh6c3U5ZDJ2WW43WnR5OXNSa21iaW5WYWJoYTFNVWtfZ1FJODNRSVBoc0ZSVXVucW1BcVM4N2RGNQ?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
   { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
   { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
-  { time: "02:21", tag: "ai", tagText: "AI", text: "OpenAI再次进行高管重组，总裁Greg Brockman正式负责所有产品事务，旨在赢得AI代理之战。此次重组整合了部分业务部门，反映出OpenAI在AI代理领域的激烈竞争压力。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle" },
-  { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
-  { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
 ];
-const aiBreakingDate = "2026年5月17日 23:08 CST";
+const aiBreakingDate = "2026年5月18日 01:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
