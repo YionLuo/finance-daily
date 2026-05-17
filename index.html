@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月17日 19:19 CST"
+  date: "2026年5月17日 21:52 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:46", tag: "geo", tagText: "地缘", text: "北美最大通勤铁路系统——长岛铁路（LIRR）因五个工会罢工已连续关闭两天，周一早高峰即将来临，数百万通勤者面临出行混乱。罢工于周五午夜后开始，服务纽约市及东部郊区。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/long-island-rail-road-lirr-shutdown-union-strike.html" },
+  { time: "21:30", tag: "macro", tagText: "宏观", text: "尽管固定利率抵押贷款名义上不变，但不断上涨的房产税和飙升的房屋保险成本正推高房主每月实际还款额。许多房主面临托管账户短缺，导致月供意外增加。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/mortgage-escrow-shortages.html" },
+  { time: "20:14", tag: "macro", tagText: "宏观", text: "G7财长将于周一在巴黎召开会议，正值长期借贷成本飙升之际。欧元集团主席警告称，霍尔木兹海峡长期关闭将带来严重经济后果，强调重新开放该海峡是“重中之重”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/opening-strait-of-hormuz-is-of-utmost-importance-eurogroup-head.html" },
+  { time: "20:00", tag: "geo", tagText: "地缘", text: "美国军事工业复合体正经历颠覆性变革，国防领域正在发生巨大且利润丰厚的转变。在颠覆时代，国防工业正经历深刻变革，带来丰厚利润。", source: "Financial Times", url: "https://www.ft.com/content/713d7483-0ca6-46ae-b287-c501b5d81644" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "英伟达即将公布的财报可能刺破期权泡沫。分析师警告，市场对AI芯片股的极端投机情绪和大量未平仓期权合约，若财报不及预期，可能引发剧烈波动，波及整个科技板块。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNU1RxaE8zbFFtOVRtNTY1YnBBVFI0SlYxeXRQb2YtQkxuRDJmQUJFYl93NVBnUzFJNmxDcFliZldxOHJxaklJa2JBaGNwMmpWYWdrZWVqR2hoZ3NpaVhXX0F3XzNrWnh5Z25rU010ZkhMRGs3UkU1Sml2N2p3c01MX09uVXJWRDM5?oc=5" },
   { time: "18:49", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基声称对莫斯科致命无人机袭击负责，称这是对俄罗斯轰炸基辅的“完全正当”报复。袭击加剧了俄乌冲突的升级风险，可能进一步扰动全球能源和粮食市场。", source: "Financial Times", url: "https://www.ft.com/content/c7e98e0b-90c4-4602-86d7-5a99b1b0b7ab" },
   { time: "18:11", tag: "crypto", tagText: "加密", text: "XRP在某一关键指标上大幅领先以太坊和Solana，但分析师质疑这一优势能否转化为持有者的实际收益。市场关注XRP在支付领域的采用进展，但整体加密市场情绪仍受宏观利率环境影响。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMGVOaF9FMTFzMTZUdnRBWFFnZkhwR3pEYXYydHlzbWxDY3RqZTl2eklOczFRczBRZnk1N1RsTGI5aUFEMlgzalJ6UmtFQVVIQXJseWhJcDhNTGgzTmdldnBFN0VfWVV1SDRjdVNIOWhhbWF2aUdQUU9LelktMUxBdGVGclVKMjdqZDFGREg3WlE0OGU2YzNv?oc=5" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "06:23", tag: "tech", tagText: "科技", text: "凯西·伍德旗下ARK基金抛售4060万美元热门半导体股票。此举可能反映其对半导体板块估值或短期前景的谨慎态度。", source: "thestreet.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYi1La0FRWWE3SEZQblliZWxfVFZ4cVlRbUpEaURwSlFDRnIzdktxcXJid3ZtWXNQalNOUy1NLXdRSkRWR2x2c0xFcUhEWEVSdlVjbE9JX1l0NTd3ckpoQjJrYkxpelM2cTBmcEJOblJ1ckpIbUZ2QlllMDg4QlVSbEUwcndhR3Fidjd0TnFPcUdJWGhSRjJoTUgwRi00Zl8zUi0tSy1aMU5HUGRYeUFicUtB?oc=5" },
   { time: "06:07", tag: "ai", tagText: "AI", text: "通用动力公司与Kodiak AI合作，开发用于国防领域的自主地面车辆。此举标志着AI技术在军事应用领域的进一步拓展。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-corporation-gd-partners-180740343.html" },
   { time: "05:00", tag: "macro", tagText: "宏观", text: "4月通胀数据飙升，市场认为美联储主席凯文·沃什及美联储已无借口不加息。债券市场不会等待央行对抗通胀，加息压力骤增。", source: "MarketWatch", url: "https://www.marketwatch.com/story/warsh-faces-rate-pressure-as-aprils-inflation-spike-leaves-the-fed-with-zero-excuses-9610ddb6?mod=mw_rss_topstories" },
-  { time: "05:00", tag: "macro", tagText: "宏观", text: "分析指出，官方CPI掩盖了医疗、保险和能源领域两位数的价格涨幅，实际通胀对退休储蓄的冲击远超预期。3.8%的通胀率对退休组合的实际影响可能高达8%，传统退休策略正悄然侵蚀资产。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-3-8-inflation-actually-feels-like-an-8-hit-to-your-retirement-savings-9e0ba615?mod=mw_rss_topstories" },
-  { time: "05:00", tag: "ai", tagText: "AI", text: "报告显示，8000亿美元的人工智能支出正在推动GDP和股市上涨，但与此同时实际工资下降，美国消费者削减商品支出。AI投资热潮与普通民众经济感受出现明显背离。", source: "Moneywise", url: "https://finance.yahoo.com/economy/articles/800b-ai-spending-juicing-gdp-193500398.html" },
-  { time: "04:26", tag: "macro", tagText: "宏观", text: "分析指出，2年期美国国债收益率维持在4.09%高位，可能是压制比特币价格突破的关键因素。高利率环境持续对风险资产形成压力。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcXpZR1J2cG1pQlk1WUJEN2psQ2FpQmQyY3JmbDNFZmk0YkVSdDNwUTNuVkVLT1hOQWtPRGFPVTE4dlNFc19ZSkJFTXkwVVJqUjN2UXI2OW5SODdvbnZCNzIxUHFQdWRETFZFeUhRenZ5c2VOTllqSUhIaEl5Q1h0VnFPclRLMmkxcU1SV2N3VkNjZXBlUVNOY0pyM0xNVVVlUldwNFQ1c3g?oc=5" },
-  { time: "01:43", tag: "geo", tagText: "地缘", text: "中国商务部表示，中美已同意通过降低关税扩大农业贸易，这是特朗普与习近平峰会后释放的信号。此举有望缓解两国贸易紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/china-signals-tariff-cuts-advances-in-farm-market-access-after-trump-xi-summit.html" },
 ];
-const breakingDate = "2026年5月17日 19:19 CST";
+const breakingDate = "2026年5月17日 21:52 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
 ];
-const aiBreakingDate = "2026年5月17日 19:19 CST";
+const aiBreakingDate = "2026年5月17日 21:52 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
