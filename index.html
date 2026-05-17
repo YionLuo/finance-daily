@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月18日 05:05 CST"
+  date: "2026年5月18日 06:05 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:02", tag: "geo", tagText: "地缘", text: "白宫宣布，美国总统特朗普与中国国家主席习近平在峰会上同意设立“贸易委员会”，双方签署了旨在促进贸易战期间“稳定”的措施。此举被视为中美关系缓和的重要信号。", source: "Financial Times", url: "https://www.ft.com/content/aed42b42-0ca2-4104-848a-c8bca33fd837" },
+  { time: "05:00", tag: "macro", tagText: "宏观", text: "美国上游油气行业并购反弹，今年迄今交易额已达380亿美元。在能源价格波动和地缘政治不确定性背景下，行业整合加速，大型企业通过收购扩大资源储备。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/u-upstream-mergers-hit-38b-210000374.html" },
+  { time: "03:36", tag: "tech", tagText: "科技", text: "法国广告集团阳狮（Publicis）宣布以22亿美元收购美国数据公司LiveRamp，以深化其在人工智能营销领域的布局。该交易凸显了AI技术对广告和数据行业的颠覆性影响。", source: "Financial Times", url: "https://www.ft.com/content/fa33f1b3-ea8b-474b-9f75-a70536c8d2cb" },
   { time: "03:12", tag: "crypto", tagText: "加密", text: "意大利最大银行在2026年第一季度增加了比特币、以太坊和XRP的敞口，显示传统金融机构对加密资产的兴趣持续升温。", source: "CryptoProwl", url: "https://finance.yahoo.com/markets/crypto/articles/italy-largest-bank-adds-bitcoin-183100354.html" },
   { time: "03:10", tag: "ai", tagText: "AI", text: "AI能源需求催生新投资机会：GE Vernova、Bloom Energy等基础设施公司成为AI电网的新“守门人”，在科技巨头7000亿美元AI能源争夺战中脱颖而出，被视为“电力领域的英伟达”。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
   { time: "03:08", tag: "macro", tagText: "宏观", text: "市场分析人士警告，AI对就业市场的冲击加剧，传统3-6个月的应急储蓄已不足够，建议储备18个月的现金缓冲以应对潜在的失业风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/you-now-need-18-months-of-emergency-savings-because-of-how-much-ai-is-disrupting-the-workforce-86dbac97?mod=mw_rss_topstories" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "19:36", tag: "ai", tagText: "AI", text: "数据显示，与人工智能相关的裁员并不一定能提振公司股价，这揭示了一个令人不安的现实：市场对AI驱动的效率提升反应复杂，投资者需谨慎看待此类消息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/ai-related-layoffs-a-boost-for-stocks-not-necessarily.html" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "英伟达即将公布的财报可能刺破期权泡沫。分析师警告，市场对AI芯片股的极端投机情绪和大量未平仓期权合约，若财报不及预期，可能引发剧烈波动，波及整个科技板块。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNU1RxaE8zbFFtOVRtNTY1YnBBVFI0SlYxeXRQb2YtQkxuRDJmQUJFYl93NVBnUzFJNmxDcFliZldxOHJxaklJa2JBaGNwMmpWYWdrZWVqR2hoZ3NpaVhXX0F3XzNrWnh5Z25rU010ZkhMRGs3UkU1Sml2N2p3c01MX09uVXJWRDM5?oc=5" },
   { time: "18:49", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基声称对莫斯科致命无人机袭击负责，称这是对俄罗斯轰炸基辅的“完全正当”报复。袭击加剧了俄乌冲突的升级风险，可能进一步扰动全球能源和粮食市场。", source: "Financial Times", url: "https://www.ft.com/content/c7e98e0b-90c4-4602-86d7-5a99b1b0b7ab" },
-  { time: "18:11", tag: "crypto", tagText: "加密", text: "XRP在某一关键指标上大幅领先以太坊和Solana，但分析师质疑这一优势能否转化为持有者的实际收益。市场关注XRP在支付领域的采用进展，但整体加密市场情绪仍受宏观利率环境影响。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMGVOaF9FMTFzMTZUdnRBWFFnZkhwR3pEYXYydHlzbWxDY3RqZTl2eklOczFRczBRZnk1N1RsTGI5aUFEMlgzalJ6UmtFQVVIQXJseWhJcDhNTGgzTmdldnBFN0VfWVV1SDRjdVNIOWhhbWF2aUdQUU9LelktMUxBdGVGclVKMjdqZDFGREg3WlE0OGU2YzNv?oc=5" },
-  { time: "13:27", tag: "tech", tagText: "科技", text: "小鹏汽车（XPEV）在创纪录利润率后发布谨慎的第一季度展望，引发市场对其投资叙事的质疑。投资者关注其未来增长前景是否面临压力。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUkJfaFZjc3VUdnJTUHJRTTVSN2xGaTBWMFBRLXdET0VlcE45TENQNUlIN3NwbjBVUlM1Y3E1YlBpa1BranU4Z3JZS3NxZ2VzcnBac0QxSVlCSTRnUUJ6RTNUUmg1UXdfSVRLbkJTZXpjNFdmdEZ5ZEEtSUx6ZkJ0YkVhM1FYWnFTVmY5LUFMXzB6TnBHSGlvSHB3SU12QkZmNjVtVkZhNDltWmNoOHNhcG0xOGtLVzlOYWRUeHVWMjNrMlnSAcgBQVVfeXFMTXBrOFdJRlZ6aDQ0dmNqNVFxYWNISUw2bFJaWnlLWU1fSTQxR2FyeE1fQnRjSEdrUWhFNk9mRkJMVm5iZTBHVnpENnNlVXZLZzRENkFpdWZ2X2NiZVRfLXFZVnRiRlpCd256cFVhanFXX0RpSFdUekZrMmlOb2dFcWJFVUxGdFBnV19Nb3VMenM2bUtqN0VBTXVvYVZEWDY3bWJKOGJYUFc5MEliaWh6Yl83RE9LNzRpdDZ0ZllPYzNYM0xicU9VYy0?oc=5" },
-  { time: "13:09", tag: "tech", tagText: "科技", text: "特斯拉更新Model Y定价，预计将对股价产生影响。市场关注此举是否反映需求变化或竞争压力，投资者需警惕短期波动。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTFlJYVZ0U0xxZlN6bkRYdUI0S3lmMjBtY2VreVdYeXVvNEdYM0pwdURwWVVYS0s4dmNwX0N5cDNwMjRXa1ItWXV1QTViYUREODhHMWo2aWlWRmtNalA5OFJnak1QN1NtSnBxdlhPYWtMQWZPUGpnblJnVXJMcG4zUkJDZTM2UFJGbDRqV1puclo5VTZtOWZmdGo1dw?oc=5" },
 ];
-const breakingDate = "2026年5月18日 05:05 CST";
+const breakingDate = "2026年5月18日 06:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "16:24", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用人工智能优化航班调度和空域管理，旨在提升欧洲航空系统的效率和安全性。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNWFQZjI2M0tUVkRuUDNVRUZyS2VSb1BvMFcyeF9hRm9mbmdfN1BqMHV1NU1EVWkycEtLYmlnSnpSMW02cHFBODBiV1NINEhmSS1PNGIzdm82ckNMVmFEUU9UWVlZcDdOLVpSc19FNTMxelhjcUc1YWI1Y1EzcE11Vkw5WFRHU0ppZFRtcV83dkxzUm1UaVBmVmlnRnFURWo1bzk1NzNQLWZ2ZERrNS0xMkJyTTI3SEM0UlNpLXVFc0JqdW50b1ZmRkVjOW8?oc=5" },
   { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月18日 05:05 CST";
+const aiBreakingDate = "2026年5月18日 06:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
