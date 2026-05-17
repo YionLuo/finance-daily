@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月17日 06:58 CST"
+  date: "2026年5月17日 08:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:59", tag: "geo", tagText: "地缘", text: "委内瑞拉公布石油法草案，允许能源部为每个项目单独设定税率。此举旨在吸引外资、增加产量，但可能引发对政策稳定性的担忧。", source: "Reuters", url: "https://finance.yahoo.com/sectors/energy/articles/venezuelas-draft-oil-law-lets-225931582.html" },
+  { time: "06:46", tag: "tech", tagText: "科技", text: "台积电减持Vanguard股份，以集中资源聚焦AI芯片核心业务。此举显示台积电正进一步将战略重心转向人工智能领域。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOMXlZNXVxT19ycTlzSTdJRlVhWDZpWGdVcVg3cTJLUXY1LXkwSU1iUXI4Z2V5TjVRVDhkV2Y2UnBYYlZiNVNEcThpX1JpUnlaZTlxaVB0NVcwd3ZPNXVvbWRpYUVkV1gwMWhpb09GaG1hdGdPYUQ1S3YxU0R2Ni1kUUpHb3FjRC1pcDFjSmlFcHdqeFhtTGRwS1dOanpOWVhSY2xJY2NyQlJQU2ozbU9VR1RPVzEycEEydkFEV19jYUVIVVFrMTdnb3NCaEVfRWtnYnpDaGxUNzMzdkRxSlI0UnNtLUtvTkVVd2fSAe8BQVVfeXFMUGhid0U3c3JXOXl3eUwxdko3U195Y193cEsyUm9hRl9jWjA1Vmd4bjh4QWExOHRLUE1wMEFZaFY5U3UxTy1mSWJzbUNjSHNqdlgwWDNxbW9IR0dDTTh6bVdsVzNianpCYzhmRVFWSUprYi15cHY4M2Vza3NfaWtvMHpDRkRlQWk5MFlaVVBBN2pxZ3JQM2xma0QzX0t4S0J6ZTl6ZDdKLWVmU2ZFQUcxczF4NmhwMXBCd2ZrVXZvQWVGSDdEM1RIQXFSSm0tbndzVnRYOHd5TkZCQk9BSGppOFRPdkxFMXY1SHcwVGlnazA?oc=5" },
+  { time: "06:23", tag: "tech", tagText: "科技", text: "凯西·伍德旗下ARK基金抛售4060万美元热门半导体股票。此举可能反映其对半导体板块估值或短期前景的谨慎态度。", source: "thestreet.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYi1La0FRWWE3SEZQblliZWxfVFZ4cVlRbUpEaURwSlFDRnIzdktxcXJid3ZtWXNQalNOUy1NLXdRSkRWR2x2c0xFcUhEWEVSdlVjbE9JX1l0NTd3ckpoQjJrYkxpelM2cTBmcEJOblJ1ckpIbUZ2QlllMDg4QlVSbEUwcndhR3Fidjd0TnFPcUdJWGhSRjJoTUgwRi00Zl8zUi0tSy1aMU5HUGRYeUFicUtB?oc=5" },
+  { time: "06:07", tag: "ai", tagText: "AI", text: "通用动力公司与Kodiak AI合作，开发用于国防领域的自主地面车辆。此举标志着AI技术在军事应用领域的进一步拓展。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-corporation-gd-partners-180740343.html" },
   { time: "05:00", tag: "macro", tagText: "宏观", text: "4月通胀数据飙升，市场认为美联储主席凯文·沃什及美联储已无借口不加息。债券市场不会等待央行对抗通胀，加息压力骤增。", source: "MarketWatch", url: "https://www.marketwatch.com/story/warsh-faces-rate-pressure-as-aprils-inflation-spike-leaves-the-fed-with-zero-excuses-9610ddb6?mod=mw_rss_topstories" },
   { time: "05:00", tag: "macro", tagText: "宏观", text: "分析指出，官方CPI掩盖了医疗、保险和能源领域两位数的价格涨幅，实际通胀对退休储蓄的冲击远超预期。3.8%的通胀率对退休组合的实际影响可能高达8%，传统退休策略正悄然侵蚀资产。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-3-8-inflation-actually-feels-like-an-8-hit-to-your-retirement-savings-9e0ba615?mod=mw_rss_topstories" },
   { time: "05:00", tag: "ai", tagText: "AI", text: "报告显示，8000亿美元的人工智能支出正在推动GDP和股市上涨，但与此同时实际工资下降，美国消费者削减商品支出。AI投资热潮与普通民众经济感受出现明显背离。", source: "Moneywise", url: "https://finance.yahoo.com/economy/articles/800b-ai-spending-juicing-gdp-193500398.html" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "19:54", tag: "geo", tagText: "地缘", text: "以色列空袭击毙了策划10月7日袭击的最后一名哈马斯高级领导人伊兹·丁·哈达德，给脆弱的停火协议带来更大压力。此举可能进一步加剧中东紧张局势，影响全球能源和金融市场。", source: "Financial Times", url: "https://www.ft.com/content/e36df354-4d50-4399-b9dd-5beda50688b9" },
   { time: "19:00", tag: "geo", tagText: "地缘", text: "特朗普加大对古巴施压，利用威胁和利诱手段迫使这个燃料短缺的共产主义岛国开放经济。", source: "Financial Times", url: "https://www.ft.com/content/fb62a4c4-6615-434e-a259-bc813a27ac6a" },
   { time: "17:54", tag: "crypto", tagText: "加密", text: "比特币跌至两周低点，山寨币大幅下挫。此前Strategy公司（原MicroStrategy）悄然确认计划出售比特币，引发市场恐慌性抛售。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOanVMbndjbkZNRFlncUxhVWZTNFVmMFNKdnlaSlh3SGNENXZJb24wRXNXemZjVm1TdWJfNTE4RlJDYVpybXAzUHJ6RzR2blFwNWRMNWhCODZDZ2lwV2xkT05wUW12YTQwcEp4MTNfbG8yX0N6NHRoX2R4TzNuaFNCNXdfWVc5YV9VV0FOT3pWeWpaam9GaWNEenVJNUYtVUgtMlpMR0Rlai1QcUMxaEtyR18yd3NOSmg0dlNWWU5LQ2NZdzJXZnFHeWJxTGRuLVpGTWs1ek9lT2RTdw?oc=5" },
-  { time: "17:54", tag: "tech", tagText: "科技", text: "亿万富翁对冲基金经理比尔·阿克曼旗下Pershing Square Capital Management在第一季度市场抛售期间建仓微软股票，押注人工智能和云计算的增长前景。", source: "CNBC", url: "https://www.cnbc.com/2026/05/15/bill-ackman-says-he-built-microsoft-position-in-first-quarter.html" },
-  { time: "17:26", tag: "geo", tagText: "地缘", text: "俄罗斯总统普京将于5月19日至20日访问北京，与中国国家主席习近平会晤。此行紧随美国总统特朗普访华之后，凸显中俄在美中关系紧张背景下的战略协调。", source: "CNBC", url: "https://www.cnbc.com/2026/05/16/russias-putin-to-meet-chinas-xi-in-beijing-from-may-19-20.html" },
-  { time: "15:55", tag: "macro", tagText: "宏观", text: "标普500和纳斯达克指数期货小幅回落，但SPY和QQQ市场情绪仍保持看涨。投资者关注美光(MU)、Cerebras(CBRS)等个股，英伟达和沃尔玛即将公布的财报成为市场焦点。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxPd2Q0YmpkOFM2U2dqbmpDRVk4emtfLUVrajNVdFVTTFBSOWxRdHV6a0cxLXFEUWxIYTlaa3BuSjFzZV9YMVB0SFpzM29DTmgzY2xDOEdlQmk3bnp1ekFWMnpQT1lESDJsdnFyd3ZWM2pRa3NjV3VfcWs5UFkxcnVEVWl1aHJTNTZ5c1YxRVBxajlMMFFIcnR2T1dWbmhOcGZxZUsyR1lpbGJZdmtUbWJqOVJKQkRnVnlhcnhHWlpfaVNDY2xSNWgzZmxuRTc?oc=5" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "北约秘书长马克·吕特下周将在布鲁塞尔与欧洲主要防务集团会面，敦促其加大投资和生产，以应对持续的地缘政治紧张局势和乌克兰战争带来的武器需求。此举旨在推动欧洲军工产业加速扩产。", source: "International homepage", url: "https://www.ft.com/content/d6ec23af-9b0e-49cd-b53d-a8a1786d5f5e" },
 ];
-const breakingDate = "2026年5月17日 06:58 CST";
+const breakingDate = "2026年5月17日 08:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:46", tag: "ai", tagText: "AI", text: "知名财经评论员Cramer支持英伟达在中国销售AI芯片，认为无论政策结果如何，英伟达股票都能继续上涨。这一表态正值市场对中美科技合作前景高度关注之际。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUDRxaFR1TXhFeHNqa1NoZEhBX0gwRTlwcnRmcDN5Y1J2S0FXR0x2WWc3aVlxLWJiTjh3WE5ZQkQ5d2doOXQ3ZUVwS0EwRHgzd0wzamZWUmhTRWtBZFpoX2VWRHhxc2w2V2tqMEJuTWo0dng1QVk1UmF1SEVDRTRSdV9rdWtsZDdqWF9SS0poUUtzLXpOd3lRTmNudmdTMUE1bHZxb2dvWE9OdXhTdnZsSmJ2ZUs1VVp5Mm80?oc=5" },
   { time: "04:38", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv宣布新规：将禁止上传充斥AI生成低质量内容（AI slop）的研究者。平台将对存在“无可辩驳证据”表明作者滥用AI生成论文的行为采取封禁措施，以遏制AI垃圾论文泛滥，维护学术质量。", source: "The Verge", url: "https://www.theverge.com/science/931766/arxiv-ai-slop-ban-researchers" },
   { time: "03:57", tag: "ai", tagText: "AI", text: "Richard Socher创立新公司，获6.5亿美元融资，目标是打造能够自我研究和改进的AI系统，并承诺将推出实际产品。这一方向引发了关于AI自主进化能力的广泛讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" },
   { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "16:24", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用人工智能优化航班调度和空域管理，旨在提升欧洲航空系统的效率和安全性。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNWFQZjI2M0tUVkRuUDNVRUZyS2VSb1BvMFcyeF9hRm9mbmdfN1BqMHV1NU1EVWkycEtLYmlnSnpSMW02cHFBODBiV1NINEhmSS1PNGIzdm82ckNMVmFEUU9UWVlZcDdOLVpSc19FNTMxelhjcUc1YWI1Y1EzcE11Vkw5WFRHU0ppZFRtcV83dkxzUm1UaVBmVmlnRnFURWo1bzk1NzNQLWZ2ZERrNS0xMkJyTTI3SEM0UlNpLXVFc0JqdW50b1ZmRkVjOW8?oc=5" },
   { time: "16:09", tag: "ai", tagText: "AI", text: "英伟达2026年5月财报前瞻：AI芯片巨头面临市场高预期压力。分析师关注其数据中心业务增长及下一代芯片路线图，市场对业绩指引高度敏感。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMibEFVX3lxTFBpeWxKaFFuTV9yRmFINExrLUpBRk1uU1ltMFF0NG1vTmFUSGtrWnBKMkNBX0ozYUdXbHBkSVc4X0hySHVQMTFFaWtBOVA4U0JydXMzRnQ3N2pzQ2hFZzZpR042QmhwMmI5ODlzNQ?oc=5" },
   { time: "14:30", tag: "geo", tagText: "地缘", text: "美国批准英伟达H200 AI芯片向中国公司销售，但交付仍处于停滞状态。尽管获得许可，实际出货因物流和合规问题受阻，凸显中美科技贸易的复杂局面。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbUNSdmdFcEhyNjRQcUxsY3RsbDJkZ3c5eGpFS3Q4by1uRHVpYVNFOE1Hb3lmTWpmZEFoMU1uS19KVGIzbUV4dDZ2eUhEcTd0VnRIUzkwdXd6V3YtMmd4OFgtb2hpUGtkRnU1Q3E1TjRaRm5hTlF1N3VROUlsVWgwRk9pdTBLS2JqTG5TMEtkY3Z6RkFCcW1pUVI1dWFOUGt6TFE3NklzajdmYXZCRDVCMFN4RFluTjJfQWtyT0JSc2RYNGd5eXZOQlByOEd6cXYwUDBzS1ZuQzRDTnBTcVBrOdIB5gFBVV95cUxNQ2c2d1I3bDFySkszR3F6TnB3Nl9YekhhYjRQR0JGZE1aNFNyME1kVDJOX3FiWDFyVWlZM3BwNXBtSjBxcHJMVUo3S25hV1BWR2M3OWxyX0dGQ0hPcjlxYmNDWlNtYnhlMlZJVFA4d0FuX1piZVZSSDhjcWFKR0JrUFp4OHo5QnVCREJQeWFybVV5Y0lJMnhqRGdNNXVaX3UzdkVOYXBoN2ZWOHYxbnBxaEQ2UHBYU3FKNUJka25uQm5nNU40cElIYmxOV1NKT25OQU1kbE5VOEVHRU51TTNodGxMVHg2dw?oc=5" },
-  { time: "07:46", tag: "ai", tagText: "AI", text: "知名财经评论员Cramer支持英伟达在中国销售AI芯片，认为无论政策结果如何，英伟达股票都能继续上涨。这一表态正值市场对中美科技合作前景高度关注之际。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUDRxaFR1TXhFeHNqa1NoZEhBX0gwRTlwcnRmcDN5Y1J2S0FXR0x2WWc3aVlxLWJiTjh3WE5ZQkQ5d2doOXQ3ZUVwS0EwRHgzd0wzamZWUmhTRWtBZFpoX2VWRHhxc2w2V2tqMEJuTWo0dng1QVk1UmF1SEVDRTRSdV9rdWtsZDdqWF9SS0poUUtzLXpOd3lRTmNudmdTMUE1bHZxb2dvWE9OdXhTdnZsSmJ2ZUs1VVp5Mm80?oc=5" },
 ];
-const aiBreakingDate = "2026年5月17日 06:58 CST";
+const aiBreakingDate = "2026年5月17日 08:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
