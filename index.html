@@ -1618,17 +1618,23 @@
 const fearGreedData = {
   score: 62.91,
   rating: "greed",
-  timestamp: "2026-05-15T23:59:54+00:00",
-  previousClose: 66.14,
-  previous1Week: 66.69,
-  previous1Month: 56.2,
-  previous1Year: 69.14,
-  date: "2026年5月18日 12:25 CST"
+  timestamp: "2026-05-18T08:32:01+00:00",
+  previousClose: 62.91,
+  previous1Week: 65.4,
+  previous1Month: 68.57,
+  previous1Year: 70.6,
+  date: "2026年5月18日 16:51 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:51", tag: "macro", tagText: "宏观", text: "全球债券市场遭遇抛售潮，通胀担忧加剧。美国及日本国债收益率攀升，能源价格飙升引发投资者对通胀重燃的恐慌。英国准首相安迪·伯纳姆试图安抚市场，英国国债暂稳。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/treasury-yields-inflation-bond-rout-oil.html" },
+  { time: "16:08", tag: "geo", tagText: "地缘", text: "美伊紧张局势升级，特朗普称对伊朗“时间紧迫”，油价应声上涨。美股期货下跌，道指、标普500、纳斯达克期货均下滑。市场关注英伟达财报及零售业数据。", source: "Investor's Business Daily", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxQS3J0eUJwX0hfY1RyVkF1aFZVSFdlckgyNGZmZjUxWVNjRjgzWnYtTDNDZVo3ZFlnVEQ4TDJBV2tJdXVVcjUyd1lrN01OVTFjbHdQdmxsT3hRU2Nrb19oTHFJaHB0LUZBQjVRZjlUYWhNVHJCdHdmZk1NZ1RFX3NGQk00al9NSjZSOWJsX1ZUbE55aWdUaDRFZzBLUGhHcG9ZY0hkYlo1Tm8xd2dUb0Vscl81V0x0V19PVXhKbjRab2VQYUZCTVNF?oc=5" },
+  { time: "15:45", tag: "crypto", tagText: "加密", text: "加密货币市场大幅下挫，比特币跌至两周低点76,700美元，以太坊、XRP、Solana等主流币种同步下跌。过去24小时全网爆仓金额达7亿美元，ETF资金流出创2月以来最差周度表现。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxQYmYxUUlWU3lMZmhwaHlSLXd3Smt1YXRwVXFrVHN5bmlpaTVtTFZRdUg2aTNLMWRycmlILXNCVVBJY05DdWJVMkRZaFNwdnhzQzV1VElLMXpKVmR4MnFncmM1U2g3eWZSNXRmZTBtSXRjUXlYejVmSEQxcVE2YVo5RDBWSk1ud0hTVHZnY2E1YklvZ3N5Y3F0ak5rSWdvQQ?oc=5" },
+  { time: "15:38", tag: "geo", tagText: "地缘", text: "三星电子面临4.7万名工人罢工威胁，韩国总统施压要求达成劳资协议。政府警告称，罢工可能给经济造成数十亿美元损失。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/samsung-strike-lee-jae-myung-labor-deal.html" },
+  { time: "15:00", tag: "macro", tagText: "宏观", text: "高能源价格可能阻碍欧洲在人工智能领域与美中竞争。欧洲各地能源成本差异巨大，导致在吸引AI投资方面出现明显的赢家和输家。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/europe-ai-energy-electricity-costs-data-centers-china-us.html" },
+  { time: "15:00", tag: "macro", tagText: "宏观", text: "英国小型贷款机构MFS倒闭的持续影响引发市场担忧，美国大型信贷公司感到不安。市场担心复杂信贷市场的问题可能构成更广泛的系统性风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/mfs-private-credit-insolvency-banks-failure-collapse-barclays-mortgage.html" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "中国4月经济数据全面不及预期，工业增加值和零售销售增速放缓，后者创2022年以来最低。伊朗危机打击消费者信心，中国警告全球“严峻”形势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/china-april-retail-sales-industrial-output-investment-unemployment-iran-war.html" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "德国就业市场急剧恶化，失业人数15年来首次突破300万。这个曾经欧元区最强劲的劳动力市场，正从劳动力短缺转向招聘冻结。", source: "Financial Times", url: "https://www.ft.com/content/2a6c1cb9-6c11-41c8-a8ea-a367b8799126" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "西班牙安达卢西亚地区选举中，右翼民粹政党Vox成为关键造王者，保守派人民党需其支持才能执政。首相桑切斯遭遇重大挫败。", source: "Financial Times", url: "https://www.ft.com/content/be7186e3-4df7-49b8-99bd-d06b1a5383ac" },
@@ -1643,19 +1649,15 @@ const breakingNews = [
   { time: "01:43", tag: "geo", tagText: "地缘", text: "特朗普警告伊朗“抓紧行动”，否则“将一无所有”。此前特朗普曾威胁打击伊朗民用基础设施，此举可能构成战争罪。同时，伊朗能源危机进入新阶段，夏季高峰临近，石油库存告急，紧急措施蔓延。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/trump-warns-iran-wont-be-anything-left.html" },
   { time: "01:00", tag: "macro", tagText: "宏观", text: "英国《金融时报》分析指出，伊朗战争导致的能源供应紧张将进一步恶化，能源危机将持续加深。全球市场面临油价飙升和供应链中断风险。", source: "Financial Times", url: "https://www.ft.com/content/08665686-f673-46ca-9dba-fd34e1546e7c" },
   { time: "23:06", tag: "geo", tagText: "地缘", text: "阿联酋报告称，一架无人机袭击了巴拉卡核电站，击中其外围的发电机并引发火灾。当局称未造成人员伤亡，辐射水平正常。此次袭击发生在伊朗战争僵局持续的背景下，加剧了中东地区的紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/abu-dhabi-says-drone-strike-caused-fire-at-nuclear-power-plant.html" },
-  { time: "22:52", tag: "geo", tagText: "地缘", text: "世界卫生组织宣布，刚果和乌干达爆发的罕见埃博拉病毒株疫情为国际关注的突发公共卫生事件。该疫情已导致约80人死亡，引发全球卫生警报。", source: "MarketWatch", url: "https://www.marketwatch.com/story/health-officials-declare-ebola-outbreak-a-public-health-emergency-36fb9a91?mod=mw_rss_topstories" },
-  { time: "22:00", tag: "macro", tagText: "宏观", text: "沃尔玛和塔吉特即将公布的财报将揭示伊朗战争如何改变消费者购物习惯。沃尔玛表示，当汽油价格达到每加仑4.5至5美元时，顾客开始削减支出。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/walmart-and-target-are-about-to-show-just-how-much-shopping-habits-have-changed-due-to-the-iran-war-105b34d9?mod=mw_rss_topstories" },
-  { time: "21:46", tag: "geo", tagText: "地缘", text: "北美最大通勤铁路系统——长岛铁路（LIRR）因五个工会罢工已连续关闭两天，周一早高峰即将来临，数百万通勤者面临出行混乱。罢工于周五午夜后开始，服务纽约市及东部郊区。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/long-island-rail-road-lirr-shutdown-union-strike.html" },
-  { time: "21:30", tag: "macro", tagText: "宏观", text: "尽管固定利率抵押贷款名义上不变，但不断上涨的房产税和飙升的房屋保险成本正推高房主每月实际还款额。许多房主面临托管账户短缺，导致月供意外增加。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/mortgage-escrow-shortages.html" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "英伟达财报和谷歌开发者大会将成为本周市场焦点，AI热潮持续主导市场情绪。同时，美光预计将成为标普500指数盈利增长的第二大贡献者，仅次于英伟达，但英伟达的影响力可能减弱。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/3-big-things-were-watching-in-the-stock-market-for-the-week-ahead.html" },
-  { time: "20:14", tag: "macro", tagText: "宏观", text: "G7财长将于周一在巴黎召开会议，正值长期借贷成本飙升之际。欧元集团主席警告称，霍尔木兹海峡长期关闭将带来严重经济后果，强调重新开放该海峡是“重中之重”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/opening-strait-of-hormuz-is-of-utmost-importance-eurogroup-head.html" },
 ];
-const breakingDate = "2026年5月18日 12:25 CST";
+const breakingDate = "2026年5月18日 16:51 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:21", tag: "ai", tagText: "AI", text: "哈萨克斯坦青少年凭借AI癌症检测突破性研究获得美国奖项。该成果利用人工智能技术提升癌症早期检测的准确率，展现了年轻一代在AI医疗领域的创新潜力。", source: "Caspianpost.com", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTlN6V0ttX1VITXI2YjdDZDRoYnBXaWRDcW5TcHI0NFIxUUFpWkpUZXBpSTk4T0tiWEMxaENSSEdFSnQzZ0lrSDhoVVhoNFZDYVFvUEhnY05pTHJhZzR2VnJZbzRmT25HNDY3TTRSVkhGME96NnJxY3p6TUJ2UXhoYWY4a2tGcWluR1dkRFZiUHNwYy1wb24xc0M0RWhfM2tjeWtyLTUxanlwdw?oc=5" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "中美峰会未提及半导体出口管制议题，市场关注后续科技政策走向。此次峰会未将芯片限制作为核心讨论内容，或暗示两国在科技博弈上暂时降温，但不确定性依然存在。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQUXYyZ2tRdkdGMjNoTnltUHNHOWNobkJTZnoyQVlId1Fnc1ZHV05JLUtUdk9wdXVFQjhvMkhBcm13QUJTcl9LdUlMQ2l1MDI2Vms5a0c2SS1JeHRXd0pwSGVUWkJUY1VUOVBGTnJiV1dNVW0ySF9CVnA3TmJzZ3JXY2ZYVVFiTHllTW4wS2tBQVN6YjBPb0UtZEt1VjNhYmpqd094M1F0R0JRckt0RWJaVUFTY3IxYl9UQU9mS0ZScVNtcUVPMUY4YktzeHlMMURCQUdoU0VWTzIyX2c?oc=5" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "AI市场屏息以待英伟达财报，作为行业风向标，其业绩将直接影响AI芯片股走势。分析师正密切关注英伟达对下一代芯片需求及数据中心业务的展望。", source: "The Daily Upside", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPSE1OSUxBMVJGU0JCLVI2cGx1WDhRbHpfa1QxdEVyWTdVUU1KR21LLTJOVUU3eVlGOGVlRlBnWkNoZ1BsWEgzTHBMQS1xTVh2eTM0OTdDNFNwQ2RvNXVwY3hiLWFXMWtKd21fclhWUEtrZ0pvWk51OUwwd2ZMeTlIODlLSEc3cWZ1SmhPQmY0T1NyM250MW1Kb1dJZGhLMWw1cnZlZnllQTVmTzcwRnZrV25LWkdpQlBWeXpobTZ3cUdOY2VrYnpybE5yaDVpM3RGNFBiRg?oc=5" },
+  { time: "11:47", tag: "ai", tagText: "AI", text: "印度裔高管Krishna Rao出任Anthropic首席财务官，主导数十亿美元规模的AI融资与算力交易。作为AI领域最受关注的初创公司之一，Anthropic正加速资本运作以支撑其大模型研发和商业化扩张。", source: "Storyboard18", url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPOGhBMUx5U1lZX2FjeHhVaHVUM1hSaEVqeDFTR3QwWmJ6UTNyTW41MVlDb3NKa25FTWd4N3g0T0VHZGRHNmpycXlFWVlXTS1Iczd3LXd0akVJRVlMbFBsUndSdnJIVEJpZTB4QVU3cjRHR0h4ZGNCcjBReEtJOFBmYy0xNm1ybmRiY3Zpa2w3cWpvM29ET242YmhfV2hWYzB1akw1MU9HaFREOE9vNWdRWDh0RGVKVXFZV1dZc1VIRkhxN003Q3AwYk1DZDVwSUVobTlEY1RCM3JrUGsyeUpIYkE3Vk1ZTHVzbnI40gHwAUFVX3lxTE5YTXdadFUwN0tNQ3EzTE8tUkxJUHZSV0VNbnNITUl0bkEzMk5VRlJRMG8xSVozbG41WVRubTZXQlNTb2ZscFY3anZjSFFGTXZyU2JiMDNZRTI2S2JpaDFfX0N2V0h1WnJTSHZ3RnBORm9iZE1xQmtIVzV0eHlpX0VHNC1iR3JKcW9sYWVHQkV5YWFRVTNCdl9oVjJrWkNiZFRhaXBlTHkyN2MwUHZraVNxU2oyemNKVUh6ZUFfVU9zR3ltcVBRZmxVbUxfSXVoV1IzOFdmeldFN3NLY0VNY1p3aWJGTnhJYzdyTXk3TjJBQw?oc=5" },
   { time: "08:30", tag: "ai", tagText: "AI", text: "英伟达或将领投AI初创公司Simplismart的2000万美元融资轮，后者估值达1亿美元。此举显示英伟达正通过投资布局AI应用生态，进一步巩固其行业主导地位。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPTzBRdWxZc2NtbU5LRmxtdGhuQnIzRGQ2ZWlQaWdtR0Mtd1VPRGs4SGJfYnNPaS0xUjk3aFFFVUFRT0JULTFfT25CTFJRdFBuSkJBby1taGpKaFNkdmF1YVhUR19iRXVVbEJQbVJKc0FGdmFxaXpiUWxoUE5oek5uVmZnUnk1WlJBQkg5NWxqTThuLXdDZ01WNG9VcXBaeThySEpaZjhyU3lMazNJeVZsWkhoUloyU3Iyb1UyOUttb1FTTUFUM180cmo5NzBlUVhOWmZBdHNWVWF1M1M0MG1mN9IB5gFBVV95cUxPYW9Hc2ZEc0MzNnowb2sxMEdYOHltTWFZcWFEcXZsWTdTZWNqd1BEcmp6S3FHVU1vazBYemlFZ1hyRjgybWw3a2VrUjVZQWRmRmkwNHk0cmk2S1BOSkN6Z01ZcXNXNThzMS15Q2VBV0JkdDhJZ2J2RXJpWFFsOEZOUXBOajV3aVJSek10RWNncGhZLUhleW02VTJfbU1xUXR3cmJLV3kxaHA5SzctN3VCR0xTZ1RNUWdpOU96Y29yYWZicU1faFB4eUZvNHFSU0ZlTl83MDlJNWtoNVZmeTBmNld0MHJQUQ?oc=5" },
   { time: "07:09", tag: "ai", tagText: "AI", text: "巴克莱银行发布英国顶级AI初创公司榜单，Fractile和Isomorphic Labs入选。该榜单旨在识别英国最具潜力的AI企业，反映英国在AI领域的创新活力。", source: "City AM", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSFVIVXYtc3dIejBpWklSYXIzWU1ERGVZczcwZURCSmd6dVpoM1BLNjJuMDQxR0FTb0dIRk1IN0tnV1d3MWhPSXlhbmdoTlRlaWp3MDVHUlZoMlRMVWZkQkxmTFVONmN5Qmd4bFNXak9SUUJzT25QendmcUhaYTdObWFQellxMUc4ZGRjZFExM05iQ1FvejVHdg?oc=5" },
   { time: "03:55", tag: "ai", tagText: "AI", text: "2026年全球新诞生的98家独角兽初创公司中，AI公司占比超过四分之一，显示人工智能领域仍是资本追逐的核心赛道。", source: "Digital Journal", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaTd4ZHpscVEtWFBlX2tUbnZOYUJIN1dNWjUwMFhmQ0t2QzJBRHhNbndJVE9wZ3ROeDAyVTg5bnpYeW5wN01VWGc5ZUhTTnBxNGVTTDhzT0dmZjZ1ek5xdDNTN3dQV0NLZEJaMXpEYm1TX1FReXA5ZnlFd09maXY4OW5YQlppV3B2Qlg1N0FIeTU5WTZGVnpqY1k0cTNuV3Y5bHM0bjdqVV84ZkRrRkNlS0gyWlN0OTBZSVRieW9zaVFzM2h3RXA5OFlR?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:01", tag: "geo", tagText: "地缘", text: "分析师预测英伟达将在中国市场卷土重来，称其为“AI教父”，并认为这将引发新一轮全球科技热潮。尽管中美科技关系紧张，市场仍对英伟达在华业务前景持乐观态度。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNX2lLcDdnWTdjdXNKa3kyTHlIMFNQU2huYmJSb1B0R1Jzc3ZBdFBFdVBwMXE3OU1JNTQ0TVBxdEVQVGpHUzJIalVBclVvb2Y1TGZISktOMDV0eURfT3QySVFXWXAwSW1wMHdZREVWNHF3ZkVFRkZPVzBjMF85YlJWLXhyVTQ4dFQ4NVk0MW1LVGZzSXczZy1YZ2JGTWRGMEdFNmxLNFlJU2hfT19jYWZMTWpRMTBfSFJudFNUYUFUVnh6c3U5ZDJ2WW43WnR5OXNSa21iaW5WYWJoYTFNVWtfZ1FJODNRSVBoc0ZSVXVucW1BcVM4N2RGNQ?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI视频生成初创公司Runway正押注视频生成是通往世界模型的路径，并认为作为AI领域的“局外人”是优势而非劣势，目标是在AI领域击败谷歌。该公司最初以帮助电影制作人起家。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "聊天机器人进入快餐店得来速（Drive-thru）只是AI渗透日常生活的开始。文章指出，AI正逐步融入点餐、客服等场景，未来将更广泛地改变消费者与品牌的互动方式。", source: "The Verge", url: "https://www.theverge.com/column/928096/chatbots-ai-drive-thru-mcdonalds-wendys" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "英国政府支持David Silver领导的估值8.14亿英镑的AI初创公司，引发关于技术主权和国家安全的热议。支持者认为此举可确保英国在AI领域的竞争力，反对者则担忧关键技术和数据外流风险。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVFpGVEEzNGVJckNVaC05dWRBN2FiV3U3NzNScXNhZmdFSU9uczgtQXo5VlBka2lGMXdudk5raFVUZGVER2dKb01XdHo3OXBOVExEWmN5SGE3UXpOenFDbTk3UU9wazBRRWFTemZFRVlWdTNzbEFxVmlfeUV4eTJyT25Sd0hBdUlmMm1na2hSaVhrNnlWNzhR?oc=5" },
 ];
-const aiBreakingDate = "2026年5月18日 12:25 CST";
+const aiBreakingDate = "2026年5月18日 16:51 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
