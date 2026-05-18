@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 66.69,
   previous1Month: 56.2,
   previous1Year: 69.14,
-  date: "2026年5月18日 07:09 CST"
+  date: "2026年5月18日 12:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "中国4月经济数据全面不及预期，工业增加值和零售销售增速放缓，后者创2022年以来最低。伊朗危机打击消费者信心，中国警告全球“严峻”形势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/china-april-retail-sales-industrial-output-investment-unemployment-iran-war.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "德国就业市场急剧恶化，失业人数15年来首次突破300万。这个曾经欧元区最强劲的劳动力市场，正从劳动力短缺转向招聘冻结。", source: "Financial Times", url: "https://www.ft.com/content/2a6c1cb9-6c11-41c8-a8ea-a367b8799126" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "西班牙安达卢西亚地区选举中，右翼民粹政党Vox成为关键造王者，保守派人民党需其支持才能执政。首相桑切斯遭遇重大挫败。", source: "Financial Times", url: "https://www.ft.com/content/be7186e3-4df7-49b8-99bd-d06b1a5383ac" },
   { time: "07:09", tag: "crypto", tagText: "加密", text: "MicroStrategy（现更名为Strategy）创始人Michael Saylor暗示将再次买入比特币，该公司目前持有818,334枚BTC，并正推动STRC股息投票。此举显示机构对比特币的持续看好。", source: "CryptoProwl", url: "https://finance.yahoo.com/markets/crypto/articles/saylor-signals-another-bitcoin-buy-222900294.html" },
   { time: "05:02", tag: "geo", tagText: "地缘", text: "白宫宣布，美国总统特朗普与中国国家主席习近平在峰会上同意设立“贸易委员会”，双方签署了旨在促进贸易战期间“稳定”的措施。此举被视为中美关系缓和的重要信号。", source: "Financial Times", url: "https://www.ft.com/content/aed42b42-0ca2-4104-848a-c8bca33fd837" },
   { time: "05:00", tag: "macro", tagText: "宏观", text: "美国上游油气行业并购反弹，今年迄今交易额已达380亿美元。在能源价格波动和地缘政治不确定性背景下，行业整合加速，大型企业通过收购扩大资源储备。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/u-upstream-mergers-hit-38b-210000374.html" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "21:30", tag: "macro", tagText: "宏观", text: "尽管固定利率抵押贷款名义上不变，但不断上涨的房产税和飙升的房屋保险成本正推高房主每月实际还款额。许多房主面临托管账户短缺，导致月供意外增加。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/mortgage-escrow-shortages.html" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "英伟达财报和谷歌开发者大会将成为本周市场焦点，AI热潮持续主导市场情绪。同时，美光预计将成为标普500指数盈利增长的第二大贡献者，仅次于英伟达，但英伟达的影响力可能减弱。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/3-big-things-were-watching-in-the-stock-market-for-the-week-ahead.html" },
   { time: "20:14", tag: "macro", tagText: "宏观", text: "G7财长将于周一在巴黎召开会议，正值长期借贷成本飙升之际。欧元集团主席警告称，霍尔木兹海峡长期关闭将带来严重经济后果，强调重新开放该海峡是“重中之重”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/opening-strait-of-hormuz-is-of-utmost-importance-eurogroup-head.html" },
-  { time: "20:00", tag: "geo", tagText: "地缘", text: "美国军事工业复合体正经历颠覆性变革，国防领域正在发生巨大且利润丰厚的转变。在颠覆时代，国防工业正经历深刻变革，带来丰厚利润。", source: "Financial Times", url: "https://www.ft.com/content/713d7483-0ca6-46ae-b287-c501b5d81644" },
-  { time: "19:36", tag: "ai", tagText: "AI", text: "数据显示，与人工智能相关的裁员并不一定能提振公司股价，这揭示了一个令人不安的现实：市场对AI驱动的效率提升反应复杂，投资者需谨慎看待此类消息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/ai-related-layoffs-a-boost-for-stocks-not-necessarily.html" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "英伟达即将公布的财报可能刺破期权泡沫。分析师警告，市场对AI芯片股的极端投机情绪和大量未平仓期权合约，若财报不及预期，可能引发剧烈波动，波及整个科技板块。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNU1RxaE8zbFFtOVRtNTY1YnBBVFI0SlYxeXRQb2YtQkxuRDJmQUJFYl93NVBnUzFJNmxDcFliZldxOHJxaklJa2JBaGNwMmpWYWdrZWVqR2hoZ3NpaVhXX0F3XzNrWnh5Z25rU010ZkhMRGs3UkU1Sml2N2p3c01MX09uVXJWRDM5?oc=5" },
 ];
-const breakingDate = "2026年5月18日 07:09 CST";
+const breakingDate = "2026年5月18日 12:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "中美峰会未提及半导体出口管制议题，市场关注后续科技政策走向。此次峰会未将芯片限制作为核心讨论内容，或暗示两国在科技博弈上暂时降温，但不确定性依然存在。", source: "MSN", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQUXYyZ2tRdkdGMjNoTnltUHNHOWNobkJTZnoyQVlId1Fnc1ZHV05JLUtUdk9wdXVFQjhvMkhBcm13QUJTcl9LdUlMQ2l1MDI2Vms5a0c2SS1JeHRXd0pwSGVUWkJUY1VUOVBGTnJiV1dNVW0ySF9CVnA3TmJzZ3JXY2ZYVVFiTHllTW4wS2tBQVN6YjBPb0UtZEt1VjNhYmpqd094M1F0R0JRckt0RWJaVUFTY3IxYl9UQU9mS0ZScVNtcUVPMUY4YktzeHlMMURCQUdoU0VWTzIyX2c?oc=5" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "AI市场屏息以待英伟达财报，作为行业风向标，其业绩将直接影响AI芯片股走势。分析师正密切关注英伟达对下一代芯片需求及数据中心业务的展望。", source: "The Daily Upside", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPSE1OSUxBMVJGU0JCLVI2cGx1WDhRbHpfa1QxdEVyWTdVUU1KR21LLTJOVUU3eVlGOGVlRlBnWkNoZ1BsWEgzTHBMQS1xTVh2eTM0OTdDNFNwQ2RvNXVwY3hiLWFXMWtKd21fclhWUEtrZ0pvWk51OUwwd2ZMeTlIODlLSEc3cWZ1SmhPQmY0T1NyM250MW1Kb1dJZGhLMWw1cnZlZnllQTVmTzcwRnZrV25LWkdpQlBWeXpobTZ3cUdOY2VrYnpybE5yaDVpM3RGNFBiRg?oc=5" },
+  { time: "08:30", tag: "ai", tagText: "AI", text: "英伟达或将领投AI初创公司Simplismart的2000万美元融资轮，后者估值达1亿美元。此举显示英伟达正通过投资布局AI应用生态，进一步巩固其行业主导地位。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPTzBRdWxZc2NtbU5LRmxtdGhuQnIzRGQ2ZWlQaWdtR0Mtd1VPRGs4SGJfYnNPaS0xUjk3aFFFVUFRT0JULTFfT25CTFJRdFBuSkJBby1taGpKaFNkdmF1YVhUR19iRXVVbEJQbVJKc0FGdmFxaXpiUWxoUE5oek5uVmZnUnk1WlJBQkg5NWxqTThuLXdDZ01WNG9VcXBaeThySEpaZjhyU3lMazNJeVZsWkhoUloyU3Iyb1UyOUttb1FTTUFUM180cmo5NzBlUVhOWmZBdHNWVWF1M1M0MG1mN9IB5gFBVV95cUxPYW9Hc2ZEc0MzNnowb2sxMEdYOHltTWFZcWFEcXZsWTdTZWNqd1BEcmp6S3FHVU1vazBYemlFZ1hyRjgybWw3a2VrUjVZQWRmRmkwNHk0cmk2S1BOSkN6Z01ZcXNXNThzMS15Q2VBV0JkdDhJZ2J2RXJpWFFsOEZOUXBOajV3aVJSek10RWNncGhZLUhleW02VTJfbU1xUXR3cmJLV3kxaHA5SzctN3VCR0xTZ1RNUWdpOU96Y29yYWZicU1faFB4eUZvNHFSU0ZlTl83MDlJNWtoNVZmeTBmNld0MHJQUQ?oc=5" },
   { time: "07:09", tag: "ai", tagText: "AI", text: "巴克莱银行发布英国顶级AI初创公司榜单，Fractile和Isomorphic Labs入选。该榜单旨在识别英国最具潜力的AI企业，反映英国在AI领域的创新活力。", source: "City AM", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSFVIVXYtc3dIejBpWklSYXIzWU1ERGVZczcwZURCSmd6dVpoM1BLNjJuMDQxR0FTb0dIRk1IN0tnV1d3MWhPSXlhbmdoTlRlaWp3MDVHUlZoMlRMVWZkQkxmTFVONmN5Qmd4bFNXak9SUUJzT25QendmcUhaYTdObWFQellxMUc4ZGRjZFExM05iQ1FvejVHdg?oc=5" },
   { time: "03:55", tag: "ai", tagText: "AI", text: "2026年全球新诞生的98家独角兽初创公司中，AI公司占比超过四分之一，显示人工智能领域仍是资本追逐的核心赛道。", source: "Digital Journal", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaTd4ZHpscVEtWFBlX2tUbnZOYUJIN1dNWjUwMFhmQ0t2QzJBRHhNbndJVE9wZ3ROeDAyVTg5bnpYeW5wN01VWGc5ZUhTTnBxNGVTTDhzT0dmZjZ1ek5xdDNTN3dQV0NLZEJaMXpEYm1TX1FReXA5ZnlFd09maXY4OW5YQlppV3B2Qlg1N0FIeTU5WTZGVnpqY1k0cTNuV3Y5bHM0bjdqVV84ZkRrRkNlS0gyWlN0OTBZSVRieW9zaVFzM2h3RXA5OFlR?oc=5" },
   { time: "03:46", tag: "ai", tagText: "AI", text: "埃隆·马斯克与OpenAI的诉讼进入尾声，庭审焦点集中在OpenAI CEO萨姆·奥尔特曼是否值得信任。信任问题成为该案核心争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/17/why-trust-is-a-big-question-at-the-elon-musk-openai-trial/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "金融科技公司Ramp的最新AI指数显示，Anthropic的已验证企业客户数量首次超过OpenAI，标志着AI商业应用格局的重大转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "聊天机器人进入快餐店得来速（Drive-thru）只是AI渗透日常生活的开始。文章指出，AI正逐步融入点餐、客服等场景，未来将更广泛地改变消费者与品牌的互动方式。", source: "The Verge", url: "https://www.theverge.com/column/928096/chatbots-ai-drive-thru-mcdonalds-wendys" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "英国政府支持David Silver领导的估值8.14亿英镑的AI初创公司，引发关于技术主权和国家安全的热议。支持者认为此举可确保英国在AI领域的竞争力，反对者则担忧关键技术和数据外流风险。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVFpGVEEzNGVJckNVaC05dWRBN2FiV3U3NzNScXNhZmdFSU9uczgtQXo5VlBka2lGMXdudk5raFVUZGVER2dKb01XdHo3OXBOVExEWmN5SGE3UXpOenFDbTk3UU9wazBRRWFTemZFRVlWdTNzbEFxVmlfeUV4eTJyT25Sd0hBdUlmMm1na2hSaVhrNnlWNzhR?oc=5" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "初创公司Osaurus发布Mac应用，允许用户在同一界面内结合使用本地和云端AI模型，并将用户的记忆、文件和工具保留在本地硬件上，兼顾隐私与性能。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "AI研究论文质量提升反而引发学术界危机：一篇论文因被过度引用而成为问题，揭示AI生成内容泛滥正在破坏同行评审体系，科学家面临辨别真伪的困境。", source: "AI | The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem" },
-  { time: "16:24", tag: "ai", tagText: "AI", text: "AI初创公司获550万美元种子轮融资，支持欧洲空中交通管理软件升级。该公司利用人工智能优化航班调度和空域管理，旨在提升欧洲航空系统的效率和安全性。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNWFQZjI2M0tUVkRuUDNVRUZyS2VSb1BvMFcyeF9hRm9mbmdfN1BqMHV1NU1EVWkycEtLYmlnSnpSMW02cHFBODBiV1NINEhmSS1PNGIzdm82ckNMVmFEUU9UWVlZcDdOLVpSc19FNTMxelhjcUc1YWI1Y1EzcE11Vkw5WFRHU0ppZFRtcV83dkxzUm1UaVBmVmlnRnFURWo1bzk1NzNQLWZ2ZERrNS0xMkJyTTI3SEM0UlNpLXVFc0JqdW50b1ZmRkVjOW8?oc=5" },
 ];
-const aiBreakingDate = "2026年5月18日 07:09 CST";
+const aiBreakingDate = "2026年5月18日 12:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
