@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 62.91,
+  score: 61.8,
   rating: "greed",
-  timestamp: "2026-05-18T12:27:16+00:00",
+  timestamp: "2026-05-18T16:27:44+00:00",
   previousClose: 62.91,
   previous1Week: 65.4,
   previous1Month: 68.57,
   previous1Year: 70.6,
-  date: "2026年5月18日 20:43 CST"
+  date: "2026年5月19日 00:32 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:24", tag: "macro", tagText: "宏观", text: "美股连续第二日下跌，标普500和纳斯达克指数走低，美光科技领跌。市场密切关注油价和债券收益率走势，同时等待中东冲突的进一步发展。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/stock-market-today-live-updates.html" },
+  { time: "00:10", tag: "macro", tagText: "宏观", text: "华尔街传奇人物、Evercore的Roger Altman警告称，石油市场正接近“临界点”，油价大幅上涨可能引发“新冠疫情后本十年的第二次重大通胀冲击”，进而破坏市场稳定，对股市构成风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-oil-market-is-reaching-a-tipping-point-that-could-create-problems-for-stocks-according-to-this-wall-street-legend-8e7f9d62?mod=mw_rss_topstories" },
+  { time: "00:08", tag: "macro", tagText: "宏观", text: "知名经济学家Yardeni预测，美联储将在7月被迫加息，以安抚“债券义警”。他认为，即将上任的美联储主席Kevin Warsh可能不得不推动加息，而非降息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/the-fed-will-have-to-raise-interest-rates-in-july-to-appease-bond-vigilantes-yardeni-says.html" },
+  { time: "23:30", tag: "ai", tagText: "AI", text: "高盛发布报告指出，从历史经验看，人工智能技术很可能会进一步拉大企业巨头与其他公司之间的差距，加剧市场分化。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/article/history-says-ai-is-likely-to-widen-the-gap-between-corporate-giants-and-everyone-else-goldman-sachs-161724815.html" },
+  { time: "23:12", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦最新披露的文件可能揭示了巴菲特在3月向CNBC透露的“一笔小收购”。市场关注这位“奥马哈先知”的最新投资动向。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/warren-buffett-teased-to-cnbc-a-tiny-purchase-in-march-berkshire-filing-may-have-revealed-it.html" },
   { time: "20:41", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦大幅调整投资组合，斥资26亿美元建仓达美航空，并将Alphabet持股增加224%。市场关注巴菲特最新投资动向及其对航空和科技板块的押注信号。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/berkshire-portfolio-revamp-delta-airlines-macys-unitedhealth.html" },
   { time: "20:40", tag: "ai", tagText: "AI", text: "NextEra Energy宣布收购Dominion Energy，交易将合并两家在AI数据中心电力竞赛中的关键参与者。Dominion为全球最大数据中心市场（北弗吉尼亚）供电，NextEra是美国最大可再生能源开发商。合并后将成为全球最大上市公用事业公司，估值约4000亿美元，凸显AI驱动的电力需求激增。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/nextera-nee-dominion-energy-d-data-center-ai.html" },
   { time: "20:26", tag: "macro", tagText: "宏观", text: "特朗普表示，在与英特尔CEO谈判政府持股时，他本应要求“更多”股份。自去年8月美国政府通过股权交易获得英特尔9.9%股份以来，该芯片制造商股价大幅上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/trump-stake-in-intel.html" },
@@ -1644,16 +1649,16 @@ const breakingNews = [
   { time: "12:00", tag: "macro", tagText: "宏观", text: "德国就业市场急剧恶化，失业人数15年来首次突破300万。这个曾经欧元区最强劲的劳动力市场，正从劳动力短缺转向招聘冻结。", source: "Financial Times", url: "https://www.ft.com/content/2a6c1cb9-6c11-41c8-a8ea-a367b8799126" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "西班牙安达卢西亚地区选举中，右翼民粹政党Vox成为关键造王者，保守派人民党需其支持才能执政。首相桑切斯遭遇重大挫败。", source: "Financial Times", url: "https://www.ft.com/content/be7186e3-4df7-49b8-99bd-d06b1a5383ac" },
   { time: "07:09", tag: "crypto", tagText: "加密", text: "MicroStrategy（现更名为Strategy）创始人Michael Saylor暗示将再次买入比特币，该公司目前持有818,334枚BTC，并正推动STRC股息投票。此举显示机构对比特币的持续看好。", source: "CryptoProwl", url: "https://finance.yahoo.com/markets/crypto/articles/saylor-signals-another-bitcoin-buy-222900294.html" },
-  { time: "05:02", tag: "geo", tagText: "地缘", text: "白宫宣布，美国总统特朗普与中国国家主席习近平在峰会上同意设立“贸易委员会”，双方签署了旨在促进贸易战期间“稳定”的措施。此举被视为中美关系缓和的重要信号。", source: "Financial Times", url: "https://www.ft.com/content/aed42b42-0ca2-4104-848a-c8bca33fd837" },
-  { time: "05:00", tag: "macro", tagText: "宏观", text: "美国上游油气行业并购反弹，今年迄今交易额已达380亿美元。在能源价格波动和地缘政治不确定性背景下，行业整合加速，大型企业通过收购扩大资源储备。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/u-upstream-mergers-hit-38b-210000374.html" },
-  { time: "03:36", tag: "tech", tagText: "科技", text: "法国广告集团阳狮（Publicis）宣布以22亿美元收购美国数据公司LiveRamp，以深化其在人工智能营销领域的布局。该交易凸显了AI技术对广告和数据行业的颠覆性影响。", source: "Financial Times", url: "https://www.ft.com/content/fa33f1b3-ea8b-474b-9f75-a70536c8d2cb" },
-  { time: "03:12", tag: "crypto", tagText: "加密", text: "意大利最大银行在2026年第一季度增加了比特币、以太坊和XRP的敞口，显示传统金融机构对加密资产的兴趣持续升温。", source: "CryptoProwl", url: "https://finance.yahoo.com/markets/crypto/articles/italy-largest-bank-adds-bitcoin-183100354.html" },
-  { time: "03:10", tag: "ai", tagText: "AI", text: "AI能源需求催生新投资机会：GE Vernova、Bloom Energy等基础设施公司成为AI电网的新“守门人”，在科技巨头7000亿美元AI能源争夺战中脱颖而出，被视为“电力领域的英伟达”。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-nvidias-of-power-5-stocks-winning-big-techs-700-billion-ai-energy-grab-9226157a?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月18日 20:43 CST";
+const breakingDate = "2026年5月19日 00:32 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:32", tag: "ai", tagText: "AI", text: "TechCrunch报道称，AI技能军备竞赛正向汽车行业蔓延。随着自动驾驶和智能座舱技术发展，汽车行业对AI人才的需求急剧上升，成为新的竞争焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/17/techcrunch-mobility-the-ai-skills-arms-race-is-coming-for-automotive/" },
+  { time: "00:24", tag: "ai", tagText: "AI", text: "亚马逊Alexa+推出AI生成播客功能，用户可指定任意主题，由AI自动生成完整播客节目。此举将Alexa从语音助手升级为个性化AI内容平台，进一步拓展AI在消费端的应用场景。", source: "The Verge", url: "https://www.theverge.com/tech/932375/amazon-alexa-plus-ai-podcasts" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
+  { time: "23:11", tag: "ai", tagText: "AI", text: "前OpenAI研究员Leopold Aschenbrenner为其136亿美元AI项目押注加密货币矿工，计划利用矿场算力资源构建大规模AI计算基础设施。此举将加密挖矿与AI算力需求深度绑定，引发市场对算力资源再分配的讨论。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOLWtsNXBJenNMQ0hpakVjVXpjaTFFZVdiYU14RXF6dWdhNGNqYkh3dXF3MEltSjY0dEhDdDhDemNFMkM3enZCYnZiUWhxR1RrbU43d0JOQkhqbHRBVllBYTQzTlhsbjlTcFNrZnMxUnVoZzZrVm5PR3JOVDZwM19oUE4wN2VWRlRQU1lxWjFxWFptZUpETFVwZk41Nm8yekVMU2w0bnRjNTdOQXpJVl8zTHhRT25Tb0k3R0ZYeHc5NnpmNFpiTlZZ?oc=5" },
+  { time: "21:01", tag: "tech", tagText: "科技", text: "华尔街日报独家报道，一家初创公司开发出简化AI芯片切换的技术，使企业能更轻松地在不同AI芯片之间迁移工作负载，英伟达已成为其新投资者。此举或降低AI芯片市场的切换成本，削弱英伟达的生态锁定效应。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQzEzU191bU5EM3BOX3JESTlYZWRYY3FRVmNfcDBNNGJ6MW9qMXoxeWFKbmFrSmxZRUJXUzFzRWozNjRRSklIMTJLRzFNMXNzSjMwMmlIYXhrLU04MmpmV3dxd3Z1NGtsNTkweWd3cUZZOEhBWklIM1lUSFJyVHB4TzZLQnd1YUtPVlptYnQ5dW5UTi0yc1hRN2dnSktIdzc5bjFnYlhMUQ?oc=5" },
   { time: "19:12", tag: "tech", tagText: "科技", text: "Valar Labs的AI膀胱癌检测工具获得美国FDA突破性医疗器械认定，为美国首个获此认定的AI膀胱癌检测产品。该认定有望加速其审批流程，推动AI在癌症诊断领域的应用。", source: "Medical Device Network", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMndMbTdJeXhYUGFPSUlSX3ZLajBQSFowN1lyNXRLMDU0QjZldGE2M1dEREpwN2pjWlo5WEZYUzQ2NS1YU3hVSlRCSUVwLXhGNk5rMDB0T1ltQ3Z0NGZzRXphUTd2Ymk3U1E5U1JCT2VPQ0hDUzBVMEh1SlNaWkxlcUw2OTNaTlJqbDM1bXVRcXJkEpGbWEyOF8wczBISXZ6aVpCMUg4SHJvS1AxVmZQdTdXYkVIb1Nra2xWSGkyQnZMZ0E?oc=5" },
   { time: "19:04", tag: "ai", tagText: "AI", text: "红杉资本领投巴黎AI初创公司Dust 4000万美元，旨在解决企业AI生产力差距问题。Dust专注于为企业提供AI工具，提升工作效率，此次融资显示资本对欧洲AI应用层的持续关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHVpdEtOeklwQWdBT2tqaVRUYWRfd1NEYmdUTmJWemlOQTVuS29valZ1T1ZLamlHV0xSMDBBVU1PTFk0Y2psQWhUcTF1MVFJLVdUcF9MNDJ6bDF0RFNHYTlySTJqYjJzNzludm5aQ2U3eEVoWVJhLVhvdjh4OXlRQ3NPa0lQSl9teW9ZcUZsQ29ZcUFj?oc=5" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "前OpenAI员工创办的对冲基金披露了巨额英伟达及AI芯片期权头寸，显示其对AI芯片市场前景极度看好。此举引发市场关注，可能影响投资者对AI硬件板块的情绪。", source: "Quiver Quantitative", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWGJ3WDIwSjk3UmF0SWp0NEJrcnVMaEVPLVhiUzI3bjNoMkNzY09YX0t6emxLU0hRRU5PVkdtWGg2aElXU09OTUhPcS1XSWFlX2QxTjcxRnA5ekNRY0w0bFN5OUIxN3Z2WDMtdGZ6NDFxR1htb2paU0tsUWJOMDJ4bC1KeUNIVTFwa1pUODVyUEJMWmVVT29BU3NrUVBRYjkxX2JWSWc4bXBlUnNfSENiVUNreURIdmFIZXFxV0I2LV91UUZTRDlOUw?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
   { time: "02:40", tag: "ai", tagText: "AI", text: "苹果计划为升级版Siri引入自动删除聊天记录功能，试图以隐私保护作为AI领域的差异化优势，在落后于竞争对手的情况下争取用户信任。", source: "The Verge", url: "https://www.theverge.com/tech/932207/siri-apple-intelligence-auto-deleting-chats" },
   { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
-  { time: "01:22", tag: "ai", tagText: "AI", text: "前谷歌CEO埃里克·施密特在亚利桑那大学毕业典礼上发表演讲，当谈及AI时遭到学生持续嘘声。这一事件反映出年轻一代对AI主导未来的普遍担忧和抵触情绪。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932203/university-of-arizona-students-boo-eric-schmidt-ai-commencement" },
-  { time: "01:09", tag: "ai", tagText: "AI", text: "AI实验公司Andon Labs让AI代理完全自主运营四家广播电台，结果暴露出AI在缺乏人类监督时出现的各种问题，凸显AI在关键任务中不可完全信任的现状。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies" },
-  { time: "00:42", tag: "tech", tagText: "科技", text: "谷歌更新搜索垃圾政策，将试图“操纵”其AI模型（包括AI概览和AI模式）的行为明确列为垃圾信息。此举旨在遏制利用AI生成内容操纵搜索排名的行为。", source: "The Verge", url: "https://www.theverge.com/tech/931416/google-ai-search-spam-policy" },
-  { time: "00:32", tag: "ai", tagText: "AI", text: "TechCrunch报道称，AI技能军备竞赛正向汽车行业蔓延。随着自动驾驶和智能座舱技术发展，汽车行业对AI人才的需求急剧上升，成为新的竞争焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/17/techcrunch-mobility-the-ai-skills-arms-race-is-coming-for-automotive/" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
 ];
-const aiBreakingDate = "2026年5月18日 20:43 CST";
+const aiBreakingDate = "2026年5月19日 00:32 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
