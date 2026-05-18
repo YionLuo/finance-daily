@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 61.8,
+  score: 61.66,
   rating: "greed",
-  timestamp: "2026-05-18T16:27:44+00:00",
+  timestamp: "2026-05-18T18:57:34+00:00",
   previousClose: 62.91,
   previous1Week: 65.4,
   previous1Month: 68.57,
   previous1Year: 70.6,
-  date: "2026年5月19日 00:32 CST"
+  date: "2026年5月19日 02:58 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:46", tag: "macro", tagText: "宏观", text: "债券市场向美联储发出警告：必须认真对待通胀并尽快加息。市场分析认为，美联储需要更强硬的加息言论来缓解国债市场的抛售压力。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-bond-market-has-a-warning-for-the-fed-get-serious-about-inflation-and-potential-rate-hikes-asap-f38bbdcf?mod=mw_rss_topstories" },
+  { time: "02:45", tag: "tech", tagText: "科技", text: "特斯拉股价下跌，马斯克在与OpenAI及Sam Altman的法律诉讼中败诉。加州奥克兰陪审团裁定马斯克败诉，为Altman赢得法律胜利，该案此前曾给OpenAI的上市计划蒙上阴影。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/musk-altman-openai-trial-verdict.html" },
+  { time: "02:28", tag: "geo", tagText: "地缘", text: "特朗普在中美峰会后转向中期选举和民生议题，伊朗战争持续。特朗普预计将在白宫活动上宣布扩大通过TrumpRX提供的折扣处方药数量。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/trump-hegseth-economy-2026-election-midterms-iran-china.html" },
+  { time: "02:13", tag: "geo", tagText: "地缘", text: "美国延长俄罗斯石油豁免许可30天，试图以此降低国内燃油价格。此举正值美国选民对高昂汽油和柴油价格感到不满之际。", source: "Financial Times", url: "https://www.ft.com/content/df5fca22-d057-444f-b430-32623b196d00" },
+  { time: "01:44", tag: "macro", tagText: "宏观", text: "油价上涨，特朗普警告对伊朗“时间紧迫”，但市场更担心供应缓冲耗尽可能引发更大危机。分析指出，用于缓冲供应中断的储备正在减少，可能成为下一轮油价飙升的导火索。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/oil-climbs-as-trump-warns-the-clock-is-ticking-on-iran-but-theres-a-bigger-danger-lurking-on-the-horizon-9dfa8129?mod=mw_rss_topstories" },
   { time: "00:24", tag: "macro", tagText: "宏观", text: "美股连续第二日下跌，标普500和纳斯达克指数走低，美光科技领跌。市场密切关注油价和债券收益率走势，同时等待中东冲突的进一步发展。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/stock-market-today-live-updates.html" },
   { time: "00:10", tag: "macro", tagText: "宏观", text: "华尔街传奇人物、Evercore的Roger Altman警告称，石油市场正接近“临界点”，油价大幅上涨可能引发“新冠疫情后本十年的第二次重大通胀冲击”，进而破坏市场稳定，对股市构成风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-oil-market-is-reaching-a-tipping-point-that-could-create-problems-for-stocks-according-to-this-wall-street-legend-8e7f9d62?mod=mw_rss_topstories" },
   { time: "00:08", tag: "macro", tagText: "宏观", text: "知名经济学家Yardeni预测，美联储将在7月被迫加息，以安抚“债券义警”。他认为，即将上任的美联储主席Kevin Warsh可能不得不推动加息，而非降息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/the-fed-will-have-to-raise-interest-rates-in-july-to-appease-bond-vigilantes-yardeni-says.html" },
@@ -1644,16 +1649,15 @@ const breakingNews = [
   { time: "15:45", tag: "crypto", tagText: "加密", text: "加密货币市场大幅下挫，比特币跌至两周低点76,700美元，以太坊、XRP、Solana等主流币种同步下跌。过去24小时全网爆仓金额达7亿美元，ETF资金流出创2月以来最差周度表现。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxQYmYxUUlWU3lMZmhwaHlSLXd3Smt1YXRwVXFrVHN5bmlpaTVtTFZRdUg2aTNLMWRycmlILXNCVVBJY05DdWJVMkRZaFNwdnhzQzV1VElLMXpKVmR4MnFncmM1U2g3eWZSNXRmZTBtSXRjUXlYejVmSEQxcVE2YVo5RDBWSk1ud0hTVHZnY2E1YklvZ3N5Y3F0ak5rSWdvQQ?oc=5" },
   { time: "15:38", tag: "geo", tagText: "地缘", text: "三星电子面临4.7万名工人罢工威胁，韩国总统施压要求达成劳资协议。政府警告称，罢工可能给经济造成数十亿美元损失。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/samsung-strike-lee-jae-myung-labor-deal.html" },
   { time: "15:00", tag: "macro", tagText: "宏观", text: "高能源价格可能阻碍欧洲在人工智能领域与美中竞争。欧洲各地能源成本差异巨大，导致在吸引AI投资方面出现明显的赢家和输家。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/europe-ai-energy-electricity-costs-data-centers-china-us.html" },
-  { time: "15:00", tag: "macro", tagText: "宏观", text: "英国小型贷款机构MFS倒闭的持续影响引发市场担忧，美国大型信贷公司感到不安。市场担心复杂信贷市场的问题可能构成更广泛的系统性风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/mfs-private-credit-insolvency-banks-failure-collapse-barclays-mortgage.html" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "中国4月经济数据全面不及预期，工业增加值和零售销售增速放缓，后者创2022年以来最低。伊朗危机打击消费者信心，中国警告全球“严峻”形势。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/china-april-retail-sales-industrial-output-investment-unemployment-iran-war.html" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "德国就业市场急剧恶化，失业人数15年来首次突破300万。这个曾经欧元区最强劲的劳动力市场，正从劳动力短缺转向招聘冻结。", source: "Financial Times", url: "https://www.ft.com/content/2a6c1cb9-6c11-41c8-a8ea-a367b8799126" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "西班牙安达卢西亚地区选举中，右翼民粹政党Vox成为关键造王者，保守派人民党需其支持才能执政。首相桑切斯遭遇重大挫败。", source: "Financial Times", url: "https://www.ft.com/content/be7186e3-4df7-49b8-99bd-d06b1a5383ac" },
-  { time: "07:09", tag: "crypto", tagText: "加密", text: "MicroStrategy（现更名为Strategy）创始人Michael Saylor暗示将再次买入比特币，该公司目前持有818,334枚BTC，并正推动STRC股息投票。此举显示机构对比特币的持续看好。", source: "CryptoProwl", url: "https://finance.yahoo.com/markets/crypto/articles/saylor-signals-another-bitcoin-buy-222900294.html" },
 ];
-const breakingDate = "2026年5月19日 00:32 CST";
+const breakingDate = "2026年5月19日 02:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
+  { time: "02:40", tag: "ai", tagText: "AI", text: "苹果计划为升级版Siri引入自动删除聊天记录功能，试图以隐私保护作为AI领域的差异化优势，在落后于竞争对手的情况下争取用户信任。", source: "The Verge", url: "https://www.theverge.com/tech/932207/siri-apple-intelligence-auto-deleting-chats" },
+  { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
+  { time: "01:39", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案陪审团作出裁决，认定马斯克两项主张因超过诉讼时效被驳回，马斯克败诉。该案结果可能影响OpenAI未来治理结构及非营利转营利进程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932383/jury-verdict-musk-v-altman-openai-trial" },
   { time: "00:32", tag: "ai", tagText: "AI", text: "TechCrunch报道称，AI技能军备竞赛正向汽车行业蔓延。随着自动驾驶和智能座舱技术发展，汽车行业对AI人才的需求急剧上升，成为新的竞争焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/17/techcrunch-mobility-the-ai-skills-arms-race-is-coming-for-automotive/" },
   { time: "00:24", tag: "ai", tagText: "AI", text: "亚马逊Alexa+推出AI生成播客功能，用户可指定任意主题，由AI自动生成完整播客节目。此举将Alexa从语音助手升级为个性化AI内容平台，进一步拓展AI在消费端的应用场景。", source: "The Verge", url: "https://www.theverge.com/tech/932375/amazon-alexa-plus-ai-podcasts" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI推出ChatGPT个人理财功能，允许用户连接银行账户查看投资组合、支出、订阅和即将付款的仪表盘。该功能通过Plaid平台安全连接，标志着AI向金融数据管理领域深度渗透。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "08:30", tag: "ai", tagText: "AI", text: "英伟达或将领投AI初创公司Simplismart的2000万美元融资轮，后者估值达1亿美元。此举显示英伟达正通过投资布局AI应用生态，进一步巩固其行业主导地位。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPTzBRdWxZc2NtbU5LRmxtdGhuQnIzRGQ2ZWlQaWdtR0Mtd1VPRGs4SGJfYnNPaS0xUjk3aFFFVUFRT0JULTFfT25CTFJRdFBuSkJBby1taGpKaFNkdmF1YVhUR19iRXVVbEJQbVJKc0FGdmFxaXpiUWxoUE5oek5uVmZnUnk1WlJBQkg5NWxqTThuLXdDZ01WNG9VcXBaeThySEpaZjhyU3lMazNJeVZsWkhoUloyU3Iyb1UyOUttb1FTTUFUM180cmo5NzBlUVhOWmZBdHNWVWF1M1M0MG1mN9IB5gFBVV95cUxPYW9Hc2ZEc0MzNnowb2sxMEdYOHltTWFZcWFEcXZsWTdTZWNqd1BEcmp6S3FHVU1vazBYemlFZ1hyRjgybWw3a2VrUjVZQWRmRmkwNHk0cmk2S1BOSkN6Z01ZcXNXNThzMS15Q2VBV0JkdDhJZ2J2RXJpWFFsOEZOUXBOajV3aVJSek10RWNncGhZLUhleW02VTJfbU1xUXR3cmJLV3kxaHA5SzctN3VCR0xTZ1RNUWdpOU96Y29yYWZicU1faFB4eUZvNHFSU0ZlTl83MDlJNWtoNVZmeTBmNld0MHJQUQ?oc=5" },
   { time: "07:09", tag: "ai", tagText: "AI", text: "巴克莱银行发布英国顶级AI初创公司榜单，Fractile和Isomorphic Labs入选。该榜单旨在识别英国最具潜力的AI企业，反映英国在AI领域的创新活力。", source: "City AM", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSFVIVXYtc3dIejBpWklSYXIzWU1ERGVZczcwZURCSmd6dVpoM1BLNjJuMDQxR0FTb0dIRk1IN0tnV1d3MWhPSXlhbmdoTlRlaWp3MDVHUlZoMlRMVWZkQkxmTFVONmN5Qmd4bFNXak9SUUJzT25QendmcUhaYTdObWFQellxMUc4ZGRjZFExM05iQ1FvejVHdg?oc=5" },
   { time: "03:55", tag: "ai", tagText: "AI", text: "2026年全球新诞生的98家独角兽初创公司中，AI公司占比超过四分之一，显示人工智能领域仍是资本追逐的核心赛道。", source: "Digital Journal", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaTd4ZHpscVEtWFBlX2tUbnZOYUJIN1dNWjUwMFhmQ0t2QzJBRHhNbndJVE9wZ3ROeDAyVTg5bnpYeW5wN01VWGc5ZUhTTnBxNGVTTDhzT0dmZjZ1ek5xdDNTN3dQV0NLZEJaMXpEYm1TX1FReXA5ZnlFd09maXY4OW5YQlppV3B2Qlg1N0FIeTU5WTZGVnpqY1k0cTNuV3Y5bHM0bjdqVV84ZkRrRkNlS0gyWlN0OTBZSVRieW9zaVFzM2h3RXA5OFlR?oc=5" },
-  { time: "03:46", tag: "ai", tagText: "AI", text: "埃隆·马斯克与OpenAI的诉讼进入尾声，庭审焦点集中在OpenAI CEO萨姆·奥尔特曼是否值得信任。信任问题成为该案核心争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/17/why-trust-is-a-big-question-at-the-elon-musk-openai-trial/" },
-  { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
-  { time: "02:40", tag: "ai", tagText: "AI", text: "苹果计划为升级版Siri引入自动删除聊天记录功能，试图以隐私保护作为AI领域的差异化优势，在落后于竞争对手的情况下争取用户信任。", source: "The Verge", url: "https://www.theverge.com/tech/932207/siri-apple-intelligence-auto-deleting-chats" },
-  { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
 ];
-const aiBreakingDate = "2026年5月19日 00:32 CST";
+const aiBreakingDate = "2026年5月19日 02:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
