@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 62.17,
+  score: 60.63,
   rating: "greed",
-  timestamp: "2026-05-19T12:34:31+00:00",
+  timestamp: "2026-05-19T16:24:58+00:00",
   previousClose: 62.8,
   previous1Week: 65.11,
   previous1Month: 68.57,
   previous1Year: 69.74,
-  date: "2026年5月19日 20:50 CST"
+  date: "2026年5月20日 00:30 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:58", tag: "macro", tagText: "宏观", text: "美国银行警告称，投资者正以“牛市投降”般的速度从现金涌入股市，这一反向信号暗示市场可能面临回调风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/investors-are-leaving-cash-to-buy-stocks-thats-a-sell-signal-bank-of-america-says.html" },
+  { time: "23:55", tag: "macro", tagText: "宏观", text: "特朗普表示将让新任美联储主席沃什在利率问题上“做他想做的事”。这一表态被市场解读为特朗普可能放松对美联储的施压，此前他曾对美联储施加前所未有的压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-says-hell-let-warsh-do-what-he-wants-to-do-with-interest-rates-its-a-remark-that-fed-watchers-have-been-bracing-for-2b014504?mod=mw_rss_topstories" },
+  { time: "23:30", tag: "geo", tagText: "地缘", text: "习近平在会见特朗普时表示，普京可能对入侵乌克兰感到“后悔”。特朗普则提议美中俄三国合作对抗国际刑事法院。", source: "Financial Times", url: "https://www.ft.com/content/567c57b0-6346-43e6-9d14-840a793b4d1d" },
   { time: "20:44", tag: "macro", tagText: "宏观", text: "标普500和纳斯达克期货下跌，芯片股持续走低，10年期美债收益率升至2025年2月以来最高水平，对股市构成压力。市场对AI泡沫风险的担忧加剧，投资者情绪谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/stock-market-today-live-updates.html" },
   { time: "20:33", tag: "geo", tagText: "地缘", text: "日本和中国引领外国政府减持美国国债，因海湾战争爆发引发货币担忧。美伊冲突导致原油价格飙升，日元等亚洲货币大幅贬值，各国央行抛售美债以稳定汇率。中国持有的美债降至18年低点。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/central-banks-offload-us-treasuries-china-holdings-at-18-year-low.html" },
   { time: "20:33", tag: "tech", tagText: "科技", text: "Anthropic与美国政府将在华盛顿特区法院对峙，就国防部将这家AI初创公司列入供应链风险黑名单一事展开辩论。Anthropic于3月起诉国防部，指控其决定缺乏依据。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/anthropic-dod-blacklist-court-opening-arguments.html" },
@@ -1646,14 +1649,16 @@ const breakingNews = [
   { time: "07:50", tag: "tech", tagText: "科技", text: "渣打银行宣布将裁减超过15%的企业职能部门岗位，目标到2028年将每位员工的收入提高20%以上，以寻求更高回报。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/standard-chartered-job-cuts-corporate-roles-profit-targets.html" },
   { time: "07:50", tag: "tech", tagText: "科技", text: "SpaceX IPO在即，据报将对冲基金D1 Capital持有的股份价值推高至200亿美元。若火箭制造商下月成功上市，D1 Capital等华尔街机构将获得巨额回报。", source: "Financial Times", url: "https://www.ft.com/content/f0838802-a923-43eb-9ea1-331cf6b5f038" },
   { time: "07:42", tag: "geo", tagText: "地缘", text: "据FT计算，以色列在加沙、黎巴嫩和叙利亚控制的领土面积已达约1000平方公里，相当于以色列1949年边界面积的5%。内塔尼亚胡的战争战略持续扩大以色列控制范围。", source: "Financial Times", url: "https://www.ft.com/content/1c15fae2-8aaf-4e89-838b-8cdc1fa52858" },
-  { time: "06:43", tag: "ai", tagText: "AI", text: "谷歌I/O开发者大会即将召开，这是Alphabet向华尔街展示AI实力的关键机会。在股价飙升140%后，市场期待谷歌证明其AI故事不仅仅是市场叙事，而是有实质性的业务增长动力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/google-i-o-alphabet-ai-wall-street.html" },
-  { time: "06:09", tag: "tech", tagText: "科技", text: "希捷CEO称建设新工厂“耗时太长”，引发存储芯片板块抛售，希捷、美光、SanDisk和西部数据股价齐跌。市场对AI泡沫风险的担忧加剧，英特尔亦因AI泡沫警告而走低。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/seagate-memory-chip-stocks-ai.html" },
-  { time: "04:06", tag: "geo", tagText: "地缘", text: "特朗普称应中东领导人请求，推迟原定于周二对伊朗的军事打击。美伊在霍尔木兹海峡陷入僵局，战争导致全球石油供应冲击，油价一度突破106美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/trump-iran-attack-saudi-uae-qatar-deal.html" },
 ];
-const breakingDate = "2026年5月19日 20:50 CST";
+const breakingDate = "2026年5月20日 00:30 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:24", tag: "ai", tagText: "AI", text: "亚马逊Alexa+推出AI生成播客功能，用户可指定任意主题，由AI自动生成完整播客节目。此举将Alexa从语音助手升级为个性化AI内容平台，进一步拓展AI在消费端的应用场景。", source: "The Verge", url: "https://www.theverge.com/tech/932375/amazon-alexa-plus-ai-podcasts" },
+  { time: "23:43", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Andrej Karpathy加入Anthropic预训练团队，负责大规模训练Claude模型的核心能力。预训练是AI模型最昂贵、计算最密集的环节之一，此次人事变动引发行业对顶尖AI人才流向的高度关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/" },
+  { time: "23:31", tag: "ai", tagText: "AI", text: "AI芯片股在英伟达财报发布前普遍下跌，市场对业绩预期持谨慎态度。与此同时，前OpenAI研究员旗下对冲基金押注做空英伟达及AI芯片涨势，显示部分投资者对AI芯片估值泡沫的担忧加剧。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPc2tRY0FlOENHczNna3BoNXdDbnhoc1dfdVBrSm1tRUpEN1REU09VVEVsdldwVmNsalpaeUwxVnFJazRyTjktdjduejBObE83a1BSTWoyOEpUcUZLMDBwaVVNY1AxR1JuX3NqYmxtd3BPWWotQmVJVFQ5Y19Zd1F5bFFJdjV1N0hQYVVr?oc=5" },
+  { time: "22:58", tag: "tech", tagText: "科技", text: "美国《下架法案》全面生效，要求社交平台迅速删除深度伪造性内容及其他未经同意的影像。但专家警告，该政策对受害者帮助有限，甚至可能因过度删除而误伤合法内容，引发言论自由争议。", source: "The Verge", url: "https://www.theverge.com/policy/933518/take-it-down-act-notice-removal-social-media-deepfake" },
+  { time: "22:07", tag: "ai", tagText: "AI", text: "AI专利初创公司Stilta宣布完成1050万美元种子轮融资。该公司利用AI技术加速专利申请和分析流程，此次融资显示资本对AI赋能知识产权领域的兴趣持续升温。", source: "Law.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZXd0MHhUeGxFOXVxUVVFR0R6TVFqdzhPQnVDSHZIUW5VNU8wZnh3cExfdm5YQzFGZFlwRF9wWGhrNnMyY2VzaVp2c1BZdFNVYlF5cENka1BfTFN4OUkyOXpTQ2FhSFpkU05fRk5mM1BhMUd1aGtVZENQcUYxdEtsODBCWW10ckgwWC00eWFSa2gydlA5Ym1rRWlJbmZUaXQwRngxSXM5Z2Z0NFpIWXh4OHp3?oc=5" },
   { time: "19:12", tag: "tech", tagText: "科技", text: "Valar Labs的AI膀胱癌检测工具获得美国FDA突破性医疗器械认定，为美国首个获此认定的AI膀胱癌检测产品。该认定有望加速其审批流程，推动AI在癌症诊断领域的应用。", source: "Medical Device Network", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMndMbTdJeXhYUGFPSUlSX3ZLajBQSFowN1lyNXRLMDU0QjZldGE2M1dEREpwN2pjWlo5WEZYUzQ2NS1YU3hVSlRCSUVwLXhGNk5rMDB0T1ltQ3Z0NGZzRXphUTd2Ymk3U1E5U1JCT2VPQ0hDUzBVMEh1SlNaWkxlcUw2OTNaTlJqbDM1bXVRcXJkEpGbWEyOF8wczBISXZ6aVpCMUg4SHJvS1AxVmZQdTdXYkVIb1Nra2xWSGkyQnZMZ0E?oc=5" },
   { time: "19:04", tag: "ai", tagText: "AI", text: "红杉资本领投巴黎AI初创公司Dust 4000万美元，旨在解决企业AI生产力差距问题。Dust专注于为企业提供AI工具，提升工作效率，此次融资显示资本对欧洲AI应用层的持续关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHVpdEtOeklwQWdBT2tqaVRUYWRfd1NEYmdUTmJWemlOQTVuS29valZ1T1ZLamlHV0xSMDBBVU1PTFk0Y2psQWhUcTF1MVFJLVdUcF9MNDJ6bDF0RFNHYTlySTJqYjJzNzludm5aQ2U3eEVoWVJhLVhvdjh4OXlRQ3NPa0lQSl9teW9ZcUZsQ29ZcUFj?oc=5" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "《福布斯》发布2026年AI 50强榜单，评选出全球最具影响力的人工智能公司。该榜单反映了AI行业的最新格局和资本流向，是衡量AI产业竞争态势的重要风向标。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5uUGIzcFRTdFZwdkxZTnpHdUpfVmhCQ21iczlSQjJrMnlSa19sYzB4S2JuVC1wSWo1UFhRWnlpVWtrb0NIN1RmS2Nn?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审结束，评论认为该案证明AI行业由错误的人领导。这场备受瞩目的科技审判本质上是控制权之争，马斯克认为奥特曼不应主导OpenAI的未来方向，引发对AI治理的广泛反思。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people" },
   { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
   { time: "02:40", tag: "ai", tagText: "AI", text: "苹果计划为升级版Siri引入自动删除聊天记录功能，试图以隐私保护作为AI领域的差异化优势，在落后于竞争对手的情况下争取用户信任。", source: "The Verge", url: "https://www.theverge.com/tech/932207/siri-apple-intelligence-auto-deleting-chats" },
-  { time: "02:32", tag: "tech", tagText: "科技", text: "安全研究人员发现一个零日漏洞，可完全绕过Windows 11默认的BitLocker加密保护。微软表示正在调查，但漏洞细节尚不明确，对用户数据安全构成严重威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/" },
-  { time: "02:27", tag: "ai", tagText: "AI", text: "Anthropic收购了开发工具初创公司Stainless，后者为OpenAI、Google和Cloudflare等巨头提供自动化SDK创建和维护服务。此次收购将增强Anthropic的开发者工具生态，加速其AI产品部署。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/18/anthropic-has-acquired-the-dev-tools-startup-used-by-openai-google-and-cloudflare/" },
-  { time: "01:39", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案陪审团作出裁决，认定马斯克两项主张因超过诉讼时效被驳回，马斯克败诉。该案结果可能影响OpenAI未来治理结构及非营利转营利进程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932383/jury-verdict-musk-v-altman-openai-trial" },
-  { time: "00:32", tag: "ai", tagText: "AI", text: "TechCrunch报道称，AI技能军备竞赛正向汽车行业蔓延。随着自动驾驶和智能座舱技术发展，汽车行业对AI人才的需求急剧上升，成为新的竞争焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/17/techcrunch-mobility-the-ai-skills-arms-race-is-coming-for-automotive/" },
-  { time: "00:24", tag: "ai", tagText: "AI", text: "亚马逊Alexa+推出AI生成播客功能，用户可指定任意主题，由AI自动生成完整播客节目。此举将Alexa从语音助手升级为个性化AI内容平台，进一步拓展AI在消费端的应用场景。", source: "The Verge", url: "https://www.theverge.com/tech/932375/amazon-alexa-plus-ai-podcasts" },
 ];
-const aiBreakingDate = "2026年5月19日 20:50 CST";
+const aiBreakingDate = "2026年5月20日 00:30 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
