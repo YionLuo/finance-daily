@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 60.63,
+  score: 60.66,
   rating: "greed",
-  timestamp: "2026-05-19T16:24:58+00:00",
+  timestamp: "2026-05-19T19:09:06+00:00",
   previousClose: 62.8,
   previous1Week: 65.11,
   previous1Month: 68.57,
   previous1Year: 69.74,
-  date: "2026年5月20日 00:30 CST"
+  date: "2026年5月20日 03:11 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:11", tag: "geo", tagText: "地缘", text: "特朗普声称习近平不会向伊朗提供武器，并警告德黑兰只有“两三天”时间达成协议并重新开放霍尔木兹海峡。特朗普还透露，他曾在决定对伊朗发动打击前一小时推迟行动，伊朗的谈判窗口可能持续至周日或下周初。", source: "Financial Times", url: "https://www.ft.com/content/95b98e06-3a04-4cfa-9722-f8bd27a5109b" },
+  { time: "03:11", tag: "tech", tagText: "科技", text: "谷歌在年度开发者大会上发布新一代AI模型和个性化AI代理工具，推出更先进的Gemini模型，以追赶OpenAI和Anthropic。CEO皮查伊表示新模型缩小了与竞争对手的差距。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html" },
+  { time: "03:11", tag: "ai", tagText: "AI", text: "特斯拉前AI负责人、OpenAI联合创始人安德烈·卡帕西加入Anthropic。卡帕西曾获马斯克高度评价，此次加盟进一步强化了Anthropic在AI领域的竞争力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/anthropic-hires-openai-cofounder-andrej-karpathy-former-tesla-ai-lead.html" },
+  { time: "03:11", tag: "macro", tagText: "宏观", text: "抵押贷款利率周二继续攀升，受伊朗战争不确定性影响，利率升至去年7月以来最高水平，逼近7%。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/mortgage-rates-closing-in-on-7percent.html" },
   { time: "23:58", tag: "macro", tagText: "宏观", text: "美国银行警告称，投资者正以“牛市投降”般的速度从现金涌入股市，这一反向信号暗示市场可能面临回调风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/investors-are-leaving-cash-to-buy-stocks-thats-a-sell-signal-bank-of-america-says.html" },
   { time: "23:55", tag: "macro", tagText: "宏观", text: "特朗普表示将让新任美联储主席沃什在利率问题上“做他想做的事”。这一表态被市场解读为特朗普可能放松对美联储的施压，此前他曾对美联储施加前所未有的压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-says-hell-let-warsh-do-what-he-wants-to-do-with-interest-rates-its-a-remark-that-fed-watchers-have-been-bracing-for-2b014504?mod=mw_rss_topstories" },
   { time: "23:30", tag: "geo", tagText: "地缘", text: "习近平在会见特朗普时表示，普京可能对入侵乌克兰感到“后悔”。特朗普则提议美中俄三国合作对抗国际刑事法院。", source: "Financial Times", url: "https://www.ft.com/content/567c57b0-6346-43e6-9d14-840a793b4d1d" },
@@ -1645,15 +1649,23 @@ const breakingNews = [
   { time: "16:28", tag: "tech", tagText: "科技", text: "中国顶级闪存芯片制造商长江存储（YMTC）开始进行IPO前辅导，已与投资银行签约。此举标志着这家受美国制裁的芯片巨头正式启动上市进程。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/chinas-top-flash-memory-chipmaker-082808615.html" },
   { time: "09:42", tag: "geo", tagText: "地缘", text: "普京将于本周访问北京，与习近平讨论“西伯利亚力量2号”天然气管道项目。此次峰会正值特朗普刚刚结束访华，俄罗斯担忧中国可能在美国压力下疏远莫斯科。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/putin-russia-visit-china-beijing-trump-summit-ukraine-war-energy-shock-.html" },
   { time: "09:02", tag: "macro", tagText: "宏观", text: "美国财政部、司法部与SEC与亿万富翁高塔姆·阿达尼达成和解，涉及阿达尼企业2023年11月至2025年6月期间购买受制裁伊朗能源的指控。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/adani-treasury-justice-department-sec-settlement.html" },
-  { time: "08:10", tag: "macro", tagText: "宏观", text: "日本第一季度GDP年化增长2.1%，远超经济学家预期的0.4%，较上季度的0.3%大幅提速。强劲的经济数据为日本央行进一步加息提供了支撑。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/japan-first-quarter-gdp-economy-inflation-energy.html" },
-  { time: "07:50", tag: "tech", tagText: "科技", text: "渣打银行宣布将裁减超过15%的企业职能部门岗位，目标到2028年将每位员工的收入提高20%以上，以寻求更高回报。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/standard-chartered-job-cuts-corporate-roles-profit-targets.html" },
-  { time: "07:50", tag: "tech", tagText: "科技", text: "SpaceX IPO在即，据报将对冲基金D1 Capital持有的股份价值推高至200亿美元。若火箭制造商下月成功上市，D1 Capital等华尔街机构将获得巨额回报。", source: "Financial Times", url: "https://www.ft.com/content/f0838802-a923-43eb-9ea1-331cf6b5f038" },
-  { time: "07:42", tag: "geo", tagText: "地缘", text: "据FT计算，以色列在加沙、黎巴嫩和叙利亚控制的领土面积已达约1000平方公里，相当于以色列1949年边界面积的5%。内塔尼亚胡的战争战略持续扩大以色列控制范围。", source: "Financial Times", url: "https://www.ft.com/content/1c15fae2-8aaf-4e89-838b-8cdc1fa52858" },
 ];
-const breakingDate = "2026年5月20日 00:30 CST";
+const breakingDate = "2026年5月20日 03:11 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
+  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审结束，评论认为该案证明AI行业由错误的人领导。这场备受瞩目的科技审判本质上是控制权之争，马斯克认为奥特曼不应主导OpenAI的未来方向，引发对AI治理的广泛反思。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people" },
+  { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
+  { time: "02:40", tag: "ai", tagText: "AI", text: "苹果计划为升级版Siri引入自动删除聊天记录功能，试图以隐私保护作为AI领域的差异化优势，在落后于竞争对手的情况下争取用户信任。", source: "The Verge", url: "https://www.theverge.com/tech/932207/siri-apple-intelligence-auto-deleting-chats" },
+  { time: "01:51", tag: "ai", tagText: "AI", text: "谷歌在I/O大会上发布Gemini 3.5 Flash，这是其迄今最强大的编程和智能体AI模型，能够自主执行复杂任务并构建软件。此举标志着谷歌将AI战略重心从聊天机器人转向自主智能体。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/" },
+  { time: "01:48", tag: "ai", tagText: "AI", text: "谷歌在I/O大会上宣布邀请专家测试CodeMender API，这是一款专注于代码安全的AI代理，旨在与Anthropic的Mythos竞争。谷歌正大举进军网络安全AI领域。", source: "The Verge", url: "https://www.theverge.com/tech/933921/google-wants-to-compete-with-anthropics-mythos" },
+  { time: "01:45", tag: "tech", tagText: "科技", text: "谷歌宣布对搜索进行25年来最大改版，将传统链接列表转变为由AI驱动的对话式回答、自主智能体和交互界面。同时推出跨平台“通用购物车”功能，允许AI代理在多个零售商间跟踪和管理用户购物车。", source: "The Verge", url: "https://www.theverge.com/tech/932970/google-search-ai-update-io-2026" },
+  { time: "01:45", tag: "ai", tagText: "AI", text: "谷歌推出Gemini Omni多模态模型，能够通过简单对话将文本、图像和音频转化为视频内容。该模型首发版本为Omni Flash，标志着AI视频生成进入多模态交互新阶段。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/googles-gemini-omni-turns-images-audio-and-text-into-video-and-thats-just-the-start/" },
+  { time: "01:45", tag: "ai", tagText: "AI", text: "谷歌推出AI Studio重大升级，用户现在可以通过自然语言提示在几分钟内生成原生Android应用。此举大幅降低了移动应用开发门槛，推动AI驱动的“氛围编程”普及。", source: "The Verge", url: "https://www.theverge.com/tech/932364/google-ai-studio-native-android-apps-vibe-code-google-io-2026" },
+  { time: "01:45", tag: "ai", tagText: "AI", text: "谷歌推出Gmail Live功能，将Gemini Live语音交互体验引入邮箱。用户可通过语音对话方式搜索邮件、查找信息，标志着AI语音助手深度集成至核心生产力工具。", source: "The Verge", url: "https://www.theverge.com/tech/932973/google-gmail-live-ai-keep-docs-io-2026" },
+  { time: "01:45", tag: "ai", tagText: "AI", text: "谷歌推出Gemini Spark，一款始终在线的AI代理平台，对标此前引发行业轰动的OpenClaw。同时发布Antigravity 2.0桌面应用和CLI工具，并推出每月100美元的AI Ultra订阅计划，使用额度为Pro版的5倍。", source: "The Verge", url: "https://www.theverge.com/tech/932996/google-gemini-spark-antigravity-io-2026" },
+  { time: "01:45", tag: "ai", tagText: "AI", text: "谷歌DeepMind将街景与Project Genie世界模型整合，创建沉浸式交互式世界模拟，可用于机器人训练、游戏和虚拟旅行。用户可探索真实街道环境、模拟天气变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/googles-genie-world-model-can-now-simulate-real-streets-with-street-view/" },
   { time: "00:24", tag: "ai", tagText: "AI", text: "亚马逊Alexa+推出AI生成播客功能，用户可指定任意主题，由AI自动生成完整播客节目。此举将Alexa从语音助手升级为个性化AI内容平台，进一步拓展AI在消费端的应用场景。", source: "The Verge", url: "https://www.theverge.com/tech/932375/amazon-alexa-plus-ai-podcasts" },
   { time: "23:43", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Andrej Karpathy加入Anthropic预训练团队，负责大规模训练Claude模型的核心能力。预训练是AI模型最昂贵、计算最密集的环节之一，此次人事变动引发行业对顶尖AI人才流向的高度关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/" },
   { time: "23:31", tag: "ai", tagText: "AI", text: "AI芯片股在英伟达财报发布前普遍下跌，市场对业绩预期持谨慎态度。与此同时，前OpenAI研究员旗下对冲基金押注做空英伟达及AI芯片涨势，显示部分投资者对AI芯片估值泡沫的担忧加剧。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPc2tRY0FlOENHczNna3BoNXdDbnhoc1dfdVBrSm1tRUpEN1REU09VVEVsdldwVmNsalpaeUwxVnFJazRyTjktdjduejBObE83a1BSTWoyOEpUcUZLMDBwaVVNY1AxR1JuX3NqYmxtd3BPWWotQmVJVFQ5Y19Zd1F5bFFJdjV1N0hQYVVr?oc=5" },
@@ -1662,20 +1674,8 @@ const aiBreakingNews = [
   { time: "19:12", tag: "tech", tagText: "科技", text: "Valar Labs的AI膀胱癌检测工具获得美国FDA突破性医疗器械认定，为美国首个获此认定的AI膀胱癌检测产品。该认定有望加速其审批流程，推动AI在癌症诊断领域的应用。", source: "Medical Device Network", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMndMbTdJeXhYUGFPSUlSX3ZLajBQSFowN1lyNXRLMDU0QjZldGE2M1dEREpwN2pjWlo5WEZYUzQ2NS1YU3hVSlRCSUVwLXhGNk5rMDB0T1ltQ3Z0NGZzRXphUTd2Ymk3U1E5U1JCT2VPQ0hDUzBVMEh1SlNaWkxlcUw2OTNaTlJqbDM1bXVRcXJkEpGbWEyOF8wczBISXZ6aVpCMUg4SHJvS1AxVmZQdTdXYkVIb1Nra2xWSGkyQnZMZ0E?oc=5" },
   { time: "19:04", tag: "ai", tagText: "AI", text: "红杉资本领投巴黎AI初创公司Dust 4000万美元，旨在解决企业AI生产力差距问题。Dust专注于为企业提供AI工具，提升工作效率，此次融资显示资本对欧洲AI应用层的持续关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHVpdEtOeklwQWdBT2tqaVRUYWRfd1NEYmdUTmJWemlOQTVuS29valZ1T1ZLamlHV0xSMDBBVU1PTFk0Y2psQWhUcTF1MVFJLVdUcF9MNDJ6bDF0RFNHYTlySTJqYjJzNzludm5aQ2U3eEVoWVJhLVhvdjh4OXlRQ3NPa0lQSl9teW9ZcUZsQ29ZcUFj?oc=5" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "《福布斯》发布2026年AI 50强榜单，评选出全球最具影响力的人工智能公司。该榜单反映了AI行业的最新格局和资本流向，是衡量AI产业竞争态势的重要风向标。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5uUGIzcFRTdFZwdkxZTnpHdUpfVmhCQ21iczlSQjJrMnlSa19sYzB4S2JuVC1wSWo1UFhRWnlpVWtrb0NIN1RmS2Nn?oc=5" },
-  { time: "18:30", tag: "tech", tagText: "科技", text: "The Verge评论指出，谷歌Gemini正面临“全面Copilot化”的风险。随着Gemini图标渗透至Gmail、Google Drive等所有Workspace应用，用户开始感到被过度侵入，AI助手从工具变为“无处不在的幽灵”，可能引发用户反感。", source: "The Verge", url: "https://www.theverge.com/tech/931752/google-io-2026-gemini-icon-docs-workspace" },
-  { time: "18:00", tag: "ai", tagText: "AI", text: "Crunchbase分析指出，风险资本正以前所未有的速度向头部AI公司集中，中小初创企业面临融资困境。这种“赢者通吃”的趋势可能重塑AI创业生态，引发行业对创新多样性的担忧。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxOY0lMcGZoMmw0di1Cb1JMLVczOW5fOUVENEdWOFNvM1puSFVEZnYtSV9UZEN0c0ttbXhydmRTdlZ1ZEtuYmNyUUQ3U1JmdlNkUEd6OGFmdzZ4eXN5UzVXU1E1TFFzd0gzMkNGb0Y2Q3hzb0J5ZlBnUmt2X2pCaVZ5N1BFRzhlRExjaWd4b0w3OVI?oc=5" },
-  { time: "16:30", tag: "ai", tagText: "AI", text: "Motley Fool分析指出，英伟达股价5月20日可能不会大涨，但另一家超级AI半导体股票有望爆发并开启强劲牛市。该文暗示市场对AI芯片领域的关注正从英伟达向其他潜力股扩散。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYzdIeWs5bHFKU1E0bWdFUUZ4QXY0U09MYmk5MWZTcTRsRDVGZjQ0UzN3MGVsOXZqT21vQkZtaFZaUnctd2c5NHFYbW5SMGw4QjhjRm80QjUxNHZ5RG9xSmdiLTBDanc4aFNhYWhsWjZ3SlVZTkJlb2JTZTVwbGtaRGVpZENrN0dUbmtyUFM5X2l3eGluaGx1OQ?oc=5" },
-  { time: "08:25", tag: "tech", tagText: "科技", text: "科学家研发出利用光-物质粒子（激子）替代电子驱动AI计算的新技术。该突破有望大幅降低AI芯片能耗并提升运算速度，为下一代AI硬件开辟全新路径。", source: "ScienceDaily", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoRGxfbE9LYU1PZFFTRW1CaFJRQkhLRldUREttb0RzNEVNdzBfeXhTaXZJNDBaUVFacU1hcHBWZlRZY0tCeFVjM3hoUDdVMGthYkY3SnlraDlrekNtcFlZaE5mN3FsWTNrV1JJRkpraw?oc=5" },
-  { time: "06:37", tag: "ai", tagText: "AI", text: "无人机AI初创公司Arkeus完成2500万美元融资，估值飙升至1亿美元。该公司专注于无人机AI技术，此次融资显示资本对AI+无人机赛道的高度关注。", source: "SmartCompany", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNdUdCRlJSVWZiYlc4M1BUWFZiZU94VHlVWFFRNWNMYWFmb2gza0ctclJubmJZY1RKVHNyZWw1eE4wb1dmSXBGZzNTZlNvVnJyOXh0RGlRU2poeHVRN2lPbElndlI4THc0cmVSNlRZaWJHLWEwd19QVHM5dzkwX0RSeWU0WE9vQ1dndEROVzEzQl91cHM5SzY1dkNvbGVJb20ycThsc1B3VTcxb01KdlE?oc=5" },
-  { time: "05:29", tag: "ai", tagText: "AI", text: "SandboxAQ将其药物发现模型接入Claude，称无需计算博士学位即可使用。该公司认为，AI药物研发的瓶颈在于模型的可及性，而非模型本身，此举旨在降低AI制药门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/18/sandboxaq-brings-its-drug-discovery-models-to-claude-no-phd-in-computing-required/" },
-  { time: "05:02", tag: "geo", tagText: "地缘", text: "英伟达CEO表示，中国市场将向AI芯片开放。这一表态可能预示着美国对华芯片出口管制出现松动，对全球AI芯片供应链格局产生重大影响。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTlI3RWpSMENXRl9iZlNEdEdVcDI5TDloNjVzaTBDWGRJNjJYalQ0WldaeEs3MVNLTlYxaFhjX2lEZ3ZJbjVfa2lSUGpRbmp5REN5MVRIWTh6bnBCdHB0bC1YMEMzdUwwaFlTcjdnaDJfd2Vlb3JiVzhnRVlvV2FQcVF1LWFGeFBrWjVHN1RkdXBYLXpUajI3MXgwX0lSdGc?oc=5" },
-  { time: "03:55", tag: "ai", tagText: "AI", text: "2026年全球新诞生的98家独角兽初创公司中，AI公司占比超过四分之一，显示人工智能领域仍是资本追逐的核心赛道。", source: "Digital Journal", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaTd4ZHpscVEtWFBlX2tUbnZOYUJIN1dNWjUwMFhmQ0t2QzJBRHhNbndJVE9wZ3ROeDAyVTg5bnpYeW5wN01VWGc5ZUhTTnBxNGVTTDhzT0dmZjZ1ek5xdDNTN3dQV0NLZEJaMXpEYm1TX1FReXA5ZnlFd09maXY4OW5YQlppV3B2Qlg1N0FIeTU5WTZGVnpqY1k0cTNuV3Y5bHM0bjdqVV84ZkRrRkNlS0gyWlN0OTBZSVRieW9zaVFzM2h3RXA5OFlR?oc=5" },
-  { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审结束，评论认为该案证明AI行业由错误的人领导。这场备受瞩目的科技审判本质上是控制权之争，马斯克认为奥特曼不应主导OpenAI的未来方向，引发对AI治理的广泛反思。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people" },
-  { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
-  { time: "02:40", tag: "ai", tagText: "AI", text: "苹果计划为升级版Siri引入自动删除聊天记录功能，试图以隐私保护作为AI领域的差异化优势，在落后于竞争对手的情况下争取用户信任。", source: "The Verge", url: "https://www.theverge.com/tech/932207/siri-apple-intelligence-auto-deleting-chats" },
 ];
-const aiBreakingDate = "2026年5月20日 00:30 CST";
+const aiBreakingDate = "2026年5月20日 03:11 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
