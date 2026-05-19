@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 60.43,
   rating: "greed",
-  timestamp: "2026-05-19T21:25:03+00:00",
+  timestamp: "2026-05-19T22:55:30+00:00",
   previousClose: 62.8,
   previous1Week: 65.11,
   previous1Month: 68.57,
   previous1Year: 69.74,
-  date: "2026年5月20日 05:41 CST"
+  date: "2026年5月20日 07:15 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:00", tag: "geo", tagText: "地缘", text: "美国参议院推进一项旨在终止对伊朗军事行动的议案，此举被视为对特朗普的公开谴责。对伊战争已超过《战争权力法》规定的60天期限，总统需寻求国会授权。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/senate-advances-measure-to-end-military-action-in-iran-in-rebuke-to-trump.html" },
+  { time: "07:00", tag: "tech", tagText: "科技", text: "SpaceX已选定高盛牵头其创纪录的IPO，消息人士称这将是史上规模最大的上市交易之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/spacex-picks-goldman-sachs-to-lead-record-breaking-ipo-sources-say.html" },
+  { time: "06:50", tag: "ai", tagText: "AI", text: "瑞银看好中国科技股，认为AI生态系统扩张及中美关系缓和正重振中国股市吸引力，尤其是科技板块。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/china-tech-stocks-ai-ubs-.html" },
+  { time: "05:50", tag: "geo", tagText: "地缘", text: "特朗普在肯塔基州初选中支持‘MAGA战士’肯·帕克斯顿，此举可能为民主党在11月中期选举中创造机会。", source: "Financial Times", url: "https://www.ft.com/content/cd5d3094-c490-4866-b0de-cc5917fed18c" },
   { time: "05:00", tag: "geo", tagText: "地缘", text: "美国司法部与特朗普达成协议，允许特朗普及其儿子永久免于IRS税务审计。此前一天，美国政府设立18亿美元基金，用于赔偿因所谓“法律战”而受损的特朗普盟友。", source: "Financial Times", url: "https://www.ft.com/content/57334fae-a475-4ab0-a202-8df3766927e4" },
   { time: "04:41", tag: "tech", tagText: "科技", text: "谷歌与黑石成立云计算合资企业，引发市场对AI云服务竞争加剧的担忧。CoreWeave股价下跌，分析师警告市场可能变得更加拥挤。", source: "MarketWatch", url: "https://www.marketwatch.com/story/coreweaves-stock-falls-as-new-google-cloud-venture-may-signal-more-competition-ahead-7bd7fb30?mod=mw_rss_topstories" },
   { time: "04:01", tag: "macro", tagText: "宏观", text: "花旗银行表示，当前是50年来买入铝的最佳时机，预计2026年下半年铝均价将飙升至每吨4000美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/citi-says-its-the-best-buying-set-up-in-this-metal-in-50-years.html" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "20:33", tag: "tech", tagText: "科技", text: "Anthropic与美国政府将在华盛顿特区法院对峙，就国防部将这家AI初创公司列入供应链风险黑名单一事展开辩论。Anthropic于3月起诉国防部，指控其决定缺乏依据。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/anthropic-dod-blacklist-court-opening-arguments.html" },
   { time: "20:29", tag: "crypto", tagText: "加密", text: "华尔街监管机构将发布代币化股票框架，为数字资产与传统金融的融合提供监管指引。此举被视为加密市场制度化的重要一步，稳定币和代币化实物资产正成为加密市场的新驱动力。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/crypto/articles/wall-street-regulator-issue-tokenized-122900212.html" },
   { time: "20:24", tag: "macro", tagText: "宏观", text: "家得宝第一季度营收和利润均超华尔街预期，核心消费者在高油价面前仍具韧性，销售额增长5%。但部分消费者减少了大额装修项目支出，公司维持全年业绩展望不变，缓解了投资者担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/home-depot-hd-q1-2026-earnings.html" },
-  { time: "20:15", tag: "ai", tagText: "AI", text: "AI主题在股市中的主导地位已变得极端，引发市场失衡担忧。尽管AI股曾帮助牛市抵御多重威胁，但当前结构性问题日益紧迫，市场对AI泡沫风险的讨论升温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/ai-stocks-helped-the-bull-power-through-multiple-threats-but-now-is-this-market-too-out-of-balance.html" },
-  { time: "17:57", tag: "geo", tagText: "地缘", text: "古巴强烈谴责美国新一轮制裁，指控华盛顿正在编造“欺诈性案件”以为军事行动铺路。外界猜测美国可能对古巴发动军事打击，局势持续紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/cuba-us-sanctions-military-fraudulent-case.html" },
-  { time: "17:26", tag: "macro", tagText: "宏观", text: "美国国债抛售压力暂时缓解，但30年期国债收益率仍逼近1999年以来最高水平。全球债券市场因通胀担忧重燃而持续紧张，交易员密切关注各国央行应对措施。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/treasurys-yields-inflation-traders-fed-interest-rates.html" },
-  { time: "17:15", tag: "macro", tagText: "宏观", text: "巴克莱警告称，投资者正以多年来最快速度涌入美国股票基金，但基金仓位已满，回调风险随之上升。市场情绪可能即将逆转。", source: "MarketWatch", url: "https://www.marketwatch.com/story/investors-are-piling-into-u-s-equity-funds-at-the-fastest-pace-in-years-but-now-the-pendulum-may-swing-back-warns-barclays-91f10215" },
 ];
-const breakingDate = "2026年5月20日 05:41 CST";
+const breakingDate = "2026年5月20日 07:15 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:15", tag: "ai", tagText: "AI", text: "OpenAI宣布两项新措施以帮助检测AI生成图像：加入开放C2PA标准，并在其产品中集成谷歌的SynthID水印技术，提升AI内容可追溯性。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/openai-is-making-it-easier-to-check-if-an-image-was-made-by-their-models/" },
+  { time: "07:15", tag: "ai", tagText: "AI", text: "AI安全初创公司Ocean完成2800万美元融资，由Lightspeed Venture Partners领投。该公司创始人从少年黑客转型为“铁穹”研究员，其平台专注于利用智能体技术防御AI驱动的钓鱼攻击。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/from-teen-hacker-to-iron-dome-researcher-this-founder-raised-28m-to-fight-ai-phishing/" },
   { time: "05:40", tag: "ai", tagText: "AI", text: "谷歌宣布与沃尔沃合作，Gemini将能调用沃尔沃EX60 SUV的外部摄像头解读停车标志，使AI助手获得视觉和移动能力，拓展车载AI应用场景。", source: "The Verge", url: "https://www.theverge.com/transportation/933556/google-io-gemini-volvo-ex60-camera-ai-parking" },
   { time: "05:40", tag: "tech", tagText: "科技", text: "美国网络安全和基础设施安全局（CISA）的机密凭证（包括SSH密钥和明文密码）被发现自2025年11月起公开暴露在GitHub仓库中，引发严重安全担忧。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/in-stunning-display-of-stupid-secret-cisa-credentials-found-in-public-github-repo/" },
   { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "23:43", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Andrej Karpathy加入Anthropic预训练团队，负责大规模训练Claude模型的核心能力。预训练是AI模型最昂贵、计算最密集的环节之一，此次人事变动引发行业对顶尖AI人才流向的高度关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/" },
   { time: "23:31", tag: "ai", tagText: "AI", text: "AI芯片股在英伟达财报发布前普遍下跌，市场对业绩预期持谨慎态度。与此同时，前OpenAI研究员旗下对冲基金押注做空英伟达及AI芯片涨势，显示部分投资者对AI芯片估值泡沫的担忧加剧。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPc2tRY0FlOENHczNna3BoNXdDbnhoc1dfdVBrSm1tRUpEN1REU09VVEVsdldwVmNsalpaeUwxVnFJazRyTjktdjduejBObE83a1BSTWoyOEpUcUZLMDBwaVVNY1AxR1JuX3NqYmxtd3BPWWotQmVJVFQ5Y19Zd1F5bFFJdjV1N0hQYVVr?oc=5" },
   { time: "22:58", tag: "tech", tagText: "科技", text: "美国《下架法案》全面生效，要求社交平台迅速删除深度伪造性内容及其他未经同意的影像。但专家警告，该政策对受害者帮助有限，甚至可能因过度删除而误伤合法内容，引发言论自由争议。", source: "The Verge", url: "https://www.theverge.com/policy/933518/take-it-down-act-notice-removal-social-media-deepfake" },
-  { time: "22:07", tag: "ai", tagText: "AI", text: "AI专利初创公司Stilta宣布完成1050万美元种子轮融资。该公司利用AI技术加速专利申请和分析流程，此次融资显示资本对AI赋能知识产权领域的兴趣持续升温。", source: "Law.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZXd0MHhUeGxFOXVxUVVFR0R6TVFqdzhPQnVDSHZIUW5VNU8wZnh3cExfdm5YQzFGZFlwRF9wWGhrNnMyY2VzaVp2c1BZdFNVYlF5cENka1BfTFN4OUkyOXpTQ2FhSFpkU05fRk5mM1BhMUd1aGtVZENQcUYxdEtsODBCWW10ckgwWC00eWFSa2gydlA5Ym1rRWlJbmZUaXQwRngxSXM5Z2Z0NFpIWXh4OHp3?oc=5" },
-  { time: "19:12", tag: "tech", tagText: "科技", text: "Valar Labs的AI膀胱癌检测工具获得美国FDA突破性医疗器械认定，为美国首个获此认定的AI膀胱癌检测产品。该认定有望加速其审批流程，推动AI在癌症诊断领域的应用。", source: "Medical Device Network", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMndMbTdJeXhYUGFPSUlSX3ZLajBQSFowN1lyNXRLMDU0QjZldGE2M1dEREpwN2pjWlo5WEZYUzQ2NS1YU3hVSlRCSUVwLXhGNk5rMDB0T1ltQ3Z0NGZzRXphUTd2Ymk3U1E5U1JCT2VPQ0hDUzBVMEh1SlNaWkxlcUw2OTNaTlJqbDM1bXVRcXJkEpGbWEyOF8wczBISXZ6aVpCMUg4SHJvS1AxVmZQdTdXYkVIb1Nra2xWSGkyQnZMZ0E?oc=5" },
 ];
-const aiBreakingDate = "2026年5月20日 05:41 CST";
+const aiBreakingDate = "2026年5月20日 07:15 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
