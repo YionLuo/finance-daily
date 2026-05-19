@@ -1616,21 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 62.8,
+  score: 62.66,
   rating: "greed",
-  timestamp: "2026-05-18T23:58:19+00:00",
-  previousClose: 62.91,
-  previous1Week: 65.4,
+  timestamp: "2026-05-19T00:00:00+00:00",
+  previousClose: 62.8,
+  previous1Week: 65.11,
   previous1Month: 68.57,
-  previous1Year: 70.6,
-  date: "2026年5月19日 08:16 CST"
+  previous1Year: 69.74,
+  date: "2026年5月19日 13:09 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "09:42", tag: "geo", tagText: "地缘", text: "普京将于本周访问北京，与习近平讨论“西伯利亚力量2号”天然气管道项目。此次峰会正值特朗普刚刚结束访华，俄罗斯担忧中国可能在美国压力下疏远莫斯科。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/putin-russia-visit-china-beijing-trump-summit-ukraine-war-energy-shock-.html" },
+  { time: "09:02", tag: "macro", tagText: "宏观", text: "美国财政部、司法部与SEC与亿万富翁高塔姆·阿达尼达成和解，涉及阿达尼企业2023年11月至2025年6月期间购买受制裁伊朗能源的指控。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/adani-treasury-justice-department-sec-settlement.html" },
   { time: "08:10", tag: "macro", tagText: "宏观", text: "日本第一季度GDP年化增长2.1%，远超经济学家预期的0.4%，较上季度的0.3%大幅提速。强劲的经济数据为日本央行进一步加息提供了支撑。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/japan-first-quarter-gdp-economy-inflation-energy.html" },
+  { time: "07:50", tag: "tech", tagText: "科技", text: "渣打银行宣布将裁减超过15%的企业职能部门岗位，目标到2028年将每位员工的收入提高20%以上，以寻求更高回报。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/standard-chartered-job-cuts-corporate-roles-profit-targets.html" },
   { time: "07:50", tag: "tech", tagText: "科技", text: "SpaceX IPO在即，据报将对冲基金D1 Capital持有的股份价值推高至200亿美元。若火箭制造商下月成功上市，D1 Capital等华尔街机构将获得巨额回报。", source: "Financial Times", url: "https://www.ft.com/content/f0838802-a923-43eb-9ea1-331cf6b5f038" },
+  { time: "07:42", tag: "geo", tagText: "地缘", text: "据FT计算，以色列在加沙、黎巴嫩和叙利亚控制的领土面积已达约1000平方公里，相当于以色列1949年边界面积的5%。内塔尼亚胡的战争战略持续扩大以色列控制范围。", source: "Financial Times", url: "https://www.ft.com/content/1c15fae2-8aaf-4e89-838b-8cdc1fa52858" },
   { time: "06:43", tag: "ai", tagText: "AI", text: "谷歌I/O开发者大会即将召开，这是Alphabet向华尔街展示AI实力的关键机会。在股价飙升140%后，市场期待谷歌证明其AI故事不仅仅是市场叙事，而是有实质性的业务增长动力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/google-i-o-alphabet-ai-wall-street.html" },
   { time: "06:09", tag: "tech", tagText: "科技", text: "希捷CEO称建设新工厂“耗时太长”，引发存储芯片板块抛售，希捷、美光、SanDisk和西部数据股价齐跌。市场对AI泡沫风险的担忧加剧，英特尔亦因AI泡沫警告而走低。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/seagate-memory-chip-stocks-ai.html" },
   { time: "04:06", tag: "geo", tagText: "地缘", text: "特朗普称应中东领导人请求，推迟原定于周二对伊朗的军事打击。美伊在霍尔木兹海峡陷入僵局，战争导致全球石油供应冲击，油价一度突破106美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/trump-iran-attack-saudi-uae-qatar-deal.html" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "00:24", tag: "macro", tagText: "宏观", text: "美股连续第二日下跌，标普500和纳斯达克指数走低，美光科技领跌。市场密切关注油价和债券收益率走势，同时等待中东冲突的进一步发展。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/stock-market-today-live-updates.html" },
   { time: "00:10", tag: "macro", tagText: "宏观", text: "华尔街传奇人物、Evercore的Roger Altman警告称，石油市场正接近“临界点”，油价大幅上涨可能引发“新冠疫情后本十年的第二次重大通胀冲击”，进而破坏市场稳定，对股市构成风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-oil-market-is-reaching-a-tipping-point-that-could-create-problems-for-stocks-according-to-this-wall-street-legend-8e7f9d62?mod=mw_rss_topstories" },
   { time: "00:08", tag: "macro", tagText: "宏观", text: "知名经济学家Yardeni预测，美联储将在7月被迫加息，以安抚“债券义警”。他认为，即将上任的美联储主席Kevin Warsh可能不得不推动加息，而非降息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/the-fed-will-have-to-raise-interest-rates-in-july-to-appease-bond-vigilantes-yardeni-says.html" },
-  { time: "23:30", tag: "ai", tagText: "AI", text: "高盛发布报告指出，从历史经验看，人工智能技术很可能会进一步拉大企业巨头与其他公司之间的差距，加剧市场分化。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/article/history-says-ai-is-likely-to-widen-the-gap-between-corporate-giants-and-everyone-else-goldman-sachs-161724815.html" },
-  { time: "23:12", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦最新披露的文件可能揭示了巴菲特在3月向CNBC透露的“一笔小收购”。市场关注这位“奥马哈先知”的最新投资动向。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/warren-buffett-teased-to-cnbc-a-tiny-purchase-in-march-berkshire-filing-may-have-revealed-it.html" },
-  { time: "20:41", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦大幅调整投资组合，斥资26亿美元建仓达美航空，并将Alphabet持股增加224%。市场关注巴菲特最新投资动向及其对航空和科技板块的押注信号。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/berkshire-portfolio-revamp-delta-airlines-macys-unitedhealth.html" },
-  { time: "20:40", tag: "ai", tagText: "AI", text: "NextEra Energy宣布收购Dominion Energy，交易将合并两家在AI数据中心电力竞赛中的关键参与者。Dominion为全球最大数据中心市场（北弗吉尼亚）供电，NextEra是美国最大可再生能源开发商。合并后将成为全球最大上市公用事业公司，估值约4000亿美元，凸显AI驱动的电力需求激增。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/nextera-nee-dominion-energy-d-data-center-ai.html" },
 ];
-const breakingDate = "2026年5月19日 08:16 CST";
+const breakingDate = "2026年5月19日 13:09 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:25", tag: "tech", tagText: "科技", text: "科学家研发出利用光-物质粒子（激子）替代电子驱动AI计算的新技术。该突破有望大幅降低AI芯片能耗并提升运算速度，为下一代AI硬件开辟全新路径。", source: "ScienceDaily", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoRGxfbE9LYU1PZFFTRW1CaFJRQkhLRldUREttb0RzNEVNdzBfeXhTaXZJNDBaUVFacU1hcHBWZlRZY0tCeFVjM3hoUDdVMGthYkY3SnlraDlrekNtcFlZaE5mN3FsWTNrV1JJRkpraw?oc=5" },
   { time: "06:37", tag: "ai", tagText: "AI", text: "无人机AI初创公司Arkeus完成2500万美元融资，估值飙升至1亿美元。该公司专注于无人机AI技术，此次融资显示资本对AI+无人机赛道的高度关注。", source: "SmartCompany", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNdUdCRlJSVWZiYlc4M1BUWFZiZU94VHlVWFFRNWNMYWFmb2gza0ctclJubmJZY1RKVHNyZWw1eE4wb1dmSXBGZzNTZlNvVnJyOXh0RGlRU2poeHVRN2lPbElndlI4THc0cmVSNlRZaWJHLWEwd19QVHM5dzkwX0RSeWU0WE9vQ1dndEROVzEzQl91cHM5SzY1dkNvbGVJb20ycThsc1B3VTcxb01KdlE?oc=5" },
   { time: "05:29", tag: "ai", tagText: "AI", text: "SandboxAQ将其药物发现模型接入Claude，称无需计算博士学位即可使用。该公司认为，AI药物研发的瓶颈在于模型的可及性，而非模型本身，此举旨在降低AI制药门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/18/sandboxaq-brings-its-drug-discovery-models-to-claude-no-phd-in-computing-required/" },
   { time: "05:02", tag: "geo", tagText: "地缘", text: "英伟达CEO表示，中国市场将向AI芯片开放。这一表态可能预示着美国对华芯片出口管制出现松动，对全球AI芯片供应链格局产生重大影响。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTlI3RWpSMENXRl9iZlNEdEdVcDI5TDloNjVzaTBDWGRJNjJYalQ0WldaeEs3MVNLTlYxaFhjX2lEZ3ZJbjVfa2lSUGpRbmp5REN5MVRIWTh6bnBCdHB0bC1YMEMzdUwwaFlTcjdnaDJfd2Vlb3JiVzhnRVlvV2FQcVF1LWFGeFBrWjVHN1RkdXBYLXpUajI3MXgwX0lSdGc?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "19:12", tag: "tech", tagText: "科技", text: "Valar Labs的AI膀胱癌检测工具获得美国FDA突破性医疗器械认定，为美国首个获此认定的AI膀胱癌检测产品。该认定有望加速其审批流程，推动AI在癌症诊断领域的应用。", source: "Medical Device Network", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMndMbTdJeXhYUGFPSUlSX3ZLajBQSFowN1lyNXRLMDU0QjZldGE2M1dEREpwN2pjWlo5WEZYUzQ2NS1YU3hVSlRCSUVwLXhGNk5rMDB0T1ltQ3Z0NGZzRXphUTd2Ymk3U1E5U1JCT2VPQ0hDUzBVMEh1SlNaWkxlcUw2OTNaTlJqbDM1bXVRcXJkEpGbWEyOF8wczBISXZ6aVpCMUg4SHJvS1AxVmZQdTdXYkVIb1Nra2xWSGkyQnZMZ0E?oc=5" },
   { time: "19:04", tag: "ai", tagText: "AI", text: "红杉资本领投巴黎AI初创公司Dust 4000万美元，旨在解决企业AI生产力差距问题。Dust专注于为企业提供AI工具，提升工作效率，此次融资显示资本对欧洲AI应用层的持续关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHVpdEtOeklwQWdBT2tqaVRUYWRfd1NEYmdUTmJWemlOQTVuS29valZ1T1ZLamlHV0xSMDBBVU1PTFk0Y2psQWhUcTF1MVFJLVdUcF9MNDJ6bDF0RFNHYTlySTJqYjJzNzludm5aQ2U3eEVoWVJhLVhvdjh4OXlRQ3NPa0lQSl9teW9ZcUZsQ29ZcUFj?oc=5" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "前OpenAI员工创办的对冲基金披露了巨额英伟达及AI芯片期权头寸，显示其对AI芯片市场前景极度看好。此举引发市场关注，可能影响投资者对AI硬件板块的情绪。", source: "Quiver Quantitative", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWGJ3WDIwSjk3UmF0SWp0NEJrcnVMaEVPLVhiUzI3bjNoMkNzY09YX0t6emxLU0hRRU5PVkdtWGg2aElXU09OTUhPcS1XSWFlX2QxTjcxRnA5ekNRY0w0bFN5OUIxN3Z2WDMtdGZ6NDFxR1htb2paU0tsUWJOMDJ4bC1KeUNIVTFwa1pUODVyUEJMWmVVT29BU3NrUVBRYjkxX2JWSWc4bXBlUnNfSENiVUNreURIdmFIZXFxV0I2LV91UUZTRDlOUw?oc=5" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "韩国初创公司LetinAR正在研发用于AI眼镜的微型光学镜片，其镜片仅指甲盖大小，有望成为AI眼镜时代的光学基础。该公司致力于解决AR眼镜轻量化与高画质的核心难题。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/18/south-koreas-letinar-is-building-the-optics-behind-ai-glasses/" },
 ];
-const aiBreakingDate = "2026年5月19日 08:16 CST";
+const aiBreakingDate = "2026年5月19日 13:09 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
