@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 62.66,
+  score: 62.17,
   rating: "greed",
-  timestamp: "2026-05-19T00:00:00+00:00",
+  timestamp: "2026-05-19T09:44:16+00:00",
   previousClose: 62.8,
   previous1Week: 65.11,
   previous1Month: 68.57,
   previous1Year: 69.74,
-  date: "2026年5月19日 13:09 CST"
+  date: "2026年5月19日 18:02 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:57", tag: "geo", tagText: "地缘", text: "古巴强烈谴责美国新一轮制裁，指控华盛顿正在编造“欺诈性案件”以为军事行动铺路。外界猜测美国可能对古巴发动军事打击，局势持续紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/cuba-us-sanctions-military-fraudulent-case.html" },
+  { time: "17:26", tag: "macro", tagText: "宏观", text: "美国国债抛售压力暂时缓解，但30年期国债收益率仍逼近1999年以来最高水平。全球债券市场因通胀担忧重燃而持续紧张，交易员密切关注各国央行应对措施。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/treasurys-yields-inflation-traders-fed-interest-rates.html" },
+  { time: "17:15", tag: "macro", tagText: "宏观", text: "巴克莱警告称，投资者正以多年来最快速度涌入美国股票基金，但基金仓位已满，回调风险随之上升。市场情绪可能即将逆转。", source: "MarketWatch", url: "https://www.marketwatch.com/story/investors-are-piling-into-u-s-equity-funds-at-the-fastest-pace-in-years-but-now-the-pendulum-may-swing-back-warns-barclays-91f10215" },
+  { time: "17:00", tag: "ai", tagText: "AI", text: "AI经济正在重塑美国梦：蓝领技术工人成为赢家。福特、AT&T等公司加大招聘熟练技工，而面向大学毕业生的入门级岗位因AI自动化而减少。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/ai-hiring-slowdown-skilled-trade-workers.html" },
+  { time: "16:28", tag: "tech", tagText: "科技", text: "中国顶级闪存芯片制造商长江存储（YMTC）开始进行IPO前辅导，已与投资银行签约。此举标志着这家受美国制裁的芯片巨头正式启动上市进程。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/chinas-top-flash-memory-chipmaker-082808615.html" },
   { time: "09:42", tag: "geo", tagText: "地缘", text: "普京将于本周访问北京，与习近平讨论“西伯利亚力量2号”天然气管道项目。此次峰会正值特朗普刚刚结束访华，俄罗斯担忧中国可能在美国压力下疏远莫斯科。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/putin-russia-visit-china-beijing-trump-summit-ukraine-war-energy-shock-.html" },
   { time: "09:02", tag: "macro", tagText: "宏观", text: "美国财政部、司法部与SEC与亿万富翁高塔姆·阿达尼达成和解，涉及阿达尼企业2023年11月至2025年6月期间购买受制裁伊朗能源的指控。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/adani-treasury-justice-department-sec-settlement.html" },
   { time: "08:10", tag: "macro", tagText: "宏观", text: "日本第一季度GDP年化增长2.1%，远超经济学家预期的0.4%，较上季度的0.3%大幅提速。强劲的经济数据为日本央行进一步加息提供了支撑。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/japan-first-quarter-gdp-economy-inflation-energy.html" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "02:45", tag: "tech", tagText: "科技", text: "特斯拉股价下跌，马斯克在与OpenAI及Sam Altman的法律诉讼中败诉。加州奥克兰陪审团裁定马斯克败诉，为Altman赢得法律胜利，该案此前曾给OpenAI的上市计划蒙上阴影。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/musk-altman-openai-trial-verdict.html" },
   { time: "02:28", tag: "geo", tagText: "地缘", text: "特朗普在中美峰会后转向中期选举和民生议题，伊朗战争持续。特朗普预计将在白宫活动上宣布扩大通过TrumpRX提供的折扣处方药数量。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/trump-hegseth-economy-2026-election-midterms-iran-china.html" },
   { time: "02:13", tag: "geo", tagText: "地缘", text: "美国延长俄罗斯石油豁免许可30天，试图以此降低国内燃油价格。此举正值美国选民对高昂汽油和柴油价格感到不满之际。", source: "Financial Times", url: "https://www.ft.com/content/df5fca22-d057-444f-b430-32623b196d00" },
-  { time: "01:44", tag: "macro", tagText: "宏观", text: "油价上涨，特朗普警告对伊朗“时间紧迫”，但市场更担心供应缓冲耗尽可能引发更大危机。分析指出，用于缓冲供应中断的储备正在减少，可能成为下一轮油价飙升的导火索。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/oil-climbs-as-trump-warns-the-clock-is-ticking-on-iran-but-theres-a-bigger-danger-lurking-on-the-horizon-9dfa8129?mod=mw_rss_topstories" },
-  { time: "01:40", tag: "macro", tagText: "宏观", text: "一名美国医生在刚果检测出埃博拉病毒阳性，美国政府计划将其与其他六名美国人转运至德国治疗，同时禁止近期到过刚果、乌干达或南苏丹的非美国护照持有者入境。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-plans-to-move-physicians-exposed-to-rare-ebola-virus-to-germany-122af3f4?mod=mw_rss_topstories" },
-  { time: "00:24", tag: "macro", tagText: "宏观", text: "美股连续第二日下跌，标普500和纳斯达克指数走低，美光科技领跌。市场密切关注油价和债券收益率走势，同时等待中东冲突的进一步发展。", source: "CNBC", url: "https://www.cnbc.com/2026/05/17/stock-market-today-live-updates.html" },
-  { time: "00:10", tag: "macro", tagText: "宏观", text: "华尔街传奇人物、Evercore的Roger Altman警告称，石油市场正接近“临界点”，油价大幅上涨可能引发“新冠疫情后本十年的第二次重大通胀冲击”，进而破坏市场稳定，对股市构成风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-oil-market-is-reaching-a-tipping-point-that-could-create-problems-for-stocks-according-to-this-wall-street-legend-8e7f9d62?mod=mw_rss_topstories" },
-  { time: "00:08", tag: "macro", tagText: "宏观", text: "知名经济学家Yardeni预测，美联储将在7月被迫加息，以安抚“债券义警”。他认为，即将上任的美联储主席Kevin Warsh可能不得不推动加息，而非降息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/the-fed-will-have-to-raise-interest-rates-in-july-to-appease-bond-vigilantes-yardeni-says.html" },
 ];
-const breakingDate = "2026年5月19日 13:09 CST";
+const breakingDate = "2026年5月19日 18:02 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:30", tag: "ai", tagText: "AI", text: "Motley Fool分析指出，英伟达股价5月20日可能不会大涨，但另一家超级AI半导体股票有望爆发并开启强劲牛市。该文暗示市场对AI芯片领域的关注正从英伟达向其他潜力股扩散。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYzdIeWs5bHFKU1E0bWdFUUZ4QXY0U09MYmk5MWZTcTRsRDVGZjQ0UzN3MGVsOXZqT21vQkZtaFZaUnctd2c5NHFYbW5SMGw4QjhjRm80QjUxNHZ5RG9xSmdiLTBDanc4aFNhYWhsWjZ3SlVZTkJlb2JTZTVwbGtaRGVpZENrN0dUbmtyUFM5X2l3eGluaGx1OQ?oc=5" },
   { time: "08:25", tag: "tech", tagText: "科技", text: "科学家研发出利用光-物质粒子（激子）替代电子驱动AI计算的新技术。该突破有望大幅降低AI芯片能耗并提升运算速度，为下一代AI硬件开辟全新路径。", source: "ScienceDaily", url: "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoRGxfbE9LYU1PZFFTRW1CaFJRQkhLRldUREttb0RzNEVNdzBfeXhTaXZJNDBaUVFacU1hcHBWZlRZY0tCeFVjM3hoUDdVMGthYkY3SnlraDlrekNtcFlZaE5mN3FsWTNrV1JJRkpraw?oc=5" },
   { time: "06:37", tag: "ai", tagText: "AI", text: "无人机AI初创公司Arkeus完成2500万美元融资，估值飙升至1亿美元。该公司专注于无人机AI技术，此次融资显示资本对AI+无人机赛道的高度关注。", source: "SmartCompany", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNdUdCRlJSVWZiYlc4M1BUWFZiZU94VHlVWFFRNWNMYWFmb2gza0ctclJubmJZY1RKVHNyZWw1eE4wb1dmSXBGZzNTZlNvVnJyOXh0RGlRU2poeHVRN2lPbElndlI4THc0cmVSNlRZaWJHLWEwd19QVHM5dzkwX0RSeWU0WE9vQ1dndEROVzEzQl91cHM5SzY1dkNvbGVJb20ycThsc1B3VTcxb01KdlE?oc=5" },
   { time: "05:29", tag: "ai", tagText: "AI", text: "SandboxAQ将其药物发现模型接入Claude，称无需计算博士学位即可使用。该公司认为，AI药物研发的瓶颈在于模型的可及性，而非模型本身，此举旨在降低AI制药门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/18/sandboxaq-brings-its-drug-discovery-models-to-claude-no-phd-in-computing-required/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:01", tag: "tech", tagText: "科技", text: "华尔街日报独家报道，一家初创公司开发出简化AI芯片切换的技术，使企业能更轻松地在不同AI芯片之间迁移工作负载，英伟达已成为其新投资者。此举或降低AI芯片市场的切换成本，削弱英伟达的生态锁定效应。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQzEzU191bU5EM3BOX3JESTlYZWRYY3FRVmNfcDBNNGJ6MW9qMXoxeWFKbmFrSmxZRUJXUzFzRWozNjRRSklIMTJLRzFNMXNzSjMwMmlIYXhrLU04MmpmV3dxd3Z1NGtsNTkweWd3cUZZOEhBWklIM1lUSFJyVHB4TzZLQnd1YUtPVlptYnQ5dW5UTi0yc1hRN2dnSktIdzc5bjFnYlhMUQ?oc=5" },
   { time: "19:12", tag: "tech", tagText: "科技", text: "Valar Labs的AI膀胱癌检测工具获得美国FDA突破性医疗器械认定，为美国首个获此认定的AI膀胱癌检测产品。该认定有望加速其审批流程，推动AI在癌症诊断领域的应用。", source: "Medical Device Network", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMndMbTdJeXhYUGFPSUlSX3ZLajBQSFowN1lyNXRLMDU0QjZldGE2M1dEREpwN2pjWlo5WEZYUzQ2NS1YU3hVSlRCSUVwLXhGNk5rMDB0T1ltQ3Z0NGZzRXphUTd2Ymk3U1E5U1JCT2VPQ0hDUzBVMEh1SlNaWkxlcUw2OTNaTlJqbDM1bXVRcXJkEpGbWEyOF8wczBISXZ6aVpCMUg4SHJvS1AxVmZQdTdXYkVIb1Nra2xWSGkyQnZMZ0E?oc=5" },
   { time: "19:04", tag: "ai", tagText: "AI", text: "红杉资本领投巴黎AI初创公司Dust 4000万美元，旨在解决企业AI生产力差距问题。Dust专注于为企业提供AI工具，提升工作效率，此次融资显示资本对欧洲AI应用层的持续关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHVpdEtOeklwQWdBT2tqaVRUYWRfd1NEYmdUTmJWemlOQTVuS29valZ1T1ZLamlHV0xSMDBBVU1PTFk0Y2psQWhUcTF1MVFJLVdUcF9MNDJ6bDF0RFNHYTlySTJqYjJzNzludm5aQ2U3eEVoWVJhLVhvdjh4OXlRQ3NPa0lQSl9teW9ZcUZsQ29ZcUFj?oc=5" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "前OpenAI员工创办的对冲基金披露了巨额英伟达及AI芯片期权头寸，显示其对AI芯片市场前景极度看好。此举引发市场关注，可能影响投资者对AI硬件板块的情绪。", source: "Quiver Quantitative", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWGJ3WDIwSjk3UmF0SWp0NEJrcnVMaEVPLVhiUzI3bjNoMkNzY09YX0t6emxLU0hRRU5PVkdtWGg2aElXU09OTUhPcS1XSWFlX2QxTjcxRnA5ekNRY0w0bFN5OUIxN3Z2WDMtdGZ6NDFxR1htb2paU0tsUWJOMDJ4bC1KeUNIVTFwa1pUODVyUEJMWmVVT29BU3NrUVBRYjkxX2JWSWc4bXBlUnNfSENiVUNreURIdmFIZXFxV0I2LV91UUZTRDlOUw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月19日 13:09 CST";
+const aiBreakingDate = "2026年5月19日 18:02 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
