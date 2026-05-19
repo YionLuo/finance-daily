@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 60.66,
+  score: 60.43,
   rating: "greed",
-  timestamp: "2026-05-19T19:09:06+00:00",
+  timestamp: "2026-05-19T21:25:03+00:00",
   previousClose: 62.8,
   previous1Week: 65.11,
   previous1Month: 68.57,
   previous1Year: 69.74,
-  date: "2026年5月20日 03:11 CST"
+  date: "2026年5月20日 05:41 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:00", tag: "geo", tagText: "地缘", text: "美国司法部与特朗普达成协议，允许特朗普及其儿子永久免于IRS税务审计。此前一天，美国政府设立18亿美元基金，用于赔偿因所谓“法律战”而受损的特朗普盟友。", source: "Financial Times", url: "https://www.ft.com/content/57334fae-a475-4ab0-a202-8df3766927e4" },
+  { time: "04:41", tag: "tech", tagText: "科技", text: "谷歌与黑石成立云计算合资企业，引发市场对AI云服务竞争加剧的担忧。CoreWeave股价下跌，分析师警告市场可能变得更加拥挤。", source: "MarketWatch", url: "https://www.marketwatch.com/story/coreweaves-stock-falls-as-new-google-cloud-venture-may-signal-more-competition-ahead-7bd7fb30?mod=mw_rss_topstories" },
+  { time: "04:01", tag: "macro", tagText: "宏观", text: "花旗银行表示，当前是50年来买入铝的最佳时机，预计2026年下半年铝均价将飙升至每吨4000美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/citi-says-its-the-best-buying-set-up-in-this-metal-in-50-years.html" },
+  { time: "03:56", tag: "crypto", tagText: "加密", text: "Polymarket推出私人公司交易市场，允许投资者对Anthropic、OpenAI等未上市公司的估值、IPO时间表和二级市场活动进行投机。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/polymarket-launches-private-company-trading-so-investors-can-speculate-on-anthropic-openai.html" },
   { time: "03:11", tag: "geo", tagText: "地缘", text: "特朗普声称习近平不会向伊朗提供武器，并警告德黑兰只有“两三天”时间达成协议并重新开放霍尔木兹海峡。特朗普还透露，他曾在决定对伊朗发动打击前一小时推迟行动，伊朗的谈判窗口可能持续至周日或下周初。", source: "Financial Times", url: "https://www.ft.com/content/95b98e06-3a04-4cfa-9722-f8bd27a5109b" },
   { time: "03:11", tag: "tech", tagText: "科技", text: "谷歌在年度开发者大会上发布新一代AI模型和个性化AI代理工具，推出更先进的Gemini模型，以追赶OpenAI和Anthropic。CEO皮查伊表示新模型缩小了与竞争对手的差距。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html" },
   { time: "03:11", tag: "ai", tagText: "AI", text: "特斯拉前AI负责人、OpenAI联合创始人安德烈·卡帕西加入Anthropic。卡帕西曾获马斯克高度评价，此次加盟进一步强化了Anthropic在AI领域的竞争力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/anthropic-hires-openai-cofounder-andrej-karpathy-former-tesla-ai-lead.html" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "17:57", tag: "geo", tagText: "地缘", text: "古巴强烈谴责美国新一轮制裁，指控华盛顿正在编造“欺诈性案件”以为军事行动铺路。外界猜测美国可能对古巴发动军事打击，局势持续紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/cuba-us-sanctions-military-fraudulent-case.html" },
   { time: "17:26", tag: "macro", tagText: "宏观", text: "美国国债抛售压力暂时缓解，但30年期国债收益率仍逼近1999年以来最高水平。全球债券市场因通胀担忧重燃而持续紧张，交易员密切关注各国央行应对措施。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/treasurys-yields-inflation-traders-fed-interest-rates.html" },
   { time: "17:15", tag: "macro", tagText: "宏观", text: "巴克莱警告称，投资者正以多年来最快速度涌入美国股票基金，但基金仓位已满，回调风险随之上升。市场情绪可能即将逆转。", source: "MarketWatch", url: "https://www.marketwatch.com/story/investors-are-piling-into-u-s-equity-funds-at-the-fastest-pace-in-years-but-now-the-pendulum-may-swing-back-warns-barclays-91f10215" },
-  { time: "17:00", tag: "ai", tagText: "AI", text: "AI经济正在重塑美国梦：蓝领技术工人成为赢家。福特、AT&T等公司加大招聘熟练技工，而面向大学毕业生的入门级岗位因AI自动化而减少。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/ai-hiring-slowdown-skilled-trade-workers.html" },
-  { time: "16:28", tag: "tech", tagText: "科技", text: "中国顶级闪存芯片制造商长江存储（YMTC）开始进行IPO前辅导，已与投资银行签约。此举标志着这家受美国制裁的芯片巨头正式启动上市进程。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/chinas-top-flash-memory-chipmaker-082808615.html" },
-  { time: "09:42", tag: "geo", tagText: "地缘", text: "普京将于本周访问北京，与习近平讨论“西伯利亚力量2号”天然气管道项目。此次峰会正值特朗普刚刚结束访华，俄罗斯担忧中国可能在美国压力下疏远莫斯科。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/putin-russia-visit-china-beijing-trump-summit-ukraine-war-energy-shock-.html" },
-  { time: "09:02", tag: "macro", tagText: "宏观", text: "美国财政部、司法部与SEC与亿万富翁高塔姆·阿达尼达成和解，涉及阿达尼企业2023年11月至2025年6月期间购买受制裁伊朗能源的指控。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/adani-treasury-justice-department-sec-settlement.html" },
 ];
-const breakingDate = "2026年5月20日 03:11 CST";
+const breakingDate = "2026年5月20日 05:41 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:40", tag: "ai", tagText: "AI", text: "谷歌宣布与沃尔沃合作，Gemini将能调用沃尔沃EX60 SUV的外部摄像头解读停车标志，使AI助手获得视觉和移动能力，拓展车载AI应用场景。", source: "The Verge", url: "https://www.theverge.com/transportation/933556/google-io-gemini-volvo-ex60-camera-ai-parking" },
+  { time: "05:40", tag: "tech", tagText: "科技", text: "美国网络安全和基础设施安全局（CISA）的机密凭证（包括SSH密钥和明文密码）被发现自2025年11月起公开暴露在GitHub仓库中，引发严重安全担忧。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/in-stunning-display-of-stupid-secret-cisa-credentials-found-in-public-github-repo/" },
   { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审结束，评论认为该案证明AI行业由错误的人领导。这场备受瞩目的科技审判本质上是控制权之争，马斯克认为奥特曼不应主导OpenAI的未来方向，引发对AI治理的广泛反思。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people" },
   { time: "02:54", tag: "ai", tagText: "AI", text: "学术预印本平台ArXiv进一步打击AI滥用：若发现作者让AI完成全部论文工作，将封禁其账号一年。新规旨在遏制科研论文中大规模语言模型的随意使用。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:58", tag: "tech", tagText: "科技", text: "美国《下架法案》全面生效，要求社交平台迅速删除深度伪造性内容及其他未经同意的影像。但专家警告，该政策对受害者帮助有限，甚至可能因过度删除而误伤合法内容，引发言论自由争议。", source: "The Verge", url: "https://www.theverge.com/policy/933518/take-it-down-act-notice-removal-social-media-deepfake" },
   { time: "22:07", tag: "ai", tagText: "AI", text: "AI专利初创公司Stilta宣布完成1050万美元种子轮融资。该公司利用AI技术加速专利申请和分析流程，此次融资显示资本对AI赋能知识产权领域的兴趣持续升温。", source: "Law.com", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZXd0MHhUeGxFOXVxUVVFR0R6TVFqdzhPQnVDSHZIUW5VNU8wZnh3cExfdm5YQzFGZFlwRF9wWGhrNnMyY2VzaVp2c1BZdFNVYlF5cENka1BfTFN4OUkyOXpTQ2FhSFpkU05fRk5mM1BhMUd1aGtVZENQcUYxdEtsODBCWW10ckgwWC00eWFSa2gydlA5Ym1rRWlJbmZUaXQwRngxSXM5Z2Z0NFpIWXh4OHp3?oc=5" },
   { time: "19:12", tag: "tech", tagText: "科技", text: "Valar Labs的AI膀胱癌检测工具获得美国FDA突破性医疗器械认定，为美国首个获此认定的AI膀胱癌检测产品。该认定有望加速其审批流程，推动AI在癌症诊断领域的应用。", source: "Medical Device Network", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMndMbTdJeXhYUGFPSUlSX3ZLajBQSFowN1lyNXRLMDU0QjZldGE2M1dEREpwN2pjWlo5WEZYUzQ2NS1YU3hVSlRCSUVwLXhGNk5rMDB0T1ltQ3Z0NGZzRXphUTd2Ymk3U1E5U1JCT2VPQ0hDUzBVMEh1SlNaWkxlcUw2OTNaTlJqbDM1bXVRcXJkEpGbWEyOF8wczBISXZ6aVpCMUg4SHJvS1AxVmZQdTdXYkVIb1Nra2xWSGkyQnZMZ0E?oc=5" },
-  { time: "19:04", tag: "ai", tagText: "AI", text: "红杉资本领投巴黎AI初创公司Dust 4000万美元，旨在解决企业AI生产力差距问题。Dust专注于为企业提供AI工具，提升工作效率，此次融资显示资本对欧洲AI应用层的持续关注。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHVpdEtOeklwQWdBT2tqaVRUYWRfd1NEYmdUTmJWemlOQTVuS29valZ1T1ZLamlHV0xSMDBBVU1PTFk0Y2psQWhUcTF1MVFJLVdUcF9MNDJ6bDF0RFNHYTlySTJqYjJzNzludm5aQ2U3eEVoWVJhLVhvdjh4OXlRQ3NPa0lQSl9teW9ZcUZsQ29ZcUFj?oc=5" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "《福布斯》发布2026年AI 50强榜单，评选出全球最具影响力的人工智能公司。该榜单反映了AI行业的最新格局和资本流向，是衡量AI产业竞争态势的重要风向标。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5uUGIzcFRTdFZwdkxZTnpHdUpfVmhCQ21iczlSQjJrMnlSa19sYzB4S2JuVC1wSWo1UFhRWnlpVWtrb0NIN1RmS2Nn?oc=5" },
 ];
-const aiBreakingDate = "2026年5月20日 03:11 CST";
+const aiBreakingDate = "2026年5月20日 05:41 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
