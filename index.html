@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 60.43,
+  score: 60.29,
   rating: "greed",
-  timestamp: "2026-05-19T22:55:30+00:00",
-  previousClose: 62.8,
-  previous1Week: 65.11,
-  previous1Month: 68.57,
-  previous1Year: 69.74,
-  date: "2026年5月20日 07:15 CST"
+  timestamp: "2026-05-20T00:00:00+00:00",
+  previousClose: 60.43,
+  previous1Week: 64.03,
+  previous1Month: 69.97,
+  previous1Year: 69.17,
+  date: "2026年5月20日 12:21 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:21", tag: "geo", tagText: "地缘", text: "普京与习近平会晤，因伊朗战争导致能源供应中断，长期搁置的“西伯利亚力量2号”天然气管道项目重新提上议程。普京称赞中俄关系“前所未有”，此次访问正值特朗普刚结束访华之后。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/putin-xi-gas-pipeline-power-of-siberia-iran-war-.html" },
+  { time: "12:21", tag: "tech", tagText: "科技", text: "超过4.7万名三星电子工人因薪资谈判破裂，将于周四开始罢工，导致股价下跌。这是三星历史上规模最大的工会行动之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/samsung-electronics-strike-workers-union-wage-talks-shares.html" },
+  { time: "12:21", tag: "tech", tagText: "科技", text: "阿里巴巴发布更强大的“真武”AI芯片及新的大语言模型，进一步扩展其AI产品线。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/alibaba-reveals-more-powerful-zhenwu-ai-chip-new-llm.html" },
+  { time: "12:21", tag: "macro", tagText: "宏观", text: "AI热潮正在重塑全球股市格局，韩国和台湾股市因AI相关股票大涨，超越部分长期领先的西方国家。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/global-market-reordering-is-accelerating-as-the-ai-rally-gains-pace.html" },
+  { time: "12:21", tag: "geo", tagText: "地缘", text: "美国计划将驻欧洲部队削减至自乌克兰战争爆发以来的最低水平，五角大楼拟将部署从四个旅减少到三个。", source: "Financial Times", url: "https://www.ft.com/content/d9b05d2b-7d61-4787-ba3e-f7e3c56fa2f4" },
   { time: "07:00", tag: "geo", tagText: "地缘", text: "美国参议院推进一项旨在终止对伊朗军事行动的议案，此举被视为对特朗普的公开谴责。对伊战争已超过《战争权力法》规定的60天期限，总统需寻求国会授权。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/senate-advances-measure-to-end-military-action-in-iran-in-rebuke-to-trump.html" },
   { time: "07:00", tag: "tech", tagText: "科技", text: "SpaceX已选定高盛牵头其创纪录的IPO，消息人士称这将是史上规模最大的上市交易之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/spacex-picks-goldman-sachs-to-lead-record-breaking-ipo-sources-say.html" },
   { time: "06:50", tag: "ai", tagText: "AI", text: "瑞银看好中国科技股，认为AI生态系统扩张及中美关系缓和正重振中国股市吸引力，尤其是科技板块。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/china-tech-stocks-ai-ubs-.html" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "23:58", tag: "macro", tagText: "宏观", text: "美国银行警告称，投资者正以“牛市投降”般的速度从现金涌入股市，这一反向信号暗示市场可能面临回调风险。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/investors-are-leaving-cash-to-buy-stocks-thats-a-sell-signal-bank-of-america-says.html" },
   { time: "23:55", tag: "macro", tagText: "宏观", text: "特朗普表示将让新任美联储主席沃什在利率问题上“做他想做的事”。这一表态被市场解读为特朗普可能放松对美联储的施压，此前他曾对美联储施加前所未有的压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-says-hell-let-warsh-do-what-he-wants-to-do-with-interest-rates-its-a-remark-that-fed-watchers-have-been-bracing-for-2b014504?mod=mw_rss_topstories" },
   { time: "23:30", tag: "geo", tagText: "地缘", text: "习近平在会见特朗普时表示，普京可能对入侵乌克兰感到“后悔”。特朗普则提议美中俄三国合作对抗国际刑事法院。", source: "Financial Times", url: "https://www.ft.com/content/567c57b0-6346-43e6-9d14-840a793b4d1d" },
-  { time: "20:44", tag: "macro", tagText: "宏观", text: "标普500和纳斯达克期货下跌，芯片股持续走低，10年期美债收益率升至2025年2月以来最高水平，对股市构成压力。市场对AI泡沫风险的担忧加剧，投资者情绪谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/05/18/stock-market-today-live-updates.html" },
-  { time: "20:33", tag: "geo", tagText: "地缘", text: "日本和中国引领外国政府减持美国国债，因海湾战争爆发引发货币担忧。美伊冲突导致原油价格飙升，日元等亚洲货币大幅贬值，各国央行抛售美债以稳定汇率。中国持有的美债降至18年低点。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/central-banks-offload-us-treasuries-china-holdings-at-18-year-low.html" },
-  { time: "20:33", tag: "tech", tagText: "科技", text: "Anthropic与美国政府将在华盛顿特区法院对峙，就国防部将这家AI初创公司列入供应链风险黑名单一事展开辩论。Anthropic于3月起诉国防部，指控其决定缺乏依据。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/anthropic-dod-blacklist-court-opening-arguments.html" },
-  { time: "20:29", tag: "crypto", tagText: "加密", text: "华尔街监管机构将发布代币化股票框架，为数字资产与传统金融的融合提供监管指引。此举被视为加密市场制度化的重要一步，稳定币和代币化实物资产正成为加密市场的新驱动力。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/crypto/articles/wall-street-regulator-issue-tokenized-122900212.html" },
-  { time: "20:24", tag: "macro", tagText: "宏观", text: "家得宝第一季度营收和利润均超华尔街预期，核心消费者在高油价面前仍具韧性，销售额增长5%。但部分消费者减少了大额装修项目支出，公司维持全年业绩展望不变，缓解了投资者担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/home-depot-hd-q1-2026-earnings.html" },
 ];
-const breakingDate = "2026年5月20日 07:15 CST";
+const breakingDate = "2026年5月20日 12:21 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "23:31", tag: "ai", tagText: "AI", text: "AI芯片股在英伟达财报发布前普遍下跌，市场对业绩预期持谨慎态度。与此同时，前OpenAI研究员旗下对冲基金押注做空英伟达及AI芯片涨势，显示部分投资者对AI芯片估值泡沫的担忧加剧。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPc2tRY0FlOENHczNna3BoNXdDbnhoc1dfdVBrSm1tRUpEN1REU09VVEVsdldwVmNsalpaeUwxVnFJazRyTjktdjduejBObE83a1BSTWoyOEpUcUZLMDBwaVVNY1AxR1JuX3NqYmxtd3BPWWotQmVJVFQ5Y19Zd1F5bFFJdjV1N0hQYVVr?oc=5" },
   { time: "22:58", tag: "tech", tagText: "科技", text: "美国《下架法案》全面生效，要求社交平台迅速删除深度伪造性内容及其他未经同意的影像。但专家警告，该政策对受害者帮助有限，甚至可能因过度删除而误伤合法内容，引发言论自由争议。", source: "The Verge", url: "https://www.theverge.com/policy/933518/take-it-down-act-notice-removal-social-media-deepfake" },
 ];
-const aiBreakingDate = "2026年5月20日 07:15 CST";
+const aiBreakingDate = "2026年5月20日 12:21 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
