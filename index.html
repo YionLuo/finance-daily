@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 60.91,
   rating: "greed",
-  timestamp: "2026-05-20T20:47:24+00:00",
+  timestamp: "2026-05-20T22:22:20+00:00",
   previousClose: 60.43,
   previous1Week: 64.03,
   previous1Month: 69.97,
   previous1Year: 69.17,
-  date: "2026年5月21日 05:05 CST"
+  date: "2026年5月21日 06:42 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:42", tag: "macro", tagText: "宏观", text: "美股三大指数大幅收高，道指涨超650点，首次收于50000点上方。油价暴跌，债券收益率回落，市场对伊朗战争结束的乐观情绪提振风险偏好。投资者等待英伟达财报。", source: "Investopedia", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRGZKVE9ROGl4RGdqVHZqcjJhMWJIbkpyT01EdUlqMU1CQlRGOUs2dThtaG9mb1ZmWUx1YVhIaFBxQU1USnFINWtDMGVVTFBTN0l2Y192aW5LZXdqQVBZNWhtekVhWXlyUFM2ZjBkYjNDZUJYUXdjZkduYTlJVXI3TEFuQ1M0U2VIbHJ4V2ZHS1M?oc=5" },
+  { time: "06:42", tag: "macro", tagText: "宏观", text: "更新版“痛苦指数”显示，包含抵押贷款利率的新指标正逼近警告区域，尽管股市走高，但经济压力可能意味着标普500指数未来回报将减弱。", source: "MarketWatch", url: "https://www.marketwatch.com/story/an-updated-misery-index-shows-economic-stress-is-nearing-a-warning-zone-as-stocks-push-higher-177959f7?mod=mw_rss_topstories" },
+  { time: "06:42", tag: "geo", tagText: "地缘", text: "美国国务院监察机构正在调查加沙人道主义基金会，审查该有美国和以色列支持的有争议非营利组织如何花费了3000万美元拨款。", source: "Financial Times", url: "https://www.ft.com/content/ff2c906a-9575-434e-a72a-086fac1faa86" },
+  { time: "06:42", tag: "ai", tagText: "AI", text: "杰夫·贝佐斯在CNBC采访中为亿万富翁辩护，力挺AI，谈论税收问题，并赞扬特朗普。他否认亚马逊决定发布关于第一夫人梅拉尼娅·特朗普的纪录片是为了讨好总统。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/jeff-bezos-taxes-ai-corporations-trump.html" },
   { time: "05:05", tag: "tech", tagText: "科技", text: "SpaceX正式提交IPO申请，计划在纳斯达克上市，股票代码为SPCX。此次发行有望成为史上规模最大的IPO之一，备受市场关注。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html" },
   { time: "05:05", tag: "tech", tagText: "科技", text: "Intuit宣布裁员约17%，因生成式AI模型威胁传统税务软件业务，公司增长放缓。今年以来Intuit股价大幅下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/intuit-intu-q3-earnings-report-2026-company-cutting-17percent-of-staff.html" },
   { time: "02:05", tag: "macro", tagText: "宏观", text: "美联储4月会议纪要显示，因伊朗战争持续推高通胀，多位官员呼吁放弃宽松倾向，多数官员预计若通胀居高不下，可能需要加息。市场对加息预期升温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/fed-officials-see-rate-hike-ahead-if-inflation-stays-elevated-minutes-show.html" },
@@ -1645,23 +1649,23 @@ const breakingNews = [
   { time: "19:47", tag: "macro", tagText: "宏观", text: "标普500期货小幅上涨，油价下跌，市场等待英伟达财报。全球债券抛售潮有所缓解，但收益率仍处高位。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTFBtV09DWGhSdVlkR3ZUQzUwS2hpRUVfUEszWHFMWExWUFVBbHN1VFlra21kUUZxMVhsZGlmSk8tVHRjMzN0dTJJc2dtd201aVVzUi1obFhXZTBWLWxiUG15bWNQb0Z4Y1piRm54UWUxNFJKUzg5ZGFn0gF8QVVfeXFMUFpNMVdNZHdzV3RxMFRrT08yLXhXMmtlc0k1OTNBTXh4emhrSVhUdEx4eDdMOUZ0R2ZhNk1YcmpUMllfUnZRS2lvOXpscGgyV3pjN3pBMW5Ua1hHQldVTTJULU5KUW1VWjQ2ZDVjUktzVDFMRWs4WEpLV3lLTw?oc=5" },
   { time: "19:38", tag: "geo", tagText: "地缘", text: "摩根士丹利向香港银行家发放受限设备，用于前往中国内地出差。此举反映跨境合规审查趋严。", source: "Private Banker International", url: "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-gives-hong-kong-113847439.html" },
   { time: "19:38", tag: "geo", tagText: "地缘", text: "参议院民主党致信美国贸易代表Jamieson Greer，就美墨加协定（USMCA）审查提出要求，明确贸易谈判立场。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/congress-trade-democrats-usmca-review.html" },
-  { time: "19:25", tag: "tech", tagText: "科技", text: "芯片制造商Analog Devices季度业绩超预期并上调展望。Evercore ISI因AI市场转变上调AMD目标价。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/adi-stock-analog-devices-fiscal-q2-2026-earnings/?src=A00220&yptr=yahoo" },
-  { time: "19:11", tag: "macro", tagText: "宏观", text: "Target第一季度业绩超预期，上调销售展望，消费者开始回流。公司通过高端婴儿用品和升级购物车等策略推动扭亏为盈。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/target-tgt-q1-2026-earnings.html" },
-  { time: "18:25", tag: "macro", tagText: "宏观", text: "劳氏（Lowe's）第一季度财报超华尔街预期，尽管住房市场环境‘充满挑战’，公司重申全年业绩指引。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/lowes-low-q1-2026-earnings.html" },
-  { time: "16:08", tag: "tech", tagText: "科技", text: "中国在英伟达CEO黄仁勋访华期间，将英伟达游戏芯片列入禁止采购名单，旨在支持华为、寒武纪等本土企业追赶美国竞争对手。", source: "Financial Times", url: "https://www.ft.com/content/a30c3dd5-9383-4606-a649-fdf19c41c308" },
 ];
-const breakingDate = "2026年5月21日 05:05 CST";
+const breakingDate = "2026年5月21日 06:42 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:26", tag: "ai", tagText: "AI", text: "xAI去年亏损64亿美元，SpaceX IPO文件首次披露马斯克AI业务财务状况。文件显示xAI计划大规模扩张Grok，并将在未来三年斥资28亿美元购买天然气涡轮机用于数据中心供电，同时xAI正因数据中心发电机问题被起诉。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/" },
+  { time: "05:29", tag: "ai", tagText: "AI", text: "Anthropic将以每月12.5亿美元的价格向xAI购买算力。马斯克的xAI此前与Anthropic达成算力出售协议，此次披露的金额远超市场预期，凸显AI算力需求的爆发式增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" },
   { time: "04:43", tag: "ai", tagText: "AI", text: "英伟达股价因销售预测疲软及AI芯片竞争加剧而下跌。市场关注其即将公布的财报，此前芯片指数已飙升60%，但涨势正显疲态。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOGtPeXZQVWc2N2NBMGgwWUR6UzJ5WUYzeDNYZFIxQWlKdmhKSnBMT1dVYVJuM1dGaEVfUGNRSHNCSHB1WFNING1DcWtrTXNLR0piMmZoazRRQnY0WEhBOVdnbnZ1STVqbXVCeFU1ZFlnbnY0RVR0Q21jUHk1YXljMFdvR1UzZlJJUXg4NEJ0ZkxwekhjUmtPOGxn?oc=5" },
   { time: "04:28", tag: "ai", tagText: "AI", text: "OpenAI声称其推理模型成功破解了自1946年以来未解的几何猜想，解决了80年历史的数学难题。此前曾因类似声明被数学家打脸，但此次得到了相关数学家的背书。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/" },
   { time: "04:15", tag: "ai", tagText: "AI", text: "美国FDA授予一款AI膀胱癌预后测试“突破性医疗器械”认定。该测试利用人工智能评估患者预后，有望加速其审批和临床应用。", source: "Clinical Lab Products", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOT2NCNFZCanpvRVZ6YzRIMHJIMmhxeTZBYjY0MTEyOGgzUkszaDNEMl9iUE5qZEZ1SzRLaFdENG91X20yVURiWnM1d2xjR0tPWVJiRnIwZXRHeE9TSkxXQ3gyY1c0SktpbWZXVXVXNGRfUmxtN1Q2T3Bzdzg1RjRXTjJpampMamhNZERVU2lMNzdRR05zNmx5bQ?oc=5" },
   { time: "03:47", tag: "ai", tagText: "AI", text: "由吴恩达支持的初创公司IrisGo推出AI桌面助手。该工具可监控用户桌面操作并自动学习执行任务，定位为“AI管家”，旨在成为用户不可或缺的桌面伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/irisgo-a-startup-backed-by-andrew-ng-looks-to-become-the-ai-desktop-buddy-you-never-knew-you-needed/" },
+  { time: "03:10", tag: "tech", tagText: "科技", text: "谷歌在补丁发布前公开了威胁数百万Chromium用户的漏洞利用代码。该漏洞早在29个月前就已报告，但迟迟未修复，此次公开引发安全界广泛关注。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/google-publishes-exploit-code-threatening-millions-of-chromium-users/" },
   { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审结束，评论认为该案证明AI行业由错误的人领导。这场备受瞩目的科技审判本质上是控制权之争，马斯克认为奥特曼不应主导OpenAI的未来方向，引发对AI治理的广泛反思。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people" },
   { time: "02:00", tag: "tech", tagText: "科技", text: "", source: "The Verge", url: "https://www.theverge.com/tech/934704/google-gemini-omni-youtub-shorts-remix-ai" },
   { time: "01:51", tag: "ai", tagText: "AI", text: "谷歌在I/O大会上发布Gemini 3.5 Flash，这是其迄今最强大的编程和智能体AI模型，能够自主执行复杂任务并构建软件。此举标志着谷歌将AI战略重心从聊天机器人转向自主智能体。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/" },
+  { time: "01:40", tag: "tech", tagText: "科技", text: "谷歌在I/O大会上推出Android AI Studio，让用户可以通过自然语言在手机上创建应用和自动化任务，将\"氛围编程\"（vibe coding）带到移动端。", source: "The Verge", url: "https://www.theverge.com/tech/934628/google-io-2026-android-ai-studio-widgets-shortcuts" },
   { time: "01:24", tag: "ai", tagText: "AI", text: "OpenAI在马斯克诉讼案败诉后加速推进IPO进程，据报道最早可能在9月上市。此举标志着OpenAI从非营利向商业化的重大转变，也将成为AI领域最受瞩目的资本市场事件。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/openai-barrels-towards-ipo-that-may-happen-in-september/" },
   { time: "23:04", tag: "ai", tagText: "AI", text: "AI搜索初创公司正迅速崛起，成为消费级AI领域最受关注的目标之一。多家初创公司获得大量用户和资本青睐，行业竞争日趋激烈。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/ai-search-startups-are-blowing-up/" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "Stability AI发布Stability Audio 3.0音频模型，可生成长达六分钟的歌曲。其小型模型能在设备端运行，并生成两分钟长的音轨，大幅提升AI音乐创作能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "tech", tagText: "科技", text: "Figma在其协作画板中引入AI助手，首先在Figma Design中可用。该功能旨在提升设计协作效率，标志着设计工具AI化的重要进展。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/figma-adds-an-ai-assistant-to-its-collaborative-canvas/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "犹他州拟建全球最大数据中心引发巨大争议。尽管专家发出严厉警告并遭到公众强烈反对，博克斯埃尔德县 commissioners 已批准该项目，凸显AI基础设施扩张与地方矛盾的激化。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/933687/utah-stratos-project-data-center-kevin-oleary" },
   { time: "19:49", tag: "ai", tagText: "AI", text: "英伟达引领的AI涨势正转向存储和电源芯片股，市场关注焦点从GPU扩展到支撑AI基础设施的其他关键半导体领域。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQbjlQOVBfZGpIMmpUZzVUSHNiaEg4TmhSM0tuRDNtNmRNeWl3eXMzTUhTU1lSS1BKRmh0aUlhTTlKYnpzWUhiLXlDWldMOWtJeFdWSGtwdWNpVWhCbDlpR2RtYjV5V2stRFJiZkoweDVCRTBiaTdIYXVoTTUzOHc3QUpwamM1cnZMQkw3Wk1XRi0zYzNaQTRWR3ZKVHFtTDhPTVdZQmZicDE0NXdZTGhJRXFZR0pMUkltTXZtZkhEOUFqbHNwUVBNamdpb3lZQlM4aG9kYWdESEZoUXAzZS0wWUVsVlgyT3pKeWlMakd2VGhuaVBSVHc?oc=5" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "中国具身智能（Embodied AI）推动机器人领域融资创历史新高，多家相关公司正加速IPO进程，显示该赛道在资本市场的热度持续攀升。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxPekZhSHpjR0xjVXR6cThjTkN3Z1FJVDFBUy1UbGRYQm1SZjFoMWJDQWRtRTBUU1RkOFgwb2NqbnVpU1pQVkVndlpHa3VPR1BpQWpROWU0NGxxM1ZkMkJPRnQwUUQzNkFVQ3BWX0ZOVnBINHJOSVJxTEVKb0RacEJDVFRRaUNKc0ZTOUwtTVFhUzhOVm5sNGdabGFnQ2U?oc=5" },
-  { time: "18:42", tag: "ai", tagText: "AI", text: "阿里巴巴发布新一代AI芯片，旨在与英伟达竞争。此举是中国减少对英伟达依赖、推动自主AI芯片生态的重要举措。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQRlZrMG1HOU9XaWcwMzh2dzkzQmNkTGtPN1BYZm5GU2JabmF2bFBjWjFpSzdQaXRqSWtqNEgtajZJeGszQ0ZsREhnYVQ3RC10TTJhTUNnNVY4M0E4MnRfNWxrV0RTVHFHVDNrLWNPN1ZWcUx5cEFDczdWU01EdTdZaERRMXFRcUZCMEZiSmFFLURTVkt3WjZpbHIySHh3Nk1nb1lZUW9mN00?oc=5" },
-  { time: "17:24", tag: "ai", tagText: "AI", text: "日本DIC公司在苏黎世设立新基金，专门投资物理AI（Physical AI）初创企业，显示全球资本正加速布局将AI与实体世界结合的赛道。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeUo1SnJrOXlVOE9qcEtXem5IRW5jeFJMeHktV1Utc2dZLU5oRlJ2d2doNWd4eEU4VG1fZTBiN3hjVzFBNThOMXNaWi03eHNybHVEXzNOVEN6WHRmYWRPdWN4b2pnbzZ3R2otU2pONUlOZURQQ1MweGdvdU5KdmpVQWtyNFV0WnM3X1JQZHFRQVFMSUloLXNCY1ZUUlVFQ1V6Y21yMjdzR09BMlpJbWdvYXRn?oc=5" },
-  { time: "16:45", tag: "ai", tagText: "AI", text: "AI同事初创公司Viktor完成6470万欧元A轮融资，产品上线仅10周即实现1290万欧元年化收入。该AI助手可自主执行工作任务，引发市场对AI替代白领工作的新一轮关注。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNbmFoT0Q1cGlvSkRhM2o0dWNlempkQlVLUG1MT2JIaDY1WkJnRktpV1lhTjM3SlRKN1I3NWRjUTc0NEEycjZGNDUyMXRvWW9aZzU1MmdBOWRFM1QzU015VW1BS1NZcGd0OWdETHF4WTVLVlVhYy1MUXljT29OaEZYcmhOVVZFYVNBdk1mSFJkaWM3STdVWmwtRlczZjZVUWlqTEJRbzRSTGF6azkxMVAwYVVidWFubng2RnRCLUZrS1A2UXVsUU9aR3IxTjFzdTN3VVBnX01kWm9xTUNURFk5cUtyeHVvZ0tPYUJ6RUVTRjZTbm1wbkNn?oc=5" },
 ];
-const aiBreakingDate = "2026年5月21日 05:05 CST";
+const aiBreakingDate = "2026年5月21日 06:42 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
