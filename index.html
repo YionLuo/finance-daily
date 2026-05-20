@@ -1618,17 +1618,23 @@
 const fearGreedData = {
   score: 59.26,
   rating: "greed",
-  timestamp: "2026-05-20T08:16:16+00:00",
+  timestamp: "2026-05-20T11:36:31+00:00",
   previousClose: 60.43,
   previous1Week: 64.03,
   previous1Month: 69.97,
   previous1Year: 69.17,
-  date: "2026年5月20日 16:33 CST"
+  date: "2026年5月20日 19:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:47", tag: "macro", tagText: "宏观", text: "标普500期货小幅上涨，油价下跌，市场等待英伟达财报。全球债券抛售潮有所缓解，但收益率仍处高位。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTFBtV09DWGhSdVlkR3ZUQzUwS2hpRUVfUEszWHFMWExWUFVBbHN1VFlra21kUUZxMVhsZGlmSk8tVHRjMzN0dTJJc2dtd201aVVzUi1obFhXZTBWLWxiUG15bWNQb0Z4Y1piRm54UWUxNFJKUzg5ZGFn0gF8QVVfeXFMUFpNMVdNZHdzV3RxMFRrT08yLXhXMmtlc0k1OTNBTXh4emhrSVhUdEx4eDdMOUZ0R2ZhNk1YcmpUMllfUnZRS2lvOXpscGgyV3pjN3pBMW5Ua1hHQldVTTJULU5KUW1VWjQ2ZDVjUktzVDFMRWs4WEpLV3lLTw?oc=5" },
+  { time: "19:38", tag: "geo", tagText: "地缘", text: "摩根士丹利向香港银行家发放受限设备，用于前往中国内地出差。此举反映跨境合规审查趋严。", source: "Private Banker International", url: "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-gives-hong-kong-113847439.html" },
+  { time: "19:38", tag: "geo", tagText: "地缘", text: "参议院民主党致信美国贸易代表Jamieson Greer，就美墨加协定（USMCA）审查提出要求，明确贸易谈判立场。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/congress-trade-democrats-usmca-review.html" },
+  { time: "19:25", tag: "tech", tagText: "科技", text: "芯片制造商Analog Devices季度业绩超预期并上调展望。Evercore ISI因AI市场转变上调AMD目标价。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/adi-stock-analog-devices-fiscal-q2-2026-earnings/?src=A00220&yptr=yahoo" },
+  { time: "19:11", tag: "macro", tagText: "宏观", text: "Target第一季度业绩超预期，上调销售展望，消费者开始回流。公司通过高端婴儿用品和升级购物车等策略推动扭亏为盈。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/target-tgt-q1-2026-earnings.html" },
+  { time: "18:25", tag: "macro", tagText: "宏观", text: "劳氏（Lowe's）第一季度财报超华尔街预期，尽管住房市场环境‘充满挑战’，公司重申全年业绩指引。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/lowes-low-q1-2026-earnings.html" },
   { time: "16:08", tag: "tech", tagText: "科技", text: "中国在英伟达CEO黄仁勋访华期间，将英伟达游戏芯片列入禁止采购名单，旨在支持华为、寒武纪等本土企业追赶美国竞争对手。", source: "Financial Times", url: "https://www.ft.com/content/a30c3dd5-9383-4606-a649-fdf19c41c308" },
   { time: "15:19", tag: "macro", tagText: "宏观", text: "欧盟扫清主要障碍，就取消美国商品进口关税的立法达成临时协议，以规避特朗普的关税升级威胁。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/eu-us-trade-deal-trump-autos.html" },
   { time: "15:03", tag: "macro", tagText: "宏观", text: "英国4月通胀率降至2.8%，低于预期的3%，但分析师预计这一放缓将是短暂的。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/uk-april-inflation-cpi-energy-prices.html" },
@@ -1643,17 +1649,16 @@ const breakingNews = [
   { time: "07:00", tag: "tech", tagText: "科技", text: "SpaceX已选定高盛牵头其创纪录的IPO，消息人士称这将是史上规模最大的上市交易之一。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/spacex-picks-goldman-sachs-to-lead-record-breaking-ipo-sources-say.html" },
   { time: "06:50", tag: "ai", tagText: "AI", text: "瑞银看好中国科技股，认为AI生态系统扩张及中美关系缓和正重振中国股市吸引力，尤其是科技板块。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/china-tech-stocks-ai-ubs-.html" },
   { time: "05:50", tag: "geo", tagText: "地缘", text: "特朗普在肯塔基州初选中支持‘MAGA战士’肯·帕克斯顿，此举可能为民主党在11月中期选举中创造机会。", source: "Financial Times", url: "https://www.ft.com/content/cd5d3094-c490-4866-b0de-cc5917fed18c" },
-  { time: "05:00", tag: "geo", tagText: "地缘", text: "美国司法部与特朗普达成协议，允许特朗普及其儿子永久免于IRS税务审计。此前一天，美国政府设立18亿美元基金，用于赔偿因所谓“法律战”而受损的特朗普盟友。", source: "Financial Times", url: "https://www.ft.com/content/57334fae-a475-4ab0-a202-8df3766927e4" },
-  { time: "04:41", tag: "tech", tagText: "科技", text: "谷歌与黑石成立云计算合资企业，引发市场对AI云服务竞争加剧的担忧。CoreWeave股价下跌，分析师警告市场可能变得更加拥挤。", source: "MarketWatch", url: "https://www.marketwatch.com/story/coreweaves-stock-falls-as-new-google-cloud-venture-may-signal-more-competition-ahead-7bd7fb30?mod=mw_rss_topstories" },
-  { time: "04:01", tag: "macro", tagText: "宏观", text: "花旗银行表示，当前是50年来买入铝的最佳时机，预计2026年下半年铝均价将飙升至每吨4000美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/citi-says-its-the-best-buying-set-up-in-this-metal-in-50-years.html" },
-  { time: "03:56", tag: "crypto", tagText: "加密", text: "Polymarket推出私人公司交易市场，允许投资者对Anthropic、OpenAI等未上市公司的估值、IPO时间表和二级市场活动进行投机。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/polymarket-launches-private-company-trading-so-investors-can-speculate-on-anthropic-openai.html" },
-  { time: "03:11", tag: "geo", tagText: "地缘", text: "特朗普声称习近平不会向伊朗提供武器，并警告德黑兰只有“两三天”时间达成协议并重新开放霍尔木兹海峡。特朗普还透露，他曾在决定对伊朗发动打击前一小时推迟行动，伊朗的谈判窗口可能持续至周日或下周初。", source: "Financial Times", url: "https://www.ft.com/content/95b98e06-3a04-4cfa-9722-f8bd27a5109b" },
-  { time: "03:11", tag: "tech", tagText: "科技", text: "谷歌在年度开发者大会上发布新一代AI模型和个性化AI代理工具，推出更先进的Gemini模型，以追赶OpenAI和Anthropic。CEO皮查伊表示新模型缩小了与竞争对手的差距。", source: "CNBC", url: "https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html" },
 ];
-const breakingDate = "2026年5月20日 16:33 CST";
+const breakingDate = "2026年5月20日 19:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:49", tag: "ai", tagText: "AI", text: "英伟达引领的AI涨势正转向存储和电源芯片股，市场关注焦点从GPU扩展到支撑AI基础设施的其他关键半导体领域。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQbjlQOVBfZGpIMmpUZzVUSHNiaEg4TmhSM0tuRDNtNmRNeWl3eXMzTUhTU1lSS1BKRmh0aUlhTTlKYnpzWUhiLXlDWldMOWtJeFdWSGtwdWNpVWhCbDlpR2RtYjV5V2stRFJiZkoweDVCRTBiaTdIYXVoTTUzOHc3QUpwamM1cnZMQkw3Wk1XRi0zYzNaQTRWR3ZKVHFtTDhPTVdZQmZicDE0NXdZTGhJRXFZR0pMUkltTXZtZkhEOUFqbHNwUVBNamdpb3lZQlM4aG9kYWdESEZoUXAzZS0wWUVsVlgyT3pKeWlMakd2VGhuaVBSVHc?oc=5" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "中国具身智能（Embodied AI）推动机器人领域融资创历史新高，多家相关公司正加速IPO进程，显示该赛道在资本市场的热度持续攀升。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxPekZhSHpjR0xjVXR6cThjTkN3Z1FJVDFBUy1UbGRYQm1SZjFoMWJDQWRtRTBUU1RkOFgwb2NqbnVpU1pQVkVndlpHa3VPR1BpQWpROWU0NGxxM1ZkMkJPRnQwUUQzNkFVQ3BWX0ZOVnBINHJOSVJxTEVKb0RacEJDVFRRaUNKc0ZTOUwtTVFhUzhOVm5sNGdabGFnQ2U?oc=5" },
+  { time: "18:42", tag: "ai", tagText: "AI", text: "阿里巴巴发布新一代AI芯片，旨在与英伟达竞争。此举是中国减少对英伟达依赖、推动自主AI芯片生态的重要举措。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQRlZrMG1HOU9XaWcwMzh2dzkzQmNkTGtPN1BYZm5GU2JabmF2bFBjWjFpSzdQaXRqSWtqNEgtajZJeGszQ0ZsREhnYVQ3RC10TTJhTUNnNVY4M0E4MnRfNWxrV0RTVHFHVDNrLWNPN1ZWcUx5cEFDczdWU01EdTdZaERRMXFRcUZCMEZiSmFFLURTVkt3WjZpbHIySHh3Nk1nb1lZUW9mN00?oc=5" },
+  { time: "17:24", tag: "ai", tagText: "AI", text: "日本DIC公司在苏黎世设立新基金，专门投资物理AI（Physical AI）初创企业，显示全球资本正加速布局将AI与实体世界结合的赛道。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeUo1SnJrOXlVOE9qcEtXem5IRW5jeFJMeHktV1Utc2dZLU5oRlJ2d2doNWd4eEU4VG1fZTBiN3hjVzFBNThOMXNaWi03eHNybHVEXzNOVEN6WHRmYWRPdWN4b2pnbzZ3R2otU2pONUlOZURQQ1MweGdvdU5KdmpVQWtyNFV0WnM3X1JQZHFRQVFMSUloLXNCY1ZUUlVFQ1V6Y21yMjdzR09BMlpJbWdvYXRn?oc=5" },
+  { time: "16:45", tag: "ai", tagText: "AI", text: "AI同事初创公司Viktor完成6470万欧元A轮融资，产品上线仅10周即实现1290万欧元年化收入。该AI助手可自主执行工作任务，引发市场对AI替代白领工作的新一轮关注。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNbmFoT0Q1cGlvSkRhM2o0dWNlempkQlVLUG1MT2JIaDY1WkJnRktpV1lhTjM3SlRKN1I3NWRjUTc0NEEycjZGNDUyMXRvWW9aZzU1MmdBOWRFM1QzU015VW1BS1NZcGd0OWdETHF4WTVLVlVhYy1MUXljT29OaEZYcmhOVVZFYVNBdk1mSFJkaWM3STdVWmwtRlczZjZVUWlqTEJRbzRSTGF6azkxMVAwYVVidWFubng2RnRCLUZrS1A2UXVsUU9aR3IxTjFzdTN3VVBnX01kWm9xTUNURFk5cUtyeHVvZ0tPYUJ6RUVTRjZTbm1wbkNn?oc=5" },
   { time: "07:15", tag: "ai", tagText: "AI", text: "OpenAI宣布两项新措施以帮助检测AI生成图像：加入开放C2PA标准，并在其产品中集成谷歌的SynthID水印技术，提升AI内容可追溯性。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/openai-is-making-it-easier-to-check-if-an-image-was-made-by-their-models/" },
   { time: "07:15", tag: "ai", tagText: "AI", text: "AI安全初创公司Ocean完成2800万美元融资，由Lightspeed Venture Partners领投。该公司创始人从少年黑客转型为“铁穹”研究员，其平台专注于利用智能体技术防御AI驱动的钓鱼攻击。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/from-teen-hacker-to-iron-dome-researcher-this-founder-raised-28m-to-fight-ai-phishing/" },
   { time: "05:40", tag: "ai", tagText: "AI", text: "谷歌宣布与沃尔沃合作，Gemini将能调用沃尔沃EX60 SUV的外部摄像头解读停车标志，使AI助手获得视觉和移动能力，拓展车载AI应用场景。", source: "The Verge", url: "https://www.theverge.com/transportation/933556/google-io-gemini-volvo-ex60-camera-ai-parking" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "01:45", tag: "ai", tagText: "AI", text: "谷歌推出AI Studio重大升级，用户现在可以通过自然语言提示在几分钟内生成原生Android应用。此举大幅降低了移动应用开发门槛，推动AI驱动的“氛围编程”普及。", source: "The Verge", url: "https://www.theverge.com/tech/932364/google-ai-studio-native-android-apps-vibe-code-google-io-2026" },
   { time: "01:45", tag: "ai", tagText: "AI", text: "谷歌推出Gmail Live功能，将Gemini Live语音交互体验引入邮箱。用户可通过语音对话方式搜索邮件、查找信息，标志着AI语音助手深度集成至核心生产力工具。", source: "The Verge", url: "https://www.theverge.com/tech/932973/google-gmail-live-ai-keep-docs-io-2026" },
   { time: "01:45", tag: "ai", tagText: "AI", text: "谷歌推出Gemini Spark，一款始终在线的AI代理平台，对标此前引发行业轰动的OpenClaw。同时发布Antigravity 2.0桌面应用和CLI工具，并推出每月100美元的AI Ultra订阅计划，使用额度为Pro版的5倍。", source: "The Verge", url: "https://www.theverge.com/tech/932996/google-gemini-spark-antigravity-io-2026" },
-  { time: "01:45", tag: "ai", tagText: "AI", text: "谷歌DeepMind将街景与Project Genie世界模型整合，创建沉浸式交互式世界模拟，可用于机器人训练、游戏和虚拟旅行。用户可探索真实街道环境、模拟天气变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/googles-genie-world-model-can-now-simulate-real-streets-with-street-view/" },
-  { time: "00:24", tag: "ai", tagText: "AI", text: "亚马逊Alexa+推出AI生成播客功能，用户可指定任意主题，由AI自动生成完整播客节目。此举将Alexa从语音助手升级为个性化AI内容平台，进一步拓展AI在消费端的应用场景。", source: "The Verge", url: "https://www.theverge.com/tech/932375/amazon-alexa-plus-ai-podcasts" },
-  { time: "23:43", tag: "ai", tagText: "AI", text: "OpenAI联合创始人Andrej Karpathy加入Anthropic预训练团队，负责大规模训练Claude模型的核心能力。预训练是AI模型最昂贵、计算最密集的环节之一，此次人事变动引发行业对顶尖AI人才流向的高度关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/" },
-  { time: "23:31", tag: "ai", tagText: "AI", text: "AI芯片股在英伟达财报发布前普遍下跌，市场对业绩预期持谨慎态度。与此同时，前OpenAI研究员旗下对冲基金押注做空英伟达及AI芯片涨势，显示部分投资者对AI芯片估值泡沫的担忧加剧。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPc2tRY0FlOENHczNna3BoNXdDbnhoc1dfdVBrSm1tRUpEN1REU09VVEVsdldwVmNsalpaeUwxVnFJazRyTjktdjduejBObE83a1BSTWoyOEpUcUZLMDBwaVVNY1AxR1JuX3NqYmxtd3BPWWotQmVJVFQ5Y19Zd1F5bFFJdjV1N0hQYVVr?oc=5" },
-  { time: "22:58", tag: "tech", tagText: "科技", text: "美国《下架法案》全面生效，要求社交平台迅速删除深度伪造性内容及其他未经同意的影像。但专家警告，该政策对受害者帮助有限，甚至可能因过度删除而误伤合法内容，引发言论自由争议。", source: "The Verge", url: "https://www.theverge.com/policy/933518/take-it-down-act-notice-removal-social-media-deepfake" },
 ];
-const aiBreakingDate = "2026年5月20日 16:33 CST";
+const aiBreakingDate = "2026年5月20日 19:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
