@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 60.91,
   rating: "greed",
-  timestamp: "2026-05-20T22:22:20+00:00",
+  timestamp: "2026-05-20T23:57:38+00:00",
   previousClose: 60.43,
   previous1Week: 64.03,
   previous1Month: 69.97,
   previous1Year: 69.17,
-  date: "2026年5月21日 06:42 CST"
+  date: "2026年5月21日 08:15 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:07", tag: "macro", tagText: "宏观", text: "日本4月出口同比增长14.8%，远超预期的9.3%，较3月的11.5%进一步加速，主要受半导体和汽车出口拉动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/japan-exports-semiconductor-autos-imports-trade.html" },
+  { time: "08:00", tag: "geo", tagText: "地缘", text: "因美国宣布对台140亿美元军售案，中国推迟为美国防部官员科尔比访问北京开绿灯，五角大楼官员访华行程面临不确定性。", source: "Financial Times", url: "https://www.ft.com/content/aecf40c9-fb61-4958-ae6b-14a471cad680" },
+  { time: "07:00", tag: "macro", tagText: "宏观", text: "霍尔木兹海峡封锁的连锁效应冲击日本经济，日本对塑料的依赖正引发经济担忧。", source: "Financial Times", url: "https://www.ft.com/content/ec6f9c87-eba1-4932-8aae-957cc3fd0916" },
   { time: "06:42", tag: "macro", tagText: "宏观", text: "美股三大指数大幅收高，道指涨超650点，首次收于50000点上方。油价暴跌，债券收益率回落，市场对伊朗战争结束的乐观情绪提振风险偏好。投资者等待英伟达财报。", source: "Investopedia", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRGZKVE9ROGl4RGdqVHZqcjJhMWJIbkpyT01EdUlqMU1CQlRGOUs2dThtaG9mb1ZmWUx1YVhIaFBxQU1USnFINWtDMGVVTFBTN0l2Y192aW5LZXdqQVBZNWhtekVhWXlyUFM2ZjBkYjNDZUJYUXdjZkduYTlJVXI3TEFuQ1M0U2VIbHJ4V2ZHS1M?oc=5" },
   { time: "06:42", tag: "macro", tagText: "宏观", text: "更新版“痛苦指数”显示，包含抵押贷款利率的新指标正逼近警告区域，尽管股市走高，但经济压力可能意味着标普500指数未来回报将减弱。", source: "MarketWatch", url: "https://www.marketwatch.com/story/an-updated-misery-index-shows-economic-stress-is-nearing-a-warning-zone-as-stocks-push-higher-177959f7?mod=mw_rss_topstories" },
   { time: "06:42", tag: "geo", tagText: "地缘", text: "美国国务院监察机构正在调查加沙人道主义基金会，审查该有美国和以色列支持的有争议非营利组织如何花费了3000万美元拨款。", source: "Financial Times", url: "https://www.ft.com/content/ff2c906a-9575-434e-a72a-086fac1faa86" },
@@ -1646,15 +1649,13 @@ const breakingNews = [
   { time: "23:25", tag: "macro", tagText: "宏观", text: "美元指数下跌，因市场对伊朗达成协议抱有希望；日元逼近危险区域，市场关注日本当局是否会干预汇市。", source: "Reuters", url: "https://finance.yahoo.com/news/dollar-six-week-high-rate-014105798.html" },
   { time: "23:18", tag: "tech", tagText: "科技", text: "Authentic Brands Group（旗下拥有Reebok和Champion）任命上市公司资深高管为新CEO，创始人向CNBC表示预计在未来12个月内进行IPO。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/reebok-owner-authentic-brands-group-inches-closer-to-ipo.html" },
   { time: "22:29", tag: "macro", tagText: "宏观", text: "美国金融改革法案主要设计者、前众议员巴尼·弗兰克去世，享年86岁。他主导了多德-弗兰克法案，加强银行监管以防范2008年式金融危机重演。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/barney-frank-architect-of-landmark-wall-street-reforms-dies-at-86.html" },
-  { time: "19:47", tag: "macro", tagText: "宏观", text: "标普500期货小幅上涨，油价下跌，市场等待英伟达财报。全球债券抛售潮有所缓解，但收益率仍处高位。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTFBtV09DWGhSdVlkR3ZUQzUwS2hpRUVfUEszWHFMWExWUFVBbHN1VFlra21kUUZxMVhsZGlmSk8tVHRjMzN0dTJJc2dtd201aVVzUi1obFhXZTBWLWxiUG15bWNQb0Z4Y1piRm54UWUxNFJKUzg5ZGFn0gF8QVVfeXFMUFpNMVdNZHdzV3RxMFRrT08yLXhXMmtlc0k1OTNBTXh4emhrSVhUdEx4eDdMOUZ0R2ZhNk1YcmpUMllfUnZRS2lvOXpscGgyV3pjN3pBMW5Ua1hHQldVTTJULU5KUW1VWjQ2ZDVjUktzVDFMRWs4WEpLV3lLTw?oc=5" },
-  { time: "19:38", tag: "geo", tagText: "地缘", text: "摩根士丹利向香港银行家发放受限设备，用于前往中国内地出差。此举反映跨境合规审查趋严。", source: "Private Banker International", url: "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-gives-hong-kong-113847439.html" },
-  { time: "19:38", tag: "geo", tagText: "地缘", text: "参议院民主党致信美国贸易代表Jamieson Greer，就美墨加协定（USMCA）审查提出要求，明确贸易谈判立场。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/congress-trade-democrats-usmca-review.html" },
 ];
-const breakingDate = "2026年5月21日 06:42 CST";
+const breakingDate = "2026年5月21日 08:15 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
   { time: "06:26", tag: "ai", tagText: "AI", text: "xAI去年亏损64亿美元，SpaceX IPO文件首次披露马斯克AI业务财务状况。文件显示xAI计划大规模扩张Grok，并将在未来三年斥资28亿美元购买天然气涡轮机用于数据中心供电，同时xAI正因数据中心发电机问题被起诉。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/" },
+  { time: "06:03", tag: "ai", tagText: "AI", text: "英伟达公布财报，营收再创纪录，并披露持有430亿美元初创公司股权。公司通过战略投资将AI主导地位转化为护城河，但预计下季度增速放缓，股价盘后下跌。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/nvidia-posts-another-record-quarter-reveals-43-billion-of-holdings-in-startups/" },
   { time: "05:29", tag: "ai", tagText: "AI", text: "Anthropic将以每月12.5亿美元的价格向xAI购买算力。马斯克的xAI此前与Anthropic达成算力出售协议，此次披露的金额远超市场预期，凸显AI算力需求的爆发式增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" },
   { time: "04:43", tag: "ai", tagText: "AI", text: "英伟达股价因销售预测疲软及AI芯片竞争加剧而下跌。市场关注其即将公布的财报，此前芯片指数已飙升60%，但涨势正显疲态。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOGtPeXZQVWc2N2NBMGgwWUR6UzJ5WUYzeDNYZFIxQWlKdmhKSnBMT1dVYVJuM1dGaEVfUGNRSHNCSHB1WFNING1DcWtrTXNLR0piMmZoazRRQnY0WEhBOVdnbnZ1STVqbXVCeFU1ZFlnbnY0RVR0Q21jUHk1YXljMFdvR1UzZlJJUXg4NEJ0ZkxwekhjUmtPOGxn?oc=5" },
   { time: "04:28", tag: "ai", tagText: "AI", text: "OpenAI声称其推理模型成功破解了自1946年以来未解的几何猜想，解决了80年历史的数学难题。此前曾因类似声明被数学家打脸，但此次得到了相关数学家的背书。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:24", tag: "ai", tagText: "AI", text: "谷歌能否让AI代理真正有用成为行业焦点。多年来科技公司承诺AI个人助理，但实际体验不佳。过去六个月情况开始改变，谷歌的进展被视为行业风向标。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/934478/if-google-cant-make-ai-agents-useful-maybe-no-one-can" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "Figma在其协作画板中引入AI助手，首先在Figma Design中可用。该功能旨在提升设计协作效率，标志着设计工具AI化的重要进展。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/figma-adds-an-ai-assistant-to-its-collaborative-canvas/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "犹他州拟建全球最大数据中心引发巨大争议。尽管专家发出严厉警告并遭到公众强烈反对，博克斯埃尔德县 commissioners 已批准该项目，凸显AI基础设施扩张与地方矛盾的激化。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/933687/utah-stratos-project-data-center-kevin-oleary" },
-  { time: "19:49", tag: "ai", tagText: "AI", text: "英伟达引领的AI涨势正转向存储和电源芯片股，市场关注焦点从GPU扩展到支撑AI基础设施的其他关键半导体领域。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQbjlQOVBfZGpIMmpUZzVUSHNiaEg4TmhSM0tuRDNtNmRNeWl3eXMzTUhTU1lSS1BKRmh0aUlhTTlKYnpzWUhiLXlDWldMOWtJeFdWSGtwdWNpVWhCbDlpR2RtYjV5V2stRFJiZkoweDVCRTBiaTdIYXVoTTUzOHc3QUpwamM1cnZMQkw3Wk1XRi0zYzNaQTRWR3ZKVHFtTDhPTVdZQmZicDE0NXdZTGhJRXFZR0pMUkltTXZtZkhEOUFqbHNwUVBNamdpb3lZQlM4aG9kYWdESEZoUXAzZS0wWUVsVlgyT3pKeWlMakd2VGhuaVBSVHc?oc=5" },
 ];
-const aiBreakingDate = "2026年5月21日 06:42 CST";
+const aiBreakingDate = "2026年5月21日 08:15 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
