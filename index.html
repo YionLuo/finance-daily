@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 59.06,
+  score: 58.31,
   rating: "greed",
-  timestamp: "2026-05-21T19:03:17+00:00",
+  timestamp: "2026-05-21T21:24:29+00:00",
   previousClose: 60.91,
   previous1Week: 65.91,
   previous1Month: 67.57,
   previous1Year: 66.23,
-  date: "2026年5月22日 03:07 CST"
+  date: "2026年5月22日 05:44 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:30", tag: "tech", tagText: "科技", text: "Meta、博通、应用材料、格芯和Synopsys联合在加州大学洛杉矶分校启动1.25亿美元的半导体研究中心，旨在加强美国芯片研发能力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/meta-broadcom-others-to-launch-125-million-semiconductor-research-hub-at-ucla.html" },
+  { time: "03:26", tag: "ai", tagText: "AI", text: "据市场观察报道，马斯克的xAI正在大量消耗SpaceX的现金，但成果有限。xAI上一季度营收8.18亿美元，但运营亏损高达24.7亿美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/elon-musks-xai-is-draining-spacexs-cash-with-little-to-show-for-it-9517874d?mod=mw_rss_topstories" },
   { time: "02:45", tag: "geo", tagText: "地缘", text: "特朗普突然推迟原定签署的AI行政令，因白宫内部争斗。总统在签署前数小时拒绝批准，担心美国创新者会输给中国。该行政令原定为企业自愿参与。", source: "Financial Times", url: "https://www.ft.com/content/14213cb0-8d11-4118-bac0-12a403696185" },
   { time: "02:40", tag: "tech", tagText: "科技", text: "Spotify宣布与环球音乐集团达成AI音乐合作协议并发布业绩指引，股价大涨15%。公司正由联合CEO领导，并举行四年来首次投资者日。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/spotify-spot-stock-guidance-investor-day-ai.html" },
   { time: "02:26", tag: "tech", tagText: "科技", text: "预测市场Polymarket交易员押注，SpaceX、OpenAI和Anthropic上市首日估值将至少达到1.4万亿美元，超越伯克希尔·哈撒韦。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/spacex-openai-valuations-to-leapfrog-berkshire-hathaway-traders-say.html" },
@@ -1647,16 +1649,20 @@ const breakingNews = [
   { time: "15:10", tag: "tech", tagText: "科技", text: "特斯拉宣布在中国推出FSD（完全自动驾驶）监督版，标志着其自动驾驶技术在中国市场的重要进展。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxOb3NvNTJ4VWVNOWRjdldCZnh3ZThQN0Y2TDc0Q0dVOFpCWUNVVzFjeUJpOGFEM1pfekZrOUtSeU14b0s1am1oSl9URF9sM3NTME9wcl8xb21rQklXMVVqb05xeXRJWGxyMlNCNkY5N0VraVhIRWhpbUNVbXU5X3gzb0hFRnhiMjFrWW9lQVJn?oc=5" },
   { time: "13:34", tag: "geo", tagText: "地缘", text: "普京结束北京之行，与中国签署多项双边协议并重申持久友谊，但未能达成莫斯科迫切需要的能源突破。分析称中俄关系虽稳固，但在关键能源合作上仍存分歧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/china-russia-putin-xi-jinping-ties-deals-energy-siberia-pipeline-trump-visits-.html" },
   { time: "13:03", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋表示，公司已“基本放弃”中国先进AI芯片市场，将这一市场拱手让给华为。英伟达财报显示数据中心营收近乎翻倍，但股价盘后仍下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/nvidia-jensen-huang-china-ai-chip-market-huawei.html" },
-  { time: "12:23", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic有望首次实现季度盈利，领先于竞争对手OpenAI和xAI。", source: "Financial Times", url: "https://www.ft.com/content/a67248e7-f819-4dba-b0f7-3847df0a75f3" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "沙特阿拉伯暂停向咨询公司支付新项目费用，并推迟付款，以收紧对“2030愿景”大型项目的支出控制，战争冲击其财政。", source: "Financial Times", url: "https://www.ft.com/content/9855a284-8109-4d66-8b3e-e08da0e97dd8" },
 ];
-const breakingDate = "2026年5月22日 03:07 CST";
+const breakingDate = "2026年5月22日 05:44 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:29", tag: "ai", tagText: "AI", text: "Anthropic将以每月12.5亿美元的价格向xAI购买算力。马斯克的xAI此前与Anthropic达成算力出售协议，此次披露的金额远超市场预期，凸显AI算力需求的爆发式增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" },
+  { time: "04:43", tag: "ai", tagText: "AI", text: "英伟达股价因销售预测疲软及AI芯片竞争加剧而下跌。市场关注其即将公布的财报，此前芯片指数已飙升60%，但涨势正显疲态。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOGtPeXZQVWc2N2NBMGgwWUR6UzJ5WUYzeDNYZFIxQWlKdmhKSnBMT1dVYVJuM1dGaEVfUGNRSHNCSHB1WFNING1DcWtrTXNLR0piMmZoazRRQnY0WEhBOVdnbnZ1STVqbXVCeFU1ZFlnbnY0RVR0Q21jUHk1YXljMFdvR1UzZlJJUXg4NEJ0ZkxwekhjUmtPOGxn?oc=5" },
+  { time: "04:28", tag: "ai", tagText: "AI", text: "OpenAI声称其推理模型成功破解了自1946年以来未解的几何猜想，解决了80年历史的数学难题。此前曾因类似声明被数学家打脸，但此次得到了相关数学家的背书。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/" },
   { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
+  { time: "03:00", tag: "tech", tagText: "科技", text: "美国大学毕业生在毕业典礼上对鼓吹AI的高管报以嘘声和起哄，高管们对此感到意外。这一现象反映出年轻一代对AI取代就业岗位的焦虑与不满。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935602/graduates-boo-ai-ceos" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审结束，评论认为该案证明AI行业由错误的人领导。这场备受瞩目的科技审判本质上是控制权之争，马斯克认为奥特曼不应主导OpenAI的未来方向，引发对AI治理的广泛反思。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people" },
+  { time: "02:19", tag: "tech", tagText: "科技", text: "随着谷歌搜索AI摘要功能全面铺开，传统搜索体验巨变。外媒推荐六款替代搜索引擎，包括注重隐私的DuckDuckGo、去中心化的Brave Search等，供用户选择。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/six-search-engines-worth-trying-now-that-google-isnt-really-google-anymore/" },
   { time: "01:30", tag: "ai", tagText: "AI", text: "特朗普推迟签署AI安全行政令，称“不想阻碍领先地位”。该行政令原要求对AI模型进行发布前的政府安全审查，特朗普因对措辞不满而推迟签署，此举可能影响美国AI监管进程。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/trump-delays-ai-security-executive-order-i-dont-want-to-get-in-the-way-of-that-leading/" },
+  { time: "00:00", tag: "tech", tagText: "科技", text: "音乐设备厂商Polyend推出首款AI吉他效果踏板，用户可通过AI生成和定制音效。尽管市场对此类产品需求存疑，但标志着AI开始渗透传统乐器硬件领域。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935219/polyend-endless-ai-guitar-effects-pedal" },
   { time: "23:54", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团达成授权协议，将推出AI生成混音和翻唱功能，用户可通过提示词为流媒体歌曲创建AI混音和翻唱版本，该工具为付费附加功能。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935379/spotify-umg-ai-covers-remix" },
   { time: "23:47", tag: "ai", tagText: "AI", text: "Spotify推出全新AI桌面应用Studio，可基于用户收听历史和提示词，自动生成每日简报、个性化播客和播放列表，直接对标谷歌NotebookLM。该应用已在20多个市场以研究预览形式上线。", source: "The Verge", url: "https://www.theverge.com/entertainment/935390/spotify-studio-ai-app-personal-podcasts" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI硬件初创公司Hark完成7亿美元A轮融资，估值达60亿美元。该公司由Brett Adcock创立，正在开发神秘的“通用”AI界面，引发市场高度关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "17:20", tag: "ai", tagText: "AI", text: "Meta为弥补巨额AI投资，已通知数千名员工被裁员。公司正通过削减人力成本来平衡在人工智能领域的重金投入。", source: "The Verge", url: "https://www.theverge.com/tech/935163/meta-layoffs-ai-investment-offset-memo" },
   { time: "15:49", tag: "ai", tagText: "AI", text: "AMD宣布在台湾投资100亿美元建设AI芯片生产线，旨在挑战英伟达在AI芯片领域的主导地位。此举将大幅提升AMD的AI芯片产能。", source: "Mint", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQenU2Ulc1NjF6aUhZTzg1ejNTMTNlVVpqRlNSYW02aDhpdC1oZ3Y4MEN5Z2doT0lvaHZ6NmNQNWVraDFDX3g3WmhjbG5KY0pmQXpJeE5lSV93b28zSzJmSURSOXlMVWxHUmV2SGxVdFJDcmczbENkM0huUjQ3c2ZtQzllSk50bmpFY1VxVFFDWm9pSVNXbktSY3BueFVXQVNIMU5vd3ZWTW45Ri1KZVBiRGhUaTBHMWlnVG1ZV0l6Rkh6RXNUTG9PamlwbmlmT1NSQURLaTUtOEh6Z9IB3wFBVV95cUxPb3dfWi1jNzdGdEplZVIxSk9SQVBzN0pUUFpUVWdYRk5GXzhuRGVpZDNHb1Qzb1VxbHhZeFNtODNNV1l4Vm9MSlpUZTE4eWJMd3NhN3B6V3NURDl5aGh6YVRDTWVYOXZNVHVJYTZ2Y0pKQlYybGdpOEJibEZBUlhmenRyQVI5M3BHb1BEcU9vTlk3YVc4Ul9nYlIzQ2ZSSXFfSlc4TWxJU0dxRTZtb0UzSDItQWYzRjMzbjN6MEs1ZnpER0ZGLXRLc3FGa0lNMmgxb3dLZXM2YlNHZFAzdlcw?oc=5" },
   { time: "15:39", tag: "geo", tagText: "地缘", text: "台湾当局寻求拘留三名涉嫌参与AI芯片走私的人员。这是台湾加强AI芯片出口管制的最新行动，旨在防止先进芯片非法流入受限制地区。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOOXRSbWhnR3VWTE1mWl9RSTlOTWlIWmhpT29aMzVaeUlhUmhjd1FNb2hBNC1aV1c2bThWUjZOS0xrWDV6M0h2VVI4S0laRUEtQndtRmR6dVN0R3JSVFg2b1J1dV9UaDJpVFlpX2FyZXJyWTU3U3pjcFR1YW1ST1ZKM1M0enJNWnRiUk1lQnQ5dWlTWldBczF5M20yMVcyYjhSaFZoNF9BQ3UyWVRwUFVr?oc=5" },
-  { time: "08:28", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋预测，公司将开辟一个价值2000亿美元的“全新”市场——为AI智能体提供CPU。他认为，随着AI代理的普及，对专用CPU的需求将爆发式增长，成为英伟达的下一个增长引擎。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/" },
-  { time: "06:26", tag: "ai", tagText: "AI", text: "xAI去年亏损64亿美元，SpaceX IPO文件首次披露马斯克AI业务财务状况。文件显示xAI计划大规模扩张Grok，并将在未来三年斥资28亿美元购买天然气涡轮机用于数据中心供电，同时xAI正因数据中心发电机问题被起诉。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/" },
-  { time: "06:03", tag: "ai", tagText: "AI", text: "英伟达公布财报，营收再创纪录，并披露持有430亿美元初创公司股权。公司通过战略投资将AI主导地位转化为护城河，但预计下季度增速放缓，股价盘后下跌。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/nvidia-posts-another-record-quarter-reveals-43-billion-of-holdings-in-startups/" },
-  { time: "05:29", tag: "ai", tagText: "AI", text: "Anthropic将以每月12.5亿美元的价格向xAI购买算力。马斯克的xAI此前与Anthropic达成算力出售协议，此次披露的金额远超市场预期，凸显AI算力需求的爆发式增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" },
-  { time: "04:43", tag: "ai", tagText: "AI", text: "英伟达股价因销售预测疲软及AI芯片竞争加剧而下跌。市场关注其即将公布的财报，此前芯片指数已飙升60%，但涨势正显疲态。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOGtPeXZQVWc2N2NBMGgwWUR6UzJ5WUYzeDNYZFIxQWlKdmhKSnBMT1dVYVJuM1dGaEVfUGNRSHNCSHB1WFNING1DcWtrTXNLR0piMmZoazRRQnY0WEhBOVdnbnZ1STVqbXVCeFU1ZFlnbnY0RVR0Q21jUHk1YXljMFdvR1UzZlJJUXg4NEJ0ZkxwekhjUmtPOGxn?oc=5" },
-  { time: "04:28", tag: "ai", tagText: "AI", text: "OpenAI声称其推理模型成功破解了自1946年以来未解的几何猜想，解决了80年历史的数学难题。此前曾因类似声明被数学家打脸，但此次得到了相关数学家的背书。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/" },
 ];
-const aiBreakingDate = "2026年5月22日 03:07 CST";
+const aiBreakingDate = "2026年5月22日 05:44 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
