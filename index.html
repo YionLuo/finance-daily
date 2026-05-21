@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 60.91,
+  score: 60.86,
   rating: "greed",
-  timestamp: "2026-05-20T23:57:38+00:00",
-  previousClose: 60.43,
-  previous1Week: 64.03,
-  previous1Month: 69.97,
-  previous1Year: 69.17,
-  date: "2026年5月21日 08:15 CST"
+  timestamp: "2026-05-21T00:00:00+00:00",
+  previousClose: 60.91,
+  previous1Week: 64.97,
+  previous1Month: 67.57,
+  previous1Year: 66.23,
+  date: "2026年5月21日 13:16 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:03", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋表示，公司已“基本放弃”中国先进AI芯片市场，将这一市场拱手让给华为。英伟达财报显示数据中心营收近乎翻倍，但股价盘后仍下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/nvidia-jensen-huang-china-ai-chip-market-huawei.html" },
+  { time: "12:23", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic有望首次实现季度盈利，领先于竞争对手OpenAI和xAI。", source: "Financial Times", url: "https://www.ft.com/content/a67248e7-f819-4dba-b0f7-3847df0a75f3" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "沙特阿拉伯暂停向咨询公司支付新项目费用，并推迟付款，以收紧对“2030愿景”大型项目的支出控制，战争冲击其财政。", source: "Financial Times", url: "https://www.ft.com/content/9855a284-8109-4d66-8b3e-e08da0e97dd8" },
+  { time: "10:12", tag: "crypto", tagText: "加密", text: "比特币、以太坊、XRP、狗狗币因特朗普对伊朗的言论而反弹。分析师警告需关注比特币关键价位。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxPRGUwUVo0Tm5LTFcxMGJKVzNEOWUwNGJNMVV0OEZ5eWdFM193WGRzeGlIYl9LSVQ1WG94UWZxT0lUMDBjVzhWdTR2eDhsd3M0ZTBMblVRR0doSHJQLVp2WGppWjFOOHo2SkdVRWdLcHZ1TDFZdEkwNGd0Ym16Y1hYTXlzbWFOU2JxZU5fRHBOZms1alNkaWVVT01TcW9NSm5fY0x4bzhFV20wSlBlWnpfUzBYQ2pEU1M4WDFFTUw1amRpV3FqNDBj?oc=5" },
   { time: "08:07", tag: "macro", tagText: "宏观", text: "日本4月出口同比增长14.8%，远超预期的9.3%，较3月的11.5%进一步加速，主要受半导体和汽车出口拉动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/japan-exports-semiconductor-autos-imports-trade.html" },
   { time: "08:00", tag: "geo", tagText: "地缘", text: "因美国宣布对台140亿美元军售案，中国推迟为美国防部官员科尔比访问北京开绿灯，五角大楼官员访华行程面临不确定性。", source: "Financial Times", url: "https://www.ft.com/content/aecf40c9-fb61-4958-ae6b-14a471cad680" },
   { time: "07:00", tag: "macro", tagText: "宏观", text: "霍尔木兹海峡封锁的连锁效应冲击日本经济，日本对塑料的依赖正引发经济担忧。", source: "Financial Times", url: "https://www.ft.com/content/ec6f9c87-eba1-4932-8aae-957cc3fd0916" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "01:19", tag: "tech", tagText: "科技", text: "美国电网运营商PJM加速数据中心并网交易，承认现有电网容量无法满足AI数据中心激增的电力需求。Constellation Energy和Vistra股价因此大涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/constellations-and-vistras-stocks-rally-as-power-grid-operator-speeds-up-data-center-deals-67b95021" },
   { time: "01:10", tag: "ai", tagText: "AI", text: "英伟达将于今日盘后发布第一财季财报，市场高度关注其AI业务指引。与此同时，空头在芯片股近期回调中加码做空，押注英伟达财报不及预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/short-sellers-see-opportunity-as-chip-stocks-rally-breaks-bears-hold-firm-into-nvidia-earnings.html" },
   { time: "23:40", tag: "geo", tagText: "地缘", text: "伊朗革命卫队威胁称，若美国和以色列恢复对伊攻击，将把冲突扩大到“地区之外”。同日有报道称伊朗协议可能接近达成，油价跌破100美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/iran-war-us-israel-middle-east.html" },
-  { time: "23:35", tag: "geo", tagText: "地缘", text: "三艘超级油轮尝试穿越霍尔木兹海峡，共载有600万桶原油，目的地为中国和韩国。此前伊朗封锁海峡导致全球能源市场紧张。", source: "Financial Times", url: "https://www.ft.com/content/110b9bb3-ec4f-460d-bfe6-4ffae9a2e945" },
-  { time: "23:25", tag: "macro", tagText: "宏观", text: "美元指数下跌，因市场对伊朗达成协议抱有希望；日元逼近危险区域，市场关注日本当局是否会干预汇市。", source: "Reuters", url: "https://finance.yahoo.com/news/dollar-six-week-high-rate-014105798.html" },
-  { time: "23:18", tag: "tech", tagText: "科技", text: "Authentic Brands Group（旗下拥有Reebok和Champion）任命上市公司资深高管为新CEO，创始人向CNBC表示预计在未来12个月内进行IPO。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/reebok-owner-authentic-brands-group-inches-closer-to-ipo.html" },
-  { time: "22:29", tag: "macro", tagText: "宏观", text: "美国金融改革法案主要设计者、前众议员巴尼·弗兰克去世，享年86岁。他主导了多德-弗兰克法案，加强银行监管以防范2008年式金融危机重演。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/barney-frank-architect-of-landmark-wall-street-reforms-dies-at-86.html" },
 ];
-const breakingDate = "2026年5月21日 08:15 CST";
+const breakingDate = "2026年5月21日 13:16 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:28", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋预测，公司将开辟一个价值2000亿美元的“全新”市场——为AI智能体提供CPU。他认为，随着AI代理的普及，对专用CPU的需求将爆发式增长，成为英伟达的下一个增长引擎。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/" },
   { time: "06:26", tag: "ai", tagText: "AI", text: "xAI去年亏损64亿美元，SpaceX IPO文件首次披露马斯克AI业务财务状况。文件显示xAI计划大规模扩张Grok，并将在未来三年斥资28亿美元购买天然气涡轮机用于数据中心供电，同时xAI正因数据中心发电机问题被起诉。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/" },
   { time: "06:03", tag: "ai", tagText: "AI", text: "英伟达公布财报，营收再创纪录，并披露持有430亿美元初创公司股权。公司通过战略投资将AI主导地位转化为护城河，但预计下季度增速放缓，股价盘后下跌。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/nvidia-posts-another-record-quarter-reveals-43-billion-of-holdings-in-startups/" },
   { time: "05:29", tag: "ai", tagText: "AI", text: "Anthropic将以每月12.5亿美元的价格向xAI购买算力。马斯克的xAI此前与Anthropic达成算力出售协议，此次披露的金额远超市场预期，凸显AI算力需求的爆发式增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "tech", tagText: "科技", text: "金融科技公司Mercury完成新一轮融资，估值达52亿美元，较14个月前增长49%。该公司专注于为初创企业提供银行服务，增长势头强劲。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxNb3Yxc0U3UVNFTWVNdURiSHlEa0ZXMHJmM18yeWlxaW1OUDFoRGNaRWVoMHZtblFoSEZxSVdrem5YTEVuampkRURUYXRtZXpLcXlLaEJ3V2JnVGlZZ0JQcEIyblBfODRzV3pNQnVBQjM1dGJ0Z21FbUFDWXBId3dFYXEySjJHMDZuRlFHalRB0gGTAUFVX3lxTE4xcG92WHdCaEVwcVVVdTU0alVQOUR1ejkzazRLVGx1bTlDTXRlTmdORXctcnpSY0R6YlBuSXVDNkdvbFEydGNPN29wS0hxMHUzaUpaanI0Z2prT2RoQ1RQOFBrUjkycmdIbHBGQ0dhSEQybWktVVV2WnZwVTRvOTRJS0dRWjdKTlRiUGxCYVNPU1JVdw?oc=5" },
   { time: "21:24", tag: "ai", tagText: "AI", text: "谷歌能否让AI代理真正有用成为行业焦点。多年来科技公司承诺AI个人助理，但实际体验不佳。过去六个月情况开始改变，谷歌的进展被视为行业风向标。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/934478/if-google-cant-make-ai-agents-useful-maybe-no-one-can" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "Figma在其协作画板中引入AI助手，首先在Figma Design中可用。该功能旨在提升设计协作效率，标志着设计工具AI化的重要进展。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/figma-adds-an-ai-assistant-to-its-collaborative-canvas/" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "犹他州拟建全球最大数据中心引发巨大争议。尽管专家发出严厉警告并遭到公众强烈反对，博克斯埃尔德县 commissioners 已批准该项目，凸显AI基础设施扩张与地方矛盾的激化。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/933687/utah-stratos-project-data-center-kevin-oleary" },
 ];
-const aiBreakingDate = "2026年5月21日 08:15 CST";
+const aiBreakingDate = "2026年5月21日 13:16 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
