@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 60.86,
+  score: 60.83,
   rating: "greed",
-  timestamp: "2026-05-21T00:00:00+00:00",
+  timestamp: "2026-05-21T09:43:31+00:00",
   previousClose: 60.91,
   previous1Week: 64.97,
   previous1Month: 67.57,
   previous1Year: 66.23,
-  date: "2026年5月21日 13:16 CST"
+  date: "2026年5月21日 18:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:59", tag: "geo", tagText: "地缘", text: "伊朗战争持续，霍尔木兹海峡石油实物供应量较正常水平下降95%，全球石油库存快速消耗，而夏季出行旺季即将到来，能源供应前景严峻。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/as-iran-war-drags-on-this-is-how-quickly-global-oil-stocks-are-being-depleted-and-travel-season-is-starting-soon-c6948319?mod=mw_rss_topstories" },
+  { time: "17:47", tag: "crypto", tagText: "加密", text: "以太坊ETF本周资金流出达4.3亿美元，ETH跌破2200美元关键支撑位，市场情绪低迷。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTE9SZ1AzcjVHeEJfNlotSXV3YjFSWHBOa3BJTU43SnY3RmNLVHQzeHdXY3pkQl9iVkl3bWxRTnl1ZERaRXVmTi1SRV9lZ2JBTjFkZ2EycjVjemhOdnE2WmNUdE1ZdEY5NWdobHVRd3B6dEZVSzR1UWNUcTR1MA?oc=5" },
+  { time: "16:51", tag: "tech", tagText: "科技", text: "育碧股价暴跌14%，此前《刺客信条》开发商警告称本财年将继续出现亏损，业绩前景令市场失望。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/ubisoft-fy-earnings-profit-loss-assassins-creed.html" },
+  { time: "15:10", tag: "tech", tagText: "科技", text: "特斯拉宣布在中国推出FSD（完全自动驾驶）监督版，标志着其自动驾驶技术在中国市场的重要进展。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxOb3NvNTJ4VWVNOWRjdldCZnh3ZThQN0Y2TDc0Q0dVOFpCWUNVVzFjeUJpOGFEM1pfekZrOUtSeU14b0s1am1oSl9URF9sM3NTME9wcl8xb21rQklXMVVqb05xeXRJWGxyMlNCNkY5N0VraVhIRWhpbUNVbXU5X3gzb0hFRnhiMjFrWW9lQVJn?oc=5" },
+  { time: "13:34", tag: "geo", tagText: "地缘", text: "普京结束北京之行，与中国签署多项双边协议并重申持久友谊，但未能达成莫斯科迫切需要的能源突破。分析称中俄关系虽稳固，但在关键能源合作上仍存分歧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/china-russia-putin-xi-jinping-ties-deals-energy-siberia-pipeline-trump-visits-.html" },
   { time: "13:03", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋表示，公司已“基本放弃”中国先进AI芯片市场，将这一市场拱手让给华为。英伟达财报显示数据中心营收近乎翻倍，但股价盘后仍下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/nvidia-jensen-huang-china-ai-chip-market-huawei.html" },
   { time: "12:23", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic有望首次实现季度盈利，领先于竞争对手OpenAI和xAI。", source: "Financial Times", url: "https://www.ft.com/content/a67248e7-f819-4dba-b0f7-3847df0a75f3" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "沙特阿拉伯暂停向咨询公司支付新项目费用，并推迟付款，以收紧对“2030愿景”大型项目的支出控制，战争冲击其财政。", source: "Financial Times", url: "https://www.ft.com/content/9855a284-8109-4d66-8b3e-e08da0e97dd8" },
@@ -1644,16 +1649,14 @@ const breakingNews = [
   { time: "05:05", tag: "tech", tagText: "科技", text: "Intuit宣布裁员约17%，因生成式AI模型威胁传统税务软件业务，公司增长放缓。今年以来Intuit股价大幅下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/intuit-intu-q3-earnings-report-2026-company-cutting-17percent-of-staff.html" },
   { time: "02:05", tag: "macro", tagText: "宏观", text: "美联储4月会议纪要显示，因伊朗战争持续推高通胀，多位官员呼吁放弃宽松倾向，多数官员预计若通胀居高不下，可能需要加息。市场对加息预期升温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/fed-officials-see-rate-hike-ahead-if-inflation-stays-elevated-minutes-show.html" },
   { time: "01:35", tag: "ai", tagText: "AI", text: "OpenAI最早将于本周五（5月22日）向美国证券交易委员会秘密提交IPO申请，计划最早于9月上市，估值或达1万亿美元。高盛和摩根士丹利为其承销商。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/openai-ipo-filing.html" },
-  { time: "01:35", tag: "tech", tagText: "科技", text: "Meta启动新一轮裁员，约裁减10%员工（约8000人）。CEO扎克伯格在内部备忘录中称“成功并非理所当然”，强调公司需提高效率。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/meta-layoffs-zuckerberg-says-success-isnt-a-given-in-memo.html" },
-  { time: "01:35", tag: "macro", tagText: "宏观", text: "美国众议院通过一项突破性住房法案，放宽对投资者出售“建后出租”房屋的限制，被视为对私募股权和机构投资者的利好。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/congress-investors-private-equity-housing-bill.html" },
-  { time: "01:19", tag: "tech", tagText: "科技", text: "美国电网运营商PJM加速数据中心并网交易，承认现有电网容量无法满足AI数据中心激增的电力需求。Constellation Energy和Vistra股价因此大涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/constellations-and-vistras-stocks-rally-as-power-grid-operator-speeds-up-data-center-deals-67b95021" },
-  { time: "01:10", tag: "ai", tagText: "AI", text: "英伟达将于今日盘后发布第一财季财报，市场高度关注其AI业务指引。与此同时，空头在芯片股近期回调中加码做空，押注英伟达财报不及预期。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/short-sellers-see-opportunity-as-chip-stocks-rally-breaks-bears-hold-firm-into-nvidia-earnings.html" },
-  { time: "23:40", tag: "geo", tagText: "地缘", text: "伊朗革命卫队威胁称，若美国和以色列恢复对伊攻击，将把冲突扩大到“地区之外”。同日有报道称伊朗协议可能接近达成，油价跌破100美元。", source: "CNBC", url: "https://www.cnbc.com/2026/05/20/iran-war-us-israel-middle-east.html" },
 ];
-const breakingDate = "2026年5月21日 13:16 CST";
+const breakingDate = "2026年5月21日 18:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "17:20", tag: "ai", tagText: "AI", text: "Meta为弥补巨额AI投资，已通知数千名员工被裁员。公司正通过削减人力成本来平衡在人工智能领域的重金投入。", source: "The Verge", url: "https://www.theverge.com/tech/935163/meta-layoffs-ai-investment-offset-memo" },
+  { time: "15:49", tag: "ai", tagText: "AI", text: "AMD宣布在台湾投资100亿美元建设AI芯片生产线，旨在挑战英伟达在AI芯片领域的主导地位。此举将大幅提升AMD的AI芯片产能。", source: "Mint", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQenU2Ulc1NjF6aUhZTzg1ejNTMTNlVVpqRlNSYW02aDhpdC1oZ3Y4MEN5Z2doT0lvaHZ6NmNQNWVraDFDX3g3WmhjbG5KY0pmQXpJeE5lSV93b28zSzJmSURSOXlMVWxHUmV2SGxVdFJDcmczbENkM0huUjQ3c2ZtQzllSk50bmpFY1VxVFFDWm9pSVNXbktSY3BueFVXQVNIMU5vd3ZWTW45Ri1KZVBiRGhUaTBHMWlnVG1ZV0l6Rkh6RXNUTG9PamlwbmlmT1NSQURLaTUtOEh6Z9IB3wFBVV95cUxPb3dfWi1jNzdGdEplZVIxSk9SQVBzN0pUUFpUVWdYRk5GXzhuRGVpZDNHb1Qzb1VxbHhZeFNtODNNV1l4Vm9MSlpUZTE4eWJMd3NhN3B6V3NURDl5aGh6YVRDTWVYOXZNVHVJYTZ2Y0pKQlYybGdpOEJibEZBUlhmenRyQVI5M3BHb1BEcU9vTlk3YVc4Ul9nYlIzQ2ZSSXFfSlc4TWxJU0dxRTZtb0UzSDItQWYzRjMzbjN6MEs1ZnpER0ZGLXRLc3FGa0lNMmgxb3dLZXM2YlNHZFAzdlcw?oc=5" },
+  { time: "15:39", tag: "geo", tagText: "地缘", text: "台湾当局寻求拘留三名涉嫌参与AI芯片走私的人员。这是台湾加强AI芯片出口管制的最新行动，旨在防止先进芯片非法流入受限制地区。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOOXRSbWhnR3VWTE1mWl9RSTlOTWlIWmhpT29aMzVaeUlhUmhjd1FNb2hBNC1aV1c2bThWUjZOS0xrWDV6M0h2VVI4S0laRUEtQndtRmR6dVN0R3JSVFg2b1J1dV9UaDJpVFlpX2FyZXJyWTU3U3pjcFR1YW1ST1ZKM1M0enJNWnRiUk1lQnQ5dWlTWldBczF5M20yMVcyYjhSaFZoNF9BQ3UyWVRwUFVr?oc=5" },
   { time: "08:28", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋预测，公司将开辟一个价值2000亿美元的“全新”市场——为AI智能体提供CPU。他认为，随着AI代理的普及，对专用CPU的需求将爆发式增长，成为英伟达的下一个增长引擎。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/" },
   { time: "06:26", tag: "ai", tagText: "AI", text: "xAI去年亏损64亿美元，SpaceX IPO文件首次披露马斯克AI业务财务状况。文件显示xAI计划大规模扩张Grok，并将在未来三年斥资28亿美元购买天然气涡轮机用于数据中心供电，同时xAI正因数据中心发电机问题被起诉。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/" },
   { time: "06:03", tag: "ai", tagText: "AI", text: "英伟达公布财报，营收再创纪录，并披露持有430亿美元初创公司股权。公司通过战略投资将AI主导地位转化为护城河，但预计下季度增速放缓，股价盘后下跌。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/nvidia-posts-another-record-quarter-reveals-43-billion-of-holdings-in-startups/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "01:24", tag: "ai", tagText: "AI", text: "OpenAI在马斯克诉讼案败诉后加速推进IPO进程，据报道最早可能在9月上市。此举标志着OpenAI从非营利向商业化的重大转变，也将成为AI领域最受瞩目的资本市场事件。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/openai-barrels-towards-ipo-that-may-happen-in-september/" },
   { time: "23:04", tag: "ai", tagText: "AI", text: "AI搜索初创公司正迅速崛起，成为消费级AI领域最受关注的目标之一。多家初创公司获得大量用户和资本青睐，行业竞争日趋激烈。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/ai-search-startups-are-blowing-up/" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "Stability AI发布Stability Audio 3.0音频模型，可生成长达六分钟的歌曲。其小型模型能在设备端运行，并生成两分钟长的音轨，大幅提升AI音乐创作能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/" },
-  { time: "22:00", tag: "tech", tagText: "科技", text: "金融科技公司Mercury完成新一轮融资，估值达52亿美元，较14个月前增长49%。该公司专注于为初创企业提供银行服务，增长势头强劲。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxNb3Yxc0U3UVNFTWVNdURiSHlEa0ZXMHJmM18yeWlxaW1OUDFoRGNaRWVoMHZtblFoSEZxSVdrem5YTEVuampkRURUYXRtZXpLcXlLaEJ3V2JnVGlZZ0JQcEIyblBfODRzV3pNQnVBQjM1dGJ0Z21FbUFDWXBId3dFYXEySjJHMDZuRlFHalRB0gGTAUFVX3lxTE4xcG92WHdCaEVwcVVVdTU0alVQOUR1ejkzazRLVGx1bTlDTXRlTmdORXctcnpSY0R6YlBuSXVDNkdvbFEydGNPN29wS0hxMHUzaUpaanI0Z2prT2RoQ1RQOFBrUjkycmdIbHBGQ0dhSEQybWktVVV2WnZwVTRvOTRJS0dRWjdKTlRiUGxCYVNPU1JVdw?oc=5" },
-  { time: "21:24", tag: "ai", tagText: "AI", text: "谷歌能否让AI代理真正有用成为行业焦点。多年来科技公司承诺AI个人助理，但实际体验不佳。过去六个月情况开始改变，谷歌的进展被视为行业风向标。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/934478/if-google-cant-make-ai-agents-useful-maybe-no-one-can" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "Figma在其协作画板中引入AI助手，首先在Figma Design中可用。该功能旨在提升设计协作效率，标志着设计工具AI化的重要进展。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/figma-adds-an-ai-assistant-to-its-collaborative-canvas/" },
 ];
-const aiBreakingDate = "2026年5月21日 13:16 CST";
+const aiBreakingDate = "2026年5月21日 18:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
