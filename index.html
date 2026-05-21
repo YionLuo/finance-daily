@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 60.83,
+  score: 57.89,
   rating: "greed",
-  timestamp: "2026-05-21T12:33:46+00:00",
+  timestamp: "2026-05-21T16:19:13+00:00",
   previousClose: 60.91,
   previous1Week: 64.97,
   previous1Month: 67.57,
   previous1Year: 66.23,
-  date: "2026年5月21日 20:54 CST"
+  date: "2026年5月22日 00:22 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:14", tag: "macro", tagText: "宏观", text: "私人信贷违约率飙升至历史新高，因利率持续攀升。基金公司正忙于重组债务并下调资产估值，市场风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/private-credit-defaults-hit-record-high-as-interest-rates-soar.html" },
+  { time: "22:47", tag: "geo", tagText: "地缘", text: "两党参议员提出法案，旨在限制美国财长贝森特动用2190亿美元外汇稳定基金向外国盟友提供资金的能力，引发对财政部权力的新一轮辩论。", source: "Financial Times", url: "https://www.ft.com/content/f75fa2e5-a7b5-4fb0-a8f4-b9ad88af9f10" },
+  { time: "22:15", tag: "macro", tagText: "宏观", text: "加拿大和印度已推出Wegovy仿制药，每月费用可低至15美元。未来一年，全球40%人口所在国家将获得Ozempic和Wegovy仿制药，但美国因专利保护等原因仍无法获得。", source: "MarketWatch", url: "https://www.marketwatch.com/story/canada-and-india-now-have-generic-wegovy-heres-why-the-u-s-doesnt-db18b6b7?mod=mw_rss_topstories" },
   { time: "20:53", tag: "macro", tagText: "宏观", text: "美国通胀升至三年新高，除油价上涨和特朗普关税残余影响外，人工智能热潮也成为推高通胀的新因素。AI相关投资和能源需求激增，正在加剧价格压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/artificial-intelligence-was-supposed-to-reduce-prices-instead-ai-is-boosting-inflation-d7dbec01?mod=mw_rss_topstories" },
   { time: "20:53", tag: "tech", tagText: "科技", text: "美国政府计划向九家量子计算公司提供20亿美元拨款并持有股权，量子计算股盘前大涨。受益公司包括与特朗普家族有关联的初创企业。", source: "Financial Times", url: "https://www.ft.com/content/92baf913-8987-4c65-82da-311e80f773b0" },
   { time: "20:53", tag: "macro", tagText: "宏观", text: "沃尔玛发布弱于预期的业绩展望，高油价冲击消费者支出。公司警告利润可能不及预期，与竞争对手塔吉特形成鲜明对比，股价下跌。", source: "MarketWatch", url: "https://www.marketwatch.com/story/walmart-sees-slowing-sales-growth-and-warns-of-a-profit-miss-in-contrast-to-rival-target-1f114fa0?mod=mw_rss_topstories" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "08:07", tag: "macro", tagText: "宏观", text: "日本4月出口同比增长14.8%，远超预期的9.3%，较3月的11.5%进一步加速，主要受半导体和汽车出口拉动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/japan-exports-semiconductor-autos-imports-trade.html" },
   { time: "08:00", tag: "geo", tagText: "地缘", text: "因美国宣布对台140亿美元军售案，中国推迟为美国防部官员科尔比访问北京开绿灯，五角大楼官员访华行程面临不确定性。", source: "Financial Times", url: "https://www.ft.com/content/aecf40c9-fb61-4958-ae6b-14a471cad680" },
   { time: "07:00", tag: "macro", tagText: "宏观", text: "霍尔木兹海峡封锁的连锁效应冲击日本经济，日本对塑料的依赖正引发经济担忧。", source: "Financial Times", url: "https://www.ft.com/content/ec6f9c87-eba1-4932-8aae-957cc3fd0916" },
-  { time: "06:42", tag: "macro", tagText: "宏观", text: "美股三大指数大幅收高，道指涨超650点，首次收于50000点上方。油价暴跌，债券收益率回落，市场对伊朗战争结束的乐观情绪提振风险偏好。投资者等待英伟达财报。", source: "Investopedia", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRGZKVE9ROGl4RGdqVHZqcjJhMWJIbkpyT01EdUlqMU1CQlRGOUs2dThtaG9mb1ZmWUx1YVhIaFBxQU1USnFINWtDMGVVTFBTN0l2Y192aW5LZXdqQVBZNWhtekVhWXlyUFM2ZjBkYjNDZUJYUXdjZkduYTlJVXI3TEFuQ1M0U2VIbHJ4V2ZHS1M?oc=5" },
-  { time: "06:42", tag: "macro", tagText: "宏观", text: "更新版“痛苦指数”显示，包含抵押贷款利率的新指标正逼近警告区域，尽管股市走高，但经济压力可能意味着标普500指数未来回报将减弱。", source: "MarketWatch", url: "https://www.marketwatch.com/story/an-updated-misery-index-shows-economic-stress-is-nearing-a-warning-zone-as-stocks-push-higher-177959f7?mod=mw_rss_topstories" },
-  { time: "06:42", tag: "geo", tagText: "地缘", text: "美国国务院监察机构正在调查加沙人道主义基金会，审查该有美国和以色列支持的有争议非营利组织如何花费了3000万美元拨款。", source: "Financial Times", url: "https://www.ft.com/content/ff2c906a-9575-434e-a72a-086fac1faa86" },
 ];
-const breakingDate = "2026年5月21日 20:54 CST";
+const breakingDate = "2026年5月22日 00:22 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:54", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团达成授权协议，将推出AI生成混音和翻唱功能，用户可通过提示词为流媒体歌曲创建AI混音和翻唱版本，该工具为付费附加功能。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935379/spotify-umg-ai-covers-remix" },
+  { time: "23:47", tag: "ai", tagText: "AI", text: "Spotify推出全新AI桌面应用Studio，可基于用户收听历史和提示词，自动生成每日简报、个性化播客和播放列表，直接对标谷歌NotebookLM。该应用已在20多个市场以研究预览形式上线。", source: "The Verge", url: "https://www.theverge.com/entertainment/935390/spotify-studio-ai-app-personal-podcasts" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "AI硬件初创公司Hark完成7亿美元A轮融资，估值达60亿美元。该公司由Brett Adcock创立，正在开发神秘的“通用”AI界面，引发市场高度关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/" },
   { time: "20:31", tag: "ai", tagText: "AI", text: "谷歌公布AI主导计划：效仿苹果策略。据报道，谷歌正采取类似苹果的生态系统整合与硬件协同策略，以在AI竞争中占据优势。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYlFUVWM3eWRhZGIzdnlvdkpxeG5rUzVvQ2tKdXUyMkpDVkllU0pXSXlsakdLUEx0aGFDc1gtUjFxMWZpRWttcGxrdWU2X3pCNWdzYmFTb2hvTzM2RkNyZXM0QTdHbXZRTWwtaTlKYnBNdnVSWVU1bTI1VEpqVFo2dHZ6eTNqeU8wSVBqYzVlVktWWk0?oc=5" },
   { time: "19:02", tag: "ai", tagText: "AI", text: "英伟达财报超预期，AI需求持续飙升。英伟达最新季度业绩再次超越华尔街预期，显示人工智能芯片需求依然强劲。", source: "Hungarian Conservative", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUEtxLWtSLUtGenJRR3ItMGphTXNsdldJbk5iOUhMM0JDS0FpVXVUTm1CMTZOVk0wSTNJRTdudHRlWWx2SlZ1aXJKNlpBTWlxT1BBTnNkMXI1T3pncVR4dkpSb1lvSnBFVDJrd201ZG51LVZ2SndXR0J4ak1MWXFaSXZUaDBrWGVZZ3JsX2s2M0REcUNLcFZZem9B?oc=5" },
   { time: "18:38", tag: "ai", tagText: "AI", text: "医疗AI初创公司Commure获7000万美元融资，由General Catalyst领投，用于扩展其自主AI系统。该公司专注于医疗领域的智能体AI应用。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPek5XN2NTb2FpcFZvcTVfV0E0dHgybWNCOTFBQ3hxb0M0a3FlR3Axalhhakd4eXAwX2JhU1lBZGd2VnBTTUQ4WVBXV3BGa2ZyMWhGcjlVRWR5NUhZRWhxSF82UVVoN1c5cXp3Umw2ZHc5cjBObXZEMnRtQmNWYi1kcXI3MTdnbjlHYzdKVnhzRS1INzFGekNiUUEzRnNscEp3ZDhjdlFITFNDX29jb0FTQkFQWTVTZmdsTThUTGhGaFk3RHM3U0hDLW11MnRHQ3h1OGlpRHYtYmZVMkU?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "03:10", tag: "tech", tagText: "科技", text: "谷歌在补丁发布前公开了威胁数百万Chromium用户的漏洞利用代码。该漏洞早在29个月前就已报告，但迟迟未修复，此次公开引发安全界广泛关注。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/google-publishes-exploit-code-threatening-millions-of-chromium-users/" },
   { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审结束，评论认为该案证明AI行业由错误的人领导。这场备受瞩目的科技审判本质上是控制权之争，马斯克认为奥特曼不应主导OpenAI的未来方向，引发对AI治理的广泛反思。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people" },
-  { time: "02:00", tag: "tech", tagText: "科技", text: "", source: "The Verge", url: "https://www.theverge.com/tech/934704/google-gemini-omni-youtub-shorts-remix-ai" },
-  { time: "01:51", tag: "ai", tagText: "AI", text: "谷歌在I/O大会上发布Gemini 3.5 Flash，这是其迄今最强大的编程和智能体AI模型，能够自主执行复杂任务并构建软件。此举标志着谷歌将AI战略重心从聊天机器人转向自主智能体。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/" },
-  { time: "01:40", tag: "tech", tagText: "科技", text: "谷歌在I/O大会上推出Android AI Studio，让用户可以通过自然语言在手机上创建应用和自动化任务，将\"氛围编程\"（vibe coding）带到移动端。", source: "The Verge", url: "https://www.theverge.com/tech/934628/google-io-2026-android-ai-studio-widgets-shortcuts" },
 ];
-const aiBreakingDate = "2026年5月21日 20:54 CST";
+const aiBreakingDate = "2026年5月22日 00:22 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
