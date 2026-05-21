@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 57.89,
+  score: 59.06,
   rating: "greed",
-  timestamp: "2026-05-21T16:19:13+00:00",
+  timestamp: "2026-05-21T19:03:17+00:00",
   previousClose: 60.91,
-  previous1Week: 64.97,
+  previous1Week: 65.91,
   previous1Month: 67.57,
   previous1Year: 66.23,
-  date: "2026年5月22日 00:22 CST"
+  date: "2026年5月22日 03:07 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:45", tag: "geo", tagText: "地缘", text: "特朗普突然推迟原定签署的AI行政令，因白宫内部争斗。总统在签署前数小时拒绝批准，担心美国创新者会输给中国。该行政令原定为企业自愿参与。", source: "Financial Times", url: "https://www.ft.com/content/14213cb0-8d11-4118-bac0-12a403696185" },
+  { time: "02:40", tag: "tech", tagText: "科技", text: "Spotify宣布与环球音乐集团达成AI音乐合作协议并发布业绩指引，股价大涨15%。公司正由联合CEO领导，并举行四年来首次投资者日。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/spotify-spot-stock-guidance-investor-day-ai.html" },
+  { time: "02:26", tag: "tech", tagText: "科技", text: "预测市场Polymarket交易员押注，SpaceX、OpenAI和Anthropic上市首日估值将至少达到1.4万亿美元，超越伯克希尔·哈撒韦。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/spacex-openai-valuations-to-leapfrog-berkshire-hathaway-traders-say.html" },
+  { time: "02:01", tag: "macro", tagText: "宏观", text: "特朗普的“DOJ基金”成为争议焦点，参议院未通过国土安全部拨款法案即休会。共和党内部因特朗普的司法部基金问题产生紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/ballroom-funding-trump-congress-immigration-funding.html" },
   { time: "23:14", tag: "macro", tagText: "宏观", text: "私人信贷违约率飙升至历史新高，因利率持续攀升。基金公司正忙于重组债务并下调资产估值，市场风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/private-credit-defaults-hit-record-high-as-interest-rates-soar.html" },
   { time: "22:47", tag: "geo", tagText: "地缘", text: "两党参议员提出法案，旨在限制美国财长贝森特动用2190亿美元外汇稳定基金向外国盟友提供资金的能力，引发对财政部权力的新一轮辩论。", source: "Financial Times", url: "https://www.ft.com/content/f75fa2e5-a7b5-4fb0-a8f4-b9ad88af9f10" },
   { time: "22:15", tag: "macro", tagText: "宏观", text: "加拿大和印度已推出Wegovy仿制药，每月费用可低至15美元。未来一年，全球40%人口所在国家将获得Ozempic和Wegovy仿制药，但美国因专利保护等原因仍无法获得。", source: "MarketWatch", url: "https://www.marketwatch.com/story/canada-and-india-now-have-generic-wegovy-heres-why-the-u-s-doesnt-db18b6b7?mod=mw_rss_topstories" },
@@ -1645,18 +1649,19 @@ const breakingNews = [
   { time: "13:03", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋表示，公司已“基本放弃”中国先进AI芯片市场，将这一市场拱手让给华为。英伟达财报显示数据中心营收近乎翻倍，但股价盘后仍下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/nvidia-jensen-huang-china-ai-chip-market-huawei.html" },
   { time: "12:23", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic有望首次实现季度盈利，领先于竞争对手OpenAI和xAI。", source: "Financial Times", url: "https://www.ft.com/content/a67248e7-f819-4dba-b0f7-3847df0a75f3" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "沙特阿拉伯暂停向咨询公司支付新项目费用，并推迟付款，以收紧对“2030愿景”大型项目的支出控制，战争冲击其财政。", source: "Financial Times", url: "https://www.ft.com/content/9855a284-8109-4d66-8b3e-e08da0e97dd8" },
-  { time: "10:12", tag: "crypto", tagText: "加密", text: "比特币、以太坊、XRP、狗狗币因特朗普对伊朗的言论而反弹。分析师警告需关注比特币关键价位。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxPRGUwUVo0Tm5LTFcxMGJKVzNEOWUwNGJNMVV0OEZ5eWdFM193WGRzeGlIYl9LSVQ1WG94UWZxT0lUMDBjVzhWdTR2eDhsd3M0ZTBMblVRR0doSHJQLVp2WGppWjFOOHo2SkdVRWdLcHZ1TDFZdEkwNGd0Ym16Y1hYTXlzbWFOU2JxZU5fRHBOZms1alNkaWVVT01TcW9NSm5fY0x4bzhFV20wSlBlWnpfUzBYQ2pEU1M4WDFFTUw1amRpV3FqNDBj?oc=5" },
-  { time: "08:07", tag: "macro", tagText: "宏观", text: "日本4月出口同比增长14.8%，远超预期的9.3%，较3月的11.5%进一步加速，主要受半导体和汽车出口拉动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/japan-exports-semiconductor-autos-imports-trade.html" },
-  { time: "08:00", tag: "geo", tagText: "地缘", text: "因美国宣布对台140亿美元军售案，中国推迟为美国防部官员科尔比访问北京开绿灯，五角大楼官员访华行程面临不确定性。", source: "Financial Times", url: "https://www.ft.com/content/aecf40c9-fb61-4958-ae6b-14a471cad680" },
-  { time: "07:00", tag: "macro", tagText: "宏观", text: "霍尔木兹海峡封锁的连锁效应冲击日本经济，日本对塑料的依赖正引发经济担忧。", source: "Financial Times", url: "https://www.ft.com/content/ec6f9c87-eba1-4932-8aae-957cc3fd0916" },
 ];
-const breakingDate = "2026年5月22日 00:22 CST";
+const breakingDate = "2026年5月22日 03:07 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
+  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审结束，评论认为该案证明AI行业由错误的人领导。这场备受瞩目的科技审判本质上是控制权之争，马斯克认为奥特曼不应主导OpenAI的未来方向，引发对AI治理的广泛反思。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people" },
+  { time: "01:30", tag: "ai", tagText: "AI", text: "特朗普推迟签署AI安全行政令，称“不想阻碍领先地位”。该行政令原要求对AI模型进行发布前的政府安全审查，特朗普因对措辞不满而推迟签署，此举可能影响美国AI监管进程。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/trump-delays-ai-security-executive-order-i-dont-want-to-get-in-the-way-of-that-leading/" },
   { time: "23:54", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团达成授权协议，将推出AI生成混音和翻唱功能，用户可通过提示词为流媒体歌曲创建AI混音和翻唱版本，该工具为付费附加功能。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935379/spotify-umg-ai-covers-remix" },
   { time: "23:47", tag: "ai", tagText: "AI", text: "Spotify推出全新AI桌面应用Studio，可基于用户收听历史和提示词，自动生成每日简报、个性化播客和播放列表，直接对标谷歌NotebookLM。该应用已在20多个市场以研究预览形式上线。", source: "The Verge", url: "https://www.theverge.com/entertainment/935390/spotify-studio-ai-app-personal-podcasts" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI硬件初创公司Hark完成7亿美元A轮融资，估值达60亿美元。该公司由Brett Adcock创立，正在开发神秘的“通用”AI界面，引发市场高度关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/" },
+  { time: "21:52", tag: "ai", tagText: "AI", text: "谷歌在I/O大会上向消费者推销AI智能体生态系统，但分析认为消费者可能并不买账。尽管AI智能体是谷歌展示的最有前景的新方向之一，但其概念复杂，市场接受度存疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/" },
+  { time: "21:48", tag: "tech", tagText: "科技", text: "美国政府以20亿美元股权投资九家量子计算公司，受资方包括一家与特朗普家族有关联的初创公司。此举标志着美国在量子计算领域的重大战略投入。", source: "Ars Technica", url: "https://arstechnica.com/gadgets/2026/05/us-government-takes-2-billion-equity-stake-in-nine-quantum-computing-firms/" },
   { time: "20:31", tag: "ai", tagText: "AI", text: "谷歌公布AI主导计划：效仿苹果策略。据报道，谷歌正采取类似苹果的生态系统整合与硬件协同策略，以在AI竞争中占据优势。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYlFUVWM3eWRhZGIzdnlvdkpxeG5rUzVvQ2tKdXUyMkpDVkllU0pXSXlsakdLUEx0aGFDc1gtUjFxMWZpRWttcGxrdWU2X3pCNWdzYmFTb2hvTzM2RkNyZXM0QTdHbXZRTWwtaTlKYnBNdnVSWVU1bTI1VEpqVFo2dHZ6eTNqeU8wSVBqYzVlVktWWk0?oc=5" },
   { time: "19:02", tag: "ai", tagText: "AI", text: "英伟达财报超预期，AI需求持续飙升。英伟达最新季度业绩再次超越华尔街预期，显示人工智能芯片需求依然强劲。", source: "Hungarian Conservative", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUEtxLWtSLUtGenJRR3ItMGphTXNsdldJbk5iOUhMM0JDS0FpVXVUTm1CMTZOVk0wSTNJRTdudHRlWWx2SlZ1aXJKNlpBTWlxT1BBTnNkMXI1T3pncVR4dkpSb1lvSnBFVDJrd201ZG51LVZ2SndXR0J4ak1MWXFaSXZUaDBrWGVZZ3JsX2s2M0REcUNLcFZZem9B?oc=5" },
   { time: "18:38", tag: "ai", tagText: "AI", text: "医疗AI初创公司Commure获7000万美元融资，由General Catalyst领投，用于扩展其自主AI系统。该公司专注于医疗领域的智能体AI应用。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPek5XN2NTb2FpcFZvcTVfV0E0dHgybWNCOTFBQ3hxb0M0a3FlR3Axalhhakd4eXAwX2JhU1lBZGd2VnBTTUQ4WVBXV3BGa2ZyMWhGcjlVRWR5NUhZRWhxSF82UVVoN1c5cXp3Umw2ZHc5cjBObXZEMnRtQmNWYi1kcXI3MTdnbjlHYzdKVnhzRS1INzFGekNiUUEzRnNscEp3ZDhjdlFITFNDX29jb0FTQkFQWTVTZmdsTThUTGhGaFk3RHM3U0hDLW11MnRHQ3h1OGlpRHYtYmZVMkU?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "05:29", tag: "ai", tagText: "AI", text: "Anthropic将以每月12.5亿美元的价格向xAI购买算力。马斯克的xAI此前与Anthropic达成算力出售协议，此次披露的金额远超市场预期，凸显AI算力需求的爆发式增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" },
   { time: "04:43", tag: "ai", tagText: "AI", text: "英伟达股价因销售预测疲软及AI芯片竞争加剧而下跌。市场关注其即将公布的财报，此前芯片指数已飙升60%，但涨势正显疲态。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOGtPeXZQVWc2N2NBMGgwWUR6UzJ5WUYzeDNYZFIxQWlKdmhKSnBMT1dVYVJuM1dGaEVfUGNRSHNCSHB1WFNING1DcWtrTXNLR0piMmZoazRRQnY0WEhBOVdnbnZ1STVqbXVCeFU1ZFlnbnY0RVR0Q21jUHk1YXljMFdvR1UzZlJJUXg4NEJ0ZkxwekhjUmtPOGxn?oc=5" },
   { time: "04:28", tag: "ai", tagText: "AI", text: "OpenAI声称其推理模型成功破解了自1946年以来未解的几何猜想，解决了80年历史的数学难题。此前曾因类似声明被数学家打脸，但此次得到了相关数学家的背书。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/" },
-  { time: "04:15", tag: "ai", tagText: "AI", text: "美国FDA授予一款AI膀胱癌预后测试“突破性医疗器械”认定。该测试利用人工智能评估患者预后，有望加速其审批和临床应用。", source: "Clinical Lab Products", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOT2NCNFZCanpvRVZ6YzRIMHJIMmhxeTZBYjY0MTEyOGgzUkszaDNEMl9iUE5qZEZ1SzRLaFdENG91X20yVURiWnM1d2xjR0tPWVJiRnIwZXRHeE9TSkxXQ3gyY1c0SktpbWZXVXVXNGRfUmxtN1Q2T3Bzdzg1RjRXTjJpampMamhNZERVU2lMNzdRR05zNmx5bQ?oc=5" },
-  { time: "03:47", tag: "ai", tagText: "AI", text: "由吴恩达支持的初创公司IrisGo推出AI桌面助手。该工具可监控用户桌面操作并自动学习执行任务，定位为“AI管家”，旨在成为用户不可或缺的桌面伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/irisgo-a-startup-backed-by-andrew-ng-looks-to-become-the-ai-desktop-buddy-you-never-knew-you-needed/" },
-  { time: "03:10", tag: "tech", tagText: "科技", text: "谷歌在补丁发布前公开了威胁数百万Chromium用户的漏洞利用代码。该漏洞早在29个月前就已报告，但迟迟未修复，此次公开引发安全界广泛关注。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/google-publishes-exploit-code-threatening-millions-of-chromium-users/" },
-  { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "马斯克诉奥特曼案庭审结束，评论认为该案证明AI行业由错误的人领导。这场备受瞩目的科技审判本质上是控制权之争，马斯克认为奥特曼不应主导OpenAI的未来方向，引发对AI治理的广泛反思。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people" },
 ];
-const aiBreakingDate = "2026年5月22日 00:22 CST";
+const aiBreakingDate = "2026年5月22日 03:07 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
