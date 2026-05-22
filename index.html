@@ -1616,20 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 58.2,
+  score: 58.03,
   rating: "greed",
-  timestamp: "2026-05-22T00:00:00+00:00",
+  timestamp: "2026-05-22T08:10:31+00:00",
   previousClose: 58.2,
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月22日 12:24 CST"
+  date: "2026年5月22日 16:29 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:51", tag: "ai", tagText: "AI", text: "联想集团股价周五大涨近20%，创下历史新高，因公司公布创纪录的季度财报，AI业务收入近乎翻倍，强劲的AI需求推动整体营收大幅增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/lenovo-shares-jump-15percent-on-record-earnings-as-ai-revenue-nearly-doubles.html" },
   { time: "12:15", tag: "geo", tagText: "地缘", text: "亚太市场走高，投资者评估美伊和平协议外交进展。尽管美国交易时段油价下跌，但报道称伊朗计划将浓缩铀库存留在国内，这使谈判复杂化。国际能源署警告，随着夏季出行需求增长，石油市场可能很快进入“红色区域”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/asia-markets-today-brent-nikkei-225-kospi-hang-seng-index.html" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "美国对古巴的施压行动似乎进入新阶段，当前局势开始类似于冲突前的剧本。分析人士警告，古巴局势可能进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/the-cuba-situation-is-starting-to-resemble-a-pre-conflict-playbook.html" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "摩根大通寻求剥离约40亿美元私募股权相关贷款的风险敞口。这家美国最大银行正在讨论风险转移交易，因私募股权公司面临长期放缓困境。", source: "Financial Times", url: "https://www.ft.com/content/dc63cb21-afdb-4f0e-8667-86fc89f45a03" },
   { time: "11:06", tag: "tech", tagText: "科技", text: "软银集团股价连续第二日大涨逾11%，投资者涌入AI交易，该公司是OpenAI和Arm的主要支持者。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/softbank-extends-scorching-rally-surging-over-12percent-as-investors-crowd-into-ai-trade.html" },
   { time: "10:49", tag: "macro", tagText: "宏观", text: "日本4月核心通胀率降至逾四年低点，低于经济学家预期的1.7%和3月的1.8%，削弱了日本央行加息的理由。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/japan-april-core-inflation-boj-rate-hike-outlook.html" },
@@ -1647,13 +1649,13 @@ const breakingNews = [
   { time: "02:26", tag: "tech", tagText: "科技", text: "预测市场Polymarket交易员押注，SpaceX、OpenAI和Anthropic上市首日估值将至少达到1.4万亿美元，超越伯克希尔·哈撒韦。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/spacex-openai-valuations-to-leapfrog-berkshire-hathaway-traders-say.html" },
   { time: "02:01", tag: "macro", tagText: "宏观", text: "特朗普的“DOJ基金”成为争议焦点，参议院未通过国土安全部拨款法案即休会。共和党内部因特朗普的司法部基金问题产生紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/ballroom-funding-trump-congress-immigration-funding.html" },
   { time: "23:14", tag: "macro", tagText: "宏观", text: "私人信贷违约率飙升至历史新高，因利率持续攀升。基金公司正忙于重组债务并下调资产估值，市场风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/private-credit-defaults-hit-record-high-as-interest-rates-soar.html" },
-  { time: "22:47", tag: "geo", tagText: "地缘", text: "两党参议员提出法案，旨在限制美国财长贝森特动用2190亿美元外汇稳定基金向外国盟友提供资金的能力，引发对财政部权力的新一轮辩论。", source: "Financial Times", url: "https://www.ft.com/content/f75fa2e5-a7b5-4fb0-a8f4-b9ad88af9f10" },
-  { time: "22:15", tag: "macro", tagText: "宏观", text: "加拿大和印度已推出Wegovy仿制药，每月费用可低至15美元。未来一年，全球40%人口所在国家将获得Ozempic和Wegovy仿制药，但美国因专利保护等原因仍无法获得。", source: "MarketWatch", url: "https://www.marketwatch.com/story/canada-and-india-now-have-generic-wegovy-heres-why-the-u-s-doesnt-db18b6b7?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月22日 12:24 CST";
+const breakingDate = "2026年5月22日 16:29 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:26", tag: "ai", tagText: "AI", text: "英国AI初创公司Scope获1730万欧元融资，由Index Ventures领投，用于加速工业检测流程。该公司利用AI技术提升制造业质检效率。", source: "BeBeez International", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxONEhldUZwdWRnbEtaZElaOTQyd2pPQlFrTnZxcHVNUUo0SWxxSzhfV0E4ODVZQjVDOEVfNzJ6UFBqYmVoOG5HQ2pNLUYyVTFscGF6dDFfQWFYSFdzenhHYngwVFRZQzlZcTQ4NzNXMENqNzdGNi14OFRwQW53b2VXRmxUTHBBd3VsVUt0cHh6b01IQ29BU0NqbDlxVlcyVzA4TjRlaHk0b21GVFlKb2FQbXNUT0xtdEtFcDJEbEhwM3FtZEV0aW05MEc3VU1Sa2NhMTZDT1NsdXpId1pr?oc=5" },
+  { time: "15:51", tag: "ai", tagText: "AI", text: "新加坡AI初创公司K25获纳斯达克上市公司200万美元投资。该公司专注于AI技术研发，此次投资显示资本市场对东南亚AI初创企业的关注。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaXlJdFN3R3ZoQUo2aWpFR2VKbVk3eHRmbHgyaEVrNFlySURCY2VDTEpEQWVfMzlyM25vUTJONzhhX21OZXo4dDN3S3VIelBvY29HWU03N3ptY3hmeGxadXctMXEyTmM3SkF6c3lUZ09DWkxOUlY3RFhLNWpjNkVRTGRacDMwWVJGZlJVTmlHeEhmUFJVSnl3azRVTTZVcnl3ZnY5QUl3UEZsMmpkZThv?oc=5" },
   { time: "09:44", tag: "ai", tagText: "AI", text: "继生成式AI之后，物理AI崛起：合成数据成为全球AI核心基础设施。报道指出，随着AI从数字世界向物理世界延伸，合成数据在训练机器人、自动驾驶等物理AI系统中扮演关键角色，正成为支撑全球AI发展的基础性资源。", source: "아시아경제", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ZeXN3dFM3ekdNQzNvNEY3RDh5bFd4YVBZbFZ5NmRzNzdsTU84ekNsYXZsU0Z2czE0N3d3NVh1N01fYzZBNEZsbFlJeHJITGRDSklXaVlUQTdiRzhneXUyenlqdFA0ZWo1ZnZlR3pMOGI1NWxjR0VFMWRkUQ?oc=5" },
   { time: "09:11", tag: "tech", tagText: "科技", text: "无服务器AI基础设施初创公司Modal Labs完成3.55亿美元融资。该公司专注于提供无需管理服务器的AI计算平台，本轮融资规模巨大，反映出市场对高效、可扩展AI基础设施的强劲需求。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTXJoV2U1UjExUjF2SkxXSEpDR2ZfSEVxRmU0NHRNSlJkZmNxS0ROaWh5U3YtR3VHejA3a1BvZXdOekJhaWtCVDliR2RqODhLYzFjbjZnbUpBZXpuMllhcXNSVmN6MDJ2bW9TSUxhcjBXQmZJOEJjVXNXc0NhbmpwNy00WmtHbGVBb0lQaGN1amlxNEpQeG5BdkFQdTV5d1BHWXlnNzRxeHRPTVpfMnc?oc=5" },
   { time: "05:29", tag: "ai", tagText: "AI", text: "Anthropic将以每月12.5亿美元的价格向xAI购买算力。马斯克的xAI此前与Anthropic达成算力出售协议，此次披露的金额远超市场预期，凸显AI算力需求的爆发式增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "21:52", tag: "ai", tagText: "AI", text: "谷歌在I/O大会上向消费者推销AI智能体生态系统，但分析认为消费者可能并不买账。尽管AI智能体是谷歌展示的最有前景的新方向之一，但其概念复杂，市场接受度存疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/" },
   { time: "21:48", tag: "tech", tagText: "科技", text: "美国政府以20亿美元股权投资九家量子计算公司，受资方包括一家与特朗普家族有关联的初创公司。此举标志着美国在量子计算领域的重大战略投入。", source: "Ars Technica", url: "https://arstechnica.com/gadgets/2026/05/us-government-takes-2-billion-equity-stake-in-nine-quantum-computing-firms/" },
   { time: "20:31", tag: "ai", tagText: "AI", text: "谷歌公布AI主导计划：效仿苹果策略。据报道，谷歌正采取类似苹果的生态系统整合与硬件协同策略，以在AI竞争中占据优势。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYlFUVWM3eWRhZGIzdnlvdkpxeG5rUzVvQ2tKdXUyMkpDVkllU0pXSXlsakdLUEx0aGFDc1gtUjFxMWZpRWttcGxrdWU2X3pCNWdzYmFTb2hvTzM2RkNyZXM0QTdHbXZRTWwtaTlKYnBNdnVSWVU1bTI1VEpqVFo2dHZ6eTNqeU8wSVBqYzVlVktWWk0?oc=5" },
-  { time: "19:02", tag: "ai", tagText: "AI", text: "英伟达财报超预期，AI需求持续飙升。英伟达最新季度业绩再次超越华尔街预期，显示人工智能芯片需求依然强劲。", source: "Hungarian Conservative", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUEtxLWtSLUtGenJRR3ItMGphTXNsdldJbk5iOUhMM0JDS0FpVXVUTm1CMTZOVk0wSTNJRTdudHRlWWx2SlZ1aXJKNlpBTWlxT1BBTnNkMXI1T3pncVR4dkpSb1lvSnBFVDJrd201ZG51LVZ2SndXR0J4ak1MWXFaSXZUaDBrWGVZZ3JsX2s2M0REcUNLcFZZem9B?oc=5" },
-  { time: "18:38", tag: "ai", tagText: "AI", text: "医疗AI初创公司Commure获7000万美元融资，由General Catalyst领投，用于扩展其自主AI系统。该公司专注于医疗领域的智能体AI应用。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPek5XN2NTb2FpcFZvcTVfV0E0dHgybWNCOTFBQ3hxb0M0a3FlR3Axalhhakd4eXAwX2JhU1lBZGd2VnBTTUQ4WVBXV3BGa2ZyMWhGcjlVRWR5NUhZRWhxSF82UVVoN1c5cXp3Umw2ZHc5cjBObXZEMnRtQmNWYi1kcXI3MTdnbjlHYzdKVnhzRS1INzFGekNiUUEzRnNscEp3ZDhjdlFITFNDX29jb0FTQkFQWTVTZmdsTThUTGhGaFk3RHM3U0hDLW11MnRHQ3h1OGlpRHYtYmZVMkU?oc=5" },
 ];
-const aiBreakingDate = "2026年5月22日 12:24 CST";
+const aiBreakingDate = "2026年5月22日 16:29 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
