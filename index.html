@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 58.31,
+  score: 58.2,
   rating: "greed",
-  timestamp: "2026-05-21T22:54:45+00:00",
-  previousClose: 60.91,
-  previous1Week: 65.91,
-  previous1Month: 67.57,
-  previous1Year: 66.23,
-  date: "2026年5月22日 07:13 CST"
+  timestamp: "2026-05-22T00:00:00+00:00",
+  previousClose: 58.2,
+  previous1Week: 63.23,
+  previous1Month: 68.46,
+  previous1Year: 66.8,
+  date: "2026年5月22日 12:24 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:15", tag: "geo", tagText: "地缘", text: "亚太市场走高，投资者评估美伊和平协议外交进展。尽管美国交易时段油价下跌，但报道称伊朗计划将浓缩铀库存留在国内，这使谈判复杂化。国际能源署警告，随着夏季出行需求增长，石油市场可能很快进入“红色区域”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/asia-markets-today-brent-nikkei-225-kospi-hang-seng-index.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "摩根大通寻求剥离约40亿美元私募股权相关贷款的风险敞口。这家美国最大银行正在讨论风险转移交易，因私募股权公司面临长期放缓困境。", source: "Financial Times", url: "https://www.ft.com/content/dc63cb21-afdb-4f0e-8667-86fc89f45a03" },
+  { time: "11:06", tag: "tech", tagText: "科技", text: "软银集团股价连续第二日大涨逾11%，投资者涌入AI交易，该公司是OpenAI和Arm的主要支持者。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/softbank-extends-scorching-rally-surging-over-12percent-as-investors-crowd-into-ai-trade.html" },
+  { time: "10:49", tag: "macro", tagText: "宏观", text: "日本4月核心通胀率降至逾四年低点，低于经济学家预期的1.7%和3月的1.8%，削弱了日本央行加息的理由。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/japan-april-core-inflation-boj-rate-hike-outlook.html" },
+  { time: "10:46", tag: "geo", tagText: "地缘", text: "中国在APEC会议上呼吁合作，但商务部长因“紧急公务”缺席开幕式。中国国际贸易谈判代表李成钢主持了周五的会议。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/china-apec-trade-meeting-li-chenggang-cooperation-us-china-deals.html" },
+  { time: "08:18", tag: "crypto", tagText: "加密", text: "加密货币行业为量子计算威胁做准备。行业人士警告，对比特币底层代码的威胁已从“理论性变为可信”。", source: "Financial Times", url: "https://www.ft.com/content/99c1c1e7-1a1c-479c-9fc8-e21aea5c3f0e" },
   { time: "07:12", tag: "macro", tagText: "宏观", text: "美股期货小幅上涨，标普500指数有望连续第二周收高。本周市场波动加剧，长期美债收益率大幅攀升令投资者承压。道指创下历史新高，标普500和纳斯达克指数因美伊和平希望而反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/stock-market-today-live-updates.html" },
   { time: "07:12", tag: "macro", tagText: "宏观", text: "债市信号与股市乐观情绪出现背离。BCA Research警告称，股市和债市“正走向碰撞”，债券投资者可能胜出。市场观察文章指出，当信贷和股票意见不一致时，信贷市场往往在说真话。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-bond-market-just-flipped-the-script-on-investors-wall-street-is-acting-like-nothings-wrong-f321cc5b?mod=mw_rss_topstories" },
   { time: "07:12", tag: "tech", tagText: "科技", text: "SpaceX准备进行巨型星舰火箭的第12次试飞，IPO在即。此次发射紧随公司发布招股说明书之后，预计将创下纪录。FT报道称，马斯克的航天集团在IPO文件中警告，其战略“高度依赖”该巨型火箭。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/spacex-plans-12th-test-flight-of-massive-starship-rocket-as-ipo-looms.html" },
@@ -1643,17 +1649,13 @@ const breakingNews = [
   { time: "23:14", tag: "macro", tagText: "宏观", text: "私人信贷违约率飙升至历史新高，因利率持续攀升。基金公司正忙于重组债务并下调资产估值，市场风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/private-credit-defaults-hit-record-high-as-interest-rates-soar.html" },
   { time: "22:47", tag: "geo", tagText: "地缘", text: "两党参议员提出法案，旨在限制美国财长贝森特动用2190亿美元外汇稳定基金向外国盟友提供资金的能力，引发对财政部权力的新一轮辩论。", source: "Financial Times", url: "https://www.ft.com/content/f75fa2e5-a7b5-4fb0-a8f4-b9ad88af9f10" },
   { time: "22:15", tag: "macro", tagText: "宏观", text: "加拿大和印度已推出Wegovy仿制药，每月费用可低至15美元。未来一年，全球40%人口所在国家将获得Ozempic和Wegovy仿制药，但美国因专利保护等原因仍无法获得。", source: "MarketWatch", url: "https://www.marketwatch.com/story/canada-and-india-now-have-generic-wegovy-heres-why-the-u-s-doesnt-db18b6b7?mod=mw_rss_topstories" },
-  { time: "20:53", tag: "macro", tagText: "宏观", text: "美国通胀升至三年新高，除油价上涨和特朗普关税残余影响外，人工智能热潮也成为推高通胀的新因素。AI相关投资和能源需求激增，正在加剧价格压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/artificial-intelligence-was-supposed-to-reduce-prices-instead-ai-is-boosting-inflation-d7dbec01?mod=mw_rss_topstories" },
-  { time: "20:53", tag: "tech", tagText: "科技", text: "美国政府计划向九家量子计算公司提供20亿美元拨款并持有股权，量子计算股盘前大涨。受益公司包括与特朗普家族有关联的初创企业。", source: "Financial Times", url: "https://www.ft.com/content/92baf913-8987-4c65-82da-311e80f773b0" },
-  { time: "20:53", tag: "macro", tagText: "宏观", text: "沃尔玛发布弱于预期的业绩展望，高油价冲击消费者支出。公司警告利润可能不及预期，与竞争对手塔吉特形成鲜明对比，股价下跌。", source: "MarketWatch", url: "https://www.marketwatch.com/story/walmart-sees-slowing-sales-growth-and-warns-of-a-profit-miss-in-contrast-to-rival-target-1f114fa0?mod=mw_rss_topstories" },
-  { time: "20:53", tag: "tech", tagText: "科技", text: "礼来公司下一代减肥药retatrutide在关键肥胖症临床试验中实现28%的减重效果，优于现有药物Zepbound。该药作用机制不同，礼来距离提交上市申请更近一步。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/eli-lilly-weight-loss-drug-retatrutide-clears-obesity-trial.html" },
-  { time: "20:53", tag: "macro", tagText: "宏观", text: "BCA Research警告称，股市过热阻碍债券收益率下行，需要一次“有意义的”抛售才能让债市降温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-a-meaningful-selloff-for-stocks-is-needed-to-bring-down-bond-yields-c03b2d37?mod=mw_rss_topstories" },
-  { time: "17:59", tag: "geo", tagText: "地缘", text: "伊朗战争持续，霍尔木兹海峡石油实物供应量较正常水平下降95%，全球石油库存快速消耗，而夏季出行旺季即将到来，能源供应前景严峻。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/as-iran-war-drags-on-this-is-how-quickly-global-oil-stocks-are-being-depleted-and-travel-season-is-starting-soon-c6948319?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月22日 07:13 CST";
+const breakingDate = "2026年5月22日 12:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "09:44", tag: "ai", tagText: "AI", text: "继生成式AI之后，物理AI崛起：合成数据成为全球AI核心基础设施。报道指出，随着AI从数字世界向物理世界延伸，合成数据在训练机器人、自动驾驶等物理AI系统中扮演关键角色，正成为支撑全球AI发展的基础性资源。", source: "아시아경제", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ZeXN3dFM3ekdNQzNvNEY3RDh5bFd4YVBZbFZ5NmRzNzdsTU84ekNsYXZsU0Z2czE0N3d3NVh1N01fYzZBNEZsbFlJeHJITGRDSklXaVlUQTdiRzhneXUyenlqdFA0ZWo1ZnZlR3pMOGI1NWxjR0VFMWRkUQ?oc=5" },
+  { time: "09:11", tag: "tech", tagText: "科技", text: "无服务器AI基础设施初创公司Modal Labs完成3.55亿美元融资。该公司专注于提供无需管理服务器的AI计算平台，本轮融资规模巨大，反映出市场对高效、可扩展AI基础设施的强劲需求。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTXJoV2U1UjExUjF2SkxXSEpDR2ZfSEVxRmU0NHRNSlJkZmNxS0ROaWh5U3YtR3VHejA3a1BvZXdOekJhaWtCVDliR2RqODhLYzFjbjZnbUpBZXpuMllhcXNSVmN6MDJ2bW9TSUxhcjBXQmZJOEJjVXNXc0NhbmpwNy00WmtHbGVBb0lQaGN1amlxNEpQeG5BdkFQdTV5d1BHWXlnNzRxeHRPTVpfMnc?oc=5" },
   { time: "05:29", tag: "ai", tagText: "AI", text: "Anthropic将以每月12.5亿美元的价格向xAI购买算力。马斯克的xAI此前与Anthropic达成算力出售协议，此次披露的金额远超市场预期，凸显AI算力需求的爆发式增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" },
   { time: "04:43", tag: "ai", tagText: "AI", text: "英伟达股价因销售预测疲软及AI芯片竞争加剧而下跌。市场关注其即将公布的财报，此前芯片指数已飙升60%，但涨势正显疲态。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOGtPeXZQVWc2N2NBMGgwWUR6UzJ5WUYzeDNYZFIxQWlKdmhKSnBMT1dVYVJuM1dGaEVfUGNRSHNCSHB1WFNING1DcWtrTXNLR0piMmZoazRRQnY0WEhBOVdnbnZ1STVqbXVCeFU1ZFlnbnY0RVR0Q21jUHk1YXljMFdvR1UzZlJJUXg4NEJ0ZkxwekhjUmtPOGxn?oc=5" },
   { time: "04:28", tag: "ai", tagText: "AI", text: "OpenAI声称其推理模型成功破解了自1946年以来未解的几何猜想，解决了80年历史的数学难题。此前曾因类似声明被数学家打脸，但此次得到了相关数学家的背书。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "20:31", tag: "ai", tagText: "AI", text: "谷歌公布AI主导计划：效仿苹果策略。据报道，谷歌正采取类似苹果的生态系统整合与硬件协同策略，以在AI竞争中占据优势。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYlFUVWM3eWRhZGIzdnlvdkpxeG5rUzVvQ2tKdXUyMkpDVkllU0pXSXlsakdLUEx0aGFDc1gtUjFxMWZpRWttcGxrdWU2X3pCNWdzYmFTb2hvTzM2RkNyZXM0QTdHbXZRTWwtaTlKYnBNdnVSWVU1bTI1VEpqVFo2dHZ6eTNqeU8wSVBqYzVlVktWWk0?oc=5" },
   { time: "19:02", tag: "ai", tagText: "AI", text: "英伟达财报超预期，AI需求持续飙升。英伟达最新季度业绩再次超越华尔街预期，显示人工智能芯片需求依然强劲。", source: "Hungarian Conservative", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUEtxLWtSLUtGenJRR3ItMGphTXNsdldJbk5iOUhMM0JDS0FpVXVUTm1CMTZOVk0wSTNJRTdudHRlWWx2SlZ1aXJKNlpBTWlxT1BBTnNkMXI1T3pncVR4dkpSb1lvSnBFVDJrd201ZG51LVZ2SndXR0J4ak1MWXFaSXZUaDBrWGVZZ3JsX2s2M0REcUNLcFZZem9B?oc=5" },
   { time: "18:38", tag: "ai", tagText: "AI", text: "医疗AI初创公司Commure获7000万美元融资，由General Catalyst领投，用于扩展其自主AI系统。该公司专注于医疗领域的智能体AI应用。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPek5XN2NTb2FpcFZvcTVfV0E0dHgybWNCOTFBQ3hxb0M0a3FlR3Axalhhakd4eXAwX2JhU1lBZGd2VnBTTUQ4WVBXV3BGa2ZyMWhGcjlVRWR5NUhZRWhxSF82UVVoN1c5cXp3Umw2ZHc5cjBObXZEMnRtQmNWYi1kcXI3MTdnbjlHYzdKVnhzRS1INzFGekNiUUEzRnNscEp3ZDhjdlFITFNDX29jb0FTQkFQWTVTZmdsTThUTGhGaFk3RHM3U0hDLW11MnRHQ3h1OGlpRHYtYmZVMkU?oc=5" },
-  { time: "17:20", tag: "ai", tagText: "AI", text: "Meta为弥补巨额AI投资，已通知数千名员工被裁员。公司正通过削减人力成本来平衡在人工智能领域的重金投入。", source: "The Verge", url: "https://www.theverge.com/tech/935163/meta-layoffs-ai-investment-offset-memo" },
-  { time: "15:49", tag: "ai", tagText: "AI", text: "AMD宣布在台湾投资100亿美元建设AI芯片生产线，旨在挑战英伟达在AI芯片领域的主导地位。此举将大幅提升AMD的AI芯片产能。", source: "Mint", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQenU2Ulc1NjF6aUhZTzg1ejNTMTNlVVpqRlNSYW02aDhpdC1oZ3Y4MEN5Z2doT0lvaHZ6NmNQNWVraDFDX3g3WmhjbG5KY0pmQXpJeE5lSV93b28zSzJmSURSOXlMVWxHUmV2SGxVdFJDcmczbENkM0huUjQ3c2ZtQzllSk50bmpFY1VxVFFDWm9pSVNXbktSY3BueFVXQVNIMU5vd3ZWTW45Ri1KZVBiRGhUaTBHMWlnVG1ZV0l6Rkh6RXNUTG9PamlwbmlmT1NSQURLaTUtOEh6Z9IB3wFBVV95cUxPb3dfWi1jNzdGdEplZVIxSk9SQVBzN0pUUFpUVWdYRk5GXzhuRGVpZDNHb1Qzb1VxbHhZeFNtODNNV1l4Vm9MSlpUZTE4eWJMd3NhN3B6V3NURDl5aGh6YVRDTWVYOXZNVHVJYTZ2Y0pKQlYybGdpOEJibEZBUlhmenRyQVI5M3BHb1BEcU9vTlk3YVc4Ul9nYlIzQ2ZSSXFfSlc4TWxJU0dxRTZtb0UzSDItQWYzRjMzbjN6MEs1ZnpER0ZGLXRLc3FGa0lNMmgxb3dLZXM2YlNHZFAzdlcw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月22日 07:13 CST";
+const aiBreakingDate = "2026年5月22日 12:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
