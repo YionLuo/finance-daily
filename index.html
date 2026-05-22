@@ -1618,17 +1618,24 @@
 const fearGreedData = {
   score: 58.03,
   rating: "greed",
-  timestamp: "2026-05-22T08:10:31+00:00",
+  timestamp: "2026-05-22T11:35:46+00:00",
   previousClose: 58.2,
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月22日 16:29 CST"
+  date: "2026年5月22日 19:53 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:52", tag: "geo", tagText: "地缘", text: "美国与伊朗释放和平信号，但双方在浓缩铀库存和霍尔木兹海峡通行费问题上仍存分歧。美国国务卿鲁比奥称结束中东冲突的协议出现“良好迹象”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/iran-war-strait-of-hormuz-tolls-trump.html" },
+  { time: "19:41", tag: "macro", tagText: "宏观", text: "美国众议院监督委员会主席科默对预测市场Kalshi和Polymarket发起国会调查，重点关注内幕交易问题。国会正加大对预测市场的施压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/kalshi-polymarket-comer-insider-trading-probe-congress.html" },
+  { time: "19:39", tag: "geo", tagText: "地缘", text: "北约秘书长吕特表示北约将在国防上投入数千亿美元。特朗普宣布将向波兰增派5000名美军，以奖励其成为北约最高国防支出国。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/trump-troops-poland-nato-rutte-defense-spending.html" },
+  { time: "19:29", tag: "macro", tagText: "宏观", text: "对冲基金Zweig-DiMenna警告称，其专有模型显示未来3-6个月通胀将上升，而债券收益率尚未充分上升以补偿投资者，这种“有毒组合”可能导致标普500指数下跌15%。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-toxic-cocktail-threatens-stocks-why-the-s-p-500-could-drop-15-according-to-this-hedge-fund-655e225b" },
+  { time: "19:23", tag: "macro", tagText: "宏观", text: "尽管特朗普此前威胁会“记住”未申请关税退税的公司，但沃尔玛、家得宝等多家零售商仍已申请退税。沃尔玛表示将把退税所得用于降低商品价格。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/trump-tariff-refunds-walmart-home-depot-target-apply.html" },
+  { time: "19:14", tag: "macro", tagText: "宏观", text: "土耳其法院罢免埃尔多安主要竞争对手的裁决引发市场恐慌，土耳其政府正试图安抚投资者。分析师警告资本外流可能持续。", source: "Financial Times", url: "https://www.ft.com/content/35a55cb3-6f78-4f09-8e6c-62bf80566deb" },
+  { time: "19:00", tag: "crypto", tagText: "加密", text: "特朗普媒体公司出售2650枚比特币，价值约2.05亿美元，引发市场猜测。与此同时，比特币连续第四日横盘，山寨币轮动行情升温。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxOQko2aVlkVTZQc3ZxeTlnajJUUjVlTnhlZlhkNWpUMXJhcjVHNngtNGRCSWRrT2FkXzBBWHhmRm1fRVRFLVFJY25weE54eVllcE91VDBzMEhmclcxTmpKQzBJcVNVNVczSm83cVh6aUxVbWVWclBBaHctdWR4dVN2ekNXRFByQ1JBc0hXNHRjZHNCdjhyS2N1NlNld0hYZ9IBowFBVV95cUxNQkRKLTBsbUxoeFczWDJ2cVZuR1gtRjZtbjhGendzRVVVcW9NYUVKbHZ3Q2t3amdrSFZBUWdtbWxoR0FVc2NKeVV6WWt1WlZvRFE1dXZiX0NuZTFZZ19KTG9zMlMyWDl6eTdzdTdUcDlkbFlFdnJWT1YzT3Q4RmdDcVQzV3ViVk9fRy1SSWFoT2ZUYVR6WmI4M3k2aDJOQ3pOd1g0" },
   { time: "15:51", tag: "ai", tagText: "AI", text: "联想集团股价周五大涨近20%，创下历史新高，因公司公布创纪录的季度财报，AI业务收入近乎翻倍，强劲的AI需求推动整体营收大幅增长。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/lenovo-shares-jump-15percent-on-record-earnings-as-ai-revenue-nearly-doubles.html" },
   { time: "12:15", tag: "geo", tagText: "地缘", text: "亚太市场走高，投资者评估美伊和平协议外交进展。尽管美国交易时段油价下跌，但报道称伊朗计划将浓缩铀库存留在国内，这使谈判复杂化。国际能源署警告，随着夏季出行需求增长，石油市场可能很快进入“红色区域”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/asia-markets-today-brent-nikkei-225-kospi-hang-seng-index.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "美国对古巴的施压行动似乎进入新阶段，当前局势开始类似于冲突前的剧本。分析人士警告，古巴局势可能进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/the-cuba-situation-is-starting-to-resemble-a-pre-conflict-playbook.html" },
@@ -1642,18 +1649,14 @@ const breakingNews = [
   { time: "07:12", tag: "tech", tagText: "科技", text: "SpaceX准备进行巨型星舰火箭的第12次试飞，IPO在即。此次发射紧随公司发布招股说明书之后，预计将创下纪录。FT报道称，马斯克的航天集团在IPO文件中警告，其战略“高度依赖”该巨型火箭。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/spacex-plans-12th-test-flight-of-massive-starship-rocket-as-ipo-looms.html" },
   { time: "07:12", tag: "ai", tagText: "AI", text: "Anthropic与微软就AI芯片交易进行谈判，此前微软已投资50亿美元。微软的Maia 200芯片尚未向客户开放，但在公司数据中心使用，效率优于其他芯片。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/anthropic-microsoft-maia-200-ai-chip.html" },
   { time: "07:12", tag: "tech", tagText: "科技", text: "IMAX已通过中间人与潜在买家进行了“初步谈判”，但公司尚未直接进行正式推介。消息人士向CNBC透露了这一信息。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/imax-preliminary-talks-potential-buyers.html" },
-  { time: "04:30", tag: "tech", tagText: "科技", text: "Meta、博通、应用材料、格芯和Synopsys联合在加州大学洛杉矶分校启动1.25亿美元的半导体研究中心，旨在加强美国芯片研发能力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/meta-broadcom-others-to-launch-125-million-semiconductor-research-hub-at-ucla.html" },
-  { time: "03:26", tag: "ai", tagText: "AI", text: "据市场观察报道，马斯克的xAI正在大量消耗SpaceX的现金，但成果有限。xAI上一季度营收8.18亿美元，但运营亏损高达24.7亿美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/elon-musks-xai-is-draining-spacexs-cash-with-little-to-show-for-it-9517874d?mod=mw_rss_topstories" },
-  { time: "02:45", tag: "geo", tagText: "地缘", text: "特朗普突然推迟原定签署的AI行政令，因白宫内部争斗。总统在签署前数小时拒绝批准，担心美国创新者会输给中国。该行政令原定为企业自愿参与。", source: "Financial Times", url: "https://www.ft.com/content/14213cb0-8d11-4118-bac0-12a403696185" },
-  { time: "02:40", tag: "tech", tagText: "科技", text: "Spotify宣布与环球音乐集团达成AI音乐合作协议并发布业绩指引，股价大涨15%。公司正由联合CEO领导，并举行四年来首次投资者日。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/spotify-spot-stock-guidance-investor-day-ai.html" },
-  { time: "02:26", tag: "tech", tagText: "科技", text: "预测市场Polymarket交易员押注，SpaceX、OpenAI和Anthropic上市首日估值将至少达到1.4万亿美元，超越伯克希尔·哈撒韦。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/spacex-openai-valuations-to-leapfrog-berkshire-hathaway-traders-say.html" },
-  { time: "02:01", tag: "macro", tagText: "宏观", text: "特朗普的“DOJ基金”成为争议焦点，参议院未通过国土安全部拨款法案即休会。共和党内部因特朗普的司法部基金问题产生紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/ballroom-funding-trump-congress-immigration-funding.html" },
-  { time: "23:14", tag: "macro", tagText: "宏观", text: "私人信贷违约率飙升至历史新高，因利率持续攀升。基金公司正忙于重组债务并下调资产估值，市场风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/21/private-credit-defaults-hit-record-high-as-interest-rates-soar.html" },
 ];
-const breakingDate = "2026年5月22日 16:29 CST";
+const breakingDate = "2026年5月22日 19:53 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:05", tag: "tech", tagText: "科技", text: "三星与威胁罢工的存储芯片员工达成临时协议，部分员工今年平均可获得34万美元奖金。此举旨在避免生产中断，凸显半导体行业人才争夺激烈。", source: "The Verge", url: "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus" },
+  { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
+  { time: "18:30", tag: "ai", tagText: "AI", text: "英伟达AI业务前景展望提振亚洲芯片供应商股价。市场对英伟达财报及AI芯片需求保持乐观，带动相关供应链企业上涨。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWC1Xb1ZNalNGVkg2cWhoRXp0RFJqVlpwNjRaeURNdGRxLWVLd3RxN0g2TEpKSXZMZm91aGVqNi1JNG5OdzB1ZDAtaGRUUHB4SFlLLTVOZTd3NmdvSXltTmtaWkhhS2U3Ui03QVliM1NqOGdwZGZiOGxFaTJKTjE5NkVRRWRVYk1JTUtpb1NhanFrOTFTajctRmRIblpFUmJsYU53MlRobw?oc=5" },
   { time: "16:26", tag: "ai", tagText: "AI", text: "英国AI初创公司Scope获1730万欧元融资，由Index Ventures领投，用于加速工业检测流程。该公司利用AI技术提升制造业质检效率。", source: "BeBeez International", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxONEhldUZwdWRnbEtaZElaOTQyd2pPQlFrTnZxcHVNUUo0SWxxSzhfV0E4ODVZQjVDOEVfNzJ6UFBqYmVoOG5HQ2pNLUYyVTFscGF6dDFfQWFYSFdzenhHYngwVFRZQzlZcTQ4NzNXMENqNzdGNi14OFRwQW53b2VXRmxUTHBBd3VsVUt0cHh6b01IQ29BU0NqbDlxVlcyVzA4TjRlaHk0b21GVFlKb2FQbXNUT0xtdEtFcDJEbEhwM3FtZEV0aW05MEc3VU1Sa2NhMTZDT1NsdXpId1pr?oc=5" },
   { time: "15:51", tag: "ai", tagText: "AI", text: "新加坡AI初创公司K25获纳斯达克上市公司200万美元投资。该公司专注于AI技术研发，此次投资显示资本市场对东南亚AI初创企业的关注。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaXlJdFN3R3ZoQUo2aWpFR2VKbVk3eHRmbHgyaEVrNFlySURCY2VDTEpEQWVfMzlyM25vUTJONzhhX21OZXo4dDN3S3VIelBvY29HWU03N3ptY3hmeGxadXctMXEyTmM3SkF6c3lUZ09DWkxOUlY3RFhLNWpjNkVRTGRacDMwWVJGZlJVTmlHeEhmUFJVSnl3azRVTTZVcnl3ZnY5QUl3UEZsMmpkZThv?oc=5" },
   { time: "09:44", tag: "ai", tagText: "AI", text: "继生成式AI之后，物理AI崛起：合成数据成为全球AI核心基础设施。报道指出，随着AI从数字世界向物理世界延伸，合成数据在训练机器人、自动驾驶等物理AI系统中扮演关键角色，正成为支撑全球AI发展的基础性资源。", source: "아시아경제", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ZeXN3dFM3ekdNQzNvNEY3RDh5bFd4YVBZbFZ5NmRzNzdsTU84ekNsYXZsU0Z2czE0N3d3NVh1N01fYzZBNEZsbFlJeHJITGRDSklXaVlUQTdiRzhneXUyenlqdFA0ZWo1ZnZlR3pMOGI1NWxjR0VFMWRkUQ?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "23:54", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团达成授权协议，将推出AI生成混音和翻唱功能，用户可通过提示词为流媒体歌曲创建AI混音和翻唱版本，该工具为付费附加功能。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935379/spotify-umg-ai-covers-remix" },
   { time: "23:47", tag: "ai", tagText: "AI", text: "Spotify推出全新AI桌面应用Studio，可基于用户收听历史和提示词，自动生成每日简报、个性化播客和播放列表，直接对标谷歌NotebookLM。该应用已在20多个市场以研究预览形式上线。", source: "The Verge", url: "https://www.theverge.com/entertainment/935390/spotify-studio-ai-app-personal-podcasts" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "AI硬件初创公司Hark完成7亿美元A轮融资，估值达60亿美元。该公司由Brett Adcock创立，正在开发神秘的“通用”AI界面，引发市场高度关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/" },
-  { time: "21:52", tag: "ai", tagText: "AI", text: "谷歌在I/O大会上向消费者推销AI智能体生态系统，但分析认为消费者可能并不买账。尽管AI智能体是谷歌展示的最有前景的新方向之一，但其概念复杂，市场接受度存疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/" },
-  { time: "21:48", tag: "tech", tagText: "科技", text: "美国政府以20亿美元股权投资九家量子计算公司，受资方包括一家与特朗普家族有关联的初创公司。此举标志着美国在量子计算领域的重大战略投入。", source: "Ars Technica", url: "https://arstechnica.com/gadgets/2026/05/us-government-takes-2-billion-equity-stake-in-nine-quantum-computing-firms/" },
-  { time: "20:31", tag: "ai", tagText: "AI", text: "谷歌公布AI主导计划：效仿苹果策略。据报道，谷歌正采取类似苹果的生态系统整合与硬件协同策略，以在AI竞争中占据优势。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYlFUVWM3eWRhZGIzdnlvdkpxeG5rUzVvQ2tKdXUyMkpDVkllU0pXSXlsakdLUEx0aGFDc1gtUjFxMWZpRWttcGxrdWU2X3pCNWdzYmFTb2hvTzM2RkNyZXM0QTdHbXZRTWwtaTlKYnBNdnVSWVU1bTI1VEpqVFo2dHZ6eTNqeU8wSVBqYzVlVktWWk0?oc=5" },
 ];
-const aiBreakingDate = "2026年5月22日 16:29 CST";
+const aiBreakingDate = "2026年5月22日 19:53 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
