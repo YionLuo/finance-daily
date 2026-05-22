@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 59.17,
+  score: 58.57,
   rating: "greed",
-  timestamp: "2026-05-22T19:56:29+00:00",
+  timestamp: "2026-05-22T21:01:52+00:00",
   previousClose: 58.2,
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月23日 04:02 CST"
+  date: "2026年5月23日 05:20 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:20", tag: "geo", tagText: "地缘", text: "特朗普就司法部18亿美元“法律战”受害者基金抨击共和党反对者，称他们“在搞砸共和党”。此前特朗普放弃对国税局的100亿美元诉讼，换取设立该基金。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/trump-doj-fund-republicans.html" },
+  { time: "05:20", tag: "ai", tagText: "AI", text: "高通股价大涨，投资者“觉醒”于AI设备繁荣。公司被视为AI终端设备爆发的核心受益者。同时，福特股价创三年新高，部分受AI相关合作预期推动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/qualcomms-stock-pop-shows-investors-waking-up-to-boom-in-ai-devices.html" },
+  { time: "05:20", tag: "macro", tagText: "宏观", text: "“巴菲特指标”发出市场见顶警告：估值缺口高达230%，叠加能源危机等8个关键信号，显示股市看似坚不可摧实则脆弱。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buffett-indicator-warns-of-a-market-top-8-crucial-signs-that-stocks-are-running-on-fumes-12e4b4d8?mod=mw_rss_topstories" },
   { time: "02:26", tag: "macro", tagText: "宏观", text: "美国阵亡将士纪念日周末汽油支出比去年多20亿美元，专家称消费者面临的压力将进一步加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/americans-are-paying-2-billion-more-for-gas-this-memorial-day-weekend-than-they-did-last-year-632a7c56?mod=mw_rss_topstories" },
   { time: "02:23", tag: "macro", tagText: "宏观", text: "凯文·沃什可能引导美联储在每日市场中扮演更小角色，同时为干预设定更明确规则，这将是华尔街“管道”深处的真正“政权更迭”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/kevin-warshs-real-fed-regime-change-may-happen-deep-inside-wall-streets-plumbing.html" },
   { time: "19:52", tag: "geo", tagText: "地缘", text: "美国与伊朗释放和平信号，但双方在浓缩铀库存和霍尔木兹海峡通行费问题上仍存分歧。美国国务卿鲁比奥称结束中东冲突的协议出现“良好迹象”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/iran-war-strait-of-hormuz-tolls-trump.html" },
@@ -1646,19 +1649,18 @@ const breakingNews = [
   { time: "14:57", tag: "macro", tagText: "宏观", text: "沃什接任美联储主席之际，市场加息预期升温，预计央行将在2026年底前提高借贷成本。", source: "Financial Times", url: "https://www.ft.com/content/7a0b2b54-c62b-4498-8b8d-512ef7f2cb5d" },
   { time: "14:55", tag: "macro", tagText: "宏观", text: "美国5月消费者信心指数跌至历史新低，因美伊战争推高油价，加剧通胀担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/consumer-sentiment-hits-fresh-record-low-in-may-as-iran-war-fuels-inflation-worries.html" },
   { time: "14:40", tag: "tech", tagText: "科技", text: "英伟达虽能交付芯片，但无法解决大型科技公司面临的信贷和电网危机。企业利润无法修复对华贸易战、信贷溢价攀升及AI基础设施限制。", source: "MarketWatch", url: "https://www.marketwatch.com/story/nvidia-can-deliver-chips-but-it-cant-buy-big-tech-out-of-its-credit-and-power-grid-crisis-9c114e62?mod=mw_rss_topstories" },
-  { time: "12:15", tag: "geo", tagText: "地缘", text: "亚太市场走高，投资者评估美伊和平协议外交进展。尽管美国交易时段油价下跌，但报道称伊朗计划将浓缩铀库存留在国内，这使谈判复杂化。国际能源署警告，随着夏季出行需求增长，石油市场可能很快进入“红色区域”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/asia-markets-today-brent-nikkei-225-kospi-hang-seng-index.html" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "美国对古巴的施压行动似乎进入新阶段，当前局势开始类似于冲突前的剧本。分析人士警告，古巴局势可能进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/the-cuba-situation-is-starting-to-resemble-a-pre-conflict-playbook.html" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "摩根大通寻求剥离约40亿美元私募股权相关贷款的风险敞口。这家美国最大银行正在讨论风险转移交易，因私募股权公司面临长期放缓困境。", source: "Financial Times", url: "https://www.ft.com/content/dc63cb21-afdb-4f0e-8667-86fc89f45a03" },
 ];
-const breakingDate = "2026年5月23日 04:02 CST";
+const breakingDate = "2026年5月23日 05:20 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:40", tag: "ai", tagText: "AI", text: "报道揭露部分AI初创公司与风投机构合谋，通过夸大年度经常性收入（ARR）等传统营收指标来“加冕”AI明星公司，营造虚假繁荣。投资者对此心知肚明，但为推高估值和融资规模而默许甚至参与其中。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/how-vcs-and-founders-use-inflated-arr-to-kingmake-ai-startups/" },
   { time: "03:07", tag: "tech", tagText: "科技", text: "芯片股屡创新高，但英伟达并非本轮上涨的唯一驱动力。市场关注其他芯片制造商在AI浪潮中的表现，行业格局正发生变化。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUTlucXRoaDYyVjh4cGVnNHZQOVpsSWZuWDBZX3QydFR5MzFoMXI4VHB6QnhqNGZ1Y1I0SUlMTGhTd1JDdTQxS1F2VnBfY0dkWldUMHN3aG1KQ09OTW9MQW1RLTZ2bkJSTEdnaFV3TElJcjN1ZUttRHczMU9ObmNtcldNZUdQQ0pzakdmdWxNZ2lwdEp1bU5ScnhSd3g0VzNWVUZXeWRhalVxOFM4ZWZ1dVVB?oc=5" },
   { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "美国大学毕业生在毕业典礼上对鼓吹AI的高管报以嘘声和起哄，高管们对此感到意外。这一现象反映出年轻一代对AI取代就业岗位的焦虑与不满。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935602/graduates-boo-ai-ceos" },
   { time: "02:17", tag: "ai", tagText: "AI", text: "马斯克的AI聊天机器人Grok表现不佳，用户量稀少。路透社报道指出，这款号称“追求真相”的AI产品并未获得市场认可，马斯克应停止强行推广。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen" },
   { time: "01:37", tag: "tech", tagText: "科技", text: "谷歌展示其原型Android XR智能眼镜，该眼镜可将Gemini驱动的实时翻译、导航等信息直接叠加在用户视野中。体验者评价其功能“接近成熟”，但仍需完善，标志着谷歌在AI可穿戴设备领域迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" },
+  { time: "01:13", tag: "tech", tagText: "科技", text: "得克萨斯州总检察长起诉Meta，指控WhatsApp并未提供真正的端到端加密，涉嫌误导用户。批评者指出，该诉讼缺乏事实依据，且起诉人正竞选美国参议员，此举被质疑带有政治动机。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/texas-ag-sues-meta-over-claims-that-whatsapp-doesnt-provide-end-to-end-encryption/" },
   { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
   { time: "00:20", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团合作推出AI音乐混音工具，声称面向“超级粉丝”。但评论指出，AI生成的翻唱和混音已在互联网泛滥，该工具可能进一步加剧低质量AI音乐内容对原创艺术的冲击。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936072/spotify-umg-ai-music-remix-cover-superfan" },
   { time: "00:16", tag: "tech", tagText: "科技", text: "谷歌AI搜索出现严重漏洞：搜索“disregard”一词会导致AI摘要功能崩溃，无法正常显示搜索结果。该问题暴露了谷歌AI搜索系统的不稳定性。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/you-can-no-longer-google-the-word-disregard/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "18:30", tag: "ai", tagText: "AI", text: "英伟达AI业务前景展望提振亚洲芯片供应商股价。市场对英伟达财报及AI芯片需求保持乐观，带动相关供应链企业上涨。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWC1Xb1ZNalNGVkg2cWhoRXp0RFJqVlpwNjRaeURNdGRxLWVLd3RxN0g2TEpKSXZMZm91aGVqNi1JNG5OdzB1ZDAtaGRUUHB4SFlLLTVOZTd3NmdvSXltTmtaWkhhS2U3Ui03QVliM1NqOGdwZGZiOGxFaTJKTjE5NkVRRWRVYk1JTUtpb1NhanFrOTFTajctRmRIblpFUmJsYU53MlRobw?oc=5" },
   { time: "16:26", tag: "ai", tagText: "AI", text: "英国AI初创公司Scope获1730万欧元融资，由Index Ventures领投，用于加速工业检测流程。该公司利用AI技术提升制造业质检效率。", source: "BeBeez International", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxONEhldUZwdWRnbEtaZElaOTQyd2pPQlFrTnZxcHVNUUo0SWxxSzhfV0E4ODVZQjVDOEVfNzJ6UFBqYmVoOG5HQ2pNLUYyVTFscGF6dDFfQWFYSFdzenhHYngwVFRZQzlZcTQ4NzNXMENqNzdGNi14OFRwQW53b2VXRmxUTHBBd3VsVUt0cHh6b01IQ29BU0NqbDlxVlcyVzA4TjRlaHk0b21GVFlKb2FQbXNUT0xtdEtFcDJEbEhwM3FtZEV0aW05MEc3VU1Sa2NhMTZDT1NsdXpId1pr?oc=5" },
   { time: "15:51", tag: "ai", tagText: "AI", text: "新加坡AI初创公司K25获纳斯达克上市公司200万美元投资。该公司专注于AI技术研发，此次投资显示资本市场对东南亚AI初创企业的关注。", source: "CXO Digitalpulse", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaXlJdFN3R3ZoQUo2aWpFR2VKbVk3eHRmbHgyaEVrNFlySURCY2VDTEpEQWVfMzlyM25vUTJONzhhX21OZXo4dDN3S3VIelBvY29HWU03N3ptY3hmeGxadXctMXEyTmM3SkF6c3lUZ09DWkxOUlY3RFhLNWpjNkVRTGRacDMwWVJGZlJVTmlHeEhmUFJVSnl3azRVTTZVcnl3ZnY5QUl3UEZsMmpkZThv?oc=5" },
-  { time: "09:44", tag: "ai", tagText: "AI", text: "继生成式AI之后，物理AI崛起：合成数据成为全球AI核心基础设施。报道指出，随着AI从数字世界向物理世界延伸，合成数据在训练机器人、自动驾驶等物理AI系统中扮演关键角色，正成为支撑全球AI发展的基础性资源。", source: "아시아경제", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ZeXN3dFM3ekdNQzNvNEY3RDh5bFd4YVBZbFZ5NmRzNzdsTU84ekNsYXZsU0Z2czE0N3d3NVh1N01fYzZBNEZsbFlJeHJITGRDSklXaVlUQTdiRzhneXUyenlqdFA0ZWo1ZnZlR3pMOGI1NWxjR0VFMWRkUQ?oc=5" },
-  { time: "09:11", tag: "tech", tagText: "科技", text: "无服务器AI基础设施初创公司Modal Labs完成3.55亿美元融资。该公司专注于提供无需管理服务器的AI计算平台，本轮融资规模巨大，反映出市场对高效、可扩展AI基础设施的强劲需求。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTXJoV2U1UjExUjF2SkxXSEpDR2ZfSEVxRmU0NHRNSlJkZmNxS0ROaWh5U3YtR3VHejA3a1BvZXdOekJhaWtCVDliR2RqODhLYzFjbjZnbUpBZXpuMllhcXNSVmN6MDJ2bW9TSUxhcjBXQmZJOEJjVXNXc0NhbmpwNy00WmtHbGVBb0lQaGN1amlxNEpQeG5BdkFQdTV5d1BHWXlnNzRxeHRPTVpfMnc?oc=5" },
 ];
-const aiBreakingDate = "2026年5月23日 04:02 CST";
+const aiBreakingDate = "2026年5月23日 05:20 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
