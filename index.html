@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月23日 23:12 CST"
+  date: "2026年5月24日 01:13 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:52", tag: "geo", tagText: "地缘", text: "美伊接近达成60天停火延期协议，涉及霍尔木兹海峡逐步重新开放。自4月8日脆弱的停火协议生效以来，双方在霍尔木兹海峡附近时有冲突。调解方透露，协议框架包括核问题谈判，但细节仍在敲定中。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/us-iran-war-talks.html" },
+  { time: "00:52", tag: "macro", tagText: "宏观", text: "市场分析警告多个板块出现泡沫，标普500未来两年有30%概率崩盘。文章指出，英伟达所在的AI板块并非最大泡沫，另有四个板块估值过高。同时，“巴菲特指标”显示估值缺口高达230%，市场脆弱性加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-4-market-sectors-look-frothy-and-nvidias-isnt-even-the-biggest-bubble-d740acf7?mod=mw_rss_topstories" },
+  { time: "23:02", tag: "tech", tagText: "科技", text: "微软高管减持股票，引发市场关注。分析认为，微软与OpenAI关系松动可能改变其AI战略格局，对MSFT股票前景产生重大影响。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxOV1RScVZkMWhMeVp3eHVCOEdLOU5oeXVhbS1nMlR6MG0zS1hjc0M1TmN4dG1IWGs2SWxrWWF2NFZNZTREcDE5MUdtN3JrUVlpNUJELXVrVEdSWWZwa216TV9TT3U5cEtFMXBpbHBaaGZfby14VFlWYkRqTDlaQ3hUSk1fZll6dWxJVFBXRHJWQkpaY1hJVjhfOG1B?oc=5" },
   { time: "22:01", tag: "macro", tagText: "科技", text: "债券市场发出警告信号，信贷与股市走势出现背离。历史经验表明，当两者意见不一致时，信贷市场往往更接近真相。投资者需警惕当前华尔街的乐观情绪可能掩盖风险。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-bond-market-just-flipped-the-script-on-investors-wall-street-is-acting-like-nothings-wrong-f321cc5b?mod=mw_rss_topstories" },
   { time: "21:58", tag: "macro", tagText: "宏观", text: "美联储主席凯文·沃什暗示短期内不会降息，因通胀再度抬头；但加息也暂不在议程上。分析指出，沃什面临在抑制需求与维持牛市之间的艰难抉择，加之油价突破100美元，市场面临“新主席诅咒”考验。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-fed-isnt-cutting-interest-rates-any-time-soon-but-a-hike-isnt-yet-on-the-table-either-aee28c06?mod=mw_rss_topstories" },
   { time: "21:30", tag: "macro", tagText: "宏观", text: "白宫经济顾问哈塞特吹嘘信用卡支出“爆表”，但数据显示违约率攀升，农业破产案同比激增46%。消费繁荣背后暗藏债务风险，经济分化信号加剧。", source: "Moneywise", url: "https://finance.yahoo.com/economy/articles/hassett-brags-credit-card-spending-133000446.html" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "计算能力新军备竞赛：军事能力日益依赖数据中心，落后于AI发展的国家正转向实验性技术。随着AI在军事领域的应用加速，各国政府意识到传统计算基础设施已无法满足需求。部分国家开始探索量子计算、光子芯片等前沿技术，试图在AI军备竞赛中追赶领先者。", source: "Financial Times", url: "https://www.ft.com/content/5aecd7b6-652f-4edb-b666-71f3f50fc43e" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "新卢德运动兴起：若政府不减缓AI发展，选民可能效仿历史，自行采取行动。随着AI对就业和社会结构的影响日益显现，反对AI技术扩散的民间运动正在全球多地萌芽。分析人士警告，如果政策制定者未能妥善管理AI转型，公众不满可能演变为破坏性行动。", source: "Financial Times", url: "https://www.ft.com/content/f5c96fa6-5b9b-4951-b71d-e32b3b57d8df" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "中国企业加速收购西方消费品牌：在国内竞争和通缩压力下，中国企业通过收购Everlane、Puma等品牌寻求海外增长。这一趋势反映出中国消费市场饱和及内需疲软背景下，企业正积极通过海外并购获取品牌、技术和市场渠道，以应对国内增长瓶颈。", source: "Financial Times", url: "https://www.ft.com/content/d5137b83-446d-4562-b0e5-44dc27d02640" },
-  { time: "08:57", tag: "geo", tagText: "地缘", text: "特朗普考虑对伊朗发动重大军事行动，加密市场准备应对冲击。报道称此举可能对全球市场产生深远影响。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTFBUUi1ibEtSOW1yLVUydVhQQ1FYZ2QtNGJ3TmtNZ3d0eE53dnBfRElFWlZxMHhwWWUzTl9BNFlkV1pGTlphbS1qM2I5N2hIMXh1YU1rN1BQeXU3SW1sUDRCYUVlTUI0Z2x3MjJVclRjVDR3MFFNdzZhMmpvUQ?oc=5" },
-  { time: "07:48", tag: "macro", tagText: "宏观", text: "穆迪对美国信用评级下调的担忧导致微软股价跌至420美元。市场对美国政府债务可持续性的忧虑加剧。", source: "foreignpolicyjournal.com", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNVlfN2ZnNExock9DQ1lUcHNzaG5iS29EYlN0UERtcEJ5UDNrQUJJTTluNlEtR3lrV2RDdERuUVJVN1pzMHJfckIwNDF4RW9tb2FIUlFEVDRZdnpQNzdSUGN5OFo5RUlSclpOcWdyaEFUM3lRVl9OaFN2MEdPNGgyS0MyY3FKSkZmeHhhcTdPNk1ZNjRrUEgwUWJhYVRLU2hTMkdtQ2prZl9ZN1dBNVNPSUZKcm94bjR3SFJzU0JwX3RxelZuak1ZM01kaldZZ29aSzNBOVFadw?oc=5" },
-  { time: "07:36", tag: "tech", tagText: "科技", text: "苹果股价创历史新高，触及309美元，受强劲的人工智能叙事推动。市场对苹果AI战略前景持乐观态度。", source: "foreignpolicyjournal.com", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZ2JCckJqbUdyTV83clBiRWJ4dnAtb3J2U3llc0toMmxxamN6c0ZWR1RjNmJqZnZucnZ3TzN4Skc3N1RhZXpjam9kanU1ZFU2WkpjZUR4ODVmWVFLOVZWeGYzYXpBYXVjY29zZXhPSDBMRTRSSnlXRndmRnROUmdSckdkNm91bWxjR3lrcTkyd211SW5vZDl3UkpLMWx3SFVzOVhrSjgwdHh4cllTbklLd2RITFRWYVQ0ODliWlRrOHZLY2pnT1YyTzl1a1VJQnk2Y21rR3d3?oc=5" },
 ];
-const breakingDate = "2026年5月23日 23:12 CST";
+const breakingDate = "2026年5月24日 01:13 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:13", tag: "tech", tagText: "科技", text: "得克萨斯州总检察长起诉Meta，指控WhatsApp并未提供真正的端到端加密，涉嫌误导用户。批评者指出，该诉讼缺乏事实依据，且起诉人正竞选美国参议员，此举被质疑带有政治动机。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/texas-ag-sues-meta-over-claims-that-whatsapp-doesnt-provide-end-to-end-encryption/" },
+  { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
+  { time: "00:20", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团合作推出AI音乐混音工具，声称面向“超级粉丝”。但评论指出，AI生成的翻唱和混音已在互联网泛滥，该工具可能进一步加剧低质量AI音乐内容对原创艺术的冲击。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936072/spotify-umg-ai-music-remix-cover-superfan" },
   { time: "23:08", tag: "tech", tagText: "科技", text: "法拉利与IBM合作，利用AI技术打造F1超级粉丝体验，重新定义观赛互动方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/23/ferrari-is-using-ai-to-create-f1-superfans/" },
   { time: "22:54", tag: "ai", tagText: "AI", text: "巴西银行（Banco do Brasil）与MSW Capital合作设立一只新的AI专项基金。该基金将专注于人工智能领域的投资机会，显示传统金融机构正加速布局AI赛道。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdTlPSkRUWUlTelpDRVhGMThQWjJmM2ZGalQtR2VXQktJYVJ2OERSOFhRa2dsbVJuaVpsTFo1MGo4aExjRFdMWlM0VEZTejVtRGZ0QnJkenk4SGdEWmdvem9lU2dQNDhfYnYzN3ZFRGNDV19yQmZXZHZod3FqczNiZ1pGdHB5ZkpCckx0c3lITGttNkp6ZVNnbzQ3X2VpUWQ5dGs4?oc=5" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "马斯克旗下xAI全面转向天然气发电，SpaceX则专注于轨道数据中心，其曾承诺的“太阳能电力经济”愿景在地球上已被放弃。此举标志着马斯克在能源战略上的重大转向。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/23/elon-musk-has-given-up-on-solar-power-on-earth/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "03:00", tag: "tech", tagText: "科技", text: "美国大学毕业生在毕业典礼上对鼓吹AI的高管报以嘘声和起哄，高管们对此感到意外。这一现象反映出年轻一代对AI取代就业岗位的焦虑与不满。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935602/graduates-boo-ai-ceos" },
   { time: "02:17", tag: "ai", tagText: "AI", text: "马斯克的AI聊天机器人Grok表现不佳，用户量稀少。路透社报道指出，这款号称“追求真相”的AI产品并未获得市场认可，马斯克应停止强行推广。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen" },
   { time: "01:37", tag: "tech", tagText: "科技", text: "谷歌展示其原型Android XR智能眼镜，该眼镜可将Gemini驱动的实时翻译、导航等信息直接叠加在用户视野中。体验者评价其功能“接近成熟”，但仍需完善，标志着谷歌在AI可穿戴设备领域迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" },
-  { time: "01:13", tag: "tech", tagText: "科技", text: "得克萨斯州总检察长起诉Meta，指控WhatsApp并未提供真正的端到端加密，涉嫌误导用户。批评者指出，该诉讼缺乏事实依据，且起诉人正竞选美国参议员，此举被质疑带有政治动机。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/texas-ag-sues-meta-over-claims-that-whatsapp-doesnt-provide-end-to-end-encryption/" },
-  { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
-  { time: "00:20", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团合作推出AI音乐混音工具，声称面向“超级粉丝”。但评论指出，AI生成的翻唱和混音已在互联网泛滥，该工具可能进一步加剧低质量AI音乐内容对原创艺术的冲击。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936072/spotify-umg-ai-music-remix-cover-superfan" },
 ];
-const aiBreakingDate = "2026年5月23日 23:12 CST";
+const aiBreakingDate = "2026年5月24日 01:13 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
