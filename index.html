@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月23日 19:21 CST"
+  date: "2026年5月23日 21:58 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:58", tag: "macro", tagText: "宏观", text: "美联储主席凯文·沃什暗示短期内不会降息，因通胀再度抬头；但加息也暂不在议程上。分析指出，沃什面临在抑制需求与维持牛市之间的艰难抉择，加之油价突破100美元，市场面临“新主席诅咒”考验。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-fed-isnt-cutting-interest-rates-any-time-soon-but-a-hike-isnt-yet-on-the-table-either-aee28c06?mod=mw_rss_topstories" },
+  { time: "21:30", tag: "macro", tagText: "宏观", text: "白宫经济顾问哈塞特吹嘘信用卡支出“爆表”，但数据显示违约率攀升，农业破产案同比激增46%。消费繁荣背后暗藏债务风险，经济分化信号加剧。", source: "Moneywise", url: "https://finance.yahoo.com/economy/articles/hassett-brags-credit-card-spending-133000446.html" },
+  { time: "21:00", tag: "geo", tagText: "地缘", text: "伊朗首席谈判代表卡利巴夫表示，德黑兰不会在与美国的谈判中妥协，将同时在战场和外交上追求“合法权利”。美伊核谈判前景再度蒙上阴影。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/top-iran-negotiator-says-tehran-will-not-compromise-in-talks-with-us.html" },
+  { time: "20:30", tag: "tech", tagText: "科技", text: "英伟达预测CPU市场规模将达2000亿美元，并明确表示该预测包含中国市场。尽管面临出口管制，英伟达仍看好中国长期需求，信号意义重大。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/nvidia-forecast-for-200-billion-cpu-market-includes-china.html" },
+  { time: "20:30", tag: "macro", tagText: "宏观", text: "阵亡将士纪念日长周末前夕，美国通胀压力持续挤压消费者。旅行、娱乐和食品价格涨幅尤为显著，高油价考验夏季出行意愿。历史数据显示，股市在中期选举前的夏季往往表现疲软。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/memorial-day-weekend-prices-inflation-war.html" },
   { time: "19:19", tag: "geo", tagText: "地缘", text: "APEC会议释放三大信号：中美贸易分歧依旧巨大。特朗普与习近平北京峰会结束后，双方官员在公开表态中展现出截然不同的优先事项，贸易关系改善前景不明。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/three-signs-from-apec-that-the-us-china-remain-far-apart-on-trade.html" },
   { time: "19:01", tag: "geo", tagText: "地缘", text: "夏威夷大岛发生6级地震，美国地质调查局正在评估基拉韦厄火山活动。该火山是世界上最活跃的火山之一，地震引发对火山喷发风险的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/hawaii-earthquake.html" },
   { time: "19:00", tag: "geo", tagText: "地缘", text: "美国国务卿卢比奥寻求与古巴达成协议，但面临古巴裔美国人的强烈反对。其政策重点在于推动经济改革，而非彻底改变古巴政治体制。", source: "Financial Times", url: "https://www.ft.com/content/b3eff5d9-10e9-407c-ab6b-1daeeed63a3c" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "06:48", tag: "geo", tagText: "地缘", text: "特朗普政府拟要求外国人离境申请绿卡，收紧永久居留权规定，此举可能对企业产生重大影响。", source: "Financial Times", url: "https://www.ft.com/content/5d4c3de6-07d9-436e-8822-2dbafd10774a" },
   { time: "06:36", tag: "tech", tagText: "科技", text: "SpaceX在首次尝试推迟后，于周五成功发射了其巨型星舰火箭的试飞。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/spacex-prepares-another-attempt-at-starship-launch-after-prior-scrub.html" },
   { time: "06:19", tag: "macro", tagText: "宏观", text: "沃尔玛两位高管在新CEO约翰·弗纳领导下离职：山姆会员店首席运营官汤姆·沃德退休，美国门店运营执行副总裁塞德里克·克拉克离职。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/walmart-executives-depart-under-ceo-john-furner.html" },
-  { time: "06:14", tag: "crypto", tagText: "加密", text: "SEC推迟代币化股票交易计划，比特币、以太坊、SUI等加密货币遭遇血洗式下跌。监管不确定性打击市场情绪。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYUdjYTR2ME1NS0VldTJQampjMGVLX3pUYTdRVk44YTNoQnBDNGZLdkFMOUE3M09OQjU2cGpOd0xGMVpPQ1BzS3lCWjNRS2xXTTdZMlNpdnFWYjN2Z1lpTmFaaDVPYnVnbFhQbEE2SVg5RkNpaTJsdG15czRZQTdxUjFkdkR3WGhYTnIySGYwWjk3ZXJ3SDV3MDQ4bUFKcXdhTVZrcjF6MXRWcnFQOHd3SVpsTzk1VWcxNldkSg?oc=5" },
-  { time: "05:30", tag: "macro", tagText: "宏观", text: "美股周五收高，道指上涨近300点创历史新高，标普500指数录得连续第八周上涨，为2023年以来最长周度连涨纪录。市场在阵亡将士纪念日长周末前表现强劲。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZVkybWxiTjVkUHh6TGR0VllMQzlLRWhEUmtjQWZXaG1mRFgzcWVtRnRlNGF4dFVGa01yRTRYOW92My0xNGJnaDR0Y3ZVektiSjYxVDZMbTB1bkx4WkhXdjZRZHItVFJrMWM2QjllQld5eW9PdlRwOG9scWpYbVBMbmZiZkRRUjJPaVdMLWJTVDV5SXMwLWFLaEYyeTdmdHR6VlZ3aElDWVdXWnpSR2tjdW5RQmx2V2ZtSmcwWDhIUTBsUQ?oc=5" },
-  { time: "05:20", tag: "geo", tagText: "地缘", text: "特朗普就司法部18亿美元“法律战”受害者基金抨击共和党反对者，称他们“在搞砸共和党”。此前特朗普放弃对国税局的100亿美元诉讼，换取设立该基金。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/trump-doj-fund-republicans.html" },
-  { time: "05:20", tag: "ai", tagText: "AI", text: "高通股价大涨，投资者“觉醒”于AI设备繁荣。公司被视为AI终端设备爆发的核心受益者。同时，福特股价创三年新高，部分受AI相关合作预期推动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/qualcomms-stock-pop-shows-investors-waking-up-to-boom-in-ai-devices.html" },
-  { time: "05:20", tag: "macro", tagText: "宏观", text: "“巴菲特指标”发出市场见顶警告：估值缺口高达230%，叠加能源危机等8个关键信号，显示股市看似坚不可摧实则脆弱。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buffett-indicator-warns-of-a-market-top-8-crucial-signs-that-stocks-are-running-on-fumes-12e4b4d8?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月23日 19:21 CST";
+const breakingDate = "2026年5月23日 21:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:00", tag: "ai", tagText: "AI", text: "马斯克旗下xAI全面转向天然气发电，SpaceX则专注于轨道数据中心，其曾承诺的“太阳能电力经济”愿景在地球上已被放弃。此举标志着马斯克在能源战略上的重大转向。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/23/elon-musk-has-given-up-on-solar-power-on-earth/" },
   { time: "19:05", tag: "tech", tagText: "科技", text: "三星与威胁罢工的存储芯片员工达成临时协议，部分员工今年平均可获得34万美元奖金。此举旨在避免生产中断，凸显半导体行业人才争夺激烈。", source: "The Verge", url: "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "谷歌发布全新“任意到任意”AI模型，可跨文本、图像、视频等多种模态进行生成和转换，功能极为强大。该模型基于Gemini技术，能实现如将玩偶照片生成度假视频等创意应用，引发业界对多模态AI能力的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video" },
   { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "00:20", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团合作推出AI音乐混音工具，声称面向“超级粉丝”。但评论指出，AI生成的翻唱和混音已在互联网泛滥，该工具可能进一步加剧低质量AI音乐内容对原创艺术的冲击。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936072/spotify-umg-ai-music-remix-cover-superfan" },
   { time: "00:16", tag: "tech", tagText: "科技", text: "谷歌AI搜索出现严重漏洞：搜索“disregard”一词会导致AI摘要功能崩溃，无法正常显示搜索结果。该问题暴露了谷歌AI搜索系统的不稳定性。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/you-can-no-longer-google-the-word-disregard/" },
   { time: "22:54", tag: "ai", tagText: "AI", text: "巴西银行（Banco do Brasil）与MSW Capital合作设立一只新的AI专项基金。该基金将专注于人工智能领域的投资机会，显示传统金融机构正加速布局AI赛道。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdTlPSkRUWUlTelpDRVhGMThQWjJmM2ZGalQtR2VXQktJYVJ2OERSOFhRa2dsbVJuaVpsTFo1MGo4aExjRFdMWlM0VEZTejVtRGZ0QnJkenk4SGdEWmdvem9lU2dQNDhfYnYzN3ZFRGNDV19yQmZXZHZod3FqczNiZ1pGdHB5ZkpCckx0c3lITGttNkp6ZVNnbzQ3X2VpUWQ5dGs4?oc=5" },
-  { time: "22:41", tag: "ai", tagText: "AI", text: "全球最大动力电池制造商宁德时代（CATL）正考虑投资中国AI初创公司DeepSeek。此举显示传统制造业巨头加速布局AI领域，DeepSeek作为中国AI新星备受关注。", source: "Latest news from Azerbaijan", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTFBFdnJiMzF2MXdhTHdzMXJNMTdJOHZXXzczRXFNQmZlSm4tQW4wNUxhLWZoVkJsMlMycU9MazVaQlAzTGh6bWIwaFM0N2ZQSDhweFNQZTluSVA2aTZ3WVFWVnVQWkV1bF9QLWN4SHdqeks2TVgyM3I5TUlMN0g?oc=5" },
 ];
-const aiBreakingDate = "2026年5月23日 19:21 CST";
+const aiBreakingDate = "2026年5月23日 21:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
