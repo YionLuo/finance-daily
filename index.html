@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月23日 12:03 CST"
+  date: "2026年5月23日 14:42 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:00", tag: "ai", tagText: "AI", text: "英伟达财报远超预期但股价下跌：市场解读与未来展望。尽管英伟达最新财报大幅超出分析师预期，但其股价却出现下跌。分析认为，市场可能已提前消化利好，或对部分业务指引存在担忧。投资者正密切关注AI芯片需求持续性及公司未来增长动力。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPRHRDS0VOSGpvVmswcXk2THpLM0xLNTZpUmpSYjJpZVVIaHVwR0xIMHE5SWlabDhudjhCQ0hZT0FXaFVjcW9lV3J0aFphaHBuWTVFYVF4Q3RIM1hUUlJtMUZmdTB4cGVxOUxVWFZBZXpmS0xROUNHdnZORXl1M1NmYVQ5bWxaOVFfeWNtcFRMTFB3M2V3Rk5rUA?oc=5" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "计算能力新军备竞赛：军事能力日益依赖数据中心，落后于AI发展的国家正转向实验性技术。随着AI在军事领域的应用加速，各国政府意识到传统计算基础设施已无法满足需求。部分国家开始探索量子计算、光子芯片等前沿技术，试图在AI军备竞赛中追赶领先者。", source: "Financial Times", url: "https://www.ft.com/content/5aecd7b6-652f-4edb-b666-71f3f50fc43e" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "新卢德运动兴起：若政府不减缓AI发展，选民可能效仿历史，自行采取行动。随着AI对就业和社会结构的影响日益显现，反对AI技术扩散的民间运动正在全球多地萌芽。分析人士警告，如果政策制定者未能妥善管理AI转型，公众不满可能演变为破坏性行动。", source: "Financial Times", url: "https://www.ft.com/content/f5c96fa6-5b9b-4951-b71d-e32b3b57d8df" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "中国企业加速收购西方消费品牌：在国内竞争和通缩压力下，中国企业通过收购Everlane、Puma等品牌寻求海外增长。这一趋势反映出中国消费市场饱和及内需疲软背景下，企业正积极通过海外并购获取品牌、技术和市场渠道，以应对国内增长瓶颈。", source: "Financial Times", url: "https://www.ft.com/content/d5137b83-446d-4562-b0e5-44dc27d02640" },
   { time: "08:57", tag: "geo", tagText: "地缘", text: "特朗普考虑对伊朗发动重大军事行动，加密市场准备应对冲击。报道称此举可能对全球市场产生深远影响。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTFBUUi1ibEtSOW1yLVUydVhQQ1FYZ2QtNGJ3TmtNZ3d0eE53dnBfRElFWlZxMHhwWWUzTl9BNFlkV1pGTlphbS1qM2I5N2hIMXh1YU1rN1BQeXU3SW1sUDRCYUVlTUI0Z2x3MjJVclRjVDR3MFFNdzZhMmpvUQ?oc=5" },
   { time: "07:48", tag: "macro", tagText: "宏观", text: "穆迪对美国信用评级下调的担忧导致微软股价跌至420美元。市场对美国政府债务可持续性的忧虑加剧。", source: "foreignpolicyjournal.com", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNVlfN2ZnNExock9DQ1lUcHNzaG5iS29EYlN0UERtcEJ5UDNrQUJJTTluNlEtR3lrV2RDdERuUVJVN1pzMHJfckIwNDF4RW9tb2FIUlFEVDRZdnpQNzdSUGN5OFo5RUlSclpOcWdyaEFUM3lRVl9OaFN2MEdPNGgyS0MyY3FKSkZmeHhhcTdPNk1ZNjRrUEgwUWJhYVRLU2hTMkdtQ2prZl9ZN1dBNVNPSUZKcm94bjR3SFJzU0JwX3RxelZuak1ZM01kaldZZ29aSzNBOVFadw?oc=5" },
   { time: "07:36", tag: "tech", tagText: "科技", text: "苹果股价创历史新高，触及309美元，受强劲的人工智能叙事推动。市场对苹果AI战略前景持乐观态度。", source: "foreignpolicyjournal.com", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZ2JCckJqbUdyTV83clBiRWJ4dnAtb3J2U3llc0toMmxxamN6c0ZWR1RjNmJqZnZucnZ3TzN4Skc3N1RhZXpjam9kanU1ZFU2WkpjZUR4ODVmWVFLOVZWeGYzYXpBYXVjY29zZXhPSDBMRTRSSnlXRndmRnROUmdSckdkNm91bWxjR3lrcTkyd211SW5vZDl3UkpLMWx3SFVzOVhrSjgwdHh4cllTbklLd2RITFRWYVQ0ODliWlRrOHZLY2pnT1YyTzl1a1VJQnk2Y21rR3d3?oc=5" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "02:23", tag: "macro", tagText: "宏观", text: "凯文·沃什可能引导美联储在每日市场中扮演更小角色，同时为干预设定更明确规则，这将是华尔街“管道”深处的真正“政权更迭”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/kevin-warshs-real-fed-regime-change-may-happen-deep-inside-wall-streets-plumbing.html" },
   { time: "19:52", tag: "geo", tagText: "地缘", text: "美国与伊朗释放和平信号，但双方在浓缩铀库存和霍尔木兹海峡通行费问题上仍存分歧。美国国务卿鲁比奥称结束中东冲突的协议出现“良好迹象”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/iran-war-strait-of-hormuz-tolls-trump.html" },
   { time: "19:41", tag: "macro", tagText: "宏观", text: "美国众议院监督委员会主席科默对预测市场Kalshi和Polymarket发起国会调查，重点关注内幕交易问题。国会正加大对预测市场的施压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/kalshi-polymarket-comer-insider-trading-probe-congress.html" },
-  { time: "19:39", tag: "geo", tagText: "地缘", text: "北约秘书长吕特表示北约将在国防上投入数千亿美元。特朗普宣布将向波兰增派5000名美军，以奖励其成为北约最高国防支出国。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/trump-troops-poland-nato-rutte-defense-spending.html" },
-  { time: "19:29", tag: "macro", tagText: "宏观", text: "对冲基金Zweig-DiMenna警告称，其专有模型显示未来3-6个月通胀将上升，而债券收益率尚未充分上升以补偿投资者，这种“有毒组合”可能导致标普500指数下跌15%。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-toxic-cocktail-threatens-stocks-why-the-s-p-500-could-drop-15-according-to-this-hedge-fund-655e225b" },
-  { time: "19:23", tag: "macro", tagText: "宏观", text: "尽管特朗普此前威胁会“记住”未申请关税退税的公司，但沃尔玛、家得宝等多家零售商仍已申请退税。沃尔玛表示将把退税所得用于降低商品价格。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/trump-tariff-refunds-walmart-home-depot-target-apply.html" },
-  { time: "19:14", tag: "macro", tagText: "宏观", text: "土耳其法院罢免埃尔多安主要竞争对手的裁决引发市场恐慌，土耳其政府正试图安抚投资者。分析师警告资本外流可能持续。", source: "Financial Times", url: "https://www.ft.com/content/35a55cb3-6f78-4f09-8e6c-62bf80566deb" },
 ];
-const breakingDate = "2026年5月23日 12:03 CST";
+const breakingDate = "2026年5月23日 14:42 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:23", tag: "ai", tagText: "AI", text: "Harbor Capital推出AI ETF 2.0版“Lab”基金，直接投资Anthropic、OpenAI和xAI等未上市AI初创公司，为散户提供参与顶级AI公司早期投资的新渠道。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5COWI4SzJXWFdldXRmbHZsZFZSU2JqdUdGVUZaZTF4emFHcVR2ZWp6QXVjX0o0Ykh2cnJOdXpZeE9DNjZOSlM4a3UxLS01RWlCeWtadmFOX1Q?oc=5" },
   { time: "11:34", tag: "ai", tagText: "AI", text: "Anthropic接近完成300亿美元融资轮，有望超越OpenAI成为估值最高的AI初创公司。此轮融资将巩固其在AI领域的领先地位，并加剧与OpenAI的竞争。", source: "The Business Times", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxOUVcyc2hFcEdXSXc0TUFiY1R4VWVyZ3ZLNVhjaWxFdFdSVElrbW5tNjdOMmR6UFR0N2dneU9Ma2QxMDdrU3ZHdFoxTmFEZEU4R1pDVGM4T3dTR2NKNUIwemRIaW0zM0RWWDlKbWJFN1JWbUM1T0pLbk9zU3dnblpreTdTQjFVY19vc0xpeUdic2tRVHVjYkR1dFlZR2luZlBYbVVnZGRjQ0lCRTBDbmlIcWtEQjliUEszaGNrM2lwbHp6UWFCVngyUnF0Z01kbzg?oc=5" },
   { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
   { time: "03:40", tag: "ai", tagText: "AI", text: "报道揭露部分AI初创公司与风投机构合谋，通过夸大年度经常性收入（ARR）等传统营收指标来“加冕”AI明星公司，营造虚假繁荣。投资者对此心知肚明，但为推高估值和融资规模而默许甚至参与其中。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/how-vcs-and-founders-use-inflated-arr-to-kingmake-ai-startups/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "19:05", tag: "tech", tagText: "科技", text: "三星与威胁罢工的存储芯片员工达成临时协议，部分员工今年平均可获得34万美元奖金。此举旨在避免生产中断，凸显半导体行业人才争夺激烈。", source: "The Verge", url: "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus" },
   { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
   { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
-  { time: "18:30", tag: "ai", tagText: "AI", text: "英伟达AI业务前景展望提振亚洲芯片供应商股价。市场对英伟达财报及AI芯片需求保持乐观，带动相关供应链企业上涨。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWC1Xb1ZNalNGVkg2cWhoRXp0RFJqVlpwNjRaeURNdGRxLWVLd3RxN0g2TEpKSXZMZm91aGVqNi1JNG5OdzB1ZDAtaGRUUHB4SFlLLTVOZTd3NmdvSXltTmtaWkhhS2U3Ui03QVliM1NqOGdwZGZiOGxFaTJKTjE5NkVRRWRVYk1JTUtpb1NhanFrOTFTajctRmRIblpFUmJsYU53MlRobw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月23日 12:03 CST";
+const aiBreakingDate = "2026年5月23日 14:42 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
