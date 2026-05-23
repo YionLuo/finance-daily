@@ -1623,15 +1623,18 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月23日 21:58 CST"
+  date: "2026年5月23日 23:12 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:01", tag: "macro", tagText: "科技", text: "债券市场发出警告信号，信贷与股市走势出现背离。历史经验表明，当两者意见不一致时，信贷市场往往更接近真相。投资者需警惕当前华尔街的乐观情绪可能掩盖风险。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-bond-market-just-flipped-the-script-on-investors-wall-street-is-acting-like-nothings-wrong-f321cc5b?mod=mw_rss_topstories" },
   { time: "21:58", tag: "macro", tagText: "宏观", text: "美联储主席凯文·沃什暗示短期内不会降息，因通胀再度抬头；但加息也暂不在议程上。分析指出，沃什面临在抑制需求与维持牛市之间的艰难抉择，加之油价突破100美元，市场面临“新主席诅咒”考验。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-fed-isnt-cutting-interest-rates-any-time-soon-but-a-hike-isnt-yet-on-the-table-either-aee28c06?mod=mw_rss_topstories" },
   { time: "21:30", tag: "macro", tagText: "宏观", text: "白宫经济顾问哈塞特吹嘘信用卡支出“爆表”，但数据显示违约率攀升，农业破产案同比激增46%。消费繁荣背后暗藏债务风险，经济分化信号加剧。", source: "Moneywise", url: "https://finance.yahoo.com/economy/articles/hassett-brags-credit-card-spending-133000446.html" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "网络安全硬件、软件和服务提供商预计将在AI建设持续推动下实现强劲销售增长。部分网络安全股票目前估值偏低，分析认为到2028年该板块将迎来快速增长期。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/these-cybersecurity-stocks-are-poised-for-rapid-growth-through-2028-and-some-of-them-are-cheap-right-now-cf924a36?mod=mw_rss_topstories" },
   { time: "21:00", tag: "geo", tagText: "地缘", text: "伊朗首席谈判代表卡利巴夫表示，德黑兰不会在与美国的谈判中妥协，将同时在战场和外交上追求“合法权利”。美伊核谈判前景再度蒙上阴影。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/top-iran-negotiator-says-tehran-will-not-compromise-in-talks-with-us.html" },
+  { time: "20:41", tag: "macro", tagText: "科技", text: "美国银行发布报告，指出五只股票在6月及之后仍有较大上涨空间。与此同时，历史数据显示，股市在经历三年强劲回报后，后续表现往往不及预期。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/23/bank-of-america-says-these-stocks-have-major-upside-heading-into-june.html" },
   { time: "20:30", tag: "tech", tagText: "科技", text: "英伟达预测CPU市场规模将达2000亿美元，并明确表示该预测包含中国市场。尽管面临出口管制，英伟达仍看好中国长期需求，信号意义重大。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/nvidia-forecast-for-200-billion-cpu-market-includes-china.html" },
   { time: "20:30", tag: "macro", tagText: "宏观", text: "阵亡将士纪念日长周末前夕，美国通胀压力持续挤压消费者。旅行、娱乐和食品价格涨幅尤为显著，高油价考验夏季出行意愿。历史数据显示，股市在中期选举前的夏季往往表现疲软。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/memorial-day-weekend-prices-inflation-war.html" },
   { time: "19:19", tag: "geo", tagText: "地缘", text: "APEC会议释放三大信号：中美贸易分歧依旧巨大。特朗普与习近平北京峰会结束后，双方官员在公开表态中展现出截然不同的优先事项，贸易关系改善前景不明。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/three-signs-from-apec-that-the-us-china-remain-far-apart-on-trade.html" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "08:57", tag: "geo", tagText: "地缘", text: "特朗普考虑对伊朗发动重大军事行动，加密市场准备应对冲击。报道称此举可能对全球市场产生深远影响。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTFBUUi1ibEtSOW1yLVUydVhQQ1FYZ2QtNGJ3TmtNZ3d0eE53dnBfRElFWlZxMHhwWWUzTl9BNFlkV1pGTlphbS1qM2I5N2hIMXh1YU1rN1BQeXU3SW1sUDRCYUVlTUI0Z2x3MjJVclRjVDR3MFFNdzZhMmpvUQ?oc=5" },
   { time: "07:48", tag: "macro", tagText: "宏观", text: "穆迪对美国信用评级下调的担忧导致微软股价跌至420美元。市场对美国政府债务可持续性的忧虑加剧。", source: "foreignpolicyjournal.com", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNVlfN2ZnNExock9DQ1lUcHNzaG5iS29EYlN0UERtcEJ5UDNrQUJJTTluNlEtR3lrV2RDdERuUVJVN1pzMHJfckIwNDF4RW9tb2FIUlFEVDRZdnpQNzdSUGN5OFo5RUlSclpOcWdyaEFUM3lRVl9OaFN2MEdPNGgyS0MyY3FKSkZmeHhhcTdPNk1ZNjRrUEgwUWJhYVRLU2hTMkdtQ2prZl9ZN1dBNVNPSUZKcm94bjR3SFJzU0JwX3RxelZuak1ZM01kaldZZ29aSzNBOVFadw?oc=5" },
   { time: "07:36", tag: "tech", tagText: "科技", text: "苹果股价创历史新高，触及309美元，受强劲的人工智能叙事推动。市场对苹果AI战略前景持乐观态度。", source: "foreignpolicyjournal.com", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZ2JCckJqbUdyTV83clBiRWJ4dnAtb3J2U3llc0toMmxxamN6c0ZWR1RjNmJqZnZucnZ3TzN4Skc3N1RhZXpjam9kanU1ZFU2WkpjZUR4ODVmWVFLOVZWeGYzYXpBYXVjY29zZXhPSDBMRTRSSnlXRndmRnROUmdSckdkNm91bWxjR3lrcTkyd211SW5vZDl3UkpLMWx3SFVzOVhrSjgwdHh4cllTbklLd2RITFRWYVQ0ODliWlRrOHZLY2pnT1YyTzl1a1VJQnk2Y21rR3d3?oc=5" },
-  { time: "06:48", tag: "geo", tagText: "地缘", text: "特朗普政府拟要求外国人离境申请绿卡，收紧永久居留权规定，此举可能对企业产生重大影响。", source: "Financial Times", url: "https://www.ft.com/content/5d4c3de6-07d9-436e-8822-2dbafd10774a" },
-  { time: "06:36", tag: "tech", tagText: "科技", text: "SpaceX在首次尝试推迟后，于周五成功发射了其巨型星舰火箭的试飞。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/spacex-prepares-another-attempt-at-starship-launch-after-prior-scrub.html" },
-  { time: "06:19", tag: "macro", tagText: "宏观", text: "沃尔玛两位高管在新CEO约翰·弗纳领导下离职：山姆会员店首席运营官汤姆·沃德退休，美国门店运营执行副总裁塞德里克·克拉克离职。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/walmart-executives-depart-under-ceo-john-furner.html" },
 ];
-const breakingDate = "2026年5月23日 21:58 CST";
+const breakingDate = "2026年5月23日 23:12 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:08", tag: "tech", tagText: "科技", text: "法拉利与IBM合作，利用AI技术打造F1超级粉丝体验，重新定义观赛互动方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/23/ferrari-is-using-ai-to-create-f1-superfans/" },
+  { time: "22:54", tag: "ai", tagText: "AI", text: "巴西银行（Banco do Brasil）与MSW Capital合作设立一只新的AI专项基金。该基金将专注于人工智能领域的投资机会，显示传统金融机构正加速布局AI赛道。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdTlPSkRUWUlTelpDRVhGMThQWjJmM2ZGalQtR2VXQktJYVJ2OERSOFhRa2dsbVJuaVpsTFo1MGo4aExjRFdMWlM0VEZTejVtRGZ0QnJkenk4SGdEWmdvem9lU2dQNDhfYnYzN3ZFRGNDV19yQmZXZHZod3FqczNiZ1pGdHB5ZkpCckx0c3lITGttNkp6ZVNnbzQ3X2VpUWQ5dGs4?oc=5" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "马斯克旗下xAI全面转向天然气发电，SpaceX则专注于轨道数据中心，其曾承诺的“太阳能电力经济”愿景在地球上已被放弃。此举标志着马斯克在能源战略上的重大转向。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/23/elon-musk-has-given-up-on-solar-power-on-earth/" },
   { time: "19:05", tag: "tech", tagText: "科技", text: "三星与威胁罢工的存储芯片员工达成临时协议，部分员工今年平均可获得34万美元奖金。此举旨在避免生产中断，凸显半导体行业人才争夺激烈。", source: "The Verge", url: "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "谷歌发布全新“任意到任意”AI模型，可跨文本、图像、视频等多种模态进行生成和转换，功能极为强大。该模型基于Gemini技术，能实现如将玩偶照片生成度假视频等创意应用，引发业界对多模态AI能力的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "01:13", tag: "tech", tagText: "科技", text: "得克萨斯州总检察长起诉Meta，指控WhatsApp并未提供真正的端到端加密，涉嫌误导用户。批评者指出，该诉讼缺乏事实依据，且起诉人正竞选美国参议员，此举被质疑带有政治动机。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/05/texas-ag-sues-meta-over-claims-that-whatsapp-doesnt-provide-end-to-end-encryption/" },
   { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
   { time: "00:20", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团合作推出AI音乐混音工具，声称面向“超级粉丝”。但评论指出，AI生成的翻唱和混音已在互联网泛滥，该工具可能进一步加剧低质量AI音乐内容对原创艺术的冲击。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936072/spotify-umg-ai-music-remix-cover-superfan" },
-  { time: "00:16", tag: "tech", tagText: "科技", text: "谷歌AI搜索出现严重漏洞：搜索“disregard”一词会导致AI摘要功能崩溃，无法正常显示搜索结果。该问题暴露了谷歌AI搜索系统的不稳定性。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/you-can-no-longer-google-the-word-disregard/" },
-  { time: "22:54", tag: "ai", tagText: "AI", text: "巴西银行（Banco do Brasil）与MSW Capital合作设立一只新的AI专项基金。该基金将专注于人工智能领域的投资机会，显示传统金融机构正加速布局AI赛道。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdTlPSkRUWUlTelpDRVhGMThQWjJmM2ZGalQtR2VXQktJYVJ2OERSOFhRa2dsbVJuaVpsTFo1MGo4aExjRFdMWlM0VEZTejVtRGZ0QnJkenk4SGdEWmdvem9lU2dQNDhfYnYzN3ZFRGNDV19yQmZXZHZod3FqczNiZ1pGdHB5ZkpCckx0c3lITGttNkp6ZVNnbzQ3X2VpUWQ5dGs4?oc=5" },
 ];
-const aiBreakingDate = "2026年5月23日 21:58 CST";
+const aiBreakingDate = "2026年5月23日 23:12 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
