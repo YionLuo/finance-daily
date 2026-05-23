@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月24日 05:03 CST"
+  date: "2026年5月24日 06:03 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1635,6 +1635,8 @@ const breakingNews = [
   { time: "01:35", tag: "tech", tagText: "科技", text: "德国外卖巨头Delivery Hero披露收到优步（Uber）以100亿欧元估值的收购要约，同时DoorDash也表达了收购意向。该交易若达成，将重塑全球外卖行业格局。", source: "FT", url: "https://www.ft.com/content/6d5df0df-74b3-4be9-a1ec-27322e1c3184" },
   { time: "00:52", tag: "geo", tagText: "地缘", text: "美伊接近达成60天停火延期协议，涉及霍尔木兹海峡逐步重新开放。自4月8日脆弱的停火协议生效以来，双方在霍尔木兹海峡附近时有冲突。调解方透露，协议框架包括核问题谈判，但细节仍在敲定中。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/us-iran-war-talks.html" },
   { time: "00:52", tag: "macro", tagText: "宏观", text: "市场分析警告多个板块出现泡沫，标普500未来两年有30%概率崩盘。文章指出，英伟达所在的AI板块并非最大泡沫，另有四个板块估值过高。同时，“巴菲特指标”显示估值缺口高达230%，市场脆弱性加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-4-market-sectors-look-frothy-and-nvidias-isnt-even-the-biggest-bubble-d740acf7?mod=mw_rss_topstories" },
+  { time: "00:17", tag: "tech", tagText: "科技", text: "Arm Holdings与Red Hat宣布扩大合作，共同开发面向代理型AI（Agentic AI）的软件栈。此举旨在加速AI应用在企业端的部署，强化Arm架构在AI计算领域的生态布局。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/arm-holdings-arm-red-hat-200853890.html" },
+  { time: "00:15", tag: "tech", tagText: "科技", text: "GlobalFoundries（格芯）宣布成立专门的量子技术解决方案部门，进军量子计算硬件制造领域。此举标志着传统芯片代工厂开始布局下一代计算技术。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/technology/articles/globalfoundries-gfs-launches-dedicated-quantum-200944118.html" },
   { time: "23:02", tag: "tech", tagText: "科技", text: "微软高管减持股票，引发市场关注。分析认为，微软与OpenAI关系松动可能改变其AI战略格局，对MSFT股票前景产生重大影响。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxOV1RScVZkMWhMeVp3eHVCOEdLOU5oeXVhbS1nMlR6MG0zS1hjc0M1TmN4dG1IWGs2SWxrWWF2NFZNZTREcDE5MUdtN3JrUVlpNUJELXVrVEdSWWZwa216TV9TT3U5cEtFMXBpbHBaaGZfby14VFlWYkRqTDlaQ3hUSk1fZll6dWxJVFBXRHJWQkpaY1hJVjhfOG1B?oc=5" },
   { time: "22:01", tag: "macro", tagText: "科技", text: "债券市场发出警告信号，信贷与股市走势出现背离。历史经验表明，当两者意见不一致时，信贷市场往往更接近真相。投资者需警惕当前华尔街的乐观情绪可能掩盖风险。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-bond-market-just-flipped-the-script-on-investors-wall-street-is-acting-like-nothings-wrong-f321cc5b?mod=mw_rss_topstories" },
   { time: "21:58", tag: "macro", tagText: "宏观", text: "美联储主席凯文·沃什暗示短期内不会降息，因通胀再度抬头；但加息也暂不在议程上。分析指出，沃什面临在抑制需求与维持牛市之间的艰难抉择，加之油价突破100美元，市场面临“新主席诅咒”考验。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-fed-isnt-cutting-interest-rates-any-time-soon-but-a-hike-isnt-yet-on-the-table-either-aee28c06?mod=mw_rss_topstories" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "19:19", tag: "geo", tagText: "地缘", text: "APEC会议释放三大信号：中美贸易分歧依旧巨大。特朗普与习近平北京峰会结束后，双方官员在公开表态中展现出截然不同的优先事项，贸易关系改善前景不明。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/three-signs-from-apec-that-the-us-china-remain-far-apart-on-trade.html" },
   { time: "19:01", tag: "geo", tagText: "地缘", text: "夏威夷大岛发生6级地震，美国地质调查局正在评估基拉韦厄火山活动。该火山是世界上最活跃的火山之一，地震引发对火山喷发风险的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/hawaii-earthquake.html" },
   { time: "19:00", tag: "geo", tagText: "地缘", text: "美国国务卿卢比奥寻求与古巴达成协议，但面临古巴裔美国人的强烈反对。其政策重点在于推动经济改革，而非彻底改变古巴政治体制。", source: "Financial Times", url: "https://www.ft.com/content/b3eff5d9-10e9-407c-ab6b-1daeeed63a3c" },
-  { time: "16:48", tag: "crypto", tagText: "加密", text: "比特币跌破75,000美元，引发超1亿美元多头清算。加密货币市场今日遭遇大规模抛售，比特币和主流山寨币集体暴跌，市场恐慌情绪蔓延。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQeG81dEZ5ZFJvcnRGMHJiOWlCLXZlQktWczEwdG1RSUZtc1pjSjIxOXRuVXBRX1psczBJZUZMcmROMy02dWhvbVRfR3Jvc3diajg4WmZ5d3ZySnRfRXR5Rm5GTTF2eEJOOXNlMVFoWTh5OUhZV2lQYXNkSEhOTWRHZ3B3MXNsY0s5S0RZ?oc=5" },
-  { time: "16:00", tag: "ai", tagText: "AI", text: "SpaceX、OpenAI和Anthropic三大AI巨头计划IPO，将考验AI泡沫的极限。马斯克、奥特曼和阿莫迪正争夺华尔街最深资本池的支持，这场IPO大战将检验市场对AI行业的真实信心。", source: "Financial Times", url: "https://www.ft.com/content/ae9bb47d-bd1d-473c-b4c5-abae0420cc12" },
 ];
-const breakingDate = "2026年5月24日 05:03 CST";
+const breakingDate = "2026年5月24日 06:03 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "11:34", tag: "ai", tagText: "AI", text: "Anthropic接近完成300亿美元融资轮，有望超越OpenAI成为估值最高的AI初创公司。此轮融资将巩固其在AI领域的领先地位，并加剧与OpenAI的竞争。", source: "The Business Times", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxOUVcyc2hFcEdXSXc0TUFiY1R4VWVyZ3ZLNVhjaWxFdFdSVElrbW5tNjdOMmR6UFR0N2dneU9Ma2QxMDdrU3ZHdFoxTmFEZEU4R1pDVGM4T3dTR2NKNUIwemRIaW0zM0RWWDlKbWJFN1JWbUM1T0pLbk9zU3dnblpreTdTQjFVY19vc0xpeUdic2tRVHVjYkR1dFlZR2luZlBYbVVnZGRjQ0lCRTBDbmlIcWtEQjliUEszaGNrM2lwbHp6UWFCVngyUnF0Z01kbzg?oc=5" },
   { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
 ];
-const aiBreakingDate = "2026年5月24日 05:03 CST";
+const aiBreakingDate = "2026年5月24日 06:03 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
