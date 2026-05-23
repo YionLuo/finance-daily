@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月23日 14:42 CST"
+  date: "2026年5月23日 17:08 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:48", tag: "crypto", tagText: "加密", text: "比特币跌破75,000美元，引发超1亿美元多头清算。加密货币市场今日遭遇大规模抛售，比特币和主流山寨币集体暴跌，市场恐慌情绪蔓延。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQeG81dEZ5ZFJvcnRGMHJiOWlCLXZlQktWczEwdG1RSUZtc1pjSjIxOXRuVXBRX1psczBJZUZMcmROMy02dWhvbVRfR3Jvc3diajg4WmZ5d3ZySnRfRXR5Rm5GTTF2eEJOOXNlMVFoWTh5OUhZV2lQYXNkSEhOTWRHZ3B3MXNsY0s5S0RZ?oc=5" },
+  { time: "16:00", tag: "ai", tagText: "AI", text: "SpaceX、OpenAI和Anthropic三大AI巨头计划IPO，将考验AI泡沫的极限。马斯克、奥特曼和阿莫迪正争夺华尔街最深资本池的支持，这场IPO大战将检验市场对AI行业的真实信心。", source: "Financial Times", url: "https://www.ft.com/content/ae9bb47d-bd1d-473c-b4c5-abae0420cc12" },
   { time: "14:00", tag: "ai", tagText: "AI", text: "英伟达财报远超预期但股价下跌：市场解读与未来展望。尽管英伟达最新财报大幅超出分析师预期，但其股价却出现下跌。分析认为，市场可能已提前消化利好，或对部分业务指引存在担忧。投资者正密切关注AI芯片需求持续性及公司未来增长动力。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPRHRDS0VOSGpvVmswcXk2THpLM0xLNTZpUmpSYjJpZVVIaHVwR0xIMHE5SWlabDhudjhCQ0hZT0FXaFVjcW9lV3J0aFphaHBuWTVFYVF4Q3RIM1hUUlJtMUZmdTB4cGVxOUxVWFZBZXpmS0xROUNHdnZORXl1M1NmYVQ5bWxaOVFfeWNtcFRMTFB3M2V3Rk5rUA?oc=5" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "计算能力新军备竞赛：军事能力日益依赖数据中心，落后于AI发展的国家正转向实验性技术。随着AI在军事领域的应用加速，各国政府意识到传统计算基础设施已无法满足需求。部分国家开始探索量子计算、光子芯片等前沿技术，试图在AI军备竞赛中追赶领先者。", source: "Financial Times", url: "https://www.ft.com/content/5aecd7b6-652f-4edb-b666-71f3f50fc43e" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "新卢德运动兴起：若政府不减缓AI发展，选民可能效仿历史，自行采取行动。随着AI对就业和社会结构的影响日益显现，反对AI技术扩散的民间运动正在全球多地萌芽。分析人士警告，如果政策制定者未能妥善管理AI转型，公众不满可能演变为破坏性行动。", source: "Financial Times", url: "https://www.ft.com/content/f5c96fa6-5b9b-4951-b71d-e32b3b57d8df" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "03:40", tag: "geo", tagText: "地缘", text: "大宗商品市场发出新警告：若霍尔木兹海峡在8月底前未能重新开放，可能重演2008年“火车失事”式油价飙升情景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-2008-train-wreck-oil-scenario-could-unfold-if-hormuz-isnt-opened-by-end-of-august-75b74bb1?mod=mw_rss_topstories" },
   { time: "02:26", tag: "macro", tagText: "宏观", text: "美国阵亡将士纪念日周末汽油支出比去年多20亿美元，专家称消费者面临的压力将进一步加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/americans-are-paying-2-billion-more-for-gas-this-memorial-day-weekend-than-they-did-last-year-632a7c56?mod=mw_rss_topstories" },
   { time: "02:23", tag: "macro", tagText: "宏观", text: "凯文·沃什可能引导美联储在每日市场中扮演更小角色，同时为干预设定更明确规则，这将是华尔街“管道”深处的真正“政权更迭”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/kevin-warshs-real-fed-regime-change-may-happen-deep-inside-wall-streets-plumbing.html" },
-  { time: "19:52", tag: "geo", tagText: "地缘", text: "美国与伊朗释放和平信号，但双方在浓缩铀库存和霍尔木兹海峡通行费问题上仍存分歧。美国国务卿鲁比奥称结束中东冲突的协议出现“良好迹象”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/iran-war-strait-of-hormuz-tolls-trump.html" },
-  { time: "19:41", tag: "macro", tagText: "宏观", text: "美国众议院监督委员会主席科默对预测市场Kalshi和Polymarket发起国会调查，重点关注内幕交易问题。国会正加大对预测市场的施压。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/kalshi-polymarket-comer-insider-trading-probe-congress.html" },
 ];
-const breakingDate = "2026年5月23日 14:42 CST";
+const breakingDate = "2026年5月23日 17:08 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
   { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
 ];
-const aiBreakingDate = "2026年5月23日 14:42 CST";
+const aiBreakingDate = "2026年5月23日 17:08 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
