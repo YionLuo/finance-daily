@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月23日 17:08 CST"
+  date: "2026年5月23日 19:21 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:19", tag: "geo", tagText: "地缘", text: "APEC会议释放三大信号：中美贸易分歧依旧巨大。特朗普与习近平北京峰会结束后，双方官员在公开表态中展现出截然不同的优先事项，贸易关系改善前景不明。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/three-signs-from-apec-that-the-us-china-remain-far-apart-on-trade.html" },
+  { time: "19:01", tag: "geo", tagText: "地缘", text: "夏威夷大岛发生6级地震，美国地质调查局正在评估基拉韦厄火山活动。该火山是世界上最活跃的火山之一，地震引发对火山喷发风险的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/hawaii-earthquake.html" },
+  { time: "19:00", tag: "geo", tagText: "地缘", text: "美国国务卿卢比奥寻求与古巴达成协议，但面临古巴裔美国人的强烈反对。其政策重点在于推动经济改革，而非彻底改变古巴政治体制。", source: "Financial Times", url: "https://www.ft.com/content/b3eff5d9-10e9-407c-ab6b-1daeeed63a3c" },
   { time: "16:48", tag: "crypto", tagText: "加密", text: "比特币跌破75,000美元，引发超1亿美元多头清算。加密货币市场今日遭遇大规模抛售，比特币和主流山寨币集体暴跌，市场恐慌情绪蔓延。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQeG81dEZ5ZFJvcnRGMHJiOWlCLXZlQktWczEwdG1RSUZtc1pjSjIxOXRuVXBRX1psczBJZUZMcmROMy02dWhvbVRfR3Jvc3diajg4WmZ5d3ZySnRfRXR5Rm5GTTF2eEJOOXNlMVFoWTh5OUhZV2lQYXNkSEhOTWRHZ3B3MXNsY0s5S0RZ?oc=5" },
   { time: "16:00", tag: "ai", tagText: "AI", text: "SpaceX、OpenAI和Anthropic三大AI巨头计划IPO，将考验AI泡沫的极限。马斯克、奥特曼和阿莫迪正争夺华尔街最深资本池的支持，这场IPO大战将检验市场对AI行业的真实信心。", source: "Financial Times", url: "https://www.ft.com/content/ae9bb47d-bd1d-473c-b4c5-abae0420cc12" },
   { time: "14:00", tag: "ai", tagText: "AI", text: "英伟达财报远超预期但股价下跌：市场解读与未来展望。尽管英伟达最新财报大幅超出分析师预期，但其股价却出现下跌。分析认为，市场可能已提前消化利好，或对部分业务指引存在担忧。投资者正密切关注AI芯片需求持续性及公司未来增长动力。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPRHRDS0VOSGpvVmswcXk2THpLM0xLNTZpUmpSYjJpZVVIaHVwR0xIMHE5SWlabDhudjhCQ0hZT0FXaFVjcW9lV3J0aFphaHBuWTVFYVF4Q3RIM1hUUlJtMUZmdTB4cGVxOUxVWFZBZXpmS0xROUNHdnZORXl1M1NmYVQ5bWxaOVFfeWNtcFRMTFB3M2V3Rk5rUA?oc=5" },
@@ -1646,14 +1649,16 @@ const breakingNews = [
   { time: "05:20", tag: "geo", tagText: "地缘", text: "特朗普就司法部18亿美元“法律战”受害者基金抨击共和党反对者，称他们“在搞砸共和党”。此前特朗普放弃对国税局的100亿美元诉讼，换取设立该基金。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/trump-doj-fund-republicans.html" },
   { time: "05:20", tag: "ai", tagText: "AI", text: "高通股价大涨，投资者“觉醒”于AI设备繁荣。公司被视为AI终端设备爆发的核心受益者。同时，福特股价创三年新高，部分受AI相关合作预期推动。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/qualcomms-stock-pop-shows-investors-waking-up-to-boom-in-ai-devices.html" },
   { time: "05:20", tag: "macro", tagText: "宏观", text: "“巴菲特指标”发出市场见顶警告：估值缺口高达230%，叠加能源危机等8个关键信号，显示股市看似坚不可摧实则脆弱。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buffett-indicator-warns-of-a-market-top-8-crucial-signs-that-stocks-are-running-on-fumes-12e4b4d8?mod=mw_rss_topstories" },
-  { time: "03:40", tag: "geo", tagText: "地缘", text: "大宗商品市场发出新警告：若霍尔木兹海峡在8月底前未能重新开放，可能重演2008年“火车失事”式油价飙升情景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-2008-train-wreck-oil-scenario-could-unfold-if-hormuz-isnt-opened-by-end-of-august-75b74bb1?mod=mw_rss_topstories" },
-  { time: "02:26", tag: "macro", tagText: "宏观", text: "美国阵亡将士纪念日周末汽油支出比去年多20亿美元，专家称消费者面临的压力将进一步加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/americans-are-paying-2-billion-more-for-gas-this-memorial-day-weekend-than-they-did-last-year-632a7c56?mod=mw_rss_topstories" },
-  { time: "02:23", tag: "macro", tagText: "宏观", text: "凯文·沃什可能引导美联储在每日市场中扮演更小角色，同时为干预设定更明确规则，这将是华尔街“管道”深处的真正“政权更迭”。", source: "CNBC", url: "https://www.cnbc.com/2026/05/22/kevin-warshs-real-fed-regime-change-may-happen-deep-inside-wall-streets-plumbing.html" },
 ];
-const breakingDate = "2026年5月23日 17:08 CST";
+const breakingDate = "2026年5月23日 19:21 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:05", tag: "tech", tagText: "科技", text: "三星与威胁罢工的存储芯片员工达成临时协议，部分员工今年平均可获得34万美元奖金。此举旨在避免生产中断，凸显半导体行业人才争夺激烈。", source: "The Verge", url: "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "谷歌发布全新“任意到任意”AI模型，可跨文本、图像、视频等多种模态进行生成和转换，功能极为强大。该模型基于Gemini技术，能实现如将玩偶照片生成度假视频等创意应用，引发业界对多模态AI能力的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video" },
+  { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
+  { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
+  { time: "17:38", tag: "ai", tagText: "AI", text: "中国AI初创企业融资激增，资本正追逐规模化扩张。最新数据显示，大量资金涌入中国AI赛道，投资者更青睐具备快速扩张能力的公司，反映出市场对AI规模化应用的强烈信心。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNU1p4SjlvWGJpRnNMUVJQeE1nelB5WXFubFY5MWpuWGY3Y3RmZHhBS202SzZiUHJmNVcyNTN0VEFRWDhjOWJYYVFWd3k0c0dQVWh0YVNYV05XNnh1dnJnX0xrVnpxbTNXRmg5WTJrMU8wdUZKZkNxNFIyQklDbkVNMF9ZYVI5QTdMWmtucERDMHBFRmZwM3c?oc=5" },
   { time: "14:23", tag: "ai", tagText: "AI", text: "Harbor Capital推出AI ETF 2.0版“Lab”基金，直接投资Anthropic、OpenAI和xAI等未上市AI初创公司，为散户提供参与顶级AI公司早期投资的新渠道。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5COWI4SzJXWFdldXRmbHZsZFZSU2JqdUdGVUZaZTF4emFHcVR2ZWp6QXVjX0o0Ykh2cnJOdXpZeE9DNjZOSlM4a3UxLS01RWlCeWtadmFOX1Q?oc=5" },
   { time: "11:34", tag: "ai", tagText: "AI", text: "Anthropic接近完成300亿美元融资轮，有望超越OpenAI成为估值最高的AI初创公司。此轮融资将巩固其在AI领域的领先地位，并加剧与OpenAI的竞争。", source: "The Business Times", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxOUVcyc2hFcEdXSXc0TUFiY1R4VWVyZ3ZLNVhjaWxFdFdSVElrbW5tNjdOMmR6UFR0N2dneU9Ma2QxMDdrU3ZHdFoxTmFEZEU4R1pDVGM4T3dTR2NKNUIwemRIaW0zM0RWWDlKbWJFN1JWbUM1T0pLbk9zU3dnblpreTdTQjFVY19vc0xpeUdic2tRVHVjYkR1dFlZR2luZlBYbVVnZGRjQ0lCRTBDbmlIcWtEQjliUEszaGNrM2lwbHp6UWFCVngyUnF0Z01kbzg?oc=5" },
   { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "00:16", tag: "tech", tagText: "科技", text: "谷歌AI搜索出现严重漏洞：搜索“disregard”一词会导致AI摘要功能崩溃，无法正常显示搜索结果。该问题暴露了谷歌AI搜索系统的不稳定性。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/you-can-no-longer-google-the-word-disregard/" },
   { time: "22:54", tag: "ai", tagText: "AI", text: "巴西银行（Banco do Brasil）与MSW Capital合作设立一只新的AI专项基金。该基金将专注于人工智能领域的投资机会，显示传统金融机构正加速布局AI赛道。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdTlPSkRUWUlTelpDRVhGMThQWjJmM2ZGalQtR2VXQktJYVJ2OERSOFhRa2dsbVJuaVpsTFo1MGo4aExjRFdMWlM0VEZTejVtRGZ0QnJkenk4SGdEWmdvem9lU2dQNDhfYnYzN3ZFRGNDV19yQmZXZHZod3FqczNiZ1pGdHB5ZkpCckx0c3lITGttNkp6ZVNnbzQ3X2VpUWQ5dGs4?oc=5" },
   { time: "22:41", tag: "ai", tagText: "AI", text: "全球最大动力电池制造商宁德时代（CATL）正考虑投资中国AI初创公司DeepSeek。此举显示传统制造业巨头加速布局AI领域，DeepSeek作为中国AI新星备受关注。", source: "Latest news from Azerbaijan", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTFBFdnJiMzF2MXdhTHdzMXJNMTdJOHZXXzczRXFNQmZlSm4tQW4wNUxhLWZoVkJsMlMycU9MazVaQlAzTGh6bWIwaFM0N2ZQSDhweFNQZTluSVA2aTZ3WVFWVnVQWkV1bF9QLWN4SHdqeks2TVgyM3I5TUlMN0g?oc=5" },
-  { time: "22:30", tag: "tech", tagText: "科技", text: "英国文学杂志《Granta》在评选年度英联邦短篇小说奖时发现，有一篇投稿疑似由AI生成。这一事件引发文学界对AI创作冲击传统写作的担忧，业界尚未做好应对准备。", source: "The Verge", url: "https://www.theverge.com/tech/936073/ai-writing-granta-commonwealth-prize" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "AI硬件初创公司Hark完成7亿美元A轮融资，估值达60亿美元。该公司由Brett Adcock创立，正在开发神秘的“通用”AI界面，引发市场高度关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/" },
-  { time: "19:05", tag: "tech", tagText: "科技", text: "三星与威胁罢工的存储芯片员工达成临时协议，部分员工今年平均可获得34万美元奖金。此举旨在避免生产中断，凸显半导体行业人才争夺激烈。", source: "The Verge", url: "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus" },
-  { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
-  { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
 ];
-const aiBreakingDate = "2026年5月23日 17:08 CST";
+const aiBreakingDate = "2026年5月23日 19:21 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
