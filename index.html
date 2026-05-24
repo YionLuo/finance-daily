@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月24日 15:53 CST"
+  date: "2026年5月24日 18:02 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:19", tag: "geo", tagText: "地缘", text: "中东战争正考验海湾国家成为AI中心的雄心。分析师指出，对数据中心设施的袭击以及持续高企的能源价格，已改变运营商的成本与安全考量。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/middle-east-war-testing-gulfs-ambitions-to-become-ai-hub.html" },
   { time: "13:49", tag: "crypto", tagText: "加密", text: "稳定币总市值达到3230亿美元的历史新高，同时以太坊质押量也创下峰值。分析师指出，这一Q2数据相关性值得关注，可能预示市场流动性充裕。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBwX1hHU0JJMEFoUkRmZU55RE1LbWloWjhrOVF1dldFMzRSa3dwXzBKR0VHWE5qUE42OVZSUDVXNldBTkxtbnfSAawBQVVfeXFMUFBiVUd5elYyUWJQMklxSFBnZjJaOVp6U2pGVXFvT0cySG03SFVWcGVSTnRXNThzYzA3TG0xdTkweFlESHh1QllzcHg1Z2stSS00WTBXbUNVZlQzYmREN3VpYjRxU3lYcG5XNlB3d01jNTJjM3hGVEo1SFA0b2t5ZjE2RXZZRGRqRUJvVEpiR20xbHBJa2JscUVqbjEzTEFER2xSOGtaaXhic1BYRA?oc=5" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "调查显示，伊朗伊斯兰革命卫队曾利用一家阿联酋公司购买军用卫星设备。德黑兰通过海湾国家的采购网络获取敏感技术，而该网络后来遭到伊朗导弹和无人机袭击。", source: "Financial Times", url: "https://www.ft.com/content/371fee77-8637-4b99-ab5a-4b6fae253a44" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "德国商业银行在年度股东大会上动员股东，争取从意大利联合信贷银行的收购中保持独立。长期遭受压力的股东终于迎来利好信号。", source: "Financial Times", url: "https://www.ft.com/content/590ac4fd-ac77-499d-95be-4721ecb67e56" },
@@ -1648,12 +1649,12 @@ const breakingNews = [
   { time: "00:15", tag: "tech", tagText: "科技", text: "GlobalFoundries（格芯）宣布成立专门的量子技术解决方案部门，进军量子计算硬件制造领域。此举标志着传统芯片代工厂开始布局下一代计算技术。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/technology/articles/globalfoundries-gfs-launches-dedicated-quantum-200944118.html" },
   { time: "23:02", tag: "tech", tagText: "科技", text: "微软高管减持股票，引发市场关注。分析认为，微软与OpenAI关系松动可能改变其AI战略格局，对MSFT股票前景产生重大影响。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxOV1RScVZkMWhMeVp3eHVCOEdLOU5oeXVhbS1nMlR6MG0zS1hjc0M1TmN4dG1IWGs2SWxrWWF2NFZNZTREcDE5MUdtN3JrUVlpNUJELXVrVEdSWWZwa216TV9TT3U5cEtFMXBpbHBaaGZfby14VFlWYkRqTDlaQ3hUSk1fZll6dWxJVFBXRHJWQkpaY1hJVjhfOG1B?oc=5" },
   { time: "22:01", tag: "macro", tagText: "科技", text: "债券市场发出警告信号，信贷与股市走势出现背离。历史经验表明，当两者意见不一致时，信贷市场往往更接近真相。投资者需警惕当前华尔街的乐观情绪可能掩盖风险。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-bond-market-just-flipped-the-script-on-investors-wall-street-is-acting-like-nothings-wrong-f321cc5b?mod=mw_rss_topstories" },
-  { time: "21:58", tag: "macro", tagText: "宏观", text: "美联储主席凯文·沃什暗示短期内不会降息，因通胀再度抬头；但加息也暂不在议程上。分析指出，沃什面临在抑制需求与维持牛市之间的艰难抉择，加之油价突破100美元，市场面临“新主席诅咒”考验。", source: "MarketWatch", url: "https://www.marketwatch.com/story/kevin-warshs-fed-isnt-cutting-interest-rates-any-time-soon-but-a-hike-isnt-yet-on-the-table-either-aee28c06?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年5月24日 15:53 CST";
+const breakingDate = "2026年5月24日 18:02 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "17:38", tag: "ai", tagText: "AI", text: "中国AI初创企业融资激增，资本正追逐规模化扩张。最新数据显示，大量资金涌入中国AI赛道，投资者更青睐具备快速扩张能力的公司，反映出市场对AI规模化应用的强烈信心。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNU1p4SjlvWGJpRnNMUVJQeE1nelB5WXFubFY5MWpuWGY3Y3RmZHhBS202SzZiUHJmNVcyNTN0VEFRWDhjOWJYYVFWd3k0c0dQVWh0YVNYV05XNnh1dnJnX0xrVnpxbTNXRmg5WTJrMU8wdUZKZkNxNFIyQklDbkVNMF9ZYVI5QTdMWmtucERDMHBFRmZwM3c?oc=5" },
   { time: "08:11", tag: "ai", tagText: "AI", text: "英伟达2026年5月财报：AI芯片巨头营收超预期，但股价仍承压下跌。尽管业绩表现强劲，市场对AI行业估值和增长可持续性的担忧依然存在。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTFBsQ1BqeDh0QWktYnVoRXZJM2M5ZnRYNXZZQTlnNUJnalR3NjZtWllRV0xKMGhFaUFTTzNKWUpCVnloUWlaVlk4VnppZnlEOVFLRXN4QkdwNW5mNGdNbG1jM2E1clVGdERXSnlOS3ln?oc=5" },
   { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
   { time: "06:34", tag: "macro", tagText: "宏观", text: "美国国债持续攀升，开始考验AI融资热潮的可持续性。分析指出，不断膨胀的政府债务可能推高利率，收紧市场流动性，进而对高度依赖资本投入的AI初创公司构成融资压力。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVhKcDJpNWVGVE9USV8yWjFmMnFNczhBQjhXQTM2TTFPN3VXempIcXNMQU01WV9JSjE1RmdRbXhCQjN0dFBBU2Q5bnlYZTc2RXpxa3dKb0tfcFdFY1BKMFdsOHBZM1dfTG5PQjFKc1hrNWk5TkNBcl9QQWtyVEZhQ3VYY3lFTi01SEE?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "19:00", tag: "ai", tagText: "AI", text: "谷歌发布全新“任意到任意”AI模型，可跨文本、图像、视频等多种模态进行生成和转换，功能极为强大。该模型基于Gemini技术，能实现如将玩偶照片生成度假视频等创意应用，引发业界对多模态AI能力的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video" },
   { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
   { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
-  { time: "17:38", tag: "ai", tagText: "AI", text: "中国AI初创企业融资激增，资本正追逐规模化扩张。最新数据显示，大量资金涌入中国AI赛道，投资者更青睐具备快速扩张能力的公司，反映出市场对AI规模化应用的强烈信心。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNU1p4SjlvWGJpRnNMUVJQeE1nelB5WXFubFY5MWpuWGY3Y3RmZHhBS202SzZiUHJmNVcyNTN0VEFRWDhjOWJYYVFWd3k0c0dQVWh0YVNYV05XNnh1dnJnX0xrVnpxbTNXRmg5WTJrMU8wdUZKZkNxNFIyQklDbkVNMF9ZYVI5QTdMWmtucERDMHBFRmZwM3c?oc=5" },
 ];
-const aiBreakingDate = "2026年5月24日 15:53 CST";
+const aiBreakingDate = "2026年5月24日 18:02 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
