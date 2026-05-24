@@ -1623,13 +1623,16 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月24日 19:36 CST"
+  date: "2026年5月24日 21:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "美股处于盈利热潮中，但夏季面临多重风险。主要基准指数处于历史高位，但投资者需警惕伊朗局势、通胀反复及地缘冲突升级等风险，未来几个月市场可能波动加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/stocks-are-riding-an-earnings-hot-streak-but-investors-are-facing-a-summer-thats-rife-with-risks-67a700e4?mod=mw_rss_topstories" },
+  { time: "20:00", tag: "crypto", tagText: "加密", text: "比特币突破77,000美元，市场信心增强。受伊朗停火协议预期及宏观情绪改善推动，比特币价格大幅上涨，突破77,000美元关口。分析师指出，地缘政治风险缓解和流动性充裕共同推动了此轮涨势。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOW1WOHBMM3EzbGY2V1F4cFdsUWlVTndrN0M5U01OWUtlaFZ6bHQ2MkZid2puT1FWWkJKaGZMRldwTkwyVjZ0Tk5idjhHTmw1TWZHWWFqUkZlRHB0djBwdUFwVVotaW92RC0wWThMMXR5TXVHMExXZ0I3VzFkUnI4dlRjUUxaaTNXSzZv?oc=5" },
   { time: "19:26", tag: "geo", tagText: "地缘", text: "巴基斯坦俾路支省首府奎达附近铁路线发生爆炸，造成至少16人死亡。分离主义组织已宣称对此次袭击负责。该事件凸显巴基斯坦西南部动荡地区的安全局势持续恶化。", source: "Financial Times", url: "https://www.ft.com/content/7b08d851-4464-47cd-b760-57a3fcc9513b" },
+  { time: "19:00", tag: "tech", tagText: "科技", text: "分析师建议关注中国科技股以抵御宏观波动。多位分析师指出，当前投资中国股票应聚焦人工智能相关标的，无论整体经济增长放缓与否，AI主题仍具韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/china-tech-plays-to-ride-out-macro-volatility.html" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "分析警告，AI相关IPO热潮可能预示着市场见顶。大量AI公司集中上市将增加股票供应，削弱此前推动股价上涨的动力，投资者需警惕市场过热风险。", source: "Financial Times", url: "https://www.ft.com/content/7e153dc1-7e13-44d0-9c49-8071a4c29261" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "持续三个月的伊朗战争正给美国债务带来沉重压力。美国政府借贷成本已升至2007年以来最高水平，分析指出冲突可能使美国额外增加数十亿美元的利息支出。", source: "Financial Times", url: "https://www.ft.com/content/d66b0e94-2f80-4d9a-a1a0-2bf5ce837a66" },
   { time: "17:19", tag: "geo", tagText: "地缘", text: "中东战争正考验海湾国家成为AI中心的雄心。分析师指出，对数据中心设施的袭击以及持续高企的能源价格，已改变运营商的成本与安全考量。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/middle-east-war-testing-gulfs-ambitions-to-become-ai-hub.html" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "03:00", tag: "geo", tagText: "地缘", text: "美国警告日本，因伊朗战争导致五角大楼库存耗尽，对日“战斧”导弹交付可能延迟两年。此举凸显中东军事行动对盟友军备供应的连锁影响。", source: "FT", url: "https://www.ft.com/content/406bc3bb-068b-4f4c-b064-23082e8a9f70" },
   { time: "02:17", tag: "tech", tagText: "科技", text: "英伟达虽能交付芯片，但无法解决大型科技公司面临的信贷危机和电网瓶颈。分析指出，企业利润无法弥补对华贸易战、信用溢价攀升及AI基础设施限制带来的系统性风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/nvidia-can-deliver-chips-but-it-cant-buy-big-tech-out-of-its-credit-and-power-grid-crisis-9c114e62?mod=mw_rss_topstories" },
   { time: "01:35", tag: "tech", tagText: "科技", text: "德国外卖巨头Delivery Hero披露收到优步（Uber）以100亿欧元估值的收购要约，同时DoorDash也表达了收购意向。该交易若达成，将重塑全球外卖行业格局。", source: "FT", url: "https://www.ft.com/content/6d5df0df-74b3-4be9-a1ec-27322e1c3184" },
-  { time: "00:52", tag: "geo", tagText: "地缘", text: "美伊接近达成60天停火延期协议，涉及霍尔木兹海峡逐步重新开放。自4月8日脆弱的停火协议生效以来，双方在霍尔木兹海峡附近时有冲突。调解方透露，协议框架包括核问题谈判，但细节仍在敲定中。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/us-iran-war-talks.html" },
-  { time: "00:52", tag: "macro", tagText: "宏观", text: "市场分析警告多个板块出现泡沫，标普500未来两年有30%概率崩盘。文章指出，英伟达所在的AI板块并非最大泡沫，另有四个板块估值过高。同时，“巴菲特指标”显示估值缺口高达230%，市场脆弱性加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/these-4-market-sectors-look-frothy-and-nvidias-isnt-even-the-biggest-bubble-d740acf7?mod=mw_rss_topstories" },
-  { time: "00:17", tag: "tech", tagText: "科技", text: "Arm Holdings与Red Hat宣布扩大合作，共同开发面向代理型AI（Agentic AI）的软件栈。此举旨在加速AI应用在企业端的部署，强化Arm架构在AI计算领域的生态布局。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/arm-holdings-arm-red-hat-200853890.html" },
 ];
-const breakingDate = "2026年5月24日 19:36 CST";
+const breakingDate = "2026年5月24日 21:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:00", tag: "tech", tagText: "科技", text: "黑客正学习利用聊天机器人的“个性”进行攻击。报道指出，攻击者不再仅依赖技术漏洞，而是通过操纵AI助手的对话风格和预设角色来实施欺诈或获取敏感信息，安全威胁呈现新形态。", source: "The Verge", url: "https://www.theverge.com/column/935545/hackers-ai-chatbots" },
   { time: "19:05", tag: "tech", tagText: "科技", text: "三星与威胁罢工的存储芯片员工达成临时协议，部分员工今年平均可获得34万美元奖金。此举旨在避免生产中断，凸显半导体行业人才争夺激烈。", source: "The Verge", url: "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "谷歌发布全新“任意到任意”AI模型，可跨文本、图像、视频等多种模态进行生成和转换，功能极为强大。该模型基于Gemini技术，能实现如将玩偶照片生成度假视频等创意应用，引发业界对多模态AI能力的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video" },
   { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
   { time: "00:20", tag: "ai", tagText: "AI", text: "Spotify与环球音乐集团合作推出AI音乐混音工具，声称面向“超级粉丝”。但评论指出，AI生成的翻唱和混音已在互联网泛滥，该工具可能进一步加剧低质量AI音乐内容对原创艺术的冲击。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936072/spotify-umg-ai-music-remix-cover-superfan" },
   { time: "23:08", tag: "tech", tagText: "科技", text: "法拉利与IBM合作，利用AI技术打造F1超级粉丝体验，重新定义观赛互动方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/23/ferrari-is-using-ai-to-create-f1-superfans/" },
-  { time: "22:54", tag: "ai", tagText: "AI", text: "巴西银行（Banco do Brasil）与MSW Capital合作设立一只新的AI专项基金。该基金将专注于人工智能领域的投资机会，显示传统金融机构正加速布局AI赛道。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdTlPSkRUWUlTelpDRVhGMThQWjJmM2ZGalQtR2VXQktJYVJ2OERSOFhRa2dsbVJuaVpsTFo1MGo4aExjRFdMWlM0VEZTejVtRGZ0QnJkenk4SGdEWmdvem9lU2dQNDhfYnYzN3ZFRGNDV19yQmZXZHZod3FqczNiZ1pGdHB5ZkpCckx0c3lITGttNkp6ZVNnbzQ3X2VpUWQ5dGs4?oc=5" },
 ];
-const aiBreakingDate = "2026年5月24日 19:36 CST";
+const aiBreakingDate = "2026年5月24日 21:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
