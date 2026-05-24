@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月25日 03:37 CST"
+  date: "2026年5月25日 05:07 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:47", tag: "ai", tagText: "AI", text: "埃隆·马斯克对OpenAI的攻击实质是为其AI公司xAI铺路。分析指出，马斯克深知OpenAI内部缺陷，此举意在削弱竞争对手并凸显xAI的优势。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/markets/stocks/articles/knows-flaws-because-knows-man-204722212.html" },
+  { time: "01:34", tag: "crypto", tagText: "加密", text: "以太坊联合创始人Vitalik Buterin表示，以太坊基金会将缩减规模并减少ETH出售，以应对研究员离职潮。此举旨在优化运营并减少市场抛压。", source: "The Block", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMDlyMFBLbjVHWVM0Q0ZFNzlFZ3UyUUwwZ25FdDlCQmRvT0FhaEY1MnJiNDhPMTlWVzZteFpNNTczSUdsZDFvUUhwMU11RllDbjMwb0tQanZFRm8yeVhIal9MM19uME5kTmZ1bHQwMmtBVW5PSGdZMUR2WUNRQTBndFlHY3puZ1B1V3h0TTk0OTl4Wks1bGpzWXVKd0FfSkZ5enJjQ0FtcWFubmE4d3hFd2NlbTMzQ0pYeDlCbF95SjhXN1RnZTU4aXA3SkMxZU1KdlE?oc=5" },
+  { time: "01:29", tag: "tech", tagText: "科技", text: "SpaceX即将上市，市场关注其应归入标普500哪个行业板块。分析师讨论其业务涵盖太空火箭、卫星、数据中心及AI模型Grok，行业分类存在争议。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/spacex-sp-sector-index.html" },
   { time: "01:01", tag: "geo", tagText: "地缘", text: "特朗普称伊朗谈判进展“有序且具建设性”，但警告不会急于达成协议。总统表示，在“协议达成、认证并签署”之前，美国对伊朗港口的 naval 封锁将继续有效。市场对霍尔木兹海峡重新开放的预期有所降温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/trump-iran-war-talks.html" },
   { time: "01:00", tag: "tech", tagText: "科技", text: "欧洲央行紧急召集银行会议，敦促其修复最新AI模型暴露的缺陷。监管机构将强调对金融系统风险的严重性，要求银行迅速采取行动弥补技术漏洞。", source: "Financial Times", url: "https://www.ft.com/content/482c56aa-6d2b-4456-9d33-b42dc30788bd" },
   { time: "00:04", tag: "tech", tagText: "科技", text: "《曼达洛人与古古》创下迪士尼《星球大战》系列电影最低开画纪录，首周末三天北美票房仅约8200万美元。该片表现远低于预期，引发市场对星战IP热度衰退的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/the-mandalorian-and-grogu-is-disneys-lowest-star-wars-film-opening.html" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "调查显示，伊朗伊斯兰革命卫队曾利用一家阿联酋公司购买军用卫星设备。德黑兰通过海湾国家的采购网络获取敏感技术，而该网络后来遭到伊朗导弹和无人机袭击。", source: "Financial Times", url: "https://www.ft.com/content/371fee77-8637-4b99-ab5a-4b6fae253a44" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "德国商业银行在年度股东大会上动员股东，争取从意大利联合信贷银行的收购中保持独立。长期遭受压力的股东终于迎来利好信号。", source: "Financial Times", url: "https://www.ft.com/content/590ac4fd-ac77-499d-95be-4721ecb67e56" },
   { time: "10:23", tag: "tech", tagText: "科技", text: "英伟达董事会批准新增800亿美元股票回购计划。此举向投资者传递强烈信号，表明公司对自身长期增长前景充满信心。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMHEtVE1RUWJTSTM3ZlBnQnU2bWFQNXdFWEs4N1V0Qmp2RWdvOFRCZVZNdEZURXRueEVzSG5md19YUGpjZ0FKbVJPT2c4aF9nM19iY1RkWmpJTVJCcUdEODJYZi11MkFqWEtDWUZFYlJnbzRZN3R4X2ZKTmZhQWhIYThUQUNTWWNIMDdacGRINDRCZW1XNUtydA?oc=5" },
-  { time: "09:40", tag: "geo", tagText: "地缘", text: "一名嫌疑人在白宫附近安全检查站向特勤局开火后被击毙。事发时总统特朗普正在白宫内，未受影响。事件凸显华盛顿安保形势的紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/reports-of-shots-fired-near-white-house.html" },
-  { time: "09:00", tag: "geo", tagText: "地缘", text: "全球海上咽喉要道争夺加剧。霍尔木兹海峡危机冲击全球经济之际，各国正竞相确保其他脆弱水道的安全。分析指出，狭窄海域的地缘政治博弈正成为影响贸易和能源供应的关键变量。", source: "Financial Times", url: "https://ig.ft.com/maritime-chokepoints/" },
-  { time: "07:25", tag: "geo", tagText: "地缘", text: "俄罗斯夜间对基辅发动大规模导弹和无人机袭击，乌克兰首都传出爆炸声。此前泽连斯基警告称即将发生大规模攻击。俄乌冲突持续升级。", source: "Financial Times", url: "https://www.ft.com/content/334b2b9e-10c5-4292-aa53-c1c0589f1413" },
 ];
-const breakingDate = "2026年5月25日 03:37 CST";
+const breakingDate = "2026年5月25日 05:07 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
   { time: "06:34", tag: "macro", tagText: "宏观", text: "美国国债持续攀升，开始考验AI融资热潮的可持续性。分析指出，不断膨胀的政府债务可能推高利率，收紧市场流动性，进而对高度依赖资本投入的AI初创公司构成融资压力。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVhKcDJpNWVGVE9USV8yWjFmMnFNczhBQjhXQTM2TTFPN3VXempIcXNMQU01WV9JSjE1RmdRbXhCQjN0dFBBU2Q5bnlYZTc2RXpxa3dKb0tfcFdFY1BKMFdsOHBZM1dfTG5PQjFKc1hrNWk5TkNBcl9QQWtyVEZhQ3VYY3lFTi01SEE?oc=5" },
 ];
-const aiBreakingDate = "2026年5月25日 03:37 CST";
+const aiBreakingDate = "2026年5月25日 05:07 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
