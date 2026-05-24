@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月25日 05:07 CST"
+  date: "2026年5月25日 07:06 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:00", tag: "crypto", tagText: "加密", text: "加密货币市场因美伊协议希望而反弹，原油暴跌推动资金流入加密资产。比特币价格波动，分析师警告可能先跌至7.25万美元再反弹。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTUpHa3hYb0JFWFF5ZnRvaklMdGNOMHEzN0pNc1dnRURSOEJQTWFzX0dyY0RGX2otLWdTMTlqdUctaWt6dlVZOVVtYVZmOVJTRHV4czJzN19GbUJYRTJseVVocUkzZk1pejl6cVFOaEpOVGwtQzZIbkpaOUMzeDJzZDlvZUFhb1JRdUdWMG9vVmhfOUFCT1E0QjZVV0RnYzJBbWtjeDZodVRVMS1IdGkxSTdTdmNxZEhhWUJpX2xZQU5GbDFuSGhyMTBkeXZNZw" },
+  { time: "07:00", tag: "tech", tagText: "科技", text: "Uber考虑提高对Delivery Hero的收购报价，此前115亿欧元要约被拒。Uber已接触这家德国食品集团的主要股东，寻求达成交易。", source: "Financial Times", url: "https://www.ft.com/content/04f5d191-f5d9-4221-bf62-c34c879ab81b" },
+  { time: "07:00", tag: "geo", tagText: "地缘", text: "南加州一化学储罐出现“潜在裂缝”，消防官员称这可能有助于防止爆炸，允许当局逐步排空化学品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/california-chemical-tank.html" },
   { time: "01:47", tag: "ai", tagText: "AI", text: "埃隆·马斯克对OpenAI的攻击实质是为其AI公司xAI铺路。分析指出，马斯克深知OpenAI内部缺陷，此举意在削弱竞争对手并凸显xAI的优势。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/markets/stocks/articles/knows-flaws-because-knows-man-204722212.html" },
   { time: "01:34", tag: "crypto", tagText: "加密", text: "以太坊联合创始人Vitalik Buterin表示，以太坊基金会将缩减规模并减少ETH出售，以应对研究员离职潮。此举旨在优化运营并减少市场抛压。", source: "The Block", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMDlyMFBLbjVHWVM0Q0ZFNzlFZ3UyUUwwZ25FdDlCQmRvT0FhaEY1MnJiNDhPMTlWVzZteFpNNTczSUdsZDFvUUhwMU11RllDbjMwb0tQanZFRm8yeVhIal9MM19uME5kTmZ1bHQwMmtBVW5PSGdZMUR2WUNRQTBndFlHY3puZ1B1V3h0TTk0OTl4Wks1bGpzWXVKd0FfSkZ5enJjQ0FtcWFubmE4d3hFd2NlbTMzQ0pYeDlCbF95SjhXN1RnZTU4aXA3SkMxZU1KdlE?oc=5" },
   { time: "01:29", tag: "tech", tagText: "科技", text: "SpaceX即将上市，市场关注其应归入标普500哪个行业板块。分析师讨论其业务涵盖太空火箭、卫星、数据中心及AI模型Grok，行业分类存在争议。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/spacex-sp-sector-index.html" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "19:00", tag: "macro", tagText: "宏观", text: "持续三个月的伊朗战争正给美国债务带来沉重压力。美国政府借贷成本已升至2007年以来最高水平，分析指出冲突可能使美国额外增加数十亿美元的利息支出。", source: "Financial Times", url: "https://www.ft.com/content/d66b0e94-2f80-4d9a-a1a0-2bf5ce837a66" },
   { time: "17:19", tag: "geo", tagText: "地缘", text: "中东战争正考验海湾国家成为AI中心的雄心。分析师指出，对数据中心设施的袭击以及持续高企的能源价格，已改变运营商的成本与安全考量。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/middle-east-war-testing-gulfs-ambitions-to-become-ai-hub.html" },
   { time: "13:49", tag: "crypto", tagText: "加密", text: "稳定币总市值达到3230亿美元的历史新高，同时以太坊质押量也创下峰值。分析师指出，这一Q2数据相关性值得关注，可能预示市场流动性充裕。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBwX1hHU0JJMEFoUkRmZU55RE1LbWloWjhrOVF1dldFMzRSa3dwXzBKR0VHWE5qUE42OVZSUDVXNldBTkxtbnfSAawBQVVfeXFMUFBiVUd5elYyUWJQMklxSFBnZjJaOVp6U2pGVXFvT0cySG03SFVWcGVSTnRXNThzYzA3TG0xdTkweFlESHh1QllzcHg1Z2stSS00WTBXbUNVZlQzYmREN3VpYjRxU3lYcG5XNlB3d01jNTJjM3hGVEo1SFA0b2t5ZjE2RXZZRGRqRUJvVEpiR20xbHBJa2JscUVqbjEzTEFER2xSOGtaaXhic1BYRA?oc=5" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "调查显示，伊朗伊斯兰革命卫队曾利用一家阿联酋公司购买军用卫星设备。德黑兰通过海湾国家的采购网络获取敏感技术，而该网络后来遭到伊朗导弹和无人机袭击。", source: "Financial Times", url: "https://www.ft.com/content/371fee77-8637-4b99-ab5a-4b6fae253a44" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "德国商业银行在年度股东大会上动员股东，争取从意大利联合信贷银行的收购中保持独立。长期遭受压力的股东终于迎来利好信号。", source: "Financial Times", url: "https://www.ft.com/content/590ac4fd-ac77-499d-95be-4721ecb67e56" },
-  { time: "10:23", tag: "tech", tagText: "科技", text: "英伟达董事会批准新增800亿美元股票回购计划。此举向投资者传递强烈信号，表明公司对自身长期增长前景充满信心。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMHEtVE1RUWJTSTM3ZlBnQnU2bWFQNXdFWEs4N1V0Qmp2RWdvOFRCZVZNdEZURXRueEVzSG5md19YUGpjZ0FKbVJPT2c4aF9nM19iY1RkWmpJTVJCcUdEODJYZi11MkFqWEtDWUZFYlJnbzRZN3R4X2ZKTmZhQWhIYThUQUNTWWNIMDdacGRINDRCZW1XNUtydA?oc=5" },
 ];
-const breakingDate = "2026年5月25日 05:07 CST";
+const breakingDate = "2026年5月25日 07:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
+  { time: "06:34", tag: "macro", tagText: "宏观", text: "美国国债持续攀升，开始考验AI融资热潮的可持续性。分析指出，不断膨胀的政府债务可能推高利率，收紧市场流动性，进而对高度依赖资本投入的AI初创公司构成融资压力。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVhKcDJpNWVGVE9USV8yWjFmMnFNczhBQjhXQTM2TTFPN3VXempIcXNMQU01WV9JSjE1RmdRbXhCQjN0dFBBU2Q5bnlYZTc2RXpxa3dKb0tfcFdFY1BKMFdsOHBZM1dfTG5PQjFKc1hrNWk5TkNBcl9QQWtyVEZhQ3VYY3lFTi01SEE?oc=5" },
+  { time: "05:39", tag: "ai", tagText: "AI", text: "所有人都在实时应对AI安全挑战——谷歌也不例外。报道指出，当前正处于AI安全过渡期，即使是科技巨头也在摸索中前行，凸显了AI安全治理的紧迫性和不确定性。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/" },
   { time: "03:07", tag: "tech", tagText: "科技", text: "芯片股屡创新高，但英伟达并非本轮上涨的唯一驱动力。市场关注其他芯片制造商在AI浪潮中的表现，行业格局正发生变化。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUTlucXRoaDYyVjh4cGVnNHZQOVpsSWZuWDBZX3QydFR5MzFoMXI4VHB6QnhqNGZ1Y1I0SUlMTGhTd1JDdTQxS1F2VnBfY0dkWldUMHN3aG1KQ09OTW9MQW1RLTZ2bkJSTEdnaFV3TElJcjN1ZUttRHczMU9ObmNtcldNZUdQQ0pzakdmdWxNZ2lwdEp1bU5ScnhSd3g0VzNWVUZXeWRhalVxOFM4ZWZ1dVVB?oc=5" },
   { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "美国大学毕业生在毕业典礼上对鼓吹AI的高管报以嘘声和起哄，高管们对此感到意外。这一现象反映出年轻一代对AI取代就业岗位的焦虑与不满。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935602/graduates-boo-ai-ceos" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
   { time: "17:38", tag: "ai", tagText: "AI", text: "中国AI初创企业融资激增，资本正追逐规模化扩张。最新数据显示，大量资金涌入中国AI赛道，投资者更青睐具备快速扩张能力的公司，反映出市场对AI规模化应用的强烈信心。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNU1p4SjlvWGJpRnNMUVJQeE1nelB5WXFubFY5MWpuWGY3Y3RmZHhBS202SzZiUHJmNVcyNTN0VEFRWDhjOWJYYVFWd3k0c0dQVWh0YVNYV05XNnh1dnJnX0xrVnpxbTNXRmg5WTJrMU8wdUZKZkNxNFIyQklDbkVNMF9ZYVI5QTdMWmtucERDMHBFRmZwM3c?oc=5" },
   { time: "17:00", tag: "ai", tagText: "AI", text: "AI为一位八旬老人带来医学突破。纽约每日新闻报道，人工智能技术帮助一位80多岁的老年患者取得了重要的医疗进展，具体细节未披露，但凸显了AI在个性化医疗和老年健康领域的应用潜力。", source: "New York Daily News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbC1MWjZRTjdtVWtrN3QxWTVRaXJiR29oUFJVU0s1RFRIclVSZklGM0RGNlRCTVVGSXhwcEN2dU4waHN3dnkzUVktNDR0c24tQkFRY2pONEhDTExsTDZmZGwxaUxIYW1HYnpDSzQ2aTZuNkxmcjhjVHBMZzdfNjNZZzRVX3E5bWs?oc=5" },
-  { time: "08:11", tag: "ai", tagText: "AI", text: "英伟达2026年5月财报：AI芯片巨头营收超预期，但股价仍承压下跌。尽管业绩表现强劲，市场对AI行业估值和增长可持续性的担忧依然存在。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTFBsQ1BqeDh0QWktYnVoRXZJM2M5ZnRYNXZZQTlnNUJnalR3NjZtWllRV0xKMGhFaUFTTzNKWUpCVnloUWlaVlk4VnppZnlEOVFLRXN4QkdwNW5mNGdNbG1jM2E1clVGdERXSnlOS3ln?oc=5" },
-  { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
-  { time: "06:34", tag: "macro", tagText: "宏观", text: "美国国债持续攀升，开始考验AI融资热潮的可持续性。分析指出，不断膨胀的政府债务可能推高利率，收紧市场流动性，进而对高度依赖资本投入的AI初创公司构成融资压力。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVhKcDJpNWVGVE9USV8yWjFmMnFNczhBQjhXQTM2TTFPN3VXempIcXNMQU01WV9JSjE1RmdRbXhCQjN0dFBBU2Q5bnlYZTc2RXpxa3dKb0tfcFdFY1BKMFdsOHBZM1dfTG5PQjFKc1hrNWk5TkNBcl9QQWtyVEZhQ3VYY3lFTi01SEE?oc=5" },
 ];
-const aiBreakingDate = "2026年5月25日 05:07 CST";
+const aiBreakingDate = "2026年5月25日 07:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
