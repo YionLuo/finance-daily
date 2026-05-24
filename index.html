@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月24日 07:05 CST"
+  date: "2026年5月24日 12:23 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "09:40", tag: "geo", tagText: "地缘", text: "一名嫌疑人在白宫附近安全检查站向特勤局开火后被击毙。事发时总统特朗普正在白宫内，未受影响。事件凸显华盛顿安保形势的紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/reports-of-shots-fired-near-white-house.html" },
+  { time: "09:00", tag: "geo", tagText: "地缘", text: "全球海上咽喉要道争夺加剧。霍尔木兹海峡危机冲击全球经济之际，各国正竞相确保其他脆弱水道的安全。分析指出，狭窄海域的地缘政治博弈正成为影响贸易和能源供应的关键变量。", source: "Financial Times", url: "https://ig.ft.com/maritime-chokepoints/" },
+  { time: "07:25", tag: "geo", tagText: "地缘", text: "俄罗斯夜间对基辅发动大规模导弹和无人机袭击，乌克兰首都传出爆炸声。此前泽连斯基警告称即将发生大规模攻击。俄乌冲突持续升级。", source: "Financial Times", url: "https://www.ft.com/content/334b2b9e-10c5-4292-aa53-c1c0589f1413" },
+  { time: "07:06", tag: "macro", tagText: "宏观", text: "东南亚经济体难以应对能源冲击。伊朗战争导致石油匮乏国家在抗击通胀的同时，艰难寻求对冲措施。能源价格高企正加剧该地区的经济脆弱性。", source: "Financial Times", url: "https://www.ft.com/content/746e3cbc-ebfd-40cc-915e-718643372989" },
   { time: "07:05", tag: "macro", tagText: "宏观", text: "加州迪士尼乐园附近一化学储罐有爆炸风险，约4万居民被下令疏散。事发地加登格罗夫紧邻阿纳海姆，正值阵亡将士纪念日长周末，迪士尼乐园暂未收到疏散令。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/california-chemical-tank-at-risk-of-exploding-40000-ordered-to-evacuate.html" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "挪威加倍投资石油和天然气，以应对欧洲能源供应紧张。在欧洲争相寻找替代能源的背景下，挪威此举将进一步巩固其作为欧洲关键能源供应国的地位。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/norway-doubles-down-oil-gas-190000261.html" },
   { time: "03:00", tag: "geo", tagText: "地缘", text: "美国警告日本，因伊朗战争导致五角大楼库存耗尽，对日“战斧”导弹交付可能延迟两年。此举凸显中东军事行动对盟友军备供应的连锁影响。", source: "FT", url: "https://www.ft.com/content/406bc3bb-068b-4f4c-b064-23082e8a9f70" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "21:00", tag: "tech", tagText: "科技", text: "网络安全硬件、软件和服务提供商预计将在AI建设持续推动下实现强劲销售增长。部分网络安全股票目前估值偏低，分析认为到2028年该板块将迎来快速增长期。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/these-cybersecurity-stocks-are-poised-for-rapid-growth-through-2028-and-some-of-them-are-cheap-right-now-cf924a36?mod=mw_rss_topstories" },
   { time: "21:00", tag: "geo", tagText: "地缘", text: "伊朗首席谈判代表卡利巴夫表示，德黑兰不会在与美国的谈判中妥协，将同时在战场和外交上追求“合法权利”。美伊核谈判前景再度蒙上阴影。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/top-iran-negotiator-says-tehran-will-not-compromise-in-talks-with-us.html" },
   { time: "20:41", tag: "macro", tagText: "科技", text: "美国银行发布报告，指出五只股票在6月及之后仍有较大上涨空间。与此同时，历史数据显示，股市在经历三年强劲回报后，后续表现往往不及预期。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/05/23/bank-of-america-says-these-stocks-have-major-upside-heading-into-june.html" },
-  { time: "20:30", tag: "tech", tagText: "科技", text: "英伟达预测CPU市场规模将达2000亿美元，并明确表示该预测包含中国市场。尽管面临出口管制，英伟达仍看好中国长期需求，信号意义重大。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/nvidia-forecast-for-200-billion-cpu-market-includes-china.html" },
-  { time: "20:30", tag: "macro", tagText: "宏观", text: "阵亡将士纪念日长周末前夕，美国通胀压力持续挤压消费者。旅行、娱乐和食品价格涨幅尤为显著，高油价考验夏季出行意愿。历史数据显示，股市在中期选举前的夏季往往表现疲软。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/memorial-day-weekend-prices-inflation-war.html" },
-  { time: "19:19", tag: "geo", tagText: "地缘", text: "APEC会议释放三大信号：中美贸易分歧依旧巨大。特朗普与习近平北京峰会结束后，双方官员在公开表态中展现出截然不同的优先事项，贸易关系改善前景不明。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/three-signs-from-apec-that-the-us-china-remain-far-apart-on-trade.html" },
-  { time: "19:01", tag: "geo", tagText: "地缘", text: "夏威夷大岛发生6级地震，美国地质调查局正在评估基拉韦厄火山活动。该火山是世界上最活跃的火山之一，地震引发对火山喷发风险的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/23/hawaii-earthquake.html" },
 ];
-const breakingDate = "2026年5月24日 07:05 CST";
+const breakingDate = "2026年5月24日 12:23 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:11", tag: "ai", tagText: "AI", text: "英伟达2026年5月财报：AI芯片巨头营收超预期，但股价仍承压下跌。尽管业绩表现强劲，市场对AI行业估值和增长可持续性的担忧依然存在。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTFBsQ1BqeDh0QWktYnVoRXZJM2M5ZnRYNXZZQTlnNUJnalR3NjZtWllRV0xKMGhFaUFTTzNKWUpCVnloUWlaVlk4VnppZnlEOVFLRXN4QkdwNW5mNGdNbG1jM2E1clVGdERXSnlOS3ln?oc=5" },
   { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
   { time: "06:34", tag: "macro", tagText: "宏观", text: "美国国债持续攀升，开始考验AI融资热潮的可持续性。分析指出，不断膨胀的政府债务可能推高利率，收紧市场流动性，进而对高度依赖资本投入的AI初创公司构成融资压力。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVhKcDJpNWVGVE9USV8yWjFmMnFNczhBQjhXQTM2TTFPN3VXempIcXNMQU01WV9JSjE1RmdRbXhCQjN0dFBBU2Q5bnlYZTc2RXpxa3dKb0tfcFdFY1BKMFdsOHBZM1dfTG5PQjFKc1hrNWk5TkNBcl9QQWtyVEZhQ3VYY3lFTi01SEE?oc=5" },
   { time: "03:40", tag: "ai", tagText: "AI", text: "报道揭露部分AI初创公司与风投机构合谋，通过夸大年度经常性收入（ARR）等传统营收指标来“加冕”AI明星公司，营造虚假繁荣。投资者对此心知肚明，但为推高估值和融资规模而默许甚至参与其中。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/how-vcs-and-founders-use-inflated-arr-to-kingmake-ai-startups/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
   { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
   { time: "17:38", tag: "ai", tagText: "AI", text: "中国AI初创企业融资激增，资本正追逐规模化扩张。最新数据显示，大量资金涌入中国AI赛道，投资者更青睐具备快速扩张能力的公司，反映出市场对AI规模化应用的强烈信心。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNU1p4SjlvWGJpRnNMUVJQeE1nelB5WXFubFY5MWpuWGY3Y3RmZHhBS202SzZiUHJmNVcyNTN0VEFRWDhjOWJYYVFWd3k0c0dQVWh0YVNYV05XNnh1dnJnX0xrVnpxbTNXRmg5WTJrMU8wdUZKZkNxNFIyQklDbkVNMF9ZYVI5QTdMWmtucERDMHBFRmZwM3c?oc=5" },
-  { time: "14:23", tag: "ai", tagText: "AI", text: "Harbor Capital推出AI ETF 2.0版“Lab”基金，直接投资Anthropic、OpenAI和xAI等未上市AI初创公司，为散户提供参与顶级AI公司早期投资的新渠道。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5COWI4SzJXWFdldXRmbHZsZFZSU2JqdUdGVUZaZTF4emFHcVR2ZWp6QXVjX0o0Ykh2cnJOdXpZeE9DNjZOSlM4a3UxLS01RWlCeWtadmFOX1Q?oc=5" },
 ];
-const aiBreakingDate = "2026年5月24日 07:05 CST";
+const aiBreakingDate = "2026年5月24日 12:23 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
