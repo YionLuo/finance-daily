@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 63.23,
   previous1Month: 68.46,
   previous1Year: 66.8,
-  date: "2026年5月25日 07:06 CST"
+  date: "2026年5月25日 12:45 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:45", tag: "macro", tagText: "宏观", text: "美国消费者面临支出紧缩压力，因特朗普减税红利消退，同时霍尔木兹海峡封锁导致燃油价格飙升50%。家庭购买力受到双重挤压，消费支出前景堪忧。", source: "Financial Times", url: "https://www.ft.com/content/60c7a1ea-9b8a-4f11-b3cb-109fade74e48" },
+  { time: "12:45", tag: "macro", tagText: "宏观", text: "化肥生产商因伊朗战争导致硫磺供应紧张而减产。硫磺是磷酸盐肥料的关键原料，供应短缺将迫使发展中国家农民减少施肥量，可能导致农作物减产，加剧全球粮食安全风险。", source: "Financial Times", url: "https://www.ft.com/content/3cf63a2a-f0a8-4a3b-86e8-77476af5caf7" },
+  { time: "12:45", tag: "macro", tagText: "宏观", text: "欧洲如何学会爱上补贴：欧盟国家援助规模大幅增加。分析指出，此举虽旨在抵御中国竞争，但可能分裂单一市场，引发内部贸易摩擦和效率损失。", source: "Financial Times", url: "https://www.ft.com/content/b3e968c3-9089-417b-9757-95020eb0f469" },
+  { time: "12:45", tag: "tech", tagText: "科技", text: "AI热潮与场外交易激增推动日本散户交易量飙升。东京证券交易所主板市场日均交易量在12个月内几乎翻倍，散户投资者积极参与AI相关股票和衍生品交易。", source: "Financial Times", url: "https://www.ft.com/content/2cf9dacf-08ee-4a3b-bfbe-ba6b8f3c955b" },
   { time: "07:00", tag: "crypto", tagText: "加密", text: "加密货币市场因美伊协议希望而反弹，原油暴跌推动资金流入加密资产。比特币价格波动，分析师警告可能先跌至7.25万美元再反弹。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTUpHa3hYb0JFWFF5ZnRvaklMdGNOMHEzN0pNc1dnRURSOEJQTWFzX0dyY0RGX2otLWdTMTlqdUctaWt6dlVZOVVtYVZmOVJTRHV4czJzN19GbUJYRTJseVVocUkzZk1pejl6cVFOaEpOVGwtQzZIbkpaOUMzeDJzZDlvZUFhb1JRdUdWMG9vVmhfOUFCT1E0QjZVV0RnYzJBbWtjeDZodVRVMS1IdGkxSTdTdmNxZEhhWUJpX2xZQU5GbDFuSGhyMTBkeXZNZw" },
   { time: "07:00", tag: "tech", tagText: "科技", text: "Uber考虑提高对Delivery Hero的收购报价，此前115亿欧元要约被拒。Uber已接触这家德国食品集团的主要股东，寻求达成交易。", source: "Financial Times", url: "https://www.ft.com/content/04f5d191-f5d9-4221-bf62-c34c879ab81b" },
   { time: "07:00", tag: "geo", tagText: "地缘", text: "南加州一化学储罐出现“潜在裂缝”，消防官员称这可能有助于防止爆炸，允许当局逐步排空化学品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/california-chemical-tank.html" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "20:00", tag: "crypto", tagText: "加密", text: "比特币突破77,000美元，市场信心增强。受伊朗停火协议预期及宏观情绪改善推动，比特币价格大幅上涨，突破77,000美元关口。分析师指出，地缘政治风险缓解和流动性充裕共同推动了此轮涨势。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOW1WOHBMM3EzbGY2V1F4cFdsUWlVTndrN0M5U01OWUtlaFZ6bHQ2MkZid2puT1FWWkJKaGZMRldwTkwyVjZ0Tk5idjhHTmw1TWZHWWFqUkZlRHB0djBwdUFwVVotaW92RC0wWThMMXR5TXVHMExXZ0I3VzFkUnI4dlRjUUxaaTNXSzZv?oc=5" },
   { time: "19:26", tag: "geo", tagText: "地缘", text: "巴基斯坦俾路支省首府奎达附近铁路线发生爆炸，造成至少16人死亡。分离主义组织已宣称对此次袭击负责。该事件凸显巴基斯坦西南部动荡地区的安全局势持续恶化。", source: "Financial Times", url: "https://www.ft.com/content/7b08d851-4464-47cd-b760-57a3fcc9513b" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "分析师建议关注中国科技股以抵御宏观波动。多位分析师指出，当前投资中国股票应聚焦人工智能相关标的，无论整体经济增长放缓与否，AI主题仍具韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/china-tech-plays-to-ride-out-macro-volatility.html" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "分析警告，AI相关IPO热潮可能预示着市场见顶。大量AI公司集中上市将增加股票供应，削弱此前推动股价上涨的动力，投资者需警惕市场过热风险。", source: "Financial Times", url: "https://www.ft.com/content/7e153dc1-7e13-44d0-9c49-8071a4c29261" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "持续三个月的伊朗战争正给美国债务带来沉重压力。美国政府借贷成本已升至2007年以来最高水平，分析指出冲突可能使美国额外增加数十亿美元的利息支出。", source: "Financial Times", url: "https://www.ft.com/content/d66b0e94-2f80-4d9a-a1a0-2bf5ce837a66" },
-  { time: "17:19", tag: "geo", tagText: "地缘", text: "中东战争正考验海湾国家成为AI中心的雄心。分析师指出，对数据中心设施的袭击以及持续高企的能源价格，已改变运营商的成本与安全考量。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/middle-east-war-testing-gulfs-ambitions-to-become-ai-hub.html" },
-  { time: "13:49", tag: "crypto", tagText: "加密", text: "稳定币总市值达到3230亿美元的历史新高，同时以太坊质押量也创下峰值。分析师指出，这一Q2数据相关性值得关注，可能预示市场流动性充裕。", source: "AMBCrypto", url: "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBwX1hHU0JJMEFoUkRmZU55RE1LbWloWjhrOVF1dldFMzRSa3dwXzBKR0VHWE5qUE42OVZSUDVXNldBTkxtbnfSAawBQVVfeXFMUFBiVUd5elYyUWJQMklxSFBnZjJaOVp6U2pGVXFvT0cySG03SFVWcGVSTnRXNThzYzA3TG0xdTkweFlESHh1QllzcHg1Z2stSS00WTBXbUNVZlQzYmREN3VpYjRxU3lYcG5XNlB3d01jNTJjM3hGVEo1SFA0b2t5ZjE2RXZZRGRqRUJvVEpiR20xbHBJa2JscUVqbjEzTEFER2xSOGtaaXhic1BYRA?oc=5" },
 ];
-const breakingDate = "2026年5月25日 07:06 CST";
+const breakingDate = "2026年5月25日 12:45 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "11:28", tag: "ai", tagText: "AI", text: "AI芯片股迎来新一轮看涨：英伟达、美光、高通获多家机构上调评级，市场对AI芯片需求持续乐观。", source: "Gotrade", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQSndlZkJVcXNZNmVYR1dud3VhMjRNSXRNR3F5VlFTQ1VCYVlLdDlQUzVtZ2pPSnBXRWlmejdZQ0lXRkVDVGF6ZHRpZzd5ZU1aQVhCQ2ZINlE0d2NwMEg2Q2x5VmVlM3NGTzh0U2kyYmdTeHdzVzBnTUJwZUhPc0ZpMF9UaUlXWlBtX3c?oc=5" },
   { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
   { time: "06:34", tag: "macro", tagText: "宏观", text: "美国国债持续攀升，开始考验AI融资热潮的可持续性。分析指出，不断膨胀的政府债务可能推高利率，收紧市场流动性，进而对高度依赖资本投入的AI初创公司构成融资压力。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVhKcDJpNWVGVE9USV8yWjFmMnFNczhBQjhXQTM2TTFPN3VXempIcXNMQU01WV9JSjE1RmdRbXhCQjN0dFBBU2Q5bnlYZTc2RXpxa3dKb0tfcFdFY1BKMFdsOHBZM1dfTG5PQjFKc1hrNWk5TkNBcl9QQWtyVEZhQ3VYY3lFTi01SEE?oc=5" },
   { time: "05:39", tag: "ai", tagText: "AI", text: "所有人都在实时应对AI安全挑战——谷歌也不例外。报道指出，当前正处于AI安全过渡期，即使是科技巨头也在摸索中前行，凸显了AI安全治理的紧迫性和不确定性。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
   { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
   { time: "17:38", tag: "ai", tagText: "AI", text: "中国AI初创企业融资激增，资本正追逐规模化扩张。最新数据显示，大量资金涌入中国AI赛道，投资者更青睐具备快速扩张能力的公司，反映出市场对AI规模化应用的强烈信心。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNU1p4SjlvWGJpRnNMUVJQeE1nelB5WXFubFY5MWpuWGY3Y3RmZHhBS202SzZiUHJmNVcyNTN0VEFRWDhjOWJYYVFWd3k0c0dQVWh0YVNYV05XNnh1dnJnX0xrVnpxbTNXRmg5WTJrMU8wdUZKZkNxNFIyQklDbkVNMF9ZYVI5QTdMWmtucERDMHBFRmZwM3c?oc=5" },
-  { time: "17:00", tag: "ai", tagText: "AI", text: "AI为一位八旬老人带来医学突破。纽约每日新闻报道，人工智能技术帮助一位80多岁的老年患者取得了重要的医疗进展，具体细节未披露，但凸显了AI在个性化医疗和老年健康领域的应用潜力。", source: "New York Daily News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbC1MWjZRTjdtVWtrN3QxWTVRaXJiR29oUFJVU0s1RFRIclVSZklGM0RGNlRCTVVGSXhwcEN2dU4waHN3dnkzUVktNDR0c24tQkFRY2pONEhDTExsTDZmZGwxaUxIYW1HYnpDSzQ2aTZuNkxmcjhjVHBMZzdfNjNZZzRVX3E5bWs?oc=5" },
 ];
-const aiBreakingDate = "2026年5月25日 07:06 CST";
+const aiBreakingDate = "2026年5月25日 12:45 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
