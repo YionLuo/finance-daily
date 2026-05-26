@@ -1,5 +1,374 @@
 # Y Daily 健康检查执行记录
 
+## 2026-05-26 16:44
+- **状态**: ✅ OK
+- **Breaking News**: 4 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-26 12:40
+- **状态**: ✅ OK
+- **Breaking News**: 20 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-26 08:35
+- **状态**: ✅ OK
+- **Breaking News**: 78 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-26 04:31
+- **状态**: ✅ OK
+- **Breaking News**: 37 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-26 00:29
+- **状态**: ✅ OK
+- **Breaking News**: 34 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-25 20:28
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 463 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-25 16:27
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 222 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-25 12:26
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 320 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 500, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-25 08:25
+- **状态**: ✅ OK
+- **Breaking News**: 79 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-25 04:24
+- **状态**: ✅ OK
+- **Breaking News**: 48 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-25 00:23
+- **状态**: ✅ OK
+- **Breaking News**: 69 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-24 20:14
+- **状态**: ✅ OK
+- **Breaking News**: 38 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-24 16:13
+- **状态**: ✅ OK
+- **Breaking News**: 20 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-24 12:12
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 306 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-24 08:11
+- **状态**: ✅ OK
+- **Breaking News**: 65 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-24 04:10
+- **状态**: ✅ OK
+- **Breaking News**: 45 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-24 00:05
+- **状态**: ✅ OK
+- **Breaking News**: 53 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-23 20:04
+- **状态**: ✅ OK
+- **Breaking News**: 42 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-23 16:03
+- **状态**: ✅ OK
+- **Breaking News**: 81 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-23 12:02
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 288 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-23 08:01
+- **状态**: ✅ OK
+- **Breaking News**: 47 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-23 04:00
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 121 分钟前最后提交，刚超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-22 23:57
+- **状态**: ✅ OK（Breaking News 正常）
+- **Breaking News**: 41 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: MISSING（today's report not found），但 API 不可用无法恢复
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无需恢复（Breaking News 正常，日报 API 不可用跳过）
+
+## 2026-05-22 19:42
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 193 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-21 22:15
+- **状态**: ✅ OK
+- **Breaking News**: 82 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-21 17:58
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 282 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-21 13:52
+- **状态**: ✅ OK
+- **Breaking News**: 36 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-21 09:51
+- **状态**: ✅ OK
+- **Breaking News**: 96 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-21 05:50
+- **状态**: ✅ OK
+- **Breaking News**: 45 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-21 01:49
+- **状态**: ✅ OK
+- **Breaking News**: 60 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-20 21:48
+- **状态**: ✅ OK
+- **Breaking News**: 113 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-20 09:21
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 125 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-20 05:20
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 129 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-20 01:19
+- **状态**: ✅ OK
+- **Breaking News**: 31 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-19 21:18
+- **状态**: ✅ OK
+- **Breaking News**: 28 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-19 17:16
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 247 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-19 13:15
+- **状态**: ✅ OK
+- **Breaking News**: 6 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-19 09:14
+- **状态**: ✅ OK
+- **Breaking News**: 58 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-19 05:13
+- **状态**: ✅ OK
+- **Breaking News**: 31 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-19 01:12
+- **状态**: ✅ OK
+- **Breaking News**: 26 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-18 20:47
+- **状态**: ✅ OK
+- **Breaking News**: 4 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-18 03:02
+- **状态**: ✅ OK
+- **Breaking News**: 113 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-17 22:47
+- **状态**: ✅ OK
+- **Breaking News**: 55 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-15 18:23
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 131 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-15 14:22
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 130 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-15 10:21
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 195 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-15 06:20
+- **状态**: ✅ OK
+- **Breaking News**: 62 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-15 02:09
+- **状态**: ✅ OK
+- **Breaking News**: 5 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-14 22:08
+- **状态**: ✅ OK
+- **Breaking News**: 68 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-14 18:02
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 135 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-14 13:51
+- **状态**: ✅ OK
+- **Breaking News**: 57 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-13 16:16
+- **状态**: ✅ OK
+- **Breaking News**: 10 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-13 12:14
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 243 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-13 08:13
+- **状态**: ✅ OK
+- **Breaking News**: 2 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-13 04:12
+- **状态**: ✅ OK
+- **Breaking News**: 68 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-13 00:11
+- **状态**: ⚠️ STALE → 未恢复（API 不可用）
+- **Breaking News**: 125 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **API 状态**: once.novai.su 503, deepseek.com 401
+- **操作**: 无法恢复，等待下一周期重试
+
+## 2026-05-12 20:10
+- **状态**: ✅ OK
+- **Breaking News**: 90 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **操作**: 无需恢复
+
+## 2026-05-12 12:07
+- **状态**: ⚠️ STALE → ⚠️ 部分恢复（仅时间戳+Fear&Greed）
+- **Breaking News**: 240 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未到检查时间）
+- **API 状态**: once.novai.su 503（`deepseek-v4-flash` model_not_found），deepseek.com 401（key 无效）
+- **操作**: 运行 update_breaking.py，RSS 抓取成功（finance 22 篇 + AI 6 篇），LLM 分析全部失败（0 条新内容），仅更新时间戳（08:06→12:08 CST）+ Fear & Greed 66.89（greed），新闻条目无变化
+- **提交**: `auto: health check recovery breaking news 2026-05-12 12:08 CST` → push OK
+- **注意**: API 端点 `once.novai.su` 持续 503（deepseek-v4-flash 不可用），已连续多次 LLM 不可用
+
 ## 2026-05-12 08:06
 - **状态**: ✅ OK
 - **Breaking News**: 110 分钟前最后提交，在 120min 阈值内
