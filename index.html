@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 60.74,
+  score: 61.4,
   rating: "greed",
-  timestamp: "2026-05-27T00:00:00+00:00",
+  timestamp: "2026-05-27T08:27:31+00:00",
   previousClose: 60.83,
   previous1Week: 60.26,
   previous1Month: 66.29,
   previous1Year: 65.74,
-  date: "2026年5月27日 12:43 CST"
+  date: "2026年5月27日 16:46 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:45", tag: "macro", tagText: "宏观", text: "美国消费者面临支出紧缩压力，因特朗普减税红利消退，同时霍尔木兹海峡封锁导致燃油价格飙升50%。家庭购买力受到双重挤压，消费支出前景堪忧。", source: "Financial Times", url: "https://www.ft.com/content/60c7a1ea-9b8a-4f11-b3cb-109fade74e48" },
+  { time: "12:45", tag: "macro", tagText: "宏观", text: "化肥生产商因伊朗战争导致硫磺供应紧张而减产。硫磺是磷酸盐肥料的关键原料，供应短缺将迫使发展中国家农民减少施肥量，可能导致农作物减产，加剧全球粮食安全风险。", source: "Financial Times", url: "https://www.ft.com/content/3cf63a2a-f0a8-4a3b-86e8-77476af5caf7" },
+  { time: "12:45", tag: "macro", tagText: "宏观", text: "欧洲如何学会爱上补贴：欧盟国家援助规模大幅增加。分析指出，此举虽旨在抵御中国竞争，但可能分裂单一市场，引发内部贸易摩擦和效率损失。", source: "Financial Times", url: "https://www.ft.com/content/b3e968c3-9089-417b-9757-95020eb0f469" },
+  { time: "12:45", tag: "tech", tagText: "科技", text: "AI热潮与场外交易激增推动日本散户交易量飙升。东京证券交易所主板市场日均交易量在12个月内几乎翻倍，散户投资者积极参与AI相关股票和衍生品交易。", source: "Financial Times", url: "https://www.ft.com/content/2cf9dacf-08ee-4a3b-bfbe-ba6b8f3c955b" },
   { time: "07:00", tag: "crypto", tagText: "加密", text: "加密货币市场因美伊协议希望而反弹，原油暴跌推动资金流入加密资产。比特币价格波动，分析师警告可能先跌至7.25万美元再反弹。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTUpHa3hYb0JFWFF5ZnRvaklMdGNOMHEzN0pNc1dnRURSOEJQTWFzX0dyY0RGX2otLWdTMTlqdUctaWt6dlVZOVVtYVZmOVJTRHV4czJzN19GbUJYRTJseVVocUkzZk1pejl6cVFOaEpOVGwtQzZIbkpaOUMzeDJzZDlvZUFhb1JRdUdWMG9vVmhfOUFCT1E0QjZVV0RnYzJBbWtjeDZodVRVMS1IdGkxSTdTdmNxZEhhWUJpX2xZQU5GbDFuSGhyMTBkeXZNZw" },
   { time: "07:00", tag: "tech", tagText: "科技", text: "Uber考虑提高对Delivery Hero的收购报价，此前115亿欧元要约被拒。Uber已接触这家德国食品集团的主要股东，寻求达成交易。", source: "Financial Times", url: "https://www.ft.com/content/04f5d191-f5d9-4221-bf62-c34c879ab81b" },
   { time: "07:00", tag: "geo", tagText: "地缘", text: "南加州一化学储罐出现“潜在裂缝”，消防官员称这可能有助于防止爆炸，允许当局逐步排空化学品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/california-chemical-tank.html" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "19:26", tag: "geo", tagText: "地缘", text: "巴基斯坦俾路支省首府奎达附近铁路线发生爆炸，造成至少16人死亡。分离主义组织已宣称对此次袭击负责。该事件凸显巴基斯坦西南部动荡地区的安全局势持续恶化。", source: "Financial Times", url: "https://www.ft.com/content/7b08d851-4464-47cd-b760-57a3fcc9513b" },
   { time: "19:23", tag: "geo", tagText: "地缘", text: "俄罗斯向美国国务卿鲁比奥发出警告，称将针对基辅发动“系统性、持续性的打击”，建议美国公民立即离开乌克兰首都。此举标志着俄乌冲突进一步升级，市场对地缘风险担忧加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/russia-ukraine-war-rubio-trump-lavrov-kyiv.html" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "分析师建议关注中国科技股以抵御宏观波动。多位分析师指出，当前投资中国股票应聚焦人工智能相关标的，无论整体经济增长放缓与否，AI主题仍具韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/china-tech-plays-to-ride-out-macro-volatility.html" },
-  { time: "12:45", tag: "macro", tagText: "宏观", text: "美国消费者面临支出紧缩压力，因特朗普减税红利消退，同时霍尔木兹海峡封锁导致燃油价格飙升50%。家庭购买力受到双重挤压，消费支出前景堪忧。", source: "Financial Times", url: "https://www.ft.com/content/60c7a1ea-9b8a-4f11-b3cb-109fade74e48" },
-  { time: "12:45", tag: "macro", tagText: "宏观", text: "化肥生产商因伊朗战争导致硫磺供应紧张而减产。硫磺是磷酸盐肥料的关键原料，供应短缺将迫使发展中国家农民减少施肥量，可能导致农作物减产，加剧全球粮食安全风险。", source: "Financial Times", url: "https://www.ft.com/content/3cf63a2a-f0a8-4a3b-86e8-77476af5caf7" },
-  { time: "12:45", tag: "macro", tagText: "宏观", text: "欧洲如何学会爱上补贴：欧盟国家援助规模大幅增加。分析指出，此举虽旨在抵御中国竞争，但可能分裂单一市场，引发内部贸易摩擦和效率损失。", source: "Financial Times", url: "https://www.ft.com/content/b3e968c3-9089-417b-9757-95020eb0f469" },
-  { time: "12:45", tag: "tech", tagText: "科技", text: "AI热潮与场外交易激增推动日本散户交易量飙升。东京证券交易所主板市场日均交易量在12个月内几乎翻倍，散户投资者积极参与AI相关股票和衍生品交易。", source: "Financial Times", url: "https://www.ft.com/content/2cf9dacf-08ee-4a3b-bfbe-ba6b8f3c955b" },
 ];
-const breakingDate = "2026年5月27日 12:43 CST";
+const breakingDate = "2026年5月27日 16:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "17:55", tag: "ai", tagText: "AI", text: "Uber总裁表示AI支出越来越难以证明合理性。据报道，Uber在2026年仅四个月内就用完了年度AI预算，但并未看到显著回报，引发对AI投资泡沫的担忧。", source: "The Verge", url: "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify" },
   { time: "17:38", tag: "ai", tagText: "AI", text: "中国AI初创企业融资激增，资本正追逐规模化扩张。最新数据显示，大量资金涌入中国AI赛道，投资者更青睐具备快速扩张能力的公司，反映出市场对AI规模化应用的强烈信心。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNU1p4SjlvWGJpRnNMUVJQeE1nelB5WXFubFY5MWpuWGY3Y3RmZHhBS202SzZiUHJmNVcyNTN0VEFRWDhjOWJYYVFWd3k0c0dQVWh0YVNYV05XNnh1dnJnX0xrVnpxbTNXRmg5WTJrMU8wdUZKZkNxNFIyQklDbkVNMF9ZYVI5QTdMWmtucERDMHBFRmZwM3c?oc=5" },
 ];
-const aiBreakingDate = "2026年5月27日 12:43 CST";
+const aiBreakingDate = "2026年5月27日 16:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
