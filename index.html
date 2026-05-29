@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 60.31,
+  score: 60,
   rating: "greed",
-  timestamp: "2026-05-29T12:07:01+00:00",
+  timestamp: "2026-05-29T16:46:07+00:00",
   previousClose: 60.23,
   previous1Week: 58.97,
   previous1Month: 66.23,
   previous1Year: 64.46,
-  date: "2026年5月29日 20:25 CST"
+  date: "2026年5月30日 00:51 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,11 @@ const breakingNews = [
   { time: "01:29", tag: "tech", tagText: "科技", text: "SpaceX即将上市，市场关注其应归入标普500哪个行业板块。分析师讨论其业务涵盖太空火箭、卫星、数据中心及AI模型Grok，行业分类存在争议。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/spacex-sp-sector-index.html" },
   { time: "01:01", tag: "geo", tagText: "地缘", text: "特朗普称伊朗谈判进展“有序且具建设性”，但警告不会急于达成协议。总统表示，在“协议达成、认证并签署”之前，美国对伊朗港口的 naval 封锁将继续有效。市场对霍尔木兹海峡重新开放的预期有所降温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/trump-iran-war-talks.html" },
 ];
-const breakingDate = "2026年5月29日 20:25 CST";
+const breakingDate = "2026年5月30日 00:51 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "《特定常规武器公约》在日内瓦联合国召开会议，聚焦致命自主武器系统。专家警告AI战争已现实存在，国际社会亟需划定红线，防止失控的自主武器造成人道主义灾难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "黑客正学习利用聊天机器人的“个性”进行攻击。报道指出，攻击者不再仅依赖技术漏洞，而是通过操纵AI助手的对话风格和预设角色来实施欺诈或获取敏感信息，安全威胁呈现新形态。", source: "The Verge", url: "https://www.theverge.com/column/935545/hackers-ai-chatbots" },
   { time: "19:53", tag: "tech", tagText: "科技", text: "AMD、博通和谷歌联合加强反英伟达攻势，AI半导体格局面临潜在重组。三家公司正通过合作开发替代方案，试图打破英伟达在AI芯片市场的主导地位。", source: "economy.ac", url: "https://news.google.com/rss/articles/CBMiV0FVX3lxTE83Qi1QQTU2NVlmRnU3QlVaejg0NE1NdnF2MVFDdzNLUXNoT2RETmYzWWhESGhaUEdpX0wxUG5VTVZWcjFMRmo5am8xM19tSGJLZWFqOGozUQ?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "02:17", tag: "ai", tagText: "AI", text: "马斯克的AI聊天机器人Grok表现不佳，用户量稀少。路透社报道指出，这款号称“追求真相”的AI产品并未获得市场认可，马斯克应停止强行推广。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen" },
   { time: "01:48", tag: "tech", tagText: "科技", text: "英伟达CEO黄仁勋在Computex 2026期间飞往台积电，因新一代Vera Rubin芯片量产对台湾供应链造成压力。此举凸显全球AI芯片产能高度集中于台湾的地缘风险。", source: "Tech Times", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOYlZTam1zMjA1azVXcVJRZHNxb2ZnR3NwRjF2d2tBSjhjZnd5cDBTVzdTT3h3N0F2ek9SeFpmN2l1bWQxYnprLUFlSWhjRWQxc3RYNEhrSUk2VDRNYkJlaHJGcHlZZ3lQZmZIa2piQW13SjZBT0RjTW9PWGhQMFlOV1pFOVlyRVEyYzc0UnZ5N3ZJV3RWSlBva245VURaNHZQMWVhYWE3MERZNFh1OXktazV2M2wta1FEaWkwUXNTcVlUdkxVQm5QYVlXWVZjZVlQRHY1M2dHQWRnd3c?oc=5" },
   { time: "01:37", tag: "tech", tagText: "科技", text: "谷歌展示其原型Android XR智能眼镜，该眼镜可将Gemini驱动的实时翻译、导航等信息直接叠加在用户视野中。体验者评价其功能“接近成熟”，但仍需完善，标志着谷歌在AI可穿戴设备领域迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" },
-  { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月29日 20:25 CST";
+const aiBreakingDate = "2026年5月30日 00:51 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
