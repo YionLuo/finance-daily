@@ -1,5 +1,92 @@
 # Y Daily 健康检查执行记录
 
+## 2026-05-29 06:39
+- **状态**: ✅ OK
+- **Breaking News**: 36 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-29 02:30
+- **状态**: ✅ OK
+- **Breaking News**: 90 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-28 18:02
+- **状态**: ✅ OK
+- **Breaking News**: 72 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-28 13:56
+- **状态**: ✅ OK
+- **Breaking News**: 93 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-28 09:34
+- **状态**: ✅ OK
+- **Breaking News**: 118 分钟前最后提交，在 120min 阈值内（临界值）
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-28 05:30
+- **状态**: ✅ OK
+- **Breaking News**: 119 分钟前最后提交，在 120min 阈值内（临界值）
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-28 01:22
+- **状态**: ✅ OK
+- **Breaking News**: 40 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-27 21:17
+- **状态**: ✅ OK
+- **Breaking News**: 48 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-27 17:11
+- **状态**: ✅ OK
+- **Breaking News**: 26 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-27 13:06
+- **状态**: ✅ OK
+- **Breaking News**: 23 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-27 09:03
+- **状态**: ✅ OK
+- **Breaking News**: 102 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-27 04:59
+- **状态**: ✅ OK
+- **Breaking News**: 94 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-27 00:55
+- **状态**: ✅ OK
+- **Breaking News**: 5 分钟前最后提交，在 120min 阈值内
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **操作**: 无需恢复
+
+## 2026-05-26 20:50
+- **状态**: ⚠️ STALE → ✅ 已恢复
+- **Breaking News**: 247 分钟前最后提交，超过 120min 阈值
+- **Finance/AI Daily**: SKIP（未过 22:00 CST + grace period）
+- **API 状态**: once.novai.su ✅ 可用（health_check 内置 120s 超时不够，直接运行成功）
+- **操作**: 直接运行 update_breaking.py（绕过 health_check 的子进程超时），RSS 抓取成功（finance 50 篇 + AI 7 篇），LLM 分析成功，新增 5 条金融 + 3 条 AI 新闻
+- **提交**: `auto: health check recovery breaking news 2026-05-26 20:50 CST` → push OK
+- **注意**: health_check.py 内置的 subprocess timeout (120s) 不够 update_breaking.py 完成（API 响应慢），本次直接调用成功
+
 ## 2026-05-26 16:44
 - **状态**: ✅ OK
 - **Breaking News**: 4 分钟前最后提交，在 120min 阈值内
