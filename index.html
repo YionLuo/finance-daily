@@ -1618,17 +1618,24 @@
 const fearGreedData = {
   score: 60.31,
   rating: "greed",
-  timestamp: "2026-05-29T08:31:46+00:00",
+  timestamp: "2026-05-29T12:07:01+00:00",
   previousClose: 60.23,
   previous1Week: 58.97,
   previous1Month: 66.23,
   previous1Year: 64.46,
-  date: "2026年5月29日 16:49 CST"
+  date: "2026年5月29日 20:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:25", tag: "macro", tagText: "宏观", text: "英国石油巨头BP董事会一致决定立即罢免董事长Albert Manifold，理由是其行为引发“严重担忧”。BP同时任命Ian Tyler为临时董事长。这是BP近期第二位被罢免的高管，公司治理问题引发市场关注，BP股价下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/bp-chair-albert-manifold-removed-conduct-governance-issues.html" },
+  { time: "20:23", tag: "geo", tagText: "地缘", text: "美国对伊朗南部导弹基地发动“自卫打击”，同时和平谈判仍在进行。五角大楼称目标包括导弹发射场和试图布设水雷的伊朗船只。此举正值特朗普政府推动与伊朗达成协议之际，市场对和平前景保持谨慎乐观。", source: "Financial Times", url: "https://www.ft.com/content/eec48003-35a8-4932-bac0-573cdaade0e5" },
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "美股处于盈利热潮中，但夏季面临多重风险。主要基准指数处于历史高位，但投资者需警惕伊朗局势、通胀反复及地缘冲突升级等风险，未来几个月市场可能波动加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/stocks-are-riding-an-earnings-hot-streak-but-investors-are-facing-a-summer-thats-rife-with-risks-67a700e4?mod=mw_rss_topstories" },
+  { time: "20:00", tag: "crypto", tagText: "加密", text: "比特币突破77,000美元，市场信心增强。受伊朗停火协议预期及宏观情绪改善推动，比特币价格大幅上涨，突破77,000美元关口。分析师指出，地缘政治风险缓解和流动性充裕共同推动了此轮涨势。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOW1WOHBMM3EzbGY2V1F4cFdsUWlVTndrN0M5U01OWUtlaFZ6bHQ2MkZid2puT1FWWkJKaGZMRldwTkwyVjZ0Tk5idjhHTmw1TWZHWWFqUkZlRHB0djBwdUFwVVotaW92RC0wWThMMXR5TXVHMExXZ0I3VzFkUnI4dlRjUUxaaTNXSzZv?oc=5" },
+  { time: "19:54", tag: "tech", tagText: "科技", text: "法拉利推出首款全电动车型后股价大幅下跌。市场对这款售价超50万美元的电动超跑反应冷淡，投资者担忧其盈利能力及传统豪华车品牌转型电动化的挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/ferrari-stock-shares-luce-electric-vehicle-ev-launch.html" },
+  { time: "19:47", tag: "tech", tagText: "科技", text: "量子计算公司Quantinuum设定IPO条款，计划融资最高10亿美元，估值接近130亿美元。该公司是量子计算领域头部企业，此次上市被视为行业里程碑，有望吸引大量科技投资关注。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-new-quantum-stock-could-debut-with-a-valuation-of-nearly-13-billion-9593b4e4" },
+  { time: "19:26", tag: "geo", tagText: "地缘", text: "巴基斯坦俾路支省首府奎达附近铁路线发生爆炸，造成至少16人死亡。分离主义组织已宣称对此次袭击负责。该事件凸显巴基斯坦西南部动荡地区的安全局势持续恶化。", source: "Financial Times", url: "https://www.ft.com/content/7b08d851-4464-47cd-b760-57a3fcc9513b" },
   { time: "10:29", tag: "tech", tagText: "科技", text: "LG电子股价飙升24%，公司发布基于谷歌技术的汽车创新产品，包括车载信息娱乐系统和自动驾驶解决方案。市场看好其与谷歌合作在汽车电子领域的增长潜力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/29/lg-electronics-shares-jump-after-debut-of-google-based-car-products.html" },
   { time: "10:28", tag: "tech", tagText: "科技", text: "三星电子开始向全球客户出货下一代AI内存芯片HBM4E样品，股价一度大涨6%。该芯片是高性能计算关键组件，有望巩固三星在AI存储市场的领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/05/29/samsung-hbm4e-chip-samples-ai-memory.html" },
   { time: "10:07", tag: "geo", tagText: "地缘", text: "美国接近达成延长伊朗停火协议，但伊朗同时发射导弹。特朗普政府希望协议即将达成，双方此前交火。总统考虑暂停战争两个月，但强调不会急于达成协议，海军封锁将继续。", source: "Financial Times", url: "https://www.ft.com/content/89c43161-27c3-4e4d-a5f6-49d895cde3da" },
@@ -1642,18 +1649,19 @@ const breakingNews = [
   { time: "01:34", tag: "crypto", tagText: "加密", text: "以太坊联合创始人Vitalik Buterin表示，以太坊基金会将缩减规模并减少ETH出售，以应对研究员离职潮。此举旨在优化运营并减少市场抛压。", source: "The Block", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMDlyMFBLbjVHWVM0Q0ZFNzlFZ3UyUUwwZ25FdDlCQmRvT0FhaEY1MnJiNDhPMTlWVzZteFpNNTczSUdsZDFvUUhwMU11RllDbjMwb0tQanZFRm8yeVhIal9MM19uME5kTmZ1bHQwMmtBVW5PSGdZMUR2WUNRQTBndFlHY3puZ1B1V3h0TTk0OTl4Wks1bGpzWXVKd0FfSkZ5enJjQ0FtcWFubmE4d3hFd2NlbTMzQ0pYeDlCbF95SjhXN1RnZTU4aXA3SkMxZU1KdlE?oc=5" },
   { time: "01:29", tag: "tech", tagText: "科技", text: "SpaceX即将上市，市场关注其应归入标普500哪个行业板块。分析师讨论其业务涵盖太空火箭、卫星、数据中心及AI模型Grok，行业分类存在争议。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/spacex-sp-sector-index.html" },
   { time: "01:01", tag: "geo", tagText: "地缘", text: "特朗普称伊朗谈判进展“有序且具建设性”，但警告不会急于达成协议。总统表示，在“协议达成、认证并签署”之前，美国对伊朗港口的 naval 封锁将继续有效。市场对霍尔木兹海峡重新开放的预期有所降温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/trump-iran-war-talks.html" },
-  { time: "20:25", tag: "macro", tagText: "宏观", text: "英国石油巨头BP董事会一致决定立即罢免董事长Albert Manifold，理由是其行为引发“严重担忧”。BP同时任命Ian Tyler为临时董事长。这是BP近期第二位被罢免的高管，公司治理问题引发市场关注，BP股价下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/bp-chair-albert-manifold-removed-conduct-governance-issues.html" },
-  { time: "20:23", tag: "geo", tagText: "地缘", text: "美国对伊朗南部导弹基地发动“自卫打击”，同时和平谈判仍在进行。五角大楼称目标包括导弹发射场和试图布设水雷的伊朗船只。此举正值特朗普政府推动与伊朗达成协议之际，市场对和平前景保持谨慎乐观。", source: "Financial Times", url: "https://www.ft.com/content/eec48003-35a8-4932-bac0-573cdaade0e5" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "美股处于盈利热潮中，但夏季面临多重风险。主要基准指数处于历史高位，但投资者需警惕伊朗局势、通胀反复及地缘冲突升级等风险，未来几个月市场可能波动加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/stocks-are-riding-an-earnings-hot-streak-but-investors-are-facing-a-summer-thats-rife-with-risks-67a700e4?mod=mw_rss_topstories" },
-  { time: "20:00", tag: "crypto", tagText: "加密", text: "比特币突破77,000美元，市场信心增强。受伊朗停火协议预期及宏观情绪改善推动，比特币价格大幅上涨，突破77,000美元关口。分析师指出，地缘政治风险缓解和流动性充裕共同推动了此轮涨势。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOW1WOHBMM3EzbGY2V1F4cFdsUWlVTndrN0M5U01OWUtlaFZ6bHQ2MkZid2puT1FWWkJKaGZMRldwTkwyVjZ0Tk5idjhHTmw1TWZHWWFqUkZlRHB0djBwdUFwVVotaW92RC0wWThMMXR5TXVHMExXZ0I3VzFkUnI4dlRjUUxaaTNXSzZv?oc=5" },
-  { time: "19:54", tag: "tech", tagText: "科技", text: "法拉利推出首款全电动车型后股价大幅下跌。市场对这款售价超50万美元的电动超跑反应冷淡，投资者担忧其盈利能力及传统豪华车品牌转型电动化的挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/ferrari-stock-shares-luce-electric-vehicle-ev-launch.html" },
-  { time: "19:47", tag: "tech", tagText: "科技", text: "量子计算公司Quantinuum设定IPO条款，计划融资最高10亿美元，估值接近130亿美元。该公司是量子计算领域头部企业，此次上市被视为行业里程碑，有望吸引大量科技投资关注。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-new-quantum-stock-could-debut-with-a-valuation-of-nearly-13-billion-9593b4e4" },
-  { time: "19:26", tag: "geo", tagText: "地缘", text: "巴基斯坦俾路支省首府奎达附近铁路线发生爆炸，造成至少16人死亡。分离主义组织已宣称对此次袭击负责。该事件凸显巴基斯坦西南部动荡地区的安全局势持续恶化。", source: "Financial Times", url: "https://www.ft.com/content/7b08d851-4464-47cd-b760-57a3fcc9513b" },
 ];
-const breakingDate = "2026年5月29日 16:49 CST";
+const breakingDate = "2026年5月29日 20:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:00", tag: "ai", tagText: "AI", text: "《特定常规武器公约》在日内瓦联合国召开会议，聚焦致命自主武器系统。专家警告AI战争已现实存在，国际社会亟需划定红线，防止失控的自主武器造成人道主义灾难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "黑客正学习利用聊天机器人的“个性”进行攻击。报道指出，攻击者不再仅依赖技术漏洞，而是通过操纵AI助手的对话风格和预设角色来实施欺诈或获取敏感信息，安全威胁呈现新形态。", source: "The Verge", url: "https://www.theverge.com/column/935545/hackers-ai-chatbots" },
+  { time: "19:53", tag: "tech", tagText: "科技", text: "AMD、博通和谷歌联合加强反英伟达攻势，AI半导体格局面临潜在重组。三家公司正通过合作开发替代方案，试图打破英伟达在AI芯片市场的主导地位。", source: "economy.ac", url: "https://news.google.com/rss/articles/CBMiV0FVX3lxTE83Qi1QQTU2NVlmRnU3QlVaejg0NE1NdnF2MVFDdzNLUXNoT2RETmYzWWhESGhaUEdpX0wxUG5VTVZWcjFMRmo5am8xM19tSGJLZWFqOGozUQ?oc=5" },
+  { time: "19:05", tag: "tech", tagText: "科技", text: "三星与威胁罢工的存储芯片员工达成临时协议，部分员工今年平均可获得34万美元奖金。此举旨在避免生产中断，凸显半导体行业人才争夺激烈。", source: "The Verge", url: "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "谷歌发布全新“任意到任意”AI模型，可跨文本、图像、视频等多种模态进行生成和转换，功能极为强大。该模型基于Gemini技术，能实现如将玩偶照片生成度假视频等创意应用，引发业界对多模态AI能力的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video" },
+  { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
+  { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
+  { time: "17:55", tag: "ai", tagText: "AI", text: "Uber总裁表示AI支出越来越难以证明合理性。据报道，Uber在2026年仅四个月内就用完了年度AI预算，但并未看到显著回报，引发对AI投资泡沫的担忧。", source: "The Verge", url: "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify" },
   { time: "08:44", tag: "ai", tagText: "AI", text: "企业AI搜索初创公司Glean年收入突破3亿美元，同比增长两倍，尽管科技巨头纷纷入局。该公司将“帮助客户削减AI预算”作为核心卖点，通过优化企业AI支出实现逆势增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/" },
   { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
   { time: "06:34", tag: "macro", tagText: "宏观", text: "美国国债持续攀升，开始考验AI融资热潮的可持续性。分析指出，不断膨胀的政府债务可能推高利率，收紧市场流动性，进而对高度依赖资本投入的AI初创公司构成融资压力。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVhKcDJpNWVGVE9USV8yWjFmMnFNczhBQjhXQTM2TTFPN3VXempIcXNMQU01WV9JSjE1RmdRbXhCQjN0dFBBU2Q5bnlYZTc2RXpxa3dKb0tfcFdFY1BKMFdsOHBZM1dfTG5PQjFKc1hrNWk5TkNBcl9QQWtyVEZhQ3VYY3lFTi01SEE?oc=5" },
@@ -1666,16 +1674,8 @@ const aiBreakingNews = [
   { time: "01:48", tag: "tech", tagText: "科技", text: "英伟达CEO黄仁勋在Computex 2026期间飞往台积电，因新一代Vera Rubin芯片量产对台湾供应链造成压力。此举凸显全球AI芯片产能高度集中于台湾的地缘风险。", source: "Tech Times", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOYlZTam1zMjA1azVXcVJRZHNxb2ZnR3NwRjF2d2tBSjhjZnd5cDBTVzdTT3h3N0F2ek9SeFpmN2l1bWQxYnprLUFlSWhjRWQxc3RYNEhrSUk2VDRNYkJlaHJGcHlZZ3lQZmZIa2piQW13SjZBT0RjTW9PWGhQMFlOV1pFOVlyRVEyYzc0UnZ5N3ZJV3RWSlBva245VURaNHZQMWVhYWE3MERZNFh1OXktazV2M2wta1FEaWkwUXNTcVlUdkxVQm5QYVlXWVZjZVlQRHY1M2dHQWRnd3c?oc=5" },
   { time: "01:37", tag: "tech", tagText: "科技", text: "谷歌展示其原型Android XR智能眼镜，该眼镜可将Gemini驱动的实时翻译、导航等信息直接叠加在用户视野中。体验者评价其功能“接近成熟”，但仍需完善，标志着谷歌在AI可穿戴设备领域迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" },
   { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "《特定常规武器公约》在日内瓦联合国召开会议，聚焦致命自主武器系统。专家警告AI战争已现实存在，国际社会亟需划定红线，防止失控的自主武器造成人道主义灾难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "黑客正学习利用聊天机器人的“个性”进行攻击。报道指出，攻击者不再仅依赖技术漏洞，而是通过操纵AI助手的对话风格和预设角色来实施欺诈或获取敏感信息，安全威胁呈现新形态。", source: "The Verge", url: "https://www.theverge.com/column/935545/hackers-ai-chatbots" },
-  { time: "19:53", tag: "tech", tagText: "科技", text: "AMD、博通和谷歌联合加强反英伟达攻势，AI半导体格局面临潜在重组。三家公司正通过合作开发替代方案，试图打破英伟达在AI芯片市场的主导地位。", source: "economy.ac", url: "https://news.google.com/rss/articles/CBMiV0FVX3lxTE83Qi1QQTU2NVlmRnU3QlVaejg0NE1NdnF2MVFDdzNLUXNoT2RETmYzWWhESGhaUEdpX0wxUG5VTVZWcjFMRmo5am8xM19tSGJLZWFqOGozUQ?oc=5" },
-  { time: "19:05", tag: "tech", tagText: "科技", text: "三星与威胁罢工的存储芯片员工达成临时协议，部分员工今年平均可获得34万美元奖金。此举旨在避免生产中断，凸显半导体行业人才争夺激烈。", source: "The Verge", url: "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "谷歌发布全新“任意到任意”AI模型，可跨文本、图像、视频等多种模态进行生成和转换，功能极为强大。该模型基于Gemini技术，能实现如将玩偶照片生成度假视频等创意应用，引发业界对多模态AI能力的广泛讨论。", source: "AI | The Verge", url: "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video" },
-  { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
-  { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
-  { time: "17:55", tag: "ai", tagText: "AI", text: "Uber总裁表示AI支出越来越难以证明合理性。据报道，Uber在2026年仅四个月内就用完了年度AI预算，但并未看到显著回报，引发对AI投资泡沫的担忧。", source: "The Verge", url: "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify" },
 ];
-const aiBreakingDate = "2026年5月29日 16:49 CST";
+const aiBreakingDate = "2026年5月29日 20:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
