@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 58.97,
   previous1Month: 66.23,
   previous1Year: 64.46,
-  date: "2026年5月31日 00:11 CST"
+  date: "2026年5月31日 02:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:47", tag: "ai", tagText: "AI", text: "埃隆·马斯克对OpenAI的攻击实质是为其AI公司xAI铺路。分析指出，马斯克深知OpenAI内部缺陷，此举意在削弱竞争对手并凸显xAI的优势。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/markets/stocks/articles/knows-flaws-because-knows-man-204722212.html" },
+  { time: "01:34", tag: "crypto", tagText: "加密", text: "以太坊联合创始人Vitalik Buterin表示，以太坊基金会将缩减规模并减少ETH出售，以应对研究员离职潮。此举旨在优化运营并减少市场抛压。", source: "The Block", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMDlyMFBLbjVHWVM0Q0ZFNzlFZ3UyUUwwZ25FdDlCQmRvT0FhaEY1MnJiNDhPMTlWVzZteFpNNTczSUdsZDFvUUhwMU11RllDbjMwb0tQanZFRm8yeVhIal9MM19uME5kTmZ1bHQwMmtBVW5PSGdZMUR2WUNRQTBndFlHY3puZ1B1V3h0TTk0OTl4Wks1bGpzWXVKd0FfSkZ5enJjQ0FtcWFubmE4d3hFd2NlbTMzQ0pYeDlCbF95SjhXN1RnZTU4aXA3SkMxZU1KdlE?oc=5" },
+  { time: "01:29", tag: "tech", tagText: "科技", text: "SpaceX即将上市，市场关注其应归入标普500哪个行业板块。分析师讨论其业务涵盖太空火箭、卫星、数据中心及AI模型Grok，行业分类存在争议。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/spacex-sp-sector-index.html" },
+  { time: "01:01", tag: "geo", tagText: "地缘", text: "特朗普称伊朗谈判进展“有序且具建设性”，但警告不会急于达成协议。总统表示，在“协议达成、认证并签署”之前，美国对伊朗港口的 naval 封锁将继续有效。市场对霍尔木兹海峡重新开放的预期有所降温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/trump-iran-war-talks.html" },
   { time: "20:25", tag: "macro", tagText: "宏观", text: "英国石油巨头BP董事会一致决定立即罢免董事长Albert Manifold，理由是其行为引发“严重担忧”。BP同时任命Ian Tyler为临时董事长。这是BP近期第二位被罢免的高管，公司治理问题引发市场关注，BP股价下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/bp-chair-albert-manifold-removed-conduct-governance-issues.html" },
   { time: "20:23", tag: "geo", tagText: "地缘", text: "美国对伊朗南部导弹基地发动“自卫打击”，同时和平谈判仍在进行。五角大楼称目标包括导弹发射场和试图布设水雷的伊朗船只。此举正值特朗普政府推动与伊朗达成协议之际，市场对和平前景保持谨慎乐观。", source: "Financial Times", url: "https://www.ft.com/content/eec48003-35a8-4932-bac0-573cdaade0e5" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "美股处于盈利热潮中，但夏季面临多重风险。主要基准指数处于历史高位，但投资者需警惕伊朗局势、通胀反复及地缘冲突升级等风险，未来几个月市场可能波动加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/stocks-are-riding-an-earnings-hot-streak-but-investors-are-facing-a-summer-thats-rife-with-risks-67a700e4?mod=mw_rss_topstories" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "07:00", tag: "tech", tagText: "科技", text: "Uber考虑提高对Delivery Hero的收购报价，此前115亿欧元要约被拒。Uber已接触这家德国食品集团的主要股东，寻求达成交易。", source: "Financial Times", url: "https://www.ft.com/content/04f5d191-f5d9-4221-bf62-c34c879ab81b" },
   { time: "07:00", tag: "geo", tagText: "地缘", text: "南加州一化学储罐出现“潜在裂缝”，消防官员称这可能有助于防止爆炸，允许当局逐步排空化学品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/california-chemical-tank.html" },
   { time: "06:44", tag: "macro", tagText: "宏观", text: "Costco第三财季同店销售增长9.8%超预期，汽油销量创纪录。油价飙升推动消费者涌入会员制仓储零售商，首次加油会员数量显著增加。", source: "CNBC", url: "https://www.cnbc.com/2026/05/28/costco-cost-q3-2026-earnings.html" },
-  { time: "01:47", tag: "ai", tagText: "AI", text: "埃隆·马斯克对OpenAI的攻击实质是为其AI公司xAI铺路。分析指出，马斯克深知OpenAI内部缺陷，此举意在削弱竞争对手并凸显xAI的优势。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/markets/stocks/articles/knows-flaws-because-knows-man-204722212.html" },
-  { time: "01:34", tag: "crypto", tagText: "加密", text: "以太坊联合创始人Vitalik Buterin表示，以太坊基金会将缩减规模并减少ETH出售，以应对研究员离职潮。此举旨在优化运营并减少市场抛压。", source: "The Block", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMDlyMFBLbjVHWVM0Q0ZFNzlFZ3UyUUwwZ25FdDlCQmRvT0FhaEY1MnJiNDhPMTlWVzZteFpNNTczSUdsZDFvUUhwMU11RllDbjMwb0tQanZFRm8yeVhIal9MM19uME5kTmZ1bHQwMmtBVW5PSGdZMUR2WUNRQTBndFlHY3puZ1B1V3h0TTk0OTl4Wks1bGpzWXVKd0FfSkZ5enJjQ0FtcWFubmE4d3hFd2NlbTMzQ0pYeDlCbF95SjhXN1RnZTU4aXA3SkMxZU1KdlE?oc=5" },
-  { time: "01:29", tag: "tech", tagText: "科技", text: "SpaceX即将上市，市场关注其应归入标普500哪个行业板块。分析师讨论其业务涵盖太空火箭、卫星、数据中心及AI模型Grok，行业分类存在争议。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/spacex-sp-sector-index.html" },
-  { time: "01:01", tag: "geo", tagText: "地缘", text: "特朗普称伊朗谈判进展“有序且具建设性”，但警告不会急于达成协议。总统表示，在“协议达成、认证并签署”之前，美国对伊朗港口的 naval 封锁将继续有效。市场对霍尔木兹海峡重新开放的预期有所降温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/trump-iran-war-talks.html" },
 ];
-const breakingDate = "2026年5月31日 00:11 CST";
+const breakingDate = "2026年5月31日 02:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:48", tag: "tech", tagText: "科技", text: "英伟达CEO黄仁勋在Computex 2026期间飞往台积电，因新一代Vera Rubin芯片量产对台湾供应链造成压力。此举凸显全球AI芯片产能高度集中于台湾的地缘风险。", source: "Tech Times", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOYlZTam1zMjA1azVXcVJRZHNxb2ZnR3NwRjF2d2tBSjhjZnd5cDBTVzdTT3h3N0F2ek9SeFpmN2l1bWQxYnprLUFlSWhjRWQxc3RYNEhrSUk2VDRNYkJlaHJGcHlZZ3lQZmZIa2piQW13SjZBT0RjTW9PWGhQMFlOV1pFOVlyRVEyYzc0UnZ5N3ZJV3RWSlBva245VURaNHZQMWVhYWE3MERZNFh1OXktazV2M2wta1FEaWkwUXNTcVlUdkxVQm5QYVlXWVZjZVlQRHY1M2dHQWRnd3c?oc=5" },
+  { time: "01:37", tag: "tech", tagText: "科技", text: "谷歌展示其原型Android XR智能眼镜，该眼镜可将Gemini驱动的实时翻译、导航等信息直接叠加在用户视野中。体验者评价其功能“接近成熟”，但仍需完善，标志着谷歌在AI可穿戴设备领域迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" },
+  { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "《特定常规武器公约》在日内瓦联合国召开会议，聚焦致命自主武器系统。专家警告AI战争已现实存在，国际社会亟需划定红线，防止失控的自主武器造成人道主义灾难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "黑客正学习利用聊天机器人的“个性”进行攻击。报道指出，攻击者不再仅依赖技术漏洞，而是通过操纵AI助手的对话风格和预设角色来实施欺诈或获取敏感信息，安全威胁呈现新形态。", source: "The Verge", url: "https://www.theverge.com/column/935545/hackers-ai-chatbots" },
   { time: "19:53", tag: "tech", tagText: "科技", text: "AMD、博通和谷歌联合加强反英伟达攻势，AI半导体格局面临潜在重组。三家公司正通过合作开发替代方案，试图打破英伟达在AI芯片市场的主导地位。", source: "economy.ac", url: "https://news.google.com/rss/articles/CBMiV0FVX3lxTE83Qi1QQTU2NVlmRnU3QlVaejg0NE1NdnF2MVFDdzNLUXNoT2RETmYzWWhESGhaUEdpX0wxUG5VTVZWcjFMRmo5am8xM19tSGJLZWFqOGozUQ?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "03:03", tag: "ai", tagText: "AI", text: "AI初创公司Recursive AI凭借其自我改进技术获得46.5亿美元估值，成为AI领域新晋独角兽。该公司核心技术使AI模型能够自主优化性能，无需大量人工干预，引发市场高度关注。", source: "StartupHub.ai", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMmFBbktHMXNWRmQ0R2RkdlFfczNEaGVuQlNDVHJPUUYxQ0NFdTlHV0xqdV8wQm40ekdFd1Z1TTFOUG8weUlHOXB1TlBwWjBFTXIwNEFCSnBZSGozWW1IUkw2Q091RkthbnF2U3hKSTZhTzNVSktCckRSWnd6QzBQYmRYVDhscVJZenkxU2IwOS0yU2piR1E1cWVHeTR4OVFKTk5kM0pmS1M0TGVnN1lN?oc=5" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "美国大学毕业生在毕业典礼上对鼓吹AI的高管报以嘘声和起哄，高管们对此感到意外。这一现象反映出年轻一代对AI取代就业岗位的焦虑与不满。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/935602/graduates-boo-ai-ceos" },
   { time: "02:17", tag: "ai", tagText: "AI", text: "马斯克的AI聊天机器人Grok表现不佳，用户量稀少。路透社报道指出，这款号称“追求真相”的AI产品并未获得市场认可，马斯克应停止强行推广。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen" },
-  { time: "01:48", tag: "tech", tagText: "科技", text: "英伟达CEO黄仁勋在Computex 2026期间飞往台积电，因新一代Vera Rubin芯片量产对台湾供应链造成压力。此举凸显全球AI芯片产能高度集中于台湾的地缘风险。", source: "Tech Times", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOYlZTam1zMjA1azVXcVJRZHNxb2ZnR3NwRjF2d2tBSjhjZnd5cDBTVzdTT3h3N0F2ek9SeFpmN2l1bWQxYnprLUFlSWhjRWQxc3RYNEhrSUk2VDRNYkJlaHJGcHlZZ3lQZmZIa2piQW13SjZBT0RjTW9PWGhQMFlOV1pFOVlyRVEyYzc0UnZ5N3ZJV3RWSlBva245VURaNHZQMWVhYWE3MERZNFh1OXktazV2M2wta1FEaWkwUXNTcVlUdkxVQm5QYVlXWVZjZVlQRHY1M2dHQWRnd3c?oc=5" },
-  { time: "01:37", tag: "tech", tagText: "科技", text: "谷歌展示其原型Android XR智能眼镜，该眼镜可将Gemini驱动的实时翻译、导航等信息直接叠加在用户视野中。体验者评价其功能“接近成熟”，但仍需完善，标志着谷歌在AI可穿戴设备领域迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" },
-  { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
 ];
-const aiBreakingDate = "2026年5月31日 00:11 CST";
+const aiBreakingDate = "2026年5月31日 02:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
