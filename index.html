@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 54,
   rating: "neutral",
-  timestamp: "2026-06-03T23:34:47+00:00",
-  previousClose: 57.03,
-  previous1Week: 60.6,
-  previous1Month: 71.17,
-  previous1Year: 54.57,
-  date: "2026年6月4日 07:54 CST"
+  timestamp: "2026-06-04T00:00:00+00:00",
+  previousClose: 54.0,
+  previous1Week: 60.09,
+  previous1Month: 66.89,
+  previous1Year: 54.89,
+  date: "2026年6月4日 12:58 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "10:29", tag: "tech", tagText: "科技", text: "LG电子股价飙升24%，公司发布基于谷歌技术的汽车创新产品，包括车载信息娱乐系统和自动驾驶解决方案。市场看好其与谷歌合作在汽车电子领域的增长潜力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/29/lg-electronics-shares-jump-after-debut-of-google-based-car-products.html" },
+  { time: "10:28", tag: "tech", tagText: "科技", text: "三星电子开始向全球客户出货下一代AI内存芯片HBM4E样品，股价一度大涨6%。该芯片是高性能计算关键组件，有望巩固三星在AI存储市场的领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/05/29/samsung-hbm4e-chip-samples-ai-memory.html" },
+  { time: "10:07", tag: "geo", tagText: "地缘", text: "美国接近达成延长伊朗停火协议，但伊朗同时发射导弹。特朗普政府希望协议即将达成，双方此前交火。总统考虑暂停战争两个月，但强调不会急于达成协议，海军封锁将继续。", source: "Financial Times", url: "https://www.ft.com/content/89c43161-27c3-4e4d-a5f6-49d895cde3da" },
+  { time: "08:47", tag: "tech", tagText: "科技", text: "戴尔科技第一财季AI服务器收入同比增长757%，利润超预期幅度创五年最大，股价飙升至历史新高。AI需求持续爆发推动公司业绩强劲增长。", source: "MarketWatch", url: "https://www.marketwatch.com/story/dell-stock-soars-toward-another-record-high-as-the-ai-boom-drives-a-big-earnings-beat-b7c0c203" },
   { time: "07:36", tag: "ai", tagText: "AI", text: "Anthropic完成650亿美元融资，估值达9650亿美元，超越OpenAI成为硅谷最有价值AI初创公司。新资金将用于扩展Claude AI模型及基础设施建设。", source: "Financial Times", url: "https://www.ft.com/content/fd0aec4a-50d1-4594-b489-7420bd0b4268" },
   { time: "07:00", tag: "crypto", tagText: "加密", text: "加密货币市场因美伊协议希望而反弹，原油暴跌推动资金流入加密资产。比特币价格波动，分析师警告可能先跌至7.25万美元再反弹。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTUpHa3hYb0JFWFF5ZnRvaklMdGNOMHEzN0pNc1dnRURSOEJQTWFzX0dyY0RGX2otLWdTMTlqdUctaWt6dlVZOVVtYVZmOVJTRHV4czJzN19GbUJYRTJseVVocUkzZk1pejl6cVFOaEpOVGwtQzZIbkpaOUMzeDJzZDlvZUFhb1JRdUdWMG9vVmhfOUFCT1E0QjZVV0RnYzJBbWtjeDZodVRVMS1IdGkxSTdTdmNxZEhhWUJpX2xZQU5GbDFuSGhyMTBkeXZNZw" },
   { time: "07:00", tag: "tech", tagText: "科技", text: "Uber考虑提高对Delivery Hero的收购报价，此前115亿欧元要约被拒。Uber已接触这家德国食品集团的主要股东，寻求达成交易。", source: "Financial Times", url: "https://www.ft.com/content/04f5d191-f5d9-4221-bf62-c34c879ab81b" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "19:54", tag: "tech", tagText: "科技", text: "法拉利推出首款全电动车型后股价大幅下跌。市场对这款售价超50万美元的电动超跑反应冷淡，投资者担忧其盈利能力及传统豪华车品牌转型电动化的挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/ferrari-stock-shares-luce-electric-vehicle-ev-launch.html" },
   { time: "19:47", tag: "tech", tagText: "科技", text: "量子计算公司Quantinuum设定IPO条款，计划融资最高10亿美元，估值接近130亿美元。该公司是量子计算领域头部企业，此次上市被视为行业里程碑，有望吸引大量科技投资关注。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-new-quantum-stock-could-debut-with-a-valuation-of-nearly-13-billion-9593b4e4" },
   { time: "19:26", tag: "geo", tagText: "地缘", text: "巴基斯坦俾路支省首府奎达附近铁路线发生爆炸，造成至少16人死亡。分离主义组织已宣称对此次袭击负责。该事件凸显巴基斯坦西南部动荡地区的安全局势持续恶化。", source: "Financial Times", url: "https://www.ft.com/content/7b08d851-4464-47cd-b760-57a3fcc9513b" },
-  { time: "10:29", tag: "tech", tagText: "科技", text: "LG电子股价飙升24%，公司发布基于谷歌技术的汽车创新产品，包括车载信息娱乐系统和自动驾驶解决方案。市场看好其与谷歌合作在汽车电子领域的增长潜力。", source: "CNBC", url: "https://www.cnbc.com/2026/05/29/lg-electronics-shares-jump-after-debut-of-google-based-car-products.html" },
-  { time: "10:28", tag: "tech", tagText: "科技", text: "三星电子开始向全球客户出货下一代AI内存芯片HBM4E样品，股价一度大涨6%。该芯片是高性能计算关键组件，有望巩固三星在AI存储市场的领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/05/29/samsung-hbm4e-chip-samples-ai-memory.html" },
-  { time: "10:07", tag: "geo", tagText: "地缘", text: "美国接近达成延长伊朗停火协议，但伊朗同时发射导弹。特朗普政府希望协议即将达成，双方此前交火。总统考虑暂停战争两个月，但强调不会急于达成协议，海军封锁将继续。", source: "Financial Times", url: "https://www.ft.com/content/89c43161-27c3-4e4d-a5f6-49d895cde3da" },
-  { time: "08:47", tag: "tech", tagText: "科技", text: "戴尔科技第一财季AI服务器收入同比增长757%，利润超预期幅度创五年最大，股价飙升至历史新高。AI需求持续爆发推动公司业绩强劲增长。", source: "MarketWatch", url: "https://www.marketwatch.com/story/dell-stock-soars-toward-another-record-high-as-the-ai-boom-drives-a-big-earnings-beat-b7c0c203" },
 ];
-const breakingDate = "2026年6月4日 07:54 CST";
+const breakingDate = "2026年6月4日 12:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:44", tag: "ai", tagText: "AI", text: "企业AI搜索初创公司Glean年收入突破3亿美元，同比增长两倍，尽管科技巨头纷纷入局。该公司将“帮助客户削减AI预算”作为核心卖点，通过优化企业AI支出实现逆势增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/" },
   { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
   { time: "06:34", tag: "macro", tagText: "宏观", text: "美国国债持续攀升，开始考验AI融资热潮的可持续性。分析指出，不断膨胀的政府债务可能推高利率，收紧市场流动性，进而对高度依赖资本投入的AI初创公司构成融资压力。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVhKcDJpNWVGVE9USV8yWjFmMnFNczhBQjhXQTM2TTFPN3VXempIcXNMQU01WV9JSjE1RmdRbXhCQjN0dFBBU2Q5bnlYZTc2RXpxa3dKb0tfcFdFY1BKMFdsOHBZM1dfTG5PQjFKc1hrNWk5TkNBcl9QQWtyVEZhQ3VYY3lFTi01SEE?oc=5" },
   { time: "05:39", tag: "ai", tagText: "AI", text: "所有人都在实时应对AI安全挑战——谷歌也不例外。报道指出，当前正处于AI安全过渡期，即使是科技巨头也在摸索中前行，凸显了AI安全治理的紧迫性和不确定性。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "18:51", tag: "tech", tagText: "科技", text: "微软正与Anthropic就芯片供应进行谈判，寻求在AI基础设施领域取得重大突破。此举显示微软正积极拓展AI芯片供应链，以支撑其日益增长的AI算力需求。", source: "Arise News", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkFWWTIyQW94STRUYUd0MElXQlZqbGF3NjlteWUzRnl4Vlk3QmZrMk9WbXJTREJLbENxRzY2R2tFQzg0ekoxRUhWSmZOVm53aElLQ2N0Q0hORXl2a2lCcEtWV0VwUTBlMjFheTRIVGRJSV80andzZWRaWVRndk5BZWU3M0UweWNxUC0tMVF1cXJEZi1UcE9WU0E0eVRJaXcxbThIM3piRFlqQQ?oc=5" },
   { time: "18:30", tag: "tech", tagText: "科技", text: "黑客组织TeamPCP正以前所未有的规模对开源代码投毒，GitHub成为最新受害者。该团伙已发起一系列软件供应链攻击，威胁全球软件安全生态。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/" },
   { time: "17:55", tag: "ai", tagText: "AI", text: "Uber总裁表示AI支出越来越难以证明合理性。据报道，Uber在2026年仅四个月内就用完了年度AI预算，但并未看到显著回报，引发对AI投资泡沫的担忧。", source: "The Verge", url: "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify" },
-  { time: "08:44", tag: "ai", tagText: "AI", text: "企业AI搜索初创公司Glean年收入突破3亿美元，同比增长两倍，尽管科技巨头纷纷入局。该公司将“帮助客户削减AI预算”作为核心卖点，通过优化企业AI支出实现逆势增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/" },
 ];
-const aiBreakingDate = "2026年6月4日 07:54 CST";
+const aiBreakingDate = "2026年6月4日 12:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
