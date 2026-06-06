@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 59.51,
   previous1Month: 67.26,
   previous1Year: 57.97,
-  date: "2026年6月6日 20:13 CST"
+  date: "2026年6月6日 22:50 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:25", tag: "macro", tagText: "宏观", text: "英国石油巨头BP董事会一致决定立即罢免董事长Albert Manifold，理由是其行为引发“严重担忧”。BP同时任命Ian Tyler为临时董事长。这是BP近期第二位被罢免的高管，公司治理问题引发市场关注，BP股价下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/bp-chair-albert-manifold-removed-conduct-governance-issues.html" },
+  { time: "20:23", tag: "geo", tagText: "地缘", text: "美国对伊朗南部导弹基地发动“自卫打击”，同时和平谈判仍在进行。五角大楼称目标包括导弹发射场和试图布设水雷的伊朗船只。此举正值特朗普政府推动与伊朗达成协议之际，市场对和平前景保持谨慎乐观。", source: "Financial Times", url: "https://www.ft.com/content/eec48003-35a8-4932-bac0-573cdaade0e5" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "美股处于盈利热潮中，但夏季面临多重风险。主要基准指数处于历史高位，但投资者需警惕伊朗局势、通胀反复及地缘冲突升级等风险，未来几个月市场可能波动加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/stocks-are-riding-an-earnings-hot-streak-but-investors-are-facing-a-summer-thats-rife-with-risks-67a700e4?mod=mw_rss_topstories" },
   { time: "20:00", tag: "crypto", tagText: "加密", text: "比特币突破77,000美元，市场信心增强。受伊朗停火协议预期及宏观情绪改善推动，比特币价格大幅上涨，突破77,000美元关口。分析师指出，地缘政治风险缓解和流动性充裕共同推动了此轮涨势。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOW1WOHBMM3EzbGY2V1F4cFdsUWlVTndrN0M5U01OWUtlaFZ6bHQ2MkZid2puT1FWWkJKaGZMRldwTkwyVjZ0Tk5idjhHTmw1TWZHWWFqUkZlRHB0djBwdUFwVVotaW92RC0wWThMMXR5TXVHMExXZ0I3VzFkUnI4dlRjUUxaaTNXSzZv?oc=5" },
   { time: "19:54", tag: "tech", tagText: "科技", text: "法拉利推出首款全电动车型后股价大幅下跌。市场对这款售价超50万美元的电动超跑反应冷淡，投资者担忧其盈利能力及传统豪华车品牌转型电动化的挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/ferrari-stock-shares-luce-electric-vehicle-ev-launch.html" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "01:34", tag: "crypto", tagText: "加密", text: "以太坊联合创始人Vitalik Buterin表示，以太坊基金会将缩减规模并减少ETH出售，以应对研究员离职潮。此举旨在优化运营并减少市场抛压。", source: "The Block", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMDlyMFBLbjVHWVM0Q0ZFNzlFZ3UyUUwwZ25FdDlCQmRvT0FhaEY1MnJiNDhPMTlWVzZteFpNNTczSUdsZDFvUUhwMU11RllDbjMwb0tQanZFRm8yeVhIal9MM19uME5kTmZ1bHQwMmtBVW5PSGdZMUR2WUNRQTBndFlHY3puZ1B1V3h0TTk0OTl4Wks1bGpzWXVKd0FfSkZ5enJjQ0FtcWFubmE4d3hFd2NlbTMzQ0pYeDlCbF95SjhXN1RnZTU4aXA3SkMxZU1KdlE?oc=5" },
   { time: "01:29", tag: "tech", tagText: "科技", text: "SpaceX即将上市，市场关注其应归入标普500哪个行业板块。分析师讨论其业务涵盖太空火箭、卫星、数据中心及AI模型Grok，行业分类存在争议。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/spacex-sp-sector-index.html" },
   { time: "01:01", tag: "geo", tagText: "地缘", text: "特朗普称伊朗谈判进展“有序且具建设性”，但警告不会急于达成协议。总统表示，在“协议达成、认证并签署”之前，美国对伊朗港口的 naval 封锁将继续有效。市场对霍尔木兹海峡重新开放的预期有所降温。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/trump-iran-war-talks.html" },
-  { time: "20:25", tag: "macro", tagText: "宏观", text: "英国石油巨头BP董事会一致决定立即罢免董事长Albert Manifold，理由是其行为引发“严重担忧”。BP同时任命Ian Tyler为临时董事长。这是BP近期第二位被罢免的高管，公司治理问题引发市场关注，BP股价下跌。", source: "CNBC", url: "https://www.cnbc.com/2026/05/26/bp-chair-albert-manifold-removed-conduct-governance-issues.html" },
-  { time: "20:23", tag: "geo", tagText: "地缘", text: "美国对伊朗南部导弹基地发动“自卫打击”，同时和平谈判仍在进行。五角大楼称目标包括导弹发射场和试图布设水雷的伊朗船只。此举正值特朗普政府推动与伊朗达成协议之际，市场对和平前景保持谨慎乐观。", source: "Financial Times", url: "https://www.ft.com/content/eec48003-35a8-4932-bac0-573cdaade0e5" },
 ];
-const breakingDate = "2026年6月6日 20:13 CST";
+const breakingDate = "2026年6月6日 22:50 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "01:37", tag: "tech", tagText: "科技", text: "谷歌展示其原型Android XR智能眼镜，该眼镜可将Gemini驱动的实时翻译、导航等信息直接叠加在用户视野中。体验者评价其功能“接近成熟”，但仍需完善，标志着谷歌在AI可穿戴设备领域迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" },
   { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
 ];
-const aiBreakingDate = "2026年6月6日 20:13 CST";
+const aiBreakingDate = "2026年6月6日 22:50 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
