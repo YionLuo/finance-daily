@@ -1616,21 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.29,
+  score: 33.43,
   rating: "fear",
-  timestamp: "2026-06-09T19:23:17+00:00",
+  timestamp: "2026-06-09T21:38:28+00:00",
   previousClose: 40.11,
   previous1Week: 56.06,
   previous1Month: 67.29,
   previous1Year: 63.43,
-  date: "2026年6月10日 03:26 CST"
+  date: "2026年6月10日 05:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:20", tag: "tech", tagText: "科技", text: "通用汽车（GM）效仿福特，押注钠离子电池技术以拓展能源存储和AI数据中心业务。该非传统方案旨在利用下一代电池化学满足数据中心和储能市场的快速增长需求，股价受此消息提振。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gm-follows-ford-by-making-a-big-energy-bet-but-heres-the-quirky-twist-eae9b5ee" },
+  { time: "05:09", tag: "macro", tagText: "宏观", text: "油价下跌，美国能源部长称霍尔木兹海峡通航量正在‘实质性’恢复。此前美军对伊朗实施报复性打击，但特朗普表示伊朗协议可能在两三天内达成，缓解了供应中断担忧。官员警告航道完全恢复仍需数月。", source: "Financial Times", url: "https://www.ft.com/content/c7e5bbbd-65ed-4678-baee-a4b63123e0e5" },
+  { time: "04:53", tag: "geo", tagText: "地缘", text: "台湾在野党国民党主席在访美前接受FT专访，呼吁美国和大陆不要将台湾视为‘棋子’，主张通过对话缓和台海紧张局势，并强调台湾应自主决定未来。此行或影响中美台三方互动。", source: "Financial Times", url: "https://www.ft.com/content/4f667f6f-efd0-4c3f-ab49-9f0d1099a8ba" },
+  { time: "04:23", tag: "macro", tagText: "宏观", text: "分析师警告厄尔尼诺现象即将来袭，可能推高全球大宗商品价格，引发新一轮通胀风暴。投资者需调整组合以保护购买力，能源和农产品相关资产或成对冲工具。", source: "MarketWatch", url: "https://www.marketwatch.com/story/an-inflation-storm-is-brewing-in-the-pacific-ocean-and-your-portfolio-isnt-ready-f200fc60" },
   { time: "03:20", tag: "macro", tagText: "宏观", text: "美国社会保障信托基金预计2032年耗尽，届时只能支付78%的福利，受《一大美丽法案》影响压力加剧。超过7000万退休和残疾人士的福利面临削减风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-security-faces-insolvency-in-2032-when-it-would-pay-only-78-of-benefits-b0f0df22?mod=mw_rss_topstories" },
   { time: "03:11", tag: "macro", tagText: "宏观", text: "美国有效国债首次突破100万亿美元，相当于每户家庭负债100万美元，达到GDP的400%。该数字包括社会保障、医疗保险等未偿承诺，但市场对此反应平淡。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-true-national-debt-just-hit-1-million-per-u-s-household-bd0924d1?mod=mw_rss_topstories" },
+  { time: "03:03", tag: "crypto", tagText: "加密", text: "预测市场平台Kalshi的永续合约（perps）在推出首周交易量即突破10亿美元，成为公司历史上增长最快的产品。该平台同时推出举报服务和就业披露机制以遏制内幕交易。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/kalshi-perpetual-futures-trading-perps-crosses-1-billion-in-volume-within-a-week-of-launch.html" },
   { time: "02:54", tag: "macro", tagText: "宏观", text: "周三将公布5月通胀数据，市场预期CPI同比上涨4.2%。若符合预期，通胀仍远高于美联储目标，可能影响后续加息路径及市场情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/the-may-inflation-numbers-are-due-out-wednesday-morning-heres-what-to-expect.html" },
   { time: "02:46", tag: "geo", tagText: "地缘", text: "伊朗在霍尔木兹海峡击落一架美军直升机，特朗普称美国必须做出回应。最新冲突发生在特朗普表示伊朗协议可能数日内达成的背景下，中东局势再度升级。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/trump-iran-helicopter-hormuz-strait.html" },
   { time: "02:44", tag: "ai", tagText: "AI", text: "Anthropic向公众发布类似Mythos的AI模型，此前私有版本两个月前曾震动华尔街。公司称因新增高风险领域防护措施，现可安全公开发布。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html" },
@@ -1644,18 +1649,16 @@ const breakingNews = [
   { time: "19:08", tag: "macro", tagText: "宏观", text: "花旗警告称，由于美伊战争爆发后黄金的避险功能失效，金价可能在9月前再跌20%。自2月28日冲突以来，黄金持续承压，市场避险资金转向美元等其他资产。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/gold-price-slump-iran-war-hormuz.html" },
   { time: "18:16", tag: "macro", tagText: "宏观", text: "韩国股市在24小时内出现高达16%的巨幅波动。散户投资者（被称为‘蚂蚁’）大量使用杠杆产品追逐上涨，加剧了市场波动性，引发对系统性风险的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-massive-16-market-swing-just-rocked-south-korea-over-24-hours-the-retail-ants-holding-the-wheel-are-driving-dangerously-8799c198?mod=mw_rss_topstories" },
   { time: "15:51", tag: "macro", tagText: "宏观", text: "亚洲科技股全面反弹，台湾、韩国等芯片制造业主导的市场在经历周一抛售后重获买盘，华尔街重新拥抱AI热潮。费城半导体指数期货走高，提振区域情绪。", source: "Financial Times", url: "https://www.ft.com/content/f9367c83-c291-4446-bf12-8282e5169812" },
-  { time: "15:37", tag: "macro", tagText: "宏观", text: "葛兰素史克（GSK）宣布以106亿美元收购美国生物科技公司Nuvalent，为其八年来最大收购，旨在重振此前缩减的癌症药物管线。该交易显示大型药企正加速布局肿瘤精准治疗领域。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gsk-just-announced-its-biggest-purchase-in-eight-years-to-rev-up-cancer-portfolio-it-had-previously-wound-down-a95e6065?mod=mw_rss_topstories" },
-  { time: "13:51", tag: "macro", tagText: "宏观", text: "中国5月对美出口同比增长35%，创2021年3月以来最大增幅，总体出口受科技产品提振强劲增长。此前去年大部分时间对美出口连续两位数下滑，如今显著反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/china-trade-exports-imports-iran-war.html" },
-  { time: "13:06", tag: "tech", tagText: "科技", text: "美国多位参议员敦促政府加强对台积电及AI芯片出口的监管，进一步收紧对华技术限制。此举旨在阻止先进芯片通过第三国流入中国军事领域。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZDBzYms2Qk80RzZFWWRKbktyQl82TEEzSnlvRTZTaWtaYk1GV2taSl84WTVkMk1GVzNTUEVqV28wa3dVcjN3WXBLVy1ndEVYT2RqSFV0enpXS2xqd0FuX2h2X1g1Mk5qX3BzWGx0bVowZGxQYzdOM0xKd3ZBb3dyX0V1Qml2Tno3aS01TXJMcldkU3VLM0thek82SlVXU0RoNnZDdnAwNUVxTDI4?oc=5" },
-  { time: "12:59", tag: "geo", tagText: "地缘", text: "伊拉克与阿联酋竞相建设替代石油管道，因霍尔木兹海峡原油出口因伊朗战争受阻。伊拉克内阁已批准加快通过库尔德-土耳其管道出口原油的计划。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/iraq-uae-hormuz-oil-pipelines-oil-iran-war.html" },
-  { time: "12:37", tag: "tech", tagText: "科技", text: "英特尔股价因与谷歌和英伟达的合作消息大幅上涨。市场对公司AI芯片和数据中心业务的预期改善，推动股价出现罕见异动。", source: "Yahoo Finance Singapore", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMk5VM1JtMVVmeG45dzJUUy1VVVJLOV9Ma2FtUEhsRERWblNTZjNVX0oyZXBXYl9aMXNlWGttMTRzVzB0azZRYTNhNk1FWGlZWDVuX29QenNfOWhUQWdlMlp4dHR3M0dudkJxLWp1N25lbi13ckE5MGZXZGhESm15U216Nkk?oc=5" },
 ];
-const breakingDate = "2026年6月10日 03:26 CST";
+const breakingDate = "2026年6月10日 05:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:00", tag: "tech", tagText: "科技", text: "通用汽车在旧金山宣布，将利用电动汽车的Vehicle-to-Grid（V2G）技术，使电动车电池在AI数据中心电力需求高峰时反向供电，以缓解电网压力。该计划还包括钠离子电池储能方案，旨在平衡AI算力扩张带来的巨大能耗。", source: "The Verge", url: "https://www.theverge.com/transportation/946820/gm-energy-ev-v2g-storage-sodium-ion" },
+  { time: "04:24", tag: "ai", tagText: "AI", text: "微软AI CEO穆斯塔法·苏莱曼公开批评Anthropic在其Claude模型“宪法”中暗示AI具有意识，称这种推测“非常非常危险”。他认为将AI拟人化可能误导公众认知，并带来不可控的伦理与安全风险。", source: "The Verge", url: "https://www.theverge.com/tech/947197/microsoft-ai-mustafa-suleyman-anthropic-claude-conscious" },
   { time: "03:07", tag: "tech", tagText: "科技", text: "芯片股屡创新高，但英伟达并非本轮上涨的唯一驱动力。市场关注其他芯片制造商在AI浪潮中的表现，行业格局正发生变化。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUTlucXRoaDYyVjh4cGVnNHZQOVpsSWZuWDBZX3QydFR5MzFoMXI4VHB6QnhqNGZ1Y1I0SUlMTGhTd1JDdTQxS1F2VnBfY0dkWldUMHN3aG1KQ09OTW9MQW1RLTZ2bkJSTEdnaFV3TElJcjN1ZUttRHczMU9ObmNtcldNZUdQQ0pzakdmdWxNZ2lwdEp1bU5ScnhSd3g0VzNWVUZXeWRhalVxOFM4ZWZ1dVVB?oc=5" },
   { time: "02:14", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋宣布与一位“意外伙伴”达成一项新的“数万亿美元”AI合作。该合作据称将极大推动AI基础设施发展，但具体伙伴身份尚未公开。分析认为此规模合作可能重塑AI芯片供应链格局。", source: "inc.com", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUnNWZkdyREFkckRHQU9oemNuSHlrYXNteGpDRE54NzVhTlNyYjA1WVZRTXpMYkhsM2lDWkJFeVFtZGlfbFhNdkJab29lXzAyX2FqdGFmOXZRVDFaM2RBOHFNQVNhelpuYko1X210VUk0VHRfOENzQXJkOE8yNDU0SGI1SEMyYmg5MFB4dlpLdGUwT09pUnRQQUFOV1g1eTFRTGVSOTRyTWJPdGJfN2RCaHl2RlVZWWc4c092TE85aUp1bjkzY3A3dzB0cXdDaXFWbjhhNGJvN2s2QQ?oc=5" },
+  { time: "02:04", tag: "ai", tagText: "AI", text: "苹果在WWDC 2026上发布多项AI更新：Siri全面升级，支持更自然的对话和跨应用任务执行；iOS 27深度集成Apple Intelligence，新增AI驱动的照片编辑工具、邮件摘要、实时翻译等功能。苹果强调其AI策略注重隐私与端侧处理，与竞争对手形成差异化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic发布首个Mythos级模型Claude Fable 5，号称迄今最强公开模型，在软件工程等领域表现卓越。该模型附带严格安全护栏，在网络安全、生物学等高风险领域限制响应，反映出AI安全与能力之间的平衡挑战。", source: "The Verge", url: "https://www.theverge.com/news/946725/anthropic-releases-claude-fable-5-mythos" },
   { time: "00:09", tag: "ai", tagText: "AI", text: "科技行业迎来新缩写MANGOS：SpaceX、Anthropic、OpenAI等公司正筹备大规模公开上市，可能取代FAANG成为新一代科技巨头。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" },
   { time: "00:01", tag: "ai", tagText: "AI", text: "英伟达发布Cosmos 3，号称全球首个完全开源的AI全能模型，涵盖多模态能力，推动AI民主化进程。", source: "AI Magazine", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNko3Mm1FRGphWkxlWWJNTDVLMmc2NTlCbWtVejV4UkFrZjFmbzFITTRLampScnJmaDFDNjVOVjYwQVhYeDRZUmZzc0dhcjhhOVlTczNTQ3pRRVJtUGp0REdRblAyUXJDTGpsTTFYT0VKZS10M3VCNklfN1JtSm5rTE5XdE83SmtrMTY4WFNB?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "11:02", tag: "ai", tagText: "AI", text: "韩国GS工程建设公司与大东机器人合作，共同开发AI现场机器人。双方将结合建筑行业经验与自主机器人技术，研发可在建筑工地执行巡检、物料搬运等任务的智能机器人，推动建筑领域数字化转型。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZlRJcFVpNldaaVNwOVhWOWdQcjUySHlPRVlkSV81clNEbEpTdW9wVlhuRWM5NW1XLU1IUWtMNU4tWExrUE5fTHdPRFluVXllQzlQZmh4UXdBci12ZmgxaUdreWFUQjlYVGFsa2dJcEZWaVpFMl8zY1RXXzY2SnZ6cmtUYzBNNW03S1N5TExjamo3aGlKSDlLTjdSRVdOdkduTVNYRg?oc=5" },
   { time: "10:16", tag: "ai", tagText: "AI", text: "英伟达与LG电子达成合作，共同建设面向机器人和数据中心的AI工厂。双方将利用英伟达的AI计算平台和LG的制造经验，打造大规模AI基础设施，以推动工业自动化和智能计算发展。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE5hclkzOFJGenZZQm9aQW9UdUl3bUdnUjdTV1dBOWVHWDhpSTMxU3RwTTY5aHN4RFdCay1DNkMyQm9OMTYxbXZHYmNSMElZbXd5VUJQVEVoM050VXlWblJMZmpzS3VMUUU5UFRPOUp0bjRMRGRNOUVxU3J1OFM?oc=5" },
   { time: "09:56", tag: "ai", tagText: "AI", text: "科技媒体TechCrunch分析指出，苹果在AI领域的缓慢而稳健策略正开始显现优势。当竞争对手竞相推出大模型和激进产品时，苹果选择将AI深度集成到现有生态系统中，这种务实的路径正在赢得认可，并可能在后期的用户体验中建立护城河。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/08/why-apples-slow-and-steady-ai-bet-is-starting-to-look-pretty-smart/" },
-  { time: "08:45", tag: "ai", tagText: "AI", text: "AI初创公司Mercor的CEO Brendan Foody公开指责红杉资本存在“双重定价”估值操纵行为，即对同一股权向不同投资者提供不同价格。这一指控引发创投圈广泛关注，凸显当前AI领域融资热潮下的定价透明度争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/08/mercors-brendan-foody-calls-out-sequoia-over-dual-pricing-valuation-tricks/" },
-  { time: "08:44", tag: "ai", tagText: "AI", text: "企业AI搜索初创公司Glean年收入突破3亿美元，同比增长两倍，尽管科技巨头纷纷入局。该公司将“帮助客户削减AI预算”作为核心卖点，通过优化企业AI支出实现逆势增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/" },
-  { time: "07:03", tag: "ai", tagText: "AI", text: "AI被用于“复活”已故飞行员的声音。有人利用AI技术对驾驶舱录音的频谱图进行重构，迫使美国国家运输安全委员会（NTSB）暂时封锁其档案系统访问权限，引发伦理与安全争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" },
 ];
-const aiBreakingDate = "2026年6月10日 03:26 CST";
+const aiBreakingDate = "2026年6月10日 05:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
