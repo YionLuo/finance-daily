@@ -205,7 +205,7 @@ def build_env_string():
     model = os.environ.get("LLM_MODEL", default_model_for_base_url(base_url))
     writer_model = os.environ.get(
         "WRITER_MODEL",
-        model,
+        "deepseek-v4-pro" if "api.deepseek.com" in base_url else model,
     )
     if not os.environ.get("OPENAI_BASE_URL"):
         env_extra += f'OPENAI_BASE_URL="{base_url}" '
