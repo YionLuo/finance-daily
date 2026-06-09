@@ -1618,17 +1618,19 @@
 const fearGreedData = {
   score: 33.43,
   rating: "fear",
-  timestamp: "2026-06-09T21:38:28+00:00",
+  timestamp: "2026-06-09T23:08:22+00:00",
   previousClose: 40.11,
   previous1Week: 56.06,
   previous1Month: 67.29,
   previous1Year: 63.43,
-  date: "2026年6月10日 05:56 CST"
+  date: "2026年6月10日 07:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:29", tag: "tech", tagText: "科技", text: "超微电脑（Super Micro）宣布70亿美元融资计划，用于满足AI服务器订单激增带来的资金需求。市场担忧股权稀释及高现金消耗，股价盘后暴跌逾15%。该公司成为最新一家借AI热潮大规模融资的科技企业。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/super-micro-stock-tumbles-on-7-billion-financing-plans.html" },
+  { time: "06:00", tag: "ai", tagText: "AI", text: "苹果公司AI功能有望引发历史性换机周期，但投资者可能低估其变现速度。分析指出，新一代AI特性对硬件要求更高，加之潜在“杀手级应用”的催化，消费者升级需求将远超预期，苹果营收增长动能被市场忽视。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apples-ai-could-usher-in-a-historic-upgrade-cycle-that-investors-are-overlooking-2b47fbb3" },
   { time: "05:20", tag: "tech", tagText: "科技", text: "通用汽车（GM）效仿福特，押注钠离子电池技术以拓展能源存储和AI数据中心业务。该非传统方案旨在利用下一代电池化学满足数据中心和储能市场的快速增长需求，股价受此消息提振。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gm-follows-ford-by-making-a-big-energy-bet-but-heres-the-quirky-twist-eae9b5ee" },
   { time: "05:09", tag: "macro", tagText: "宏观", text: "油价下跌，美国能源部长称霍尔木兹海峡通航量正在‘实质性’恢复。此前美军对伊朗实施报复性打击，但特朗普表示伊朗协议可能在两三天内达成，缓解了供应中断担忧。官员警告航道完全恢复仍需数月。", source: "Financial Times", url: "https://www.ft.com/content/c7e5bbbd-65ed-4678-baee-a4b63123e0e5" },
   { time: "04:53", tag: "geo", tagText: "地缘", text: "台湾在野党国民党主席在访美前接受FT专访，呼吁美国和大陆不要将台湾视为‘棋子’，主张通过对话缓和台海紧张局势，并强调台湾应自主决定未来。此行或影响中美台三方互动。", source: "Financial Times", url: "https://www.ft.com/content/4f667f6f-efd0-4c3f-ab49-9f0d1099a8ba" },
@@ -1647,16 +1649,17 @@ const breakingNews = [
   { time: "19:31", tag: "macro", tagText: "宏观", text: "美元走弱，因中东停火希望升温，市场风险偏好回升，抵消了对美国利率上升的预期。投资者押注美伊协议将缓解地缘紧张局势，削弱美元避险需求。", source: "Reuters", url: "https://finance.yahoo.com/news/dollar-hovers-around-two-month-013340797.html" },
   { time: "19:22", tag: "tech", tagText: "科技", text: "甲骨文股价因AI炒作大幅上涨，市场关注其即将发布的第四财季业绩。投资者需看到数据中心建设进度和AI转型带来的财务影响，以证明当前高估值合理性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oracles-stock-has-surged-on-ai-hype-now-it-has-to-deliver-the-earnings-to-match-3b56592b?mod=mw_rss_topstories" },
   { time: "19:08", tag: "macro", tagText: "宏观", text: "花旗警告称，由于美伊战争爆发后黄金的避险功能失效，金价可能在9月前再跌20%。自2月28日冲突以来，黄金持续承压，市场避险资金转向美元等其他资产。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/gold-price-slump-iran-war-hormuz.html" },
-  { time: "18:16", tag: "macro", tagText: "宏观", text: "韩国股市在24小时内出现高达16%的巨幅波动。散户投资者（被称为‘蚂蚁’）大量使用杠杆产品追逐上涨，加剧了市场波动性，引发对系统性风险的担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-massive-16-market-swing-just-rocked-south-korea-over-24-hours-the-retail-ants-holding-the-wheel-are-driving-dangerously-8799c198?mod=mw_rss_topstories" },
-  { time: "15:51", tag: "macro", tagText: "宏观", text: "亚洲科技股全面反弹，台湾、韩国等芯片制造业主导的市场在经历周一抛售后重获买盘，华尔街重新拥抱AI热潮。费城半导体指数期货走高，提振区域情绪。", source: "Financial Times", url: "https://www.ft.com/content/f9367c83-c291-4446-bf12-8282e5169812" },
 ];
-const breakingDate = "2026年6月10日 05:56 CST";
+const breakingDate = "2026年6月10日 07:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:17", tag: "tech", tagText: "科技", text: "Sabertooth VC创始人Justin Ernest通过其LP关系网络，在不设立传统风险基金的情况下，向Anthropic、Anduril和SpaceX等热门初创公司投资近4亿美元。这种新型投资模式绕过了传统募资流程，引发行业关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-400m-into-hot-startups-without-a-traditional-vc-fund/" },
   { time: "05:00", tag: "tech", tagText: "科技", text: "通用汽车在旧金山宣布，将利用电动汽车的Vehicle-to-Grid（V2G）技术，使电动车电池在AI数据中心电力需求高峰时反向供电，以缓解电网压力。该计划还包括钠离子电池储能方案，旨在平衡AI算力扩张带来的巨大能耗。", source: "The Verge", url: "https://www.theverge.com/transportation/946820/gm-energy-ev-v2g-storage-sodium-ion" },
+  { time: "04:56", tag: "tech", tagText: "科技", text: "微软修复了一个由研究员Nightmare Eclipse披露的0-day漏洞，此前双方处于激烈竞争关系。该漏洞及另一个同时披露的0-day均已被修补，但双方紧张关系持续受到安全社区关注。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/locked-in-heated-rivalry-with-researcher-microsoft-fixes-0-day-they-disclosed/" },
   { time: "04:24", tag: "ai", tagText: "AI", text: "微软AI CEO穆斯塔法·苏莱曼公开批评Anthropic在其Claude模型“宪法”中暗示AI具有意识，称这种推测“非常非常危险”。他认为将AI拟人化可能误导公众认知，并带来不可控的伦理与安全风险。", source: "The Verge", url: "https://www.theverge.com/tech/947197/microsoft-ai-mustafa-suleyman-anthropic-claude-conscious" },
   { time: "03:07", tag: "tech", tagText: "科技", text: "芯片股屡创新高，但英伟达并非本轮上涨的唯一驱动力。市场关注其他芯片制造商在AI浪潮中的表现，行业格局正发生变化。", source: "Yahoo Finance UK", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUTlucXRoaDYyVjh4cGVnNHZQOVpsSWZuWDBZX3QydFR5MzFoMXI4VHB6QnhqNGZ1Y1I0SUlMTGhTd1JDdTQxS1F2VnBfY0dkWldUMHN3aG1KQ09OTW9MQW1RLTZ2bkJSTEdnaFV3TElJcjN1ZUttRHczMU9ObmNtcldNZUdQQ0pzakdmdWxNZ2lwdEp1bU5ScnhSd3g0VzNWVUZXeWRhalVxOFM4ZWZ1dVVB?oc=5" },
+  { time: "02:56", tag: "ai", tagText: "AI", text: "随着AI模型成本不断下降，科技公司正面临是否采用更便宜模型的决策。如果低成本的模型能在不影响质量的情况下处理相同的AI工作负载，将引发AI经济学的重大转变，可能重塑整个行业格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models/" },
   { time: "02:14", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋宣布与一位“意外伙伴”达成一项新的“数万亿美元”AI合作。该合作据称将极大推动AI基础设施发展，但具体伙伴身份尚未公开。分析认为此规模合作可能重塑AI芯片供应链格局。", source: "inc.com", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUnNWZkdyREFkckRHQU9oemNuSHlrYXNteGpDRE54NzVhTlNyYjA1WVZRTXpMYkhsM2lDWkJFeVFtZGlfbFhNdkJab29lXzAyX2FqdGFmOXZRVDFaM2RBOHFNQVNhelpuYko1X210VUk0VHRfOENzQXJkOE8yNDU0SGI1SEMyYmg5MFB4dlpLdGUwT09pUnRQQUFOV1g1eTFRTGVSOTRyTWJPdGJfN2RCaHl2RlVZWWc4c092TE85aUp1bjkzY3A3dzB0cXdDaXFWbjhhNGJvN2s2QQ?oc=5" },
   { time: "02:04", tag: "ai", tagText: "AI", text: "苹果在WWDC 2026上发布多项AI更新：Siri全面升级，支持更自然的对话和跨应用任务执行；iOS 27深度集成Apple Intelligence，新增AI驱动的照片编辑工具、邮件摘要、实时翻译等功能。苹果强调其AI策略注重隐私与端侧处理，与竞争对手形成差异化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic发布首个Mythos级模型Claude Fable 5，号称迄今最强公开模型，在软件工程等领域表现卓越。该模型附带严格安全护栏，在网络安全、生物学等高风险领域限制响应，反映出AI安全与能力之间的平衡挑战。", source: "The Verge", url: "https://www.theverge.com/news/946725/anthropic-releases-claude-fable-5-mythos" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "14:42", tag: "ai", tagText: "AI", text: "由韩国DGIST与美国MIT组成的联合团队赢得国际AI自动驾驶挑战赛，展示了跨国产学研合作在自动驾驶算法领域的领先实力。该赛事聚焦复杂道路环境下的实时决策与感知能力，获奖方案有望加速自动驾驶技术商业化落地。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcDNfWWxVc2VhOU5HdkFNckdxRldoQjRybVJNUUJWdVpVTHhqdW5ZdG1CcXlnREJ6Qm1tUUFVRXA3SkxqUnByRWxSOWJtWVE4SzhTVkR3VFVhOXRBbkk5UjY2MndiNWVLYXZBV1ZnSURielpEbkNyUUhiaXcxSFI0cGszNkh1TXh0?oc=5" },
   { time: "14:34", tag: "ai", tagText: "AI", text: "安特卫普风投Pitchdrive完成6000万欧元第四期基金募集，专注投资AI原生早期初创公司。该基金将重点支持人工智能原生领域的种子轮和A轮项目，显示出欧洲AI投资热度不减。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxObmFfNU55V2dIYzdSQ1ZaT0d1YTZOY0J4bmRQWEdlaXB6MjFQYUhBM1N1VVZFT1JkaVg0QWdhR1R5WEVrWXdUbzJSUEpuZURCSXU2R2dGWDNja2pSQ3g0bFJPZFdGLVF2Rl9KMFZKdEtaUWRmSDQ1cF9aR1FqTlVEQTExTGU2SWtWNXVzb0ViTl9YajFKYVhlUVR4LWJ3d3F6SWJNNlhCZy1VZUotRDNzQVlXQm5KblpBN0lOXzJCQ0sxZ3hzV1E?oc=5" },
   { time: "12:58", tag: "macro", tagText: "宏观", text: "半导体板块遭遇集体抛售，但随后英伟达等芯片股出现技术性反弹。分析指出，短期抛压源于获利回吐和对AI投资回报率的担忧，但AI算力需求基本面未变，芯片长期前景依然强劲。", source: "Gotrade", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVkFJdjFLWU81RU1KMk1kQ2o3MllWVWowaUdnM2NRSC1VWmxORkx3Wkx5czY2MmpxekR2MjgtVEE5c0ZtcE5OY3hLd0prWkpkY21BbTVyZEo1S0NQVmFXRmZvYjNNUWlxMkdnZXlDY0dKUFFrQU5vQ2JHazhUOXBhcm1VYw?oc=5" },
-  { time: "11:02", tag: "ai", tagText: "AI", text: "韩国GS工程建设公司与大东机器人合作，共同开发AI现场机器人。双方将结合建筑行业经验与自主机器人技术，研发可在建筑工地执行巡检、物料搬运等任务的智能机器人，推动建筑领域数字化转型。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZlRJcFVpNldaaVNwOVhWOWdQcjUySHlPRVlkSV81clNEbEpTdW9wVlhuRWM5NW1XLU1IUWtMNU4tWExrUE5fTHdPRFluVXllQzlQZmh4UXdBci12ZmgxaUdreWFUQjlYVGFsa2dJcEZWaVpFMl8zY1RXXzY2SnZ6cmtUYzBNNW03S1N5TExjamo3aGlKSDlLTjdSRVdOdkduTVNYRg?oc=5" },
-  { time: "10:16", tag: "ai", tagText: "AI", text: "英伟达与LG电子达成合作，共同建设面向机器人和数据中心的AI工厂。双方将利用英伟达的AI计算平台和LG的制造经验，打造大规模AI基础设施，以推动工业自动化和智能计算发展。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE5hclkzOFJGenZZQm9aQW9UdUl3bUdnUjdTV1dBOWVHWDhpSTMxU3RwTTY5aHN4RFdCay1DNkMyQm9OMTYxbXZHYmNSMElZbXd5VUJQVEVoM050VXlWblJMZmpzS3VMUUU5UFRPOUp0bjRMRGRNOUVxU3J1OFM?oc=5" },
-  { time: "09:56", tag: "ai", tagText: "AI", text: "科技媒体TechCrunch分析指出，苹果在AI领域的缓慢而稳健策略正开始显现优势。当竞争对手竞相推出大模型和激进产品时，苹果选择将AI深度集成到现有生态系统中，这种务实的路径正在赢得认可，并可能在后期的用户体验中建立护城河。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/08/why-apples-slow-and-steady-ai-bet-is-starting-to-look-pretty-smart/" },
 ];
-const aiBreakingDate = "2026年6月10日 05:56 CST";
+const aiBreakingDate = "2026年6月10日 07:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
