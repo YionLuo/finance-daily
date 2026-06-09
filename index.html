@@ -1616,22 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 40.09,
+  score: 39.37,
   rating: "fear",
-  timestamp: "2026-06-09T00:00:00+00:00",
+  timestamp: "2026-06-09T08:22:16+00:00",
   previousClose: 40.11,
   previous1Week: 56.06,
   previous1Month: 67.29,
   previous1Year: 63.43,
-  date: "2026年6月9日 14:38 CST"
+  date: "2026年6月9日 16:38 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:51", tag: "macro", tagText: "宏观", text: "亚洲科技股全面反弹，台湾、韩国等芯片制造业主导的市场在经历周一抛售后重获买盘，华尔街重新拥抱AI热潮。费城半导体指数期货走高，提振区域情绪。", source: "Financial Times", url: "https://www.ft.com/content/f9367c83-c291-4446-bf12-8282e5169812" },
+  { time: "15:37", tag: "macro", tagText: "宏观", text: "葛兰素史克（GSK）宣布以106亿美元收购美国生物科技公司Nuvalent，为其八年来最大收购，旨在重振此前缩减的癌症药物管线。该交易显示大型药企正加速布局肿瘤精准治疗领域。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gsk-just-announced-its-biggest-purchase-in-eight-years-to-rev-up-cancer-portfolio-it-had-previously-wound-down-a95e6065?mod=mw_rss_topstories" },
   { time: "13:51", tag: "macro", tagText: "宏观", text: "中国5月对美出口同比增长35%，创2021年3月以来最大增幅，总体出口受科技产品提振强劲增长。此前去年大部分时间对美出口连续两位数下滑，如今显著反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/china-trade-exports-imports-iran-war.html" },
   { time: "13:06", tag: "tech", tagText: "科技", text: "美国多位参议员敦促政府加强对台积电及AI芯片出口的监管，进一步收紧对华技术限制。此举旨在阻止先进芯片通过第三国流入中国军事领域。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZDBzYms2Qk80RzZFWWRKbktyQl82TEEzSnlvRTZTaWtaYk1GV2taSl84WTVkMk1GVzNTUEVqV28wa3dVcjN3WXBLVy1ndEVYT2RqSFV0enpXS2xqd0FuX2h2X1g1Mk5qX3BzWGx0bVowZGxQYzdOM0xKd3ZBb3dyX0V1Qml2Tno3aS01TXJMcldkU3VLM0thek82SlVXU0RoNnZDdnAwNUVxTDI4?oc=5" },
   { time: "12:59", tag: "geo", tagText: "地缘", text: "伊拉克与阿联酋竞相建设替代石油管道，因霍尔木兹海峡原油出口因伊朗战争受阻。伊拉克内阁已批准加快通过库尔德-土耳其管道出口原油的计划。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/iraq-uae-hormuz-oil-pipelines-oil-iran-war.html" },
+  { time: "12:37", tag: "tech", tagText: "科技", text: "英特尔股价因与谷歌和英伟达的合作消息大幅上涨。市场对公司AI芯片和数据中心业务的预期改善，推动股价出现罕见异动。", source: "Yahoo Finance Singapore", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMk5VM1JtMVVmeG45dzJUUy1VVVJLOV9Ma2FtUEhsRERWblNTZjNVX0oyZXBXYl9aMXNlWGttMTRzVzB0azZRYTNhNk1FWGlZWDVuX29QenNfOWhUQWdlMlp4dHR3M0dudkJxLWp1N25lbi13ckE5MGZXZGhESm15U216Nkk?oc=5" },
   { time: "12:16", tag: "geo", tagText: "地缘", text: "五角大楼更新中国军事关联企业名单，新增阿里巴巴、百度等科技巨头，给中美关系缓和再添变数。五角大楼2月曾短暂发布类似扩大名单后又撤回，此次正式发布。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/alibaba-baidu-byd-named-on-pentagons-china-military-list-.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普与以色列总理内塔尼亚胡在中东战争目标上爆发分歧。特朗普对以色列持续攻击黎巴嫩和伊朗表示不满，正推动尽快结束战争，双方目标矛盾公开化。", source: "Financial Times", url: "https://www.ft.com/content/64213988-ec72-462d-b9b6-e56acebb85df" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "ASML首席执行官警告欧盟不要干预芯片供应链，称行业需要的是全球领导者而非政府指令。作为欧洲市值最大公司，ASML在光刻机领域具有垄断地位。", source: "Financial Times", url: "https://www.ft.com/content/ae7e66f1-1174-4812-b848-d6efd4f9379d" },
@@ -1646,15 +1649,15 @@ const breakingNews = [
   { time: "07:00", tag: "tech", tagText: "科技", text: "Uber考虑提高对Delivery Hero的收购报价，此前115亿欧元要约被拒。Uber已接触这家德国食品集团的主要股东，寻求达成交易。", source: "Financial Times", url: "https://www.ft.com/content/04f5d191-f5d9-4221-bf62-c34c879ab81b" },
   { time: "07:00", tag: "geo", tagText: "地缘", text: "南加州一化学储罐出现“潜在裂缝”，消防官员称这可能有助于防止爆炸，允许当局逐步排空化学品。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/california-chemical-tank.html" },
   { time: "06:44", tag: "macro", tagText: "宏观", text: "Costco第三财季同店销售增长9.8%超预期，汽油销量创纪录。油价飙升推动消费者涌入会员制仓储零售商，首次加油会员数量显著增加。", source: "CNBC", url: "https://www.cnbc.com/2026/05/28/costco-cost-q3-2026-earnings.html" },
-  { time: "01:47", tag: "ai", tagText: "AI", text: "埃隆·马斯克对OpenAI的攻击实质是为其AI公司xAI铺路。分析指出，马斯克深知OpenAI内部缺陷，此举意在削弱竞争对手并凸显xAI的优势。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/markets/stocks/articles/knows-flaws-because-knows-man-204722212.html" },
-  { time: "01:34", tag: "crypto", tagText: "加密", text: "以太坊联合创始人Vitalik Buterin表示，以太坊基金会将缩减规模并减少ETH出售，以应对研究员离职潮。此举旨在优化运营并减少市场抛压。", source: "The Block", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMDlyMFBLbjVHWVM0Q0ZFNzlFZ3UyUUwwZ25FdDlCQmRvT0FhaEY1MnJiNDhPMTlWVzZteFpNNTczSUdsZDFvUUhwMU11RllDbjMwb0tQanZFRm8yeVhIal9MM19uME5kTmZ1bHQwMmtBVW5PSGdZMUR2WUNRQTBndFlHY3puZ1B1V3h0TTk0OTl4Wks1bGpzWXVKd0FfSkZ5enJjQ0FtcWFubmE4d3hFd2NlbTMzQ0pYeDlCbF95SjhXN1RnZTU4aXA3SkMxZU1KdlE?oc=5" },
-  { time: "01:29", tag: "tech", tagText: "科技", text: "SpaceX即将上市，市场关注其应归入标普500哪个行业板块。分析师讨论其业务涵盖太空火箭、卫星、数据中心及AI模型Grok，行业分类存在争议。", source: "CNBC", url: "https://www.cnbc.com/2026/05/24/spacex-sp-sector-index.html" },
 ];
-const breakingDate = "2026年6月9日 14:38 CST";
+const breakingDate = "2026年6月9日 16:38 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "15:33", tag: "ai", tagText: "AI", text: "三星与英伟达正探讨下一代AI芯片合作，双方将共同开发面向高性能计算和AI工作负载的先进芯片技术。这一合作可能重塑AI芯片供应链格局，标志着三星在代工领域追赶台积电的重要一步。", source: "Electronics For You BUSINESS", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUXBreTZhTzZ0M3hrei1yc2dwdFU1dHY4RW82MS1aV3NNQ0NaWEhEaHNMaHo2b09aZXFWZlprWjRQQ0lad2VUeDhhSXlEWVk2X0ZMcmoybWh4NUJKcnlUV3hJN2NIU2IyWUxUbGJrMDByMGxGTWNsLWoxZ2ZPSzFhYm16a0d1WXdTNFJEdEdUVEI2T3REcjZIVjVDdXltcnBSejRqVThXOFlpRHhvaU5iRXRKOA?oc=5" },
+  { time: "14:42", tag: "ai", tagText: "AI", text: "由韩国DGIST与美国MIT组成的联合团队赢得国际AI自动驾驶挑战赛，展示了跨国产学研合作在自动驾驶算法领域的领先实力。该赛事聚焦复杂道路环境下的实时决策与感知能力，获奖方案有望加速自动驾驶技术商业化落地。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcDNfWWxVc2VhOU5HdkFNckdxRldoQjRybVJNUUJWdVpVTHhqdW5ZdG1CcXlnREJ6Qm1tUUFVRXA3SkxqUnByRWxSOWJtWVE4SzhTVkR3VFVhOXRBbkk5UjY2MndiNWVLYXZBV1ZnSURielpEbkNyUUhiaXcxSFI0cGszNkh1TXh0?oc=5" },
   { time: "14:34", tag: "ai", tagText: "AI", text: "安特卫普风投Pitchdrive完成6000万欧元第四期基金募集，专注投资AI原生早期初创公司。该基金将重点支持人工智能原生领域的种子轮和A轮项目，显示出欧洲AI投资热度不减。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxObmFfNU55V2dIYzdSQ1ZaT0d1YTZOY0J4bmRQWEdlaXB6MjFQYUhBM1N1VVZFT1JkaVg0QWdhR1R5WEVrWXdUbzJSUEpuZURCSXU2R2dGWDNja2pSQ3g0bFJPZFdGLVF2Rl9KMFZKdEtaUWRmSDQ1cF9aR1FqTlVEQTExTGU2SWtWNXVzb0ViTl9YajFKYVhlUVR4LWJ3d3F6SWJNNlhCZy1VZUotRDNzQVlXQm5KblpBN0lOXzJCQ0sxZ3hzV1E?oc=5" },
+  { time: "12:58", tag: "macro", tagText: "宏观", text: "半导体板块遭遇集体抛售，但随后英伟达等芯片股出现技术性反弹。分析指出，短期抛压源于获利回吐和对AI投资回报率的担忧，但AI算力需求基本面未变，芯片长期前景依然强劲。", source: "Gotrade", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVkFJdjFLWU81RU1KMk1kQ2o3MllWVWowaUdnM2NRSC1VWmxORkx3Wkx5czY2MmpxekR2MjgtVEE5c0ZtcE5OY3hLd0prWkpkY21BbTVyZEo1S0NQVmFXRmZvYjNNUWlxMkdnZXlDY0dKUFFrQU5vQ2JHazhUOXBhcm1VYw?oc=5" },
   { time: "11:02", tag: "ai", tagText: "AI", text: "韩国GS工程建设公司与大东机器人合作，共同开发AI现场机器人。双方将结合建筑行业经验与自主机器人技术，研发可在建筑工地执行巡检、物料搬运等任务的智能机器人，推动建筑领域数字化转型。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZlRJcFVpNldaaVNwOVhWOWdQcjUySHlPRVlkSV81clNEbEpTdW9wVlhuRWM5NW1XLU1IUWtMNU4tWExrUE5fTHdPRFluVXllQzlQZmh4UXdBci12ZmgxaUdreWFUQjlYVGFsa2dJcEZWaVpFMl8zY1RXXzY2SnZ6cmtUYzBNNW03S1N5TExjamo3aGlKSDlLTjdSRVdOdkduTVNYRg?oc=5" },
   { time: "10:16", tag: "ai", tagText: "AI", text: "英伟达与LG电子达成合作，共同建设面向机器人和数据中心的AI工厂。双方将利用英伟达的AI计算平台和LG的制造经验，打造大规模AI基础设施，以推动工业自动化和智能计算发展。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE5hclkzOFJGenZZQm9aQW9UdUl3bUdnUjdTV1dBOWVHWDhpSTMxU3RwTTY5aHN4RFdCay1DNkMyQm9OMTYxbXZHYmNSMElZbXd5VUJQVEVoM050VXlWblJMZmpzS3VMUUU5UFRPOUp0bjRMRGRNOUVxU3J1OFM?oc=5" },
   { time: "09:56", tag: "ai", tagText: "AI", text: "科技媒体TechCrunch分析指出，苹果在AI领域的缓慢而稳健策略正开始显现优势。当竞争对手竞相推出大模型和激进产品时，苹果选择将AI深度集成到现有生态系统中，这种务实的路径正在赢得认可，并可能在后期的用户体验中建立护城河。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/08/why-apples-slow-and-steady-ai-bet-is-starting-to-look-pretty-smart/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "01:48", tag: "tech", tagText: "科技", text: "英伟达CEO黄仁勋在Computex 2026期间飞往台积电，因新一代Vera Rubin芯片量产对台湾供应链造成压力。此举凸显全球AI芯片产能高度集中于台湾的地缘风险。", source: "Tech Times", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOYlZTam1zMjA1azVXcVJRZHNxb2ZnR3NwRjF2d2tBSjhjZnd5cDBTVzdTT3h3N0F2ek9SeFpmN2l1bWQxYnprLUFlSWhjRWQxc3RYNEhrSUk2VDRNYkJlaHJGcHlZZ3lQZmZIa2piQW13SjZBT0RjTW9PWGhQMFlOV1pFOVlyRVEyYzc0UnZ5N3ZJV3RWSlBva245VURaNHZQMWVhYWE3MERZNFh1OXktazV2M2wta1FEaWkwUXNTcVlUdkxVQm5QYVlXWVZjZVlQRHY1M2dHQWRnd3c?oc=5" },
   { time: "01:37", tag: "tech", tagText: "科技", text: "谷歌展示其原型Android XR智能眼镜，该眼镜可将Gemini驱动的实时翻译、导航等信息直接叠加在用户视野中。体验者评价其功能“接近成熟”，但仍需完善，标志着谷歌在AI可穿戴设备领域迈出重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" },
   { time: "00:49", tag: "ai", tagText: "AI", text: "最新数据显示，英伟达在AI驱动的半导体市场中持续扩大领先优势。随着全球AI算力需求激增，英伟达凭借其GPU和AI芯片生态，进一步巩固了市场主导地位。", source: "Statista", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcnh1SHVsZE9FY3g4SUlOaTVTN1dqbjhiWHJjOFJLWnVhVGdnTVp0d29vcFMtMTkwaG5BM09QSTJOdVlUaFRJUW9IQlp2NjNxZC1Wb2V0OGU2a2dxcVlwUlh3UVB3c290ZVhwTDQ3a3ljT1RBaFhsa2NpcVk4OUE1VTNHSDJ0b285LUhpZFNzN0kxSHBlQ3MwRXJqUGhxMnBUNlJpTzhB0gGrAUFVX3lxTE1oZWtlT3YxZ2pOdHZWcDlkakxBZXhaOUJDUGl3NlBhejJKUVlqeVZZUnFISkNJOVEzZjhRS3FKVXpLeHc2Vm5jQVYyU3lOdGN0NjBwWndiWWFJSDFxTW5DbWwtMmNoSmJoRk0yVUhwU3hKMmlLMDRYX0NVbjJPWGFXZzBEa3pwVFdza0JjcW45S1ZuckdSX3E2ZnZfQVAxNm9KTTFIblNrVmdTZw?oc=5" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "《特定常规武器公约》在日内瓦联合国召开会议，聚焦致命自主武器系统。专家警告AI战争已现实存在，国际社会亟需划定红线，防止失控的自主武器造成人道主义灾难。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "黑客正学习利用聊天机器人的“个性”进行攻击。报道指出，攻击者不再仅依赖技术漏洞，而是通过操纵AI助手的对话风格和预设角色来实施欺诈或获取敏感信息，安全威胁呈现新形态。", source: "The Verge", url: "https://www.theverge.com/column/935545/hackers-ai-chatbots" },
-  { time: "19:53", tag: "tech", tagText: "科技", text: "AMD、博通和谷歌联合加强反英伟达攻势，AI半导体格局面临潜在重组。三家公司正通过合作开发替代方案，试图打破英伟达在AI芯片市场的主导地位。", source: "economy.ac", url: "https://news.google.com/rss/articles/CBMiV0FVX3lxTE83Qi1QQTU2NVlmRnU3QlVaejg0NE1NdnF2MVFDdzNLUXNoT2RETmYzWWhESGhaUEdpX0wxUG5VTVZWcjFMRmo5am8xM19tSGJLZWFqOGozUQ?oc=5" },
 ];
-const aiBreakingDate = "2026年6月9日 14:38 CST";
+const aiBreakingDate = "2026年6月9日 16:38 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
