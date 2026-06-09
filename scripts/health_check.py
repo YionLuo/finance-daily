@@ -40,7 +40,7 @@ DAILY_GRACE_MINUTES = 60          # Allow 60 min grace after scheduled time
 MAX_RETRY = 2
 
 # OpenAI-compatible gateway config (fallback if env not set)
-DEFAULT_BASE_URL = "https://tokens.devcloud.woa.com/v1"
+DEFAULT_BASE_URL = "https://api.deepseek.com"
 DEFAULT_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
 
@@ -205,7 +205,7 @@ def build_env_string():
     model = os.environ.get("LLM_MODEL", default_model_for_base_url(base_url))
     writer_model = os.environ.get(
         "WRITER_MODEL",
-        "gpt-5.4" if "tokens.devcloud.woa.com" in base_url else model,
+        model,
     )
     if not os.environ.get("OPENAI_BASE_URL"):
         env_extra += f'OPENAI_BASE_URL="{base_url}" '

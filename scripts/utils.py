@@ -365,7 +365,6 @@ def is_within_hours(time_str, hours=24):
 
 # Fallback API endpoints — tried in order if the primary fails with connection errors
 FALLBACK_ENDPOINTS = [
-    "https://tokens.devcloud.woa.com/v1",
     "https://api.deepseek.com",
 ]
 
@@ -374,9 +373,7 @@ def default_model_for_base_url(base_url):
     """Return a working default model for the configured OpenAI-compatible gateway."""
     if "openrouter" in base_url:
         return "deepseek/deepseek-v4-flash"
-    if "tokens.devcloud.woa.com" in base_url:
-        return "gpt-5.4-mini"
-    return "deepseek-v4-flash"
+    return "deepseek-chat"
 
 
 # Default model — auto-detect based on API endpoint
@@ -478,7 +475,7 @@ def llm_chat_with_retry(client, messages, model=None, max_tokens=4000,
     Args:
         client: OpenAI client instance
         messages: List of message dicts
-        model: Model name (defaults to LLM_MODEL env var or deepseek-v4-flash)
+        model: Model name (defaults to LLM_MODEL env var or deepseek-chat)
         max_tokens: Max response tokens
         temperature: Sampling temperature
         max_retries: Maximum retry attempts
