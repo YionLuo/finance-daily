@@ -35,8 +35,8 @@ jobs:
       - name: Run Breaking News update
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_BASE_URL: "https://api.deepseek.com"
-          LLM_MODEL: "deepseek-chat"
+          OPENAI_BASE_URL: "https://tokens.devcloud.woa.com/v1"
+          LLM_MODEL: "gpt-5.4-mini"
           TZ: Asia/Shanghai
         run: python scripts/update_breaking.py
 
@@ -44,7 +44,7 @@ jobs:
         run: |
           git config user.name "Y Daily Bot"
           git config user.email "bot@yion.me"
-          git add -A
+          git add index.html
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

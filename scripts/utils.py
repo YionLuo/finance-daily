@@ -365,12 +365,23 @@ def is_within_hours(time_str, hours=24):
 
 # Fallback API endpoints — tried in order if the primary fails with connection errors
 FALLBACK_ENDPOINTS = [
+    "https://tokens.devcloud.woa.com/v1",
     "https://api.deepseek.com",
 ]
 
+
+def default_model_for_base_url(base_url):
+    """Return a working default model for the configured OpenAI-compatible gateway."""
+    if "openrouter" in base_url:
+        return "deepseek/deepseek-v4-flash"
+    if "tokens.devcloud.woa.com" in base_url:
+        return "gpt-5.4-mini"
+    return "deepseek-v4-flash"
+
+
 # Default model — auto-detect based on API endpoint
-_base = os.environ.get("OPENAI_BASE_URL", "")
-DEFAULT_LLM_MODEL = "deepseek/deepseek-v4-flash" if "openrouter" in _base else "deepseek-v4-flash"
+_base = os.environ.get("OPENAI_BASE_URL", FALLBACK_ENDPOINTS[0])
+DEFAULT_LLM_MODEL = default_model_for_base_url(_base)
 
 
 def create_llm_client(required=True):
@@ -414,19 +425,23 @@ def create_llm_client(required=True):
 
     # Try each endpoint with a quick chat completion test (short timeout)
     working_ep = None
+    working_model = None
+    explicit_model = os.environ.get("LLM_MODEL")
     for ep in endpoints:
         try:
             test_client = OpenAI(api_key=api_key, base_url=ep, timeout=15)
+            model = explicit_model or default_model_for_base_url(ep)
             # Use a minimal chat completion instead of models.list()
             # This tests the actual path we'll use for report generation
             test_resp = test_client.chat.completions.create(
-                model=os.environ.get("LLM_MODEL", DEFAULT_LLM_MODEL),
+                model=model,
                 messages=[{"role": "user", "content": "say ok"}],
                 max_tokens=5,
             )
             if test_resp.choices and test_resp.choices[0].message.content:
-                print(f"LLM endpoint OK: {ep}")
+                print(f"LLM endpoint OK: {ep} ({model})")
                 working_ep = ep
+                working_model = model
                 break
             else:
                 print(f"LLM endpoint {ep}: empty response")
@@ -439,6 +454,10 @@ def create_llm_client(required=True):
     if chosen_ep:
         if not working_ep:
             print(f"WARNING: All endpoints failed connectivity test, using {chosen_ep} anyway")
+            working_model = explicit_model or default_model_for_base_url(chosen_ep)
+        os.environ["OPENAI_BASE_URL"] = chosen_ep
+        if not explicit_model and working_model:
+            os.environ["LLM_MODEL"] = working_model
         # Create actual client with long timeout for LLM generation
         return OpenAI(api_key=api_key, base_url=chosen_ep, timeout=300)
 

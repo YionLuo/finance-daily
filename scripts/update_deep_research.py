@@ -30,7 +30,7 @@ from utils import (
     replace_js_array,
     create_llm_client, llm_chat_with_retry,
     now_cst, format_date_cst, CST,
-    python_to_js_array,
+    python_to_js_array, DEFAULT_LLM_MODEL,
 )
 from news_fetcher import (
     fetch_topic_articles, articles_to_context,
@@ -42,12 +42,8 @@ from news_fetcher import (
 MAX_RESEARCH_ENTRIES = 30
 WEEKDAY_MAP = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 
-# Auto-detect model names based on API endpoint
-_base_url = os.environ.get("OPENAI_BASE_URL", "")
-_is_openrouter = "openrouter" in _base_url
-
-LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek/deepseek-v4-flash" if _is_openrouter else "deepseek-v4-flash")
-WRITER_MODEL = os.environ.get("WRITER_MODEL", LLM_MODEL)  # defaults to flash; set env var for pro
+LLM_MODEL = os.environ.get("LLM_MODEL", DEFAULT_LLM_MODEL)
+WRITER_MODEL = os.environ.get("WRITER_MODEL", LLM_MODEL)
 
 # Tool budgets
 MAX_RESEARCH_TOOL_CALLS = 18

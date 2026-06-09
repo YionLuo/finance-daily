@@ -2,10 +2,9 @@
 """
 Y Daily Health Check & Auto-Recovery v2
 
-Checks THREE content streams:
+Checks TWO content streams:
 1. Breaking News — should have auto commit within 2 hours
-2. Finance Daily Report — should have today's issue (after 22:00 CST)
-3. AI Daily Report — should have today's issue (after 22:10 CST)
+2. Deep Research Report — should have today's report (after 22:00 CST)
 
 If any stream is stale, attempts auto-recovery by running the
 corresponding update script locally and pushing the result.
@@ -18,12 +17,15 @@ import os
 import sys
 import subprocess
 import time
-import re
 import json
 from datetime import datetime, timezone, timedelta
 
 sys.path.insert(0, os.path.dirname(__file__))
-from utils import FALLBACK_ENDPOINTS, DEFAULT_LLM_MODEL
+from utils import (
+    FALLBACK_ENDPOINTS,
+    extract_js_array,
+    default_model_for_base_url,
+)
 
 # ============ Configuration ============
 
@@ -32,14 +34,13 @@ CST = timezone(timedelta(hours=8))
 
 # Thresholds
 BREAKING_STALE_MINUTES = 120      # Breaking News: 2 hours without commit
-DAILY_REPORT_HOUR = 22            # Finance daily runs at 22:00 CST
-AI_REPORT_HOUR = 22               # AI daily runs at 22:10 CST
+DEEP_RESEARCH_HOUR = 22           # Deep Research runs at 22:00 CST
 DAILY_GRACE_MINUTES = 60          # Allow 60 min grace after scheduled time
 
 MAX_RETRY = 2
 
-# NovAI config (fallback if env not set)
-DEFAULT_BASE_URL = "https://api.deepseek.com"
+# OpenAI-compatible gateway config (fallback if env not set)
+DEFAULT_BASE_URL = "https://tokens.devcloud.woa.com/v1"
 DEFAULT_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
 
@@ -102,12 +103,9 @@ def get_last_auto_commit_age():
     return None
 
 
-def check_daily_report_in_html(report_type="finance"):
+def check_deep_research_in_html():
     """
-    Check if today's daily report exists in index.html.
-
-    Args:
-        report_type: "finance" or "ai"
+    Check if today's deep research report exists in index.html.
 
     Returns:
         (has_today, latest_date_str) — whether today's report exists, and the latest date found
@@ -120,34 +118,17 @@ def check_daily_report_in_html(report_type="finance"):
         now = datetime.now(CST)
         today_str = now.strftime("%Y-%m-%d")
 
-        if report_type == "finance":
-            # Look for issue id like "2026-04-12" in const issues = [...]
-            pattern = r'"id"\s*:\s*"(\d{4}-\d{2}-\d{2})"'
-            var_pattern = r'const\s+issues\s*='
-        else:
-            # Look for AI issue id like "ai-2026-04-12" in const aiIssues = [...]
-            pattern = r'"id"\s*:\s*"ai-(\d{4}-\d{2}-\d{2})"'
-            var_pattern = r'const\s+aiIssues\s*='
-
-        # Find the relevant section
-        var_match = re.search(var_pattern, html)
-        if not var_match:
+        deep_research = extract_js_array(html, "deepResearch")
+        if not deep_research:
             return False, "N/A"
 
-        # Search for dates after the variable declaration
-        section = html[var_match.start():var_match.start() + 5000]
-        dates = re.findall(pattern, section)
-
-        if not dates:
-            return False, "N/A"
-
-        latest_date = dates[0]  # First one should be the latest (prepended)
-        has_today = today_str in dates
+        latest_date = deep_research[0].get("id", "N/A")
+        has_today = latest_date == today_str
 
         return has_today, latest_date
 
     except Exception as e:
-        log(f"Error checking {report_type} report: {e}")
+        log(f"Error checking deep research report: {e}")
         return False, "error"
 
 
@@ -184,8 +165,9 @@ def test_api():
 
     for base_url in endpoints:
         url = f"{base_url}/chat/completions"
+        model = os.environ.get("LLM_MODEL", default_model_for_base_url(base_url))
         data = json.dumps({
-            "model": DEFAULT_LLM_MODEL,
+            "model": model,
             "messages": [{"role": "user", "content": "say ok"}],
             "max_tokens": 5
         }).encode()
@@ -202,8 +184,9 @@ def test_api():
         try:
             with urllib.request.urlopen(req, timeout=15) as resp:
                 if resp.status == 200:
-                    log(f"API OK: {base_url}")
+                    log(f"API OK: {base_url} ({model})")
                     os.environ["OPENAI_BASE_URL"] = base_url
+                    os.environ.setdefault("LLM_MODEL", model)
                     return True
         except Exception as e:
             log(f"API failed [{base_url}]: {e}")
@@ -218,10 +201,20 @@ def test_api():
 def build_env_string():
     """Build environment variable prefix for subprocess calls."""
     env_extra = ""
+    base_url = os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL)
+    model = os.environ.get("LLM_MODEL", default_model_for_base_url(base_url))
+    writer_model = os.environ.get(
+        "WRITER_MODEL",
+        "gpt-5.4" if "tokens.devcloud.woa.com" in base_url else model,
+    )
     if not os.environ.get("OPENAI_BASE_URL"):
-        env_extra += f'OPENAI_BASE_URL="{DEFAULT_BASE_URL}" '
+        env_extra += f'OPENAI_BASE_URL="{base_url}" '
     if not os.environ.get("OPENAI_API_KEY") and DEFAULT_API_KEY:
         env_extra += f'OPENAI_API_KEY="{DEFAULT_API_KEY}" '
+    if not os.environ.get("LLM_MODEL"):
+        env_extra += f'LLM_MODEL="{model}" '
+    if not os.environ.get("WRITER_MODEL"):
+        env_extra += f'WRITER_MODEL="{writer_model}" '
     env_extra += 'TZ=Asia/Shanghai '
     return env_extra
 
@@ -244,40 +237,26 @@ def run_breaking_update():
         return False
 
 
-def run_finance_daily():
-    """Run update_finance.py and return success."""
+def run_deep_research():
+    """Run update_deep_research.py and return success."""
     env = build_env_string()
-    cmd = f"{env}python3 scripts/update_finance.py"
-    log("Running Finance Daily Report...")
-    ok, out = run(cmd, timeout_sec=600)  # Daily reports take longer
+    cmd = f"{env}python3 scripts/update_deep_research.py"
+    log("Running Deep Research Report...")
+    ok, out = run(cmd, timeout_sec=3600)
 
     if ok and "Done!" in out:
-        log("Finance Daily Report OK")
+        log("Deep Research Report OK")
         return True
-    else:
-        log("Finance Daily Report FAILED")
-        for line in out.split("\n")[-5:]:
-            if line.strip():
-                log(f"  {line.strip()}")
-        return False
 
-
-def run_ai_daily():
-    """Run update_ai.py and return success."""
-    env = build_env_string()
-    cmd = f"{env}python3 scripts/update_ai.py"
-    log("Running AI Daily Report...")
-    ok, out = run(cmd, timeout_sec=600)
-
-    if ok and "Done!" in out:
-        log("AI Daily Report OK")
+    if ok and "SUCCESS: Deep research report generated!" in out:
+        log("Deep Research Report OK")
         return True
-    else:
-        log("AI Daily Report FAILED")
-        for line in out.split("\n")[-5:]:
-            if line.strip():
-                log(f"  {line.strip()}")
-        return False
+
+    log("Deep Research Report FAILED")
+    for line in out.split("\n")[-8:]:
+        if line.strip():
+            log(f"  {line.strip()}")
+    return False
 
 
 def git_push(commit_msg=None):
@@ -342,31 +321,18 @@ def main():
     else:
         log(f"OK — last commit {age:.0f}min ago")
 
-    # ============ Check 2: Finance Daily Report ============
-    log("\n--- Check: Finance Daily Report ---")
-    if should_check_daily(DAILY_REPORT_HOUR):
-        has_today, latest_date = check_daily_report_in_html("finance")
+    # ============ Check 2: Deep Research Report ============
+    log("\n--- Check: Deep Research Report ---")
+    if should_check_daily(DEEP_RESEARCH_HOUR):
+        has_today, latest_date = check_deep_research_in_html()
         if has_today:
-            log(f"OK — today's report exists (latest: {latest_date})")
+            log(f"OK — today's deep research exists (latest: {latest_date})")
         else:
-            log(f"MISSING — today's report not found (latest: {latest_date})")
-            issues_found.append(f"Finance Daily: missing today (latest: {latest_date})")
-            recovery_needed.append("finance")
+            log(f"MISSING — today's deep research not found (latest: {latest_date})")
+            issues_found.append(f"Deep Research: missing today (latest: {latest_date})")
+            recovery_needed.append("deep_research")
     else:
-        log(f"SKIP — not yet past {DAILY_REPORT_HOUR}:00 CST + grace period")
-
-    # ============ Check 3: AI Daily Report ============
-    log("\n--- Check: AI Daily Report ---")
-    if should_check_daily(AI_REPORT_HOUR):
-        has_today, latest_date = check_daily_report_in_html("ai")
-        if has_today:
-            log(f"OK — today's report exists (latest: {latest_date})")
-        else:
-            log(f"MISSING — today's report not found (latest: {latest_date})")
-            issues_found.append(f"AI Daily: missing today (latest: {latest_date})")
-            recovery_needed.append("ai")
-    else:
-        log(f"SKIP — not yet past {AI_REPORT_HOUR}:00 CST + grace period")
+        log(f"SKIP — not yet past {DEEP_RESEARCH_HOUR}:00 CST + grace period")
 
     # ============ Summary ============
     log("\n--- Summary ---")
@@ -393,22 +359,16 @@ def main():
         if run_breaking_update():
             recovered.append("breaking")
 
-    if "finance" in recovery_needed:
-        if run_finance_daily():
-            recovered.append("finance")
-
-    if "ai" in recovery_needed:
-        if run_ai_daily():
-            recovered.append("ai")
+    if "deep_research" in recovery_needed:
+        if run_deep_research():
+            recovered.append("deep_research")
 
     if recovered:
         parts = []
         if "breaking" in recovered:
             parts.append("breaking news")
-        if "finance" in recovered:
-            parts.append("finance daily")
-        if "ai" in recovered:
-            parts.append("AI daily")
+        if "deep_research" in recovered:
+            parts.append("deep research")
 
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M CST")
         commit_msg = f"auto: recovery {' + '.join(parts)} {now_str}"

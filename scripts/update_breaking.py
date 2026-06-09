@@ -27,7 +27,7 @@ from utils import (
     replace_js_array, replace_js_string, replace_js_object,
     format_date_cst, now_cst, CST,
     python_to_js_object_inline,
-    create_llm_client,
+    create_llm_client, DEFAULT_LLM_MODEL,
 )
 from news_fetcher import (
     fetch_finance_news, fetch_ai_news, fetch_watchlist_news,
@@ -38,7 +38,7 @@ from news_fetcher import (
 
 MAX_ITEMS = 20
 WINDOW_HOURS = 24
-LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-v4-flash")
+LLM_MODEL = os.environ.get("LLM_MODEL", DEFAULT_LLM_MODEL)
 
 
 def analyze_news_with_llm(client, articles_context, category, existing_texts):
