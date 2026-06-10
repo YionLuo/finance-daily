@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 29.11,
+  score: 27.86,
   rating: "fear",
-  timestamp: "2026-06-10T16:39:44+00:00",
+  timestamp: "2026-06-10T19:40:08+00:00",
   previousClose: 33.43,
   previous1Week: 53.03,
   previous1Month: 67.29,
   previous1Year: 64.0,
-  date: "2026年6月11日 00:42 CST"
+  date: "2026年6月11日 03:44 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1646,14 +1646,18 @@ const breakingNews = [
   { time: "12:00", tag: "ai", tagText: "AI", text: "英国《金融时报》呼吁全球必须就AI监管达成协议，建议美中签署类似技术军备控制的条约，以增强各国对AI安全发展的信心。当前AI军备竞赛加剧，缺乏国际规则构成重大风险。", source: "Financial Times", url: "https://www.ft.com/content/8724874e-f387-4848-bfc4-2411d6f0797f" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "华尔街IPO热潮将逆转美股供应萎缩趋势：SpaceX、Anthropic和OpenAI等明星科技公司即将上市，加上公司回购放缓，投资者警告新股大规模上市可能削弱对现有股票的价格支撑。", source: "Financial Times", url: "https://www.ft.com/content/f7dae4e1-d650-45ab-ac97-043c7a965d24" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "中国投资者通过数字渠道押注美国科技IPO：为获得SpaceX等热门美股敞口，中国内地投资者利用数字凭证、跨境衍生品等工具规避监管，尽管面临风险和合规不确定性。", source: "Financial Times", url: "https://www.ft.com/content/809a5144-ce28-435a-807f-2ed2c46bd529" },
-  { time: "06:29", tag: "tech", tagText: "科技", text: "超微电脑（Super Micro）宣布70亿美元融资计划，用于满足AI服务器订单激增带来的资金需求。市场担忧股权稀释及高现金消耗，股价盘后暴跌逾15%。该公司成为最新一家借AI热潮大规模融资的科技企业。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/super-micro-stock-tumbles-on-7-billion-financing-plans.html" },
-  { time: "06:00", tag: "ai", tagText: "AI", text: "苹果公司AI功能有望引发历史性换机周期，但投资者可能低估其变现速度。分析指出，新一代AI特性对硬件要求更高，加之潜在“杀手级应用”的催化，消费者升级需求将远超预期，苹果营收增长动能被市场忽视。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apples-ai-could-usher-in-a-historic-upgrade-cycle-that-investors-are-overlooking-2b47fbb3" },
-  { time: "05:20", tag: "tech", tagText: "科技", text: "通用汽车（GM）效仿福特，押注钠离子电池技术以拓展能源存储和AI数据中心业务。该非传统方案旨在利用下一代电池化学满足数据中心和储能市场的快速增长需求，股价受此消息提振。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gm-follows-ford-by-making-a-big-energy-bet-but-heres-the-quirky-twist-eae9b5ee" },
+  { time: "07:27", tag: "tech", tagText: "科技", text: "SpaceX即将进行历史性IPO，但投资者面临核心难题：这家公司到底是火箭发射商、卫星通信巨头还是AI算力提供商？不同定位对应天差地别的估值逻辑。同时，其独特的业务结构使华尔街难以对冲风险，基金经理感叹“你难道要做空NASA吗？”。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/the-big-question-facing-spacex-investors-what-are-you-really-buying-8c5c2a10" },
+  { time: "07:03", tag: "macro", tagText: "宏观", text: "黄金自2022年以来首次进入熊市。金价自2月创下盘中历史高点以来已下跌25%，GLD ETF跌幅相当。交易员押注黄金可能还要承受两年的跌势。分析认为，美元走强、美联储维持高利率预期以及地缘风险并未如预期推升避险需求是金价暴跌主因。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/gold-enters-a-bear-market-for-the-first-time-since-2022-how-the-safe-haven-metal-got-here-445a78a3" },
+  { time: "06:54", tag: "macro", tagText: "宏观", text: "特朗普在5月CPI同比上涨4.2%创三年新高后表示“我爱通胀”，称战争结束后通胀将回落，并透露美国通过霍尔木兹海峡秘密运出“数百万桶石油”。这一言论加剧市场对通胀黏性和美联储政策路径的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/trump-inflation-cpi-iran-oil.html" },
 ];
-const breakingDate = "2026年6月11日 00:42 CST";
+const breakingDate = "2026年6月11日 03:44 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:27", tag: "ai", tagText: "AI", text: "拉斯维加斯AI初创公司获创纪录的3.5亿美元融资，用于扩大数据中心版图。该公司专注于AI基础设施，本轮资金将支持其在美国多个地区新建大规模数据中心，以应对AI计算需求激增。", source: "reviewjournal.com", url: "https://news.google.com/rss/articles/CBMinwNBVV95cUxPOWZFTGh0R2RURVpvcUJtTnE3ZFc3eHA0VUFFVXNzQW1ZWGdUMnBiLTZ1ZEJjb1hiQlZmX0JNd1hTbnZfQW8tZ2tndUV5NUt4WWVRdUtDTXJCTFlORFdheHBzMDBGTVlMaDRwRi0wX1dSTnVJekFJek1VUkU2LUVtZnpLS1pBNDBjbUFqZGxkTFprV2ZJRmpxeE1QLXFjUU9SWHJEcUctYnFkVHJaVFpKUnItbUdvT1V3SU04TEp0LVktN1lKcHcxTERxb0Zxa1JQSjdxNmpBeEIwWVVJWmFaLU9MVG8ycGNGT3h1WEJJS0E4SmgtTXhSMVhSVUp1U2VXNXBvcS0yQ2toUS0yemNrMkMzSXZzbTFEWF96eXlKb01UcGRWcjBjNTNqNU5uUkJ5RnlnNlMxcmVhTHdadU5xZ0loOUdIek04QVFseDdWQzhUREU0dEttdjFOcGJ4WkZrd3p2TV9RNTNTOUg2bGFKUTZlZnBmd0hsOFZBVUNuTHdOdlhPOVc2cEk4QS1lekxMN2FMaG56cVlXYUxHbTRr?oc=5" },
+  { time: "01:20", tag: "tech", tagText: "科技", text: "谷歌遭独立音乐人集体诉讼，指控其未经许可使用YouTube平台上的歌曲训练Lyria音乐AI模型。原告称谷歌将用户上传的视频视为训练素材，但未明确告知或获得授权。此案可能对AI训练数据的版权规则产生深远影响。", source: "The Verge", url: "https://www.theverge.com/tech/947770/google-lyria-music-ai-lawsuit-youtube" },
+  { time: "01:07", tag: "ai", tagText: "AI", text: "最新数据显示，“AI重度投入”的企业每月为每位员工在AI工具和服务上花费约7500美元。该金额已接近入门级工程师薪资，反映出企业为抢占AI红利不惜重金投入的趋势，同时也引发对投资回报率的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/ai-pilled-firms-spend-7500-per-employee-each-month-on-ai/" },
+  { time: "00:50", tag: "ai", tagText: "AI", text: "Anthropic新发布的Mythos级模型Claude Fable引发双重争议：微软因数据保留担忧限制内部员工使用该模型；同时，网络安全研究人员批评Fable的安全护栏过于严格，导致无法进行有效的安全测试与漏洞分析。模型能力与可用性之间的平衡面临行业拷问。", source: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
   { time: "00:18", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，将保存用户使用Lens拍摄的照片、Search Live录音及翻译音频等交互数据，用于AI模型训练。此举引发对数据隐私和AI训练伦理的新一轮讨论。", source: "The Verge", url: "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio" },
   { time: "00:09", tag: "ai", tagText: "AI", text: "科技行业迎来新缩写MANGOS：SpaceX、Anthropic、OpenAI等公司正筹备大规模公开上市，可能取代FAANG成为新一代科技巨头。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" },
   { time: "00:01", tag: "ai", tagText: "AI", text: "英伟达发布Cosmos 3，号称全球首个完全开源的AI全能模型，涵盖多模态能力，推动AI民主化进程。", source: "AI Magazine", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNko3Mm1FRGphWkxlWWJNTDVLMmc2NTlCbWtVejV4UkFrZjFmbzFITTRLampScnJmaDFDNjVOVjYwQVhYeDRZUmZzc0dhcjhhOVlTczNTQ3pRRVJtUGp0REdRblAyUXJDTGpsTTFYT0VKZS10M3VCNklfN1JtSm5rTE5XdE83SmtrMTY4WFNB?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "15:33", tag: "ai", tagText: "AI", text: "三星与英伟达正探讨下一代AI芯片合作，双方将共同开发面向高性能计算和AI工作负载的先进芯片技术。这一合作可能重塑AI芯片供应链格局，标志着三星在代工领域追赶台积电的重要一步。", source: "Electronics For You BUSINESS", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUXBreTZhTzZ0M3hrei1yc2dwdFU1dHY4RW82MS1aV3NNQ0NaWEhEaHNMaHo2b09aZXFWZlprWjRQQ0lad2VUeDhhSXlEWVk2X0ZMcmoybWh4NUJKcnlUV3hJN2NIU2IyWUxUbGJrMDByMGxGTWNsLWoxZ2ZPSzFhYm16a0d1WXdTNFJEdEdUVEI2T3REcjZIVjVDdXltcnBSejRqVThXOFlpRHhvaU5iRXRKOA?oc=5" },
   { time: "15:05", tag: "ai", tagText: "AI", text: "Meta与印度信实工业（Reliance）签署首份AI数据中心协议，将在印度建设一座168兆瓦的设施，支持Meta全球AI计算需求，并可未来扩展。此举标志着Meta加速在印度布局AI基础设施。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/meta-signs-first-ai-data-center-deal-in-india-with-reliance/" },
   { time: "14:42", tag: "ai", tagText: "AI", text: "由韩国DGIST与美国MIT组成的联合团队赢得国际AI自动驾驶挑战赛，展示了跨国产学研合作在自动驾驶算法领域的领先实力。该赛事聚焦复杂道路环境下的实时决策与感知能力，获奖方案有望加速自动驾驶技术商业化落地。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcDNfWWxVc2VhOU5HdkFNckdxRldoQjRybVJNUUJWdVpVTHhqdW5ZdG1CcXlnREJ6Qm1tUUFVRXA3SkxqUnByRWxSOWJtWVE4SzhTVkR3VFVhOXRBbkk5UjY2MndiNWVLYXZBV1ZnSURielpEbkNyUUhiaXcxSFI0cGszNkh1TXh0?oc=5" },
-  { time: "10:37", tag: "ai", tagText: "AI", text: "韩国SK电讯、日本NTT与台湾中华电信联合推出规模5亿美元的AI投资基金，旨在支持亚洲AI初创企业及基础设施建设。三方将整合各自在电信、云计算和数据中心领域的资源，推动区域AI生态发展。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQT3JkbEJfd3VVWU1iZXpCT2NPNlZMMVZfNVk4NGl1Q0xfN1hyaHZsTTZQcVRRNUhZVFpIRWJZRHA1LV95VUlwNXQ5dTRuekJHdTBNQTExNVJUTXptd2daU0NOSnRNdmVjNW1aMHpiRjNfQmlRZnhoSFJwbE1wd19IcUhrNVJxNG53T3hFSE85U2xZQWs?oc=5" },
-  { time: "08:26", tag: "ai", tagText: "AI", text: "谷歌打响AI订阅价格战：大幅下调其廉价AI订阅层级的费用，以更激进的定价策略抢占市场。此举被视为对其他竞争对手（如OpenAI、微软）的直接警告，AI服务商业化竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/google-just-fired-a-warning-shot-in-the-ai-subscription-price-wars/" },
-  { time: "07:17", tag: "tech", tagText: "科技", text: "Sabertooth VC创始人Justin Ernest通过其LP关系网络，在不设立传统风险基金的情况下，向Anthropic、Anduril和SpaceX等热门初创公司投资近4亿美元。这种新型投资模式绕过了传统募资流程，引发行业关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-400m-into-hot-startups-without-a-traditional-vc-fund/" },
-  { time: "05:00", tag: "tech", tagText: "科技", text: "通用汽车在旧金山宣布，将利用电动汽车的Vehicle-to-Grid（V2G）技术，使电动车电池在AI数据中心电力需求高峰时反向供电，以缓解电网压力。该计划还包括钠离子电池储能方案，旨在平衡AI算力扩张带来的巨大能耗。", source: "The Verge", url: "https://www.theverge.com/transportation/946820/gm-energy-ev-v2g-storage-sodium-ion" },
 ];
-const aiBreakingDate = "2026年6月11日 00:42 CST";
+const aiBreakingDate = "2026年6月11日 03:44 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
