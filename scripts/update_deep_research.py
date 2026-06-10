@@ -2,14 +2,14 @@
 """
 Deep Research Report Generator for Y Daily.
 
-Six-stage pipeline with independent fact-checking:
+Six-stage investment memo pipeline with independent fact-checking:
 
-  Stage 1 — Topic Selection: Pick the best deep-dive topic from breaking news
-  Stage 2 — Research Planning: Activate domain knowledge + generate explicit key questions
-  Stage 3 — Research: Question-guided tool-using research → structured evidence bank
+  Stage 1 — Editor Gate: Score candidates and skip low-value days
+  Stage 2 — Research Contract: Define thesis, anti-thesis, evidence needs, stop rules
+  Stage 3 — Research: Contract-guided tool research → evidence cards
   Stage 4 — Fact Check: Independent verification of claims (fresh context, adversarial)
-  Stage 5 — Report Writing: Generate report from verified evidence only (no tools)
-  Stage 6 — Format: Convert to structured JSON + validation
+  Stage 5 — Memo Writing: Financial mapping + red team + investment judgment
+  Stage 6 — Format: Convert memo to structured JSON + validation
 
 Outputs: Updates the `deepResearch` array in index.html
 """
@@ -51,20 +51,107 @@ MAX_RESEARCH_ROUNDS = 15
 MAX_FACT_CHECK_TOOL_CALLS = 10
 MAX_FACT_CHECK_ROUNDS = 8
 
+WATCHLIST_PATH = os.path.join(
+    os.path.dirname(__file__),
+    "..",
+    "skill-金融资讯日报",
+    "references",
+    "watchlist.md",
+)
+
+# Quality gates. A run exits cleanly without writing a report when these are not met.
+MIN_TOPIC_SCORE = 0.62
+MIN_DATA_QUALITY_SCORE = 0.35
+MIN_USABLE_CLAIMS = 3
+MIN_ANSWERED_QUESTIONS = 2
+MIN_QUESTION_COVERAGE = 0.35
+
+
+def load_watchlist_context(max_chars=5000):
+    """Load the user's watchlist and focus areas for topic scoring and mapping."""
+    try:
+        with open(WATCHLIST_PATH, "r", encoding="utf-8") as f:
+            return f.read()[:max_chars]
+    except OSError:
+        return "（未找到股票池配置，按通用 AI/科技/金融市场主题评估）"
+
+
+def _as_float(value, default=0.0):
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def _topic_total_score(topic_info):
+    scores = topic_info.get("scores", {})
+    if isinstance(scores, dict):
+        return _as_float(scores.get("total"), _as_float(topic_info.get("totalScore"), 0.0))
+    return _as_float(topic_info.get("totalScore"), 0.0)
+
+
+def _should_skip_topic(topic_info):
+    """Return (should_skip, reason) for the editor gate."""
+    if topic_info.get("shouldSkip"):
+        return True, topic_info.get("skipReason") or "Editor 判定今日没有足够投资研究价值"
+
+    total = _topic_total_score(topic_info)
+    if total < MIN_TOPIC_SCORE:
+        return True, f"选题总分 {total:.2f} 低于门槛 {MIN_TOPIC_SCORE:.2f}"
+
+    scores = topic_info.get("scores", {})
+    if isinstance(scores, dict):
+        repetition = _as_float(scores.get("repetitionPenalty"), 0.0)
+        if repetition >= 0.8:
+            return True, "近期重复度过高，跳过"
+
+    return False, ""
+
+
+def _research_coverage_stats(plan, evidence_bank):
+    """Return question coverage stats used by the post-research quality gate."""
+    questions = plan.get("key_questions", [])
+    total_questions = len(questions)
+    coverage = evidence_bank.get("questions_coverage", {})
+    answered = coverage.get("answered", {}) if isinstance(coverage, dict) else {}
+    answered_ids = [qid for qid, claim_ids in answered.items() if claim_ids]
+    answered_count = len(set(answered_ids))
+    coverage_ratio = answered_count / total_questions if total_questions else 1.0
+    return {
+        "total_questions": total_questions,
+        "answered_count": answered_count,
+        "coverage_ratio": coverage_ratio,
+    }
+
+
+def _should_skip_after_research(plan, evidence_bank):
+    """Return (should_skip, reason) when research coverage is too thin for a memo."""
+    stats = _research_coverage_stats(plan, evidence_bank)
+    total = stats["total_questions"]
+    answered = stats["answered_count"]
+    ratio = stats["coverage_ratio"]
+
+    if total == 0:
+        return True, "研究计划没有关键问题，跳过以避免无约束写作"
+    if answered < MIN_ANSWERED_QUESTIONS:
+        return True, f"关键问题覆盖不足：仅回答 {answered}/{total}，至少需要 {MIN_ANSWERED_QUESTIONS} 个"
+    if ratio < MIN_QUESTION_COVERAGE:
+        return True, f"关键问题覆盖率 {ratio:.0%} 低于门槛 {MIN_QUESTION_COVERAGE:.0%}"
+    return False, ""
+
 
 # ============ Stage 1: Topic Selection ============
 
-TOPIC_SELECTION_PROMPT = """你是 Y Daily 首席分析师。从今日 Breaking News 中选出最具深度分析价值的 1 个专题。
+TOPIC_SELECTION_PROMPT = """你是 Y Daily 的 Editor，不是日报写手。你的职责是判断今天是否存在值得写成投资判断 memo 的研究机会。
 
-选题标准：
-1. 时效性：最近 24 小时内的重大事件
-2. 深度价值：有足够多的角度和数据支撑深度分析
-3. 与 AI/互联网/科技行业 或 金融市场（美股/港股）相关
-4. 不是简单的事件报道，而是可以挖掘深层逻辑的话题
+目标读者：关注美股/港股 AI、科技、互联网、半导体、宏观流动性的专业投资人。
+核心原则：宁缺毋滥。若今天没有足够强的投资判断增量，应该跳过，不要硬写长文。
 
-⚠️ 绝对不能重复的近期报告主题：
+用户股票池与关注领域：
+{watchlist_context}
+
+近期报告主题（用于去重）：
 {existing_topics}
-选题必须与以上所有主题**完全不同**。不能是同一事件的不同角度，不能是同一公司的不同切入点。如果近期已经写过亚马逊/Anthropic，就不要再选任何涉及这两家公司的话题。选一个全新的领域。
 
 今日金融快讯：
 {finance_news}
@@ -72,17 +159,73 @@ TOPIC_SELECTION_PROMPT = """你是 Y Daily 首席分析师。从今日 Breaking 
 今日 AI/科技快讯：
 {ai_news}
 
+请先生成 2-5 个候选 TopicCandidate，再逐项评分，最后选择一个或决定跳过。
+
+评分维度（0-1 分）：
+- tickerRelevance：是否能直接映射到用户股票池/关注资产的业务线、估值变量或风险偏好。
+- informationDelta：今天的信息是否改变原有判断，而不是普通新闻复述。
+- evidenceVerifiability：是否可能用公开报道、公司 IR、监管文件、财务数据验证。
+- catalystClarity：未来 1-8 周是否有可观察的验证/推翻信号。
+- bearCaseStrength：是否存在足够强的反方论证，避免单边叙事。
+- repetitionPenalty：近期重复度，0=完全不重复，1=高度重复。
+
+total 评分公式：
+0.25*tickerRelevance + 0.25*informationDelta + 0.20*evidenceVerifiability + 0.15*catalystClarity + 0.10*bearCaseStrength - 0.15*repetitionPenalty
+
+跳过规则：
+- selected.total < 0.62，跳过
+- 与近期报告主题高度重复，跳过
+- 无法回答“读者读完应改变什么投资判断”，跳过
+- 只是市场行情、产品发布、融资传闻、媒体观点复述，跳过
+
 输出严格 JSON（不要 markdown 代码块）：
 {{
-  "topic": "专题名称（15字以内）",
-  "topicReason": "选题理由（2-3句话）",
-  "angle": "分析切入角度（1句话）"
+  "shouldSkip": false,
+  "skipReason": null,
+  "candidates": [
+    {{
+      "topic": "专题名称（15字以内）",
+      "topicReason": "为什么它可能值得写（2句话以内）",
+      "angle": "投资判断切入角度",
+      "whyNow": "为什么今天必须写",
+      "beliefUpdate": "读者读完后应该更新的判断",
+      "linkedTickers": ["NVDA", "MSFT"],
+      "scores": {{
+        "tickerRelevance": 0.8,
+        "informationDelta": 0.7,
+        "evidenceVerifiability": 0.8,
+        "catalystClarity": 0.6,
+        "bearCaseStrength": 0.6,
+        "repetitionPenalty": 0.0,
+        "total": 0.71
+      }},
+      "skipReason": null
+    }}
+  ],
+  "selected": {{
+    "topic": "专题名称（15字以内）",
+    "topicReason": "最终选择理由",
+    "angle": "投资判断切入角度",
+    "whyNow": "为什么今天必须写",
+    "beliefUpdate": "读者读完后应该更新的判断",
+    "linkedTickers": ["NVDA", "MSFT"],
+    "scores": {{
+      "tickerRelevance": 0.8,
+      "informationDelta": 0.7,
+      "evidenceVerifiability": 0.8,
+      "catalystClarity": 0.6,
+      "bearCaseStrength": 0.6,
+      "repetitionPenalty": 0.0,
+      "total": 0.71
+    }},
+    "skipReason": null
+  }}
 }}
 """
 
 
-def select_topic(client, breaking_news, ai_breaking_news, existing_topics):
-    """Stage 1: Select the best topic from breaking news."""
+def select_topic(client, breaking_news, ai_breaking_news, existing_topics, watchlist_context):
+    """Stage 1: Editor gate, candidate scoring, and optional skip."""
     print("\n=== Stage 1: Topic Selection ===")
 
     topics_str = "\n".join(f"- {t}" for t in existing_topics) if existing_topics else "（无历史报告）"
@@ -96,6 +239,7 @@ def select_topic(client, breaking_news, ai_breaking_news, existing_topics):
         ai_lines.append(f"[{item.get('time', '')}] [{item.get('tagText', '')}] {item.get('text', '')}")
 
     prompt = TOPIC_SELECTION_PROMPT.format(
+        watchlist_context=watchlist_context,
         existing_topics=topics_str,
         finance_news="\n".join(finance_lines) or "（无金融快讯）",
         ai_news="\n".join(ai_lines) or "（无AI快讯）",
@@ -105,12 +249,38 @@ def select_topic(client, breaking_news, ai_breaking_news, existing_topics):
     cleaned = _strip_llm_wrapper(response)
 
     try:
-        topic_info = json.loads(cleaned)
+        selection = json.loads(cleaned)
     except json.JSONDecodeError:
-        fallback = (breaking_news[0].get("text", "市场动态")[:15] if breaking_news
-                    else ai_breaking_news[0].get("text", "AI行业")[:15] if ai_breaking_news
-                    else "全球市场综述")
-        topic_info = {"topic": fallback, "topicReason": "自动选题", "angle": "综合分析"}
+        print("  WARNING: Failed to parse topic selection JSON, skipping to avoid low-value report")
+        selection = {
+            "shouldSkip": True,
+            "skipReason": "选题评分 JSON 解析失败",
+            "candidates": [],
+            "selected": {
+                "topic": "无合格选题",
+                "topicReason": "自动跳过",
+                "angle": "",
+                "whyNow": "",
+                "beliefUpdate": "",
+                "linkedTickers": [],
+                "scores": {"total": 0.0},
+                "skipReason": "选题评分 JSON 解析失败",
+            },
+        }
+
+    selected = selection.get("selected") or {}
+    if not selected and "topic" in selection:
+        selected = selection
+
+    topic_info = dict(selected)
+    topic_info["shouldSkip"] = bool(selection.get("shouldSkip", selected.get("shouldSkip", False)))
+    topic_info["skipReason"] = selection.get("skipReason") or selected.get("skipReason")
+    topic_info["candidates"] = selection.get("candidates", [])
+    if not isinstance(topic_info.get("linkedTickers"), list):
+        topic_info["linkedTickers"] = []
+    if not isinstance(topic_info.get("scores"), dict):
+        topic_info["scores"] = {"total": _as_float(topic_info.get("totalScore"), 0.0)}
+    topic_info["totalScore"] = _topic_total_score(topic_info)
 
     # Collect seed article URLs for Stage 3
     all_breaking = breaking_news + ai_breaking_news
@@ -123,22 +293,41 @@ def select_topic(client, breaking_news, ai_breaking_news, existing_topics):
     topic_info["seed_urls"] = seed_urls[:8]
 
     print(f"  Topic: {topic_info.get('topic', '?')}")
+    print(f"  Score: {topic_info.get('totalScore', 0):.2f}")
+    print(f"  Linked tickers: {', '.join(topic_info.get('linkedTickers', [])) or 'none'}")
     print(f"  Reason: {topic_info.get('topicReason', '')}")
+    if topic_info.get("shouldSkip") or topic_info.get("skipReason"):
+        print(f"  Skip reason: {topic_info.get('skipReason', '')}")
     return topic_info
 
 
 # ============ Stage 2: Research Planning ============
 
-PLAN_RESEARCH_PROMPT = """你是一位在 AI 和科技金融领域有 15 年经验的资深分析师，服务对象是专业投资人。
+PLAN_RESEARCH_PROMPT = """你是一位在 AI 和科技金融领域有 15 年经验的资深研究负责人，服务对象是专业投资人。
 当前时间：{current_time}
 
 今天你要深度分析的主题是：「{topic}」
 角度：{angle}
 选题理由：{reason}
+为什么今天写：{why_now}
+预期判断更新：{belief_update}
+关联标的：{linked_tickers}
 
-你的任务是产出一份**研究计划**，包含两部分：
+用户股票池与关注领域：
+{watchlist_context}
 
-═══ 第一部分：结构性认知（Brain Dump）═══
+你的任务是产出一份**Research Contract + 研究计划**。Research Contract 是后续 agent 的约束：如果无法满足，宁可跳过，也不要写一篇貌似完整但没有判断增量的报告。
+
+═══ 第一部分：Research Contract ═══
+必须明确：
+1. **coreQuestion**：这篇 memo 要回答的唯一核心投资问题。
+2. **thesis**：当前最值得检验的正向假设。
+3. **antiThesis**：最强反向假设，不要稻草人。
+4. **beliefUpdate**：读者读完后应更新的判断。
+5. **requiredEvidence**：必须拿到哪些证据才值得写。
+6. **stopConditions**：出现哪些情况就应该停止写作或降级为低置信度。
+
+═══ 第二部分：结构性认知（Brain Dump）═══
 梳理你对这个话题的结构性认知——重点是分析框架和历史规律。
 
 覆盖以下维度：
@@ -152,19 +341,19 @@ PLAN_RESEARCH_PROMPT = """你是一位在 AI 和科技金融领域有 15 年经�
 ⚠️ 重要：你的训练数据截止到 2024 年底。不要写具体的产品版本号、融资金额、公司估值——这些会通过搜索获取。
 聚焦结构性认知（竞争逻辑、商业模式、历史规律），标注不确定的为 [待验证]。
 
-═══ 第二部分：关键问题清单 ═══
+═══ 第三部分：关键问题清单 ═══
 列出这份报告必须回答的 5-8 个关键问题。
 
 问题类型：
 - **事实验证型**：需要搜索确认的具体事实（如"X公司最新季度营收是多少？"）
-- **财务穿透型**：涉及公司的哪条业务线受影响？影响多少？
+- **财务穿透型**：涉及公司的哪条业务线、财务变量、时间窗口受影响？
 - **竞争格局型**：有哪些竞争者/替代方案？各自定位？
 - **反面论证型**：谁会反驳这个结论？有什么反面证据？
 - **催化剂型**：未来什么事件能验证/推翻核心假设？
 
 每个问题附带搜索建议（具体的搜索关键词）。
 
-═══ 第三部分：分析陷阱提醒 ═══
+═══ 第四部分：分析陷阱提醒 ═══
 列出这个话题特有的分析陷阱。
 例如：
 - "NVIDIA 是 fabless 公司（台积电代工），不要把 FCF 低归因于建厂 CAPEX"
@@ -173,6 +362,14 @@ PLAN_RESEARCH_PROMPT = """你是一位在 AI 和科技金融领域有 15 年经�
 
 输出严格 JSON（不要 markdown 代码块）：
 {{
+  "research_contract": {{
+    "coreQuestion": "唯一核心投资问题",
+    "thesis": "正向假设",
+    "antiThesis": "最强反向假设",
+    "beliefUpdate": "读者应更新的判断",
+    "requiredEvidence": ["必须拿到的证据1", "必须拿到的证据2"],
+    "stopConditions": ["停止/跳过条件1", "停止/跳过条件2"]
+  }},
   "brain_dump": "结构性认知文本（800-1200字）",
   "key_questions": [
     {{
@@ -189,14 +386,18 @@ PLAN_RESEARCH_PROMPT = """你是一位在 AI 和科技金融领域有 15 年经�
 """
 
 
-def plan_research(client, topic_info):
-    """Stage 2: Generate research plan with brain dump + key questions."""
+def plan_research(client, topic_info, watchlist_context):
+    """Stage 2: Generate Research Contract, brain dump, and key questions."""
     print("\n=== Stage 2: Research Planning ===")
 
     prompt = PLAN_RESEARCH_PROMPT.format(
         topic=topic_info.get("topic", ""),
         angle=topic_info.get("angle", ""),
         reason=topic_info.get("topicReason", ""),
+        why_now=topic_info.get("whyNow", ""),
+        belief_update=topic_info.get("beliefUpdate", ""),
+        linked_tickers=", ".join(topic_info.get("linkedTickers", [])) or "（无直接标的）",
+        watchlist_context=watchlist_context[:4000],
         current_time=format_date_cst(now_cst()),
     )
 
@@ -212,6 +413,14 @@ def plan_research(client, topic_info):
     except json.JSONDecodeError:
         print("  WARNING: Failed to parse research plan JSON, using fallback")
         plan = {
+            "research_contract": {
+                "coreQuestion": f"{topic_info.get('topic', '')} 是否改变用户股票池的投资判断？",
+                "thesis": topic_info.get("beliefUpdate", "") or "该事件可能改变相关标的的风险收益结构。",
+                "antiThesis": "该事件只是短期新闻，不改变基本面或估值变量。",
+                "beliefUpdate": topic_info.get("beliefUpdate", ""),
+                "requiredEvidence": ["核心事实", "相关标的财务/业务映射", "反方证据", "未来催化剂"],
+                "stopConditions": ["无法获得可验证证据", "无法映射到具体标的或财务变量"],
+            },
             "brain_dump": response[:1200],
             "key_questions": [
                 {"id": "Q1", "question": "这个事件的核心事实是什么？", "type": "事实验证型", "priority": "high", "search_hints": [topic_info.get("topic", "") + " 2026"]},
@@ -222,7 +431,11 @@ def plan_research(client, topic_info):
             "pitfalls": [],
         }
 
+    contract = plan.get("research_contract", {})
     questions = plan.get("key_questions", [])
+    print(f"  Core question: {contract.get('coreQuestion', '')[:100]}")
+    print(f"  Thesis: {contract.get('thesis', '')[:100]}")
+    print(f"  Anti-thesis: {contract.get('antiThesis', '')[:100]}")
     print(f"  Brain dump: {len(plan.get('brain_dump', ''))} chars")
     print(f"  Key questions: {len(questions)}")
     for q in questions:
@@ -237,6 +450,12 @@ def plan_research(client, topic_info):
 RESEARCH_AGENT_PROMPT = """你是 Y Daily 的研究助理。当前时间：{current_time}
 
 今天你要为「{topic}」收集投研级素材。
+
+=== Research Contract（必须服从） ===
+{research_contract_text}
+
+=== 关联标的 ===
+{linked_tickers_text}
 
 === 初始知识框架 ===
 {brain_dump}
@@ -272,17 +491,18 @@ RESEARCH_AGENT_PROMPT = """你是 Y Daily 的研究助理。当前时间：{curr
 你有 {max_tool_calls} 次工具调用预算。按以下优先级分配：
 
 1. **种子文章**（如果有 URL）：先 fetch_url_content 读取 2-3 篇最相关的种子文章
-2. **高优先问题**：针对每个 high 优先级问题，做 1-2 次 web_search
-3. **财务数据**：涉及具体公司时，调用 fetch_financial_data
-4. **一手信源**：至少 1 次搜索 SEC 文件 / 监管机构公告 / 公司 IR 页面
-5. **反面观点**：至少 1 次搜索 bear case / risks / criticism
-6. **竞争格局**：至少 1 次搜索 competitors / alternatives
-7. **中优先问题**：用剩余预算
+2. **Contract 必需证据**：优先满足 requiredEvidence；若满足不了，明确记录 info_gaps
+3. **高优先问题**：针对每个 high 优先级问题，做 1-2 次 web_search
+4. **财务映射**：对关联标的调用 fetch_financial_data，并搜索公司 IR/earnings/10-Q/10-K/公告
+5. **一手信源**：至少 1 次搜索 SEC 文件 / 监管机构公告 / 公司 IR 页面
+6. **Red Team**：至少 1 次搜索 bear case / risks / criticism / alternative explanation
+7. **催化剂**：搜索未来 1-8 周可验证事件，如财报、监管截止日、产品发布、会议
+8. **竞争格局**：至少 1 次搜索 competitors / alternatives
 
 【分析陷阱提醒】
 {pitfalls_text}
 
-研究够了就停止调用工具。系统会自动整理你的研究成果。
+研究够了就停止调用工具。系统会自动整理你的研究成果。不要为了填满预算而搜索。
 """
 
 RESEARCH_COMPRESS_PROMPT = """请将以上研究过程中获得的所有关键信息整理为结构化研究摘要。
@@ -294,6 +514,18 @@ RESEARCH_COMPRESS_PROMPT = """请将以上研究过程中获得的所有关键�
 
 输出严格 JSON（不要 markdown 代码块）：
 {{
+  "evidence_cards": [
+    {{
+      "id": "e1",
+      "claim": "具体的、可验证的证据卡片",
+      "sourceIds": ["c1"],
+      "sourceType": "official/filing/company_ir/media/financial_data/analyst/other",
+      "confidence": "high/medium/low",
+      "supports": ["thesis", "antiThesis", "tickerImpact:NVDA", "catalyst"],
+      "affectedTickers": ["NVDA"],
+      "caveats": ["限制或口径说明"]
+    }}
+  ],
   "claims": [
     {{
       "id": "c1",
@@ -309,6 +541,24 @@ RESEARCH_COMPRESS_PROMPT = """请将以上研究过程中获得的所有关键�
     "tickers_fetched": ["NVDA"],
     "raw_data": "fetch_financial_data 返回的原始数据文本"
   }},
+  "ticker_impact_map": [
+    {{
+      "ticker": "NVDA",
+      "businessLine": "数据中心 GPU",
+      "financialVariable": "收入增速/毛利率/资本开支/估值倍数",
+      "direction": "positive/negative/mixed/unclear",
+      "timeWindow": "1-8周/季度/年度",
+      "evidenceIds": ["e1", "e2"],
+      "confidence": "high/medium/low"
+    }}
+  ],
+  "red_team": [
+    {{
+      "argument": "最强反方论点",
+      "evidenceIds": ["e3"],
+      "wouldInvalidateThesisIf": "什么信号出现会推翻 thesis"
+    }}
+  ],
   "questions_coverage": {{
     "answered": {{"Q1": ["c1", "c2"]}},
     "unanswered": ["Q4", "Q5"]
@@ -322,6 +572,8 @@ RESEARCH_COMPRESS_PROMPT = """请将以上研究过程中获得的所有关键�
 2. source_count 严格按独立来源计数——同一篇文章的多个数据点只算 1 个来源
 3. 只保留工具返回的真实数据，绝不补充训练数据中的数字
 4. 没搜到的信息放 info_gaps，不要编造
+5. 每个 ticker_impact_map.evidenceIds 必须能在 evidence_cards 中找到
+6. 单一来源证据的 confidence 最高只能是 medium；0 来源只能是 low
 """
 
 
@@ -359,8 +611,15 @@ def research(client, topic_info, plan, breaking_context):
     pitfalls = plan.get("pitfalls", [])
     pitfalls_text = "\n".join(f"  - {p}" for p in pitfalls) if pitfalls else "（无特殊提醒）"
 
+    contract = plan.get("research_contract", {})
+    research_contract_text = json.dumps(contract, ensure_ascii=False, indent=2) if contract else "（无 Research Contract）"
+    linked_tickers = topic_info.get("linkedTickers", [])
+    linked_tickers_text = ", ".join(linked_tickers) if linked_tickers else "（无直接标的，需验证是否值得继续）"
+
     system_prompt = RESEARCH_AGENT_PROMPT.format(
         topic=topic_info.get("topic", ""),
+        research_contract_text=research_contract_text[:3000],
+        linked_tickers_text=linked_tickers_text,
         brain_dump=plan.get("brain_dump", "")[:1500],
         questions_text=questions_text,
         breaking_context=breaking_context[:5000],
@@ -529,6 +788,8 @@ def research(client, topic_info, plan, breaking_context):
             "source_independence_notes": "",
             "info_gaps": ["研究摘要JSON解析失败，使用工具结果原文提取"],
         }
+
+    evidence_bank = _normalize_evidence_bank(evidence_bank)
 
     claims = evidence_bank.get("claims", [])
     gaps = evidence_bank.get("info_gaps", [])
@@ -742,16 +1003,36 @@ def fact_check(client, evidence_bank):
 # ============ Stage 5: Report Writing ============
 
 REPORT_WRITER_PROMPT = """你是 Y Daily 的首席分析师。当前时间：{current_time}
-你已经完成了对「{topic}」的研究和事实核查。请基于以下**已验证的证据**写一份深度投研分析报告。
+你要基于以下**已核查证据**写一份投资判断 memo，而不是新闻综述或行业科普。
 
-=== 分析框架 ===
+你同时承担三个角色：
+- Financial Mapper：把事件映射到关联标的、业务线、财务变量、时间窗口和证据 ID。
+- Red Team：提出最强反方与推翻条件。
+- Writer：把判断压缩成专业投资人愿意读的 memo。
+
+=== Topic ===
+{topic}
+
+=== Research Contract ===
+{research_contract_text}
+
+=== 结构性框架 ===
 {brain_dump}
 
 === 关键问题 ===
 {questions_text}
 
-=== 已验证的证据（只能使用这些） ===
+=== Evidence Cards（优先使用，只能使用这些事实） ===
+{evidence_cards_text}
+
+=== 已核查 Claims（辅助溯源） ===
 {verified_claims_text}
+
+=== 初始标的映射（可修正，但证据 ID 必须存在） ===
+{ticker_impact_map_text}
+
+=== Red Team 素材 ===
+{red_team_text}
 
 === 财务数据 ===
 {financial_data_text}
@@ -768,85 +1049,49 @@ REPORT_WRITER_PROMPT = """你是 Y Daily 的首席分析师。当前时间：{cu
 
 ---
 
-【关键约束 — 每一条都必须遵守】
+【关键约束】
 
-1. **数据纪律**：只使用"已验证的证据"中的数据。不在证据中的数字/事实一律不写。
-   不确定就写"（未获取到具体数据）"。绝不使用训练数据中的数字。
+1. 只使用 Evidence Cards、已核查 Claims 和财务数据中的信息。不要写训练数据里的具体数字。
+2. 不输出买入/卖出/做多/做空/加仓/减仓等交易指令。
+3. 所有判断必须写成情景句式：若 [条件] 被验证，则 [标的] 面临 [方向] 压力/机会，关键信号是 [X]。
+4. 单一来源证据最高只能给 🟡；未验证或证据冲突只能给 🔴。
+5. 每个 Watchlist Impact 必须包含 Evidence IDs，例如：证据：e1, e3。
+6. 催化剂必须尽量具体到日期、周或财报/监管节点；如果证据不足，写“未获取到具体时间”并降置信度。
+7. 未回答问题要明确列入 What We Still Don't Know，不能用套话掩盖。
+8. 禁止废话："短期/中期/长期"、"存在不确定性"、"需要密切关注"。
 
-2. **信源多元化铁律**：
-   - ≥2 独立来源 = 【已验证】
-   - 1 个来源 = 【部分验证】（即使该来源内部自洽）
-   - 0 个来源 = 【未验证-推测】
-   ⚠️ 同一篇文章的多个数据点只算 1 个来源。
-
-3. **多空排版**：每个分析章节内，多方和空方观点用 ### 子标题分开。
-   每个列表项独占一行，前后有空行：
-
-   ### 多方观点
-
-   - **论点A**：证据。【已验证】来源：URL
-
-   - **论点B**：证据。【部分验证】来源：URL
-
-   ### 空方观点
-
-   - **论点C**：证据。来源：URL
-
-4. **评级-信源一致性铁律**：
-   🟢 高确定性：≥2 独立来源硬数据，无强反面证据
-   🟡 中等确定性：1 来源 / 数据不完整 / 存在可信反面论点
-   🔴 低确定性：纯推测 / 正反证据强度接近 / 关键变量未知
-   - 1 个来源 → 最高 🟡
-   - 未验证假设 → 只能 🔴
-   - "需更多数据验证" → 不能给 🟢
-   - 评级理由必须引用具体来源数量
-
-5. **催化剂日历**：时间具体到"周"或更精确。禁止"下半年"、"近期"。
-   | 时间 | 事件 | 验证/推翻假设 | 影响方向 |
-   ⚠️ 至少 2 条必须有具体日期（从已验证证据中提取财报日、会议日等）。
-   "时间不确定"最多出现 1 次。如果大部分催化剂都无法确定时间，说明研究不够充分——在表前注明"⚠️ 催化剂时间精度不足，需补充研究"。
-
-6. **交易建议**：不写"买入/卖出/做多/做空"。
-   用情景假设："若 [条件] 被验证，则 [标的] 面临 [方向] 压力/机会，关键信号是 [X]。"
-   提及配对交易必须给出具体 ETF/个股代码，或明确写"未找到合适标的"。
-
-7. **竞争格局**：如果证据中有竞争者信息，必须做对比。否则标注为信息空白。
-
-8. **关键洞察展开**：有价值的宏观洞察（负反馈环路、结构性矛盾）必须用独立段落展开，
-   列出环路节点、搜索历史弹性系数。无法量化则标注"（无历史数据支撑量化）"。
-
-9. **未回答问题诚实说**：对 unanswered 的问题，在相关章节明确写"当前证据不足以回答此问题"。
-
----
-
-【报告结构】（严格遵守）
+【输出结构】（严格遵守）
 
 # [标题]
 
-## 核心问题
-（1-2 句话）
+## Bottom Line
+用 2-4 句话给出核心判断、置信度和最重要的验证信号。
 
-## 关键假设与验证状态
-| 假设 | 验证状态 | 证据来源 | 独立来源数 |
+## What Changed
+列出今天的新信息如何改变原有判断。每条附证据 ID。
 
-## [分析章节 1]
-### 多方观点
-### 空方观点
+## Belief Update
+明确读者读完后应该从什么判断更新到什么判断。
 
-## [分析章节 2]
-### 多方观点
-### 空方观点
+## Watchlist Impact
+用表格：
+| 标的 | 业务线/变量 | 方向 | 时间窗口 | 情景句式判断 | 置信度 | 证据 |
 
-## 我们的判断
-（每个分判断独立一行 + 🟢🟡🔴 + 理由 + 来源数量）
+## Bull/Base/Bear Scenarios
+用表格：
+| 情景 | 条件 | 影响 | 关键验证信号 | 置信度 |
 
-## 催化剂日历与待验证信号
-（Markdown 表格，时间排序）
+## Disconfirming Evidence
+列出最强反方论点、证据 ID、以及什么信号会推翻核心 thesis。
 
----
-写作风格：Stratechery 结构感 + SemiAnalysis 数据穿透。克制。不确定就说不确定。
-禁止废话："短期/中期/长期"、"存在不确定性"、"需要密切关注"。
-目标：3500-5000 字。以 # 标题行开头，直接输出。
+## Catalyst Calendar
+用表格：
+| 时间 | 事件/信号 | 验证/推翻什么 | 关联标的 | 证据 |
+
+## What We Still Don't Know
+列出还没有足够证据回答的问题，以及为什么这会影响判断。
+
+写作风格：克制、密度高、面向投资判断。目标 1800-3000 字。以 # 标题行开头，直接输出。
 """
 
 
@@ -888,6 +1133,38 @@ def write_report(client, topic_info, plan, evidence_bank, fact_check_result):
     fin_data = evidence_bank.get("financial_data", {})
     financial_data_text = fin_data.get("raw_data", "（无财务数据）")[:3000]
 
+    # Evidence cards are the primary building blocks for the investment memo.
+    evidence_card_lines = []
+    for card in evidence_bank.get("evidence_cards", []):
+        usable = card.get("usable", True)
+        status = "usable" if usable else "not_usable"
+        evidence_card_lines.append(
+            f"  [{card.get('id', '?')}] ({status}, {card.get('confidence', 'low')}, {card.get('sourceType', 'other')}) "
+            f"{card.get('claim', '')}"
+        )
+        evidence_card_lines.append(
+            f"    sourceIds: {', '.join(card.get('sourceIds', [])) or 'none'} | "
+            f"supports: {', '.join(card.get('supports', [])) or 'none'} | "
+            f"tickers: {', '.join(card.get('affectedTickers', [])) or 'none'}"
+        )
+        caveats = card.get("caveats", [])
+        if caveats:
+            evidence_card_lines.append(f"    caveats: {'; '.join(caveats[:3])}")
+    evidence_cards_text = "\n".join(evidence_card_lines) if evidence_card_lines else "（无 Evidence Cards）"
+
+    contract = plan.get("research_contract", {})
+    research_contract_text = json.dumps(contract, ensure_ascii=False, indent=2) if contract else "（无 Research Contract）"
+    ticker_impact_map_text = json.dumps(
+        evidence_bank.get("ticker_impact_map", []),
+        ensure_ascii=False,
+        indent=2,
+    )[:5000] or "[]"
+    red_team_text = json.dumps(
+        evidence_bank.get("red_team", []),
+        ensure_ascii=False,
+        indent=2,
+    )[:4000] or "[]"
+
     # Questions
     questions = plan.get("key_questions", [])
     questions_text = "\n".join(f"  {q.get('id', '?')}. {q.get('question', '?')}" for q in questions) if questions else "（无问题清单）"
@@ -907,9 +1184,13 @@ def write_report(client, topic_info, plan, evidence_bank, fact_check_result):
 
     prompt = REPORT_WRITER_PROMPT.format(
         topic=topic_info.get("topic", ""),
+        research_contract_text=research_contract_text[:3000],
         brain_dump=plan.get("brain_dump", "")[:1200],
         questions_text=questions_text,
+        evidence_cards_text=evidence_cards_text[:12000],
         verified_claims_text=verified_claims_text[:15000],
+        ticker_impact_map_text=ticker_impact_map_text,
+        red_team_text=red_team_text,
         financial_data_text=financial_data_text,
         unanswered_text=unanswered_text,
         info_gaps_text=info_gaps_text,
@@ -947,13 +1228,14 @@ def write_report(client, topic_info, plan, evidence_bank, fact_check_result):
 
 # ============ Stage 6: Format to JSON ============
 
-FORMAT_PROMPT = """把以下深度分析报告转换为 JSON 格式。保留所有内容，只改变格式。
+FORMAT_PROMPT = """把以下投资判断 memo 转换为 JSON 格式。保留所有内容，只改变格式。
 
 ⚠️ 格式化规则：
 - 标题和副标题中的引号必须配对
 - 中文使用中文标点（""、''），不要混用半角引号
 - sections content 中的 HTML 必须完整闭合
 - 输出必须是合法 JSON，不要输出 markdown 代码块标记
+- 新增字段必须尽量从对应章节抽取；抽不到时用空数组、空字符串或 null，不要编造。
 
 ⚠️ keyTakeaways 禁止使用"建议买入/卖出/做多/做空/加仓/减仓"等任何交易指令。
 改用情景假设句式："若[条件]被验证，则[标的]面临[方向]压力/机会，关键信号是[X]，确定性：🟡"。
@@ -967,11 +1249,49 @@ FORMAT_PROMPT = """把以下深度分析报告转换为 JSON 格式。保留所�
   "title": "报告标题",
   "subtitle": "副标题",
   "summary": "200字以内摘要",
+  "whyNow": "为什么今天值得写",
+  "bottomLine": "Bottom Line 章节的核心判断",
+  "beliefUpdate": "Belief Update 章节的判断更新",
+  "confidence": "high|medium|low",
   "tags": [
     {{"text": "标签名", "type": "up|down|warn"}}
   ],
   "keyTakeaways": ["核心判断1（情景假设句式）", "核心判断2", "核心判断3"],
   "relatedTickers": ["AAPL", "NVDA"],
+  "tickerImpacts": [
+    {{
+      "ticker": "NVDA",
+      "businessLine": "业务线/变量",
+      "direction": "positive|negative|mixed|unclear",
+      "timeWindow": "时间窗口",
+      "judgment": "若[条件]被验证，则[标的]面临[方向]压力/机会，关键信号是[X]",
+      "confidence": "high|medium|low",
+      "evidenceIds": ["e1", "e3"]
+    }}
+  ],
+  "scenarios": {{
+    "bull": {{"conditions": "条件", "impact": "影响", "signals": "验证信号", "confidence": "high|medium|low"}},
+    "base": {{"conditions": "条件", "impact": "影响", "signals": "验证信号", "confidence": "high|medium|low"}},
+    "bear": {{"conditions": "条件", "impact": "影响", "signals": "验证信号", "confidence": "high|medium|low"}}
+  }},
+  "catalysts": [
+    {{
+      "time": "时间",
+      "event": "事件/信号",
+      "tests": "验证/推翻什么",
+      "tickers": ["NVDA"],
+      "evidenceIds": ["e1"]
+    }}
+  ],
+  "redTeam": [
+    {{
+      "argument": "最强反方论点",
+      "evidenceIds": ["e2"],
+      "wouldInvalidateThesisIf": "推翻条件"
+    }}
+  ],
+  "unknowns": ["尚未回答的问题1", "尚未回答的问题2"],
+  "qualityScore": null,
   "sections": [
     {{
       "id": "sec-1",
@@ -1098,9 +1418,19 @@ def _fallback_md_to_json(report_text):
         "title": title,
         "subtitle": "",
         "summary": summary_text,
+        "whyNow": "",
+        "bottomLine": _extract_section_excerpt(md_sections, "Bottom Line"),
+        "beliefUpdate": _extract_section_excerpt(md_sections, "Belief Update"),
+        "confidence": _extract_confidence_from_text(report_text),
         "tags": tags,
         "keyTakeaways": key_takeaways[:5],
         "relatedTickers": tickers,
+        "tickerImpacts": [],
+        "scenarios": {},
+        "catalysts": [],
+        "redTeam": [],
+        "unknowns": _extract_section_bullets(md_sections, "What We Still"),
+        "qualityScore": None,
         "sections": sections,
         "sourceIndices": [],
     }
@@ -1110,6 +1440,135 @@ def _fallback_md_to_json(report_text):
 
 
 # ============ Helpers ============
+
+def _normalize_evidence_bank(evidence_bank):
+    """Normalize optional v2 evidence structures while preserving old claim-based flow."""
+    if not isinstance(evidence_bank, dict):
+        return {
+            "evidence_cards": [],
+            "claims": [],
+            "financial_data": {},
+            "ticker_impact_map": [],
+            "red_team": [],
+            "questions_coverage": {"answered": {}, "unanswered": []},
+            "source_independence_notes": "",
+            "info_gaps": ["研究摘要不是合法对象"],
+        }
+
+    claims = evidence_bank.get("claims", [])
+    if not isinstance(claims, list):
+        claims = []
+    for i, claim in enumerate(claims, 1):
+        if not isinstance(claim, dict):
+            claims[i - 1] = {"id": f"c{i}", "text": str(claim), "source_count": 0}
+            claim = claims[i - 1]
+        claim.setdefault("id", f"c{i}")
+        urls = claim.get("source_urls") if isinstance(claim.get("source_urls"), list) else []
+        names = claim.get("source_names") if isinstance(claim.get("source_names"), list) else []
+        if "source_count" not in claim:
+            claim["source_count"] = max(len(set(urls)), len(set(names)))
+    evidence_bank["claims"] = claims
+
+    claim_by_id = {c.get("id"): c for c in claims}
+    cards = evidence_bank.get("evidence_cards", [])
+    if not isinstance(cards, list):
+        cards = []
+    if not cards:
+        for claim in claims:
+            cards.append({
+                "id": "e" + re.sub(r"^\D+", "", str(claim.get("id", ""))) if claim.get("id") else f"e{len(cards) + 1}",
+                "claim": claim.get("text", ""),
+                "sourceIds": [claim.get("id", "")],
+                "sourceType": "media",
+                "confidence": "medium" if _as_float(claim.get("source_count"), 0) >= 1 else "low",
+                "supports": claim.get("answers_questions", []),
+                "affectedTickers": [],
+                "caveats": [],
+            })
+
+    normalized_cards = []
+    for i, card in enumerate(cards, 1):
+        if not isinstance(card, dict):
+            card = {"claim": str(card)}
+        card.setdefault("id", f"e{i}")
+        card.setdefault("claim", card.get("text", ""))
+        source_ids = card.get("sourceIds", [])
+        if not isinstance(source_ids, list):
+            source_ids = [str(source_ids)] if source_ids else []
+        card["sourceIds"] = [sid for sid in source_ids if sid]
+        if not card["sourceIds"] and claims:
+            card["sourceIds"] = [claims[min(i - 1, len(claims) - 1)].get("id", "")]
+        source_count = 0
+        for sid in card["sourceIds"]:
+            source_count = max(source_count, _as_float(claim_by_id.get(sid, {}).get("source_count"), 0))
+        if source_count == 0:
+            card["confidence"] = "low"
+        elif source_count < 2 and card.get("confidence") == "high":
+            card["confidence"] = "medium"
+        card.setdefault("sourceType", "other")
+        if not isinstance(card.get("supports"), list):
+            card["supports"] = []
+        if not isinstance(card.get("affectedTickers"), list):
+            card["affectedTickers"] = []
+        if not isinstance(card.get("caveats"), list):
+            card["caveats"] = []
+        normalized_cards.append(card)
+    evidence_bank["evidence_cards"] = normalized_cards
+
+    if not isinstance(evidence_bank.get("ticker_impact_map"), list):
+        evidence_bank["ticker_impact_map"] = []
+    if not isinstance(evidence_bank.get("red_team"), list):
+        evidence_bank["red_team"] = []
+    if not isinstance(evidence_bank.get("info_gaps"), list):
+        evidence_bank["info_gaps"] = []
+    if not isinstance(evidence_bank.get("questions_coverage"), dict):
+        evidence_bank["questions_coverage"] = {"answered": {}, "unanswered": []}
+    if not isinstance(evidence_bank.get("financial_data"), dict):
+        evidence_bank["financial_data"] = {}
+
+    return evidence_bank
+
+
+def _apply_fact_check_to_evidence_bank(evidence_bank, fact_check_result):
+    """Attach fact-check status to evidence cards and enforce confidence ceilings."""
+    verdicts = {v.get("claim_id"): v for v in fact_check_result.get("verdicts", [])}
+    bad_verdicts = {"refuted", "training_data_leak", "source_independence_error", "bad_analogy", "logic_gap"}
+
+    claims = {c.get("id"): c for c in evidence_bank.get("claims", [])}
+    for card in evidence_bank.get("evidence_cards", []):
+        source_ids = card.get("sourceIds", [])
+        card_verdicts = [verdicts.get(sid, {}) for sid in source_ids if sid in verdicts]
+        unusable = any((not v.get("usable", True)) or v.get("verdict") in bad_verdicts for v in card_verdicts)
+        card["usable"] = not unusable
+        if unusable:
+            card["confidence"] = "low"
+
+        max_source_count = max((_as_float(claims.get(sid, {}).get("source_count"), 0) for sid in source_ids), default=0)
+        if max_source_count == 0:
+            card["confidence"] = "low"
+        elif max_source_count < 2 and card.get("confidence") == "high":
+            card["confidence"] = "medium"
+
+        if any(v.get("verdict") in {"unverified", "disputed", "stale_data"} for v in card_verdicts):
+            if card.get("confidence") == "high":
+                card["confidence"] = "medium"
+
+    card_by_id = {c.get("id"): c for c in evidence_bank.get("evidence_cards", [])}
+    for impact in evidence_bank.get("ticker_impact_map", []):
+        if not isinstance(impact, dict):
+            continue
+        evidence_ids = impact.get("evidenceIds", [])
+        if not isinstance(evidence_ids, list):
+            evidence_ids = [str(evidence_ids)] if evidence_ids else []
+        impact["evidenceIds"] = evidence_ids
+        usable_cards = [card_by_id.get(eid) for eid in evidence_ids if card_by_id.get(eid, {}).get("usable", True)]
+        if not usable_cards:
+            impact["confidence"] = "low"
+        elif any(c.get("confidence") == "low" for c in usable_cards) and impact.get("confidence") == "high":
+            impact["confidence"] = "medium"
+
+    return evidence_bank
+
 
 def _strip_llm_wrapper(text):
     """Strip markdown code blocks and <think> tags from LLM output, extract JSON."""
@@ -1314,6 +1773,44 @@ def _extract_title_from_md(text):
     return None
 
 
+def _extract_section_excerpt(md_sections, title_keyword, max_chars=260):
+    """Return a compact text excerpt from the first section matching a title keyword."""
+    for sec_title, sec_content in md_sections:
+        if title_keyword.lower() in sec_title.lower():
+            text = re.sub(r'[#*\-|`]', '', sec_content).strip()
+            text = re.sub(r'\s+', ' ', text)
+            return text[:max_chars]
+    return ""
+
+
+def _extract_section_bullets(md_sections, title_keyword):
+    """Extract simple bullet-like lines from a matching markdown section."""
+    bullets = []
+    for sec_title, sec_content in md_sections:
+        if title_keyword.lower() not in sec_title.lower():
+            continue
+        for line in sec_content.split("\n"):
+            stripped = line.strip()
+            if re.match(r'^[-*]\s+', stripped):
+                clean = re.sub(r'^[-*]\s+', '', stripped)
+                clean = re.sub(r'\*\*(.+?)\*\*', r'\1', clean)
+                if clean:
+                    bullets.append(clean[:220])
+        break
+    return bullets[:8]
+
+
+def _extract_confidence_from_text(text):
+    """Best-effort confidence extraction for fallback formatting."""
+    if "🟢" in text or re.search(r'\bhigh\b', text, re.IGNORECASE):
+        return "high"
+    if "🔴" in text or re.search(r'\blow\b', text, re.IGNORECASE):
+        return "low"
+    if "🟡" in text or re.search(r'\bmedium\b', text, re.IGNORECASE):
+        return "medium"
+    return "medium"
+
+
 def _extract_tickers_from_text(text):
     """Extract stock ticker symbols from text."""
     tickers = set()
@@ -1371,7 +1868,7 @@ def _extract_tags_from_text(text, tickers):
 
 def main():
     print("=" * 60)
-    print("Y Daily — Deep Research Report Generator (6-Stage Pipeline)")
+    print("Y Daily — Investment Memo Generator (6-Stage Pipeline)")
     print("=" * 60)
 
     now = now_cst()
@@ -1401,15 +1898,21 @@ def main():
 
     # Create LLM client
     client = create_llm_client(required=True)
+    watchlist_context = load_watchlist_context()
 
     # Get recent topics for dedup
     existing_topics = [r.get("topic", "") for r in deep_research[:7] if r.get("topic")]
 
     # ====== Stage 1: Topic Selection ======
-    topic_info = select_topic(client, breaking_news, ai_breaking_news, existing_topics)
+    topic_info = select_topic(client, breaking_news, ai_breaking_news, existing_topics, watchlist_context)
+    should_skip, skip_reason = _should_skip_topic(topic_info)
+    if should_skip:
+        print(f"\nSKIP: {skip_reason}")
+        print("No deep research report written today.")
+        sys.exit(0)
 
     # ====== Stage 2: Research Planning ======
-    plan = plan_research(client, topic_info)
+    plan = plan_research(client, topic_info, watchlist_context)
 
     # Build breaking news context for Stage 3
     breaking_lines = []
@@ -1426,6 +1929,17 @@ def main():
         print("\nABORT: Zero claims from research. Refusing to hallucinate a report.")
         sys.exit(0)
 
+    should_skip, skip_reason = _should_skip_after_research(plan, evidence_bank)
+    if should_skip:
+        stats = _research_coverage_stats(plan, evidence_bank)
+        print(f"\nSKIP: {skip_reason}.")
+        print(
+            f"Research coverage: {stats['answered_count']}/"
+            f"{stats['total_questions']} ({stats['coverage_ratio']:.0%})."
+        )
+        print("No deep research report written today.")
+        sys.exit(0)
+
     # ====== Stage 4: Fact Check ======
     try:
         fact_check_result = fact_check(client, evidence_bank)
@@ -1440,18 +1954,21 @@ def main():
     # Check quality score and usable claims
     quality_score = fact_check_result.get("data_quality_score", 0)
     verdicts = fact_check_result.get("verdicts", [])
-    usable_count = sum(1 for v in verdicts if v.get("usable", True))
+    usable_count = sum(
+        1 for v in verdicts
+        if v.get("usable", True) and v.get("verdict") in ("verified", "partially_correct")
+    )
+    evidence_bank = _apply_fact_check_to_evidence_bank(evidence_bank, fact_check_result)
 
-    if usable_count == 0 and len(verdicts) > 0:
-        # All claims marked unusable — but pipeline should still produce a report
-        # with honest "no verified evidence" framing, rather than aborting entirely.
-        # Mark claims as usable=True but keep their verdicts (unverified/training_data_leak)
-        # so the writer can see the verification status and be appropriately cautious.
-        print(f"  ⚠️ All {len(verdicts)} claims marked unusable — overriding to allow cautious report")
-        for v in verdicts:
-            v["usable"] = True
-        fact_check_result["data_quality_score"] = max(quality_score, 0.15)
-        quality_score = fact_check_result["data_quality_score"]
+    if usable_count < MIN_USABLE_CLAIMS:
+        print(f"\nSKIP: only {usable_count} verified/partially-correct claims; need {MIN_USABLE_CLAIMS}.")
+        print("No deep research report written today.")
+        sys.exit(0)
+
+    if quality_score < MIN_DATA_QUALITY_SCORE:
+        print(f"\nSKIP: data quality score {quality_score:.2f} below {MIN_DATA_QUALITY_SCORE:.2f}.")
+        print("No deep research report written today.")
+        sys.exit(0)
 
     # ====== Stage 5: Write Report ======
     report_text = write_report(client, topic_info, plan, evidence_bank, fact_check_result)
@@ -1477,10 +1994,24 @@ def main():
         "tags": report.get("tags", []),
         "topic": topic_info.get("topic", ""),
         "topicReason": topic_info.get("topicReason", ""),
+        "topicScores": topic_info.get("scores", {}),
+        "topicCandidates": topic_info.get("candidates", []),
+        "whyNow": report.get("whyNow") or topic_info.get("whyNow", ""),
+        "bottomLine": report.get("bottomLine", ""),
+        "beliefUpdate": report.get("beliefUpdate") or topic_info.get("beliefUpdate", ""),
+        "confidence": report.get("confidence", "medium"),
+        "qualityScore": report.get("qualityScore") if report.get("qualityScore") is not None else quality_score,
         "readTime": f"{read_minutes}分钟",
         "generatedAt": format_date_cst(now),
         "keyTakeaways": report.get("keyTakeaways", []),
-        "relatedTickers": report.get("relatedTickers", []),
+        "relatedTickers": report.get("relatedTickers", []) or topic_info.get("linkedTickers", []),
+        "tickerImpacts": report.get("tickerImpacts", []) or evidence_bank.get("ticker_impact_map", []),
+        "scenarios": report.get("scenarios", {}),
+        "catalysts": report.get("catalysts", []),
+        "redTeam": report.get("redTeam", []) or evidence_bank.get("red_team", []),
+        "unknowns": report.get("unknowns", []) or evidence_bank.get("info_gaps", []),
+        "researchContract": plan.get("research_contract", {}),
+        "evidenceCards": evidence_bank.get("evidence_cards", []),
         "sections": report.get("sections", []),
         "sources": report.get("sources", report.get("sourceIndices", [])),
     }
