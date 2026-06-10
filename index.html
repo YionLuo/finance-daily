@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 33.54,
+  score: 33.66,
   rating: "fear",
-  timestamp: "2026-06-10T00:00:00+00:00",
+  timestamp: "2026-06-10T08:39:31+00:00",
   previousClose: 33.43,
   previous1Week: 53.03,
   previous1Month: 67.29,
   previous1Year: 64.0,
-  date: "2026年6月10日 12:40 CST"
+  date: "2026年6月10日 16:59 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:40", tag: "tech", tagText: "科技", text: "日本软银集团股价暴跌超过8%，领跌亚洲科技股。周三亚洲半导体及科技股普遍下挫，延续隔夜华尔街的跌势。市场对全球科技股估值及地缘政治风险的担忧加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/softbank-samsung-skhynix-asia-tech-stocks-ai-ipo.html" },
+  { time: "16:07", tag: "macro", tagText: "宏观", text: "据市场观察报道，SpaceX的首次公开募股规模可能极为庞大，一日之内即可为美国经常账户赤字的约8%提供再融资。一位货币策略师的估算显示，这场IPO将对全球市场产生深远影响，凸显其融资规模之巨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-spacex-ipo-could-lead-to-8-of-americas-current-account-deficit-being-refinanced-in-single-day-a013a428" },
+  { time: "13:02", tag: "ai", tagText: "AI", text: "网络安全公司CrowdStrike警告称，中国实体发起了超过一半的针对科技公司的国家支持网络攻击，以窃取人工智能资产。报告指出北京正加大AI间谍活动以追赶美国技术水平，中美科技竞争进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/crowdstrike-warns-of-increasing-chinese-ai-cyberattacks-on-us-tech.html" },
   { time: "12:13", tag: "macro", tagText: "宏观", text: "中国5月PPI同比涨幅创近4年新高，受伊朗战争推高能源和原材料成本以及AI投资热潮拉动。输入性通胀压力加大，但经济获得再通胀提振，市场关注后续货币政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/china-cpi-ppi-inflation-may-consumer-prices-producer-oil-iran-war-ai-tech-.html" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "英国《金融时报》呼吁全球必须就AI监管达成协议，建议美中签署类似技术军备控制的条约，以增强各国对AI安全发展的信心。当前AI军备竞赛加剧，缺乏国际规则构成重大风险。", source: "Financial Times", url: "https://www.ft.com/content/8724874e-f387-4848-bfc4-2411d6f0797f" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "华尔街IPO热潮将逆转美股供应萎缩趋势：SpaceX、Anthropic和OpenAI等明星科技公司即将上市，加上公司回购放缓，投资者警告新股大规模上市可能削弱对现有股票的价格支撑。", source: "Financial Times", url: "https://www.ft.com/content/f7dae4e1-d650-45ab-ac97-043c7a965d24" },
@@ -1646,14 +1649,15 @@ const breakingNews = [
   { time: "02:46", tag: "geo", tagText: "地缘", text: "伊朗在霍尔木兹海峡击落一架美军直升机，特朗普称美国必须做出回应。最新冲突发生在特朗普表示伊朗协议可能数日内达成的背景下，中东局势再度升级。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/trump-iran-helicopter-hormuz-strait.html" },
   { time: "02:44", tag: "ai", tagText: "AI", text: "Anthropic向公众发布类似Mythos的AI模型，此前私有版本两个月前曾震动华尔街。公司称因新增高风险领域防护措施，现可安全公开发布。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html" },
   { time: "02:40", tag: "tech", tagText: "科技", text: "瑞银分析师称，美光等内存制造商正推动芯片设备行业进入“超级周期”，设备公司获得前所未有的订单可见性，行业前景强劲。", source: "MarketWatch", url: "https://www.marketwatch.com/story/micron-and-other-memory-makers-are-driving-a-supercycle-for-this-corner-of-the-chip-sector-398c40c5?mod=mw_rss_topstories" },
-  { time: "01:56", tag: "macro", tagText: "宏观", text: "美股周一大幅下挫，纳指跌约1.75%，道指跌超100点，标普500走低。科技股抛售重启，芯片股反弹势头消退，同时地缘政治紧张（伊朗击落直升机）加剧市场避险情绪。油价先跌后涨，因特朗普称美国必须回应。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNa2xGTEE5YnpUdWtwODJLUFBva0kwTzdwZUptU25YUXRFUUp4UWlxNmlPRjBrQm5oekIzRXJ6MDdKdVlKQWFfMmxUS2JURmczNXREY2JiSGJoRk12em1sckV6LXRkU1g0SmNENXNNZzlGZkZzMVpCbHFWODJlVjA4c0hPazFDQWR2WHVzR3pjQXoxUXFfUmU0bS0xMHhMVUlQWmNEQ1duNVc0dU9VQWxHdV93SEY3aF9iczM2b0ZqQVJUaldJeVI2TnBPSnEzRWpVazQwLXd3?oc=5" },
-  { time: "01:28", tag: "tech", tagText: "科技", text: "SpaceX IPO定价确定，但散户份额分配仍存变数。嘉信、富达、Robinhood、SoFi及摩根士丹利旗下E-Trade等券商将提供认购渠道，市场关注其估值及认购热度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/09/spacex-ipo-explained-stock-price-date.html" },
-  { time: "20:11", tag: "macro", tagText: "宏观", text: "市场定价欧洲央行即将加息，为近三年来首次。但一位顶级经济学家警告称这可能是一个‘正在酿成的错误’，认为当前经济状况不支持加息，过早行动或损害复苏。", source: "MarketWatch", url: "https://www.marketwatch.com/story/markets-are-pricing-in-a-rate-hike-by-the-european-central-bank-and-that-could-be-a-mistake-in-the-making-b99771ca?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年6月10日 12:40 CST";
+const breakingDate = "2026年6月10日 16:59 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:16", tag: "ai", tagText: "AI", text: "超微电脑（Super Micro Computer）计划通过股权融资70亿美元，用于扩大AI服务器产能。此次融资规模巨大，反映了AI基础设施需求的持续高涨。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUVZ0eVZHdlZmZVVFWktQZUlzU1VoMHdGZmpURmVQVUlvWnozemR4WE1Hd281eUtHaTJCa1dGeGFPZ2lqallzc0hUUzlXM2JWNFhOVUJabmJyV3pjQkxocjQwRGRGQUVHc0JYRTJfVFM3aGxkcXczLVVKbzJsMHdCQVZfVUJqVXVJVE9CVWp2elFEbW1UcXVabFNkN3hfSVg4U1NWdXlZdTVtRXI1eXhoRTE3V2MyQ0VRV3FNcDdfSXZiVTY4eVl6Nmdac0k4SFlpa3c1X25HUGc?oc=5" },
+  { time: "15:33", tag: "ai", tagText: "AI", text: "三星与英伟达正探讨下一代AI芯片合作，双方将共同开发面向高性能计算和AI工作负载的先进芯片技术。这一合作可能重塑AI芯片供应链格局，标志着三星在代工领域追赶台积电的重要一步。", source: "Electronics For You BUSINESS", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUXBreTZhTzZ0M3hrei1yc2dwdFU1dHY4RW82MS1aV3NNQ0NaWEhEaHNMaHo2b09aZXFWZlprWjRQQ0lad2VUeDhhSXlEWVk2X0ZMcmoybWh4NUJKcnlUV3hJN2NIU2IyWUxUbGJrMDByMGxGTWNsLWoxZ2ZPSzFhYm16a0d1WXdTNFJEdEdUVEI2T3REcjZIVjVDdXltcnBSejRqVThXOFlpRHhvaU5iRXRKOA?oc=5" },
+  { time: "15:05", tag: "ai", tagText: "AI", text: "Meta与印度信实工业（Reliance）签署首份AI数据中心协议，将在印度建设一座168兆瓦的设施，支持Meta全球AI计算需求，并可未来扩展。此举标志着Meta加速在印度布局AI基础设施。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/meta-signs-first-ai-data-center-deal-in-india-with-reliance/" },
+  { time: "14:42", tag: "ai", tagText: "AI", text: "由韩国DGIST与美国MIT组成的联合团队赢得国际AI自动驾驶挑战赛，展示了跨国产学研合作在自动驾驶算法领域的领先实力。该赛事聚焦复杂道路环境下的实时决策与感知能力，获奖方案有望加速自动驾驶技术商业化落地。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcDNfWWxVc2VhOU5HdkFNckdxRldoQjRybVJNUUJWdVpVTHhqdW5ZdG1CcXlnREJ6Qm1tUUFVRXA3SkxqUnByRWxSOWJtWVE4SzhTVkR3VFVhOXRBbkk5UjY2MndiNWVLYXZBV1ZnSURielpEbkNyUUhiaXcxSFI0cGszNkh1TXh0?oc=5" },
   { time: "10:37", tag: "ai", tagText: "AI", text: "韩国SK电讯、日本NTT与台湾中华电信联合推出规模5亿美元的AI投资基金，旨在支持亚洲AI初创企业及基础设施建设。三方将整合各自在电信、云计算和数据中心领域的资源，推动区域AI生态发展。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxQT3JkbEJfd3VVWU1iZXpCT2NPNlZMMVZfNVk4NGl1Q0xfN1hyaHZsTTZQcVRRNUhZVFpIRWJZRHA1LV95VUlwNXQ5dTRuekJHdTBNQTExNVJUTXptd2daU0NOSnRNdmVjNW1aMHpiRjNfQmlRZnhoSFJwbE1wd19IcUhrNVJxNG53T3hFSE85U2xZQWs?oc=5" },
   { time: "08:26", tag: "ai", tagText: "AI", text: "谷歌打响AI订阅价格战：大幅下调其廉价AI订阅层级的费用，以更激进的定价策略抢占市场。此举被视为对其他竞争对手（如OpenAI、微软）的直接警告，AI服务商业化竞争进一步白热化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/google-just-fired-a-warning-shot-in-the-ai-subscription-price-wars/" },
   { time: "07:17", tag: "tech", tagText: "科技", text: "Sabertooth VC创始人Justin Ernest通过其LP关系网络，在不设立传统风险基金的情况下，向Anthropic、Anduril和SpaceX等热门初创公司投资近4亿美元。这种新型投资模式绕过了传统募资流程，引发行业关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-400m-into-hot-startups-without-a-traditional-vc-fund/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "23:12", tag: "tech", tagText: "科技", text: "Linux内核因单个字符错误出现高危Use-After-Free漏洞，攻击者可利用它突破沙盒防御获得root权限，影响广泛系统安全。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/a-single-errant-character-in-the-linux-kernel-allows-attacker-to-gain-root/" },
   { time: "22:54", tag: "ai", tagText: "AI", text: "微软AI主管穆斯塔法·苏莱曼（Mustafa Suleyman）收回此前关于AI将取代律师、会计师等白领工作的言论，称其表述过于夸张。此前他在播客中预测AI会自动化大量白领岗位，引发广泛争议。", source: "The Verge", url: "https://www.theverge.com/tech/946879/microsoft-mustafa-suleyman-ai-white-collar-jobs" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "AI编程平台Lovable宣布年化收入突破5亿美元，每周新增100万个新项目，用户正用它构建商业应用并替代内部软件。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/lovable-says-it-has-hit-500m-in-annualized-revenue-with-1-million-new-projects-a-week/" },
-  { time: "19:03", tag: "ai", tagText: "AI", text: "英伟达与现代汽车深化战略合作，共同推动AI驱动的机器人和自主移动技术发展，涵盖智能工厂和自动驾驶领域。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTE1kWjFFUnhmZXd2QW5CZEJPaXNyWm5RNC05cER1Nk1WWTdtSWhYb21YZmcyYWl2bEFydFh2VzZoR0JZOFdmRUhKdWJsd29sUUEzeFNlTjlZTmI1ODc2TWJaZWx1cjB6UmNyZktHSnJsQ0o?oc=5" },
-  { time: "18:00", tag: "tech", tagText: "科技", text: "亚马逊员工请求西雅图市议会暂停新建数据中心一年。此前几家公司提议建设五个大型数据中心，引发当地居民对能耗、环境及就业的担忧。西雅图市议会将于周二投票决定是否实施为期一年的暂停令。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/945809/amazon-employees-seattle-data-center-moratorium" },
-  { time: "15:33", tag: "ai", tagText: "AI", text: "三星与英伟达正探讨下一代AI芯片合作，双方将共同开发面向高性能计算和AI工作负载的先进芯片技术。这一合作可能重塑AI芯片供应链格局，标志着三星在代工领域追赶台积电的重要一步。", source: "Electronics For You BUSINESS", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUXBreTZhTzZ0M3hrei1yc2dwdFU1dHY4RW82MS1aV3NNQ0NaWEhEaHNMaHo2b09aZXFWZlprWjRQQ0lad2VUeDhhSXlEWVk2X0ZMcmoybWh4NUJKcnlUV3hJN2NIU2IyWUxUbGJrMDByMGxGTWNsLWoxZ2ZPSzFhYm16a0d1WXdTNFJEdEdUVEI2T3REcjZIVjVDdXltcnBSejRqVThXOFlpRHhvaU5iRXRKOA?oc=5" },
-  { time: "14:42", tag: "ai", tagText: "AI", text: "由韩国DGIST与美国MIT组成的联合团队赢得国际AI自动驾驶挑战赛，展示了跨国产学研合作在自动驾驶算法领域的领先实力。该赛事聚焦复杂道路环境下的实时决策与感知能力，获奖方案有望加速自动驾驶技术商业化落地。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcDNfWWxVc2VhOU5HdkFNckdxRldoQjRybVJNUUJWdVpVTHhqdW5ZdG1CcXlnREJ6Qm1tUUFVRXA3SkxqUnByRWxSOWJtWVE4SzhTVkR3VFVhOXRBbkk5UjY2MndiNWVLYXZBV1ZnSURielpEbkNyUUhiaXcxSFI0cGszNkh1TXh0?oc=5" },
 ];
-const aiBreakingDate = "2026年6月10日 12:40 CST";
+const aiBreakingDate = "2026年6月10日 16:59 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
