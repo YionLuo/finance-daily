@@ -1616,24 +1616,29 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27.46,
+  score: 27.57,
   rating: "fear",
-  timestamp: "2026-06-10T23:59:59+00:00",
-  previousClose: 33.43,
-  previous1Week: 53.03,
-  previous1Month: 67.29,
-  previous1Year: 64.0,
-  date: "2026年6月11日 08:25 CST"
+  timestamp: "2026-06-11T00:00:00+00:00",
+  previousClose: 27.46,
+  previous1Week: 53.89,
+  previous1Month: 66.63,
+  previous1Year: 64.2,
+  date: "2026年6月11日 14:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:02", tag: "ai", tagText: "AI", text: "网络安全公司CrowdStrike警告称，中国实体发起了超过一半的针对科技公司的国家支持网络攻击，以窃取人工智能资产。报告指出北京正加大AI间谍活动以追赶美国技术水平，中美科技竞争进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/crowdstrike-warns-of-increasing-chinese-ai-cyberattacks-on-us-tech.html" },
   { time: "07:45", tag: "geo", tagText: "地缘", text: "美军对伊朗境内多个目标发动新一轮打击，伊朗宣布无限期关闭霍尔木兹海峡。特朗普称美国已秘密通过海峡运送超1亿桶原油，并警告伊朗将付出更大代价。市场担忧全球石油供应中断，油价飙升，美股暴跌。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/trump-iran-war-attacks-deal.html" },
   { time: "06:07", tag: "macro", tagText: "宏观", text: "中国电动汽车销量激增正达到全球经济的临界点。分析认为，中国EV的快速渗透将对传统汽车产业、石油需求及全球供应链产生深远影响，可能改变国际贸易格局。", source: "Global Macro Monitor", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNR0xzdTB6aVVFSmVYVHRRNjM2bnNfRWNwbFNNSjVUM3pxVU11RkNwQmZZa005Sml5VkRwUjVjcnlzTkVleGZiZ2JPSkRIWjd3M0tiU0xhaVFIaG8wQkR2MDJwb052WEg4b1VkNTJSeUEzTEdDYU5jX1EzdUp3QkRrUGdsNmFQX1lRTEhIZE8xaU5IWnV3d1hEdHRRRkJpV0NhNjRlQXd3bUo3ZVJnRDJEbQ?oc=5" },
   { time: "06:05", tag: "ai", tagText: "AI", text: "甲骨文第四季度财报超预期，合同积压达6380亿美元，但因AI基础设施投入巨大且自由现金流为负，计划再融资200亿美元用于数据中心，股价盘后下跌。市场对AI高昂成本产生担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/oracle-orcl-q4-earnings-report-2026.html" },
   { time: "05:52", tag: "macro", tagText: "宏观", text: "特朗普周三公开表示对4.2%的通胀率感到满意，称“爱通胀”。分析认为，这为新任美联储主席Kevin Warsh维持高利率立场提供政治背书，市场对降息预期进一步降温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/trump-inflation-fed-chair-kevin-warsh-analysis.html" },
   { time: "05:26", tag: "macro", tagText: "宏观", text: "特朗普提名Capital One高管Brian Johnson担任美国消费者金融保护局（CFPB）局长。Johnson长期持放松监管立场，预计将推动金融监管改革，影响贷款和信用卡市场。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVGZVMHB0N3NYTnhaOEdsTE92c3NMWDZjYXREc0NUUndBdTltLVFnZTN0cjlILVFsUmVpQkZjUW90OE1PaTJMNm9mYXdwWEJUYmppcDFiWDhJMWk5aDlXY2NKVmlvc3dMdDRONHJ3QjVSZkVMR0o1b25SWERBY21qUG5fZ3NPbm0zMUxwbW82UUVmZ3pMNTlVajQ5T05zSXBzTG5udmdn?oc=5" },
+  { time: "05:00", tag: "macro", tagText: "宏观", text: "中国取消与欧盟高级别会议，原定在北京的两轮会谈突然被取消，两大贸易超级大国之间紧张关系加剧。", source: "Financial Times", url: "https://www.ft.com/content/5903318c-319b-426e-b05d-062f7620f799" },
+  { time: "05:00", tag: "geo", tagText: "地缘", text: "欧盟国家考虑‘拆解’其外交服务机构，首席外交官卡娅·卡拉斯及其领导的欧洲对外行动署因领导力和协调问题成为各国批评焦点。", source: "Financial Times", url: "https://www.ft.com/content/a7278d93-98fc-4fa7-a14c-d0c089b693dd" },
+  { time: "05:00", tag: "macro", tagText: "宏观", text: "伊朗战争加剧金属市场‘超级挤压’。铜和铝此前因中东冲突影响供应而持续上涨，地缘风险进一步推高工业金属价格。", source: "Financial Times", url: "https://www.ft.com/content/44d4b188-45ed-4e7e-a5eb-278da62ac601" },
+  { time: "04:00", tag: "ai", tagText: "AI", text: "OpenAI据报正考虑大幅降价，以吸引消费者从竞争对手Anthropic处转向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/openai-mulls-slashing-prices-ahead-of-competition-from-anthropic-wsj.html" },
   { time: "01:44", tag: "macro", tagText: "宏观", text: "美国5月CPI同比上涨4.2%创三年新高，但分析认为最坏情况可能已过。汽油价格回落及关税效应减弱预计将在年底前推动通胀下行，市场对美联储进一步加息的压力有所缓解。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-4-2-inflation-rate-is-a-bummer-but-the-worst-might-be-over-ef27170d?mod=mw_rss_topstories" },
   { time: "00:42", tag: "geo", tagText: "地缘", text: "特朗普暗示可能不再续签2020年签署的美墨加贸易协定（USMCA），称“不需要他们拥有的任何东西”。该言论加剧了北美贸易关系的不确定性，引发市场对关税和供应链风险的担忧。", source: "Financial Times", url: "https://www.ft.com/content/e55a6ab9-d5dd-4a9f-bcb5-9bc0d23e08fb" },
   { time: "00:24", tag: "geo", tagText: "地缘", text: "特朗普签署700亿美元移民资金法案，为ICE和CBP提供至其任期结束的经费。该法案历经数月拖延后终获通过。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/trump-ice-70-billion-immigration-funding.html" },
@@ -1644,16 +1649,14 @@ const breakingNews = [
   { time: "20:30", tag: "macro", tagText: "宏观", text: "美国5月CPI同比上涨4.2%，符合市场预期，创三年来最高水平。通胀数据强化了市场对美联储维持高利率的预期，削弱了降息可能性。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/cpi-inflation-report-may-2026.html" },
   { time: "20:08", tag: "macro", tagText: "宏观", text: "美股周三大幅下挫，道指跌超500点，标普500及纳指期货同步走低。科技股承压，AI概念股领跌，同时市场消化特朗普对伊朗强硬言论及即将公布的通胀数据，避险情绪升温。", source: "Investor's Business Daily", url: "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-trump-cpi-inflation-tsm-stock/" },
   { time: "19:45", tag: "geo", tagText: "地缘", text: "美伊冲突进一步升级：特朗普称伊朗将“付出代价”，指责其拖延和平协议。此前美军对伊朗境内目标实施打击，伊朗方面称约2万人因水罐被毁而断水。受此影响，油价大幅跳升，市场担忧霍尔木兹海峡航运中断。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/oil-price-us-completes-iran-strikes-after-apache-helicopter-attack.html" },
-  { time: "19:26", tag: "crypto", tagText: "加密", text: "加密市场出现“激烈投降”：约800万枚比特币处于亏损状态，以太坊大部分供应也浮亏。黄金、白银、比特币同步下跌，因市场对通胀及美联储加息路径担忧加剧，风险资产遭全面抛售。", source: "Decrypt", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxPN05WMVZmekNIYmJvRWdmNkhjRjlEbFFCajhGZXVqbkxrS2VzMzBjUUxLb1ZxY0p1SzVSbFZoVzJmeFlBdk1WaU1ZOW4taWZRU0NkcXR6LS1PMzkzQUw0VE5uWUZ2anBNQWRqeThKOUhMQ0Fxb3ZoVFFFa3ZvaW1kR2twY3RWSGFCUHBqc1FxemhVY1JXN1ZFLW1XcDJSYk440gGoAUFVX3lxTE5PVVAwYlhZZzYwVFhLV3ZrX3JqRXB2WnYwaXpyVVM2QXpEMmswYlhWdWNyaTVRRnUtY0JnbW9jX3hYd21nSDRPZ1BadEhfSWZmVlhGbWlrU215aV9MeFlvVDV5WlVNdkotWUxFQnF0WWpzcnFkYm9VWDJoZEUzZXlmOEd5WjI0U3J4MWp5LW1QVGF5YmV3U05iU211SHFyZWJVcC10amZRYg" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "KKR发布2026年中全球宏观展望报告。报告认为当前市场面临多重挑战，包括通胀顽固、地缘风险以及估值高企，建议投资者保持谨慎并关注结构性机会。", source: "Stock Titan", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMmpuMnBva1BjVWRhc3VKWmVWWTVicWhvblEyZkNZOG1hOTgzY0Z5T2hYb3A5eEtXRDBFYnJ1Z29qWU5od3BKcld3OFFyX1IwMmN0NDlTNGRKS3pEazdMR25qeVNZd21tVEYydHh1dDhyZUNYTk5TMWNTa1Jlcl9KYzEzUG1MQWdtRzBteXNKZjZFTzlVYkFtZg" },
-  { time: "16:40", tag: "tech", tagText: "科技", text: "日本软银集团股价暴跌超过8%，领跌亚洲科技股。周三亚洲半导体及科技股普遍下挫，延续隔夜华尔街的跌势。市场对全球科技股估值及地缘政治风险的担忧加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/softbank-samsung-skhynix-asia-tech-stocks-ai-ipo.html" },
-  { time: "16:07", tag: "macro", tagText: "宏观", text: "据市场观察报道，SpaceX的首次公开募股规模可能极为庞大，一日之内即可为美国经常账户赤字的约8%提供再融资。一位货币策略师的估算显示，这场IPO将对全球市场产生深远影响，凸显其融资规模之巨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-spacex-ipo-could-lead-to-8-of-americas-current-account-deficit-being-refinanced-in-single-day-a013a428" },
-  { time: "13:02", tag: "ai", tagText: "AI", text: "网络安全公司CrowdStrike警告称，中国实体发起了超过一半的针对科技公司的国家支持网络攻击，以窃取人工智能资产。报告指出北京正加大AI间谍活动以追赶美国技术水平，中美科技竞争进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/crowdstrike-warns-of-increasing-chinese-ai-cyberattacks-on-us-tech.html" },
 ];
-const breakingDate = "2026年6月11日 08:25 CST";
+const breakingDate = "2026年6月11日 14:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:17", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI正考虑大幅降低API token价格，以应对来自Anthropic日益激烈的竞争。此举可能引发AI模型定价战，进一步压低企业使用大模型的成本。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU1dmT09qdzE4R2hqeVpvcmtFckVBdUUzbWpTd2p4eU5rMjNqMVc0QTZtT2VkVlJFYm5KUlVNUmk4M21zRjBDcDVhcE1tQlVUSnYtbnowNVlnTGNBRFMxOHl3Ylc0cVBMNmtmX2Q4VjdWWUtfVjJ1Mi05eWwwWFN3Zk5CTEYtT0hmdGYwTXJwUVFVcW5hUDBOMWdneWViRUhyLTRmSDFvVQ?oc=5" },
+  { time: "12:02", tag: "tech", tagText: "科技", text: "Opendoor宣布退出印度市场，引发业界关于AI是否将取代传统IT外包岗位的更大讨论。印度作为全球最大GCC（全球能力中心）市场，该事件被视为AI对离岸外包模式冲击的缩影。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/opendoors-india-exit-is-fueling-a-bigger-conversation-about-ai-and-outsourcing/" },
+  { time: "08:18", tag: "ai", tagText: "AI", text: "Anthropic CEO Dario Amodei公开宣称AI增长呈指数级，但该公司内部最新研究却得出了相反结论。这一自相矛盾的局面引发市场对AI发展速度预期的重新审视。", source: "Mashable", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5iRl9EbEFSSTRLU1c5MzdQQTVmTERmYU5HaVBDUHN6dVZndThLUlhBN2xhZUJ2anRDc1RXU0pQWVNGWlV0Z0R1a1o2ZUFiSXdrTEIteXlhMG9ObkJ5SjJCZlFHbWc2VjJzM2ducE9nTmxwQV9neTY1LVh3?oc=5" },
   { time: "06:31", tag: "tech", tagText: "科技", text: "xAI一名前工程师提起诉讼，指控其因在SpaceX历史性IPO前夕提出Grok模型的安全担忧而被解雇。该工程师此前在xAI和SpaceX任职，声称公司因警示AI风险而报复性解雇。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety-new-lawsuit-claims/" },
   { time: "04:19", tag: "tech", tagText: "科技", text: "亚马逊刚刚完成债券发行后，又从银行借款175亿美元，用于持续的人工智能支出。随着AI军备竞赛加剧，企业正以惊人速度消耗大量资金，债务水平不断攀升。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/fresh-off-bond-sale-amazon-borrows-17-5-billion-from-banks-as-ai-spending-continues/" },
   { time: "03:27", tag: "ai", tagText: "AI", text: "拉斯维加斯AI初创公司获创纪录的3.5亿美元融资，用于扩大数据中心版图。该公司专注于AI基础设施，本轮资金将支持其在美国多个地区新建大规模数据中心，以应对AI计算需求激增。", source: "reviewjournal.com", url: "https://news.google.com/rss/articles/CBMinwNBVV95cUxPOWZFTGh0R2RURVpvcUJtTnE3ZFc3eHA0VUFFVXNzQW1ZWGdUMnBiLTZ1ZEJjb1hiQlZmX0JNd1hTbnZfQW8tZ2tndUV5NUt4WWVRdUtDTXJCTFlORFdheHBzMDBGTVlMaDRwRi0wX1dSTnVJekFJek1VUkU2LUVtZnpLS1pBNDBjbUFqZGxkTFprV2ZJRmpxeE1QLXFjUU9SWHJEcUctYnFkVHJaVFpKUnItbUdvT1V3SU04TEp0LVktN1lKcHcxTERxb0Zxa1JQSjdxNmpBeEIwWVVJWmFaLU9MVG8ycGNGT3h1WEJJS0E4SmgtTXhSMVhSVUp1U2VXNXBvcS0yQ2toUS0yemNrMkMzSXZzbTFEWF96eXlKb01UcGRWcjBjNTNqNU5uUkJ5RnlnNlMxcmVhTHdadU5xZ0loOUdIek04QVFseDdWQzhUREU0dEttdjFOcGJ4WkZrd3p2TV9RNTNTOUg2bGFKUTZlZnBmd0hsOFZBVUNuTHdOdlhPOVc2cEk4QS1lekxMN2FMaG56cVlXYUxHbTRr?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "OpenAI投资一家专注于合规与核保任务的AI初创公司，进一步拓展其在企业级AI应用领域的布局，覆盖金融合规等受监管行业。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOU3k5aU1FVk92aE1lb2h0Yi1oNWFWbDg2QjZOSGk2d29vV3E2NHhnQW1mSW5CaTZzaURZTEVtdFJRWU1FY3hyOElHaGpwNG0wYmVFeDdSMDBjUEYtWlcxZGZCckhXNHJKTHV2SS1WN0djZHlqcXo0RkVJT2hjVjFCVDFzXzZhenpldTZSN1JiTkJxd016ZDRwRnZIenF5dndNeGNoTEhmYkViNVhLNnVxa3J2Yw?oc=5" },
   { time: "19:17", tag: "ai", tagText: "AI", text: "AI时代的网络安全初创公司Cyera完成6亿美元融资，估值大幅提升。该公司专注于使用AI技术保护企业数据安全，此次融资凸显AI安全赛道的火热。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSkFhMUZQeVlhNkNmSmpHQjVjem5VbW13ZjhYUXI2S1FRSWZOWnVDN0h0cUxCaU13dzUzd3JrYl9QbHFjVHJZWmdINkZJcGwyLW4yOThkZU1mWEZ5Mzdxdkc4aFl4QVd3SGJmdHlNTkFrbmtNWk9qSDZGczBPUmphckZCcmpjSENrakxBeWlIZEF6UQ?oc=5" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "半导体初创企业融资热潮不减，AI应用需求推动投资持续涌入芯片设计、制造和封装环节，行业资金充裕，新一代技术加速孵化。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQkZBMFo1eFN6VzAtY05ENGdSUWMxdm02WURseldnVFBZY0ZYb3lnV1RvZTY0QXoxS3ZpdGQ2ekZ0QkRFdGFkZWc2NkFab2x6QWpnbFk2WWttNEJLVUdsS0RlN2FybFBEMzgyUFluS0VTdXZNbGVuMEFtSGJUaG5mZWlUSnBFQU1lcXg5SFF1MmJnMWdRR2dUZW1xRVFYajlPR0t1ZE1Mb2o5c0JhdkNF?oc=5" },
-  { time: "18:40", tag: "tech", tagText: "科技", text: "AI芯片股集体上涨，英伟达（Nvidia）、博通（Broadcom）和美满电子（Marvell）等受益于AI需求持续高涨，股价录得显著涨幅，市场情绪积极。", source: "Gotrade", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxOR0pHN25ZZHE3LXFMc1NtLTJzbHN3blJhUVh1RVpNZTJ3a3dkOFFITi16QzJ5VDMwVlliVjVJaDFtMVdLeEplZzRsZThqdUloUm05YkNSSzd2TFI0UzFoc25OMkY1MmM4aTVKdEFzOWpiMGNCM04ybGJMYjdVMnRqTFlCa0ViTEE?oc=5" },
-  { time: "16:16", tag: "tech", tagText: "科技", text: "SOXQ半导体ETF（追踪半导体指数）自年初以来累计上涨181.74%，AI芯片热潮持续推动英伟达、博通、AMD等成分股大涨，ETF表现远超市场平均水平。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZkZfdkpKNkd6MGpoTE4yVzY4Sjk5ZVh3NGQ3WldMb2VUc0V2TVR1R0pSQVhIbUdZNWhyTlNEMjB2VmRScklMU3BRcldGdDk5NEp4MTdIenB5bHZiQW51NnVFTWt2Y045THFuXzdoTURrRGZBdnAwUXd4clBtNVQwcnVIYw?oc=5" },
-  { time: "16:16", tag: "ai", tagText: "AI", text: "超微电脑（Super Micro Computer）计划通过股权融资70亿美元，用于扩大AI服务器产能。此次融资规模巨大，反映了AI基础设施需求的持续高涨。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUVZ0eVZHdlZmZVVFWktQZUlzU1VoMHdGZmpURmVQVUlvWnozemR4WE1Hd281eUtHaTJCa1dGeGFPZ2lqallzc0hUUzlXM2JWNFhOVUJabmJyV3pjQkxocjQwRGRGQUVHc0JYRTJfVFM3aGxkcXczLVVKbzJsMHdCQVZfVUJqVXVJVE9CVWp2elFEbW1UcXVabFNkN3hfSVg4U1NWdXlZdTVtRXI1eXhoRTE3V2MyQ0VRV3FNcDdfSXZiVTY4eVl6Nmdac0k4SFlpa3c1X25HUGc?oc=5" },
 ];
-const aiBreakingDate = "2026年6月11日 08:25 CST";
+const aiBreakingDate = "2026年6月11日 14:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
