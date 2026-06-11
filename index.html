@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27.2,
+  score: 27.31,
   rating: "fear",
-  timestamp: "2026-06-11T10:36:46+00:00",
+  timestamp: "2026-06-11T14:46:40+00:00",
   previousClose: 27.46,
   previous1Week: 53.89,
   previous1Month: 66.63,
   previous1Year: 64.2,
-  date: "2026年6月11日 18:55 CST"
+  date: "2026年6月11日 22:51 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:49", tag: "ai", tagText: "AI", text: "贝佐斯AI初创公司Prometheus完成120亿美元融资，使其总融资额达180亿美元。贝佐斯表示AI将带来‘黄金时代’，而非大规模失业。联合CEO Vik Bajaj共同领导该公司。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/project-prometheus-bezos-bajaj-live-updates.html" },
+  { time: "22:48", tag: "geo", tagText: "地缘", text: "美国民主党参议员鲍德温和众议员卡纳提出法案，拟设立新的外国直接投资审查委员会，专门调查特朗普政府吸引外资交易中的国家安全风险，引发政治争议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/baldwin-khanna-propose-direct-foreign-investment-board-to-probe-trump.html" },
+  { time: "22:39", tag: "geo", tagText: "地缘", text: "伊朗国家媒体威胁将把马斯克在中东的所有公司视为军事目标，作为对美国打击伊朗的报复。此举可能危及SpaceX星链、特斯拉等业务在地区的运营。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/iran-threatens-elon-musks-companies-in-middle-east-iranian-state-media.html" },
+  { time: "22:34", tag: "macro", tagText: "宏观", text: "美国最高法院裁定，私人投资者不得依据关键证券法提起诉讼，支持贝莱德等资产管理公司旗下的基金免于私人民事诉讼。该裁决大幅限制了投资者追偿权利。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/supreme-court-rules-against-private-suits-brought-under-securities-law.html" },
+  { time: "22:18", tag: "geo", tagText: "地缘", text: "英国国防大臣希利辞职，称首相斯塔默‘无法’、财政部‘不愿’提供必要的国防预算，折射出英国防务开支压力和政治内部分歧。", source: "Financial Times", url: "https://www.ft.com/content/e294734a-67db-4267-88e0-4793767f50d2" },
+  { time: "21:55", tag: "geo", tagText: "地缘", text: "印度就油轮遇袭导致三名印度船员死亡向美国提出抗议，呼吁海湾地区局势‘降级’，但表现出避免与华盛顿直接对抗的倾向。", source: "Financial Times", url: "https://www.ft.com/content/0d51c952-94ca-4f8f-8cb7-4d70c140c24b" },
+  { time: "21:35", tag: "macro", tagText: "宏观", text: "欧洲央行宣布加息，为2023年以来首次，成为G7中首个因中东能源危机而提高借贷成本的央行。分析认为此举旨在应对供给冲击导致的通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/95ec93a9-1153-4837-be82-32a87eaabe1d" },
   { time: "18:41", tag: "tech", tagText: "科技", text: "美光、Marvell等芯片股领跌，科技板块正式进入技术性回调区间。分析人士认为，过去一周的抛售已从回调加深为修正，市场担忧AI泡沫及利率前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/micron-intel-drag-the-tech-sector-into-a-new-bearish-phase-will-the-correction-last-this-time-9ba4f3f5?mod=mw_rss_topstories" },
   { time: "18:38", tag: "crypto", tagText: "加密", text: "核心CPI数据低于预期，加密货币市场受到提振。分析认为通胀放缓可能缓解美联储加息压力，利好风险资产，比特币及主要代币短线走高。", source: "RTTNews", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxNanZJUWNxSlhvUXZCMzRyRXVsN1Y5ZVlmY0NFakdHMVdxMGprT01uWUVBcDZzWHh2ZjB6UDZjRmM5cV9Gbm1tZnB2UE1CMDBIOTdhOTlCVW80d1RncmttaWFYa3Jjcl9SQjZhTkk2Qmx3VWZ3TWdIWkV3SkRCRENBcg?oc=5" },
   { time: "17:51", tag: "geo", tagText: "地缘", text: "北京市场监管总局在“6.18”促销期间对阿里巴巴、京东等平台发出警告，指责其使用误导性销售策略，导致中概科技股集体走低。监管压力再度升温。", source: "Financial Times", url: "https://www.ft.com/content/75c630a9-8d94-422c-ba0d-8f5fd37f3125" },
@@ -1642,18 +1649,17 @@ const breakingNews = [
   { time: "05:52", tag: "macro", tagText: "宏观", text: "特朗普周三公开表示对4.2%的通胀率感到满意，称“爱通胀”。分析认为，这为新任美联储主席Kevin Warsh维持高利率立场提供政治背书，市场对降息预期进一步降温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/trump-inflation-fed-chair-kevin-warsh-analysis.html" },
   { time: "05:26", tag: "macro", tagText: "宏观", text: "特朗普提名Capital One高管Brian Johnson担任美国消费者金融保护局（CFPB）局长。Johnson长期持放松监管立场，预计将推动金融监管改革，影响贷款和信用卡市场。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVGZVMHB0N3NYTnhaOEdsTE92c3NMWDZjYXREc0NUUndBdTltLVFnZTN0cjlILVFsUmVpQkZjUW90OE1PaTJMNm9mYXdwWEJUYmppcDFiWDhJMWk5aDlXY2NKVmlvc3dMdDRONHJ3QjVSZkVMR0o1b25SWERBY21qUG5fZ3NPbm0zMUxwbW82UUVmZ3pMNTlVajQ5T05zSXBzTG5udmdn?oc=5" },
   { time: "05:00", tag: "macro", tagText: "宏观", text: "中国取消与欧盟高级别会议，原定在北京的两轮会谈突然被取消，两大贸易超级大国之间紧张关系加剧。", source: "Financial Times", url: "https://www.ft.com/content/5903318c-319b-426e-b05d-062f7620f799" },
-  { time: "05:00", tag: "geo", tagText: "地缘", text: "欧盟国家考虑‘拆解’其外交服务机构，首席外交官卡娅·卡拉斯及其领导的欧洲对外行动署因领导力和协调问题成为各国批评焦点。", source: "Financial Times", url: "https://www.ft.com/content/a7278d93-98fc-4fa7-a14c-d0c089b693dd" },
-  { time: "05:00", tag: "macro", tagText: "宏观", text: "伊朗战争加剧金属市场‘超级挤压’。铜和铝此前因中东冲突影响供应而持续上涨，地缘风险进一步推高工业金属价格。", source: "Financial Times", url: "https://www.ft.com/content/44d4b188-45ed-4e7e-a5eb-278da62ac601" },
-  { time: "04:00", tag: "ai", tagText: "AI", text: "OpenAI据报正考虑大幅降价，以吸引消费者从竞争对手Anthropic处转向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/openai-mulls-slashing-prices-ahead-of-competition-from-anthropic-wsj.html" },
-  { time: "01:44", tag: "macro", tagText: "宏观", text: "美国5月CPI同比上涨4.2%创三年新高，但分析认为最坏情况可能已过。汽油价格回落及关税效应减弱预计将在年底前推动通胀下行，市场对美联储进一步加息的压力有所缓解。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-4-2-inflation-rate-is-a-bummer-but-the-worst-might-be-over-ef27170d?mod=mw_rss_topstories" },
-  { time: "00:42", tag: "geo", tagText: "地缘", text: "特朗普暗示可能不再续签2020年签署的美墨加贸易协定（USMCA），称“不需要他们拥有的任何东西”。该言论加剧了北美贸易关系的不确定性，引发市场对关税和供应链风险的担忧。", source: "Financial Times", url: "https://www.ft.com/content/e55a6ab9-d5dd-4a9f-bcb5-9bc0d23e08fb" },
-  { time: "00:24", tag: "geo", tagText: "地缘", text: "特朗普签署700亿美元移民资金法案，为ICE和CBP提供至其任期结束的经费。该法案历经数月拖延后终获通过。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/trump-ice-70-billion-immigration-funding.html" },
-  { time: "00:13", tag: "tech", tagText: "科技", text: "参议员沃伦致信SEC，要求推迟SpaceX IPO，担忧其估值、治理以及马斯克作为大股东的“不受约束”的权力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/10/spacex-elizabeth-warren-elon-musk-sec-ipo.html" },
 ];
-const breakingDate = "2026年6月11日 18:55 CST";
+const breakingDate = "2026年6月11日 22:51 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX IPO背后的三大硬科技登月计划曝光：太空数据中心、星舰规模化制造及轨道燃料加注站。分析称大部分估值来自这些未来太空基础设施的看涨期权。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/the-three-hard-tech-moonshots-fueling-spacexs-unbelievable-ipo/" },
+  { time: "22:31", tag: "ai", tagText: "AI", text: "华纳音乐集团收购AI归属初创公司Sureel AI，旨在更精确追踪其艺人的作品在AI生成内容或训练数据中的使用情况，为AI时代的版权管理铺路。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/" },
+  { time: "22:23", tag: "ai", tagText: "AI", text: "DoorDash推出AI聊天机器人Ask DoorDash，用户可通过自然语言提示和图片搜索并下单，无需滚动浏览餐厅列表。该功能旨在简化订餐流程，提升用户体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/" },
+  { time: "22:01", tag: "ai", tagText: "AI", text: "由杰夫·贝佐斯创立的工业AI初创公司Prometheus估值达410亿美元，成为又一家AI独角兽。该公司专注于工业自动化与AI应用，本轮估值反映了市场对工业AI领域的高度关注。", source: "Axios", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTE1DT090MEZDbjRYNzlELVRud2cyWDE0X3h0NjRoVkh1ZENQUTBKUFoyZ3dRVnZRcXdaMC00WnJ3bFpZTkt2dUVORnBfQlYxVmJyeExvUUFqbl96U0xkLWpldmxiOUY2aVFGVzljR2V2LVQ?oc=5" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "OpenAI投资一家专注于合规与核保任务的AI初创公司，进一步拓展其在企业级AI应用领域的布局，覆盖金融合规等受监管行业。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOU3k5aU1FVk92aE1lb2h0Yi1oNWFWbDg2QjZOSGk2d29vV3E2NHhnQW1mSW5CaTZzaURZTEVtdFJRWU1FY3hyOElHaGpwNG0wYmVFeDdSMDBjUEYtWlcxZGZCckhXNHJKTHV2SS1WN0djZHlqcXo0RkVJT2hjVjFCVDFzXzZhenpldTZSN1JiTkJxd016ZDRwRnZIenF5dndNeGNoTEhmYkViNVhLNnVxa3J2Yw?oc=5" },
+  { time: "19:40", tag: "ai", tagText: "AI", text: "Anthropic就Claude Fable 5模型隐藏的蒸馏防护栏致歉，该防护栏秘密限制竞争对手使用其模型进行模型蒸馏，引发研究人员和竞争对手不满。Anthropic承认此举不当并承诺调整策略。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail" },
   { time: "16:00", tag: "ai", tagText: "AI", text: "流媒体平台Deezer推出AI音乐检测工具，可扫描用户在Spotify、Apple Music等其他平台的播放列表，识别其中AI生成的曲目。Deezer此前已率先在自家平台标注AI音乐，此举将进一步推动跨平台AI内容治理。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/948153/deezer-ai-music-detector-spotify-apple" },
   { time: "14:46", tag: "ai", tagText: "AI", text: "巴黎生成式AI初创公司Mendo完成1200万欧元A轮融资，资金将用于拓展欧洲市场。Mendo专注于代理型AI与生成式AI应用，此轮融资显示欧洲AI创业生态持续活跃。", source: "Retail Technology Innovation Hub", url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOdTF3RUlwbkRrbDFZeDVMNDFjd1lrRGZXWjdxdTdkRWpfTlJJeURGaHlkZ2JucnkxX25nWS1ISlV5WjhIY0xFWHF0elRMSGg3RGN6a3p6dmlHd3hsYV85WmFJV21zRmV5cWlQOWc5V25ZY3hXZm8zblRaS0x0eTAtZEV5SWY4UlhydHhXSmZMbEh6WDVTRTdsMjNRaGQ3TVIxVDF6eGJfMXAtcjBqVEUyZHFjUDVJYUpfc1g1UDdqVmZBMmdsVjZvelFDaFJvTkJWamJUMkVUaG80TFA4aWJqdlpxX294amQtTWNQaUhSVUZXQQ?oc=5" },
   { time: "12:17", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI正考虑大幅降低API token价格，以应对来自Anthropic日益激烈的竞争。此举可能引发AI模型定价战，进一步压低企业使用大模型的成本。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU1dmT09qdzE4R2hqeVpvcmtFckVBdUUzbWpTd2p4eU5rMjNqMVc0QTZtT2VkVlJFYm5KUlVNUmk4M21zRjBDcDVhcE1tQlVUSnYtbnowNVlnTGNBRFMxOHl3Ylc0cVBMNmtmX2Q4VjdWWUtfVjJ1Mi05eWwwWFN3Zk5CTEYtT0hmdGYwTXJwUVFVcW5hUDBOMWdneWViRUhyLTRmSDFvVQ?oc=5" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "00:50", tag: "ai", tagText: "AI", text: "Anthropic新发布的Mythos级模型Claude Fable引发双重争议：微软因数据保留担忧限制内部员工使用该模型；同时，网络安全研究人员批评Fable的安全护栏过于严格，导致无法进行有效的安全测试与漏洞分析。模型能力与可用性之间的平衡面临行业拷问。", source: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
   { time: "00:18", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，将保存用户使用Lens拍摄的照片、Search Live录音及翻译音频等交互数据，用于AI模型训练。此举引发对数据隐私和AI训练伦理的新一轮讨论。", source: "The Verge", url: "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio" },
   { time: "00:09", tag: "ai", tagText: "AI", text: "科技行业迎来新缩写MANGOS：SpaceX、Anthropic、OpenAI等公司正筹备大规模公开上市，可能取代FAANG成为新一代科技巨头。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" },
-  { time: "00:01", tag: "ai", tagText: "AI", text: "英伟达发布Cosmos 3，号称全球首个完全开源的AI全能模型，涵盖多模态能力，推动AI民主化进程。", source: "AI Magazine", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNko3Mm1FRGphWkxlWWJNTDVLMmc2NTlCbWtVejV4UkFrZjFmbzFITTRLampScnJmaDFDNjVOVjYwQVhYeDRZUmZzc0dhcjhhOVlTczNTQ3pRRVJtUGp0REdRblAyUXJDTGpsTTFYT0VKZS10M3VCNklfN1JtSm5rTE5XdE83SmtrMTY4WFNB?oc=5" },
-  { time: "23:49", tag: "tech", tagText: "科技", text: "芯片股抛售加剧，博通（Broadcom）和AMD下跌4%，英伟达（NVIDIA）下跌3%，延续近期半导体板块回调趋势。市场对AI芯片估值泡沫的担忧升温。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRWVwQjg2ZFc3NFhKejNNX2J2cGtsWUtZQXRrdV9tQmE2VnpWVnBhQWJKLTRhWkRtXzlHZjh1RUlYVFM0alZEblJCdzkweHpkRlRCeEoySkNOMXdRNXJKNXdNblNxTVdFZnRCSExlMGRKblZ2azVibk1uSW9SVmh2NGpHcXd6Y1NRdVN5RDNqYWRfc2RDcjdqaG5IbEJvQWprX25yY1A3blZydWp4ZjAzbw?oc=5" },
-  { time: "23:11", tag: "macro", tagText: "宏观", text: "2026年第一季度初创企业融资报告显示，AI领域占据了全部风险投资资金的57%，创下历史新高。资金加速向AI基础设施、应用及垂直解决方案集中。", source: "FinancialContent", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxONHVUVFlTb3ZXbEdYZE5JTm1YeUt2LTM2T1BJcU1tdEI0bDFua0xOVlRkRnhiM2ZTNWJvcWhLSEpGdmlqUHdwbE9DR1FRY0Z1ZEJXYkF1X3dFdXpKcktRc18ydW05TVlxZy10NE4tdEczRThSd2ppbEYtbmhKT2EtVUFHaFRKSEhTM2NoazJCNVlURmxQZlRUcXQ2QXpxMm1ISUxnU3pxbk1ZVTlnT3lpQVRQX2prMFRsSGt4VWpwLTRpVFdJRG52akVn?oc=5" },
-  { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX IPO背后的三大硬科技登月计划曝光：太空数据中心、星舰规模化制造及轨道燃料加注站。分析称大部分估值来自这些未来太空基础设施的看涨期权。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/the-three-hard-tech-moonshots-fueling-spacexs-unbelievable-ipo/" },
-  { time: "22:31", tag: "ai", tagText: "AI", text: "华纳音乐集团收购AI归属初创公司Sureel AI，旨在更精确追踪其艺人的作品在AI生成内容或训练数据中的使用情况，为AI时代的版权管理铺路。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "OpenAI投资一家专注于合规与核保任务的AI初创公司，进一步拓展其在企业级AI应用领域的布局，覆盖金融合规等受监管行业。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOU3k5aU1FVk92aE1lb2h0Yi1oNWFWbDg2QjZOSGk2d29vV3E2NHhnQW1mSW5CaTZzaURZTEVtdFJRWU1FY3hyOElHaGpwNG0wYmVFeDdSMDBjUEYtWlcxZGZCckhXNHJKTHV2SS1WN0djZHlqcXo0RkVJT2hjVjFCVDFzXzZhenpldTZSN1JiTkJxd016ZDRwRnZIenF5dndNeGNoTEhmYkViNVhLNnVxa3J2Yw?oc=5" },
 ];
-const aiBreakingDate = "2026年6月11日 18:55 CST";
+const aiBreakingDate = "2026年6月11日 22:51 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
