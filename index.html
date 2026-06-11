@@ -1618,17 +1618,18 @@
 const fearGreedData = {
   score: 29.69,
   rating: "fear",
-  timestamp: "2026-06-11T21:12:37+00:00",
+  timestamp: "2026-06-11T23:27:47+00:00",
   previousClose: 27.46,
   previous1Week: 53.89,
   previous1Month: 66.63,
   previous1Year: 64.2,
-  date: "2026年6月12日 05:29 CST"
+  date: "2026年6月12日 07:47 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:00", tag: "tech", tagText: "科技", text: "Adobe再失一名高管，股价延续跌势，周四收盘价创七年多新低。市场对管理层动荡和业务前景的担忧加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/adobe-is-losing-another-top-executive-and-investors-dont-like-it-587603e9?mod=mw_rss_topstories" },
   { time: "05:14", tag: "宏观", tagText: "宏观", text: "美国参议员伊丽莎白·沃伦致信交易所，质疑SpaceX IPO的监管流程，特别是关于指数基金等待期变更及散户投资者保护措施。沃伦要求交易所回应是否存在对散户不利的规则调整。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/warren-spacex-ipo-exchanges.html" },
   { time: "04:41", tag: "tech", tagText: "科技", text: "马斯克旗下SpaceX完成史上最大规模IPO，以每股135美元定价筹集750亿美元，估值约1.8万亿美元，投资者需求火爆。该交易为全球最大IPO，凸显市场对太空及AI领域的高度热情。", source: "Financial Times", url: "https://www.ft.com/content/1890e552-aa7e-4d7f-98f1-db4f165e8827" },
   { time: "04:32", tag: "AI", tagText: "AI", text: "甲骨文股价遭遇25年来最差单日表现，因市场对其950亿美元AI支出计划及数据中心交付瓶颈产生疑虑。尽管云基础设施业务快速增长，但巨额资本开支和物理瓶颈令投资者担忧回报前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oracles-stock-is-seeing-its-worst-run-in-a-quarter-century-as-this-key-ai-debate-rages-on-49b3e9ed" },
@@ -1648,9 +1649,8 @@ const breakingNews = [
   { time: "21:55", tag: "geo", tagText: "地缘", text: "印度就油轮遇袭导致三名印度船员死亡向美国提出抗议，呼吁海湾地区局势‘降级’，但表现出避免与华盛顿直接对抗的倾向。", source: "Financial Times", url: "https://www.ft.com/content/0d51c952-94ca-4f8f-8cb7-4d70c140c24b" },
   { time: "21:35", tag: "macro", tagText: "宏观", text: "欧洲央行宣布加息，为2023年以来首次，成为G7中首个因中东能源危机而提高借贷成本的央行。分析认为此举旨在应对供给冲击导致的通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/95ec93a9-1153-4837-be82-32a87eaabe1d" },
   { time: "18:41", tag: "tech", tagText: "科技", text: "美光、Marvell等芯片股领跌，科技板块正式进入技术性回调区间。分析人士认为，过去一周的抛售已从回调加深为修正，市场担忧AI泡沫及利率前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/micron-intel-drag-the-tech-sector-into-a-new-bearish-phase-will-the-correction-last-this-time-9ba4f3f5?mod=mw_rss_topstories" },
-  { time: "18:38", tag: "crypto", tagText: "加密", text: "核心CPI数据低于预期，加密货币市场受到提振。分析认为通胀放缓可能缓解美联储加息压力，利好风险资产，比特币及主要代币短线走高。", source: "RTTNews", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxNanZJUWNxSlhvUXZCMzRyRXVsN1Y5ZVlmY0NFakdHMVdxMGprT01uWUVBcDZzWHh2ZjB6UDZjRmM5cV9Gbm1tZnB2UE1CMDBIOTdhOTlCVW80d1RncmttaWFYa3Jjcl9SQjZhTkk2Qmx3VWZ3TWdIWkV3SkRCRENBcg?oc=5" },
 ];
-const breakingDate = "2026年6月12日 05:29 CST";
+const breakingDate = "2026年6月12日 07:47 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "14:46", tag: "ai", tagText: "AI", text: "巴黎生成式AI初创公司Mendo完成1200万欧元A轮融资，资金将用于拓展欧洲市场。Mendo专注于代理型AI与生成式AI应用，此轮融资显示欧洲AI创业生态持续活跃。", source: "Retail Technology Innovation Hub", url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOdTF3RUlwbkRrbDFZeDVMNDFjd1lrRGZXWjdxdTdkRWpfTlJJeURGaHlkZ2JucnkxX25nWS1ISlV5WjhIY0xFWHF0elRMSGg3RGN6a3p6dmlHd3hsYV85WmFJV21zRmV5cWlQOWc5V25ZY3hXZm8zblRaS0x0eTAtZEV5SWY4UlhydHhXSmZMbEh6WDVTRTdsMjNRaGQ3TVIxVDF6eGJfMXAtcjBqVEUyZHFjUDVJYUpfc1g1UDdqVmZBMmdsVjZvelFDaFJvTkJWamJUMkVUaG80TFA4aWJqdlpxX294amQtTWNQaUhSVUZXQQ?oc=5" },
   { time: "12:17", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI正考虑大幅降低API token价格，以应对来自Anthropic日益激烈的竞争。此举可能引发AI模型定价战，进一步压低企业使用大模型的成本。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU1dmT09qdzE4R2hqeVpvcmtFckVBdUUzbWpTd2p4eU5rMjNqMVc0QTZtT2VkVlJFYm5KUlVNUmk4M21zRjBDcDVhcE1tQlVUSnYtbnowNVlnTGNBRFMxOHl3Ylc0cVBMNmtmX2Q4VjdWWUtfVjJ1Mi05eWwwWFN3Zk5CTEYtT0hmdGYwTXJwUVFVcW5hUDBOMWdneWViRUhyLTRmSDFvVQ?oc=5" },
 ];
-const aiBreakingDate = "2026年6月12日 05:29 CST";
+const aiBreakingDate = "2026年6月12日 07:47 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
