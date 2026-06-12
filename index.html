@@ -1616,20 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 34.03,
+  score: 34,
   rating: "fear",
-  timestamp: "2026-06-12T19:13:35+00:00",
+  timestamp: "2026-06-12T21:40:02+00:00",
   previousClose: 29.63,
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月13日 03:19 CST"
+  date: "2026年6月13日 05:58 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:51", tag: "macro", tagText: "宏观", text: "派拉蒙与华纳兄弟探索公司（WBD）价值约1100亿美元的合并案获得美国司法部批准，这是传媒行业近年来最大交易的重要里程碑。不过，该交易仍可能面临各州总检察长的法律挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/paramount-wbd-merger-approval-doj.html" },
+  { time: "05:14", tag: "宏观", tagText: "宏观", text: "美国参议员伊丽莎白·沃伦致信交易所，质疑SpaceX IPO的监管流程，特别是关于指数基金等待期变更及散户投资者保护措施。沃伦要求交易所回应是否存在对散户不利的规则调整。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/warren-spacex-ipo-exchanges.html" },
+  { time: "04:41", tag: "tech", tagText: "科技", text: "马斯克旗下SpaceX完成史上最大规模IPO，以每股135美元定价筹集750亿美元，估值约1.8万亿美元，投资者需求火爆。该交易为全球最大IPO，凸显市场对太空及AI领域的高度热情。", source: "Financial Times", url: "https://www.ft.com/content/1890e552-aa7e-4d7f-98f1-db4f165e8827" },
+  { time: "04:32", tag: "AI", tagText: "AI", text: "甲骨文股价遭遇25年来最差单日表现，因市场对其950亿美元AI支出计划及数据中心交付瓶颈产生疑虑。尽管云基础设施业务快速增长，但巨额资本开支和物理瓶颈令投资者担忧回报前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oracles-stock-is-seeing-its-worst-run-in-a-quarter-century-as-this-key-ai-debate-rages-on-49b3e9ed" },
+  { time: "04:14", tag: "加密", tagText: "加密", text: "比特币价格跌向6万美元关口，此前两大主要买家（疑似机构或国家层面）撤出购买。市场情绪转向谨慎，分析人士关注6万美元支撑位是否有效。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMiogJBVV95cUxPejVISkJWeUsxcDNYU2VnOTNkYVhwY01zb3hIMFBNRUdzVGV1NEcyeFVqekJVR2s0NG95Q2xJNFY2WmlmY1hGN25hdDJvSEozZ25ONW5OdEFER29sUVBVSGRqTUxyRU8xMGFKc2RoNGRmMEgzay1USm4tTkNaZmZxOWxRSldfWEdKblhJRWlfWTNhOXl5WFJLLVpRd3NyeG9sQ3F1dlJBZi1RR0w0YTFDMXRlNkM4VWhNYnl6OWpVTU9vaXhBYklMSjg3bFlNVWFQd1MxVzFybEZCNDVRcXJFQTNxd013M3h1UXB2bVh5X2lvQkkxYjZtMGozenJDSEpNWFdybGNCZ05Xcjg3VE1hdWVQbWRsZ1NNMHZOVWRfQVh0d9IBpwJBVV95cUxPTGs0SUxMaE03YjRjbUVxS3J2TnZ5NnE0VG5aRGt3LW1HZVlSZ21JeWFCeE5ieldXWkxMSzNYQUlXbzl5M1FrWHhQVGdhbVNiYXVwZG1QMlVxNWI3NzRpS2I2Rm1MdW9nNTBVVEFJQV93bzY0LWpmaXpGMUVVQk93QTE4RTF5QkEwWkVFaU90VE91ektkeWV2SXVPNU5WVEMyXzhTLWZpdUpBdlNaMW5UQW5ZaE53Z2plc25KSC1oQ1FKcHRfdHF5cEhwaGd4Qnl2QmFVNGVZSmhrMWN5aTVPOTMzS0xPOGRwN0lWMGk2NnBqaFFzQzhqSGNlMWJPZkQ5ZnFjT2VTcVM2R3k1YVV1LThUbGFGd3huWHVqZnZ3NXI0MDJwZ1J3?oc=5" },
   { time: "02:23", tag: "geo", tagText: "地缘", text: "特朗普提名前SEC主席杰伊·克莱顿（Jay Clayton）担任国家情报总监。克莱顿在证券监管领域经验丰富，其任命或影响美国情报界对金融和科技领域的监管态度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/trump-jay-clayton-national-intelligence-pulte.html" },
+  { time: "02:00", tag: "crypto", tagText: "加密", text: "渣打银行分析师发布报告称，比特币在59,000美元附近已触底，标志着加密寒冬的结束，并预计未来将迎来反弹。此前比特币一度跌至该低点，市场情绪偏谨慎。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSk5BbUJWN2d2aFdfWlF2V2hqYzFaZnk3bV9oTi1hZHlqbGpaQVhOX05zQWJPUW90SEdhNjNOSmc1dzVNWWNiZTZReG5XN3dhb3Q0UWx1MUZmN0Njdm1QUXA2MDZXclZHWVlmeDJLU19yQm9CUmlycnJxX2k5Rjh3SGVrWFFhNmhZazJ1RFppSEhYeXRzUm9oRUxRZk14d3pMaE5mVzhLcFRKa3E5Qm9sVHRmTURRUW15VXBtN3JXSFBLWl9jVVB6bV9jaXEzN1R6ampMeTVNWQ" },
   { time: "21:05", tag: "macro", tagText: "宏观", text: "贝莱德旗下130亿美元HPS企业贷款基金连续第二个季度限制赎回，仅满足不到40%的赎回请求。该基金主要投资于私募信贷，流动性压力凸显当前信贷市场脆弱性，引发对商业地产和杠杆贷款风险的担忧。", source: "Financial Times", url: "https://www.ft.com/content/65adec62-3505-4d01-8aa6-a609aa7cfdcc" },
   { time: "20:58", tag: "geo", tagText: "地缘", text: "伊朗国家媒体披露美伊谅解备忘录草案细节，包括美国承诺解除石油制裁并重开霍尔木兹海峡。特朗普称海峡将在协议签署后立即恢复通航，国际油价应声跌至三个月新低，WTI和布伦特均大幅下挫。市场对中东局势缓和预期升温，全球股市上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/iran-us-peace-memo-strait-hormuz-oil-sanctions.html" },
   { time: "16:54", tag: "macro", tagText: "宏观", text: "私募巨头阿波罗全球管理公司选择得克萨斯州奥斯汀作为其第二总部，放弃了迈阿密和棕榈滩。原因是佛罗里达州私立学校学位已满，难以满足高管子女教育需求。此举进一步强化了奥斯汀作为新兴金融和科技中心的地位。", source: "Financial Times", url: "https://www.ft.com/content/036a838f-8209-4df7-8cbc-bb069e4e703a" },
@@ -1643,17 +1649,12 @@ const breakingNews = [
   { time: "12:22", tag: "geo", tagText: "地缘", text: "美国总统特朗普称美国已与伊朗达成框架协议，取消原定对伊朗的军事打击。该消息推动原油价格下跌，因市场预期中东紧张局势缓和将重新开放霍尔木兹海峡。亚洲股市上涨，加密货币也同步走强。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/oil-prices-wti-brent-on-hopes-of-us-iran-deal-despite-tehran-pushback.html" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "欧洲防务股涨势遭遇逆转，因政府借贷成本上升及战争形态变化冲击了这一近年最大的股票交易主题。此前，俄乌冲突推动欧洲各国大幅增加军费，但融资担忧令投资者获利了结。", source: "Financial Times", url: "https://www.ft.com/content/1fa66019-c241-46f8-b9e4-7b3ac8575904" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "中国内地投资者纷纷赴香港开设账户，因担忧北京监管收紧导致失去获得高收益投资产品的渠道。此举反映内地资本外流压力及对国内投资渠道受限的焦虑。", source: "Financial Times", url: "https://www.ft.com/content/eff414c9-6c8a-4200-b490-b13c642a7821" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "毕马威（KPMG）一份关于AI益处的报告被发现包含AI生成的虚假案例研究，涉及瑞银和交通系统的AI采用情况均为编造。该事件凸显企业使用AI工具时缺乏审核的风险。", source: "Financial Times", url: "https://www.ft.com/content/b3828e92-4961-4b39-84f0-c42f33be3c3f" },
-  { time: "06:00", tag: "tech", tagText: "科技", text: "Adobe再失一名高管，股价延续跌势，周四收盘价创七年多新低。市场对管理层动荡和业务前景的担忧加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/adobe-is-losing-another-top-executive-and-investors-dont-like-it-587603e9?mod=mw_rss_topstories" },
-  { time: "05:14", tag: "宏观", tagText: "宏观", text: "美国参议员伊丽莎白·沃伦致信交易所，质疑SpaceX IPO的监管流程，特别是关于指数基金等待期变更及散户投资者保护措施。沃伦要求交易所回应是否存在对散户不利的规则调整。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/warren-spacex-ipo-exchanges.html" },
-  { time: "04:41", tag: "tech", tagText: "科技", text: "马斯克旗下SpaceX完成史上最大规模IPO，以每股135美元定价筹集750亿美元，估值约1.8万亿美元，投资者需求火爆。该交易为全球最大IPO，凸显市场对太空及AI领域的高度热情。", source: "Financial Times", url: "https://www.ft.com/content/1890e552-aa7e-4d7f-98f1-db4f165e8827" },
-  { time: "04:32", tag: "AI", tagText: "AI", text: "甲骨文股价遭遇25年来最差单日表现，因市场对其950亿美元AI支出计划及数据中心交付瓶颈产生疑虑。尽管云基础设施业务快速增长，但巨额资本开支和物理瓶颈令投资者担忧回报前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oracles-stock-is-seeing-its-worst-run-in-a-quarter-century-as-this-key-ai-debate-rages-on-49b3e9ed" },
-  { time: "04:14", tag: "加密", tagText: "加密", text: "比特币价格跌向6万美元关口，此前两大主要买家（疑似机构或国家层面）撤出购买。市场情绪转向谨慎，分析人士关注6万美元支撑位是否有效。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMiogJBVV95cUxPejVISkJWeUsxcDNYU2VnOTNkYVhwY01zb3hIMFBNRUdzVGV1NEcyeFVqekJVR2s0NG95Q2xJNFY2WmlmY1hGN25hdDJvSEozZ25ONW5OdEFER29sUVBVSGRqTUxyRU8xMGFKc2RoNGRmMEgzay1USm4tTkNaZmZxOWxRSldfWEdKblhJRWlfWTNhOXl5WFJLLVpRd3NyeG9sQ3F1dlJBZi1RR0w0YTFDMXRlNkM4VWhNYnl6OWpVTU9vaXhBYklMSjg3bFlNVWFQd1MxVzFybEZCNDVRcXJFQTNxd013M3h1UXB2bVh5X2lvQkkxYjZtMGozenJDSEpNWFdybGNCZ05Xcjg3VE1hdWVQbWRsZ1NNMHZOVWRfQVh0d9IBpwJBVV95cUxPTGs0SUxMaE03YjRjbUVxS3J2TnZ5NnE0VG5aRGt3LW1HZVlSZ21JeWFCeE5ieldXWkxMSzNYQUlXbzl5M1FrWHhQVGdhbVNiYXVwZG1QMlVxNWI3NzRpS2I2Rm1MdW9nNTBVVEFJQV93bzY0LWpmaXpGMUVVQk93QTE4RTF5QkEwWkVFaU90VE91ektkeWV2SXVPNU5WVEMyXzhTLWZpdUpBdlNaMW5UQW5ZaE53Z2plc25KSC1oQ1FKcHRfdHF5cEhwaGd4Qnl2QmFVNGVZSmhrMWN5aTVPOTMzS0xPOGRwN0lWMGk2NnBqaFFzQzhqSGNlMWJPZkQ5ZnFjT2VTcVM2R3k1YVV1LThUbGFGd3huWHVqZnZ3NXI0MDJwZ1J3?oc=5" },
 ];
-const breakingDate = "2026年6月13日 03:19 CST";
+const breakingDate = "2026年6月13日 05:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:26", tag: "tech", tagText: "科技", text: "Oracle旗下PeopleSoft软件曝出0-day漏洞，影响数百个组织，可窃取数GB数据。该漏洞严重性极高，攻击者能远程访问敏感信息。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/peoplesoft-0-day-affecting-hundreds-of-organizations-steals-gigabytes-of-data/" },
   { time: "02:21", tag: "tech", tagText: "科技", text: "SpaceX总裁Gwynne Shotwell表示，人形机器人和自动驾驶汽车可为其解锁28.5万亿美元的市场机会。她认为SpaceX的技术平台将超越火箭发射，延伸至机器人及自动驾驶领域。", source: "CNBC TV18", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVS0yZUk2OTlRdDYxYnU4N3JKblVtS3VwUWttYmgtZlZnNlJRX21GRkZIZkxpYmhLeThfQU1GYUlHSHdJRDQ2UUNhU2JQVkppdWNDaVphb2hZc2NrelNCeF9GODlnbThZQjBGWGxIaVhCS3hCdDQ1V3lQQ2M0TXQ1ZjZHY01Fb2k1U21RbmJXaFdRYnJfSVFFVFhUNHQyQng3R1JWZkRkU0tNeUFPb3VOOWRTQk5PVHk2YjJ4ZFNvdE4xVG1PbkHSAcsBQVVfeXFMT295anhPN05FTUF0TWw4REhaM0ZLQy1ZMHYyU2FtZUg1UmllQXppQWtsZk9xZGZUSnRZb0pCWGxTTmpQb1BqR0RiR2dTb0lVY2laNG9PUHFCOTR4bWxsUXNhcTdIckpJeXlEQXdUVTVNZXNJQ01MRVFmdXRUMFppMEtFSFlZM2MwS0owNnJ4VHpvMTczX0dMS3haTWhKRTFHdjBhVUNRZTdKLWxEYk1GSFJmTGxqX0N4MC01czkwN1FoaVpkLWkzVGhiRGM?oc=5" },
   { time: "02:06", tag: "tech", tagText: "科技", text: "高通宣布其AI生态系统扩展至人形机器人和自动驾驶汽车领域。该公司正在利用其骁龙平台和AI引擎，为机器人及车载系统提供边缘AI处理能力，标志着高通从手机芯片向更广泛的AI硬件生态转型。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQR0tpUDJ0ZlZXWWl4REFnenZ2RlJlM0t0dU1oelVvUHlUeGM1b2ZIYXEyNDd4TVBYRFo3YTcwV00xLTdETHRwUFJiSEdvLUlBOXkxWUZIZTlZTzdnTTNhMG1uMUZNS243NUhzRzBKYWFDTkJzTFh4RDhKSXE1VjVPMmhleFpfUUFmVUxHV0l0VlRmM25qaXZMU2lPTmZzMURsNGJUbUFB?oc=5" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "法国AI初创公司Mistral被传正以约200亿欧元（约231.5亿美元）估值进行新一轮融资，计划筹集30亿欧元。若属实，估值较其C轮117亿欧元近乎翻倍，显示欧洲AI明星企业持续获得巨额资本追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/" },
@@ -1662,6 +1663,7 @@ const aiBreakingNews = [
   { time: "01:20", tag: "tech", tagText: "科技", text: "谷歌遭独立音乐人集体诉讼，指控其未经许可使用YouTube平台上的歌曲训练Lyria音乐AI模型。原告称谷歌将用户上传的视频视为训练素材，但未明确告知或获得授权。此案可能对AI训练数据的版权规则产生深远影响。", source: "The Verge", url: "https://www.theverge.com/tech/947770/google-lyria-music-ai-lawsuit-youtube" },
   { time: "00:50", tag: "ai", tagText: "AI", text: "Anthropic新发布的Mythos级模型Claude Fable引发双重争议：微软因数据保留担忧限制内部员工使用该模型；同时，网络安全研究人员批评Fable的安全护栏过于严格，导致无法进行有效的安全测试与漏洞分析。模型能力与可用性之间的平衡面临行业拷问。", source: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
   { time: "00:46", tag: "ai", tagText: "AI", text: "贝佐斯支持的AI初创公司Prometheus完成120亿美元融资，这是近年来规模最大的AI领域融资之一，显示出投资者对前沿AI模型的持续热情。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLWx4ZklJZGdzRThDanVsMzRHVXF4WUg2cGs5T05ZZ18wdnkxWFU4WmpKMFNfMUk4SHRLZGlVdjVRQ2x5LVNfQWNqTzdBbU5UTE5zYTRlWVlwZGJYU0pxTWVNOUl0MXlUeGl1d0hmZ0RWUFNjeFRpRVQzcmQzU2xjMTB6OHhaaHVNUDRJWnNNUExaLWJ5VU5ETTJCdWdILU5icUoyOU5HaXFTV0xvVmc?oc=5" },
+  { time: "00:24", tag: "tech", tagText: "科技", text: "埃隆·马斯克成为全球首位万亿富翁。SpaceX IPO后，其净资产突破万亿美元大关，此前约为8000亿美元。马斯克持有SpaceX约48亿股股票。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/948409/elon-musk-trillionaire-spacex-ipo" },
   { time: "00:18", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，将保存用户使用Lens拍摄的照片、Search Live录音及翻译音频等交互数据，用于AI模型训练。此举引发对数据隐私和AI训练伦理的新一轮讨论。", source: "The Verge", url: "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio" },
   { time: "00:09", tag: "ai", tagText: "AI", text: "科技行业迎来新缩写MANGOS：SpaceX、Anthropic、OpenAI等公司正筹备大规模公开上市，可能取代FAANG成为新一代科技巨头。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" },
   { time: "00:03", tag: "macro", tagText: "宏观", text: "2026年第一季度初创企业融资报告显示，AI公司吸收了全部风险资本的57%，占比创历史新高。资金持续涌向生成式AI、基础设施和垂直应用领域，进一步巩固AI作为当前科技投资核心赛道的地位。", source: "USA Today", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb21FQW5zcUJjMWwyaHF1Rk56ZzVvSElCOFhRaUFwZzlJYzdXdVZhRFhmeFJfSXJycU50UV9sUlZ3N08xb1p2cU41bFdQMjBZOEZsR1dxRllWcUZkRWtZd2VEYnJzdlc3UXR6MXFCY2hZcFd4dkItMnBQNmxrMGVvTWFfWXRYQ0RfQnNuMWxucF80c1MtQ1A0aDVQVy1vQ3d2dXRiQm5OMTVfdWU5bmc?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:03", tag: "ai", tagText: "AI", text: "亚马逊创始人杰夫·贝佐斯旗下的AI初创公司Prometheus宣布其目标是构建“人工通用工程师”——一种能自主解决复杂工程问题的通用型AI。该公司此前刚完成120亿美元融资，是AI领域最大规模之一，此次目标设定进一步明确了其技术路线。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/949005/jeff-bezos-prometheus-artificial-general-engineer" },
   { time: "21:34", tag: "tech", tagText: "科技", text: "美国国际贸易委员会（ITC）正式受理Xockets公司针对英伟达、微软和亚马逊的专利投诉，指控其AI芯片基础设施侵犯相关专利。该案涉及数据中心和AI加速器核心架构，若认定侵权可能导致进口禁令，对AI芯片供应链产生重大影响。", source: "IAM Patent", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOHZ6V1F4YVBQck95Tm4xdGtTckVkUm56Um84TGVPb3hjZDg4cm1CSGZoLWVEQzRjb0RacnVNdmJMTjZYWENqTS1SQ0ZlV3IxZWRPR2NXTWtXdTkxTEV1dWtjcnNaRV91T09FMUFzSHVQX2tlMEZNWkhfYUduZDM1SlJVcGRCN0tteGlUd3ZBTURSWkNrZThlTzJSamJLcTB3WUMybElzdlllMzlXWWljeUE4V2VoY2NLckJGNVRhc3g4UzBTWEQxUU5sOXNUUQ?oc=5" },
   { time: "20:20", tag: "ai", tagText: "AI", text: "OpenAI、谷歌DeepMind及Anthropic的AI负责人将出席G7峰会，参与人工智能治理与政策讨论。这表明全球顶级AI公司与主要经济体之间的合作与监管对话进入新阶段，或影响未来国际AI规则制定。", source: "Dataconomy", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQTIzMGxSc1ptYkRhNjJ2ZUxUTzl6Z1YweV83QlZYMFBldlJWNm9qX0RiMWZibGgxbkNKZ3NWOXo0SUtldGp0eENQUk9JVU1Gd2Q3RDJSQkR5MTVvck82eWhRMVIwZmF3NzFsQlhHaTI2aDVfNHN6ZElMTERpSHNjbWFtX0hma2o4NExLZklNd29UZw?oc=5" },
-  { time: "13:30", tag: "ai", tagText: "AI", text: "Anthropic提交S-1上市申请，分析认为其对欧洲AI初创公司的意义超过今年任何一轮融资。该文件可能揭示公司财务状况及市场对AI独角兽的估值预期，同时为欧洲AI企业提供IPO路径参考。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWGl2VWx6bW54cnhzMkhlRjR5Q2YtOU56dllmZVNrSExvTDdGWmtjcVFFNlZiTUhOakFYbkdIdUFCTVpIRjUxN2ZEU040ZFlwd2dYZjVhZUxQOExMbjl2RlhRRnI1dmxKNG9OQkZ4ZHVueW5ZRG0zcVVKcXNVRERSQ093?oc=5" },
-  { time: "12:30", tag: "tech", tagText: "科技", text: "Avataar AI推出针对印度市场的视频生成模型，定价每秒钟仅0.005美元。该模型经过蒸馏优化，速度更快且具备文化感知能力，旨在以低成本服务印度大规模内容创作需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/" },
 ];
-const aiBreakingDate = "2026年6月13日 03:19 CST";
+const aiBreakingDate = "2026年6月13日 05:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
