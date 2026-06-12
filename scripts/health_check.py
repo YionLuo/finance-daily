@@ -18,6 +18,7 @@ import sys
 import subprocess
 import time
 import json
+import urllib.request
 from datetime import datetime, timezone, timedelta
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -31,6 +32,7 @@ from utils import (
 
 SITE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CST = timezone(timedelta(hours=8))
+LIVE_SITE_URL = os.environ.get("LIVE_SITE_URL", "https://yion.me/")
 
 # Thresholds
 BREAKING_STALE_MINUTES = 120      # Breaking News: 2 hours without commit
@@ -105,15 +107,31 @@ def get_last_auto_commit_age():
 
 def check_deep_research_in_html():
     """
-    Check if today's deep research report exists in index.html.
+    Check if today's deep research report exists in live or local index.html.
 
     Returns:
         (has_today, latest_date_str) — whether today's report exists, and the latest date found
     """
     try:
-        html_path = os.path.join(SITE_DIR, "index.html")
-        with open(html_path, "r", encoding="utf-8") as f:
-            html = f.read()
+        html = None
+
+        # Prefer the live site so we validate what users actually see.
+        req = urllib.request.Request(
+            LIVE_SITE_URL,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Y Daily Health Check/1.0)",
+                "Accept": "text/html,application/xhtml+xml",
+            },
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                html = resp.read().decode("utf-8", errors="replace")
+                log(f"Fetched live HTML from {LIVE_SITE_URL}")
+        except Exception as live_err:
+            log(f"Live HTML fetch failed, falling back to local index.html: {live_err}")
+            html_path = os.path.join(SITE_DIR, "index.html")
+            with open(html_path, "r", encoding="utf-8") as f:
+                html = f.read()
 
         now = datetime.now(CST)
         today_str = now.strftime("%Y-%m-%d")
