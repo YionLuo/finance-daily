@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 31.4,
+  score: 33.43,
   rating: "fear",
-  timestamp: "2026-06-12T13:34:11+00:00",
-  previousClose: 29.69,
-  previous1Week: 41.77,
-  previous1Month: 65.69,
+  timestamp: "2026-06-12T16:48:00+00:00",
+  previousClose: 29.63,
+  previous1Week: 41.83,
+  previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月12日 21:37 CST"
+  date: "2026年6月13日 00:53 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1631,8 +1631,11 @@ const fearGreedData = {
 const breakingNews = [
   { time: "21:05", tag: "macro", tagText: "宏观", text: "贝莱德旗下130亿美元HPS企业贷款基金连续第二个季度限制赎回，仅满足不到40%的赎回请求。该基金主要投资于私募信贷，流动性压力凸显当前信贷市场脆弱性，引发对商业地产和杠杆贷款风险的担忧。", source: "Financial Times", url: "https://www.ft.com/content/65adec62-3505-4d01-8aa6-a609aa7cfdcc" },
   { time: "20:58", tag: "geo", tagText: "地缘", text: "伊朗国家媒体披露美伊谅解备忘录草案细节，包括美国承诺解除石油制裁并重开霍尔木兹海峡。特朗普称海峡将在协议签署后立即恢复通航，国际油价应声跌至三个月新低，WTI和布伦特均大幅下挫。市场对中东局势缓和预期升温，全球股市上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/iran-us-peace-memo-strait-hormuz-oil-sanctions.html" },
+  { time: "16:52", tag: "tech", tagText: "科技", text: "SpaceX上市首日股价大涨21%，市值突破2万亿美元，成为全球市值最高公司之一。埃隆·马斯克凭借SpaceX持股价值超7660亿美元，加上特斯拉持股，净资产达约1.05万亿美元，成为全球首位万亿富翁。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/spacex-stock-jumps-2-trillion.html" },
   { time: "16:37", tag: "geo", tagText: "地缘", text: "受美伊有望达成和平协议消息刺激，奢侈品股大幅上涨。LVMH股价涨近5%，Hermès、Burberry等也显著走高。此前伊朗战争严重冲击奢侈品行业，因中东本是该行业增长最快的市场之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/luxury-stocks-lvmh-hermes-burberry-iran-war-peace-deal.html" },
   { time: "16:19", tag: "tech", tagText: "科技", text: "英伟达股价连续第四周下跌，据报公司已开始向中国客户推销其最新Vera芯片。此举显示英伟达在出口管制背景下仍努力开拓中国市场，但市场对其前景持谨慎态度。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxPdWhFNjREUDY1alF2b21PRTdhODl2cHBUeDNuM1A0QTJCZnAwOGJNUWhDa2RNeVhDMkJjRDhyTFVtaS1RZktwT194d3d6blp4UlJTQVgwOXdvekpteTFmaW5scnAySXA5NWk0UFVkQTctbUpVR1FNY29xV0l0QjVzd2J6aGJhUko2Rlhqb3I4Q3hnUDFrYVlwSGdGTDJ4RU5oUjl6MWlnUVNEMF8xRTJRN2xlYTBfZ1JjMDJzSi05bHkySWI5MDYtNHQ2ZHNjb3JuOUdPV0x6ODBFS19aNjF6OU96QUlFWE1TTm4zbzlDZnRzc2RkTjZlX3prbTAtejU0?oc=5" },
+  { time: "15:04", tag: "tech", tagText: "科技", text: "花旗分析师指出，华尔街低估了Meta在AMD AI芯片上的支出潜力。AMD虽被视为CPU股票，但在AI GPU领域正快速追赶，有望获得更多数据中心订单。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amd-is-seen-as-a-cpu-stock-but-its-gaining-ground-here-too-69a55e0f" },
+  { time: "14:55", tag: "macro", tagText: "宏观", text: "前明星债券投资者Ken Leech（前Western Asset Management高管）就妨碍监管调查认罪。其被指控在管理投资组合时'樱桃挑选'有利交易分配给特定客户，原定周一开庭的审判因此终止。", source: "Financial Times", url: "https://www.ft.com/content/ea2f30d4-4ae4-47cc-b2a8-095328452f0b" },
   { time: "14:07", tag: "ai", tagText: "AI", text: "ChatGPT在5月达到月活用户10亿的里程碑，尽管公众对其伦理和环境影响日益担忧。OpenAI的这款聊天机器人仍是全球最受欢迎的AI应用之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/chatgpt-a-billion-monthly-app-users-despite-souring-public-ai-sentiment.html" },
   { time: "12:37", tag: "tech", tagText: "科技", text: "SpaceX今日在纳斯达克进行历史性IPO，融资750亿美元，为全球最大规模IPO。该公司以每股135美元定价，估值约1.8万亿美元。同时，火箭实验室（Rocket Lab）等四只股票将加入纳斯达克100指数，SpaceX后续也有望被纳入。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-raises-75-billion-in-record-setting-ipo-ahead-of-nasdaq-debut.html" },
   { time: "12:22", tag: "geo", tagText: "地缘", text: "美国总统特朗普称美国已与伊朗达成框架协议，取消原定对伊朗的军事打击。该消息推动原油价格下跌，因市场预期中东紧张局势缓和将重新开放霍尔木兹海峡。亚洲股市上涨，加密货币也同步走强。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/oil-prices-wti-brent-on-hopes-of-us-iran-deal-despite-tehran-pushback.html" },
@@ -1646,14 +1649,20 @@ const breakingNews = [
   { time: "04:14", tag: "加密", tagText: "加密", text: "比特币价格跌向6万美元关口，此前两大主要买家（疑似机构或国家层面）撤出购买。市场情绪转向谨慎，分析人士关注6万美元支撑位是否有效。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMiogJBVV95cUxPejVISkJWeUsxcDNYU2VnOTNkYVhwY01zb3hIMFBNRUdzVGV1NEcyeFVqekJVR2s0NG95Q2xJNFY2WmlmY1hGN25hdDJvSEozZ25ONW5OdEFER29sUVBVSGRqTUxyRU8xMGFKc2RoNGRmMEgzay1USm4tTkNaZmZxOWxRSldfWEdKblhJRWlfWTNhOXl5WFJLLVpRd3NyeG9sQ3F1dlJBZi1RR0w0YTFDMXRlNkM4VWhNYnl6OWpVTU9vaXhBYklMSjg3bFlNVWFQd1MxVzFybEZCNDVRcXJFQTNxd013M3h1UXB2bVh5X2lvQkkxYjZtMGozenJDSEpNWFdybGNCZ05Xcjg3VE1hdWVQbWRsZ1NNMHZOVWRfQVh0d9IBpwJBVV95cUxPTGs0SUxMaE03YjRjbUVxS3J2TnZ5NnE0VG5aRGt3LW1HZVlSZ21JeWFCeE5ieldXWkxMSzNYQUlXbzl5M1FrWHhQVGdhbVNiYXVwZG1QMlVxNWI3NzRpS2I2Rm1MdW9nNTBVVEFJQV93bzY0LWpmaXpGMUVVQk93QTE4RTF5QkEwWkVFaU90VE91ektkeWV2SXVPNU5WVEMyXzhTLWZpdUpBdlNaMW5UQW5ZaE53Z2plc25KSC1oQ1FKcHRfdHF5cEhwaGd4Qnl2QmFVNGVZSmhrMWN5aTVPOTMzS0xPOGRwN0lWMGk2NnBqaFFzQzhqSGNlMWJPZkQ5ZnFjT2VTcVM2R3k1YVV1LThUbGFGd3huWHVqZnZ3NXI0MDJwZ1J3?oc=5" },
   { time: "03:38", tag: "科技", tagText: "科技", text: "SpaceX将散户IPO配售比例削减至20%左右，低于此前预期。消息人士称此举旨在优先满足机构投资者需求，散户可获得的新股比例大幅缩减。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-cuts-retail-ipo-allocation-to-low-20percent-range-source-says.html" },
   { time: "02:23", tag: "geo", tagText: "地缘", text: "特朗普提名前SEC主席杰伊·克莱顿（Jay Clayton）担任国家情报总监。克莱顿在证券监管领域经验丰富，其任命或影响美国情报界对金融和科技领域的监管态度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/trump-jay-clayton-national-intelligence-pulte.html" },
-  { time: "02:20", tag: "geo", tagText: "地缘", text: "油轮巨头Frontline首席执行官表示，一旦美伊达成协议，霍尔木兹海峡的油轮通航量将迅速增加；许多船东正等待安全威胁评级下调后恢复穿越该海峡。该言论暗示地缘局势缓和可大幅缓解能源运输瓶颈。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/iran-strait-hormuz-oil-tanker-traffic-frontline.html" },
-  { time: "02:18", tag: "geo", tagText: "地缘", text: "特朗普取消原定于周四晚间对伊朗的军事打击，此前数小时他警告将“非常猛烈地”攻击伊朗并接管其石油基础设施。消息发布后，美股三大指数大幅上涨，道指跳涨700点，国际油价暴跌。市场消化地缘冲突降温预期，风险偏好回升。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/trump-iran-strikes-deal.html" },
-  { time: "02:16", tag: "tech", tagText: "科技", text: "SpaceX即将启动历史性IPO，估值接近1.8万亿美元，早期投资者将获得风投史上最大账面收益之一。但马斯克承认无法预测公司何时盈利，分析师警告该股上市后可能出现“极端”波动，呼吁散户投资者警惕FOMO风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-investors-reap-rewards-1-8-trillion-valuation.html" },
 ];
-const breakingDate = "2026年6月12日 21:37 CST";
+const breakingDate = "2026年6月13日 00:53 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:50", tag: "ai", tagText: "AI", text: "Anthropic新发布的Mythos级模型Claude Fable引发双重争议：微软因数据保留担忧限制内部员工使用该模型；同时，网络安全研究人员批评Fable的安全护栏过于严格，导致无法进行有效的安全测试与漏洞分析。模型能力与可用性之间的平衡面临行业拷问。", source: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
+  { time: "00:46", tag: "ai", tagText: "AI", text: "贝佐斯支持的AI初创公司Prometheus完成120亿美元融资，这是近年来规模最大的AI领域融资之一，显示出投资者对前沿AI模型的持续热情。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLWx4ZklJZGdzRThDanVsMzRHVXF4WUg2cGs5T05ZZ18wdnkxWFU4WmpKMFNfMUk4SHRLZGlVdjVRQ2x5LVNfQWNqTzdBbU5UTE5zYTRlWVlwZGJYU0pxTWVNOUl0MXlUeGl1d0hmZ0RWUFNjeFRpRVQzcmQzU2xjMTB6OHhaaHVNUDRJWnNNUExaLWJ5VU5ETTJCdWdILU5icUoyOU5HaXFTV0xvVmc?oc=5" },
+  { time: "00:18", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，将保存用户使用Lens拍摄的照片、Search Live录音及翻译音频等交互数据，用于AI模型训练。此举引发对数据隐私和AI训练伦理的新一轮讨论。", source: "The Verge", url: "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio" },
+  { time: "00:09", tag: "ai", tagText: "AI", text: "科技行业迎来新缩写MANGOS：SpaceX、Anthropic、OpenAI等公司正筹备大规模公开上市，可能取代FAANG成为新一代科技巨头。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" },
+  { time: "00:03", tag: "macro", tagText: "宏观", text: "2026年第一季度初创企业融资报告显示，AI公司吸收了全部风险资本的57%，占比创历史新高。资金持续涌向生成式AI、基础设施和垂直应用领域，进一步巩固AI作为当前科技投资核心赛道的地位。", source: "USA Today", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb21FQW5zcUJjMWwyaHF1Rk56ZzVvSElCOFhRaUFwZzlJYzdXdVZhRFhmeFJfSXJycU50UV9sUlZ3N08xb1p2cU41bFdQMjBZOEZsR1dxRllWcUZkRWtZd2VEYnJzdlc3UXR6MXFCY2hZcFd4dkItMnBQNmxrMGVvTWFfWXRYQ0RfQnNuMWxucF80c1MtQ1A0aDVQVy1vQ3d2dXRiQm5OMTVfdWU5bmc?oc=5" },
+  { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX IPO背后的三大硬科技登月计划曝光：太空数据中心、星舰规模化制造及轨道燃料加注站。分析称大部分估值来自这些未来太空基础设施的看涨期权。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/the-three-hard-tech-moonshots-fueling-spacexs-unbelievable-ipo/" },
+  { time: "22:41", tag: "ai", tagText: "AI", text: "美银报告称代理型AI（Agentic AI）将创造1700亿美元市场机会，受此消息推动，英伟达、AMD、Arm等芯片股集体上涨。投资者预期AI正从聊天机器人向能自主执行任务的智能体进化，为芯片需求带来新一轮增长。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRXY2TGRYYm1RMHYtbG16OUVYdTE2eFBzdlR1ZFMybzkzX25EcjJLVHlySVhkTmxkb2hZVl83NGdKSUxEME1WZjFyQmd4MUpmSUQxUFRmUjJXRzJZeTRVMW9rRVBrMlBocjYtbUJ4SFdMdW51bkZnTmJUel9ndjVBOTFjMkQ2c1lWS2VTNmFEMldEcUtWU1pCV1hjbHNWTzVRbUJHcDNfek5sX0hKTjhkQ3NSeExNbmdadmhlallKTWFXX00?oc=5" },
+  { time: "22:31", tag: "ai", tagText: "AI", text: "华纳音乐集团收购AI归属初创公司Sureel AI，旨在更精确追踪其艺人的作品在AI生成内容或训练数据中的使用情况，为AI时代的版权管理铺路。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/" },
+  { time: "22:23", tag: "ai", tagText: "AI", text: "DoorDash推出AI聊天机器人Ask DoorDash，用户可通过自然语言提示和图片搜索并下单，无需滚动浏览餐厅列表。该功能旨在简化订餐流程，提升用户体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/" },
   { time: "21:34", tag: "tech", tagText: "科技", text: "美国国际贸易委员会（ITC）正式受理Xockets公司针对英伟达、微软和亚马逊的专利投诉，指控其AI芯片基础设施侵犯相关专利。该案涉及数据中心和AI加速器核心架构，若认定侵权可能导致进口禁令，对AI芯片供应链产生重大影响。", source: "IAM Patent", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOHZ6V1F4YVBQck95Tm4xdGtTckVkUm56Um84TGVPb3hjZDg4cm1CSGZoLWVEQzRjb0RacnVNdmJMTjZYWENqTS1SQ0ZlV3IxZWRPR2NXTWtXdTkxTEV1dWtjcnNaRV91T09FMUFzSHVQX2tlMEZNWkhfYUduZDM1SlJVcGRCN0tteGlUd3ZBTURSWkNrZThlTzJSamJLcTB3WUMybElzdlllMzlXWWljeUE4V2VoY2NLckJGNVRhc3g4UzBTWEQxUU5sOXNUUQ?oc=5" },
   { time: "20:20", tag: "ai", tagText: "AI", text: "OpenAI、谷歌DeepMind及Anthropic的AI负责人将出席G7峰会，参与人工智能治理与政策讨论。这表明全球顶级AI公司与主要经济体之间的合作与监管对话进入新阶段，或影响未来国际AI规则制定。", source: "Dataconomy", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQTIzMGxSc1ptYkRhNjJ2ZUxUTzl6Z1YweV83QlZYMFBldlJWNm9qX0RiMWZibGgxbkNKZ3NWOXo0SUtldGp0eENQUk9JVU1Gd2Q3RDJSQkR5MTVvck82eWhRMVIwZmF3NzFsQlhHaTI2aDVfNHN6ZElMTERpSHNjbWFtX0hma2o4NExLZklNd29UZw?oc=5" },
   { time: "13:30", tag: "ai", tagText: "AI", text: "Anthropic提交S-1上市申请，分析认为其对欧洲AI初创公司的意义超过今年任何一轮融资。该文件可能揭示公司财务状况及市场对AI独角兽的估值预期，同时为欧洲AI企业提供IPO路径参考。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWGl2VWx6bW54cnhzMkhlRjR5Q2YtOU56dllmZVNrSExvTDdGWmtjcVFFNlZiTUhOakFYbkdIdUFCTVpIRjUxN2ZEU040ZFlwd2dYZjVhZUxQOExMbjl2RlhRRnI1dmxKNG9OQkZ4ZHVueW5ZRG0zcVVKcXNVRERSQ093?oc=5" },
@@ -1665,17 +1674,8 @@ const aiBreakingNews = [
   { time: "02:06", tag: "tech", tagText: "科技", text: "高通宣布其AI生态系统扩展至人形机器人和自动驾驶汽车领域。该公司正在利用其骁龙平台和AI引擎，为机器人及车载系统提供边缘AI处理能力，标志着高通从手机芯片向更广泛的AI硬件生态转型。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQR0tpUDJ0ZlZXWWl4REFnenZ2RlJlM0t0dU1oelVvUHlUeGM1b2ZIYXEyNDd4TVBYRFo3YTcwV00xLTdETHRwUFJiSEdvLUlBOXkxWUZIZTlZTzdnTTNhMG1uMUZNS243NUhzRzBKYWFDTkJzTFh4RDhKSXE1VjVPMmhleFpfUUFmVUxHV0l0VlRmM25qaXZMU2lPTmZzMURsNGJUbUFB?oc=5" },
   { time: "01:26", tag: "tech", tagText: "科技", text: "亚马逊去年数据中心用水量达25亿加仑，创历史新高。此前西雅图刚通过为期一年的数据中心建设暂停令，部分亚马逊员工也曾推动该政策。亚马逊首次公开披露这一数据，引发对环境影响的关注。", source: "The Verge", url: "https://www.theverge.com/tech/948534/amazon-data-centers-water-use" },
   { time: "01:20", tag: "tech", tagText: "科技", text: "谷歌遭独立音乐人集体诉讼，指控其未经许可使用YouTube平台上的歌曲训练Lyria音乐AI模型。原告称谷歌将用户上传的视频视为训练素材，但未明确告知或获得授权。此案可能对AI训练数据的版权规则产生深远影响。", source: "The Verge", url: "https://www.theverge.com/tech/947770/google-lyria-music-ai-lawsuit-youtube" },
-  { time: "01:07", tag: "ai", tagText: "AI", text: "最新数据显示，“AI重度投入”的企业每月为每位员工在AI工具和服务上花费约7500美元。该金额已接近入门级工程师薪资，反映出企业为抢占AI红利不惜重金投入的趋势，同时也引发对投资回报率的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/ai-pilled-firms-spend-7500-per-employee-each-month-on-ai/" },
-  { time: "00:50", tag: "ai", tagText: "AI", text: "Anthropic新发布的Mythos级模型Claude Fable引发双重争议：微软因数据保留担忧限制内部员工使用该模型；同时，网络安全研究人员批评Fable的安全护栏过于严格，导致无法进行有效的安全测试与漏洞分析。模型能力与可用性之间的平衡面临行业拷问。", source: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
-  { time: "00:18", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，将保存用户使用Lens拍摄的照片、Search Live录音及翻译音频等交互数据，用于AI模型训练。此举引发对数据隐私和AI训练伦理的新一轮讨论。", source: "The Verge", url: "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio" },
-  { time: "00:09", tag: "ai", tagText: "AI", text: "科技行业迎来新缩写MANGOS：SpaceX、Anthropic、OpenAI等公司正筹备大规模公开上市，可能取代FAANG成为新一代科技巨头。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" },
-  { time: "00:03", tag: "macro", tagText: "宏观", text: "2026年第一季度初创企业融资报告显示，AI公司吸收了全部风险资本的57%，占比创历史新高。资金持续涌向生成式AI、基础设施和垂直应用领域，进一步巩固AI作为当前科技投资核心赛道的地位。", source: "USA Today", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb21FQW5zcUJjMWwyaHF1Rk56ZzVvSElCOFhRaUFwZzlJYzdXdVZhRFhmeFJfSXJycU50UV9sUlZ3N08xb1p2cU41bFdQMjBZOEZsR1dxRllWcUZkRWtZd2VEYnJzdlc3UXR6MXFCY2hZcFd4dkItMnBQNmxrMGVvTWFfWXRYQ0RfQnNuMWxucF80c1MtQ1A0aDVQVy1vQ3d2dXRiQm5OMTVfdWU5bmc?oc=5" },
-  { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX IPO背后的三大硬科技登月计划曝光：太空数据中心、星舰规模化制造及轨道燃料加注站。分析称大部分估值来自这些未来太空基础设施的看涨期权。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/the-three-hard-tech-moonshots-fueling-spacexs-unbelievable-ipo/" },
-  { time: "22:41", tag: "ai", tagText: "AI", text: "美银报告称代理型AI（Agentic AI）将创造1700亿美元市场机会，受此消息推动，英伟达、AMD、Arm等芯片股集体上涨。投资者预期AI正从聊天机器人向能自主执行任务的智能体进化，为芯片需求带来新一轮增长。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRXY2TGRYYm1RMHYtbG16OUVYdTE2eFBzdlR1ZFMybzkzX25EcjJLVHlySVhkTmxkb2hZVl83NGdKSUxEME1WZjFyQmd4MUpmSUQxUFRmUjJXRzJZeTRVMW9rRVBrMlBocjYtbUJ4SFdMdW51bkZnTmJUel9ndjVBOTFjMkQ2c1lWS2VTNmFEMldEcUtWU1pCV1hjbHNWTzVRbUJHcDNfek5sX0hKTjhkQ3NSeExNbmdadmhlallKTWFXX00?oc=5" },
-  { time: "22:31", tag: "ai", tagText: "AI", text: "华纳音乐集团收购AI归属初创公司Sureel AI，旨在更精确追踪其艺人的作品在AI生成内容或训练数据中的使用情况，为AI时代的版权管理铺路。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/" },
-  { time: "22:23", tag: "ai", tagText: "AI", text: "DoorDash推出AI聊天机器人Ask DoorDash，用户可通过自然语言提示和图片搜索并下单，无需滚动浏览餐厅列表。该功能旨在简化订餐流程，提升用户体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/" },
 ];
-const aiBreakingDate = "2026年6月12日 21:37 CST";
+const aiBreakingDate = "2026年6月13日 00:53 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
