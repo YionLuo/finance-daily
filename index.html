@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 30.94,
+  score: 31.4,
   rating: "fear",
-  timestamp: "2026-06-12T08:48:46+00:00",
+  timestamp: "2026-06-12T13:34:11+00:00",
   previousClose: 29.69,
   previous1Week: 41.77,
   previous1Month: 65.69,
   previous1Year: 64.6,
-  date: "2026年6月12日 17:09 CST"
+  date: "2026年6月12日 21:37 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:05", tag: "macro", tagText: "宏观", text: "贝莱德旗下130亿美元HPS企业贷款基金连续第二个季度限制赎回，仅满足不到40%的赎回请求。该基金主要投资于私募信贷，流动性压力凸显当前信贷市场脆弱性，引发对商业地产和杠杆贷款风险的担忧。", source: "Financial Times", url: "https://www.ft.com/content/65adec62-3505-4d01-8aa6-a609aa7cfdcc" },
+  { time: "20:58", tag: "geo", tagText: "地缘", text: "伊朗国家媒体披露美伊谅解备忘录草案细节，包括美国承诺解除石油制裁并重开霍尔木兹海峡。特朗普称海峡将在协议签署后立即恢复通航，国际油价应声跌至三个月新低，WTI和布伦特均大幅下挫。市场对中东局势缓和预期升温，全球股市上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/iran-us-peace-memo-strait-hormuz-oil-sanctions.html" },
   { time: "16:37", tag: "geo", tagText: "地缘", text: "受美伊有望达成和平协议消息刺激，奢侈品股大幅上涨。LVMH股价涨近5%，Hermès、Burberry等也显著走高。此前伊朗战争严重冲击奢侈品行业，因中东本是该行业增长最快的市场之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/luxury-stocks-lvmh-hermes-burberry-iran-war-peace-deal.html" },
   { time: "16:19", tag: "tech", tagText: "科技", text: "英伟达股价连续第四周下跌，据报公司已开始向中国客户推销其最新Vera芯片。此举显示英伟达在出口管制背景下仍努力开拓中国市场，但市场对其前景持谨慎态度。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxPdWhFNjREUDY1alF2b21PRTdhODl2cHBUeDNuM1A0QTJCZnAwOGJNUWhDa2RNeVhDMkJjRDhyTFVtaS1RZktwT194d3d6blp4UlJTQVgwOXdvekpteTFmaW5scnAySXA5NWk0UFVkQTctbUpVR1FNY29xV0l0QjVzd2J6aGJhUko2Rlhqb3I4Q3hnUDFrYVlwSGdGTDJ4RU5oUjl6MWlnUVNEMF8xRTJRN2xlYTBfZ1JjMDJzSi05bHkySWI5MDYtNHQ2ZHNjb3JuOUdPV0x6ODBFS19aNjF6OU96QUlFWE1TTm4zbzlDZnRzc2RkTjZlX3prbTAtejU0?oc=5" },
   { time: "14:07", tag: "ai", tagText: "AI", text: "ChatGPT在5月达到月活用户10亿的里程碑，尽管公众对其伦理和环境影响日益担忧。OpenAI的这款聊天机器人仍是全球最受欢迎的AI应用之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/chatgpt-a-billion-monthly-app-users-despite-souring-public-ai-sentiment.html" },
@@ -1647,13 +1649,13 @@ const breakingNews = [
   { time: "02:20", tag: "geo", tagText: "地缘", text: "油轮巨头Frontline首席执行官表示，一旦美伊达成协议，霍尔木兹海峡的油轮通航量将迅速增加；许多船东正等待安全威胁评级下调后恢复穿越该海峡。该言论暗示地缘局势缓和可大幅缓解能源运输瓶颈。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/iran-strait-hormuz-oil-tanker-traffic-frontline.html" },
   { time: "02:18", tag: "geo", tagText: "地缘", text: "特朗普取消原定于周四晚间对伊朗的军事打击，此前数小时他警告将“非常猛烈地”攻击伊朗并接管其石油基础设施。消息发布后，美股三大指数大幅上涨，道指跳涨700点，国际油价暴跌。市场消化地缘冲突降温预期，风险偏好回升。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/trump-iran-strikes-deal.html" },
   { time: "02:16", tag: "tech", tagText: "科技", text: "SpaceX即将启动历史性IPO，估值接近1.8万亿美元，早期投资者将获得风投史上最大账面收益之一。但马斯克承认无法预测公司何时盈利，分析师警告该股上市后可能出现“极端”波动，呼吁散户投资者警惕FOMO风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-investors-reap-rewards-1-8-trillion-valuation.html" },
-  { time: "02:09", tag: "macro", tagText: "宏观", text: "全球最大固定收益管理公司Pimco发出警告，预计违约率将飙升，建议固定收益投资者远离低质量信用债，同时指出高质量资产仍蕴含大量机会。该呼吁反映市场对经济下行和信贷紧缩的担忧加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/pimco-is-warning-about-a-spike-in-defaults-how-to-position-portfolios.html" },
-  { time: "01:51", tag: "macro", tagText: "宏观", text: "黄金价格跌至6个月低点，尽管通胀担忧上升，但潜在加息预期和技术面信号转弱令贵金属承压。分析指出，实际利率走高和美元强势削弱了黄金的避险吸引力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/gold-slumps-to-6-month-low-even-as-inflation-fears-rise-heres-why-bullion-is-out-of-favor.html" },
 ];
-const breakingDate = "2026年6月12日 17:09 CST";
+const breakingDate = "2026年6月12日 21:37 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:34", tag: "tech", tagText: "科技", text: "美国国际贸易委员会（ITC）正式受理Xockets公司针对英伟达、微软和亚马逊的专利投诉，指控其AI芯片基础设施侵犯相关专利。该案涉及数据中心和AI加速器核心架构，若认定侵权可能导致进口禁令，对AI芯片供应链产生重大影响。", source: "IAM Patent", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOHZ6V1F4YVBQck95Tm4xdGtTckVkUm56Um84TGVPb3hjZDg4cm1CSGZoLWVEQzRjb0RacnVNdmJMTjZYWENqTS1SQ0ZlV3IxZWRPR2NXTWtXdTkxTEV1dWtjcnNaRV91T09FMUFzSHVQX2tlMEZNWkhfYUduZDM1SlJVcGRCN0tteGlUd3ZBTURSWkNrZThlTzJSamJLcTB3WUMybElzdlllMzlXWWljeUE4V2VoY2NLckJGNVRhc3g4UzBTWEQxUU5sOXNUUQ?oc=5" },
+  { time: "20:20", tag: "ai", tagText: "AI", text: "OpenAI、谷歌DeepMind及Anthropic的AI负责人将出席G7峰会，参与人工智能治理与政策讨论。这表明全球顶级AI公司与主要经济体之间的合作与监管对话进入新阶段，或影响未来国际AI规则制定。", source: "Dataconomy", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQTIzMGxSc1ptYkRhNjJ2ZUxUTzl6Z1YweV83QlZYMFBldlJWNm9qX0RiMWZibGgxbkNKZ3NWOXo0SUtldGp0eENQUk9JVU1Gd2Q3RDJSQkR5MTVvck82eWhRMVIwZmF3NzFsQlhHaTI2aDVfNHN6ZElMTERpSHNjbWFtX0hma2o4NExLZklNd29UZw?oc=5" },
   { time: "13:30", tag: "ai", tagText: "AI", text: "Anthropic提交S-1上市申请，分析认为其对欧洲AI初创公司的意义超过今年任何一轮融资。该文件可能揭示公司财务状况及市场对AI独角兽的估值预期，同时为欧洲AI企业提供IPO路径参考。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWGl2VWx6bW54cnhzMkhlRjR5Q2YtOU56dllmZVNrSExvTDdGWmtjcVFFNlZiTUhOakFYbkdIdUFCTVpIRjUxN2ZEU040ZFlwd2dYZjVhZUxQOExMbjl2RlhRRnI1dmxKNG9OQkZ4ZHVueW5ZRG0zcVVKcXNVRERSQ093?oc=5" },
   { time: "12:30", tag: "tech", tagText: "科技", text: "Avataar AI推出针对印度市场的视频生成模型，定价每秒钟仅0.005美元。该模型经过蒸馏优化，速度更快且具备文化感知能力，旨在以低成本服务印度大规模内容创作需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/" },
   { time: "12:17", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI正考虑大幅降低API token价格，以应对来自Anthropic日益激烈的竞争。此举可能引发AI模型定价战，进一步压低企业使用大模型的成本。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU1dmT09qdzE4R2hqeVpvcmtFckVBdUUzbWpTd2p4eU5rMjNqMVc0QTZtT2VkVlJFYm5KUlVNUmk4M21zRjBDcDVhcE1tQlVUSnYtbnowNVlnTGNBRFMxOHl3Ylc0cVBMNmtmX2Q4VjdWWUtfVjJ1Mi05eWwwWFN3Zk5CTEYtT0hmdGYwTXJwUVFVcW5hUDBOMWdneWViRUhyLTRmSDFvVQ?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:41", tag: "ai", tagText: "AI", text: "美银报告称代理型AI（Agentic AI）将创造1700亿美元市场机会，受此消息推动，英伟达、AMD、Arm等芯片股集体上涨。投资者预期AI正从聊天机器人向能自主执行任务的智能体进化，为芯片需求带来新一轮增长。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRXY2TGRYYm1RMHYtbG16OUVYdTE2eFBzdlR1ZFMybzkzX25EcjJLVHlySVhkTmxkb2hZVl83NGdKSUxEME1WZjFyQmd4MUpmSUQxUFRmUjJXRzJZeTRVMW9rRVBrMlBocjYtbUJ4SFdMdW51bkZnTmJUel9ndjVBOTFjMkQ2c1lWS2VTNmFEMldEcUtWU1pCV1hjbHNWTzVRbUJHcDNfek5sX0hKTjhkQ3NSeExNbmdadmhlallKTWFXX00?oc=5" },
   { time: "22:31", tag: "ai", tagText: "AI", text: "华纳音乐集团收购AI归属初创公司Sureel AI，旨在更精确追踪其艺人的作品在AI生成内容或训练数据中的使用情况，为AI时代的版权管理铺路。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/" },
   { time: "22:23", tag: "ai", tagText: "AI", text: "DoorDash推出AI聊天机器人Ask DoorDash，用户可通过自然语言提示和图片搜索并下单，无需滚动浏览餐厅列表。该功能旨在简化订餐流程，提升用户体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/" },
-  { time: "22:01", tag: "ai", tagText: "AI", text: "由杰夫·贝佐斯创立的工业AI初创公司Prometheus估值达410亿美元，成为又一家AI独角兽。该公司专注于工业自动化与AI应用，本轮估值反映了市场对工业AI领域的高度关注。", source: "Axios", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTE1DT090MEZDbjRYNzlELVRud2cyWDE0X3h0NjRoVkh1ZENQUTBKUFoyZ3dRVnZRcXdaMC00WnJ3bFpZTkt2dUVORnBfQlYxVmJyeExvUUFqbl96U0xkLWpldmxiOUY2aVFGVzljR2V2LVQ?oc=5" },
-  { time: "21:34", tag: "tech", tagText: "科技", text: "美国国际贸易委员会（ITC）正式受理Xockets公司针对英伟达、微软和亚马逊的专利投诉，指控其AI芯片基础设施侵犯相关专利。该案涉及数据中心和AI加速器核心架构，若认定侵权可能导致进口禁令，对AI芯片供应链产生重大影响。", source: "IAM Patent", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOHZ6V1F4YVBQck95Tm4xdGtTckVkUm56Um84TGVPb3hjZDg4cm1CSGZoLWVEQzRjb0RacnVNdmJMTjZYWENqTS1SQ0ZlV3IxZWRPR2NXTWtXdTkxTEV1dWtjcnNaRV91T09FMUFzSHVQX2tlMEZNWkhfYUduZDM1SlJVcGRCN0tteGlUd3ZBTURSWkNrZThlTzJSamJLcTB3WUMybElzdlllMzlXWWljeUE4V2VoY2NLckJGNVRhc3g4UzBTWEQxUU5sOXNUUQ?oc=5" },
 ];
-const aiBreakingDate = "2026年6月12日 17:09 CST";
+const aiBreakingDate = "2026年6月12日 21:37 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
