@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 29.69,
+  score: 29.71,
   rating: "fear",
-  timestamp: "2026-06-11T23:27:47+00:00",
-  previousClose: 27.46,
-  previous1Week: 53.89,
-  previous1Month: 66.63,
-  previous1Year: 64.2,
-  date: "2026年6月12日 07:47 CST"
+  timestamp: "2026-06-12T00:00:00+00:00",
+  previousClose: 29.69,
+  previous1Week: 41.77,
+  previous1Month: 65.69,
+  previous1Year: 64.6,
+  date: "2026年6月12日 12:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:37", tag: "tech", tagText: "科技", text: "SpaceX今日在纳斯达克进行历史性IPO，融资750亿美元，为全球最大规模IPO。该公司以每股135美元定价，估值约1.8万亿美元。同时，火箭实验室（Rocket Lab）等四只股票将加入纳斯达克100指数，SpaceX后续也有望被纳入。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-raises-75-billion-in-record-setting-ipo-ahead-of-nasdaq-debut.html" },
+  { time: "12:22", tag: "geo", tagText: "地缘", text: "美国总统特朗普称美国已与伊朗达成框架协议，取消原定对伊朗的军事打击。该消息推动原油价格下跌，因市场预期中东紧张局势缓和将重新开放霍尔木兹海峡。亚洲股市上涨，加密货币也同步走强。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/oil-prices-wti-brent-on-hopes-of-us-iran-deal-despite-tehran-pushback.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "欧洲防务股涨势遭遇逆转，因政府借贷成本上升及战争形态变化冲击了这一近年最大的股票交易主题。此前，俄乌冲突推动欧洲各国大幅增加军费，但融资担忧令投资者获利了结。", source: "Financial Times", url: "https://www.ft.com/content/1fa66019-c241-46f8-b9e4-7b3ac8575904" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "中国内地投资者纷纷赴香港开设账户，因担忧北京监管收紧导致失去获得高收益投资产品的渠道。此举反映内地资本外流压力及对国内投资渠道受限的焦虑。", source: "Financial Times", url: "https://www.ft.com/content/eff414c9-6c8a-4200-b490-b13c642a7821" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "毕马威（KPMG）一份关于AI益处的报告被发现包含AI生成的虚假案例研究，涉及瑞银和交通系统的AI采用情况均为编造。该事件凸显企业使用AI工具时缺乏审核的风险。", source: "Financial Times", url: "https://www.ft.com/content/b3828e92-4961-4b39-84f0-c42f33be3c3f" },
   { time: "06:00", tag: "tech", tagText: "科技", text: "Adobe再失一名高管，股价延续跌势，周四收盘价创七年多新低。市场对管理层动荡和业务前景的担忧加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/adobe-is-losing-another-top-executive-and-investors-dont-like-it-587603e9?mod=mw_rss_topstories" },
   { time: "05:14", tag: "宏观", tagText: "宏观", text: "美国参议员伊丽莎白·沃伦致信交易所，质疑SpaceX IPO的监管流程，特别是关于指数基金等待期变更及散户投资者保护措施。沃伦要求交易所回应是否存在对散户不利的规则调整。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/warren-spacex-ipo-exchanges.html" },
   { time: "04:41", tag: "tech", tagText: "科技", text: "马斯克旗下SpaceX完成史上最大规模IPO，以每股135美元定价筹集750亿美元，估值约1.8万亿美元，投资者需求火爆。该交易为全球最大IPO，凸显市场对太空及AI领域的高度热情。", source: "Financial Times", url: "https://www.ft.com/content/1890e552-aa7e-4d7f-98f1-db4f165e8827" },
@@ -1644,16 +1649,14 @@ const breakingNews = [
   { time: "22:49", tag: "ai", tagText: "AI", text: "贝佐斯AI初创公司Prometheus完成120亿美元融资，使其总融资额达180亿美元。贝佐斯表示AI将带来‘黄金时代’，而非大规模失业。联合CEO Vik Bajaj共同领导该公司。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/project-prometheus-bezos-bajaj-live-updates.html" },
   { time: "22:48", tag: "geo", tagText: "地缘", text: "美国民主党参议员鲍德温和众议员卡纳提出法案，拟设立新的外国直接投资审查委员会，专门调查特朗普政府吸引外资交易中的国家安全风险，引发政治争议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/baldwin-khanna-propose-direct-foreign-investment-board-to-probe-trump.html" },
   { time: "22:39", tag: "geo", tagText: "地缘", text: "伊朗国家媒体威胁将把马斯克在中东的所有公司视为军事目标，作为对美国打击伊朗的报复。此举可能危及SpaceX星链、特斯拉等业务在地区的运营。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/iran-threatens-elon-musks-companies-in-middle-east-iranian-state-media.html" },
-  { time: "22:34", tag: "macro", tagText: "宏观", text: "美国最高法院裁定，私人投资者不得依据关键证券法提起诉讼，支持贝莱德等资产管理公司旗下的基金免于私人民事诉讼。该裁决大幅限制了投资者追偿权利。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/supreme-court-rules-against-private-suits-brought-under-securities-law.html" },
-  { time: "22:18", tag: "geo", tagText: "地缘", text: "英国国防大臣希利辞职，称首相斯塔默‘无法’、财政部‘不愿’提供必要的国防预算，折射出英国防务开支压力和政治内部分歧。", source: "Financial Times", url: "https://www.ft.com/content/e294734a-67db-4267-88e0-4793767f50d2" },
-  { time: "21:55", tag: "geo", tagText: "地缘", text: "印度就油轮遇袭导致三名印度船员死亡向美国提出抗议，呼吁海湾地区局势‘降级’，但表现出避免与华盛顿直接对抗的倾向。", source: "Financial Times", url: "https://www.ft.com/content/0d51c952-94ca-4f8f-8cb7-4d70c140c24b" },
-  { time: "21:35", tag: "macro", tagText: "宏观", text: "欧洲央行宣布加息，为2023年以来首次，成为G7中首个因中东能源危机而提高借贷成本的央行。分析认为此举旨在应对供给冲击导致的通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/95ec93a9-1153-4837-be82-32a87eaabe1d" },
-  { time: "18:41", tag: "tech", tagText: "科技", text: "美光、Marvell等芯片股领跌，科技板块正式进入技术性回调区间。分析人士认为，过去一周的抛售已从回调加深为修正，市场担忧AI泡沫及利率前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/micron-intel-drag-the-tech-sector-into-a-new-bearish-phase-will-the-correction-last-this-time-9ba4f3f5?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年6月12日 07:47 CST";
+const breakingDate = "2026年6月12日 12:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:17", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI正考虑大幅降低API token价格，以应对来自Anthropic日益激烈的竞争。此举可能引发AI模型定价战，进一步压低企业使用大模型的成本。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU1dmT09qdzE4R2hqeVpvcmtFckVBdUUzbWpTd2p4eU5rMjNqMVc0QTZtT2VkVlJFYm5KUlVNUmk4M21zRjBDcDVhcE1tQlVUSnYtbnowNVlnTGNBRFMxOHl3Ylc0cVBMNmtmX2Q4VjdWWUtfVjJ1Mi05eWwwWFN3Zk5CTEYtT0hmdGYwTXJwUVFVcW5hUDBOMWdneWViRUhyLTRmSDFvVQ?oc=5" },
+  { time: "09:48", tag: "ai", tagText: "AI", text: "通用型工厂机器人公司Theker获8500万美元融资，其机器人与波士顿动力等固定形态人形机器人不同，可通过重新配置适应不同任务，旨在实现工厂自动化通用性。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything/" },
+  { time: "09:44", tag: "ai", tagText: "AI", text: "AI突破加速分子模拟，助力药物发现。新技术大幅提升分子动力学模拟速度，有望显著缩短新药研发周期。", source: "News-Medical", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWG5LdXlnZi12VVgxNEZ6SkpWQzRlNGxSX0VDd2Fmc0dqS0dzZ0ZsRndFeVQ4Z1Vicm9xc3gzYWJwcnF3djYzTTgwRTc0cktmcjA0TFRBTUtQYUhyNThveEcxNHY3cGpmZ3BoMWhUTjJFVXpjeUUzU0ZuaVBGVUExZE5wUDRneDVKdTc1azZpVkg0b0ZwazExOUU1ZEpJcEtNX05GMkVGNG5xTTR4SXpTcmhOR01Bcnc?oc=5" },
   { time: "04:33", tag: "tech", tagText: "科技", text: "SpaceX正式将IPO发行价定为每股135美元，成为史上最大规模IPO。然而，次级SPV投资者在锁定期结束前无法得知真实持股情况，面临隐性费用、延迟付款甚至欺诈风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/spacex-officially-prices-shares-at-135-in-the-largest-ipo-ever/" },
   { time: "02:06", tag: "tech", tagText: "科技", text: "高通宣布其AI生态系统扩展至人形机器人和自动驾驶汽车领域。该公司正在利用其骁龙平台和AI引擎，为机器人及车载系统提供边缘AI处理能力，标志着高通从手机芯片向更广泛的AI硬件生态转型。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQR0tpUDJ0ZlZXWWl4REFnenZ2RlJlM0t0dU1oelVvUHlUeGM1b2ZIYXEyNDd4TVBYRFo3YTcwV00xLTdETHRwUFJiSEdvLUlBOXkxWUZIZTlZTzdnTTNhMG1uMUZNS243NUhzRzBKYWFDTkJzTFh4RDhKSXE1VjVPMmhleFpfUUFmVUxHV0l0VlRmM25qaXZMU2lPTmZzMURsNGJUbUFB?oc=5" },
   { time: "01:26", tag: "tech", tagText: "科技", text: "亚马逊去年数据中心用水量达25亿加仑，创历史新高。此前西雅图刚通过为期一年的数据中心建设暂停令，部分亚马逊员工也曾推动该政策。亚马逊首次公开披露这一数据，引发对环境影响的关注。", source: "The Verge", url: "https://www.theverge.com/tech/948534/amazon-data-centers-water-use" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "21:34", tag: "tech", tagText: "科技", text: "美国国际贸易委员会（ITC）正式受理Xockets公司针对英伟达、微软和亚马逊的专利投诉，指控其AI芯片基础设施侵犯相关专利。该案涉及数据中心和AI加速器核心架构，若认定侵权可能导致进口禁令，对AI芯片供应链产生重大影响。", source: "IAM Patent", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOHZ6V1F4YVBQck95Tm4xdGtTckVkUm56Um84TGVPb3hjZDg4cm1CSGZoLWVEQzRjb0RacnVNdmJMTjZYWENqTS1SQ0ZlV3IxZWRPR2NXTWtXdTkxTEV1dWtjcnNaRV91T09FMUFzSHVQX2tlMEZNWkhfYUduZDM1SlJVcGRCN0tteGlUd3ZBTURSWkNrZThlTzJSamJLcTB3WUMybElzdlllMzlXWWljeUE4V2VoY2NLckJGNVRhc3g4UzBTWEQxUU5sOXNUUQ?oc=5" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "OpenAI投资一家专注于合规与核保任务的AI初创公司，进一步拓展其在企业级AI应用领域的布局，覆盖金融合规等受监管行业。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOU3k5aU1FVk92aE1lb2h0Yi1oNWFWbDg2QjZOSGk2d29vV3E2NHhnQW1mSW5CaTZzaURZTEVtdFJRWU1FY3hyOElHaGpwNG0wYmVFeDdSMDBjUEYtWlcxZGZCckhXNHJKTHV2SS1WN0djZHlqcXo0RkVJT2hjVjFCVDFzXzZhenpldTZSN1JiTkJxd016ZDRwRnZIenF5dndNeGNoTEhmYkViNVhLNnVxa3J2Yw?oc=5" },
   { time: "19:40", tag: "ai", tagText: "AI", text: "Anthropic就Claude Fable 5模型隐藏的蒸馏防护栏致歉，该防护栏秘密限制竞争对手使用其模型进行模型蒸馏，引发研究人员和竞争对手不满。Anthropic承认此举不当并承诺调整策略。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail" },
-  { time: "16:00", tag: "ai", tagText: "AI", text: "流媒体平台Deezer推出AI音乐检测工具，可扫描用户在Spotify、Apple Music等其他平台的播放列表，识别其中AI生成的曲目。Deezer此前已率先在自家平台标注AI音乐，此举将进一步推动跨平台AI内容治理。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/948153/deezer-ai-music-detector-spotify-apple" },
-  { time: "14:46", tag: "ai", tagText: "AI", text: "巴黎生成式AI初创公司Mendo完成1200万欧元A轮融资，资金将用于拓展欧洲市场。Mendo专注于代理型AI与生成式AI应用，此轮融资显示欧洲AI创业生态持续活跃。", source: "Retail Technology Innovation Hub", url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOdTF3RUlwbkRrbDFZeDVMNDFjd1lrRGZXWjdxdTdkRWpfTlJJeURGaHlkZ2JucnkxX25nWS1ISlV5WjhIY0xFWHF0elRMSGg3RGN6a3p6dmlHd3hsYV85WmFJV21zRmV5cWlQOWc5V25ZY3hXZm8zblRaS0x0eTAtZEV5SWY4UlhydHhXSmZMbEh6WDVTRTdsMjNRaGQ3TVIxVDF6eGJfMXAtcjBqVEUyZHFjUDVJYUpfc1g1UDdqVmZBMmdsVjZvelFDaFJvTkJWamJUMkVUaG80TFA4aWJqdlpxX294amQtTWNQaUhSVUZXQQ?oc=5" },
-  { time: "12:17", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI正考虑大幅降低API token价格，以应对来自Anthropic日益激烈的竞争。此举可能引发AI模型定价战，进一步压低企业使用大模型的成本。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU1dmT09qdzE4R2hqeVpvcmtFckVBdUUzbWpTd2p4eU5rMjNqMVc0QTZtT2VkVlJFYm5KUlVNUmk4M21zRjBDcDVhcE1tQlVUSnYtbnowNVlnTGNBRFMxOHl3Ylc0cVBMNmtmX2Q4VjdWWUtfVjJ1Mi05eWwwWFN3Zk5CTEYtT0hmdGYwTXJwUVFVcW5hUDBOMWdneWViRUhyLTRmSDFvVQ?oc=5" },
 ];
-const aiBreakingDate = "2026年6月12日 07:47 CST";
+const aiBreakingDate = "2026年6月12日 12:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
