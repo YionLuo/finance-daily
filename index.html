@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 29.71,
+  score: 30.94,
   rating: "fear",
-  timestamp: "2026-06-12T00:00:00+00:00",
+  timestamp: "2026-06-12T08:48:46+00:00",
   previousClose: 29.69,
   previous1Week: 41.77,
   previous1Month: 65.69,
   previous1Year: 64.6,
-  date: "2026年6月12日 12:56 CST"
+  date: "2026年6月12日 17:09 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:37", tag: "geo", tagText: "地缘", text: "受美伊有望达成和平协议消息刺激，奢侈品股大幅上涨。LVMH股价涨近5%，Hermès、Burberry等也显著走高。此前伊朗战争严重冲击奢侈品行业，因中东本是该行业增长最快的市场之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/luxury-stocks-lvmh-hermes-burberry-iran-war-peace-deal.html" },
+  { time: "16:19", tag: "tech", tagText: "科技", text: "英伟达股价连续第四周下跌，据报公司已开始向中国客户推销其最新Vera芯片。此举显示英伟达在出口管制背景下仍努力开拓中国市场，但市场对其前景持谨慎态度。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxPdWhFNjREUDY1alF2b21PRTdhODl2cHBUeDNuM1A0QTJCZnAwOGJNUWhDa2RNeVhDMkJjRDhyTFVtaS1RZktwT194d3d6blp4UlJTQVgwOXdvekpteTFmaW5scnAySXA5NWk0UFVkQTctbUpVR1FNY29xV0l0QjVzd2J6aGJhUko2Rlhqb3I4Q3hnUDFrYVlwSGdGTDJ4RU5oUjl6MWlnUVNEMF8xRTJRN2xlYTBfZ1JjMDJzSi05bHkySWI5MDYtNHQ2ZHNjb3JuOUdPV0x6ODBFS19aNjF6OU96QUlFWE1TTm4zbzlDZnRzc2RkTjZlX3prbTAtejU0?oc=5" },
+  { time: "14:07", tag: "ai", tagText: "AI", text: "ChatGPT在5月达到月活用户10亿的里程碑，尽管公众对其伦理和环境影响日益担忧。OpenAI的这款聊天机器人仍是全球最受欢迎的AI应用之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/chatgpt-a-billion-monthly-app-users-despite-souring-public-ai-sentiment.html" },
   { time: "12:37", tag: "tech", tagText: "科技", text: "SpaceX今日在纳斯达克进行历史性IPO，融资750亿美元，为全球最大规模IPO。该公司以每股135美元定价，估值约1.8万亿美元。同时，火箭实验室（Rocket Lab）等四只股票将加入纳斯达克100指数，SpaceX后续也有望被纳入。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-raises-75-billion-in-record-setting-ipo-ahead-of-nasdaq-debut.html" },
   { time: "12:22", tag: "geo", tagText: "地缘", text: "美国总统特朗普称美国已与伊朗达成框架协议，取消原定对伊朗的军事打击。该消息推动原油价格下跌，因市场预期中东紧张局势缓和将重新开放霍尔木兹海峡。亚洲股市上涨，加密货币也同步走强。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/oil-prices-wti-brent-on-hopes-of-us-iran-deal-despite-tehran-pushback.html" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "欧洲防务股涨势遭遇逆转，因政府借贷成本上升及战争形态变化冲击了这一近年最大的股票交易主题。此前，俄乌冲突推动欧洲各国大幅增加军费，但融资担忧令投资者获利了结。", source: "Financial Times", url: "https://www.ft.com/content/1fa66019-c241-46f8-b9e4-7b3ac8575904" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "02:16", tag: "tech", tagText: "科技", text: "SpaceX即将启动历史性IPO，估值接近1.8万亿美元，早期投资者将获得风投史上最大账面收益之一。但马斯克承认无法预测公司何时盈利，分析师警告该股上市后可能出现“极端”波动，呼吁散户投资者警惕FOMO风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-investors-reap-rewards-1-8-trillion-valuation.html" },
   { time: "02:09", tag: "macro", tagText: "宏观", text: "全球最大固定收益管理公司Pimco发出警告，预计违约率将飙升，建议固定收益投资者远离低质量信用债，同时指出高质量资产仍蕴含大量机会。该呼吁反映市场对经济下行和信贷紧缩的担忧加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/pimco-is-warning-about-a-spike-in-defaults-how-to-position-portfolios.html" },
   { time: "01:51", tag: "macro", tagText: "宏观", text: "黄金价格跌至6个月低点，尽管通胀担忧上升，但潜在加息预期和技术面信号转弱令贵金属承压。分析指出，实际利率走高和美元强势削弱了黄金的避险吸引力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/gold-slumps-to-6-month-low-even-as-inflation-fears-rise-heres-why-bullion-is-out-of-favor.html" },
-  { time: "22:49", tag: "ai", tagText: "AI", text: "贝佐斯AI初创公司Prometheus完成120亿美元融资，使其总融资额达180亿美元。贝佐斯表示AI将带来‘黄金时代’，而非大规模失业。联合CEO Vik Bajaj共同领导该公司。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/project-prometheus-bezos-bajaj-live-updates.html" },
-  { time: "22:48", tag: "geo", tagText: "地缘", text: "美国民主党参议员鲍德温和众议员卡纳提出法案，拟设立新的外国直接投资审查委员会，专门调查特朗普政府吸引外资交易中的国家安全风险，引发政治争议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/baldwin-khanna-propose-direct-foreign-investment-board-to-probe-trump.html" },
-  { time: "22:39", tag: "geo", tagText: "地缘", text: "伊朗国家媒体威胁将把马斯克在中东的所有公司视为军事目标，作为对美国打击伊朗的报复。此举可能危及SpaceX星链、特斯拉等业务在地区的运营。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/iran-threatens-elon-musks-companies-in-middle-east-iranian-state-media.html" },
 ];
-const breakingDate = "2026年6月12日 12:56 CST";
+const breakingDate = "2026年6月12日 17:09 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:30", tag: "ai", tagText: "AI", text: "Anthropic提交S-1上市申请，分析认为其对欧洲AI初创公司的意义超过今年任何一轮融资。该文件可能揭示公司财务状况及市场对AI独角兽的估值预期，同时为欧洲AI企业提供IPO路径参考。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWGl2VWx6bW54cnhzMkhlRjR5Q2YtOU56dllmZVNrSExvTDdGWmtjcVFFNlZiTUhOakFYbkdIdUFCTVpIRjUxN2ZEU040ZFlwd2dYZjVhZUxQOExMbjl2RlhRRnI1dmxKNG9OQkZ4ZHVueW5ZRG0zcVVKcXNVRERSQ093?oc=5" },
+  { time: "12:30", tag: "tech", tagText: "科技", text: "Avataar AI推出针对印度市场的视频生成模型，定价每秒钟仅0.005美元。该模型经过蒸馏优化，速度更快且具备文化感知能力，旨在以低成本服务印度大规模内容创作需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/" },
   { time: "12:17", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI正考虑大幅降低API token价格，以应对来自Anthropic日益激烈的竞争。此举可能引发AI模型定价战，进一步压低企业使用大模型的成本。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU1dmT09qdzE4R2hqeVpvcmtFckVBdUUzbWpTd2p4eU5rMjNqMVc0QTZtT2VkVlJFYm5KUlVNUmk4M21zRjBDcDVhcE1tQlVUSnYtbnowNVlnTGNBRFMxOHl3Ylc0cVBMNmtmX2Q4VjdWWUtfVjJ1Mi05eWwwWFN3Zk5CTEYtT0hmdGYwTXJwUVFVcW5hUDBOMWdneWViRUhyLTRmSDFvVQ?oc=5" },
   { time: "09:48", tag: "ai", tagText: "AI", text: "通用型工厂机器人公司Theker获8500万美元融资，其机器人与波士顿动力等固定形态人形机器人不同，可通过重新配置适应不同任务，旨在实现工厂自动化通用性。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything/" },
   { time: "09:44", tag: "ai", tagText: "AI", text: "AI突破加速分子模拟，助力药物发现。新技术大幅提升分子动力学模拟速度，有望显著缩短新药研发周期。", source: "News-Medical", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWG5LdXlnZi12VVgxNEZ6SkpWQzRlNGxSX0VDd2Fmc0dqS0dzZ0ZsRndFeVQ4Z1Vicm9xc3gzYWJwcnF3djYzTTgwRTc0cktmcjA0TFRBTUtQYUhyNThveEcxNHY3cGpmZ3BoMWhUTjJFVXpjeUUzU0ZuaVBGVUExZE5wUDRneDVKdTc1azZpVkg0b0ZwazExOUU1ZEpJcEtNX05GMkVGNG5xTTR4SXpTcmhOR01Bcnc?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:23", tag: "ai", tagText: "AI", text: "DoorDash推出AI聊天机器人Ask DoorDash，用户可通过自然语言提示和图片搜索并下单，无需滚动浏览餐厅列表。该功能旨在简化订餐流程，提升用户体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/" },
   { time: "22:01", tag: "ai", tagText: "AI", text: "由杰夫·贝佐斯创立的工业AI初创公司Prometheus估值达410亿美元，成为又一家AI独角兽。该公司专注于工业自动化与AI应用，本轮估值反映了市场对工业AI领域的高度关注。", source: "Axios", url: "https://news.google.com/rss/articles/CBMicEFVX3lxTE1DT090MEZDbjRYNzlELVRud2cyWDE0X3h0NjRoVkh1ZENQUTBKUFoyZ3dRVnZRcXdaMC00WnJ3bFpZTkt2dUVORnBfQlYxVmJyeExvUUFqbl96U0xkLWpldmxiOUY2aVFGVzljR2V2LVQ?oc=5" },
   { time: "21:34", tag: "tech", tagText: "科技", text: "美国国际贸易委员会（ITC）正式受理Xockets公司针对英伟达、微软和亚马逊的专利投诉，指控其AI芯片基础设施侵犯相关专利。该案涉及数据中心和AI加速器核心架构，若认定侵权可能导致进口禁令，对AI芯片供应链产生重大影响。", source: "IAM Patent", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOHZ6V1F4YVBQck95Tm4xdGtTckVkUm56Um84TGVPb3hjZDg4cm1CSGZoLWVEQzRjb0RacnVNdmJMTjZYWENqTS1SQ0ZlV3IxZWRPR2NXTWtXdTkxTEV1dWtjcnNaRV91T09FMUFzSHVQX2tlMEZNWkhfYUduZDM1SlJVcGRCN0tteGlUd3ZBTURSWkNrZThlTzJSamJLcTB3WUMybElzdlllMzlXWWljeUE4V2VoY2NLckJGNVRhc3g4UzBTWEQxUU5sOXNUUQ?oc=5" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "OpenAI投资一家专注于合规与核保任务的AI初创公司，进一步拓展其在企业级AI应用领域的布局，覆盖金融合规等受监管行业。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOU3k5aU1FVk92aE1lb2h0Yi1oNWFWbDg2QjZOSGk2d29vV3E2NHhnQW1mSW5CaTZzaURZTEVtdFJRWU1FY3hyOElHaGpwNG0wYmVFeDdSMDBjUEYtWlcxZGZCckhXNHJKTHV2SS1WN0djZHlqcXo0RkVJT2hjVjFCVDFzXzZhenpldTZSN1JiTkJxd016ZDRwRnZIenF5dndNeGNoTEhmYkViNVhLNnVxa3J2Yw?oc=5" },
-  { time: "19:40", tag: "ai", tagText: "AI", text: "Anthropic就Claude Fable 5模型隐藏的蒸馏防护栏致歉，该防护栏秘密限制竞争对手使用其模型进行模型蒸馏，引发研究人员和竞争对手不满。Anthropic承认此举不当并承诺调整策略。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail" },
 ];
-const aiBreakingDate = "2026年6月12日 12:56 CST";
+const aiBreakingDate = "2026年6月12日 17:09 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
