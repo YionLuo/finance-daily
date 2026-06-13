@@ -1623,13 +1623,16 @@ const fearGreedData = {
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月13日 16:30 CST"
+  date: "2026年6月13日 19:23 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:00", tag: "geo", tagText: "地缘", text: "多家投资公司加入特朗普政府推动的1000亿美元委内瑞拉石油资产争夺战。Lionheart Capital与Keo Energy共同成立纳斯达克上市公司，旨在获取该国油气资源。此举标志着美国资本在政治支持下大规模重返委内瑞拉能源领域。", source: "Financial Times", url: "https://www.ft.com/content/6982febe-5d1b-4e16-9505-fbee84ca60ab" },
+  { time: "17:30", tag: "geo", tagText: "地缘", text: "阿联酋官方否认有关向伊朗转移数十亿美元冻结资金的报道，称相关消息为“虚假”报道。此前路透社报道称阿联酋同意解冻伊朗资金用于人道主义目的，此举可能影响中东局势及原油市场走向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/uae-denies-false-reports-of-fund-transfer-to-iran.html" },
   { time: "16:19", tag: "tech", tagText: "科技", text: "英伟达股价连续第四周下跌，据报公司已开始向中国客户推销其最新Vera芯片。此举显示英伟达在出口管制背景下仍努力开拓中国市场，但市场对其前景持谨慎态度。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxPdWhFNjREUDY1alF2b21PRTdhODl2cHBUeDNuM1A0QTJCZnAwOGJNUWhDa2RNeVhDMkJjRDhyTFVtaS1RZktwT194d3d6blp4UlJTQVgwOXdvekpteTFmaW5scnAySXA5NWk0UFVkQTctbUpVR1FNY29xV0l0QjVzd2J6aGJhUko2Rlhqb3I4Q3hnUDFrYVlwSGdGTDJ4RU5oUjl6MWlnUVNEMF8xRTJRN2xlYTBfZ1JjMDJzSi05bHkySWI5MDYtNHQ2ZHNjb3JuOUdPV0x6ODBFS19aNjF6OU96QUlFWE1TTm4zbzlDZnRzc2RkTjZlX3prbTAtejU0?oc=5" },
+  { time: "15:22", tag: "tech", tagText: "科技", text: "前特斯拉董事会成员Steve Westly表示，SpaceX若要维持其约1.8万亿美元的IPO估值，必须实现其三大“登月计划”中的至少两个，包括星链、星舰或火星任务。尽管SpaceX创下史上最大IPO记录，但市场对其长期盈利前景仍存质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/spacex-moonshots-valuation-westly-tesla.html" },
   { time: "15:04", tag: "tech", tagText: "科技", text: "花旗分析师指出，华尔街低估了Meta在AMD AI芯片上的支出潜力。AMD虽被视为CPU股票，但在AI GPU领域正快速追赶，有望获得更多数据中心订单。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amd-is-seen-as-a-cpu-stock-but-its-gaining-ground-here-too-69a55e0f" },
   { time: "14:05", tag: "macro", tagText: "宏观", text: "瑞士今日公投决定是否将人口上限设为1000万。若通过，将收紧移民政策，并可能危及与欧盟的人员自由流动协议。该公投结果将对瑞士经济及与欧盟关系产生深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/switzerland-population-cap-referendum-immigration.html" },
   { time: "12:43", tag: "tech", tagText: "科技", text: "美国一场专利纠纷将台积电估值及美国芯片供应推向风口浪尖。诉讼结果可能影响台积电在美国的扩张计划，进而威胁到包括苹果、英伟达在内的美国芯片客户供应安全。市场密切关注案件进展。", source: "Simply Wall St", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdFAydDdjc0RNeDZlTWpKYnA4ZWRKWVFPX1ZnTXJNWXdQamZNekRXZnZ6SVcyRmlSN1ZVNFE4ejZFREt6UGNrZlJNTTJtVUpoelQxaDU0M1FvdWFjZlFobmhSWWlfMmZGX3NvREZGeWpWVFFwMDdQcnEtNV9PbmpFcVJOaWs4N2xNdDUySTY4WDByMnNvSmk4R2FHbkxqOGwta0xlMGZsd25ISEQzTXpFVDlIa0I4TVBmbGhTcE1BY1dOSDNicS00VzhUbm8zQW5fN2FqOWpNSlpkS0VTTlQ1WWtsLW9rWkoxcGFlZtIB8gFBVV95cUxOdEV2ZlVhdlJtXzZWNTBXeFp6dlNlaWsydnNrVmpNT0gwSkJqYk02VnhRRDh5YjhSbHdTbGpyUXVBcncxdlE3dkVJRF9tcGt3NDVYTkFsMWtlWWg0d3ZRM3h1VmVOcmlPQWF4aXNoRVVQb0hzZ093ZDA3b3o2LWR2RjFKYzhVSFFydGZDVDBvR0FJX2ZFU0RxT0EyX0hVOFVtVUxEOVNoUmMtMm1NMUJ0M1k4bGtrUlFIMFRBMGlMc05NOUJCcGZKS3hlZS02Q0RrM2VjNFpOUVUycUJ0eW9SUmhTaWI4S2w1MTBRVFl4djUxUQ?oc=5" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "04:32", tag: "AI", tagText: "AI", text: "甲骨文股价遭遇25年来最差单日表现，因市场对其950亿美元AI支出计划及数据中心交付瓶颈产生疑虑。尽管云基础设施业务快速增长，但巨额资本开支和物理瓶颈令投资者担忧回报前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oracles-stock-is-seeing-its-worst-run-in-a-quarter-century-as-this-key-ai-debate-rages-on-49b3e9ed" },
   { time: "04:14", tag: "加密", tagText: "加密", text: "比特币价格跌向6万美元关口，此前两大主要买家（疑似机构或国家层面）撤出购买。市场情绪转向谨慎，分析人士关注6万美元支撑位是否有效。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMiogJBVV95cUxPejVISkJWeUsxcDNYU2VnOTNkYVhwY01zb3hIMFBNRUdzVGV1NEcyeFVqekJVR2s0NG95Q2xJNFY2WmlmY1hGN25hdDJvSEozZ25ONW5OdEFER29sUVBVSGRqTUxyRU8xMGFKc2RoNGRmMEgzay1USm4tTkNaZmZxOWxRSldfWEdKblhJRWlfWTNhOXl5WFJLLVpRd3NyeG9sQ3F1dlJBZi1RR0w0YTFDMXRlNkM4VWhNYnl6OWpVTU9vaXhBYklMSjg3bFlNVWFQd1MxVzFybEZCNDVRcXJFQTNxd013M3h1UXB2bVh5X2lvQkkxYjZtMGozenJDSEpNWFdybGNCZ05Xcjg3VE1hdWVQbWRsZ1NNMHZOVWRfQVh0d9IBpwJBVV95cUxPTGs0SUxMaE03YjRjbUVxS3J2TnZ5NnE0VG5aRGt3LW1HZVlSZ21JeWFCeE5ieldXWkxMSzNYQUlXbzl5M1FrWHhQVGdhbVNiYXVwZG1QMlVxNWI3NzRpS2I2Rm1MdW9nNTBVVEFJQV93bzY0LWpmaXpGMUVVQk93QTE4RTF5QkEwWkVFaU90VE91ektkeWV2SXVPNU5WVEMyXzhTLWZpdUpBdlNaMW5UQW5ZaE53Z2plc25KSC1oQ1FKcHRfdHF5cEhwaGd4Qnl2QmFVNGVZSmhrMWN5aTVPOTMzS0xPOGRwN0lWMGk2NnBqaFFzQzhqSGNlMWJPZkQ5ZnFjT2VTcVM2R3k1YVV1LThUbGFGd3huWHVqZnZ3NXI0MDJwZ1J3?oc=5" },
   { time: "02:23", tag: "geo", tagText: "地缘", text: "特朗普提名前SEC主席杰伊·克莱顿（Jay Clayton）担任国家情报总监。克莱顿在证券监管领域经验丰富，其任命或影响美国情报界对金融和科技领域的监管态度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/trump-jay-clayton-national-intelligence-pulte.html" },
-  { time: "02:00", tag: "crypto", tagText: "加密", text: "渣打银行分析师发布报告称，比特币在59,000美元附近已触底，标志着加密寒冬的结束，并预计未来将迎来反弹。此前比特币一度跌至该低点，市场情绪偏谨慎。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSk5BbUJWN2d2aFdfWlF2V2hqYzFaZnk3bV9oTi1hZHlqbGpaQVhOX05zQWJPUW90SEdhNjNOSmc1dzVNWWNiZTZReG5XN3dhb3Q0UWx1MUZmN0Njdm1QUXA2MDZXclZHWVlmeDJLU19yQm9CUmlycnJxX2k5Rjh3SGVrWFFhNmhZazJ1RFppSEhYeXRzUm9oRUxRZk14d3pMaE5mVzhLcFRKa3E5Qm9sVHRmTURRUW15VXBtN3JXSFBLWl9jVVB6bV9jaXEzN1R6ampMeTVNWQ" },
-  { time: "21:05", tag: "macro", tagText: "宏观", text: "贝莱德旗下130亿美元HPS企业贷款基金连续第二个季度限制赎回，仅满足不到40%的赎回请求。该基金主要投资于私募信贷，流动性压力凸显当前信贷市场脆弱性，引发对商业地产和杠杆贷款风险的担忧。", source: "Financial Times", url: "https://www.ft.com/content/65adec62-3505-4d01-8aa6-a609aa7cfdcc" },
-  { time: "20:58", tag: "geo", tagText: "地缘", text: "伊朗国家媒体披露美伊谅解备忘录草案细节，包括美国承诺解除石油制裁并重开霍尔木兹海峡。特朗普称海峡将在协议签署后立即恢复通航，国际油价应声跌至三个月新低，WTI和布伦特均大幅下挫。市场对中东局势缓和预期升温，全球股市上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/iran-us-peace-memo-strait-hormuz-oil-sanctions.html" },
 ];
-const breakingDate = "2026年6月13日 16:30 CST";
+const breakingDate = "2026年6月13日 19:23 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:31", tag: "ai", tagText: "AI", text: "华纳音乐集团收购AI归属初创公司Sureel AI，旨在更精确追踪其艺人的作品在AI生成内容或训练数据中的使用情况，为AI时代的版权管理铺路。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/" },
   { time: "22:23", tag: "ai", tagText: "AI", text: "DoorDash推出AI聊天机器人Ask DoorDash，用户可通过自然语言提示和图片搜索并下单，无需滚动浏览餐厅列表。该功能旨在简化订餐流程，提升用户体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/" },
 ];
-const aiBreakingDate = "2026年6月13日 16:30 CST";
+const aiBreakingDate = "2026年6月13日 19:23 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
