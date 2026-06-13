@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月14日 04:23 CST"
+  date: "2026年6月14日 06:15 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:00", tag: "macro", tagText: "宏观", text: "美国六个州相继调整燃油税政策，与此同时能源通胀加速。燃油税变动将直接影响居民出行成本和物流费用，进一步推高通胀压力，令美联储抗通胀任务更加复杂。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/fuel-tax-changes-hit-six-210000819.html" },
+  { time: "03:44", tag: "geo", tagText: "地缘", text: "特朗普宣布将于周日（6月14日）签署美伊和平协议，重新开放霍尔木兹海峡。伊朗方面对具体时间仍持谨慎态度，但巴基斯坦称停火协议即将达成。此举有望缓解中东紧张局势，降低全球能源供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/trump-iran-deal-strait-of-hormuz.html" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "美国真实国家债务首次突破100万亿美元，相当于每户美国家庭负债100万美元，达GDP的400%。这一数字包括社会保障、医疗保险等未偿付的隐性债务，市场对此反应平淡但长期风险巨大。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-true-national-debt-just-hit-1-million-per-u-s-household-bd0924d1" },
   { time: "03:00", tag: "geo", tagText: "地缘", text: "美国政府宣布在空袭中击毙委内瑞拉黑帮组织“阿拉瓜火车”头目赫克托·格雷罗，行动与委内瑞拉政府协调。该组织在南美及美国境内从事犯罪活动，此次打击被视为特朗普政府强化拉美安全政策的标志性行动。", source: "Financial Times", url: "https://www.ft.com/content/298a1431-dc3e-4cbc-aa6f-769e54541b60" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "最新社保信托报告显示，美国社会保障基金预计于2032年面临22%的自动削减。当前通胀高企使2027年生活成本调整（COLA）或达4.7%，但长期偿付能力危机加剧。专家建议投资者提前建立不受政府影响的退休收入来源。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-security-could-face-an-automatic-22-cut-in-2032-these-4-moves-will-protect-your-retirement-a00f9463" },
@@ -1637,6 +1639,7 @@ const breakingNews = [
   { time: "01:59", tag: "tech", tagText: "科技", text: "Alphabet向英特尔下达超过300万片TPU芯片订单，计划2028年交付。这笔巨额订单标志着谷歌在自研AI芯片上的持续扩张，同时为英特尔代工业务注入强心剂。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/alphabet-googl-places-order-intel-175947094.html" },
   { time: "01:59", tag: "ai", tagText: "AI", text: "英伟达与韩国LG集团达成合作，共同开发人形机器人和数据中心解决方案。此次合作将结合英伟达的AI计算平台与LG的硬件制造能力，加速机器人技术商业化。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/nvidia-corporation-nvda-partners-south-175948056.html" },
   { time: "01:59", tag: "tech", tagText: "科技", text: "台积电公布5月强劲营收数据，UBS随后将其列为“代理AI”主题的首选股，认为其将在AI芯片制造中占据核心地位。市场需求持续旺盛，台积电产能利用率维持高位。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-tsm-posts-strong-175952688.html" },
+  { time: "00:29", tag: "tech", tagText: "科技", text: "苹果股价在WWDC后因AI功能未达预期而承压，市场重新评估其估值与过度风险。分析师指出，苹果在AI领域进展缓慢，可能影响未来增长前景，投资者需警惕高估值下的回调风险。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdXJ4VHpPazlwaTBqcWtGLVNYaHdjdmZJQXNYSXB3d1plbDVwZmtVVXRRcEFWMWd1TjJmQVJENU15bURUSWV1bUlacGdkUzh0c0VfbUhRNEdTaElQMVp2bHFqdEU0TXlVenAxWDNWQ3BJb3FtSWtvVi1tb1VlY204N2lLX2hnSDZJNldyZS0wcVdPcWhvUGEwdlFmcmtDaFo5Qk9YdXU1MlRValFCVE1PTmR4UEF2UllzNzRKRtIBwgFBVV95cUxOTFZUN2pVODE1Y2VOS0ZGYUhEQzR0Ty03bXBvUi1KbW8welRncmZtcE52dmZWeTZYV3RCbWNoZUZnWVViaWtMaDFhbTNKWVdIXzZJTzRDRDlSbzNGWUxQTjJmeTktUTVfNGlGcnBnR0VvM1VUSDNaQU44UzcwTFRjajVmYkNOYW51YXQ0eWxsbXEtVy1DVUkwWGRCZ01aT0lMNzdZTFZTRnpIT2FJRkpVUk02ZXFLZlFHQksxWXA3V3ZEZw?oc=5" },
   { time: "00:28", tag: "geo", tagText: "地缘", text: "美国总统特朗普计划下周一前往法国埃维昂参加G7峰会，期间将分别与中东领导人及乌克兰方面会晤。此前他宣布将于周日签署美伊和平协议，与会晤安排紧密衔接。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/trump-to-meet-with-mideast-and-ukraine-leaders-at-g7-officials-say.html" },
   { time: "20:30", tag: "macro", tagText: "宏观", text: "富人持续大手笔消费“毫无歉意的奢侈品”，推高日用商品价格，令通胀难以降温。市场分析认为，这可能会使美联储对抗通胀的任务更加复杂化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-rich-keep-spending-money-on-unapologetic-luxury-and-its-raising-prices-on-everyday-goods-for-everyone-cdc4546b?mod=mw_rss_topstories" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "Pimco警告债务市场违约潮再度来袭，建议投资者增持固定收益资产，因股票估值已偏高。该债券巨头指出，企业违约率正在回升，市场应转向防御性策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/defaults-in-debt-markets-are-starting-again-warns-pimco-heres-the-bond-giants-game-plan-16559c6d?mod=mw_rss_topstories" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "17:30", tag: "geo", tagText: "地缘", text: "阿联酋官方否认有关向伊朗转移数十亿美元冻结资金的报道，称相关消息为“虚假”报道。此前路透社报道称阿联酋同意解冻伊朗资金用于人道主义目的，此举可能影响中东局势及原油市场走向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/uae-denies-false-reports-of-fund-transfer-to-iran.html" },
   { time: "16:19", tag: "tech", tagText: "科技", text: "英伟达股价连续第四周下跌，据报公司已开始向中国客户推销其最新Vera芯片。此举显示英伟达在出口管制背景下仍努力开拓中国市场，但市场对其前景持谨慎态度。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxPdWhFNjREUDY1alF2b21PRTdhODl2cHBUeDNuM1A0QTJCZnAwOGJNUWhDa2RNeVhDMkJjRDhyTFVtaS1RZktwT194d3d6blp4UlJTQVgwOXdvekpteTFmaW5scnAySXA5NWk0UFVkQTctbUpVR1FNY29xV0l0QjVzd2J6aGJhUko2Rlhqb3I4Q3hnUDFrYVlwSGdGTDJ4RU5oUjl6MWlnUVNEMF8xRTJRN2xlYTBfZ1JjMDJzSi05bHkySWI5MDYtNHQ2ZHNjb3JuOUdPV0x6ODBFS19aNjF6OU96QUlFWE1TTm4zbzlDZnRzc2RkTjZlX3prbTAtejU0?oc=5" },
   { time: "15:22", tag: "tech", tagText: "科技", text: "前特斯拉董事会成员Steve Westly表示，SpaceX若要维持其约1.8万亿美元的IPO估值，必须实现其三大“登月计划”中的至少两个，包括星链、星舰或火星任务。尽管SpaceX创下史上最大IPO记录，但市场对其长期盈利前景仍存质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/spacex-moonshots-valuation-westly-tesla.html" },
-  { time: "15:04", tag: "tech", tagText: "科技", text: "花旗分析师指出，华尔街低估了Meta在AMD AI芯片上的支出潜力。AMD虽被视为CPU股票，但在AI GPU领域正快速追赶，有望获得更多数据中心订单。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amd-is-seen-as-a-cpu-stock-but-its-gaining-ground-here-too-69a55e0f" },
-  { time: "14:05", tag: "macro", tagText: "宏观", text: "瑞士今日公投决定是否将人口上限设为1000万。若通过，将收紧移民政策，并可能危及与欧盟的人员自由流动协议。该公投结果将对瑞士经济及与欧盟关系产生深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/switzerland-population-cap-referendum-immigration.html" },
-  { time: "12:43", tag: "tech", tagText: "科技", text: "美国一场专利纠纷将台积电估值及美国芯片供应推向风口浪尖。诉讼结果可能影响台积电在美国的扩张计划，进而威胁到包括苹果、英伟达在内的美国芯片客户供应安全。市场密切关注案件进展。", source: "Simply Wall St", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdFAydDdjc0RNeDZlTWpKYnA4ZWRKWVFPX1ZnTXJNWXdQamZNekRXZnZ6SVcyRmlSN1ZVNFE4ejZFREt6UGNrZlJNTTJtVUpoelQxaDU0M1FvdWFjZlFobmhSWWlfMmZGX3NvREZGeWpWVFFwMDdQcnEtNV9PbmpFcVJOaWs4N2xNdDUySTY4WDByMnNvSmk4R2FHbkxqOGwta0xlMGZsd25ISEQzTXpFVDlIa0I4TVBmbGhTcE1BY1dOSDNicS00VzhUbm8zQW5fN2FqOWpNSlpkS0VTTlQ1WWtsLW9rWkoxcGFlZtIB8gFBVV95cUxOdEV2ZlVhdlJtXzZWNTBXeFp6dlNlaWsydnNrVmpNT0gwSkJqYk02VnhRRDh5YjhSbHdTbGpyUXVBcncxdlE3dkVJRF9tcGt3NDVYTkFsMWtlWWg0d3ZRM3h1VmVOcmlPQWF4aXNoRVVQb0hzZ093ZDA3b3o2LWR2RjFKYzhVSFFydGZDVDBvR0FJX2ZFU0RxT0EyX0hVOFVtVUxEOVNoUmMtMm1NMUJ0M1k4bGtrUlFIMFRBMGlMc05NOUJCcGZKS3hlZS02Q0RrM2VjNFpOUVUycUJ0eW9SUmhTaWI4S2w1MTBRVFl4djUxUQ?oc=5" },
 ];
-const breakingDate = "2026年6月14日 04:23 CST";
+const breakingDate = "2026年6月14日 06:15 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:42", tag: "ai", tagText: "AI", text: "毕马威（KPMG）因报告内容出现明显的AI幻觉，撤回了其关于AI使用情况的研究报告。该报告本应分析AI在各行业的应用，但被发现包含由AI生成的虚假或不准确信息，再次引发业界对AI生成内容可靠性的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/" },
   { time: "03:26", tag: "tech", tagText: "科技", text: "Oracle旗下PeopleSoft软件曝出0-day漏洞，影响数百个组织，可窃取数GB数据。该漏洞严重性极高，攻击者能远程访问敏感信息。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/peoplesoft-0-day-affecting-hundreds-of-organizations-steals-gigabytes-of-data/" },
   { time: "02:06", tag: "tech", tagText: "科技", text: "高通宣布其AI生态系统扩展至人形机器人和自动驾驶汽车领域。该公司正在利用其骁龙平台和AI引擎，为机器人及车载系统提供边缘AI处理能力，标志着高通从手机芯片向更广泛的AI硬件生态转型。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQR0tpUDJ0ZlZXWWl4REFnenZ2RlJlM0t0dU1oelVvUHlUeGM1b2ZIYXEyNDd4TVBYRFo3YTcwV00xLTdETHRwUFJiSEdvLUlBOXkxWUZIZTlZTzdnTTNhMG1uMUZNS243NUhzRzBKYWFDTkJzTFh4RDhKSXE1VjVPMmhleFpfUUFmVUxHV0l0VlRmM25qaXZMU2lPTmZzMURsNGJUbUFB?oc=5" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "法国AI初创公司Mistral被传正以约200亿欧元（约231.5亿美元）估值进行新一轮融资，计划筹集30亿欧元。若属实，估值较其C轮117亿欧元近乎翻倍，显示欧洲AI明星企业持续获得巨额资本追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "tech", tagText: "科技", text: "苹果在iOS 27中首次推出AI照片编辑工具，包括智能重构图、内容扩展、消除等实用功能。评测认为这些工具大多能正常工作，但效果参差不齐，既有惊喜也有明显失误，标志着全球最大相机平台正式进入AI编辑时代。", source: "The Verge", url: "https://www.theverge.com/tech/949360/apple-ai-photo-edit-reframe-extend-clean-up-hands-on" },
   { time: "12:14", tag: "macro", tagText: "宏观", text: "安德鲁·杨（Andrew Yang）认为下一个重大创业机会是降低生活成本。他列出了一系列美国人超支的领域——住房、食品、无线通讯等，并指出下一波创业金矿在于将这些多付的钱返还给消费者。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/" },
   { time: "10:26", tag: "ai", tagText: "AI", text: "Anthropic的安全警告适得其反：美国政府以存在潜在越狱漏洞为由，要求召回其最强大的AI模型Claude Fable。Anthropic表示强烈反对，认为狭窄的漏洞不应导致已部署给数亿用户的商业模型被召回。这标志着AI监管的重大升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/" },
-  { time: "07:00", tag: "tech", tagText: "科技", text: "Meta成立仅数月的AI部门被内部工程师描述为“灵魂压榨的古拉格”，一份新报告显示该部门6500名员工濒临爆发反抗。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/" },
 ];
-const aiBreakingDate = "2026年6月14日 04:23 CST";
+const aiBreakingDate = "2026年6月14日 06:15 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
