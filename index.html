@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月14日 02:19 CST"
+  date: "2026年6月14日 04:23 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:00", tag: "macro", tagText: "宏观", text: "美国真实国家债务首次突破100万亿美元，相当于每户美国家庭负债100万美元，达GDP的400%。这一数字包括社会保障、医疗保险等未偿付的隐性债务，市场对此反应平淡但长期风险巨大。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-true-national-debt-just-hit-1-million-per-u-s-household-bd0924d1" },
+  { time: "03:00", tag: "geo", tagText: "地缘", text: "美国政府宣布在空袭中击毙委内瑞拉黑帮组织“阿拉瓜火车”头目赫克托·格雷罗，行动与委内瑞拉政府协调。该组织在南美及美国境内从事犯罪活动，此次打击被视为特朗普政府强化拉美安全政策的标志性行动。", source: "Financial Times", url: "https://www.ft.com/content/298a1431-dc3e-4cbc-aa6f-769e54541b60" },
+  { time: "03:00", tag: "macro", tagText: "宏观", text: "最新社保信托报告显示，美国社会保障基金预计于2032年面临22%的自动削减。当前通胀高企使2027年生活成本调整（COLA）或达4.7%，但长期偿付能力危机加剧。专家建议投资者提前建立不受政府影响的退休收入来源。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-security-could-face-an-automatic-22-cut-in-2032-these-4-moves-will-protect-your-retirement-a00f9463" },
   { time: "02:00", tag: "crypto", tagText: "加密", text: "Visa宣布拓展AI商务布局，推出稳定币及代币化能力，旨在推动数字支付创新。新功能允许用户通过区块链进行快速跨境结算，并支持智能合约自动执行。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/technology/articles/visa-v-expands-ai-commerce-175956351.html" },
   { time: "02:00", tag: "crypto", tagText: "加密", text: "Mastercard推出AI代理支付网络，获超过30家行业合作伙伴支持。该网络允许人工智能代理自主进行支付交易，标志着支付行业向AI代理经济迈出关键一步。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/mastercard-ma-unveils-ai-agent-175945694.html" },
   { time: "01:59", tag: "tech", tagText: "科技", text: "Alphabet向英特尔下达超过300万片TPU芯片订单，计划2028年交付。这笔巨额订单标志着谷歌在自研AI芯片上的持续扩张，同时为英特尔代工业务注入强心剂。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/alphabet-googl-places-order-intel-175947094.html" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "15:04", tag: "tech", tagText: "科技", text: "花旗分析师指出，华尔街低估了Meta在AMD AI芯片上的支出潜力。AMD虽被视为CPU股票，但在AI GPU领域正快速追赶，有望获得更多数据中心订单。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amd-is-seen-as-a-cpu-stock-but-its-gaining-ground-here-too-69a55e0f" },
   { time: "14:05", tag: "macro", tagText: "宏观", text: "瑞士今日公投决定是否将人口上限设为1000万。若通过，将收紧移民政策，并可能危及与欧盟的人员自由流动协议。该公投结果将对瑞士经济及与欧盟关系产生深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/switzerland-population-cap-referendum-immigration.html" },
   { time: "12:43", tag: "tech", tagText: "科技", text: "美国一场专利纠纷将台积电估值及美国芯片供应推向风口浪尖。诉讼结果可能影响台积电在美国的扩张计划，进而威胁到包括苹果、英伟达在内的美国芯片客户供应安全。市场密切关注案件进展。", source: "Simply Wall St", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdFAydDdjc0RNeDZlTWpKYnA4ZWRKWVFPX1ZnTXJNWXdQamZNekRXZnZ6SVcyRmlSN1ZVNFE4ejZFREt6UGNrZlJNTTJtVUpoelQxaDU0M1FvdWFjZlFobmhSWWlfMmZGX3NvREZGeWpWVFFwMDdQcnEtNV9PbmpFcVJOaWs4N2xNdDUySTY4WDByMnNvSmk4R2FHbkxqOGwta0xlMGZsd25ISEQzTXpFVDlIa0I4TVBmbGhTcE1BY1dOSDNicS00VzhUbm8zQW5fN2FqOWpNSlpkS0VTTlQ1WWtsLW9rWkoxcGFlZtIB8gFBVV95cUxOdEV2ZlVhdlJtXzZWNTBXeFp6dlNlaWsydnNrVmpNT0gwSkJqYk02VnhRRDh5YjhSbHdTbGpyUXVBcncxdlE3dkVJRF9tcGt3NDVYTkFsMWtlWWg0d3ZRM3h1VmVOcmlPQWF4aXNoRVVQb0hzZ093ZDA3b3o2LWR2RjFKYzhVSFFydGZDVDBvR0FJX2ZFU0RxT0EyX0hVOFVtVUxEOVNoUmMtMm1NMUJ0M1k4bGtrUlFIMFRBMGlMc05NOUJCcGZKS3hlZS02Q0RrM2VjNFpOUVUycUJ0eW9SUmhTaWI4S2w1MTBRVFl4djUxUQ?oc=5" },
-  { time: "12:37", tag: "tech", tagText: "科技", text: "SpaceX今日在纳斯达克进行历史性IPO，融资750亿美元，为全球最大规模IPO。该公司以每股135美元定价，估值约1.8万亿美元。同时，火箭实验室（Rocket Lab）等四只股票将加入纳斯达克100指数，SpaceX后续也有望被纳入。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-raises-75-billion-in-record-setting-ipo-ahead-of-nasdaq-debut.html" },
-  { time: "12:22", tag: "geo", tagText: "地缘", text: "美国总统特朗普称美国已与伊朗达成框架协议，取消原定对伊朗的军事打击。该消息推动原油价格下跌，因市场预期中东紧张局势缓和将重新开放霍尔木兹海峡。亚洲股市上涨，加密货币也同步走强。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/oil-prices-wti-brent-on-hopes-of-us-iran-deal-despite-tehran-pushback.html" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "FT评论文章指出，当前各国央行采取“观望”货币政策策略，可能重蹈2008年金融危机前的错误：因过早放松或延迟行动而导致通胀反复。文章呼吁更果断的利率路径以彻底驯服通胀。", source: "Financial Times", url: "https://www.ft.com/content/01c5ea35-a0fa-469f-b8bb-356d98c05fb0" },
 ];
-const breakingDate = "2026年6月14日 02:19 CST";
+const breakingDate = "2026年6月14日 04:23 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:26", tag: "tech", tagText: "科技", text: "Oracle旗下PeopleSoft软件曝出0-day漏洞，影响数百个组织，可窃取数GB数据。该漏洞严重性极高，攻击者能远程访问敏感信息。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/peoplesoft-0-day-affecting-hundreds-of-organizations-steals-gigabytes-of-data/" },
   { time: "02:06", tag: "tech", tagText: "科技", text: "高通宣布其AI生态系统扩展至人形机器人和自动驾驶汽车领域。该公司正在利用其骁龙平台和AI引擎，为机器人及车载系统提供边缘AI处理能力，标志着高通从手机芯片向更广泛的AI硬件生态转型。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQR0tpUDJ0ZlZXWWl4REFnenZ2RlJlM0t0dU1oelVvUHlUeGM1b2ZIYXEyNDd4TVBYRFo3YTcwV00xLTdETHRwUFJiSEdvLUlBOXkxWUZIZTlZTzdnTTNhMG1uMUZNS243NUhzRzBKYWFDTkJzTFh4RDhKSXE1VjVPMmhleFpfUUFmVUxHV0l0VlRmM25qaXZMU2lPTmZzMURsNGJUbUFB?oc=5" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "法国AI初创公司Mistral被传正以约200亿欧元（约231.5亿美元）估值进行新一轮融资，计划筹集30亿欧元。若属实，估值较其C轮117亿欧元近乎翻倍，显示欧洲AI明星企业持续获得巨额资本追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/" },
   { time: "01:26", tag: "ai", tagText: "AI", text: "谷歌起诉涉嫌利用AI技术发送诈骗短信的中国网络犯罪组织“Outsider Enterprise”。该组织在两周内使用AI发送约250万条诈骗短信，导致数十万受害者上当。这是科技巨头首次针对AI辅助的大规模诈骗活动提起法律诉讼。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/google-sues-alleged-chinese-cybercrime-operation-that-used-ai-to-send-scam-texts/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "12:14", tag: "macro", tagText: "宏观", text: "安德鲁·杨（Andrew Yang）认为下一个重大创业机会是降低生活成本。他列出了一系列美国人超支的领域——住房、食品、无线通讯等，并指出下一波创业金矿在于将这些多付的钱返还给消费者。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/" },
   { time: "10:26", tag: "ai", tagText: "AI", text: "Anthropic的安全警告适得其反：美国政府以存在潜在越狱漏洞为由，要求召回其最强大的AI模型Claude Fable。Anthropic表示强烈反对，认为狭窄的漏洞不应导致已部署给数亿用户的商业模型被召回。这标志着AI监管的重大升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/" },
   { time: "07:00", tag: "tech", tagText: "科技", text: "Meta成立仅数月的AI部门被内部工程师描述为“灵魂压榨的古拉格”，一份新报告显示该部门6500名员工濒临爆发反抗。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/" },
-  { time: "03:26", tag: "tech", tagText: "科技", text: "Oracle旗下PeopleSoft软件曝出0-day漏洞，影响数百个组织，可窃取数GB数据。该漏洞严重性极高，攻击者能远程访问敏感信息。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/peoplesoft-0-day-affecting-hundreds-of-organizations-steals-gigabytes-of-data/" },
 ];
-const aiBreakingDate = "2026年6月14日 02:19 CST";
+const aiBreakingDate = "2026年6月14日 04:23 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
