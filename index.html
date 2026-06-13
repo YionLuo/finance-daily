@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 34,
   rating: "fear",
-  timestamp: "2026-06-12T23:25:05+00:00",
+  timestamp: "2026-06-12T23:59:56+00:00",
   previousClose: 29.63,
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月13日 07:40 CST"
+  date: "2026年6月13日 12:44 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:37", tag: "tech", tagText: "科技", text: "SpaceX今日在纳斯达克进行历史性IPO，融资750亿美元，为全球最大规模IPO。该公司以每股135美元定价，估值约1.8万亿美元。同时，火箭实验室（Rocket Lab）等四只股票将加入纳斯达克100指数，SpaceX后续也有望被纳入。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-raises-75-billion-in-record-setting-ipo-ahead-of-nasdaq-debut.html" },
+  { time: "12:22", tag: "geo", tagText: "地缘", text: "美国总统特朗普称美国已与伊朗达成框架协议，取消原定对伊朗的军事打击。该消息推动原油价格下跌，因市场预期中东紧张局势缓和将重新开放霍尔木兹海峡。亚洲股市上涨，加密货币也同步走强。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/oil-prices-wti-brent-on-hopes-of-us-iran-deal-despite-tehran-pushback.html" },
+  { time: "11:42", tag: "geo", tagText: "地缘", text: "美国政府宣布在委内瑞拉与德尔西·罗德里格斯政府协调下，通过空袭击毙了“阿拉瓜火车”帮派头目Héctor Guerrero。该帮派是委内瑞拉主要犯罪组织之一，此次行动标志着特朗普政府打击跨国犯罪的升级。", source: "Financial Times", url: "https://www.ft.com/content/298a1431-dc3e-4cbc-aa6f-769e54541b60" },
+  { time: "10:01", tag: "ai", tagText: "AI", text: "美国AI公司Anthropic应政府出口管制指令，暂停外国用户访问其最新模型Fable 5和Mythos 5。特朗普政府以国家安全为由限制外国公民使用，此举影响全球AI开发者生态，并加剧科技领域的地缘分化。", source: "Financial Times", url: "https://www.ft.com/content/2a27300a-b90d-4649-8c09-f7e7cd426dbb" },
   { time: "06:50", tag: "macro", tagText: "宏观", text: "价值股今年表现远超成长股，涨幅差距显著。投资者对科技以外行业盈利增长扩大的乐观情绪推动资金轮动，分析师认为这一趋势并非昙花一现。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-is-not-a-flash-in-the-pan-why-value-stocks-are-beating-growth-by-such-a-wide-margin-b2bddccc?mod=mw_rss_topstories" },
   { time: "05:51", tag: "macro", tagText: "宏观", text: "派拉蒙与华纳兄弟探索公司（WBD）价值约1100亿美元的合并案获得美国司法部批准，这是传媒行业近年来最大交易的重要里程碑。不过，该交易仍可能面临各州总检察长的法律挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/paramount-wbd-merger-approval-doj.html" },
   { time: "05:15", tag: "geo", tagText: "地缘", text: "众议院共和党高层莉萨·麦克莱恩的丈夫在SpaceX IPO前购入至多25万美元的xAI股份（后被并入SpaceX），其家族投资将因IPO大涨而获利，引发道德争议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/lisa-mcclain-spacex-ipo-xai-investment-congress.html" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "16:37", tag: "geo", tagText: "地缘", text: "受美伊有望达成和平协议消息刺激，奢侈品股大幅上涨。LVMH股价涨近5%，Hermès、Burberry等也显著走高。此前伊朗战争严重冲击奢侈品行业，因中东本是该行业增长最快的市场之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/luxury-stocks-lvmh-hermes-burberry-iran-war-peace-deal.html" },
   { time: "16:19", tag: "tech", tagText: "科技", text: "英伟达股价连续第四周下跌，据报公司已开始向中国客户推销其最新Vera芯片。此举显示英伟达在出口管制背景下仍努力开拓中国市场，但市场对其前景持谨慎态度。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxPdWhFNjREUDY1alF2b21PRTdhODl2cHBUeDNuM1A0QTJCZnAwOGJNUWhDa2RNeVhDMkJjRDhyTFVtaS1RZktwT194d3d6blp4UlJTQVgwOXdvekpteTFmaW5scnAySXA5NWk0UFVkQTctbUpVR1FNY29xV0l0QjVzd2J6aGJhUko2Rlhqb3I4Q3hnUDFrYVlwSGdGTDJ4RU5oUjl6MWlnUVNEMF8xRTJRN2xlYTBfZ1JjMDJzSi05bHkySWI5MDYtNHQ2ZHNjb3JuOUdPV0x6ODBFS19aNjF6OU96QUlFWE1TTm4zbzlDZnRzc2RkTjZlX3prbTAtejU0?oc=5" },
   { time: "15:04", tag: "tech", tagText: "科技", text: "花旗分析师指出，华尔街低估了Meta在AMD AI芯片上的支出潜力。AMD虽被视为CPU股票，但在AI GPU领域正快速追赶，有望获得更多数据中心订单。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amd-is-seen-as-a-cpu-stock-but-its-gaining-ground-here-too-69a55e0f" },
-  { time: "14:55", tag: "macro", tagText: "宏观", text: "前明星债券投资者Ken Leech（前Western Asset Management高管）就妨碍监管调查认罪。其被指控在管理投资组合时'樱桃挑选'有利交易分配给特定客户，原定周一开庭的审判因此终止。", source: "Financial Times", url: "https://www.ft.com/content/ea2f30d4-4ae4-47cc-b2a8-095328452f0b" },
-  { time: "14:07", tag: "ai", tagText: "AI", text: "ChatGPT在5月达到月活用户10亿的里程碑，尽管公众对其伦理和环境影响日益担忧。OpenAI的这款聊天机器人仍是全球最受欢迎的AI应用之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/chatgpt-a-billion-monthly-app-users-despite-souring-public-ai-sentiment.html" },
-  { time: "12:37", tag: "tech", tagText: "科技", text: "SpaceX今日在纳斯达克进行历史性IPO，融资750亿美元，为全球最大规模IPO。该公司以每股135美元定价，估值约1.8万亿美元。同时，火箭实验室（Rocket Lab）等四只股票将加入纳斯达克100指数，SpaceX后续也有望被纳入。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-raises-75-billion-in-record-setting-ipo-ahead-of-nasdaq-debut.html" },
-  { time: "12:22", tag: "geo", tagText: "地缘", text: "美国总统特朗普称美国已与伊朗达成框架协议，取消原定对伊朗的军事打击。该消息推动原油价格下跌，因市场预期中东紧张局势缓和将重新开放霍尔木兹海峡。亚洲股市上涨，加密货币也同步走强。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/oil-prices-wti-brent-on-hopes-of-us-iran-deal-despite-tehran-pushback.html" },
 ];
-const breakingDate = "2026年6月13日 07:40 CST";
+const breakingDate = "2026年6月13日 12:44 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "10:26", tag: "ai", tagText: "AI", text: "Anthropic的安全警告适得其反：美国政府以存在潜在越狱漏洞为由，要求召回其最强大的AI模型Claude Fable。Anthropic表示强烈反对，认为狭窄的漏洞不应导致已部署给数亿用户的商业模型被召回。这标志着AI监管的重大升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/" },
   { time: "07:00", tag: "tech", tagText: "科技", text: "Meta成立仅数月的AI部门被内部工程师描述为“灵魂压榨的古拉格”，一份新报告显示该部门6500名员工濒临爆发反抗。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/" },
   { time: "03:26", tag: "tech", tagText: "科技", text: "Oracle旗下PeopleSoft软件曝出0-day漏洞，影响数百个组织，可窃取数GB数据。该漏洞严重性极高，攻击者能远程访问敏感信息。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/peoplesoft-0-day-affecting-hundreds-of-organizations-steals-gigabytes-of-data/" },
   { time: "02:21", tag: "tech", tagText: "科技", text: "SpaceX总裁Gwynne Shotwell表示，人形机器人和自动驾驶汽车可为其解锁28.5万亿美元的市场机会。她认为SpaceX的技术平台将超越火箭发射，延伸至机器人及自动驾驶领域。", source: "CNBC TV18", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVS0yZUk2OTlRdDYxYnU4N3JKblVtS3VwUWttYmgtZlZnNlJRX21GRkZIZkxpYmhLeThfQU1GYUlHSHdJRDQ2UUNhU2JQVkppdWNDaVphb2hZc2NrelNCeF9GODlnbThZQjBGWGxIaVhCS3hCdDQ1V3lQQ2M0TXQ1ZjZHY01Fb2k1U21RbmJXaFdRYnJfSVFFVFhUNHQyQng3R1JWZkRkU0tNeUFPb3VOOWRTQk5PVHk2YjJ4ZFNvdE4xVG1PbkHSAcsBQVVfeXFMT295anhPN05FTUF0TWw4REhaM0ZLQy1ZMHYyU2FtZUg1UmllQXppQWtsZk9xZGZUSnRZb0pCWGxTTmpQb1BqR0RiR2dTb0lVY2laNG9PUHFCOTR4bWxsUXNhcTdIckpJeXlEQXdUVTVNZXNJQ01MRVFmdXRUMFppMEtFSFlZM2MwS0owNnJ4VHpvMTczX0dMS3haTWhKRTFHdjBhVUNRZTdKLWxEYk1GSFJmTGxqX0N4MC01czkwN1FoaVpkLWkzVGhiRGM?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:31", tag: "ai", tagText: "AI", text: "华纳音乐集团收购AI归属初创公司Sureel AI，旨在更精确追踪其艺人的作品在AI生成内容或训练数据中的使用情况，为AI时代的版权管理铺路。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/" },
   { time: "22:23", tag: "ai", tagText: "AI", text: "DoorDash推出AI聊天机器人Ask DoorDash，用户可通过自然语言提示和图片搜索并下单，无需滚动浏览餐厅列表。该功能旨在简化订餐流程，提升用户体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/" },
   { time: "22:03", tag: "ai", tagText: "AI", text: "亚马逊创始人杰夫·贝佐斯旗下的AI初创公司Prometheus宣布其目标是构建“人工通用工程师”——一种能自主解决复杂工程问题的通用型AI。该公司此前刚完成120亿美元融资，是AI领域最大规模之一，此次目标设定进一步明确了其技术路线。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/949005/jeff-bezos-prometheus-artificial-general-engineer" },
-  { time: "21:34", tag: "tech", tagText: "科技", text: "美国国际贸易委员会（ITC）正式受理Xockets公司针对英伟达、微软和亚马逊的专利投诉，指控其AI芯片基础设施侵犯相关专利。该案涉及数据中心和AI加速器核心架构，若认定侵权可能导致进口禁令，对AI芯片供应链产生重大影响。", source: "IAM Patent", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOHZ6V1F4YVBQck95Tm4xdGtTckVkUm56Um84TGVPb3hjZDg4cm1CSGZoLWVEQzRjb0RacnVNdmJMTjZYWENqTS1SQ0ZlV3IxZWRPR2NXTWtXdTkxTEV1dWtjcnNaRV91T09FMUFzSHVQX2tlMEZNWkhfYUduZDM1SlJVcGRCN0tteGlUd3ZBTURSWkNrZThlTzJSamJLcTB3WUMybElzdlllMzlXWWljeUE4V2VoY2NLckJGNVRhc3g4UzBTWEQxUU5sOXNUUQ?oc=5" },
 ];
-const aiBreakingDate = "2026年6月13日 07:40 CST";
+const aiBreakingDate = "2026年6月13日 12:44 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
