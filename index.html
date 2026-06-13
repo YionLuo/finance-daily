@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月13日 19:23 CST"
+  date: "2026年6月13日 22:21 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:30", tag: "macro", tagText: "宏观", text: "富人持续大手笔消费“毫无歉意的奢侈品”，推高日用商品价格，令通胀难以降温。市场分析认为，这可能会使美联储对抗通胀的任务更加复杂化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-rich-keep-spending-money-on-unapologetic-luxury-and-its-raising-prices-on-everyday-goods-for-everyone-cdc4546b?mod=mw_rss_topstories" },
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "Pimco警告债务市场违约潮再度来袭，建议投资者增持固定收益资产，因股票估值已偏高。该债券巨头指出，企业违约率正在回升，市场应转向防御性策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/defaults-in-debt-markets-are-starting-again-warns-pimco-heres-the-bond-giants-game-plan-16559c6d?mod=mw_rss_topstories" },
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "制药商竞相布局下一代减肥药，试图打破诺和诺德与礼来的市场垄断。多个药企正在推进新一代GLP-1及组合疗法，预计将引发新一轮激烈竞争。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/glp-1s-lilly-novo-pfizer-look-to-new-weight-loss-drugs.html" },
+  { time: "19:30", tag: "crypto", tagText: "加密", text: "加密货币市场正静待贝莱德（BlackRock）可能带来的比特币价格“游戏改变者”。传闻称贝莱德或有重大动作，市场预期此举可能彻底改变比特币的走势格局。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPMDlqVGRWNUI1TGM3OEkzNGdpbEJxS3FuUy1SRFg1YnpVT2ZuX0ZudDNVRDhQQ01QMWJhRG1DWkdTQzM3TkR5VGZuY1FQdnZheWVZQXU5YWgtRk44WmVoclZueFBuYW8xUnpZakZHTmJ5RFd2STR6dlV6cmJYN1BqaS00MFQ5b3NNVVBQNHN6U0ZTblo4ZXJZWGFUd1U4dnVIQk85TVNrWVUtNGQxX0hpYkNmTk9iMGVTRlpOdkNQcWoxWTRHQ3ZDVjlfM0QxVFp1YmVV?oc=5" },
   { time: "18:00", tag: "geo", tagText: "地缘", text: "多家投资公司加入特朗普政府推动的1000亿美元委内瑞拉石油资产争夺战。Lionheart Capital与Keo Energy共同成立纳斯达克上市公司，旨在获取该国油气资源。此举标志着美国资本在政治支持下大规模重返委内瑞拉能源领域。", source: "Financial Times", url: "https://www.ft.com/content/6982febe-5d1b-4e16-9505-fbee84ca60ab" },
   { time: "17:30", tag: "geo", tagText: "地缘", text: "阿联酋官方否认有关向伊朗转移数十亿美元冻结资金的报道，称相关消息为“虚假”报道。此前路透社报道称阿联酋同意解冻伊朗资金用于人道主义目的，此举可能影响中东局势及原油市场走向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/uae-denies-false-reports-of-fund-transfer-to-iran.html" },
   { time: "16:19", tag: "tech", tagText: "科技", text: "英伟达股价连续第四周下跌，据报公司已开始向中国客户推销其最新Vera芯片。此举显示英伟达在出口管制背景下仍努力开拓中国市场，但市场对其前景持谨慎态度。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxPdWhFNjREUDY1alF2b21PRTdhODl2cHBUeDNuM1A0QTJCZnAwOGJNUWhDa2RNeVhDMkJjRDhyTFVtaS1RZktwT194d3d6blp4UlJTQVgwOXdvekpteTFmaW5scnAySXA5NWk0UFVkQTctbUpVR1FNY29xV0l0QjVzd2J6aGJhUko2Rlhqb3I4Q3hnUDFrYVlwSGdGTDJ4RU5oUjl6MWlnUVNEMF8xRTJRN2xlYTBfZ1JjMDJzSi05bHkySWI5MDYtNHQ2ZHNjb3JuOUdPV0x6ODBFS19aNjF6OU96QUlFWE1TTm4zbzlDZnRzc2RkTjZlX3prbTAtejU0?oc=5" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "05:51", tag: "macro", tagText: "宏观", text: "派拉蒙与华纳兄弟探索公司（WBD）价值约1100亿美元的合并案获得美国司法部批准，这是传媒行业近年来最大交易的重要里程碑。不过，该交易仍可能面临各州总检察长的法律挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/paramount-wbd-merger-approval-doj.html" },
   { time: "05:15", tag: "geo", tagText: "地缘", text: "众议院共和党高层莉萨·麦克莱恩的丈夫在SpaceX IPO前购入至多25万美元的xAI股份（后被并入SpaceX），其家族投资将因IPO大涨而获利，引发道德争议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/lisa-mcclain-spacex-ipo-xai-investment-congress.html" },
   { time: "05:14", tag: "宏观", tagText: "宏观", text: "美国参议员伊丽莎白·沃伦致信交易所，质疑SpaceX IPO的监管流程，特别是关于指数基金等待期变更及散户投资者保护措施。沃伦要求交易所回应是否存在对散户不利的规则调整。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/warren-spacex-ipo-exchanges.html" },
-  { time: "04:41", tag: "tech", tagText: "科技", text: "马斯克旗下SpaceX完成史上最大规模IPO，以每股135美元定价筹集750亿美元，估值约1.8万亿美元，投资者需求火爆。该交易为全球最大IPO，凸显市场对太空及AI领域的高度热情。", source: "Financial Times", url: "https://www.ft.com/content/1890e552-aa7e-4d7f-98f1-db4f165e8827" },
-  { time: "04:32", tag: "AI", tagText: "AI", text: "甲骨文股价遭遇25年来最差单日表现，因市场对其950亿美元AI支出计划及数据中心交付瓶颈产生疑虑。尽管云基础设施业务快速增长，但巨额资本开支和物理瓶颈令投资者担忧回报前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oracles-stock-is-seeing-its-worst-run-in-a-quarter-century-as-this-key-ai-debate-rages-on-49b3e9ed" },
-  { time: "04:14", tag: "加密", tagText: "加密", text: "比特币价格跌向6万美元关口，此前两大主要买家（疑似机构或国家层面）撤出购买。市场情绪转向谨慎，分析人士关注6万美元支撑位是否有效。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMiogJBVV95cUxPejVISkJWeUsxcDNYU2VnOTNkYVhwY01zb3hIMFBNRUdzVGV1NEcyeFVqekJVR2s0NG95Q2xJNFY2WmlmY1hGN25hdDJvSEozZ25ONW5OdEFER29sUVBVSGRqTUxyRU8xMGFKc2RoNGRmMEgzay1USm4tTkNaZmZxOWxRSldfWEdKblhJRWlfWTNhOXl5WFJLLVpRd3NyeG9sQ3F1dlJBZi1RR0w0YTFDMXRlNkM4VWhNYnl6OWpVTU9vaXhBYklMSjg3bFlNVWFQd1MxVzFybEZCNDVRcXJFQTNxd013M3h1UXB2bVh5X2lvQkkxYjZtMGozenJDSEpNWFdybGNCZ05Xcjg3VE1hdWVQbWRsZ1NNMHZOVWRfQVh0d9IBpwJBVV95cUxPTGs0SUxMaE03YjRjbUVxS3J2TnZ5NnE0VG5aRGt3LW1HZVlSZ21JeWFCeE5ieldXWkxMSzNYQUlXbzl5M1FrWHhQVGdhbVNiYXVwZG1QMlVxNWI3NzRpS2I2Rm1MdW9nNTBVVEFJQV93bzY0LWpmaXpGMUVVQk93QTE4RTF5QkEwWkVFaU90VE91ektkeWV2SXVPNU5WVEMyXzhTLWZpdUpBdlNaMW5UQW5ZaE53Z2plc25KSC1oQ1FKcHRfdHF5cEhwaGd4Qnl2QmFVNGVZSmhrMWN5aTVPOTMzS0xPOGRwN0lWMGk2NnBqaFFzQzhqSGNlMWJPZkQ5ZnFjT2VTcVM2R3k1YVV1LThUbGFGd3huWHVqZnZ3NXI0MDJwZ1J3?oc=5" },
-  { time: "02:23", tag: "geo", tagText: "地缘", text: "特朗普提名前SEC主席杰伊·克莱顿（Jay Clayton）担任国家情报总监。克莱顿在证券监管领域经验丰富，其任命或影响美国情报界对金融和科技领域的监管态度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/11/trump-jay-clayton-national-intelligence-pulte.html" },
 ];
-const breakingDate = "2026年6月13日 19:23 CST";
+const breakingDate = "2026年6月13日 22:21 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:55", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，下令Anthropic封锁其旗舰模型Fable 5和Mythos 5对所有外国用户的访问，包括美国境外及境内非美国公民。此举标志着AI出口管制进一步升级，引发业界对全球AI技术分裂的担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/949553/anthropic-fable-5-mythos-5-government-national-security" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "苹果在iOS 27中首次推出AI照片编辑工具，包括智能重构图、内容扩展、消除等实用功能。评测认为这些工具大多能正常工作，但效果参差不齐，既有惊喜也有明显失误，标志着全球最大相机平台正式进入AI编辑时代。", source: "The Verge", url: "https://www.theverge.com/tech/949360/apple-ai-photo-edit-reframe-extend-clean-up-hands-on" },
   { time: "12:14", tag: "macro", tagText: "宏观", text: "安德鲁·杨（Andrew Yang）认为下一个重大创业机会是降低生活成本。他列出了一系列美国人超支的领域——住房、食品、无线通讯等，并指出下一波创业金矿在于将这些多付的钱返还给消费者。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/" },
   { time: "10:26", tag: "ai", tagText: "AI", text: "Anthropic的安全警告适得其反：美国政府以存在潜在越狱漏洞为由，要求召回其最强大的AI模型Claude Fable。Anthropic表示强烈反对，认为狭窄的漏洞不应导致已部署给数亿用户的商业模型被召回。这标志着AI监管的重大升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/" },
   { time: "07:00", tag: "tech", tagText: "科技", text: "Meta成立仅数月的AI部门被内部工程师描述为“灵魂压榨的古拉格”，一份新报告显示该部门6500名员工濒临爆发反抗。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "00:03", tag: "macro", tagText: "宏观", text: "2026年第一季度初创企业融资报告显示，AI公司吸收了全部风险资本的57%，占比创历史新高。资金持续涌向生成式AI、基础设施和垂直应用领域，进一步巩固AI作为当前科技投资核心赛道的地位。", source: "USA Today", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb21FQW5zcUJjMWwyaHF1Rk56ZzVvSElCOFhRaUFwZzlJYzdXdVZhRFhmeFJfSXJycU50UV9sUlZ3N08xb1p2cU41bFdQMjBZOEZsR1dxRllWcUZkRWtZd2VEYnJzdlc3UXR6MXFCY2hZcFd4dkItMnBQNmxrMGVvTWFfWXRYQ0RfQnNuMWxucF80c1MtQ1A0aDVQVy1vQ3d2dXRiQm5OMTVfdWU5bmc?oc=5" },
   { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX IPO背后的三大硬科技登月计划曝光：太空数据中心、星舰规模化制造及轨道燃料加注站。分析称大部分估值来自这些未来太空基础设施的看涨期权。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/the-three-hard-tech-moonshots-fueling-spacexs-unbelievable-ipo/" },
   { time: "22:41", tag: "ai", tagText: "AI", text: "美银报告称代理型AI（Agentic AI）将创造1700亿美元市场机会，受此消息推动，英伟达、AMD、Arm等芯片股集体上涨。投资者预期AI正从聊天机器人向能自主执行任务的智能体进化，为芯片需求带来新一轮增长。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRXY2TGRYYm1RMHYtbG16OUVYdTE2eFBzdlR1ZFMybzkzX25EcjJLVHlySVhkTmxkb2hZVl83NGdKSUxEME1WZjFyQmd4MUpmSUQxUFRmUjJXRzJZeTRVMW9rRVBrMlBocjYtbUJ4SFdMdW51bkZnTmJUel9ndjVBOTFjMkQ2c1lWS2VTNmFEMldEcUtWU1pCV1hjbHNWTzVRbUJHcDNfek5sX0hKTjhkQ3NSeExNbmdadmhlallKTWFXX00?oc=5" },
-  { time: "22:31", tag: "ai", tagText: "AI", text: "华纳音乐集团收购AI归属初创公司Sureel AI，旨在更精确追踪其艺人的作品在AI生成内容或训练数据中的使用情况，为AI时代的版权管理铺路。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/warner-music-acquires-ai-attribution-startup-sureel-ai/" },
-  { time: "22:23", tag: "ai", tagText: "AI", text: "DoorDash推出AI聊天机器人Ask DoorDash，用户可通过自然语言提示和图片搜索并下单，无需滚动浏览餐厅列表。该功能旨在简化订餐流程，提升用户体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/" },
 ];
-const aiBreakingDate = "2026年6月13日 19:23 CST";
+const aiBreakingDate = "2026年6月13日 22:21 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
