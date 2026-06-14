@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月15日 03:51 CST"
+  date: "2026年6月15日 05:24 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:21", tag: "geo", tagText: "地缘", text: "特朗普在其80岁生日当天，于白宫草坪搭建临时竞技场举办UFC格斗赛事，以此展示政治主导力，并与美国独立宣言签署250周年庆祝活动挂钩。此举引发关于其执政优先事项与国内外重大议题并行的争议。", source: "FT / CNBC", url: "https://www.ft.com/content/11f71770-5872-4769-9ea5-a21f12151e10" },
+  { time: "05:00", tag: "macro", tagText: "宏观", text: "美国六个州相继调整燃油税政策，与此同时能源通胀加速。燃油税变动将直接影响居民出行成本和物流费用，进一步推高通胀压力，令美联储抗通胀任务更加复杂。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/fuel-tax-changes-hit-six-210000819.html" },
   { time: "03:44", tag: "geo", tagText: "地缘", text: "特朗普宣布将于周日（6月14日）签署美伊和平协议，重新开放霍尔木兹海峡。伊朗方面对具体时间仍持谨慎态度，但巴基斯坦称停火协议即将达成。此举有望缓解中东紧张局势，降低全球能源供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/trump-iran-deal-strait-of-hormuz.html" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "美国真实国家债务首次突破100万亿美元，相当于每户美国家庭负债100万美元，达GDP的400%。这一数字包括社会保障、医疗保险等未偿付的隐性债务，市场对此反应平淡但长期风险巨大。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-true-national-debt-just-hit-1-million-per-u-s-household-bd0924d1" },
   { time: "03:00", tag: "geo", tagText: "地缘", text: "美国政府宣布在空袭中击毙委内瑞拉黑帮组织“阿拉瓜火车”头目赫克托·格雷罗，行动与委内瑞拉政府协调。该组织在南美及美国境内从事犯罪活动，此次打击被视为特朗普政府强化拉美安全政策的标志性行动。", source: "Financial Times", url: "https://www.ft.com/content/298a1431-dc3e-4cbc-aa6f-769e54541b60" },
@@ -1647,13 +1649,12 @@ const breakingNews = [
   { time: "16:09", tag: "macro", tagText: "宏观", text: "以色列经济在持续战争中展现出惊人韧性。过去二十年高速增长的基础让该国能够应对冲突和能源冲击，国防与科技产业支撑经济活动，但长期财政压力仍存。", source: "Financial Times", url: "https://www.ft.com/content/3cce2be6-0fe4-47db-acce-1df6e7c83dfd" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "华尔街消化创纪录的融资规模，AI竞赛白热化。SpaceX、Anthropic和Alphabet的大规模融资显示投资者愿意吸收大量新发行股票。", source: "Financial Times", url: "https://www.ft.com/content/db05efcb-9035-4d55-aca4-7253656a1c06" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "防务科技初创公司Anduril呼吁改革美国武器出口管制。该公司CEO希望联合盟友生产低成本武器，以应对当前地缘安全挑战。", source: "Financial Times", url: "https://www.ft.com/content/74e29a55-8f76-47e2-a039-52fb10beaaec" },
-  { time: "10:24", tag: "macro", tagText: "宏观", text: "中国推出数字支付系统与美元竞争。该跨境货币平台由香港、泰国、阿联酋和沙特阿拉伯的央行支持，旨在推动人民币国际化。", source: "Financial Times", url: "https://www.ft.com/content/76de5ca6-9ae8-49ae-a0cb-64d09040f327" },
-  { time: "05:00", tag: "macro", tagText: "宏观", text: "美国六个州相继调整燃油税政策，与此同时能源通胀加速。燃油税变动将直接影响居民出行成本和物流费用，进一步推高通胀压力，令美联储抗通胀任务更加复杂。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/fuel-tax-changes-hit-six-210000819.html" },
 ];
-const breakingDate = "2026年6月15日 03:51 CST";
+const breakingDate = "2026年6月15日 05:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:42", tag: "ai", tagText: "AI", text: "毕马威（KPMG）因报告内容出现明显的AI幻觉，撤回了其关于AI使用情况的研究报告。该报告本应分析AI在各行业的应用，但被发现包含由AI生成的虚假或不准确信息，再次引发业界对AI生成内容可靠性的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/" },
   { time: "03:26", tag: "tech", tagText: "科技", text: "Oracle旗下PeopleSoft软件曝出0-day漏洞，影响数百个组织，可窃取数GB数据。该漏洞严重性极高，攻击者能远程访问敏感信息。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/peoplesoft-0-day-affecting-hundreds-of-organizations-steals-gigabytes-of-data/" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "法国AI初创公司Mistral被传正以约200亿欧元（约231.5亿美元）估值进行新一轮融资，计划筹集30亿欧元。若属实，估值较其C轮117亿欧元近乎翻倍，显示欧洲AI明星企业持续获得巨额资本追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/" },
   { time: "01:26", tag: "ai", tagText: "AI", text: "谷歌起诉涉嫌利用AI技术发送诈骗短信的中国网络犯罪组织“Outsider Enterprise”。该组织在两周内使用AI发送约250万条诈骗短信，导致数十万受害者上当。这是科技巨头首次针对AI辅助的大规模诈骗活动提起法律诉讼。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/google-sues-alleged-chinese-cybercrime-operation-that-used-ai-to-send-scam-texts/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "tech", tagText: "科技", text: "苹果在iOS 27中首次推出AI照片编辑工具，包括智能重构图、内容扩展、消除等实用功能。评测认为这些工具大多能正常工作，但效果参差不齐，既有惊喜也有明显失误，标志着全球最大相机平台正式进入AI编辑时代。", source: "The Verge", url: "https://www.theverge.com/tech/949360/apple-ai-photo-edit-reframe-extend-clean-up-hands-on" },
   { time: "12:14", tag: "macro", tagText: "宏观", text: "安德鲁·杨（Andrew Yang）认为下一个重大创业机会是降低生活成本。他列出了一系列美国人超支的领域——住房、食品、无线通讯等，并指出下一波创业金矿在于将这些多付的钱返还给消费者。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/" },
   { time: "08:03", tag: "geo", tagText: "地缘", text: "消息称Meta正着手撤销其20亿美元收购AI初创公司Manus的交易，因北京方面要求该交易逆转。此举凸显中美科技监管博弈加剧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/" },
-  { time: "04:42", tag: "ai", tagText: "AI", text: "毕马威（KPMG）因报告内容出现明显的AI幻觉，撤回了其关于AI使用情况的研究报告。该报告本应分析AI在各行业的应用，但被发现包含由AI生成的虚假或不准确信息，再次引发业界对AI生成内容可靠性的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/" },
 ];
-const aiBreakingDate = "2026年6月15日 03:51 CST";
+const aiBreakingDate = "2026年6月15日 05:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
