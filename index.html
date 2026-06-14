@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月14日 14:01 CST"
+  date: "2026年6月14日 17:52 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:32", tag: "geo", tagText: "地缘", text: "英国海军在英吉利海峡拦截并扣押一艘俄罗斯“影子舰队”油轮“SMYRTOS”号，该船被指违反制裁运输俄油。英方将其扣押在英格兰南海岸进行调查，此举进一步升级西方对俄能源出口的限制。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/uk-forces-board-sanctioned-russian-shadow-fleet-oil-tanker.html" },
+  { time: "17:05", tag: "crypto", tagText: "加密", text: "比特币突破6.4万美元，创近10日新高。推动因素包括比特币ETF资金流入回暖，以及SpaceX相关利好提振加密货币市场情绪。分析认为机构资金重返有望支撑短期涨势。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxNMk43WjZMSVZwRkgzZmlocXFHdjg4MDREWVlia0V3VmFhUHJkcjVpcTZ1UmxCLWtpVFNJbjA2VlBmSEpMTmhIZmdjVnJudDV2eUppYmFiTkJjRFk2R0M2cUpNRFVnREZtaHR6Y2xMeGZpS0VKZXliWGdXRVcxdHZsWFVEX2R1aWZoNmRPSWE4WkY3T3JEZjdDQ2hxTXQzSGlPbGVTbHQwMmEwVDNvWll1RzdGUlUtb01JMXh5dERCVVNPUFN3ellZ?oc=5" },
+  { time: "16:09", tag: "macro", tagText: "宏观", text: "以色列经济在持续战争中展现出惊人韧性。过去二十年高速增长的基础让该国能够应对冲突和能源冲击，国防与科技产业支撑经济活动，但长期财政压力仍存。", source: "Financial Times", url: "https://www.ft.com/content/3cce2be6-0fe4-47db-acce-1df6e7c83dfd" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "华尔街消化创纪录的融资规模，AI竞赛白热化。SpaceX、Anthropic和Alphabet的大规模融资显示投资者愿意吸收大量新发行股票。", source: "Financial Times", url: "https://www.ft.com/content/db05efcb-9035-4d55-aca4-7253656a1c06" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "防务科技初创公司Anduril呼吁改革美国武器出口管制。该公司CEO希望联合盟友生产低成本武器，以应对当前地缘安全挑战。", source: "Financial Times", url: "https://www.ft.com/content/74e29a55-8f76-47e2-a039-52fb10beaaec" },
   { time: "10:24", tag: "macro", tagText: "宏观", text: "中国推出数字支付系统与美元竞争。该跨境货币平台由香港、泰国、阿联酋和沙特阿拉伯的央行支持，旨在推动人民币国际化。", source: "Financial Times", url: "https://www.ft.com/content/76de5ca6-9ae8-49ae-a0cb-64d09040f327" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "00:28", tag: "geo", tagText: "地缘", text: "美国总统特朗普计划下周一前往法国埃维昂参加G7峰会，期间将分别与中东领导人及乌克兰方面会晤。此前他宣布将于周日签署美伊和平协议，与会晤安排紧密衔接。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/trump-to-meet-with-mideast-and-ukraine-leaders-at-g7-officials-say.html" },
   { time: "20:30", tag: "macro", tagText: "宏观", text: "富人持续大手笔消费“毫无歉意的奢侈品”，推高日用商品价格，令通胀难以降温。市场分析认为，这可能会使美联储对抗通胀的任务更加复杂化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-rich-keep-spending-money-on-unapologetic-luxury-and-its-raising-prices-on-everyday-goods-for-everyone-cdc4546b?mod=mw_rss_topstories" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "Pimco警告债务市场违约潮再度来袭，建议投资者增持固定收益资产，因股票估值已偏高。该债券巨头指出，企业违约率正在回升，市场应转向防御性策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/defaults-in-debt-markets-are-starting-again-warns-pimco-heres-the-bond-giants-game-plan-16559c6d?mod=mw_rss_topstories" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "制药商竞相布局下一代减肥药，试图打破诺和诺德与礼来的市场垄断。多个药企正在推进新一代GLP-1及组合疗法，预计将引发新一轮激烈竞争。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/glp-1s-lilly-novo-pfizer-look-to-new-weight-loss-drugs.html" },
-  { time: "19:30", tag: "crypto", tagText: "加密", text: "加密货币市场正静待贝莱德（BlackRock）可能带来的比特币价格“游戏改变者”。传闻称贝莱德或有重大动作，市场预期此举可能彻底改变比特币的走势格局。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPMDlqVGRWNUI1TGM3OEkzNGdpbEJxS3FuUy1SRFg1YnpVT2ZuX0ZudDNVRDhQQ01QMWJhRG1DWkdTQzM3TkR5VGZuY1FQdnZheWVZQXU5YWgtRk44WmVoclZueFBuYW8xUnpZakZHTmJ5RFd2STR6dlV6cmJYN1BqaS00MFQ5b3NNVVBQNHN6U0ZTblo4ZXJZWGFUd1U4dnVIQk85TVNrWVUtNGQxX0hpYkNmTk9iMGVTRlpOdkNQcWoxWTRHQ3ZDVjlfM0QxVFp1YmVV?oc=5" },
-  { time: "18:00", tag: "geo", tagText: "地缘", text: "多家投资公司加入特朗普政府推动的1000亿美元委内瑞拉石油资产争夺战。Lionheart Capital与Keo Energy共同成立纳斯达克上市公司，旨在获取该国油气资源。此举标志着美国资本在政治支持下大规模重返委内瑞拉能源领域。", source: "Financial Times", url: "https://www.ft.com/content/6982febe-5d1b-4e16-9505-fbee84ca60ab" },
 ];
-const breakingDate = "2026年6月14日 14:01 CST";
+const breakingDate = "2026年6月14日 17:52 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "20:55", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，下令Anthropic封锁其旗舰模型Fable 5和Mythos 5对所有外国用户的访问，包括美国境外及境内非美国公民。此举标志着AI出口管制进一步升级，引发业界对全球AI技术分裂的担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/949553/anthropic-fable-5-mythos-5-government-national-security" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "苹果在iOS 27中首次推出AI照片编辑工具，包括智能重构图、内容扩展、消除等实用功能。评测认为这些工具大多能正常工作，但效果参差不齐，既有惊喜也有明显失误，标志着全球最大相机平台正式进入AI编辑时代。", source: "The Verge", url: "https://www.theverge.com/tech/949360/apple-ai-photo-edit-reframe-extend-clean-up-hands-on" },
 ];
-const aiBreakingDate = "2026年6月14日 14:01 CST";
+const aiBreakingDate = "2026年6月14日 17:52 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
