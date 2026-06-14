@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月14日 20:08 CST"
+  date: "2026年6月14日 23:13 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:05", tag: "geo", tagText: "地缘", text: "以色列空袭黎巴嫩贝鲁特南郊真主党目标，原定于本周签署的美伊和平协议及霍尔木兹海峡重开计划面临变数。特朗普警告各方‘别搞砸’，并已启程前往法国参加G7峰会，峰会还将讨论俄乌战争。中东局势再度紧张，油价或受冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/iran-deal-teeters-israel-strikes-lebanon.html" },
+  { time: "22:25", tag: "macro", tagText: "宏观", text: "SpaceX创纪录IPO后市场情绪高涨，但本周美联储将召开会议（Kevin Warsh首次主持），利率决策将考验AI驱动的牛市逻辑。更高的利率可能使AI增长故事更难自圆其说，市场正密切关注美联储是否维持鹰派立场。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/article/spacex-ipo-afterglow-kevin-warshs-first-fed-meeting-and-a-potential-us-iran-deal-what-to-watch-this-week-142500418.html" },
+  { time: "22:24", tag: "crypto", tagText: "加密", text: "比特币价格持续回落，但链上数据显示约2730亿美元的稳定币并未撤离市场。分析师认为这表明投资者仍在观望，而非恐慌出逃，市场可能正在积蓄下一轮动能。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMiakFVX3lxTE5QRHpKTXBCS2x3ZXRmQ3FIRUFYVW1yU3g4MEFNdmRCTmdzTkNIVVhkd2pPclRxc2lpaWN4LXhEOWkwQ1hOWjhMS3V5TXdGX0FOQzBMNWxhaTBBQnAzamNDbG9jRGF1QXZ3N2c?oc=5" },
+  { time: "20:45", tag: "macro", tagText: "宏观", text: "2026年世界杯预计将为美国经济带来170亿美元增量，主要来自数字广告、旅游和消费支出。华尔街分析师点名多支受益股票，包括酒店、航空和媒体公司，投资者可提前布局。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/2026-world-cup-these-stocks-could-benefit.html" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "一年前Meta重金挖来AI明星Alexandr Wang主导新模型开发，但成果未达预期。如今CEO扎克伯格不得不亲自下场向客户推销该模型，暴露了Meta在AI商业化上的困境。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/meta-hired-alexandr-wang-to-build-ai-its-zuckerbergs-job-to-sell-it.html" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "Pimco警告债务市场违约潮再度来袭，建议投资者增持固定收益资产，因股票估值已偏高。该债券巨头指出，企业违约率正在回升，市场应转向防御性策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/defaults-in-debt-markets-are-starting-again-warns-pimco-heres-the-bond-giants-game-plan-16559c6d?mod=mw_rss_topstories" },
   { time: "19:35", tag: "geo", tagText: "地缘", text: "瑞士选民在公投中否决了限制人口增长的提案，该提案曾引发商界对终止瑞士与欧盟之间劳动力自由流动的担忧。否决结果避免了瑞士与欧盟的直接冲突，维护了当前的双边关系框架。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/swiss-voters-set-to-reject-population-cap-in-referendum.html" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "03:00", tag: "geo", tagText: "地缘", text: "美国政府宣布在空袭中击毙委内瑞拉黑帮组织“阿拉瓜火车”头目赫克托·格雷罗，行动与委内瑞拉政府协调。该组织在南美及美国境内从事犯罪活动，此次打击被视为特朗普政府强化拉美安全政策的标志性行动。", source: "Financial Times", url: "https://www.ft.com/content/298a1431-dc3e-4cbc-aa6f-769e54541b60" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "最新社保信托报告显示，美国社会保障基金预计于2032年面临22%的自动削减。当前通胀高企使2027年生活成本调整（COLA）或达4.7%，但长期偿付能力危机加剧。专家建议投资者提前建立不受政府影响的退休收入来源。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-security-could-face-an-automatic-22-cut-in-2032-these-4-moves-will-protect-your-retirement-a00f9463" },
   { time: "02:00", tag: "crypto", tagText: "加密", text: "Visa宣布拓展AI商务布局，推出稳定币及代币化能力，旨在推动数字支付创新。新功能允许用户通过区块链进行快速跨境结算，并支持智能合约自动执行。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/technology/articles/visa-v-expands-ai-commerce-175956351.html" },
-  { time: "02:00", tag: "crypto", tagText: "加密", text: "Mastercard推出AI代理支付网络，获超过30家行业合作伙伴支持。该网络允许人工智能代理自主进行支付交易，标志着支付行业向AI代理经济迈出关键一步。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/mastercard-ma-unveils-ai-agent-175945694.html" },
-  { time: "01:59", tag: "tech", tagText: "科技", text: "Alphabet向英特尔下达超过300万片TPU芯片订单，计划2028年交付。这笔巨额订单标志着谷歌在自研AI芯片上的持续扩张，同时为英特尔代工业务注入强心剂。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/alphabet-googl-places-order-intel-175947094.html" },
-  { time: "01:59", tag: "ai", tagText: "AI", text: "英伟达与韩国LG集团达成合作，共同开发人形机器人和数据中心解决方案。此次合作将结合英伟达的AI计算平台与LG的硬件制造能力，加速机器人技术商业化。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/nvidia-corporation-nvda-partners-south-175948056.html" },
-  { time: "01:59", tag: "tech", tagText: "科技", text: "台积电公布5月强劲营收数据，UBS随后将其列为“代理AI”主题的首选股，认为其将在AI芯片制造中占据核心地位。市场需求持续旺盛，台积电产能利用率维持高位。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-tsm-posts-strong-175952688.html" },
 ];
-const breakingDate = "2026年6月14日 20:08 CST";
+const breakingDate = "2026年6月14日 23:13 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX IPO背后的三大硬科技登月计划曝光：太空数据中心、星舰规模化制造及轨道燃料加注站。分析称大部分估值来自这些未来太空基础设施的看涨期权。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/the-three-hard-tech-moonshots-fueling-spacexs-unbelievable-ipo/" },
+  { time: "22:41", tag: "ai", tagText: "AI", text: "美银报告称代理型AI（Agentic AI）将创造1700亿美元市场机会，受此消息推动，英伟达、AMD、Arm等芯片股集体上涨。投资者预期AI正从聊天机器人向能自主执行任务的智能体进化，为芯片需求带来新一轮增长。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRXY2TGRYYm1RMHYtbG16OUVYdTE2eFBzdlR1ZFMybzkzX25EcjJLVHlySVhkTmxkb2hZVl83NGdKSUxEME1WZjFyQmd4MUpmSUQxUFRmUjJXRzJZeTRVMW9rRVBrMlBocjYtbUJ4SFdMdW51bkZnTmJUel9ndjVBOTFjMkQ2c1lWS2VTNmFEMldEcUtWU1pCV1hjbHNWTzVRbUJHcDNfek5sX0hKTjhkQ3NSeExNbmdadmhlallKTWFXX00?oc=5" },
+  { time: "20:55", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，下令Anthropic封锁其旗舰模型Fable 5和Mythos 5对所有外国用户的访问，包括美国境外及境内非美国公民。此举标志着AI出口管制进一步升级，引发业界对全球AI技术分裂的担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/949553/anthropic-fable-5-mythos-5-government-national-security" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "苹果在iOS 27中首次推出AI照片编辑工具，包括智能重构图、内容扩展、消除等实用功能。评测认为这些工具大多能正常工作，但效果参差不齐，既有惊喜也有明显失误，标志着全球最大相机平台正式进入AI编辑时代。", source: "The Verge", url: "https://www.theverge.com/tech/949360/apple-ai-photo-edit-reframe-extend-clean-up-hands-on" },
   { time: "12:14", tag: "macro", tagText: "宏观", text: "安德鲁·杨（Andrew Yang）认为下一个重大创业机会是降低生活成本。他列出了一系列美国人超支的领域——住房、食品、无线通讯等，并指出下一波创业金矿在于将这些多付的钱返还给消费者。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/" },
   { time: "08:03", tag: "geo", tagText: "地缘", text: "消息称Meta正着手撤销其20亿美元收购AI初创公司Manus的交易，因北京方面要求该交易逆转。此举凸显中美科技监管博弈加剧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "00:18", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，将保存用户使用Lens拍摄的照片、Search Live录音及翻译音频等交互数据，用于AI模型训练。此举引发对数据隐私和AI训练伦理的新一轮讨论。", source: "The Verge", url: "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio" },
   { time: "00:09", tag: "ai", tagText: "AI", text: "科技行业迎来新缩写MANGOS：SpaceX、Anthropic、OpenAI等公司正筹备大规模公开上市，可能取代FAANG成为新一代科技巨头。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" },
   { time: "00:03", tag: "macro", tagText: "宏观", text: "2026年第一季度初创企业融资报告显示，AI公司吸收了全部风险资本的57%，占比创历史新高。资金持续涌向生成式AI、基础设施和垂直应用领域，进一步巩固AI作为当前科技投资核心赛道的地位。", source: "USA Today", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb21FQW5zcUJjMWwyaHF1Rk56ZzVvSElCOFhRaUFwZzlJYzdXdVZhRFhmeFJfSXJycU50UV9sUlZ3N08xb1p2cU41bFdQMjBZOEZsR1dxRllWcUZkRWtZd2VEYnJzdlc3UXR6MXFCY2hZcFd4dkItMnBQNmxrMGVvTWFfWXRYQ0RfQnNuMWxucF80c1MtQ1A0aDVQVy1vQ3d2dXRiQm5OMTVfdWU5bmc?oc=5" },
-  { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX IPO背后的三大硬科技登月计划曝光：太空数据中心、星舰规模化制造及轨道燃料加注站。分析称大部分估值来自这些未来太空基础设施的看涨期权。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/the-three-hard-tech-moonshots-fueling-spacexs-unbelievable-ipo/" },
-  { time: "22:41", tag: "ai", tagText: "AI", text: "美银报告称代理型AI（Agentic AI）将创造1700亿美元市场机会，受此消息推动，英伟达、AMD、Arm等芯片股集体上涨。投资者预期AI正从聊天机器人向能自主执行任务的智能体进化，为芯片需求带来新一轮增长。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRXY2TGRYYm1RMHYtbG16OUVYdTE2eFBzdlR1ZFMybzkzX25EcjJLVHlySVhkTmxkb2hZVl83NGdKSUxEME1WZjFyQmd4MUpmSUQxUFRmUjJXRzJZeTRVMW9rRVBrMlBocjYtbUJ4SFdMdW51bkZnTmJUel9ndjVBOTFjMkQ2c1lWS2VTNmFEMldEcUtWU1pCV1hjbHNWTzVRbUJHcDNfek5sX0hKTjhkQ3NSeExNbmdadmhlallKTWFXX00?oc=5" },
-  { time: "20:55", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，下令Anthropic封锁其旗舰模型Fable 5和Mythos 5对所有外国用户的访问，包括美国境外及境内非美国公民。此举标志着AI出口管制进一步升级，引发业界对全球AI技术分裂的担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/949553/anthropic-fable-5-mythos-5-government-national-security" },
 ];
-const aiBreakingDate = "2026年6月14日 20:08 CST";
+const aiBreakingDate = "2026年6月14日 23:13 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
