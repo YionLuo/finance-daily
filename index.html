@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 41.83,
   previous1Month: 65.11,
   previous1Year: 64.6,
-  date: "2026年6月14日 08:18 CST"
+  date: "2026年6月14日 14:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "ai", tagText: "AI", text: "华尔街消化创纪录的融资规模，AI竞赛白热化。SpaceX、Anthropic和Alphabet的大规模融资显示投资者愿意吸收大量新发行股票。", source: "Financial Times", url: "https://www.ft.com/content/db05efcb-9035-4d55-aca4-7253656a1c06" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "防务科技初创公司Anduril呼吁改革美国武器出口管制。该公司CEO希望联合盟友生产低成本武器，以应对当前地缘安全挑战。", source: "Financial Times", url: "https://www.ft.com/content/74e29a55-8f76-47e2-a039-52fb10beaaec" },
+  { time: "10:24", tag: "macro", tagText: "宏观", text: "中国推出数字支付系统与美元竞争。该跨境货币平台由香港、泰国、阿联酋和沙特阿拉伯的央行支持，旨在推动人民币国际化。", source: "Financial Times", url: "https://www.ft.com/content/76de5ca6-9ae8-49ae-a0cb-64d09040f327" },
   { time: "05:00", tag: "macro", tagText: "宏观", text: "美国六个州相继调整燃油税政策，与此同时能源通胀加速。燃油税变动将直接影响居民出行成本和物流费用，进一步推高通胀压力，令美联储抗通胀任务更加复杂。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/fuel-tax-changes-hit-six-210000819.html" },
   { time: "03:44", tag: "geo", tagText: "地缘", text: "特朗普宣布将于周日（6月14日）签署美伊和平协议，重新开放霍尔木兹海峡。伊朗方面对具体时间仍持谨慎态度，但巴基斯坦称停火协议即将达成。此举有望缓解中东紧张局势，降低全球能源供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/trump-iran-deal-strait-of-hormuz.html" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "美国真实国家债务首次突破100万亿美元，相当于每户美国家庭负债100万美元，达GDP的400%。这一数字包括社会保障、医疗保险等未偿付的隐性债务，市场对此反应平淡但长期风险巨大。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-true-national-debt-just-hit-1-million-per-u-s-household-bd0924d1" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "20:00", tag: "macro", tagText: "宏观", text: "制药商竞相布局下一代减肥药，试图打破诺和诺德与礼来的市场垄断。多个药企正在推进新一代GLP-1及组合疗法，预计将引发新一轮激烈竞争。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/glp-1s-lilly-novo-pfizer-look-to-new-weight-loss-drugs.html" },
   { time: "19:30", tag: "crypto", tagText: "加密", text: "加密货币市场正静待贝莱德（BlackRock）可能带来的比特币价格“游戏改变者”。传闻称贝莱德或有重大动作，市场预期此举可能彻底改变比特币的走势格局。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPMDlqVGRWNUI1TGM3OEkzNGdpbEJxS3FuUy1SRFg1YnpVT2ZuX0ZudDNVRDhQQ01QMWJhRG1DWkdTQzM3TkR5VGZuY1FQdnZheWVZQXU5YWgtRk44WmVoclZueFBuYW8xUnpZakZHTmJ5RFd2STR6dlV6cmJYN1BqaS00MFQ5b3NNVVBQNHN6U0ZTblo4ZXJZWGFUd1U4dnVIQk85TVNrWVUtNGQxX0hpYkNmTk9iMGVTRlpOdkNQcWoxWTRHQ3ZDVjlfM0QxVFp1YmVV?oc=5" },
   { time: "18:00", tag: "geo", tagText: "地缘", text: "多家投资公司加入特朗普政府推动的1000亿美元委内瑞拉石油资产争夺战。Lionheart Capital与Keo Energy共同成立纳斯达克上市公司，旨在获取该国油气资源。此举标志着美国资本在政治支持下大规模重返委内瑞拉能源领域。", source: "Financial Times", url: "https://www.ft.com/content/6982febe-5d1b-4e16-9505-fbee84ca60ab" },
-  { time: "17:30", tag: "geo", tagText: "地缘", text: "阿联酋官方否认有关向伊朗转移数十亿美元冻结资金的报道，称相关消息为“虚假”报道。此前路透社报道称阿联酋同意解冻伊朗资金用于人道主义目的，此举可能影响中东局势及原油市场走向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/uae-denies-false-reports-of-fund-transfer-to-iran.html" },
-  { time: "16:19", tag: "tech", tagText: "科技", text: "英伟达股价连续第四周下跌，据报公司已开始向中国客户推销其最新Vera芯片。此举显示英伟达在出口管制背景下仍努力开拓中国市场，但市场对其前景持谨慎态度。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxPdWhFNjREUDY1alF2b21PRTdhODl2cHBUeDNuM1A0QTJCZnAwOGJNUWhDa2RNeVhDMkJjRDhyTFVtaS1RZktwT194d3d6blp4UlJTQVgwOXdvekpteTFmaW5scnAySXA5NWk0UFVkQTctbUpVR1FNY29xV0l0QjVzd2J6aGJhUko2Rlhqb3I4Q3hnUDFrYVlwSGdGTDJ4RU5oUjl6MWlnUVNEMF8xRTJRN2xlYTBfZ1JjMDJzSi05bHkySWI5MDYtNHQ2ZHNjb3JuOUdPV0x6ODBFS19aNjF6OU96QUlFWE1TTm4zbzlDZnRzc2RkTjZlX3prbTAtejU0?oc=5" },
-  { time: "15:22", tag: "tech", tagText: "科技", text: "前特斯拉董事会成员Steve Westly表示，SpaceX若要维持其约1.8万亿美元的IPO估值，必须实现其三大“登月计划”中的至少两个，包括星链、星舰或火星任务。尽管SpaceX创下史上最大IPO记录，但市场对其长期盈利前景仍存质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/12/spacex-moonshots-valuation-westly-tesla.html" },
 ];
-const breakingDate = "2026年6月14日 08:18 CST";
+const breakingDate = "2026年6月14日 14:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:14", tag: "macro", tagText: "宏观", text: "安德鲁·杨（Andrew Yang）认为下一个重大创业机会是降低生活成本。他列出了一系列美国人超支的领域——住房、食品、无线通讯等，并指出下一波创业金矿在于将这些多付的钱返还给消费者。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/" },
   { time: "08:03", tag: "geo", tagText: "地缘", text: "消息称Meta正着手撤销其20亿美元收购AI初创公司Manus的交易，因北京方面要求该交易逆转。此举凸显中美科技监管博弈加剧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/" },
   { time: "04:42", tag: "ai", tagText: "AI", text: "毕马威（KPMG）因报告内容出现明显的AI幻觉，撤回了其关于AI使用情况的研究报告。该报告本应分析AI在各行业的应用，但被发现包含由AI生成的虚假或不准确信息，再次引发业界对AI生成内容可靠性的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/" },
   { time: "03:26", tag: "tech", tagText: "科技", text: "Oracle旗下PeopleSoft软件曝出0-day漏洞，影响数百个组织，可窃取数GB数据。该漏洞严重性极高，攻击者能远程访问敏感信息。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/peoplesoft-0-day-affecting-hundreds-of-organizations-steals-gigabytes-of-data/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:41", tag: "ai", tagText: "AI", text: "美银报告称代理型AI（Agentic AI）将创造1700亿美元市场机会，受此消息推动，英伟达、AMD、Arm等芯片股集体上涨。投资者预期AI正从聊天机器人向能自主执行任务的智能体进化，为芯片需求带来新一轮增长。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRXY2TGRYYm1RMHYtbG16OUVYdTE2eFBzdlR1ZFMybzkzX25EcjJLVHlySVhkTmxkb2hZVl83NGdKSUxEME1WZjFyQmd4MUpmSUQxUFRmUjJXRzJZeTRVMW9rRVBrMlBocjYtbUJ4SFdMdW51bkZnTmJUel9ndjVBOTFjMkQ2c1lWS2VTNmFEMldEcUtWU1pCV1hjbHNWTzVRbUJHcDNfek5sX0hKTjhkQ3NSeExNbmdadmhlallKTWFXX00?oc=5" },
   { time: "20:55", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，下令Anthropic封锁其旗舰模型Fable 5和Mythos 5对所有外国用户的访问，包括美国境外及境内非美国公民。此举标志着AI出口管制进一步升级，引发业界对全球AI技术分裂的担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/949553/anthropic-fable-5-mythos-5-government-national-security" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "苹果在iOS 27中首次推出AI照片编辑工具，包括智能重构图、内容扩展、消除等实用功能。评测认为这些工具大多能正常工作，但效果参差不齐，既有惊喜也有明显失误，标志着全球最大相机平台正式进入AI编辑时代。", source: "The Verge", url: "https://www.theverge.com/tech/949360/apple-ai-photo-edit-reframe-extend-clean-up-hands-on" },
-  { time: "12:14", tag: "macro", tagText: "宏观", text: "安德鲁·杨（Andrew Yang）认为下一个重大创业机会是降低生活成本。他列出了一系列美国人超支的领域——住房、食品、无线通讯等，并指出下一波创业金矿在于将这些多付的钱返还给消费者。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/" },
 ];
-const aiBreakingDate = "2026年6月14日 08:18 CST";
+const aiBreakingDate = "2026年6月14日 14:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
