@@ -1618,17 +1618,19 @@
 const fearGreedData = {
   score: 40.86,
   rating: "fear",
-  timestamp: "2026-06-15T20:58:29+00:00",
+  timestamp: "2026-06-15T23:38:35+00:00",
   previousClose: 34.0,
   previous1Week: 39.86,
   previous1Month: 62.97,
   previous1Year: 59.54,
-  date: "2026年6月16日 05:16 CST"
+  date: "2026年6月16日 07:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:10", tag: "crypto", tagText: "加密", text: "数据显示比特币持仓正经历历史上第二大未实现亏损，市场持续承压。当前加密货币整体面临宏观利率环境及风险偏好变化的影响，投资者情绪趋于谨慎。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU3RON1NfM0Y4WktZWHpJRlRjbWwtVHI4alBwWF9GaGs5blE1NmNPTG9wQWt2cDB1Q1VzdTFyLU9Jd0VNQ3pGMEN6d3hRaWJLampoaWY2TzAyd0pvZF96UkVVdkd5QVBqeWRTcVVESG1NNkJkQjJXOTN0V05OLWtHR0JqR2NPQ0M3bXJVVWgteUhra1prUjFTU1RuelF2Q0kwd0lTSU40VQ?oc=5" },
+  { time: "05:13", tag: "geo", tagText: "地缘", text: "美伊和平协议达成后，美国战略石油储备（SPR）降至1983年以来最低水平。同时特朗普政府正考虑设立3000亿美元基金用于激励伊朗履行协议，包括开放霍尔木兹海峡和在核问题上合作。此举旨在稳定全球油价，但基金规模与伊朗表现挂钩。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/iran-deal-came-in-time-as-strategic-petroleum-reserve-hits-lowest-level-since-1983.html" },
   { time: "04:43", tag: "tech", tagText: "科技", text: "AMD股价飙升，市值逼近9000亿美元，超过摩根大通。公司通过增强内存技术推动AI芯片竞争力，市场对其前景乐观。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amd-flirts-with-a-900-billion-valuation-after-beefing-up-its-memory-technology-2a366bdc?mod=mw_rss_topstories" },
   { time: "04:33", tag: "geo", tagText: "地缘", text: "加州州长纽森称特朗普已下令司法部调查他和他的妻子。纽森被视为2028年民主党潜在总统候选人，此举引发政治博弈加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/gavin-newsom-trump-doj-investigation-california.html" },
   { time: "00:33", tag: "tech", tagText: "科技", text: "芯片股全线大涨创历史新高。受美伊和平协议提振风险偏好，加之Anthropic与美国政府的AI出口限制纠纷可能促使AI基础设施建设扩大，半导体板块领涨市场。费城半导体指数及多只个股刷新纪录。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-chip-stock-rally-is-back-in-full-force-thanks-to-two-big-geopolitical-developments-4e3ec21d" },
@@ -1647,16 +1649,17 @@ const breakingNews = [
   { time: "19:14", tag: "geo", tagText: "地缘", text: "特朗普威胁称，若法国不废除针对美国科技公司的数字服务税，将对法国葡萄酒和香槟征收100%关税。该声明发布于G7峰会前夕，贸易摩擦风险升温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/trump-france-tech-tax-wine-tariffs-champagne.html" },
   { time: "12:35", tag: "crypto", tagText: "加密", text: "市场预期美联储可能加息，分析指出更高利率环境对加密货币构成利空。利率上升将压制风险资产需求，比特币等加密资产或面临下行压力。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYVdjR2lxRzllMmtqRGl4d0JBSHNSWWs4RUwwbVlEdUFmQUlXOXViRC12V0hrTWo2UG1nRmlpVkR6ZFQ0dEphaGtRcm9aWDhMMW4zUTBrLW00dWVnWnBlT25FQUxjakRmaXFUM2VTSjVJYkd6SVhKcUt2ZjNXNnY3MTE4Qjhuc2hVYXoxV0ppSERwNm92elJZV1Z6Vk9POWlRc0haZDBCcm93RWJKLVluRTdQX3hFdVFwbDY1Sk5NOUFDMmhoSjdFb3JlRGtIazdna21DenlfUWdUTUNRQkU1ZUw4UWdtcmRJRGZaZGh4REY?oc=5" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰无人机持续攻击俄占克里米亚的补给线，导致半岛燃料短缺。分析称克里米亚“易攻难守”，此次行动可能削弱俄军后勤能力，改变战场态势。", source: "Financial Times", url: "https://www.ft.com/content/0ea7f48c-172c-443f-9896-1e77c2a8d065" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "华尔街消化创纪录的融资规模，AI竞赛白热化。SpaceX、Anthropic和Alphabet的大规模融资显示投资者愿意吸收大量新发行股票。", source: "Financial Times", url: "https://www.ft.com/content/db05efcb-9035-4d55-aca4-7253656a1c06" },
-  { time: "11:03", tag: "ai", tagText: "AI", text: "英伟达与SharonAI达成数据中心合作协议，市场关注AI芯片领导者是否仍被低估。该交易有望进一步巩固英伟达在AI基础设施领域的地位，股价或受提振。", source: "Simply Wall St", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxNd0ZuZEgwZ3Bjd2tQMEVralNTZERNd2U5empEdWJaZlJGU1lfWk11WW1iTWNjRU56RXdtNHdkeUdrUGhGSTA4c2ZmRmgyNmNjc2FTM2NmVWxuQ181SkJwQTl5NFNFeVJmWVdrelhtVFVNMFRxWjh4U2pOWHQwbjQ2Ti15aWFaWDJpY1Nnd3doNHhOc0EtSlJKUGZFTHBrdG1OTGl1MXdSSEp3bHhkWXhERERpT0x0Wk16clBfcXkya2lwQ1B1X05nTWo3VdIB0AFBVV95cUxNV2dQc3drZmZ2Qzc4N0JmNmp0TUV5Mi10YUNMUkRaWDU1T3dmTmhRUTVZWTBSRWJKcmxGTk1yV001UmlrVGR0Q0JjMmpuS0RLWHlqYTRUS2dBQUxpaEZFbWxpdERjaEg1STFMakUwejctLXlMT0RaWmp4RlBWUXA0elBHN194SDdHRmZYNktmQmRDVEJueW1LQmZaOTQwY2IzZVJlcHZCbXBiYVd5d2gwMnhvdXg1N2ZpV1JQU0x3MEEzTlZlUlI0OHBEQXpMZFNK?oc=5" },
 ];
-const breakingDate = "2026年6月16日 05:16 CST";
+const breakingDate = "2026年6月16日 07:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:51", tag: "ai", tagText: "AI", text: "谷歌CEO皮查伊在斯坦福大学毕业典礼上发表演讲时，因谷歌与以色列及ICE（移民海关执法局）的合同关系遭遇学生嘘声和集体退场抗议。抗议焦点在于谷歌将AI技术用于国防和移民执法合同，引发关于AI伦理的校园争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/sundar-pichai-faces-boos-walkout-at-stanford-graduation-ceremony-over-googles-israel-ice-ties/" },
+  { time: "05:13", tag: "tech", tagText: "科技", text: "AI云计算公司CoreWeave旗下超级计算机“Vera Rubin”实现算力突破，但新的债务融资成本高昂，市场对其AI雄心能否持续产生质疑。该公司正承受扩大基础设施与偿还债务的双重压力。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOYk1tNlJ0dnFiN3F0c1Z2eUtXSmplNDgyTlA2WV82UENGRjdScnNfWXAwaGNlM1ViMGZWSE1sS2hScGpiYjYtS1NnWkptTmhZLVhicnhhUzRmU1A4Q0RlZTE0MGhVX0VrZC13TU5hOVp3MzNHSFhwQUt0VjFhSFZEQkdDSXVWUS1BaHl0RHg4RTlrY0g3SFg0Uk12MF9OMFNvYVRPd1ZB?oc=5" },
   { time: "02:30", tag: "tech", tagText: "科技", text: "Meta宣布在 Facebook 推出全新“AI 模式”，该功能将聚合旗下各平台的公开信息，旨在增强用户互动并加速追赶竞争对手。此举是 Meta 在 AI 领域最新布局，标志着社交巨头进一步整合资源。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/" },
   { time: "02:30", tag: "tech", tagText: "科技", text: "SpaceX 正式上市后，TechCrunch 发布全面分析包，涵盖 IPO 细节、受益方与潜在挑战。作为全球最具价值的私营航天公司，SpaceX 上市标志着商业航天进入新阶段。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/spacex-is-public-everything-you-need-to-know-post-ipo/" },
   { time: "02:06", tag: "ai", tagText: "AI", text: "OpenAI、Google DeepMind 与 Anthropic 联合致信美国政府，呼吁出台合成 DNA 筛查立法，以防止生物技术被恶意利用。三巨头联手推动生物安全监管，凸显 AI 在基因合成领域的潜在风险。", source: "MobiHealthNews", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdDFrYktvc2pENGZqRnRiOE81NEV1Qlp5SUpNVE40MXJMZlk5NVRrcmV1TzR1XzE3TjdxQzU1eWJYM1hVMzhZZmc0WDJBV3IxdlBuUzJESk52STREN3p5dGl4eGlZM2JUaVoxTFBvVWdVZHU2cURvbFJWTmo2M1VVbWk4eE16NGNQTUJ0LUF2STJSTFUwTC13M1NvRGVsNEhUVzkyeXZkWlZlc052ZGZfVGdn?oc=5" },
+  { time: "01:55", tag: "tech", tagText: "科技", text: "AMD被曝从其消费级CPU中悄然移除透明安全内存加密（TSME）功能，用户指责其为有意且隐秘的行为，可能影响系统安全性和数据保护。目前AMD尚未对此做出正式回应。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/" },
   { time: "01:44", tag: "macro", tagText: "宏观", text: "大型科技公司为AI监管立法做最后冲刺，游说国会通过一项全面的联邦法律，以取代各州零散的AI法规。该法案的核心是“优先权”，即联邦法律高于州法。但该努力面临巨大阻力，因国会对AI安全、隐私和公平性分歧严重。科技巨头希望借此避免各州出台更严格的法规。", source: "The Verge", url: "https://www.theverge.com/policy/949970/ai-regulation-child-safety-kosa-congress" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "法国AI初创公司Mistral被传正以约200亿欧元（约231.5亿美元）估值进行新一轮融资，计划筹集30亿欧元。若属实，估值较其C轮117亿欧元近乎翻倍，显示欧洲AI明星企业持续获得巨额资本追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/" },
   { time: "01:26", tag: "ai", tagText: "AI", text: "谷歌起诉涉嫌利用AI技术发送诈骗短信的中国网络犯罪组织“Outsider Enterprise”。该组织在两周内使用AI发送约250万条诈骗短信，导致数十万受害者上当。这是科技巨头首次针对AI辅助的大规模诈骗活动提起法律诉讼。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/google-sues-alleged-chinese-cybercrime-operation-that-used-ai-to-send-scam-texts/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "AI安全初创公司NewCore完成6600万美元融资，旨在为AI代理提供数字身份管理与安全基础设施，应对企业环境中的AI代理身份治理挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "地球观测卫星首次自主发现目标：今年4月，一颗卫星在没有地面指令的情况下自行识别并找到了它要寻找的目标物体。这是卫星自主智能的重大突破，意味着未来卫星可自主执行侦察、灾害监测等任务，大幅降低对地面控制的依赖。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "AI初创融资热潮并非全球现象：Crunchbase数据显示，AI领域的天量资金高度集中在美国和中国市场，欧洲、拉丁美洲和非洲的AI初创公司获得的资金占比极小。这一结构性差异意味着全球AI竞赛的赢家可能仅限于少数地区。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9Rc0RfdUdVYUVEQ0w2dE5sNnZvUU1ZQ0ZLdzR3RF83VjgxZ2xVdXdac1FMNUVQcjBBendmSjlmRDd3SUNJMXF1a1Z2QlhNd09kMkVKbkgtSnNUR1ZkM0NacVhYc0xBRkR1blRabzlQMFZzaFRuelRB?oc=5" },
-  { time: "16:23", tag: "ai", tagText: "AI", text: "Monday.com推出2亿美元AI初创基金：项目管理软件公司Monday.com宣布设立专项基金，用于投资人工智能初创企业。此举表明企业软件巨头正积极通过资本布局AI生态，以抢占下一代智能工作平台赛道。", source: "Tech in Asia", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVGp2QkpFelltbTBlYnVJaWY2MlpKdEoybkRNMkRxenBmRnNEX0tCbGhnLTRVYnJicTVjcE9ORENkWTl1VGs1Mi1KQV95TGJ2ZjdUS0FZWTdCdnh1a2x2WDFUelF4ekJBekt4ODM1UnhLTzhZWWhKVmtRcmNwd2JPQXFURQ?oc=5" },
-  { time: "15:25", tag: "ai", tagText: "AI", text: "AI裁员浪潮成为火药桶：一边是数十万工人被AI替代而失业，另一边是少数AI内部人士以难以想象的规模暴富。这种剧烈的财富分化正在积累社会不满情绪，可能引发更广泛的监管和劳资冲突。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/" },
-  { time: "12:14", tag: "macro", tagText: "宏观", text: "安德鲁·杨（Andrew Yang）认为下一个重大创业机会是降低生活成本。他列出了一系列美国人超支的领域——住房、食品、无线通讯等，并指出下一波创业金矿在于将这些多付的钱返还给消费者。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/" },
 ];
-const aiBreakingDate = "2026年6月16日 05:16 CST";
+const aiBreakingDate = "2026年6月16日 07:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
