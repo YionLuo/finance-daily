@@ -1618,17 +1618,24 @@
 const fearGreedData = {
   score: 34,
   rating: "fear",
-  timestamp: "2026-06-12T23:59:56+00:00",
-  previousClose: 29.63,
-  previous1Week: 41.83,
-  previous1Month: 65.11,
-  previous1Year: 64.6,
-  date: "2026年6月15日 13:22 CST"
+  timestamp: "2026-06-15T12:20:46+00:00",
+  previousClose: 34.0,
+  previous1Week: 39.86,
+  previous1Month: 62.97,
+  previous1Year: 59.54,
+  date: "2026年6月15日 20:39 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:24", tag: "tech", tagText: "科技", text: "福克斯（Fox）宣布以220亿美元企业价值收购流媒体设备制造商Roku。合并后公司将成为美国电视收视份额第三大巨头，标志媒体行业格局重大转变。Roku股价飙升至四年新高。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/fox-to-buy-roku.html" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "一年前Meta重金挖来AI明星Alexandr Wang主导新模型开发，但成果未达预期。如今CEO扎克伯格不得不亲自下场向客户推销该模型，暴露了Meta在AI商业化上的困境。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/meta-hired-alexandr-wang-to-build-ai-its-zuckerbergs-job-to-sell-it.html" },
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "Pimco警告债务市场违约潮再度来袭，建议投资者增持固定收益资产，因股票估值已偏高。该债券巨头指出，企业违约率正在回升，市场应转向防御性策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/defaults-in-debt-markets-are-starting-again-warns-pimco-heres-the-bond-giants-game-plan-16559c6d?mod=mw_rss_topstories" },
+  { time: "19:38", tag: "tech", tagText: "科技", text: "SpaceX上市次日股价盘前再涨超6%，市值突破2万亿美元，马斯克成为全球首位万亿富翁，个人净资产接近加密市场总市值的一半。分析师对估值分歧加大，但市场情绪高涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/spacex-stock-record-ipo-debut.html" },
+  { time: "19:36", tag: "geo", tagText: "地缘", text: "英国当局调查发现，针对首相斯塔默多处住宅的纵火袭击由与亲克里姆林宫黑客组织有关联的人员策划。事件加剧英俄紧张关系，安全警戒升级。", source: "Financial Times", url: "https://www.ft.com/content/dd79d6eb-44e4-4365-8c6e-a4fd64b211c8" },
+  { time: "19:35", tag: "geo", tagText: "地缘", text: "瑞士选民在公投中否决了限制人口增长的提案，该提案曾引发商界对终止瑞士与欧盟之间劳动力自由流动的担忧。否决结果避免了瑞士与欧盟的直接冲突，维护了当前的双边关系框架。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/swiss-voters-set-to-reject-population-cap-in-referendum.html" },
+  { time: "19:14", tag: "geo", tagText: "地缘", text: "特朗普威胁称，若法国不废除针对美国科技公司的数字服务税，将对法国葡萄酒和香槟征收100%关税。该声明发布于G7峰会前夕，贸易摩擦风险升温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/trump-france-tech-tax-wine-tariffs-champagne.html" },
   { time: "12:35", tag: "crypto", tagText: "加密", text: "市场预期美联储可能加息，分析指出更高利率环境对加密货币构成利空。利率上升将压制风险资产需求，比特币等加密资产或面临下行压力。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYVdjR2lxRzllMmtqRGl4d0JBSHNSWWs4RUwwbVlEdUFmQUlXOXViRC12V0hrTWo2UG1nRmlpVkR6ZFQ0dEphaGtRcm9aWDhMMW4zUTBrLW00dWVnWnBlT25FQUxjakRmaXFUM2VTSjVJYkd6SVhKcUt2ZjNXNnY3MTE4Qjhuc2hVYXoxV0ppSERwNm92elJZV1Z6Vk9POWlRc0haZDBCcm93RWJKLVluRTdQX3hFdVFwbDY1Sk5NOUFDMmhoSjdFb3JlRGtIazdna21DenlfUWdUTUNRQkU1ZUw4UWdtcmRJRGZaZGh4REY?oc=5" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰无人机持续攻击俄占克里米亚的补给线，导致半岛燃料短缺。分析称克里米亚“易攻难守”，此次行动可能削弱俄军后勤能力，改变战场态势。", source: "Financial Times", url: "https://www.ft.com/content/0ea7f48c-172c-443f-9896-1e77c2a8d065" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "华尔街消化创纪录的融资规模，AI竞赛白热化。SpaceX、Anthropic和Alphabet的大规模融资显示投资者愿意吸收大量新发行股票。", source: "Financial Times", url: "https://www.ft.com/content/db05efcb-9035-4d55-aca4-7253656a1c06" },
@@ -1642,18 +1649,15 @@ const breakingNews = [
   { time: "03:00", tag: "geo", tagText: "地缘", text: "美国政府宣布在空袭中击毙委内瑞拉黑帮组织“阿拉瓜火车”头目赫克托·格雷罗，行动与委内瑞拉政府协调。该组织在南美及美国境内从事犯罪活动，此次打击被视为特朗普政府强化拉美安全政策的标志性行动。", source: "Financial Times", url: "https://www.ft.com/content/298a1431-dc3e-4cbc-aa6f-769e54541b60" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "最新社保信托报告显示，美国社会保障基金预计于2032年面临22%的自动削减。当前通胀高企使2027年生活成本调整（COLA）或达4.7%，但长期偿付能力危机加剧。专家建议投资者提前建立不受政府影响的退休收入来源。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-security-could-face-an-automatic-22-cut-in-2032-these-4-moves-will-protect-your-retirement-a00f9463" },
   { time: "02:00", tag: "crypto", tagText: "加密", text: "Visa宣布拓展AI商务布局，推出稳定币及代币化能力，旨在推动数字支付创新。新功能允许用户通过区块链进行快速跨境结算，并支持智能合约自动执行。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/technology/articles/visa-v-expands-ai-commerce-175956351.html" },
-  { time: "23:05", tag: "geo", tagText: "地缘", text: "以色列空袭黎巴嫩贝鲁特南郊真主党目标，原定于本周签署的美伊和平协议及霍尔木兹海峡重开计划面临变数。特朗普警告各方‘别搞砸’，并已启程前往法国参加G7峰会，峰会还将讨论俄乌战争。中东局势再度紧张，油价或受冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/iran-deal-teeters-israel-strikes-lebanon.html" },
-  { time: "22:25", tag: "macro", tagText: "宏观", text: "SpaceX创纪录IPO后市场情绪高涨，但本周美联储将召开会议（Kevin Warsh首次主持），利率决策将考验AI驱动的牛市逻辑。更高的利率可能使AI增长故事更难自圆其说，市场正密切关注美联储是否维持鹰派立场。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/article/spacex-ipo-afterglow-kevin-warshs-first-fed-meeting-and-a-potential-us-iran-deal-what-to-watch-this-week-142500418.html" },
-  { time: "22:24", tag: "crypto", tagText: "加密", text: "比特币价格持续回落，但链上数据显示约2730亿美元的稳定币并未撤离市场。分析师认为这表明投资者仍在观望，而非恐慌出逃，市场可能正在积蓄下一轮动能。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMiakFVX3lxTE5QRHpKTXBCS2x3ZXRmQ3FIRUFYVW1yU3g4MEFNdmRCTmdzTkNIVVhkd2pPclRxc2lpaWN4LXhEOWkwQ1hOWjhMS3V5TXdGX0FOQzBMNWxhaTBBQnAzamNDbG9jRGF1QXZ3N2c?oc=5" },
-  { time: "20:45", tag: "macro", tagText: "宏观", text: "2026年世界杯预计将为美国经济带来170亿美元增量，主要来自数字广告、旅游和消费支出。华尔街分析师点名多支受益股票，包括酒店、航空和媒体公司，投资者可提前布局。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/2026-world-cup-these-stocks-could-benefit.html" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "一年前Meta重金挖来AI明星Alexandr Wang主导新模型开发，但成果未达预期。如今CEO扎克伯格不得不亲自下场向客户推销该模型，暴露了Meta在AI商业化上的困境。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/meta-hired-alexandr-wang-to-build-ai-its-zuckerbergs-job-to-sell-it.html" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "Pimco警告债务市场违约潮再度来袭，建议投资者增持固定收益资产，因股票估值已偏高。该债券巨头指出，企业违约率正在回升，市场应转向防御性策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/defaults-in-debt-markets-are-starting-again-warns-pimco-heres-the-bond-giants-game-plan-16559c6d?mod=mw_rss_topstories" },
-  { time: "19:35", tag: "geo", tagText: "地缘", text: "瑞士选民在公投中否决了限制人口增长的提案，该提案曾引发商界对终止瑞士与欧盟之间劳动力自由流动的担忧。否决结果避免了瑞士与欧盟的直接冲突，维护了当前的双边关系框架。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/swiss-voters-set-to-reject-population-cap-in-referendum.html" },
 ];
-const breakingDate = "2026年6月15日 13:22 CST";
+const breakingDate = "2026年6月15日 20:39 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:00", tag: "tech", tagText: "科技", text: "地球观测卫星首次自主发现目标：今年4月，一颗卫星在没有地面指令的情况下自行识别并找到了它要寻找的目标物体。这是卫星自主智能的重大突破，意味着未来卫星可自主执行侦察、灾害监测等任务，大幅降低对地面控制的依赖。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "AI初创融资热潮并非全球现象：Crunchbase数据显示，AI领域的天量资金高度集中在美国和中国市场，欧洲、拉丁美洲和非洲的AI初创公司获得的资金占比极小。这一结构性差异意味着全球AI竞赛的赢家可能仅限于少数地区。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9Rc0RfdUdVYUVEQ0w2dE5sNnZvUU1ZQ0ZLdzR3RF83VjgxZ2xVdXdac1FMNUVQcjBBendmSjlmRDd3SUNJMXF1a1Z2QlhNd09kMkVKbkgtSnNUR1ZkM0NacVhYc0xBRkR1blRabzlQMFZzaFRuelRB?oc=5" },
+  { time: "16:23", tag: "ai", tagText: "AI", text: "Monday.com推出2亿美元AI初创基金：项目管理软件公司Monday.com宣布设立专项基金，用于投资人工智能初创企业。此举表明企业软件巨头正积极通过资本布局AI生态，以抢占下一代智能工作平台赛道。", source: "Tech in Asia", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVGp2QkpFelltbTBlYnVJaWY2MlpKdEoybkRNMkRxenBmRnNEX0tCbGhnLTRVYnJicTVjcE9ORENkWTl1VGs1Mi1KQV95TGJ2ZjdUS0FZWTdCdnh1a2x2WDFUelF4ekJBekt4ODM1UnhLTzhZWWhKVmtRcmNwd2JPQXFURQ?oc=5" },
+  { time: "15:25", tag: "ai", tagText: "AI", text: "AI裁员浪潮成为火药桶：一边是数十万工人被AI替代而失业，另一边是少数AI内部人士以难以想象的规模暴富。这种剧烈的财富分化正在积累社会不满情绪，可能引发更广泛的监管和劳资冲突。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/" },
   { time: "12:14", tag: "macro", tagText: "宏观", text: "安德鲁·杨（Andrew Yang）认为下一个重大创业机会是降低生活成本。他列出了一系列美国人超支的领域——住房、食品、无线通讯等，并指出下一波创业金矿在于将这些多付的钱返还给消费者。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/" },
   { time: "11:43", tag: "ai", tagText: "AI", text: "印度AI初创公司正在美国向风险投资者积极募资。据印度企业家Anirudh Arun透露，多家印度AI初创企业正寻求美国风投的资金支持，以推动其技术研发和市场扩张。此举反映出印度AI生态的活跃以及全球资本对AI领域的持续关注。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOeUphZm1lcE42X2pUNEVEYnFEUXd0bmgtci1FTHoyaEVpdzVfSTM1dGQwTkN2Um9rTUVzU3ZjcmsxUjM1WHFWeEhDNThmQjh2cEZ5TUdwVWdqcGlhdGNXUEtlUkxvUDY0Q19DbU05MXBmUE1tVjR2WmFYcFdxeDctNjZrVFRoNGtleW5BcTV3VndZdklCQlBvYWtJSmxHc2pwMTNjWDFMR215cUFIUFQxN0drWFVMSHo1VzJic3ZJWm51RkM5MVdzWi0zMmNmSXhoaXBCRDQzOXNYS2xsSDVV?oc=5" },
   { time: "11:04", tag: "ai", tagText: "AI", text: "风投机构Tin Men Capital领投人工智能初创公司Pints AI的560万美元融资轮。Pints AI专注于AI驱动的解决方案，此次融资将用于产品开发和团队扩张。该轮投资显示投资者对垂直AI应用场景的持续看好。", source: "Tech in Asia", url: "https://news.google.com/rss/articles/CBMijAFBVV95cUxOV01wVVoxc3pUOF9VajhPeWs3WkpHcXYyVkEzYWNXblN5Y3BFaU82cGo5NWlGSzF2NjE4SzVISFBMZERYZjRJRVl1aUgwR0xieU9pYnpnUFhvdjhKNHdLUFJfRjUySkpwMTdwTE42OGQ1b1d6cUVvRWd2LVB6UEhxTlQ3MTgzMmZVQ1dQMA?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "00:24", tag: "tech", tagText: "科技", text: "埃隆·马斯克成为全球首位万亿富翁。SpaceX IPO后，其净资产突破万亿美元大关，此前约为8000亿美元。马斯克持有SpaceX约48亿股股票。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/948409/elon-musk-trillionaire-spacex-ipo" },
   { time: "00:18", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，将保存用户使用Lens拍摄的照片、Search Live录音及翻译音频等交互数据，用于AI模型训练。此举引发对数据隐私和AI训练伦理的新一轮讨论。", source: "The Verge", url: "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio" },
   { time: "00:09", tag: "ai", tagText: "AI", text: "科技行业迎来新缩写MANGOS：SpaceX、Anthropic、OpenAI等公司正筹备大规模公开上市，可能取代FAANG成为新一代科技巨头。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" },
-  { time: "00:03", tag: "macro", tagText: "宏观", text: "2026年第一季度初创企业融资报告显示，AI公司吸收了全部风险资本的57%，占比创历史新高。资金持续涌向生成式AI、基础设施和垂直应用领域，进一步巩固AI作为当前科技投资核心赛道的地位。", source: "USA Today", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb21FQW5zcUJjMWwyaHF1Rk56ZzVvSElCOFhRaUFwZzlJYzdXdVZhRFhmeFJfSXJycU50UV9sUlZ3N08xb1p2cU41bFdQMjBZOEZsR1dxRllWcUZkRWtZd2VEYnJzdlc3UXR6MXFCY2hZcFd4dkItMnBQNmxrMGVvTWFfWXRYQ0RfQnNuMWxucF80c1MtQ1A0aDVQVy1vQ3d2dXRiQm5OMTVfdWU5bmc?oc=5" },
-  { time: "23:13", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋公开力挺Marvell，称其有望成为下一个万亿美元芯片公司，尤其在当前AI基础设施热潮持续升温的背景下，Marvell凭借网络和定制芯片业务将扮演关键角色。", source: "IndexBox", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVUxGa3V0WDJWWWNGd0xaUlc5Q0FLWjhIOF93WmNYMzJIdGVscnBNTDd6Tk9BeEdpc2tjcW1kTjdnUzA3NGlFUk02N2poZWFDR0twaUdZZ21xeTJ6QU5DeUN2cmZSMVl2WGxyRFJZSmdDOFNBY1pZmV6enFBdWUxdUlsblRLQlZuZ0EtM2stTEYyT1QteVMwYUJxYlQzazVtbUNhVzZtcXFOYWJTc0xuNjF3?oc=5" },
-  { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX IPO背后的三大硬科技登月计划曝光：太空数据中心、星舰规模化制造及轨道燃料加注站。分析称大部分估值来自这些未来太空基础设施的看涨期权。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/10/the-three-hard-tech-moonshots-fueling-spacexs-unbelievable-ipo/" },
-  { time: "22:41", tag: "ai", tagText: "AI", text: "美银报告称代理型AI（Agentic AI）将创造1700亿美元市场机会，受此消息推动，英伟达、AMD、Arm等芯片股集体上涨。投资者预期AI正从聊天机器人向能自主执行任务的智能体进化，为芯片需求带来新一轮增长。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRXY2TGRYYm1RMHYtbG16OUVYdTE2eFBzdlR1ZFMybzkzX25EcjJLVHlySVhkTmxkb2hZVl83NGdKSUxEME1WZjFyQmd4MUpmSUQxUFRmUjJXRzJZeTRVMW9rRVBrMlBocjYtbUJ4SFdMdW51bkZnTmJUel9ndjVBOTFjMkQ2c1lWS2VTNmFEMldEcUtWU1pCV1hjbHNWTzVRbUJHcDNfek5sX0hKTjhkQ3NSeExNbmdadmhlallKTWFXX00?oc=5" },
 ];
-const aiBreakingDate = "2026年6月15日 13:22 CST";
+const aiBreakingDate = "2026年6月15日 20:39 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
