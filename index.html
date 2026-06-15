@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 34,
+  score: 41.29,
   rating: "fear",
-  timestamp: "2026-06-15T12:20:46+00:00",
+  timestamp: "2026-06-15T15:32:47+00:00",
   previousClose: 34.0,
   previous1Week: 39.86,
   previous1Month: 62.97,
   previous1Year: 59.54,
-  date: "2026年6月15日 20:39 CST"
+  date: "2026年6月15日 23:36 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:32", tag: "tech", tagText: "科技", text: "SpaceX首次公开募股（IPO）承销商行使超额配售权（绿鞋机制），使总融资额增至857亿美元。该规模创下美股IPO历史纪录，超过此前预估的750亿美元。SpaceX股价上市次日继续走高，较发行价累计涨幅超25%。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/spacex-ipo-spcx-greenshoe-overallotment.html" },
+  { time: "23:23", tag: "tech", tagText: "科技", text: "英伟达启动200亿美元债券发行，分七批交易以再融资现有债务。此举显示AI领域借贷热潮持续，投资者对AI相关信用产品需求旺盛。这是英伟达史上最大规模债券发行，也是其首次涉足投资级债券市场。", source: "MarketWatch", url: "https://www.marketwatch.com/story/even-nvidia-is-joining-the-ai-borrowing-spree-with-a-historic-20-billion-bond-deal-a054cff4" },
+  { time: "23:12", tag: "geo", tagText: "地缘", text: "美伊初步达成和平协议，全球股市大涨。道琼斯指数飙升超600点创历史新高，标普500和纳斯达克同步上涨，欧洲STOXX 600指数也创下历史新高。油价暴跌约5%，因市场预期霍尔木兹海峡将重新开放，但分析师警告油轮积压清理需数周，且战前油价水平短期难恢复。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/us-iran-deal-hormuz-markets.html" },
+  { time: "23:00", tag: "ai", tagText: "AI", text: "Anthropic将与美国特朗普政府会面，讨论其最新AI模型Mythos的出口限制争议。此前美国商务部向Anthropic发出指令，要求暂停任何外国国民访问其最新模型，引发业界对AI监管不确定性的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/anthropic-mythos-trump-ai.html" },
+  { time: "22:18", tag: "crypto", tagText: "加密", text: "分析师指出，比特币关键技术指标转为看涨，宣告“加密春天”到来。多项链上数据和情绪指标显示市场底部已过，机构资金重新流入，但宏观利率环境仍是隐忧。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNOFJiYlRqOHlyWWVEdUpaam9rYlBjcTIxMlMwN0ZteERlZUNzOGVnRjEzcXYxM1RKajBDMHJwbzVDQUJhV2dRdlh3aVljVWpkem43Um83MXVTZmNDRWYyRXZrN3lSNVpaOEw4TU5kbWx5aWZaTERycmoyV0pJWmdEUjBJRlY4R1J6RFFHRjlLcURnSndQTGVLSmhEekkzRnNfcjdKUlU1NkM0VEFwRjcteFJUUXdWeG1kNW1fMUZCUWo" },
   { time: "20:24", tag: "tech", tagText: "科技", text: "福克斯（Fox）宣布以220亿美元企业价值收购流媒体设备制造商Roku。合并后公司将成为美国电视收视份额第三大巨头，标志媒体行业格局重大转变。Roku股价飙升至四年新高。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/fox-to-buy-roku.html" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "一年前Meta重金挖来AI明星Alexandr Wang主导新模型开发，但成果未达预期。如今CEO扎克伯格不得不亲自下场向客户推销该模型，暴露了Meta在AI商业化上的困境。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/meta-hired-alexandr-wang-to-build-ai-its-zuckerbergs-job-to-sell-it.html" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "Pimco警告债务市场违约潮再度来袭，建议投资者增持固定收益资产，因股票估值已偏高。该债券巨头指出，企业违约率正在回升，市场应转向防御性策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/defaults-in-debt-markets-are-starting-again-warns-pimco-heres-the-bond-giants-game-plan-16559c6d?mod=mw_rss_topstories" },
@@ -1644,16 +1649,15 @@ const breakingNews = [
   { time: "07:03", tag: "macro", tagText: "宏观", text: "美伊达成和平协议后，霍尔木兹海峡积压的油轮可能需要数周才能清理完毕。分析师警告称，石油流量恢复缓慢，且仍易受新的中断影响。协议内容包括重新开放海峡及结束美国对伊朗港口的封锁，但市场对供应稳定性的担忧犹存。", source: "Financial Times", url: "https://www.ft.com/content/c2d4e116-c49a-4f6b-9b2e-d10d37e4c2e8" },
   { time: "05:21", tag: "geo", tagText: "地缘", text: "特朗普在其80岁生日当天，于白宫草坪搭建临时竞技场举办UFC格斗赛事，以此展示政治主导力，并与美国独立宣言签署250周年庆祝活动挂钩。此举引发关于其执政优先事项与国内外重大议题并行的争议。", source: "FT / CNBC", url: "https://www.ft.com/content/11f71770-5872-4769-9ea5-a21f12151e10" },
   { time: "05:00", tag: "macro", tagText: "宏观", text: "美国六个州相继调整燃油税政策，与此同时能源通胀加速。燃油税变动将直接影响居民出行成本和物流费用，进一步推高通胀压力，令美联储抗通胀任务更加复杂。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/fuel-tax-changes-hit-six-210000819.html" },
-  { time: "03:44", tag: "geo", tagText: "地缘", text: "特朗普宣布将于周日（6月14日）签署美伊和平协议，重新开放霍尔木兹海峡。伊朗方面对具体时间仍持谨慎态度，但巴基斯坦称停火协议即将达成。此举有望缓解中东紧张局势，降低全球能源供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/13/trump-iran-deal-strait-of-hormuz.html" },
-  { time: "03:00", tag: "macro", tagText: "宏观", text: "美国真实国家债务首次突破100万亿美元，相当于每户美国家庭负债100万美元，达GDP的400%。这一数字包括社会保障、医疗保险等未偿付的隐性债务，市场对此反应平淡但长期风险巨大。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-true-national-debt-just-hit-1-million-per-u-s-household-bd0924d1" },
-  { time: "03:00", tag: "geo", tagText: "地缘", text: "美国政府宣布在空袭中击毙委内瑞拉黑帮组织“阿拉瓜火车”头目赫克托·格雷罗，行动与委内瑞拉政府协调。该组织在南美及美国境内从事犯罪活动，此次打击被视为特朗普政府强化拉美安全政策的标志性行动。", source: "Financial Times", url: "https://www.ft.com/content/298a1431-dc3e-4cbc-aa6f-769e54541b60" },
-  { time: "03:00", tag: "macro", tagText: "宏观", text: "最新社保信托报告显示，美国社会保障基金预计于2032年面临22%的自动削减。当前通胀高企使2027年生活成本调整（COLA）或达4.7%，但长期偿付能力危机加剧。专家建议投资者提前建立不受政府影响的退休收入来源。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-security-could-face-an-automatic-22-cut-in-2032-these-4-moves-will-protect-your-retirement-a00f9463" },
-  { time: "02:00", tag: "crypto", tagText: "加密", text: "Visa宣布拓展AI商务布局，推出稳定币及代币化能力，旨在推动数字支付创新。新功能允许用户通过区块链进行快速跨境结算，并支持智能合约自动执行。", source: "Insider Monkey", url: "https://finance.yahoo.com/sectors/technology/articles/visa-v-expands-ai-commerce-175956351.html" },
 ];
-const breakingDate = "2026年6月15日 20:39 CST";
+const breakingDate = "2026年6月15日 23:36 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:29", tag: "ai", tagText: "AI", text: "数十名网络安全专家联名呼吁白宫撤销对Anthropic最强大模型Fable和Mythos的出口管制禁令，称该限制将削弱美国网络防御能力，并损害AI安全研究。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/" },
+  { time: "22:34", tag: "ai", tagText: "AI", text: "Salesforce宣布以36亿美元收购AI客服平台Fin，计划利用其团队和技术改进企业AI代理平台Agentforce，以加速自动化客服能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/" },
+  { time: "21:46", tag: "ai", tagText: "AI", text: "印度AI初创公司Sarvam获2.34亿美元融资，由HCLTech领投，估值突破10亿美元成为新晋独角兽，彰显印度AI生态的崛起。", source: "TechCrunch", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxOQzkyLVd3V3dKTzRLaU9VRHUwVWZzalgxNXdMcUlfWTNqYlJjRlNfdVVwX2J4VC1UR2FnTW1LdjgtT3ZzTUtSa1NBUm5HOVVtSDBNNFRpendCN2xYMV9SSU1iS0k4cGlROEpkQ2tza1lhallxTk5oVWdwTDBlRjU0NXFGUGVSVk10ZlZ3UFpmM2hJSnotS0t3VHZnZzdSUEZld2ZXR014OE1Dd0VPdTE2S3dFRWtHQnNhemZHaA?oc=5" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "AI安全初创公司NewCore完成6600万美元融资，旨在为AI代理提供数字身份管理与安全基础设施，应对企业环境中的AI代理身份治理挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "地球观测卫星首次自主发现目标：今年4月，一颗卫星在没有地面指令的情况下自行识别并找到了它要寻找的目标物体。这是卫星自主智能的重大突破，意味着未来卫星可自主执行侦察、灾害监测等任务，大幅降低对地面控制的依赖。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "AI初创融资热潮并非全球现象：Crunchbase数据显示，AI领域的天量资金高度集中在美国和中国市场，欧洲、拉丁美洲和非洲的AI初创公司获得的资金占比极小。这一结构性差异意味着全球AI竞赛的赢家可能仅限于少数地区。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9Rc0RfdUdVYUVEQ0w2dE5sNnZvUU1ZQ0ZLdzR3RF83VjgxZ2xVdXdac1FMNUVQcjBBendmSjlmRDd3SUNJMXF1a1Z2QlhNd09kMkVKbkgtSnNUR1ZkM0NacVhYc0xBRkR1blRabzlQMFZzaFRuelRB?oc=5" },
   { time: "16:23", tag: "ai", tagText: "AI", text: "Monday.com推出2亿美元AI初创基金：项目管理软件公司Monday.com宣布设立专项基金，用于投资人工智能初创企业。此举表明企业软件巨头正积极通过资本布局AI生态，以抢占下一代智能工作平台赛道。", source: "Tech in Asia", url: "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVGp2QkpFelltbTBlYnVJaWY2MlpKdEoybkRNMkRxenBmRnNEX0tCbGhnLTRVYnJicTVjcE9ORENkWTl1VGs1Mi1KQV95TGJ2ZjdUS0FZWTdCdnh1a2x2WDFUelF4ekJBekt4ODM1UnhLTzhZWWhKVmtRcmNwd2JPQXFURQ?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "01:20", tag: "tech", tagText: "科技", text: "谷歌遭独立音乐人集体诉讼，指控其未经许可使用YouTube平台上的歌曲训练Lyria音乐AI模型。原告称谷歌将用户上传的视频视为训练素材，但未明确告知或获得授权。此案可能对AI训练数据的版权规则产生深远影响。", source: "The Verge", url: "https://www.theverge.com/tech/947770/google-lyria-music-ai-lawsuit-youtube" },
   { time: "00:50", tag: "ai", tagText: "AI", text: "Anthropic新发布的Mythos级模型Claude Fable引发双重争议：微软因数据保留担忧限制内部员工使用该模型；同时，网络安全研究人员批评Fable的安全护栏过于严格，导致无法进行有效的安全测试与漏洞分析。模型能力与可用性之间的平衡面临行业拷问。", source: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
   { time: "00:47", tag: "ai", tagText: "AI", text: "OpenAI面临美国多个州检察长调查，调查内容涉及广告政策、数据处理方式及健康数据合规等问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/" },
-  { time: "00:46", tag: "ai", tagText: "AI", text: "贝佐斯支持的AI初创公司Prometheus完成120亿美元融资，这是近年来规模最大的AI领域融资之一，显示出投资者对前沿AI模型的持续热情。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLWx4ZklJZGdzRThDanVsMzRHVXF4WUg2cGs5T05ZZ18wdnkxWFU4WmpKMFNfMUk4SHRLZGlVdjVRQ2x5LVNfQWNqTzdBbU5UTE5zYTRlWVlwZGJYU0pxTWVNOUl0MXlUeGl1d0hmZ0RWUFNjeFRpRVQzcmQzU2xjMTB6OHhaaHVNUDRJWnNNUExaLWJ5VU5ETTJCdWdILU5icUoyOU5HaXFTV0xvVmc?oc=5" },
-  { time: "00:24", tag: "tech", tagText: "科技", text: "埃隆·马斯克成为全球首位万亿富翁。SpaceX IPO后，其净资产突破万亿美元大关，此前约为8000亿美元。马斯克持有SpaceX约48亿股股票。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/948409/elon-musk-trillionaire-spacex-ipo" },
-  { time: "00:18", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，将保存用户使用Lens拍摄的照片、Search Live录音及翻译音频等交互数据，用于AI模型训练。此举引发对数据隐私和AI训练伦理的新一轮讨论。", source: "The Verge", url: "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio" },
-  { time: "00:09", tag: "ai", tagText: "AI", text: "科技行业迎来新缩写MANGOS：SpaceX、Anthropic、OpenAI等公司正筹备大规模公开上市，可能取代FAANG成为新一代科技巨头。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" },
 ];
-const aiBreakingDate = "2026年6月15日 20:39 CST";
+const aiBreakingDate = "2026年6月15日 23:36 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
