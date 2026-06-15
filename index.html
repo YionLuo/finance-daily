@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 41.29,
+  score: 41.66,
   rating: "fear",
-  timestamp: "2026-06-15T15:32:47+00:00",
+  timestamp: "2026-06-15T17:57:10+00:00",
   previousClose: 34.0,
   previous1Week: 39.86,
   previous1Month: 62.97,
   previous1Year: 59.54,
-  date: "2026年6月15日 23:36 CST"
+  date: "2026年6月16日 02:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:33", tag: "tech", tagText: "科技", text: "芯片股全线大涨创历史新高。受美伊和平协议提振风险偏好，加之Anthropic与美国政府的AI出口限制纠纷可能促使AI基础设施建设扩大，半导体板块领涨市场。费城半导体指数及多只个股刷新纪录。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-chip-stock-rally-is-back-in-full-force-thanks-to-two-big-geopolitical-developments-4e3ec21d" },
+  { time: "00:09", tag: "macro", tagText: "宏观", text: "特朗普为新任美联储主席Warsh提供政治空间以重塑央行。分析称Warsh正处政治蜜月期，而特朗普曾是对美联储批评最严厉的总统。市场关注未来货币政策走向及监管调整。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/trump-warsh-fed-reshape.html" },
   { time: "23:32", tag: "tech", tagText: "科技", text: "SpaceX首次公开募股（IPO）承销商行使超额配售权（绿鞋机制），使总融资额增至857亿美元。该规模创下美股IPO历史纪录，超过此前预估的750亿美元。SpaceX股价上市次日继续走高，较发行价累计涨幅超25%。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/spacex-ipo-spcx-greenshoe-overallotment.html" },
   { time: "23:23", tag: "tech", tagText: "科技", text: "英伟达启动200亿美元债券发行，分七批交易以再融资现有债务。此举显示AI领域借贷热潮持续，投资者对AI相关信用产品需求旺盛。这是英伟达史上最大规模债券发行，也是其首次涉足投资级债券市场。", source: "MarketWatch", url: "https://www.marketwatch.com/story/even-nvidia-is-joining-the-ai-borrowing-spree-with-a-historic-20-billion-bond-deal-a054cff4" },
   { time: "23:12", tag: "geo", tagText: "地缘", text: "美伊初步达成和平协议，全球股市大涨。道琼斯指数飙升超600点创历史新高，标普500和纳斯达克同步上涨，欧洲STOXX 600指数也创下历史新高。油价暴跌约5%，因市场预期霍尔木兹海峡将重新开放，但分析师警告油轮积压清理需数周，且战前油价水平短期难恢复。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/us-iran-deal-hormuz-markets.html" },
@@ -1647,14 +1649,20 @@ const breakingNews = [
   { time: "11:03", tag: "ai", tagText: "AI", text: "英伟达与SharonAI达成数据中心合作协议，市场关注AI芯片领导者是否仍被低估。该交易有望进一步巩固英伟达在AI基础设施领域的地位，股价或受提振。", source: "Simply Wall St", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxNd0ZuZEgwZ3Bjd2tQMEVralNTZERNd2U5empEdWJaZlJGU1lfWk11WW1iTWNjRU56RXdtNHdkeUdrUGhGSTA4c2ZmRmgyNmNjc2FTM2NmVWxuQ181SkJwQTl5NFNFeVJmWVdrelhtVFVNMFRxWjh4U2pOWHQwbjQ2Ti15aWFaWDJpY1Nnd3doNHhOc0EtSlJKUGZFTHBrdG1OTGl1MXdSSEp3bHhkWXhERERpT0x0Wk16clBfcXkya2lwQ1B1X05nTWo3VdIB0AFBVV95cUxNV2dQc3drZmZ2Qzc4N0JmNmp0TUV5Mi10YUNMUkRaWDU1T3dmTmhRUTVZWTBSRWJKcmxGTk1yV001UmlrVGR0Q0JjMmpuS0RLWHlqYTRUS2dBQUxpaEZFbWxpdERjaEg1STFMakUwejctLXlMT0RaWmp4RlBWUXA0elBHN194SDdHRmZYNktmQmRDVEJueW1LQmZaOTQwY2IzZVJlcHZCbXBiYVd5d2gwMnhvdXg1N2ZpV1JQU0x3MEEzTlZlUlI0OHBEQXpMZFNK?oc=5" },
   { time: "07:43", tag: "ai", tagText: "AI", text: "特朗普政府冻结Anthropic顶级AI模型（Fable和Mythos）的出口许可，公司紧急应对。此举引发对AI监管不确定性的担忧，可能影响美国AI产业竞争力及全球AI技术格局。", source: "Financial Times", url: "https://www.ft.com/content/f6940d59-28f4-4ae4-a569-c6fc421e52b9" },
   { time: "07:03", tag: "macro", tagText: "宏观", text: "美伊达成和平协议后，霍尔木兹海峡积压的油轮可能需要数周才能清理完毕。分析师警告称，石油流量恢复缓慢，且仍易受新的中断影响。协议内容包括重新开放海峡及结束美国对伊朗港口的封锁，但市场对供应稳定性的担忧犹存。", source: "Financial Times", url: "https://www.ft.com/content/c2d4e116-c49a-4f6b-9b2e-d10d37e4c2e8" },
-  { time: "05:21", tag: "geo", tagText: "地缘", text: "特朗普在其80岁生日当天，于白宫草坪搭建临时竞技场举办UFC格斗赛事，以此展示政治主导力，并与美国独立宣言签署250周年庆祝活动挂钩。此举引发关于其执政优先事项与国内外重大议题并行的争议。", source: "FT / CNBC", url: "https://www.ft.com/content/11f71770-5872-4769-9ea5-a21f12151e10" },
-  { time: "05:00", tag: "macro", tagText: "宏观", text: "美国六个州相继调整燃油税政策，与此同时能源通胀加速。燃油税变动将直接影响居民出行成本和物流费用，进一步推高通胀压力，令美联储抗通胀任务更加复杂。", source: "Oilprice.com", url: "https://finance.yahoo.com/sectors/energy/articles/fuel-tax-changes-hit-six-210000819.html" },
 ];
-const breakingDate = "2026年6月15日 23:36 CST";
+const breakingDate = "2026年6月16日 02:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:44", tag: "macro", tagText: "宏观", text: "大型科技公司为AI监管立法做最后冲刺，游说国会通过一项全面的联邦法律，以取代各州零散的AI法规。该法案的核心是“优先权”，即联邦法律高于州法。但该努力面临巨大阻力，因国会对AI安全、隐私和公平性分歧严重。科技巨头希望借此避免各州出台更严格的法规。", source: "The Verge", url: "https://www.theverge.com/policy/949970/ai-regulation-child-safety-kosa-congress" },
+  { time: "01:38", tag: "ai", tagText: "AI", text: "法国AI初创公司Mistral被传正以约200亿欧元（约231.5亿美元）估值进行新一轮融资，计划筹集30亿欧元。若属实，估值较其C轮117亿欧元近乎翻倍，显示欧洲AI明星企业持续获得巨额资本追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/" },
+  { time: "01:26", tag: "ai", tagText: "AI", text: "谷歌起诉涉嫌利用AI技术发送诈骗短信的中国网络犯罪组织“Outsider Enterprise”。该组织在两周内使用AI发送约250万条诈骗短信，导致数十万受害者上当。这是科技巨头首次针对AI辅助的大规模诈骗活动提起法律诉讼。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/google-sues-alleged-chinese-cybercrime-operation-that-used-ai-to-send-scam-texts/" },
+  { time: "01:26", tag: "tech", tagText: "科技", text: "亚马逊去年数据中心用水量达25亿加仑，创历史新高。此前西雅图刚通过为期一年的数据中心建设暂停令，部分亚马逊员工也曾推动该政策。亚马逊首次公开披露这一数据，引发对环境影响的关注。", source: "The Verge", url: "https://www.theverge.com/tech/948534/amazon-data-centers-water-use" },
+  { time: "01:20", tag: "tech", tagText: "科技", text: "谷歌遭独立音乐人集体诉讼，指控其未经许可使用YouTube平台上的歌曲训练Lyria音乐AI模型。原告称谷歌将用户上传的视频视为训练素材，但未明确告知或获得授权。此案可能对AI训练数据的版权规则产生深远影响。", source: "The Verge", url: "https://www.theverge.com/tech/947770/google-lyria-music-ai-lawsuit-youtube" },
+  { time: "00:50", tag: "ai", tagText: "AI", text: "Anthropic新发布的Mythos级模型Claude Fable引发双重争议：微软因数据保留担忧限制内部员工使用该模型；同时，网络安全研究人员批评Fable的安全护栏过于严格，导致无法进行有效的安全测试与漏洞分析。模型能力与可用性之间的平衡面临行业拷问。", source: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
+  { time: "00:47", tag: "ai", tagText: "AI", text: "OpenAI面临美国多个州检察长调查，调查内容涉及广告政策、数据处理方式及健康数据合规等问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/" },
   { time: "23:29", tag: "ai", tagText: "AI", text: "数十名网络安全专家联名呼吁白宫撤销对Anthropic最强大模型Fable和Mythos的出口管制禁令，称该限制将削弱美国网络防御能力，并损害AI安全研究。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/" },
+  { time: "22:53", tag: "tech", tagText: "科技", text: "AI芯片股全面上涨，半导体ETF（SMH）创历史新高，涨幅超越英伟达。英伟达股价因报道称其计划发行200亿美元债券而跳升，市场对该债券融资用于AI基础设施扩张表示乐观。此轮涨势显示投资者对AI硬件需求持续高涨。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxOR1phRG5YUGRLczg5VW5VWjVXaDFfdGJoM2RNM3g0VWFzRThteTRna2pJRF9oc1FydjJiNWxxcnFTRkJOMEl5Q2tEVkpsT2M4aUlZcF84cTBVSWV6b0ZaUWNha0I0VWhZNEN5NGdIeWpvak9ldFJkd3dkbkhTT2ZSUFNjR2gwWXRKMjZnV19iekdaVWpNNkRQamI5ZXJVazFuZW9MZWlPZlMzcWFBVEdzaklyd2xzaFJuUU9RSzU2eDdIRW10XzNGS2ZR?oc=5" },
   { time: "22:34", tag: "ai", tagText: "AI", text: "Salesforce宣布以36亿美元收购AI客服平台Fin，计划利用其团队和技术改进企业AI代理平台Agentforce，以加速自动化客服能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/" },
   { time: "21:46", tag: "ai", tagText: "AI", text: "印度AI初创公司Sarvam获2.34亿美元融资，由HCLTech领投，估值突破10亿美元成为新晋独角兽，彰显印度AI生态的崛起。", source: "TechCrunch", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxOQzkyLVd3V3dKTzRLaU9VRHUwVWZzalgxNXdMcUlfWTNqYlJjRlNfdVVwX2J4VC1UR2FnTW1LdjgtT3ZzTUtSa1NBUm5HOVVtSDBNNFRpendCN2xYMV9SSU1iS0k4cGlROEpkQ2tza1lhallxTk5oVWdwTDBlRjU0NXFGUGVSVk10ZlZ3UFpmM2hJSnotS0t3VHZnZzdSUEZld2ZXR014OE1Dd0VPdTE2S3dFRWtHQnNhemZHaA?oc=5" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "AI安全初创公司NewCore完成6600万美元融资，旨在为AI代理提供数字身份管理与安全基础设施，应对企业环境中的AI代理身份治理挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/" },
@@ -1666,16 +1674,8 @@ const aiBreakingNews = [
   { time: "11:43", tag: "ai", tagText: "AI", text: "印度AI初创公司正在美国向风险投资者积极募资。据印度企业家Anirudh Arun透露，多家印度AI初创企业正寻求美国风投的资金支持，以推动其技术研发和市场扩张。此举反映出印度AI生态的活跃以及全球资本对AI领域的持续关注。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOeUphZm1lcE42X2pUNEVEYnFEUXd0bmgtci1FTHoyaEVpdzVfSTM1dGQwTkN2Um9rTUVzU3ZjcmsxUjM1WHFWeEhDNThmQjh2cEZ5TUdwVWdqcGlhdGNXUEtlUkxvUDY0Q19DbU05MXBmUE1tVjR2WmFYcFdxeDctNjZrVFRoNGtleW5BcTV3VndZdklCQlBvYWtJSmxHc2pwMTNjWDFMR215cUFIUFQxN0drWFVMSHo1VzJic3ZJWm51RkM5MVdzWi0zMmNmSXhoaXBCRDQzOXNYS2xsSDVV?oc=5" },
   { time: "11:04", tag: "ai", tagText: "AI", text: "风投机构Tin Men Capital领投人工智能初创公司Pints AI的560万美元融资轮。Pints AI专注于AI驱动的解决方案，此次融资将用于产品开发和团队扩张。该轮投资显示投资者对垂直AI应用场景的持续看好。", source: "Tech in Asia", url: "https://news.google.com/rss/articles/CBMijAFBVV95cUxOV01wVVoxc3pUOF9VajhPeWs3WkpHcXYyVkEzYWNXblN5Y3BFaU82cGo5NWlGSzF2NjE4SzVISFBMZERYZjRJRVl1aUgwR0xieU9pYnpnUFhvdjhKNHdLUFJfRjUySkpwMTdwTE42OGQ1b1d6cUVvRWd2LVB6UEhxTlQ3MTgzMmZVQ1dQMA?oc=5" },
   { time: "08:03", tag: "geo", tagText: "地缘", text: "消息称Meta正着手撤销其20亿美元收购AI初创公司Manus的交易，因北京方面要求该交易逆转。此举凸显中美科技监管博弈加剧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/" },
-  { time: "04:42", tag: "ai", tagText: "AI", text: "毕马威（KPMG）因报告内容出现明显的AI幻觉，撤回了其关于AI使用情况的研究报告。该报告本应分析AI在各行业的应用，但被发现包含由AI生成的虚假或不准确信息，再次引发业界对AI生成内容可靠性的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/" },
-  { time: "03:26", tag: "tech", tagText: "科技", text: "Oracle旗下PeopleSoft软件曝出0-day漏洞，影响数百个组织，可窃取数GB数据。该漏洞严重性极高，攻击者能远程访问敏感信息。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/peoplesoft-0-day-affecting-hundreds-of-organizations-steals-gigabytes-of-data/" },
-  { time: "01:38", tag: "ai", tagText: "AI", text: "法国AI初创公司Mistral被传正以约200亿欧元（约231.5亿美元）估值进行新一轮融资，计划筹集30亿欧元。若属实，估值较其C轮117亿欧元近乎翻倍，显示欧洲AI明星企业持续获得巨额资本追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/" },
-  { time: "01:26", tag: "ai", tagText: "AI", text: "谷歌起诉涉嫌利用AI技术发送诈骗短信的中国网络犯罪组织“Outsider Enterprise”。该组织在两周内使用AI发送约250万条诈骗短信，导致数十万受害者上当。这是科技巨头首次针对AI辅助的大规模诈骗活动提起法律诉讼。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/google-sues-alleged-chinese-cybercrime-operation-that-used-ai-to-send-scam-texts/" },
-  { time: "01:26", tag: "tech", tagText: "科技", text: "亚马逊去年数据中心用水量达25亿加仑，创历史新高。此前西雅图刚通过为期一年的数据中心建设暂停令，部分亚马逊员工也曾推动该政策。亚马逊首次公开披露这一数据，引发对环境影响的关注。", source: "The Verge", url: "https://www.theverge.com/tech/948534/amazon-data-centers-water-use" },
-  { time: "01:20", tag: "tech", tagText: "科技", text: "谷歌遭独立音乐人集体诉讼，指控其未经许可使用YouTube平台上的歌曲训练Lyria音乐AI模型。原告称谷歌将用户上传的视频视为训练素材，但未明确告知或获得授权。此案可能对AI训练数据的版权规则产生深远影响。", source: "The Verge", url: "https://www.theverge.com/tech/947770/google-lyria-music-ai-lawsuit-youtube" },
-  { time: "00:50", tag: "ai", tagText: "AI", text: "Anthropic新发布的Mythos级模型Claude Fable引发双重争议：微软因数据保留担忧限制内部员工使用该模型；同时，网络安全研究人员批评Fable的安全护栏过于严格，导致无法进行有效的安全测试与漏洞分析。模型能力与可用性之间的平衡面临行业拷问。", source: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
-  { time: "00:47", tag: "ai", tagText: "AI", text: "OpenAI面临美国多个州检察长调查，调查内容涉及广告政策、数据处理方式及健康数据合规等问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/" },
 ];
-const aiBreakingDate = "2026年6月15日 23:36 CST";
+const aiBreakingDate = "2026年6月16日 02:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
