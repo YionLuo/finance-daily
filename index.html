@@ -1616,19 +1616,28 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 40.86,
+  score: 41.29,
   rating: "fear",
-  timestamp: "2026-06-15T23:38:35+00:00",
-  previousClose: 34.0,
-  previous1Week: 39.86,
+  timestamp: "2026-06-16T00:59:46+00:00",
+  previousClose: 40.86,
+  previous1Week: 32.43,
   previous1Month: 62.97,
-  previous1Year: 59.54,
-  date: "2026年6月16日 07:56 CST"
+  previous1Year: 61.11,
+  date: "2026年6月16日 13:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:08", tag: "ai", tagText: "AI", text: "高通CEO表示AI代理将取代手机应用，公司正研发40款搭载AI的新设备，并看好智能眼镜发展潜力，认为其可能媲美智能手机市场规模。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/qualcomm-ceo-ai-devices-agents.html" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "巴克莱认为近期黄金抛售是“重置”，金价反弹将有利于部分矿业股；此前美元走强及加息预期打压金价，避险属性受质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/gold-reset-barclays-mining-stocks-benefit-commodities-asset.html" },
+  { time: "12:35", tag: "crypto", tagText: "加密", text: "市场预期美联储可能加息，分析指出更高利率环境对加密货币构成利空。利率上升将压制风险资产需求，比特币等加密资产或面临下行压力。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYVdjR2lxRzllMmtqRGl4d0JBSHNSWWs4RUwwbVlEdUFmQUlXOXViRC12V0hrTWo2UG1nRmlpVkR6ZFQ0dEphaGtRcm9aWDhMMW4zUTBrLW00dWVnWnBlT25FQUxjakRmaXFUM2VTSjVJYkd6SVhKcUt2ZjNXNnY3MTE4Qjhuc2hVYXoxV0ppSERwNm92elJZV1Z6Vk9POWlRc0haZDBCcm93RWJKLVluRTdQX3hFdVFwbDY1Sk5NOUFDMmhoSjdFb3JlRGtIazdna21DenlfUWdUTUNRQkU1ZUw4UWdtcmRJRGZaZGh4REY?oc=5" },
+  { time: "12:34", tag: "macro", tagText: "宏观", text: "日本央行加息至1%，创1995年以来最高水平。这是自去年12月加息至0.75%后的首次加息，主要受日元贬值和通胀压力推动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html" },
+  { time: "12:10", tag: "macro", tagText: "宏观", text: "中国5月零售销售额同比下滑，为三年来首次负增长；固定资产投资降幅超预期，经济疲软态势加深。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/china-economy-may-retail-sales-industrial-output-fixed-asset-investment-.html" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "全球最大油轮运营商商船三井警告，霍尔木兹海峡恢复通航可能需要“数周”时间，船东需重建信心；美伊协议签署后，航运恢复面临实际障碍。", source: "Financial Times", url: "https://www.ft.com/content/9dfe2dd2-2d52-445f-a223-147d6509a76f" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "对冲基金大举做空欧洲汽车股，担忧中国竞争加剧；数十亿欧元市值蒸发，长期债务和股权均遭做空。", source: "Financial Times", url: "https://www.ft.com/content/a1a4f63d-c244-4195-9b3c-8b8954edf640" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰无人机持续攻击俄占克里米亚的补给线，导致半岛燃料短缺。分析称克里米亚“易攻难守”，此次行动可能削弱俄军后勤能力，改变战场态势。", source: "Financial Times", url: "https://www.ft.com/content/0ea7f48c-172c-443f-9896-1e77c2a8d065" },
+  { time: "11:56", tag: "geo", tagText: "地缘", text: "韩国国防股因战后伊朗重建需求预期飙升，分析师称韩国军工企业将有大量向中东出口管道的机遇。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/south-korean-defense-stocks-surge-on-prospects-for-iran-wars-end-.html" },
   { time: "06:10", tag: "crypto", tagText: "加密", text: "数据显示比特币持仓正经历历史上第二大未实现亏损，市场持续承压。当前加密货币整体面临宏观利率环境及风险偏好变化的影响，投资者情绪趋于谨慎。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU3RON1NfM0Y4WktZWHpJRlRjbWwtVHI4alBwWF9GaGs5blE1NmNPTG9wQWt2cDB1Q1VzdTFyLU9Jd0VNQ3pGMEN6d3hRaWJLampoaWY2TzAyd0pvZF96UkVVdkd5QVBqeWRTcVVESG1NNkJkQjJXOTN0V05OLWtHR0JqR2NPQ0M3bXJVVWgteUhra1prUjFTU1RuelF2Q0kwd0lTSU40VQ?oc=5" },
   { time: "05:13", tag: "geo", tagText: "地缘", text: "美伊和平协议达成后，美国战略石油储备（SPR）降至1983年以来最低水平。同时特朗普政府正考虑设立3000亿美元基金用于激励伊朗履行协议，包括开放霍尔木兹海峡和在核问题上合作。此举旨在稳定全球油价，但基金规模与伊朗表现挂钩。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/iran-deal-came-in-time-as-strategic-petroleum-reserve-hits-lowest-level-since-1983.html" },
   { time: "04:43", tag: "tech", tagText: "科技", text: "AMD股价飙升，市值逼近9000亿美元，超过摩根大通。公司通过增强内存技术推动AI芯片竞争力，市场对其前景乐观。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amd-flirts-with-a-900-billion-valuation-after-beefing-up-its-memory-technology-2a366bdc?mod=mw_rss_topstories" },
@@ -1640,20 +1649,13 @@ const breakingNews = [
   { time: "23:12", tag: "geo", tagText: "地缘", text: "美伊初步达成和平协议，全球股市大涨。道琼斯指数飙升超600点创历史新高，标普500和纳斯达克同步上涨，欧洲STOXX 600指数也创下历史新高。油价暴跌约5%，因市场预期霍尔木兹海峡将重新开放，但分析师警告油轮积压清理需数周，且战前油价水平短期难恢复。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/us-iran-deal-hormuz-markets.html" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "Anthropic将与美国特朗普政府会面，讨论其最新AI模型Mythos的出口限制争议。此前美国商务部向Anthropic发出指令，要求暂停任何外国国民访问其最新模型，引发业界对AI监管不确定性的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/anthropic-mythos-trump-ai.html" },
   { time: "22:18", tag: "crypto", tagText: "加密", text: "分析师指出，比特币关键技术指标转为看涨，宣告“加密春天”到来。多项链上数据和情绪指标显示市场底部已过，机构资金重新流入，但宏观利率环境仍是隐忧。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNOFJiYlRqOHlyWWVEdUpaam9rYlBjcTIxMlMwN0ZteERlZUNzOGVnRjEzcXYxM1RKajBDMHJwbzVDQUJhV2dRdlh3aVljVWpkem43Um83MXVTZmNDRWYyRXZrN3lSNVpaOEw4TU5kbWx5aWZaTERycmoyV0pJWmdEUjBJRlY4R1J6RFFHRjlLcURnSndQTGVLSmhEekkzRnNfcjdKUlU1NkM0VEFwRjcteFJUUXdWeG1kNW1fMUZCUWo" },
-  { time: "20:24", tag: "tech", tagText: "科技", text: "福克斯（Fox）宣布以220亿美元企业价值收购流媒体设备制造商Roku。合并后公司将成为美国电视收视份额第三大巨头，标志媒体行业格局重大转变。Roku股价飙升至四年新高。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/fox-to-buy-roku.html" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "一年前Meta重金挖来AI明星Alexandr Wang主导新模型开发，但成果未达预期。如今CEO扎克伯格不得不亲自下场向客户推销该模型，暴露了Meta在AI商业化上的困境。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/meta-hired-alexandr-wang-to-build-ai-its-zuckerbergs-job-to-sell-it.html" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "Pimco警告债务市场违约潮再度来袭，建议投资者增持固定收益资产，因股票估值已偏高。该债券巨头指出，企业违约率正在回升，市场应转向防御性策略。", source: "MarketWatch", url: "https://www.marketwatch.com/story/defaults-in-debt-markets-are-starting-again-warns-pimco-heres-the-bond-giants-game-plan-16559c6d?mod=mw_rss_topstories" },
-  { time: "19:38", tag: "tech", tagText: "科技", text: "SpaceX上市次日股价盘前再涨超6%，市值突破2万亿美元，马斯克成为全球首位万亿富翁，个人净资产接近加密市场总市值的一半。分析师对估值分歧加大，但市场情绪高涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/spacex-stock-record-ipo-debut.html" },
-  { time: "19:36", tag: "geo", tagText: "地缘", text: "英国当局调查发现，针对首相斯塔默多处住宅的纵火袭击由与亲克里姆林宫黑客组织有关联的人员策划。事件加剧英俄紧张关系，安全警戒升级。", source: "Financial Times", url: "https://www.ft.com/content/dd79d6eb-44e4-4365-8c6e-a4fd64b211c8" },
-  { time: "19:35", tag: "geo", tagText: "地缘", text: "瑞士选民在公投中否决了限制人口增长的提案，该提案曾引发商界对终止瑞士与欧盟之间劳动力自由流动的担忧。否决结果避免了瑞士与欧盟的直接冲突，维护了当前的双边关系框架。", source: "CNBC", url: "https://www.cnbc.com/2026/06/14/swiss-voters-set-to-reject-population-cap-in-referendum.html" },
-  { time: "19:14", tag: "geo", tagText: "地缘", text: "特朗普威胁称，若法国不废除针对美国科技公司的数字服务税，将对法国葡萄酒和香槟征收100%关税。该声明发布于G7峰会前夕，贸易摩擦风险升温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/trump-france-tech-tax-wine-tariffs-champagne.html" },
-  { time: "12:35", tag: "crypto", tagText: "加密", text: "市场预期美联储可能加息，分析指出更高利率环境对加密货币构成利空。利率上升将压制风险资产需求，比特币等加密资产或面临下行压力。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYVdjR2lxRzllMmtqRGl4d0JBSHNSWWs4RUwwbVlEdUFmQUlXOXViRC12V0hrTWo2UG1nRmlpVkR6ZFQ0dEphaGtRcm9aWDhMMW4zUTBrLW00dWVnWnBlT25FQUxjakRmaXFUM2VTSjVJYkd6SVhKcUt2ZjNXNnY3MTE4Qjhuc2hVYXoxV0ppSERwNm92elJZV1Z6Vk9POWlRc0haZDBCcm93RWJKLVluRTdQX3hFdVFwbDY1Sk5NOUFDMmhoSjdFb3JlRGtIazdna21DenlfUWdUTUNRQkU1ZUw4UWdtcmRJRGZaZGh4REY?oc=5" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰无人机持续攻击俄占克里米亚的补给线，导致半岛燃料短缺。分析称克里米亚“易攻难守”，此次行动可能削弱俄军后勤能力，改变战场态势。", source: "Financial Times", url: "https://www.ft.com/content/0ea7f48c-172c-443f-9896-1e77c2a8d065" },
 ];
-const breakingDate = "2026年6月16日 07:56 CST";
+const breakingDate = "2026年6月16日 13:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:25", tag: "ai", tagText: "AI", text: "韩国科学技术院（KAIST）发布突破性技术，可大幅降低AI数据中心冷却功耗，有望解决AI算力扩张中的能源瓶颈问题。", source: "The Korea Times", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVDMwbC1rSWlYcTdBWHRjWmVrSDFidG15N1ZqSXNDYmZZTkZJekJTRVZVZzJhRF9ub1hhNmt1dmxvaVc0LXZWSUxfRkZkZzN6NjVBZGpfdFVLZndic1lKc0RETjlZRVVsYVVlTXF5Y2RDYnNmMU9EaDktS3VmdmlpMFJQRzE0UzgwNmJMZmJnXzVLWlFLZ3JoYm9va1Y4WUZwT0ZzRTBzZHdVQS1YVHdDbWhYT3ZTNFhsLUIxejJn0gHDAUFVX3lxTE96ZnlZQ01kWlBGTjZKUlhQelhxcTNvUjFQaGZLR244eExSTGZ6SWZNY3VSS1NUMDliUi1sdTExdmY0QmZIODBpXzI0LTkydlAwMUNvVFlteU1TNjIwZjFXSWdhejluTzNKYXVvUnpRM1pha3kxd2I0WnFSaEt6cGRtVXRmVDZIOUlsSFgxU3RfdXlIVGRVaVBkSV9qXzVxTEwydkpyUTV0WkpHbWJ2bnBuVkxobUpYbGRKeVJTYjVmb1ZBaw?oc=5" },
+  { time: "12:25", tag: "ai", tagText: "AI", text: "谷歌、亚马逊、微软、Meta等全球科技巨头宣布“脱离英伟达”，正通过自研芯片或引入其他供应商，试图降低对英伟达AI芯片的依赖，以增强供应链自主性。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTFB4TjFZRm1JbVpCQkRTVF9kS2lsNU9sejRXdnl6b1dXX1NTc0JKWDRzZ0Q0ZjlCU0duc0lydm5ETHBXQmdjc2cydFhWZw?oc=5" },
   { time: "07:51", tag: "ai", tagText: "AI", text: "谷歌CEO皮查伊在斯坦福大学毕业典礼上发表演讲时，因谷歌与以色列及ICE（移民海关执法局）的合同关系遭遇学生嘘声和集体退场抗议。抗议焦点在于谷歌将AI技术用于国防和移民执法合同，引发关于AI伦理的校园争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/sundar-pichai-faces-boos-walkout-at-stanford-graduation-ceremony-over-googles-israel-ice-ties/" },
   { time: "05:13", tag: "tech", tagText: "科技", text: "AI云计算公司CoreWeave旗下超级计算机“Vera Rubin”实现算力突破，但新的债务融资成本高昂，市场对其AI雄心能否持续产生质疑。该公司正承受扩大基础设施与偿还债务的双重压力。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOYk1tNlJ0dnFiN3F0c1Z2eUtXSmplNDgyTlA2WV82UENGRjdScnNfWXAwaGNlM1ViMGZWSE1sS2hScGpiYjYtS1NnWkptTmhZLVhicnhhUzRmU1A4Q0RlZTE0MGhVX0VrZC13TU5hOVp3MzNHSFhwQUt0VjFhSFZEQkdDSXVWUS1BaHl0RHg4RTlrY0g3SFg0Uk12MF9OMFNvYVRPd1ZB?oc=5" },
   { time: "02:30", tag: "tech", tagText: "科技", text: "Meta宣布在 Facebook 推出全新“AI 模式”，该功能将聚合旗下各平台的公开信息，旨在增强用户互动并加速追赶竞争对手。此举是 Meta 在 AI 领域最新布局，标志着社交巨头进一步整合资源。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:34", tag: "ai", tagText: "AI", text: "Salesforce宣布以36亿美元收购AI客服平台Fin，计划利用其团队和技术改进企业AI代理平台Agentforce，以加速自动化客服能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/" },
   { time: "21:46", tag: "ai", tagText: "AI", text: "印度AI初创公司Sarvam获2.34亿美元融资，由HCLTech领投，估值突破10亿美元成为新晋独角兽，彰显印度AI生态的崛起。", source: "TechCrunch", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxOQzkyLVd3V3dKTzRLaU9VRHUwVWZzalgxNXdMcUlfWTNqYlJjRlNfdVVwX2J4VC1UR2FnTW1LdjgtT3ZzTUtSa1NBUm5HOVVtSDBNNFRpendCN2xYMV9SSU1iS0k4cGlROEpkQ2tza1lhallxTk5oVWdwTDBlRjU0NXFGUGVSVk10ZlZ3UFpmM2hJSnotS0t3VHZnZzdSUEZld2ZXR014OE1Dd0VPdTE2S3dFRWtHQnNhemZHaA?oc=5" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "AI安全初创公司NewCore完成6600万美元融资，旨在为AI代理提供数字身份管理与安全基础设施，应对企业环境中的AI代理身份治理挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "地球观测卫星首次自主发现目标：今年4月，一颗卫星在没有地面指令的情况下自行识别并找到了它要寻找的目标物体。这是卫星自主智能的重大突破，意味着未来卫星可自主执行侦察、灾害监测等任务，大幅降低对地面控制的依赖。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "AI初创融资热潮并非全球现象：Crunchbase数据显示，AI领域的天量资金高度集中在美国和中国市场，欧洲、拉丁美洲和非洲的AI初创公司获得的资金占比极小。这一结构性差异意味着全球AI竞赛的赢家可能仅限于少数地区。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9Rc0RfdUdVYUVEQ0w2dE5sNnZvUU1ZQ0ZLdzR3RF83VjgxZ2xVdXdac1FMNUVQcjBBendmSjlmRDd3SUNJMXF1a1Z2QlhNd09kMkVKbkgtSnNUR1ZkM0NacVhYc0xBRkR1blRabzlQMFZzaFRuelRB?oc=5" },
 ];
-const aiBreakingDate = "2026年6月16日 07:56 CST";
+const aiBreakingDate = "2026年6月16日 13:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
