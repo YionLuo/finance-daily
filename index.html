@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 41.29,
+  score: 40.23,
   rating: "fear",
-  timestamp: "2026-06-16T11:14:31+00:00",
+  timestamp: "2026-06-16T15:29:54+00:00",
   previousClose: 40.86,
   previous1Week: 32.43,
   previous1Month: 62.97,
   previous1Year: 61.11,
-  date: "2026年6月16日 19:30 CST"
+  date: "2026年6月16日 23:34 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:26", tag: "macro", tagText: "宏观", text: "分析文章指出，特朗普最新的贸易战威胁可能迫使美联储在本周会议上采取行动。如果关税升级进一步推高通胀或抑制经济增长，美联储或需调整利率立场。市场正密切关注明日美联储决议。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/economy/policy/articles/opinion-trump-newest-trade-war-152658222.html" },
+  { time: "23:18", tag: "tech", tagText: "科技", text: "T. Rowe Price知名基金经理David Giroux将特斯拉从“科技七巨头”中剔除，替换为另一科技巨头。他认为当前大型科技股并未处于泡沫，但看好医疗保健和公用事业板块的价值。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-veteran-investor-is-kicking-tesla-out-of-the-magnificent-seven-replacing-it-with-this-tech-giant-a2828cec?mod=mw_rss_topstories" },
+  { time: "23:03", tag: "ai", tagText: "AI", text: "英伟达成为AI数据中心建设浪潮中的“大借款人”，其下游供应商及数据中心运营商正大量举债以扩张算力基础设施。分析指出，快速增长的债务可能带来系统性风险，但短期内AI需求仍保持强劲。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/ai-data-centers-suppliers-nvidia-debt/?src=A00220&yptr=yahoo" },
+  { time: "23:00", tag: "macro", tagText: "宏观", text: "宾夕法尼亚大学沃顿商学院的最新模型预测，美国社会保障退休信托基金可能在2033年2月耗尽，比官方预测更早。该报告独家分享给CNBC，凸显社会保障体系面临的资金压力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/social-security-trust-funds-wharton-analysis.html" },
+  { time: "22:53", tag: "geo", tagText: "地缘", text: "美国总统特朗普表示，他可能会将周日宣布的美伊和平协议的详细信息提交给国会审议。目前该协议在国会反应冷淡，包括部分特朗普盟友也持保留态度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/trump-iran-deal-congress.html" },
+  { time: "22:47", tag: "geo", tagText: "地缘", text: "FBI局长卡什·帕特尔表示，执法部门挫败了一起针对周日白宫UFC活动的袭击阴谋，多人已被拘留。事件未造成实际伤害，但凸显美国国内安全风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/fbi-alleged-plot-targeting-ufc-event-white-house-trump.html" },
   { time: "13:08", tag: "ai", tagText: "AI", text: "高通CEO表示AI代理将取代手机应用，公司正研发40款搭载AI的新设备，并看好智能眼镜发展潜力，认为其可能媲美智能手机市场规模。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/qualcomm-ceo-ai-devices-agents.html" },
   { time: "13:00", tag: "macro", tagText: "宏观", text: "巴克莱认为近期黄金抛售是“重置”，金价反弹将有利于部分矿业股；此前美元走强及加息预期打压金价，避险属性受质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/gold-reset-barclays-mining-stocks-benefit-commodities-asset.html" },
   { time: "12:35", tag: "crypto", tagText: "加密", text: "市场预期美联储可能加息，分析指出更高利率环境对加密货币构成利空。利率上升将压制风险资产需求，比特币等加密资产或面临下行压力。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYVdjR2lxRzllMmtqRGl4d0JBSHNSWWs4RUwwbVlEdUFmQUlXOXViRC12V0hrTWo2UG1nRmlpVkR6ZFQ0dEphaGtRcm9aWDhMMW4zUTBrLW00dWVnWnBlT25FQUxjakRmaXFUM2VTSjVJYkd6SVhKcUt2ZjNXNnY3MTE4Qjhuc2hVYXoxV0ppSERwNm92elJZV1Z6Vk9POWlRc0haZDBCcm93RWJKLVluRTdQX3hFdVFwbDY1Sk5NOUFDMmhoSjdFb3JlRGtIazdna21DenlfUWdUTUNRQkU1ZUw4UWdtcmRJRGZaZGh4REY?oc=5" },
@@ -1643,18 +1649,16 @@ const breakingNews = [
   { time: "11:05", tag: "macro", tagText: "宏观", text: "白银价格今日开盘创逾一周新高，市场关注本周美联储会议。", source: "Yahoo Personal Finance", url: "https://finance.yahoo.com/personal-finance/investing/article/silver-prices-today-tuesday-june-16-best-opening-price-in-over-a-week-ahead-of-fed-meeting-110523343.html" },
   { time: "10:59", tag: "tech", tagText: "科技", text: "SpaceX股价再飙升，市值超越亚马逊成为美国第五大公司。此次IPO后涨势迅猛，同时宣布600亿美元收购交易。", source: "Financial Times", url: "https://www.ft.com/content/17153f13-b0c8-4331-8f97-32a19a5e966e" },
   { time: "10:56", tag: "geo", tagText: "地缘", text: "特朗普在G7峰会上否认美国将向伊朗提供资金，美伊刚于周末达成谅解备忘录。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/trump-g7-summit-iran-zelenskyy-macron.html" },
-  { time: "10:47", tag: "macro", tagText: "宏观", text: "美伊协议前景下，美国银行上调某能源巨头评级至买入，认为无论局势如何该股均具吸引力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/the-us-iran-war-could-end-soon-bofa-says-buy-this-energy-giant-no-matter-what.html" },
-  { time: "09:07", tag: "macro", tagText: "宏观", text: "高盛下调油价目标至市场水平，认为和平协议已充分定价。报告指出全球经济已灵活适应了此前最大的石油供应冲击。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-peace-deal-is-in-the-price-goldman-sachs-lowers-its-oil-price-target-to-market-levels-632cc2b1?mod=mw_rss_topstories" },
-  { time: "06:10", tag: "crypto", tagText: "加密", text: "数据显示比特币持仓正经历历史上第二大未实现亏损，市场持续承压。当前加密货币整体面临宏观利率环境及风险偏好变化的影响，投资者情绪趋于谨慎。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU3RON1NfM0Y4WktZWHpJRlRjbWwtVHI4alBwWF9GaGs5blE1NmNPTG9wQWt2cDB1Q1VzdTFyLU9Jd0VNQ3pGMEN6d3hRaWJLampoaWY2TzAyd0pvZF96UkVVdkd5QVBqeWRTcVVESG1NNkJkQjJXOTN0V05OLWtHR0JqR2NPQ0M3bXJVVWgteUhra1prUjFTU1RuelF2Q0kwd0lTSU40VQ?oc=5" },
-  { time: "05:13", tag: "geo", tagText: "地缘", text: "美伊和平协议达成后，美国战略石油储备（SPR）降至1983年以来最低水平。同时特朗普政府正考虑设立3000亿美元基金用于激励伊朗履行协议，包括开放霍尔木兹海峡和在核问题上合作。此举旨在稳定全球油价，但基金规模与伊朗表现挂钩。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/iran-deal-came-in-time-as-strategic-petroleum-reserve-hits-lowest-level-since-1983.html" },
-  { time: "04:43", tag: "tech", tagText: "科技", text: "AMD股价飙升，市值逼近9000亿美元，超过摩根大通。公司通过增强内存技术推动AI芯片竞争力，市场对其前景乐观。", source: "MarketWatch", url: "https://www.marketwatch.com/story/amd-flirts-with-a-900-billion-valuation-after-beefing-up-its-memory-technology-2a366bdc?mod=mw_rss_topstories" },
-  { time: "04:33", tag: "geo", tagText: "地缘", text: "加州州长纽森称特朗普已下令司法部调查他和他的妻子。纽森被视为2028年民主党潜在总统候选人，此举引发政治博弈加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/15/gavin-newsom-trump-doj-investigation-california.html" },
 ];
-const breakingDate = "2026年6月16日 19:30 CST";
+const breakingDate = "2026年6月16日 23:34 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:29", tag: "ai", tagText: "AI", text: "数十名网络安全专家联名呼吁白宫撤销对Anthropic最强大模型Fable和Mythos的出口管制禁令，称该限制将削弱美国网络防御能力，并损害AI安全研究。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/" },
+  { time: "23:05", tag: "tech", tagText: "科技", text: "美国司法部（DOJ）声称，xAI未经许可运行的燃气轮机事关“国家、经济和能源安全”，并称五角大楼需要xAI继续使用这些设备。此举将AI基础设施与国家安全绑定，引发对监管合规与能源依赖的争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/doj-claims-xais-unpermitted-gas-turbines-are-a-matter-of-national-economic-and-energy-security/" },
+  { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX股价上市后估值飙升，已达2.7万亿美元，超越亚马逊。其估值在周五开始交易以来增加1万亿美元，显示出资本市场对其航天与AI融合前景的极度看好。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/spacex-passes-amazon-as-valuation-balloons-to-2-7t/" },
   { time: "19:21", tag: "tech", tagText: "科技", text: "SpaceX在IPO仅数天后宣布以600亿美元股票收购AI编程工具Cursor，旨在提振其陷入困境的AI部门。SpaceX向IPO投资者表示，其AI业务潜在市场规模达26万亿美元。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/" },
+  { time: "19:15", tag: "tech", tagText: "科技", text: "微软Copilot曝出严重安全漏洞：黑客可利用SearchLeak攻击窃取用户的二因素认证（2FA）码。该漏洞暴露了当前大语言模型安全架构的固有缺陷，行业亟需从根本上重新审视LLM防护策略。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/critical-copilot-vulnerability-allowed-hackers-to-seal-2fa-code-from-users/" },
   { time: "15:38", tag: "ai", tagText: "AI", text: "中国AI初创公司DeepSeek完成超70亿美元融资，采用非同寻常的交易结构。此轮融资规模巨大，显示中国AI赛道依然火热，但具体投资者与条款尚未完全披露。", source: "Emirates 24|7", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWDNBVHF2RUdrNUxoM1JiMjYwYjFnV0FWazQ1cTJzVjdtMEpfOUwzZlZFM0JtUkxFRHdHbFFqNzhpeHFJaGVYY1BaWWxMUzhYdjI4M096WGpqWGJhZ1c5NGlvQzR0NjFZcEJ6WWx5eGJVUkktakRfSjQwYmI5UjNta1pBZHVhdXVvTTV3YjhReDZKYUNrMUZTOHpGYUM0VTYxVktGeHhKYi1FY3NBSHd0ZktPNThfVjR5M2JlaEVB0gHYAUFVX3lxTE9VSDVhMFVPdWxoVWppLXNfekl0di1jYVFLU1hZZEphN0ZvZzFaYnczQU1GYjRUUTR4VzM1VlM1NTg5OWFVajd6V1JqemxLZGx4eUczYTZQRXQtRGFxamlfdmIzM0F3bHJQT2lYM0ZQdEdNOVpncTNwaU45Qkh2NF9HczQwRm9IcFc3Z2ZmVlFNZVF2VXZ3dFRkS1doRHJlMDZudndkUHVDLVRnUlE0MXdRUGhva2NCRUpWLUhoUHVlWS1BYV85aUJ2RnlLV1llOHoxNnNUYXczeA?oc=5" },
   { time: "14:59", tag: "ai", tagText: "AI", text: "马来西亚AI消息平台Respond.io完成6250万美元融资，计划用于北美和欧洲的收购。该公司利用AI代理处理大量客户问询，按对话计费而非按座位，成为东南亚AI创业的代表之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/malaysias-respond-io-raises-62-5m-eyes-acquisitions-in-north-america-and-europe/" },
   { time: "14:55", tag: "tech", tagText: "科技", text: "法国研究机构CEA-Leti展示了22nm铁电RAM（FeRAM）技术突破，专为边缘AI应用设计。该技术可提供非易失性存储与高速读写能力，有望替代传统嵌入式闪存，推动低功耗AI设备发展。", source: "New Electronics", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxNakpZUkZRT0lzcXc4RVQ1Ni1ERWdYVVFvX0ZQbURPdElTYmgxVGprRklSN2tKalRJcktVbmFTdzM0NjlkNkl5QV9MbmlRLUZRU09qYVRMSkQ2ZWRRTkxMeUI0SmJ0NEl1MnlSQ2t2ZHVXT0h2d2JuenNEeTdTZ0VWbndUZXhvTFE0cHVJN0xkUDNBcnhjZnl1Ukowa1NiTXA5LXJaWlJuZWIwM1JDNV9MMGdEYUlEM0U?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "01:38", tag: "ai", tagText: "AI", text: "法国AI初创公司Mistral被传正以约200亿欧元（约231.5亿美元）估值进行新一轮融资，计划筹集30亿欧元。若属实，估值较其C轮117亿欧元近乎翻倍，显示欧洲AI明星企业持续获得巨额资本追捧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/" },
   { time: "01:26", tag: "ai", tagText: "AI", text: "谷歌起诉涉嫌利用AI技术发送诈骗短信的中国网络犯罪组织“Outsider Enterprise”。该组织在两周内使用AI发送约250万条诈骗短信，导致数十万受害者上当。这是科技巨头首次针对AI辅助的大规模诈骗活动提起法律诉讼。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/12/google-sues-alleged-chinese-cybercrime-operation-that-used-ai-to-send-scam-texts/" },
   { time: "01:26", tag: "tech", tagText: "科技", text: "亚马逊去年数据中心用水量达25亿加仑，创历史新高。此前西雅图刚通过为期一年的数据中心建设暂停令，部分亚马逊员工也曾推动该政策。亚马逊首次公开披露这一数据，引发对环境影响的关注。", source: "The Verge", url: "https://www.theverge.com/tech/948534/amazon-data-centers-water-use" },
-  { time: "01:20", tag: "tech", tagText: "科技", text: "谷歌遭独立音乐人集体诉讼，指控其未经许可使用YouTube平台上的歌曲训练Lyria音乐AI模型。原告称谷歌将用户上传的视频视为训练素材，但未明确告知或获得授权。此案可能对AI训练数据的版权规则产生深远影响。", source: "The Verge", url: "https://www.theverge.com/tech/947770/google-lyria-music-ai-lawsuit-youtube" },
-  { time: "00:50", tag: "ai", tagText: "AI", text: "Anthropic新发布的Mythos级模型Claude Fable引发双重争议：微软因数据保留担忧限制内部员工使用该模型；同时，网络安全研究人员批评Fable的安全护栏过于严格，导致无法进行有效的安全测试与漏洞分析。模型能力与可用性之间的平衡面临行业拷问。", source: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
-  { time: "00:47", tag: "ai", tagText: "AI", text: "OpenAI面临美国多个州检察长调查，调查内容涉及广告政策、数据处理方式及健康数据合规等问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/" },
-  { time: "23:29", tag: "ai", tagText: "AI", text: "数十名网络安全专家联名呼吁白宫撤销对Anthropic最强大模型Fable和Mythos的出口管制禁令，称该限制将削弱美国网络防御能力，并损害AI安全研究。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/" },
 ];
-const aiBreakingDate = "2026年6月16日 19:30 CST";
+const aiBreakingDate = "2026年6月16日 23:34 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
