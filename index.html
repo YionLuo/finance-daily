@@ -1618,18 +1618,21 @@
 const fearGreedData = {
   score: 39.2,
   rating: "fear",
-  timestamp: "2026-06-16T20:56:16+00:00",
+  timestamp: "2026-06-16T23:25:25+00:00",
   previousClose: 40.86,
   previous1Week: 32.43,
   previous1Month: 62.97,
   previous1Year: 61.11,
-  date: "2026年6月17日 05:15 CST"
+  date: "2026年6月17日 07:44 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:34", tag: "ai", tagText: "AI", text: "Anthropic关闭旗下AI代理平台Fable，被视为开源AI的重要转折点。目前许多增长最快的开源模型来自中国，该事件可能加速开源社区分化，并引发对AI安全与商业模式的重新思考。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/anthropics-fable-shutdown-is-a-big-moment-for-open-source-ai.html" },
+  { time: "06:25", tag: "ai", tagText: "AI", text: "Databricks年化营收达69亿美元，增速超80%，由AI代理驱动数据分析带来强劲增长。但大量AI活动显著推高成本，利润率出现收缩，引发市场对AI规模化商业模式的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/databricks-revenue-growth-tops-80percent-to-6point9-billion-annualized.html" },
   { time: "05:00", tag: "tech", tagText: "科技", text: "英特尔开始生产其最先进芯片节点18A-P，这可能是未来与苹果达成协议的关键。新节点将用于下一代处理器，有助于英特尔追赶台积电的制造工艺。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/intel-begins-production-of-18a-p-inches-closer-to-possible-apple-deal.html" },
+  { time: "04:56", tag: "crypto", tagText: "加密", text: "比特币突破65,000美元，创近期新高。中东紧张局势缓和以及大型投资者（鲸鱼）大规模买入是主要推手。市场情绪转暖，但需关注美联储利率决议带来的潜在波动。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJaS1hyc21PMWtBOFRKNDBPTk9yYlY4RFpqQ2ZlQjFzM2JsUTl6UFo5X1FydXNoeFRuNUc1ZUlMYzBiWHhIRXZJT0NGdmpiaExqcWJ4b19FcE0wWmlFT2szV1hQYW5Sdk1RZDlnbmRBVkhCTDV5RTFhYWM2R3VQVjF6OHZudTg5T1pvamdqemFrX1ZOX1Z0aHdVVWd1QQ?oc=5" },
   { time: "04:47", tag: "tech", tagText: "科技", text: "福克斯宣布将以220亿美元收购流媒体设备制造商Roku。尽管福克斯股价因收购消息下跌，但分析师认为交易合理，将帮助福克斯在流媒体时代扩大用户基础和广告业务。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/fox-roku-stock-investors-streaming.html" },
   { time: "04:47", tag: "macro", tagText: "宏观", text: "美国国会两党领导人就限制投资者购买住房的法案达成一致，预计将迅速通过。该法案旨在遏制机构投资者大规模购房推高房价，优先保障个人购房者需求。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/housing-bill-limiting-investors-congress.html" },
   { time: "04:29", tag: "tech", tagText: "科技", text: "SpaceX上市首日股价飙升60%，市值超越亚马逊成为全球第五大公司，盘中一度超越微软。公司宣布以600亿美元收购AI编程应用Cursor。创始人马斯克称2030年营收或达1万亿美元。知名投资者Michael Burry表示想做空但放弃，称估值过高。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/spacex-stock-rally-market-cap.html" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "22:53", tag: "geo", tagText: "地缘", text: "美国总统特朗普表示，他可能会将周日宣布的美伊和平协议的详细信息提交给国会审议。目前该协议在国会反应冷淡，包括部分特朗普盟友也持保留态度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/trump-iran-deal-congress.html" },
   { time: "22:47", tag: "geo", tagText: "地缘", text: "FBI局长卡什·帕特尔表示，执法部门挫败了一起针对周日白宫UFC活动的袭击阴谋，多人已被拘留。事件未造成实际伤害，但凸显美国国内安全风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/fbi-alleged-plot-targeting-ufc-event-white-house-trump.html" },
   { time: "13:08", tag: "ai", tagText: "AI", text: "高通CEO表示AI代理将取代手机应用，公司正研发40款搭载AI的新设备，并看好智能眼镜发展潜力，认为其可能媲美智能手机市场规模。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/qualcomm-ceo-ai-devices-agents.html" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "巴克莱认为近期黄金抛售是“重置”，金价反弹将有利于部分矿业股；此前美元走强及加息预期打压金价，避险属性受质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/gold-reset-barclays-mining-stocks-benefit-commodities-asset.html" },
-  { time: "12:35", tag: "crypto", tagText: "加密", text: "市场预期美联储可能加息，分析指出更高利率环境对加密货币构成利空。利率上升将压制风险资产需求，比特币等加密资产或面临下行压力。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYVdjR2lxRzllMmtqRGl4d0JBSHNSWWs4RUwwbVlEdUFmQUlXOXViRC12V0hrTWo2UG1nRmlpVkR6ZFQ0dEphaGtRcm9aWDhMMW4zUTBrLW00dWVnWnBlT25FQUxjakRmaXFUM2VTSjVJYkd6SVhKcUt2ZjNXNnY3MTE4Qjhuc2hVYXoxV0ppSERwNm92elJZV1Z6Vk9POWlRc0haZDBCcm93RWJKLVluRTdQX3hFdVFwbDY1Sk5NOUFDMmhoSjdFb3JlRGtIazdna21DenlfUWdUTUNRQkU1ZUw4UWdtcmRJRGZaZGh4REY?oc=5" },
-  { time: "12:34", tag: "macro", tagText: "宏观", text: "日本央行加息至1%，创1995年以来最高水平。这是自去年12月加息至0.75%后的首次加息，主要受日元贬值和通胀压力推动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html" },
 ];
-const breakingDate = "2026年6月17日 05:15 CST";
+const breakingDate = "2026年6月17日 07:44 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:34", tag: "ai", tagText: "AI", text: "据Ramp数据显示，Anthropic与特朗普政府的争执反而可能提升其企业销售。该公司在企业用户中的受欢迎程度持续增长，最新与政府的矛盾似乎未影响客户信心。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/anthropics-latest-feud-with-the-trump-admin-may-actually-help-it-sales-data-suggests/" },
+  { time: "06:32", tag: "tech", tagText: "科技", text: "韩国养老金账户中机器人ETF规模激增3万亿韩元（约25亿美元），显示机构投资者对自动化与AI机器人赛道的长期看好。此次资金流入反映了市场对工业机器人及AI驱动自动化趋势的信心。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaGpfbnd2NUVhVTR1a0tESGpmOG14MHptUWVCNHFEdG9VOXVkRXlHd2d6Z3ppMzhwN0E3UWhPaFh0UmxGd2FQSEprTFhqUzhIYlVPZ19qTEE3dTBDSW9GX2RrdmFjRFV6MGhmbGZGMllqVEsxaldZV21LV2xQYldwZWF3cktWNVV1VlNhVnpn?oc=5" },
+  { time: "06:11", tag: "tech", tagText: "科技", text: "HPE向VMware用户提供一年免费虚拟化软件，旨在吸引因Broadcom收购VMware后寻求替代方案的客户。合作伙伴表示HPE应发放更多免费VM Essentials许可以扩大用户基础。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/06/16/hpe-tempts-vmware-users-partners-with-year-of-free-virtualization-software/" },
   { time: "05:13", tag: "tech", tagText: "科技", text: "AI云计算公司CoreWeave旗下超级计算机“Vera Rubin”实现算力突破，但新的债务融资成本高昂，市场对其AI雄心能否持续产生质疑。该公司正承受扩大基础设施与偿还债务的双重压力。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOYk1tNlJ0dnFiN3F0c1Z2eUtXSmplNDgyTlA2WV82UENGRjdScnNfWXAwaGNlM1ViMGZWSE1sS2hScGpiYjYtS1NnWkptTmhZLVhicnhhUzRmU1A4Q0RlZTE0MGhVX0VrZC13TU5hOVp3MzNHSFhwQUt0VjFhSFZEQkdDSXVWUS1BaHl0RHg4RTlrY0g3SFg0Uk12MF9OMFNvYVRPd1ZB?oc=5" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "据彭博社报道，Anthropic的战略撤退为中国“开放AI”模式带来利好。这一动向可能重塑全球AI竞争格局，中国开源AI生态有望借此获得更多市场空间和人才资源。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZkRPRmthcjVWTXcyeEFQQjkyd2d0SzBFWnA5V0Nyd3IwREJpWUszTkhmOF9lNXJoUUx3V2c5MU81WjJWYTd2OTRVQnJuTWp1ajlKZXZXcDlxaDA4V0RGNG8zVmQzRDY1YzBEZHVqRUZJWWJ6c3U3Z1duek95bEFnY1FZYUhUalFic09FNFhoOFZOdlRLS3o1RzdaZElteDNaelk0NnU3RlRJV2kzTWxUYWFSdk9yLW9ZcHpJ?oc=5" },
   { time: "02:30", tag: "tech", tagText: "科技", text: "Meta宣布在 Facebook 推出全新“AI 模式”，该功能将聚合旗下各平台的公开信息，旨在增强用户互动并加速追赶竞争对手。此举是 Meta 在 AI 领域最新布局，标志着社交巨头进一步整合资源。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX股价上市后估值飙升，已达2.7万亿美元，超越亚马逊。其估值在周五开始交易以来增加1万亿美元，显示出资本市场对其航天与AI融合前景的极度看好。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/spacex-passes-amazon-as-valuation-balloons-to-2-7t/" },
   { time: "19:21", tag: "tech", tagText: "科技", text: "SpaceX在IPO仅数天后宣布以600亿美元股票收购AI编程工具Cursor，旨在提振其陷入困境的AI部门。SpaceX向IPO投资者表示，其AI业务潜在市场规模达26万亿美元。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/" },
   { time: "19:15", tag: "tech", tagText: "科技", text: "微软Copilot曝出严重安全漏洞：黑客可利用SearchLeak攻击窃取用户的二因素认证（2FA）码。该漏洞暴露了当前大语言模型安全架构的固有缺陷，行业亟需从根本上重新审视LLM防护策略。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/critical-copilot-vulnerability-allowed-hackers-to-seal-2fa-code-from-users/" },
-  { time: "15:38", tag: "ai", tagText: "AI", text: "中国AI初创公司DeepSeek完成超70亿美元融资，采用非同寻常的交易结构。此轮融资规模巨大，显示中国AI赛道依然火热，但具体投资者与条款尚未完全披露。", source: "Emirates 24|7", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWDNBVHF2RUdrNUxoM1JiMjYwYjFnV0FWazQ1cTJzVjdtMEpfOUwzZlZFM0JtUkxFRHdHbFFqNzhpeHFJaGVYY1BaWWxMUzhYdjI4M096WGpqWGJhZ1c5NGlvQzR0NjFZcEJ6WWx5eGJVUkktakRfSjQwYmI5UjNta1pBZHVhdXVvTTV3YjhReDZKYUNrMUZTOHpGYUM0VTYxVktGeHhKYi1FY3NBSHd0ZktPNThfVjR5M2JlaEVB0gHYAUFVX3lxTE9VSDVhMFVPdWxoVWppLXNfekl0di1jYVFLU1hZZEphN0ZvZzFaYnczQU1GYjRUUTR4VzM1VlM1NTg5OWFVajd6V1JqemxLZGx4eUczYTZQRXQtRGFxamlfdmIzM0F3bHJQT2lYM0ZQdEdNOVpncTNwaU45Qkh2NF9HczQwRm9IcFc3Z2ZmVlFNZVF2VXZ3dFRkS1doRHJlMDZudndkUHVDLVRnUlE0MXdRUGhva2NCRUpWLUhoUHVlWS1BYV85aUJ2RnlLV1llOHoxNnNUYXczeA?oc=5" },
-  { time: "14:59", tag: "ai", tagText: "AI", text: "马来西亚AI消息平台Respond.io完成6250万美元融资，计划用于北美和欧洲的收购。该公司利用AI代理处理大量客户问询，按对话计费而非按座位，成为东南亚AI创业的代表之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/malaysias-respond-io-raises-62-5m-eyes-acquisitions-in-north-america-and-europe/" },
-  { time: "14:55", tag: "tech", tagText: "科技", text: "法国研究机构CEA-Leti展示了22nm铁电RAM（FeRAM）技术突破，专为边缘AI应用设计。该技术可提供非易失性存储与高速读写能力，有望替代传统嵌入式闪存，推动低功耗AI设备发展。", source: "New Electronics", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxNakpZUkZRT0lzcXc4RVQ1Ni1ERWdYVVFvX0ZQbURPdElTYmgxVGprRklSN2tKalRJcktVbmFTdzM0NjlkNkl5QV9MbmlRLUZRU09qYVRMSkQ2ZWRRTkxMeUI0SmJ0NEl1MnlSQ2t2ZHVXT0h2d2JuenNEeTdTZ0VWbndUZXhvTFE0cHVJN0xkUDNBcnhjZnl1Ukowa1NiTXA5LXJaWlJuZWIwM1JDNV9MMGdEYUlEM0U?oc=5" },
 ];
-const aiBreakingDate = "2026年6月17日 05:15 CST";
+const aiBreakingDate = "2026年6月17日 07:44 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
