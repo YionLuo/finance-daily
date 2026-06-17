@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.77,
+  score: 32.66,
   rating: "fear",
-  timestamp: "2026-06-17T20:12:18+00:00",
+  timestamp: "2026-06-17T22:32:39+00:00",
   previousClose: 39.29,
   previous1Week: 26.89,
   previous1Month: 62.97,
   previous1Year: 57.43,
-  date: "2026年6月18日 04:27 CST"
+  date: "2026年6月18日 06:50 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:44", tag: "macro", tagText: "宏观", text: "美联储新任主席凯文·沃什在其首次FOMC会议上宣布成立五个工作组，专注于央行沟通、通胀框架等改革方向。沃什暗示未来可能更激进地加息，多位官员预计年内加息一次。此举标志着美联储运作方式的重大转变。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/kevin-warsh-fed-interest-rates-risk-analysis.html" },
+  { time: "06:01", tag: "tech", tagText: "科技", text: "苹果CEO蒂姆·库克表示，由于AI服务器需求导致内存芯片价格飙升，苹果“不可避免”将被迫涨价。AI热潮推高零部件成本，科技巨头纷纷抢购芯片，消费者需为苹果产品支付更高价格。", source: "MarketWatch", url: "https://www.marketwatch.com/story/its-unavoidable-apple-says-it-will-be-forced-to-raise-prices-due-to-the-ai-boom-e3d1e4c4?mod=mw_rss_topstories" },
+  { time: "05:38", tag: "macro", tagText: "宏观", text: "美国参议院军事委员会通过法案，拟禁止国防承包商在未获五角大楼批准的情况下进行股票回购。此举旨在限制企业将利润用于回购而非提升国防能力，若落地将影响洛克希德·马丁等巨头。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/defense-contractors-stock-buybacks-senate-warren-trump.html" },
+  { time: "05:02", tag: "macro", tagText: "宏观", text: "沃什鹰派立场引发市场剧烈波动：道琼斯指数收盘暴跌500点，2年期美债收益率飙升，股市、债市、黄金和美元均出现显著反应。投资者押注美联储可能提前加息以遏制通胀。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9uTFFzUE5SblgwaXNYcjl5R1BNd0dVd3NELUZMRFVkNkpqOV96MUZqNTBQWkZNTzE0Um56VGNRTno4SEJybHRwRnpLTG9nRjJ2ZE0xRTR0ZFNMcXV6UWNNNlk2Y2hFUGRWcnd6V1BNLVhqUGZabUZZ0gF8QVVfeXFMTlV5eGVzUzFGN01QSGRBZHljQkNPeGJyYzIyYVFnMFA4Rk5SN081cXVnNzBZREhtYnVZUU5oSmVfeWtsWGNZX3JxaW5scWMxSzVZMmh5YnBLbmlSeUNwRHloT1JjWGtRWEs1ZDM0NXRmQ2UtTlpXTklRekFudA?oc=5" },
+  { time: "04:17", tag: "geo", tagText: "地缘", text: "特朗普表示，当伊朗“表现好”时，美国将释放其被冻结的数十亿美元资金并放松制裁。同时他承认战后伊朗将保留弹道导弹，暗示新协议可能不会彻底解决核问题。", source: "Financial Times", url: "https://www.ft.com/content/d4f89b6b-c213-4550-924b-a9ae45e24c37" },
   { time: "04:00", tag: "macro", tagText: "宏观", text: "知名投资者杰弗里·冈拉克（Jeffrey Gundlach）表示，美联储主席沃什并非市场期待的“宽松货币主席”，其鹰派立场降低了过度宽松政策重燃通胀的风险，但可能推高长期借贷成本。冈拉克警告市场此前对沃什的鸽派预期是错误的。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/jeffrey-gundlach-says-feds-warsh-is-not-going-to-be-the-easy-money-chairman-many-hoped-for.html" },
   { time: "03:54", tag: "geo", tagText: "地缘", text: "特朗普在G7峰会上表示，他喜欢“如果伊朗核协议不奏效，就归咎于副总统万斯”这一想法。特朗普称美伊达成的谅解备忘录“可能不是他该签署的那种文件”，暗示可能不会最终签署协议。此前特朗普曾威胁若不满意将“回去扔炸弹”。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/trump-vance-iran-deal-nuclear-g7.html" },
   { time: "03:25", tag: "macro", tagText: "宏观", text: "美联储点阵图显示，2026年底联邦基金利率中位数预测为3.8%，比当前目标区间高出25个基点，暗示年内可能加息一次。但沃什主席本人拒绝给出利率预测，多名FOMC委员支持加息，标志着美联储政策转向鹰派。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/fed-projections-call-for-a-rate-hike-in-2026-but-chairman-warsh-likely-abstained.html" },
@@ -1644,18 +1649,18 @@ const breakingNews = [
   { time: "23:21", tag: "geo", tagText: "地缘", text: "特朗普在G7会议上威胁称，若对伊朗核协议不满意，美国将“直接回去扔炸弹”。此前有报道称协议包含3000亿美元投资基金，特朗普明确表示美国不会出资，此举引发两党强烈反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/trump-us-iran-deal-g7.html" },
   { time: "23:03", tag: "geo", tagText: "地缘", text: "欧盟理事会主席安东尼奥·科斯塔办公室与俄罗斯总统普京身边的高级官员进行了通话，探讨潜在的乌克兰和平谈判可能性。这是欧盟罕见直接接触克里姆林宫，释放可能的外交信号。", source: "Financial Times", url: "https://www.ft.com/content/8873de89-c5d7-496d-b0e2-ed7811c318b3" },
   { time: "21:30", tag: "macro", tagText: "宏观", text: "私募股权公司Thoma Bravo将软件公司Medallia移交给债权人，成为私募股权行业最大亏损之一。由黑石集团牵头的财团将接管这家陷入困境的公司。", source: "Financial Times", url: "https://www.ft.com/content/ae4b6c77-9b3d-46fb-a7fc-59f072e7291b" },
-  { time: "21:24", tag: "macro", tagText: "宏观", text: "高油价正在挤压零售支出，美国人因美伊冲突导致汽油价格高企而减少外出就餐，将更多预算转向必需品，餐馆行业首当其冲。", source: "MarketWatch", url: "https://www.marketwatch.com/story/high-gas-prices-soak-up-more-retail-sales-dollars-and-restaurants-are-paying-the-bill-4255057c?mod=mw_rss_topstories" },
-  { time: "21:04", tag: "macro", tagText: "宏观", text: "芝加哥商品交易所集团(CME)宣布CEO Terry Duffy将于2027年卸任，现任CFO Lynne Fitzpatrick将升任CEO，Duffy届时转任执行董事长。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/cme-groups-terry-duffy-to-step-down-in-2027-cfo-lynne-fitzpatrick-to-become-ceo.html" },
-  { time: "20:32", tag: "ai", tagText: "AI", text: "Anthropic一直支持AI监管，但特朗普政府对其施加了远超预期的严格监管措施，华盛顿对AI公司的打压力度显著加大。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/anthropic-ai-regulation-trump.html" },
-  { time: "20:21", tag: "macro", tagText: "宏观", text: "美国证券交易委员会(SEC)正被大幅削弱：预算减少、执法标准模糊，华盛顿最严厉的金融监管机构正被自身委员逐步拆除执法杠杆。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fewer-dollars-and-fuzzier-standards-inside-the-push-to-weaken-washingtons-toughest-financial-watchdog-2601a0ee?mod=mw_rss_topstories" },
-  { time: "12:56", tag: "geo", tagText: "地缘", text: "至少三艘伊朗油轮载近500万桶原油突破美国海军封锁，数月来首次驶离霍尔木兹海峡。船东对航道安全仍持谨慎怀疑态度，此举表明美伊停火协议后海峡通航正逐步恢复。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/iranian-tankers-oil-shipment-us-iran-deal-strait-of-hormuz-.html" },
 ];
-const breakingDate = "2026年6月18日 04:27 CST";
+const breakingDate = "2026年6月18日 06:50 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
+  { time: "04:24", tag: "tech", tagText: "科技", text: "Snap发布价格极其昂贵的AR眼镜后，市场反应负面，公司股价大幅下跌。投资者对其昂贵产品的市场前景表示担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/after-unveiling-ridiculously-expensive-ar-glasses-snaps-stock-takes-a-dive/" },
   { time: "04:15", tag: "geo", tagText: "地缘", text: "G7峰会聚焦AI地缘政治：特朗普表示与Anthropic的谈判仍在继续，Anthropic和Google DeepMind CEO联合呼吁建立美国主导的AI联盟。法国总统马克龙和印度总理莫迪担忧美国可能随时切断AI出口，近期Anthropic被迫限制外国用户访问事件加剧了盟友的不信任。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNenFUaFpvYnNtNFZadUZHbnNqbGtVa1Z1VkNKZnZ1aDR2a2UxUUo5XzhRY3ZVMjdtel9vVldtcXZOeFFtOTNCM050R0lNUDFSbTNqcUt4ZjUwa09HY25SNVdaNVRRNVJ2dFBCRkV3cER2VlFpWVl0ZnhYeEt5R21ESTNmTjUtRTlUUlhNN24yOTY5TktJVkVINF9mMU1qajlLYm82cU5sZnBzZHZ4ejRuRQ?oc=5" },
+  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
+  { time: "03:43", tag: "tech", tagText: "科技", text: "英国零售巨头Tesco计划将4万个服务器工作负载从VMware迁移至其他平台，指控Broadcom在收购后滥用市场地位，将VMware价格大幅提高约175%。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/06/tesco-moving-40000-server-workloads-off-vmware-amid-broadcoms-abusive-conduct/" },
   { time: "02:30", tag: "ai", tagText: "AI", text: "Anthropic成为首家加入Frontier碳去除联盟的AI初创公司。该联盟由Stripe、Meta、Shopify等发起，致力于通过预购碳去除服务推动负排放技术落地，Anthropic的加入标志着AI行业对气候行动的实质性承诺。", source: "TechCrunch", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaTgyOERuUEtSSjR1X2VzOVF3dGlwOWhJbHBYTnBWUnFWaVFubFBrM3lRTkNEVUFnbDk0V3F4LUF5YnpSN0RMMHpnZ2VDSGIzRGRqOEtENzJzUk02dUE2bmJpSklqSnRvWmM5cXN6ZkV1bDdHZHZlYWdpeDQ1c2VfVUVkTFFhQzVaQXEzOWQtVHoxXzFoVk9yc1ZkdEhMZDdmZlFCRHB5dkxzUHpZUTA3Z3VmM2UzUQ?oc=5" },
+  { time: "02:28", tag: "ai", tagText: "AI", text: "Anthropic因特朗普政府突然实施出口管制，被要求切断所有外国公民对其最新AI模型的访问权限，导致公司本周大部分时间都在努力恢复服务。此举引发了业界对AI技术地缘政治化的担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/951703/anthropic-shutdown-export-controls" },
   { time: "01:43", tag: "ai", tagText: "AI", text: "世界模型初创公司Odyssey以14.5亿美元估值完成新一轮融资，亚马逊等知名投资者参投。世界模型被视为超越大语言模型的下一波AI浪潮，Odyssey凭借构建可交互3D场景的AI系统成为该赛道最受关注的初创之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
   { time: "23:24", tag: "tech", tagText: "科技", text: "“慢科技”运动兴起：一批初创公司推出功能单一、限制使用时间的设备和应用，旨在帮助用户摆脱手机成瘾、夺回注意力。TechCrunch报道称，越来越多用户愿意为减少干扰的工具付费。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/the-slowtech-revolution-is-here-to-kill-your-phone-addiction-and-rescue-your-attention-span/" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "20:14", tag: "ai", tagText: "AI", text: "AI翻译公司DeepL收购实时音频流与翻译初创公司Mixhalo，并在旧金山设立办公室以拓展美国业务。此举将增强DeepL在会议、演出等场景下的实时翻译能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/deepl-acquires-mixhalo-for-live-event-audio-streaming-and-translation/" },
   { time: "20:03", tag: "ai", tagText: "AI", text: "一款新型AI通过学习物理定律，在量子计算领域取得突破性进展，有望大幅加速量子计算机的研发进程。该成果发表在SciTechDaily，被认为是AI与量子计算交叉领域的里程碑。", source: "SciTechDaily", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZ2lsUnZzRVctYkd5eEU4LUZDY1ZNZ3h1dzFkZGpnR1JTQlY3NElIdXpobFJfZVdUdFpSSG1YZTFXQ2t4bGJQZzlMVnVNUHJmRjJ3LURudGZUOG5aTmN2SHo5Ni1XMWNISnFyOWxhNmRXRlpza0w4UkJ6X3JJaWhwRXhFaTQydHZfcks4bTlpVlRBd3lqZGRUUzVxMDNNM3NnVzFnTHBBXzN1b2JteGpwdWlnOGQ?oc=5" },
   { time: "20:01", tag: "ai", tagText: "AI", text: "杰夫·贝索斯领投剑桥AI初创公司4亿美元融资轮。该公司专注于前沿AI技术开发，此次融资规模巨大，显示顶级投资者对AI领域持续重注。", source: "The Times", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZG9uUnFBa3RucXhCN0dBZ20zckpiR3lXR0hVUHFnMlgwbWlUWENZSTBkMnoxVC1NaTQxbTZJZFd1OWhGRHQ4NlZ4cXREZHZhZ25zdlVQcjNlaTVWOVpNREFPdk9VcWl2TGJOTFkzSU0teFlIU0prLURpdm9ZeWRLb0dUb0p3Nk9hSHNvZE53aHJuX0F2N19rWnZEa1B6cllvbVI4RUQyTWQyU1JZR3lvNmd2MWlfVGFuRXpZWVhR?oc=5" },
-  { time: "19:24", tag: "ai", tagText: "AI", text: "美国能源部向英伟达支持的AI初创公司SandboxAQ拨款5亿美元，用于利用AI发现新型芯片制造材料。此举旨在加强美国半导体供应链安全，减少对外部依赖。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNdk4xYlJEQzhuS1ZNa3dQRHhibDlrS3VuV0pqTEdZNGRSVE43SjdIaHBaVjZlMnEzaWY5UmhNamNkWlF3T3NoR1pPY1RFcHVzU0xUQ2I2SzhyTHJTWUZJMl9abG5KclAzd0JXRHJ2Z2laV2drcHdKbzRQNlZ6RmhESG45QzRFRUg5ekhtYjhYRVVFMzZKQldxYXozTmtBb3NDRXVlaWZNU1VEQTVITkxxcEdCd1ZIOWd4SkNVQ3YyTFdQSjA?oc=5" },
-  { time: "19:15", tag: "tech", tagText: "科技", text: "Windows和Linux用户注意：Secure Boot密钥即将过期，需尽快更新以保障系统启动安全。Ars Technica提醒用户关注这一关键安全期限。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/windows-and-linux-users-the-deadline-to-update-secure-boot-keys-is-near/" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "Pinterest推出实验性AI购物应用“Ask Pinterest”，用户可通过对话式界面获取商品推荐和灵感。该应用标志着Pinterest在AI导购领域的重要尝试。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/pinterest-launches-an-experimental-ai-shopping-app-called-ask-pinterest/" },
-  { time: "17:46", tag: "ai", tagText: "AI", text: "Genesis AI提出新型人形机器人设计理念：无需头部和双腿，采用轮式底座并像折叠椅般收纳。该公司认为人形机器人不必模仿人类外形。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/951283/genesis-ai-humanoid-robot-eno" },
-  { time: "12:32", tag: "ai", tagText: "AI", text: "定制AI芯片正在挑战英伟达的霸主地位。据Motley Fool报道，有两家公司正悄然从定制AI芯片市场中获益，这些芯片有望削弱英伟达的市场主导地位。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxNLUxuNzg4b1NOekt5YjBIcmRxX2FodzZuY0Z2M3hfNmp6TGVwbFUydHh5cTJSWjFjZVJxQkZoX0VIdlROaFVtekhoZjVJWlh1QW5IdHdRM0F3dGdnd2hmbzl6TDRoZ1ZHLXlPcGtKYVpnaC1RdWp3aTVrTjNPM2R3UkMwYlRaeHdnVGQ3a0dvZ29MNDhpeDhZ?oc=5" },
 ];
-const aiBreakingDate = "2026年6月18日 04:27 CST";
+const aiBreakingDate = "2026年6月18日 06:50 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
