@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 41.6,
+  score: 40,
   rating: "fear",
-  timestamp: "2026-06-17T13:49:36+00:00",
+  timestamp: "2026-06-17T15:31:50+00:00",
   previousClose: 39.29,
   previous1Week: 26.89,
   previous1Month: 62.97,
   previous1Year: 57.43,
-  date: "2026年6月17日 21:52 CST"
+  date: "2026年6月17日 23:36 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:32", tag: "macro", tagText: "宏观", text: "美联储利率决议在即，新任主席凯文·沃什首次主持FOMC会议。市场普遍预期按兵不动，但沃什的立场和委员会“鹰派”倾向备受关注。道指盘中创历史新高，标普、纳指小幅上涨，交易员静待决策。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/fed-meeting-today-live-updates.html" },
+  { time: "23:23", tag: "macro", tagText: "宏观", text: "美国5月零售销售数据超预期跳升，显示消费者成功消化了汽油价格冲击。经济保持强劲韧性，为新任美联储主席沃什提供了货币政策操作空间。", source: "Financial Times", url: "https://www.ft.com/content/a1cef91a-e590-4b01-a81e-5a1f9488cffe" },
+  { time: "23:21", tag: "geo", tagText: "地缘", text: "特朗普在G7会议上威胁称，若对伊朗核协议不满意，美国将“直接回去扔炸弹”。此前有报道称协议包含3000亿美元投资基金，特朗普明确表示美国不会出资，此举引发两党强烈反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/trump-us-iran-deal-g7.html" },
+  { time: "23:03", tag: "geo", tagText: "地缘", text: "欧盟理事会主席安东尼奥·科斯塔办公室与俄罗斯总统普京身边的高级官员进行了通话，探讨潜在的乌克兰和平谈判可能性。这是欧盟罕见直接接触克里姆林宫，释放可能的外交信号。", source: "Financial Times", url: "https://www.ft.com/content/8873de89-c5d7-496d-b0e2-ed7811c318b3" },
   { time: "21:30", tag: "macro", tagText: "宏观", text: "私募股权公司Thoma Bravo将软件公司Medallia移交给债权人，成为私募股权行业最大亏损之一。由黑石集团牵头的财团将接管这家陷入困境的公司。", source: "Financial Times", url: "https://www.ft.com/content/ae4b6c77-9b3d-46fb-a7fc-59f072e7291b" },
   { time: "21:24", tag: "macro", tagText: "宏观", text: "高油价正在挤压零售支出，美国人因美伊冲突导致汽油价格高企而减少外出就餐，将更多预算转向必需品，餐馆行业首当其冲。", source: "MarketWatch", url: "https://www.marketwatch.com/story/high-gas-prices-soak-up-more-retail-sales-dollars-and-restaurants-are-paying-the-bill-4255057c?mod=mw_rss_topstories" },
   { time: "21:04", tag: "macro", tagText: "宏观", text: "芝加哥商品交易所集团(CME)宣布CEO Terry Duffy将于2027年卸任，现任CFO Lynne Fitzpatrick将升任CEO，Duffy届时转任执行董事长。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/cme-groups-terry-duffy-to-step-down-in-2027-cfo-lynne-fitzpatrick-to-become-ceo.html" },
@@ -1645,20 +1649,21 @@ const breakingNews = [
   { time: "06:34", tag: "ai", tagText: "AI", text: "Anthropic关闭旗下AI代理平台Fable，被视为开源AI的重要转折点。目前许多增长最快的开源模型来自中国，该事件可能加速开源社区分化，并引发对AI安全与商业模式的重新思考。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/anthropics-fable-shutdown-is-a-big-moment-for-open-source-ai.html" },
   { time: "06:25", tag: "ai", tagText: "AI", text: "Databricks年化营收达69亿美元，增速超80%，由AI代理驱动数据分析带来强劲增长。但大量AI活动显著推高成本，利润率出现收缩，引发市场对AI规模化商业模式的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/databricks-revenue-growth-tops-80percent-to-6point9-billion-annualized.html" },
   { time: "05:00", tag: "tech", tagText: "科技", text: "英特尔开始生产其最先进芯片节点18A-P，这可能是未来与苹果达成协议的关键。新节点将用于下一代处理器，有助于英特尔追赶台积电的制造工艺。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/intel-begins-production-of-18a-p-inches-closer-to-possible-apple-deal.html" },
-  { time: "04:56", tag: "crypto", tagText: "加密", text: "比特币突破65,000美元，创近期新高。中东紧张局势缓和以及大型投资者（鲸鱼）大规模买入是主要推手。市场情绪转暖，但需关注美联储利率决议带来的潜在波动。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJaS1hyc21PMWtBOFRKNDBPTk9yYlY4RFpqQ2ZlQjFzM2JsUTl6UFo5X1FydXNoeFRuNUc1ZUlMYzBiWHhIRXZJT0NGdmpiaExqcWJ4b19FcE0wWmlFT2szV1hQYW5Sdk1RZDlnbmRBVkhCTDV5RTFhYWM2R3VQVjF6OHZudTg5T1pvamdqemFrX1ZOX1Z0aHdVVWd1QQ?oc=5" },
-  { time: "04:47", tag: "tech", tagText: "科技", text: "福克斯宣布将以220亿美元收购流媒体设备制造商Roku。尽管福克斯股价因收购消息下跌，但分析师认为交易合理，将帮助福克斯在流媒体时代扩大用户基础和广告业务。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/fox-roku-stock-investors-streaming.html" },
-  { time: "04:47", tag: "macro", tagText: "宏观", text: "美国国会两党领导人就限制投资者购买住房的法案达成一致，预计将迅速通过。该法案旨在遏制机构投资者大规模购房推高房价，优先保障个人购房者需求。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/housing-bill-limiting-investors-congress.html" },
-  { time: "04:29", tag: "tech", tagText: "科技", text: "SpaceX上市首日股价飙升60%，市值超越亚马逊成为全球第五大公司，盘中一度超越微软。公司宣布以600亿美元收购AI编程应用Cursor。创始人马斯克称2030年营收或达1万亿美元。知名投资者Michael Burry表示想做空但放弃，称估值过高。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/spacex-stock-rally-market-cap.html" },
 ];
-const breakingDate = "2026年6月17日 21:52 CST";
+const breakingDate = "2026年6月17日 23:36 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:00", tag: "tech", tagText: "科技", text: "收集机器人训练数据是一项脏活累活。部分AI实验室已开始向XDOF（远程操作员）付费，以获取用于训练物理AI的高质量真实世界数据。这暴露了机器人AI在数据获取上面临的瓶颈，与LLM的成功形成对比。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/collecting-robot-training-data-is-dirty-unglamorous-work-some-ai-labs-are-already-paying-xdof-to-do-it/" },
+  { time: "22:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Genspark在最新一轮融资中估值达26亿美元。该公司专注于AI驱动的信息检索和知识聚合，本轮融资凸显投资者对AI搜索赛道的持续看好。", source: "CNA", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxObGFuTVExWWxndlBMY2NmeVpOcU1nMVNtUkdBYkR6TGtQTTBUcF9QZGxUbnJfSE40MTA3aFB4SGU0ZXRjZ1NYRE1lODVsM0hyYW5pNXVIVjRtRXRFN1o3czRqZms5akJ1RlFrNUlPUm4xS1BuYXRtMnItamRGTnhoTGU1bzY4MFUzeXdHZWxtRVgtRk1wNFlRQk5yeElwVmNfV1l3MFBhY0VMRzVUQS1z?oc=5" },
+  { time: "22:15", tag: "ai", tagText: "AI", text: "AI初创公司Pramaana Labs获Khosla Ventures 2700万美元种子轮融资，计划将形式化验证技术引入AI系统，重点服务于法律、药物发现和税务等高风险领域，确保AI输出可靠且可验证。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/pramaana-labs-raises-27-million-seed-round-from-khosla-ventures-to-bring-formal-verification-to-ai/" },
   { time: "21:30", tag: "ai", tagText: "AI", text: "英伟达（NVDA）股价2026年表现不佳，竞争加剧成为主因。Barron's和Blockonomi报道指出，随着定制AI芯片和竞争对手的崛起，英伟达在AI芯片市场的领先地位面临挑战，股价承压。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lZjk4U0Z0cWl0U0NPU255Rng2ZlBPOXNENklQVjQzOXZiUk0xckRPbmNBdk5HTmZlUlhMN0VTd0ZCUjdnMGstai1vMDgxVWNJekFPb3d3RHplQ3dMNUtUVE1ueENjTW15TzMwbVFJeS1CUDFuaEp5OQ?oc=5" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌时隔六年推出全新智能音箱Google Home Speaker，将于6月29日发货，配备Gemini AI功能，今日开启预购。该产品原定春季发布，略有延迟。", source: "The Verge", url: "https://www.theverge.com/tech/951147/google-home-speaker-gemini-launch-date-price-specs-features" },
   { time: "20:38", tag: "ai", tagText: "AI", text: "加拿大养老基金巨头购入印度数据中心运营商CtrlS 8.2%的股份，押注AI驱动的数据中心需求激增。CtrlS在印度运营超过15个数据中心，此轮投资显示国际资本对亚洲AI基础设施的看好。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/canadian-pension-giant-joins-race-to-fund-indias-ai-fueled-data-center-boom/" },
   { time: "20:14", tag: "ai", tagText: "AI", text: "AI翻译公司DeepL收购实时音频流与翻译初创公司Mixhalo，并在旧金山设立办公室以拓展美国业务。此举将增强DeepL在会议、演出等场景下的实时翻译能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/deepl-acquires-mixhalo-for-live-event-audio-streaming-and-translation/" },
+  { time: "20:03", tag: "ai", tagText: "AI", text: "一款新型AI通过学习物理定律，在量子计算领域取得突破性进展，有望大幅加速量子计算机的研发进程。该成果发表在SciTechDaily，被认为是AI与量子计算交叉领域的里程碑。", source: "SciTechDaily", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZ2lsUnZzRVctYkd5eEU4LUZDY1ZNZ3h1dzFkZGpnR1JTQlY3NElIdXpobFJfZVdUdFpSSG1YZTFXQ2t4bGJQZzlMVnVNUHJmRjJ3LURudGZUOG5aTmN2SHo5Ni1XMWNISnFyOWxhNmRXRlpza0w4UkJ6X3JJaWhwRXhFaTQydHZfcks4bTlpVlRBd3lqZGRUUzVxMDNNM3NnVzFnTHBBXzN1b2JteGpwdWlnOGQ?oc=5" },
   { time: "20:01", tag: "ai", tagText: "AI", text: "杰夫·贝索斯领投剑桥AI初创公司4亿美元融资轮。该公司专注于前沿AI技术开发，此次融资规模巨大，显示顶级投资者对AI领域持续重注。", source: "The Times", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZG9uUnFBa3RucXhCN0dBZ20zckpiR3lXR0hVUHFnMlgwbWlUWENZSTBkMnoxVC1NaTQxbTZJZFd1OWhGRHQ4NlZ4cXREZHZhZ25zdlVQcjNlaTVWOVpNREFPdk9VcWl2TGJOTFkzSU0teFlIU0prLURpdm9ZeWRLb0dUb0p3Nk9hSHNvZE53aHJuX0F2N19rWnZEa1B6cllvbVI4RUQyTWQyU1JZR3lvNmd2MWlfVGFuRXpZWVhR?oc=5" },
+  { time: "19:24", tag: "ai", tagText: "AI", text: "美国能源部向英伟达支持的AI初创公司SandboxAQ拨款5亿美元，用于利用AI发现新型芯片制造材料。此举旨在加强美国半导体供应链安全，减少对外部依赖。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNdk4xYlJEQzhuS1ZNa3dQRHhibDlrS3VuV0pqTEdZNGRSVE43SjdIaHBaVjZlMnEzaWY5UmhNamNkWlF3T3NoR1pPY1RFcHVzU0xUQ2I2SzhyTHJTWUZJMl9abG5KclAzd0JXRHJ2Z2laV2drcHdKbzRQNlZ6RmhESG45QzRFRUg5ekhtYjhYRVVFMzZKQldxYXozTmtBb3NDRXVlaWZNU1VEQTVITkxxcEdCd1ZIOWd4SkNVQ3YyTFdQSjA?oc=5" },
   { time: "19:15", tag: "tech", tagText: "科技", text: "Windows和Linux用户注意：Secure Boot密钥即将过期，需尽快更新以保障系统启动安全。Ars Technica提醒用户关注这一关键安全期限。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/windows-and-linux-users-the-deadline-to-update-secure-boot-keys-is-near/" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "Pinterest推出实验性AI购物应用“Ask Pinterest”，用户可通过对话式界面获取商品推荐和灵感。该应用标志着Pinterest在AI导购领域的重要尝试。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/pinterest-launches-an-experimental-ai-shopping-app-called-ask-pinterest/" },
   { time: "17:46", tag: "ai", tagText: "AI", text: "Genesis AI提出新型人形机器人设计理念：无需头部和双腿，采用轮式底座并像折叠椅般收纳。该公司认为人形机器人不必模仿人类外形。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/951283/genesis-ai-humanoid-robot-eno" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "06:11", tag: "tech", tagText: "科技", text: "HPE向VMware用户提供一年免费虚拟化软件，旨在吸引因Broadcom收购VMware后寻求替代方案的客户。合作伙伴表示HPE应发放更多免费VM Essentials许可以扩大用户基础。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/06/16/hpe-tempts-vmware-users-partners-with-year-of-free-virtualization-software/" },
   { time: "05:13", tag: "tech", tagText: "科技", text: "AI云计算公司CoreWeave旗下超级计算机“Vera Rubin”实现算力突破，但新的债务融资成本高昂，市场对其AI雄心能否持续产生质疑。该公司正承受扩大基础设施与偿还债务的双重压力。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOYk1tNlJ0dnFiN3F0c1Z2eUtXSmplNDgyTlA2WV82UENGRjdScnNfWXAwaGNlM1ViMGZWSE1sS2hScGpiYjYtS1NnWkptTmhZLVhicnhhUzRmU1A4Q0RlZTE0MGhVX0VrZC13TU5hOVp3MzNHSFhwQUt0VjFhSFZEQkdDSXVWUS1BaHl0RHg4RTlrY0g3SFg0Uk12MF9OMFNvYVRPd1ZB?oc=5" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "据彭博社报道，Anthropic的战略撤退为中国“开放AI”模式带来利好。这一动向可能重塑全球AI竞争格局，中国开源AI生态有望借此获得更多市场空间和人才资源。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZkRPRmthcjVWTXcyeEFQQjkyd2d0SzBFWnA5V0Nyd3IwREJpWUszTkhmOF9lNXJoUUx3V2c5MU81WjJWYTd2OTRVQnJuTWp1ajlKZXZXcDlxaDA4V0RGNG8zVmQzRDY1YzBEZHVqRUZJWWJ6c3U3Z1duek95bEFnY1FZYUhUalFic09FNFhoOFZOdlRLS3o1RzdaZElteDNaelk0NnU3RlRJV2kzTWxUYWFSdk9yLW9ZcHpJ?oc=5" },
-  { time: "02:30", tag: "tech", tagText: "科技", text: "Meta宣布在 Facebook 推出全新“AI 模式”，该功能将聚合旗下各平台的公开信息，旨在增强用户互动并加速追赶竞争对手。此举是 Meta 在 AI 领域最新布局，标志着社交巨头进一步整合资源。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/" },
-  { time: "02:30", tag: "tech", tagText: "科技", text: "SpaceX 正式上市后，TechCrunch 发布全面分析包，涵盖 IPO 细节、受益方与潜在挑战。作为全球最具价值的私营航天公司，SpaceX 上市标志着商业航天进入新阶段。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/spacex-is-public-everything-you-need-to-know-post-ipo/" },
-  { time: "02:06", tag: "ai", tagText: "AI", text: "OpenAI、Google DeepMind 与 Anthropic 联合致信美国政府，呼吁出台合成 DNA 筛查立法，以防止生物技术被恶意利用。三巨头联手推动生物安全监管，凸显 AI 在基因合成领域的潜在风险。", source: "MobiHealthNews", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdDFrYktvc2pENGZqRnRiOE81NEV1Qlp5SUpNVE40MXJMZlk5NVRrcmV1TzR1XzE3TjdxQzU1eWJYM1hVMzhZZmc0WDJBV3IxdlBuUzJESk52STREN3p5dGl4eGlZM2JUaVoxTFBvVWdVZHU2cURvbFJWTmo2M1VVbWk4eE16NGNQTUJ0LUF2STJSTFUwTC13M1NvRGVsNEhUVzkyeXZkWlZlc052ZGZfVGdn?oc=5" },
-  { time: "02:00", tag: "tech", tagText: "科技", text: "谷歌正式发布Android 17和Wear OS 7，新增多任务工具、家长控制和安全功能，同时扩展了Gemini AI功能。随系统一同推出的还有Pixel Drop更新，进一步提升智能设备体验。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/android-17-launches-with-new-multitasking-tools-as-google-expands-gemini-features/" },
-  { time: "01:55", tag: "tech", tagText: "科技", text: "AMD被曝从其消费级CPU中悄然移除透明安全内存加密（TSME）功能，用户指责其为有意且隐秘的行为，可能影响系统安全性和数据保护。目前AMD尚未对此做出正式回应。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/" },
 ];
-const aiBreakingDate = "2026年6月17日 21:52 CST";
+const aiBreakingDate = "2026年6月17日 23:36 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
