@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 39.29,
+  score: 39.51,
   rating: "fear",
-  timestamp: "2026-06-17T00:00:00+00:00",
+  timestamp: "2026-06-17T09:41:31+00:00",
   previousClose: 39.29,
   previous1Week: 26.89,
   previous1Month: 62.97,
   previous1Year: 57.43,
-  date: "2026年6月17日 13:05 CST"
+  date: "2026年6月17日 18:00 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,12 @@ const breakingNews = [
   { time: "00:50", tag: "tech", tagText: "科技", text: "Snap发布售价2195美元的增强现实眼镜“Specs”，面向大众消费者而非开发者。CEO斯皮格尔押注后智能手机时代，认为AR眼镜有望成为下一代计算平台，但分析师对价格和实用性持怀疑态度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/16/snap-unveils-2195-specs-ar-glasses-spiegel-bets-on-post-smartphone.html" },
   { time: "00:44", tag: "macro", tagText: "宏观", text: "美国5月独栋住宅开工率降至八个月新低，同时进口通胀大幅上升。房地产市场疲软叠加进口价格上涨，显示经济面临滞胀压力，为本周美联储会议增添复杂性。", source: "Reuters", url: "https://finance.yahoo.com/real-estate/articles/us-single-family-housing-starts-130631825.html" },
 ];
-const breakingDate = "2026年6月17日 13:05 CST";
+const breakingDate = "2026年6月17日 18:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "17:46", tag: "ai", tagText: "AI", text: "Genesis AI提出新型人形机器人设计理念：无需头部和双腿，采用轮式底座并像折叠椅般收纳。该公司认为人形机器人不必模仿人类外形。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/951283/genesis-ai-humanoid-robot-eno" },
+  { time: "12:32", tag: "ai", tagText: "AI", text: "定制AI芯片正在挑战英伟达的霸主地位。据Motley Fool报道，有两家公司正悄然从定制AI芯片市场中获益，这些芯片有望削弱英伟达的市场主导地位。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxNLUxuNzg4b1NOekt5YjBIcmRxX2FodzZuY0Z2M3hfNmp6TGVwbFUydHh5cTJSWjFjZVJxQkZoX0VIdlROaFVtekhoZjVJWlh1QW5IdHdRM0F3dGdnd2hmbzl6TDRoZ1ZHLXlPcGtKYVpnaC1RdWp3aTVrTjNPM2R3UkMwYlRaeHdnVGQ3a0dvZ29MNDhpeDhZ?oc=5" },
   { time: "10:01", tag: "tech", tagText: "科技", text: "首尔经济日报报道，未来移动出行技术展亮相：自动驾驶、建筑机器人、AI城市等前沿技术集中展示。展会呈现了韩国在智能交通与AI基础设施领域的最新成果，反映出全球自动驾驶与机器人产业正加速落地。", source: "Seoul Economic Daily", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTlA2TFBsRlZMbkNBOFRKeVFaV0pGSnY2UGgyWUc4cThrRDVzdXljeE9MbDVRTDRBNkRmZjhWdG5ydTVjU3EtRXFIS19ZVUJacDRvUnowTXpKelp6dnprNlpMYzRha1NRZm5yUVN4bHNsVjdZZnBRLWJWUE5iSTlKbS13RjE3UU5SWTRBOEF3WlJuaGZ4WVo0TGZ1TQ?oc=5" },
   { time: "06:34", tag: "ai", tagText: "AI", text: "据Ramp数据显示，Anthropic与特朗普政府的争执反而可能提升其企业销售。该公司在企业用户中的受欢迎程度持续增长，最新与政府的矛盾似乎未影响客户信心。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/anthropics-latest-feud-with-the-trump-admin-may-actually-help-it-sales-data-suggests/" },
   { time: "06:32", tag: "tech", tagText: "科技", text: "韩国养老金账户中机器人ETF规模激增3万亿韩元（约25亿美元），显示机构投资者对自动化与AI机器人赛道的长期看好。此次资金流入反映了市场对工业机器人及AI驱动自动化趋势的信心。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaGpfbnd2NUVhVTR1a0tESGpmOG14MHptUWVCNHFEdG9VOXVkRXlHd2d6Z3ppMzhwN0E3UWhPaFh0UmxGd2FQSEprTFhqUzhIYlVPZ19qTEE3dTBDSW9GX2RrdmFjRFV6MGhmbGZGMllqVEsxaldZV21LV2xQYldwZWF3cktWNVV1VlNhVnpn?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "23:29", tag: "ai", tagText: "AI", text: "数十名网络安全专家联名呼吁白宫撤销对Anthropic最强大模型Fable和Mythos的出口管制禁令，称该限制将削弱美国网络防御能力，并损害AI安全研究。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/" },
   { time: "23:05", tag: "tech", tagText: "科技", text: "美国司法部（DOJ）声称，xAI未经许可运行的燃气轮机事关“国家、经济和能源安全”，并称五角大楼需要xAI继续使用这些设备。此举将AI基础设施与国家安全绑定，引发对监管合规与能源依赖的争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/doj-claims-xais-unpermitted-gas-turbines-are-a-matter-of-national-economic-and-energy-security/" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "AI记事本公司Plaud宣布其软件业务年经常性收入（ARR）突破1亿美元，累计出货AI记事设备超过200万台。在拥挤的AI会议记录赛道中，Plaud凭借硬件+订阅模式实现规模化商业成功。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/plaud-says-its-software-business-topped-100m-in-arr-after-shipping-over-2m-ai-notetakers/" },
-  { time: "22:48", tag: "tech", tagText: "科技", text: "SpaceX股价上市后估值飙升，已达2.7万亿美元，超越亚马逊。其估值在周五开始交易以来增加1万亿美元，显示出资本市场对其航天与AI融合前景的极度看好。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/spacex-passes-amazon-as-valuation-balloons-to-2-7t/" },
-  { time: "19:21", tag: "tech", tagText: "科技", text: "SpaceX在IPO仅数天后宣布以600亿美元股票收购AI编程工具Cursor，旨在提振其陷入困境的AI部门。SpaceX向IPO投资者表示，其AI业务潜在市场规模达26万亿美元。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/" },
 ];
-const aiBreakingDate = "2026年6月17日 13:05 CST";
+const aiBreakingDate = "2026年6月17日 18:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
