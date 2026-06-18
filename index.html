@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 37,
+  score: 37.51,
   rating: "fear",
-  timestamp: "2026-06-18T18:06:12+00:00",
+  timestamp: "2026-06-18T21:09:29+00:00",
   previousClose: 32.66,
   previous1Week: 31.57,
   previous1Month: 61.54,
   previous1Year: 54.29,
-  date: "2026年6月19日 02:10 CST"
+  date: "2026年6月19日 05:26 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:14", tag: "macro", tagText: "宏观", text: "美光等内存股迎有史以来最佳年度表现，但在人工智能热潮推动下估值仍显便宜。分析师指出，尽管股价大涨，半导体存储器行业市盈率仍处于历史低位，AI需求持续支撑长期增长前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/memory-stocks-are-having-their-best-year-ever-why-do-they-still-look-so-cheap-a506466d?mod=mw_rss_topstories" },
+  { time: "04:32", tag: "geo", tagText: "地缘", text: "美伊初步和平协议引发航运业担忧：高管警告称协议语言可能使伊朗在60天后对霍尔木兹海峡通行征收费用或设立类似马六甲海峡的基金。目前美海军已解除对伊朗港口和沿海地区的封锁。", source: "Financial Times", url: "https://www.ft.com/content/d7e0c7ca-3485-4eef-ab8c-70db0bf4b8be" },
+  { time: "04:21", tag: "tech", tagText: "科技", text: "Waymo自愿召回约3900辆自动驾驶出租车，原因是部分车辆驶入高速公路封闭施工区域。公司已修复底层软件问题，此次召回为美国国家公路交通安全管理局监督下的自愿行动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/waymo-nhtsa-voluntary-recall-robotaxis-entered-freeway-construction-zones.html" },
+  { time: "03:48", tag: "tech", tagText: "科技", text: "亚马逊正在调查多名工程师，这些工程师在公开场合批评公司AI数据中心扩张计划。事件源于西雅图市议会暂停新建数据中心一年的听证会上，五名亚马逊员工作证表达反对意见。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/amazon-engineers-ai-data-center-opposition.html" },
+  { time: "03:07", tag: "geo", tagText: "地缘", text: "美国副总统万斯严厉抨击以色列政府对美伊协议的批评，称以色列批评者需要“清醒过来，闻一闻现实”。万斯强调只有在伊朗完全遵守协议条款的前提下，其才能获得资源，美国不会给伊朗“一分钱”。", source: "Financial Times", url: "https://www.ft.com/content/cbb2047a-91dd-4777-9051-e9c709f4388b" },
   { time: "02:10", tag: "macro", tagText: "宏观", text: "美联储主席凯文·沃什发表强硬通胀言论，市场预期美联储将采取更激进的加息路径。沃什暗示可能放弃2%通胀目标，引发美股剧烈波动，道指盘中创新高后收跌超500点。分析人士认为沃什正在拆除市场的“护栏”，对高估值股票构成威胁。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/markets-are-set-for-a-much-more-hawkish-warsh-fed-than-expected.html" },
   { time: "01:48", tag: "geo", tagText: "地缘", text: "美国与伊朗签署初步和平协议，副总统万斯称伊朗须完全遵守条款才能获得资源。协议比预期提前两天生效，霍尔木兹海峡有望重新开放。受此影响，油价暴跌，布伦特原油逼近战前水平；航空燃油价格大幅下跌，航空公司成本压力缓解。美股受协议提振反弹，纳指领涨，芯片股强势。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/vance-iran-war-memo-oil-gas.html" },
   { time: "01:41", tag: "tech", tagText: "科技", text: "SpaceX股价周三下跌7%，终结连续三日涨势。此前研究机构预测SpaceX股价将翻倍至400美元以上，但投资者热情降温。该股上市首周曾创多项纪录，目前波动加剧。与此同时，另一家研究公司称SpaceX股价上涨可能使其成为全球市值最大公司。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/spacex-stock-elon-musk-rally-cools.html" },
@@ -1644,20 +1649,23 @@ const breakingNews = [
   { time: "17:18", tag: "tech", tagText: "科技", text: "特朗普宣布英特尔将与苹果合作，在美国本土为苹果设计制造芯片。英特尔股价盘前大涨9%，延续近期反弹势头。此举标志美国芯片制造回流取得重大突破。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/trump-intel-apple-chip-design-deal.html" },
   { time: "17:00", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯警告北约盟友，部分国家将无法通过美方防务审查，并批评欧洲盟友拒绝提供打击伊朗的基地使用权。美欧防务分歧加剧，北约内部紧张升温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/hegseth-nato-defense-review-fail-europe.html" },
   { time: "15:56", tag: "tech", tagText: "科技", text: "分析指出英伟达（NVDA）股价面临跌破200美元风险，因地缘政治紧张与竞争加剧。芯片行业需求分化，市场担忧AI龙头增长放缓。", source: "FXLeaders", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQVmpDMDBGSGR0dFhUaDczVDBsdFl5UTBGMEE2Tl9xSU5rdy1uYWJDZ1BJeklUbUtOTWRERTlaVXUxb0E4N1ZVTVBDVWxTNUNtNjM1SW9GbmRSd3hLbXRmdFBQOU8xQkxpLTdyOWdOSG1LX3B3VVV5YkJ6OW9YeTFsWXNRQlZaYkNscW1PSWxVZTc4VmZJZEE2eWpHVTRvY3ZaY2hGSEpjeTdIRmRhdVBTbE9oUzFpOXk2aDgteFkyaVNCako4UVp2QVNLNTU" },
-  { time: "13:55", tag: "macro", tagText: "宏观", text: "摩根大通预计中国将在8月份重返全球主要石油买家行列，并点名推荐中石油和LG化学等股票。此前全球最大石油进口国进口量下滑，帮助吸收了全球能源冲击并抑制了俄乌战争以来的油价涨幅。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/china-crude-oil-imports-rebound-jpmorgan-petrochina-lg-chem.html" },
-  { time: "13:43", tag: "macro", tagText: "宏观", text: "外国政府、华尔街银行及跨国公司纷纷涌入中国熊猫债券市场，寻求利用中国低廉的融资成本。低成本人民币资金吸引力大增，凸显中国资本市场开放与全球利率分化下的套利机会。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/china-panda-bonds-yuan-funding-costs-foreign-borrowers.html" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "随着以色列国际孤立加剧，印度与以色列关系迅速升温，两国在无人机采购、雕像外交等领域合作加深，形成特殊联盟。莫迪与内塔尼亚胡的紧密关系正在重塑中东与南亚地缘格局。", source: "Financial Times", url: "https://www.ft.com/content/5829cf25-42c0-4aa4-84d7-9142ab66d6d4" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "摩根大通紧随高盛步伐，禁止其香港员工使用Anthropic的AI模型Claude。华尔街日益警惕AI数据安全与合规风险，各大行在亚洲金融中心收紧对前沿大模型的使用权限。", source: "Financial Times", url: "https://www.ft.com/content/de83d303-6a03-456b-bfb9-7b11dd502ab3" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "海湾冲突导致燃料供应严重短缺，迫使多艘货轮绕道寻找加油港口。船东警告称，尽管美伊达成停火协议并开放海峡，供应中断仍将持续，全球航运和能源物流面临挑战。", source: "Financial Times", url: "https://www.ft.com/content/1a54013e-57f4-43a2-8f1c-47dc45f258c3" },
 ];
-const breakingDate = "2026年6月19日 02:10 CST";
+const breakingDate = "2026年6月19日 05:26 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
+  { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
+  { time: "04:30", tag: "ai", tagText: "AI", text: "Snap将其AI视频团队分拆为独立公司Dotmo，原团队员工将离开Snap专注于AI视频开发。此举旨在降低运营成本。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/snap-spins-off-ai-video-team-into-new-company-dotmo-due-to-costs/" },
+  { time: "04:24", tag: "tech", tagText: "科技", text: "Snap发布价格极其昂贵的AR眼镜后，市场反应负面，公司股价大幅下跌。投资者对其昂贵产品的市场前景表示担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/after-unveiling-ridiculously-expensive-ar-glasses-snaps-stock-takes-a-dive/" },
+  { time: "04:15", tag: "geo", tagText: "地缘", text: "G7峰会聚焦AI地缘政治：特朗普表示与Anthropic的谈判仍在继续，Anthropic和Google DeepMind CEO联合呼吁建立美国主导的AI联盟。法国总统马克龙和印度总理莫迪担忧美国可能随时切断AI出口，近期Anthropic被迫限制外国用户访问事件加剧了盟友的不信任。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNenFUaFpvYnNtNFZadUZHbnNqbGtVa1Z1VkNKZnZ1aDR2a2UxUUo5XzhRY3ZVMjdtel9vVldtcXZOeFFtOTNCM050R0lNUDFSbTNqcUt4ZjUwa09HY25SNVdaNVRRNVJ2dFBCRkV3cER2VlFpWVl0ZnhYeEt5R21ESTNmTjUtRTlUUlhNN24yOTY5TktJVkVINF9mMU1qajlLYm82cU5sZnBzZHZ4ejRuRQ?oc=5" },
+  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
+  { time: "02:22", tag: "tech", tagText: "科技", text: "亚马逊正计划将其自研AI芯片向其他数据中心出售，以更直接地挑战英伟达。AWS已与多家数据中心洽谈，CEO Andy Jassy称这代表着500亿美元的市场机会。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/" },
   { time: "01:49", tag: "macro", tagText: "宏观", text: "美国联邦能源监管委员会（FERC）要求电网运营商为AI数据中心提供并网快速通道，但未解决电力供应短缺问题。此举将加速数据中心接入电网，但可能加剧区域电力紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/" },
   { time: "01:43", tag: "ai", tagText: "AI", text: "世界模型初创公司Odyssey以14.5亿美元估值完成新一轮融资，亚马逊等知名投资者参投。世界模型被视为超越大语言模型的下一波AI浪潮，Odyssey凭借构建可交互3D场景的AI系统成为该赛道最受关注的初创之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/" },
   { time: "01:42", tag: "geo", tagText: "地缘", text: "SpaceX即将IPO前，有中国投资者秘密收购其股份，其中一家此前未披露的投资者与中国军工承包商有关联。该事件引发美国对技术外流和国家安全风险的关注。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/06/18/before-spacex-ipo-investors-in-china-secretly-acquired-stakes/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
+  { time: "00:00", tag: "tech", tagText: "科技", text: "三名亚马逊软件工程师因在听证会上支持西雅图市数据中心建设限制法案，被公司告知可能面临解雇。员工引用反歧视法为自己辩护，事件引发对科技巨头压制员工公共参与权的争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952180/amazon-seattle-data-center-moratorium-aecj-disciplinary-action" },
   { time: "23:24", tag: "tech", tagText: "科技", text: "“慢科技”运动兴起：一批初创公司推出功能单一、限制使用时间的设备和应用，旨在帮助用户摆脱手机成瘾、夺回注意力。TechCrunch报道称，越来越多用户愿意为减少干扰的工具付费。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/the-slowtech-revolution-is-here-to-kill-your-phone-addiction-and-rescue-your-attention-span/" },
   { time: "23:20", tag: "ai", tagText: "AI", text: "世界模型初创公司General Intuition正洽谈以约20亿美元估值融资3亿美元。该公司利用游戏平台Medal的20亿条/年视频数据集（来自1000万月活用户）训练具身AI和世界模型，被视为超越大语言模型的下一波AI浪潮。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/general-intuition-in-talks-to-raise-300m-at-around-2b-valuation/" },
   { time: "22:15", tag: "ai", tagText: "AI", text: "AI初创公司Pramaana Labs获Khosla Ventures 2700万美元种子轮融资，计划将形式化验证技术引入AI系统，重点服务于法律、药物发现和税务等高风险领域，确保AI输出可靠且可验证。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/pramaana-labs-raises-27-million-seed-round-from-khosla-ventures-to-bring-formal-verification-to-ai/" },
@@ -1666,16 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "Adobe在Photoshop、Premiere等Creative Cloud应用中推出AI助手，并重新设计Firefly AI Studio，支持从单一界面进行编辑和生成新设计。此举标志着Adobe将生成式AI全面融入其核心创意工具套件。", source: "The Verge", url: "https://www.theverge.com/tech/952099/adobe-ai-assistants-photoshop-premiere-illustrator-beta-launch" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌时隔六年推出全新智能音箱Google Home Speaker，将于6月29日发货，配备Gemini AI功能，今日开启预购。该产品原定春季发布，略有延迟。", source: "The Verge", url: "https://www.theverge.com/tech/951147/google-home-speaker-gemini-launch-date-price-specs-features" },
   { time: "20:58", tag: "ai", tagText: "AI", text: "Google花费27亿美元打造的Gemini大模型核心架构师（Transformer架构作者之一）跳槽至OpenAI。这一顶级AI人才流动将直接影响下一代大模型的竞争格局，凸显OpenAI对顶尖研究人员的吸引力。", source: "Tech Times", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxOU1MxZlNqUHpGRzZXWE50eU9kMC1XMjFYaF82NGhXX2RmbmpOMWdqQ0loSG5XVVNZYmxOeDJkR3ZQUUh6Y01Hd1RIQmU1dm4wemh4NW9vQi1hTklzYl9WUUxvZXI0LURBdE1senpYRFBBUHVtZHBEZXVId0I3VGxmVnFSYTBYUFlJajlBbXBpYzBITllLSmFFb2UzalpGYzJ6enMwVTd4WGktNTNxcW81ZXRkLTJvRVViN0hGNmF0OHJGNFlu?oc=5" },
-  { time: "20:38", tag: "ai", tagText: "AI", text: "加拿大养老基金巨头购入印度数据中心运营商CtrlS 8.2%的股份，押注AI驱动的数据中心需求激增。CtrlS在印度运营超过15个数据中心，此轮投资显示国际资本对亚洲AI基础设施的看好。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/canadian-pension-giant-joins-race-to-fund-indias-ai-fueled-data-center-boom/" },
-  { time: "20:14", tag: "ai", tagText: "AI", text: "AI翻译公司DeepL收购实时音频流与翻译初创公司Mixhalo，并在旧金山设立办公室以拓展美国业务。此举将增强DeepL在会议、演出等场景下的实时翻译能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/deepl-acquires-mixhalo-for-live-event-audio-streaming-and-translation/" },
-  { time: "18:35", tag: "ai", tagText: "AI", text: "中国初创公司Manifold AI完成新一轮融资，投资者押注‘世界模型’赛道。该公司专注于构建能够模拟物理世界并与环境交互的AI系统，被视为超越大语言模型的下一代AI方向。具体融资金额未披露，但此轮融资表明资本对世界模型概念的持续看好。", source: "Caixin Global", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPTmtGbmY2T3JCcDlTdUNVRWJaQUtSd1RLLU90M2tKdkR5aTB0R1pKS2xiRElmWG5oSTFjTVpCaXh4TGtVQy1KRVZPSVZIYzFOQkxHNXN4Z1c3OU0wUERvWE5KUVlBYXBsZnNwNEVOWUxEWl9JRHN2VXhwV243SXNoVzY1U1NiMGM2LXlXRHNLY0tsTjV5M3MteEFyYnFSdHI2NVFISE1KWHJ5T3ZDTC1SQ1hFX2Q5RGdHWUY4TjRUQVpKaThVeHBJSndKY1ZoN1liS0E?oc=5" },
-  { time: "11:12", tag: "ai", tagText: "AI", text: "Midjourney CEO David Holz展示公司首款硬件产品——全身超声扫描仪，并计划在旧金山开设水疗中心，标志着这家以生成猫图片闻名的AI公司向医疗硬件领域跨界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952011/midjourney-medical-ai-ultrasound-scan" },
-  { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
-  { time: "04:24", tag: "tech", tagText: "科技", text: "Snap发布价格极其昂贵的AR眼镜后，市场反应负面，公司股价大幅下跌。投资者对其昂贵产品的市场前景表示担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/after-unveiling-ridiculously-expensive-ar-glasses-snaps-stock-takes-a-dive/" },
-  { time: "04:15", tag: "geo", tagText: "地缘", text: "G7峰会聚焦AI地缘政治：特朗普表示与Anthropic的谈判仍在继续，Anthropic和Google DeepMind CEO联合呼吁建立美国主导的AI联盟。法国总统马克龙和印度总理莫迪担忧美国可能随时切断AI出口，近期Anthropic被迫限制外国用户访问事件加剧了盟友的不信任。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNenFUaFpvYnNtNFZadUZHbnNqbGtVa1Z1VkNKZnZ1aDR2a2UxUUo5XzhRY3ZVMjdtel9vVldtcXZOeFFtOTNCM050R0lNUDFSbTNqcUt4ZjUwa09HY25SNVdaNVRRNVJ2dFBCRkV3cER2VlFpWVl0ZnhYeEt5R21ESTNmTjUtRTlUUlhNN24yOTY5TktJVkVINF9mMU1qajlLYm82cU5sZnBzZHZ4ejRuRQ?oc=5" },
-  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
 ];
-const aiBreakingDate = "2026年6月19日 02:10 CST";
+const aiBreakingDate = "2026年6月19日 05:26 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
