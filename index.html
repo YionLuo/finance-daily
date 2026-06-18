@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.71,
+  score: 32.03,
   rating: "fear",
-  timestamp: "2026-06-18T00:00:00+00:00",
+  timestamp: "2026-06-18T10:28:46+00:00",
   previousClose: 32.66,
   previous1Week: 31.57,
   previous1Month: 61.54,
   previous1Year: 54.29,
-  date: "2026年6月18日 14:05 CST"
+  date: "2026年6月18日 18:46 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:00", tag: "geo", tagText: "地缘", text: "北卡罗来纳州2026年参议员选举将对决民主党人库珀与共和党人沃特利。该摇摆州自2008年以来未选出民主党参议员，结果将直接决定国会下届控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/north-carolina-2026-senate-race-roy-cooper-michael-whatley.html" },
+  { time: "17:54", tag: "geo", tagText: "地缘", text: "乌克兰对莫斯科发动史上最大规模无人机袭击，近200架无人机攻击俄罗斯首都，击中该市最大炼油厂。冲突升级引发市场避险情绪升温。", source: "Financial Times", url: "https://www.ft.com/content/c2514fd8-d5d8-4bde-ad64-1167638d188b" },
+  { time: "17:18", tag: "tech", tagText: "科技", text: "特朗普宣布英特尔将与苹果合作，在美国本土为苹果设计制造芯片。英特尔股价盘前大涨9%，延续近期反弹势头。此举标志美国芯片制造回流取得重大突破。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/trump-intel-apple-chip-design-deal.html" },
+  { time: "17:00", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯警告北约盟友，部分国家将无法通过美方防务审查，并批评欧洲盟友拒绝提供打击伊朗的基地使用权。美欧防务分歧加剧，北约内部紧张升温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/hegseth-nato-defense-review-fail-europe.html" },
+  { time: "15:56", tag: "tech", tagText: "科技", text: "分析指出英伟达（NVDA）股价面临跌破200美元风险，因地缘政治紧张与竞争加剧。芯片行业需求分化，市场担忧AI龙头增长放缓。", source: "FXLeaders", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxQVmpDMDBGSGR0dFhUaDczVDBsdFl5UTBGMEE2Tl9xSU5rdy1uYWJDZ1BJeklUbUtOTWRERTlaVXUxb0E4N1ZVTVBDVWxTNUNtNjM1SW9GbmRSd3hLbXRmdFBQOU8xQkxpLTdyOWdOSG1LX3B3VVV5YkJ6OW9YeTFsWXNRQlZaYkNscW1PSWxVZTc4VmZJZEE2eWpHVTRvY3ZaY2hGSEpjeTdIRmRhdVBTbE9oUzFpOXk2aDgteFkyaVNCako4UVp2QVNLNTU" },
   { time: "13:55", tag: "macro", tagText: "宏观", text: "摩根大通预计中国将在8月份重返全球主要石油买家行列，并点名推荐中石油和LG化学等股票。此前全球最大石油进口国进口量下滑，帮助吸收了全球能源冲击并抑制了俄乌战争以来的油价涨幅。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/china-crude-oil-imports-rebound-jpmorgan-petrochina-lg-chem.html" },
   { time: "13:43", tag: "macro", tagText: "宏观", text: "外国政府、华尔街银行及跨国公司纷纷涌入中国熊猫债券市场，寻求利用中国低廉的融资成本。低成本人民币资金吸引力大增，凸显中国资本市场开放与全球利率分化下的套利机会。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/china-panda-bonds-yuan-funding-costs-foreign-borrowers.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "随着以色列国际孤立加剧，印度与以色列关系迅速升温，两国在无人机采购、雕像外交等领域合作加深，形成特殊联盟。莫迪与内塔尼亚胡的紧密关系正在重塑中东与南亚地缘格局。", source: "Financial Times", url: "https://www.ft.com/content/5829cf25-42c0-4aa4-84d7-9142ab66d6d4" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "04:19", tag: "crypto", tagText: "加密", text: "美联储鹰派立场冲击加密市场，比特币及山寨币价格承压下跌。新任主席沃什暗示可能加息以遏制通胀，市场风险偏好下降，加密资产遭遇抛售。", source: "The Block", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTFNqS250RFBZRW43aWtYZ1RkUjVVUy1sT0t3RjRqR2hiTWtSMnZPTVg4cjVkYzNaZVpjUHZ4a29PbGZZQUJMN3RYdWZZbDJYajU5elVjNFdiWElHam9ETnlWZUswYWZLTlN0UzQyTzJqZXpKdTRtdExoUTVfcW1Gc1gyeTdaNDF1OFQyR3RsY1JyMFc1VDI1UHotbWxKaW1qZV9mUHZiQzhxdnFi?oc=5" },
   { time: "04:17", tag: "geo", tagText: "地缘", text: "特朗普表示，当伊朗“表现好”时，美国将释放其被冻结的数十亿美元资金并放松制裁。同时他承认战后伊朗将保留弹道导弹，暗示新协议可能不会彻底解决核问题。", source: "Financial Times", url: "https://www.ft.com/content/d4f89b6b-c213-4550-924b-a9ae45e24c37" },
   { time: "04:00", tag: "macro", tagText: "宏观", text: "知名投资者杰弗里·冈拉克（Jeffrey Gundlach）表示，美联储主席沃什并非市场期待的“宽松货币主席”，其鹰派立场降低了过度宽松政策重燃通胀的风险，但可能推高长期借贷成本。冈拉克警告市场此前对沃什的鸽派预期是错误的。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/jeffrey-gundlach-says-feds-warsh-is-not-going-to-be-the-easy-money-chairman-many-hoped-for.html" },
-  { time: "03:54", tag: "geo", tagText: "地缘", text: "特朗普在G7峰会上表示，他喜欢“如果伊朗核协议不奏效，就归咎于副总统万斯”这一想法。特朗普称美伊达成的谅解备忘录“可能不是他该签署的那种文件”，暗示可能不会最终签署协议。此前特朗普曾威胁若不满意将“回去扔炸弹”。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/trump-vance-iran-deal-nuclear-g7.html" },
-  { time: "03:25", tag: "macro", tagText: "宏观", text: "美联储点阵图显示，2026年底联邦基金利率中位数预测为3.8%，比当前目标区间高出25个基点，暗示年内可能加息一次。但沃什主席本人拒绝给出利率预测，多名FOMC委员支持加息，标志着美联储政策转向鹰派。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/fed-projections-call-for-a-rate-hike-in-2026-but-chairman-warsh-likely-abstained.html" },
-  { time: "03:10", tag: "macro", tagText: "宏观", text: "据英国《金融时报》报道，美联储在沃什领导下正式放弃了倾向于降息的措辞。声明删除了此前关于“通胀正在向2%目标回归”的表述，改为强调通胀仍高于目标。此举反映特朗普对伊朗的军事行动已将美国通胀推高至接近目标的两倍。", source: "Financial Times", url: "https://www.ft.com/content/76c16d57-8546-412d-9b76-0e55e6a79348" },
-  { time: "01:00", tag: "crypto", tagText: "加密", text: "SPAC并购热潮卷土重来，华尔街超级IPO浪潮推动空白支票公司复兴。多家投行积极筹备新SPAC上市，市场情绪回暖。", source: "Reuters", url: "https://finance.yahoo.com/markets/stocks/articles/analysis-spacs-back-thanks-wall-170058150.html" },
-  { time: "00:48", tag: "geo", tagText: "地缘", text: "特朗普破坏参议院快速推进前SEC主席克莱顿出任国家情报总监（DNI）的计划，听证会被取消。代理DNI继续留任，可能危及美国关键情报机构的重新授权。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/jay-clayton-dni-hearing-congress-trump-cancel.html" },
 ];
-const breakingDate = "2026年6月18日 14:05 CST";
+const breakingDate = "2026年6月18日 18:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "18:35", tag: "ai", tagText: "AI", text: "中国初创公司Manifold AI完成新一轮融资，投资者押注‘世界模型’赛道。该公司专注于构建能够模拟物理世界并与环境交互的AI系统，被视为超越大语言模型的下一代AI方向。具体融资金额未披露，但此轮融资表明资本对世界模型概念的持续看好。", source: "Caixin Global", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPTmtGbmY2T3JCcDlTdUNVRWJaQUtSd1RLLU90M2tKdkR5aTB0R1pKS2xiRElmWG5oSTFjTVpCaXh4TGtVQy1KRVZPSVZIYzFOQkxHNXN4Z1c3OU0wUERvWE5KUVlBYXBsZnNwNEVOWUxEWl9JRHN2VXhwV243SXNoVzY1U1NiMGM2LXlXRHNLY0tsTjV5M3MteEFyYnFSdHI2NVFISE1KWHJ5T3ZDTC1SQ1hFX2Q5RGdHWUY4TjRUQVpKaThVeHBJSndKY1ZoN1liS0E?oc=5" },
   { time: "11:12", tag: "ai", tagText: "AI", text: "Midjourney CEO David Holz展示公司首款硬件产品——全身超声扫描仪，并计划在旧金山开设水疗中心，标志着这家以生成猫图片闻名的AI公司向医疗硬件领域跨界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952011/midjourney-medical-ai-ultrasound-scan" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
   { time: "04:24", tag: "tech", tagText: "科技", text: "Snap发布价格极其昂贵的AR眼镜后，市场反应负面，公司股价大幅下跌。投资者对其昂贵产品的市场前景表示担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/after-unveiling-ridiculously-expensive-ar-glasses-snaps-stock-takes-a-dive/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌时隔六年推出全新智能音箱Google Home Speaker，将于6月29日发货，配备Gemini AI功能，今日开启预购。该产品原定春季发布，略有延迟。", source: "The Verge", url: "https://www.theverge.com/tech/951147/google-home-speaker-gemini-launch-date-price-specs-features" },
   { time: "20:38", tag: "ai", tagText: "AI", text: "加拿大养老基金巨头购入印度数据中心运营商CtrlS 8.2%的股份，押注AI驱动的数据中心需求激增。CtrlS在印度运营超过15个数据中心，此轮投资显示国际资本对亚洲AI基础设施的看好。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/canadian-pension-giant-joins-race-to-fund-indias-ai-fueled-data-center-boom/" },
   { time: "20:14", tag: "ai", tagText: "AI", text: "AI翻译公司DeepL收购实时音频流与翻译初创公司Mixhalo，并在旧金山设立办公室以拓展美国业务。此举将增强DeepL在会议、演出等场景下的实时翻译能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/deepl-acquires-mixhalo-for-live-event-audio-streaming-and-translation/" },
-  { time: "20:03", tag: "ai", tagText: "AI", text: "一款新型AI通过学习物理定律，在量子计算领域取得突破性进展，有望大幅加速量子计算机的研发进程。该成果发表在SciTechDaily，被认为是AI与量子计算交叉领域的里程碑。", source: "SciTechDaily", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZ2lsUnZzRVctYkd5eEU4LUZDY1ZNZ3h1dzFkZGpnR1JTQlY3NElIdXpobFJfZVdUdFpSSG1YZTFXQ2t4bGJQZzlMVnVNUHJmRjJ3LURudGZUOG5aTmN2SHo5Ni1XMWNISnFyOWxhNmRXRlpza0w4UkJ6X3JJaWhwRXhFaTQydHZfcks4bTlpVlRBd3lqZGRUUzVxMDNNM3NnVzFnTHBBXzN1b2JteGpwdWlnOGQ?oc=5" },
 ];
-const aiBreakingDate = "2026年6月18日 14:05 CST";
+const aiBreakingDate = "2026年6月18日 18:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
