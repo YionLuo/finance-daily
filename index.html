@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.03,
+  score: 37.14,
   rating: "fear",
-  timestamp: "2026-06-18T10:28:46+00:00",
+  timestamp: "2026-06-18T14:13:45+00:00",
   previousClose: 32.66,
   previous1Week: 31.57,
   previous1Month: 61.54,
   previous1Year: 54.29,
-  date: "2026年6月18日 18:46 CST"
+  date: "2026年6月18日 22:18 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:13", tag: "ai", tagText: "AI", text: "AI教父Yann LeCun炮轰马斯克的xAI是“失败品”，并警告AI实验室正面临“巨大的泡沫破裂”风险。LeCun的言论延续了与马斯克的长期争端，并对全球多家顶级AI公司的估值提出质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/yann-lecun-elon-musk-xai-failure-ai-labs-bubble-risk.html" },
+  { time: "21:51", tag: "tech", tagText: "科技", text: "埃森哲股价跌至2017年以来最低点，因人工智能威胁加剧。公司业绩展望不及预期，分析师担忧新公布的大型交易可能带来复杂的整合挑战，市场对其商业模式受AI冲击的忧虑升温。", source: "Financial Times", url: "https://www.ft.com/content/9f063b07-da39-4feb-92ab-ee0f91385c62" },
+  { time: "21:33", tag: "macro", tagText: "宏观", text: "加州正押注于SpaceX、OpenAI和Anthropic的IPO将带来巨额税收收入，但专家表示多种因素可能削弱实际财政影响。科技巨头上市潮虽有望为加州创造税收红利，但经济效益或低于预期。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/california-ipo-tax-windfall.html" },
+  { time: "20:30", tag: "tech", tagText: "科技", text: "Space在纳斯达克上市首周创下多项惊人纪录：从交易量到公司首笔收购规模均刷新历史。数据显示SpaceX上市首周表现远超预期，引发市场高度关注。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/5-wild-spacex-stats-from-the-companys-first-week-on-the-nasdaq.html" },
   { time: "18:00", tag: "geo", tagText: "地缘", text: "北卡罗来纳州2026年参议员选举将对决民主党人库珀与共和党人沃特利。该摇摆州自2008年以来未选出民主党参议员，结果将直接决定国会下届控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/north-carolina-2026-senate-race-roy-cooper-michael-whatley.html" },
   { time: "17:54", tag: "geo", tagText: "地缘", text: "乌克兰对莫斯科发动史上最大规模无人机袭击，近200架无人机攻击俄罗斯首都，击中该市最大炼油厂。冲突升级引发市场避险情绪升温。", source: "Financial Times", url: "https://www.ft.com/content/c2514fd8-d5d8-4bde-ad64-1167638d188b" },
   { time: "17:18", tag: "tech", tagText: "科技", text: "特朗普宣布英特尔将与苹果合作，在美国本土为苹果设计制造芯片。英特尔股价盘前大涨9%，延续近期反弹势头。此举标志美国芯片制造回流取得重大突破。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/trump-intel-apple-chip-design-deal.html" },
@@ -1645,15 +1649,19 @@ const breakingNews = [
   { time: "06:44", tag: "macro", tagText: "宏观", text: "美联储新任主席凯文·沃什在其首次FOMC会议上宣布成立五个工作组，专注于央行沟通、通胀框架等改革方向。沃什暗示未来可能更激进地加息，多位官员预计年内加息一次。此举标志着美联储运作方式的重大转变。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/kevin-warsh-fed-interest-rates-risk-analysis.html" },
   { time: "06:01", tag: "tech", tagText: "科技", text: "苹果CEO蒂姆·库克表示，由于AI服务器需求导致内存芯片价格飙升，苹果“不可避免”将被迫涨价。AI热潮推高零部件成本，科技巨头纷纷抢购芯片，消费者需为苹果产品支付更高价格。", source: "MarketWatch", url: "https://www.marketwatch.com/story/its-unavoidable-apple-says-it-will-be-forced-to-raise-prices-due-to-the-ai-boom-e3d1e4c4?mod=mw_rss_topstories" },
   { time: "05:38", tag: "macro", tagText: "宏观", text: "美国参议院军事委员会通过法案，拟禁止国防承包商在未获五角大楼批准的情况下进行股票回购。此举旨在限制企业将利润用于回购而非提升国防能力，若落地将影响洛克希德·马丁等巨头。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/defense-contractors-stock-buybacks-senate-warren-trump.html" },
-  { time: "05:02", tag: "macro", tagText: "宏观", text: "沃什鹰派立场引发市场剧烈波动：道琼斯指数收盘暴跌500点，2年期美债收益率飙升，股市、债市、黄金和美元均出现显著反应。投资者押注美联储可能提前加息以遏制通胀。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9uTFFzUE5SblgwaXNYcjl5R1BNd0dVd3NELUZMRFVkNkpqOV96MUZqNTBQWkZNTzE0Um56VGNRTno4SEJybHRwRnpLTG9nRjJ2ZE0xRTR0ZFNMcXV6UWNNNlk2Y2hFUGRWcnd6V1BNLVhqUGZabUZZ0gF8QVVfeXFMTlV5eGVzUzFGN01QSGRBZHljQkNPeGJyYzIyYVFnMFA4Rk5SN081cXVnNzBZREhtYnVZUU5oSmVfeWtsWGNZX3JxaW5scWMxSzVZMmh5YnBLbmlSeUNwRHloT1JjWGtRWEs1ZDM0NXRmQ2UtTlpXTklRekFudA?oc=5" },
-  { time: "04:19", tag: "crypto", tagText: "加密", text: "美联储鹰派立场冲击加密市场，比特币及山寨币价格承压下跌。新任主席沃什暗示可能加息以遏制通胀，市场风险偏好下降，加密资产遭遇抛售。", source: "The Block", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTFNqS250RFBZRW43aWtYZ1RkUjVVUy1sT0t3RjRqR2hiTWtSMnZPTVg4cjVkYzNaZVpjUHZ4a29PbGZZQUJMN3RYdWZZbDJYajU5elVjNFdiWElHam9ETnlWZUswYWZLTlN0UzQyTzJqZXpKdTRtdExoUTVfcW1Gc1gyeTdaNDF1OFQyR3RsY1JyMFc1VDI1UHotbWxKaW1qZV9mUHZiQzhxdnFi?oc=5" },
-  { time: "04:17", tag: "geo", tagText: "地缘", text: "特朗普表示，当伊朗“表现好”时，美国将释放其被冻结的数十亿美元资金并放松制裁。同时他承认战后伊朗将保留弹道导弹，暗示新协议可能不会彻底解决核问题。", source: "Financial Times", url: "https://www.ft.com/content/d4f89b6b-c213-4550-924b-a9ae45e24c37" },
-  { time: "04:00", tag: "macro", tagText: "宏观", text: "知名投资者杰弗里·冈拉克（Jeffrey Gundlach）表示，美联储主席沃什并非市场期待的“宽松货币主席”，其鹰派立场降低了过度宽松政策重燃通胀的风险，但可能推高长期借贷成本。冈拉克警告市场此前对沃什的鸽派预期是错误的。", source: "CNBC", url: "https://www.cnbc.com/2026/06/17/jeffrey-gundlach-says-feds-warsh-is-not-going-to-be-the-easy-money-chairman-many-hoped-for.html" },
 ];
-const breakingDate = "2026年6月18日 18:46 CST";
+const breakingDate = "2026年6月18日 22:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:15", tag: "ai", tagText: "AI", text: "AI初创公司Pramaana Labs获Khosla Ventures 2700万美元种子轮融资，计划将形式化验证技术引入AI系统，重点服务于法律、药物发现和税务等高风险领域，确保AI输出可靠且可验证。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/pramaana-labs-raises-27-million-seed-round-from-khosla-ventures-to-bring-formal-verification-to-ai/" },
+  { time: "21:30", tag: "tech", tagText: "科技", text: "Meta推出AI搜索模式“AI Mode”，基于Facebook帖子内容提供个性化搜索结果，可回答“周末该做什么”等开放性问题。该功能将社交数据与生成式AI结合，但也引发隐私与信息准确性担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/951099/meta-ai-mode-search-hands-on" },
+  { time: "21:30", tag: "ai", tagText: "AI", text: "英伟达（NVDA）股价2026年表现不佳，竞争加剧成为主因。Barron's和Blockonomi报道指出，随着定制AI芯片和竞争对手的崛起，英伟达在AI芯片市场的领先地位面临挑战，股价承压。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lZjk4U0Z0cWl0U0NPU255Rng2ZlBPOXNENklQVjQzOXZiUk0xckRPbmNBdk5HTmZlUlhMN0VTd0ZCUjdnMGstai1vMDgxVWNJekFPb3d3RHplQ3dMNUtUVE1ueENjTW15TzMwbVFJeS1CUDFuaEp5OQ?oc=5" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "Adobe在Photoshop、Premiere等Creative Cloud应用中推出AI助手，并重新设计Firefly AI Studio，支持从单一界面进行编辑和生成新设计。此举标志着Adobe将生成式AI全面融入其核心创意工具套件。", source: "The Verge", url: "https://www.theverge.com/tech/952099/adobe-ai-assistants-photoshop-premiere-illustrator-beta-launch" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌时隔六年推出全新智能音箱Google Home Speaker，将于6月29日发货，配备Gemini AI功能，今日开启预购。该产品原定春季发布，略有延迟。", source: "The Verge", url: "https://www.theverge.com/tech/951147/google-home-speaker-gemini-launch-date-price-specs-features" },
+  { time: "20:58", tag: "ai", tagText: "AI", text: "Google花费27亿美元打造的Gemini大模型核心架构师（Transformer架构作者之一）跳槽至OpenAI。这一顶级AI人才流动将直接影响下一代大模型的竞争格局，凸显OpenAI对顶尖研究人员的吸引力。", source: "Tech Times", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxOU1MxZlNqUHpGRzZXWE50eU9kMC1XMjFYaF82NGhXX2RmbmpOMWdqQ0loSG5XVVNZYmxOeDJkR3ZQUUh6Y01Hd1RIQmU1dm4wemh4NW9vQi1hTklzYl9WUUxvZXI0LURBdE1senpYRFBBUHVtZHBEZXVId0I3VGxmVnFSYTBYUFlJajlBbXBpYzBITllLSmFFb2UzalpGYzJ6enMwVTd4WGktNTNxcW81ZXRkLTJvRVViN0hGNmF0OHJGNFlu?oc=5" },
+  { time: "20:38", tag: "ai", tagText: "AI", text: "加拿大养老基金巨头购入印度数据中心运营商CtrlS 8.2%的股份，押注AI驱动的数据中心需求激增。CtrlS在印度运营超过15个数据中心，此轮投资显示国际资本对亚洲AI基础设施的看好。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/canadian-pension-giant-joins-race-to-fund-indias-ai-fueled-data-center-boom/" },
+  { time: "20:14", tag: "ai", tagText: "AI", text: "AI翻译公司DeepL收购实时音频流与翻译初创公司Mixhalo，并在旧金山设立办公室以拓展美国业务。此举将增强DeepL在会议、演出等场景下的实时翻译能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/deepl-acquires-mixhalo-for-live-event-audio-streaming-and-translation/" },
   { time: "18:35", tag: "ai", tagText: "AI", text: "中国初创公司Manifold AI完成新一轮融资，投资者押注‘世界模型’赛道。该公司专注于构建能够模拟物理世界并与环境交互的AI系统，被视为超越大语言模型的下一代AI方向。具体融资金额未披露，但此轮融资表明资本对世界模型概念的持续看好。", source: "Caixin Global", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPTmtGbmY2T3JCcDlTdUNVRWJaQUtSd1RLLU90M2tKdkR5aTB0R1pKS2xiRElmWG5oSTFjTVpCaXh4TGtVQy1KRVZPSVZIYzFOQkxHNXN4Z1c3OU0wUERvWE5KUVlBYXBsZnNwNEVOWUxEWl9JRHN2VXhwV243SXNoVzY1U1NiMGM2LXlXRHNLY0tsTjV5M3MteEFyYnFSdHI2NVFISE1KWHJ5T3ZDTC1SQ1hFX2Q5RGdHWUY4TjRUQVpKaThVeHBJSndKY1ZoN1liS0E?oc=5" },
   { time: "11:12", tag: "ai", tagText: "AI", text: "Midjourney CEO David Holz展示公司首款硬件产品——全身超声扫描仪，并计划在旧金山开设水疗中心，标志着这家以生成猫图片闻名的AI公司向医疗硬件领域跨界。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952011/midjourney-medical-ai-ultrasound-scan" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
@@ -1666,16 +1674,8 @@ const aiBreakingNews = [
   { time: "01:43", tag: "ai", tagText: "AI", text: "世界模型初创公司Odyssey以14.5亿美元估值完成新一轮融资，亚马逊等知名投资者参投。世界模型被视为超越大语言模型的下一波AI浪潮，Odyssey凭借构建可交互3D场景的AI系统成为该赛道最受关注的初创之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
   { time: "23:24", tag: "tech", tagText: "科技", text: "“慢科技”运动兴起：一批初创公司推出功能单一、限制使用时间的设备和应用，旨在帮助用户摆脱手机成瘾、夺回注意力。TechCrunch报道称，越来越多用户愿意为减少干扰的工具付费。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/the-slowtech-revolution-is-here-to-kill-your-phone-addiction-and-rescue-your-attention-span/" },
-  { time: "23:00", tag: "tech", tagText: "科技", text: "收集机器人训练数据是一项脏活累活。部分AI实验室已开始向XDOF（远程操作员）付费，以获取用于训练物理AI的高质量真实世界数据。这暴露了机器人AI在数据获取上面临的瓶颈，与LLM的成功形成对比。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/collecting-robot-training-data-is-dirty-unglamorous-work-some-ai-labs-are-already-paying-xdof-to-do-it/" },
-  { time: "22:44", tag: "ai", tagText: "AI", text: "AI搜索初创公司Genspark在最新一轮融资中估值达26亿美元。该公司专注于AI驱动的信息检索和知识聚合，本轮融资凸显投资者对AI搜索赛道的持续看好。", source: "CNA", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxObGFuTVExWWxndlBMY2NmeVpOcU1nMVNtUkdBYkR6TGtQTTBUcF9QZGxUbnJfSE40MTA3aFB4SGU0ZXRjZ1NYRE1lODVsM0hyYW5pNXVIVjRtRXRFN1o3czRqZms5akJ1RlFrNUlPUm4xS1BuYXRtMnItamRGTnhoTGU1bzY4MFUzeXdHZWxtRVgtRk1wNFlRQk5yeElwVmNfV1l3MFBhY0VMRzVUQS1z?oc=5" },
-  { time: "22:15", tag: "ai", tagText: "AI", text: "AI初创公司Pramaana Labs获Khosla Ventures 2700万美元种子轮融资，计划将形式化验证技术引入AI系统，重点服务于法律、药物发现和税务等高风险领域，确保AI输出可靠且可验证。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/pramaana-labs-raises-27-million-seed-round-from-khosla-ventures-to-bring-formal-verification-to-ai/" },
-  { time: "21:30", tag: "tech", tagText: "科技", text: "Meta推出AI搜索模式“AI Mode”，基于Facebook帖子内容提供个性化搜索结果，可回答“周末该做什么”等开放性问题。该功能将社交数据与生成式AI结合，但也引发隐私与信息准确性担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/951099/meta-ai-mode-search-hands-on" },
-  { time: "21:30", tag: "ai", tagText: "AI", text: "英伟达（NVDA）股价2026年表现不佳，竞争加剧成为主因。Barron's和Blockonomi报道指出，随着定制AI芯片和竞争对手的崛起，英伟达在AI芯片市场的领先地位面临挑战，股价承压。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lZjk4U0Z0cWl0U0NPU255Rng2ZlBPOXNENklQVjQzOXZiUk0xckRPbmNBdk5HTmZlUlhMN0VTd0ZCUjdnMGstai1vMDgxVWNJekFPb3d3RHplQ3dMNUtUVE1ueENjTW15TzMwbVFJeS1CUDFuaEp5OQ?oc=5" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌时隔六年推出全新智能音箱Google Home Speaker，将于6月29日发货，配备Gemini AI功能，今日开启预购。该产品原定春季发布，略有延迟。", source: "The Verge", url: "https://www.theverge.com/tech/951147/google-home-speaker-gemini-launch-date-price-specs-features" },
-  { time: "20:38", tag: "ai", tagText: "AI", text: "加拿大养老基金巨头购入印度数据中心运营商CtrlS 8.2%的股份，押注AI驱动的数据中心需求激增。CtrlS在印度运营超过15个数据中心，此轮投资显示国际资本对亚洲AI基础设施的看好。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/canadian-pension-giant-joins-race-to-fund-indias-ai-fueled-data-center-boom/" },
-  { time: "20:14", tag: "ai", tagText: "AI", text: "AI翻译公司DeepL收购实时音频流与翻译初创公司Mixhalo，并在旧金山设立办公室以拓展美国业务。此举将增强DeepL在会议、演出等场景下的实时翻译能力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/deepl-acquires-mixhalo-for-live-event-audio-streaming-and-translation/" },
 ];
-const aiBreakingDate = "2026年6月18日 18:46 CST";
+const aiBreakingDate = "2026年6月18日 22:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
