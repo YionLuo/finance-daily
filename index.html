@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月19日 22:19 CST"
+  date: "2026年6月20日 01:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:50", tag: "tech", tagText: "科技", text: "NetJets发生首起致命空难，飞机在得州拉雷多高速公路上坠毁，知名风投创始人遇难。事故原因尚在调查中，引发对私人航空安全的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/netjets-first-fatal-crash-kills-influential-texas-vc-founder.html" },
+  { time: "00:05", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡油轮交通激增：美伊协议实施后，通行该海峡的油轮数量显著增加。市场关注协议中免费通行期结束后的海峡管理规则，油价因此波动加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/iran-oil-tanker-traffic-strait-hormuz-gulf-vlcc.html" },
+  { time: "22:53", tag: "crypto", tagText: "加密", text: "黄金、白银与加密资产同步大跌，市场分析认为主要受美联储鹰派立场及美伊协议不确定性影响，避险资产与风险资产同时遭到抛售。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc3I4YWxuS25yMFhOdDZ3eEpxQVdmdDVoTUMwS2puc0libGVxMWJFdW1Xa2ZWMDlxUDQwaWF3WWdudzNKam0yVThKa3VVSDdoWm1TR3U5clhEYlVCa3JxUHR5QlVHWFktZ2FfWEJiVUFCa1M5ZF9HLTg0Y244NHJyTGp2akJaaS1qczlBWDRFejFJT3RoN2RVU2dWT2FnbC13MDI1eXpWQ3NDcE55Vk1qcDRn" },
+  { time: "22:46", tag: "geo", tagText: "地缘", text: "古巴通过“紧急”经济改革法案，放宽私营经济限制，被视为1960年代革命以来最大规模的政策转向。此举是在美国持续施压下的重大调整。", source: "Financial Times", url: "https://www.ft.com/content/f3532214-5707-41fe-bde6-8235b67f9e86" },
+  { time: "22:15", tag: "tech", tagText: "科技", text: "艾伯维接近以近110亿美元收购生物科技公司Apogee Therapeutics，交易凸显大型药企通过并购补充管线的新一轮热潮。", source: "Financial Times", url: "https://www.ft.com/content/cb5e94aa-1687-47fe-b55a-82e273e8b1bd" },
   { time: "22:01", tag: "geo", tagText: "地缘", text: "以色列与黎巴嫩真主党达成停火协议，当地时间周五下午4点生效。美国官员证实了这一消息，油价随即由涨转跌。市场预期停火将有助于巩固美伊和平协议，缓解中东供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/oil-prices-wti-brent-crude-us-iran-deal-strait-hormuz-shipping-recovery.html" },
   { time: "21:56", tag: "tech", tagText: "科技", text: "尽管芯片股（SOXX）屡创新高，但其相对强弱指标（RSI）已跌破超买阈值，呈现价格与动量背离。历史数据表明，这种形态往往预示短期回调风险。投资者需警惕半导体板块的获利回吐压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/chip-stocks-are-setting-records-but-this-hidden-chart-pattern-says-momentum-favors-the-bears-5ba98c10" },
   { time: "21:17", tag: "geo", tagText: "地缘", text: "俄罗斯央行行长纳比乌琳娜近期缺席多场重要活动，引发外界对其去留的猜测。分析人士认为，在俄乌冲突持续、西方制裁加深的背景下，央行领导层的潜在变动可能影响俄罗斯货币政策走向。", source: "Financial Times", url: "https://www.ft.com/content/1dbfdddb-cf7b-485d-b060-c81caebc00a3" },
@@ -1644,16 +1649,15 @@ const breakingNews = [
   { time: "14:37", tag: "geo", tagText: "地缘", text: "美伊和平协议遭遇早期挫折，原定在瑞士举行的第二轮直接谈判未能如期进行。伊朗以以色列袭击黎巴嫩为由推迟会谈，市场对中东局势持久缓和的信心出现动摇。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/us-iran-talks-switzerland-canceled-interim-deal-markets.html" },
   { time: "13:07", tag: "macro", tagText: "宏观", text: "全球IT服务巨头埃森哲下调营收指引，引发印度IT股集体重挫，主要公司股价跌幅高达7%。市场对行业增长前景的担忧加剧，拖累印度基准股指Sensex下跌约700点。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/india-it-stocks-fall-accenture-cuts-revenue-forecast.html" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "美联储释放鹰派信号，市场对加息预期升温，导致新兴市场和商品货币汇率大幅逆转。此前因美伊协议走强的货币遭遇抛售，全球外汇押注格局发生显著变化。", source: "Financial Times", url: "https://www.ft.com/content/9d0f7f40-0a65-4188-9752-a69baab12176" },
-  { time: "11:12", tag: "geo", tagText: "地缘", text: "MSCI发布最新报告，对印尼股市透明度表示持续担忧。此举可能影响印尼在全球指数中的权重配置，并加大外资流出压力。此前MSCI已多次批评印尼市场信息披露不足。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/msci-still-concerned-about-indonesian-stock-market-transparency.html" },
-  { time: "11:12", tag: "macro", tagText: "宏观", text: "尽管中国高层持续呼吁扩大内需，但2026年年中经济活动依然疲软，消费和投资数据未达预期。分析认为，信心不足、房地产低迷及外部不确定性仍是主要拖累因素。", source: "Financial Times", url: "https://www.ft.com/content/7db72916-3f9f-42c6-bd28-b5c7f51ed573" },
-  { time: "10:04", tag: "macro", tagText: "宏观", text: "日本央行加息并实施超700亿美元干预，但日元仍逼近40年新低。市场认为，美国与伊朗达成和平协议后风险偏好回升，叠加美联储鹰派立场，导致日元持续承压。分析师指出，日本当局在160关口附近有较强干预意愿，但目前效果有限。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/japan-yen-intervention-boj-rate-hike.html" },
-  { time: "09:35", tag: "geo", tagText: "地缘", text: "欧盟决定推迟对中国的贸易对抗，选择通过对话解决争端而非立即采取行动。欧盟领导人担心中国的报复措施，倾向于先通过谈判缓解紧张关系。此举为中美欧三方贸易博弈增添变数。", source: "Financial Times", url: "https://www.ft.com/content/e220372c-b20e-418e-9f02-29a5aa269702" },
-  { time: "07:40", tag: "macro", tagText: "宏观", text: "日本5月核心通胀率持稳，符合市场预期，尽管能源价格存在上行压力。数据公布后，市场对日本央行后续加息节奏的预期保持谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/japan-core-inflation-holds-steady-in-may-matching-expectations-despite-energy-price-concerns.html" },
 ];
-const breakingDate = "2026年6月19日 22:19 CST";
+const breakingDate = "2026年6月20日 01:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
+  { time: "00:08", tag: "ai", tagText: "AI", text: "美国政府以国家安全为由，迫使Anthropic撤回其最新两款AI模型Fable 5和Mythos 5。此前亚马逊研究人员指控相关模型存在风险。尽管被禁，市场数据并未受到明显影响，反而引发讨论是否意外提升了该品牌的知名度。", source: "TechCrunch", url: "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/" },
+  { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
+  { time: "23:17", tag: "tech", tagText: "科技", text: "Anthropic成为首家加入Frontier Carbon Removal Collective的AI初创公司，参与该联合体9.15亿美元的融资轮。该联合体专注于碳清除技术，Anthropic的加入标志着AI行业对气候行动的进一步承诺。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVS1Zb2YwbTdBeF9pS2tPeE15SjFLa01rZXVJbmZMdWtoeWNHNlBpZTFWcE1tUXpoTlZ2YkxiVXR4ZUU3dlJyYTFpODVBaVlGdFo4MW52RF9lbmQyQnpiR1BxVXluYm1vdlR1b00taEFQQmtpYklDZHU4TWpDRDZHMzM0Z3NqQTRSWnoyeDVKbmpTeUUzcDJ4YURUazVKa3MxVlhVem1hU04tVS10VXh0cWgyM0FTWlBSOWdWSGd1MTh0SXJyZ0NJWElPVjZUemQ1Znd5b0RB?oc=5" },
   { time: "21:22", tag: "ai", tagText: "AI", text: "欧盟一项过于复杂的法律条款可能迫使英伟达退出欧盟AI项目。该条款涉及AI领域的外国补贴审查，其复杂性可能导致英伟达无法参与欧盟资助的AI研究项目，进一步加剧欧美科技监管摩擦。", source: "Euractiv", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYUNoS0VhY2tfaDIyaDVZdmJMbHBkZE9aTnJzQ05Od21Xb0pSTG5FTkZkX3dLSWVDcFFyUlZPOVZvaGJfelltdXByU1pHLXhCWDNyUHZxVldyU285ZlA1SnBPc3E0bExCWFh6dHdwMUtWTjkzb3RDalhIUzlkZS1ZRzJjQUMzdl9nckNGMWl4ME9HYV9iUDBYRTFFQkwyQnh1a3JEOHRIY3Y?oc=5" },
   { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
   { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
   { time: "03:41", tag: "tech", tagText: "科技", text: "苹果修复Beats Studio Buds高严重性窃听漏洞，该漏洞12个月前被披露，影响多个厂商产品。", source: "Ars Technica", url: "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/" },
   { time: "02:22", tag: "tech", tagText: "科技", text: "亚马逊正计划将其自研AI芯片向其他数据中心出售，以更直接地挑战英伟达。AWS已与多家数据中心洽谈，CEO Andy Jassy称这代表着500亿美元的市场机会。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/" },
-  { time: "01:49", tag: "macro", tagText: "宏观", text: "美国联邦能源监管委员会（FERC）要求电网运营商为AI数据中心提供并网快速通道，但未解决电力供应短缺问题。此举将加速数据中心接入电网，但可能加剧区域电力紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/" },
-  { time: "01:43", tag: "ai", tagText: "AI", text: "世界模型初创公司Odyssey以14.5亿美元估值完成新一轮融资，亚马逊等知名投资者参投。世界模型被视为超越大语言模型的下一波AI浪潮，Odyssey凭借构建可交互3D场景的AI系统成为该赛道最受关注的初创之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/" },
-  { time: "01:42", tag: "geo", tagText: "地缘", text: "SpaceX即将IPO前，有中国投资者秘密收购其股份，其中一家此前未披露的投资者与中国军工承包商有关联。该事件引发美国对技术外流和国家安全风险的关注。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/06/18/before-spacex-ipo-investors-in-china-secretly-acquired-stakes/" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
 ];
-const aiBreakingDate = "2026年6月19日 22:19 CST";
+const aiBreakingDate = "2026年6月20日 01:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
