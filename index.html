@@ -1623,12 +1623,18 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月19日 18:54 CST"
+  date: "2026年6月19日 22:19 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:01", tag: "geo", tagText: "地缘", text: "以色列与黎巴嫩真主党达成停火协议，当地时间周五下午4点生效。美国官员证实了这一消息，油价随即由涨转跌。市场预期停火将有助于巩固美伊和平协议，缓解中东供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/oil-prices-wti-brent-crude-us-iran-deal-strait-hormuz-shipping-recovery.html" },
+  { time: "21:56", tag: "tech", tagText: "科技", text: "尽管芯片股（SOXX）屡创新高，但其相对强弱指标（RSI）已跌破超买阈值，呈现价格与动量背离。历史数据表明，这种形态往往预示短期回调风险。投资者需警惕半导体板块的获利回吐压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/chip-stocks-are-setting-records-but-this-hidden-chart-pattern-says-momentum-favors-the-bears-5ba98c10" },
+  { time: "21:17", tag: "geo", tagText: "地缘", text: "俄罗斯央行行长纳比乌琳娜近期缺席多场重要活动，引发外界对其去留的猜测。分析人士认为，在俄乌冲突持续、西方制裁加深的背景下，央行领导层的潜在变动可能影响俄罗斯货币政策走向。", source: "Financial Times", url: "https://www.ft.com/content/1dbfdddb-cf7b-485d-b060-c81caebc00a3" },
+  { time: "20:25", tag: "geo", tagText: "地缘", text: "意大利总理梅洛尼公开指责特朗普讨好西方敌人，起因是特朗普此前声称梅洛尼“乞求”与他合影。梅洛尼的强硬回应凸显美欧之间在对待伊朗等问题上的分歧加深。", source: "Financial Times", url: "https://www.ft.com/content/f68fc9f4-ba49-472b-ac56-9b2d9236da53" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "全球内存短缺危机持续恶化，苹果CEO库克称当前局面“不可持续”，公司罕见考虑提价以应对成本压力。这一信号表明，存储芯片供需失衡已波及最强势的消费电子厂商，可能进一步推高终端设备价格。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/memory-crisis-hits-such-extremes-that-even-apple-cant-be-safe-.html" },
+  { time: "19:42", tag: "geo", tagText: "地缘", text: "伊朗要求所有通过霍尔木兹海峡的船只必须持有经德黑兰批准的保险凭证并缴纳“保险费用”。此举可能被视为伊朗在美伊协议后强化对海峡控制的新手段，为全球航运和油价增添不确定性。", source: "Financial Times", url: "https://www.ft.com/content/e1068044-5124-47d9-81ba-c4a3efc16384" },
   { time: "18:50", tag: "macro", tagText: "宏观", text: "印度最大电信运营商及数字服务商Jio Platforms正式提交IPO申请，此次上市被视为印度资本市场近十年来最大规模的项目之一，市场对其估值预期高达千亿美元。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/india-jio-platforms-ipo-mukesh-ambani.html" },
   { time: "18:48", tag: "ai", tagText: "AI", text: "SpaceX在历史性IPO后股价飙升37%，创始人马斯克持股价值突破1万亿美元。其他多位亿万富翁股东亦因公司估值暴涨而财富激增。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/musk-spacex-billionaire-shareholders.html" },
   { time: "18:26", tag: "geo", tagText: "地缘", text: "俄罗斯誓言对乌克兰实施“大规模密集打击”，以回应乌方对莫斯科发动的有史以来最大规模无人机袭击。俄方称此类攻击将招致更严厉报复，乌克兰局势持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/russia-ukraine-moscow-drone-attack-trump.html" },
@@ -1643,17 +1649,12 @@ const breakingNews = [
   { time: "10:04", tag: "macro", tagText: "宏观", text: "日本央行加息并实施超700亿美元干预，但日元仍逼近40年新低。市场认为，美国与伊朗达成和平协议后风险偏好回升，叠加美联储鹰派立场，导致日元持续承压。分析师指出，日本当局在160关口附近有较强干预意愿，但目前效果有限。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/japan-yen-intervention-boj-rate-hike.html" },
   { time: "09:35", tag: "geo", tagText: "地缘", text: "欧盟决定推迟对中国的贸易对抗，选择通过对话解决争端而非立即采取行动。欧盟领导人担心中国的报复措施，倾向于先通过谈判缓解紧张关系。此举为中美欧三方贸易博弈增添变数。", source: "Financial Times", url: "https://www.ft.com/content/e220372c-b20e-418e-9f02-29a5aa269702" },
   { time: "07:40", tag: "macro", tagText: "宏观", text: "日本5月核心通胀率持稳，符合市场预期，尽管能源价格存在上行压力。数据公布后，市场对日本央行后续加息节奏的预期保持谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/japan-core-inflation-holds-steady-in-may-matching-expectations-despite-energy-price-concerns.html" },
-  { time: "07:22", tag: "tech", tagText: "科技", text: "AI公司Midjourney进军医疗领域，推出身体扫描仪产品，声称仅需60秒即可完成类似MRI的全身成像。该公司希望通过降低成本和提升便捷性，推动医学影像普及，但业界对其准确性和监管审批存疑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-ai-company-wants-to-replace-mris-with-a-60-second-dip-in-the-spa-can-that-really-work-3bce6681" },
-  { time: "06:04", tag: "macro", tagText: "宏观", text: "欧盟委员会发布草案，计划消除银行跨境资本流动的主要障碍，以提升欧洲银行相对于美国同行的竞争力。该草案旨在简化监管、统一规则，促进资本在欧盟内部自由流动，有望推动欧洲金融一体化进程。", source: "Financial Times", url: "https://www.ft.com/content/bec1c122-04d6-4eab-b69c-c33d874cfa5b" },
-  { time: "06:01", tag: "tech", tagText: "科技", text: "SpaceX在创纪录的IPO筹集860亿美元后，计划发行200亿美元债券。此举将测试市场对这家AI与火箭公司债务的承接意愿，同时也反映其大规模扩张的资金需求。", source: "Financial Times", url: "https://www.ft.com/content/8b73b4ce-3855-4b89-9110-3d892567f28a" },
-  { time: "06:00", tag: "tech", tagText: "科技", text: "英特尔股价飙涨11%，此前特朗普宣布英特尔将在美国为苹果制造芯片。分析师认为，英特尔正稳步扩大本土产能，并将政治和战略优势转化为实际代工订单。虽然该合作可能起步规模较小，但标志着英特尔代工业务取得重大突破。", source: "MarketWatch", url: "https://www.marketwatch.com/story/intel-shares-rally-as-trump-says-company-will-build-chips-for-apple-in-the-u-s-c72d8c88?mod=mw_rss_topstories" },
-  { time: "06:00", tag: "geo", tagText: "地缘", text: "SpaceX警告欧盟计划预留部分频谱给欧洲运营商的卫星方案，可能破坏乌克兰的星链连接。马斯克旗下集团致信欧盟，称此举将削弱对乌克兰的通信支持，并损害市场竞争。", source: "Financial Times", url: "https://www.ft.com/content/0b012610-8132-4549-afd9-14bacd9db8cb" },
-  { time: "05:14", tag: "macro", tagText: "宏观", text: "美光等内存股迎有史以来最佳年度表现，但在人工智能热潮推动下估值仍显便宜。分析师指出，尽管股价大涨，半导体存储器行业市盈率仍处于历史低位，AI需求持续支撑长期增长前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/memory-stocks-are-having-their-best-year-ever-why-do-they-still-look-so-cheap-a506466d?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年6月19日 18:54 CST";
+const breakingDate = "2026年6月19日 22:19 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:22", tag: "ai", tagText: "AI", text: "欧盟一项过于复杂的法律条款可能迫使英伟达退出欧盟AI项目。该条款涉及AI领域的外国补贴审查，其复杂性可能导致英伟达无法参与欧盟资助的AI研究项目，进一步加剧欧美科技监管摩擦。", source: "Euractiv", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYUNoS0VhY2tfaDIyaDVZdmJMbHBkZE9aTnJzQ05Od21Xb0pSTG5FTkZkX3dLSWVDcFFyUlZPOVZvaGJfelltdXByU1pHLXhCWDNyUHZxVldyU285ZlA1SnBPc3E0bExCWFh6dHdwMUtWTjkzb3RDalhIUzlkZS1ZRzJjQUMzdl9nckNGMWl4ME9HYV9iUDBYRTFFQkwyQnh1a3JEOHRIY3Y?oc=5" },
   { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
   { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
   { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "01:43", tag: "ai", tagText: "AI", text: "世界模型初创公司Odyssey以14.5亿美元估值完成新一轮融资，亚马逊等知名投资者参投。世界模型被视为超越大语言模型的下一波AI浪潮，Odyssey凭借构建可交互3D场景的AI系统成为该赛道最受关注的初创之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/" },
   { time: "01:42", tag: "geo", tagText: "地缘", text: "SpaceX即将IPO前，有中国投资者秘密收购其股份，其中一家此前未披露的投资者与中国军工承包商有关联。该事件引发美国对技术外流和国家安全风险的关注。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/06/18/before-spacex-ipo-investors-in-china-secretly-acquired-stakes/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
-  { time: "00:00", tag: "tech", tagText: "科技", text: "三名亚马逊软件工程师因在听证会上支持西雅图市数据中心建设限制法案，被公司告知可能面临解雇。员工引用反歧视法为自己辩护，事件引发对科技巨头压制员工公共参与权的争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952180/amazon-seattle-data-center-moratorium-aecj-disciplinary-action" },
 ];
-const aiBreakingDate = "2026年6月19日 18:54 CST";
+const aiBreakingDate = "2026年6月19日 22:19 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
