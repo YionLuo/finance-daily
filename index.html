@@ -1618,19 +1618,23 @@
 const fearGreedData = {
   score: 37.51,
   rating: "fear",
-  timestamp: "2026-06-18T23:39:42+00:00",
+  timestamp: "2026-06-18T23:59:47+00:00",
   previousClose: 32.66,
   previous1Week: 31.57,
   previous1Month: 61.54,
   previous1Year: 54.29,
-  date: "2026年6月19日 07:55 CST"
+  date: "2026年6月19日 10:46 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "10:04", tag: "macro", tagText: "宏观", text: "日本央行加息并实施超700亿美元干预，但日元仍逼近40年新低。市场认为，美国与伊朗达成和平协议后风险偏好回升，叠加美联储鹰派立场，导致日元持续承压。分析师指出，日本当局在160关口附近有较强干预意愿，但目前效果有限。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/japan-yen-intervention-boj-rate-hike.html" },
+  { time: "09:35", tag: "geo", tagText: "地缘", text: "欧盟决定推迟对中国的贸易对抗，选择通过对话解决争端而非立即采取行动。欧盟领导人担心中国的报复措施，倾向于先通过谈判缓解紧张关系。此举为中美欧三方贸易博弈增添变数。", source: "Financial Times", url: "https://www.ft.com/content/e220372c-b20e-418e-9f02-29a5aa269702" },
   { time: "07:40", tag: "macro", tagText: "宏观", text: "日本5月核心通胀率持稳，符合市场预期，尽管能源价格存在上行压力。数据公布后，市场对日本央行后续加息节奏的预期保持谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/japan-core-inflation-holds-steady-in-may-matching-expectations-despite-energy-price-concerns.html" },
+  { time: "06:04", tag: "macro", tagText: "宏观", text: "欧盟委员会发布草案，计划消除银行跨境资本流动的主要障碍，以提升欧洲银行相对于美国同行的竞争力。该草案旨在简化监管、统一规则，促进资本在欧盟内部自由流动，有望推动欧洲金融一体化进程。", source: "Financial Times", url: "https://www.ft.com/content/bec1c122-04d6-4eab-b69c-c33d874cfa5b" },
   { time: "06:01", tag: "tech", tagText: "科技", text: "SpaceX在创纪录的IPO筹集860亿美元后，计划发行200亿美元债券。此举将测试市场对这家AI与火箭公司债务的承接意愿，同时也反映其大规模扩张的资金需求。", source: "Financial Times", url: "https://www.ft.com/content/8b73b4ce-3855-4b89-9110-3d892567f28a" },
+  { time: "06:00", tag: "tech", tagText: "科技", text: "英特尔股价飙涨11%，此前特朗普宣布英特尔将在美国为苹果制造芯片。分析师认为，英特尔正稳步扩大本土产能，并将政治和战略优势转化为实际代工订单。虽然该合作可能起步规模较小，但标志着英特尔代工业务取得重大突破。", source: "MarketWatch", url: "https://www.marketwatch.com/story/intel-shares-rally-as-trump-says-company-will-build-chips-for-apple-in-the-u-s-c72d8c88?mod=mw_rss_topstories" },
   { time: "06:00", tag: "geo", tagText: "地缘", text: "SpaceX警告欧盟计划预留部分频谱给欧洲运营商的卫星方案，可能破坏乌克兰的星链连接。马斯克旗下集团致信欧盟，称此举将削弱对乌克兰的通信支持，并损害市场竞争。", source: "Financial Times", url: "https://www.ft.com/content/0b012610-8132-4549-afd9-14bacd9db8cb" },
   { time: "05:14", tag: "macro", tagText: "宏观", text: "美光等内存股迎有史以来最佳年度表现，但在人工智能热潮推动下估值仍显便宜。分析师指出，尽管股价大涨，半导体存储器行业市盈率仍处于历史低位，AI需求持续支撑长期增长前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/memory-stocks-are-having-their-best-year-ever-why-do-they-still-look-so-cheap-a506466d?mod=mw_rss_topstories" },
   { time: "05:06", tag: "geo", tagText: "地缘", text: "英国工党领袖候选人伯纳姆有望在补选中获胜，这将进一步加剧首相斯塔默的政治压力。此次补选被视为英国政局变动的关键风向标。", source: "Financial Times", url: "https://www.ft.com/content/44e1e71d-dcd2-4935-a14b-b14ed3b24bf8" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "01:28", tag: "macro", tagText: "宏观", text: "油价持续下挫，WTI原油跌至伊朗战争前水平。副总统万斯称每日超过1200万桶石油通过霍尔木兹海峡，随着中东和平前景改善，市场预期供应将恢复。分析师警告，即使停火协议达成，能源市场格局已永久改变，能源安全需重新审视。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/oil-prices-today-wti-brent.html" },
   { time: "01:03", tag: "crypto", tagText: "加密", text: "加密货币市场全线暴跌，比特币跌至62,500美元，以太坊、瑞波币跌幅超5%。市场分析认为，美联储鹰派立场与美伊协议带来的风险偏好转移导致资金流出加密资产。同时，监管不确定性加剧抛售。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeXhDWE5ZT3BhTkRXOENaalRXSVQwMDBEQW8wZ3RvZmwzSzZyN3U1TG5JSUU0N1ZhaXl3RlNuX1ByaWVKQjNBRkZlQVM3UzZGWWFnNnFobjYwczRsa05VMFk1N2J0RVVZNlBCLWpSVmFxbjVNQXZrbzJXUmRoZEZBTGJpUXJKajhTRUlhVmxHYUh6UkJ4aVROdkZnbkpSZ2ZNLU1EcFNRWUNVYVVWT3l4dmZIYkd4Z2xaZlRXag?oc=5" },
   { time: "00:05", tag: "macro", tagText: "宏观", text: "美联储主席沃什与副总统万斯近日言论被市场解读为可能打开更高通胀的大门。沃什暗示放弃2%通胀目标，万斯为美伊协议辩护称不会给伊朗“一分钱”，但协议可能间接推高油价。分析警告，若通胀预期失控，美联储将被迫更激进加息，对房贷利率和购房者构成长期压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/did-warsh-and-vance-just-open-the-door-to-higher-inflation-d81396fb" },
-  { time: "22:13", tag: "ai", tagText: "AI", text: "AI教父Yann LeCun炮轰马斯克的xAI是“失败品”，并警告AI实验室正面临“巨大的泡沫破裂”风险。LeCun的言论延续了与马斯克的长期争端，并对全球多家顶级AI公司的估值提出质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/yann-lecun-elon-musk-xai-failure-ai-labs-bubble-risk.html" },
-  { time: "21:51", tag: "tech", tagText: "科技", text: "埃森哲股价跌至2017年以来最低点，因人工智能威胁加剧。公司业绩展望不及预期，分析师担忧新公布的大型交易可能带来复杂的整合挑战，市场对其商业模式受AI冲击的忧虑升温。", source: "Financial Times", url: "https://www.ft.com/content/9f063b07-da39-4feb-92ab-ee0f91385c62" },
-  { time: "21:33", tag: "macro", tagText: "宏观", text: "加州正押注于SpaceX、OpenAI和Anthropic的IPO将带来巨额税收收入，但专家表示多种因素可能削弱实际财政影响。科技巨头上市潮虽有望为加州创造税收红利，但经济效益或低于预期。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/california-ipo-tax-windfall.html" },
-  { time: "20:30", tag: "tech", tagText: "科技", text: "Space在纳斯达克上市首周创下多项惊人纪录：从交易量到公司首笔收购规模均刷新历史。数据显示SpaceX上市首周表现远超预期，引发市场高度关注。", source: "CNBC", url: "https://www.cnbc.com/2026/06/18/5-wild-spacex-stats-from-the-companys-first-week-on-the-nasdaq.html" },
 ];
-const breakingDate = "2026年6月19日 07:55 CST";
+const breakingDate = "2026年6月19日 10:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
+  { time: "08:51", tag: "ai", tagText: "AI", text: "搜索与数据分析公司Elastic同意收购CRV支持的AI初创公司DeductiveAI，交易金额最高达8500万美元。DeductiveAI利用AI自动检测和修复软件中的漏洞，成立仅三年。此次收购将增强Elastic在AI驱动的代码质量领域的布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/" },
+  { time: "07:28", tag: "crypto", tagText: "加密", text: "微软发现一种新型轻量级后门恶意软件“Crypto Clipper”，可通过USB设备自我传播，并利用Tor网络进行通信。该恶意软件专门用于窃取加密货币，危害性较高，用户需警惕USB设备来源。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/" },
   { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
   { time: "04:30", tag: "ai", tagText: "AI", text: "Snap将其AI视频团队分拆为独立公司Dotmo，原团队员工将离开Snap专注于AI视频开发。此举旨在降低运营成本。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/snap-spins-off-ai-video-team-into-new-company-dotmo-due-to-costs/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "23:20", tag: "ai", tagText: "AI", text: "世界模型初创公司General Intuition正洽谈以约20亿美元估值融资3亿美元。该公司利用游戏平台Medal的20亿条/年视频数据集（来自1000万月活用户）训练具身AI和世界模型，被视为超越大语言模型的下一波AI浪潮。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/general-intuition-in-talks-to-raise-300m-at-around-2b-valuation/" },
   { time: "22:15", tag: "ai", tagText: "AI", text: "AI初创公司Pramaana Labs获Khosla Ventures 2700万美元种子轮融资，计划将形式化验证技术引入AI系统，重点服务于法律、药物发现和税务等高风险领域，确保AI输出可靠且可验证。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/pramaana-labs-raises-27-million-seed-round-from-khosla-ventures-to-bring-formal-verification-to-ai/" },
   { time: "21:30", tag: "tech", tagText: "科技", text: "Meta推出AI搜索模式“AI Mode”，基于Facebook帖子内容提供个性化搜索结果，可回答“周末该做什么”等开放性问题。该功能将社交数据与生成式AI结合，但也引发隐私与信息准确性担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/951099/meta-ai-mode-search-hands-on" },
-  { time: "21:30", tag: "ai", tagText: "AI", text: "英伟达（NVDA）股价2026年表现不佳，竞争加剧成为主因。Barron's和Blockonomi报道指出，随着定制AI芯片和竞争对手的崛起，英伟达在AI芯片市场的领先地位面临挑战，股价承压。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lZjk4U0Z0cWl0U0NPU255Rng2ZlBPOXNENklQVjQzOXZiUk0xckRPbmNBdk5HTmZlUlhMN0VTd0ZCUjdnMGstai1vMDgxVWNJekFPb3d3RHplQ3dMNUtUVE1ueENjTW15TzMwbVFJeS1CUDFuaEp5OQ?oc=5" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "Adobe在Photoshop、Premiere等Creative Cloud应用中推出AI助手，并重新设计Firefly AI Studio，支持从单一界面进行编辑和生成新设计。此举标志着Adobe将生成式AI全面融入其核心创意工具套件。", source: "The Verge", url: "https://www.theverge.com/tech/952099/adobe-ai-assistants-photoshop-premiere-illustrator-beta-launch" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "谷歌时隔六年推出全新智能音箱Google Home Speaker，将于6月29日发货，配备Gemini AI功能，今日开启预购。该产品原定春季发布，略有延迟。", source: "The Verge", url: "https://www.theverge.com/tech/951147/google-home-speaker-gemini-launch-date-price-specs-features" },
 ];
-const aiBreakingDate = "2026年6月19日 07:55 CST";
+const aiBreakingDate = "2026年6月19日 10:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
