@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月20日 05:17 CST"
+  date: "2026年6月20日 07:09 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:28", tag: "geo", tagText: "地缘", text: "特朗普接受卡塔尔赠送的价值4亿美元私人飞机作为新的“空军一号”，此举引发伦理争议，外界批评其模糊个人利益与官方职责的界限。", source: "Financial Times", url: "https://www.ft.com/content/2bb0efd9-fe82-4943-ab5f-ac80682bee00" },
   { time: "04:18", tag: "ai", tagText: "AI", text: "特朗普向Axios表示不再将Anthropic视为国家安全威胁。此前特朗普曾命令Anthropic阻止外国公民访问其最先进的模型Fable 5和Mythos 5，该公司随后禁用这些模型。此举标志着美国AI监管政策的重大转向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/trump-tells-axios-he-no-longer-views-anthropic-as-national-security-threat.html" },
   { time: "03:50", tag: "geo", tagText: "地缘", text: "美国司法部拒绝法官要求其书面承诺不推进“反武器化”基金。该基金是今年5月司法部为解决特朗普对国税局100亿美元诉讼而设立的，司法部此举引发对基金合法性的进一步争议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/doj-anti-weaponization-fund-trump.html" },
   { time: "03:00", tag: "macro", tagText: "宏观", text: "股市出现自互联网泡沫以来从未见过的现象，历史数据显示此类趋势后往往有特定演绎路径。市场广度、估值或资金流向等指标引发投资者对当前牛市持续性的讨论。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMEJkdFZaU1I0U3VFajhaLU95cWZmU1pvdnpMSm16V1FmZWlSWnprZmQ4eERud01NOUh3dVdrT2Vqa1o2MHFidlpVS2hQUlZKcEpjbG8ySTVpczJHRnpSR2xjeXpWWWt4Z3d2V01vU3NRd0pmZzdBSG82b2kxQVBKV09DTHBGalpUVWJJZUl5WXA5aWUzTV9z?oc=5" },
@@ -1648,12 +1649,12 @@ const breakingNews = [
   { time: "20:25", tag: "geo", tagText: "地缘", text: "意大利总理梅洛尼公开指责特朗普讨好西方敌人，起因是特朗普此前声称梅洛尼“乞求”与他合影。梅洛尼的强硬回应凸显美欧之间在对待伊朗等问题上的分歧加深。", source: "Financial Times", url: "https://www.ft.com/content/f68fc9f4-ba49-472b-ac56-9b2d9236da53" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "全球内存短缺危机持续恶化，苹果CEO库克称当前局面“不可持续”，公司罕见考虑提价以应对成本压力。这一信号表明，存储芯片供需失衡已波及最强势的消费电子厂商，可能进一步推高终端设备价格。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/memory-crisis-hits-such-extremes-that-even-apple-cant-be-safe-.html" },
   { time: "19:42", tag: "geo", tagText: "地缘", text: "伊朗要求所有通过霍尔木兹海峡的船只必须持有经德黑兰批准的保险凭证并缴纳“保险费用”。此举可能被视为伊朗在美伊协议后强化对海峡控制的新手段，为全球航运和油价增添不确定性。", source: "Financial Times", url: "https://www.ft.com/content/e1068044-5124-47d9-81ba-c4a3efc16384" },
-  { time: "18:50", tag: "macro", tagText: "宏观", text: "印度最大电信运营商及数字服务商Jio Platforms正式提交IPO申请，此次上市被视为印度资本市场近十年来最大规模的项目之一，市场对其估值预期高达千亿美元。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/india-jio-platforms-ipo-mukesh-ambani.html" },
 ];
-const breakingDate = "2026年6月20日 05:17 CST";
+const breakingDate = "2026年6月20日 07:09 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
   { time: "04:30", tag: "ai", tagText: "AI", text: "Snap将其AI视频团队分拆为独立公司Dotmo，原团队员工将离开Snap专注于AI视频开发。此举旨在降低运营成本。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/snap-spins-off-ai-video-team-into-new-company-dotmo-due-to-costs/" },
   { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
   { time: "08:51", tag: "ai", tagText: "AI", text: "搜索与数据分析公司Elastic同意收购CRV支持的AI初创公司DeductiveAI，交易金额最高达8500万美元。DeductiveAI利用AI自动检测和修复软件中的漏洞，成立仅三年。此次收购将增强Elastic在AI驱动的代码质量领域的布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/" },
   { time: "07:28", tag: "crypto", tagText: "加密", text: "微软发现一种新型轻量级后门恶意软件“Crypto Clipper”，可通过USB设备自我传播，并利用Tor网络进行通信。该恶意软件专门用于窃取加密货币，危害性较高，用户需警惕USB设备来源。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/" },
-  { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
 ];
-const aiBreakingDate = "2026年6月20日 05:17 CST";
+const aiBreakingDate = "2026年6月20日 07:09 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
