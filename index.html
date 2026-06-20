@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月21日 04:23 CST"
+  date: "2026年6月21日 06:18 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:36", tag: "macro", tagText: "宏观", text: "美国社会保障和医疗保险信托基金报告显示，若不加改革，社保福利可能每月削减约500美元。新提出的两党委员会法案旨在加强两项计划的财政状况，但批评者认为力度不足。移民数量增加和所谓“DOGE”储蓄等争议因素也被纳入讨论。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/social-security-is-looking-at-a-500-a-month-cut-could-a-new-bipartisan-commission-make-a-difference-5e9d358a?mod=mw_rss_topstories" },
   { time: "02:33", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基归还波兰国家勋章，两国争端升级。泽连斯基呼吁华沙在涉及二战的历史争端中展现出更多尊重。", source: "Financial Times", url: "https://www.ft.com/content/e19012a8-d5ee-472f-a319-12c1a5f64a4a" },
   { time: "02:29", tag: "geo", tagText: "地缘", text: "阿尔巴尼亚爆发数万人参与的“火烈鸟革命”抗议活动。抗议源于贾里德·库什纳牵头的房地产项目开发提案，民众不满政府腐败。", source: "Financial Times", url: "https://www.ft.com/content/68048f2c-9f87-415f-849d-175690c72487" },
   { time: "02:28", tag: "macro", tagText: "宏观", text: "美国证券交易委员会（SEC）正被内部委员削弱执法力度，其作为最强硬金融监管机构的地位面临挑战。分析称SEC已不再像过去那样让企业违法者感到畏惧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fewer-dollars-and-fuzzier-standards-inside-the-push-to-weaken-washingtons-toughest-financial-watchdog-2601a0ee?mod=mw_rss_topstories" },
@@ -1648,18 +1649,21 @@ const breakingNews = [
   { time: "16:59", tag: "macro", tagText: "宏观", text: "韩国科技行业大规模奖金发放引发央行通胀担忧。三星、SK海力士等企业员工获得数百万韩元奖金，韩国银行警告这可能推高通胀压力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/south-korea-tech-samsung-sk-hynix-bonus-bank-of-korea.html" },
   { time: "14:37", tag: "geo", tagText: "地缘", text: "以色列空袭黎巴嫩南部致至少5人死亡，停火协议面临破裂风险。黎巴嫩国家通讯社称，以色列战机及无人机连夜对纳巴提耶地区发动多轮袭击，尽管此前已达成了停火协议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/at-least-five-killed-in-israeli-strikes-on-lebanon-despite-ceasefire.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "大型科技公司在英国煽动不安：埃隆·马斯克在贝尔法斯特、南安普顿等地放大反移民情绪，引发社会紧张。分析认为这一行为不能仅用意识形态解释。", source: "Financial Times", url: "https://www.ft.com/content/0f3e33d2-0b9e-481d-a911-245d8cc01a9c" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰和平窗口不会永远敞开：当前存在冻结冲突的机会，但普京对完全胜利的幻想可能成为障碍。各方需抓住时机推动停火。", source: "Financial Times", url: "https://www.ft.com/content/7b1ff72b-5a67-46b9-81c6-9e3855b99a34" },
 ];
-const breakingDate = "2026年6月21日 04:23 CST";
+const breakingDate = "2026年6月21日 06:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
+  { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
+  { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
   { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
   { time: "03:41", tag: "tech", tagText: "科技", text: "苹果修复Beats Studio Buds高严重性窃听漏洞，该漏洞12个月前被披露，影响多个厂商产品。", source: "Ars Technica", url: "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/" },
   { time: "02:46", tag: "ai", tagText: "AI", text: "《大西洋月刊》创建可搜索数据库，公开了用于训练AI模型的四个音乐数据集，其中两个数据集规模庞大，各含1200万首音乐。公众可通过该数据库检索AI训练所使用的音乐作品，此举将引发对AI训练数据版权问题的进一步关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/953183/the-atlantic-searchable-database-music-ai-training-data" },
   { time: "02:43", tag: "ai", tagText: "AI", text: "诺贝尔化学奖得主约翰·江珀（John Jumper）离开谷歌DeepMind，加入AI初创公司Anthropic。江珀此前担任DeepMind副总裁，因领导AlphaFold项目而获诺贝尔奖。他的加盟被视为Anthropic在AI基础研究领域的重要人才引进。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWxkcHpxVV9XRmJBUXJzN1RTOHYyTGtzTXZQOUQxRXRGQkl6NWFzdmpENkZjUjd1a3oxUmM5Ymt5YzAxdnREZjhlLUhHcFJNa3BlQnZ3dlVoaGFmOHVVcm5UTFBXUXBrUWQxSWs3ejJkRkNaOFN3cTBSajZPel8xT2FTOHpqczltVGF3Z2tGVWxaZXFUUTdoYUcxak4tOGxybHhqcEhWWHQtelFuMVN1UEtINW4?oc=5" },
   { time: "02:22", tag: "tech", tagText: "科技", text: "亚马逊正计划将其自研AI芯片向其他数据中心出售，以更直接地挑战英伟达。AWS已与多家数据中心洽谈，CEO Andy Jassy称这代表着500亿美元的市场机会。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
+  { time: "00:30", tag: "tech", tagText: "科技", text: "6月15日至20日，19家印度初创公司（涵盖AI、深度科技、食品科技、清洁科技、保险科技、健康科技等领域）共获得超4.69亿美元融资。资金来自多家投资机构，显示印度创业生态系统持续活跃。", source: "Instagram", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAyUjlaSlMxZkFCTFJ1TDZJVDJ0WWc4Mnh3UWlvdGF2UXpNT3pleC1vYjFlV2RZT2k0bG1YYlpCQXNXdVd0SVI4SjM2TUVTUEQzM2c?oc=5" },
   { time: "00:08", tag: "ai", tagText: "AI", text: "美国政府以国家安全为由，迫使Anthropic撤回其最新两款AI模型Fable 5和Mythos 5。此前亚马逊研究人员指控相关模型存在风险。尽管被禁，市场数据并未受到明显影响，反而引发讨论是否意外提升了该品牌的知名度。", source: "TechCrunch", url: "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/" },
   { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
   { time: "22:15", tag: "tech", tagText: "科技", text: "亚马逊MGM工作室放弃发行由卢卡·瓜达尼诺执导、安德鲁·加菲尔德主演的Sam Altman传记片《Artificial》。该片讲述2023年OpenAI CEO Sam Altman在五天内被罢免又复职的戏剧性事件。项目被砍原因未公布，但业内猜测可能与内容敏感度或商业考量有关。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952906/sam-altman-film-artificial-openai-amazon-mgm-dropped" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
   { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
   { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
-  { time: "08:51", tag: "ai", tagText: "AI", text: "搜索与数据分析公司Elastic同意收购CRV支持的AI初创公司DeductiveAI，交易金额最高达8500万美元。DeductiveAI利用AI自动检测和修复软件中的漏洞，成立仅三年。此次收购将增强Elastic在AI驱动的代码质量领域的布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/" },
-  { time: "07:28", tag: "crypto", tagText: "加密", text: "微软发现一种新型轻量级后门恶意软件“Crypto Clipper”，可通过USB设备自我传播，并利用Tor网络进行通信。该恶意软件专门用于窃取加密货币，危害性较高，用户需警惕USB设备来源。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/" },
-  { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
-  { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
 ];
-const aiBreakingDate = "2026年6月21日 04:23 CST";
+const aiBreakingDate = "2026年6月21日 06:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
