@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月20日 22:25 CST"
+  date: "2026年6月21日 00:43 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:11", tag: "macro", tagText: "宏观", text: "艾伯维（AbbVie）据报拟以109亿美元现金收购一家生物技术公司，以获得其处于临床阶段的特应性皮炎（湿疹）实验性药物。若交易达成，将强化艾伯维在免疫领域的管线布局。", source: "MarketWatch", url: "https://www.marketwatch.com/story/abbvie-would-gain-an-experimental-eczema-drug-by-buying-biotech-report-caf24728?mod=mw_rss_topstories" },
+  { time: "23:17", tag: "geo", tagText: "地缘", text: "伊朗宣布再次关闭霍尔木兹海峡，称因美国“背信弃义”违反承诺，同时伊朗谈判团队已启程前往瑞士。此举对全球能源供应构成直接威胁，此前美伊协议破裂已导致地区紧张升温。", source: "Financial Times", url: "https://www.ft.com/content/fad77f6e-b1db-460a-a0c8-c2fd132932f5" },
+  { time: "23:05", tag: "macro", tagText: "宏观", text: "美国廉价航空模式遭遇危机：精神航空（Spirit）申请破产，而美联航、达美航空业绩强劲。分析指出，低票价已非成功关键，行业分化加剧，低成本航司面临结构性困境。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/cheap-airline-fares-summer-travel.html" },
+  { time: "22:38", tag: "tech", tagText: "科技", text: "T. Rowe Price 基金经理 David Giroux 将特斯拉剔除出“美股七巨头”（Magnificent Seven），并新增另一家科技巨头。他认为大型科技股并未处于泡沫，同时关注医疗保健和公用事业的价值。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-veteran-investor-is-kicking-tesla-out-of-the-magnificent-seven-replacing-it-with-this-tech-giant-a2828cec?mod=mw_rss_topstories" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "科技巨头在AI数据中心建设上的巨额投资正在耗尽现金储备，迫使其大规模举债。这一趋势使投资者不得不重新密切关注利率变化，因为借贷成本的上升可能影响AI基础设施投资的回报前景。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/ai-buildout-giving-tech-investors-new-reasons-to-watch-bond-market.html" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "美国多州正在扩大对补充营养援助计划（SNAP）的食品限制，禁止使用福利购买苏打水、糖果和加工食品。这一政策变化正迫使消费者转移支出，大型食品和饮料企业密切关注销售格局的潜在重塑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/maha-snap-restrictions-junk-food-spending.html" },
   { time: "19:00", tag: "AI", tagText: "AI", text: "FT分析显示，今年Anthropic关于人工智能危险的警告频次远高于竞争对手OpenAI，这可能间接导致美国对先进AI实施出口禁令。Anthropic的激进立场正在引发政策制定者的警惕，进一步收紧AI技术出口管制。", source: "Financial Times", url: "https://www.ft.com/content/16ace46c-aeac-40c9-8598-3c01fa4481cb" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "06:33", tag: "macro", tagText: "宏观", text: "方舟投资管理公司CEO凯茜·伍德抛售近6000万美元的热门成长股。此举引发市场关注，显示其投资策略转向。", source: "TheStreet via Yahoo Finance", url: "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-dumps-nearly-60-223300469.html" },
   { time: "05:28", tag: "geo", tagText: "地缘", text: "特朗普接受卡塔尔赠送的价值4亿美元私人飞机作为新的“空军一号”，此举引发伦理争议，外界批评其模糊个人利益与官方职责的界限。", source: "Financial Times", url: "https://www.ft.com/content/2bb0efd9-fe82-4943-ab5f-ac80682bee00" },
   { time: "04:18", tag: "ai", tagText: "AI", text: "特朗普向Axios表示不再将Anthropic视为国家安全威胁。此前特朗普曾命令Anthropic阻止外国公民访问其最先进的模型Fable 5和Mythos 5，该公司随后禁用这些模型。此举标志着美国AI监管政策的重大转向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/trump-tells-axios-he-no-longer-views-anthropic-as-national-security-threat.html" },
-  { time: "03:50", tag: "geo", tagText: "地缘", text: "美国司法部拒绝法官要求其书面承诺不推进“反武器化”基金。该基金是今年5月司法部为解决特朗普对国税局100亿美元诉讼而设立的，司法部此举引发对基金合法性的进一步争议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/doj-anti-weaponization-fund-trump.html" },
-  { time: "03:00", tag: "macro", tagText: "宏观", text: "股市出现自互联网泡沫以来从未见过的现象，历史数据显示此类趋势后往往有特定演绎路径。市场广度、估值或资金流向等指标引发投资者对当前牛市持续性的讨论。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMEJkdFZaU1I0U3VFajhaLU95cWZmU1pvdnpMSm16V1FmZWlSWnprZmQ4eERud01NOUh3dVdrT2Vqa1o2MHFidlpVS2hQUlZKcEpjbG8ySTVpczJHRnpSR2xjeXpWWWt4Z3d2V01vU3NRd0pmZzdBSG82b2kxQVBKV09DTHBGalpUVWJJZUl5WXA5aWUzTV9z?oc=5" },
-  { time: "02:57", tag: "geo", tagText: "地缘", text: "英国首相斯塔默面临辞职压力。在Makerfield补缺选举中，大曼彻斯特市长伯纳姆击败改革英国党获胜后，斯塔默遭遇内阁内部叛变，要求其下台的呼声高涨。", source: "Financial Times", url: "https://www.ft.com/content/095b3f3d-8c66-46fa-bb2a-1b8186f3f054" },
-  { time: "02:35", tag: "crypto", tagText: "加密", text: "摩根大通报告指出，比特币挖矿成本已进一步恶化，当前比特币交易价格低于生产成本。这给矿工带来巨大压力，可能引发更多矿机停运或行业整合。", source: "Bitcoin Magazine", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTE15b2o0Nlp4ODRob2RXLU5WTC1hdkdaVDI3bUF4RU02YWZ3N1dkVU1mRXhoVWdCM2t4UVAwR2dCTm1oMHBUV2s4WGw1bzMtVmtnZ2l3dWdSMERtLWlodnRPd01hcU1TTEJXNFFVQ3V4cG9fc1k5amVGTHYzVQ?oc=5" },
 ];
-const breakingDate = "2026年6月20日 22:25 CST";
+const breakingDate = "2026年6月21日 00:43 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:08", tag: "ai", tagText: "AI", text: "美国政府以国家安全为由，迫使Anthropic撤回其最新两款AI模型Fable 5和Mythos 5。此前亚马逊研究人员指控相关模型存在风险。尽管被禁，市场数据并未受到明显影响，反而引发讨论是否意外提升了该品牌的知名度。", source: "TechCrunch", url: "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/" },
+  { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
   { time: "22:15", tag: "tech", tagText: "科技", text: "亚马逊MGM工作室放弃发行由卢卡·瓜达尼诺执导、安德鲁·加菲尔德主演的Sam Altman传记片《Artificial》。该片讲述2023年OpenAI CEO Sam Altman在五天内被罢免又复职的戏剧性事件。项目被砍原因未公布，但业内猜测可能与内容敏感度或商业考量有关。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952906/sam-altman-film-artificial-openai-amazon-mgm-dropped" },
   { time: "21:25", tag: "ai", tagText: "AI", text: "《环球邮报》刊文指出，英伟达最重要的产品并非芯片，而是其软件生态系统（如CUDA）。文章认为，英伟达通过建立强大的开发者平台和硬件-软件协同优势，形成了难以复制的护城河，这比单纯销售芯片更具长期价值。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOOWdtWnF3UmptVnhGNEJVYnlNU2psM3FZMmtmWUVEWTdtNDlQNnRmczdmX1N2aEYtczBtckpxeXhha1RqbDRGcTNDRllKdHZUbXU3b2dudm9nWURwZTIySWVtTHh0TVdRWEtKT05ucmc3TjRiYWNEejBsd181dFpZTjhlZTUwWkpFV2VOWWR6U3JsMVpzVVRTdlVoUXg3blFGRlN0VmJCNHBZX19FLUJwR2ZGSWhkcVdlMU9HcE9MLUxmYldvM01QLU04cDlVVDZXVndOSG5ySnJkdw?oc=5" },
   { time: "21:22", tag: "ai", tagText: "AI", text: "欧盟一项过于复杂的法律条款可能迫使英伟达退出欧盟AI项目。该条款涉及AI领域的外国补贴审查，其复杂性可能导致英伟达无法参与欧盟资助的AI研究项目，进一步加剧欧美科技监管摩擦。", source: "Euractiv", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYUNoS0VhY2tfaDIyaDVZdmJMbHBkZE9aTnJzQ05Od21Xb0pSTG5FTkZkX3dLSWVDcFFyUlZPOVZvaGJfelltdXByU1pHLXhCWDNyUHZxVldyU285ZlA1SnBPc3E0bExCWFh6dHdwMUtWTjkzb3RDalhIUzlkZS1ZRzJjQUMzdl9nckNGMWl4ME9HYV9iUDBYRTFFQkwyQnh1a3JEOHRIY3Y?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "02:43", tag: "ai", tagText: "AI", text: "诺贝尔化学奖得主约翰·江珀（John Jumper）离开谷歌DeepMind，加入AI初创公司Anthropic。江珀此前担任DeepMind副总裁，因领导AlphaFold项目而获诺贝尔奖。他的加盟被视为Anthropic在AI基础研究领域的重要人才引进。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWxkcHpxVV9XRmJBUXJzN1RTOHYyTGtzTXZQOUQxRXRGQkl6NWFzdmpENkZjUjd1a3oxUmM5Ymt5YzAxdnREZjhlLUhHcFJNa3BlQnZ3dlVoaGFmOHVVcm5UTFBXUXBrUWQxSWs3ejJkRkNaOFN3cTBSajZPel8xT2FTOHpqczltVGF3Z2tGVWxaZXFUUTdoYUcxak4tOGxybHhqcEhWWHQtelFuMVN1UEtINW4?oc=5" },
   { time: "02:22", tag: "tech", tagText: "科技", text: "亚马逊正计划将其自研AI芯片向其他数据中心出售，以更直接地挑战英伟达。AWS已与多家数据中心洽谈，CEO Andy Jassy称这代表着500亿美元的市场机会。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
-  { time: "00:08", tag: "ai", tagText: "AI", text: "美国政府以国家安全为由，迫使Anthropic撤回其最新两款AI模型Fable 5和Mythos 5。此前亚马逊研究人员指控相关模型存在风险。尽管被禁，市场数据并未受到明显影响，反而引发讨论是否意外提升了该品牌的知名度。", source: "TechCrunch", url: "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/" },
-  { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
 ];
-const aiBreakingDate = "2026年6月20日 22:25 CST";
+const aiBreakingDate = "2026年6月21日 00:43 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
