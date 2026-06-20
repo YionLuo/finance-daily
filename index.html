@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月21日 02:22 CST"
+  date: "2026年6月21日 04:23 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:33", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基归还波兰国家勋章，两国争端升级。泽连斯基呼吁华沙在涉及二战的历史争端中展现出更多尊重。", source: "Financial Times", url: "https://www.ft.com/content/e19012a8-d5ee-472f-a319-12c1a5f64a4a" },
+  { time: "02:29", tag: "geo", tagText: "地缘", text: "阿尔巴尼亚爆发数万人参与的“火烈鸟革命”抗议活动。抗议源于贾里德·库什纳牵头的房地产项目开发提案，民众不满政府腐败。", source: "Financial Times", url: "https://www.ft.com/content/68048f2c-9f87-415f-849d-175690c72487" },
+  { time: "02:28", tag: "macro", tagText: "宏观", text: "美国证券交易委员会（SEC）正被内部委员削弱执法力度，其作为最强硬金融监管机构的地位面临挑战。分析称SEC已不再像过去那样让企业违法者感到畏惧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fewer-dollars-and-fuzzier-standards-inside-the-push-to-weaken-washingtons-toughest-financial-watchdog-2601a0ee?mod=mw_rss_topstories" },
   { time: "01:08", tag: "macro", tagText: "宏观", text: "美联储主席凯文·沃什表态将全力控制通胀，暗示可能推迟降息，对期待房贷利率下降的购房者构成利空。分析认为美联储已进入“新时代”，但住房可负担性挑战依旧严峻。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/fed-chair-kevin-warsh-wants-to-get-inflation-under-control-that-could-be-bad-news-for-home-buyers-seeking-lower-mortgage-rates-99fb4aad?mod=mw_rss_topstories" },
   { time: "00:54", tag: "crypto", tagText: "加密", text: "比特币及加密市场面临显著压力，主要源于策略公司（Strategy）的优先股STRC动荡，引发市场对机构持仓风险的担忧。", source: "Crowdfund Insider", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObjEta0dxRUp5cG9tNERlTmg3ZzZFMDE3bmZYY3JnbUNVX2c5bGYyU0t6MFZWRHg2SkdSelNST0ZjTk10RXpsdnUzNDZhakc3dXZGQU5fWUdHUlNWNV9rTnZvMXBIR1RXeHp0WWlGY3VRd1JYektET0RWVk1ta25EN2dnemtDWGx5WHE2MVpYOTB1dDcySlBGdmxoMnQ5cllrZmF4cklqd2JFazNrcE15LTlmRUI1MndGWHFUSFhoQkVnMXBkWTJUOHpOVVo4MFhrSElXQkFKdkZHc0djT2ZBOQ?oc=5" },
   { time: "00:35", tag: "ai", tagText: "AI", text: "微软因中国AI需求重塑Azure业务，重新调整Copilot定价策略。此举显示中国市场需求正在改变微软云服务的收费模式与产品定位。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxNOEF4M1V1YWdvbWlWc1JidGFaWExiYndiN1ppdUVGSlZzSGNMRURwYWJNb3RmM0w3d1NOVVh2SWpGZm90SV9EbXFERTJLTlpoZ1VSa1lxM3JGa01JSlhaUDJ5dUxTMlRBMDBtWFItVHdvYV9YbGxiZzhqa0UzSlpCeU5LUmc5SGVYc3J4RTZUQjRmQ1gwdENfd2RZS3UwSkljZ0FiTkxGSUJsS1BKZ2pVdGJTQmNHNzVoZzBvZlFxOVRHNmdaLUJv0gHMAUFVX3lxTE9LM3BOOGN3bjBRVlhjSmpPZTVUbTNmVS0wTXFNdVp4MHU4eFVnejFPS2pMdWs3ZVZVN2VXa0lQZ1ZWVVk2cDlrNHpUSG9RdG85RU1mV0d4andodDNRYi1sTlhHRHpLbzcyT25tX3BVTm8tTTdlUTNOSlhSTnF6U1MxQzczWWVzQmU2LVltSjZCZDZlMTlrMjl4UlVFZGpiSzJRY2RJVXA1NXE3WWNabFBESXJLVGVuSG5tU0d1ZXNpWVJCTXB2WEVST0NNUA?oc=5" },
@@ -1646,14 +1649,15 @@ const breakingNews = [
   { time: "14:37", tag: "geo", tagText: "地缘", text: "以色列空袭黎巴嫩南部致至少5人死亡，停火协议面临破裂风险。黎巴嫩国家通讯社称，以色列战机及无人机连夜对纳巴提耶地区发动多轮袭击，尽管此前已达成了停火协议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/at-least-five-killed-in-israeli-strikes-on-lebanon-despite-ceasefire.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "大型科技公司在英国煽动不安：埃隆·马斯克在贝尔法斯特、南安普顿等地放大反移民情绪，引发社会紧张。分析认为这一行为不能仅用意识形态解释。", source: "Financial Times", url: "https://www.ft.com/content/0f3e33d2-0b9e-481d-a911-245d8cc01a9c" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰和平窗口不会永远敞开：当前存在冻结冲突的机会，但普京对完全胜利的幻想可能成为障碍。各方需抓住时机推动停火。", source: "Financial Times", url: "https://www.ft.com/content/7b1ff72b-5a67-46b9-81c6-9e3855b99a34" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "奈杰尔·法拉奇的脱欧集会由欧盟预算资助：调查显示，其“向欧盟说不”巡演中的反移民海报等费用实际来自欧洲资金，引发政治争议。", source: "Financial Times", url: "https://www.ft.com/content/e6372589-0015-4b91-b2b6-6581c3937c5a" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "德国选择党复兴纳粹时期对包豪斯的攻击：现代主义艺术机构担忧AfD的“爱国文化”推动，在包豪斯被希特勒关闭近100年后再次面临意识形态压迫。", source: "Financial Times", url: "https://www.ft.com/content/a9bb98e2-b39d-4f76-9708-eaa926697432" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "英国财政状况恶化，债券市场寻求稳定，伯纳姆阵营在财政大臣人选上出现分歧。据称埃德·米利班德、沙巴纳·马哈茂德和伊薇特·库珀均为潜在候选人。", source: "Financial Times", url: "https://www.ft.com/content/4f4b1142-96bd-4a02-a7ae-6166ccb54e2b" },
 ];
-const breakingDate = "2026年6月21日 02:22 CST";
+const breakingDate = "2026年6月21日 04:23 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
+  { time: "03:41", tag: "tech", tagText: "科技", text: "苹果修复Beats Studio Buds高严重性窃听漏洞，该漏洞12个月前被披露，影响多个厂商产品。", source: "Ars Technica", url: "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/" },
+  { time: "02:46", tag: "ai", tagText: "AI", text: "《大西洋月刊》创建可搜索数据库，公开了用于训练AI模型的四个音乐数据集，其中两个数据集规模庞大，各含1200万首音乐。公众可通过该数据库检索AI训练所使用的音乐作品，此举将引发对AI训练数据版权问题的进一步关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/953183/the-atlantic-searchable-database-music-ai-training-data" },
+  { time: "02:43", tag: "ai", tagText: "AI", text: "诺贝尔化学奖得主约翰·江珀（John Jumper）离开谷歌DeepMind，加入AI初创公司Anthropic。江珀此前担任DeepMind副总裁，因领导AlphaFold项目而获诺贝尔奖。他的加盟被视为Anthropic在AI基础研究领域的重要人才引进。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWxkcHpxVV9XRmJBUXJzN1RTOHYyTGtzTXZQOUQxRXRGQkl6NWFzdmpENkZjUjd1a3oxUmM5Ymt5YzAxdnREZjhlLUhHcFJNa3BlQnZ3dlVoaGFmOHVVcm5UTFBXUXBrUWQxSWs3ejJkRkNaOFN3cTBSajZPel8xT2FTOHpqczltVGF3Z2tGVWxaZXFUUTdoYUcxak4tOGxybHhqcEhWWHQtelFuMVN1UEtINW4?oc=5" },
   { time: "02:22", tag: "tech", tagText: "科技", text: "亚马逊正计划将其自研AI芯片向其他数据中心出售，以更直接地挑战英伟达。AWS已与多家数据中心洽谈，CEO Andy Jassy称这代表着500亿美元的市场机会。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
   { time: "00:08", tag: "ai", tagText: "AI", text: "美国政府以国家安全为由，迫使Anthropic撤回其最新两款AI模型Fable 5和Mythos 5。此前亚马逊研究人员指控相关模型存在风险。尽管被禁，市场数据并未受到明显影响，反而引发讨论是否意外提升了该品牌的知名度。", source: "TechCrunch", url: "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "07:28", tag: "crypto", tagText: "加密", text: "微软发现一种新型轻量级后门恶意软件“Crypto Clipper”，可通过USB设备自我传播，并利用Tor网络进行通信。该恶意软件专门用于窃取加密货币，危害性较高，用户需警惕USB设备来源。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/" },
   { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
-  { time: "04:30", tag: "ai", tagText: "AI", text: "Snap将其AI视频团队分拆为独立公司Dotmo，原团队员工将离开Snap专注于AI视频开发。此举旨在降低运营成本。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/snap-spins-off-ai-video-team-into-new-company-dotmo-due-to-costs/" },
-  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
-  { time: "03:41", tag: "tech", tagText: "科技", text: "苹果修复Beats Studio Buds高严重性窃听漏洞，该漏洞12个月前被披露，影响多个厂商产品。", source: "Ars Technica", url: "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/" },
-  { time: "02:43", tag: "ai", tagText: "AI", text: "诺贝尔化学奖得主约翰·江珀（John Jumper）离开谷歌DeepMind，加入AI初创公司Anthropic。江珀此前担任DeepMind副总裁，因领导AlphaFold项目而获诺贝尔奖。他的加盟被视为Anthropic在AI基础研究领域的重要人才引进。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWxkcHpxVV9XRmJBUXJzN1RTOHYyTGtzTXZQOUQxRXRGQkl6NWFzdmpENkZjUjd1a3oxUmM5Ymt5YzAxdnREZjhlLUhHcFJNa3BlQnZ3dlVoaGFmOHVVcm5UTFBXUXBrUWQxSWs3ejJkRkNaOFN3cTBSajZPel8xT2FTOHpqczltVGF3Z2tGVWxaZXFUUTdoYUcxak4tOGxybHhqcEhWWHQtelFuMVN1UEtINW4?oc=5" },
 ];
-const aiBreakingDate = "2026年6月21日 02:22 CST";
+const aiBreakingDate = "2026年6月21日 04:23 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
