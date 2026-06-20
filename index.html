@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月20日 16:27 CST"
+  date: "2026年6月20日 19:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:56", tag: "geo", tagText: "地缘", text: "伊朗因世界杯旅行限制向国际足联（FIFA）提出投诉。受签证不确定性和战争影响，伊朗队需从位于墨西哥的训练基地往返美国参加小组赛，此举引发伊朗方面强烈不满。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/iran-to-lodge-fifa-complaint-over-world-cup-travel-restrictions.html" },
+  { time: "17:38", tag: "crypto", tagText: "加密", text: "比特币反弹至63,000美元上方，SOL、HYPE和ZEC同步大幅上涨。市场交易员正在评估近期监管进展，加密货币市场整体回暖。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNSlhVZU0tVjZjbDVEQ082WERRTmdmbDdhOTMyVnVDWUVoVkFDQzZBdjlqNGFOUUo0c0lxWXVKcThOR0tobTBKcWg3ajQ5UEZpT3p4UXFrbm03cnhXa3dqbVVEemFpSDhmOVBCMTVhRk84cGNjQm5KSkpmN0ZxZUZLc0FFYW9jVzJqVzNPT1BBOG8wUHFFYU9zUlIyUzFUTW1sMnJjRXQ2WG9saDZJaW43R0NucmhqbEhtWWVDV3ZsLU9tVHNGZHpzVA?oc=5" },
+  { time: "16:59", tag: "macro", tagText: "宏观", text: "韩国科技行业大规模奖金发放引发央行通胀担忧。三星、SK海力士等企业员工获得数百万韩元奖金，韩国银行警告这可能推高通胀压力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/south-korea-tech-samsung-sk-hynix-bonus-bank-of-korea.html" },
+  { time: "14:37", tag: "geo", tagText: "地缘", text: "以色列空袭黎巴嫩南部致至少5人死亡，停火协议面临破裂风险。黎巴嫩国家通讯社称，以色列战机及无人机连夜对纳巴提耶地区发动多轮袭击，尽管此前已达成了停火协议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/at-least-five-killed-in-israeli-strikes-on-lebanon-despite-ceasefire.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "大型科技公司在英国煽动不安：埃隆·马斯克在贝尔法斯特、南安普顿等地放大反移民情绪，引发社会紧张。分析认为这一行为不能仅用意识形态解释。", source: "Financial Times", url: "https://www.ft.com/content/0f3e33d2-0b9e-481d-a911-245d8cc01a9c" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰和平窗口不会永远敞开：当前存在冻结冲突的机会，但普京对完全胜利的幻想可能成为障碍。各方需抓住时机推动停火。", source: "Financial Times", url: "https://www.ft.com/content/7b1ff72b-5a67-46b9-81c6-9e3855b99a34" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "奈杰尔·法拉奇的脱欧集会由欧盟预算资助：调查显示，其“向欧盟说不”巡演中的反移民海报等费用实际来自欧洲资金，引发政治争议。", source: "Financial Times", url: "https://www.ft.com/content/e6372589-0015-4b91-b2b6-6581c3937c5a" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "01:25", tag: "macro", tagText: "宏观", text: "美联储主席沃什设立多个工作组，为将利率变动推迟至12月提供弹性空间。沃什在首次新闻发布会上反复以“工作组正在研究”回应提问，市场解读为鹰派信号。此前特朗普曾预期沃什会推动降息，但沃什给出明确的不同路径。", source: "MarketWatch", url: "https://www.marketwatch.com/story/warshs-task-forces-give-the-fed-wiggle-room-to-put-off-changing-rates-until-december-364fc1fc?mod=mw_rss_topstories" },
   { time: "00:50", tag: "tech", tagText: "科技", text: "NetJets发生首起致命空难，飞机在得州拉雷多高速公路上坠毁，知名风投创始人遇难。事故原因尚在调查中，引发对私人航空安全的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/netjets-first-fatal-crash-kills-influential-texas-vc-founder.html" },
   { time: "00:05", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡油轮交通激增：美伊协议实施后，通行该海峡的油轮数量显著增加。市场关注协议中免费通行期结束后的海峡管理规则，油价因此波动加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/iran-oil-tanker-traffic-strait-hormuz-gulf-vlcc.html" },
-  { time: "23:53", tag: "tech", tagText: "科技", text: "SpaceX IPO后第一周迎来历史上最大规模的杠杆ETF狂潮，投资者争相买入高风险杠杆ETF以追逐该股巨大涨幅。分析人士警告此类交易风险极高，可能引发剧烈波动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/spacex-stock-risk-buy-sell.html" },
-  { time: "23:09", tag: "ai", tagText: "AI", text: "报告指出AI攻击者正在突破金融犯罪合规防线，金融科技公司面临前所未有的新型网络攻击手段，传统反洗钱和合规系统难以应对，行业亟需升级防御技术。", source: "FinTech Global", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxNS3Bhel9EQlMzVGt6eXI4bW43a0RKeFZ1SGF0dEhISVhHbjRBdGhkWU5VOVUxUV9hd3VCQ2I0akE0aW90VlVSelJzazhyOC1SVTZ5eU9icTF4T19VSnliZzhBWE1HYU1oWTJCVHpaWU1TV01SWWZyR3hWOE96cjJwMUFjWGlSSjlTTm9IZl9kN2s?oc=5" },
-  { time: "22:53", tag: "crypto", tagText: "加密", text: "黄金、白银与加密资产同步大跌，市场分析认为主要受美联储鹰派立场及美伊协议不确定性影响，避险资产与风险资产同时遭到抛售。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc3I4YWxuS25yMFhOdDZ3eEpxQVdmdDVoTUMwS2puc0libGVxMWJFdW1Xa2ZWMDlxUDQwaWF3WWdudzNKam0yVThKa3VVSDdoWm1TR3U5clhEYlVCa3JxUHR5QlVHWFktZ2FfWEJiVUFCa1M5ZF9HLTg0Y244NHJyTGp2akJaaS1qczlBWDRFejFJT3RoN2RVU2dWT2FnbC13MDI1eXpWQ3NDcE55Vk1qcDRn" },
-  { time: "22:46", tag: "geo", tagText: "地缘", text: "古巴通过“紧急”经济改革法案，放宽私营经济限制，被视为1960年代革命以来最大规模的政策转向。此举是在美国持续施压下的重大调整。", source: "Financial Times", url: "https://www.ft.com/content/f3532214-5707-41fe-bde6-8235b67f9e86" },
 ];
-const breakingDate = "2026年6月20日 16:27 CST";
+const breakingDate = "2026年6月20日 19:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
   { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
   { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
   { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "23:17", tag: "tech", tagText: "科技", text: "Anthropic成为首家加入Frontier Carbon Removal Collective的AI初创公司，参与该联合体9.15亿美元的融资轮。该联合体专注于碳清除技术，Anthropic的加入标志着AI行业对气候行动的进一步承诺。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVS1Zb2YwbTdBeF9pS2tPeE15SjFLa01rZXVJbmZMdWtoeWNHNlBpZTFWcE1tUXpoTlZ2YkxiVXR4ZUU3dlJyYTFpODVBaVlGdFo4MW52RF9lbmQyQnpiR1BxVXluYm1vdlR1b00taEFQQmtpYklDZHU4TWpDRDZHMzM0Z3NqQTRSWnoyeDVKbmpTeUUzcDJ4YURUazVKa3MxVlhVem1hU04tVS10VXh0cWgyM0FTWlBSOWdWSGd1MTh0SXJyZ0NJWElPVjZUemQ1Znd5b0RB?oc=5" },
   { time: "22:15", tag: "tech", tagText: "科技", text: "亚马逊MGM工作室放弃发行由卢卡·瓜达尼诺执导、安德鲁·加菲尔德主演的Sam Altman传记片《Artificial》。该片讲述2023年OpenAI CEO Sam Altman在五天内被罢免又复职的戏剧性事件。项目被砍原因未公布，但业内猜测可能与内容敏感度或商业考量有关。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952906/sam-altman-film-artificial-openai-amazon-mgm-dropped" },
   { time: "21:22", tag: "ai", tagText: "AI", text: "欧盟一项过于复杂的法律条款可能迫使英伟达退出欧盟AI项目。该条款涉及AI领域的外国补贴审查，其复杂性可能导致英伟达无法参与欧盟资助的AI研究项目，进一步加剧欧美科技监管摩擦。", source: "Euractiv", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYUNoS0VhY2tfaDIyaDVZdmJMbHBkZE9aTnJzQ05Od21Xb0pSTG5FTkZkX3dLSWVDcFFyUlZPOVZvaGJfelltdXByU1pHLXhCWDNyUHZxVldyU285ZlA1SnBPc3E0bExCWFh6dHdwMUtWTjkzb3RDalhIUzlkZS1ZRzJjQUMzdl9nckNGMWl4ME9HYV9iUDBYRTFFQkwyQnh1a3JEOHRIY3Y?oc=5" },
-  { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
 ];
-const aiBreakingDate = "2026年6月20日 16:27 CST";
+const aiBreakingDate = "2026年6月20日 19:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
