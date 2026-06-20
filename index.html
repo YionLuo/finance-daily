@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月20日 12:27 CST"
+  date: "2026年6月20日 16:27 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "大型科技公司在英国煽动不安：埃隆·马斯克在贝尔法斯特、南安普顿等地放大反移民情绪，引发社会紧张。分析认为这一行为不能仅用意识形态解释。", source: "Financial Times", url: "https://www.ft.com/content/0f3e33d2-0b9e-481d-a911-245d8cc01a9c" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰和平窗口不会永远敞开：当前存在冻结冲突的机会，但普京对完全胜利的幻想可能成为障碍。各方需抓住时机推动停火。", source: "Financial Times", url: "https://www.ft.com/content/7b1ff72b-5a67-46b9-81c6-9e3855b99a34" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "奈杰尔·法拉奇的脱欧集会由欧盟预算资助：调查显示，其“向欧盟说不”巡演中的反移民海报等费用实际来自欧洲资金，引发政治争议。", source: "Financial Times", url: "https://www.ft.com/content/e6372589-0015-4b91-b2b6-6581c3937c5a" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "德国选择党复兴纳粹时期对包豪斯的攻击：现代主义艺术机构担忧AfD的“爱国文化”推动，在包豪斯被希特勒关闭近100年后再次面临意识形态压迫。", source: "Financial Times", url: "https://www.ft.com/content/a9bb98e2-b39d-4f76-9708-eaa926697432" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "英国财政状况恶化，债券市场寻求稳定，伯纳姆阵营在财政大臣人选上出现分歧。据称埃德·米利班德、沙巴纳·马哈茂德和伊薇特·库珀均为潜在候选人。", source: "Financial Times", url: "https://www.ft.com/content/4f4b1142-96bd-4a02-a7ae-6166ccb54e2b" },
   { time: "08:27", tag: "crypto", tagText: "加密", text: "美伊协议破裂引发加密货币市场剧烈波动，比特币、以太坊和XRP总计出现1.92亿美元的多头清算。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOLUdyUU1DeVFmei1nZTlldDJTc1FicFVSY28xQktmX0pSZnRZRktCOWZfb3ZlY0V2OS1KRlREQmFsNkExNnQxUE5NZkQ0SmlMNS1hUTgtdi04T1N2LWZRbFRIOWk5aGlpcDVRaUZIY1lLUjhZSG8xNnJNdVZpcDIyM0xYckhDeHVBWEtwU3hPb2Y5Zi03ZUdWYUlycEFmMDI1QVk5V3F3?oc=5" },
   { time: "06:33", tag: "macro", tagText: "宏观", text: "方舟投资管理公司CEO凯茜·伍德抛售近6000万美元的热门成长股。此举引发市场关注，显示其投资策略转向。", source: "TheStreet via Yahoo Finance", url: "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-dumps-nearly-60-223300469.html" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "23:09", tag: "ai", tagText: "AI", text: "报告指出AI攻击者正在突破金融犯罪合规防线，金融科技公司面临前所未有的新型网络攻击手段，传统反洗钱和合规系统难以应对，行业亟需升级防御技术。", source: "FinTech Global", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxNS3Bhel9EQlMzVGt6eXI4bW43a0RKeFZ1SGF0dEhISVhHbjRBdGhkWU5VOVUxUV9hd3VCQ2I0akE0aW90VlVSelJzazhyOC1SVTZ5eU9icTF4T19VSnliZzhBWE1HYU1oWTJCVHpaWU1TV01SWWZyR3hWOE96cjJwMUFjWGlSSjlTTm9IZl9kN2s?oc=5" },
   { time: "22:53", tag: "crypto", tagText: "加密", text: "黄金、白银与加密资产同步大跌，市场分析认为主要受美联储鹰派立场及美伊协议不确定性影响，避险资产与风险资产同时遭到抛售。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc3I4YWxuS25yMFhOdDZ3eEpxQVdmdDVoTUMwS2puc0libGVxMWJFdW1Xa2ZWMDlxUDQwaWF3WWdudzNKam0yVThKa3VVSDdoWm1TR3U5clhEYlVCa3JxUHR5QlVHWFktZ2FfWEJiVUFCa1M5ZF9HLTg0Y244NHJyTGp2akJaaS1qczlBWDRFejFJT3RoN2RVU2dWT2FnbC13MDI1eXpWQ3NDcE55Vk1qcDRn" },
   { time: "22:46", tag: "geo", tagText: "地缘", text: "古巴通过“紧急”经济改革法案，放宽私营经济限制，被视为1960年代革命以来最大规模的政策转向。此举是在美国持续施压下的重大调整。", source: "Financial Times", url: "https://www.ft.com/content/f3532214-5707-41fe-bde6-8235b67f9e86" },
-  { time: "22:15", tag: "tech", tagText: "科技", text: "艾伯维接近以近110亿美元收购生物科技公司Apogee Therapeutics，交易凸显大型药企通过并购补充管线的新一轮热潮。", source: "Financial Times", url: "https://www.ft.com/content/cb5e94aa-1687-47fe-b55a-82e273e8b1bd" },
-  { time: "22:01", tag: "geo", tagText: "地缘", text: "以色列与黎巴嫩真主党达成停火协议，当地时间周五下午4点生效。美国官员证实了这一消息，油价随即由涨转跌。市场预期停火将有助于巩固美伊和平协议，缓解中东供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/oil-prices-wti-brent-crude-us-iran-deal-strait-hormuz-shipping-recovery.html" },
-  { time: "21:56", tag: "tech", tagText: "科技", text: "尽管芯片股（SOXX）屡创新高，但其相对强弱指标（RSI）已跌破超买阈值，呈现价格与动量背离。历史数据表明，这种形态往往预示短期回调风险。投资者需警惕半导体板块的获利回吐压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/chip-stocks-are-setting-records-but-this-hidden-chart-pattern-says-momentum-favors-the-bears-5ba98c10" },
-  { time: "21:17", tag: "geo", tagText: "地缘", text: "俄罗斯央行行长纳比乌琳娜近期缺席多场重要活动，引发外界对其去留的猜测。分析人士认为，在俄乌冲突持续、西方制裁加深的背景下，央行领导层的潜在变动可能影响俄罗斯货币政策走向。", source: "Financial Times", url: "https://www.ft.com/content/1dbfdddb-cf7b-485d-b060-c81caebc00a3" },
 ];
-const breakingDate = "2026年6月20日 12:27 CST";
+const breakingDate = "2026年6月20日 16:27 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
+  { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
   { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
   { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
   { time: "08:51", tag: "ai", tagText: "AI", text: "搜索与数据分析公司Elastic同意收购CRV支持的AI初创公司DeductiveAI，交易金额最高达8500万美元。DeductiveAI利用AI自动检测和修复软件中的漏洞，成立仅三年。此次收购将增强Elastic在AI驱动的代码质量领域的布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:15", tag: "tech", tagText: "科技", text: "亚马逊MGM工作室放弃发行由卢卡·瓜达尼诺执导、安德鲁·加菲尔德主演的Sam Altman传记片《Artificial》。该片讲述2023年OpenAI CEO Sam Altman在五天内被罢免又复职的戏剧性事件。项目被砍原因未公布，但业内猜测可能与内容敏感度或商业考量有关。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952906/sam-altman-film-artificial-openai-amazon-mgm-dropped" },
   { time: "21:22", tag: "ai", tagText: "AI", text: "欧盟一项过于复杂的法律条款可能迫使英伟达退出欧盟AI项目。该条款涉及AI领域的外国补贴审查，其复杂性可能导致英伟达无法参与欧盟资助的AI研究项目，进一步加剧欧美科技监管摩擦。", source: "Euractiv", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYUNoS0VhY2tfaDIyaDVZdmJMbHBkZE9aTnJzQ05Od21Xb0pSTG5FTkZkX3dLSWVDcFFyUlZPOVZvaGJfelltdXByU1pHLXhCWDNyUHZxVldyU285ZlA1SnBPc3E0bExCWFh6dHdwMUtWTjkzb3RDalhIUzlkZS1ZRzJjQUMzdl9nckNGMWl4ME9HYV9iUDBYRTFFQkwyQnh1a3JEOHRIY3Y?oc=5" },
   { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
-  { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
-  { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
 ];
-const aiBreakingDate = "2026年6月20日 12:27 CST";
+const aiBreakingDate = "2026年6月20日 16:27 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
