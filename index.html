@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月20日 07:09 CST"
+  date: "2026年6月20日 12:27 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "英国财政状况恶化，债券市场寻求稳定，伯纳姆阵营在财政大臣人选上出现分歧。据称埃德·米利班德、沙巴纳·马哈茂德和伊薇特·库珀均为潜在候选人。", source: "Financial Times", url: "https://www.ft.com/content/4f4b1142-96bd-4a02-a7ae-6166ccb54e2b" },
+  { time: "08:27", tag: "crypto", tagText: "加密", text: "美伊协议破裂引发加密货币市场剧烈波动，比特币、以太坊和XRP总计出现1.92亿美元的多头清算。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOLUdyUU1DeVFmei1nZTlldDJTc1FicFVSY28xQktmX0pSZnRZRktCOWZfb3ZlY0V2OS1KRlREQmFsNkExNnQxUE5NZkQ0SmlMNS1hUTgtdi04T1N2LWZRbFRIOWk5aGlpcDVRaUZIY1lLUjhZSG8xNnJNdVZpcDIyM0xYckhDeHVBWEtwU3hPb2Y5Zi03ZUdWYUlycEFmMDI1QVk5V3F3?oc=5" },
+  { time: "06:33", tag: "macro", tagText: "宏观", text: "方舟投资管理公司CEO凯茜·伍德抛售近6000万美元的热门成长股。此举引发市场关注，显示其投资策略转向。", source: "TheStreet via Yahoo Finance", url: "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-dumps-nearly-60-223300469.html" },
   { time: "05:28", tag: "geo", tagText: "地缘", text: "特朗普接受卡塔尔赠送的价值4亿美元私人飞机作为新的“空军一号”，此举引发伦理争议，外界批评其模糊个人利益与官方职责的界限。", source: "Financial Times", url: "https://www.ft.com/content/2bb0efd9-fe82-4943-ab5f-ac80682bee00" },
   { time: "04:18", tag: "ai", tagText: "AI", text: "特朗普向Axios表示不再将Anthropic视为国家安全威胁。此前特朗普曾命令Anthropic阻止外国公民访问其最先进的模型Fable 5和Mythos 5，该公司随后禁用这些模型。此举标志着美国AI监管政策的重大转向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/trump-tells-axios-he-no-longer-views-anthropic-as-national-security-threat.html" },
   { time: "03:50", tag: "geo", tagText: "地缘", text: "美国司法部拒绝法官要求其书面承诺不推进“反武器化”基金。该基金是今年5月司法部为解决特朗普对国税局100亿美元诉讼而设立的，司法部此举引发对基金合法性的进一步争议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/doj-anti-weaponization-fund-trump.html" },
@@ -1646,14 +1649,15 @@ const breakingNews = [
   { time: "22:01", tag: "geo", tagText: "地缘", text: "以色列与黎巴嫩真主党达成停火协议，当地时间周五下午4点生效。美国官员证实了这一消息，油价随即由涨转跌。市场预期停火将有助于巩固美伊和平协议，缓解中东供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/oil-prices-wti-brent-crude-us-iran-deal-strait-hormuz-shipping-recovery.html" },
   { time: "21:56", tag: "tech", tagText: "科技", text: "尽管芯片股（SOXX）屡创新高，但其相对强弱指标（RSI）已跌破超买阈值，呈现价格与动量背离。历史数据表明，这种形态往往预示短期回调风险。投资者需警惕半导体板块的获利回吐压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/chip-stocks-are-setting-records-but-this-hidden-chart-pattern-says-momentum-favors-the-bears-5ba98c10" },
   { time: "21:17", tag: "geo", tagText: "地缘", text: "俄罗斯央行行长纳比乌琳娜近期缺席多场重要活动，引发外界对其去留的猜测。分析人士认为，在俄乌冲突持续、西方制裁加深的背景下，央行领导层的潜在变动可能影响俄罗斯货币政策走向。", source: "Financial Times", url: "https://www.ft.com/content/1dbfdddb-cf7b-485d-b060-c81caebc00a3" },
-  { time: "20:25", tag: "geo", tagText: "地缘", text: "意大利总理梅洛尼公开指责特朗普讨好西方敌人，起因是特朗普此前声称梅洛尼“乞求”与他合影。梅洛尼的强硬回应凸显美欧之间在对待伊朗等问题上的分歧加深。", source: "Financial Times", url: "https://www.ft.com/content/f68fc9f4-ba49-472b-ac56-9b2d9236da53" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "全球内存短缺危机持续恶化，苹果CEO库克称当前局面“不可持续”，公司罕见考虑提价以应对成本压力。这一信号表明，存储芯片供需失衡已波及最强势的消费电子厂商，可能进一步推高终端设备价格。", source: "CNBC", url: "https://www.cnbc.com/2026/06/19/memory-crisis-hits-such-extremes-that-even-apple-cant-be-safe-.html" },
-  { time: "19:42", tag: "geo", tagText: "地缘", text: "伊朗要求所有通过霍尔木兹海峡的船只必须持有经德黑兰批准的保险凭证并缴纳“保险费用”。此举可能被视为伊朗在美伊协议后强化对海峡控制的新手段，为全球航运和油价增添不确定性。", source: "Financial Times", url: "https://www.ft.com/content/e1068044-5124-47d9-81ba-c4a3efc16384" },
 ];
-const breakingDate = "2026年6月20日 07:09 CST";
+const breakingDate = "2026年6月20日 12:27 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
+  { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
+  { time: "08:51", tag: "ai", tagText: "AI", text: "搜索与数据分析公司Elastic同意收购CRV支持的AI初创公司DeductiveAI，交易金额最高达8500万美元。DeductiveAI利用AI自动检测和修复软件中的漏洞，成立仅三年。此次收购将增强Elastic在AI驱动的代码质量领域的布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/" },
+  { time: "07:28", tag: "crypto", tagText: "加密", text: "微软发现一种新型轻量级后门恶意软件“Crypto Clipper”，可通过USB设备自我传播，并利用Tor网络进行通信。该恶意软件专门用于窃取加密货币，危害性较高，用户需警惕USB设备来源。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/" },
   { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
   { time: "04:30", tag: "ai", tagText: "AI", text: "Snap将其AI视频团队分拆为独立公司Dotmo，原团队员工将离开Snap专注于AI视频开发。此举旨在降低运营成本。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/snap-spins-off-ai-video-team-into-new-company-dotmo-due-to-costs/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
   { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
   { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
-  { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
-  { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
-  { time: "08:51", tag: "ai", tagText: "AI", text: "搜索与数据分析公司Elastic同意收购CRV支持的AI初创公司DeductiveAI，交易金额最高达8500万美元。DeductiveAI利用AI自动检测和修复软件中的漏洞，成立仅三年。此次收购将增强Elastic在AI驱动的代码质量领域的布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/" },
-  { time: "07:28", tag: "crypto", tagText: "加密", text: "微软发现一种新型轻量级后门恶意软件“Crypto Clipper”，可通过USB设备自我传播，并利用Tor网络进行通信。该恶意软件专门用于窃取加密货币，危害性较高，用户需警惕USB设备来源。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/" },
 ];
-const aiBreakingDate = "2026年6月20日 07:09 CST";
+const aiBreakingDate = "2026年6月20日 12:27 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
