@@ -1623,16 +1623,20 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月22日 00:04 CST"
+  date: "2026年6月22日 01:49 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:00", tag: "geo", tagText: "地缘", text: "美国与欧洲之间的相互“背刺”叙事正在加深裂痕。分析指出，从伊朗到格陵兰的一系列争端中，美欧双方都认为对方抛弃了自己，这种信任危机可能导致北约永久性解体。", source: "Financial Times", url: "https://www.ft.com/content/4a9be9b8-4cac-49d5-8e08-cb750007b2db" },
+  { time: "22:07", tag: "macro", tagText: "宏观", text: "提高最低工资曾是民主党的政治赢家，但近期多项提案遭遇失败，反映出经济放缓和高通胀正在削弱公众支持，其政治势头面临阻力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/raise-minimum-wage-inflation-politics.html" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "美光科技即将发布财报，利润增长率接近1000%。分析师指出，其增长几乎全部来自纯利润，对标普500指数有重要影响。市场密切关注这一关键事件。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microns-earnings-are-a-must-watch-market-event-with-profit-growth-approaching-1-000-78ec4549" },
   { time: "21:33", tag: "AI", tagText: "AI", text: "马斯克的SpaceX正押注于太空AI数据中心。尽管公众不愿在地球建设AI数据中心，但太空数据中心的经济可行性存疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/do-space-based-ai-data-centers-make-economic-sense.html" },
   { time: "21:30", tag: "crypto", tagText: "加密", text: "数据显示，共和党人购买加密货币的比例远高于民主党人。分析指出党派分歧对加密市场采用产生显著影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/republicans-democrats-crypto-bitcoin-use.html" },
   { time: "20:53", tag: "crypto", tagText: "加密", text: "摩根大通警告称，比特币的噩梦正在成为现实，价格崩盘担忧加剧。市场面临多重压力。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPbVBySFNZSkg1N2ZieGpNU0hWUnFTX2M3Y21Td2JGc0VjZTVfWW8tVWJVTU44Sjk0ZGtiQUZQR0VHWW8yWTlSdG9sWUlQNVlGZnU2ZEhpQV96bzR4RDZXUUhrQm9uY1RVYlVYWUxJNWpCQ1BoRlVseUlkMkJrdnRuTGptZDNTSWQtWHdsTW43RnhEZkQ2ZDJkZ2I2YmVZanFJdHNSbDk1bGNYNFJtbU4zYVh4cjRZM1ZrZy1XY2NyM0lrTUM2bERRcnRXN1p5d0c4S0gtZVJ0ODNxelcwSEs3SA" },
+  { time: "20:48", tag: "geo", tagText: "地缘", text: "意大利总理梅洛尼与美国总统特朗普关系破裂。随着梅洛尼准备迎接连任竞选，她与特朗普在乌克兰、关税等问题上的分歧公开化，转向批评美国政策。", source: "Financial Times", url: "https://www.ft.com/content/1adcac1d-d2d3-4a62-855d-7dd56319edbf" },
+  { time: "20:33", tag: "macro", tagText: "宏观", text: "英国国王查尔斯三世将成为首位公开个人纳税账单的英国君主。白金汉宫表示，此举将于下周实施，旨在“鼓励对问责制的理解”。", source: "Financial Times", url: "https://www.ft.com/content/af9dd4a4-f9f1-43f6-bfb3-9782c96fa17f" },
   { time: "20:16", tag: "geo", tagText: "地缘", text: "美国与伊朗在瑞士举行关键和平谈判，副总统万斯已抵达。此前伊朗军方声称关闭霍尔木兹海峡以回应以色列对黎巴嫩打击，美方称海峡仍然开放。谈判重点为以色列与真主党冲突，试图达成永久结束战争协议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/iran-reportedly-closes-strait-of-hormuz-again-raising-doubt-over-talks.html" },
   { time: "19:35", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基警告白俄罗斯，若不在一周内采取行动，将摧毁其境内用于俄罗斯的无人机中继站。此举加剧东欧紧张，乌克兰威胁对邻国实施“后果”。", source: "Financial Times", url: "https://www.ft.com/content/dd2868ef-b9a2-4b6e-ab52-e4d87a9a75d2" },
   { time: "19:14", tag: "macro", tagText: "宏观", text: "美联储主席沃什开启低调革命，成立专项工作组重新审视美联储几乎所有运作。分析指出首个重大调整信号指向悄然变革，市场预期沃什可能通过加息威胁而非实际加息来抑制牛市，但历史加息周期显示股市仍可能上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/how-kevin-warsh-has-set-out-to-remake-the-fed.html" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "英国工党政府正在试探重新加入欧盟的可能性，但布鲁塞尔明确表示需要英国做出明确承诺，且不会接受选择性参与。英国脱欧后经济表现不佳，推动部分政治力量考虑重返，但面临巨大政治和法律障碍。", source: "Financial Times", url: "https://www.ft.com/content/ac017928-50b5-40e5-a1a8-393b3a238477" },
   { time: "08:43", tag: "tech", tagText: "科技", text: "分析指出特斯拉股价可能被低估31.9%，主要受AI支出增加以及全自动驾驶（FSD）面临更严格审查的影响。尽管近期股价承压，但长期投资者认为特斯拉在AI和自动驾驶领域的投入将带来价值重估。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxNa0czc3B3NEN0eXZSUE9vWklqRGQwcEF6aThqRXhKcmNRa0NRT1VJdl92M1BtMGFBNzBzQkQzMjV6YkdxdW16QkZrS1hNUFd4VzZLeUZ5Ylg3anVjVkc3SzU5OTNMVWw5LXZJblVvWGlfbThXMXk3Q1RWR3pEczlKc0pxekt6c29rSmROeG9kSDlHY2JxejZ3N2lZZkFHNWZJTHNHblJhMFFNTUlPLU5VaUV3azFWTmpzbnA5dXFGZ1gtaDVz0gHKAUFVX3lxTE5ZQk4yUzVfNkl0OGgxVFRiODRqZEhRc0dQYmVjbExSSWoyOVZkMzBiX0ktWkdoRHpNa2J0MWtlOTBuYkxBWEJCQkl5RWdHUW1SVVc5WWpUNGxyWVFOSk1yNWxxelRzc0ZnZl9aVWRwcy1aRi1rQndfaFVsTlRUSHZkUnNsMy1naHAtdFRRSmdIRlc3QUY0V0ZjY2N3X1dRcmh3eHIyMkFncWRDdXkwbzE2Yk9tMHFxTXlDNGZJLVJhUDRWazBLS0RvVkE?oc=5" },
   { time: "06:51", tag: "geo", tagText: "地缘", text: "据《观察家报》报道，英国首相斯塔默据称已准备辞职，正在与妻子在契克斯乡村官邸商讨最终决定。但消息人士称，斯塔默仍专注于本职工作，尚未作出正式决定。此消息引发英国政坛震荡。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/uk-pm-starmer-reportedly-ready-to-quit-source-says-hes-focused-on-job.html" },
-  { time: "02:36", tag: "macro", tagText: "宏观", text: "美国社会保障和医疗保险信托基金报告显示，若不加改革，社保福利可能每月削减约500美元。新提出的两党委员会法案旨在加强两项计划的财政状况，但批评者认为力度不足。移民数量增加和所谓“DOGE”储蓄等争议因素也被纳入讨论。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/social-security-is-looking-at-a-500-a-month-cut-could-a-new-bipartisan-commission-make-a-difference-5e9d358a?mod=mw_rss_topstories" },
-  { time: "02:33", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基归还波兰国家勋章，两国争端升级。泽连斯基呼吁华沙在涉及二战的历史争端中展现出更多尊重。", source: "Financial Times", url: "https://www.ft.com/content/e19012a8-d5ee-472f-a319-12c1a5f64a4a" },
-  { time: "02:29", tag: "geo", tagText: "地缘", text: "阿尔巴尼亚爆发数万人参与的“火烈鸟革命”抗议活动。抗议源于贾里德·库什纳牵头的房地产项目开发提案，民众不满政府腐败。", source: "Financial Times", url: "https://www.ft.com/content/68048f2c-9f87-415f-849d-175690c72487" },
-  { time: "02:28", tag: "macro", tagText: "宏观", text: "美国证券交易委员会（SEC）正被内部委员削弱执法力度，其作为最强硬金融监管机构的地位面临挑战。分析称SEC已不再像过去那样让企业违法者感到畏惧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fewer-dollars-and-fuzzier-standards-inside-the-push-to-weaken-washingtons-toughest-financial-watchdog-2601a0ee?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年6月22日 00:04 CST";
+const breakingDate = "2026年6月22日 01:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
+  { time: "00:30", tag: "tech", tagText: "科技", text: "6月15日至20日，19家印度初创公司（涵盖AI、深度科技、食品科技、清洁科技、保险科技、健康科技等领域）共获得超4.69亿美元融资。资金来自多家投资机构，显示印度创业生态系统持续活跃。", source: "Instagram", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAyUjlaSlMxZkFCTFJ1TDZJVDJ0WWc4Mnh3UWlvdGF2UXpNT3pleC1vYjFlV2RZT2k0bG1YYlpCQXNXdVd0SVI4SjM2TUVTUEQzM2c?oc=5" },
+  { time: "23:28", tag: "geo", tagText: "地缘", text: "特朗普政府对AI初创公司Anthropic发起最新打击行动，引发对AI生态系统影响的广泛讨论。分析认为此举可能重塑行业竞争格局，并引发谁将从中受益的疑问。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" },
   { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
   { time: "22:40", tag: "tech", tagText: "科技", text: "苹果iOS 27将带来除Siri以外的多项实用AI功能，包括更智能的相册、邮件自动摘要、实时翻译增强等，这些功能在WWDC上被Siri的AI升级盖过风头，但对用户日常使用影响更大。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" },
   { time: "22:15", tag: "tech", tagText: "科技", text: "亚马逊MGM工作室放弃发行由卢卡·瓜达尼诺执导、安德鲁·加菲尔德主演的Sam Altman传记片《Artificial》。该片讲述2023年OpenAI CEO Sam Altman在五天内被罢免又复职的戏剧性事件。项目被砍原因未公布，但业内猜测可能与内容敏感度或商业考量有关。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952906/sam-altman-film-artificial-openai-amazon-mgm-dropped" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "03:41", tag: "tech", tagText: "科技", text: "苹果修复Beats Studio Buds高严重性窃听漏洞，该漏洞12个月前被披露，影响多个厂商产品。", source: "Ars Technica", url: "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/" },
   { time: "02:46", tag: "ai", tagText: "AI", text: "《大西洋月刊》创建可搜索数据库，公开了用于训练AI模型的四个音乐数据集，其中两个数据集规模庞大，各含1200万首音乐。公众可通过该数据库检索AI训练所使用的音乐作品，此举将引发对AI训练数据版权问题的进一步关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/953183/the-atlantic-searchable-database-music-ai-training-data" },
   { time: "02:43", tag: "ai", tagText: "AI", text: "诺贝尔化学奖得主约翰·江珀（John Jumper）离开谷歌DeepMind，加入AI初创公司Anthropic。江珀此前担任DeepMind副总裁，因领导AlphaFold项目而获诺贝尔奖。他的加盟被视为Anthropic在AI基础研究领域的重要人才引进。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWxkcHpxVV9XRmJBUXJzN1RTOHYyTGtzTXZQOUQxRXRGQkl6NWFzdmpENkZjUjd1a3oxUmM5Ymt5YzAxdnREZjhlLUhHcFJNa3BlQnZ3dlVoaGFmOHVVcm5UTFBXUXBrUWQxSWs3ejJkRkNaOFN3cTBSajZPel8xT2FTOHpqczltVGF3Z2tGVWxaZXFUUTdoYUcxak4tOGxybHhqcEhWWHQtelFuMVN1UEtINW4?oc=5" },
-  { time: "02:22", tag: "tech", tagText: "科技", text: "亚马逊正计划将其自研AI芯片向其他数据中心出售，以更直接地挑战英伟达。AWS已与多家数据中心洽谈，CEO Andy Jassy称这代表着500亿美元的市场机会。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
-  { time: "00:30", tag: "tech", tagText: "科技", text: "6月15日至20日，19家印度初创公司（涵盖AI、深度科技、食品科技、清洁科技、保险科技、健康科技等领域）共获得超4.69亿美元融资。资金来自多家投资机构，显示印度创业生态系统持续活跃。", source: "Instagram", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAyUjlaSlMxZkFCTFJ1TDZJVDJ0WWc4Mnh3UWlvdGF2UXpNT3pleC1vYjFlV2RZT2k0bG1YYlpCQXNXdVd0SVI4SjM2TUVTUEQzM2c?oc=5" },
 ];
-const aiBreakingDate = "2026年6月22日 00:04 CST";
+const aiBreakingDate = "2026年6月22日 01:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
