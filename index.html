@@ -1623,14 +1623,18 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月22日 05:24 CST"
+  date: "2026年6月22日 07:26 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:00", tag: "macro", tagText: "宏观", text: "受美伊和平谈判不确定性及通胀数据即将公布影响，美股期货周日晚间下跌，标普500、纳斯达克、道琼斯期货均走低。市场关注美国与伊朗在瑞士的紧张谈判以及即将发布的美联储青睐通胀指标，油价上涨加剧通胀担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/stock-market-today-live-updates.html" },
+  { time: "06:35", tag: "macro", tagText: "宏观", text: "高盛警告称，由于市场杠杆水平上升，可能引发约1650亿美元的股票抛售。分析师指出，对冲基金仓位调整或导致短期剧烈波动。", source: "BeInCrypto via Yahoo Finance", url: "https://finance.yahoo.com/markets/stocks/articles/165-billion-stock-selloff-looms-223539994.html" },
+  { time: "05:00", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡危机刺激中东管道建设热潮。随着伊朗关闭海峡威胁导致航运风险剧增，多国加速推进替代运输管道项目，以保障石油出口通道安全。", source: "Oilprice.com via Yahoo Finance", url: "https://finance.yahoo.com/energy/articles/hormuz-crisis-sparks-middle-east-210000952.html" },
   { time: "04:19", tag: "geo", tagText: "地缘", text: "菲律宾国防部长警告，中国可能试图完全控制黄岩岛（斯卡伯勒浅滩），称中国在相关海域的军事活动显著加强，局势令人担忧。", source: "Financial Times", url: "https://www.ft.com/content/d5191b00-dccb-465e-8afb-e61cc8260f93" },
   { time: "03:31", tag: "macro", tagText: "宏观", text: "爱尔兰建材集团CRH接近达成其史上最大收购，拟以约70亿美元收购达拉斯建筑公司Arcosa。该交易将显著扩大CRH在美国基础设施领域的布局。", source: "Financial Times", url: "https://www.ft.com/content/6c95c41b-7bf1-4adf-84e9-08356f8a4981" },
+  { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储新任主席沃什推动取消前瞻性指引，包括不再提供利率点阵图。投资者警告此举可能推高美国借贷成本，增加市场波动性。沃什倾向于通过加息威胁而非实际加息来管理市场预期。", source: "Financial Times", url: "https://www.ft.com/content/6a9330ad-a2db-494b-bf61-7dd417ab9c9a" },
   { time: "02:00", tag: "geo", tagText: "地缘", text: "全球冲突刺激国防科技领域风险投资激增，2026年至今融资额已超120亿美元，超过2025年全年。快速增长的估值引发市场对泡沫周期的担忧。", source: "Financial Times", url: "https://www.ft.com/content/cb535f43-d2b7-4d14-82fe-abdd14765dfe" },
   { time: "23:00", tag: "geo", tagText: "地缘", text: "美国与欧洲之间的相互“背刺”叙事正在加深裂痕。分析指出，从伊朗到格陵兰的一系列争端中，美欧双方都认为对方抛弃了自己，这种信任危机可能导致北约永久性解体。", source: "Financial Times", url: "https://www.ft.com/content/4a9be9b8-4cac-49d5-8e08-cb750007b2db" },
   { time: "22:07", tag: "macro", tagText: "宏观", text: "提高最低工资曾是民主党的政治赢家，但近期多项提案遭遇失败，反映出经济放缓和高通胀正在削弱公众支持，其政治势头面临阻力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/raise-minimum-wage-inflation-politics.html" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "19:14", tag: "macro", tagText: "宏观", text: "美联储主席沃什开启低调革命，成立专项工作组重新审视美联储几乎所有运作。分析指出首个重大调整信号指向悄然变革，市场预期沃什可能通过加息威胁而非实际加息来抑制牛市，但历史加息周期显示股市仍可能上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/how-kevin-warsh-has-set-out-to-remake-the-fed.html" },
   { time: "18:36", tag: "crypto", tagText: "加密", text: "比特币价格在64,000美元附近企稳，市场关注ETF资金外流及霍尔木兹海峡紧张局势。与此同时，LAB和AERO等山寨币领涨，其中LAB单日上涨25%逼近市值前20名。分析师指出，尽管整体市场动能减弱，但部分资金仍在寻找高增长机会。", source: "crypto.news / CryptoPotato", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ3RXQ3FHeEVFQ0hRdjBYTU5OdGtaX204NHNBMWxVUHZSMVltMTh2OXdyX0Z4Q2FIdWZfOGJWT2luWm9jS3ZoQVVCZXROVzhPa19LN2lqTjFIODhGZlRfNlM5T3pvaTIxZmlta01CZnVSaGdQanREV01yZE1WcnVnemN6ZEU1aW1QQlV5MXFJZmRKbDVpeWFPeWx3WTZZejJRSnc?oc=5" },
   { time: "18:15", tag: "macro", tagText: "宏观", text: "迈克尔·布隆伯格承诺向可再生能源行业协会提供2.85亿美元资金，以对抗石油利益集团。在伊朗战争后各国面临能源政策抉择之际，这笔资金将用于加强绿色游说力量。", source: "Financial Times", url: "https://www.ft.com/content/5d02676c-60cb-4d11-b719-9ece20d11849" },
-  { time: "17:46", tag: "macro", tagText: "宏观", text: "日本政府养老投资基金（GPIF）计划将1%的资产配置至加密货币。作为全球最大养老基金之一，该举措若落地将带来数十亿美元级别的资金流入，可能显著影响加密市场格局。市场密切关注其具体执行时间与资产管理规模。", source: "CryptoTicker", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRm1YZFNucFphVHJ3bWNHM056Qjk1OGhrcmk0NGNfR3J6MHhRa214WjJRMmtNUks1czhFUkxvUnl6UzJkR2NLTTlpX0gxTDEzWTJGV0NQTUlnN1U0U3RPZ2tBQ29lcXlGWkc1OThmUE5KbWZ4MzFIM25tQWw2UmtFYTZOaHg?oc=5" },
-  { time: "16:12", tag: "tech", tagText: "科技", text: "特斯拉CEO埃隆·马斯克近期大规模兑现股票期权，推动TSLA股价大涨。此举引发市场对其减持意图的猜测，但特斯拉长期投资者仍看好其在AI和自动驾驶领域的潜力。此前有分析指出特斯拉股价可能被低估约32%。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNXzJkSlVqRk1yYXBBUlFpaHZuV0txaW9OWWlGWWo4ckRFOTFMWmpMYlJBX1EwQnBZelNhVlptMFptTnBKOWx6dHRoMEtmOUZpeFdDNlZoaHRhV0lYc3BaUWFWN2ZidUlWcEM2eGVqdEVYQ3RRWXJwU0EteVNaRnJzaUFPQzJBMlJ4T0cwQkItQVhxanRlYmFpX1lubXk?oc=5" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰的无人机创新正削弱俄罗斯的人力优势，普京的战争机器在无人机时代逐渐失灵。分析指出，乌克兰利用低成本无人机有效打击俄军装甲和后勤，使俄罗斯传统的大规模兵力优势难以发挥。", source: "Financial Times", url: "https://www.ft.com/content/b409d72f-ccff-4952-8b71-dfd62d75a1cd" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "MSCI将SpaceX的ESG评级降至最低的CCC级，与2022年俄乌冲突后的俄罗斯同档。该评级反映了对SpaceX治理、劳工权益及环境影响的担忧，可能影响部分机构投资者的持仓决策。", source: "Financial Times", url: "https://www.ft.com/content/a0dd4ea7-ef3d-4460-a96c-8c6975a053e3" },
 ];
-const breakingDate = "2026年6月22日 05:24 CST";
+const breakingDate = "2026年6月22日 07:26 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
   { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
 ];
-const aiBreakingDate = "2026年6月22日 05:24 CST";
+const aiBreakingDate = "2026年6月22日 07:26 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
