@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月21日 14:13 CST"
+  date: "2026年6月21日 18:39 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:36", tag: "crypto", tagText: "加密", text: "比特币价格在64,000美元附近企稳，市场关注ETF资金外流及霍尔木兹海峡紧张局势。与此同时，LAB和AERO等山寨币领涨，其中LAB单日上涨25%逼近市值前20名。分析师指出，尽管整体市场动能减弱，但部分资金仍在寻找高增长机会。", source: "crypto.news / CryptoPotato", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ3RXQ3FHeEVFQ0hRdjBYTU5OdGtaX204NHNBMWxVUHZSMVltMTh2OXdyX0Z4Q2FIdWZfOGJWT2luWm9jS3ZoQVVCZXROVzhPa19LN2lqTjFIODhGZlRfNlM5T3pvaTIxZmlta01CZnVSaGdQanREV01yZE1WcnVnemN6ZEU1aW1QQlV5MXFJZmRKbDVpeWFPeWx3WTZZejJRSnc?oc=5" },
+  { time: "17:46", tag: "macro", tagText: "宏观", text: "日本政府养老投资基金（GPIF）计划将1%的资产配置至加密货币。作为全球最大养老基金之一，该举措若落地将带来数十亿美元级别的资金流入，可能显著影响加密市场格局。市场密切关注其具体执行时间与资产管理规模。", source: "CryptoTicker", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRm1YZFNucFphVHJ3bWNHM056Qjk1OGhrcmk0NGNfR3J6MHhRa214WjJRMmtNUks1czhFUkxvUnl6UzJkR2NLTTlpX0gxTDEzWTJGV0NQTUlnN1U0U3RPZ2tBQ29lcXlGWkc1OThmUE5KbWZ4MzFIM25tQWw2UmtFYTZOaHg?oc=5" },
+  { time: "16:12", tag: "tech", tagText: "科技", text: "特斯拉CEO埃隆·马斯克近期大规模兑现股票期权，推动TSLA股价大涨。此举引发市场对其减持意图的猜测，但特斯拉长期投资者仍看好其在AI和自动驾驶领域的潜力。此前有分析指出特斯拉股价可能被低估约32%。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNXzJkSlVqRk1yYXBBUlFpaHZuV0txaW9OWWlGWWo4ckRFOTFMWmpMYlJBX1EwQnBZelNhVlptMFptTnBKOWx6dHRoMEtmOUZpeFdDNlZoaHRhV0lYc3BaUWFWN2ZidUlWcEM2eGVqdEVYQ3RRWXJwU0EteVNaRnJzaUFPQzJBMlJ4T0cwQkItQVhxanRlYmFpX1lubXk?oc=5" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰的无人机创新正削弱俄罗斯的人力优势，普京的战争机器在无人机时代逐渐失灵。分析指出，乌克兰利用低成本无人机有效打击俄军装甲和后勤，使俄罗斯传统的大规模兵力优势难以发挥。", source: "Financial Times", url: "https://www.ft.com/content/b409d72f-ccff-4952-8b71-dfd62d75a1cd" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "MSCI将SpaceX的ESG评级降至最低的CCC级，与2022年俄乌冲突后的俄罗斯同档。该评级反映了对SpaceX治理、劳工权益及环境影响的担忧，可能影响部分机构投资者的持仓决策。", source: "Financial Times", url: "https://www.ft.com/content/a0dd4ea7-ef3d-4460-a96c-8c6975a053e3" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "英国工党政府正在试探重新加入欧盟的可能性，但布鲁塞尔明确表示需要英国做出明确承诺，且不会接受选择性参与。英国脱欧后经济表现不佳，推动部分政治力量考虑重返，但面临巨大政治和法律障碍。", source: "Financial Times", url: "https://www.ft.com/content/ac017928-50b5-40e5-a1a8-393b3a238477" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "23:17", tag: "geo", tagText: "地缘", text: "伊朗宣布再次关闭霍尔木兹海峡，称因美国“背信弃义”违反承诺，同时伊朗谈判团队已启程前往瑞士。此举对全球能源供应构成直接威胁，此前美伊协议破裂已导致地区紧张升温。", source: "Financial Times", url: "https://www.ft.com/content/fad77f6e-b1db-460a-a0c8-c2fd132932f5" },
   { time: "23:05", tag: "macro", tagText: "宏观", text: "美国廉价航空模式遭遇危机：精神航空（Spirit）申请破产，而美联航、达美航空业绩强劲。分析指出，低票价已非成功关键，行业分化加剧，低成本航司面临结构性困境。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/cheap-airline-fares-summer-travel.html" },
   { time: "22:38", tag: "tech", tagText: "科技", text: "T. Rowe Price 基金经理 David Giroux 将特斯拉剔除出“美股七巨头”（Magnificent Seven），并新增另一家科技巨头。他认为大型科技股并未处于泡沫，同时关注医疗保健和公用事业的价值。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-veteran-investor-is-kicking-tesla-out-of-the-magnificent-seven-replacing-it-with-this-tech-giant-a2828cec?mod=mw_rss_topstories" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "科技巨头在AI数据中心建设上的巨额投资正在耗尽现金储备，迫使其大规模举债。这一趋势使投资者不得不重新密切关注利率变化，因为借贷成本的上升可能影响AI基础设施投资的回报前景。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/ai-buildout-giving-tech-investors-new-reasons-to-watch-bond-market.html" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "美国多州正在扩大对补充营养援助计划（SNAP）的食品限制，禁止使用福利购买苏打水、糖果和加工食品。这一政策变化正迫使消费者转移支出，大型食品和饮料企业密切关注销售格局的潜在重塑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/maha-snap-restrictions-junk-food-spending.html" },
-  { time: "19:00", tag: "AI", tagText: "AI", text: "FT分析显示，今年Anthropic关于人工智能危险的警告频次远高于竞争对手OpenAI，这可能间接导致美国对先进AI实施出口禁令。Anthropic的激进立场正在引发政策制定者的警惕，进一步收紧AI技术出口管制。", source: "Financial Times", url: "https://www.ft.com/content/16ace46c-aeac-40c9-8598-3c01fa4481cb" },
 ];
-const breakingDate = "2026年6月21日 14:13 CST";
+const breakingDate = "2026年6月21日 18:39 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
   { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
   { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
   { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:25", tag: "ai", tagText: "AI", text: "《环球邮报》刊文指出，英伟达最重要的产品并非芯片，而是其软件生态系统（如CUDA）。文章认为，英伟达通过建立强大的开发者平台和硬件-软件协同优势，形成了难以复制的护城河，这比单纯销售芯片更具长期价值。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOOWdtWnF3UmptVnhGNEJVYnlNU2psM3FZMmtmWUVEWTdtNDlQNnRmczdmX1N2aEYtczBtckpxeXhha1RqbDRGcTNDRllKdHZUbXU3b2dudm9nWURwZTIySWVtTHh0TVdRWEtKT05ucmc3TjRiYWNEejBsd181dFpZTjhlZTUwWkpFV2VOWWR6U3JsMVpzVVRTdlVoUXg3blFGRlN0VmJCNHBZX19FLUJwR2ZGSWhkcVdlMU9HcE9MLUxmYldvM01QLU04cDlVVDZXVndOSG5ySnJkdw?oc=5" },
   { time: "21:22", tag: "ai", tagText: "AI", text: "欧盟一项过于复杂的法律条款可能迫使英伟达退出欧盟AI项目。该条款涉及AI领域的外国补贴审查，其复杂性可能导致英伟达无法参与欧盟资助的AI研究项目，进一步加剧欧美科技监管摩擦。", source: "Euractiv", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYUNoS0VhY2tfaDIyaDVZdmJMbHBkZE9aTnJzQ05Od21Xb0pSTG5FTkZkX3dLSWVDcFFyUlZPOVZvaGJfelltdXByU1pHLXhCWDNyUHZxVldyU285ZlA1SnBPc3E0bExCWFh6dHdwMUtWTjkzb3RDalhIUzlkZS1ZRzJjQUMzdl9nckNGMWl4ME9HYV9iUDBYRTFFQkwyQnh1a3JEOHRIY3Y?oc=5" },
   { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
-  { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
 ];
-const aiBreakingDate = "2026年6月21日 14:13 CST";
+const aiBreakingDate = "2026年6月21日 18:39 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
