@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月22日 01:49 CST"
+  date: "2026年6月22日 03:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:31", tag: "macro", tagText: "宏观", text: "爱尔兰建材集团CRH接近达成其史上最大收购，拟以约70亿美元收购达拉斯建筑公司Arcosa。该交易将显著扩大CRH在美国基础设施领域的布局。", source: "Financial Times", url: "https://www.ft.com/content/6c95c41b-7bf1-4adf-84e9-08356f8a4981" },
+  { time: "02:00", tag: "geo", tagText: "地缘", text: "全球冲突刺激国防科技领域风险投资激增，2026年至今融资额已超120亿美元，超过2025年全年。快速增长的估值引发市场对泡沫周期的担忧。", source: "Financial Times", url: "https://www.ft.com/content/cb535f43-d2b7-4d14-82fe-abdd14765dfe" },
   { time: "23:00", tag: "geo", tagText: "地缘", text: "美国与欧洲之间的相互“背刺”叙事正在加深裂痕。分析指出，从伊朗到格陵兰的一系列争端中，美欧双方都认为对方抛弃了自己，这种信任危机可能导致北约永久性解体。", source: "Financial Times", url: "https://www.ft.com/content/4a9be9b8-4cac-49d5-8e08-cb750007b2db" },
   { time: "22:07", tag: "macro", tagText: "宏观", text: "提高最低工资曾是民主党的政治赢家，但近期多项提案遭遇失败，反映出经济放缓和高通胀正在削弱公众支持，其政治势头面临阻力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/raise-minimum-wage-inflation-politics.html" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "美光科技即将发布财报，利润增长率接近1000%。分析师指出，其增长几乎全部来自纯利润，对标普500指数有重要影响。市场密切关注这一关键事件。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microns-earnings-are-a-must-watch-market-event-with-profit-growth-approaching-1-000-78ec4549" },
@@ -1647,13 +1649,15 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰的无人机创新正削弱俄罗斯的人力优势，普京的战争机器在无人机时代逐渐失灵。分析指出，乌克兰利用低成本无人机有效打击俄军装甲和后勤，使俄罗斯传统的大规模兵力优势难以发挥。", source: "Financial Times", url: "https://www.ft.com/content/b409d72f-ccff-4952-8b71-dfd62d75a1cd" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "MSCI将SpaceX的ESG评级降至最低的CCC级，与2022年俄乌冲突后的俄罗斯同档。该评级反映了对SpaceX治理、劳工权益及环境影响的担忧，可能影响部分机构投资者的持仓决策。", source: "Financial Times", url: "https://www.ft.com/content/a0dd4ea7-ef3d-4460-a96c-8c6975a053e3" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "英国工党政府正在试探重新加入欧盟的可能性，但布鲁塞尔明确表示需要英国做出明确承诺，且不会接受选择性参与。英国脱欧后经济表现不佳，推动部分政治力量考虑重返，但面临巨大政治和法律障碍。", source: "Financial Times", url: "https://www.ft.com/content/ac017928-50b5-40e5-a1a8-393b3a238477" },
-  { time: "08:43", tag: "tech", tagText: "科技", text: "分析指出特斯拉股价可能被低估31.9%，主要受AI支出增加以及全自动驾驶（FSD）面临更严格审查的影响。尽管近期股价承压，但长期投资者认为特斯拉在AI和自动驾驶领域的投入将带来价值重估。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxNa0czc3B3NEN0eXZSUE9vWklqRGQwcEF6aThqRXhKcmNRa0NRT1VJdl92M1BtMGFBNzBzQkQzMjV6YkdxdW16QkZrS1hNUFd4VzZLeUZ5Ylg3anVjVkc3SzU5OTNMVWw5LXZJblVvWGlfbThXMXk3Q1RWR3pEczlKc0pxekt6c29rSmROeG9kSDlHY2JxejZ3N2lZZkFHNWZJTHNHblJhMFFNTUlPLU5VaUV3azFWTmpzbnA5dXFGZ1gtaDVz0gHKAUFVX3lxTE5ZQk4yUzVfNkl0OGgxVFRiODRqZEhRc0dQYmVjbExSSWoyOVZkMzBiX0ktWkdoRHpNa2J0MWtlOTBuYkxBWEJCQkl5RWdHUW1SVVc5WWpUNGxyWVFOSk1yNWxxelRzc0ZnZl9aVWRwcy1aRi1rQndfaFVsTlRUSHZkUnNsMy1naHAtdFRRSmdIRlc3QUY0V0ZjY2N3X1dRcmh3eHIyMkFncWRDdXkwbzE2Yk9tMHFxTXlDNGZJLVJhUDRWazBLS0RvVkE?oc=5" },
-  { time: "06:51", tag: "geo", tagText: "地缘", text: "据《观察家报》报道，英国首相斯塔默据称已准备辞职，正在与妻子在契克斯乡村官邸商讨最终决定。但消息人士称，斯塔默仍专注于本职工作，尚未作出正式决定。此消息引发英国政坛震荡。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/uk-pm-starmer-reportedly-ready-to-quit-source-says-hes-focused-on-job.html" },
 ];
-const breakingDate = "2026年6月22日 01:49 CST";
+const breakingDate = "2026年6月22日 03:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
+  { time: "03:41", tag: "tech", tagText: "科技", text: "苹果修复Beats Studio Buds高严重性窃听漏洞，该漏洞12个月前被披露，影响多个厂商产品。", source: "Ars Technica", url: "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/" },
+  { time: "02:46", tag: "ai", tagText: "AI", text: "《大西洋月刊》创建可搜索数据库，公开了用于训练AI模型的四个音乐数据集，其中两个数据集规模庞大，各含1200万首音乐。公众可通过该数据库检索AI训练所使用的音乐作品，此举将引发对AI训练数据版权问题的进一步关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/953183/the-atlantic-searchable-database-music-ai-training-data" },
+  { time: "02:43", tag: "ai", tagText: "AI", text: "诺贝尔化学奖得主约翰·江珀（John Jumper）离开谷歌DeepMind，加入AI初创公司Anthropic。江珀此前担任DeepMind副总裁，因领导AlphaFold项目而获诺贝尔奖。他的加盟被视为Anthropic在AI基础研究领域的重要人才引进。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWxkcHpxVV9XRmJBUXJzN1RTOHYyTGtzTXZQOUQxRXRGQkl6NWFzdmpENkZjUjd1a3oxUmM5Ymt5YzAxdnREZjhlLUhHcFJNa3BlQnZ3dlVoaGFmOHVVcm5UTFBXUXBrUWQxSWs3ejJkRkNaOFN3cTBSajZPel8xT2FTOHpqczltVGF3Z2tGVWxaZXFUUTdoYUcxak4tOGxybHhqcEhWWHQtelFuMVN1UEtINW4?oc=5" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
   { time: "00:30", tag: "tech", tagText: "科技", text: "6月15日至20日，19家印度初创公司（涵盖AI、深度科技、食品科技、清洁科技、保险科技、健康科技等领域）共获得超4.69亿美元融资。资金来自多家投资机构，显示印度创业生态系统持续活跃。", source: "Instagram", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAyUjlaSlMxZkFCTFJ1TDZJVDJ0WWc4Mnh3UWlvdGF2UXpNT3pleC1vYjFlV2RZT2k0bG1YYlpCQXNXdVd0SVI4SjM2TUVTUEQzM2c?oc=5" },
   { time: "23:28", tag: "geo", tagText: "地缘", text: "特朗普政府对AI初创公司Anthropic发起最新打击行动，引发对AI生态系统影响的广泛讨论。分析认为此举可能重塑行业竞争格局，并引发谁将从中受益的疑问。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
   { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
-  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
-  { time: "03:41", tag: "tech", tagText: "科技", text: "苹果修复Beats Studio Buds高严重性窃听漏洞，该漏洞12个月前被披露，影响多个厂商产品。", source: "Ars Technica", url: "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/" },
-  { time: "02:46", tag: "ai", tagText: "AI", text: "《大西洋月刊》创建可搜索数据库，公开了用于训练AI模型的四个音乐数据集，其中两个数据集规模庞大，各含1200万首音乐。公众可通过该数据库检索AI训练所使用的音乐作品，此举将引发对AI训练数据版权问题的进一步关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/953183/the-atlantic-searchable-database-music-ai-training-data" },
-  { time: "02:43", tag: "ai", tagText: "AI", text: "诺贝尔化学奖得主约翰·江珀（John Jumper）离开谷歌DeepMind，加入AI初创公司Anthropic。江珀此前担任DeepMind副总裁，因领导AlphaFold项目而获诺贝尔奖。他的加盟被视为Anthropic在AI基础研究领域的重要人才引进。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWxkcHpxVV9XRmJBUXJzN1RTOHYyTGtzTXZQOUQxRXRGQkl6NWFzdmpENkZjUjd1a3oxUmM5Ymt5YzAxdnREZjhlLUhHcFJNa3BlQnZ3dlVoaGFmOHVVcm5UTFBXUXBrUWQxSWs3ejJkRkNaOFN3cTBSajZPel8xT2FTOHpqczltVGF3Z2tGVWxaZXFUUTdoYUcxak4tOGxybHhqcEhWWHQtelFuMVN1UEtINW4?oc=5" },
 ];
-const aiBreakingDate = "2026年6月22日 01:49 CST";
+const aiBreakingDate = "2026年6月22日 03:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
