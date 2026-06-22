@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 37.26,
+  score: 35.11,
   rating: "fear",
-  timestamp: "2026-06-22T12:04:31+00:00",
+  timestamp: "2026-06-22T15:26:05+00:00",
   previousClose: 37.26,
   previous1Week: 41.57,
   previous1Month: 58.97,
   previous1Year: 54.51,
-  date: "2026年6月22日 20:22 CST"
+  date: "2026年6月22日 23:33 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:24", tag: "macro", tagText: "宏观", text: "中国经济增长引擎出现奇特新火花：消费者转而购买‘感觉’来应对房地产崩盘。玩具精灵、机器人警察等情感消费产品成为经济亮点，折射出中国经济分裂的真实状态。", source: "MarketWatch", url: "https://www.marketwatch.com/story/chinas-new-economic-drivers-a-sad-toy-elf-and-a-robot-police-force-8759daf9" },
+  { time: "23:13", tag: "geo", tagText: "地缘", text: "英国首相斯塔默宣布辞职，工党领袖候选人安迪·伯纳姆成为焦点。投资者关注英国国债、英镑及下一任财政大臣人选。分析师警告若伯纳姆接任，英国长期借贷成本可能上升，潜在债务危机风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/keir-starmer-andy-burnham-uk-markets.html" },
+  { time: "23:13", tag: "tech", tagText: "科技", text: "Meta旗下WhatsApp负责人威尔·卡思卡特将卸任，由印度金融科技公司CRED创始人库纳尔·沙阿接替。此举凸显Meta深耕印度市场及金融科技领域的战略意图。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/meta-kunal-shah-whatsapp-will-cathcart.html" },
+  { time: "23:09", tag: "geo", tagText: "地缘", text: "美国财政部授权伊朗石油销售60天，伊朗超级油轮已重新开启应答器驶离波斯湾。国际油价应声下跌，WTI原油跌破74美元/桶。市场预期更多伊朗原油将涌入本已紧张的全球供应。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/treasury-iran-oil-sales.html" },
+  { time: "23:04", tag: "tech", tagText: "科技", text: "电动汽车制造商Lucid宣布裁减约18%美国员工，并即时取消首席运营官马克·温特霍夫职位，作为成本削减计划的一部分。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/lucid-layoffs-evs.html" },
+  { time: "23:00", tag: "tech", tagText: "科技", text: "SpaceX在创纪录IPO仅两周后便寻求债券市场融资，同时与开源AI初创公司Reflection签署价值高达63亿美元的算力协议。SpaceX将其Colossus数据中心转为商用算力平台，此前已与Anthropic、谷歌等达成合作。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/spacex-ai-colossus-data-center-reflection.html" },
   { time: "20:18", tag: "macro", tagText: "宏观", text: "美联储前主席艾伦·格林斯潘去世，享年100岁。他在1987年至2006年间担任美联储主席，历经四任总统，以“美联储式讲话”的模糊艺术闻名，其职业生涯备受赞誉，但金融危机后对其遗产的评价出现重新审视。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/alan-greenspan-former-chairman-of-the-fed-dies-at-age-100.html" },
   { time: "20:09", tag: "geo", tagText: "地缘", text: "美国副总统万斯表示，美伊在瑞士的谈判取得“重大进展”，伊朗已同意允许国际原子能机构（IAEA）检查人员返回该国。尽管谈判中仍存在“威胁”和“抱怨”，但整体朝积极方向推进。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/ance-iran-ceasefire-talks-iaea-inspectors.html" },
   { time: "19:56", tag: "macro", tagText: "宏观", text: "市场分析警告，美股IPO管道中聚集了SpaceX、OpenAI等重磅公司，巨额新股发行可能引发类似1929年和2000年的市场崩盘，潜在跌幅或达40%。历史记录显示，发行高峰往往预示着市场顶部。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-40-market-crash-is-lurking-in-the-ipo-pipeline-spacex-and-openai-could-trigger-it-64ae4026" },
@@ -1643,18 +1649,17 @@ const breakingNews = [
   { time: "11:45", tag: "geo", tagText: "地缘", text: "中国对数十家美国企业实施贸易限制，以报复五角大楼更新涉华军事企业黑名单（1260H清单）。中方宣布加强出口管制和采购限制，中美科技对抗进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/china-trade-curbs-us-companies-export-controls-procurement-exclusion-pentagon-list-.html" },
   { time: "11:39", tag: "macro", tagText: "宏观", text: "中国股市接近熊市区间，阿里巴巴、小米等权重股拖累香港恒生指数走低。市场情绪脆弱，投资者担忧经济复苏乏力及中美紧张局势升级。", source: "Moneycontrol", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcXRPUFUyMVJqRXJHUTVySXZqNS1QWVF2aHh0MlRzWHJiVUd5NGNfcE1iVmNtejE4S3BuQXdpVnpOaHFfcThjQXFyVF9lWHgzbnNhaGpfZkNSbGVmV05YTmthRHkxQUo4aG1TMEFWWkZkN2pCSFNHNno1QnpGTjhSblJBUHpEazNfZk1neWdsSXZhb2F0alBMSnVmdGNac3BxSG0tTUVweDZEMkRPNFI4bnhQVkd0Y2VqY1ZvTkhHR0RBWHc1bXc4UlJ5RC1vX2JZWkFCaXdB0gHbAUFVX3lxTE9uNkMzQ3daTXBEMVdSVmpuYU1UQmRySGVWZXlOLVFlekpSdWNjczAxRHlOWXMzS1duMnQ0Y25FVnAwdGdTZjR0aFNvYUI1SkZ1OW8xVHpMRE5hejlsblZrVjBQZFB5WmhxVUMyT2hXLWNwRHF2bDlBcUM2a1ZlMTY2OWl4OUtaQWZWcDlpZnNRdjZBMFVZNE1xeWdWOWVQN0RSTVV2QmJXemhlU212MS1CNzdQcmdHVXhqcHlzOXB5ZTJSN1RVSE1pRDYtRDFEWnczMmRZZXZVRk1hOA?oc=5" },
   { time: "07:47", tag: "geo", tagText: "地缘", text: "哥伦比亚总统选举结果出炉，右翼民粹主义者“老虎”阿韦拉尔多·德拉埃斯普列利亚以微弱优势击败左翼候选人。这位特朗普的崇拜者获胜，标志拉美政治格局进一步右转。", source: "Financial Times", url: "https://www.ft.com/content/49294716-56be-40a4-ba31-b4e376ccb47f" },
-  { time: "07:00", tag: "macro", tagText: "宏观", text: "受美伊和平谈判不确定性及通胀数据即将公布影响，美股期货周日晚间下跌，标普500、纳斯达克、道琼斯期货均走低。市场关注美国与伊朗在瑞士的紧张谈判以及即将发布的美联储青睐通胀指标，油价上涨加剧通胀担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/stock-market-today-live-updates.html" },
-  { time: "06:35", tag: "macro", tagText: "宏观", text: "高盛警告称，由于市场杠杆水平上升，可能引发约1650亿美元的股票抛售。分析师指出，对冲基金仓位调整或导致短期剧烈波动。", source: "BeInCrypto via Yahoo Finance", url: "https://finance.yahoo.com/markets/stocks/articles/165-billion-stock-selloff-looms-223539994.html" },
-  { time: "05:00", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡危机刺激中东管道建设热潮。随着伊朗关闭海峡威胁导致航运风险剧增，多国加速推进替代运输管道项目，以保障石油出口通道安全。", source: "Oilprice.com via Yahoo Finance", url: "https://finance.yahoo.com/energy/articles/hormuz-crisis-sparks-middle-east-210000952.html" },
-  { time: "04:19", tag: "geo", tagText: "地缘", text: "菲律宾国防部长警告，中国可能试图完全控制黄岩岛（斯卡伯勒浅滩），称中国在相关海域的军事活动显著加强，局势令人担忧。", source: "Financial Times", url: "https://www.ft.com/content/d5191b00-dccb-465e-8afb-e61cc8260f93" },
-  { time: "03:31", tag: "macro", tagText: "宏观", text: "爱尔兰建材集团CRH接近达成其史上最大收购，拟以约70亿美元收购达拉斯建筑公司Arcosa。该交易将显著扩大CRH在美国基础设施领域的布局。", source: "Financial Times", url: "https://www.ft.com/content/6c95c41b-7bf1-4adf-84e9-08356f8a4981" },
-  { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储新任主席沃什推动取消前瞻性指引，包括不再提供利率点阵图。投资者警告此举可能推高美国借贷成本，增加市场波动性。沃什倾向于通过加息威胁而非实际加息来管理市场预期。", source: "Financial Times", url: "https://www.ft.com/content/6a9330ad-a2db-494b-bf61-7dd417ab9c9a" },
 ];
-const breakingDate = "2026年6月22日 20:22 CST";
+const breakingDate = "2026年6月22日 23:33 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:28", tag: "geo", tagText: "地缘", text: "特朗普政府对AI初创公司Anthropic发起最新打击行动，引发对AI生态系统影响的广泛讨论。分析认为此举可能重塑行业竞争格局，并引发谁将从中受益的疑问。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" },
+  { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
+  { time: "22:40", tag: "tech", tagText: "科技", text: "苹果iOS 27将带来除Siri以外的多项实用AI功能，包括更智能的相册、邮件自动摘要、实时翻译增强等，这些功能在WWDC上被Siri的AI升级盖过风头，但对用户日常使用影响更大。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" },
+  { time: "20:50", tag: "ai", tagText: "AI", text: "AI初创公司Odyssey获得3.1亿美元融资，通过亚马逊支持成为独角兽。本轮融资由多家投资者参与，Odyssey致力于开发AI驱动的自动化平台，进一步拓展其技术应用场景。", source: "AI CERTs", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaWNOQ1BXY3Z6YlAxRVc0S2gyWDVpR2llNThFQUdQRjVKdjNJSkRnUlJNZDgyUDhZWUFjQmtTNG5UNXUzMTc2WjU3OXRBb2dTZl9zMG9rWWhHZWNHMUl0X2lPOWpDcFpWbUxFOGV1Ym9mSURtSE5qUjJmelZCLVp0cVpPbDNWY1pkOUphbFNfQQ?oc=5" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "2026年机器人初创公司风险投资飙升至创纪录水平。据Crunchbase News报道，随着AI与自动化需求激增，该领域融资总额创下历史新高，资本正加速涌入机器人赛道。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQ0xkRjczYTRZM09iYi1zODBtVkRvd0xoODVPYzFEUmk1TzBCVUh5OVd3QW1rR3U1eUtZVWsyWXF0ZVVpdUxnMGxURUphXzQxMDdvc09ycjJkN29GSHNnUEN3MUZweGVQRWF2azhKSkYtbEdfMUN1VEtDT0ZFSzMzd0dRZWg?oc=5" },
+  { time: "18:57", tag: "ai", tagText: "AI", text: "欧洲知名风投Seedcamp关闭其史上最大基金，规模达3.2亿美元，重点押注物理AI（Physical AI）领域。该基金计划在未来十年内投资于将AI与机器人、硬件结合的初创公司，推动AI技术向实体世界延伸。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLUpHRlU0YkMzUnZiUGV6UUF3M24yX1poazY1RUx3WFA5ZUtpTVdzdzNpLWJLSE9FMDljWllEdGF5SEZwMllOTUJwYjVNdjZnODRtMDZabWtfVFFsSl9pY1dsNkhSUW9mYm9aTkdUekZMZVdNTFdpQXBvZUFXa3NQelIxYWMtUUd5ZXpWLVZJVjlkeFJ6ckJqNDA1NEQ2UERGZUVSV2hjZ3p6WS1WaFhaS0c3ZWlJYko2bkgw?oc=5" },
   { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
   { time: "16:21", tag: "ai", tagText: "AI", text: "百度加速推进全栈AI能力建设，英伟达芯片获取渠道扩大。Crypto Briefing报道称，随着出口限制缓和，百度计划利用更充裕的英伟达AI芯片，增强从底层算力到上层模型的完整AI技术栈。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE1QeWM3dEloWU1NSkF4RnlwR2poQndheHlUNHZRM0hQWGdwbHM1N2ZpbTVGN1pIT01WSFNyS2tGc3pSYnVYUWVlN2YyOGZwS1Vjc0VXMUVwZGpKdEVqVEFaQmtzM3UxLVlMdGk0V2NtS19Gb2tT?oc=5" },
   { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "03:41", tag: "tech", tagText: "科技", text: "苹果修复Beats Studio Buds高严重性窃听漏洞，该漏洞12个月前被披露，影响多个厂商产品。", source: "Ars Technica", url: "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/" },
   { time: "02:46", tag: "ai", tagText: "AI", text: "《大西洋月刊》创建可搜索数据库，公开了用于训练AI模型的四个音乐数据集，其中两个数据集规模庞大，各含1200万首音乐。公众可通过该数据库检索AI训练所使用的音乐作品，此举将引发对AI训练数据版权问题的进一步关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/953183/the-atlantic-searchable-database-music-ai-training-data" },
   { time: "02:43", tag: "ai", tagText: "AI", text: "诺贝尔化学奖得主约翰·江珀（John Jumper）离开谷歌DeepMind，加入AI初创公司Anthropic。江珀此前担任DeepMind副总裁，因领导AlphaFold项目而获诺贝尔奖。他的加盟被视为Anthropic在AI基础研究领域的重要人才引进。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWxkcHpxVV9XRmJBUXJzN1RTOHYyTGtzTXZQOUQxRXRGQkl6NWFzdmpENkZjUjd1a3oxUmM5Ymt5YzAxdnREZjhlLUhHcFJNa3BlQnZ3dlVoaGFmOHVVcm5UTFBXUXBrUWQxSWs3ejJkRkNaOFN3cTBSajZPel8xT2FTOHpqczltVGF3Z2tGVWxaZXFUUTdoYUcxak4tOGxybHhqcEhWWHQtelFuMVN1UEtINW4?oc=5" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "皮尤研究中心最新研究显示，仅16%的美国人认为AI将对社会产生积极影响，美国民众对AI的乐观情绪显著低于华尔街的狂热。该调查揭示了大众与投资者之间的认知鸿沟。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" },
-  { time: "00:30", tag: "tech", tagText: "科技", text: "6月15日至20日，19家印度初创公司（涵盖AI、深度科技、食品科技、清洁科技、保险科技、健康科技等领域）共获得超4.69亿美元融资。资金来自多家投资机构，显示印度创业生态系统持续活跃。", source: "Instagram", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAyUjlaSlMxZkFCTFJ1TDZJVDJ0WWc4Mnh3UWlvdGF2UXpNT3pleC1vYjFlV2RZT2k0bG1YYlpCQXNXdVd0SVI4SjM2TUVTUEQzM2c?oc=5" },
-  { time: "23:28", tag: "geo", tagText: "地缘", text: "特朗普政府对AI初创公司Anthropic发起最新打击行动，引发对AI生态系统影响的广泛讨论。分析认为此举可能重塑行业竞争格局，并引发谁将从中受益的疑问。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" },
-  { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
-  { time: "22:40", tag: "tech", tagText: "科技", text: "苹果iOS 27将带来除Siri以外的多项实用AI功能，包括更智能的相册、邮件自动摘要、实时翻译增强等，这些功能在WWDC上被Siri的AI升级盖过风头，但对用户日常使用影响更大。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" },
 ];
-const aiBreakingDate = "2026年6月22日 20:22 CST";
+const aiBreakingDate = "2026年6月22日 23:33 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
