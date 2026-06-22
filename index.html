@@ -1618,17 +1618,24 @@
 const fearGreedData = {
   score: 37.26,
   rating: "fear",
-  timestamp: "2026-06-19T00:59:47+00:00",
-  previousClose: 37.51,
-  previous1Week: 35.51,
-  previous1Month: 59.37,
-  previous1Year: 54.29,
-  date: "2026年6月22日 13:23 CST"
+  timestamp: "2026-06-22T12:04:31+00:00",
+  previousClose: 37.26,
+  previous1Week: 41.57,
+  previous1Month: 58.97,
+  previous1Year: 54.51,
+  date: "2026年6月22日 20:22 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:18", tag: "macro", tagText: "宏观", text: "美联储前主席艾伦·格林斯潘去世，享年100岁。他在1987年至2006年间担任美联储主席，历经四任总统，以“美联储式讲话”的模糊艺术闻名，其职业生涯备受赞誉，但金融危机后对其遗产的评价出现重新审视。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/alan-greenspan-former-chairman-of-the-fed-dies-at-age-100.html" },
+  { time: "20:09", tag: "geo", tagText: "地缘", text: "美国副总统万斯表示，美伊在瑞士的谈判取得“重大进展”，伊朗已同意允许国际原子能机构（IAEA）检查人员返回该国。尽管谈判中仍存在“威胁”和“抱怨”，但整体朝积极方向推进。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/ance-iran-ceasefire-talks-iaea-inspectors.html" },
+  { time: "19:56", tag: "macro", tagText: "宏观", text: "市场分析警告，美股IPO管道中聚集了SpaceX、OpenAI等重磅公司，巨额新股发行可能引发类似1929年和2000年的市场崩盘，潜在跌幅或达40%。历史记录显示，发行高峰往往预示着市场顶部。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-40-market-crash-is-lurking-in-the-ipo-pipeline-spacex-and-openai-could-trigger-it-64ae4026" },
+  { time: "19:49", tag: "macro", tagText: "宏观", text: "艾伯维（AbbVie）宣布以109亿美元收购生物技术公司Apogee Therapeutics，后者正在研发一款实验性湿疹（特应性皮炎）药物。此举是艾伯维五年多来最大并购，旨在推动下一代免疫学业务增长。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/abbvie-to-buy-apogee.html" },
+  { time: "19:48", tag: "geo", tagText: "地缘", text: "英国首相基尔·斯塔默宣布辞职，辞去首相和工党领袖职务，触发党内选举新领袖。英国将在10年内迎来第七位首相，政局不确定性加剧。此前美国总统特朗普曾预言斯塔默即将下台。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/keir-starmer-resigns-uk-prime-minister.html" },
+  { time: "19:41", tag: "geo", tagText: "地缘", text: "尽管美伊达成初步停火协议，但霍尔木兹海峡仍面临通行障碍。数百艘油轮在波斯湾外等待海峡完全开放，许多船东对派遣船只持观望态度，担心伊朗与美国未能加强停火协议导致局势反复。", source: "Financial Times", url: "https://www.ft.com/content/9df718a9-8ee3-4d8b-a9ff-a29263d35a88" },
+  { time: "19:26", tag: "tech", tagText: "科技", text: "SpaceX股价在盘前交易中延续跌势，此前该公司于6月12日创纪录IPO后经历大幅上涨，但最近两个完整交易日持续回落，市场情绪降温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/spacex-stock-ipo-rally-selloff.html" },
   { time: "12:50", tag: "geo", tagText: "地缘", text: "英国首相斯塔默面临辞职压力。美国总统特朗普表示，斯塔默因“严重失败”即将辞职。英国政局不确定性加剧。", source: "Financial Times", url: "https://www.ft.com/content/ed96e673-8d46-4dec-aebc-d69863b9e801" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "德国情报机构（BND）寻求摆脱束缚，柏林希望放宽对其监管，作为欧洲减少对美情报依赖的广泛努力的一部分。此举反映欧美信任裂痕加深。", source: "Financial Times", url: "https://www.ft.com/content/50069749-fe38-4a6e-80d4-fe84d53f94a1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "爱尔兰总理米歇尔·马丁表示，今年内可以敲定欧盟资本市场联盟协议，称存在“落地的方式”。该协议旨在深化欧盟资本市场一体化，降低对伦敦金融城的依赖。", source: "Financial Times", url: "https://www.ft.com/content/022cb596-b92a-4fe3-838d-1e536cb95a7d" },
@@ -1642,18 +1649,16 @@ const breakingNews = [
   { time: "04:19", tag: "geo", tagText: "地缘", text: "菲律宾国防部长警告，中国可能试图完全控制黄岩岛（斯卡伯勒浅滩），称中国在相关海域的军事活动显著加强，局势令人担忧。", source: "Financial Times", url: "https://www.ft.com/content/d5191b00-dccb-465e-8afb-e61cc8260f93" },
   { time: "03:31", tag: "macro", tagText: "宏观", text: "爱尔兰建材集团CRH接近达成其史上最大收购，拟以约70亿美元收购达拉斯建筑公司Arcosa。该交易将显著扩大CRH在美国基础设施领域的布局。", source: "Financial Times", url: "https://www.ft.com/content/6c95c41b-7bf1-4adf-84e9-08356f8a4981" },
   { time: "02:00", tag: "macro", tagText: "宏观", text: "美联储新任主席沃什推动取消前瞻性指引，包括不再提供利率点阵图。投资者警告此举可能推高美国借贷成本，增加市场波动性。沃什倾向于通过加息威胁而非实际加息来管理市场预期。", source: "Financial Times", url: "https://www.ft.com/content/6a9330ad-a2db-494b-bf61-7dd417ab9c9a" },
-  { time: "02:00", tag: "geo", tagText: "地缘", text: "全球冲突刺激国防科技领域风险投资激增，2026年至今融资额已超120亿美元，超过2025年全年。快速增长的估值引发市场对泡沫周期的担忧。", source: "Financial Times", url: "https://www.ft.com/content/cb535f43-d2b7-4d14-82fe-abdd14765dfe" },
-  { time: "23:00", tag: "geo", tagText: "地缘", text: "美国与欧洲之间的相互“背刺”叙事正在加深裂痕。分析指出，从伊朗到格陵兰的一系列争端中，美欧双方都认为对方抛弃了自己，这种信任危机可能导致北约永久性解体。", source: "Financial Times", url: "https://www.ft.com/content/4a9be9b8-4cac-49d5-8e08-cb750007b2db" },
-  { time: "22:07", tag: "macro", tagText: "宏观", text: "提高最低工资曾是民主党的政治赢家，但近期多项提案遭遇失败，反映出经济放缓和高通胀正在削弱公众支持，其政治势头面临阻力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/raise-minimum-wage-inflation-politics.html" },
-  { time: "22:00", tag: "tech", tagText: "科技", text: "美光科技即将发布财报，利润增长率接近1000%。分析师指出，其增长几乎全部来自纯利润，对标普500指数有重要影响。市场密切关注这一关键事件。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microns-earnings-are-a-must-watch-market-event-with-profit-growth-approaching-1-000-78ec4549" },
-  { time: "21:33", tag: "AI", tagText: "AI", text: "马斯克的SpaceX正押注于太空AI数据中心。尽管公众不愿在地球建设AI数据中心，但太空数据中心的经济可行性存疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/do-space-based-ai-data-centers-make-economic-sense.html" },
-  { time: "21:30", tag: "crypto", tagText: "加密", text: "数据显示，共和党人购买加密货币的比例远高于民主党人。分析指出党派分歧对加密市场采用产生显著影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/republicans-democrats-crypto-bitcoin-use.html" },
-  { time: "20:53", tag: "crypto", tagText: "加密", text: "摩根大通警告称，比特币的噩梦正在成为现实，价格崩盘担忧加剧。市场面临多重压力。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPbVBySFNZSkg1N2ZieGpNU0hWUnFTX2M3Y21Td2JGc0VjZTVfWW8tVWJVTU44Sjk0ZGtiQUZQR0VHWW8yWTlSdG9sWUlQNVlGZnU2ZEhpQV96bzR4RDZXUUhrQm9uY1RVYlVYWUxJNWpCQ1BoRlVseUlkMkJrdnRuTGptZDNTSWQtWHdsTW43RnhEZkQ2ZDJkZ2I2YmVZanFJdHNSbDk1bGNYNFJtbU4zYVh4cjRZM1ZrZy1XY2NyM0lrTUM2bERRcnRXN1p5d0c4S0gtZVJ0ODNxelcwSEs3SA" },
 ];
-const breakingDate = "2026年6月22日 13:23 CST";
+const breakingDate = "2026年6月22日 20:22 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:00", tag: "tech", tagText: "科技", text: "2026年机器人初创公司风险投资飙升至创纪录水平。据Crunchbase News报道，随着AI与自动化需求激增，该领域融资总额创下历史新高，资本正加速涌入机器人赛道。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQ0xkRjczYTRZM09iYi1zODBtVkRvd0xoODVPYzFEUmk1TzBCVUh5OVd3QW1rR3U1eUtZVWsyWXF0ZVVpdUxnMGxURUphXzQxMDdvc09ycjJkN29GSHNnUEN3MUZweGVQRWF2azhKSkYtbEdfMUN1VEtDT0ZFSzMzd0dRZWg?oc=5" },
+  { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
+  { time: "16:21", tag: "ai", tagText: "AI", text: "百度加速推进全栈AI能力建设，英伟达芯片获取渠道扩大。Crypto Briefing报道称，随着出口限制缓和，百度计划利用更充裕的英伟达AI芯片，增强从底层算力到上层模型的完整AI技术栈。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE1QeWM3dEloWU1NSkF4RnlwR2poQndheHlUNHZRM0hQWGdwbHM1N2ZpbTVGN1pIT01WSFNyS2tGc3pSYnVYUWVlN2YyOGZwS1Vjc0VXMUVwZGpKdEVqVEFaQmtzM3UxLVlMdGk0V2NtS19Gb2tT?oc=5" },
+  { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
+  { time: "15:10", tag: "ai", tagText: "AI", text: "AI突破使乳腺癌核磁共振扫描更快、更清晰、更易获取。Ynetnews报道，新型AI算法可在缩短扫描时间的同时提升影像分辨率，有望降低检查门槛，惠及更多患者。", source: "Ynetnews", url: "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iNTJoRGNsQjl3WUdaeHZnWkhCWlF5UkpnczNNMGJxVHRXNWtXc2hRRmZQSUFWVDBYcGlab0o3eFU1bzdXaG9zQ2JoZkxSekFRa0h2anAxSDBQdjFtWGp6ZXhIYjNPejRpV0E?oc=5" },
   { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
   { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
   { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "23:28", tag: "geo", tagText: "地缘", text: "特朗普政府对AI初创公司Anthropic发起最新打击行动，引发对AI生态系统影响的广泛讨论。分析认为此举可能重塑行业竞争格局，并引发谁将从中受益的疑问。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" },
   { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
   { time: "22:40", tag: "tech", tagText: "科技", text: "苹果iOS 27将带来除Siri以外的多项实用AI功能，包括更智能的相册、邮件自动摘要、实时翻译增强等，这些功能在WWDC上被Siri的AI升级盖过风头，但对用户日常使用影响更大。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" },
-  { time: "22:15", tag: "tech", tagText: "科技", text: "亚马逊MGM工作室放弃发行由卢卡·瓜达尼诺执导、安德鲁·加菲尔德主演的Sam Altman传记片《Artificial》。该片讲述2023年OpenAI CEO Sam Altman在五天内被罢免又复职的戏剧性事件。项目被砍原因未公布，但业内猜测可能与内容敏感度或商业考量有关。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952906/sam-altman-film-artificial-openai-amazon-mgm-dropped" },
-  { time: "21:25", tag: "ai", tagText: "AI", text: "《环球邮报》刊文指出，英伟达最重要的产品并非芯片，而是其软件生态系统（如CUDA）。文章认为，英伟达通过建立强大的开发者平台和硬件-软件协同优势，形成了难以复制的护城河，这比单纯销售芯片更具长期价值。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOOWdtWnF3UmptVnhGNEJVYnlNU2psM3FZMmtmWUVEWTdtNDlQNnRmczdmX1N2aEYtczBtckpxeXhha1RqbDRGcTNDRllKdHZUbXU3b2dudm9nWURwZTIySWVtTHh0TVdRWEtKT05ucmc3TjRiYWNEejBsd181dFpZTjhlZTUwWkpFV2VOWWR6U3JsMVpzVVRTdlVoUXg3blFGRlN0VmJCNHBZX19FLUJwR2ZGSWhkcVdlMU9HcE9MLUxmYldvM01QLU04cDlVVDZXVndOSG5ySnJkdw?oc=5" },
-  { time: "21:22", tag: "ai", tagText: "AI", text: "欧盟一项过于复杂的法律条款可能迫使英伟达退出欧盟AI项目。该条款涉及AI领域的外国补贴审查，其复杂性可能导致英伟达无法参与欧盟资助的AI研究项目，进一步加剧欧美科技监管摩擦。", source: "Euractiv", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYUNoS0VhY2tfaDIyaDVZdmJMbHBkZE9aTnJzQ05Od21Xb0pSTG5FTkZkX3dLSWVDcFFyUlZPOVZvaGJfelltdXByU1pHLXhCWDNyUHZxVldyU285ZlA1SnBPc3E0bExCWFh6dHdwMUtWTjkzb3RDalhIUzlkZS1ZRzJjQUMzdl9nckNGMWl4ME9HYV9iUDBYRTFFQkwyQnh1a3JEOHRIY3Y?oc=5" },
-  { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
-  { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
 ];
-const aiBreakingDate = "2026年6月22日 13:23 CST";
+const aiBreakingDate = "2026年6月22日 20:22 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
