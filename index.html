@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 34.74,
   rating: "fear",
-  timestamp: "2026-06-22T20:55:12+00:00",
+  timestamp: "2026-06-22T23:20:31+00:00",
   previousClose: 37.26,
   previous1Week: 41.57,
   previous1Month: 58.97,
   previous1Year: 54.51,
-  date: "2026年6月23日 05:11 CST"
+  date: "2026年6月23日 07:40 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:28", tag: "macro", tagText: "宏观", text: "北京再次召集科技高管开会，但与2021年不同，由于通缩压力和中美科技竞争加剧，政府此次行动更为谨慎，政策空间受限，市场担忧程度低于此前。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/china-tech-crackdown-antitrust-tripcom-meituan-food-delivery-anti-involution-deflation-.html" },
+  { time: "06:43", tag: "macro", tagText: "宏观", text: "罗素2000指数收于3000点，创历史新高。该指数涵盖小盘股，标志着市场广度改善，投资者从大型科技股转向周期性及价值型股票。", source: "TheStreet", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbklzbHlQTE9kd3R3MXNMVGF3RmtzZWdBNS1hSzRBVkFxazdfRmRUSHFOcFp2dHZqQ00zSG9vMG9MMlRIM2pqYlpFUFBBcXlIZnN1eHFkUkNLaVFkOWlJQVBwbGcxa1ZhNVlVWmNBb2NNLWpWMU1ZSklkVlZDdDh5aWRjSjktVlcwWlZmODZ1RzAzRUdibEhYcHRVbkFfR1FPaWhBMEhhcENJb0dZ?oc=5" },
+  { time: "06:18", tag: "tech", tagText: "科技", text: "一辆特斯拉Model 3在德州撞入民宅，致一名76岁老人死亡。司机声称使用特斯拉部分自动驾驶系统。美国国家公路交通安全管理局（NHTSA）已启动联邦调查。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/tesla-nhtsa-model-3-crash-autopilot-katy-texas.html" },
+  { time: "06:18", tag: "macro", tagText: "宏观", text: "市场观察人士警告，SpaceX和OpenAI等巨型IPO可能引发类似1929年和2000年规模的股市崩盘，潜在跌幅达40%。巨额新股发行将抽干市场流动性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-40-market-crash-is-lurking-in-the-ipo-pipeline-spacex-and-openai-could-trigger-it-64ae4026?mod=mw_rss_topstories" },
   { time: "04:53", tag: "tech", tagText: "科技", text: "美光科技与人工智能公司Anthropic签署存储与内存供应协议，推动股价上涨。该合作凸显AI算力扩张对上游芯片需求的拉动，美光成为继英伟达后又一受益于AI浪潮的芯片厂商。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microns-stock-momentum-builds-as-the-company-inks-a-new-anthropic-partnership-484e3845?mod=mw_rss_topstories" },
   { time: "04:50", tag: "tech", tagText: "科技", text: "Salesforce股价连续第14个交易日下跌，创历史最长连跌纪录。投资者对其AI业务进展缺乏信心，质疑公司能否在AI时代实现自我颠覆。", source: "MarketWatch", url: "https://www.marketwatch.com/story/salesforces-stock-extends-record-losing-streak-can-the-company-disrupt-itself-8402d62c?mod=mw_rss_topstories" },
   { time: "04:40", tag: "macro", tagText: "宏观", text: "费城半导体指数今年已翻倍，但英伟达表现却在该指数成分股中垫底。分析师指出，英伟达体量过大，超预期难度增加，芯片行业内部轮动明显。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-major-chip-index-has-doubled-this-year-despite-nvidia-ranking-dead-last-f049eb5e?mod=mw_rss_topstories" },
@@ -1645,18 +1649,17 @@ const breakingNews = [
   { time: "23:24", tag: "macro", tagText: "宏观", text: "中国经济增长引擎出现奇特新火花：消费者转而购买‘感觉’来应对房地产崩盘。玩具精灵、机器人警察等情感消费产品成为经济亮点，折射出中国经济分裂的真实状态。", source: "MarketWatch", url: "https://www.marketwatch.com/story/chinas-new-economic-drivers-a-sad-toy-elf-and-a-robot-police-force-8759daf9" },
   { time: "23:13", tag: "geo", tagText: "地缘", text: "英国首相斯塔默宣布辞职，工党领袖候选人安迪·伯纳姆成为焦点。投资者关注英国国债、英镑及下一任财政大臣人选。分析师警告若伯纳姆接任，英国长期借贷成本可能上升，潜在债务危机风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/keir-starmer-andy-burnham-uk-markets.html" },
   { time: "23:13", tag: "tech", tagText: "科技", text: "Meta旗下WhatsApp负责人威尔·卡思卡特将卸任，由印度金融科技公司CRED创始人库纳尔·沙阿接替。此举凸显Meta深耕印度市场及金融科技领域的战略意图。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/meta-kunal-shah-whatsapp-will-cathcart.html" },
-  { time: "23:09", tag: "geo", tagText: "地缘", text: "美国财政部授权伊朗石油销售60天，伊朗超级油轮已重新开启应答器驶离波斯湾。国际油价应声下跌，WTI原油跌破74美元/桶。市场预期更多伊朗原油将涌入本已紧张的全球供应。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/treasury-iran-oil-sales.html" },
-  { time: "23:04", tag: "tech", tagText: "科技", text: "电动汽车制造商Lucid宣布裁减约18%美国员工，并即时取消首席运营官马克·温特霍夫职位，作为成本削减计划的一部分。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/lucid-layoffs-evs.html" },
-  { time: "23:00", tag: "tech", tagText: "科技", text: "SpaceX在创纪录IPO仅两周后便寻求债券市场融资，同时与开源AI初创公司Reflection签署价值高达63亿美元的算力协议。SpaceX将其Colossus数据中心转为商用算力平台，此前已与Anthropic、谷歌等达成合作。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/spacex-ai-colossus-data-center-reflection.html" },
-  { time: "20:18", tag: "macro", tagText: "宏观", text: "美联储前主席艾伦·格林斯潘去世，享年100岁。他在1987年至2006年间担任美联储主席，历经四任总统，以“美联储式讲话”的模糊艺术闻名，其职业生涯备受赞誉，但金融危机后对其遗产的评价出现重新审视。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/alan-greenspan-former-chairman-of-the-fed-dies-at-age-100.html" },
 ];
-const breakingDate = "2026年6月23日 05:11 CST";
+const breakingDate = "2026年6月23日 07:40 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:24", tag: "ai|tech", tagText: "AI|科技", text: "英伟达发布Rubin架构全液冷数据中心参考设计，声称能大幅降低水耗。但批评指出，此举仅减少数据中心内部用水，未能解决AI最大用水来源——为数据中心供电的化石燃料电厂的冷却用水问题，AI的水资源挑战依然严峻。", source: "The Verge", url: "https://www.theverge.com/tech/954139/nvidia-data-centers-rubin-liquid-cooling" },
+  { time: "04:53", tag: "ai", tagText: "AI", text: "AI领域出现‘Loopy’新范式：授权一群AI代理在后台持续无休止地自主工作，将Agentic AI推向新阶段。该模式强调‘循环’特性，代理可长期运行、相互协作，引发对自动化深度与治理边界的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/" },
   { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
   { time: "04:13", tag: "ai", tagText: "AI", text: "AI芯片初创公司Groq确认完成6.5亿美元融资，并在英伟达放弃200亿美元非收购性人才交易后重组管理层。Groq将加大其云业务投入，并招聘新高管。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/ai-chipmaker-groq-confirms-650m-raise-re-staffs-after-nvidias-20b-not-acqui-hire-deal/" },
+  { time: "04:00", tag: "ai", tagText: "AI", text: "AI虚拟装修工具在租房市场泛滥，房东利用生成式AI将破旧房间渲染成理想家居，导致租客在线下看到真实房源后大失所望。该现象加剧了纽约等城市的租房困境，消费者权益团体呼吁监管虚假房源图片。", source: "The Verge", url: "https://www.theverge.com/report/953888/ai-virtual-staging-real-estate-apartment-listings" },
   { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
   { time: "03:16", tag: "tech", tagText: "科技", text: "AMD在用户强烈反对后，恢复消费级CPU中的内存加密功能。此前AMD移除该功能被批评为迫使消费者购买更昂贵的企业级芯片。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/following-user-outcry-amd-reinstates-memory-encryption-in-consumer-cpus/" },
   { time: "03:08", tag: "macro", tagText: "宏观", text: "英伟达股价承压。Kalshi预测市场交易员押注AI芯片价格将下跌，同时英特尔等竞争对手芯片股逆势上涨，市场开始分化。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTFctMnQ3aTJLdkZoUlZIbE9razlGMndPTzJ0Zk9jakwyd2FXVEV3NFFRU2hUazlLTk5IY3dzQTRUaFVRMFFRX2pDX2xrU2szMTBIN2E0Z0RERWZtY0I5d2JSQXdrUmN1NnhxbGlkUUJ6NFVBaHNLTzVCQ3NQZVFoZFNkZnN3aU9tMTN4RXBoWGIxem9aV3IzaWdNYW1lclRMYTJlUDdrdkNwZ2pqeVZZ0gG0AUFVX3lxTE5ZaDY5Rm9MQUYya0U0eHlGOHE5MXA3YmgyaUVfVDFubWtvZVB2Sk5KYV9pT0hJWklMalA1WEd4WVdVNjM1aVVfdXY5UVkxYi11a0ZwNFZ1c0hOOGRVSElFS0YzekMxQmFhQVRIMzZMa0VqMFowel80VUV3RGpnLUdibGoyY1pvZkFLdmQ1VGRpdkdEWEtHalFfNHVRR2pLX2VTdDg0TkhPS3pxNlF3ZlhWN2k5ZQ?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "20:50", tag: "ai", tagText: "AI", text: "AI初创公司Odyssey获得3.1亿美元融资，通过亚马逊支持成为独角兽。本轮融资由多家投资者参与，Odyssey致力于开发AI驱动的自动化平台，进一步拓展其技术应用场景。", source: "AI CERTs", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaWNOQ1BXY3Z6YlAxRVc0S2gyWDVpR2llNThFQUdQRjVKdjNJSkRnUlJNZDgyUDhZWUFjQmtTNG5UNXUzMTc2WjU3OXRBb2dTZl9zMG9rWWhHZWNHMUl0X2lPOWpDcFpWbUxFOGV1Ym9mSURtSE5qUjJmelZCLVp0cVpPbDNWY1pkOUphbFNfQQ?oc=5" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "2026年机器人初创公司风险投资飙升至创纪录水平。据Crunchbase News报道，随着AI与自动化需求激增，该领域融资总额创下历史新高，资本正加速涌入机器人赛道。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQ0xkRjczYTRZM09iYi1zODBtVkRvd0xoODVPYzFEUmk1TzBCVUh5OVd3QW1rR3U1eUtZVWsyWXF0ZVVpdUxnMGxURUphXzQxMDdvc09ycjJkN29GSHNnUEN3MUZweGVQRWF2azhKSkYtbEdfMUN1VEtDT0ZFSzMzd0dRZWg?oc=5" },
   { time: "18:57", tag: "ai", tagText: "AI", text: "欧洲知名风投Seedcamp关闭其史上最大基金，规模达3.2亿美元，重点押注物理AI（Physical AI）领域。该基金计划在未来十年内投资于将AI与机器人、硬件结合的初创公司，推动AI技术向实体世界延伸。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLUpHRlU0YkMzUnZiUGV6UUF3M24yX1poazY1RUx3WFA5ZUtpTVdzdzNpLWJLSE9FMDljWllEdGF5SEZwMllOTUJwYjVNdjZnODRtMDZabWtfVFFsSl9pY1dsNkhSUW9mYm9aTkdUekZMZVdNTFdpQXBvZUFXa3NQelIxYWMtUUd5ZXpWLVZJVjlkeFJ6ckJqNDA1NEQ2UERGZUVSV2hjZ3p6WS1WaFhaS0c3ZWlJYko2bkgw?oc=5" },
-  { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
-  { time: "16:21", tag: "ai", tagText: "AI", text: "百度加速推进全栈AI能力建设，英伟达芯片获取渠道扩大。Crypto Briefing报道称，随着出口限制缓和，百度计划利用更充裕的英伟达AI芯片，增强从底层算力到上层模型的完整AI技术栈。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE1QeWM3dEloWU1NSkF4RnlwR2poQndheHlUNHZRM0hQWGdwbHM1N2ZpbTVGN1pIT01WSFNyS2tGc3pSYnVYUWVlN2YyOGZwS1Vjc0VXMUVwZGpKdEVqVEFaQmtzM3UxLVlMdGk0V2NtS19Gb2tT?oc=5" },
-  { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
 ];
-const aiBreakingDate = "2026年6月23日 05:11 CST";
+const aiBreakingDate = "2026年6月23日 07:40 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
