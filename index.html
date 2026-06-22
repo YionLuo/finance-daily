@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 35.11,
+  score: 35.17,
   rating: "fear",
-  timestamp: "2026-06-22T15:26:05+00:00",
+  timestamp: "2026-06-22T17:44:22+00:00",
   previousClose: 37.26,
   previous1Week: 41.57,
   previous1Month: 58.97,
   previous1Year: 54.51,
-  date: "2026年6月22日 23:33 CST"
+  date: "2026年6月23日 01:46 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:17", tag: "ai", tagText: "AI", text: "Alphabet (谷歌母公司) 因两位顶尖AI研究员（包括一位诺贝尔奖得主）离职加入竞争对手实验室，股价暴跌，单日市值蒸发约2690亿美元，创一年来最大跌幅。市场担忧其在AI人才争夺战中失利。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/alphabet-goog-stock-ai-departures.html" },
+  { time: "00:47", tag: "macro", tagText: "宏观", text: "卡特彼勒股价突破1000美元大关，创历史新高，成为道指中仅有的两只千元股之一。工业股持续强劲上涨，反映出市场对基建和制造业复苏的乐观情绪。", source: "MarketWatch", url: "https://www.marketwatch.com/story/caterpillars-stock-hits-a-milestone-as-roaring-industrials-rally-sweeps-up-wall-street-391057f7" },
+  { time: "00:24", tag: "ai", tagText: "AI", text: "超微电脑 (Super Micro) 股价大涨，创一年来最佳表现，得益于与英伟达的深化合作伙伴关系。该公司作为AI服务器供应商，市场需求持续旺盛。", source: "MarketWatch", url: "https://www.marketwatch.com/story/super-micros-stock-is-seeing-its-best-run-in-a-year-thanks-to-nvidia-partnership-f619e58e" },
+  { time: "00:19", tag: "geo", tagText: "地缘", text: "美国参议院预计本周推进一项全面的住房法案，旨在限制私募股权公司购买独栋住宅，以增加供应并提高住房可负担性。众议院也将同步推动该法案。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/affordable-housing-bill-private-equity-single-family-homes.html" },
+  { time: "23:59", tag: "geo", tagText: "地缘", text: "五眼联盟发布警告称，AI驱动的网络威胁可能在未来几个月内成为现实，西方政府和企业在AI领域的领先优势可能不会持久。各国需加速防御部署。", source: "Financial Times", url: "https://www.ft.com/content/df50c416-9308-46cc-af14-8f069bba9aa6" },
   { time: "23:24", tag: "macro", tagText: "宏观", text: "中国经济增长引擎出现奇特新火花：消费者转而购买‘感觉’来应对房地产崩盘。玩具精灵、机器人警察等情感消费产品成为经济亮点，折射出中国经济分裂的真实状态。", source: "MarketWatch", url: "https://www.marketwatch.com/story/chinas-new-economic-drivers-a-sad-toy-elf-and-a-robot-police-force-8759daf9" },
   { time: "23:13", tag: "geo", tagText: "地缘", text: "英国首相斯塔默宣布辞职，工党领袖候选人安迪·伯纳姆成为焦点。投资者关注英国国债、英镑及下一任财政大臣人选。分析师警告若伯纳姆接任，英国长期借贷成本可能上升，潜在债务危机风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/keir-starmer-andy-burnham-uk-markets.html" },
   { time: "23:13", tag: "tech", tagText: "科技", text: "Meta旗下WhatsApp负责人威尔·卡思卡特将卸任，由印度金融科技公司CRED创始人库纳尔·沙阿接替。此举凸显Meta深耕印度市场及金融科技领域的战略意图。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/meta-kunal-shah-whatsapp-will-cathcart.html" },
@@ -1644,16 +1649,14 @@ const breakingNews = [
   { time: "19:26", tag: "tech", tagText: "科技", text: "SpaceX股价在盘前交易中延续跌势，此前该公司于6月12日创纪录IPO后经历大幅上涨，但最近两个完整交易日持续回落，市场情绪降温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/spacex-stock-ipo-rally-selloff.html" },
   { time: "12:50", tag: "geo", tagText: "地缘", text: "英国首相斯塔默面临辞职压力。美国总统特朗普表示，斯塔默因“严重失败”即将辞职。英国政局不确定性加剧。", source: "Financial Times", url: "https://www.ft.com/content/ed96e673-8d46-4dec-aebc-d69863b9e801" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "德国情报机构（BND）寻求摆脱束缚，柏林希望放宽对其监管，作为欧洲减少对美情报依赖的广泛努力的一部分。此举反映欧美信任裂痕加深。", source: "Financial Times", url: "https://www.ft.com/content/50069749-fe38-4a6e-80d4-fe84d53f94a1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "爱尔兰总理米歇尔·马丁表示，今年内可以敲定欧盟资本市场联盟协议，称存在“落地的方式”。该协议旨在深化欧盟资本市场一体化，降低对伦敦金融城的依赖。", source: "Financial Times", url: "https://www.ft.com/content/022cb596-b92a-4fe3-838d-1e536cb95a7d" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "贝恩资本正在利用AI“氛围编程”（vibecoding）快速复制目标软件公司的产品，以评估其竞争壁垒。私募股权公司通过AI生成仿制品来测试收购标的的护城河，这一做法引发业界关注。", source: "Financial Times", url: "https://www.ft.com/content/e5bac4d1-b1f8-43a4-bd54-b182d5357af0" },
-  { time: "11:45", tag: "geo", tagText: "地缘", text: "中国对数十家美国企业实施贸易限制，以报复五角大楼更新涉华军事企业黑名单（1260H清单）。中方宣布加强出口管制和采购限制，中美科技对抗进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/china-trade-curbs-us-companies-export-controls-procurement-exclusion-pentagon-list-.html" },
-  { time: "11:39", tag: "macro", tagText: "宏观", text: "中国股市接近熊市区间，阿里巴巴、小米等权重股拖累香港恒生指数走低。市场情绪脆弱，投资者担忧经济复苏乏力及中美紧张局势升级。", source: "Moneycontrol", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcXRPUFUyMVJqRXJHUTVySXZqNS1QWVF2aHh0MlRzWHJiVUd5NGNfcE1iVmNtejE4S3BuQXdpVnpOaHFfcThjQXFyVF9lWHgzbnNhaGpfZkNSbGVmV05YTmthRHkxQUo4aG1TMEFWWkZkN2pCSFNHNno1QnpGTjhSblJBUHpEazNfZk1neWdsSXZhb2F0alBMSnVmdGNac3BxSG0tTUVweDZEMkRPNFI4bnhQVkd0Y2VqY1ZvTkhHR0RBWHc1bXc4UlJ5RC1vX2JZWkFCaXdB0gHbAUFVX3lxTE9uNkMzQ3daTXBEMVdSVmpuYU1UQmRySGVWZXlOLVFlekpSdWNjczAxRHlOWXMzS1duMnQ0Y25FVnAwdGdTZjR0aFNvYUI1SkZ1OW8xVHpMRE5hejlsblZrVjBQZFB5WmhxVUMyT2hXLWNwRHF2bDlBcUM2a1ZlMTY2OWl4OUtaQWZWcDlpZnNRdjZBMFVZNE1xeWdWOWVQN0RSTVV2QmJXemhlU212MS1CNzdQcmdHVXhqcHlzOXB5ZTJSN1RVSE1pRDYtRDFEWnczMmRZZXZVRk1hOA?oc=5" },
-  { time: "07:47", tag: "geo", tagText: "地缘", text: "哥伦比亚总统选举结果出炉，右翼民粹主义者“老虎”阿韦拉尔多·德拉埃斯普列利亚以微弱优势击败左翼候选人。这位特朗普的崇拜者获胜，标志拉美政治格局进一步右转。", source: "Financial Times", url: "https://www.ft.com/content/49294716-56be-40a4-ba31-b4e376ccb47f" },
 ];
-const breakingDate = "2026年6月22日 23:33 CST";
+const breakingDate = "2026年6月23日 01:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:37", tag: "ai", tagText: "AI", text: "SMH ETF（半导体ETF）资金流向显示，投资者正将AI芯片交易重心从英伟达转移至其他标的，市场关注点开始扩散。", source: "TechStock²", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ2NiRjdtdGF0UWZIUHR3QU1Xc2p3VXpIY1FRdG9yaXlTX2ljZnVsS1BGTDVJQ3dabHJPWFpwTTlnb3hMMVdJMjM2QUl4d2RjUXBEZWw2a0VGZG1ZZVhRWUEyY2g5M1FTSl9QNmxya3Y5SGZUSEs3ZXMtejhoaHZzQ2JMX2J0clFi?oc=5" },
+  { time: "01:31", tag: "tech", tagText: "科技", text: "亚马逊开始向印度用户发送邮件邀请，测试全新AI助手Alexa+，该版本已支持印地语，将进一步拓展印度市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/amazon-is-testing-alexa-in-india-with-hindi-support/" },
+  { time: "00:51", tag: "ai", tagText: "AI", text: "SpaceX与开源AI实验室Reflection AI签署计算服务协议，后者将从2026年7月1日起至2029年，每月支付1.5亿美元，使用SpaceX Colossus 2数据中心内的英伟达最新GB300 AI芯片及配套硬件。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/" },
   { time: "23:28", tag: "geo", tagText: "地缘", text: "特朗普政府对AI初创公司Anthropic发起最新打击行动，引发对AI生态系统影响的广泛讨论。分析认为此举可能重塑行业竞争格局，并引发谁将从中受益的疑问。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" },
   { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
   { time: "22:40", tag: "tech", tagText: "科技", text: "苹果iOS 27将带来除Siri以外的多项实用AI功能，包括更智能的相册、邮件自动摘要、实时翻译增强等，这些功能在WWDC上被Siri的AI升级盖过风头，但对用户日常使用影响更大。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
   { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
-  { time: "03:41", tag: "tech", tagText: "科技", text: "苹果修复Beats Studio Buds高严重性窃听漏洞，该漏洞12个月前被披露，影响多个厂商产品。", source: "Ars Technica", url: "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/" },
-  { time: "02:46", tag: "ai", tagText: "AI", text: "《大西洋月刊》创建可搜索数据库，公开了用于训练AI模型的四个音乐数据集，其中两个数据集规模庞大，各含1200万首音乐。公众可通过该数据库检索AI训练所使用的音乐作品，此举将引发对AI训练数据版权问题的进一步关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/953183/the-atlantic-searchable-database-music-ai-training-data" },
-  { time: "02:43", tag: "ai", tagText: "AI", text: "诺贝尔化学奖得主约翰·江珀（John Jumper）离开谷歌DeepMind，加入AI初创公司Anthropic。江珀此前担任DeepMind副总裁，因领导AlphaFold项目而获诺贝尔奖。他的加盟被视为Anthropic在AI基础研究领域的重要人才引进。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWxkcHpxVV9XRmJBUXJzN1RTOHYyTGtzTXZQOUQxRXRGQkl6NWFzdmpENkZjUjd1a3oxUmM5Ymt5YzAxdnREZjhlLUhHcFJNa3BlQnZ3dlVoaGFmOHVVcm5UTFBXUXBrUWQxSWs3ejJkRkNaOFN3cTBSajZPel8xT2FTOHpqczltVGF3Z2tGVWxaZXFUUTdoYUcxak4tOGxybHhqcEhWWHQtelFuMVN1UEtINW4?oc=5" },
 ];
-const aiBreakingDate = "2026年6月22日 23:33 CST";
+const aiBreakingDate = "2026年6月23日 01:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
