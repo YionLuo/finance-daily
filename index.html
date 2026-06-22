@@ -1623,12 +1623,19 @@ const fearGreedData = {
   previous1Week: 35.51,
   previous1Month: 59.37,
   previous1Year: 54.29,
-  date: "2026年6月22日 07:26 CST"
+  date: "2026年6月22日 13:23 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:50", tag: "geo", tagText: "地缘", text: "英国首相斯塔默面临辞职压力。美国总统特朗普表示，斯塔默因“严重失败”即将辞职。英国政局不确定性加剧。", source: "Financial Times", url: "https://www.ft.com/content/ed96e673-8d46-4dec-aebc-d69863b9e801" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "德国情报机构（BND）寻求摆脱束缚，柏林希望放宽对其监管，作为欧洲减少对美情报依赖的广泛努力的一部分。此举反映欧美信任裂痕加深。", source: "Financial Times", url: "https://www.ft.com/content/50069749-fe38-4a6e-80d4-fe84d53f94a1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "爱尔兰总理米歇尔·马丁表示，今年内可以敲定欧盟资本市场联盟协议，称存在“落地的方式”。该协议旨在深化欧盟资本市场一体化，降低对伦敦金融城的依赖。", source: "Financial Times", url: "https://www.ft.com/content/022cb596-b92a-4fe3-838d-1e536cb95a7d" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "贝恩资本正在利用AI“氛围编程”（vibecoding）快速复制目标软件公司的产品，以评估其竞争壁垒。私募股权公司通过AI生成仿制品来测试收购标的的护城河，这一做法引发业界关注。", source: "Financial Times", url: "https://www.ft.com/content/e5bac4d1-b1f8-43a4-bd54-b182d5357af0" },
+  { time: "11:45", tag: "geo", tagText: "地缘", text: "中国对数十家美国企业实施贸易限制，以报复五角大楼更新涉华军事企业黑名单（1260H清单）。中方宣布加强出口管制和采购限制，中美科技对抗进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/china-trade-curbs-us-companies-export-controls-procurement-exclusion-pentagon-list-.html" },
+  { time: "11:39", tag: "macro", tagText: "宏观", text: "中国股市接近熊市区间，阿里巴巴、小米等权重股拖累香港恒生指数走低。市场情绪脆弱，投资者担忧经济复苏乏力及中美紧张局势升级。", source: "Moneycontrol", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcXRPUFUyMVJqRXJHUTVySXZqNS1QWVF2aHh0MlRzWHJiVUd5NGNfcE1iVmNtejE4S3BuQXdpVnpOaHFfcThjQXFyVF9lWHgzbnNhaGpfZkNSbGVmV05YTmthRHkxQUo4aG1TMEFWWkZkN2pCSFNHNno1QnpGTjhSblJBUHpEazNfZk1neWdsSXZhb2F0alBMSnVmdGNac3BxSG0tTUVweDZEMkRPNFI4bnhQVkd0Y2VqY1ZvTkhHR0RBWHc1bXc4UlJ5RC1vX2JZWkFCaXdB0gHbAUFVX3lxTE9uNkMzQ3daTXBEMVdSVmpuYU1UQmRySGVWZXlOLVFlekpSdWNjczAxRHlOWXMzS1duMnQ0Y25FVnAwdGdTZjR0aFNvYUI1SkZ1OW8xVHpMRE5hejlsblZrVjBQZFB5WmhxVUMyT2hXLWNwRHF2bDlBcUM2a1ZlMTY2OWl4OUtaQWZWcDlpZnNRdjZBMFVZNE1xeWdWOWVQN0RSTVV2QmJXemhlU212MS1CNzdQcmdHVXhqcHlzOXB5ZTJSN1RVSE1pRDYtRDFEWnczMmRZZXZVRk1hOA?oc=5" },
+  { time: "07:47", tag: "geo", tagText: "地缘", text: "哥伦比亚总统选举结果出炉，右翼民粹主义者“老虎”阿韦拉尔多·德拉埃斯普列利亚以微弱优势击败左翼候选人。这位特朗普的崇拜者获胜，标志拉美政治格局进一步右转。", source: "Financial Times", url: "https://www.ft.com/content/49294716-56be-40a4-ba31-b4e376ccb47f" },
   { time: "07:00", tag: "macro", tagText: "宏观", text: "受美伊和平谈判不确定性及通胀数据即将公布影响，美股期货周日晚间下跌，标普500、纳斯达克、道琼斯期货均走低。市场关注美国与伊朗在瑞士的紧张谈判以及即将发布的美联储青睐通胀指标，油价上涨加剧通胀担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/stock-market-today-live-updates.html" },
   { time: "06:35", tag: "macro", tagText: "宏观", text: "高盛警告称，由于市场杠杆水平上升，可能引发约1650亿美元的股票抛售。分析师指出，对冲基金仓位调整或导致短期剧烈波动。", source: "BeInCrypto via Yahoo Finance", url: "https://finance.yahoo.com/markets/stocks/articles/165-billion-stock-selloff-looms-223539994.html" },
   { time: "05:00", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡危机刺激中东管道建设热潮。随着伊朗关闭海峡威胁导致航运风险剧增，多国加速推进替代运输管道项目，以保障石油出口通道安全。", source: "Oilprice.com via Yahoo Finance", url: "https://finance.yahoo.com/energy/articles/hormuz-crisis-sparks-middle-east-210000952.html" },
@@ -1642,18 +1649,14 @@ const breakingNews = [
   { time: "21:33", tag: "AI", tagText: "AI", text: "马斯克的SpaceX正押注于太空AI数据中心。尽管公众不愿在地球建设AI数据中心，但太空数据中心的经济可行性存疑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/do-space-based-ai-data-centers-make-economic-sense.html" },
   { time: "21:30", tag: "crypto", tagText: "加密", text: "数据显示，共和党人购买加密货币的比例远高于民主党人。分析指出党派分歧对加密市场采用产生显著影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/republicans-democrats-crypto-bitcoin-use.html" },
   { time: "20:53", tag: "crypto", tagText: "加密", text: "摩根大通警告称，比特币的噩梦正在成为现实，价格崩盘担忧加剧。市场面临多重压力。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPbVBySFNZSkg1N2ZieGpNU0hWUnFTX2M3Y21Td2JGc0VjZTVfWW8tVWJVTU44Sjk0ZGtiQUZQR0VHWW8yWTlSdG9sWUlQNVlGZnU2ZEhpQV96bzR4RDZXUUhrQm9uY1RVYlVYWUxJNWpCQ1BoRlVseUlkMkJrdnRuTGptZDNTSWQtWHdsTW43RnhEZkQ2ZDJkZ2I2YmVZanFJdHNSbDk1bGNYNFJtbU4zYVh4cjRZM1ZrZy1XY2NyM0lrTUM2bERRcnRXN1p5d0c4S0gtZVJ0ODNxelcwSEs3SA" },
-  { time: "20:48", tag: "geo", tagText: "地缘", text: "意大利总理梅洛尼与美国总统特朗普关系破裂。随着梅洛尼准备迎接连任竞选，她与特朗普在乌克兰、关税等问题上的分歧公开化，转向批评美国政策。", source: "Financial Times", url: "https://www.ft.com/content/1adcac1d-d2d3-4a62-855d-7dd56319edbf" },
-  { time: "20:33", tag: "macro", tagText: "宏观", text: "英国国王查尔斯三世将成为首位公开个人纳税账单的英国君主。白金汉宫表示，此举将于下周实施，旨在“鼓励对问责制的理解”。", source: "Financial Times", url: "https://www.ft.com/content/af9dd4a4-f9f1-43f6-bfb3-9782c96fa17f" },
-  { time: "20:16", tag: "geo", tagText: "地缘", text: "美国与伊朗在瑞士举行关键和平谈判，副总统万斯已抵达。此前伊朗军方声称关闭霍尔木兹海峡以回应以色列对黎巴嫩打击，美方称海峡仍然开放。谈判重点为以色列与真主党冲突，试图达成永久结束战争协议。", source: "CNBC", url: "https://www.cnbc.com/2026/06/20/iran-reportedly-closes-strait-of-hormuz-again-raising-doubt-over-talks.html" },
-  { time: "19:35", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基警告白俄罗斯，若不在一周内采取行动，将摧毁其境内用于俄罗斯的无人机中继站。此举加剧东欧紧张，乌克兰威胁对邻国实施“后果”。", source: "Financial Times", url: "https://www.ft.com/content/dd2868ef-b9a2-4b6e-ab52-e4d87a9a75d2" },
-  { time: "19:14", tag: "macro", tagText: "宏观", text: "美联储主席沃什开启低调革命，成立专项工作组重新审视美联储几乎所有运作。分析指出首个重大调整信号指向悄然变革，市场预期沃什可能通过加息威胁而非实际加息来抑制牛市，但历史加息周期显示股市仍可能上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/21/how-kevin-warsh-has-set-out-to-remake-the-fed.html" },
-  { time: "18:36", tag: "crypto", tagText: "加密", text: "比特币价格在64,000美元附近企稳，市场关注ETF资金外流及霍尔木兹海峡紧张局势。与此同时，LAB和AERO等山寨币领涨，其中LAB单日上涨25%逼近市值前20名。分析师指出，尽管整体市场动能减弱，但部分资金仍在寻找高增长机会。", source: "crypto.news / CryptoPotato", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ3RXQ3FHeEVFQ0hRdjBYTU5OdGtaX204NHNBMWxVUHZSMVltMTh2OXdyX0Z4Q2FIdWZfOGJWT2luWm9jS3ZoQVVCZXROVzhPa19LN2lqTjFIODhGZlRfNlM5T3pvaTIxZmlta01CZnVSaGdQanREV01yZE1WcnVnemN6ZEU1aW1QQlV5MXFJZmRKbDVpeWFPeWx3WTZZejJRSnc?oc=5" },
-  { time: "18:15", tag: "macro", tagText: "宏观", text: "迈克尔·布隆伯格承诺向可再生能源行业协会提供2.85亿美元资金，以对抗石油利益集团。在伊朗战争后各国面临能源政策抉择之际，这笔资金将用于加强绿色游说力量。", source: "Financial Times", url: "https://www.ft.com/content/5d02676c-60cb-4d11-b719-9ece20d11849" },
 ];
-const breakingDate = "2026年6月22日 07:26 CST";
+const breakingDate = "2026年6月22日 13:23 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
+  { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
+  { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
   { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
   { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "21:22", tag: "ai", tagText: "AI", text: "欧盟一项过于复杂的法律条款可能迫使英伟达退出欧盟AI项目。该条款涉及AI领域的外国补贴审查，其复杂性可能导致英伟达无法参与欧盟资助的AI研究项目，进一步加剧欧美科技监管摩擦。", source: "Euractiv", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYUNoS0VhY2tfaDIyaDVZdmJMbHBkZE9aTnJzQ05Od21Xb0pSTG5FTkZkX3dLSWVDcFFyUlZPOVZvaGJfelltdXByU1pHLXhCWDNyUHZxVldyU285ZlA1SnBPc3E0bExCWFh6dHdwMUtWTjkzb3RDalhIUzlkZS1ZRzJjQUMzdl9nckNGMWl4ME9HYV9iUDBYRTFFQkwyQnh1a3JEOHRIY3Y?oc=5" },
   { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
   { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
-  { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
-  { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
-  { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
 ];
-const aiBreakingDate = "2026年6月22日 07:26 CST";
+const aiBreakingDate = "2026年6月22日 13:23 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
