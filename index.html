@@ -1616,20 +1616,28 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 35.17,
+  score: 34.74,
   rating: "fear",
-  timestamp: "2026-06-22T17:44:22+00:00",
+  timestamp: "2026-06-22T20:55:12+00:00",
   previousClose: 37.26,
   previous1Week: 41.57,
   previous1Month: 58.97,
   previous1Year: 54.51,
-  date: "2026年6月23日 01:46 CST"
+  date: "2026年6月23日 05:11 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:53", tag: "tech", tagText: "科技", text: "美光科技与人工智能公司Anthropic签署存储与内存供应协议，推动股价上涨。该合作凸显AI算力扩张对上游芯片需求的拉动，美光成为继英伟达后又一受益于AI浪潮的芯片厂商。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microns-stock-momentum-builds-as-the-company-inks-a-new-anthropic-partnership-484e3845?mod=mw_rss_topstories" },
+  { time: "04:50", tag: "tech", tagText: "科技", text: "Salesforce股价连续第14个交易日下跌，创历史最长连跌纪录。投资者对其AI业务进展缺乏信心，质疑公司能否在AI时代实现自我颠覆。", source: "MarketWatch", url: "https://www.marketwatch.com/story/salesforces-stock-extends-record-losing-streak-can-the-company-disrupt-itself-8402d62c?mod=mw_rss_topstories" },
+  { time: "04:40", tag: "macro", tagText: "宏观", text: "费城半导体指数今年已翻倍，但英伟达表现却在该指数成分股中垫底。分析师指出，英伟达体量过大，超预期难度增加，芯片行业内部轮动明显。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-major-chip-index-has-doubled-this-year-despite-nvidia-ranking-dead-last-f049eb5e?mod=mw_rss_topstories" },
+  { time: "04:09", tag: "tech", tagText: "科技", text: "英伟达股价近期承压，Kalshi预测市场交易者押注其芯片价格将下滑。市场担忧AI芯片需求增速放缓及竞争加剧可能压缩英伟达的定价能力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/nvidias-stock-struggles-as-kalshi-traders-bet-chip-prices-are-coming-down.html" },
+  { time: "04:07", tag: "geo", tagText: "地缘", text: "安达保险（Chubb）CEO发出警告，称全球石油供应面临新的中断威胁，可能冲击能源市场稳定。具体威胁因素尚未明确，但市场对地缘风险的敏感度上升。", source: "TheStreet", url: "https://finance.yahoo.com/energy/articles/chubb-ceo-flags-threat-disrupting-200700323.html" },
+  { time: "04:06", tag: "macro", tagText: "宏观", text: "华尔街此前极度看好黄金，但6月美联储会议释放鹰派信号后，多家投行下调黄金目标价。市场对降息预期降温，黄金的避险吸引力面临挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/wall-street-was-once-uber-bullish-on-gold-now-its-changing-its-tune.html" },
+  { time: "04:03", tag: "macro", tagText: "宏观", text: "债券市场出现异常波动，分析师认为这种波动性将持续。新任美联储主席沃什似乎支持由债券市场引领货币政策路径，从而避免加息，但市场仍存不确定性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-bond-market-just-did-something-unusual-why-its-sudden-volatility-is-here-to-stay-a60205ff?mod=mw_rss_topstories" },
   { time: "01:17", tag: "ai", tagText: "AI", text: "Alphabet (谷歌母公司) 因两位顶尖AI研究员（包括一位诺贝尔奖得主）离职加入竞争对手实验室，股价暴跌，单日市值蒸发约2690亿美元，创一年来最大跌幅。市场担忧其在AI人才争夺战中失利。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/alphabet-goog-stock-ai-departures.html" },
+  { time: "01:02", tag: "tech", tagText: "科技", text: "雪佛龙与微软签署20年协议，将开发位于美国石油核心地带的数据中心，可能包含天然气发电设施。此举标志传统能源巨头正式跨界AI基础设施领域。", source: "Financial Times", url: "https://www.ft.com/content/57cc533b-08c3-419b-919c-23bec3f248f4" },
   { time: "00:47", tag: "macro", tagText: "宏观", text: "卡特彼勒股价突破1000美元大关，创历史新高，成为道指中仅有的两只千元股之一。工业股持续强劲上涨，反映出市场对基建和制造业复苏的乐观情绪。", source: "MarketWatch", url: "https://www.marketwatch.com/story/caterpillars-stock-hits-a-milestone-as-roaring-industrials-rally-sweeps-up-wall-street-391057f7" },
   { time: "00:24", tag: "ai", tagText: "AI", text: "超微电脑 (Super Micro) 股价大涨，创一年来最佳表现，得益于与英伟达的深化合作伙伴关系。该公司作为AI服务器供应商，市场需求持续旺盛。", source: "MarketWatch", url: "https://www.marketwatch.com/story/super-micros-stock-is-seeing-its-best-run-in-a-year-thanks-to-nvidia-partnership-f619e58e" },
   { time: "00:19", tag: "geo", tagText: "地缘", text: "美国参议院预计本周推进一项全面的住房法案，旨在限制私募股权公司购买独栋住宅，以增加供应并提高住房可负担性。众议院也将同步推动该法案。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/affordable-housing-bill-private-equity-single-family-homes.html" },
@@ -1641,22 +1649,22 @@ const breakingNews = [
   { time: "23:04", tag: "tech", tagText: "科技", text: "电动汽车制造商Lucid宣布裁减约18%美国员工，并即时取消首席运营官马克·温特霍夫职位，作为成本削减计划的一部分。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/lucid-layoffs-evs.html" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "SpaceX在创纪录IPO仅两周后便寻求债券市场融资，同时与开源AI初创公司Reflection签署价值高达63亿美元的算力协议。SpaceX将其Colossus数据中心转为商用算力平台，此前已与Anthropic、谷歌等达成合作。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/spacex-ai-colossus-data-center-reflection.html" },
   { time: "20:18", tag: "macro", tagText: "宏观", text: "美联储前主席艾伦·格林斯潘去世，享年100岁。他在1987年至2006年间担任美联储主席，历经四任总统，以“美联储式讲话”的模糊艺术闻名，其职业生涯备受赞誉，但金融危机后对其遗产的评价出现重新审视。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/alan-greenspan-former-chairman-of-the-fed-dies-at-age-100.html" },
-  { time: "20:09", tag: "geo", tagText: "地缘", text: "美国副总统万斯表示，美伊在瑞士的谈判取得“重大进展”，伊朗已同意允许国际原子能机构（IAEA）检查人员返回该国。尽管谈判中仍存在“威胁”和“抱怨”，但整体朝积极方向推进。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/ance-iran-ceasefire-talks-iaea-inspectors.html" },
-  { time: "19:56", tag: "macro", tagText: "宏观", text: "市场分析警告，美股IPO管道中聚集了SpaceX、OpenAI等重磅公司，巨额新股发行可能引发类似1929年和2000年的市场崩盘，潜在跌幅或达40%。历史记录显示，发行高峰往往预示着市场顶部。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-40-market-crash-is-lurking-in-the-ipo-pipeline-spacex-and-openai-could-trigger-it-64ae4026" },
-  { time: "19:49", tag: "macro", tagText: "宏观", text: "艾伯维（AbbVie）宣布以109亿美元收购生物技术公司Apogee Therapeutics，后者正在研发一款实验性湿疹（特应性皮炎）药物。此举是艾伯维五年多来最大并购，旨在推动下一代免疫学业务增长。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/abbvie-to-buy-apogee.html" },
-  { time: "19:48", tag: "geo", tagText: "地缘", text: "英国首相基尔·斯塔默宣布辞职，辞去首相和工党领袖职务，触发党内选举新领袖。英国将在10年内迎来第七位首相，政局不确定性加剧。此前美国总统特朗普曾预言斯塔默即将下台。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/keir-starmer-resigns-uk-prime-minister.html" },
-  { time: "19:41", tag: "geo", tagText: "地缘", text: "尽管美伊达成初步停火协议，但霍尔木兹海峡仍面临通行障碍。数百艘油轮在波斯湾外等待海峡完全开放，许多船东对派遣船只持观望态度，担心伊朗与美国未能加强停火协议导致局势反复。", source: "Financial Times", url: "https://www.ft.com/content/9df718a9-8ee3-4d8b-a9ff-a29263d35a88" },
-  { time: "19:26", tag: "tech", tagText: "科技", text: "SpaceX股价在盘前交易中延续跌势，此前该公司于6月12日创纪录IPO后经历大幅上涨，但最近两个完整交易日持续回落，市场情绪降温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/spacex-stock-ipo-rally-selloff.html" },
-  { time: "12:50", tag: "geo", tagText: "地缘", text: "英国首相斯塔默面临辞职压力。美国总统特朗普表示，斯塔默因“严重失败”即将辞职。英国政局不确定性加剧。", source: "Financial Times", url: "https://www.ft.com/content/ed96e673-8d46-4dec-aebc-d69863b9e801" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "德国情报机构（BND）寻求摆脱束缚，柏林希望放宽对其监管，作为欧洲减少对美情报依赖的广泛努力的一部分。此举反映欧美信任裂痕加深。", source: "Financial Times", url: "https://www.ft.com/content/50069749-fe38-4a6e-80d4-fe84d53f94a1" },
 ];
-const breakingDate = "2026年6月23日 01:46 CST";
+const breakingDate = "2026年6月23日 05:11 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
+  { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
+  { time: "04:13", tag: "ai", tagText: "AI", text: "AI芯片初创公司Groq确认完成6.5亿美元融资，并在英伟达放弃200亿美元非收购性人才交易后重组管理层。Groq将加大其云业务投入，并招聘新高管。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/ai-chipmaker-groq-confirms-650m-raise-re-staffs-after-nvidias-20b-not-acqui-hire-deal/" },
+  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
+  { time: "03:16", tag: "tech", tagText: "科技", text: "AMD在用户强烈反对后，恢复消费级CPU中的内存加密功能。此前AMD移除该功能被批评为迫使消费者购买更昂贵的企业级芯片。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/following-user-outcry-amd-reinstates-memory-encryption-in-consumer-cpus/" },
+  { time: "03:08", tag: "macro", tagText: "宏观", text: "英伟达股价承压。Kalshi预测市场交易员押注AI芯片价格将下跌，同时英特尔等竞争对手芯片股逆势上涨，市场开始分化。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTFctMnQ3aTJLdkZoUlZIbE9razlGMndPTzJ0Zk9jakwyd2FXVEV3NFFRU2hUazlLTk5IY3dzQTRUaFVRMFFRX2pDX2xrU2szMTBIN2E0Z0RERWZtY0I5d2JSQXdrUmN1NnhxbGlkUUJ6NFVBaHNLTzVCQ3NQZVFoZFNkZnN3aU9tMTN4RXBoWGIxem9aV3IzaWdNYW1lclRMYTJlUDdrdkNwZ2pqeVZZ0gG0AUFVX3lxTE5ZaDY5Rm9MQUYya0U0eHlGOHE5MXA3YmgyaUVfVDFubWtvZVB2Sk5KYV9pT0hJWklMalA1WEd4WVdVNjM1aVVfdXY5UVkxYi11a0ZwNFZ1c0hOOGRVSElFS0YzekMxQmFhQVRIMzZMa0VqMFowel80VUV3RGpnLUdibGoyY1pvZkFLdmQ1VGRpdkdEWEtHalFfNHVRR2pLX2VTdDg0TkhPS3pxNlF3ZlhWN2k5ZQ?oc=5" },
+  { time: "02:49", tag: "ai", tagText: "AI", text: "Google DeepMind与独立电影公司A24达成7500万美元合作，共同开发AI电影制作工具。此举标志着大型科技公司加码AI在好莱坞的应用。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/" },
   { time: "01:37", tag: "ai", tagText: "AI", text: "SMH ETF（半导体ETF）资金流向显示，投资者正将AI芯片交易重心从英伟达转移至其他标的，市场关注点开始扩散。", source: "TechStock²", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ2NiRjdtdGF0UWZIUHR3QU1Xc2p3VXpIY1FRdG9yaXlTX2ljZnVsS1BGTDVJQ3dabHJPWFpwTTlnb3hMMVdJMjM2QUl4d2RjUXBEZWw2a0VGZG1ZZVhRWUEyY2g5M1FTSl9QNmxya3Y5SGZUSEs3ZXMtejhoaHZzQ2JMX2J0clFi?oc=5" },
   { time: "01:31", tag: "tech", tagText: "科技", text: "亚马逊开始向印度用户发送邮件邀请，测试全新AI助手Alexa+，该版本已支持印地语，将进一步拓展印度市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/amazon-is-testing-alexa-in-india-with-hindi-support/" },
   { time: "00:51", tag: "ai", tagText: "AI", text: "SpaceX与开源AI实验室Reflection AI签署计算服务协议，后者将从2026年7月1日起至2029年，每月支付1.5亿美元，使用SpaceX Colossus 2数据中心内的英伟达最新GB300 AI芯片及配套硬件。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/" },
+  { time: "00:19", tag: "ai", tagText: "AI", text: "Alphabet股价下跌，原因是最顶尖的DeepMind和Gemini研究员相继跳槽至竞争对手AI公司，引发市场对Google AI人才流失的担忧。", source: "eciks.org", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE91QkdLeUhuT29GRWt6NjZ1TjNfa2Z4RVE3eWVTdWJTaXdTMERJRDhiemhBblE1Umw4UGZpN1k0bGVidlZTNWg3T0dfWGRla3BpNDBvOFhGYTBlb0NuTzVGamJDSlFxcDd0T21LenZEdGNJZw?oc=5" },
   { time: "23:28", tag: "geo", tagText: "地缘", text: "特朗普政府对AI初创公司Anthropic发起最新打击行动，引发对AI生态系统影响的广泛讨论。分析认为此举可能重塑行业竞争格局，并引发谁将从中受益的疑问。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" },
   { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
   { time: "22:40", tag: "tech", tagText: "科技", text: "苹果iOS 27将带来除Siri以外的多项实用AI功能，包括更智能的相册、邮件自动摘要、实时翻译增强等，这些功能在WWDC上被Siri的AI升级盖过风头，但对用户日常使用影响更大。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" },
@@ -1666,16 +1674,8 @@ const aiBreakingNews = [
   { time: "18:41", tag: "ai", tagText: "AI", text: "字节跳动正参与中国AI芯片产业建设，填补英伟达留下的市场空白。据Huawei Central报道，字节跳动在自主研发和投资国产AI芯片方面持续加码，助力中国减少对英伟达高端芯片的依赖。此举凸显中国科技企业在美国芯片出口管制下的自主化努力。", source: "Huawei Central", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzJYbFVVSFZzQktaOF9mQU40am9LUTN6ZVA4TWp1UnZObFBYbE9QSmVhQ19qLThLclNyVEVMeTBaMG9DR2k0ZHFyRUtQQXV1aU5tOHdtSFd6cDBfTHNoel9HUlZ2dHJPVG1kR3JBeHZRRl9RYVA0SEQxVHhmckN6M1hZR3g3OTdReW1IY3E2WGNPLTFmR1k5RUhwZDlzNDJoUkJZ0gGoAUFVX3lxTE1lOVRzVHRfUGRXVWdmak9pU2Q4eTdkM3NMWUF1c2tZSmtXN0xlMkV0Sk9BUGZxaDRMMU9XcURhTVhvNThQZ2pVekw5X29TXzNtX3JJRjZrUDhMVWp0cjRsS2NKcjIwU0pxYkdjYVBxSVBTUXZzNDdVNkx3N295UHAzRG43d2xpMHpKUFZfSGdWYWljYXNCWmZ6NFdJMUREaTdQdUVwUDl3aw?oc=5" },
   { time: "16:21", tag: "ai", tagText: "AI", text: "百度加速推进全栈AI能力建设，英伟达芯片获取渠道扩大。Crypto Briefing报道称，随着出口限制缓和，百度计划利用更充裕的英伟达AI芯片，增强从底层算力到上层模型的完整AI技术栈。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE1QeWM3dEloWU1NSkF4RnlwR2poQndheHlUNHZRM0hQWGdwbHM1N2ZpbTVGN1pIT01WSFNyS2tGc3pSYnVYUWVlN2YyOGZwS1Vjc0VXMUVwZGpKdEVqVEFaQmtzM3UxLVlMdGk0V2NtS19Gb2tT?oc=5" },
   { time: "15:59", tag: "geo", tagText: "地缘", text: "美国声称ASML最先进的芯片制造设备可能已被非法运入中国，但ASML坚决否认。美方指控涉及ASML的极紫外光刻机（EUV），但ASML表示其出口记录清晰，不会冒险违反许可证。该争议反映中美在半导体设备管控上的持续紧张。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" },
-  { time: "15:10", tag: "ai", tagText: "AI", text: "AI突破使乳腺癌核磁共振扫描更快、更清晰、更易获取。Ynetnews报道，新型AI算法可在缩短扫描时间的同时提升影像分辨率，有望降低检查门槛，惠及更多患者。", source: "Ynetnews", url: "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iNTJoRGNsQjl3WUdaeHZnWkhCWlF5UkpnczNNMGJxVHRXNWtXc2hRRmZQSUFWVDBYcGlab0o3eFU1bzdXaG9zQ2JoZkxSekFRa0h2anAxSDBQdjFtWGp6ZXhIYjNPejRpV0E?oc=5" },
-  { time: "12:49", tag: "ai", tagText: "AI", text: "OpenAI企业AI销售负责人Barret Zoph在重返公司仅五个月后再次离职。Zoph于今年1月中旬回归OpenAI，此前他曾短暂离开并共同创办了Thinking Machines Lab。此次离职标志着OpenAI高层人事再度波动。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/952837/barret-zoph-openai-thinking-machines-lab" },
-  { time: "10:04", tag: "ai", tagText: "AI", text: "代理式营销AI初创公司Gradial获6500万美元新融资，旨在利用AI代理自动化营销工作流程。本轮融资由多家风投参与，资金将用于产品开发和市场扩张。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdGWmxRT2t1ZHB6ckFtM3ZFajdrNDhCMEVEQXo4TUgwYTk5MUV5YmZxYllVTm80SWZnRjN4ci12V3NWUkdEREVTZjNmMHc0ZlNDNEs4cm8weS1QQjVLR3BvYmswdHlhb1gwekNhbm1taEo4VmwyQUF3dWFYX1g2NVJZMmE0NEc3SDI3ZXZxYm90MUVRdTVNR0ZWa01ydw?oc=5" },
-  { time: "09:20", tag: "geo|tech", tagText: "地缘|科技", text: "美国国会计划对每一块出口的英伟达AI芯片加装GPS追踪器，以实时监控其流向，防止芯片流入受限制国家。此举将大幅强化对先进芯片出口的管控，可能进一步加剧中美科技脱钩。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDZhd1ZicG5KQU5MaHgtOV81TVBlNl9reXV2SE00Y1F6SjVRa1lHVHZnNUhXOTNRdGk2cmZ6VThtMElKaHFwV1ZJRGd1WXJSSFdYNFB0YTNQWW1uYXBJUjQ4OEFZcEVBcV9VZzNFWF8yVEZPR0pzMGhRVWxpLUNPZ2F6VVZyWGVXZm1NcGZVaUZqSHFXRnRpZHYySTJFNUlzWnQ1bzN4SGdzQTBq?oc=5" },
-  { time: "05:20", tag: "ai", tagText: "AI", text: "AI推理初创公司Baseten据报即将完成15亿美元融资，估值达130亿美元，延续AI推理领域的“淘金热”。本轮融资距离其上一轮大规模融资仅隔数月。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" },
-  { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
-  { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
-  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
 ];
-const aiBreakingDate = "2026年6月23日 01:46 CST";
+const aiBreakingDate = "2026年6月23日 05:11 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
