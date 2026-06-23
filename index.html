@@ -1618,17 +1618,22 @@
 const fearGreedData = {
   score: 34.74,
   rating: "fear",
-  timestamp: "2026-06-22T23:20:31+00:00",
-  previousClose: 37.26,
-  previous1Week: 41.57,
+  timestamp: "2026-06-23T00:00:00+00:00",
+  previousClose: 34.74,
+  previous1Week: 39.09,
   previous1Month: 58.97,
-  previous1Year: 54.51,
-  date: "2026年6月23日 07:40 CST"
+  previous1Year: 56.6,
+  date: "2026年6月23日 12:16 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "11:19", tag: "macro", tagText: "宏观", text: "中国618购物节增速大幅放缓，消费低迷持续。最新消费数据显示，中国零售增长乏力，消费者信心不足，经济复苏前景面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/china-618-shopping-festival-sales-growth-consumer-spending-slowdown-syntun.html" },
+  { time: "09:59", tag: "crypto", tagText: "加密", text: "加密货币市场遭遇1.22亿美元多头清算，比特币、以太坊、XRP、狗狗币集体下跌。分析师指出“聪明钱”情绪减弱，但比特币在6.4万美元附近企稳，地缘紧张缓和提供一定支撑。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPZkloclFWYm9NcGNqX0ZwdGJ5dGg1bFoyU3RabnZLTktneFdNc0lpdm9qRmVQdG5VM2RrRFpIOElvMFl5MVlteWVqS2FfNnBRRnoxbGk5ZTVaWGxSR1N1QUluaTJQZnlJMDhGUFZyZ0FwRElaSzdmRldKVF9EcmVYQTFZZGZfdHNpVEY1dUZVOU1sdnZTTE9yT0NTRmUtUlZGWVRRb29DNUE4TnRQN2daQUxiRXFkbUdBX3dOMDFtNFNqZzFselhBSE5FNWtGeXhiYlRfQk9XLVJlYkctZlpGb2dIa2Zpbjk1LVR0R3lQTWVJenk3cmc?oc=5" },
+  { time: "09:31", tag: "geo", tagText: "地缘", text: "美伊谈判传出进展信号，油价暴跌，科技股遭抛售。纳斯达克指数领跌，Alphabet、亚马逊、英伟达等大型科技股下挫，SpaceX股价也大幅跳水。特朗普表示对伊朗不会用石油利润重建军事的保证持保留态度，同时美国已授权进口伊朗石油至8月。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMFZlTUtZNVVBOTdnSG4xZUZiUkFpVHgxMnhaZHNCZTB5RjFoNUt5aFd4b25YSVNqR05qXzkxVVRKc1NZVEZNM1dFeTYwWFRFSV93cUJ0SkFxSUhvVEZocXIxaFNDcFRMamM1NHJhQlFxZ29VcmF2ZGJMZ19WemdvWF9zdnBPbUE?oc=5" },
+  { time: "09:09", tag: "macro", tagText: "宏观", text: "高盛推荐最佳对冲利率冲击策略。上周美联储鹰派会议后，短期利率前景不确定性上升，高盛建议投资者通过特定衍生品或资产组合对冲利率上行风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/goldman-sachs-picks-best-hedges-for-a-rate-shock-scenario.html" },
+  { time: "08:35", tag: "macro", tagText: "宏观", text: "阿波罗全球管理旗下旗舰私募信贷基金遭遇17%赎回请求，仅满足不到三分之一。投资者加速撤离，引发市场对私募信贷流动性风险的担忧。", source: "Financial Times", url: "https://www.ft.com/content/0fa4c280-2fa0-4be0-9fac-054cd49e87fa" },
   { time: "07:28", tag: "macro", tagText: "宏观", text: "北京再次召集科技高管开会，但与2021年不同，由于通缩压力和中美科技竞争加剧，政府此次行动更为谨慎，政策空间受限，市场担忧程度低于此前。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/china-tech-crackdown-antitrust-tripcom-meituan-food-delivery-anti-involution-deflation-.html" },
   { time: "06:43", tag: "macro", tagText: "宏观", text: "罗素2000指数收于3000点，创历史新高。该指数涵盖小盘股，标志着市场广度改善，投资者从大型科技股转向周期性及价值型股票。", source: "TheStreet", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbklzbHlQTE9kd3R3MXNMVGF3RmtzZWdBNS1hSzRBVkFxazdfRmRUSHFOcFp2dHZqQ00zSG9vMG9MMlRIM2pqYlpFUFBBcXlIZnN1eHFkUkNLaVFkOWlJQVBwbGcxa1ZhNVlVWmNBb2NNLWpWMU1ZSklkVlZDdDh5aWRjSjktVlcwWlZmODZ1RzAzRUdibEhYcHRVbkFfR1FPaWhBMEhhcENJb0dZ?oc=5" },
   { time: "06:18", tag: "tech", tagText: "科技", text: "一辆特斯拉Model 3在德州撞入民宅，致一名76岁老人死亡。司机声称使用特斯拉部分自动驾驶系统。美国国家公路交通安全管理局（NHTSA）已启动联邦调查。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/tesla-nhtsa-model-3-crash-autopilot-katy-texas.html" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "01:02", tag: "tech", tagText: "科技", text: "雪佛龙与微软签署20年协议，将开发位于美国石油核心地带的数据中心，可能包含天然气发电设施。此举标志传统能源巨头正式跨界AI基础设施领域。", source: "Financial Times", url: "https://www.ft.com/content/57cc533b-08c3-419b-919c-23bec3f248f4" },
   { time: "00:47", tag: "macro", tagText: "宏观", text: "卡特彼勒股价突破1000美元大关，创历史新高，成为道指中仅有的两只千元股之一。工业股持续强劲上涨，反映出市场对基建和制造业复苏的乐观情绪。", source: "MarketWatch", url: "https://www.marketwatch.com/story/caterpillars-stock-hits-a-milestone-as-roaring-industrials-rally-sweeps-up-wall-street-391057f7" },
   { time: "00:24", tag: "ai", tagText: "AI", text: "超微电脑 (Super Micro) 股价大涨，创一年来最佳表现，得益于与英伟达的深化合作伙伴关系。该公司作为AI服务器供应商，市场需求持续旺盛。", source: "MarketWatch", url: "https://www.marketwatch.com/story/super-micros-stock-is-seeing-its-best-run-in-a-year-thanks-to-nvidia-partnership-f619e58e" },
-  { time: "00:19", tag: "geo", tagText: "地缘", text: "美国参议院预计本周推进一项全面的住房法案，旨在限制私募股权公司购买独栋住宅，以增加供应并提高住房可负担性。众议院也将同步推动该法案。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/affordable-housing-bill-private-equity-single-family-homes.html" },
-  { time: "23:59", tag: "geo", tagText: "地缘", text: "五眼联盟发布警告称，AI驱动的网络威胁可能在未来几个月内成为现实，西方政府和企业在AI领域的领先优势可能不会持久。各国需加速防御部署。", source: "Financial Times", url: "https://www.ft.com/content/df50c416-9308-46cc-af14-8f069bba9aa6" },
-  { time: "23:24", tag: "macro", tagText: "宏观", text: "中国经济增长引擎出现奇特新火花：消费者转而购买‘感觉’来应对房地产崩盘。玩具精灵、机器人警察等情感消费产品成为经济亮点，折射出中国经济分裂的真实状态。", source: "MarketWatch", url: "https://www.marketwatch.com/story/chinas-new-economic-drivers-a-sad-toy-elf-and-a-robot-police-force-8759daf9" },
-  { time: "23:13", tag: "geo", tagText: "地缘", text: "英国首相斯塔默宣布辞职，工党领袖候选人安迪·伯纳姆成为焦点。投资者关注英国国债、英镑及下一任财政大臣人选。分析师警告若伯纳姆接任，英国长期借贷成本可能上升，潜在债务危机风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/keir-starmer-andy-burnham-uk-markets.html" },
-  { time: "23:13", tag: "tech", tagText: "科技", text: "Meta旗下WhatsApp负责人威尔·卡思卡特将卸任，由印度金融科技公司CRED创始人库纳尔·沙阿接替。此举凸显Meta深耕印度市场及金融科技领域的战略意图。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/meta-kunal-shah-whatsapp-will-cathcart.html" },
 ];
-const breakingDate = "2026年6月23日 07:40 CST";
+const breakingDate = "2026年6月23日 12:16 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "10:55", tag: "ai", tagText: "AI", text: "五眼联盟发布重大警告：下一次AI突破可能就在几个月内。该联盟成员国情报机构联合指出，前沿AI模型的进展速度远超预期，可能带来不可控的风险，敦促各国政府加快制定监管框架。", source: "NDTV", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYXltYTltd01jOWVYeXRnb3NYTEFfdnlkMWZiSVdfbW95MTZ1aUM3MEVWYlNsTS1KNXZIQVZaLU5TUGg3Qzk4Q2FLNHI3N2FxRGhQVG11dXU1SFlXaXRoaVU1N1BTVzRWaUZKQ3hRU2JhOGkyUENzUzd5M2JVWFEwOHJid2RhLWI0Z2hGYk9CMmNXSjlfaTBFcjVudExxVnVuclVhTGg0bXBEQlRUS2ZlcmtCZGFNSmJLUkVyWGFmMjdGeXo2dk01QnlXWWwyeDhw0gHYAUFVX3lxTE9iTW9oREhxZjJwUEl3VWk4Wm1uOVNfdnNOVEJ6dlZzRDRkZ3dlSFloTEd2QllEVHZzNU1oalZwakc5NGllVThPOHhva0tnVXVfYkVyUzM3REZ5UGVEc1h4clRMTks5RGVzQzZ3WjEzdVJPNFpQRE5GRWVTYnE5Wk0yNnplTjFsLXRhV3NscGl2X0JadTM3V0R1UTQzb0hoaVhzUlZKQnk5VnoycW5FY2dlYUdsV0ZQRkM1WVNETTdmdzMycnNNa0NJalRYRzltUERaZ1ZYdlBhQw?oc=5" },
+  { time: "08:11", tag: "ai", tagText: "AI", text: "OpenAI启动新计划，致力于帮助发现并修补开源软件中的漏洞。该项目将利用AI模型自动扫描开源代码库的安全隐患，旨在提升开源社区的整体安全水平，减少供应链攻击风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/" },
   { time: "07:24", tag: "ai|tech", tagText: "AI|科技", text: "英伟达发布Rubin架构全液冷数据中心参考设计，声称能大幅降低水耗。但批评指出，此举仅减少数据中心内部用水，未能解决AI最大用水来源——为数据中心供电的化石燃料电厂的冷却用水问题，AI的水资源挑战依然严峻。", source: "The Verge", url: "https://www.theverge.com/tech/954139/nvidia-data-centers-rubin-liquid-cooling" },
   { time: "04:53", tag: "ai", tagText: "AI", text: "AI领域出现‘Loopy’新范式：授权一群AI代理在后台持续无休止地自主工作，将Agentic AI推向新阶段。该模式强调‘循环’特性，代理可长期运行、相互协作，引发对自动化深度与治理边界的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/" },
   { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
   { time: "22:40", tag: "tech", tagText: "科技", text: "苹果iOS 27将带来除Siri以外的多项实用AI功能，包括更智能的相册、邮件自动摘要、实时翻译增强等，这些功能在WWDC上被Siri的AI升级盖过风头，但对用户日常使用影响更大。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" },
   { time: "20:50", tag: "ai", tagText: "AI", text: "AI初创公司Odyssey获得3.1亿美元融资，通过亚马逊支持成为独角兽。本轮融资由多家投资者参与，Odyssey致力于开发AI驱动的自动化平台，进一步拓展其技术应用场景。", source: "AI CERTs", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaWNOQ1BXY3Z6YlAxRVc0S2gyWDVpR2llNThFQUdQRjVKdjNJSkRnUlJNZDgyUDhZWUFjQmtTNG5UNXUzMTc2WjU3OXRBb2dTZl9zMG9rWWhHZWNHMUl0X2lPOWpDcFpWbUxFOGV1Ym9mSURtSE5qUjJmelZCLVp0cVpPbDNWY1pkOUphbFNfQQ?oc=5" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "2026年机器人初创公司风险投资飙升至创纪录水平。据Crunchbase News报道，随着AI与自动化需求激增，该领域融资总额创下历史新高，资本正加速涌入机器人赛道。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQ0xkRjczYTRZM09iYi1zODBtVkRvd0xoODVPYzFEUmk1TzBCVUh5OVd3QW1rR3U1eUtZVWsyWXF0ZVVpdUxnMGxURUphXzQxMDdvc09ycjJkN29GSHNnUEN3MUZweGVQRWF2azhKSkYtbEdfMUN1VEtDT0ZFSzMzd0dRZWg?oc=5" },
-  { time: "18:57", tag: "ai", tagText: "AI", text: "欧洲知名风投Seedcamp关闭其史上最大基金，规模达3.2亿美元，重点押注物理AI（Physical AI）领域。该基金计划在未来十年内投资于将AI与机器人、硬件结合的初创公司，推动AI技术向实体世界延伸。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLUpHRlU0YkMzUnZiUGV6UUF3M24yX1poazY1RUx3WFA5ZUtpTVdzdzNpLWJLSE9FMDljWllEdGF5SEZwMllOTUJwYjVNdjZnODRtMDZabWtfVFFsSl9pY1dsNkhSUW9mYm9aTkdUekZMZVdNTFdpQXBvZUFXa3NQelIxYWMtUUd5ZXpWLVZJVjlkeFJ6ckJqNDA1NEQ2UERGZUVSV2hjZ3p6WS1WaFhaS0c3ZWlJYko2bkgw?oc=5" },
 ];
-const aiBreakingDate = "2026年6月23日 07:40 CST";
+const aiBreakingDate = "2026年6月23日 12:16 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
