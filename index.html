@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27.91,
+  score: 28.69,
   rating: "fear",
-  timestamp: "2026-06-23T15:54:08+00:00",
+  timestamp: "2026-06-23T18:04:33+00:00",
   previousClose: 34.74,
   previous1Week: 39.09,
   previous1Month: 58.97,
   previous1Year: 56.6,
-  date: "2026年6月24日 00:05 CST"
+  date: "2026年6月24日 02:09 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:06", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡大规模撤离计划启动，伊朗和美国支持。超过1.1万名被困在波斯湾的海员将通过该海峡撤离，以缓解因地区紧张局势导致的航运阻塞。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/strait-hormuz-persian-gulf-ship-tanker-evacuation.html" },
+  { time: "02:05", tag: "tech", tagText: "科技", text: "Meta据报正在开发预测市场应用，内部代号“Arena”，由CEO扎克伯格直接推动。消息导致相关股票（如Polymarket概念股）下跌，凸显科技巨头进军新兴金融领域的竞争加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/nyt-says-meta-builds-prediction-market-these-stocks-are-falling.html" },
+  { time: "01:48", tag: "macro", tagText: "宏观", text: "SpaceX向投资者推销250亿美元债券交易，银行家因高借贷成本吸引投资者而上调发行规模。此举显示SpaceX在上市后持续寻求大规模融资，市场对其信用风险存在分歧。", source: "Financial Times", url: "https://www.ft.com/content/7ea76b60-ea21-4e50-b0e2-bbcc842af289" },
+  { time: "01:32", tag: "macro", tagText: "宏观", text: "加拿大央行行长Macklem警告称，全球失衡可能加剧金融稳定风险。在当前利率高企、贸易摩擦持续的背景下，跨境资本流动和债务积累对金融体系构成潜在威胁。", source: "Reuters", url: "https://finance.yahoo.com/news/global-imbalances-could-fuel-financial-133957514.html" },
+  { time: "01:31", tag: "crypto", tagText: "加密", text: "数字欧元通过关键立法障碍，欧盟寻求摆脱对美国信用卡的依赖。该进展标志着欧洲央行数字货币（CBDC）项目进入新阶段，可能重塑欧洲支付格局并影响全球数字货币竞争。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPN2JLemlJSEMyWUJKMUFYdDNtYjRremdieDQ2aTlmNm1vLXVXWmFWYTJRMXQ1NDZWQmlzcXdJNlR4eFNRUWhmRENiZW1pYkZ1SnM5SXQ0Umh3TThqWV9semdvVWRPaFBmRTBocXVBdmFOUlZ1WEs0YmRSZllmV0RRdjlaZXBINFhDUm15WDRROXkwLVRRQTAwaUl2NmdROWpRbEZ6R1d3?oc=5" },
+  { time: "01:30", tag: "macro", tagText: "宏观", text: "美联储新主席Warsh正在筛选亚特兰大联储行长人选，该任命被视为重塑美联储政策方向的关键机会。候选人Michael Faulkender等人选可能影响未来利率决策和监管立场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/fed-warsh-atlanta-michael-faulkender.html" },
+  { time: "01:04", tag: "tech", tagText: "科技", text: "特朗普承认出售IBM股票是错误，并转而看好其量子计算前景。此举反映美国政策层对本土量子计算计划的支持，IBM或成政府重点扶持对象，相关科技股关注度上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-admits-selling-ibms-stock-was-a-mistake-now-hes-cheering-its-quantum-future-095592d6" },
   { time: "23:58", tag: "tech", tagText: "科技", text: "SpaceX股价盘中跌破150美元IPO发行价，随后反弹收涨4%。该股自上市以来持续承压，市场对AI和科技股的整体抛售情绪加剧了其下行压力，但尾盘买盘推动其回到发行价上方。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/spacex-stock-tech-sell-off.html" },
   { time: "23:56", tag: "tech", tagText: "科技", text: "Meta宣布推出全新智能眼镜，起售价299美元。CEO扎克伯格表示，该眼镜是迈向未来全功能增强现实（AR）设备的关键一步，目前虽未集成屏幕，但为后续产品奠定基础。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/meta-glasses-are-new-smart-glasses-starting-at-299.html" },
   { time: "23:32", tag: "tech", tagText: "科技", text: "全球芯片股遭猛烈抛售，AI投资疑虑再度升温，纳斯达克指数大跌超2%，标普500指数跌1.6%。美光科技、Sandisk等半导体股领跌，费城半导体指数大幅下挫。分析师认为，市场正经历AI驱动的上涨后的“肠检查时刻”，投资者开始质疑AI相关支出的可持续性和回报率。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/stock-market-today-live-updates.html" },
@@ -1642,23 +1649,20 @@ const breakingNews = [
   { time: "19:11", tag: "macro", tagText: "宏观", text: "美元指数升至一年新高，市场押注美联储将继续加息；日元则徘徊在40年低位附近，日本央行的宽松政策与美联储鹰派立场形成鲜明对比。外汇市场波动加剧。", source: "Reuters", url: "https://finance.yahoo.com/markets/currencies/articles/dollar-firms-hawkish-fed-bets-014832057.html" },
   { time: "16:10", tag: "geo", tagText: "地缘", text: "美国大幅豁免伊朗石油制裁，解冻数十亿美元收入，为正在进行中的和平谈判提供经济支持。此举可能缓解中东紧张局势，并压低油价，但引发盟友和鹰派不满。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/us-iran-oil-sanction-relief-strait-of-hormuz-peace-deal-.html" },
   { time: "15:42", tag: "crypto", tagText: "加密", text: "比特币ETF今年累计资金流出已达80亿美元，机构投资者因监管不确定性和科技股抛售加速撤离。比特币价格跌向6.3万美元，市场情绪转向悲观。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYXZuNVFZNWZUN2NWN24wbzlEN3NZOC00UEIwdHZpTndmUUJyYU9XZTNobHFkZ21RdjRTUEdsbEFTanBXbWFiTTAyNVNNaENmQWVaa1pGa1RZYVZJVnZ3MUFRbnVDU0JqVFBCUFBsQkM1am90REFRVTZ5bEllMWVTYw?oc=5" },
-  { time: "11:19", tag: "macro", tagText: "宏观", text: "中国618购物节增速大幅放缓，消费低迷持续。最新消费数据显示，中国零售增长乏力，消费者信心不足，经济复苏前景面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/china-618-shopping-festival-sales-growth-consumer-spending-slowdown-syntun.html" },
-  { time: "09:59", tag: "crypto", tagText: "加密", text: "加密货币市场遭遇1.22亿美元多头清算，比特币、以太坊、XRP、狗狗币集体下跌。分析师指出“聪明钱”情绪减弱，但比特币在6.4万美元附近企稳，地缘紧张缓和提供一定支撑。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPZkloclFWYm9NcGNqX0ZwdGJ5dGg1bFoyU3RabnZLTktneFdNc0lpdm9qRmVQdG5VM2RrRFpIOElvMFl5MVlteWVqS2FfNnBRRnoxbGk5ZTVaWGxSR1N1QUluaTJQZnlJMDhGUFZyZ0FwRElaSzdmRldKVF9EcmVYQTFZZGZfdHNpVEY1dUZVOU1sdnZTTE9yT0NTRmUtUlZGWVRRb29DNUE4TnRQN2daQUxiRXFkbUdBX3dOMDFtNFNqZzFselhBSE5FNWtGeXhiYlRfQk9XLVJlYkctZlpGb2dIa2Zpbjk1LVR0R3lQTWVJenk3cmc?oc=5" },
-  { time: "09:31", tag: "geo", tagText: "地缘", text: "美伊谈判传出进展信号，油价暴跌，科技股遭抛售。纳斯达克指数领跌，Alphabet、亚马逊、英伟达等大型科技股下挫，SpaceX股价也大幅跳水。特朗普表示对伊朗不会用石油利润重建军事的保证持保留态度，同时美国已授权进口伊朗石油至8月。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMFZlTUtZNVVBOTdnSG4xZUZiUkFpVHgxMnhaZHNCZTB5RjFoNUt5aFd4b25YSVNqR05qXzkxVVRKc1NZVEZNM1dFeTYwWFRFSV93cUJ0SkFxSUhvVEZocXIxaFNDcFRMamM1NHJhQlFxZ29VcmF2ZGJMZ19WemdvWF9zdnBPbUE?oc=5" },
-  { time: "09:09", tag: "macro", tagText: "宏观", text: "高盛推荐最佳对冲利率冲击策略。上周美联储鹰派会议后，短期利率前景不确定性上升，高盛建议投资者通过特定衍生品或资产组合对冲利率上行风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/goldman-sachs-picks-best-hedges-for-a-rate-shock-scenario.html" },
-  { time: "08:35", tag: "macro", tagText: "宏观", text: "阿波罗全球管理旗下旗舰私募信贷基金遭遇17%赎回请求，仅满足不到三分之一。投资者加速撤离，引发市场对私募信贷流动性风险的担忧。", source: "Financial Times", url: "https://www.ft.com/content/0fa4c280-2fa0-4be0-9fac-054cd49e87fa" },
-  { time: "07:28", tag: "macro", tagText: "宏观", text: "北京再次召集科技高管开会，但与2021年不同，由于通缩压力和中美科技竞争加剧，政府此次行动更为谨慎，政策空间受限，市场担忧程度低于此前。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/china-tech-crackdown-antitrust-tripcom-meituan-food-delivery-anti-involution-deflation-.html" },
-  { time: "06:43", tag: "macro", tagText: "宏观", text: "罗素2000指数收于3000点，创历史新高。该指数涵盖小盘股，标志着市场广度改善，投资者从大型科技股转向周期性及价值型股票。", source: "TheStreet", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbklzbHlQTE9kd3R3MXNMVGF3RmtzZWdBNS1hSzRBVkFxazdfRmRUSHFOcFp2dHZqQ00zSG9vMG9MMlRIM2pqYlpFUFBBcXlIZnN1eHFkUkNLaVFkOWlJQVBwbGcxa1ZhNVlVWmNBb2NNLWpWMU1ZSklkVlZDdDh5aWRjSjktVlcwWlZmODZ1RzAzRUdibEhYcHRVbkFfR1FPaWhBMEhhcENJb0dZ?oc=5" },
 ];
-const breakingDate = "2026年6月24日 00:05 CST";
+const breakingDate = "2026年6月24日 02:09 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
+  { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
+  { time: "00:13", tag: "ai", tagText: "AI", text: "英伟达的最新AI突破可能不是芯片，而是一种新型软件或系统架构，分析师认为这有望推动下一代数据中心建设热潮。具体细节尚未公布，但市场预期高涨。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQkR5RVNmczVfcGpIa2RzNGdqVFJrOENQcTg1b1BYS0doUF9NdElnSTk4eDFnRkFZTTVHYXpNUUFhblVLUWFka0tZMzN2VXdTRHlGQU5PUk85MlAwRU5uMnhBbGNLaE1tSWRWbUFBZnVfUENRUnNTeUFxa3F1Zm9zSTZBaDlzRHd6NGh3U1FhQ09RTWxBQVUxU3VqbDE2VEpmcDYzajVHVDduNHhPZklzOEFpNTVVeEx4X1Z1ZXd1UmlQdHVhUjREcGx3a3RqdzEzTkE?oc=5" },
   { time: "23:56", tag: "ai", tagText: "AI", text: "知名AI图像生成公司Midjourney意外转向医疗成像领域，宣布推出一款沉浸式超声扫描仪——用户需全身浸入液体槽中进行扫描。然而该产品缺乏临床证据支持，被专家质疑为炒作。", source: "The Verge", url: "https://www.theverge.com/report/954826/midjourney-medical-ai-ultrasound-body-scanner-lacks-evidence" },
   { time: "23:12", tag: "tech", tagText: "科技", text: "硅谷风投公司为庆祝成立50周年，宣布设立两只总规模30亿美元的新AI基金，重注押注人工智能领域。这反映出传统风投机构对AI赛道的长期信心依旧强劲。", source: "The Business Journals", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZ1VvRHVnZ0k1YlFBS0VLWGRGSnhLVm9DZ2RWRnNNYWRXSmpQaUtWYUpwTjZvRkRnU1RzRGlxSVNWZmExWG03b0dTNWl4VG5WQXlObVpmM2tKWnBDRWtGSnQ0R3VYcUl6S2FSYS1JTFlzZElWQTdHeE1FV2YteEpIMGxteTBvSXk2Y1padWZsYTBCN00?oc=5" },
   { time: "21:22", tag: "tech", tagText: "科技", text: "谷歌母公司Alphabet股价再次承压下跌，原因是AI初创公司Anthropic从Google DeepMind挖走了一位诺贝尔奖得主。该人才流失加剧了市场对谷歌AI竞争力下滑的担忧。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSTc2Y1FPQno3bHpCdFJ5VXlzV0lzWFpsNFlKam5Hc2RnU1RxcXBmOWhpRUVISnJaXzh5Xzd4empiT3BKWFMxUlNOa2xSeVFxdTlyM21GVFdJcUZUU1hWd1VNekgtVU5JN3Rqak1mZFMtdXpaVjFkTXpuMi1KLU1RTHRQaFhSc0k3OFE?oc=5" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "瑞典初创公司Fika Jobs完成400万美元融资，打造视频优先的招聘平台。该平台让AI代理面试候选人，并生成短视频简历，被形容为LinkedIn与TikTok的结合体。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "Meta推出新一代智能眼镜，不再与雷朋(Ray-Ban)联名，售价更低。该产品有多个款式，配备更长的电池续航和隐私提示灯，以更低门槛抢占AR可穿戴市场。", source: "The Verge", url: "https://www.theverge.com/tech/954052/meta-glasses-hands-on-kylie-jenner-smart-glasses-price-battery-privacy" },
+  { time: "20:50", tag: "macro", tagText: "宏观", text: "AI芯片股遭遇广泛的两日抛售潮，市场对估值过高和增长放缓的担忧加剧。多家芯片制造商股价下跌，投资者情绪转向谨慎。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdWFZRjFYZkhHZmZPbHhzR25OOTJMUzRUSm9GRzFsVDVKdW8wTnN0UVgzejlCcGswbzV1M1otQWEyV1lDcDhoTVc3ZzU5bnQ3S0o4cm1JTkpZSjhqMEU5UmVsZ0ppYTJ2SFd0RHU5ajYzLVZGQ0FqRUxPRjF6QlluRVJZV1ZSTmJpSUlVajhXWQ?oc=5" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC分析指出，在AI时代，谷歌的在线主导地位正出现裂痕。随着ChatGPT等AI搜索产品分流用户，以及反垄断监管压力加剧，谷歌面临十多年来最严重的挑战。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUERMWjd0MkpWcElJTnVhd3dJMkVVbUFRa3pJSFVaYjBJRHdsT3VqSm5KU1lXMDJoYXBCTnNOa0puaVlubTFib1ZERkZDd3VDdm1VcVV0R3h6R2Fnb2FnV3lyci04dzZsU3BkaThEbDJ4eW9HRHRQOHRPNkxKZm9aRkQ0Q2dQVHRBSDBteW1ldlVKc09LeUNDc0Qtd0tDb1gxalHSAacBQVVfeXFMTTMtckNOUU1yWlZpQWtYdDlGSjEyejZzWkEtZHVfcnlLdEVoSGYtODlqbG96NUYxRFgyekd2cjBwVDhVVld5UWJHNTdkQTNFVkhzNmxNaS0wbkRIWGVPOXpYcTZLY1lxM2JJUS1sYzE2YmJ0LWFaOTJqX2o2RWMycDBUenEyZTd3dlZGLWdZeFRsendiN2hXay1NZkNmalc3WXdmbkxPMTQ?oc=5" },
   { time: "19:35", tag: "tech", tagText: "科技", text: "印度AI初创企业本周融资总额达4.32亿美元，涉及23笔交易，显示出印度AI创业生态的活跃态势。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQXNrSlZ2TFpiQ25BNERkemxONkVzNlRrb3IxN3hYYkxpM0RJeW5OSzNMZDY4b3plTU5Da3cyQVZrR3FfNkprUmZmOFRHV3RyVlg1Wjlkd2Z3MEFRczJQZ3VSTV9yOWMxY2pRb195NjRuZXVwcDlFdldKM3dNZFlBanlQM0RpVGFqRXFQSWZtN0tuLXZtd1RWZWk5a1hoVFg2ZEk3UWdMaXhoWWJBLV96NzFR?oc=5" },
   { time: "19:13", tag: "macro", tagText: "宏观", text: "Crunchbase数据显示，全球AI初创企业融资热潮主要由美国驱动，其他地区占比相对较小，凸显AI投资地域集中度。", source: "quasa.io", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUUJLdTliRGlCQ1gzOHpxclBKb3hDdVptWmFJLWVlOTBqRUc5dlpGWkZKYkViRzNrRG5SdlJBNTdodWhCZ3QzUW8xVmg2bFQ3ZTVQalV5b2xuMG5kZ3BDRlNLYm9HUUhCNVdLR1JUVkpVTkp3dWNiLVY1Nzg0UkNGNFczRlQwLUVUMkdOQjduc1lqNTdCaVY5ZDJNUVg?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "07:24", tag: "ai|tech", tagText: "AI|科技", text: "英伟达发布Rubin架构全液冷数据中心参考设计，声称能大幅降低水耗。但批评指出，此举仅减少数据中心内部用水，未能解决AI最大用水来源——为数据中心供电的化石燃料电厂的冷却用水问题，AI的水资源挑战依然严峻。", source: "The Verge", url: "https://www.theverge.com/tech/954139/nvidia-data-centers-rubin-liquid-cooling" },
   { time: "04:53", tag: "ai", tagText: "AI", text: "AI领域出现‘Loopy’新范式：授权一群AI代理在后台持续无休止地自主工作，将Agentic AI推向新阶段。该模式强调‘循环’特性，代理可长期运行、相互协作，引发对自动化深度与治理边界的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/" },
   { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
-  { time: "04:32", tag: "tech", tagText: "科技", text: "前红杉资本领袖Roelof Botha加入SpaceX董事会，填补现有空缺。SpaceX刚完成史上最大规模IPO上市，此次任命备受关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" },
-  { time: "04:13", tag: "ai", tagText: "AI", text: "AI芯片初创公司Groq确认完成6.5亿美元融资，并在英伟达放弃200亿美元非收购性人才交易后重组管理层。Groq将加大其云业务投入，并招聘新高管。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/ai-chipmaker-groq-confirms-650m-raise-re-staffs-after-nvidias-20b-not-acqui-hire-deal/" },
-  { time: "04:00", tag: "ai", tagText: "AI", text: "AI虚拟装修工具在租房市场泛滥，房东利用生成式AI将破旧房间渲染成理想家居，导致租客在线下看到真实房源后大失所望。该现象加剧了纽约等城市的租房困境，消费者权益团体呼吁监管虚假房源图片。", source: "The Verge", url: "https://www.theverge.com/report/953888/ai-virtual-staging-real-estate-apartment-listings" },
-  { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
 ];
-const aiBreakingDate = "2026年6月24日 00:05 CST";
+const aiBreakingDate = "2026年6月24日 02:09 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
