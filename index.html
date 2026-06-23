@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 34.34,
+  score: 27.89,
   rating: "fear",
-  timestamp: "2026-06-23T11:56:31+00:00",
+  timestamp: "2026-06-23T15:31:10+00:00",
   previousClose: 34.74,
   previous1Week: 39.09,
   previous1Month: 58.97,
   previous1Year: 56.6,
-  date: "2026年6月23日 20:14 CST"
+  date: "2026年6月23日 23:33 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:32", tag: "tech", tagText: "科技", text: "全球芯片股遭猛烈抛售，AI投资疑虑再度升温，纳斯达克指数大跌超2%，标普500指数跌1.6%。美光科技、Sandisk等半导体股领跌，费城半导体指数大幅下挫。分析师认为，市场正经历AI驱动的上涨后的“肠检查时刻”，投资者开始质疑AI相关支出的可持续性和回报率。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/stock-market-today-live-updates.html" },
+  { time: "22:53", tag: "macro", tagText: "宏观", text: "特朗普政府宣布将提供170亿美元贷款，用于支持在美国建设10座大型核反应堆，涉及五个项目，每个项目包含两个反应堆。这是美国近年来最大的核电投资计划，旨在加快清洁能源部署并增强电力供应安全。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/trump-administration-to-loan-17-billion-to-build-10-nuclear-reactors.html" },
+  { time: "22:49", tag: "macro", tagText: "宏观", text: "标普全球数据显示，美国6月制造业裁员规模接近金融危机和新冠疫情期间的水平。尽管6月制造业PMI指数好于预期，但改善主要由库存重建推动，就业市场持续恶化，工厂裁员数量创下多年新高。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/factory-job-cuts-reported-around-financial-crisis-and-covid-levels-for-june-sp-says.html" },
   { time: "20:08", tag: "tech", tagText: "科技", text: "谷歌（Google）在在线搜索和广告领域的主导地位正显现裂痕，AI时代的到来使该公司面临新的挑战。尽管华尔街仍看好其整体实力，但市场份额和竞争格局正在发生变化。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/googles-online-dominance-is-showing-signs-of-cracking-in-ai-era.html" },
   { time: "19:42", tag: "tech", tagText: "科技", text: "甲骨文（Oracle）在过去一年裁员21,000人，公司表示AI技术的采用和部署已导致并将继续导致劳动力削减。此举成为科技巨头因AI浪潮裁员的最新案例。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html" },
   { time: "19:29", tag: "ai", tagText: "AI", text: "高盛警告称，投资者对AI交易的假设正开始脱离现实，市场可能已经跑在了AI能实际带来的回报前面。分析师指出，AI相关股票估值已相当极端，风险正在积累。", source: "MarketWatch", url: "https://www.marketwatch.com/story/investor-assumptions-about-the-ai-trade-are-starting-to-stretch-reality-goldman-sachs-says-0f39d408" },
@@ -1646,14 +1649,15 @@ const breakingNews = [
   { time: "06:18", tag: "tech", tagText: "科技", text: "一辆特斯拉Model 3在德州撞入民宅，致一名76岁老人死亡。司机声称使用特斯拉部分自动驾驶系统。美国国家公路交通安全管理局（NHTSA）已启动联邦调查。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/tesla-nhtsa-model-3-crash-autopilot-katy-texas.html" },
   { time: "06:18", tag: "macro", tagText: "宏观", text: "市场观察人士警告，SpaceX和OpenAI等巨型IPO可能引发类似1929年和2000年规模的股市崩盘，潜在跌幅达40%。巨额新股发行将抽干市场流动性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-40-market-crash-is-lurking-in-the-ipo-pipeline-spacex-and-openai-could-trigger-it-64ae4026?mod=mw_rss_topstories" },
   { time: "04:53", tag: "tech", tagText: "科技", text: "美光科技与人工智能公司Anthropic签署存储与内存供应协议，推动股价上涨。该合作凸显AI算力扩张对上游芯片需求的拉动，美光成为继英伟达后又一受益于AI浪潮的芯片厂商。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microns-stock-momentum-builds-as-the-company-inks-a-new-anthropic-partnership-484e3845?mod=mw_rss_topstories" },
-  { time: "04:50", tag: "tech", tagText: "科技", text: "Salesforce股价连续第14个交易日下跌，创历史最长连跌纪录。投资者对其AI业务进展缺乏信心，质疑公司能否在AI时代实现自我颠覆。", source: "MarketWatch", url: "https://www.marketwatch.com/story/salesforces-stock-extends-record-losing-streak-can-the-company-disrupt-itself-8402d62c?mod=mw_rss_topstories" },
-  { time: "04:40", tag: "macro", tagText: "宏观", text: "费城半导体指数今年已翻倍，但英伟达表现却在该指数成分股中垫底。分析师指出，英伟达体量过大，超预期难度增加，芯片行业内部轮动明显。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-major-chip-index-has-doubled-this-year-despite-nvidia-ranking-dead-last-f049eb5e?mod=mw_rss_topstories" },
-  { time: "04:09", tag: "tech", tagText: "科技", text: "英伟达股价近期承压，Kalshi预测市场交易者押注其芯片价格将下滑。市场担忧AI芯片需求增速放缓及竞争加剧可能压缩英伟达的定价能力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/nvidias-stock-struggles-as-kalshi-traders-bet-chip-prices-are-coming-down.html" },
 ];
-const breakingDate = "2026年6月23日 20:14 CST";
+const breakingDate = "2026年6月23日 23:33 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:12", tag: "tech", tagText: "科技", text: "硅谷风投公司为庆祝成立50周年，宣布设立两只总规模30亿美元的新AI基金，重注押注人工智能领域。这反映出传统风投机构对AI赛道的长期信心依旧强劲。", source: "The Business Journals", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZ1VvRHVnZ0k1YlFBS0VLWGRGSnhLVm9DZ2RWRnNNYWRXSmpQaUtWYUpwTjZvRkRnU1RzRGlxSVNWZmExWG03b0dTNWl4VG5WQXlObVpmM2tKWnBDRWtGSnQ0R3VYcUl6S2FSYS1JTFlzZElWQTdHeE1FV2YteEpIMGxteTBvSXk2Y1padWZsYTBCN00?oc=5" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "瑞典初创公司Fika Jobs完成400万美元融资，打造视频优先的招聘平台。该平台让AI代理面试候选人，并生成短视频简历，被形容为LinkedIn与TikTok的结合体。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "Meta推出新一代智能眼镜，不再与雷朋(Ray-Ban)联名，售价更低。该产品有多个款式，配备更长的电池续航和隐私提示灯，以更低门槛抢占AR可穿戴市场。", source: "The Verge", url: "https://www.theverge.com/tech/954052/meta-glasses-hands-on-kylie-jenner-smart-glasses-price-battery-privacy" },
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC分析指出，在AI时代，谷歌的在线主导地位正出现裂痕。随着ChatGPT等AI搜索产品分流用户，以及反垄断监管压力加剧，谷歌面临十多年来最严重的挑战。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUERMWjd0MkpWcElJTnVhd3dJMkVVbUFRa3pJSFVaYjBJRHdsT3VqSm5KU1lXMDJoYXBCTnNOa0puaVlubTFib1ZERkZDd3VDdm1VcVV0R3h6R2Fnb2FnV3lyci04dzZsU3BkaThEbDJ4eW9HRHRQOHRPNkxKZm9aRkQ0Q2dQVHRBSDBteW1ldlVKc09LeUNDc0Qtd0tDb1gxalHSAacBQVVfeXFMTTMtckNOUU1yWlZpQWtYdDlGSjEyejZzWkEtZHVfcnlLdEVoSGYtODlqbG96NUYxRFgyekd2cjBwVDhVVld5UWJHNTdkQTNFVkhzNmxNaS0wbkRIWGVPOXpYcTZLY1lxM2JJUS1sYzE2YmJ0LWFaOTJqX2o2RWMycDBUenEyZTd3dlZGLWdZeFRsendiN2hXay1NZkNmalc3WXdmbkxPMTQ?oc=5" },
   { time: "19:35", tag: "tech", tagText: "科技", text: "印度AI初创企业本周融资总额达4.32亿美元，涉及23笔交易，显示出印度AI创业生态的活跃态势。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQXNrSlZ2TFpiQ25BNERkemxONkVzNlRrb3IxN3hYYkxpM0RJeW5OSzNMZDY4b3plTU5Da3cyQVZrR3FfNkprUmZmOFRHV3RyVlg1Wjlkd2Z3MEFRczJQZ3VSTV9yOWMxY2pRb195NjRuZXVwcDlFdldKM3dNZFlBanlQM0RpVGFqRXFQSWZtN0tuLXZtd1RWZWk5a1hoVFg2ZEk3UWdMaXhoWWJBLV96NzFR?oc=5" },
   { time: "19:13", tag: "macro", tagText: "宏观", text: "Crunchbase数据显示，全球AI初创企业融资热潮主要由美国驱动，其他地区占比相对较小，凸显AI投资地域集中度。", source: "quasa.io", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUUJLdTliRGlCQ1gzOHpxclBKb3hDdVptWmFJLWVlOTBqRUc5dlpGWkZKYkViRzNrRG5SdlJBNTdodWhCZ3QzUW8xVmg2bFQ3ZTVQalV5b2xuMG5kZ3BDRlNLYm9HUUhCNVdLR1JUVkpVTkp3dWNiLVY1Nzg0UkNGNFczRlQwLUVUMkdOQjduc1lqNTdCaVY5ZDJNUVg?oc=5" },
   { time: "18:00", tag: "ai", tagText: "AI", text: "Google推出AI初创企业孵化器，利用前员工校友网络为创业者提供支持，并探索无股权融资模式，以吸引更多人才和项目。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQX2J4V3dST05vOUNwS29Pcnk3ZlVtanpDQ2hzMmVlOHJrZ2ZHeF9DdFI4YTlNWG10SFRzODF6LXJpekFhSVRzZGoxWThEM1F2akZaQ3ozR0h3ZGFyVUhsRUpIbDdGbU5QV3dzSUJfTWlocUZxQXp5VUlUbVNGbVNmZ1U0RFpRWjRvNV93Umx1WUpsVDRMV29wTm4xVFZJRWhodEg2bjB6RkJZeHVmT1pTc2xB?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "03:54", tag: "tech", tagText: "科技", text: "大规模数据泄露事件曝光，涉及Oracle、联想、FedEx、北约承包商及Fortinet等组织的敏感网络凭证被泄露，安全形势严峻。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" },
   { time: "03:16", tag: "tech", tagText: "科技", text: "AMD在用户强烈反对后，恢复消费级CPU中的内存加密功能。此前AMD移除该功能被批评为迫使消费者购买更昂贵的企业级芯片。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/06/following-user-outcry-amd-reinstates-memory-encryption-in-consumer-cpus/" },
   { time: "03:08", tag: "macro", tagText: "宏观", text: "英伟达股价承压。Kalshi预测市场交易员押注AI芯片价格将下跌，同时英特尔等竞争对手芯片股逆势上涨，市场开始分化。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTFctMnQ3aTJLdkZoUlZIbE9razlGMndPTzJ0Zk9jakwyd2FXVEV3NFFRU2hUazlLTk5IY3dzQTRUaFVRMFFRX2pDX2xrU2szMTBIN2E0Z0RERWZtY0I5d2JSQXdrUmN1NnhxbGlkUUJ6NFVBaHNLTzVCQ3NQZVFoZFNkZnN3aU9tMTN4RXBoWGIxem9aV3IzaWdNYW1lclRMYTJlUDdrdkNwZ2pqeVZZ0gG0AUFVX3lxTE5ZaDY5Rm9MQUYya0U0eHlGOHE5MXA3YmgyaUVfVDFubWtvZVB2Sk5KYV9pT0hJWklMalA1WEd4WVdVNjM1aVVfdXY5UVkxYi11a0ZwNFZ1c0hOOGRVSElFS0YzekMxQmFhQVRIMzZMa0VqMFowel80VUV3RGpnLUdibGoyY1pvZkFLdmQ1VGRpdkdEWEtHalFfNHVRR2pLX2VTdDg0TkhPS3pxNlF3ZlhWN2k5ZQ?oc=5" },
-  { time: "02:49", tag: "ai", tagText: "AI", text: "Google DeepMind与独立电影公司A24达成7500万美元合作，共同开发AI电影制作工具。此举标志着大型科技公司加码AI在好莱坞的应用。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/" },
-  { time: "01:37", tag: "ai", tagText: "AI", text: "SMH ETF（半导体ETF）资金流向显示，投资者正将AI芯片交易重心从英伟达转移至其他标的，市场关注点开始扩散。", source: "TechStock²", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ2NiRjdtdGF0UWZIUHR3QU1Xc2p3VXpIY1FRdG9yaXlTX2ljZnVsS1BGTDVJQ3dabHJPWFpwTTlnb3hMMVdJMjM2QUl4d2RjUXBEZWw2a0VGZG1ZZVhRWUEyY2g5M1FTSl9QNmxya3Y5SGZUSEs3ZXMtejhoaHZzQ2JMX2J0clFi?oc=5" },
-  { time: "01:31", tag: "tech", tagText: "科技", text: "亚马逊开始向印度用户发送邮件邀请，测试全新AI助手Alexa+，该版本已支持印地语，将进一步拓展印度市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/amazon-is-testing-alexa-in-india-with-hindi-support/" },
-  { time: "00:51", tag: "ai", tagText: "AI", text: "SpaceX与开源AI实验室Reflection AI签署计算服务协议，后者将从2026年7月1日起至2029年，每月支付1.5亿美元，使用SpaceX Colossus 2数据中心内的英伟达最新GB300 AI芯片及配套硬件。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/" },
 ];
-const aiBreakingDate = "2026年6月23日 20:14 CST";
+const aiBreakingDate = "2026年6月23日 23:33 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
