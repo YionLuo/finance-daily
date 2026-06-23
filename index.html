@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.97,
+  score: 34.34,
   rating: "fear",
-  timestamp: "2026-06-23T08:16:01+00:00",
+  timestamp: "2026-06-23T11:56:31+00:00",
   previousClose: 34.74,
   previous1Week: 39.09,
   previous1Month: 58.97,
   previous1Year: 56.6,
-  date: "2026年6月23日 16:35 CST"
+  date: "2026年6月23日 20:14 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:08", tag: "tech", tagText: "科技", text: "谷歌（Google）在在线搜索和广告领域的主导地位正显现裂痕，AI时代的到来使该公司面临新的挑战。尽管华尔街仍看好其整体实力，但市场份额和竞争格局正在发生变化。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/googles-online-dominance-is-showing-signs-of-cracking-in-ai-era.html" },
+  { time: "19:42", tag: "tech", tagText: "科技", text: "甲骨文（Oracle）在过去一年裁员21,000人，公司表示AI技术的采用和部署已导致并将继续导致劳动力削减。此举成为科技巨头因AI浪潮裁员的最新案例。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html" },
+  { time: "19:29", tag: "ai", tagText: "AI", text: "高盛警告称，投资者对AI交易的假设正开始脱离现实，市场可能已经跑在了AI能实际带来的回报前面。分析师指出，AI相关股票估值已相当极端，风险正在积累。", source: "MarketWatch", url: "https://www.marketwatch.com/story/investor-assumptions-about-the-ai-trade-are-starting-to-stretch-reality-goldman-sachs-says-0f39d408" },
+  { time: "19:26", tag: "geo", tagText: "地缘", text: "英国《金融时报》分析指出，乌克兰总统泽连斯基正逐渐掌握西方未来的主导权，他可能在与特朗普的博弈中笑到最后。文章认为乌克兰局势或将成为影响西方政治格局的关键变量。", source: "Financial Times", url: "https://www.ft.com/content/b822bb89-a0b5-4e5f-8de3-3e53aa04c4d4" },
+  { time: "19:11", tag: "macro", tagText: "宏观", text: "美元指数升至一年新高，市场押注美联储将继续加息；日元则徘徊在40年低位附近，日本央行的宽松政策与美联储鹰派立场形成鲜明对比。外汇市场波动加剧。", source: "Reuters", url: "https://finance.yahoo.com/markets/currencies/articles/dollar-firms-hawkish-fed-bets-014832057.html" },
   { time: "16:10", tag: "geo", tagText: "地缘", text: "美国大幅豁免伊朗石油制裁，解冻数十亿美元收入，为正在进行中的和平谈判提供经济支持。此举可能缓解中东紧张局势，并压低油价，但引发盟友和鹰派不满。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/us-iran-oil-sanction-relief-strait-of-hormuz-peace-deal-.html" },
   { time: "15:42", tag: "crypto", tagText: "加密", text: "比特币ETF今年累计资金流出已达80亿美元，机构投资者因监管不确定性和科技股抛售加速撤离。比特币价格跌向6.3万美元，市场情绪转向悲观。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYXZuNVFZNWZUN2NWN24wbzlEN3NZOC00UEIwdHZpTndmUUJyYU9XZTNobHFkZ21RdjRTUEdsbEFTanBXbWFiTTAyNVNNaENmQWVaa1pGa1RZYVZJVnZ3MUFRbnVDU0JqVFBCUFBsQkM1am90REFRVTZ5bEllMWVTYw?oc=5" },
   { time: "11:19", tag: "macro", tagText: "宏观", text: "中国618购物节增速大幅放缓，消费低迷持续。最新消费数据显示，中国零售增长乏力，消费者信心不足，经济复苏前景面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/china-618-shopping-festival-sales-growth-consumer-spending-slowdown-syntun.html" },
@@ -1644,16 +1649,14 @@ const breakingNews = [
   { time: "04:50", tag: "tech", tagText: "科技", text: "Salesforce股价连续第14个交易日下跌，创历史最长连跌纪录。投资者对其AI业务进展缺乏信心，质疑公司能否在AI时代实现自我颠覆。", source: "MarketWatch", url: "https://www.marketwatch.com/story/salesforces-stock-extends-record-losing-streak-can-the-company-disrupt-itself-8402d62c?mod=mw_rss_topstories" },
   { time: "04:40", tag: "macro", tagText: "宏观", text: "费城半导体指数今年已翻倍，但英伟达表现却在该指数成分股中垫底。分析师指出，英伟达体量过大，超预期难度增加，芯片行业内部轮动明显。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-major-chip-index-has-doubled-this-year-despite-nvidia-ranking-dead-last-f049eb5e?mod=mw_rss_topstories" },
   { time: "04:09", tag: "tech", tagText: "科技", text: "英伟达股价近期承压，Kalshi预测市场交易者押注其芯片价格将下滑。市场担忧AI芯片需求增速放缓及竞争加剧可能压缩英伟达的定价能力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/nvidias-stock-struggles-as-kalshi-traders-bet-chip-prices-are-coming-down.html" },
-  { time: "04:07", tag: "geo", tagText: "地缘", text: "安达保险（Chubb）CEO发出警告，称全球石油供应面临新的中断威胁，可能冲击能源市场稳定。具体威胁因素尚未明确，但市场对地缘风险的敏感度上升。", source: "TheStreet", url: "https://finance.yahoo.com/energy/articles/chubb-ceo-flags-threat-disrupting-200700323.html" },
-  { time: "04:06", tag: "macro", tagText: "宏观", text: "华尔街此前极度看好黄金，但6月美联储会议释放鹰派信号后，多家投行下调黄金目标价。市场对降息预期降温，黄金的避险吸引力面临挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/wall-street-was-once-uber-bullish-on-gold-now-its-changing-its-tune.html" },
-  { time: "04:03", tag: "macro", tagText: "宏观", text: "债券市场出现异常波动，分析师认为这种波动性将持续。新任美联储主席沃什似乎支持由债券市场引领货币政策路径，从而避免加息，但市场仍存不确定性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-bond-market-just-did-something-unusual-why-its-sudden-volatility-is-here-to-stay-a60205ff?mod=mw_rss_topstories" },
-  { time: "01:17", tag: "ai", tagText: "AI", text: "Alphabet (谷歌母公司) 因两位顶尖AI研究员（包括一位诺贝尔奖得主）离职加入竞争对手实验室，股价暴跌，单日市值蒸发约2690亿美元，创一年来最大跌幅。市场担忧其在AI人才争夺战中失利。", source: "CNBC", url: "https://www.cnbc.com/2026/06/22/alphabet-goog-stock-ai-departures.html" },
-  { time: "01:02", tag: "tech", tagText: "科技", text: "雪佛龙与微软签署20年协议，将开发位于美国石油核心地带的数据中心，可能包含天然气发电设施。此举标志传统能源巨头正式跨界AI基础设施领域。", source: "Financial Times", url: "https://www.ft.com/content/57cc533b-08c3-419b-919c-23bec3f248f4" },
 ];
-const breakingDate = "2026年6月23日 16:35 CST";
+const breakingDate = "2026年6月23日 20:14 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:35", tag: "tech", tagText: "科技", text: "印度AI初创企业本周融资总额达4.32亿美元，涉及23笔交易，显示出印度AI创业生态的活跃态势。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQXNrSlZ2TFpiQ25BNERkemxONkVzNlRrb3IxN3hYYkxpM0RJeW5OSzNMZDY4b3plTU5Da3cyQVZrR3FfNkprUmZmOFRHV3RyVlg1Wjlkd2Z3MEFRczJQZ3VSTV9yOWMxY2pRb195NjRuZXVwcDlFdldKM3dNZFlBanlQM0RpVGFqRXFQSWZtN0tuLXZtd1RWZWk5a1hoVFg2ZEk3UWdMaXhoWWJBLV96NzFR?oc=5" },
+  { time: "19:13", tag: "macro", tagText: "宏观", text: "Crunchbase数据显示，全球AI初创企业融资热潮主要由美国驱动，其他地区占比相对较小，凸显AI投资地域集中度。", source: "quasa.io", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUUJLdTliRGlCQ1gzOHpxclBKb3hDdVptWmFJLWVlOTBqRUc5dlpGWkZKYkViRzNrRG5SdlJBNTdodWhCZ3QzUW8xVmg2bFQ3ZTVQalV5b2xuMG5kZ3BDRlNLYm9HUUhCNVdLR1JUVkpVTkp3dWNiLVY1Nzg0UkNGNFczRlQwLUVUMkdOQjduc1lqNTdCaVY5ZDJNUVg?oc=5" },
+  { time: "18:00", tag: "ai", tagText: "AI", text: "Google推出AI初创企业孵化器，利用前员工校友网络为创业者提供支持，并探索无股权融资模式，以吸引更多人才和项目。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQX2J4V3dST05vOUNwS29Pcnk3ZlVtanpDQ2hzMmVlOHJrZ2ZHeF9DdFI4YTlNWG10SFRzODF6LXJpekFhSVRzZGoxWThEM1F2akZaQ3ozR0h3ZGFyVUhsRUpIbDdGbU5QV3dzSUJfTWlocUZxQXp5VUlUbVNGbVNmZ1U0RFpRWjRvNV93Umx1WUpsVDRMV29wTm4xVFZJRWhodEg2bjB6RkJZeHVmT1pTc2xB?oc=5" },
   { time: "14:04", tag: "ai", tagText: "AI", text: "AI初创公司Upscale AI完成1.9亿美元扩展轮融资，估值达20亿美元，由Premji Invest领投。该公司专注于AI驱动的图像与视频生成技术，此次融资将用于加速产品研发和市场拓展。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQMFQ4SFQ4cVJJTmQ2OW5mbE05c3kwTnZCVHdzS0kwRGhscjZ3QkU0VFBlMHI0YU9ReHBZODVYbjRzTko1c3VOal90YW1iaU1RNndfczd4YVZ3RnVoRWVQWGh1d0ZrT1drSmxiQjlvbnJBNWdLNkZwX19UNUFhcE1DSi1SUnU4dHhVa2xmeS1PZmJTTlN6aTA2N3V0b2k4WVRsSzZ1U1VOQUxOTllONE44NmNGLTFWVmNiVUVJa0JoMnZzclZPX2JzUjhVMFdpRjVxclU5d09RTldpaGRTSEE?oc=5" },
   { time: "12:53", tag: "tech", tagText: "科技", text: "现代汽车集团宣布将在美国设立机器人AI研究所，并在韩国建立全球软件中心。此举旨在加速自动驾驶和智能机器人技术研发，强化其在未来出行领域的核心竞争力。", source: "동아사이언스", url: "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9PTzVHV1E2NUVFRTdIdmNtdTcxdW1EZ1hPcmVNcFhUT3pLNFk3YWZoTDgzZlpnVDFreFVkS1JBcjR3OGRMTk5Mc0U0TVFGdTFfdXFaMQ?oc=5" },
   { time: "10:55", tag: "ai", tagText: "AI", text: "五眼联盟发布重大警告：下一次AI突破可能就在几个月内。该联盟成员国情报机构联合指出，前沿AI模型的进展速度远超预期，可能带来不可控的风险，敦促各国政府加快制定监管框架。", source: "NDTV", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYXltYTltd01jOWVYeXRnb3NYTEFfdnlkMWZiSVdfbW95MTZ1aUM3MEVWYlNsTS1KNXZIQVZaLU5TUGg3Qzk4Q2FLNHI3N2FxRGhQVG11dXU1SFlXaXRoaVU1N1BTVzRWaUZKQ3hRU2JhOGkyUENzUzd5M2JVWFEwOHJid2RhLWI0Z2hGYk9CMmNXSjlfaTBFcjVudExxVnVuclVhTGg0bXBEQlRUS2ZlcmtCZGFNSmJLUkVyWGFmMjdGeXo2dk01QnlXWWwyeDhw0gHYAUFVX3lxTE9iTW9oREhxZjJwUEl3VWk4Wm1uOVNfdnNOVEJ6dlZzRDRkZ3dlSFloTEd2QllEVHZzNU1oalZwakc5NGllVThPOHhva0tnVXVfYkVyUzM3REZ5UGVEc1h4clRMTks5RGVzQzZ3WjEzdVJPNFpQRE5GRWVTYnE5Wk0yNnplTjFsLXRhV3NscGl2X0JadTM3V0R1UTQzb0hoaVhzUlZKQnk5VnoycW5FY2dlYUdsV0ZQRkM1WVNETTdmdzMycnNNa0NJalRYRzltUERaZ1ZYdlBhQw?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "01:37", tag: "ai", tagText: "AI", text: "SMH ETF（半导体ETF）资金流向显示，投资者正将AI芯片交易重心从英伟达转移至其他标的，市场关注点开始扩散。", source: "TechStock²", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ2NiRjdtdGF0UWZIUHR3QU1Xc2p3VXpIY1FRdG9yaXlTX2ljZnVsS1BGTDVJQ3dabHJPWFpwTTlnb3hMMVdJMjM2QUl4d2RjUXBEZWw2a0VGZG1ZZVhRWUEyY2g5M1FTSl9QNmxya3Y5SGZUSEs3ZXMtejhoaHZzQ2JMX2J0clFi?oc=5" },
   { time: "01:31", tag: "tech", tagText: "科技", text: "亚马逊开始向印度用户发送邮件邀请，测试全新AI助手Alexa+，该版本已支持印地语，将进一步拓展印度市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/amazon-is-testing-alexa-in-india-with-hindi-support/" },
   { time: "00:51", tag: "ai", tagText: "AI", text: "SpaceX与开源AI实验室Reflection AI签署计算服务协议，后者将从2026年7月1日起至2029年，每月支付1.5亿美元，使用SpaceX Colossus 2数据中心内的英伟达最新GB300 AI芯片及配套硬件。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/" },
-  { time: "00:19", tag: "ai", tagText: "AI", text: "Alphabet股价下跌，原因是最顶尖的DeepMind和Gemini研究员相继跳槽至竞争对手AI公司，引发市场对Google AI人才流失的担忧。", source: "eciks.org", url: "https://news.google.com/rss/articles/CBMickFVX3lxTE91QkdLeUhuT29GRWt6NjZ1TjNfa2Z4RVE3eWVTdWJTaXdTMERJRDhiemhBblE1Umw4UGZpN1k0bGVidlZTNWg3T0dfWGRla3BpNDBvOFhGYTBlb0NuTzVGamJDSlFxcDd0T21LenZEdGNJZw?oc=5" },
-  { time: "23:28", tag: "geo", tagText: "地缘", text: "特朗普政府对AI初创公司Anthropic发起最新打击行动，引发对AI生态系统影响的广泛讨论。分析认为此举可能重塑行业竞争格局，并引发谁将从中受益的疑问。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" },
-  { time: "23:23", tag: "ai", tagText: "AI", text: "印度亿万富翁安巴尼（Mukesh Ambani）计划将AI深度整合到其电信服务中，覆盖超过5亿用户，目标是在每一个通话、应用和家庭场景中融入AI功能。Reliance正将AI编织进其庞大的电信网络。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" },
 ];
-const aiBreakingDate = "2026年6月23日 16:35 CST";
+const aiBreakingDate = "2026年6月23日 20:14 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
