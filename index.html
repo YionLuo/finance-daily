@@ -1618,18 +1618,21 @@
 const fearGreedData = {
   score: 27.54,
   rating: "fear",
-  timestamp: "2026-06-23T22:02:17+00:00",
+  timestamp: "2026-06-23T23:47:27+00:00",
   previousClose: 34.74,
   previous1Week: 39.09,
   previous1Month: 58.97,
   previous1Year: 56.6,
-  date: "2026年6月24日 06:22 CST"
+  date: "2026年6月24日 08:06 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:56", tag: "macro", tagText: "宏观", text: "美股科技板块遭遇剧烈抛售，纳斯达克指数暴跌580点，跌幅超3%，标普500下跌107点。AI和芯片股领跌，美光、Sandisk等大幅下挫，市场担忧AI泡沫及利率上升风险。投资者正在评估科技股抛售是否会进一步蔓延。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/stock-market-today-live-updates.html" },
+  { time: "07:37", tag: "macro", tagText: "宏观", text: "MSCI宣布维持韩国为新兴市场地位，但推迟了对印尼市场分类的审议，因印尼面临下调风险。市场此前期待韩国可能被纳入MSCI发达市场观察名单，此次决定令部分投资者失望。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/msci-south-korea-emerging-market-indonesia-review-extended.html" },
   { time: "06:16", tag: "macro", tagText: "宏观", text: "Alphabet（谷歌母公司）将取代Verizon加入道琼斯工业平均指数，指数提供商称Alphabet更能代表通信板块。这是科技巨头在传统蓝筹指数中权重提升的最新标志。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/alphabet-verizon-dow-djia.html" },
+  { time: "06:08", tag: "geo", tagText: "地缘", text: "欧盟盟友加入美国主导的“Pax Silica”协议，旨在打破对中国人工智能供应链的依赖。该协议由美国推动，计划通过联合创新和供应链重组减少对中国的依赖，强化西方在AI芯片及基础设施领域的自主能力。", source: "Financial Times", url: "https://www.ft.com/content/681c33a0-dcb4-4a82-9aa0-8a9172f7e5bc" },
   { time: "05:42", tag: "macro", tagText: "宏观", text: "美国众议院预计将通过一项经济适用房法案，旨在降低购房者成本并限制私募股权参与，随后将送交特朗普总统签署。该法案是近期住房政策领域的重要立法进展。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/house-affordable-housing-bill-trump.html" },
   { time: "05:34", tag: "macro", tagText: "宏观", text: "韩国KOSPI指数周二暴跌约10%，创2020年3月以来最大单日跌幅。摩根士丹利认为此次下跌并非趋势性崩溃，基本面尚未恶化，但市场对AI及科技股抛售情绪波及亚洲市场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/heres-why-morgan-stanley-says-south-korea-stocks-arent-breaking-down.html" },
   { time: "05:01", tag: "ai", tagText: "AI", text: "Cerebras发布IPO后首份财报，营收同比增长92%。这家AI芯片公司于今年5月在纳斯达克上市，为华尔街提供了纯AI概念股的投资机会。财报显示其业绩增长强劲，但当日科技股整体承压。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/cerebras-cbrs-q1-earnings-report-2026.html" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "01:32", tag: "macro", tagText: "宏观", text: "加拿大央行行长Macklem警告称，全球失衡可能加剧金融稳定风险。在当前利率高企、贸易摩擦持续的背景下，跨境资本流动和债务积累对金融体系构成潜在威胁。", source: "Reuters", url: "https://finance.yahoo.com/news/global-imbalances-could-fuel-financial-133957514.html" },
   { time: "01:31", tag: "crypto", tagText: "加密", text: "数字欧元通过关键立法障碍，欧盟寻求摆脱对美国信用卡的依赖。该进展标志着欧洲央行数字货币（CBDC）项目进入新阶段，可能重塑欧洲支付格局并影响全球数字货币竞争。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPN2JLemlJSEMyWUJKMUFYdDNtYjRremdieDQ2aTlmNm1vLXVXWmFWYTJRMXQ1NDZWQmlzcXdJNlR4eFNRUWhmRENiZW1pYkZ1SnM5SXQ0Umh3TThqWV9semdvVWRPaFBmRTBocXVBdmFOUlZ1WEs0YmRSZllmV0RRdjlaZXBINFhDUm15WDRROXkwLVRRQTAwaUl2NmdROWpRbEZ6R1d3?oc=5" },
   { time: "01:30", tag: "macro", tagText: "宏观", text: "美联储新主席Warsh正在筛选亚特兰大联储行长人选，该任命被视为重塑美联储政策方向的关键机会。候选人Michael Faulkender等人选可能影响未来利率决策和监管立场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/fed-warsh-atlanta-michael-faulkender.html" },
-  { time: "01:04", tag: "tech", tagText: "科技", text: "特朗普承认出售IBM股票是错误，并转而看好其量子计算前景。此举反映美国政策层对本土量子计算计划的支持，IBM或成政府重点扶持对象，相关科技股关注度上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-admits-selling-ibms-stock-was-a-mistake-now-hes-cheering-its-quantum-future-095592d6" },
-  { time: "23:58", tag: "tech", tagText: "科技", text: "SpaceX股价盘中跌破150美元IPO发行价，随后反弹收涨4%。该股自上市以来持续承压，市场对AI和科技股的整体抛售情绪加剧了其下行压力，但尾盘买盘推动其回到发行价上方。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/spacex-stock-tech-sell-off.html" },
-  { time: "23:56", tag: "tech", tagText: "科技", text: "Meta宣布推出全新智能眼镜，起售价299美元。CEO扎克伯格表示，该眼镜是迈向未来全功能增强现实（AR）设备的关键一步，目前虽未集成屏幕，但为后续产品奠定基础。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/meta-glasses-are-new-smart-glasses-starting-at-299.html" },
 ];
-const breakingDate = "2026年6月24日 06:22 CST";
+const breakingDate = "2026年6月24日 08:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:30", tag: "ai", tagText: "AI", text: "印度营销科技公司MoEngage宣称未来营销将由数百万AI代理驱动，并已通过全现金收购获取相关技术，为每位客户分配专属AI代理。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/indias-moengage-bets-marketings-future-on-millions-of-ai-agents/" },
+  { time: "06:30", tag: "tech", tagText: "科技", text: "白宫发布行政令，要求加速迁移至抗量子密码算法，警告若不及时采用后量子密码学将带来国家安全风险。该命令缩短了原定迁移截止期限。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/06/executive-order-bumps-up-deadline-to-move-off-quantum-vulnerable-crypto/" },
+  { time: "06:03", tag: "ai", tagText: "AI", text: "好莱坞主流制片厂集体回避关于OpenAI创始人山姆·奥尔特曼的传记电影《Artificial》。据报奈飞、A24、焦点影业及华纳兄弟子公司Clockwork均放弃发行该片，被指为向OpenAI“低头”。", source: "The Verge", url: "https://www.theverge.com/entertainment/954899/luca-guadagnino-artificial-sam-altman-amazon-a24-neon-mubi-chatgpt" },
   { time: "04:53", tag: "ai", tagText: "AI", text: "AI领域出现‘Loopy’新范式：授权一群AI代理在后台持续无休止地自主工作，将Agentic AI推向新阶段。该模式强调‘循环’特性，代理可长期运行、相互协作，引发对自动化深度与治理边界的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/" },
   { time: "04:32", tag: "ai", tagText: "AI", text: "Signal总裁Meredith Whittaker公开警告：AI聊天机器人“不是你的朋友”，它们没有意识、没有知觉，用户不应将其拟人化。她强调这些系统只是工具，而非真正的情感觉知伙伴。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
   { time: "04:17", tag: "tech|macro", tagText: "科技|宏观", text: "甲骨文宣布裁员21,000人，以削减成本并腾出资金用于AI数据中心基础设施的投资。此次裁员规模庞大，反映出传统科技巨头在AI竞赛中采取的激进财务策略。", source: "Ars Technica", url: "https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "19:35", tag: "tech", tagText: "科技", text: "印度AI初创企业本周融资总额达4.32亿美元，涉及23笔交易，显示出印度AI创业生态的活跃态势。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQXNrSlZ2TFpiQ25BNERkemxONkVzNlRrb3IxN3hYYkxpM0RJeW5OSzNMZDY4b3plTU5Da3cyQVZrR3FfNkprUmZmOFRHV3RyVlg1Wjlkd2Z3MEFRczJQZ3VSTV9yOWMxY2pRb195NjRuZXVwcDlFdldKM3dNZFlBanlQM0RpVGFqRXFQSWZtN0tuLXZtd1RWZWk5a1hoVFg2ZEk3UWdMaXhoWWJBLV96NzFR?oc=5" },
   { time: "19:13", tag: "macro", tagText: "宏观", text: "Crunchbase数据显示，全球AI初创企业融资热潮主要由美国驱动，其他地区占比相对较小，凸显AI投资地域集中度。", source: "quasa.io", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUUJLdTliRGlCQ1gzOHpxclBKb3hDdVptWmFJLWVlOTBqRUc5dlpGWkZKYkViRzNrRG5SdlJBNTdodWhCZ3QzUW8xVmg2bFQ3ZTVQalV5b2xuMG5kZ3BDRlNLYm9HUUhCNVdLR1JUVkpVTkp3dWNiLVY1Nzg0UkNGNFczRlQwLUVUMkdOQjduc1lqNTdCaVY5ZDJNUVg?oc=5" },
   { time: "18:00", tag: "ai", tagText: "AI", text: "Google推出AI初创企业孵化器，利用前员工校友网络为创业者提供支持，并探索无股权融资模式，以吸引更多人才和项目。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQX2J4V3dST05vOUNwS29Pcnk3ZlVtanpDQ2hzMmVlOHJrZ2ZHeF9DdFI4YTlNWG10SFRzODF6LXJpekFhSVRzZGoxWThEM1F2akZaQ3ozR0h3ZGFyVUhsRUpIbDdGbU5QV3dzSUJfTWlocUZxQXp5VUlUbVNGbVNmZ1U0RFpRWjRvNV93Umx1WUpsVDRMV29wTm4xVFZJRWhodEg2bjB6RkJZeHVmT1pTc2xB?oc=5" },
-  { time: "14:04", tag: "ai", tagText: "AI", text: "AI初创公司Upscale AI完成1.9亿美元扩展轮融资，估值达20亿美元，由Premji Invest领投。该公司专注于AI驱动的图像与视频生成技术，此次融资将用于加速产品研发和市场拓展。", source: "Indiatimes", url: "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQMFQ4SFQ4cVJJTmQ2OW5mbE05c3kwTnZCVHdzS0kwRGhscjZ3QkU0VFBlMHI0YU9ReHBZODVYbjRzTko1c3VOal90YW1iaU1RNndfczd4YVZ3RnVoRWVQWGh1d0ZrT1drSmxiQjlvbnJBNWdLNkZwX19UNUFhcE1DSi1SUnU4dHhVa2xmeS1PZmJTTlN6aTA2N3V0b2k4WVRsSzZ1U1VOQUxOTllONE44NmNGLTFWVmNiVUVJa0JoMnZzclZPX2JzUjhVMFdpRjVxclU5d09RTldpaGRTSEE?oc=5" },
-  { time: "12:53", tag: "tech", tagText: "科技", text: "现代汽车集团宣布将在美国设立机器人AI研究所，并在韩国建立全球软件中心。此举旨在加速自动驾驶和智能机器人技术研发，强化其在未来出行领域的核心竞争力。", source: "동아사이언스", url: "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9PTzVHV1E2NUVFRTdIdmNtdTcxdW1EZ1hPcmVNcFhUT3pLNFk3YWZoTDgzZlpnVDFreFVkS1JBcjR3OGRMTk5Mc0U0TVFGdTFfdXFaMQ?oc=5" },
-  { time: "10:55", tag: "ai", tagText: "AI", text: "五眼联盟发布重大警告：下一次AI突破可能就在几个月内。该联盟成员国情报机构联合指出，前沿AI模型的进展速度远超预期，可能带来不可控的风险，敦促各国政府加快制定监管框架。", source: "NDTV", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYXltYTltd01jOWVYeXRnb3NYTEFfdnlkMWZiSVdfbW95MTZ1aUM3MEVWYlNsTS1KNXZIQVZaLU5TUGg3Qzk4Q2FLNHI3N2FxRGhQVG11dXU1SFlXaXRoaVU1N1BTVzRWaUZKQ3hRU2JhOGkyUENzUzd5M2JVWFEwOHJid2RhLWI0Z2hGYk9CMmNXSjlfaTBFcjVudExxVnVuclVhTGg0bXBEQlRUS2ZlcmtCZGFNSmJLUkVyWGFmMjdGeXo2dk01QnlXWWwyeDhw0gHYAUFVX3lxTE9iTW9oREhxZjJwUEl3VWk4Wm1uOVNfdnNOVEJ6dlZzRDRkZ3dlSFloTEd2QllEVHZzNU1oalZwakc5NGllVThPOHhva0tnVXVfYkVyUzM3REZ5UGVEc1h4clRMTks5RGVzQzZ3WjEzdVJPNFpQRE5GRWVTYnE5Wk0yNnplTjFsLXRhV3NscGl2X0JadTM3V0R1UTQzb0hoaVhzUlZKQnk5VnoycW5FY2dlYUdsV0ZQRkM1WVNETTdmdzMycnNNa0NJalRYRzltUERaZ1ZYdlBhQw?oc=5" },
 ];
-const aiBreakingDate = "2026年6月24日 06:22 CST";
+const aiBreakingDate = "2026年6月24日 08:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
