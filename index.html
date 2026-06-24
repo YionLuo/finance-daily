@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27.69,
+  score: 27.37,
   rating: "fear",
-  timestamp: "2026-06-24T00:00:00+00:00",
+  timestamp: "2026-06-24T09:28:16+00:00",
   previousClose: 27.54,
   previous1Week: 32.2,
   previous1Month: 58.97,
   previous1Year: 57.89,
-  date: "2026年6月24日 13:08 CST"
+  date: "2026年6月24日 17:48 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:44", tag: "tech", tagText: "科技", text: "科技股周三反弹，在此前全球抛售后出现震荡交易。亚洲市场领涨，投资者逢低买入，但市场情绪仍不稳定，关注美光科技财报及AI板块走势。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/asia-tech-stocks-rebound-after-global-rout.html" },
+  { time: "17:37", tag: "crypto", tagText: "加密", text: "美国参议院即将投票的《CLARITY法案》可能成为比特币下一轮走势的关键。该法案旨在明确加密市场监管框架，若通过将利好比特币合规化进程，反之可能加剧市场不确定性。", source: "CryptoTicker", url: "https://news.google.com/rss/articles/CBMic0FVX3lxTFAyZmZ4QzZ6bm9Rb1Q4MTdJRnZaQnhfSzBZM1R1YVUtUjNfVVE0UHhtZFdlVWRpZy1Wdmc2dURKZ2NFYlEzSjl6M0xvcE5Bank3bkpfWGl6WDdCVTE0VEtFWjNLRm5FNWdEaGZJWEVkbmJDMkU?oc=5" },
+  { time: "17:07", tag: "tech", tagText: "科技", text: "SK海力士宣布计划在纳斯达克发行美国存托凭证（ADR），成为继三星之后又一家赴美上市的韩国存储芯片巨头。受AI需求推动，海力士市值飙升，此次上市将进一步扩大其海外投资者基础。", source: "MarketWatch", url: "https://www.marketwatch.com/story/coming-to-america-sk-hynix-plans-depository-receipt-listing-on-the-nasdaq-c3c9695e" },
+  { time: "17:05", tag: "macro", tagText: "宏观", text: "布伦特原油跌破76美元/桶，创下美伊战争爆发前一日以来的最低水平。美国总统特朗普加大对石油公司的施压，要求其降低汽油价格，以反映近期原油下跌趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/oil-prices-wti-brent-crude-trump-doj-gasoline-prices-strait-of-hormuz.html" },
+  { time: "16:33", tag: "geo", tagText: "地缘", text: "据英国《金融时报》报道，德国计划取消数十亿欧元的F126护卫舰建造项目。受此消息影响，德国国防巨头莱茵金属股价暴跌13%，拖累欧洲国防板块整体下挫。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/rheinmetall-stock-defense-germany-warship-scrap-plans.html" },
   { time: "13:00", tag: "geo", tagText: "地缘", text: "乌克兰通过一系列政治胜利和纵深打击成功提升战争成本，考验普京的决心。乌方在无人机袭击莫斯科等行动中取得进展，增强了长期抗俄的信心。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/ukraine-russia-drone-strikes-moscow-escalation.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "卡塔尔首相称，美伊热线对于重新开放霍尔木兹海峡至关重要，并承诺海湾国家将在数周内恢复液化天然气正常生产。此举有望缓解全球能源供应紧张局势。", source: "Financial Times", url: "https://www.ft.com/content/e2d91812-1553-4d9e-a3cf-abe499de70b1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "委内瑞拉将在全球最大规模债务重组中披露其债务规模高达2400亿美元，远超市场预期。马杜罗政权倒台后，新政府面临巨大的偿债挑战。", source: "Financial Times", url: "https://www.ft.com/content/b7f25ca2-827c-40f9-ab1a-57067d8ec90d" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "05:34", tag: "macro", tagText: "宏观", text: "韩国KOSPI指数周二暴跌约10%，创2020年3月以来最大单日跌幅。摩根士丹利认为此次下跌并非趋势性崩溃，基本面尚未恶化，但市场对AI及科技股抛售情绪波及亚洲市场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/heres-why-morgan-stanley-says-south-korea-stocks-arent-breaking-down.html" },
   { time: "05:01", tag: "ai", tagText: "AI", text: "Cerebras发布IPO后首份财报，营收同比增长92%。这家AI芯片公司于今年5月在纳斯达克上市，为华尔街提供了纯AI概念股的投资机会。财报显示其业绩增长强劲，但当日科技股整体承压。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/cerebras-cbrs-q1-earnings-report-2026.html" },
   { time: "04:57", tag: "geo", tagText: "地缘", text: "众议院监督委员会公布比尔·盖茨关于与爱泼斯坦关系的证词。盖茨向委员会表示“一开始就不该会见爱泼斯坦”。该证词公开进一步引发公众对科技巨头与争议人物交往的关注，但短期内对金融市场影响有限。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/bill-gates-jeffrey-epstein-testimony-house-oversight.html" },
-  { time: "04:55", tag: "crypto", tagText: "加密", text: "美国商品期货交易委员会（CFTC）起诉肯塔基州，称该州限制预测市场的行动侵犯了联邦监管权限。CFTC已累计起诉9个州，以捍卫其对事件合约（包括政治预测合同）的独家监管权。此举可能影响预测市场平台的发展。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/cftc-sues-kentucky-over-actions-against-prediction-markets.html" },
-  { time: "04:51", tag: "geo", tagText: "地缘", text: "美国参议院通过伊朗战争权力决议案，共和党内部对特朗普结束战争的伊朗协议提出更多质疑，要求披露制裁解除、核限制及国会审批等细节。该决议旨在限制总统未经国会授权对伊动武权力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/thune-congress-vote-trump-iran-deal.html" },
-  { time: "04:38", tag: "crypto", tagText: "加密", text: "比特币在科技股大跌浪潮中持续承压，分析师警告其“易受进一步下行冲击”。全球AI和芯片股抛售引发的风险偏好下降拖累加密货币市场，比特币短线跌破关键支撑位。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxPdU05UnlSVlhYQjE1QklEUDY3STNSYVh0QWFKTm5OOGZtcEU3Uy1sYTFjcWQ5TnpjS3BYNExOekRKTkwzTTRiTXV3R0c0ek5qTU9YYXF0TFNxcWZhZDBxZi1Ya0piSUdCcFRmMG1rN2JWYnVHbDNZVWMxVUEyU1BzTlkxR2ZYbWNYc09hQ2RpX1BLWWwxV1lfQVlxUUVFR251SGNvbDUxREE4bUR4NUZiVmt3VzBEXzFDSXl5bW5yUGVDMXZEWGc?oc=5" },
-  { time: "04:30", tag: "macro", tagText: "宏观", text: "联邦快递（FedEx）发布将货运业务分拆前的最后一份财报，第四财季业绩强劲。市场关注该物流巨头在分拆后的独立运营前景，以及其对整个运输行业的指示意义。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/fedex-fdx-q4-2026-earnings.html" },
-  { time: "04:23", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡局势持续紧张，但巨额报酬正诱使大型油轮重返波斯湾。当前油轮日租金高达28万美元，船东为高利润冒险进入危险区域装载原油，反映全球能源供给风险与套利机会并存。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oil-tankers-are-being-lured-back-into-the-strait-of-hormuz-by-big-payouts-31bf81c8" },
 ];
-const breakingDate = "2026年6月24日 13:08 CST";
+const breakingDate = "2026年6月24日 17:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:39", tag: "geo", tagText: "地缘", text: "英伟达被禁AI芯片在中国黑市价格翻倍。受美国出口管制影响，英伟达高端AI芯片在中国黑市价格飙升，供应紧张推动地下交易活跃。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE1BdW1XT3ZkWGI4a3d1Y1BxeFBiV3hseG9YUTR6TlI1eGFSemp6ZWp2dktFUjY4NjVuOVVEc0pCOFd2Rk85YV9WWEJPZHNYTUNQVHNobVdqVVlfNkNaa2dKbmxfdEV1NEZBakk2ZFE3SkU3M2EyMmdsaEpDZlQ?oc=5" },
   { time: "09:23", tag: "ai", tagText: "AI", text: "AI工厂初创公司Hadrian否认此前媒体报道的10亿美元融资轮。公司表示相关报道不实，但未透露实际融资情况。这一否认引发市场对其真实估值和资本状况的猜测。", source: "PYMNTS.com", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUTU0dWdIM0Y5RXAyTVJLNmtLTnl5dzZmRFU0Q2IwZkJUcVlRRmpXU1dzX1JkNjcwYThJZGpqS01KenpjNHdBbEl0bjZnNk9QdlYwOFJCeDl6dWt3WmFiTWttTE9Dd3FmR1Bwa0tWVjhRa2lpM1pONExlUnNSZ2pENXJyb2thd0lOTERyZ09HLUZ4bUxta2lUQ1IxdzRsc3VSWGhTRHNHNA?oc=5" },
   { time: "07:30", tag: "ai", tagText: "AI", text: "印度营销科技公司MoEngage宣称未来营销将由数百万AI代理驱动，并已通过全现金收购获取相关技术，为每位客户分配专属AI代理。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/indias-moengage-bets-marketings-future-on-millions-of-ai-agents/" },
   { time: "06:30", tag: "tech", tagText: "科技", text: "白宫发布行政令，要求加速迁移至抗量子密码算法，警告若不及时采用后量子密码学将带来国家安全风险。该命令缩短了原定迁移截止期限。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/06/executive-order-bumps-up-deadline-to-move-off-quantum-vulnerable-crypto/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:50", tag: "macro", tagText: "宏观", text: "AI芯片股遭遇广泛的两日抛售潮，市场对估值过高和增长放缓的担忧加剧。多家芯片制造商股价下跌，投资者情绪转向谨慎。", source: "Let's Data Science", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdWFZRjFYZkhHZmZPbHhzR25OOTJMUzRUSm9GRzFsVDVKdW8wTnN0UVgzejlCcGswbzV1M1otQWEyV1lDcDhoTVc3ZzU5bnQ3S0o4cm1JTkpZSjhqMEU5UmVsZ0ppYTJ2SFd0RHU5ajYzLVZGQ0FqRUxPRjF6QlluRVJZV1ZSTmJpSUlVajhXWQ?oc=5" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC分析指出，在AI时代，谷歌的在线主导地位正出现裂痕。随着ChatGPT等AI搜索产品分流用户，以及反垄断监管压力加剧，谷歌面临十多年来最严重的挑战。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUERMWjd0MkpWcElJTnVhd3dJMkVVbUFRa3pJSFVaYjBJRHdsT3VqSm5KU1lXMDJoYXBCTnNOa0puaVlubTFib1ZERkZDd3VDdm1VcVV0R3h6R2Fnb2FnV3lyci04dzZsU3BkaThEbDJ4eW9HRHRQOHRPNkxKZm9aRkQ0Q2dQVHRBSDBteW1ldlVKc09LeUNDc0Qtd0tDb1gxalHSAacBQVVfeXFMTTMtckNOUU1yWlZpQWtYdDlGSjEyejZzWkEtZHVfcnlLdEVoSGYtODlqbG96NUYxRFgyekd2cjBwVDhVVld5UWJHNTdkQTNFVkhzNmxNaS0wbkRIWGVPOXpYcTZLY1lxM2JJUS1sYzE2YmJ0LWFaOTJqX2o2RWMycDBUenEyZTd3dlZGLWdZeFRsendiN2hXay1NZkNmalc3WXdmbkxPMTQ?oc=5" },
   { time: "19:35", tag: "tech", tagText: "科技", text: "印度AI初创企业本周融资总额达4.32亿美元，涉及23笔交易，显示出印度AI创业生态的活跃态势。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQXNrSlZ2TFpiQ25BNERkemxONkVzNlRrb3IxN3hYYkxpM0RJeW5OSzNMZDY4b3plTU5Da3cyQVZrR3FfNkprUmZmOFRHV3RyVlg1Wjlkd2Z3MEFRczJQZ3VSTV9yOWMxY2pRb195NjRuZXVwcDlFdldKM3dNZFlBanlQM0RpVGFqRXFQSWZtN0tuLXZtd1RWZWk5a1hoVFg2ZEk3UWdMaXhoWWJBLV96NzFR?oc=5" },
-  { time: "19:13", tag: "macro", tagText: "宏观", text: "Crunchbase数据显示，全球AI初创企业融资热潮主要由美国驱动，其他地区占比相对较小，凸显AI投资地域集中度。", source: "quasa.io", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUUJLdTliRGlCQ1gzOHpxclBKb3hDdVptWmFJLWVlOTBqRUc5dlpGWkZKYkViRzNrRG5SdlJBNTdodWhCZ3QzUW8xVmg2bFQ3ZTVQalV5b2xuMG5kZ3BDRlNLYm9HUUhCNVdLR1JUVkpVTkp3dWNiLVY1Nzg0UkNGNFczRlQwLUVUMkdOQjduc1lqNTdCaVY5ZDJNUVg?oc=5" },
 ];
-const aiBreakingDate = "2026年6月24日 13:08 CST";
+const aiBreakingDate = "2026年6月24日 17:48 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
