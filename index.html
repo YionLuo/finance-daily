@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27.37,
+  score: 28.31,
   rating: "fear",
-  timestamp: "2026-06-24T12:08:31+00:00",
+  timestamp: "2026-06-24T15:28:22+00:00",
   previousClose: 27.54,
   previous1Week: 32.2,
   previous1Month: 58.97,
   previous1Year: 57.89,
-  date: "2026年6月24日 20:26 CST"
+  date: "2026年6月24日 23:33 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:32", tag: "geo", tagText: "地缘", text: "美国总统特朗普在签署仪式前一小时突然取消了两党住房可负担性法案的签署，并坚持要求加入选民身份验证条款。该法案旨在增加住房供应并限制机构投资者在房地产市场的作用，取消签署令市场意外，可能影响住房政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/trump-cancels-housing-bill-signing-save-america-act.html" },
+  { time: "23:22", tag: "tech", tagText: "科技", text: "温迪(Wendy's)股价飙升30%，盘中一度触发停牌。散户交易者将该快餐连锁视为下一个meme股，试图通过炒作提振股价。此轮上涨远超基本面驱动，显示市场情绪对网红股的追逐热度不减。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/wendys-stock-soars-as-meme-traders-target-another-turnaround-play.html" },
+  { time: "23:22", tag: "tech", tagText: "科技", text: "亚马逊旗下Zoox发布重新设计的自动驾驶出租车，计划在更多市场扩张并开始收费运营。这标志着亚马逊在自动驾驶领域的重要推进，将与特斯拉、Waymo等展开竞争。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/amazons-zoox-unveils-redesigned-robotaxi-ahead-of-upcoming-expansion.html" },
+  { time: "23:20", tag: "ai", tagText: "AI", text: "博通为OpenAI推出一款定制芯片，旨在支持ChatGPT制造商未来的AI模型和产品。此举挑战英伟达在AI芯片市场的主导地位，标志着定制AI芯片竞争进一步加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/broadcom-unveils-a-custom-chip-for-openai-as-it-challenges-nvidias-dominance-b9b17dd1" },
+  { time: "22:52", tag: "macro", tagText: "宏观", text: "摩根大通将标普500目标价上调至7800点，但同时警告市场可能发生“闪崩”。该机构认为基本面支撑上涨，但短期风险需警惕，建议投资者防范突然波动。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/article/jpmorgan-raises-sp-500-target-to-7800-but-warns-of-flash-crash-145240724.html" },
+  { time: "21:57", tag: "tech", tagText: "科技", text: "SpaceX宣布发行250亿美元债券，股价随之波动。此次大规模融资用于支持公司扩张及星际飞船等项目的研发，成为近期资本市场关注的重大事件。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/stocks/article/spacex-stock-wavers-as-it-announces-25-billion-bond-offering-135726178.html" },
   { time: "20:20", tag: "macro", tagText: "宏观", text: "美国财长贝森特表示，美国GDP增速有望在年底前恢复到3%。他重申“3-3-3”计划目标：3%经济增长、3%赤字率、每日增产300万桶石油。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/treasury-secretary-bessent-says-us-gdp-growth-can-return-to-3percent-before-end-of-the-year.html" },
   { time: "20:17", tag: "geo", tagText: "地缘", text: "特朗普称伊朗已向美国保证，不会对通过霍尔木兹海峡的船只收取通行费、保险费或任何费用。此前美伊热线沟通被视为缓解全球能源供应紧张的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/trump-claims-iran-has-assured-us-there-wont-be-tolls-on-the-strait-of-hormuz.html" },
   { time: "20:12", tag: "ai", tagText: "AI", text: "瑞银看好AMD和ARM股价继续上涨，因超大规模云厂商为训练AI模型大量采购CPU，推动芯片需求高涨。两家公司近期涨幅显著，瑞银认为仍有上行空间。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/these-chipmakers-are-climbing-thanks-to-sky-high-cpu-demand-ubs-sees-more-gains.html" },
@@ -1643,17 +1649,15 @@ const breakingNews = [
   { time: "17:07", tag: "tech", tagText: "科技", text: "SK海力士宣布计划在纳斯达克发行美国存托凭证（ADR），成为继三星之后又一家赴美上市的韩国存储芯片巨头。受AI需求推动，海力士市值飙升，此次上市将进一步扩大其海外投资者基础。", source: "MarketWatch", url: "https://www.marketwatch.com/story/coming-to-america-sk-hynix-plans-depository-receipt-listing-on-the-nasdaq-c3c9695e" },
   { time: "17:05", tag: "macro", tagText: "宏观", text: "布伦特原油跌破76美元/桶，创下美伊战争爆发前一日以来的最低水平。美国总统特朗普加大对石油公司的施压，要求其降低汽油价格，以反映近期原油下跌趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/oil-prices-wti-brent-crude-trump-doj-gasoline-prices-strait-of-hormuz.html" },
   { time: "16:33", tag: "geo", tagText: "地缘", text: "据英国《金融时报》报道，德国计划取消数十亿欧元的F126护卫舰建造项目。受此消息影响，德国国防巨头莱茵金属股价暴跌13%，拖累欧洲国防板块整体下挫。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/rheinmetall-stock-defense-germany-warship-scrap-plans.html" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "乌克兰通过一系列政治胜利和纵深打击成功提升战争成本，考验普京的决心。乌方在无人机袭击莫斯科等行动中取得进展，增强了长期抗俄的信心。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/ukraine-russia-drone-strikes-moscow-escalation.html" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "卡塔尔首相称，美伊热线对于重新开放霍尔木兹海峡至关重要，并承诺海湾国家将在数周内恢复液化天然气正常生产。此举有望缓解全球能源供应紧张局势。", source: "Financial Times", url: "https://www.ft.com/content/e2d91812-1553-4d9e-a3cf-abe499de70b1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "委内瑞拉将在全球最大规模债务重组中披露其债务规模高达2400亿美元，远超市场预期。马杜罗政权倒台后，新政府面临巨大的偿债挑战。", source: "Financial Times", url: "https://www.ft.com/content/b7f25ca2-827c-40f9-ab1a-57067d8ec90d" },
-  { time: "10:30", tag: "geo", tagText: "地缘", text: "美国国防部长皮特·赫格塞斯迫使驻欧洲最高陆军将领CD·多纳休将军退休。此举凸显特朗普政府对军方高层人事的强势干预，可能影响北约防务协调。", source: "Financial Times", url: "https://www.ft.com/content/b2936511-6549-4a93-9c9f-b6dc3cd165a0" },
-  { time: "10:08", tag: "macro", tagText: "宏观", text: "VIX指数运营商Cboe全球市场正式推出首批预测市场产品，意图借助零日期权增长势头拓展新领域。此举是传统交易所进军快速增长的预测市场的重要一步。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/vix-owner-cboe-jumps-into-prediction-markets-to-build-on-0dte-growth.html" },
-  { time: "08:50", tag: "ai", tagText: "AI", text: "美国官员披露，Anthropic的Mythos人工智能模型在高度机密的美国政府计算机系统中发现了安全漏洞。这是AI首次被证实用于发现国家级关键基础设施隐患，引发对AI安全应用的双重讨论。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/anthropics-mythos-model-found-vulnerabilities-in-classified-us-government-systems-official-says.html" },
 ];
-const breakingDate = "2026年6月24日 20:26 CST";
+const breakingDate = "2026年6月24日 23:33 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:12", tag: "tech", tagText: "科技", text: "硅谷风投公司为庆祝成立50周年，宣布设立两只总规模30亿美元的新AI基金，重注押注人工智能领域。这反映出传统风投机构对AI赛道的长期信心依旧强劲。", source: "The Business Journals", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZ1VvRHVnZ0k1YlFBS0VLWGRGSnhLVm9DZ2RWRnNNYWRXSmpQaUtWYUpwTjZvRkRnU1RzRGlxSVNWZmExWG03b0dTNWl4VG5WQXlObVpmM2tKWnBDRWtGSnQ0R3VYcUl6S2FSYS1JTFlzZElWQTdHeE1FV2YteEpIMGxteTBvSXk2Y1padWZsYTBCN00?oc=5" },
+  { time: "22:54", tag: "ai|tech", tagText: "AI|科技", text: "OpenAI联合博通发布首款自研AI芯片Jalapeño，专为推理系统设计，旨在降低对英伟达的依赖。该处理器针对大语言模型的推理需求优化，标志着OpenAI向上游芯片领域扩张，可能重塑AI算力市场格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" },
+  { time: "21:22", tag: "tech", tagText: "科技", text: "谷歌母公司Alphabet股价再次承压下跌，原因是AI初创公司Anthropic从Google DeepMind挖走了一位诺贝尔奖得主。该人才流失加剧了市场对谷歌AI竞争力下滑的担忧。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSTc2Y1FPQno3bHpCdFJ5VXlzV0lzWFpsNFlKam5Hc2RnU1RxcXBmOWhpRUVISnJaXzh5Xzd4empiT3BKWFMxUlNOa2xSeVFxdTlyM21GVFdJcUZUU1hWd1VNekgtVU5JN3Rqak1mZFMtdXpaVjFkTXpuMi1KLU1RTHRQaFhSc0k3OFE?oc=5" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "瑞典初创公司Fika Jobs完成400万美元融资，打造视频优先的招聘平台。该平台让AI代理面试候选人，并生成短视频简历，被形容为LinkedIn与TikTok的结合体。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC分析指出，在AI时代，谷歌的在线主导地位正出现裂痕。随着ChatGPT等AI搜索产品分流用户，以及反垄断监管压力加剧，谷歌面临十多年来最严重的挑战。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUERMWjd0MkpWcElJTnVhd3dJMkVVbUFRa3pJSFVaYjBJRHdsT3VqSm5KU1lXMDJoYXBCTnNOa0puaVlubTFib1ZERkZDd3VDdm1VcVV0R3h6R2Fnb2FnV3lyci04dzZsU3BkaThEbDJ4eW9HRHRQOHRPNkxKZm9aRkQ0Q2dQVHRBSDBteW1ldlVKc09LeUNDc0Qtd0tDb1gxalHSAacBQVVfeXFMTTMtckNOUU1yWlZpQWtYdDlGSjEyejZzWkEtZHVfcnlLdEVoSGYtODlqbG96NUYxRFgyekd2cjBwVDhVVld5UWJHNTdkQTNFVkhzNmxNaS0wbkRIWGVPOXpYcTZLY1lxM2JJUS1sYzE2YmJ0LWFaOTJqX2o2RWMycDBUenEyZTd3dlZGLWdZeFRsendiN2hXay1NZkNmalc3WXdmbkxPMTQ?oc=5" },
   { time: "19:35", tag: "tech", tagText: "科技", text: "印度AI初创企业本周融资总额达4.32亿美元，涉及23笔交易，显示出印度AI创业生态的活跃态势。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQXNrSlZ2TFpiQ25BNERkemxONkVzNlRrb3IxN3hYYkxpM0RJeW5OSzNMZDY4b3plTU5Da3cyQVZrR3FfNkprUmZmOFRHV3RyVlg1Wjlkd2Z3MEFRczJQZ3VSTV9yOWMxY2pRb195NjRuZXVwcDlFdldKM3dNZFlBanlQM0RpVGFqRXFQSWZtN0tuLXZtd1RWZWk5a1hoVFg2ZEk3UWdMaXhoWWJBLV96NzFR?oc=5" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "AI搜索初创公司Seltz完成1250万美元种子轮融资，致力于为AI代理重建网络搜索体验。该公司旨在解决传统搜索引擎对AI代理不友好的问题，提供更高效的检索方式。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQNFJMUVptQk9VejhvaDJxY3hoUEZ0YUJ1ZWY3X1N1b3g0Q3RGZk5DNjdadUd6TGE0NWh5WXQ0Q2hIVVo2QUVxNVlHdkFqb2VKdjNEVzJQMGJCOUh4ZWNraWhpcEpNU19LWjFwTldJQXF1a1Y4SHdZNHd6S2RYZGZXck1BU3lXMlZZSjY0UmVDcEJSLUxCVDdSTTBpYWlScDNXekhrUXhCQkZKQXkweTI0aGRHTnFwdUhnMnNJWGtzRHFfVDhHQmlmYQ?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
   { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
   { time: "00:13", tag: "ai", tagText: "AI", text: "英伟达的最新AI突破可能不是芯片，而是一种新型软件或系统架构，分析师认为这有望推动下一代数据中心建设热潮。具体细节尚未公布，但市场预期高涨。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQkR5RVNmczVfcGpIa2RzNGdqVFJrOENQcTg1b1BYS0doUF9NdElnSTk4eDFnRkFZTTVHYXpNUUFhblVLUWFka0tZMzN2VXdTRHlGQU5PUk85MlAwRU5uMnhBbGNLaE1tSWRWbUFBZnVfUENRUnNTeUFxa3F1Zm9zSTZBaDlzRHd6NGh3U1FhQ09RTWxBQVUxU3VqbDE2VEpmcDYzajVHVDduNHhPZklzOEFpNTVVeEx4X1Z1ZXd1UmlQdHVhUjREcGx3a3RqdzEzTkE?oc=5" },
-  { time: "23:56", tag: "ai", tagText: "AI", text: "知名AI图像生成公司Midjourney意外转向医疗成像领域，宣布推出一款沉浸式超声扫描仪——用户需全身浸入液体槽中进行扫描。然而该产品缺乏临床证据支持，被专家质疑为炒作。", source: "The Verge", url: "https://www.theverge.com/report/954826/midjourney-medical-ai-ultrasound-body-scanner-lacks-evidence" },
-  { time: "23:12", tag: "tech", tagText: "科技", text: "硅谷风投公司为庆祝成立50周年，宣布设立两只总规模30亿美元的新AI基金，重注押注人工智能领域。这反映出传统风投机构对AI赛道的长期信心依旧强劲。", source: "The Business Journals", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZ1VvRHVnZ0k1YlFBS0VLWGRGSnhLVm9DZ2RWRnNNYWRXSmpQaUtWYUpwTjZvRkRnU1RzRGlxSVNWZmExWG03b0dTNWl4VG5WQXlObVpmM2tKWnBDRWtGSnQ0R3VYcUl6S2FSYS1JTFlzZElWQTdHeE1FV2YteEpIMGxteTBvSXk2Y1padWZsYTBCN00?oc=5" },
-  { time: "21:22", tag: "tech", tagText: "科技", text: "谷歌母公司Alphabet股价再次承压下跌，原因是AI初创公司Anthropic从Google DeepMind挖走了一位诺贝尔奖得主。该人才流失加剧了市场对谷歌AI竞争力下滑的担忧。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSTc2Y1FPQno3bHpCdFJ5VXlzV0lzWFpsNFlKam5Hc2RnU1RxcXBmOWhpRUVISnJaXzh5Xzd4empiT3BKWFMxUlNOa2xSeVFxdTlyM21GVFdJcUZUU1hWd1VNekgtVU5JN3Rqak1mZFMtdXpaVjFkTXpuMi1KLU1RTHRQaFhSc0k3OFE?oc=5" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "瑞典初创公司Fika Jobs完成400万美元融资，打造视频优先的招聘平台。该平台让AI代理面试候选人，并生成短视频简历，被形容为LinkedIn与TikTok的结合体。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/" },
 ];
-const aiBreakingDate = "2026年6月24日 20:26 CST";
+const aiBreakingDate = "2026年6月24日 23:33 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
