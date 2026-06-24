@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27.54,
+  score: 27.69,
   rating: "fear",
-  timestamp: "2026-06-23T23:47:27+00:00",
-  previousClose: 34.74,
-  previous1Week: 39.09,
+  timestamp: "2026-06-24T00:00:00+00:00",
+  previousClose: 27.54,
+  previous1Week: 32.2,
   previous1Month: 58.97,
-  previous1Year: 56.6,
-  date: "2026年6月24日 08:06 CST"
+  previous1Year: 57.89,
+  date: "2026年6月24日 13:08 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "乌克兰通过一系列政治胜利和纵深打击成功提升战争成本，考验普京的决心。乌方在无人机袭击莫斯科等行动中取得进展，增强了长期抗俄的信心。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/ukraine-russia-drone-strikes-moscow-escalation.html" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "卡塔尔首相称，美伊热线对于重新开放霍尔木兹海峡至关重要，并承诺海湾国家将在数周内恢复液化天然气正常生产。此举有望缓解全球能源供应紧张局势。", source: "Financial Times", url: "https://www.ft.com/content/e2d91812-1553-4d9e-a3cf-abe499de70b1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "委内瑞拉将在全球最大规模债务重组中披露其债务规模高达2400亿美元，远超市场预期。马杜罗政权倒台后，新政府面临巨大的偿债挑战。", source: "Financial Times", url: "https://www.ft.com/content/b7f25ca2-827c-40f9-ab1a-57067d8ec90d" },
+  { time: "10:30", tag: "geo", tagText: "地缘", text: "美国国防部长皮特·赫格塞斯迫使驻欧洲最高陆军将领CD·多纳休将军退休。此举凸显特朗普政府对军方高层人事的强势干预，可能影响北约防务协调。", source: "Financial Times", url: "https://www.ft.com/content/b2936511-6549-4a93-9c9f-b6dc3cd165a0" },
+  { time: "10:08", tag: "macro", tagText: "宏观", text: "VIX指数运营商Cboe全球市场正式推出首批预测市场产品，意图借助零日期权增长势头拓展新领域。此举是传统交易所进军快速增长的预测市场的重要一步。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/vix-owner-cboe-jumps-into-prediction-markets-to-build-on-0dte-growth.html" },
+  { time: "08:50", tag: "ai", tagText: "AI", text: "美国官员披露，Anthropic的Mythos人工智能模型在高度机密的美国政府计算机系统中发现了安全漏洞。这是AI首次被证实用于发现国家级关键基础设施隐患，引发对AI安全应用的双重讨论。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/anthropics-mythos-model-found-vulnerabilities-in-classified-us-government-systems-official-says.html" },
+  { time: "08:15", tag: "tech", tagText: "科技", text: "英伟达被禁售的AI芯片在中国黑市价格翻倍。美国对非法出口的打击使得购买该科技巨头的处理器风险更高、难度更大、价格更贵，凸显中美科技脱钩下灰色市场活跃。", source: "Financial Times", url: "https://www.ft.com/content/57fcd3ce-464f-4dc2-8ea2-5712d4972c69" },
   { time: "07:56", tag: "macro", tagText: "宏观", text: "美股科技板块遭遇剧烈抛售，纳斯达克指数暴跌580点，跌幅超3%，标普500下跌107点。AI和芯片股领跌，美光、Sandisk等大幅下挫，市场担忧AI泡沫及利率上升风险。投资者正在评估科技股抛售是否会进一步蔓延。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/stock-market-today-live-updates.html" },
   { time: "07:37", tag: "macro", tagText: "宏观", text: "MSCI宣布维持韩国为新兴市场地位，但推迟了对印尼市场分类的审议，因印尼面临下调风险。市场此前期待韩国可能被纳入MSCI发达市场观察名单，此次决定令部分投资者失望。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/msci-south-korea-emerging-market-indonesia-review-extended.html" },
   { time: "06:16", tag: "macro", tagText: "宏观", text: "Alphabet（谷歌母公司）将取代Verizon加入道琼斯工业平均指数，指数提供商称Alphabet更能代表通信板块。这是科技巨头在传统蓝筹指数中权重提升的最新标志。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/alphabet-verizon-dow-djia.html" },
@@ -1642,18 +1649,12 @@ const breakingNews = [
   { time: "04:38", tag: "crypto", tagText: "加密", text: "比特币在科技股大跌浪潮中持续承压，分析师警告其“易受进一步下行冲击”。全球AI和芯片股抛售引发的风险偏好下降拖累加密货币市场，比特币短线跌破关键支撑位。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxPdU05UnlSVlhYQjE1QklEUDY3STNSYVh0QWFKTm5OOGZtcEU3Uy1sYTFjcWQ5TnpjS3BYNExOekRKTkwzTTRiTXV3R0c0ek5qTU9YYXF0TFNxcWZhZDBxZi1Ya0piSUdCcFRmMG1rN2JWYnVHbDNZVWMxVUEyU1BzTlkxR2ZYbWNYc09hQ2RpX1BLWWwxV1lfQVlxUUVFR251SGNvbDUxREE4bUR4NUZiVmt3VzBEXzFDSXl5bW5yUGVDMXZEWGc?oc=5" },
   { time: "04:30", tag: "macro", tagText: "宏观", text: "联邦快递（FedEx）发布将货运业务分拆前的最后一份财报，第四财季业绩强劲。市场关注该物流巨头在分拆后的独立运营前景，以及其对整个运输行业的指示意义。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/fedex-fdx-q4-2026-earnings.html" },
   { time: "04:23", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡局势持续紧张，但巨额报酬正诱使大型油轮重返波斯湾。当前油轮日租金高达28万美元，船东为高利润冒险进入危险区域装载原油，反映全球能源供给风险与套利机会并存。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oil-tankers-are-being-lured-back-into-the-strait-of-hormuz-by-big-payouts-31bf81c8" },
-  { time: "03:16", tag: "geo", tagText: "地缘", text: "阿里巴巴正式起诉美国国防部，要求将其从“中国军方关联企业”黑名单中移除。阿里指控五角大楼的决定“任意且反复无常”，缺乏证据支持。此案引发市场对中概股进一步面临政治风险的担忧。", source: "Financial Times", url: "https://www.ft.com/content/23944164-b81a-4296-8b85-7d3648f1753c" },
-  { time: "02:06", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡大规模撤离计划启动，伊朗和美国支持。超过1.1万名被困在波斯湾的海员将通过该海峡撤离，以缓解因地区紧张局势导致的航运阻塞。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/strait-hormuz-persian-gulf-ship-tanker-evacuation.html" },
-  { time: "02:05", tag: "tech", tagText: "科技", text: "Meta据报正在开发预测市场应用，内部代号“Arena”，由CEO扎克伯格直接推动。消息导致相关股票（如Polymarket概念股）下跌，凸显科技巨头进军新兴金融领域的竞争加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/nyt-says-meta-builds-prediction-market-these-stocks-are-falling.html" },
-  { time: "01:48", tag: "macro", tagText: "宏观", text: "SpaceX向投资者推销250亿美元债券交易，银行家因高借贷成本吸引投资者而上调发行规模。此举显示SpaceX在上市后持续寻求大规模融资，市场对其信用风险存在分歧。", source: "Financial Times", url: "https://www.ft.com/content/7ea76b60-ea21-4e50-b0e2-bbcc842af289" },
-  { time: "01:32", tag: "macro", tagText: "宏观", text: "加拿大央行行长Macklem警告称，全球失衡可能加剧金融稳定风险。在当前利率高企、贸易摩擦持续的背景下，跨境资本流动和债务积累对金融体系构成潜在威胁。", source: "Reuters", url: "https://finance.yahoo.com/news/global-imbalances-could-fuel-financial-133957514.html" },
-  { time: "01:31", tag: "crypto", tagText: "加密", text: "数字欧元通过关键立法障碍，欧盟寻求摆脱对美国信用卡的依赖。该进展标志着欧洲央行数字货币（CBDC）项目进入新阶段，可能重塑欧洲支付格局并影响全球数字货币竞争。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPN2JLemlJSEMyWUJKMUFYdDNtYjRremdieDQ2aTlmNm1vLXVXWmFWYTJRMXQ1NDZWQmlzcXdJNlR4eFNRUWhmRENiZW1pYkZ1SnM5SXQ0Umh3TThqWV9semdvVWRPaFBmRTBocXVBdmFOUlZ1WEs0YmRSZllmV0RRdjlaZXBINFhDUm15WDRROXkwLVRRQTAwaUl2NmdROWpRbEZ6R1d3?oc=5" },
-  { time: "01:30", tag: "macro", tagText: "宏观", text: "美联储新主席Warsh正在筛选亚特兰大联储行长人选，该任命被视为重塑美联储政策方向的关键机会。候选人Michael Faulkender等人选可能影响未来利率决策和监管立场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/23/fed-warsh-atlanta-michael-faulkender.html" },
 ];
-const breakingDate = "2026年6月24日 08:06 CST";
+const breakingDate = "2026年6月24日 13:08 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "09:23", tag: "ai", tagText: "AI", text: "AI工厂初创公司Hadrian否认此前媒体报道的10亿美元融资轮。公司表示相关报道不实，但未透露实际融资情况。这一否认引发市场对其真实估值和资本状况的猜测。", source: "PYMNTS.com", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUTU0dWdIM0Y5RXAyTVJLNmtLTnl5dzZmRFU0Q2IwZkJUcVlRRmpXU1dzX1JkNjcwYThJZGpqS01KenpjNHdBbEl0bjZnNk9QdlYwOFJCeDl6dWt3WmFiTWttTE9Dd3FmR1Bwa0tWVjhRa2lpM1pONExlUnNSZ2pENXJyb2thd0lOTERyZ09HLUZ4bUxta2lUQ1IxdzRsc3VSWGhTRHNHNA?oc=5" },
   { time: "07:30", tag: "ai", tagText: "AI", text: "印度营销科技公司MoEngage宣称未来营销将由数百万AI代理驱动，并已通过全现金收购获取相关技术，为每位客户分配专属AI代理。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/indias-moengage-bets-marketings-future-on-millions-of-ai-agents/" },
   { time: "06:30", tag: "tech", tagText: "科技", text: "白宫发布行政令，要求加速迁移至抗量子密码算法，警告若不及时采用后量子密码学将带来国家安全风险。该命令缩短了原定迁移截止期限。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/06/executive-order-bumps-up-deadline-to-move-off-quantum-vulnerable-crypto/" },
   { time: "06:03", tag: "ai", tagText: "AI", text: "好莱坞主流制片厂集体回避关于OpenAI创始人山姆·奥尔特曼的传记电影《Artificial》。据报奈飞、A24、焦点影业及华纳兄弟子公司Clockwork均放弃发行该片，被指为向OpenAI“低头”。", source: "The Verge", url: "https://www.theverge.com/entertainment/954899/luca-guadagnino-artificial-sam-altman-amazon-a24-neon-mubi-chatgpt" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC分析指出，在AI时代，谷歌的在线主导地位正出现裂痕。随着ChatGPT等AI搜索产品分流用户，以及反垄断监管压力加剧，谷歌面临十多年来最严重的挑战。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUERMWjd0MkpWcElJTnVhd3dJMkVVbUFRa3pJSFVaYjBJRHdsT3VqSm5KU1lXMDJoYXBCTnNOa0puaVlubTFib1ZERkZDd3VDdm1VcVV0R3h6R2Fnb2FnV3lyci04dzZsU3BkaThEbDJ4eW9HRHRQOHRPNkxKZm9aRkQ0Q2dQVHRBSDBteW1ldlVKc09LeUNDc0Qtd0tDb1gxalHSAacBQVVfeXFMTTMtckNOUU1yWlZpQWtYdDlGSjEyejZzWkEtZHVfcnlLdEVoSGYtODlqbG96NUYxRFgyekd2cjBwVDhVVld5UWJHNTdkQTNFVkhzNmxNaS0wbkRIWGVPOXpYcTZLY1lxM2JJUS1sYzE2YmJ0LWFaOTJqX2o2RWMycDBUenEyZTd3dlZGLWdZeFRsendiN2hXay1NZkNmalc3WXdmbkxPMTQ?oc=5" },
   { time: "19:35", tag: "tech", tagText: "科技", text: "印度AI初创企业本周融资总额达4.32亿美元，涉及23笔交易，显示出印度AI创业生态的活跃态势。", source: "fundsforNGOs News", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQXNrSlZ2TFpiQ25BNERkemxONkVzNlRrb3IxN3hYYkxpM0RJeW5OSzNMZDY4b3plTU5Da3cyQVZrR3FfNkprUmZmOFRHV3RyVlg1Wjlkd2Z3MEFRczJQZ3VSTV9yOWMxY2pRb195NjRuZXVwcDlFdldKM3dNZFlBanlQM0RpVGFqRXFQSWZtN0tuLXZtd1RWZWk5a1hoVFg2ZEk3UWdMaXhoWWJBLV96NzFR?oc=5" },
   { time: "19:13", tag: "macro", tagText: "宏观", text: "Crunchbase数据显示，全球AI初创企业融资热潮主要由美国驱动，其他地区占比相对较小，凸显AI投资地域集中度。", source: "quasa.io", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUUJLdTliRGlCQ1gzOHpxclBKb3hDdVptWmFJLWVlOTBqRUc5dlpGWkZKYkViRzNrRG5SdlJBNTdodWhCZ3QzUW8xVmg2bFQ3ZTVQalV5b2xuMG5kZ3BDRlNLYm9HUUhCNVdLR1JUVkpVTkp3dWNiLVY1Nzg0UkNGNFczRlQwLUVUMkdOQjduc1lqNTdCaVY5ZDJNUVg?oc=5" },
-  { time: "18:00", tag: "ai", tagText: "AI", text: "Google推出AI初创企业孵化器，利用前员工校友网络为创业者提供支持，并探索无股权融资模式，以吸引更多人才和项目。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxQX2J4V3dST05vOUNwS29Pcnk3ZlVtanpDQ2hzMmVlOHJrZ2ZHeF9DdFI4YTlNWG10SFRzODF6LXJpekFhSVRzZGoxWThEM1F2akZaQ3ozR0h3ZGFyVUhsRUpIbDdGbU5QV3dzSUJfTWlocUZxQXp5VUlUbVNGbVNmZ1U0RFpRWjRvNV93Umx1WUpsVDRMV29wTm4xVFZJRWhodEg2bjB6RkJZeHVmT1pTc2xB?oc=5" },
 ];
-const aiBreakingDate = "2026年6月24日 08:06 CST";
+const aiBreakingDate = "2026年6月24日 13:08 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
