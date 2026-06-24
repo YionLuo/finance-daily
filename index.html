@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 25.74,
+  score: 25.91,
   rating: "fear",
-  timestamp: "2026-06-24T19:59:14+00:00",
+  timestamp: "2026-06-24T21:24:22+00:00",
   previousClose: 27.54,
   previous1Week: 32.2,
   previous1Month: 58.97,
   previous1Year: 57.89,
-  date: "2026年6月25日 04:02 CST"
+  date: "2026年6月25日 05:44 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:42", tag: "macro", tagText: "宏观", text: "美联储年度压力测试结果公布后，摩根大通宣布5000亿美元股票回购计划，高盛宣布提高股息。测试显示所有32家大型银行均能承受假设的经济衰退，最大损失达7080亿美元。此次测试正值资本规则改革关键时期，但结果不会直接影响资本要求。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/jpmorgan-goldman-sachs-fed-stress-test.html" },
+  { time: "05:36", tag: "geo", tagText: "地缘", text: "美国白宫请求国会批准876亿美元紧急支出，用于伊朗战争及农业援助。白宫管理与预算办公室主任沃特致信众议院议长约翰逊，要求追加巨额资金。同时，特朗普会见波音、洛克希德·马丁、霍尼韦尔等国防公司CEO，因伊朗军事行动导致美国导弹库存紧张，要求扩大弹药产量，五角大楼工业基础面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/iran-war-supplemental-trump-congress.html" },
+  { time: "05:18", tag: "AI", tagText: "AI", text: "AI初创公司Anthropic致信指控阿里巴巴发动大规模“蒸馏攻击”，非法提取其AI模型能力。Anthropic称这是迄今为止已知最大规模的此类攻击，涉及系统性地复制其AI能力。此举凸显中美AI企业间的技术窃取争端加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html" },
+  { time: "05:15", tag: "tech", tagText: "科技", text: "美光科技第三季度财报远超预期，营收同比翻四倍，净利润飙升近1400%，受全球存储芯片短缺及AI需求推动。盘后股价大涨12%。美光过去一年股价累计上涨约700%，当前内存价格高涨周期持续利好业绩。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/micron-mu-earnings-report-q3-2026.html" },
   { time: "04:00", tag: "macro", tagText: "宏观", text: "美联储年度压力测试显示，美国大型银行能够承受7080亿美元损失，这是资本规则改革背景下的一次关键测试。与往年不同，本次结果不会直接影响银行资本要求，但反映了金融体系的韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/federal-reserve-stress-test-us-banks.html" },
   { time: "03:29", tag: "macro", tagText: "宏观", text: "分析师警告，通胀并非只受油价影响，服务业和非能源商品价格存在两个隐藏触发因素，可能迫使美联储重新加息。即将公布的PCE通胀报告将成为市场焦点，若数据超预期，可能引发紧缩担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/inflation-is-about-more-than-oil-these-two-hidden-triggers-could-force-a-fed-rate-hike-d9fa393e?mod=mw_rss_topstories" },
   { time: "03:03", tag: "ai", tagText: "AI", text: "高通正式发布面向AI数据中心的CPU，并宣布Meta为首个重要客户。此举标志着高通从智能手机芯片向数据中心市场扩张，直接挑战英特尔、AMD等传统服务器芯片厂商，也为AI算力需求激增提供了新选择。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/qualcomm-data-center-cpu-meta.html" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "22:52", tag: "macro", tagText: "宏观", text: "摩根大通将标普500目标价上调至7800点，但同时警告市场可能发生“闪崩”。该机构认为基本面支撑上涨，但短期风险需警惕，建议投资者防范突然波动。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/article/jpmorgan-raises-sp-500-target-to-7800-but-warns-of-flash-crash-145240724.html" },
   { time: "21:57", tag: "tech", tagText: "科技", text: "SpaceX宣布发行250亿美元债券，股价随之波动。此次大规模融资用于支持公司扩张及星际飞船等项目的研发，成为近期资本市场关注的重大事件。", source: "Yahoo Finance", url: "https://finance.yahoo.com/markets/stocks/article/spacex-stock-wavers-as-it-announces-25-billion-bond-offering-135726178.html" },
   { time: "20:20", tag: "macro", tagText: "宏观", text: "美国财长贝森特表示，美国GDP增速有望在年底前恢复到3%。他重申“3-3-3”计划目标：3%经济增长、3%赤字率、每日增产300万桶石油。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/treasury-secretary-bessent-says-us-gdp-growth-can-return-to-3percent-before-end-of-the-year.html" },
-  { time: "20:17", tag: "geo", tagText: "地缘", text: "特朗普称伊朗已向美国保证，不会对通过霍尔木兹海峡的船只收取通行费、保险费或任何费用。此前美伊热线沟通被视为缓解全球能源供应紧张的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/trump-claims-iran-has-assured-us-there-wont-be-tolls-on-the-strait-of-hormuz.html" },
-  { time: "20:12", tag: "ai", tagText: "AI", text: "瑞银看好AMD和ARM股价继续上涨，因超大规模云厂商为训练AI模型大量采购CPU，推动芯片需求高涨。两家公司近期涨幅显著，瑞银认为仍有上行空间。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/these-chipmakers-are-climbing-thanks-to-sky-high-cpu-demand-ubs-sees-more-gains.html" },
-  { time: "20:07", tag: "ai", tagText: "AI", text: "高通宣布收购AI初创公司Modular，交易细节未披露。Modular致力于简化AI模型开发部署，此次收购将增强高通在端侧AI领域的竞争力。", source: "Reuters", url: "https://finance.yahoo.com/technology/ai/articles/qualcomm-buy-ai-startup-modular-120736810.html" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "电动汽车初创公司Slate Auto表示，其售价24,950美元的电动皮卡每辆都将实现盈利，并计划明年实现现金流为正。CEO称公司生产的每辆车毛利率均为正。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/slate-ev-pickup-truck-ceo-business-goals.html" },
 ];
-const breakingDate = "2026年6月25日 04:02 CST";
+const breakingDate = "2026年6月25日 05:44 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:31", tag: "tech", tagText: "科技", text: "美国存储芯片公司营收同比增长4倍至414.5亿美元，利润从18.8亿美元飙升至282亿美元。内存芯片短缺持续推动行业景气，该公司成为最大受益者之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/the-memory-chip-crunch-is-paying-off-for-this-u-s-company/" },
+  { time: "04:10", tag: "ai", tagText: "AI", text: "企业纷纷采取措施限制员工滥用AI预算执行小额任务。短命的“token最大化”时代结束，进入“token配给”阶段，公司开始严格管控AI使用成本。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/companies-are-scrambling-to-stop-employees-from-maxing-out-ai-budgets-with-small-tasks/" },
   { time: "03:36", tag: "ai", tagText: "AI", text: "美国众议员安娜·保利娜·卢纳（共和党-佛罗里达州）否认其工作人员使用AI撰写国防拨款修正案。她表示，工作人员仅在修正案摘要中使用AI进行“拼写检查”，并未用于法案正文，并强调“任何立法都不会使用AI撰写”。这一声明引发了对AI在立法过程中应用的讨论。", source: "The Verge", url: "https://www.theverge.com/policy/956394/florida-anna-paulina-luna-anthropic-claude" },
   { time: "01:29", tag: "ai", tagText: "AI", text: "AI初创公司Engram以6亿美元估值完成9800万美元融资，而该公司仅有13名员工。这一罕见的高估值/员工比进一步凸显了AI领域的人才稀缺性和资本狂热。", source: "CTech", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAxc0NoQm1NTy1VYkVELUhxMmVDX3l2cW05aElrMnFnalhTb1luWGdvYjdHUm5yS0tyR3RTQVN5cUxTbWpaTFZyc3JfbkdoMXB6NXV1YVlFaHp3QmQ0NWJpRWprZGRGdWIx?oc=5" },
   { time: "01:16", tag: "ai", tagText: "AI", text: "Facebook（Meta）推出面向创作者的全新AI伴侣应用。该应用目前正在与部分创作者进行测试，内置了Facebook最新发布的AI创作助手，旨在帮助创作者更高效地管理内容、互动和创作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "19:00", tag: "tech", tagText: "科技", text: "AI搜索初创公司Seltz完成1250万美元种子轮融资，致力于为AI代理重建网络搜索体验。该公司旨在解决传统搜索引擎对AI代理不友好的问题，提供更高效的检索方式。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQNFJMUVptQk9VejhvaDJxY3hoUEZ0YUJ1ZWY3X1N1b3g0Q3RGZk5DNjdadUd6TGE0NWh5WXQ0Q2hIVVo2QUVxNVlHdkFqb2VKdjNEVzJQMGJCOUh4ZWNraWhpcEpNU19LWjFwTldJQXF1a1Y4SHdZNHd6S2RYZGZXck1BU3lXMlZZSjY0UmVDcEJSLUxCVDdSTTBpYWlScDNXekhrUXhCQkZKQXkweTI0aGRHTnFwdUhnMnNJWGtzRHFfVDhHQmlmYQ?oc=5" },
   { time: "17:58", tag: "ai", tagText: "AI", text: "分析人士讨论亚马逊AI芯片业务是否对英伟达构成威胁。随着亚马逊自研Trainium芯片在云计算和AI推理场景中加速部署，市场关注其能否撼动英伟达的统治地位，但短期内英伟达仍占据主导。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZWtfQkthUk1XZ05UZVVOZ2JHOThTSE10bG9VTlVRaUoyaFRoTXpEbl9hNThoU3J0V2J0OWYwMGZoN1ZmRF90SWVrR1E2aEVyU1o4N2ZDNUtpZ19EVURGNVhJaDItM0RnS1NYM3MyTzRqeTVaRVNvdG1ORVNZam9xbjRzMzlralhPd0RNMnhVNWplVjFrX2IzTmR6a3VHSEFtQTQ0S1o2VjdPdVJzeE1oblgyZnJ4WE1KdW5wZmdOeGZJV0hDMmpuTWdUVVJGeExwaVE?oc=5" },
   { time: "13:39", tag: "geo", tagText: "地缘", text: "英伟达被禁AI芯片在中国黑市价格翻倍。受美国出口管制影响，英伟达高端AI芯片在中国黑市价格飙升，供应紧张推动地下交易活跃。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE1BdW1XT3ZkWGI4a3d1Y1BxeFBiV3hseG9YUTR6TlI1eGFSemp6ZWp2dktFUjY4NjVuOVVEc0pCOFd2Rk85YV9WWEJPZHNYTUNQVHNobVdqVVlfNkNaa2dKbmxfdEV1NEZBakk2ZFE3SkU3M2EyMmdsaEpDZlQ?oc=5" },
-  { time: "09:23", tag: "ai", tagText: "AI", text: "AI工厂初创公司Hadrian否认此前媒体报道的10亿美元融资轮。公司表示相关报道不实，但未透露实际融资情况。这一否认引发市场对其真实估值和资本状况的猜测。", source: "PYMNTS.com", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUTU0dWdIM0Y5RXAyTVJLNmtLTnl5dzZmRFU0Q2IwZkJUcVlRRmpXU1dzX1JkNjcwYThJZGpqS01KenpjNHdBbEl0bjZnNk9QdlYwOFJCeDl6dWt3WmFiTWttTE9Dd3FmR1Bwa0tWVjhRa2lpM1pONExlUnNSZ2pENXJyb2thd0lOTERyZ09HLUZ4bUxta2lUQ1IxdzRsc3VSWGhTRHNHNA?oc=5" },
-  { time: "07:30", tag: "ai", tagText: "AI", text: "印度营销科技公司MoEngage宣称未来营销将由数百万AI代理驱动，并已通过全现金收购获取相关技术，为每位客户分配专属AI代理。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/indias-moengage-bets-marketings-future-on-millions-of-ai-agents/" },
 ];
-const aiBreakingDate = "2026年6月25日 04:02 CST";
+const aiBreakingDate = "2026年6月25日 05:44 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
