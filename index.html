@@ -1616,19 +1616,20 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 25.69,
+  score: 25.54,
   rating: "fear",
-  timestamp: "2026-06-25T17:15:33+00:00",
+  timestamp: "2026-06-25T20:06:15+00:00",
   previousClose: 25.91,
   previous1Week: 37.57,
   previous1Month: 58.97,
   previous1Year: 59.26,
-  date: "2026年6月26日 01:21 CST"
+  date: "2026年6月26日 04:19 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:53", tag: "macro", tagText: "宏观", text: "日本股市持续飙升，日经指数创下1989年以来最快的一轮历史新高。市场分析认为，企业治理改革、日元弱势以及外资回流是主要驱动力。日本股市表现亮眼，在全球主要市场中独领风骚。", source: "MarketWatch", url: "https://www.marketwatch.com/story/japanese-stocks-are-on-fire-heres-whats-driving-the-hot-streak-526a6914?mod=mw_rss_topstories" },
   { time: "01:02", tag: "geo", tagText: "地缘", text: "美国最高法院就拜耳旗下孟山都的Roundup除草剂致癌诉讼作出关键裁决，推翻了此前数十亿美元索赔的判决基础。法官裁定联邦法律优先于州法律的标签要求，极大限制了未来相关诉讼。拜耳股价应声上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/glyphosate-roundup-bayer-supreme-court-case-monsanto.html" },
   { time: "00:56", tag: "macro", tagText: "宏观", text: "当前美国平均月抵押贷款还款额达2134美元，五年前仅为1525美元，涨幅约40%。高利率与高房价共同挤压购房者负担能力，或进一步抑制房地产市场活动。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/real-estate/articles/mortgage-payments-hit-2-134-165647521.html" },
   { time: "00:49", tag: "geo", tagText: "地缘", text: "伊朗议会发言人卡利巴夫在社交媒体上嘲讽特朗普关于伊朗必须用解冻资产购买美国农产品的言论，称“我们唯一收获的作物是你种下的：数十年的不信任”。美伊关系持续紧张，此前伊朗刚加强对霍尔木兹海峡的控制。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/iran-ghalibaf-trump-us-farm-products-assets.html" },
@@ -1648,12 +1649,13 @@ const breakingNews = [
   { time: "13:00", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic正在澳大利亚和日本招聘数据中心岗位，加速海外计算能力扩张。此举表明Anthropic计划在亚太地区建设AI数据中心，以应对全球算力需求激增。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/anthropic-global-ai-data-center-push.html" },
   { time: "12:17", tag: "tech", tagText: "科技", text: "SK海力士股价暴涨12%，宣布计划在纳斯达克上市募资高达294亿美元。这将是韩国公司最大规模的美国上市，旨在为AI投资提供资金。分析人士指出，此举可能为投资者提供美光之外的新选择，但也可能加剧芯片行业竞争格局的变化。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/chip-tech-stocks-sk-hynix-nasdaq-adr-listing-29-billion-ai-investment.html" },
   { time: "12:09", tag: "macro", tagText: "宏观", text: "韩国交易所宣布推迟推出新的单一股票期权计划，因市场波动性创纪录。韩国股市今年表现全球最佳，但当局担忧投机过度，决定先观察市场稳定性。", source: "Financial Times", url: "https://www.ft.com/content/b08c7e63-aeae-4980-b681-6eea05be7114" },
-  { time: "11:28", tag: "geo", tagText: "地缘", text: "伊朗发表声明，将霍尔木兹海峡的新航线称为“不可接受且危险”，并警告未经其授权的船只不得通行。此举凸显德黑兰维持对海峡控制权的决心，可能逆转近期油轮恢复通行的缓和趋势，加剧全球能源供应不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/iran-navy-shipping-recovery-strait-of-hormuz-unauthorized-routes-us-fragile-mou-.html" },
 ];
-const breakingDate = "2026年6月26日 01:21 CST";
+const breakingDate = "2026年6月26日 04:19 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:04", tag: "ai", tagText: "AI", text: "Notion宣布关闭受Skiff影响的邮件应用，因大多数用户转向使用AI代理管理收件箱。Notion表示将全力投入AI代理来运行收件箱，反映出AI正在取代传统邮件工具。", source: "Ars Technica", url: "https://arstechnica.com/gadgets/2026/06/notion-killing-skiff-influenced-email-app-since-most-users-use-ai-agents-instead/" },
+  { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
   { time: "01:16", tag: "ai", tagText: "AI", text: "Facebook（Meta）推出面向创作者的全新AI伴侣应用。该应用目前正在与部分创作者进行测试，内置了Facebook最新发布的AI创作助手，旨在帮助创作者更高效地管理内容、互动和创作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
   { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "07:26", tag: "tech", tagText: "科技", text: "前Infosys首席执行官Vishal Sikka成立新初创公司，获Mayfield和Aramco Ventures投资，欲挑战传统IT服务业。新公司汇集来自SAP、Infosys和VianAI的资深人士，聚焦AI驱动的IT服务解决方案，意图重塑行业格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/former-infosys-chief-has-a-new-startup-that-wants-to-challenge-the-it-services-world/" },
   { time: "06:41", tag: "ai", tagText: "AI", text: "AI芯片公司Cerebras上市后首份财报不及预期，核心业务毛利率指引较低，引发投资者恐慌，股价暴跌。CEO随后澄清称市场误解了其利润率展望，但市场反应消极。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/cerebras-stock-plunges-after-earnings-as-ceo-says-margin-outlook-was-misunderstood/" },
   { time: "05:56", tag: "tech", tagText: "科技", text: "尽管AI裁员话题沸沸扬扬，SignalFire数据显示工程师岗位反而最具韧性，在新招聘中占比持续上升。分析认为AI工具提升效率的同时，也创造了对更高技能工程师的旺盛需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/" },
-  { time: "05:42", tag: "ai", tagText: "AI", text: "顶级AI研究员Jonas Adler和Alexander Pritzel离开Google，加入竞争对手Anthropic。此前已有Noam Shazeer、John Jumper等顶尖科学家离职，谷歌AI人才流失趋势加剧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" },
-  { time: "05:31", tag: "tech", tagText: "科技", text: "美国存储芯片公司营收同比增长4倍至414.5亿美元，利润从18.8亿美元飙升至282亿美元。内存芯片短缺持续推动行业景气，该公司成为最大受益者之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/the-memory-chip-crunch-is-paying-off-for-this-u-s-company/" },
 ];
-const aiBreakingDate = "2026年6月26日 01:21 CST";
+const aiBreakingDate = "2026年6月26日 04:19 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
