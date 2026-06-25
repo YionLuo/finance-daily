@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 25.8,
+  score: 27.14,
   rating: "fear",
-  timestamp: "2026-06-25T11:30:31+00:00",
+  timestamp: "2026-06-25T14:49:16+00:00",
   previousClose: 25.91,
   previous1Week: 37.57,
   previous1Month: 58.97,
   previous1Year: 59.26,
-  date: "2026年6月25日 19:47 CST"
+  date: "2026年6月25日 22:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:46", tag: "tech", tagText: "科技", text: "苹果宣布上调多款MacBook和iPad售价，归因于内存与存储成本飙升。此前美光科技发布超预期财报，显示AI驱动下存储芯片需求激增，加剧供应紧张。苹果CEO库克上周已预警涨价，此次调价幅度因机型而异。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/apple-macbook-ipad-price-hike-memory.html" },
+  { time: "22:35", tag: "macro", tagText: "宏观", text: "美元指数从13个月高位回落，因美国5月PCE数据公布后市场解读为经济韧性仍存但通胀黏性未消，美联储短期内按兵不动的预期未变。美元此前在强劲经济数据和避险需求下连续走高，获利盘涌出致回调。", source: "Reuters", url: "https://finance.yahoo.com/news/dollar-rides-high-fed-rate-012635389.html" },
+  { time: "22:33", tag: "ai", tagText: "AI", text: "据媒体报道，阿里巴巴被指控试图通过非法手段获取AI初创公司Anthropic的Claude模型技术。Anthropic已向有关部门反映此事。受此消息影响，阿里巴巴美股股价进一步下挫。阿里巴巴尚未正式回应。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/alibaba-stock-baba-anthropic-ai-claude/?src=A00220&yptr=yahoo" },
+  { time: "22:30", tag: "macro", tagText: "宏观", text: "美国5月雇主宣布裁员9.7万人，其中约40%的裁员与人工智能技术替代有关。AI对就业市场的冲击持续显现，涉及客服、内容创作、数据分析等多个岗位。零售、科技和教育行业裁员最为集中。", source: "Moneywise", url: "https://finance.yahoo.com/technology/ai/articles/us-employers-announced-97-000-143000676.html" },
+  { time: "22:16", tag: "finance", tagText: "金融", text: "摩根大通宣布人事重大调整：任命Doug Petno和Troy Rohrbaugh为联席总裁，分管两大核心业务部门；原被视为CEO接班热门人选的高管Marianne Lake离职。此举使得Petno和Rohrbaugh成为CEO杰米·戴蒙最可能的继任者。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/jpmorgan-chase-co-presidents-lake-exits.html" },
+  { time: "21:30", tag: "macro", tagText: "宏观", text: "美国5月核心PCE通胀率同比上升3.4%，高于预期的3.2%，创2023年10月以来新高。整体PCE同比上涨4.1%，与预期持平。消费者支出环比增长0.3%，但实际支出受通胀侵蚀。数据公布后，美元短暂回落，市场对美联储9月降息预期小幅降温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/pce-inflation-report-may-2026-.html" },
   { time: "19:46", tag: "macro", tagText: "宏观", text: "美光科技强劲财报缓解市场对AI需求放缓的担忧，纳指期货反弹。周四将公布美联储青睐的通胀指标——5月个人消费支出价格指数（PCE），市场密切关注这一数据对加息路径的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/stock-market-today-live-updates.html" },
   { time: "19:45", tag: "crypto", tagText: "加密", text: "比特币2026年表现惨淡，期权交易员押注跌势远未结束。市场认为当前下跌可能只是“冰山一角”，杠杆多头面临大面积清算风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/bitcoin-is-having-a-tough-year-traders-are-betting-its-going-to-get-worse.html" },
   { time: "19:29", tag: "macro", tagText: "宏观", text: "安联首席投资官Ludovic Subran警告称，SpaceX的债券发行是市场处于“泡沫区域”的明确信号。他认为债务投资者对马斯克火箭公司的审查将比股权市场更为严格，当前风险定价严重不足。", source: "Financial Times", url: "https://www.ft.com/content/40b0666b-8214-4162-a82b-d74ba464eabc" },
@@ -1643,17 +1649,14 @@ const breakingNews = [
   { time: "10:55", tag: "tech", tagText: "科技", text: "Uber正在悄悄斥资5亿美元锁定机器人出租车供应，以应对Waymo和特斯拉的竞争。Uber虽不造车，但通过巨额投资确保能在自动驾驶出行市场中占据一席之地。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-and-waymo-are-chasing-the-robotaxi-dream-but-the-company-spending-the-most-to-win-builds-no-cars-at-all-0d8682b9?mod=mw_rss_topstories" },
   { time: "10:22", tag: "geo", tagText: "地缘", text: "委内瑞拉遭遇两次7级以上强震袭击，震中距首都加拉加斯约100英里，建筑大量倒塌，官方警告“极高伤亡”可能性。救援工作已展开，但灾情严重恐进一步影响该国脆弱的石油生产与社会稳定。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/buildings-collapse-as-quakes-rock-venezuela-high-casualties-likely.html" },
   { time: "07:47", tag: "tech", tagText: "科技", text: "SpaceX联合洛克希德·马丁、火箭实验室等多家国防承包商，共同推进军用太空激光卫星网络项目。该项目旨在构建可追踪空中威胁的卫星星座，标志美军在太空武器化领域迈出新一步。", source: "MarketWatch", url: "https://www.marketwatch.com/story/rocket-lab-lockheed-martin-among-the-partners-in-spacexs-military-space-laser-project-1b8d61e2?mod=mw_rss_topstories" },
-  { time: "07:45", tag: "tech", tagText: "科技", text: "美光高管在财报电话会上表示，受AI需求持续推动，全球芯片供应紧张将延续至2027年以后。CEO Sanjay Mehrotra指出，虽然近期产能有所增加，但结构性的供需失衡短期内难以缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/chip-supply-to-stay-constrained-beyond-2027-micron-executives-say.html" },
-  { time: "07:03", tag: "geo", tagText: "地缘", text: "特朗普在会见北约秘书长后，公开要求盟国在伊朗战争中表现“忠诚”，并点名批评英国等成员国支持不足。此举加剧了美国与北约之间的紧张关系，可能影响联盟在伊朗后续行动中的协调。", source: "Financial Times", url: "https://www.ft.com/content/39883d15-863b-4563-8b31-7e65102301cd" },
-  { time: "07:00", tag: "macro", tagText: "宏观", text: "韩国IPO市场持续低迷，落后于区域同行。分析认为，财阀集团结构不愿稀释控制权，叠加公司治理改革阻力，导致企业上市意愿低，股票市场流动性受限。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/south-koreas-ipo-bust-clouds-equity-markets.html" },
-  { time: "06:57", tag: "macro", tagText: "宏观", text: "特朗普施压司法部调查油价为何未更快下跌，同时市场关注未来油价走势。伊朗协议后大量油轮通过霍尔木兹海峡，但特朗普仍不满零售端降价速度，预计未来几周可能有更多政策干预。", source: "MarketWatch", url: "https://www.marketwatch.com/story/gas-prices-arent-falling-fast-enough-for-trump-heres-when-drivers-can-expect-more-relief-57db7038" },
-  { time: "06:12", tag: "geo", tagText: "地缘", text: "特朗普会见波音、洛克希德·马丁等国防承包商CEO，讨论伊朗军事行动导致的导弹库存压力。白宫要求扩大导弹和弹药产量，同时与伊朗的谈判和武器库存担忧对五角大楼工业基础构成新压力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/trump-defense-contractors-boeing-lockheed-honeywell-weapons-production-iran.html" },
-  { time: "06:08", tag: "tech", tagText: "科技", text: "Sunrun宣布与特斯拉和Renew Home达成协议，提供16吉瓦灵活电力，用于满足AI数据中心的能源需求。Sunrun股价大幅上涨，市场看好家用电池储能与科技巨头合作的前景。", source: "MarketWatch", url: "https://www.marketwatch.com/story/this-solar-stock-is-surging-on-the-heels-of-a-new-tesla-deal-efd2747d" },
 ];
-const breakingDate = "2026年6月25日 19:47 CST";
+const breakingDate = "2026年6月25日 22:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:30", tag: "tech", tagText: "科技", text: "Adobe宣布收购图像与视频增强工具开发商Topaz Labs，计划将其工具整合至旗下各应用中。此举将增强Adobe在AI驱动的创意工具领域的竞争力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "FDA授予两项放射学领域生成式AI突破性设备认定，标志着监管机构对AI辅助诊断的加速认可，有望推动该领域商业化进程。", source: "STAT News", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY0hnTE5qN09HRlVkSVNPUERtekxDWHpwc3RBN0NNVGN4aHFIdEZCeExaYmNSRU94Y3dNY1l2ZTJoUFJNdTBYQ29IcXZRSEtDVmJlWko2OUE0Z3dwbzFPdnd2OWRSUFVOOEx6QUZsOWxGdGUzWjdhMVVoaDRKYU1Rc0ViT2lFX1F0bjJQRlF2UzRYeXIzYnRtS09Fb05fSzFYZWdIS213?oc=5" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "亚马逊宣布在印度追加130亿美元投资，用于建设AI基础设施。这是全球科技巨头加速在印度布局AI算力资源的最新举措。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/" },
   { time: "18:16", tag: "tech", tagText: "科技", text: "尽管AI芯片竞争加剧，英伟达股价仍逆势上涨。《巴伦周刊》分析认为，市场对英伟达在数据中心和AI领域的领导地位依然抱有信心，短期竞争压力未显著影响其估值。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE51T3lNTFhRNDFIal9vQVh2R1F4TVYxYjh6akh6VHB6OTZ0OUFQWmdmYmc4RHljaVpuTG5GUHhELWF5LUQyRHI2TWlqeTJWSDM2VnpfSmFuWUZkR3F0VDNsRkpqWEVwVk52S0Q4WnNmLXJnWkdQNDNxbw?oc=5" },
   { time: "16:10", tag: "ai", tagText: "AI", text: "OpenAI正式发布其首款自研AI半导体，该芯片系与博通（Broadcom）联合开发。此举标志着OpenAI加速摆脱对英伟达等第三方芯片的依赖，进一步垂直整合AI硬件供应链。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9lTGVtX0N4SWl3ZEVfemo2bDlnVFl1a2Jnc2dEWHNVWm5ONnNuR0VrSjV1bHRTblF6NkhmUWpFWjlFSTJUb0NvX1RFNA?oc=5" },
   { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "01:16", tag: "ai", tagText: "AI", text: "Facebook（Meta）推出面向创作者的全新AI伴侣应用。该应用目前正在与部分创作者进行测试，内置了Facebook最新发布的AI创作助手，旨在帮助创作者更高效地管理内容、互动和创作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
   { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
-  { time: "00:48", tag: "tech", tagText: "科技", text: "人形机器人初创公司Agility Robotics宣布将通过SPAC方式上市，交易估值达25亿美元。该公司预计将产生6.2亿美元收益，其源于俄勒冈州立大学，2015年成立，专注开发双足机器人Digit。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/agility-robotics-plans-to-go-public-via-spac-in-a-2-5b-deal/" },
-  { time: "00:15", tag: "tech", tagText: "科技", text: "设计协作平台Figma在年度Config大会上发布重磅更新：新增代码层、动画与着色器支持，并集成多项AI功能。用户可利用AI创建自定义插件、自动生成动态图形，大幅简化设计流程。", source: "The Verge", url: "https://www.theverge.com/tech/955831/figma-code-design-tools-config-2026-announcements" },
-  { time: "00:13", tag: "ai", tagText: "AI", text: "英伟达的最新AI突破可能不是芯片，而是一种新型软件或系统架构，分析师认为这有望推动下一代数据中心建设热潮。具体细节尚未公布，但市场预期高涨。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQkR5RVNmczVfcGpIa2RzNGdqVFJrOENQcTg1b1BYS0doUF9NdElnSTk4eDFnRkFZTTVHYXpNUUFhblVLUWFka0tZMzN2VXdTRHlGQU5PUk85MlAwRU5uMnhBbGNLaE1tSWRWbUFBZnVfUENRUnNTeUFxa3F1Zm9zSTZBaDlzRHd6NGh3U1FhQ09RTWxBQVUxU3VqbDE2VEpmcDYzajVHVDduNHhPZklzOEFpNTVVeEx4X1Z1ZXd1UmlQdHVhUjREcGx3a3RqdzEzTkE?oc=5" },
 ];
-const aiBreakingDate = "2026年6月25日 19:47 CST";
+const aiBreakingDate = "2026年6月25日 22:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
