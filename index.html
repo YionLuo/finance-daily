@@ -1616,21 +1616,27 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 25.97,
+  score: 25.8,
   rating: "fear",
-  timestamp: "2026-06-25T00:00:00+00:00",
+  timestamp: "2026-06-25T08:10:16+00:00",
   previousClose: 25.91,
   previous1Week: 37.57,
   previous1Month: 58.97,
   previous1Year: 59.26,
-  date: "2026年6月25日 12:19 CST"
+  date: "2026年6月25日 16:29 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:23", tag: "macro", tagText: "宏观", text: "印度最大黄金出口商之一Rajesh Exports被调查发现会计违规，其董事总经理月薪仅180美元。该公司还拥有瑞士精炼厂Valcambi，调查可能影响全球黄金供应链透明度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/india-rajesh-exports-investigation-accounting-irregularities-valcambi.html" },
+  { time: "15:12", tag: "geo", tagText: "地缘", text: "特朗普承诺对委内瑞拉地震快速援助，标志着美国与委内瑞拉临时政府的外交调整。委内瑞拉连续遭遇两次7级以上强震，震中距首都约100英里，官方警告极高伤亡。美国迅速提供援助，反映了地缘政治的微妙变化。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/venezuela-earthquakes-casualties-trump-pledges-support-aids-oil-.html" },
+  { time: "13:21", tag: "macro", tagText: "宏观", text: "Fundstrat的Tom Lee加入华尔街多头阵营，预测标普500指数年底将触及8000点。Lee认为AI投资热潮和企业盈利强劲将推动市场继续上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/fundstrats-lee-joins-wall-street-bulls-in-calling-for-sp-at-8000.html" },
+  { time: "13:00", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic正在澳大利亚和日本招聘数据中心岗位，加速海外计算能力扩张。此举表明Anthropic计划在亚太地区建设AI数据中心，以应对全球算力需求激增。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/anthropic-global-ai-data-center-push.html" },
   { time: "12:17", tag: "tech", tagText: "科技", text: "SK海力士股价暴涨12%，宣布计划在纳斯达克上市募资高达294亿美元。这将是韩国公司最大规模的美国上市，旨在为AI投资提供资金。分析人士指出，此举可能为投资者提供美光之外的新选择，但也可能加剧芯片行业竞争格局的变化。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/chip-tech-stocks-sk-hynix-nasdaq-adr-listing-29-billion-ai-investment.html" },
+  { time: "12:09", tag: "macro", tagText: "宏观", text: "韩国交易所宣布推迟推出新的单一股票期权计划，因市场波动性创纪录。韩国股市今年表现全球最佳，但当局担忧投机过度，决定先观察市场稳定性。", source: "Financial Times", url: "https://www.ft.com/content/b08c7e63-aeae-4980-b681-6eea05be7114" },
   { time: "11:28", tag: "geo", tagText: "地缘", text: "伊朗发表声明，将霍尔木兹海峡的新航线称为“不可接受且危险”，并警告未经其授权的船只不得通行。此举凸显德黑兰维持对海峡控制权的决心，可能逆转近期油轮恢复通行的缓和趋势，加剧全球能源供应不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/iran-navy-shipping-recovery-strait-of-hormuz-unauthorized-routes-us-fragile-mou-.html" },
+  { time: "10:55", tag: "tech", tagText: "科技", text: "Uber正在悄悄斥资5亿美元锁定机器人出租车供应，以应对Waymo和特斯拉的竞争。Uber虽不造车，但通过巨额投资确保能在自动驾驶出行市场中占据一席之地。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-and-waymo-are-chasing-the-robotaxi-dream-but-the-company-spending-the-most-to-win-builds-no-cars-at-all-0d8682b9?mod=mw_rss_topstories" },
   { time: "10:22", tag: "geo", tagText: "地缘", text: "委内瑞拉遭遇两次7级以上强震袭击，震中距首都加拉加斯约100英里，建筑大量倒塌，官方警告“极高伤亡”可能性。救援工作已展开，但灾情严重恐进一步影响该国脆弱的石油生产与社会稳定。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/buildings-collapse-as-quakes-rock-venezuela-high-casualties-likely.html" },
   { time: "07:47", tag: "tech", tagText: "科技", text: "SpaceX联合洛克希德·马丁、火箭实验室等多家国防承包商，共同推进军用太空激光卫星网络项目。该项目旨在构建可追踪空中威胁的卫星星座，标志美军在太空武器化领域迈出新一步。", source: "MarketWatch", url: "https://www.marketwatch.com/story/rocket-lab-lockheed-martin-among-the-partners-in-spacexs-military-space-laser-project-1b8d61e2?mod=mw_rss_topstories" },
   { time: "07:45", tag: "tech", tagText: "科技", text: "美光高管在财报电话会上表示，受AI需求持续推动，全球芯片供应紧张将延续至2027年以后。CEO Sanjay Mehrotra指出，虽然近期产能有所增加，但结构性的供需失衡短期内难以缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/chip-supply-to-stay-constrained-beyond-2027-micron-executives-say.html" },
@@ -1643,17 +1649,12 @@ const breakingNews = [
   { time: "05:36", tag: "geo", tagText: "地缘", text: "美国白宫请求国会批准876亿美元紧急支出，用于伊朗战争及农业援助。白宫管理与预算办公室主任沃特致信众议院议长约翰逊，要求追加巨额资金。同时，特朗普会见波音、洛克希德·马丁、霍尼韦尔等国防公司CEO，因伊朗军事行动导致美国导弹库存紧张，要求扩大弹药产量，五角大楼工业基础面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/iran-war-supplemental-trump-congress.html" },
   { time: "05:28", tag: "macro", tagText: "宏观", text: "分析师指出，特朗普政府可能已默许美联储理事沃什加息。此前财长贝森特曾提出“踩一次刹车”的加息想法，市场对此高度关注，认为政策转向信号渐明。", source: "MarketWatch", url: "https://www.marketwatch.com/story/did-the-trump-white-house-just-give-warsh-the-green-light-to-hike-interest-rates-this-analyst-thinks-so-f03b29fd" },
   { time: "05:18", tag: "AI", tagText: "AI", text: "AI初创公司Anthropic致信指控阿里巴巴发动大规模“蒸馏攻击”，非法提取其AI模型能力。Anthropic称这是迄今为止已知最大规模的此类攻击，涉及系统性地复制其AI能力。此举凸显中美AI企业间的技术窃取争端加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html" },
-  { time: "05:15", tag: "tech", tagText: "科技", text: "美光科技第三季度财报远超预期，营收同比翻四倍，净利润飙升近1400%，受全球存储芯片短缺及AI需求推动。盘后股价大涨12%。美光过去一年股价累计上涨约700%，当前内存价格高涨周期持续利好业绩。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/micron-mu-earnings-report-q3-2026.html" },
-  { time: "05:04", tag: "tech", tagText: "科技", text: "凯西·伍德（Cathie Wood）旗下Ark Invest大量增持Palantir、Cerebras及部分科技七巨头股票。尽管Cerebras股价近期暴跌并跌破IPO价，伍德选择逆势加仓，显示对AI芯片长期前景的看好。", source: "Investor's Business Daily", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxNSXRjOHNFbUhRQlg0LUU3Z3FKSl9zcFpxd1JLVVBzN1UyNTVzQ29Fd1U5aDQ1bjZDM0htejNaUkpoVG8zUGM0Uy1LbnlyaHpPanZBQ1FSbEpkVzRZcjY4Q1hFa0xpeTYwcUtWdXFKOU1EUGMyNjMxQTB0Q0lGN2pncmdTNTFWc1kyRkRIbzVJSUhxVnNQRnlrRmpPWnBnNENrZ2JxRHdXUDhsa3N6LS1pZGplMA" },
-  { time: "04:00", tag: "macro", tagText: "宏观", text: "美联储年度压力测试显示，美国大型银行能够承受7080亿美元损失，这是资本规则改革背景下的一次关键测试。与往年不同，本次结果不会直接影响银行资本要求，但反映了金融体系的韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/federal-reserve-stress-test-us-banks.html" },
-  { time: "03:29", tag: "macro", tagText: "宏观", text: "分析师警告，通胀并非只受油价影响，服务业和非能源商品价格存在两个隐藏触发因素，可能迫使美联储重新加息。即将公布的PCE通胀报告将成为市场焦点，若数据超预期，可能引发紧缩担忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/inflation-is-about-more-than-oil-these-two-hidden-triggers-could-force-a-fed-rate-hike-d9fa393e?mod=mw_rss_topstories" },
-  { time: "03:03", tag: "ai", tagText: "AI", text: "高通正式发布面向AI数据中心的CPU，并宣布Meta为首个重要客户。此举标志着高通从智能手机芯片向数据中心市场扩张，直接挑战英特尔、AMD等传统服务器芯片厂商，也为AI算力需求激增提供了新选择。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/qualcomm-data-center-cpu-meta.html" },
-  { time: "03:00", tag: "tech", tagText: "科技", text: "预测市场平台Kalshi正洽谈以400亿美元估值进行新一轮融资。该平台快速增长，逐步挑战传统衍生品和博彩公司，其估值飙升反映了市场对另类预测交易平台的兴趣。", source: "Financial Times", url: "https://www.ft.com/content/b6ef5e8a-4288-4223-a017-c97b89cac2fa" },
 ];
-const breakingDate = "2026年6月25日 12:19 CST";
+const breakingDate = "2026年6月25日 16:29 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
   { time: "08:08", tag: "geo", tagText: "地缘", text: "欧洲正对美国主导的对华芯片战争进行反击。ASML首席执行官此前表示，中国目前只能购买上一代深紫外（DUV）光刻工具，这与美国试图限制先进芯片设备出口的立场相左。欧洲企业希望在维护自身经济利益的同时，避免完全跟随美国的出口管制政策。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" },
   { time: "07:26", tag: "tech", tagText: "科技", text: "前Infosys首席执行官Vishal Sikka成立新初创公司，获Mayfield和Aramco Ventures投资，欲挑战传统IT服务业。新公司汇集来自SAP、Infosys和VianAI的资深人士，聚焦AI驱动的IT服务解决方案，意图重塑行业格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/former-infosys-chief-has-a-new-startup-that-wants-to-challenge-the-it-services-world/" },
   { time: "06:41", tag: "ai", tagText: "AI", text: "AI芯片公司Cerebras上市后首份财报不及预期，核心业务毛利率指引较低，引发投资者恐慌，股价暴跌。CEO随后澄清称市场误解了其利润率展望，但市场反应消极。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/cerebras-stock-plunges-after-earnings-as-ceo-says-margin-outlook-was-misunderstood/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "00:13", tag: "ai", tagText: "AI", text: "英伟达的最新AI突破可能不是芯片，而是一种新型软件或系统架构，分析师认为这有望推动下一代数据中心建设热潮。具体细节尚未公布，但市场预期高涨。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQkR5RVNmczVfcGpIa2RzNGdqVFJrOENQcTg1b1BYS0doUF9NdElnSTk4eDFnRkFZTTVHYXpNUUFhblVLUWFka0tZMzN2VXdTRHlGQU5PUk85MlAwRU5uMnhBbGNLaE1tSWRWbUFBZnVfUENRUnNTeUFxa3F1Zm9zSTZBaDlzRHd6NGh3U1FhQ09RTWxBQVUxU3VqbDE2VEpmcDYzajVHVDduNHhPZklzOEFpNTVVeEx4X1Z1ZXd1UmlQdHVhUjREcGx3a3RqdzEzTkE?oc=5" },
   { time: "23:16", tag: "tech", tagText: "科技", text: "分析师Tony Zhang指出，英伟达的股价估值目前低于整个半导体板块。这一观点可能表明市场对英伟达的高增长预期有所降温，或半导体板块整体估值偏高。尽管如此，英伟达在AI芯片领域的统治地位仍然稳固，但相对便宜的估值可能吸引价值投资者。", source: "Crypto Briefing", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQkZ2eVNjQjBZcE1YdHVIdjdHRUNjeG9rOXFJaEphbFBhLUx2Y1FWanpVVFpmb0ZnaXNEaVVZUHlTZmxWLVVIOEVsSmlrY3N1REZvdFdDQzF0WjR5Y0d3Zkg5RGh6bXhhV3ZjbGlZMDlOczQ1WDM4aElVM1pSZTlsaFpEME1sUQ?oc=5" },
   { time: "23:12", tag: "tech", tagText: "科技", text: "硅谷风投公司为庆祝成立50周年，宣布设立两只总规模30亿美元的新AI基金，重注押注人工智能领域。这反映出传统风投机构对AI赛道的长期信心依旧强劲。", source: "The Business Journals", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZ1VvRHVnZ0k1YlFBS0VLWGRGSnhLVm9DZ2RWRnNNYWRXSmpQaUtWYUpwTjZvRkRnU1RzRGlxSVNWZmExWG03b0dTNWl4VG5WQXlObVpmM2tKWnBDRWtGSnQ0R3VYcUl6S2FSYS1JTFlzZElWQTdHeE1FV2YteEpIMGxteTBvSXk2Y1padWZsYTBCN00?oc=5" },
-  { time: "22:54", tag: "ai|tech", tagText: "AI|科技", text: "OpenAI联合博通发布首款自研AI芯片Jalapeño，专为推理系统设计，旨在降低对英伟达的依赖。该处理器针对大语言模型的推理需求优化，标志着OpenAI向上游芯片领域扩张，可能重塑AI算力市场格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" },
 ];
-const aiBreakingDate = "2026年6月25日 12:19 CST";
+const aiBreakingDate = "2026年6月25日 16:29 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
