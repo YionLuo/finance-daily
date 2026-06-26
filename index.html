@@ -1616,24 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 25.06,
+  score: 25.37,
   rating: "fear",
-  timestamp: "2026-06-26T15:23:50+00:00",
+  timestamp: "2026-06-26T15:32:10+00:00",
   previousClose: 25.46,
   previous1Week: 31.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月26日 23:30 CST"
+  date: "2026年6月26日 23:34 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:33", tag: "ai", tagText: "AI", text: "OpenAI与Anthropic面临用户从‘Token最大化’转向效率的新现实。企业客户正收紧AI预算以追求投资回报，这可能抑制OpenAI和Anthropic的增长速度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html" },
   { time: "23:06", tag: "ai", tagText: "AI", text: "据媒体报道，OpenAI正考虑将IPO推迟至2027年，加剧了市场对AI投资回报的担忧。Kalshi预测市场显示，交易员认为OpenAI在2026年上市的概率仅三分之一，但在2027年6月前完成上市的可能性很高。此消息拖累科技股进一步走低，纳指本周或创年内最差表现。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/openai-ipo-timeline-delayed-kalshi-predictions.html" },
   { time: "22:56", tag: "tech", tagText: "科技", text: "SpaceX股价本周累计下跌约18%，市值大幅缩水。与此同时，SpaceX将于周五收盘后被纳入罗素1000指数，后续还可能加入其他主要指数。分析人士指出，指数基金被动买入可能带来短期波动，但当前科技股抛售潮令股价承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spacexs-stock-could-get-another-dose-of-volatility-8763bb0a?mod=mw_rss_topstories" },
   { time: "22:54", tag: "macro", tagText: "宏观", text: "美国通胀率突破4%的背景下，总统特朗普对美联储主席Kevin Warsh的公开施压有所缓和。白宫经济顾问表示将给予Warsh在利率决策上更多空间，但特朗普仍重申要求降息。市场关注美联储后续政策路径。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/trump-warsh-fed-rate-cuts-inflation.html" },
   { time: "22:52", tag: "macro", tagText: "宏观", text: "美国5月商品贸易逆差扩大至14个月新高，进口大幅攀升。数据表明美国内需强劲，但贸易逆差扩大可能拖累第二季度GDP增速。分析人士指出，企业为应对关税和供应链不确定性而提前囤货是进口激增的主要原因。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/us-goods-trade-deficit-widens-125007010.html" },
   { time: "22:50", tag: "geo", tagText: "地缘", text: "一架小型螺旋桨飞机撞上北京最高楼中信大厦（中国尊），碎片从高空坠落至中央商务区。目前伤亡情况不明，事故原因正在调查。该事件引发市场对北京中心区域安全的关注，可能影响短期市场情绪。", source: "Financial Times", url: "https://www.ft.com/content/133f3e9d-dacc-4e5a-9928-64b28a10a15a" },
+  { time: "21:29", tag: "macro", tagText: "宏观", text: "花旗经济学家警告称，厄尔尼诺现象即将回归，可能对全球农业、基础设施及整体生产力造成破坏，导致数万亿美元经济损失。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oil-may-no-longer-pose-the-same-threat-to-the-global-economy-but-another-risk-may-be-around-the-corner-says-citigroup-629d2854" },
   { time: "20:51", tag: "macro", tagText: "宏观", text: "投资者自3月以来首次从美国股票基金撤资，资金流向显示资金正从科技股转向周期性板块和房地产。分析人士认为，随着中期选举临近，市场风险偏好下降，今年夏季市场可能面临更大波动。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-stock-market-sees-first-outflow-since-march-and-that-may-set-the-stage-for-a-risk-off-summer-e3e8c623?mod=mw_rss_topstories" },
   { time: "20:04", tag: "macro", tagText: "宏观", text: "欧洲热浪将带来重大经济损失。越来越多的研究指出极端高温对经济活动的破坏，包括生产力下降、基础设施损坏和医疗成本上升。", source: "Financial Times", url: "https://www.ft.com/content/ed26a7f9-0c32-426b-88c6-a46121bef8a4" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "Polymarket年化收入突破10亿美元，距离其美国交易所上线仅六周。世界杯交易和美国候补名单取消推动了该预测市场的快速增长。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/polymarket-annualized-revenue-1-billion-us-exchange-.html" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "12:15", tag: "crypto", tagText: "加密", text: "比特币跌至年内新低，以太坊和瑞波币也同步破位下行。市场避险情绪升温叠加科技股抛售浪潮，加密货币市场遭遇全面抛压，技术面显示短期可能进一步下探。", source: "FXStreet", url: "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNUnVrd3V5aEt5NUZNcFF6Y2NMRlZUNkZVdlIxVXY0UlVDYm5ZNm1URE1yczhubjk5aWJFVDVadVhsdlB2TzkzemlEdkZaRUxLaXh4MklIWjZOZUwtc2FXbzZRNlFYY0NkRTZMSjNYa3NlS0l6aWJ2TWZRLTRSOFhhQXNkX1V6T3lNQkJSemMtSTNITTV2bDJlQ2x1WFJZbkx5T0txNmNWbTV3RjZFalR5U0VRWmZMdmpDTElhaDhmVXZLZnRTbmc4WGNWZEdqam9sa2VJUmU1NkpxMTBQX2F4bzVnbURfaERtdTJ3T1FhLVlHcmFDNjBuNHIzbThnMXV3bVpmcmFZSlhPLW8?oc=5" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "美联储新任主席Kevin Warsh发表强硬通胀言论，其鹰派表态叠加油价下跌，推动长期通胀预期回落，市场投资者信心有所恢复。Warsh强调将坚定不移对抗通胀，此举被视为新一届美联储政策基调的明确信号。", source: "Financial Times", url: "https://www.ft.com/content/a825975a-df76-4f9c-9eb9-774329ebc29d" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "马斯克的SpaceX计划通过Starlink进军美国消费者移动通信市场，目标将卫星宽带服务延伸至手机直连领域。此举将直接挑战传统电信运营商，测试SpaceX能否将宏伟愿景转化为大规模手机业务。", source: "Financial Times", url: "https://www.ft.com/content/42af0f15-3aa9-49b7-b429-4a39540af03e" },
-  { time: "06:29", tag: "macro", tagText: "宏观", text: "伊拉克暗示可能退出OPEC，全球石油市场再添变数。分析人士指出，若伊拉克最终退出且更多产油国效仿，OPEC控制力瓦解或推动油价跌破每桶50美元。当前布伦特原油价格因地缘紧张已有所上涨，但供给端的不确定性正在加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-world-rejecting-opec-controls-could-usher-in-oil-below-50-a-barrel-3d7eda1b?mod=mw_rss_topstories" },
-  { time: "05:30", tag: "ai", tagText: "AI", text: "默克集团旗下Merck KGaA宣布以每股73美元现金收购Bio-Techne，交易总金额约115亿美元。Bio-Techne专注于生命科学工具和诊断试剂，此次收购将加强默克在生物制药上游领域的布局。消息公布后Bio-Techne股价盘后大涨。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPUnk2dUJjQk5TQ1QwY2h0M3Q4bTVtMDR6d09JVXRFMko0ZVBrOFJIWVVaTVdGTXcxWGx5dTdDVjVlS1E1OGJQQVF4SVZfbWFXRVNEQUNZT2tJdFpkcy1CYnBXcVRiX0pVR3FCS2FzcTVZRWo2TFBDTWtsUEhMdTA1UkQxcVZQRzZLb1dpeTBrb0JjNHRNRnBtQmNMLThxWGt2MFRuSWJ3SXdJc3pyRlBHcE8tSjgxaWNOcWVCUGRMY2dGMThLWmFkUGN1OUZrZFhPaTFGVFhLNlpPbHB1dDRmczdMUzhicVVHOUZCZFU1RUExMXlaYjRnVTdWeGs?oc=5" },
 ];
-const breakingDate = "2026年6月26日 23:30 CST";
+const breakingDate = "2026年6月26日 23:34 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
   { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
 ];
-const aiBreakingDate = "2026年6月26日 23:30 CST";
+const aiBreakingDate = "2026年6月26日 23:34 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
