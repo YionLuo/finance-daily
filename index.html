@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 25.46,
+  score: 25.54,
   rating: "fear",
-  timestamp: "2026-06-25T23:59:59+00:00",
-  previousClose: 25.91,
-  previous1Week: 37.57,
-  previous1Month: 58.97,
-  previous1Year: 59.26,
-  date: "2026年6月26日 08:20 CST"
+  timestamp: "2026-06-26T00:00:00+00:00",
+  previousClose: 25.46,
+  previous1Week: 31.6,
+  previous1Month: 60.91,
+  previous1Year: 63.0,
+  date: "2026年6月26日 13:21 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:58", tag: "tech", tagText: "科技", text: "全球科技股抛售加剧：亚洲市场领跌，软银暴跌13%，SK海力士跌10%，韩国KOSPI指数重挫8%。市场对AI基础设施成本飙升及OpenAI IPO延期的担忧持续发酵，苹果因内存成本上涨而提价，进一步拖累科技板块。美股纳斯达克和标普500期货同步走低。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/global-tech-stocks-ai-infrastructure-costs-selloff-softbank-apple.html" },
+  { time: "12:48", tag: "tech", tagText: "科技", text: "金融科技公司Airwallex完成3.2亿美元融资，估值达110亿美元。公司计划利用资金构建AI代理驱动的新一代金融基础设施，实现企业支付与财务管理的自动化。此轮融资显示投资者对AI+金融领域的高度兴趣。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/airwallex-series-h-funding-11-billion-valuation-ai-finance.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "美联储新任主席Kevin Warsh发表强硬通胀言论，其鹰派表态叠加油价下跌，推动长期通胀预期回落，市场投资者信心有所恢复。Warsh强调将坚定不移对抗通胀，此举被视为新一届美联储政策基调的明确信号。", source: "Financial Times", url: "https://www.ft.com/content/a825975a-df76-4f9c-9eb9-774329ebc29d" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "马斯克的SpaceX计划通过Starlink进军美国消费者移动通信市场，目标将卫星宽带服务延伸至手机直连领域。此举将直接挑战传统电信运营商，测试SpaceX能否将宏伟愿景转化为大规模手机业务。", source: "Financial Times", url: "https://www.ft.com/content/42af0f15-3aa9-49b7-b429-4a39540af03e" },
   { time: "06:29", tag: "macro", tagText: "宏观", text: "伊拉克暗示可能退出OPEC，全球石油市场再添变数。分析人士指出，若伊拉克最终退出且更多产油国效仿，OPEC控制力瓦解或推动油价跌破每桶50美元。当前布伦特原油价格因地缘紧张已有所上涨，但供给端的不确定性正在加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-world-rejecting-opec-controls-could-usher-in-oil-below-50-a-barrel-3d7eda1b?mod=mw_rss_topstories" },
   { time: "05:30", tag: "ai", tagText: "AI", text: "默克集团旗下Merck KGaA宣布以每股73美元现金收购Bio-Techne，交易总金额约115亿美元。Bio-Techne专注于生命科学工具和诊断试剂，此次收购将加强默克在生物制药上游领域的布局。消息公布后Bio-Techne股价盘后大涨。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPUnk2dUJjQk5TQ1QwY2h0M3Q4bTVtMDR6d09JVXRFMko0ZVBrOFJIWVVaTVdGTXcxWGx5dTdDVjVlS1E1OGJQQVF4SVZfbWFXRVNEQUNZT2tJdFpkcy1CYnBXcVRiX0pVR3FCS2FzcTVZRWo2TFBDTWtsUEhMdTA1UkQxcVZQRzZLb1dpeTBrb0JjNHRNRnBtQmNMLThxWGt2MFRuSWJ3SXdJc3pyRlBHcE8tSjgxaWNOcWVCUGRMY2dGMThLWmFkUGN1OUZrZFhPaTFGVFhLNlpPbHB1dDRmczdMUzhicVVHOUZCZFU1RUExMXlaYjRnVTdWeGs?oc=5" },
   { time: "05:30", tag: "tech", tagText: "科技", text: "安森美半导体宣布以70亿美元收购Synaptics，旨在布局“物理AI”领域。本次收购将使安森美的潜在市场规模到2030年扩大300亿美元至2430亿美元。Synaptics在触控和显示技术方面具有领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/on-semi-synaptics-deal-physical-ai.html" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "22:35", tag: "macro", tagText: "宏观", text: "美元指数从13个月高位回落，因美国5月PCE数据公布后市场解读为经济韧性仍存但通胀黏性未消，美联储短期内按兵不动的预期未变。美元此前在强劲经济数据和避险需求下连续走高，获利盘涌出致回调。", source: "Reuters", url: "https://finance.yahoo.com/news/dollar-rides-high-fed-rate-012635389.html" },
   { time: "22:33", tag: "ai", tagText: "AI", text: "据媒体报道，阿里巴巴被指控试图通过非法手段获取AI初创公司Anthropic的Claude模型技术。Anthropic已向有关部门反映此事。受此消息影响，阿里巴巴美股股价进一步下挫。阿里巴巴尚未正式回应。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/alibaba-stock-baba-anthropic-ai-claude/?src=A00220&yptr=yahoo" },
   { time: "22:30", tag: "macro", tagText: "宏观", text: "美国5月雇主宣布裁员9.7万人，其中约40%的裁员与人工智能技术替代有关。AI对就业市场的冲击持续显现，涉及客服、内容创作、数据分析等多个岗位。零售、科技和教育行业裁员最为集中。", source: "Moneywise", url: "https://finance.yahoo.com/technology/ai/articles/us-employers-announced-97-000-143000676.html" },
-  { time: "22:16", tag: "finance", tagText: "金融", text: "摩根大通宣布人事重大调整：任命Doug Petno和Troy Rohrbaugh为联席总裁，分管两大核心业务部门；原被视为CEO接班热门人选的高管Marianne Lake离职。此举使得Petno和Rohrbaugh成为CEO杰米·戴蒙最可能的继任者。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/jpmorgan-chase-co-presidents-lake-exits.html" },
-  { time: "21:30", tag: "macro", tagText: "宏观", text: "美国5月核心PCE通胀率同比上升3.4%，高于预期的3.2%，创2023年10月以来新高。整体PCE同比上涨4.1%，与预期持平。消费者支出环比增长0.3%，但实际支出受通胀侵蚀。数据公布后，美元短暂回落，市场对美联储9月降息预期小幅降温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/pce-inflation-report-may-2026-.html" },
-  { time: "19:46", tag: "macro", tagText: "宏观", text: "美光科技强劲财报缓解市场对AI需求放缓的担忧，纳指期货反弹。周四将公布美联储青睐的通胀指标——5月个人消费支出价格指数（PCE），市场密切关注这一数据对加息路径的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/stock-market-today-live-updates.html" },
-  { time: "19:45", tag: "crypto", tagText: "加密", text: "比特币2026年表现惨淡，期权交易员押注跌势远未结束。市场认为当前下跌可能只是“冰山一角”，杠杆多头面临大面积清算风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/bitcoin-is-having-a-tough-year-traders-are-betting-its-going-to-get-worse.html" },
 ];
-const breakingDate = "2026年6月26日 08:20 CST";
+const breakingDate = "2026年6月26日 13:21 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "16:10", tag: "ai", tagText: "AI", text: "OpenAI正式发布其首款自研AI半导体，该芯片系与博通（Broadcom）联合开发。此举标志着OpenAI加速摆脱对英伟达等第三方芯片的依赖，进一步垂直整合AI硬件供应链。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9lTGVtX0N4SWl3ZEVfemo2bDlnVFl1a2Jnc2dEWHNVWm5ONnNuR0VrSjV1bHRTblF6NkhmUWpFWjlFSTJUb0NvX1RFNA?oc=5" },
   { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
 ];
-const aiBreakingDate = "2026年6月26日 08:20 CST";
+const aiBreakingDate = "2026年6月26日 13:21 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
