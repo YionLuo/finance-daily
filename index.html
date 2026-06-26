@@ -1618,19 +1618,26 @@
 const fearGreedData = {
   score: 24.77,
   rating: "extreme fear",
-  timestamp: "2026-06-26T21:18:11+00:00",
+  timestamp: "2026-06-26T22:58:16+00:00",
   previousClose: 25.46,
   previous1Week: 37.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月27日 05:38 CST"
+  date: "2026年6月27日 07:18 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:16", tag: "ai", tagText: "AI", text: "特朗普政府允许Anthropic向部分企业和政府机构发布其最新AI模型Mythos，标志着特朗普政府与该AI公司谈判的重大进展。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html" },
+  { time: "06:35", tag: "tech", tagText: "科技", text: "特斯拉与Waymo在自动驾驶出租车领域激烈竞争，而Uber悄然斥资5亿美元锁定自动驾驶出租车运力，以应对Waymo可能将其甩在身后的风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-and-waymo-are-chasing-the-robotaxi-dream-but-the-company-spending-the-most-to-win-builds-no-cars-at-all-0d8682b9" },
+  { time: "06:19", tag: "crypto", tagText: "加密", text: "风险情绪施压比特币，本周比特币ETF资金流出达13亿美元。加密市场跟随整体风险资产走弱。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxORUFWOTlZeE5rMlJ6XzRzUG9BUUlKYTdOQnZ2RWZCYV8yNmVuVk1CYzFlX3g0NFZ2QTlST1F4cVlaQVdyQU9kXzM4cFBCcWtrTkhwNkNRTWlYS1piY0FzLVhGay1mR1JtNzRsUUpVUHJQa2hQWkl5QUJnSjg2R1BHSlRZRWctdno1ZGlFdzNTaXp0NjAyd3Fhcmt6YWdvZUpGOElVZXJ4SFNaa2N4eHliSmdIeldNRmZON3FOTkFzMlBScy1FOTktTTZhNXE0bk5XTExTRENZbmQ4U1V0SV9yclkyY1RyX3dYVGcwckdfdzd2dmNVczBRYXlUS2tfQ0t3?oc=5" },
+  { time: "06:11", tag: "ai", tagText: "AI", text: "中国AI公司智谱发布GLM 5.2模型，性能逼近美国顶级模型Anthropic和OpenAI。分析指出，AI竞争已转向每美元智能产出，开源模型正成为有力竞争者。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/china-zhipu-z-ai-open-source-anthropic-openai.html" },
+  { time: "06:09", tag: "tech", tagText: "科技", text: "ServiceNow、Salesforce等软件股大幅上涨，因市场认为OpenAI的威胁减弱。甲骨文因与OpenAI云基础设施业务挂钩而错失本轮软件反弹。", source: "MarketWatch", url: "https://www.marketwatch.com/story/servicenow-salesforce-and-other-software-stocks-surge-as-the-openai-threat-weakens-bb1eacfb" },
+  { time: "05:59", tag: "macro", tagText: "宏观", text: "国际货币基金组织首席经济学家古林查斯警告称，“针锋相对”的贸易战威胁全球经济，试图获取微小优势的行为将“弄巧成拙”。", source: "Financial Times", url: "https://www.ft.com/content/8199cd6d-e513-4c9a-9beb-8a7acd2b65dc" },
   { time: "05:34", tag: "geo", tagText: "地缘", text: "美国对伊朗发动军事打击，此前特朗普指责伊朗违反霍尔木兹海峡停火协议，袭击商船。此次攻击标志着停火期间敌对行动升级，可能进一步推高油价并影响全球航运。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-strikes-iran-strait-of-hormuz-ceasefire.html" },
   { time: "05:16", tag: "tech", tagText: "科技", text: "科技股遭遇一年来最糟糕的一周，标普500和纳斯达克连续第五个交易日下跌。市场开始质疑AI巨额投入的实际回报，芯片股领跌，甲骨文、英伟达等重挫。投资者从科技板块撤出，转向医疗保健等防御性板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tech-stocks-just-had-one-of-their-worst-weeks-in-a-year-heres-how-ai-momentum-went-off-the-rails-d4596bae" },
+  { time: "05:06", tag: "geo", tagText: "地缘", text: "伊朗袭击商船后，航运保险市场面临考验。战争风险保费此前因停火预期大幅下降，现在可能再次飙升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/irans-ship-attack-tests-the-shipping-insurance-market-just-as-war-risk-premiums-had-plunged-8c4ef14d" },
   { time: "05:06", tag: "geo", tagText: "地缘", text: "美国国务卿鲁比奥宣布，以色列与黎巴嫩已达成旨在实现“持久和平与安全”的框架协议，但最终实施取决于真主党同意停止敌对行动。这一进展有望缓解中东紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/israel-lebanon-hezbollah-ceasefire-rubio.html" },
   { time: "04:42", tag: "tech", tagText: "科技", text: "SpaceX本周早些时候完成250亿美元债券发行，但新债随即遭抛售，收益率向垃圾债水平移动，反映出投资者对AI和航天领域狂热情绪的降温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spacexs-new-bonds-are-flashing-a-warning-sign-as-investors-pump-the-brakes-on-ai-frenzy-752ad44b" },
   { time: "04:38", tag: "macro", tagText: "宏观", text: "尽管通胀升至4%以上，但美联储新主席沃什的强硬言论帮助压低了长期国债收益率。市场认为沃什在通胀问题上态度坚决，部分缓解了加息恐慌。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bond-yields-are-falling-as-inflation-pops-the-feds-tough-talk-under-warsh-is-helping-7d538b3b" },
@@ -1642,18 +1649,13 @@ const breakingNews = [
   { time: "01:41", tag: "geo", tagText: "地缘", text: "特朗普指责伊朗违反停火，称伊朗无人机袭击霍尔木兹海峡船只。此前国际海事组织因一艘货轮被击中暂停疏散被困船只和船员。伊朗加强对该关键水道的控制，推动油价走高。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/trump-iran-ceasefire-strait-of-hormuz.html" },
   { time: "01:41", tag: "macro", tagText: "宏观", text: "明尼阿波利斯联储主席卡什卡利发出加息警告，引发市场关注。分析人士认为，若美联储继续紧缩，可能抑制美股和比特币等风险资产的表现。", source: "BeInCrypto", url: "https://finance.yahoo.com/markets/stocks/articles/fed-official-kashkari-gives-rate-174146017.html" },
   { time: "01:35", tag: "macro", tagText: "宏观", text: "两党住房法案重新步入立法正轨。总统特朗普此前取消了该法案的签署仪式，但如今法案再度接近成为法律。该法案旨在提高住房可负担性，内容包括增加供应和降低购房成本。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-housing-bills-back-on-track-to-becoming-law-heres-what-it-does-for-affordability-14f4c7ba?mod=mw_rss_topstories" },
-  { time: "01:34", tag: "geo", tagText: "地缘", text: "特朗普警告称，将对实施数字服务税的国家征收100%的关税，并表示该关税将凌驾于美国与其他国家达成的任何贸易协议之上。此举可能加剧全球贸易摩擦。", source: "Financial Times", url: "https://www.ft.com/content/5d886d47-c509-44a4-9077-bcd25158b61e" },
-  { time: "23:54", tag: "geo", tagText: "地缘", text: "美国前国家安全顾问约翰·博尔顿就处理机密文件不当认罪。此案被视为特朗普对其政治对手法律行动的首个胜利，引发对政府内部信息管控和党派斗争的进一步讨论。", source: "Financial Times", url: "https://www.ft.com/content/c97fd9e9-4b3b-4333-a898-54243ef317d7" },
-  { time: "23:33", tag: "ai", tagText: "AI", text: "OpenAI与Anthropic面临用户从‘Token最大化’转向效率的新现实。企业客户正收紧AI预算以追求投资回报，这可能抑制OpenAI和Anthropic的增长速度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html" },
-  { time: "23:06", tag: "ai", tagText: "AI", text: "据媒体报道，OpenAI正考虑将IPO推迟至2027年，加剧了市场对AI投资回报的担忧。Kalshi预测市场显示，交易员认为OpenAI在2026年上市的概率仅三分之一，但在2027年6月前完成上市的可能性很高。此消息拖累科技股进一步走低，纳指本周或创年内最差表现。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/openai-ipo-timeline-delayed-kalshi-predictions.html" },
-  { time: "22:56", tag: "tech", tagText: "科技", text: "SpaceX股价本周累计下跌约18%，市值大幅缩水。与此同时，SpaceX将于周五收盘后被纳入罗素1000指数，后续还可能加入其他主要指数。分析人士指出，指数基金被动买入可能带来短期波动，但当前科技股抛售潮令股价承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spacexs-stock-could-get-another-dose-of-volatility-8763bb0a?mod=mw_rss_topstories" },
-  { time: "22:54", tag: "macro", tagText: "宏观", text: "美国通胀率突破4%的背景下，总统特朗普对美联储主席Kevin Warsh的公开施压有所缓和。白宫经济顾问表示将给予Warsh在利率决策上更多空间，但特朗普仍重申要求降息。市场关注美联储后续政策路径。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/trump-warsh-fed-rate-cuts-inflation.html" },
-  { time: "22:52", tag: "macro", tagText: "宏观", text: "美国5月商品贸易逆差扩大至14个月新高，进口大幅攀升。数据表明美国内需强劲，但贸易逆差扩大可能拖累第二季度GDP增速。分析人士指出，企业为应对关税和供应链不确定性而提前囤货是进口激增的主要原因。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/us-goods-trade-deficit-widens-125007010.html" },
 ];
-const breakingDate = "2026年6月27日 05:38 CST";
+const breakingDate = "2026年6月27日 07:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:46", tag: "tech", tagText: "科技", text: "英伟达和Alphabet股价在大型科技股反弹中落后，市场对AI基础设施的高成本及其对芯片需求前景的担忧加剧。尽管整体科技板块走强，但投资者开始质疑AI投资的回报周期，导致芯片相关股票承压。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOY0JzOFJvZ1huNU9CMUpOSTI5Y2U0aWVfa3JUYzBNTHMzWWhGX1hHWWQxLWh3WW0yVUc3ZjA0WGkzcWZKYm8zdkZnWFVZWUQ3UHE0cmVsd1V3ajc1czZqV0x5REZHNktRbEdVbVBpN3UtT19qTWJhekdzNlh1X05SYV9TVEI4Tmo4aEhtZWhrRFRKZmdKSmIyNQ?oc=5" },
+  { time: "02:55", tag: "tech", tagText: "科技", text: "《纽约时报》分析指出，一项此前不起眼的底层技术正成为人工智能发展的关键瓶颈。该技术环节的供应受限、成本上升或性能瓶颈，可能拖累整个AI产业的迭代速度与部署规模。文章呼吁业界关注供应链中的“灰犀牛”风险。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWR0RnpqZnpUN2NoVktOR05SWTVHZVd1UkRRanFQVk51czB6bWF3VGR6VWRLMEw2UUk2bmJGSUNweC1BZi1tTFVoUmlRaVM3d1h5ZnhiemJkUkFYNGlDTUFQR2ZJMjBrcmZ3b25LWUJEYndlODVEdjMtd2JmY2JObzg3U0pIbjVQR2c?oc=5" },
   { time: "02:32", tag: "ai|geo", tagText: "AI|地缘", text: "OpenAI应美国政府要求，限制其最新大模型GPT-5.6仅向“可信合作伙伴”开放，而非全面推迟发布。公司表示此类政府干预不应成为常态，呼吁建立更合理的监管框架，以避免将最先进工具封锁在用户、开发者和企业之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" },
   { time: "02:19", tag: "ai|tech", tagText: "AI|科技", text: "OpenAI从Uber挖来其印度负责人，以领导美国以外最大市场——印度的业务。该公司正加速在印度设立办公室、招聘人才并建立合作伙伴关系，这是其全球扩张战略的重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "tech", tagText: "科技", text: "亚马逊宣布在印度追加130亿美元投资，用于建设AI基础设施。这是全球科技巨头加速在印度布局AI算力资源的最新举措。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/" },
   { time: "18:16", tag: "tech", tagText: "科技", text: "尽管AI芯片竞争加剧，英伟达股价仍逆势上涨。《巴伦周刊》分析认为，市场对英伟达在数据中心和AI领域的领导地位依然抱有信心，短期竞争压力未显著影响其估值。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE51T3lNTFhRNDFIal9vQVh2R1F4TVYxYjh6akh6VHB6OTZ0OUFQWmdmYmc4RHljaVpuTG5GUHhELWF5LUQyRHI2TWlqeTJWSDM2VnpfSmFuWUZkR3F0VDNsRkpqWEVwVk52S0Q4WnNmLXJnWkdQNDNxbw?oc=5" },
   { time: "16:10", tag: "ai", tagText: "AI", text: "OpenAI正式发布其首款自研AI半导体，该芯片系与博通（Broadcom）联合开发。此举标志着OpenAI加速摆脱对英伟达等第三方芯片的依赖，进一步垂直整合AI硬件供应链。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9lTGVtX0N4SWl3ZEVfemo2bDlnVFl1a2Jnc2dEWHNVWm5ONnNuR0VrSjV1bHRTblF6NkhmUWpFWjlFSTJUb0NvX1RFNA?oc=5" },
-  { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
-  { time: "08:08", tag: "geo", tagText: "地缘", text: "欧洲正对美国主导的对华芯片战争进行反击。ASML首席执行官此前表示，中国目前只能购买上一代深紫外（DUV）光刻工具，这与美国试图限制先进芯片设备出口的立场相左。欧洲企业希望在维护自身经济利益的同时，避免完全跟随美国的出口管制政策。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" },
 ];
-const aiBreakingDate = "2026年6月27日 05:38 CST";
+const aiBreakingDate = "2026年6月27日 07:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
