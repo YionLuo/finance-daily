@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 24.66,
+  score: 24.77,
   rating: "extreme fear",
-  timestamp: "2026-06-26T19:59:59+00:00",
+  timestamp: "2026-06-26T21:18:11+00:00",
   previousClose: 25.46,
   previous1Week: 37.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月27日 04:04 CST"
+  date: "2026年6月27日 05:38 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:34", tag: "geo", tagText: "地缘", text: "美国对伊朗发动军事打击，此前特朗普指责伊朗违反霍尔木兹海峡停火协议，袭击商船。此次攻击标志着停火期间敌对行动升级，可能进一步推高油价并影响全球航运。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-strikes-iran-strait-of-hormuz-ceasefire.html" },
+  { time: "05:16", tag: "tech", tagText: "科技", text: "科技股遭遇一年来最糟糕的一周，标普500和纳斯达克连续第五个交易日下跌。市场开始质疑AI巨额投入的实际回报，芯片股领跌，甲骨文、英伟达等重挫。投资者从科技板块撤出，转向医疗保健等防御性板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tech-stocks-just-had-one-of-their-worst-weeks-in-a-year-heres-how-ai-momentum-went-off-the-rails-d4596bae" },
+  { time: "05:06", tag: "geo", tagText: "地缘", text: "美国国务卿鲁比奥宣布，以色列与黎巴嫩已达成旨在实现“持久和平与安全”的框架协议，但最终实施取决于真主党同意停止敌对行动。这一进展有望缓解中东紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/israel-lebanon-hezbollah-ceasefire-rubio.html" },
+  { time: "04:42", tag: "tech", tagText: "科技", text: "SpaceX本周早些时候完成250亿美元债券发行，但新债随即遭抛售，收益率向垃圾债水平移动，反映出投资者对AI和航天领域狂热情绪的降温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spacexs-new-bonds-are-flashing-a-warning-sign-as-investors-pump-the-brakes-on-ai-frenzy-752ad44b" },
+  { time: "04:38", tag: "macro", tagText: "宏观", text: "尽管通胀升至4%以上，但美联储新主席沃什的强硬言论帮助压低了长期国债收益率。市场认为沃什在通胀问题上态度坚决，部分缓解了加息恐慌。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bond-yields-are-falling-as-inflation-pops-the-feds-tough-talk-under-warsh-is-helping-7d538b3b" },
+  { time: "04:21", tag: "tech", tagText: "科技", text: "甲骨文股价本周暴跌，跌幅为2001年互联网泡沫以来最大。市场对其激增的资本支出、负自由现金流和1300亿美元债务感到担忧，AI融资前景恶化加剧了抛售。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/oracle-stock-ends-worst-week-since-2001-as-investors-dwell-on-finances.html" },
   { time: "03:49", tag: "macro", tagText: "宏观", text: "加州州长纽森呼吁在全国范围内对亿万富翁征收最低税，并堵住“免税生活方式贷款”漏洞。他表示“是时候进行经济重置了”。此举可能加剧关于财富税的全国辩论。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/gavin-newsom-national-billionaires-tax-california.html" },
   { time: "03:46", tag: "tech", tagText: "科技", text: "高通正推进其数据中心芯片战略，试图挑战英伟达在AI计算领域的统治地位。该转型涉及约400亿美元规模，Meta已成为早期客户。市场关注高通能否在数据中心市场后来居上。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-qualcomm-actually-compete-with-nvidia-inside-its-bold-data-center-gamble-38ac48b3?mod=mw_rss_topstories" },
   { time: "02:39", tag: "macro", tagText: "宏观", text: "投资者正从科技股转向医疗保健板块，艾伯维、礼来和强生股价均有望在周五创出历史新高。生物制药领域资金回流明显，成为市场震荡中的避风港。", source: "MarketWatch", url: "https://www.marketwatch.com/story/healthcare-stocks-have-become-a-haven-for-investors-ditching-tech-81c544d0?mod=mw_rss_topstories" },
@@ -1643,14 +1649,8 @@ const breakingNews = [
   { time: "22:56", tag: "tech", tagText: "科技", text: "SpaceX股价本周累计下跌约18%，市值大幅缩水。与此同时，SpaceX将于周五收盘后被纳入罗素1000指数，后续还可能加入其他主要指数。分析人士指出，指数基金被动买入可能带来短期波动，但当前科技股抛售潮令股价承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spacexs-stock-could-get-another-dose-of-volatility-8763bb0a?mod=mw_rss_topstories" },
   { time: "22:54", tag: "macro", tagText: "宏观", text: "美国通胀率突破4%的背景下，总统特朗普对美联储主席Kevin Warsh的公开施压有所缓和。白宫经济顾问表示将给予Warsh在利率决策上更多空间，但特朗普仍重申要求降息。市场关注美联储后续政策路径。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/trump-warsh-fed-rate-cuts-inflation.html" },
   { time: "22:52", tag: "macro", tagText: "宏观", text: "美国5月商品贸易逆差扩大至14个月新高，进口大幅攀升。数据表明美国内需强劲，但贸易逆差扩大可能拖累第二季度GDP增速。分析人士指出，企业为应对关税和供应链不确定性而提前囤货是进口激增的主要原因。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/us-goods-trade-deficit-widens-125007010.html" },
-  { time: "22:50", tag: "geo", tagText: "地缘", text: "一架小型螺旋桨飞机撞上北京最高楼中信大厦（中国尊），碎片从高空坠落至中央商务区。目前伤亡情况不明，事故原因正在调查。该事件引发市场对北京中心区域安全的关注，可能影响短期市场情绪。", source: "Financial Times", url: "https://www.ft.com/content/133f3e9d-dacc-4e5a-9928-64b28a10a15a" },
-  { time: "21:29", tag: "macro", tagText: "宏观", text: "花旗经济学家警告称，厄尔尼诺现象即将回归，可能对全球农业、基础设施及整体生产力造成破坏，导致数万亿美元经济损失。", source: "MarketWatch", url: "https://www.marketwatch.com/story/oil-may-no-longer-pose-the-same-threat-to-the-global-economy-but-another-risk-may-be-around-the-corner-says-citigroup-629d2854" },
-  { time: "20:51", tag: "macro", tagText: "宏观", text: "投资者自3月以来首次从美国股票基金撤资，资金流向显示资金正从科技股转向周期性板块和房地产。分析人士认为，随着中期选举临近，市场风险偏好下降，今年夏季市场可能面临更大波动。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-stock-market-sees-first-outflow-since-march-and-that-may-set-the-stage-for-a-risk-off-summer-e3e8c623?mod=mw_rss_topstories" },
-  { time: "20:04", tag: "macro", tagText: "宏观", text: "欧洲热浪将带来重大经济损失。越来越多的研究指出极端高温对经济活动的破坏，包括生产力下降、基础设施损坏和医疗成本上升。", source: "Financial Times", url: "https://www.ft.com/content/ed26a7f9-0c32-426b-88c6-a46121bef8a4" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "Polymarket年化收入突破10亿美元，距离其美国交易所上线仅六周。世界杯交易和美国候补名单取消推动了该预测市场的快速增长。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/polymarket-annualized-revenue-1-billion-us-exchange-.html" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "AI竞赛导致存储芯片短缺，推高笔记本电脑和智能手机成本。内存芯片价格上涨正传导至消费电子终端，可能引发产品供应短缺。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/ai-memory-chip-shortage-consumer-electronics-prices.html" },
 ];
-const breakingDate = "2026年6月27日 04:04 CST";
+const breakingDate = "2026年6月27日 05:38 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
   { time: "08:08", tag: "geo", tagText: "地缘", text: "欧洲正对美国主导的对华芯片战争进行反击。ASML首席执行官此前表示，中国目前只能购买上一代深紫外（DUV）光刻工具，这与美国试图限制先进芯片设备出口的立场相左。欧洲企业希望在维护自身经济利益的同时，避免完全跟随美国的出口管制政策。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" },
 ];
-const aiBreakingDate = "2026年6月27日 04:04 CST";
+const aiBreakingDate = "2026年6月27日 05:38 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
