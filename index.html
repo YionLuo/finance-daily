@@ -1618,19 +1618,23 @@
 const fearGreedData = {
   score: 25.46,
   rating: "fear",
-  timestamp: "2026-06-25T22:21:27+00:00",
+  timestamp: "2026-06-25T23:59:59+00:00",
   previousClose: 25.91,
   previous1Week: 37.57,
   previous1Month: 58.97,
   previous1Year: 59.26,
-  date: "2026年6月26日 06:40 CST"
+  date: "2026年6月26日 08:20 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:29", tag: "macro", tagText: "宏观", text: "伊拉克暗示可能退出OPEC，全球石油市场再添变数。分析人士指出，若伊拉克最终退出且更多产油国效仿，OPEC控制力瓦解或推动油价跌破每桶50美元。当前布伦特原油价格因地缘紧张已有所上涨，但供给端的不确定性正在加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-world-rejecting-opec-controls-could-usher-in-oil-below-50-a-barrel-3d7eda1b?mod=mw_rss_topstories" },
+  { time: "05:30", tag: "ai", tagText: "AI", text: "默克集团旗下Merck KGaA宣布以每股73美元现金收购Bio-Techne，交易总金额约115亿美元。Bio-Techne专注于生命科学工具和诊断试剂，此次收购将加强默克在生物制药上游领域的布局。消息公布后Bio-Techne股价盘后大涨。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPUnk2dUJjQk5TQ1QwY2h0M3Q4bTVtMDR6d09JVXRFMko0ZVBrOFJIWVVaTVdGTXcxWGx5dTdDVjVlS1E1OGJQQVF4SVZfbWFXRVNEQUNZT2tJdFpkcy1CYnBXcVRiX0pVR3FCS2FzcTVZRWo2TFBDTWtsUEhMdTA1UkQxcVZQRzZLb1dpeTBrb0JjNHRNRnBtQmNMLThxWGt2MFRuSWJ3SXdJc3pyRlBHcE8tSjgxaWNOcWVCUGRMY2dGMThLWmFkUGN1OUZrZFhPaTFGVFhLNlpPbHB1dDRmczdMUzhicVVHOUZCZFU1RUExMXlaYjRnVTdWeGs?oc=5" },
   { time: "05:30", tag: "tech", tagText: "科技", text: "安森美半导体宣布以70亿美元收购Synaptics，旨在布局“物理AI”领域。本次收购将使安森美的潜在市场规模到2030年扩大300亿美元至2430亿美元。Synaptics在触控和显示技术方面具有领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/on-semi-synaptics-deal-physical-ai.html" },
+  { time: "05:03", tag: "macro", tagText: "宏观", text: "芝加哥联储主席古尔斯比（Goolsbee）表示当前通胀水平仍然过高，拒绝就利率路径做出预测；纽约联储主席威廉姆斯（Williams）则认为价格压力正在缓解。两位官员言论暗示美联储内部对通胀前景判断存在分歧，市场继续押注7月按兵不动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/chicago-fed-president-goolsbee-says-inflation-is-too-high-calls-warsh-a-serious-guy.html" },
   { time: "04:50", tag: "tech", tagText: "科技", text: "微软股价本六月遭遇历史性暴跌，本月累计跌幅创纪录。投资者对微软在AI基础设施上的巨额资本支出感到担忧，认为公司在AI投资回报尚不明朗的情况下大幅增加开支，导致自由现金流承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microsofts-stock-is-suffering-a-historic-june-rout-as-investors-balk-at-heavy-spending-9afaef1b" },
+  { time: "04:39", tag: "tech", tagText: "科技", text: "高通正在推进一项400亿美元的数据中心转型计划，试图挑战英伟达在AI芯片领域的统治地位。据悉Meta已开始采用高通方案进行推理部署，但分析师质疑高通能否在性能和生态上真正与英伟达抗衡。该战略被视为高通未来增长的关键赌注。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-qualcomm-actually-compete-with-nvidia-inside-its-bold-data-center-gamble-38ac48b3?mod=mw_rss_topstories" },
   { time: "04:30", tag: "macro", tagText: "宏观", text: "美股收盘涨跌互现：纳指连跌四天，标普500险守关键支撑位。美光科技强劲财报推动半导体板块上涨，但苹果因内存成本飙升宣布涨价后股价下跌，拖累大型科技股整体走低。道指小幅上涨。市场关注地缘局势及通胀数据。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/stock-market-today-live-updates.html" },
   { time: "03:53", tag: "macro", tagText: "宏观", text: "日本股市持续飙升，日经指数创下1989年以来最快的一轮历史新高。市场分析认为，企业治理改革、日元弱势以及外资回流是主要驱动力。日本股市表现亮眼，在全球主要市场中独领风骚。", source: "MarketWatch", url: "https://www.marketwatch.com/story/japanese-stocks-are-on-fire-heres-whats-driving-the-hot-streak-526a6914?mod=mw_rss_topstories" },
   { time: "03:45", tag: "geo", tagText: "地缘", text: "伊朗被指在霍尔木兹海峡附近袭击一艘货船，国际海事组织暂停了此前搁浅船只的疏散计划。美国官员确认伊朗涉案，布伦特原油价格因地缘紧张升级而走高。霍尔木兹海峡是全球最重要的石油运输通道之一。", source: "Financial Times", url: "https://www.ft.com/content/5abcb3c1-8ce8-470f-8a37-f47af58b2f7c" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "21:30", tag: "macro", tagText: "宏观", text: "美国5月核心PCE通胀率同比上升3.4%，高于预期的3.2%，创2023年10月以来新高。整体PCE同比上涨4.1%，与预期持平。消费者支出环比增长0.3%，但实际支出受通胀侵蚀。数据公布后，美元短暂回落，市场对美联储9月降息预期小幅降温。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/pce-inflation-report-may-2026-.html" },
   { time: "19:46", tag: "macro", tagText: "宏观", text: "美光科技强劲财报缓解市场对AI需求放缓的担忧，纳指期货反弹。周四将公布美联储青睐的通胀指标——5月个人消费支出价格指数（PCE），市场密切关注这一数据对加息路径的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/24/stock-market-today-live-updates.html" },
   { time: "19:45", tag: "crypto", tagText: "加密", text: "比特币2026年表现惨淡，期权交易员押注跌势远未结束。市场认为当前下跌可能只是“冰山一角”，杠杆多头面临大面积清算风险。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/bitcoin-is-having-a-tough-year-traders-are-betting-its-going-to-get-worse.html" },
-  { time: "19:29", tag: "macro", tagText: "宏观", text: "安联首席投资官Ludovic Subran警告称，SpaceX的债券发行是市场处于“泡沫区域”的明确信号。他认为债务投资者对马斯克火箭公司的审查将比股权市场更为严格，当前风险定价严重不足。", source: "Financial Times", url: "https://www.ft.com/content/40b0666b-8214-4162-a82b-d74ba464eabc" },
-  { time: "18:00", tag: "macro", tagText: "宏观", text: "黄金价格徘徊在4000美元附近，白银则跌破60美元。今年以来黄金累计下跌约8%，白银跌幅超过20%。市场对利率持续高企的预期削弱了贵金属的避险吸引力，投资者正重新评估贵金属资产配置。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/gold-silver-price-rally-invest-interest-rates.html" },
-  { time: "15:23", tag: "macro", tagText: "宏观", text: "印度最大黄金出口商之一Rajesh Exports被调查发现会计违规，其董事总经理月薪仅180美元。该公司还拥有瑞士精炼厂Valcambi，调查可能影响全球黄金供应链透明度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/india-rajesh-exports-investigation-accounting-irregularities-valcambi.html" },
-  { time: "15:12", tag: "geo", tagText: "地缘", text: "特朗普承诺对委内瑞拉地震快速援助，标志着美国与委内瑞拉临时政府的外交调整。委内瑞拉连续遭遇两次7级以上强震，震中距首都约100英里，官方警告极高伤亡。美国迅速提供援助，反映了地缘政治的微妙变化。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/venezuela-earthquakes-casualties-trump-pledges-support-aids-oil-.html" },
 ];
-const breakingDate = "2026年6月26日 06:40 CST";
+const breakingDate = "2026年6月26日 08:20 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:08", tag: "geo", tagText: "地缘", text: "欧洲正对美国主导的对华芯片战争进行反击。ASML首席执行官此前表示，中国目前只能购买上一代深紫外（DUV）光刻工具，这与美国试图限制先进芯片设备出口的立场相左。欧洲企业希望在维护自身经济利益的同时，避免完全跟随美国的出口管制政策。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" },
   { time: "05:57", tag: "ai", tagText: "AI", text: "据报道，特朗普政府出于安全考虑要求OpenAI推迟其下一代大模型GPT-5.6的发布。OpenAI已同意该请求，具体发布时间未定。这标志着政府与AI巨头在模型安全审查上的博弈加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/957372/openai-will-delay-gpt-5-6-after-trump-administration-request" },
   { time: "05:56", tag: "tech", tagText: "科技", text: "尽管AI裁员话题沸沸扬扬，SignalFire数据显示工程师岗位反而最具韧性，在新招聘中占比持续上升。分析认为AI工具提升效率的同时，也创造了对更高技能工程师的旺盛需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/" },
   { time: "04:19", tag: "ai", tagText: "AI", text: "AI代理测试初创公司Patronus AI完成5000万美元融资，该公司由前Meta AI研究员创立，致力于构建“数字世界”来对AI代理进行压力测试。投资者表示，市场对该类测试服务的需求几乎“无法满足”，反映出企业对AI代理可靠性日益增长的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "18:16", tag: "tech", tagText: "科技", text: "尽管AI芯片竞争加剧，英伟达股价仍逆势上涨。《巴伦周刊》分析认为，市场对英伟达在数据中心和AI领域的领导地位依然抱有信心，短期竞争压力未显著影响其估值。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE51T3lNTFhRNDFIal9vQVh2R1F4TVYxYjh6akh6VHB6OTZ0OUFQWmdmYmc4RHljaVpuTG5GUHhELWF5LUQyRHI2TWlqeTJWSDM2VnpfSmFuWUZkR3F0VDNsRkpqWEVwVk52S0Q4WnNmLXJnWkdQNDNxbw?oc=5" },
   { time: "16:10", tag: "ai", tagText: "AI", text: "OpenAI正式发布其首款自研AI半导体，该芯片系与博通（Broadcom）联合开发。此举标志着OpenAI加速摆脱对英伟达等第三方芯片的依赖，进一步垂直整合AI硬件供应链。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9lTGVtX0N4SWl3ZEVfemo2bDlnVFl1a2Jnc2dEWHNVWm5ONnNuR0VrSjV1bHRTblF6NkhmUWpFWjlFSTJUb0NvX1RFNA?oc=5" },
   { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
-  { time: "08:08", tag: "geo", tagText: "地缘", text: "欧洲正对美国主导的对华芯片战争进行反击。ASML首席执行官此前表示，中国目前只能购买上一代深紫外（DUV）光刻工具，这与美国试图限制先进芯片设备出口的立场相左。欧洲企业希望在维护自身经济利益的同时，避免完全跟随美国的出口管制政策。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" },
 ];
-const aiBreakingDate = "2026年6月26日 06:40 CST";
+const aiBreakingDate = "2026年6月26日 08:20 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
