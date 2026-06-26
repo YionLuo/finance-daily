@@ -1616,23 +1616,28 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 25.43,
-  rating: "fear",
-  timestamp: "2026-06-26T17:53:15+00:00",
+  score: 24.66,
+  rating: "extreme fear",
+  timestamp: "2026-06-26T19:59:59+00:00",
   previousClose: 25.46,
   previous1Week: 37.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月27日 02:01 CST"
+  date: "2026年6月27日 04:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:49", tag: "macro", tagText: "宏观", text: "加州州长纽森呼吁在全国范围内对亿万富翁征收最低税，并堵住“免税生活方式贷款”漏洞。他表示“是时候进行经济重置了”。此举可能加剧关于财富税的全国辩论。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/gavin-newsom-national-billionaires-tax-california.html" },
+  { time: "03:46", tag: "tech", tagText: "科技", text: "高通正推进其数据中心芯片战略，试图挑战英伟达在AI计算领域的统治地位。该转型涉及约400亿美元规模，Meta已成为早期客户。市场关注高通能否在数据中心市场后来居上。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-qualcomm-actually-compete-with-nvidia-inside-its-bold-data-center-gamble-38ac48b3?mod=mw_rss_topstories" },
+  { time: "02:39", tag: "macro", tagText: "宏观", text: "投资者正从科技股转向医疗保健板块，艾伯维、礼来和强生股价均有望在周五创出历史新高。生物制药领域资金回流明显，成为市场震荡中的避风港。", source: "MarketWatch", url: "https://www.marketwatch.com/story/healthcare-stocks-have-become-a-haven-for-investors-ditching-tech-81c544d0?mod=mw_rss_topstories" },
+  { time: "02:23", tag: "macro", tagText: "宏观", text: "德国正考虑在2092年前将退休年龄逐步提高至70岁，以应对人口老龄化带来的社保资金缺口。分析指出，类似举措只能部分解决美国社保的长期赤字问题。", source: "MarketWatch", url: "https://www.marketwatch.com/story/could-the-u-s-join-germany-in-raising-its-retirement-age-3282e0bd?mod=mw_rss_topstories" },
   { time: "01:41", tag: "geo", tagText: "地缘", text: "特朗普指责伊朗违反停火，称伊朗无人机袭击霍尔木兹海峡船只。此前国际海事组织因一艘货轮被击中暂停疏散被困船只和船员。伊朗加强对该关键水道的控制，推动油价走高。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/trump-iran-ceasefire-strait-of-hormuz.html" },
   { time: "01:41", tag: "macro", tagText: "宏观", text: "明尼阿波利斯联储主席卡什卡利发出加息警告，引发市场关注。分析人士认为，若美联储继续紧缩，可能抑制美股和比特币等风险资产的表现。", source: "BeInCrypto", url: "https://finance.yahoo.com/markets/stocks/articles/fed-official-kashkari-gives-rate-174146017.html" },
   { time: "01:35", tag: "macro", tagText: "宏观", text: "两党住房法案重新步入立法正轨。总统特朗普此前取消了该法案的签署仪式，但如今法案再度接近成为法律。该法案旨在提高住房可负担性，内容包括增加供应和降低购房成本。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-housing-bills-back-on-track-to-becoming-law-heres-what-it-does-for-affordability-14f4c7ba?mod=mw_rss_topstories" },
   { time: "01:34", tag: "geo", tagText: "地缘", text: "特朗普警告称，将对实施数字服务税的国家征收100%的关税，并表示该关税将凌驾于美国与其他国家达成的任何贸易协议之上。此举可能加剧全球贸易摩擦。", source: "Financial Times", url: "https://www.ft.com/content/5d886d47-c509-44a4-9077-bcd25158b61e" },
+  { time: "23:54", tag: "geo", tagText: "地缘", text: "美国前国家安全顾问约翰·博尔顿就处理机密文件不当认罪。此案被视为特朗普对其政治对手法律行动的首个胜利，引发对政府内部信息管控和党派斗争的进一步讨论。", source: "Financial Times", url: "https://www.ft.com/content/c97fd9e9-4b3b-4333-a898-54243ef317d7" },
   { time: "23:33", tag: "ai", tagText: "AI", text: "OpenAI与Anthropic面临用户从‘Token最大化’转向效率的新现实。企业客户正收紧AI预算以追求投资回报，这可能抑制OpenAI和Anthropic的增长速度。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html" },
   { time: "23:06", tag: "ai", tagText: "AI", text: "据媒体报道，OpenAI正考虑将IPO推迟至2027年，加剧了市场对AI投资回报的担忧。Kalshi预测市场显示，交易员认为OpenAI在2026年上市的概率仅三分之一，但在2027年6月前完成上市的可能性很高。此消息拖累科技股进一步走低，纳指本周或创年内最差表现。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/openai-ipo-timeline-delayed-kalshi-predictions.html" },
   { time: "22:56", tag: "tech", tagText: "科技", text: "SpaceX股价本周累计下跌约18%，市值大幅缩水。与此同时，SpaceX将于周五收盘后被纳入罗素1000指数，后续还可能加入其他主要指数。分析人士指出，指数基金被动买入可能带来短期波动，但当前科技股抛售潮令股价承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spacexs-stock-could-get-another-dose-of-volatility-8763bb0a?mod=mw_rss_topstories" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "20:04", tag: "macro", tagText: "宏观", text: "欧洲热浪将带来重大经济损失。越来越多的研究指出极端高温对经济活动的破坏，包括生产力下降、基础设施损坏和医疗成本上升。", source: "Financial Times", url: "https://www.ft.com/content/ed26a7f9-0c32-426b-88c6-a46121bef8a4" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "Polymarket年化收入突破10亿美元，距离其美国交易所上线仅六周。世界杯交易和美国候补名单取消推动了该预测市场的快速增长。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/polymarket-annualized-revenue-1-billion-us-exchange-.html" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "AI竞赛导致存储芯片短缺，推高笔记本电脑和智能手机成本。内存芯片价格上涨正传导至消费电子终端，可能引发产品供应短缺。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/ai-memory-chip-shortage-consumer-electronics-prices.html" },
-  { time: "18:53", tag: "macro", tagText: "宏观", text: "美元持续走强，违背市场对海湾停战后避险情绪消退的预期。分析指出五大原因支撑美元：美国经济韧性、美联储维持高利率、全球风险偏好下降、资金回流美国以及其他国家增长疲弱。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-fistful-of-dollars-five-reasons-why-the-u-s-currency-is-rising-b29df92a" },
-  { time: "17:22", tag: "macro", tagText: "宏观", text: "美国WTI原油跌破70美元/桶，回吐周初因阿曼湾货船遇袭事件带来的地缘溢价。市场焦点转向中东局势后续发展及OPEC+产量政策，布伦特原油同步承压。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/oil-prices-middle-east-iran-strait-of-hormuz-opec-iraq-wti-brent-crude.html" },
-  { time: "16:49", tag: "macro", tagText: "宏观", text: "大众汽车宣布在史无前例的成本削减计划中裁员多达10万人，相当于其全球员工总数的约15%。此次重组紧随其将船用发动机业务出售给美国私募股权公司贝恩资本之后，旨在应对电动化转型压力和利润率下滑。", source: "Financial Times", url: "https://www.ft.com/content/d0760eaf-d345-4964-b2ae-f55f6dfd9a4a" },
-  { time: "15:38", tag: "tech", tagText: "科技", text: "SK海力士准备以每股166美元的价格在美国上市，汇丰分析师认为其估值可能还有20%的上涨空间，因美国市场上市有望缩小与竞争对手美光科技的估值差距。SK海力士是AI存储芯片的主要供应商之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/sk-hynix-us-listing-ipo-hsbc-price-target.html" },
-  { time: "12:58", tag: "tech", tagText: "科技", text: "全球科技股抛售加剧：亚洲市场领跌，软银暴跌13%，SK海力士跌10%，韩国KOSPI指数重挫8%。市场对AI基础设施成本飙升及OpenAI IPO延期的担忧持续发酵，苹果因内存成本上涨而提价，进一步拖累科技板块。美股纳斯达克和标普500期货同步走低。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/global-tech-stocks-ai-infrastructure-costs-selloff-softbank-apple.html" },
 ];
-const breakingDate = "2026年6月27日 02:01 CST";
+const breakingDate = "2026年6月27日 04:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:32", tag: "ai|geo", tagText: "AI|地缘", text: "OpenAI应美国政府要求，限制其最新大模型GPT-5.6仅向“可信合作伙伴”开放，而非全面推迟发布。公司表示此类政府干预不应成为常态，呼吁建立更合理的监管框架，以避免将最先进工具封锁在用户、开发者和企业之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" },
+  { time: "02:19", tag: "ai|tech", tagText: "AI|科技", text: "OpenAI从Uber挖来其印度负责人，以领导美国以外最大市场——印度的业务。该公司正加速在印度设立办公室、招聘人才并建立合作伙伴关系，这是其全球扩张战略的重要一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
   { time: "01:16", tag: "ai", tagText: "AI", text: "Facebook（Meta）推出面向创作者的全新AI伴侣应用。该应用目前正在与部分创作者进行测试，内置了Facebook最新发布的AI创作助手，旨在帮助创作者更高效地管理内容、互动和创作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "16:10", tag: "ai", tagText: "AI", text: "OpenAI正式发布其首款自研AI半导体，该芯片系与博通（Broadcom）联合开发。此举标志着OpenAI加速摆脱对英伟达等第三方芯片的依赖，进一步垂直整合AI硬件供应链。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9lTGVtX0N4SWl3ZEVfemo2bDlnVFl1a2Jnc2dEWHNVWm5ONnNuR0VrSjV1bHRTblF6NkhmUWpFWjlFSTJUb0NvX1RFNA?oc=5" },
   { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
   { time: "08:08", tag: "geo", tagText: "地缘", text: "欧洲正对美国主导的对华芯片战争进行反击。ASML首席执行官此前表示，中国目前只能购买上一代深紫外（DUV）光刻工具，这与美国试图限制先进芯片设备出口的立场相左。欧洲企业希望在维护自身经济利益的同时，避免完全跟随美国的出口管制政策。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" },
-  { time: "05:57", tag: "ai", tagText: "AI", text: "据报道，特朗普政府出于安全考虑要求OpenAI推迟其下一代大模型GPT-5.6的发布。OpenAI已同意该请求，具体发布时间未定。这标志着政府与AI巨头在模型安全审查上的博弈加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/957372/openai-will-delay-gpt-5-6-after-trump-administration-request" },
-  { time: "05:56", tag: "tech", tagText: "科技", text: "尽管AI裁员话题沸沸扬扬，SignalFire数据显示工程师岗位反而最具韧性，在新招聘中占比持续上升。分析认为AI工具提升效率的同时，也创造了对更高技能工程师的旺盛需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/" },
 ];
-const aiBreakingDate = "2026年6月27日 02:01 CST";
+const aiBreakingDate = "2026年6月27日 04:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
