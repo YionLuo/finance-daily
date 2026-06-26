@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 24.96,
-  rating: "extreme fear",
-  timestamp: "2026-06-26T12:02:31+00:00",
+  score: 25.06,
+  rating: "fear",
+  timestamp: "2026-06-26T15:23:50+00:00",
   previousClose: 25.46,
   previous1Week: 31.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月26日 20:21 CST"
+  date: "2026年6月26日 23:30 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:06", tag: "ai", tagText: "AI", text: "据媒体报道，OpenAI正考虑将IPO推迟至2027年，加剧了市场对AI投资回报的担忧。Kalshi预测市场显示，交易员认为OpenAI在2026年上市的概率仅三分之一，但在2027年6月前完成上市的可能性很高。此消息拖累科技股进一步走低，纳指本周或创年内最差表现。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/openai-ipo-timeline-delayed-kalshi-predictions.html" },
+  { time: "22:56", tag: "tech", tagText: "科技", text: "SpaceX股价本周累计下跌约18%，市值大幅缩水。与此同时，SpaceX将于周五收盘后被纳入罗素1000指数，后续还可能加入其他主要指数。分析人士指出，指数基金被动买入可能带来短期波动，但当前科技股抛售潮令股价承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spacexs-stock-could-get-another-dose-of-volatility-8763bb0a?mod=mw_rss_topstories" },
+  { time: "22:54", tag: "macro", tagText: "宏观", text: "美国通胀率突破4%的背景下，总统特朗普对美联储主席Kevin Warsh的公开施压有所缓和。白宫经济顾问表示将给予Warsh在利率决策上更多空间，但特朗普仍重申要求降息。市场关注美联储后续政策路径。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/trump-warsh-fed-rate-cuts-inflation.html" },
+  { time: "22:52", tag: "macro", tagText: "宏观", text: "美国5月商品贸易逆差扩大至14个月新高，进口大幅攀升。数据表明美国内需强劲，但贸易逆差扩大可能拖累第二季度GDP增速。分析人士指出，企业为应对关税和供应链不确定性而提前囤货是进口激增的主要原因。", source: "Reuters", url: "https://finance.yahoo.com/economy/policy/articles/us-goods-trade-deficit-widens-125007010.html" },
+  { time: "22:50", tag: "geo", tagText: "地缘", text: "一架小型螺旋桨飞机撞上北京最高楼中信大厦（中国尊），碎片从高空坠落至中央商务区。目前伤亡情况不明，事故原因正在调查。该事件引发市场对北京中心区域安全的关注，可能影响短期市场情绪。", source: "Financial Times", url: "https://www.ft.com/content/133f3e9d-dacc-4e5a-9928-64b28a10a15a" },
+  { time: "20:51", tag: "macro", tagText: "宏观", text: "投资者自3月以来首次从美国股票基金撤资，资金流向显示资金正从科技股转向周期性板块和房地产。分析人士认为，随着中期选举临近，市场风险偏好下降，今年夏季市场可能面临更大波动。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-stock-market-sees-first-outflow-since-march-and-that-may-set-the-stage-for-a-risk-off-summer-e3e8c623?mod=mw_rss_topstories" },
   { time: "20:04", tag: "macro", tagText: "宏观", text: "欧洲热浪将带来重大经济损失。越来越多的研究指出极端高温对经济活动的破坏，包括生产力下降、基础设施损坏和医疗成本上升。", source: "Financial Times", url: "https://www.ft.com/content/ed26a7f9-0c32-426b-88c6-a46121bef8a4" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "Polymarket年化收入突破10亿美元，距离其美国交易所上线仅六周。世界杯交易和美国候补名单取消推动了该预测市场的快速增长。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/polymarket-annualized-revenue-1-billion-us-exchange-.html" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "AI竞赛导致存储芯片短缺，推高笔记本电脑和智能手机成本。内存芯片价格上涨正传导至消费电子终端，可能引发产品供应短缺。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/ai-memory-chip-shortage-consumer-electronics-prices.html" },
@@ -1643,17 +1649,16 @@ const breakingNews = [
   { time: "12:00", tag: "tech", tagText: "科技", text: "马斯克的SpaceX计划通过Starlink进军美国消费者移动通信市场，目标将卫星宽带服务延伸至手机直连领域。此举将直接挑战传统电信运营商，测试SpaceX能否将宏伟愿景转化为大规模手机业务。", source: "Financial Times", url: "https://www.ft.com/content/42af0f15-3aa9-49b7-b429-4a39540af03e" },
   { time: "06:29", tag: "macro", tagText: "宏观", text: "伊拉克暗示可能退出OPEC，全球石油市场再添变数。分析人士指出，若伊拉克最终退出且更多产油国效仿，OPEC控制力瓦解或推动油价跌破每桶50美元。当前布伦特原油价格因地缘紧张已有所上涨，但供给端的不确定性正在加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-world-rejecting-opec-controls-could-usher-in-oil-below-50-a-barrel-3d7eda1b?mod=mw_rss_topstories" },
   { time: "05:30", tag: "ai", tagText: "AI", text: "默克集团旗下Merck KGaA宣布以每股73美元现金收购Bio-Techne，交易总金额约115亿美元。Bio-Techne专注于生命科学工具和诊断试剂，此次收购将加强默克在生物制药上游领域的布局。消息公布后Bio-Techne股价盘后大涨。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPUnk2dUJjQk5TQ1QwY2h0M3Q4bTVtMDR6d09JVXRFMko0ZVBrOFJIWVVaTVdGTXcxWGx5dTdDVjVlS1E1OGJQQVF4SVZfbWFXRVNEQUNZT2tJdFpkcy1CYnBXcVRiX0pVR3FCS2FzcTVZRWo2TFBDTWtsUEhMdTA1UkQxcVZQRzZLb1dpeTBrb0JjNHRNRnBtQmNMLThxWGt2MFRuSWJ3SXdJc3pyRlBHcE8tSjgxaWNOcWVCUGRMY2dGMThLWmFkUGN1OUZrZFhPaTFGVFhLNlpPbHB1dDRmczdMUzhicVVHOUZCZFU1RUExMXlaYjRnVTdWeGs?oc=5" },
-  { time: "05:30", tag: "tech", tagText: "科技", text: "安森美半导体宣布以70亿美元收购Synaptics，旨在布局“物理AI”领域。本次收购将使安森美的潜在市场规模到2030年扩大300亿美元至2430亿美元。Synaptics在触控和显示技术方面具有领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/on-semi-synaptics-deal-physical-ai.html" },
-  { time: "05:03", tag: "macro", tagText: "宏观", text: "芝加哥联储主席古尔斯比（Goolsbee）表示当前通胀水平仍然过高，拒绝就利率路径做出预测；纽约联储主席威廉姆斯（Williams）则认为价格压力正在缓解。两位官员言论暗示美联储内部对通胀前景判断存在分歧，市场继续押注7月按兵不动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/chicago-fed-president-goolsbee-says-inflation-is-too-high-calls-warsh-a-serious-guy.html" },
-  { time: "04:50", tag: "tech", tagText: "科技", text: "微软股价本六月遭遇历史性暴跌，本月累计跌幅创纪录。投资者对微软在AI基础设施上的巨额资本支出感到担忧，认为公司在AI投资回报尚不明朗的情况下大幅增加开支，导致自由现金流承压。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microsofts-stock-is-suffering-a-historic-june-rout-as-investors-balk-at-heavy-spending-9afaef1b" },
-  { time: "04:39", tag: "tech", tagText: "科技", text: "高通正在推进一项400亿美元的数据中心转型计划，试图挑战英伟达在AI芯片领域的统治地位。据悉Meta已开始采用高通方案进行推理部署，但分析师质疑高通能否在性能和生态上真正与英伟达抗衡。该战略被视为高通未来增长的关键赌注。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-qualcomm-actually-compete-with-nvidia-inside-its-bold-data-center-gamble-38ac48b3?mod=mw_rss_topstories" },
-  { time: "04:30", tag: "macro", tagText: "宏观", text: "美股收盘涨跌互现：纳指连跌四天，标普500险守关键支撑位。美光科技强劲财报推动半导体板块上涨，但苹果因内存成本飙升宣布涨价后股价下跌，拖累大型科技股整体走低。道指小幅上涨。市场关注地缘局势及通胀数据。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/stock-market-today-live-updates.html" },
-  { time: "03:53", tag: "macro", tagText: "宏观", text: "日本股市持续飙升，日经指数创下1989年以来最快的一轮历史新高。市场分析认为，企业治理改革、日元弱势以及外资回流是主要驱动力。日本股市表现亮眼，在全球主要市场中独领风骚。", source: "MarketWatch", url: "https://www.marketwatch.com/story/japanese-stocks-are-on-fire-heres-whats-driving-the-hot-streak-526a6914?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年6月26日 20:21 CST";
+const breakingDate = "2026年6月26日 23:30 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:14", tag: "tech", tagText: "科技", text: "3M在光纤技术领域取得突破，正在帮助支撑AI大规模基础设施建设的需求。", source: "3M News Center", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMGhVM3k5U3V4S25DdzVQODRWNmx3c2tHLXVJM2V2T1diQndkT1R6VzcwR2NGUjRESXVoZ3hJY0xRbkM2VVE1OHlaS1ZpdmJ1T0h2dVRLeWx4TkRUSU0xUnFuR0NSVjJuOTZvRmMzekF3eDhsZmQxNEpWNXVEOVVqN08xR1h5c2hMX29hUGxaYw?oc=5" },
+  { time: "22:55", tag: "ai", tagText: "AI", text: "网路软件公司Netris获a16z领投1500万美元A轮融资，旨在帮助AI新云服务商更快投入运营，降低网络部署时间。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/netris-raises-15m-series-a-from-a16z-to-help-ai-neoclouds-go-live-faster/" },
+  { time: "22:39", tag: "ai", tagText: "AI", text: "《经济学人》发文探讨中国最新AI突破背后的关键人物，指出中国在人工智能领域持续取得进展，但未披露具体技术细节。文章分析了该突破对全球AI竞争格局的潜在影响。", source: "The Economist", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOY2EtaE1uZFFLTW5QTUNvb3Zxd01qMHV4eGFMelNISHE0RGNqM1lTZVNsaXhhb1gyV0ZXZXEzM3pIejlHU01BaGZIMHRrRzY2SU40Wm1pY1JnNXkxUk1qaU85WXlLZVV1c1d5MnV1N2ZtLUM0UjYtdXkwTDJoUTVwVmhXV3RTcWQ0YmhaRElFZW5mWHQ1VWVRMEpNWTY3UmdZdDIwaVA1eGFDX3Ry?oc=5" },
+  { time: "22:07", tag: "geo", tagText: "地缘", text: "Anthropic的旗舰AI模型Mythos因特朗普政府以安全为由下达最后通牒，被迫下线已超两周。公司紧急与政府谈判，但情况持续恶化，双方尚未达成一致。该事件标志着美国政府与AI巨头间的模型安全博弈进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/957327/anthropic-mythos-fable-ai-trump-administration-negotiations" },
+  { time: "21:30", tag: "tech", tagText: "科技", text: "Adobe宣布收购图像与视频增强工具开发商Topaz Labs，计划将其工具整合至旗下各应用中。此举将增强Adobe在AI驱动的创意工具领域的竞争力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "福特被迫重新雇佣前工程师，以修复其自动化系统在质量管控中造成的错误。福特表示，这是为了应对近年来的可靠性挑战，并反思过度依赖自动化的问题。", source: "The Verge", url: "https://www.theverge.com/transportation/956316/ford-quality-jd-power-ranking-ai-automated-mistakes" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "FDA授予两项放射学领域生成式AI突破性设备认定，标志着监管机构对AI辅助诊断的加速认可，有望推动该领域商业化进程。", source: "STAT News", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY0hnTE5qN09HRlVkSVNPUERtekxDWHpwc3RBN0NNVGN4aHFIdEZCeExaYmNSRU94Y3dNY1l2ZTJoUFJNdTBYQ29IcXZRSEtDVmJlWko2OUE0Z3dwbzFPdnd2OWRSUFVOOEx6QUZsOWxGdGUzWjdhMVVoaDRKYU1Rc0ViT2lFX1F0bjJQRlF2UzRYeXIzYnRtS09Fb05fSzFYZWdIS213?oc=5" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "亚马逊宣布在印度追加130亿美元投资，用于建设AI基础设施。这是全球科技巨头加速在印度布局AI算力资源的最新举措。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "01:16", tag: "ai", tagText: "AI", text: "Facebook（Meta）推出面向创作者的全新AI伴侣应用。该应用目前正在与部分创作者进行测试，内置了Facebook最新发布的AI创作助手，旨在帮助创作者更高效地管理内容、互动和创作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
   { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
-  { time: "00:55", tag: "ai", tagText: "AI", text: "General Intuition以23亿美元估值融资3.2亿美元，押注通过数百万小时游戏数据训练AI代理，使其具备接近人类的直觉能力，并应用于现实世界任务。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/" },
-  { time: "00:48", tag: "ai", tagText: "AI", text: "前Databricks AI负责人创立Un0，声称其图像生成系统可将AI功耗降低1000倍，首次展示了该技术如何复制传统AI系统。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/databricks-former-ai-chief-thinks-he-can-cut-ais-power-bill-by-1000x/" },
-  { time: "23:14", tag: "tech", tagText: "科技", text: "3M在光纤技术领域取得突破，正在帮助支撑AI大规模基础设施建设的需求。", source: "3M News Center", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMGhVM3k5U3V4S25DdzVQODRWNmx3c2tHLXVJM2V2T1diQndkT1R6VzcwR2NGUjRESXVoZ3hJY0xRbkM2VVE1OHlaS1ZpdmJ1T0h2dVRLeWx4TkRUSU0xUnFuR0NSVjJuOTZvRmMzekF3eDhsZmQxNEpWNXVEOVVqN08xR1h5c2hMX29hUGxaYw?oc=5" },
-  { time: "22:55", tag: "ai", tagText: "AI", text: "网路软件公司Netris获a16z领投1500万美元A轮融资，旨在帮助AI新云服务商更快投入运营，降低网络部署时间。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/netris-raises-15m-series-a-from-a16z-to-help-ai-neoclouds-go-live-faster/" },
-  { time: "21:30", tag: "tech", tagText: "科技", text: "Adobe宣布收购图像与视频增强工具开发商Topaz Labs，计划将其工具整合至旗下各应用中。此举将增强Adobe在AI驱动的创意工具领域的竞争力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/" },
 ];
-const aiBreakingDate = "2026年6月26日 20:21 CST";
+const aiBreakingDate = "2026年6月26日 23:30 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
