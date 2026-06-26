@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 24.68,
+  score: 24.96,
   rating: "extreme fear",
-  timestamp: "2026-06-26T09:27:16+00:00",
+  timestamp: "2026-06-26T12:02:31+00:00",
   previousClose: 25.46,
   previous1Week: 31.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月26日 17:46 CST"
+  date: "2026年6月26日 20:21 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:04", tag: "macro", tagText: "宏观", text: "欧洲热浪将带来重大经济损失。越来越多的研究指出极端高温对经济活动的破坏，包括生产力下降、基础设施损坏和医疗成本上升。", source: "Financial Times", url: "https://www.ft.com/content/ed26a7f9-0c32-426b-88c6-a46121bef8a4" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "Polymarket年化收入突破10亿美元，距离其美国交易所上线仅六周。世界杯交易和美国候补名单取消推动了该预测市场的快速增长。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/polymarket-annualized-revenue-1-billion-us-exchange-.html" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "AI竞赛导致存储芯片短缺，推高笔记本电脑和智能手机成本。内存芯片价格上涨正传导至消费电子终端，可能引发产品供应短缺。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/ai-memory-chip-shortage-consumer-electronics-prices.html" },
+  { time: "18:53", tag: "macro", tagText: "宏观", text: "美元持续走强，违背市场对海湾停战后避险情绪消退的预期。分析指出五大原因支撑美元：美国经济韧性、美联储维持高利率、全球风险偏好下降、资金回流美国以及其他国家增长疲弱。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-fistful-of-dollars-five-reasons-why-the-u-s-currency-is-rising-b29df92a" },
   { time: "17:22", tag: "macro", tagText: "宏观", text: "美国WTI原油跌破70美元/桶，回吐周初因阿曼湾货船遇袭事件带来的地缘溢价。市场焦点转向中东局势后续发展及OPEC+产量政策，布伦特原油同步承压。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/oil-prices-middle-east-iran-strait-of-hormuz-opec-iraq-wti-brent-crude.html" },
   { time: "16:49", tag: "macro", tagText: "宏观", text: "大众汽车宣布在史无前例的成本削减计划中裁员多达10万人，相当于其全球员工总数的约15%。此次重组紧随其将船用发动机业务出售给美国私募股权公司贝恩资本之后，旨在应对电动化转型压力和利润率下滑。", source: "Financial Times", url: "https://www.ft.com/content/d0760eaf-d345-4964-b2ae-f55f6dfd9a4a" },
   { time: "15:38", tag: "tech", tagText: "科技", text: "SK海力士准备以每股166美元的价格在美国上市，汇丰分析师认为其估值可能还有20%的上涨空间，因美国市场上市有望缩小与竞争对手美光科技的估值差距。SK海力士是AI存储芯片的主要供应商之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/sk-hynix-us-listing-ipo-hsbc-price-target.html" },
@@ -1645,15 +1649,15 @@ const breakingNews = [
   { time: "04:39", tag: "tech", tagText: "科技", text: "高通正在推进一项400亿美元的数据中心转型计划，试图挑战英伟达在AI芯片领域的统治地位。据悉Meta已开始采用高通方案进行推理部署，但分析师质疑高通能否在性能和生态上真正与英伟达抗衡。该战略被视为高通未来增长的关键赌注。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-qualcomm-actually-compete-with-nvidia-inside-its-bold-data-center-gamble-38ac48b3?mod=mw_rss_topstories" },
   { time: "04:30", tag: "macro", tagText: "宏观", text: "美股收盘涨跌互现：纳指连跌四天，标普500险守关键支撑位。美光科技强劲财报推动半导体板块上涨，但苹果因内存成本飙升宣布涨价后股价下跌，拖累大型科技股整体走低。道指小幅上涨。市场关注地缘局势及通胀数据。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/stock-market-today-live-updates.html" },
   { time: "03:53", tag: "macro", tagText: "宏观", text: "日本股市持续飙升，日经指数创下1989年以来最快的一轮历史新高。市场分析认为，企业治理改革、日元弱势以及外资回流是主要驱动力。日本股市表现亮眼，在全球主要市场中独领风骚。", source: "MarketWatch", url: "https://www.marketwatch.com/story/japanese-stocks-are-on-fire-heres-whats-driving-the-hot-streak-526a6914?mod=mw_rss_topstories" },
-  { time: "03:45", tag: "geo", tagText: "地缘", text: "伊朗被指在霍尔木兹海峡附近袭击一艘货船，国际海事组织暂停了此前搁浅船只的疏散计划。美国官员确认伊朗涉案，布伦特原油价格因地缘紧张升级而走高。霍尔木兹海峡是全球最重要的石油运输通道之一。", source: "Financial Times", url: "https://www.ft.com/content/5abcb3c1-8ce8-470f-8a37-f47af58b2f7c" },
-  { time: "01:02", tag: "geo", tagText: "地缘", text: "美国最高法院就拜耳旗下孟山都的Roundup除草剂致癌诉讼作出关键裁决，推翻了此前数十亿美元索赔的判决基础。法官裁定联邦法律优先于州法律的标签要求，极大限制了未来相关诉讼。拜耳股价应声上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/glyphosate-roundup-bayer-supreme-court-case-monsanto.html" },
-  { time: "00:56", tag: "macro", tagText: "宏观", text: "当前美国平均月抵押贷款还款额达2134美元，五年前仅为1525美元，涨幅约40%。高利率与高房价共同挤压购房者负担能力，或进一步抑制房地产市场活动。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/real-estate/articles/mortgage-payments-hit-2-134-165647521.html" },
-  { time: "00:49", tag: "geo", tagText: "地缘", text: "伊朗议会发言人卡利巴夫在社交媒体上嘲讽特朗普关于伊朗必须用解冻资产购买美国农产品的言论，称“我们唯一收获的作物是你种下的：数十年的不信任”。美伊关系持续紧张，此前伊朗刚加强对霍尔木兹海峡的控制。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/iran-ghalibaf-trump-us-farm-products-assets.html" },
 ];
-const breakingDate = "2026年6月26日 17:46 CST";
+const breakingDate = "2026年6月26日 20:21 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:00", tag: "tech", tagText: "科技", text: "福特被迫重新雇佣前工程师，以修复其自动化系统在质量管控中造成的错误。福特表示，这是为了应对近年来的可靠性挑战，并反思过度依赖自动化的问题。", source: "The Verge", url: "https://www.theverge.com/transportation/956316/ford-quality-jd-power-ranking-ai-automated-mistakes" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "FDA授予两项放射学领域生成式AI突破性设备认定，标志着监管机构对AI辅助诊断的加速认可，有望推动该领域商业化进程。", source: "STAT News", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY0hnTE5qN09HRlVkSVNPUERtekxDWHpwc3RBN0NNVGN4aHFIdEZCeExaYmNSRU94Y3dNY1l2ZTJoUFJNdTBYQ29IcXZRSEtDVmJlWko2OUE0Z3dwbzFPdnd2OWRSUFVOOEx6QUZsOWxGdGUzWjdhMVVoaDRKYU1Rc0ViT2lFX1F0bjJQRlF2UzRYeXIzYnRtS09Fb05fSzFYZWdIS213?oc=5" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "亚马逊宣布在印度追加130亿美元投资，用于建设AI基础设施。这是全球科技巨头加速在印度布局AI算力资源的最新举措。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/" },
+  { time: "18:16", tag: "tech", tagText: "科技", text: "尽管AI芯片竞争加剧，英伟达股价仍逆势上涨。《巴伦周刊》分析认为，市场对英伟达在数据中心和AI领域的领导地位依然抱有信心，短期竞争压力未显著影响其估值。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE51T3lNTFhRNDFIal9vQVh2R1F4TVYxYjh6akh6VHB6OTZ0OUFQWmdmYmc4RHljaVpuTG5GUHhELWF5LUQyRHI2TWlqeTJWSDM2VnpfSmFuWUZkR3F0VDNsRkpqWEVwVk52S0Q4WnNmLXJnWkdQNDNxbw?oc=5" },
   { time: "16:10", tag: "ai", tagText: "AI", text: "OpenAI正式发布其首款自研AI半导体，该芯片系与博通（Broadcom）联合开发。此举标志着OpenAI加速摆脱对英伟达等第三方芯片的依赖，进一步垂直整合AI硬件供应链。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9lTGVtX0N4SWl3ZEVfemo2bDlnVFl1a2Jnc2dEWHNVWm5ONnNuR0VrSjV1bHRTblF6NkhmUWpFWjlFSTJUb0NvX1RFNA?oc=5" },
   { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
   { time: "08:08", tag: "geo", tagText: "地缘", text: "欧洲正对美国主导的对华芯片战争进行反击。ASML首席执行官此前表示，中国目前只能购买上一代深紫外（DUV）光刻工具，这与美国试图限制先进芯片设备出口的立场相左。欧洲企业希望在维护自身经济利益的同时，避免完全跟随美国的出口管制政策。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "23:14", tag: "tech", tagText: "科技", text: "3M在光纤技术领域取得突破，正在帮助支撑AI大规模基础设施建设的需求。", source: "3M News Center", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMGhVM3k5U3V4S25DdzVQODRWNmx3c2tHLXVJM2V2T1diQndkT1R6VzcwR2NGUjRESXVoZ3hJY0xRbkM2VVE1OHlaS1ZpdmJ1T0h2dVRLeWx4TkRUSU0xUnFuR0NSVjJuOTZvRmMzekF3eDhsZmQxNEpWNXVEOVVqN08xR1h5c2hMX29hUGxaYw?oc=5" },
   { time: "22:55", tag: "ai", tagText: "AI", text: "网路软件公司Netris获a16z领投1500万美元A轮融资，旨在帮助AI新云服务商更快投入运营，降低网络部署时间。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/netris-raises-15m-series-a-from-a16z-to-help-ai-neoclouds-go-live-faster/" },
   { time: "21:30", tag: "tech", tagText: "科技", text: "Adobe宣布收购图像与视频增强工具开发商Topaz Labs，计划将其工具整合至旗下各应用中。此举将增强Adobe在AI驱动的创意工具领域的竞争力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "福特被迫重新雇佣前工程师，以修复其自动化系统在质量管控中造成的错误。福特表示，这是为了应对近年来的可靠性挑战，并反思过度依赖自动化的问题。", source: "The Verge", url: "https://www.theverge.com/transportation/956316/ford-quality-jd-power-ranking-ai-automated-mistakes" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "FDA授予两项放射学领域生成式AI突破性设备认定，标志着监管机构对AI辅助诊断的加速认可，有望推动该领域商业化进程。", source: "STAT News", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY0hnTE5qN09HRlVkSVNPUERtekxDWHpwc3RBN0NNVGN4aHFIdEZCeExaYmNSRU94Y3dNY1l2ZTJoUFJNdTBYQ29IcXZRSEtDVmJlWko2OUE0Z3dwbzFPdnd2OWRSUFVOOEx6QUZsOWxGdGUzWjdhMVVoaDRKYU1Rc0ViT2lFX1F0bjJQRlF2UzRYeXIzYnRtS09Fb05fSzFYZWdIS213?oc=5" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "亚马逊宣布在印度追加130亿美元投资，用于建设AI基础设施。这是全球科技巨头加速在印度布局AI算力资源的最新举措。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/" },
-  { time: "18:16", tag: "tech", tagText: "科技", text: "尽管AI芯片竞争加剧，英伟达股价仍逆势上涨。《巴伦周刊》分析认为，市场对英伟达在数据中心和AI领域的领导地位依然抱有信心，短期竞争压力未显著影响其估值。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE51T3lNTFhRNDFIal9vQVh2R1F4TVYxYjh6akh6VHB6OTZ0OUFQWmdmYmc4RHljaVpuTG5GUHhELWF5LUQyRHI2TWlqeTJWSDM2VnpfSmFuWUZkR3F0VDNsRkpqWEVwVk52S0Q4WnNmLXJnWkdQNDNxbw?oc=5" },
 ];
-const aiBreakingDate = "2026年6月26日 17:46 CST";
+const aiBreakingDate = "2026年6月26日 20:21 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
