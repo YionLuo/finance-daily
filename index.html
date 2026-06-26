@@ -1616,21 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 25.54,
-  rating: "fear",
-  timestamp: "2026-06-26T00:00:00+00:00",
+  score: 24.68,
+  rating: "extreme fear",
+  timestamp: "2026-06-26T09:27:16+00:00",
   previousClose: 25.46,
   previous1Week: 31.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月26日 13:21 CST"
+  date: "2026年6月26日 17:46 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:22", tag: "macro", tagText: "宏观", text: "美国WTI原油跌破70美元/桶，回吐周初因阿曼湾货船遇袭事件带来的地缘溢价。市场焦点转向中东局势后续发展及OPEC+产量政策，布伦特原油同步承压。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/oil-prices-middle-east-iran-strait-of-hormuz-opec-iraq-wti-brent-crude.html" },
+  { time: "16:49", tag: "macro", tagText: "宏观", text: "大众汽车宣布在史无前例的成本削减计划中裁员多达10万人，相当于其全球员工总数的约15%。此次重组紧随其将船用发动机业务出售给美国私募股权公司贝恩资本之后，旨在应对电动化转型压力和利润率下滑。", source: "Financial Times", url: "https://www.ft.com/content/d0760eaf-d345-4964-b2ae-f55f6dfd9a4a" },
+  { time: "15:38", tag: "tech", tagText: "科技", text: "SK海力士准备以每股166美元的价格在美国上市，汇丰分析师认为其估值可能还有20%的上涨空间，因美国市场上市有望缩小与竞争对手美光科技的估值差距。SK海力士是AI存储芯片的主要供应商之一。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/sk-hynix-us-listing-ipo-hsbc-price-target.html" },
   { time: "12:58", tag: "tech", tagText: "科技", text: "全球科技股抛售加剧：亚洲市场领跌，软银暴跌13%，SK海力士跌10%，韩国KOSPI指数重挫8%。市场对AI基础设施成本飙升及OpenAI IPO延期的担忧持续发酵，苹果因内存成本上涨而提价，进一步拖累科技板块。美股纳斯达克和标普500期货同步走低。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/global-tech-stocks-ai-infrastructure-costs-selloff-softbank-apple.html" },
   { time: "12:48", tag: "tech", tagText: "科技", text: "金融科技公司Airwallex完成3.2亿美元融资，估值达110亿美元。公司计划利用资金构建AI代理驱动的新一代金融基础设施，实现企业支付与财务管理的自动化。此轮融资显示投资者对AI+金融领域的高度兴趣。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/airwallex-series-h-funding-11-billion-valuation-ai-finance.html" },
+  { time: "12:15", tag: "crypto", tagText: "加密", text: "比特币跌至年内新低，以太坊和瑞波币也同步破位下行。市场避险情绪升温叠加科技股抛售浪潮，加密货币市场遭遇全面抛压，技术面显示短期可能进一步下探。", source: "FXStreet", url: "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNUnVrd3V5aEt5NUZNcFF6Y2NMRlZUNkZVdlIxVXY0UlVDYm5ZNm1URE1yczhubjk5aWJFVDVadVhsdlB2TzkzemlEdkZaRUxLaXh4MklIWjZOZUwtc2FXbzZRNlFYY0NkRTZMSjNYa3NlS0l6aWJ2TWZRLTRSOFhhQXNkX1V6T3lNQkJSemMtSTNITTV2bDJlQ2x1WFJZbkx5T0txNmNWbTV3RjZFalR5U0VRWmZMdmpDTElhaDhmVXZLZnRTbmc4WGNWZEdqam9sa2VJUmU1NkpxMTBQX2F4bzVnbURfaERtdTJ3T1FhLVlHcmFDNjBuNHIzbThnMXV3bVpmcmFZSlhPLW8?oc=5" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "美联储新任主席Kevin Warsh发表强硬通胀言论，其鹰派表态叠加油价下跌，推动长期通胀预期回落，市场投资者信心有所恢复。Warsh强调将坚定不移对抗通胀，此举被视为新一届美联储政策基调的明确信号。", source: "Financial Times", url: "https://www.ft.com/content/a825975a-df76-4f9c-9eb9-774329ebc29d" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "马斯克的SpaceX计划通过Starlink进军美国消费者移动通信市场，目标将卫星宽带服务延伸至手机直连领域。此举将直接挑战传统电信运营商，测试SpaceX能否将宏伟愿景转化为大规模手机业务。", source: "Financial Times", url: "https://www.ft.com/content/42af0f15-3aa9-49b7-b429-4a39540af03e" },
   { time: "06:29", tag: "macro", tagText: "宏观", text: "伊拉克暗示可能退出OPEC，全球石油市场再添变数。分析人士指出，若伊拉克最终退出且更多产油国效仿，OPEC控制力瓦解或推动油价跌破每桶50美元。当前布伦特原油价格因地缘紧张已有所上涨，但供给端的不确定性正在加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-world-rejecting-opec-controls-could-usher-in-oil-below-50-a-barrel-3d7eda1b?mod=mw_rss_topstories" },
@@ -1645,15 +1649,13 @@ const breakingNews = [
   { time: "01:02", tag: "geo", tagText: "地缘", text: "美国最高法院就拜耳旗下孟山都的Roundup除草剂致癌诉讼作出关键裁决，推翻了此前数十亿美元索赔的判决基础。法官裁定联邦法律优先于州法律的标签要求，极大限制了未来相关诉讼。拜耳股价应声上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/glyphosate-roundup-bayer-supreme-court-case-monsanto.html" },
   { time: "00:56", tag: "macro", tagText: "宏观", text: "当前美国平均月抵押贷款还款额达2134美元，五年前仅为1525美元，涨幅约40%。高利率与高房价共同挤压购房者负担能力，或进一步抑制房地产市场活动。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/real-estate/articles/mortgage-payments-hit-2-134-165647521.html" },
   { time: "00:49", tag: "geo", tagText: "地缘", text: "伊朗议会发言人卡利巴夫在社交媒体上嘲讽特朗普关于伊朗必须用解冻资产购买美国农产品的言论，称“我们唯一收获的作物是你种下的：数十年的不信任”。美伊关系持续紧张，此前伊朗刚加强对霍尔木兹海峡的控制。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/iran-ghalibaf-trump-us-farm-products-assets.html" },
-  { time: "22:46", tag: "tech", tagText: "科技", text: "苹果宣布上调多款MacBook和iPad售价，归因于内存与存储成本飙升。此前美光科技发布超预期财报，显示AI驱动下存储芯片需求激增，加剧供应紧张。苹果CEO库克上周已预警涨价，此次调价幅度因机型而异。", source: "CNBC", url: "https://www.cnbc.com/2026/06/25/apple-macbook-ipad-price-hike-memory.html" },
-  { time: "22:35", tag: "macro", tagText: "宏观", text: "美元指数从13个月高位回落，因美国5月PCE数据公布后市场解读为经济韧性仍存但通胀黏性未消，美联储短期内按兵不动的预期未变。美元此前在强劲经济数据和避险需求下连续走高，获利盘涌出致回调。", source: "Reuters", url: "https://finance.yahoo.com/news/dollar-rides-high-fed-rate-012635389.html" },
-  { time: "22:33", tag: "ai", tagText: "AI", text: "据媒体报道，阿里巴巴被指控试图通过非法手段获取AI初创公司Anthropic的Claude模型技术。Anthropic已向有关部门反映此事。受此消息影响，阿里巴巴美股股价进一步下挫。阿里巴巴尚未正式回应。", source: "Investor's Business Daily", url: "https://www.investors.com/news/technology/alibaba-stock-baba-anthropic-ai-claude/?src=A00220&yptr=yahoo" },
-  { time: "22:30", tag: "macro", tagText: "宏观", text: "美国5月雇主宣布裁员9.7万人，其中约40%的裁员与人工智能技术替代有关。AI对就业市场的冲击持续显现，涉及客服、内容创作、数据分析等多个岗位。零售、科技和教育行业裁员最为集中。", source: "Moneywise", url: "https://finance.yahoo.com/technology/ai/articles/us-employers-announced-97-000-143000676.html" },
 ];
-const breakingDate = "2026年6月26日 13:21 CST";
+const breakingDate = "2026年6月26日 17:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:10", tag: "ai", tagText: "AI", text: "OpenAI正式发布其首款自研AI半导体，该芯片系与博通（Broadcom）联合开发。此举标志着OpenAI加速摆脱对英伟达等第三方芯片的依赖，进一步垂直整合AI硬件供应链。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9lTGVtX0N4SWl3ZEVfemo2bDlnVFl1a2Jnc2dEWHNVWm5ONnNuR0VrSjV1bHRTblF6NkhmUWpFWjlFSTJUb0NvX1RFNA?oc=5" },
+  { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
   { time: "08:08", tag: "geo", tagText: "地缘", text: "欧洲正对美国主导的对华芯片战争进行反击。ASML首席执行官此前表示，中国目前只能购买上一代深紫外（DUV）光刻工具，这与美国试图限制先进芯片设备出口的立场相左。欧洲企业希望在维护自身经济利益的同时，避免完全跟随美国的出口管制政策。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" },
   { time: "05:57", tag: "ai", tagText: "AI", text: "据报道，特朗普政府出于安全考虑要求OpenAI推迟其下一代大模型GPT-5.6的发布。OpenAI已同意该请求，具体发布时间未定。这标志着政府与AI巨头在模型安全审查上的博弈加剧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/957372/openai-will-delay-gpt-5-6-after-trump-administration-request" },
   { time: "05:56", tag: "tech", tagText: "科技", text: "尽管AI裁员话题沸沸扬扬，SignalFire数据显示工程师岗位反而最具韧性，在新招聘中占比持续上升。分析认为AI工具提升效率的同时，也创造了对更高技能工程师的旺盛需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "tech", tagText: "科技", text: "FDA授予两项放射学领域生成式AI突破性设备认定，标志着监管机构对AI辅助诊断的加速认可，有望推动该领域商业化进程。", source: "STAT News", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY0hnTE5qN09HRlVkSVNPUERtekxDWHpwc3RBN0NNVGN4aHFIdEZCeExaYmNSRU94Y3dNY1l2ZTJoUFJNdTBYQ29IcXZRSEtDVmJlWko2OUE0Z3dwbzFPdnd2OWRSUFVOOEx6QUZsOWxGdGUzWjdhMVVoaDRKYU1Rc0ViT2lFX1F0bjJQRlF2UzRYeXIzYnRtS09Fb05fSzFYZWdIS213?oc=5" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "亚马逊宣布在印度追加130亿美元投资，用于建设AI基础设施。这是全球科技巨头加速在印度布局AI算力资源的最新举措。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/" },
   { time: "18:16", tag: "tech", tagText: "科技", text: "尽管AI芯片竞争加剧，英伟达股价仍逆势上涨。《巴伦周刊》分析认为，市场对英伟达在数据中心和AI领域的领导地位依然抱有信心，短期竞争压力未显著影响其估值。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE51T3lNTFhRNDFIal9vQVh2R1F4TVYxYjh6akh6VHB6OTZ0OUFQWmdmYmc4RHljaVpuTG5GUHhELWF5LUQyRHI2TWlqeTJWSDM2VnpfSmFuWUZkR3F0VDNsRkpqWEVwVk52S0Q4WnNmLXJnWkdQNDNxbw?oc=5" },
-  { time: "16:10", tag: "ai", tagText: "AI", text: "OpenAI正式发布其首款自研AI半导体，该芯片系与博通（Broadcom）联合开发。此举标志着OpenAI加速摆脱对英伟达等第三方芯片的依赖，进一步垂直整合AI硬件供应链。", source: "매일경제", url: "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9lTGVtX0N4SWl3ZEVfemo2bDlnVFl1a2Jnc2dEWHNVWm5ONnNuR0VrSjV1bHRTblF6NkhmUWpFWjlFSTJUb0NvX1RFNA?oc=5" },
-  { time: "15:57", tag: "tech", tagText: "科技", text: "英伟达芯片在中国黑市价格飙升。据韩国《朝鲜日报》报道，受美国出口管制影响，英伟达高端芯片在中国黑市的交易价格大幅上涨，反映出市场对受限芯片的旺盛需求与供应短缺之间的矛盾。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaVBDMlh2RUxRN1pEMEE2WERtVExIN2xlV1dVMUMwU1B5a3ZlNGhLb1dlVVZaNUtfWW5UUmhtRzZYS0hyRTVXTUI4cWxSSktBT2NiMkNSRExJR3dKT0paR2VOamM1dHd4TENZSzd5UjE5cnlHOV9rbXA2Y1ZUeFN4UzkyWXNWRUkz?oc=5" },
 ];
-const aiBreakingDate = "2026年6月26日 13:21 CST";
+const aiBreakingDate = "2026年6月26日 17:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
