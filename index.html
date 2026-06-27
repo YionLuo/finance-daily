@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 37.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月27日 12:11 CST"
+  date: "2026年6月27日 15:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:58", tag: "macro", tagText: "宏观", text: "委内瑞拉强震死亡人数突破900，搜救工作仍在继续，重灾区救援进展不均引发民众不满。此次灾害可能对该国经济及石油生产造成进一步冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/venezuela-quake-toll-tops-900-search-intensifies-for-hundreds-trapped.html" },
+  { time: "12:53", tag: "geo", tagText: "地缘", text: "北京中信大厦飞机撞击事件后，警方搜查的涉事车辆车主身份已确认。该车辆曾出现在肇事飞机起飞的自机场。调查仍在进行中。", source: "Financial Times", url: "https://www.ft.com/content/190beede-1d8b-4a22-8437-ef8c48d01828" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "哥伦比亚民粹主义刑事律师阿贝拉尔多·德·拉·埃斯普里埃拉赢得总统选举，誓言以强硬手段打击毒贩。其“特朗普式”风格可能重塑该国与美国及拉美的关系。", source: "Financial Times", url: "https://www.ft.com/content/ec1f4ef3-1a8d-41f1-9071-dd8dbbd10e71" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "分析称特朗普权力正在减弱，但“特朗普主义”在共和党内部依然强势，可能主导美国保守主义的未来走向。中期选举前景及党内路线之争成为焦点。", source: "Financial Times", url: "https://www.ft.com/content/47163aeb-07e0-4314-9488-13acb28b0f6b" },
   { time: "10:17", tag: "geo", tagText: "地缘", text: "苹果寻求从被制裁的中国公司购买存储芯片，以缓解半导体价格上涨压力。这家iPhone制造商希望特朗普政府批准采购，并已向美国当局提交申请。", source: "Financial Times", url: "https://www.ft.com/content/d72a25e2-7bde-4aa9-bd8d-0c4f3d6cb2cb" },
   { time: "07:16", tag: "ai", tagText: "AI", text: "特朗普政府允许Anthropic向部分企业和政府机构发布其最新AI模型Mythos，标志着特朗普政府与该AI公司谈判的重大进展。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html" },
   { time: "06:35", tag: "tech", tagText: "科技", text: "特斯拉与Waymo在自动驾驶出租车领域激烈竞争，而Uber悄然斥资5亿美元锁定自动驾驶出租车运力，以应对Waymo可能将其甩在身后的风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-and-waymo-are-chasing-the-robotaxi-dream-but-the-company-spending-the-most-to-win-builds-no-cars-at-all-0d8682b9" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "04:21", tag: "tech", tagText: "科技", text: "甲骨文股价本周暴跌，跌幅为2001年互联网泡沫以来最大。市场对其激增的资本支出、负自由现金流和1300亿美元债务感到担忧，AI融资前景恶化加剧了抛售。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/oracle-stock-ends-worst-week-since-2001-as-investors-dwell-on-finances.html" },
   { time: "03:49", tag: "macro", tagText: "宏观", text: "加州州长纽森呼吁在全国范围内对亿万富翁征收最低税，并堵住“免税生活方式贷款”漏洞。他表示“是时候进行经济重置了”。此举可能加剧关于财富税的全国辩论。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/gavin-newsom-national-billionaires-tax-california.html" },
   { time: "03:46", tag: "tech", tagText: "科技", text: "高通正推进其数据中心芯片战略，试图挑战英伟达在AI计算领域的统治地位。该转型涉及约400亿美元规模，Meta已成为早期客户。市场关注高通能否在数据中心市场后来居上。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-qualcomm-actually-compete-with-nvidia-inside-its-bold-data-center-gamble-38ac48b3?mod=mw_rss_topstories" },
-  { time: "02:39", tag: "macro", tagText: "宏观", text: "投资者正从科技股转向医疗保健板块，艾伯维、礼来和强生股价均有望在周五创出历史新高。生物制药领域资金回流明显，成为市场震荡中的避风港。", source: "MarketWatch", url: "https://www.marketwatch.com/story/healthcare-stocks-have-become-a-haven-for-investors-ditching-tech-81c544d0?mod=mw_rss_topstories" },
-  { time: "02:23", tag: "macro", tagText: "宏观", text: "德国正考虑在2092年前将退休年龄逐步提高至70岁，以应对人口老龄化带来的社保资金缺口。分析指出，类似举措只能部分解决美国社保的长期赤字问题。", source: "MarketWatch", url: "https://www.marketwatch.com/story/could-the-u-s-join-germany-in-raising-its-retirement-age-3282e0bd?mod=mw_rss_topstories" },
-  { time: "01:41", tag: "geo", tagText: "地缘", text: "特朗普指责伊朗违反停火，称伊朗无人机袭击霍尔木兹海峡船只。此前国际海事组织因一艘货轮被击中暂停疏散被困船只和船员。伊朗加强对该关键水道的控制，推动油价走高。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/trump-iran-ceasefire-strait-of-hormuz.html" },
-  { time: "01:41", tag: "macro", tagText: "宏观", text: "明尼阿波利斯联储主席卡什卡利发出加息警告，引发市场关注。分析人士认为，若美联储继续紧缩，可能抑制美股和比特币等风险资产的表现。", source: "BeInCrypto", url: "https://finance.yahoo.com/markets/stocks/articles/fed-official-kashkari-gives-rate-174146017.html" },
 ];
-const breakingDate = "2026年6月27日 12:11 CST";
+const breakingDate = "2026年6月27日 15:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:09", tag: "ai", tagText: "AI", text: "2026年AI半导体市场迎来繁荣，预测市场规模达1.3万亿美元。顶级芯片股如英伟达、AMD等正驱动这一增长，AI基础设施的持续需求推动行业扩张。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5vZnJYSk9JZGZmVWR4SThBLV9RNDctM3ZOQmRMTHlZd1k1T3ZXeHQ4aVBaQ0h6UU5nRlJIQ29WZHlWRVBfYU44UXNhTTc2TkN3LWZWbGkyU3lTcmo3bTNKb1Y4blU?oc=5" },
   { time: "09:01", tag: "ai", tagText: "AI", text: "特朗普政府批准Anthropic的旗舰AI模型Mythos 5重新上线，授权超过100家美国公司和政府机构使用，包括其非美国员工。此前该模型因安全担忧被政府要求下线，经过两周谈判后以受限形式恢复。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/" },
   { time: "05:46", tag: "tech", tagText: "科技", text: "英伟达和Alphabet股价在大型科技股反弹中落后，市场对AI基础设施的高成本及其对芯片需求前景的担忧加剧。尽管整体科技板块走强，但投资者开始质疑AI投资的回报周期，导致芯片相关股票承压。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOY0JzOFJvZ1huNU9CMUpOSTI5Y2U0aWVfa3JUYzBNTHMzWWhGX1hHWWQxLWh3WW0yVUc3ZjA0WGkzcWZKYm8zdkZnWFVZWUQ3UHE0cmVsd1V3ajc1czZqV0x5REZHNktRbEdVbVBpN3UtT19qTWJhekdzNlh1X05SYV9TVEI4Tmo4aEhtZWhrRFRKZmdKSmIyNQ?oc=5" },
   { time: "02:55", tag: "tech", tagText: "科技", text: "《纽约时报》分析指出，一项此前不起眼的底层技术正成为人工智能发展的关键瓶颈。该技术环节的供应受限、成本上升或性能瓶颈，可能拖累整个AI产业的迭代速度与部署规模。文章呼吁业界关注供应链中的“灰犀牛”风险。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWR0RnpqZnpUN2NoVktOR05SWTVHZVd1UkRRanFQVk51czB6bWF3VGR6VWRLMEw2UUk2bmJGSUNweC1BZi1tTFVoUmlRaVM3d1h5ZnhiemJkUkFYNGlDTUFQR2ZJMjBrcmZ3b25LWUJEYndlODVEdjMtd2JmY2JObzg3U0pIbjVQR2c?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "tech", tagText: "科技", text: "福特被迫重新雇佣前工程师，以修复其自动化系统在质量管控中造成的错误。福特表示，这是为了应对近年来的可靠性挑战，并反思过度依赖自动化的问题。", source: "The Verge", url: "https://www.theverge.com/transportation/956316/ford-quality-jd-power-ranking-ai-automated-mistakes" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "FDA授予两项放射学领域生成式AI突破性设备认定，标志着监管机构对AI辅助诊断的加速认可，有望推动该领域商业化进程。", source: "STAT News", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY0hnTE5qN09HRlVkSVNPUERtekxDWHpwc3RBN0NNVGN4aHFIdEZCeExaYmNSRU94Y3dNY1l2ZTJoUFJNdTBYQ29IcXZRSEtDVmJlWko2OUE0Z3dwbzFPdnd2OWRSUFVOOEx6QUZsOWxGdGUzWjdhMVVoaDRKYU1Rc0ViT2lFX1F0bjJQRlF2UzRYeXIzYnRtS09Fb05fSzFYZWdIS213?oc=5" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "亚马逊宣布在印度追加130亿美元投资，用于建设AI基础设施。这是全球科技巨头加速在印度布局AI算力资源的最新举措。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/" },
-  { time: "18:16", tag: "tech", tagText: "科技", text: "尽管AI芯片竞争加剧，英伟达股价仍逆势上涨。《巴伦周刊》分析认为，市场对英伟达在数据中心和AI领域的领导地位依然抱有信心，短期竞争压力未显著影响其估值。", source: "Barron's", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE51T3lNTFhRNDFIal9vQVh2R1F4TVYxYjh6akh6VHB6OTZ0OUFQWmdmYmc4RHljaVpuTG5GUHhELWF5LUQyRHI2TWlqeTJWSDM2VnpfSmFuWUZkR3F0VDNsRkpqWEVwVk52S0Q4WnNmLXJnWkdQNDNxbw?oc=5" },
 ];
-const aiBreakingDate = "2026年6月27日 12:11 CST";
+const aiBreakingDate = "2026年6月27日 15:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
