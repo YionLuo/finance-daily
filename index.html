@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 37.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月27日 18:19 CST"
+  date: "2026年6月27日 20:14 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:00", tag: "tech", tagText: "科技", text: "SpaceX价值110亿美元的“救命稻草”转向向竞争对手提供硬件访问，但这一战略可能阻碍其自身的AI目标。公司为缓解资金压力而做出的让步，或将以牺牲未来AI野心为代价。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/spacexs-new-11-billion-saving-grace-comes-with-a-big-catch-9270c6ae?mod=mw_rss_topstories" },
+  { time: "19:30", tag: "macro", tagText: "宏观", text: "标普500内部再现分化：等权重版本本周跑赢传统市值加权版，创六年来最大领先幅度，显示资金正加速从头部科技股轮出，市场广度正在改善。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/its-a-tale-of-two-s-p-500s-as-rotation-out-of-top-tech-stocks-shifts-into-overdrive-5254207f?mod=mw_rss_topstories" },
+  { time: "19:13", tag: "macro", tagText: "宏观", text: "中国工业利润保持韧性，5月同比增速维持稳健。经济仍严重依赖工厂和出口来支撑增长，而房地产持续低迷和结构性失衡令复苏基础脆弱。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/06/27/china-industrial-profits-stay-resilient-as-economy-leans-on-factories.html" },
+  { time: "19:00", tag: "geo", tagText: "地缘", text: "纽约州社会主义势力在近期选举中取得压倒性胜利，引发民主党内部焦虑。激进左翼的崛起暴露了该党在11月大选中如何对抗特朗普的深层分歧。", source: "International homepage", url: "https://www.ft.com/content/831d18c4-7272-4543-bcfc-d134df238dd7" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "德国汽车制造商开启历史性大规模裁员，因中国竞争对手大量涌入本土及全球市场。欧洲最大经济体的工业模式正面临前所未有的威胁。", source: "International homepage", url: "https://www.ft.com/content/b68964c9-f3d0-48e8-8873-8f463834936c" },
   { time: "16:03", tag: "macro", tagText: "宏观", text: "沙特阿美在拉斯坦努拉港恢复原油装载，尽管周四一艘台湾长荣海运的货船在霍尔木兹海峡被不明物体击中。此举有助于缓解市场对中东供应中断的担忧，为全球油市带来供给提振。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/saudi-aramco-resumes-oil-loading-at-ras-tanura-in-boost-to-supply.html" },
   { time: "14:58", tag: "macro", tagText: "宏观", text: "委内瑞拉强震死亡人数突破900，搜救工作仍在继续，重灾区救援进展不均引发民众不满。此次灾害可能对该国经济及石油生产造成进一步冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/venezuela-quake-toll-tops-900-search-intensifies-for-hundreds-trapped.html" },
   { time: "13:00", tag: "macro", tagText: "宏观", text: "红色警报级热浪正成为欧洲新常态，本周多个国家气温纪录被打破，多国发布危及生命的高级别警告。投资者开始重点关注极端气候对能源需求、农业生产及保险市场的长期影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/europe-heatwave-uk-temperature-el-nino-invest.html" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "05:59", tag: "macro", tagText: "宏观", text: "国际货币基金组织首席经济学家古林查斯警告称，“针锋相对”的贸易战威胁全球经济，试图获取微小优势的行为将“弄巧成拙”。", source: "Financial Times", url: "https://www.ft.com/content/8199cd6d-e513-4c9a-9beb-8a7acd2b65dc" },
   { time: "05:34", tag: "geo", tagText: "地缘", text: "美国对伊朗发动军事打击，此前特朗普指责伊朗违反霍尔木兹海峡停火协议，袭击商船。此次攻击标志着停火期间敌对行动升级，可能进一步推高油价并影响全球航运。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-strikes-iran-strait-of-hormuz-ceasefire.html" },
   { time: "05:16", tag: "tech", tagText: "科技", text: "科技股遭遇一年来最糟糕的一周，标普500和纳斯达克连续第五个交易日下跌。市场开始质疑AI巨额投入的实际回报，芯片股领跌，甲骨文、英伟达等重挫。投资者从科技板块撤出，转向医疗保健等防御性板块。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tech-stocks-just-had-one-of-their-worst-weeks-in-a-year-heres-how-ai-momentum-went-off-the-rails-d4596bae" },
-  { time: "05:06", tag: "geo", tagText: "地缘", text: "伊朗袭击商船后，航运保险市场面临考验。战争风险保费此前因停火预期大幅下降，现在可能再次飙升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/irans-ship-attack-tests-the-shipping-insurance-market-just-as-war-risk-premiums-had-plunged-8c4ef14d" },
-  { time: "05:06", tag: "geo", tagText: "地缘", text: "美国国务卿鲁比奥宣布，以色列与黎巴嫩已达成旨在实现“持久和平与安全”的框架协议，但最终实施取决于真主党同意停止敌对行动。这一进展有望缓解中东紧张局势。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/israel-lebanon-hezbollah-ceasefire-rubio.html" },
-  { time: "04:42", tag: "tech", tagText: "科技", text: "SpaceX本周早些时候完成250亿美元债券发行，但新债随即遭抛售，收益率向垃圾债水平移动，反映出投资者对AI和航天领域狂热情绪的降温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/spacexs-new-bonds-are-flashing-a-warning-sign-as-investors-pump-the-brakes-on-ai-frenzy-752ad44b" },
-  { time: "04:38", tag: "macro", tagText: "宏观", text: "尽管通胀升至4%以上，但美联储新主席沃什的强硬言论帮助压低了长期国债收益率。市场认为沃什在通胀问题上态度坚决，部分缓解了加息恐慌。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bond-yields-are-falling-as-inflation-pops-the-feds-tough-talk-under-warsh-is-helping-7d538b3b" },
-  { time: "04:21", tag: "tech", tagText: "科技", text: "甲骨文股价本周暴跌，跌幅为2001年互联网泡沫以来最大。市场对其激增的资本支出、负自由现金流和1300亿美元债务感到担忧，AI融资前景恶化加剧了抛售。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/oracle-stock-ends-worst-week-since-2001-as-investors-dwell-on-finances.html" },
 ];
-const breakingDate = "2026年6月27日 18:19 CST";
+const breakingDate = "2026年6月27日 20:14 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:00", tag: "tech", tagText: "科技", text: "福特被迫重新雇佣前工程师，以修复其自动化系统在质量管控中造成的错误。福特表示，这是为了应对近年来的可靠性挑战，并反思过度依赖自动化的问题。", source: "The Verge", url: "https://www.theverge.com/transportation/956316/ford-quality-jd-power-ranking-ai-automated-mistakes" },
   { time: "15:56", tag: "ai", tagText: "AI", text: "分析指出，印度AI初创企业与研发面临核心资金缺口问题。尽管印度拥有庞大技术人才库，但风险投资对AI领域投资不足，导致创新与商业化受阻，全球竞争力受限。", source: "WION", url: "https://news.google.com/rss/articles/CBMiggJBVV95cUxNWE8zaDRQRXdGanhkQXB3Sl94WDVOOEZCU3k2UTZEVVpPcVBGdVRQbk9ZMFYwTkxIOXlDMjQxS1V0b3dkWVJOQWhNQ2RCLVNtYmxlUW5XaGNRQ0FsMG5JSkZ0ZkI2RlVzYWotTVk0WmRNVWE4b2FYSG1rVFhicGJCZk1PaThlYk5Vc04tbDEyNHZIenVMUzNrM1pId1drLXRrZWk4TUF1QnhITUtsenpfNzI0bTV4UVh6RTN5NWIwcGwtcXY2MVBwdkNJcTMxb2REUnJsTmMzMTJqVE5TUHVfRV9udUhURTZOdDFSemhaUVk1RWdBS0wwVUg5cm95aUJQWmfSAYcCQVVfeXFMTUJ3d3VtcFV1MFVHN1FiMHRRZzNLZUt4R0t0ak9QVnZCekRPdGhtbEFMMG42bFhIV3gtYkJjUFA4VG5QMjktS29DMTRXakp1WTVZN0daTXlORi1wcFk3N3hWejJaMjZldnIySWl1cGpJN3d1MnlKM1FuRzE2a0IyOHBUZThxV2FSTjJNUkRsZUdUUkxWbUdnWkk2bXhMQzNFbDl5V0tOMzBpb0ZFcW9oOGtKQTZzRFlIOFBsaHBlZUNOakM4cW9jQjJQaVJ1US1UdnUxdEUxYzVSRnhOejlRTDhVTjZubWhySG1VRXNXMjhlTW5HQzItWWZDaWVwTDAwYXlqekp0NEk?oc=5" },
   { time: "12:23", tag: "tech", tagText: "科技", text: "中东和北非（MENA）地区创业融资与并购势头持续。近期多笔交易显示，当地科技生态系统活跃，资本持续流入早期及成长期企业，涉及多个垂直领域。", source: "Arab News PK", url: "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5NVnNmdS1Qam9SMVpXbFZ4d0cwUmctcUpGa1JjcGhkSzVyV21lM01WOW56SzNjcGozdjZDRGoyT29xQWhnbWZRdmJ1WVRBakJkZk9LR2pSRDVoajVfN1l1UlZJSQ?oc=5" },
   { time: "12:09", tag: "ai", tagText: "AI", text: "2026年AI半导体市场迎来繁荣，预测市场规模达1.3万亿美元。顶级芯片股如英伟达、AMD等正驱动这一增长，AI基础设施的持续需求推动行业扩张。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5vZnJYSk9JZGZmVWR4SThBLV9RNDctM3ZOQmRMTHlZd1k1T3ZXeHQ4aVBaQ0h6UU5nRlJIQ29WZHlWRVBfYU44UXNhTTc2TkN3LWZWbGkyU3lTcmo3bTNKb1Y4blU?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:39", tag: "ai", tagText: "AI", text: "《经济学人》发文探讨中国最新AI突破背后的关键人物，指出中国在人工智能领域持续取得进展，但未披露具体技术细节。文章分析了该突破对全球AI竞争格局的潜在影响。", source: "The Economist", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOY2EtaE1uZFFLTW5QTUNvb3Zxd01qMHV4eGFMelNISHE0RGNqM1lTZVNsaXhhb1gyV0ZXZXEzM3pIejlHU01BaGZIMHRrRzY2SU40Wm1pY1JnNXkxUk1qaU85WXlLZVV1c1d5MnV1N2ZtLUM0UjYtdXkwTDJoUTVwVmhXV3RTcWQ0YmhaRElFZW5mWHQ1VWVRMEpNWTY3UmdZdDIwaVA1eGFDX3Ry?oc=5" },
   { time: "22:07", tag: "geo", tagText: "地缘", text: "Anthropic的旗舰AI模型Mythos因特朗普政府以安全为由下达最后通牒，被迫下线已超两周。公司紧急与政府谈判，但情况持续恶化，双方尚未达成一致。该事件标志着美国政府与AI巨头间的模型安全博弈进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/957327/anthropic-mythos-fable-ai-trump-administration-negotiations" },
   { time: "21:30", tag: "tech", tagText: "科技", text: "Adobe宣布收购图像与视频增强工具开发商Topaz Labs，计划将其工具整合至旗下各应用中。此举将增强Adobe在AI驱动的创意工具领域的竞争力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "福特被迫重新雇佣前工程师，以修复其自动化系统在质量管控中造成的错误。福特表示，这是为了应对近年来的可靠性挑战，并反思过度依赖自动化的问题。", source: "The Verge", url: "https://www.theverge.com/transportation/956316/ford-quality-jd-power-ranking-ai-automated-mistakes" },
 ];
-const aiBreakingDate = "2026年6月27日 18:19 CST";
+const aiBreakingDate = "2026年6月27日 20:14 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
