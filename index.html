@@ -1623,14 +1623,18 @@ const fearGreedData = {
   previous1Week: 37.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月27日 22:51 CST"
+  date: "2026年6月28日 00:16 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:32", tag: "macro", tagText: "宏观", text: "美敦力CEO向市场披露关税政策对公司的具体影响，包括供应链成本上升和定价压力，进一步揭示贸易摩擦对医疗科技行业的冲击。", source: "Insider Monkey", url: "https://finance.yahoo.com/economy/policy/articles/medtronic-plc-mdt-ceo-discloses-153207076.html" },
+  { time: "22:59", tag: "geo", tagText: "地缘", text: "美国于当地时间26日对伊朗发动空袭，总统特朗普指控德黑兰违反霍尔木兹海峡停火协议。此次打击正值美伊原定60天无敌对状态谈判期间，令中东局势骤然升级，此前一艘台湾货船在霍尔木兹海峡遭不明袭击已引发紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-strikes-iran-strait-of-hormuz-ceasefire.html" },
+  { time: "21:21", tag: "tech", tagText: "科技", text: "存储芯片短缺危机持续发酵，苹果和微软被迫提价以覆盖成本，但对小型消费电子公司而言已成“生存危机”。小企业面临更严峻的供应短缺和成本飙升，行业洗牌加速。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/memory-crunch-shaking-apple-and-microsoft-existential-for-small-guys.html" },
   { time: "21:00", tag: "macro", tagText: "宏观", text: "AI在助推股市之后，现在开始拉动实体经济。报道称，人工智能投资热潮正显著提振美国GDP，形成一场“现代淘金热”。数据中心建设、芯片制造及相关基础设施支出激增，成为经济增长的新引擎。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ai-turbocharged-the-stock-market-now-its-firing-up-the-economy-193d2eb1?mod=mw_rss_topstories" },
   { time: "20:32", tag: "tech", tagText: "科技", text: "SpaceX将以快速通道方式加入纳斯达克100指数，成为纳斯达克新采用的快速纳入框架的首批受益者之一。此举将引发大量ETF被动买入需求，预计对SpaceX股价形成重大支撑。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/spacex-added-to-nasdaq-100-on-hold-on-hold-on-hold.html" },
+  { time: "20:11", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦CEO格雷格·阿贝尔在棒球赛上宣誓成为美国公民。阿贝尔出生于加拿大，作为巴菲特选定的接班人，此举为其未来执掌这家美国旗舰企业扫清国籍障碍。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/berkshire-ceo-greg-abel-sworn-in-as-us-citizen-at-baseball-game.html" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "GE Vernova正在建造大型燃气轮机以支持AI数据中心的电力需求。其涡轮机已为马斯克的xAI Colossus 1数据中心供电，微软也购买了七台用于德州数据中心。AI算力扩张正推动传统能源设备需求激增。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/ge-vernova-gas-turbines-ai-data-centers.html" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "SpaceX价值110亿美元的“救命稻草”转向向竞争对手提供硬件访问，但这一战略可能阻碍其自身的AI目标。公司为缓解资金压力而做出的让步，或将以牺牲未来AI野心为代价。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/spacexs-new-11-billion-saving-grace-comes-with-a-big-catch-9270c6ae?mod=mw_rss_topstories" },
   { time: "19:30", tag: "macro", tagText: "宏观", text: "标普500内部再现分化：等权重版本本周跑赢传统市值加权版，创六年来最大领先幅度，显示资金正加速从头部科技股轮出，市场广度正在改善。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/its-a-tale-of-two-s-p-500s-as-rotation-out-of-top-tech-stocks-shifts-into-overdrive-5254207f?mod=mw_rss_topstories" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "分析称特朗普权力正在减弱，但“特朗普主义”在共和党内部依然强势，可能主导美国保守主义的未来走向。中期选举前景及党内路线之争成为焦点。", source: "Financial Times", url: "https://www.ft.com/content/47163aeb-07e0-4314-9488-13acb28b0f6b" },
   { time: "10:17", tag: "geo", tagText: "地缘", text: "苹果寻求从被制裁的中国公司购买存储芯片，以缓解半导体价格上涨压力。这家iPhone制造商希望特朗普政府批准采购，并已向美国当局提交申请。", source: "Financial Times", url: "https://www.ft.com/content/d72a25e2-7bde-4aa9-bd8d-0c4f3d6cb2cb" },
   { time: "07:16", tag: "ai", tagText: "AI", text: "特朗普政府允许Anthropic向部分企业和政府机构发布其最新AI模型Mythos，标志着特朗普政府与该AI公司谈判的重大进展。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html" },
-  { time: "06:35", tag: "tech", tagText: "科技", text: "特斯拉与Waymo在自动驾驶出租车领域激烈竞争，而Uber悄然斥资5亿美元锁定自动驾驶出租车运力，以应对Waymo可能将其甩在身后的风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-and-waymo-are-chasing-the-robotaxi-dream-but-the-company-spending-the-most-to-win-builds-no-cars-at-all-0d8682b9" },
-  { time: "06:19", tag: "crypto", tagText: "加密", text: "风险情绪施压比特币，本周比特币ETF资金流出达13亿美元。加密市场跟随整体风险资产走弱。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMigAJBVV95cUxORUFWOTlZeE5rMlJ6XzRzUG9BUUlKYTdOQnZ2RWZCYV8yNmVuVk1CYzFlX3g0NFZ2QTlST1F4cVlaQVdyQU9kXzM4cFBCcWtrTkhwNkNRTWlYS1piY0FzLVhGay1mR1JtNzRsUUpVUHJQa2hQWkl5QUJnSjg2R1BHSlRZRWctdno1ZGlFdzNTaXp0NjAyd3Fhcmt6YWdvZUpGOElVZXJ4SFNaa2N4eHliSmdIeldNRmZON3FOTkFzMlBScy1FOTktTTZhNXE0bk5XTExTRENZbmQ4U1V0SV9yclkyY1RyX3dYVGcwckdfdzd2dmNVczBRYXlUS2tfQ0t3?oc=5" },
-  { time: "06:11", tag: "ai", tagText: "AI", text: "中国AI公司智谱发布GLM 5.2模型，性能逼近美国顶级模型Anthropic和OpenAI。分析指出，AI竞争已转向每美元智能产出，开源模型正成为有力竞争者。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/china-zhipu-z-ai-open-source-anthropic-openai.html" },
-  { time: "06:09", tag: "tech", tagText: "科技", text: "ServiceNow、Salesforce等软件股大幅上涨，因市场认为OpenAI的威胁减弱。甲骨文因与OpenAI云基础设施业务挂钩而错失本轮软件反弹。", source: "MarketWatch", url: "https://www.marketwatch.com/story/servicenow-salesforce-and-other-software-stocks-surge-as-the-openai-threat-weakens-bb1eacfb" },
 ];
-const breakingDate = "2026年6月27日 22:51 CST";
+const breakingDate = "2026年6月28日 00:16 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
   { time: "00:29", tag: "ai", tagText: "AI", text: "分析师预测：物理AI将在未来4-5年成为AI增长最快的领域之一。该分析师曾给出SpaceX 250美元目标价，指出机器人、自动驾驶等实体AI应用将加速发展。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdmlOSXBmTUg1X3lnZF93Z3Z6bU5fX25qWW9hTW1HSzZzQjAzTlFzd0VsZ1pkZWxXZVRXRzZ4aVVyVllaclZQQVI2eE5zNDU3V3lENE84SFJRUVlKOUVTdU9pQnlhMkxoYnRlby1scWU3TWt4QWtqRnVwVENwNWR2d0ZPVFR5Vkl3XzMwQTdMTEtqNC01MkdCYVJLLWxKZmNXUHNtN3dXZzZiRGV3ZkY2bzRvT0NCRC1hcTFRRE50U3AxLWJnZlBMTVlpVDlEbnNSSU1lcVc2OGJYTk9hd2x3dldaMVEycDNMOXBFZ0pPOA?oc=5" },
 ];
-const aiBreakingDate = "2026年6月27日 22:51 CST";
+const aiBreakingDate = "2026年6月28日 00:16 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
