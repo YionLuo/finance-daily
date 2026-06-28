@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 37.6,
   previous1Month: 60.91,
   previous1Year: 63.0,
-  date: "2026年6月28日 06:12 CST"
+  date: "2026年6月28日 08:12 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:51", tag: "geo", tagText: "地缘", text: "特朗普提名前俄克拉荷马州州警兰斯·施罗耶担任美国移民和海关执法局（ICE）局长。前任局长托德·莱昂斯于5月底辞职，大卫·文图雷拉一直担任代理局长。该任命显示特朗普政府继续强化边境执法立场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/trump-nominates-ex-oklahoma-state-trooper-lance-schroyer-as-ice-director.html" },
+  { time: "06:22", tag: "macro", tagText: "宏观", text: "阿根廷总统米莱的内阁首席部长曼努埃尔·阿多尼因腐败指控辞职，此前数月丑闻已困扰该国自由派政府。此举可能影响米莱的经济改革议程和投资者信心。", source: "Financial Times", url: "https://www.ft.com/content/db091e41-ea8c-4aac-b76c-b303f799d191" },
+  { time: "03:30", tag: "macro", tagText: "宏观", text: "先锋集团最新报告显示，2025年美国民众401(k)账户余额创下历史新高。强劲的股市上涨和持续缴费推动了退休储蓄增长，反映出美国家庭财富状况改善。", source: "MarketWatch", url: "https://www.marketwatch.com/story/americans-401-k-balances-hit-record-levels-last-year-see-how-you-compare-facd32c4?mod=mw_rss_topstories" },
+  { time: "03:30", tag: "macro", tagText: "宏观", text: "美国一项新提案拟将Medicare参保人的年度自付费用上限设为5000美元，但预计将使政府每年增加“数百亿”美元支出。该法案旨在为所有Medicare受益人提供成本保护，但目前通过前景渺茫。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-new-bill-would-cap-medicare-enrollees-annual-expenses-at-5-000-and-could-cost-the-government-tens-of-billions-d370bb37?mod=mw_rss_topstories" },
+  { time: "03:30", tag: "macro", tagText: "宏观", text: "特朗普政府推动更多年金产品进入401(k)计划，旨在为退休人员提供稳定收入。但专家警告，年金费用高昂且流动性差，对年轻储户未必适合，投资者需审慎评估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/annuities-are-coming-to-more-401-k-plans-should-workers-embrace-them-78f014e9?mod=mw_rss_topstories" },
   { time: "03:30", tag: "macro", tagText: "宏观", text: "德国考虑逐步将退休年龄提高至70岁（至2092年），以应对养老金资金缺口。分析指出，此举仅能部分解决社保财务问题，美国是否跟进引发讨论。", source: "MarketWatch", url: "https://www.marketwatch.com/story/could-the-u-s-join-germany-in-raising-its-retirement-age-3282e0bd" },
   { time: "03:30", tag: "ai", tagText: "AI", text: "自7月1日起，美国Medicare将首次覆盖GLP-1类减肥药物，合格受益人每月仅需支付50美元。专家提醒患者需关注副作用及肌肉流失风险。此举有望显著扩大减肥药市场规模。", source: "MarketWatch", url: "https://www.marketwatch.com/story/millions-of-older-americans-will-soon-have-medicare-access-to-glp-1s-for-weight-loss-heres-what-they-need-to-know-758efe4c" },
   { time: "03:01", tag: "macro", tagText: "宏观", text: "亚马逊Prime Day消费数据显示，在通胀压力下，消费者支出同比增长9.3%，更多购买耐用品和折扣商品。零售专家认为，高通胀使消费者更注重性价比，推动大额消费集中于促销活动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/amazon-prime-day.html" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "20:00", tag: "tech", tagText: "科技", text: "SpaceX价值110亿美元的“救命稻草”转向向竞争对手提供硬件访问，但这一战略可能阻碍其自身的AI目标。公司为缓解资金压力而做出的让步，或将以牺牲未来AI野心为代价。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/spacexs-new-11-billion-saving-grace-comes-with-a-big-catch-9270c6ae?mod=mw_rss_topstories" },
   { time: "19:30", tag: "macro", tagText: "宏观", text: "标普500内部再现分化：等权重版本本周跑赢传统市值加权版，创六年来最大领先幅度，显示资金正加速从头部科技股轮出，市场广度正在改善。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/its-a-tale-of-two-s-p-500s-as-rotation-out-of-top-tech-stocks-shifts-into-overdrive-5254207f?mod=mw_rss_topstories" },
   { time: "19:13", tag: "macro", tagText: "宏观", text: "中国工业利润保持韧性，5月同比增速维持稳健。经济仍严重依赖工厂和出口来支撑增长，而房地产持续低迷和结构性失衡令复苏基础脆弱。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/06/27/china-industrial-profits-stay-resilient-as-economy-leans-on-factories.html" },
-  { time: "19:00", tag: "geo", tagText: "地缘", text: "纽约州社会主义势力在近期选举中取得压倒性胜利，引发民主党内部焦虑。激进左翼的崛起暴露了该党在11月大选中如何对抗特朗普的深层分歧。", source: "International homepage", url: "https://www.ft.com/content/831d18c4-7272-4543-bcfc-d134df238dd7" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "德国汽车制造商开启历史性大规模裁员，因中国竞争对手大量涌入本土及全球市场。欧洲最大经济体的工业模式正面临前所未有的威胁。", source: "International homepage", url: "https://www.ft.com/content/b68964c9-f3d0-48e8-8873-8f463834936c" },
-  { time: "16:03", tag: "macro", tagText: "宏观", text: "沙特阿美在拉斯坦努拉港恢复原油装载，尽管周四一艘台湾长荣海运的货船在霍尔木兹海峡被不明物体击中。此举有助于缓解市场对中东供应中断的担忧，为全球油市带来供给提振。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/saudi-aramco-resumes-oil-loading-at-ras-tanura-in-boost-to-supply.html" },
-  { time: "14:58", tag: "macro", tagText: "宏观", text: "委内瑞拉强震死亡人数突破900，搜救工作仍在继续，重灾区救援进展不均引发民众不满。此次灾害可能对该国经济及石油生产造成进一步冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/venezuela-quake-toll-tops-900-search-intensifies-for-hundreds-trapped.html" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "红色警报级热浪正成为欧洲新常态，本周多个国家气温纪录被打破，多国发布危及生命的高级别警告。投资者开始重点关注极端气候对能源需求、农业生产及保险市场的长期影响。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/europe-heatwave-uk-temperature-el-nino-invest.html" },
 ];
-const breakingDate = "2026年6月28日 06:12 CST";
+const breakingDate = "2026年6月28日 08:12 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:42", tag: "tech", tagText: "科技", text: "软银CEO孙正义对马斯克的轨道数据中心愿景提出质疑，认为该计划面临巨大工程和成本挑战。此前马斯克曾宣称将在低轨道部署大型数据中心，但投资者和业内专家普遍怀疑其可行性。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/softbanks-ceo-isnt-the-only-one-with-questions-about-elon-musks-orbital-data-center-hype/" },
   { time: "02:55", tag: "tech", tagText: "科技", text: "《纽约时报》分析指出，一项此前不起眼的底层技术正成为人工智能发展的关键瓶颈。该技术环节的供应受限、成本上升或性能瓶颈，可能拖累整个AI产业的迭代速度与部署规模。文章呼吁业界关注供应链中的“灰犀牛”风险。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWR0RnpqZnpUN2NoVktOR05SWTVHZVd1UkRRanFQVk51czB6bWF3VGR6VWRLMEw2UUk2bmJGSUNweC1BZi1tTFVoUmlRaVM3d1h5ZnhiemJkUkFYNGlDTUFQR2ZJMjBrcmZ3b25LWUJEYndlODVEdjMtd2JmY2JObzg3U0pIbjVQR2c?oc=5" },
   { time: "02:32", tag: "ai|geo", tagText: "AI|地缘", text: "OpenAI应美国政府要求，限制其最新大模型GPT-5.6仅向“可信合作伙伴”开放，而非全面推迟发布。公司表示此类政府干预不应成为常态，呼吁建立更合理的监管框架，以避免将最先进工具封锁在用户、开发者和企业之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "15:56", tag: "ai", tagText: "AI", text: "分析指出，印度AI初创企业与研发面临核心资金缺口问题。尽管印度拥有庞大技术人才库，但风险投资对AI领域投资不足，导致创新与商业化受阻，全球竞争力受限。", source: "WION", url: "https://news.google.com/rss/articles/CBMiggJBVV95cUxNWE8zaDRQRXdGanhkQXB3Sl94WDVOOEZCU3k2UTZEVVpPcVBGdVRQbk9ZMFYwTkxIOXlDMjQxS1V0b3dkWVJOQWhNQ2RCLVNtYmxlUW5XaGNRQ0FsMG5JSkZ0ZkI2RlVzYWotTVk0WmRNVWE4b2FYSG1rVFhicGJCZk1PaThlYk5Vc04tbDEyNHZIenVMUzNrM1pId1drLXRrZWk4TUF1QnhITUtsenpfNzI0bTV4UVh6RTN5NWIwcGwtcXY2MVBwdkNJcTMxb2REUnJsTmMzMTJqVE5TUHVfRV9udUhURTZOdDFSemhaUVk1RWdBS0wwVUg5cm95aUJQWmfSAYcCQVVfeXFMTUJ3d3VtcFV1MFVHN1FiMHRRZzNLZUt4R0t0ak9QVnZCekRPdGhtbEFMMG42bFhIV3gtYkJjUFA4VG5QMjktS29DMTRXakp1WTVZN0daTXlORi1wcFk3N3hWejJaMjZldnIySWl1cGpJN3d1MnlKM1FuRzE2a0IyOHBUZThxV2FSTjJNUkRsZUdUUkxWbUdnWkk2bXhMQzNFbDl5V0tOMzBpb0ZFcW9oOGtKQTZzRFlIOFBsaHBlZUNOakM4cW9jQjJQaVJ1US1UdnUxdEUxYzVSRnhOejlRTDhVTjZubWhySG1VRXNXMjhlTW5HQzItWWZDaWVwTDAwYXlqekp0NEk?oc=5" },
   { time: "12:23", tag: "tech", tagText: "科技", text: "中东和北非（MENA）地区创业融资与并购势头持续。近期多笔交易显示，当地科技生态系统活跃，资本持续流入早期及成长期企业，涉及多个垂直领域。", source: "Arab News PK", url: "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5NVnNmdS1Qam9SMVpXbFZ4d0cwUmctcUpGa1JjcGhkSzVyV21lM01WOW56SzNjcGozdjZDRGoyT29xQWhnbWZRdmJ1WVRBakJkZk9LR2pSRDVoajVfN1l1UlZJSQ?oc=5" },
   { time: "12:09", tag: "ai", tagText: "AI", text: "2026年AI半导体市场迎来繁荣，预测市场规模达1.3万亿美元。顶级芯片股如英伟达、AMD等正驱动这一增长，AI基础设施的持续需求推动行业扩张。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5vZnJYSk9JZGZmVWR4SThBLV9RNDctM3ZOQmRMTHlZd1k1T3ZXeHQ4aVBaQ0h6UU5nRlJIQ29WZHlWRVBfYU44UXNhTTc2TkN3LWZWbGkyU3lTcmo3bTNKb1Y4blU?oc=5" },
-  { time: "09:01", tag: "ai", tagText: "AI", text: "特朗普政府批准Anthropic的旗舰AI模型Mythos 5重新上线，授权超过100家美国公司和政府机构使用，包括其非美国员工。此前该模型因安全担忧被政府要求下线，经过两周谈判后以受限形式恢复。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/" },
 ];
-const aiBreakingDate = "2026年6月28日 06:12 CST";
+const aiBreakingDate = "2026年6月28日 08:12 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
