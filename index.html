@@ -1623,12 +1623,19 @@ const fearGreedData = {
   previous1Week: 25.11,
   previous1Month: 53.03,
   previous1Year: 77.63,
-  date: "2026年7月4日 01:42 CST"
+  date: "2026年7月4日 03:42 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:30", tag: "macro", tagText: "宏观", text: "先锋集团最新报告显示，2025年美国民众401(k)账户余额创下历史新高。强劲的股市上涨和持续缴费推动了退休储蓄增长，反映出美国家庭财富状况改善。", source: "MarketWatch", url: "https://www.marketwatch.com/story/americans-401-k-balances-hit-record-levels-last-year-see-how-you-compare-facd32c4?mod=mw_rss_topstories" },
+  { time: "03:30", tag: "macro", tagText: "宏观", text: "美国一项新提案拟将Medicare参保人的年度自付费用上限设为5000美元，但预计将使政府每年增加“数百亿”美元支出。该法案旨在为所有Medicare受益人提供成本保护，但目前通过前景渺茫。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-new-bill-would-cap-medicare-enrollees-annual-expenses-at-5-000-and-could-cost-the-government-tens-of-billions-d370bb37?mod=mw_rss_topstories" },
+  { time: "03:30", tag: "macro", tagText: "宏观", text: "特朗普政府推动更多年金产品进入401(k)计划，旨在为退休人员提供稳定收入。但专家警告，年金费用高昂且流动性差，对年轻储户未必适合，投资者需审慎评估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/annuities-are-coming-to-more-401-k-plans-should-workers-embrace-them-78f014e9?mod=mw_rss_topstories" },
+  { time: "03:30", tag: "macro", tagText: "宏观", text: "德国考虑逐步将退休年龄提高至70岁（至2092年），以应对养老金资金缺口。分析指出，此举仅能部分解决社保财务问题，美国是否跟进引发讨论。", source: "MarketWatch", url: "https://www.marketwatch.com/story/could-the-u-s-join-germany-in-raising-its-retirement-age-3282e0bd" },
+  { time: "03:30", tag: "ai", tagText: "AI", text: "自7月1日起，美国Medicare将首次覆盖GLP-1类减肥药物，合格受益人每月仅需支付50美元。专家提醒患者需关注副作用及肌肉流失风险。此举有望显著扩大减肥药市场规模。", source: "MarketWatch", url: "https://www.marketwatch.com/story/millions-of-older-americans-will-soon-have-medicare-access-to-glp-1s-for-weight-loss-heres-what-they-need-to-know-758efe4c" },
+  { time: "03:01", tag: "macro", tagText: "宏观", text: "亚马逊Prime Day消费数据显示，在通胀压力下，消费者支出同比增长9.3%，更多购买耐用品和折扣商品。零售专家认为，高通胀使消费者更注重性价比，推动大额消费集中于促销活动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/amazon-prime-day.html" },
+  { time: "02:11", tag: "macro", tagText: "宏观", text: "美国银行Bridgepoint接近达成收购某房地产单元的交易，押注美国房地产市场回暖。这家伦敦私募股权公司正从传统企业收购拓展至不动产领域。", source: "Financial Times", url: "https://www.ft.com/content/567ba6a4-809f-4e8e-a8f3-03855beb9a48" },
   { time: "01:00", tag: "crypto", tagText: "加密", text: "链上数据显示，大型投资者（鲸鱼）重新开设高杠杆空头头寸，押注比特币和以太坊价格下跌。此举可能加剧加密货币市场短期波动，需警惕回调风险。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQc3AzUHl2X25VYm55TGpXLUZWR1pfTjJZVER1QV91RHhqQWtyQVgzZ25EbXFIUmtZNmt2dER0b1RlTWhPLTRVUkVBNTA0YnpIYy1OTDVsUm92c3hFU1hCQzFkVTlBc0VuUW45Q1k0cDRvY0xsR01lRExUeTJra0o4VlNJcmE3RHNtU3pkeDZ6dWNOcjV3QTdnWWM5TmJMMHdTM2NISXpFTzh5cGU0RVBwUlNNcU1HYUxPNUhkSWUwTXlEejRTZGswNm5VdTRSaXJYb1Z4RWpSRU1MQQ?oc=5" },
   { time: "23:32", tag: "macro", tagText: "宏观", text: "美敦力CEO向市场披露关税政策对公司的具体影响，包括供应链成本上升和定价压力，进一步揭示贸易摩擦对医疗科技行业的冲击。", source: "Insider Monkey", url: "https://finance.yahoo.com/economy/policy/articles/medtronic-plc-mdt-ceo-discloses-153207076.html" },
   { time: "22:59", tag: "geo", tagText: "地缘", text: "美国于当地时间26日对伊朗发动空袭，总统特朗普指控德黑兰违反霍尔木兹海峡停火协议。此次打击正值美伊原定60天无敌对状态谈判期间，令中东局势骤然升级，此前一艘台湾货船在霍尔木兹海峡遭不明袭击已引发紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-strikes-iran-strait-of-hormuz-ceasefire.html" },
@@ -1642,18 +1649,13 @@ const breakingNews = [
   { time: "10:53", tag: "tech", tagText: "科技", text: "中国科技中心深圳加速推进自动驾驶出租车，扩大无人驾驶车辆运营，自动化浪潮正冲击网约车司机等零工经济从业者的生计。", source: "Financial Times", url: "https://www.ft.com/content/b1445598-e5e3-4530-9e82-e0155c44106b" },
   { time: "06:51", tag: "geo", tagText: "地缘", text: "特朗普提名前俄克拉荷马州州警兰斯·施罗耶担任美国移民和海关执法局（ICE）局长。前任局长托德·莱昂斯于5月底辞职，大卫·文图雷拉一直担任代理局长。该任命显示特朗普政府继续强化边境执法立场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/trump-nominates-ex-oklahoma-state-trooper-lance-schroyer-as-ice-director.html" },
   { time: "06:22", tag: "macro", tagText: "宏观", text: "阿根廷总统米莱的内阁首席部长曼努埃尔·阿多尼因腐败指控辞职，此前数月丑闻已困扰该国自由派政府。此举可能影响米莱的经济改革议程和投资者信心。", source: "Financial Times", url: "https://www.ft.com/content/db091e41-ea8c-4aac-b76c-b303f799d191" },
-  { time: "03:30", tag: "macro", tagText: "宏观", text: "先锋集团最新报告显示，2025年美国民众401(k)账户余额创下历史新高。强劲的股市上涨和持续缴费推动了退休储蓄增长，反映出美国家庭财富状况改善。", source: "MarketWatch", url: "https://www.marketwatch.com/story/americans-401-k-balances-hit-record-levels-last-year-see-how-you-compare-facd32c4?mod=mw_rss_topstories" },
-  { time: "03:30", tag: "macro", tagText: "宏观", text: "美国一项新提案拟将Medicare参保人的年度自付费用上限设为5000美元，但预计将使政府每年增加“数百亿”美元支出。该法案旨在为所有Medicare受益人提供成本保护，但目前通过前景渺茫。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-new-bill-would-cap-medicare-enrollees-annual-expenses-at-5-000-and-could-cost-the-government-tens-of-billions-d370bb37?mod=mw_rss_topstories" },
-  { time: "03:30", tag: "macro", tagText: "宏观", text: "特朗普政府推动更多年金产品进入401(k)计划，旨在为退休人员提供稳定收入。但专家警告，年金费用高昂且流动性差，对年轻储户未必适合，投资者需审慎评估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/annuities-are-coming-to-more-401-k-plans-should-workers-embrace-them-78f014e9?mod=mw_rss_topstories" },
-  { time: "03:30", tag: "macro", tagText: "宏观", text: "德国考虑逐步将退休年龄提高至70岁（至2092年），以应对养老金资金缺口。分析指出，此举仅能部分解决社保财务问题，美国是否跟进引发讨论。", source: "MarketWatch", url: "https://www.marketwatch.com/story/could-the-u-s-join-germany-in-raising-its-retirement-age-3282e0bd" },
-  { time: "03:30", tag: "ai", tagText: "AI", text: "自7月1日起，美国Medicare将首次覆盖GLP-1类减肥药物，合格受益人每月仅需支付50美元。专家提醒患者需关注副作用及肌肉流失风险。此举有望显著扩大减肥药市场规模。", source: "MarketWatch", url: "https://www.marketwatch.com/story/millions-of-older-americans-will-soon-have-medicare-access-to-glp-1s-for-weight-loss-heres-what-they-need-to-know-758efe4c" },
-  { time: "03:01", tag: "macro", tagText: "宏观", text: "亚马逊Prime Day消费数据显示，在通胀压力下，消费者支出同比增长9.3%，更多购买耐用品和折扣商品。零售专家认为，高通胀使消费者更注重性价比，推动大额消费集中于促销活动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/amazon-prime-day.html" },
-  { time: "02:11", tag: "macro", tagText: "宏观", text: "美国银行Bridgepoint接近达成收购某房地产单元的交易，押注美国房地产市场回暖。这家伦敦私募股权公司正从传统企业收购拓展至不动产领域。", source: "Financial Times", url: "https://www.ft.com/content/567ba6a4-809f-4e8e-a8f3-03855beb9a48" },
 ];
-const breakingDate = "2026年7月4日 01:42 CST";
+const breakingDate = "2026年7月4日 03:42 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:55", tag: "tech", tagText: "科技", text: "《纽约时报》分析指出，一项此前不起眼的底层技术正成为人工智能发展的关键瓶颈。该技术环节的供应受限、成本上升或性能瓶颈，可能拖累整个AI产业的迭代速度与部署规模。文章呼吁业界关注供应链中的“灰犀牛”风险。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWR0RnpqZnpUN2NoVktOR05SWTVHZVd1UkRRanFQVk51czB6bWF3VGR6VWRLMEw2UUk2bmJGSUNweC1BZi1tTFVoUmlRaVM3d1h5ZnhiemJkUkFYNGlDTUFQR2ZJMjBrcmZ3b25LWUJEYndlODVEdjMtd2JmY2JObzg3U0pIbjVQR2c?oc=5" },
+  { time: "02:32", tag: "ai|geo", tagText: "AI|地缘", text: "OpenAI应美国政府要求，限制其最新大模型GPT-5.6仅向“可信合作伙伴”开放，而非全面推迟发布。公司表示此类政府干预不应成为常态，呼吁建立更合理的监管框架，以避免将最先进工具封锁在用户、开发者和企业之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
   { time: "01:16", tag: "ai", tagText: "AI", text: "Facebook（Meta）推出面向创作者的全新AI伴侣应用。该应用目前正在与部分创作者进行测试，内置了Facebook最新发布的AI创作助手，旨在帮助创作者更高效地管理内容、互动和创作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "12:23", tag: "tech", tagText: "科技", text: "中东和北非（MENA）地区创业融资与并购势头持续。近期多笔交易显示，当地科技生态系统活跃，资本持续流入早期及成长期企业，涉及多个垂直领域。", source: "Arab News PK", url: "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5NVnNmdS1Qam9SMVpXbFZ4d0cwUmctcUpGa1JjcGhkSzVyV21lM01WOW56SzNjcGozdjZDRGoyT29xQWhnbWZRdmJ1WVRBakJkZk9LR2pSRDVoajVfN1l1UlZJSQ?oc=5" },
   { time: "12:09", tag: "ai", tagText: "AI", text: "2026年AI半导体市场迎来繁荣，预测市场规模达1.3万亿美元。顶级芯片股如英伟达、AMD等正驱动这一增长，AI基础设施的持续需求推动行业扩张。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5vZnJYSk9JZGZmVWR4SThBLV9RNDctM3ZOQmRMTHlZd1k1T3ZXeHQ4aVBaQ0h6UU5nRlJIQ29WZHlWRVBfYU44UXNhTTc2TkN3LWZWbGkyU3lTcmo3bTNKb1Y4blU?oc=5" },
   { time: "04:42", tag: "tech", tagText: "科技", text: "软银CEO孙正义对马斯克的轨道数据中心愿景提出质疑，认为该计划面临巨大工程和成本挑战。此前马斯克曾宣称将在低轨道部署大型数据中心，但投资者和业内专家普遍怀疑其可行性。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/softbanks-ceo-isnt-the-only-one-with-questions-about-elon-musks-orbital-data-center-hype/" },
-  { time: "02:55", tag: "tech", tagText: "科技", text: "《纽约时报》分析指出，一项此前不起眼的底层技术正成为人工智能发展的关键瓶颈。该技术环节的供应受限、成本上升或性能瓶颈，可能拖累整个AI产业的迭代速度与部署规模。文章呼吁业界关注供应链中的“灰犀牛”风险。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWR0RnpqZnpUN2NoVktOR05SWTVHZVd1UkRRanFQVk51czB6bWF3VGR6VWRLMEw2UUk2bmJGSUNweC1BZi1tTFVoUmlRaVM3d1h5ZnhiemJkUkFYNGlDTUFQR2ZJMjBrcmZ3b25LWUJEYndlODVEdjMtd2JmY2JObzg3U0pIbjVQR2c?oc=5" },
-  { time: "02:32", tag: "ai|geo", tagText: "AI|地缘", text: "OpenAI应美国政府要求，限制其最新大模型GPT-5.6仅向“可信合作伙伴”开放，而非全面推迟发布。公司表示此类政府干预不应成为常态，呼吁建立更合理的监管框架，以避免将最先进工具封锁在用户、开发者和企业之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" },
 ];
-const aiBreakingDate = "2026年7月4日 01:42 CST";
+const aiBreakingDate = "2026年7月4日 03:42 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
