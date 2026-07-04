@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1f2b44">
+  <title>中国全部城市</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #202b43;
+      --bg-deep: #172239;
+      --text: #f4f7ff;
+      --muted: #9eabc2;
+      --muted-strong: #c6cfdf;
+      --line: rgba(255, 255, 255, 0.1);
+      --accent: #ff9c27;
+      --accent-2: #54c3ff;
+      --danger: #ff7272;
+      --sheet: #eef3fb;
+      --sheet-text: #1c2942;
+      --radius: 10px;
+      --side: clamp(20px, 5vw, 34px);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--bg);
+    }
+
+    body {
+      min-height: 100%;
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(84, 195, 255, 0.12), transparent 28rem),
+        linear-gradient(180deg, #21304b 0%, var(--bg) 24rem, #1c2940 100%);
+      color: var(--text);
+      letter-spacing: 0;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      color: inherit;
+    }
+
+    .app {
+      width: min(100%, 560px);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: calc(env(safe-area-inset-top) + 26px) 0 calc(env(safe-area-inset-bottom) + 34px);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px var(--side) 12px;
+      background: linear-gradient(180deg, rgba(32, 43, 67, 0.98), rgba(32, 43, 67, 0.78) 70%, rgba(32, 43, 67, 0));
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .back-button,
+    .tool-button,
+    .close-button {
+      display: inline-grid;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .back-button {
+      margin-left: -8px;
+      background: transparent;
+    }
+
+    .back-button:active,
+    .tool-button:active,
+    .close-button:active,
+    .city-card:active {
+      transform: scale(0.96);
+    }
+
+    .title-wrap {
+      min-width: 0;
+      flex: 1;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 8vw, 40px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin-top: 7px;
+      color: var(--muted-strong);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .tools {
+      display: flex;
+      gap: 8px;
+    }
+
+    .search-row {
+      position: sticky;
+      top: 68px;
+      z-index: 19;
+      display: flex;
+      gap: 10px;
+      padding: 4px var(--side) 16px;
+      background: linear-gradient(180deg, rgba(32, 43, 67, 0.92), rgba(32, 43, 67, 0.72) 72%, rgba(32, 43, 67, 0));
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+    }
+
+    .search-box svg {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .search-box input {
+      width: 100%;
+      height: 44px;
+      padding: 0 16px 0 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      outline: 0;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 650;
+    }
+
+    .search-box input::placeholder {
+      color: #8593aa;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      padding: 6px var(--side) 20px;
+    }
+
+    .stat {
+      min-width: 0;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .stat b {
+      display: block;
+      font-size: 20px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    main {
+      padding: 0 0 18px;
+    }
+
+    .section {
+      padding: 13px var(--side) 24px;
+    }
+
+    .section[hidden] {
+      display: none;
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: clamp(26px, 7vw, 34px);
+      font-weight: 850;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 21px 13px;
+    }
+
+    .city-card {
+      display: block;
+      min-width: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .thumb {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(84, 195, 255, 0.18), rgba(255, 156, 39, 0.16)),
+        #2a3853;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.96;
+      filter: saturate(1.08) contrast(1.04);
+      transform: scale(1.02);
+    }
+
+    .thumb::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: rgba(11, 18, 31, 0.45);
+      transition: background 180ms ease;
+    }
+
+    .date-badge {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      padding: 4px 4px 5px;
+      background: linear-gradient(180deg, rgba(7, 10, 16, 0), rgba(7, 10, 16, 0.78));
+      color: #fff;
+      font-size: clamp(10px, 2.85vw, 16px);
+      font-weight: 850;
+      line-height: 1.1;
+      text-align: center;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .pin {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      z-index: 3;
+      display: grid;
+      width: 22px;
+      height: 22px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.36);
+      border-radius: 50%;
+      background: rgba(15, 21, 33, 0.48);
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .city-name {
+      display: block;
+      min-height: 2.3em;
+      margin-top: 9px;
+      color: rgba(244, 247, 255, 0.9);
+      font-size: clamp(17px, 4.7vw, 22px);
+      font-weight: 850;
+      line-height: 1.15;
+      overflow-wrap: anywhere;
+    }
+
+    .city-card.is-lit .thumb::after {
+      background: rgba(7, 10, 16, 0.04);
+    }
+
+    .city-card.is-lit .date-badge,
+    .city-card.is-lit .pin {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .city-card.is-lit .city-name {
+      color: #fff;
+    }
+
+    .empty-state {
+      display: none;
+      padding: 28px var(--side) 60px;
+      color: var(--muted-strong);
+      font-size: 18px;
+      font-weight: 750;
+      text-align: center;
+    }
+
+    .empty-state.is-visible {
+      display: block;
+    }
+
+    dialog {
+      width: min(100% - 28px, 432px);
+      margin: auto auto max(18px, env(safe-area-inset-bottom));
+      padding: 0;
+      border: 0;
+      border-radius: 18px;
+      background: var(--sheet);
+      color: var(--sheet-text);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.48);
+    }
+
+    dialog::backdrop {
+      background: rgba(8, 13, 23, 0.62);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+
+    .sheet {
+      padding: 18px;
+    }
+
+    .sheet-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .sheet-city {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .sheet-city span {
+      display: block;
+      color: #69758b;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .sheet-city strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 28px;
+      line-height: 1.15;
+      overflow-wrap: anywhere;
+    }
+
+    .close-button {
+      width: 38px;
+      height: 38px;
+      background: #dfe6f0;
+      color: #3a4659;
+    }
+
+    .date-field {
+      display: block;
+      margin: 0 0 14px;
+      color: #46536a;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .date-field input {
+      display: block;
+      width: 100%;
+      height: 50px;
+      margin-top: 8px;
+      padding: 0 14px;
+      border: 1px solid #c8d2df;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--sheet-text);
+      font-size: 18px;
+      font-weight: 750;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .action-button {
+      min-height: 48px;
+      border: 0;
+      border-radius: 10px;
+      background: #dfe7f2;
+      color: #23314a;
+      font-size: 16px;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .action-button.primary {
+      background: linear-gradient(135deg, #ff9c27, #ffbd5c);
+      color: #1f2635;
+    }
+
+    .action-button.danger {
+      background: #ffe1e1;
+      color: #ba3838;
+    }
+
+    .action-button.full {
+      grid-column: 1 / -1;
+    }
+
+    .file-input {
+      position: fixed;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    .toast {
+      position: fixed;
+      right: 22px;
+      bottom: calc(env(safe-area-inset-bottom) + 22px);
+      left: 22px;
+      z-index: 50;
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 13px 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(13, 20, 34, 0.92);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 750;
+      text-align: center;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.34);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(14px);
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .toast.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 700px) {
+      .app {
+        width: min(100%, 680px);
+      }
+
+      .city-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 360px) {
+      :root {
+        --side: 16px;
+      }
+
+      .city-grid {
+        gap: 18px 10px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .tools {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <button class="back-button" type="button" id="backButton" aria-label="返回">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="title-wrap">
+        <h1>中国全部城市</h1>
+        <div class="subtitle" id="overallSubtitle">已点亮 0/0</div>
+      </div>
+      <div class="tools" aria-label="工具">
+        <button class="tool-button" type="button" id="importButton" aria-label="导入">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="tool-button" type="button" id="exportButton" aria-label="导出">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 21V9m0 0 4 4m-4-4-4 4M5 3h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="search-row">
+      <label class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <input id="searchInput" type="search" placeholder="搜索城市" autocomplete="off">
+      </label>
+      <button class="tool-button" type="button" id="clearButton" aria-label="清空">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 6h18m-2 0-.7 12.1A2 2 0 0 1 16.3 20H7.7a2 2 0 0 1-2-1.9L5 6m3 0V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m-7 4 1 6m5-6-1 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <section class="stats" aria-label="进度">
+      <div class="stat"><b id="litCount">0</b><span>点亮城市</span></div>
+      <div class="stat"><b id="sectionCount">0</b><span>点亮地区</span></div>
+      <div class="stat"><b id="percentCount">0%</b><span>完成进度</span></div>
+    </section>
+
+    <main id="sectionsRoot"></main>
+    <div class="empty-state" id="emptyState">没有匹配城市</div>
+  </div>
+
+  <dialog id="cityDialog">
+    <form class="sheet" method="dialog" id="cityForm">
+      <div class="sheet-head">
+        <div class="sheet-city">
+          <span id="dialogSection">地区</span>
+          <strong id="dialogCity">城市</strong>
+        </div>
+        <button class="close-button" type="button" id="dialogClose" aria-label="关闭">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <label class="date-field">
+        点亮日期
+        <input id="visitDate" type="date" required>
+      </label>
+      <div class="actions">
+        <button class="action-button danger" id="unlightButton" type="button">取消点亮</button>
+        <button class="action-button primary" id="saveButton" type="submit">点亮</button>
+      </div>
+    </form>
+  </dialog>
+
+  <input class="file-input" id="importFile" type="file" accept="application/json,.json">
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const STORAGE_KEY = "yionme.cityLights.v1";
+    const TODAY = new Date();
+    const DEFAULT_VISITED = {
+      "直辖市|北京市": "2021-03-17",
+      "直辖市|上海市": "2023-12-14",
+      "直辖市|重庆市": "2021-03-05",
+      "港澳台|香港特别行政区": "2023-10-20",
+      "港澳台|澳门特别行政区": "2024-01-29"
+    };
+
+    const SECTION_TEXT = [
+      ["直辖市", "北京市 天津市 上海市 重庆市"],
+      ["港澳台", "香港特别行政区 澳门特别行政区 台湾"],
+      ["安徽", "合肥市 芜湖市 蚌埠市 淮南市 马鞍山市 淮北市 铜陵市 安庆市 黄山市 滁州市 阜阳市 宿州市 六安市 亳州市 池州市 宣城市"],
+      ["福建", "福州市 厦门市 莆田市 三明市 泉州市 漳州市 南平市 龙岩市 宁德市"],
+      ["甘肃", "兰州市 嘉峪关市 金昌市 白银市 天水市 武威市 张掖市 平凉市 酒泉市 庆阳市 定西市 陇南市 临夏回族自治州 甘南藏族自治州"],
+      ["广东", "广州市 韶关市 深圳市 珠海市 汕头市 佛山市 江门市 湛江市 茂名市 肇庆市 惠州市 梅州市 汕尾市 河源市 阳江市 清远市 东莞市 中山市 潮州市 揭阳市 云浮市"],
+      ["广西", "南宁市 柳州市 桂林市 梧州市 北海市 防城港市 钦州市 贵港市 玉林市 百色市 贺州市 河池市 来宾市 崇左市"],
+      ["贵州", "贵阳市 六盘水市 遵义市 安顺市 毕节市 铜仁市 黔西南布依族苗族自治州 黔东南苗族侗族自治州 黔南布依族苗族自治州"],
+      ["海南", "海口市 三亚市 三沙市 儋州市"],
+      ["河北", "石家庄市 唐山市 秦皇岛市 邯郸市 邢台市 保定市 张家口市 承德市 沧州市 廊坊市 衡水市"],
+      ["河南", "郑州市 开封市 洛阳市 平顶山市 安阳市 鹤壁市 新乡市 焦作市 濮阳市 许昌市 漯河市 三门峡市 南阳市 商丘市 信阳市 周口市 驻马店市"],
+      ["黑龙江", "哈尔滨市 齐齐哈尔市 鸡西市 鹤岗市 双鸭山市 大庆市 伊春市 佳木斯市 七台河市 牡丹江市 黑河市 绥化市 大兴安岭地区"],
+      ["湖北", "武汉市 黄石市 十堰市 宜昌市 襄阳市 鄂州市 荆门市 孝感市 荆州市 黄冈市 咸宁市 随州市 恩施土家族苗族自治州"],
+      ["湖南", "长沙市 株洲市 湘潭市 衡阳市 邵阳市 岳阳市 常德市 张家界市 益阳市 郴州市 永州市 怀化市 娄底市 湘西土家族苗族自治州"],
+      ["吉林", "长春市 吉林市 四平市 辽源市 通化市 白山市 松原市 白城市 延边朝鲜族自治州"],
+      ["江苏", "南京市 无锡市 徐州市 常州市 苏州市 南通市 连云港市 淮安市 盐城市 扬州市 镇江市 泰州市 宿迁市"],
+      ["江西", "南昌市 景德镇市 萍乡市 九江市 新余市 鹰潭市 赣州市 吉安市 宜春市 抚州市 上饶市"],
+      ["辽宁", "沈阳市 大连市 鞍山市 抚顺市 本溪市 丹东市 锦州市 营口市 阜新市 辽阳市 盘锦市 铁岭市 朝阳市 葫芦岛市"],
+      ["内蒙古", "呼和浩特市 包头市 乌海市 赤峰市 通辽市 鄂尔多斯市 呼伦贝尔市 巴彦淖尔市 乌兰察布市 兴安盟 锡林郭勒盟 阿拉善盟"],
+      ["宁夏", "银川市 石嘴山市 吴忠市 固原市 中卫市"],
+      ["青海", "西宁市 海东市 海北藏族自治州 黄南藏族自治州 海南藏族自治州 果洛藏族自治州 玉树藏族自治州 海西蒙古族藏族自治州"],
+      ["山东", "济南市 青岛市 淄博市 枣庄市 东营市 烟台市 潍坊市 济宁市 泰安市 威海市 日照市 临沂市 德州市 聊城市 滨州市 菏泽市"],
+      ["山西", "太原市 大同市 阳泉市 长治市 晋城市 朔州市 晋中市 运城市 忻州市 临汾市 吕梁市"],
+      ["陕西", "西安市 铜川市 宝鸡市 咸阳市 渭南市 延安市 汉中市 榆林市 安康市 商洛市"],
+      ["四川", "成都市 自贡市 攀枝花市 泸州市 德阳市 绵阳市 广元市 遂宁市 内江市 乐山市 南充市 眉山市 宜宾市 广安市 达州市 雅安市 巴中市 资阳市 阿坝藏族羌族自治州 甘孜藏族自治州 凉山彝族自治州"],
+      ["西藏", "拉萨市 日喀则市 昌都市 林芝市 山南市 那曲市 阿里地区"],
+      ["新疆", "乌鲁木齐市 克拉玛依市 吐鲁番市 哈密市 昌吉回族自治州 博尔塔拉蒙古自治州 巴音郭楞蒙古自治州 阿克苏地区 克孜勒苏柯尔克孜自治州 喀什地区 和田地区 伊犁哈萨克自治州 塔城地区 阿勒泰地区"],
+      ["云南", "昆明市 曲靖市 玉溪市 保山市 昭通市 丽江市 普洱市 临沧市 楚雄彝族自治州 红河哈尼族彝族自治州 文山壮族苗族自治州 西双版纳傣族自治州 大理白族自治州 德宏傣族景颇族自治州 怒江傈僳族自治州 迪庆藏族自治州"],
+      ["浙江", "杭州市 宁波市 温州市 嘉兴市 湖州市 绍兴市 金华市 衢州市 舟山市 台州市 丽水市"]
+    ];
+
+    const sections = SECTION_TEXT.map(([name, names]) => ({
+      name,
+      cities: names.split(" ").map(city => ({
+        id: `${name}|${city}`,
+        name: city,
+        shortName: city
+          .replace("特别行政区", "")
+          .replace("布依族苗族自治州", "州")
+          .replace("土家族苗族自治州", "州")
+          .replace("土家族苗族侗族自治州", "州")
+          .replace("哈尼族彝族自治州", "州")
+          .replace("柯尔克孜自治州", "州")
+          .replace("蒙古族藏族自治州", "州")
+          .replace("蒙古自治州", "州")
+          .replace("藏族羌族自治州", "州")
+          .replace("朝鲜族自治州", "州")
+          .replace("回族自治州", "州")
+          .replace("苗族侗族自治州", "州")
+          .replace("藏族自治州", "州")
+          .replace("彝族自治州", "州")
+          .replace("傣族自治州", "州")
+          .replace("白族自治州", "州")
+          .replace("傈僳族自治州", "州")
+          .replace("壮族苗族自治州", "州")
+      }))
+    }));
+
+    const allCities = sections.flatMap(section => section.cities.map(city => ({ ...city, section: section.name })));
+    let visited = loadVisited();
+    let activeCity = null;
+    let toastTimer = 0;
+
+    const root = document.getElementById("sectionsRoot");
+    const emptyState = document.getElementById("emptyState");
+    const searchInput = document.getElementById("searchInput");
+    const dialog = document.getElementById("cityDialog");
+    const visitDateInput = document.getElementById("visitDate");
+    const dialogCity = document.getElementById("dialogCity");
+    const dialogSection = document.getElementById("dialogSection");
+    const saveButton = document.getElementById("saveButton");
+    const unlightButton = document.getElementById("unlightButton");
+    const importFile = document.getElementById("importFile");
+
+    render();
+    updateStats();
+
+    document.getElementById("backButton").addEventListener("click", () => {
+      if (history.length > 1) history.back();
+      else scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.getElementById("dialogClose").addEventListener("click", () => dialog.close());
+    document.getElementById("cityForm").addEventListener("submit", event => {
+      event.preventDefault();
+      if (!activeCity || !visitDateInput.value) return;
+      visited[activeCity.id] = visitDateInput.value;
+      persist();
+      syncCity(activeCity.id);
+      updateStats();
+      dialog.close();
+      showToast(`${activeCity.name} 已点亮`);
+    });
+
+    unlightButton.addEventListener("click", () => {
+      if (!activeCity) return;
+      delete visited[activeCity.id];
+      persist();
+      syncCity(activeCity.id);
+      updateStats();
+      dialog.close();
+      showToast(`${activeCity.name} 已取消`);
+    });
+
+    searchInput.addEventListener("input", () => filterCities(searchInput.value.trim()));
+    document.getElementById("clearButton").addEventListener("click", () => {
+      const total = Object.keys(visited).length;
+      if (!total) {
+        showToast("还没有点亮城市");
+        return;
+      }
+      if (!confirm(`确认清空 ${total} 个点亮记录？`)) return;
+      visited = {};
+      persist();
+      document.querySelectorAll(".city-card").forEach(card => syncCity(card.dataset.id));
+      updateStats();
+      showToast("已清空");
+    });
+
+    document.getElementById("exportButton").addEventListener("click", exportState);
+    document.getElementById("importButton").addEventListener("click", () => importFile.click());
+    importFile.addEventListener("change", importState);
+
+    function render() {
+      root.innerHTML = "";
+      const fragment = document.createDocumentFragment();
+
+      sections.forEach(section => {
+        const sectionEl = document.createElement("section");
+        sectionEl.className = "section";
+        sectionEl.dataset.section = section.name;
+
+        const heading = document.createElement("h2");
+        heading.id = `heading-${section.name}`;
+        sectionEl.appendChild(heading);
+
+        const grid = document.createElement("div");
+        grid.className = "city-grid";
+
+        section.cities.forEach(city => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "city-card";
+          button.dataset.id = city.id;
+          button.dataset.name = city.name;
+          button.dataset.section = section.name;
+          button.setAttribute("aria-labelledby", `name-${city.id}`);
+          button.addEventListener("click", () => openCity(city, section.name));
+
+          const thumb = document.createElement("span");
+          thumb.className = "thumb";
+          const image = document.createElement("img");
+          image.src = imageUrl(city.id);
+          image.alt = "";
+          image.loading = "lazy";
+          image.decoding = "async";
+          image.referrerPolicy = "no-referrer";
+          thumb.appendChild(image);
+
+          const pin = document.createElement("span");
+          pin.className = "pin";
+          pin.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m20 6-11 11-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+          thumb.appendChild(pin);
+
+          const date = document.createElement("span");
+          date.className = "date-badge";
+          thumb.appendChild(date);
+
+          const name = document.createElement("span");
+          name.className = "city-name";
+          name.id = `name-${city.id}`;
+          name.textContent = city.shortName;
+
+          button.append(thumb, name);
+          grid.appendChild(button);
+        });
+
+        sectionEl.appendChild(grid);
+        fragment.appendChild(sectionEl);
+      });
+
+      root.appendChild(fragment);
+      document.querySelectorAll(".city-card").forEach(card => syncCity(card.dataset.id));
+    }
+
+    function openCity(city, sectionName) {
+      activeCity = { ...city, section: sectionName };
+      dialogCity.textContent = city.name;
+      dialogSection.textContent = sectionName;
+      visitDateInput.value = visited[city.id] || formatInputDate(TODAY);
+      const isLit = Boolean(visited[city.id]);
+      saveButton.textContent = isLit ? "更新日期" : "点亮";
+      unlightButton.hidden = !isLit;
+      saveButton.classList.toggle("full", !isLit);
+      dialog.showModal();
+      visitDateInput.focus({ preventScroll: true });
+    }
+
+    function syncCity(id) {
+      const card = document.querySelector(`.city-card[data-id="${cssEscape(id)}"]`);
+      if (!card) return;
+      const date = visited[id];
+      card.classList.toggle("is-lit", Boolean(date));
+      card.setAttribute("aria-pressed", date ? "true" : "false");
+      const badge = card.querySelector(".date-badge");
+      badge.textContent = date ? formatDisplayDate(date) : "";
+
+      const sectionName = card.dataset.section;
+      const section = sections.find(item => item.name === sectionName);
+      const lit = section.cities.filter(city => visited[city.id]).length;
+      const heading = document.querySelector(`.section[data-section="${cssEscape(sectionName)}"] h2`);
+      if (heading) heading.textContent = `${sectionName}（已点亮 ${lit}/${section.cities.length}）`;
+    }
+
+    function updateStats() {
+      const lit = allCities.filter(city => visited[city.id]).length;
+      const litSections = sections.filter(section => section.cities.some(city => visited[city.id])).length;
+      const total = allCities.length;
+      const percent = total ? Math.round((lit / total) * 100) : 0;
+
+      document.getElementById("overallSubtitle").textContent = `已点亮 ${lit}/${total}`;
+      document.getElementById("litCount").textContent = lit;
+      document.getElementById("sectionCount").textContent = litSections;
+      document.getElementById("percentCount").textContent = `${percent}%`;
+
+      sections.forEach(section => {
+        const litInSection = section.cities.filter(city => visited[city.id]).length;
+        const heading = document.querySelector(`.section[data-section="${cssEscape(section.name)}"] h2`);
+        if (heading) heading.textContent = `${section.name}（已点亮 ${litInSection}/${section.cities.length}）`;
+      });
+    }
+
+    function filterCities(query) {
+      let shownSections = 0;
+      const normalized = query.toLowerCase();
+
+      document.querySelectorAll(".section").forEach(sectionEl => {
+        let shownCards = 0;
+        sectionEl.querySelectorAll(".city-card").forEach(card => {
+          const haystack = `${card.dataset.section} ${card.dataset.name}`.toLowerCase();
+          const visible = !normalized || haystack.includes(normalized);
+          card.hidden = !visible;
+          if (visible) shownCards += 1;
+        });
+        sectionEl.hidden = shownCards === 0;
+        if (shownCards > 0) shownSections += 1;
+      });
+
+      emptyState.classList.toggle("is-visible", shownSections === 0);
+    }
+
+    function loadVisited() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return { ...DEFAULT_VISITED };
+        const parsed = JSON.parse(raw);
+        const source = parsed.visited && typeof parsed.visited === "object" ? parsed.visited : parsed;
+        return normalizeVisited(source);
+      } catch (error) {
+        return { ...DEFAULT_VISITED };
+      }
+    }
+
+    function normalizeVisited(source) {
+      const ids = new Set(allCities.map(city => city.id));
+      return Object.fromEntries(
+        Object.entries(source || {})
+          .filter(([id, value]) => ids.has(id) && typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value))
+      );
+    }
+
+    function persist() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        version: 1,
+        updatedAt: new Date().toISOString(),
+        visited
+      }));
+    }
+
+    function exportState() {
+      const payload = JSON.stringify({
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        visited
+      }, null, 2);
+      const blob = new Blob([payload], { type: "application/json" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = `city-lights-${formatInputDate(new Date())}.json`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+      showToast("已导出");
+    }
+
+    async function importState(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      try {
+        const text = await file.text();
+        const parsed = JSON.parse(text);
+        visited = normalizeVisited(parsed.visited || parsed);
+        persist();
+        document.querySelectorAll(".city-card").forEach(card => syncCity(card.dataset.id));
+        updateStats();
+        showToast("已导入");
+      } catch (error) {
+        showToast("导入失败");
+      } finally {
+        event.target.value = "";
+      }
+    }
+
+    function imageUrl(seed) {
+      return `https://picsum.photos/seed/${encodeURIComponent(seed)}/320/320`;
+    }
+
+    function formatInputDate(date) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
+    }
+
+    function formatDisplayDate(value) {
+      return value.replaceAll("-", ".");
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 1800);
+    }
+
+    function cssEscape(value) {
+      if (window.CSS && CSS.escape) return CSS.escape(value);
+      return value.replace(/["\\]/g, "\\$&");
+    }
+  </script>
+</body>
+</html>
