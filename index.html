@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 25.11,
   previous1Month: 53.03,
   previous1Year: 77.63,
-  date: "2026年7月5日 07:07 CST"
+  date: "2026年7月5日 12:15 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "tech", tagText: "科技", text: "苹果将在英国最高法院就5亿美元专利费案进行抗辩。该案涉及移动通信协议的许可费率，裁决可能影响全球其他技术的专利授权定价标准。", source: "Financial Times", url: "https://www.ft.com/content/d6a0103a-7fca-4e66-b92f-45f6ff3de059" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "美国连续第二天对伊朗发动空袭，作为对伊朗袭击航运的回应。此举进一步打击了持续停火的希望，中东局势急剧升级。", source: "Financial Times", url: "https://www.ft.com/content/5f4cd16c-fa4a-4806-94ce-84df6f51ecc0" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "谷歌限制Meta旗下Gemini的AI模型使用量。AI需求激增导致计算能力成为科技行业最稀缺资源，巨头之间开始争夺算力配额。", source: "Financial Times", url: "https://www.ft.com/content/c5d52f72-71ef-40bc-bad3-61afdba8b378" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "日本邮船CEO警告，霍尔木兹海峡的水雷将使航运受限长达数月，安全航道“极其有限”，通行量仅为战前水平的一半。全球能源运输面临严重威胁。", source: "Financial Times", url: "https://www.ft.com/content/a0739198-318c-4ae8-9953-ba88201edc45" },
+  { time: "10:53", tag: "tech", tagText: "科技", text: "中国科技中心深圳加速推进自动驾驶出租车，扩大无人驾驶车辆运营，自动化浪潮正冲击网约车司机等零工经济从业者的生计。", source: "Financial Times", url: "https://www.ft.com/content/b1445598-e5e3-4530-9e82-e0155c44106b" },
   { time: "06:51", tag: "geo", tagText: "地缘", text: "特朗普提名前俄克拉荷马州州警兰斯·施罗耶担任美国移民和海关执法局（ICE）局长。前任局长托德·莱昂斯于5月底辞职，大卫·文图雷拉一直担任代理局长。该任命显示特朗普政府继续强化边境执法立场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/trump-nominates-ex-oklahoma-state-trooper-lance-schroyer-as-ice-director.html" },
   { time: "06:22", tag: "macro", tagText: "宏观", text: "阿根廷总统米莱的内阁首席部长曼努埃尔·阿多尼因腐败指控辞职，此前数月丑闻已困扰该国自由派政府。此举可能影响米莱的经济改革议程和投资者信心。", source: "Financial Times", url: "https://www.ft.com/content/db091e41-ea8c-4aac-b76c-b303f799d191" },
   { time: "03:30", tag: "macro", tagText: "宏观", text: "先锋集团最新报告显示，2025年美国民众401(k)账户余额创下历史新高。强劲的股市上涨和持续缴费推动了退休储蓄增长，反映出美国家庭财富状况改善。", source: "MarketWatch", url: "https://www.marketwatch.com/story/americans-401-k-balances-hit-record-levels-last-year-see-how-you-compare-facd32c4?mod=mw_rss_topstories" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "21:21", tag: "tech", tagText: "科技", text: "存储芯片短缺危机持续发酵，苹果和微软被迫提价以覆盖成本，但对小型消费电子公司而言已成“生存危机”。小企业面临更严峻的供应短缺和成本飙升，行业洗牌加速。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/memory-crunch-shaking-apple-and-microsoft-existential-for-small-guys.html" },
   { time: "17:00", tag: "macro", tagText: "宏观", text: "国际清算银行（BIS）警告，人工智能领域的“狂热”可能以长期投资泡沫告终。若回报不及预期，对科技公司的资金支持或将大幅缩减，进而威胁全球经济。", source: "Financial Times", url: "https://www.ft.com/content/e81ce414-e4bd-4e8c-bac7-94f7bf17def4" },
   { time: "16:43", tag: "geo", tagText: "地缘", text: "特朗普再次威胁将“毁灭”伊朗，科威特和巴林报告遭袭。伊朗声称已对位于科威特和巴林的美国军事设施发动打击，以回应美国对霍尔木兹海峡附近目标的空袭，停火协议承压。", source: "CNBC", url: "https://www.cnbc.com/2026/06/28/trump-threatens-iran-with-annihilation-kuwait-bahrain-report-attacks.html" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "苹果将在英国最高法院就5亿美元专利费案进行抗辩。该案涉及移动通信协议的许可费率，裁决可能影响全球其他技术的专利授权定价标准。", source: "Financial Times", url: "https://www.ft.com/content/d6a0103a-7fca-4e66-b92f-45f6ff3de059" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "美国连续第二天对伊朗发动空袭，作为对伊朗袭击航运的回应。此举进一步打击了持续停火的希望，中东局势急剧升级。", source: "Financial Times", url: "https://www.ft.com/content/5f4cd16c-fa4a-4806-94ce-84df6f51ecc0" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "谷歌限制Meta旗下Gemini的AI模型使用量。AI需求激增导致计算能力成为科技行业最稀缺资源，巨头之间开始争夺算力配额。", source: "Financial Times", url: "https://www.ft.com/content/c5d52f72-71ef-40bc-bad3-61afdba8b378" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "日本邮船CEO警告，霍尔木兹海峡的水雷将使航运受限长达数月，安全航道“极其有限”，通行量仅为战前水平的一半。全球能源运输面临严重威胁。", source: "Financial Times", url: "https://www.ft.com/content/a0739198-318c-4ae8-9953-ba88201edc45" },
-  { time: "10:53", tag: "tech", tagText: "科技", text: "中国科技中心深圳加速推进自动驾驶出租车，扩大无人驾驶车辆运营，自动化浪潮正冲击网约车司机等零工经济从业者的生计。", source: "Financial Times", url: "https://www.ft.com/content/b1445598-e5e3-4530-9e82-e0155c44106b" },
 ];
-const breakingDate = "2026年7月5日 07:07 CST";
+const breakingDate = "2026年7月5日 12:15 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:09", tag: "ai", tagText: "AI", text: "2026年AI半导体市场迎来繁荣，预测市场规模达1.3万亿美元。顶级芯片股如英伟达、AMD等正驱动这一增长，AI基础设施的持续需求推动行业扩张。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5vZnJYSk9JZGZmVWR4SThBLV9RNDctM3ZOQmRMTHlZd1k1T3ZXeHQ4aVBaQ0h6UU5nRlJIQ29WZHlWRVBfYU44UXNhTTc2TkN3LWZWbGkyU3lTcmo3bTNKb1Y4blU?oc=5" },
   { time: "04:42", tag: "tech", tagText: "科技", text: "软银CEO孙正义对马斯克的轨道数据中心愿景提出质疑，认为该计划面临巨大工程和成本挑战。此前马斯克曾宣称将在低轨道部署大型数据中心，但投资者和业内专家普遍怀疑其可行性。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/softbanks-ceo-isnt-the-only-one-with-questions-about-elon-musks-orbital-data-center-hype/" },
   { time: "02:55", tag: "tech", tagText: "科技", text: "《纽约时报》分析指出，一项此前不起眼的底层技术正成为人工智能发展的关键瓶颈。该技术环节的供应受限、成本上升或性能瓶颈，可能拖累整个AI产业的迭代速度与部署规模。文章呼吁业界关注供应链中的“灰犀牛”风险。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWR0RnpqZnpUN2NoVktOR05SWTVHZVd1UkRRanFQVk51czB6bWF3VGR6VWRLMEw2UUk2bmJGSUNweC1BZi1tTFVoUmlRaVM3d1h5ZnhiemJkUkFYNGlDTUFQR2ZJMjBrcmZ3b25LWUJEYndlODVEdjMtd2JmY2JObzg3U0pIbjVQR2c?oc=5" },
   { time: "02:32", tag: "ai|geo", tagText: "AI|地缘", text: "OpenAI应美国政府要求，限制其最新大模型GPT-5.6仅向“可信合作伙伴”开放，而非全面推迟发布。公司表示此类政府干预不应成为常态，呼吁建立更合理的监管框架，以避免将最先进工具封锁在用户、开发者和企业之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "19:36", tag: "ai", tagText: "AI", text: "OpenAI发布首款自研AI芯片，代号“Jalapeño”。该芯片专为训练和推理优化，标志着OpenAI减少对外部供应商依赖的重要一步。具体性能参数尚未披露，但此举可能重塑AI芯片竞争格局。", source: "Memeburn", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTFB6X0xYOXFzMzRNVGVNdUcxYmtvaDJoYS1BaFBMSnlNT2xiNzZYYVVHQTE4T0FtNGstcTM3SWpOMXJidWQ5bk16TUtaT1RkOWx0NktlWXptRWlpSEZFU2lBUEtNZzg2MWdXNkJyN0NR?oc=5" },
   { time: "15:56", tag: "ai", tagText: "AI", text: "分析指出，印度AI初创企业与研发面临核心资金缺口问题。尽管印度拥有庞大技术人才库，但风险投资对AI领域投资不足，导致创新与商业化受阻，全球竞争力受限。", source: "WION", url: "https://news.google.com/rss/articles/CBMiggJBVV95cUxNWE8zaDRQRXdGanhkQXB3Sl94WDVOOEZCU3k2UTZEVVpPcVBGdVRQbk9ZMFYwTkxIOXlDMjQxS1V0b3dkWVJOQWhNQ2RCLVNtYmxlUW5XaGNRQ0FsMG5JSkZ0ZkI2RlVzYWotTVk0WmRNVWE4b2FYSG1rVFhicGJCZk1PaThlYk5Vc04tbDEyNHZIenVMUzNrM1pId1drLXRrZWk4TUF1QnhITUtsenpfNzI0bTV4UVh6RTN5NWIwcGwtcXY2MVBwdkNJcTMxb2REUnJsTmMzMTJqVE5TUHVfRV9udUhURTZOdDFSemhaUVk1RWdBS0wwVUg5cm95aUJQWmfSAYcCQVVfeXFMTUJ3d3VtcFV1MFVHN1FiMHRRZzNLZUt4R0t0ak9QVnZCekRPdGhtbEFMMG42bFhIV3gtYkJjUFA4VG5QMjktS29DMTRXakp1WTVZN0daTXlORi1wcFk3N3hWejJaMjZldnIySWl1cGpJN3d1MnlKM1FuRzE2a0IyOHBUZThxV2FSTjJNUkRsZUdUUkxWbUdnWkk2bXhMQzNFbDl5V0tOMzBpb0ZFcW9oOGtKQTZzRFlIOFBsaHBlZUNOakM4cW9jQjJQaVJ1US1UdnUxdEUxYzVSRnhOejlRTDhVTjZubWhySG1VRXNXMjhlTW5HQzItWWZDaWVwTDAwYXlqekp0NEk?oc=5" },
   { time: "12:23", tag: "tech", tagText: "科技", text: "中东和北非（MENA）地区创业融资与并购势头持续。近期多笔交易显示，当地科技生态系统活跃，资本持续流入早期及成长期企业，涉及多个垂直领域。", source: "Arab News PK", url: "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5NVnNmdS1Qam9SMVpXbFZ4d0cwUmctcUpGa1JjcGhkSzVyV21lM01WOW56SzNjcGozdjZDRGoyT29xQWhnbWZRdmJ1WVRBakJkZk9LR2pSRDVoajVfN1l1UlZJSQ?oc=5" },
-  { time: "12:09", tag: "ai", tagText: "AI", text: "2026年AI半导体市场迎来繁荣，预测市场规模达1.3万亿美元。顶级芯片股如英伟达、AMD等正驱动这一增长，AI基础设施的持续需求推动行业扩张。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5vZnJYSk9JZGZmVWR4SThBLV9RNDctM3ZOQmRMTHlZd1k1T3ZXeHQ4aVBaQ0h6UU5nRlJIQ29WZHlWRVBfYU44UXNhTTc2TkN3LWZWbGkyU3lTcmo3bTNKb1Y4blU?oc=5" },
 ];
-const aiBreakingDate = "2026年7月5日 07:07 CST";
+const aiBreakingDate = "2026年7月5日 12:15 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
