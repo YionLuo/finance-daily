@@ -7,20 +7,25 @@
   <title>中国全部城市</title>
   <style>
     :root {
-      color-scheme: dark;
-      --bg: #202b43;
-      --bg-deep: #172239;
-      --text: #f4f7ff;
-      --muted: #9eabc2;
-      --muted-strong: #c6cfdf;
-      --line: rgba(255, 255, 255, 0.1);
-      --accent: #ff9c27;
-      --accent-2: #54c3ff;
-      --danger: #ff7272;
-      --sheet: #eef3fb;
-      --sheet-text: #1c2942;
-      --radius: 10px;
-      --side: clamp(20px, 5vw, 34px);
+      color-scheme: light;
+      --bg: #f3f7f5;
+      --bg-soft: #e8f0ed;
+      --surface: #ffffff;
+      --surface-tint: #eef5f2;
+      --text: #12211d;
+      --muted: #66756f;
+      --muted-strong: #40514b;
+      --line: rgba(23, 42, 36, 0.13);
+      --accent: #e87538;
+      --accent-2: #087f8c;
+      --success: #1f9d72;
+      --danger: #cf4d4d;
+      --sheet: #ffffff;
+      --sheet-text: #17231f;
+      --radius: 8px;
+      --side: clamp(18px, 4vw, 44px);
+      --shadow-soft: 0 16px 36px rgba(23, 42, 36, 0.12);
+      --shadow-strong: 0 26px 70px rgba(23, 42, 36, 0.24);
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     }
 
@@ -31,14 +36,15 @@
     html {
       min-height: 100%;
       background: var(--bg);
+      scroll-behavior: smooth;
     }
 
     body {
       min-height: 100%;
       margin: 0;
       background:
-        radial-gradient(circle at 12% 0%, rgba(84, 195, 255, 0.12), transparent 28rem),
-        linear-gradient(180deg, #21304b 0%, var(--bg) 24rem, #1c2940 100%);
+        linear-gradient(180deg, #e7f3ef 0, #f7faf8 22rem, #eef4f6 100%),
+        repeating-linear-gradient(135deg, rgba(8, 127, 140, 0.06) 0 1px, transparent 1px 24px);
       color: var(--text);
       letter-spacing: 0;
     }
@@ -53,23 +59,17 @@
     }
 
     .app {
-      width: min(100%, 560px);
+      width: min(100%, 1280px);
       min-height: 100vh;
       margin: 0 auto;
-      padding: calc(env(safe-area-inset-top) + 26px) 0 calc(env(safe-area-inset-bottom) + 34px);
+      padding: calc(env(safe-area-inset-top) + 22px) 0 calc(env(safe-area-inset-bottom) + 42px);
     }
 
     .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
       display: flex;
       align-items: center;
       gap: 14px;
-      padding: 14px var(--side) 12px;
-      background: linear-gradient(180deg, rgba(32, 43, 67, 0.98), rgba(32, 43, 67, 0.78) 70%, rgba(32, 43, 67, 0));
-      -webkit-backdrop-filter: blur(18px);
-      backdrop-filter: blur(18px);
+      padding: 16px var(--side) 18px;
     }
 
     .back-button,
@@ -80,16 +80,20 @@
       height: 42px;
       flex: 0 0 auto;
       place-items: center;
-      border: 0;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--text);
+      box-shadow: 0 8px 22px rgba(23, 42, 36, 0.08);
       cursor: pointer;
-      transition: transform 160ms ease, background 160ms ease;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
     }
 
     .back-button {
       margin-left: -8px;
       background: transparent;
+      border-color: transparent;
+      box-shadow: none;
     }
 
     .back-button:active,
@@ -106,17 +110,17 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(30px, 8vw, 40px);
-      font-weight: 800;
-      line-height: 1.12;
+      font-size: clamp(29px, 5vw, 52px);
+      font-weight: 850;
+      line-height: 1.04;
       letter-spacing: 0;
     }
 
     .subtitle {
-      margin-top: 7px;
+      margin-top: 8px;
       color: var(--muted-strong);
-      font-size: 14px;
-      font-weight: 650;
+      font-size: clamp(14px, 1.8vw, 17px);
+      font-weight: 720;
     }
 
     .tools {
@@ -126,12 +130,14 @@
 
     .search-row {
       position: sticky;
-      top: 68px;
-      z-index: 19;
+      top: 0;
+      z-index: 20;
       display: flex;
       gap: 10px;
-      padding: 4px var(--side) 16px;
-      background: linear-gradient(180deg, rgba(32, 43, 67, 0.92), rgba(32, 43, 67, 0.72) 72%, rgba(32, 43, 67, 0));
+      padding: 10px var(--side) 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.44);
+      border-bottom: 1px solid var(--line);
+      background: rgba(243, 247, 245, 0.9);
       -webkit-backdrop-filter: blur(18px);
       backdrop-filter: blur(18px);
     }
@@ -139,12 +145,13 @@
     .search-box {
       position: relative;
       flex: 1;
+      min-width: 0;
     }
 
     .search-box svg {
       position: absolute;
       top: 50%;
-      left: 14px;
+      left: 15px;
       transform: translateY(-50%);
       color: var(--muted);
       pointer-events: none;
@@ -152,49 +159,57 @@
 
     .search-box input {
       width: 100%;
-      height: 44px;
-      padding: 0 16px 0 42px;
+      height: 46px;
+      padding: 0 16px 0 43px;
       border: 1px solid var(--line);
       border-radius: 999px;
       outline: 0;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.86);
       color: var(--text);
       font-size: 16px;
-      font-weight: 650;
+      font-weight: 680;
+      box-shadow: 0 8px 22px rgba(23, 42, 36, 0.06);
+    }
+
+    .search-box input:focus {
+      border-color: rgba(8, 127, 140, 0.48);
+      box-shadow: 0 0 0 4px rgba(8, 127, 140, 0.1);
     }
 
     .search-box input::placeholder {
-      color: #8593aa;
+      color: #84928d;
     }
 
     .stats {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      padding: 6px var(--side) 20px;
+      gap: 12px;
+      padding: 18px var(--side) 24px;
     }
 
     .stat {
       min-width: 0;
-      padding: 11px 12px;
+      padding: 14px 16px;
       border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 10px 26px rgba(23, 42, 36, 0.07);
     }
 
     .stat b {
       display: block;
-      font-size: 20px;
-      line-height: 1.1;
+      color: var(--accent-2);
+      font-size: clamp(22px, 4vw, 36px);
+      line-height: 1;
       letter-spacing: 0;
     }
 
     .stat span {
       display: block;
-      margin-top: 5px;
+      margin-top: 7px;
       color: var(--muted);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 760;
       white-space: nowrap;
     }
 
@@ -203,7 +218,12 @@
     }
 
     .section {
-      padding: 13px var(--side) 24px;
+      padding: 26px var(--side) 32px;
+      border-top: 1px solid rgba(23, 42, 36, 0.08);
+    }
+
+    .section:first-child {
+      border-top: 0;
     }
 
     .section[hidden] {
@@ -212,16 +232,17 @@
 
     .section h2 {
       margin: 0 0 18px;
-      font-size: clamp(26px, 7vw, 34px);
+      color: var(--text);
+      font-size: clamp(22px, 4.8vw, 30px);
       font-weight: 850;
-      line-height: 1.16;
+      line-height: 1.18;
       letter-spacing: 0;
     }
 
     .city-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 21px 13px;
+      gap: 20px 12px;
     }
 
     .city-card {
@@ -230,6 +251,7 @@
       padding: 0;
       border: 0;
       background: transparent;
+      color: inherit;
       text-align: center;
       cursor: pointer;
     }
@@ -240,19 +262,20 @@
       width: 100%;
       aspect-ratio: 1 / 1;
       overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.86);
       border-radius: var(--radius);
       background:
-        linear-gradient(135deg, rgba(84, 195, 255, 0.18), rgba(255, 156, 39, 0.16)),
-        #2a3853;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+        linear-gradient(135deg, rgba(8, 127, 140, 0.16), rgba(232, 117, 56, 0.15)),
+        #dce8e4;
+      box-shadow: var(--shadow-soft);
     }
 
     .thumb img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.96;
-      filter: saturate(1.08) contrast(1.04);
+      opacity: 0.98;
+      filter: saturate(1.04) contrast(1.02);
       transform: scale(1.02);
     }
 
@@ -260,7 +283,7 @@
       position: absolute;
       inset: 0;
       content: "";
-      background: rgba(11, 18, 31, 0.45);
+      background: rgba(14, 31, 26, 0.46);
       transition: background 180ms ease;
     }
 
@@ -270,14 +293,14 @@
       bottom: 0;
       left: 0;
       z-index: 2;
-      padding: 4px 4px 5px;
-      background: linear-gradient(180deg, rgba(7, 10, 16, 0), rgba(7, 10, 16, 0.78));
+      padding: 4px 1px 5px;
+      background: linear-gradient(180deg, rgba(5, 9, 8, 0), rgba(5, 9, 8, 0.78));
       color: #fff;
-      font-size: clamp(10px, 2.85vw, 16px);
+      font-size: clamp(8px, 2.45vw, 14px);
       font-weight: 850;
       line-height: 1.1;
       text-align: center;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.48);
       white-space: nowrap;
       opacity: 0;
       transform: translateY(6px);
@@ -293,9 +316,10 @@
       width: 22px;
       height: 22px;
       place-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.36);
+      border: 1px solid rgba(255, 255, 255, 0.72);
       border-radius: 50%;
-      background: rgba(15, 21, 33, 0.48);
+      background: var(--success);
+      color: #fff;
       opacity: 0;
       transform: translateY(-5px);
       transition: opacity 180ms ease, transform 180ms ease;
@@ -303,17 +327,18 @@
 
     .city-name {
       display: block;
-      min-height: 2.3em;
+      min-height: 2.44em;
       margin-top: 9px;
-      color: rgba(244, 247, 255, 0.9);
-      font-size: clamp(17px, 4.7vw, 22px);
-      font-weight: 850;
-      line-height: 1.15;
+      color: var(--muted-strong);
+      font-size: clamp(13px, 3.45vw, 16px);
+      font-weight: 780;
+      line-height: 1.22;
       overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .city-card.is-lit .thumb::after {
-      background: rgba(7, 10, 16, 0.04);
+      background: rgba(5, 13, 11, 0.02);
     }
 
     .city-card.is-lit .date-badge,
@@ -323,15 +348,15 @@
     }
 
     .city-card.is-lit .city-name {
-      color: #fff;
+      color: var(--text);
     }
 
     .empty-state {
       display: none;
-      padding: 28px var(--side) 60px;
+      padding: 36px var(--side) 70px;
       color: var(--muted-strong);
       font-size: 18px;
-      font-weight: 750;
+      font-weight: 760;
       text-align: center;
     }
 
@@ -340,18 +365,18 @@
     }
 
     dialog {
-      width: min(100% - 28px, 432px);
+      width: min(100% - 28px, 440px);
       margin: auto auto max(18px, env(safe-area-inset-bottom));
       padding: 0;
       border: 0;
-      border-radius: 18px;
+      border-radius: 16px;
       background: var(--sheet);
       color: var(--sheet-text);
-      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.48);
+      box-shadow: var(--shadow-strong);
     }
 
     dialog::backdrop {
-      background: rgba(8, 13, 23, 0.62);
+      background: rgba(15, 26, 23, 0.46);
       -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
     }
@@ -374,7 +399,7 @@
 
     .sheet-city span {
       display: block;
-      color: #69758b;
+      color: var(--muted);
       font-size: 13px;
       font-weight: 800;
     }
@@ -390,14 +415,15 @@
     .close-button {
       width: 38px;
       height: 38px;
-      background: #dfe6f0;
-      color: #3a4659;
+      background: var(--surface-tint);
+      color: var(--muted-strong);
+      box-shadow: none;
     }
 
     .date-field {
       display: block;
       margin: 0 0 14px;
-      color: #46536a;
+      color: var(--muted-strong);
       font-size: 13px;
       font-weight: 800;
     }
@@ -408,8 +434,8 @@
       height: 50px;
       margin-top: 8px;
       padding: 0 14px;
-      border: 1px solid #c8d2df;
-      border-radius: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       background: #fff;
       color: var(--sheet-text);
       font-size: 18px;
@@ -425,22 +451,22 @@
     .action-button {
       min-height: 48px;
       border: 0;
-      border-radius: 10px;
-      background: #dfe7f2;
-      color: #23314a;
+      border-radius: var(--radius);
+      background: var(--surface-tint);
+      color: var(--text);
       font-size: 16px;
       font-weight: 850;
       cursor: pointer;
     }
 
     .action-button.primary {
-      background: linear-gradient(135deg, #ff9c27, #ffbd5c);
-      color: #1f2635;
+      background: linear-gradient(135deg, var(--accent), #f0b35c);
+      color: #21150e;
     }
 
     .action-button.danger {
-      background: #ffe1e1;
-      color: #ba3838;
+      background: #ffe7e1;
+      color: #a33535;
     }
 
     .action-button.full {
@@ -464,14 +490,14 @@
       max-width: 420px;
       margin: 0 auto;
       padding: 13px 16px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: rgba(13, 20, 34, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      background: rgba(18, 33, 29, 0.92);
       color: #fff;
       font-size: 15px;
-      font-weight: 750;
+      font-weight: 760;
       text-align: center;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.34);
+      box-shadow: 0 16px 36px rgba(23, 42, 36, 0.24);
       opacity: 0;
       pointer-events: none;
       transform: translateY(14px);
@@ -483,31 +509,105 @@
       transform: translateY(0);
     }
 
-    @media (min-width: 700px) {
-      .app {
-        width: min(100%, 680px);
+    @media (hover: hover) {
+      .back-button:hover,
+      .tool-button:hover,
+      .close-button:hover {
+        background: #fff;
+        border-color: rgba(8, 127, 140, 0.3);
       }
 
-      .city-grid {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+      .city-card:hover .thumb {
+        box-shadow: 0 18px 42px rgba(23, 42, 36, 0.18);
+      }
+
+      .city-card:hover .thumb img {
+        transform: scale(1.06);
       }
     }
 
-    @media (max-width: 360px) {
+    @media (min-width: 700px) {
+      .topbar {
+        padding-top: 24px;
+      }
+
+      .city-grid {
+        grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+        gap: 28px 18px;
+      }
+
+      .city-name {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .stats {
+        padding-bottom: 34px;
+      }
+
+      .section {
+        padding-top: 34px;
+        padding-bottom: 42px;
+      }
+
+      .city-grid {
+        grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+        gap: 30px 20px;
+      }
+    }
+
+    @media (max-width: 430px) {
       :root {
         --side: 16px;
+      }
+
+      .topbar {
+        gap: 8px;
+      }
+
+      .back-button,
+      .tool-button {
+        width: 38px;
+        height: 38px;
+      }
+
+      .tools {
+        gap: 5px;
+      }
+
+      .stats {
+        gap: 7px;
+      }
+
+      .stat {
+        padding: 11px 9px;
       }
 
       .city-grid {
         gap: 18px 10px;
       }
+    }
 
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
+    @media (max-width: 350px) {
       .tools {
         display: none;
+      }
+
+      .city-name {
+        font-size: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
@@ -525,12 +625,12 @@
         <div class="subtitle" id="overallSubtitle">已点亮 0/0</div>
       </div>
       <div class="tools" aria-label="工具">
-        <button class="tool-button" type="button" id="importButton" aria-label="导入">
+        <button class="tool-button" type="button" id="importButton" aria-label="导入" title="导入">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <button class="tool-button" type="button" id="exportButton" aria-label="导出">
+        <button class="tool-button" type="button" id="exportButton" aria-label="导出" title="导出">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 21V9m0 0 4 4m-4-4-4 4M5 3h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -545,7 +645,7 @@
         </svg>
         <input id="searchInput" type="search" placeholder="搜索城市" autocomplete="off">
       </label>
-      <button class="tool-button" type="button" id="clearButton" aria-label="清空">
+      <button class="tool-button" type="button" id="clearButton" aria-label="清空点亮记录" title="清空点亮记录">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M3 6h18m-2 0-.7 12.1A2 2 0 0 1 16.3 20H7.7a2 2 0 0 1-2-1.9L5 6m3 0V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m-7 4 1 6m5-6-1 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -590,14 +690,61 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
-    const STORAGE_KEY = "yionme.cityLights.v1";
+    const STORAGE_KEY = "yionme.cityLights.v3";
     const TODAY = new Date();
     const DEFAULT_VISITED = {
       "直辖市|北京市": "2021-03-17",
       "直辖市|上海市": "2023-12-14",
       "直辖市|重庆市": "2021-03-05",
       "港澳台|香港特别行政区": "2023-10-20",
-      "港澳台|澳门特别行政区": "2024-01-29"
+      "港澳台|澳门特别行政区": "2024-01-29",
+      "福建|厦门市": "2025-12-27",
+      "福建|泉州市": "2025-12-27",
+      "福建|南平市": "2026-05-02",
+      "福建|龙岩市": "2025-12-26",
+      "广东|广州市": "2021-01-19",
+      "广东|韶关市": "2021-01-23",
+      "广东|深圳市": "2021-01-30",
+      "广东|珠海市": "2023-05-26",
+      "广东|佛山市": "2021-02-10",
+      "广东|江门市": "2021-02-10",
+      "广东|肇庆市": "2023-04-15",
+      "广东|惠州市": "2021-02-11",
+      "广东|梅州市": "2021-02-11",
+      "广东|河源市": "2021-02-11",
+      "广东|清远市": "2021-11-13",
+      "广东|东莞市": "2021-01-30",
+      "广东|中山市": "2023-05-26",
+      "广西|桂林市": "2020-10-25",
+      "广西|贺州市": "2023-04-15",
+      "海南|三亚市": "2023-08-20",
+      "海南|陵水黎族自治县": "2023-08-18",
+      "河北|廊坊市": "2023-05-08",
+      "湖北|武汉市": "2024-10-02",
+      "湖北|黄石市": "2024-09-30",
+      "湖南|长沙市": "2026-04-04",
+      "吉林|白山市": "2023-12-15",
+      "江苏|无锡市": "2022-08-21",
+      "江苏|苏州市": "2022-08-20",
+      "江苏|扬州市": "2023-04-01",
+      "内蒙古|呼伦贝尔市": "2023-06-17",
+      "山西|太原市": "2025-10-04",
+      "山西|大同市": "2025-10-07",
+      "山西|晋中市": "2025-10-05",
+      "山西|忻州市": "2025-10-06",
+      "陕西|西安市": "2021-10-03",
+      "陕西|咸阳市": "2021-10-03",
+      "四川|成都市": "2021-05-01",
+      "四川|德阳市": "2021-05-04",
+      "云南|昆明市": "2025-06-27",
+      "云南|玉溪市": "2025-06-28",
+      "云南|保山市": "2023-01-16",
+      "云南|丽江市": "2022-06-01",
+      "云南|普洱市": "2023-04-30",
+      "云南|西双版纳傣族自治州": "2023-04-30",
+      "云南|大理白族自治州": "2022-05-31",
+      "云南|迪庆藏族自治州": "2022-06-01",
+      "浙江|绍兴市": "2021-04-11"
     };
 
     const SECTION_TEXT = [
@@ -609,11 +756,11 @@
       ["广东", "广州市 韶关市 深圳市 珠海市 汕头市 佛山市 江门市 湛江市 茂名市 肇庆市 惠州市 梅州市 汕尾市 河源市 阳江市 清远市 东莞市 中山市 潮州市 揭阳市 云浮市"],
       ["广西", "南宁市 柳州市 桂林市 梧州市 北海市 防城港市 钦州市 贵港市 玉林市 百色市 贺州市 河池市 来宾市 崇左市"],
       ["贵州", "贵阳市 六盘水市 遵义市 安顺市 毕节市 铜仁市 黔西南布依族苗族自治州 黔东南苗族侗族自治州 黔南布依族苗族自治州"],
-      ["海南", "海口市 三亚市 三沙市 儋州市"],
+      ["海南", "海口市 三亚市 三沙市 儋州市 五指山市 琼海市 文昌市 万宁市 东方市 定安县 屯昌县 澄迈县 临高县 白沙黎族自治县 昌江黎族自治县 乐东黎族自治县 陵水黎族自治县 保亭黎族苗族自治县 琼中黎族苗族自治县"],
       ["河北", "石家庄市 唐山市 秦皇岛市 邯郸市 邢台市 保定市 张家口市 承德市 沧州市 廊坊市 衡水市"],
-      ["河南", "郑州市 开封市 洛阳市 平顶山市 安阳市 鹤壁市 新乡市 焦作市 濮阳市 许昌市 漯河市 三门峡市 南阳市 商丘市 信阳市 周口市 驻马店市"],
+      ["河南", "郑州市 开封市 洛阳市 平顶山市 安阳市 鹤壁市 新乡市 焦作市 濮阳市 许昌市 漯河市 三门峡市 南阳市 商丘市 信阳市 周口市 驻马店市 济源市"],
       ["黑龙江", "哈尔滨市 齐齐哈尔市 鸡西市 鹤岗市 双鸭山市 大庆市 伊春市 佳木斯市 七台河市 牡丹江市 黑河市 绥化市 大兴安岭地区"],
-      ["湖北", "武汉市 黄石市 十堰市 宜昌市 襄阳市 鄂州市 荆门市 孝感市 荆州市 黄冈市 咸宁市 随州市 恩施土家族苗族自治州"],
+      ["湖北", "武汉市 黄石市 十堰市 宜昌市 襄阳市 鄂州市 荆门市 孝感市 荆州市 黄冈市 咸宁市 随州市 恩施土家族苗族自治州 仙桃市 潜江市 天门市 神农架林区"],
       ["湖南", "长沙市 株洲市 湘潭市 衡阳市 邵阳市 岳阳市 常德市 张家界市 益阳市 郴州市 永州市 怀化市 娄底市 湘西土家族苗族自治州"],
       ["吉林", "长春市 吉林市 四平市 辽源市 通化市 白山市 松原市 白城市 延边朝鲜族自治州"],
       ["江苏", "南京市 无锡市 徐州市 常州市 苏州市 南通市 连云港市 淮安市 盐城市 扬州市 镇江市 泰州市 宿迁市"],
@@ -654,6 +801,8 @@
           .replace("彝族自治州", "州")
           .replace("傣族自治州", "州")
           .replace("白族自治州", "州")
+          .replace("黎族苗族自治县", "自治县")
+          .replace("黎族自治县", "自治县")
           .replace("傈僳族自治州", "州")
           .replace("壮族苗族自治州", "州")
       }))
@@ -754,10 +903,14 @@
           thumb.className = "thumb";
           const image = document.createElement("img");
           image.src = imageUrl(city.id);
+          image.dataset.fallbackSrc = fallbackImageUrl(city.id);
           image.alt = "";
           image.loading = "lazy";
           image.decoding = "async";
           image.referrerPolicy = "no-referrer";
+          image.addEventListener("error", () => {
+            if (image.src !== image.dataset.fallbackSrc) image.src = image.dataset.fallbackSrc;
+          });
           thumb.appendChild(image);
 
           const pin = document.createElement("span");
@@ -914,7 +1067,17 @@
     }
 
     function imageUrl(seed) {
+      return `assets/${assetName(seed)}.jpg`;
+    }
+
+    function fallbackImageUrl(seed) {
       return `https://picsum.photos/seed/${encodeURIComponent(seed)}/320/320`;
+    }
+
+    function assetName(seed) {
+      return Array.from(new TextEncoder().encode(seed))
+        .map(byte => byte.toString(16).padStart(2, "0"))
+        .join("");
     }
 
     function formatInputDate(date) {
