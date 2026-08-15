@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 64.43,
   previous1Month: 41.06,
   previous1Year: 63.26,
-  date: "2026年8月16日 04:33 CST"
+  date: "2026年8月16日 05:29 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,11 @@ const breakingNews = [
   { time: "06:51", tag: "geo", tagText: "地缘", text: "特朗普提名前俄克拉荷马州州警兰斯·施罗耶担任美国移民和海关执法局（ICE）局长。前任局长托德·莱昂斯于5月底辞职，大卫·文图雷拉一直担任代理局长。该任命显示特朗普政府继续强化边境执法立场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/trump-nominates-ex-oklahoma-state-trooper-lance-schroyer-as-ice-director.html" },
   { time: "06:22", tag: "macro", tagText: "宏观", text: "阿根廷总统米莱的内阁首席部长曼努埃尔·阿多尼因腐败指控辞职，此前数月丑闻已困扰该国自由派政府。此举可能影响米莱的经济改革议程和投资者信心。", source: "Financial Times", url: "https://www.ft.com/content/db091e41-ea8c-4aac-b76c-b303f799d191" },
 ];
-const breakingDate = "2026年8月16日 04:33 CST";
+const breakingDate = "2026年8月16日 05:29 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:42", tag: "tech", tagText: "科技", text: "软银CEO孙正义对马斯克的轨道数据中心愿景提出质疑，认为该计划面临巨大工程和成本挑战。此前马斯克曾宣称将在低轨道部署大型数据中心，但投资者和业内专家普遍怀疑其可行性。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/softbanks-ceo-isnt-the-only-one-with-questions-about-elon-musks-orbital-data-center-hype/" },
   { time: "02:55", tag: "tech", tagText: "科技", text: "《纽约时报》分析指出，一项此前不起眼的底层技术正成为人工智能发展的关键瓶颈。该技术环节的供应受限、成本上升或性能瓶颈，可能拖累整个AI产业的迭代速度与部署规模。文章呼吁业界关注供应链中的“灰犀牛”风险。", source: "The New York Times", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWR0RnpqZnpUN2NoVktOR05SWTVHZVd1UkRRanFQVk51czB6bWF3VGR6VWRLMEw2UUk2bmJGSUNweC1BZi1tTFVoUmlRaVM3d1h5ZnhiemJkUkFYNGlDTUFQR2ZJMjBrcmZ3b25LWUJEYndlODVEdjMtd2JmY2JObzg3U0pIbjVQR2c?oc=5" },
   { time: "02:32", tag: "ai|geo", tagText: "AI|地缘", text: "OpenAI应美国政府要求，限制其最新大模型GPT-5.6仅向“可信合作伙伴”开放，而非全面推迟发布。公司表示此类政府干预不应成为常态，呼吁建立更合理的监管框架，以避免将最先进工具封锁在用户、开发者和企业之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "15:56", tag: "ai", tagText: "AI", text: "分析指出，印度AI初创企业与研发面临核心资金缺口问题。尽管印度拥有庞大技术人才库，但风险投资对AI领域投资不足，导致创新与商业化受阻，全球竞争力受限。", source: "WION", url: "https://news.google.com/rss/articles/CBMiggJBVV95cUxNWE8zaDRQRXdGanhkQXB3Sl94WDVOOEZCU3k2UTZEVVpPcVBGdVRQbk9ZMFYwTkxIOXlDMjQxS1V0b3dkWVJOQWhNQ2RCLVNtYmxlUW5XaGNRQ0FsMG5JSkZ0ZkI2RlVzYWotTVk0WmRNVWE4b2FYSG1rVFhicGJCZk1PaThlYk5Vc04tbDEyNHZIenVMUzNrM1pId1drLXRrZWk4TUF1QnhITUtsenpfNzI0bTV4UVh6RTN5NWIwcGwtcXY2MVBwdkNJcTMxb2REUnJsTmMzMTJqVE5TUHVfRV9udUhURTZOdDFSemhaUVk1RWdBS0wwVUg5cm95aUJQWmfSAYcCQVVfeXFMTUJ3d3VtcFV1MFVHN1FiMHRRZzNLZUt4R0t0ak9QVnZCekRPdGhtbEFMMG42bFhIV3gtYkJjUFA4VG5QMjktS29DMTRXakp1WTVZN0daTXlORi1wcFk3N3hWejJaMjZldnIySWl1cGpJN3d1MnlKM1FuRzE2a0IyOHBUZThxV2FSTjJNUkRsZUdUUkxWbUdnWkk2bXhMQzNFbDl5V0tOMzBpb0ZFcW9oOGtKQTZzRFlIOFBsaHBlZUNOakM4cW9jQjJQaVJ1US1UdnUxdEUxYzVSRnhOejlRTDhVTjZubWhySG1VRXNXMjhlTW5HQzItWWZDaWVwTDAwYXlqekp0NEk?oc=5" },
   { time: "12:23", tag: "tech", tagText: "科技", text: "中东和北非（MENA）地区创业融资与并购势头持续。近期多笔交易显示，当地科技生态系统活跃，资本持续流入早期及成长期企业，涉及多个垂直领域。", source: "Arab News PK", url: "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5NVnNmdS1Qam9SMVpXbFZ4d0cwUmctcUpGa1JjcGhkSzVyV21lM01WOW56SzNjcGozdjZDRGoyT29xQWhnbWZRdmJ1WVRBakJkZk9LR2pSRDVoajVfN1l1UlZJSQ?oc=5" },
   { time: "12:09", tag: "ai", tagText: "AI", text: "2026年AI半导体市场迎来繁荣，预测市场规模达1.3万亿美元。顶级芯片股如英伟达、AMD等正驱动这一增长，AI基础设施的持续需求推动行业扩张。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5vZnJYSk9JZGZmVWR4SThBLV9RNDctM3ZOQmRMTHlZd1k1T3ZXeHQ4aVBaQ0h6UU5nRlJIQ29WZHlWRVBfYU44UXNhTTc2TkN3LWZWbGkyU3lTcmo3bTNKb1Y4blU?oc=5" },
-  { time: "04:42", tag: "tech", tagText: "科技", text: "软银CEO孙正义对马斯克的轨道数据中心愿景提出质疑，认为该计划面临巨大工程和成本挑战。此前马斯克曾宣称将在低轨道部署大型数据中心，但投资者和业内专家普遍怀疑其可行性。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/softbanks-ceo-isnt-the-only-one-with-questions-about-elon-musks-orbital-data-center-hype/" },
 ];
-const aiBreakingDate = "2026年8月16日 04:33 CST";
+const aiBreakingDate = "2026年8月16日 05:29 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
