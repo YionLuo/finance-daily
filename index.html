@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 64.43,
   previous1Month: 41.06,
   previous1Year: 63.26,
-  date: "2026年8月17日 05:28 CST"
+  date: "2026年8月17日 06:30 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:22", tag: "macro", tagText: "宏观", text: "阿根廷总统米莱的内阁首席部长曼努埃尔·阿多尼因腐败指控辞职，此前数月丑闻已困扰该国自由派政府。此举可能影响米莱的经济改革议程和投资者信心。", source: "Financial Times", url: "https://www.ft.com/content/db091e41-ea8c-4aac-b76c-b303f799d191" },
   { time: "03:30", tag: "macro", tagText: "宏观", text: "先锋集团最新报告显示，2025年美国民众401(k)账户余额创下历史新高。强劲的股市上涨和持续缴费推动了退休储蓄增长，反映出美国家庭财富状况改善。", source: "MarketWatch", url: "https://www.marketwatch.com/story/americans-401-k-balances-hit-record-levels-last-year-see-how-you-compare-facd32c4?mod=mw_rss_topstories" },
   { time: "03:30", tag: "macro", tagText: "宏观", text: "美国一项新提案拟将Medicare参保人的年度自付费用上限设为5000美元，但预计将使政府每年增加“数百亿”美元支出。该法案旨在为所有Medicare受益人提供成本保护，但目前通过前景渺茫。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-new-bill-would-cap-medicare-enrollees-annual-expenses-at-5-000-and-could-cost-the-government-tens-of-billions-d370bb37?mod=mw_rss_topstories" },
   { time: "03:30", tag: "macro", tagText: "宏观", text: "特朗普政府推动更多年金产品进入401(k)计划，旨在为退休人员提供稳定收入。但专家警告，年金费用高昂且流动性差，对年轻储户未必适合，投资者需审慎评估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/annuities-are-coming-to-more-401-k-plans-should-workers-embrace-them-78f014e9?mod=mw_rss_topstories" },
@@ -1648,9 +1649,8 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "日本邮船CEO警告，霍尔木兹海峡的水雷将使航运受限长达数月，安全航道“极其有限”，通行量仅为战前水平的一半。全球能源运输面临严重威胁。", source: "Financial Times", url: "https://www.ft.com/content/a0739198-318c-4ae8-9953-ba88201edc45" },
   { time: "10:53", tag: "tech", tagText: "科技", text: "中国科技中心深圳加速推进自动驾驶出租车，扩大无人驾驶车辆运营，自动化浪潮正冲击网约车司机等零工经济从业者的生计。", source: "Financial Times", url: "https://www.ft.com/content/b1445598-e5e3-4530-9e82-e0155c44106b" },
   { time: "06:51", tag: "geo", tagText: "地缘", text: "特朗普提名前俄克拉荷马州州警兰斯·施罗耶担任美国移民和海关执法局（ICE）局长。前任局长托德·莱昂斯于5月底辞职，大卫·文图雷拉一直担任代理局长。该任命显示特朗普政府继续强化边境执法立场。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/trump-nominates-ex-oklahoma-state-trooper-lance-schroyer-as-ice-director.html" },
-  { time: "06:22", tag: "macro", tagText: "宏观", text: "阿根廷总统米莱的内阁首席部长曼努埃尔·阿多尼因腐败指控辞职，此前数月丑闻已困扰该国自由派政府。此举可能影响米莱的经济改革议程和投资者信心。", source: "Financial Times", url: "https://www.ft.com/content/db091e41-ea8c-4aac-b76c-b303f799d191" },
 ];
-const breakingDate = "2026年8月17日 05:28 CST";
+const breakingDate = "2026年8月17日 06:30 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "12:23", tag: "tech", tagText: "科技", text: "中东和北非（MENA）地区创业融资与并购势头持续。近期多笔交易显示，当地科技生态系统活跃，资本持续流入早期及成长期企业，涉及多个垂直领域。", source: "Arab News PK", url: "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5NVnNmdS1Qam9SMVpXbFZ4d0cwUmctcUpGa1JjcGhkSzVyV21lM01WOW56SzNjcGozdjZDRGoyT29xQWhnbWZRdmJ1WVRBakJkZk9LR2pSRDVoajVfN1l1UlZJSQ?oc=5" },
   { time: "12:09", tag: "ai", tagText: "AI", text: "2026年AI半导体市场迎来繁荣，预测市场规模达1.3万亿美元。顶级芯片股如英伟达、AMD等正驱动这一增长，AI基础设施的持续需求推动行业扩张。", source: "Intellectia AI", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5vZnJYSk9JZGZmVWR4SThBLV9RNDctM3ZOQmRMTHlZd1k1T3ZXeHQ4aVBaQ0h6UU5nRlJIQ29WZHlWRVBfYU44UXNhTTc2TkN3LWZWbGkyU3lTcmo3bTNKb1Y4blU?oc=5" },
 ];
-const aiBreakingDate = "2026年8月17日 05:28 CST";
+const aiBreakingDate = "2026年8月17日 06:30 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
