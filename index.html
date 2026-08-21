@@ -1616,19 +1616,20 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 52.14,
-  rating: "neutral",
-  timestamp: "2026-08-21T12:46:31+00:00",
+  score: 56.31,
+  rating: "greed",
+  timestamp: "2026-08-21T13:56:21+00:00",
   previousClose: 52.49,
   previous1Week: 63.97,
   previous1Month: 43.37,
   previous1Year: 52.6,
-  date: "2026年8月21日 21:03 CST"
+  date: "2026年8月21日 21:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:21", tag: "tech", tagText: "科技", text: "存储芯片短缺危机持续发酵，苹果和微软被迫提价以覆盖成本，但对小型消费电子公司而言已成“生存危机”。小企业面临更严峻的供应短缺和成本飙升，行业洗牌加速。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/memory-crunch-shaking-apple-and-microsoft-existential-for-small-guys.html" },
   { time: "17:00", tag: "macro", tagText: "宏观", text: "国际清算银行（BIS）警告，人工智能领域的“狂热”可能以长期投资泡沫告终。若回报不及预期，对科技公司的资金支持或将大幅缩减，进而威胁全球经济。", source: "Financial Times", url: "https://www.ft.com/content/e81ce414-e4bd-4e8c-bac7-94f7bf17def4" },
   { time: "16:43", tag: "geo", tagText: "地缘", text: "特朗普再次威胁将“毁灭”伊朗，科威特和巴林报告遭袭。伊朗声称已对位于科威特和巴林的美国军事设施发动打击，以回应美国对霍尔木兹海峡附近目标的空袭，停火协议承压。", source: "CNBC", url: "https://www.cnbc.com/2026/06/28/trump-threatens-iran-with-annihilation-kuwait-bahrain-report-attacks.html" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "苹果将在英国最高法院就5亿美元专利费案进行抗辩。该案涉及移动通信协议的许可费率，裁决可能影响全球其他技术的专利授权定价标准。", source: "Financial Times", url: "https://www.ft.com/content/d6a0103a-7fca-4e66-b92f-45f6ff3de059" },
@@ -1648,12 +1649,13 @@ const breakingNews = [
   { time: "01:00", tag: "crypto", tagText: "加密", text: "链上数据显示，大型投资者（鲸鱼）重新开设高杠杆空头头寸，押注比特币和以太坊价格下跌。此举可能加剧加密货币市场短期波动，需警惕回调风险。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQc3AzUHl2X25VYm55TGpXLUZWR1pfTjJZVER1QV91RHhqQWtyQVgzZ25EbXFIUmtZNmt2dER0b1RlTWhPLTRVUkVBNTA0YnpIYy1OTDVsUm92c3hFU1hCQzFkVTlBc0VuUW45Q1k0cDRvY0xsR01lRExUeTJra0o4VlNJcmE3RHNtU3pkeDZ6dWNOcjV3QTdnWWM5TmJMMHdTM2NISXpFTzh5cGU0RVBwUlNNcU1HYUxPNUhkSWUwTXlEejRTZGswNm5VdTRSaXJYb1Z4RWpSRU1MQQ?oc=5" },
   { time: "23:32", tag: "macro", tagText: "宏观", text: "美敦力CEO向市场披露关税政策对公司的具体影响，包括供应链成本上升和定价压力，进一步揭示贸易摩擦对医疗科技行业的冲击。", source: "Insider Monkey", url: "https://finance.yahoo.com/economy/policy/articles/medtronic-plc-mdt-ceo-discloses-153207076.html" },
   { time: "22:59", tag: "geo", tagText: "地缘", text: "美国于当地时间26日对伊朗发动空袭，总统特朗普指控德黑兰违反霍尔木兹海峡停火协议。此次打击正值美伊原定60天无敌对状态谈判期间，令中东局势骤然升级，此前一艘台湾货船在霍尔木兹海峡遭不明袭击已引发紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-strikes-iran-strait-of-hormuz-ceasefire.html" },
-  { time: "21:21", tag: "tech", tagText: "科技", text: "存储芯片短缺危机持续发酵，苹果和微软被迫提价以覆盖成本，但对小型消费电子公司而言已成“生存危机”。小企业面临更严峻的供应短缺和成本飙升，行业洗牌加速。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/memory-crunch-shaking-apple-and-microsoft-existential-for-small-guys.html" },
 ];
-const breakingDate = "2026年8月21日 21:03 CST";
+const breakingDate = "2026年8月21日 21:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:30", tag: "tech", tagText: "科技", text: "苹果因AI投入成本上升，多款产品涨价。库克称价格上涨“不可避免”，并形容公司定价“不可持续”。16英寸MacBook Pro涨价300美元，11英寸iPad Air价格也随之上涨。分析认为，大型科技公司对AI的巨额投资正转嫁给消费者。", source: "The Verge", url: "https://www.theverge.com/report/958678/apple-consumer-price-increase-ai-big-tech" },
+  { time: "21:30", tag: "tech", tagText: "科技", text: "Adobe宣布收购图像与视频增强工具开发商Topaz Labs，计划将其工具整合至旗下各应用中。此举将增强Adobe在AI驱动的创意工具领域的竞争力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/" },
   { time: "20:00", tag: "geo", tagText: "地缘", text: "亚洲AI初创公司推出类似Anthropic Mythos的模型，利用美国出口禁令持续带来的市场空白。这些模型声称具备Mythos级别能力且不受出口管制影响。分析指出，美国AI公司可能永远失去这一巨大亚洲市场。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "福特被迫重新雇佣前工程师，以修复其自动化系统在质量管控中造成的错误。福特表示，这是为了应对近年来的可靠性挑战，并反思过度依赖自动化的问题。", source: "The Verge", url: "https://www.theverge.com/transportation/956316/ford-quality-jd-power-ranking-ai-automated-mistakes" },
   { time: "19:36", tag: "ai", tagText: "AI", text: "OpenAI发布首款自研AI芯片，代号“Jalapeño”。该芯片专为训练和推理优化，标志着OpenAI减少对外部供应商依赖的重要一步。具体性能参数尚未披露，但此举可能重塑AI芯片竞争格局。", source: "Memeburn", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTFB6X0xYOXFzMzRNVGVNdUcxYmtvaDJoYS1BaFBMSnlNT2xiNzZYYVVHQTE4T0FtNGstcTM3SWpOMXJidWQ5bk16TUtaT1RkOWx0NktlWXptRWlpSEZFU2lBUEtNZzg2MWdXNkJyN0NR?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "00:07", tag: "macro", tagText: "宏观", text: "6月22日至27日，印度18家初创企业（覆盖地产科技、电商、营销科技、金融科技、航天科技、网络安全、DevOps、农业科技、物流等领域）共获超10.8亿美元融资，显示印度科技创投市场活跃。", source: "Instagram (via Google News)", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1lYlViZkpTQThzVmRuRHQ4elNRZkEydlhUVUlFRGtKenZUSFI4bWc1M3pPczBLelE2NTZkRU1YaHdZMWV6aTlUYUUwcF9XLTNmZUE?oc=5" },
   { time: "22:39", tag: "ai", tagText: "AI", text: "《经济学人》发文探讨中国最新AI突破背后的关键人物，指出中国在人工智能领域持续取得进展，但未披露具体技术细节。文章分析了该突破对全球AI竞争格局的潜在影响。", source: "The Economist", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOY2EtaE1uZFFLTW5QTUNvb3Zxd01qMHV4eGFMelNISHE0RGNqM1lTZVNsaXhhb1gyV0ZXZXEzM3pIejlHU01BaGZIMHRrRzY2SU40Wm1pY1JnNXkxUk1qaU85WXlLZVV1c1d5MnV1N2ZtLUM0UjYtdXkwTDJoUTVwVmhXV3RTcWQ0YmhaRElFZW5mWHQ1VWVRMEpNWTY3UmdZdDIwaVA1eGFDX3Ry?oc=5" },
   { time: "22:07", tag: "geo", tagText: "地缘", text: "Anthropic的旗舰AI模型Mythos因特朗普政府以安全为由下达最后通牒，被迫下线已超两周。公司紧急与政府谈判，但情况持续恶化，双方尚未达成一致。该事件标志着美国政府与AI巨头间的模型安全博弈进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/957327/anthropic-mythos-fable-ai-trump-administration-negotiations" },
-  { time: "21:30", tag: "tech", tagText: "科技", text: "苹果因AI投入成本上升，多款产品涨价。库克称价格上涨“不可避免”，并形容公司定价“不可持续”。16英寸MacBook Pro涨价300美元，11英寸iPad Air价格也随之上涨。分析认为，大型科技公司对AI的巨额投资正转嫁给消费者。", source: "The Verge", url: "https://www.theverge.com/report/958678/apple-consumer-price-increase-ai-big-tech" },
-  { time: "21:30", tag: "tech", tagText: "科技", text: "Adobe宣布收购图像与视频增强工具开发商Topaz Labs，计划将其工具整合至旗下各应用中。此举将增强Adobe在AI驱动的创意工具领域的竞争力。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/" },
 ];
-const aiBreakingDate = "2026年8月21日 21:03 CST";
+const aiBreakingDate = "2026年8月21日 21:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
