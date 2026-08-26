@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 56.43,
+  score: 55.2,
   rating: "greed",
-  timestamp: "2026-08-26T14:51:17+00:00",
+  timestamp: "2026-08-26T16:22:56+00:00",
   previousClose: 58.8,
   previous1Week: 57.2,
   previous1Month: 41.34,
   previous1Year: 55.4,
-  date: "2026年8月26日 22:53 CST"
+  date: "2026年8月27日 00:24 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:32", tag: "macro", tagText: "宏观", text: "美敦力CEO向市场披露关税政策对公司的具体影响，包括供应链成本上升和定价压力，进一步揭示贸易摩擦对医疗科技行业的冲击。", source: "Insider Monkey", url: "https://finance.yahoo.com/economy/policy/articles/medtronic-plc-mdt-ceo-discloses-153207076.html" },
+  { time: "22:59", tag: "geo", tagText: "地缘", text: "美国于当地时间26日对伊朗发动空袭，总统特朗普指控德黑兰违反霍尔木兹海峡停火协议。此次打击正值美伊原定60天无敌对状态谈判期间，令中东局势骤然升级，此前一艘台湾货船在霍尔木兹海峡遭不明袭击已引发紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-strikes-iran-strait-of-hormuz-ceasefire.html" },
   { time: "21:21", tag: "tech", tagText: "科技", text: "存储芯片短缺危机持续发酵，苹果和微软被迫提价以覆盖成本，但对小型消费电子公司而言已成“生存危机”。小企业面临更严峻的供应短缺和成本飙升，行业洗牌加速。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/memory-crunch-shaking-apple-and-microsoft-existential-for-small-guys.html" },
   { time: "17:00", tag: "macro", tagText: "宏观", text: "国际清算银行（BIS）警告，人工智能领域的“狂热”可能以长期投资泡沫告终。若回报不及预期，对科技公司的资金支持或将大幅缩减，进而威胁全球经济。", source: "Financial Times", url: "https://www.ft.com/content/e81ce414-e4bd-4e8c-bac7-94f7bf17def4" },
   { time: "16:43", tag: "geo", tagText: "地缘", text: "特朗普再次威胁将“毁灭”伊朗，科威特和巴林报告遭袭。伊朗声称已对位于科威特和巴林的美国军事设施发动打击，以回应美国对霍尔木兹海峡附近目标的空袭，停火协议承压。", source: "CNBC", url: "https://www.cnbc.com/2026/06/28/trump-threatens-iran-with-annihilation-kuwait-bahrain-report-attacks.html" },
@@ -1647,13 +1649,12 @@ const breakingNews = [
   { time: "03:01", tag: "macro", tagText: "宏观", text: "亚马逊Prime Day消费数据显示，在通胀压力下，消费者支出同比增长9.3%，更多购买耐用品和折扣商品。零售专家认为，高通胀使消费者更注重性价比，推动大额消费集中于促销活动。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/amazon-prime-day.html" },
   { time: "02:11", tag: "macro", tagText: "宏观", text: "美国银行Bridgepoint接近达成收购某房地产单元的交易，押注美国房地产市场回暖。这家伦敦私募股权公司正从传统企业收购拓展至不动产领域。", source: "Financial Times", url: "https://www.ft.com/content/567ba6a4-809f-4e8e-a8f3-03855beb9a48" },
   { time: "01:00", tag: "crypto", tagText: "加密", text: "链上数据显示，大型投资者（鲸鱼）重新开设高杠杆空头头寸，押注比特币和以太坊价格下跌。此举可能加剧加密货币市场短期波动，需警惕回调风险。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQc3AzUHl2X25VYm55TGpXLUZWR1pfTjJZVER1QV91RHhqQWtyQVgzZ25EbXFIUmtZNmt2dER0b1RlTWhPLTRVUkVBNTA0YnpIYy1OTDVsUm92c3hFU1hCQzFkVTlBc0VuUW45Q1k0cDRvY0xsR01lRExUeTJra0o4VlNJcmE3RHNtU3pkeDZ6dWNOcjV3QTdnWWM5TmJMMHdTM2NISXpFTzh5cGU0RVBwUlNNcU1HYUxPNUhkSWUwTXlEejRTZGswNm5VdTRSaXJYb1Z4RWpSRU1MQQ?oc=5" },
-  { time: "23:32", tag: "macro", tagText: "宏观", text: "美敦力CEO向市场披露关税政策对公司的具体影响，包括供应链成本上升和定价压力，进一步揭示贸易摩擦对医疗科技行业的冲击。", source: "Insider Monkey", url: "https://finance.yahoo.com/economy/policy/articles/medtronic-plc-mdt-ceo-discloses-153207076.html" },
-  { time: "22:59", tag: "geo", tagText: "地缘", text: "美国于当地时间26日对伊朗发动空袭，总统特朗普指控德黑兰违反霍尔木兹海峡停火协议。此次打击正值美伊原定60天无敌对状态谈判期间，令中东局势骤然升级，此前一艘台湾货船在霍尔木兹海峡遭不明袭击已引发紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/06/26/us-strikes-iran-strait-of-hormuz-ceasefire.html" },
 ];
-const breakingDate = "2026年8月26日 22:53 CST";
+const breakingDate = "2026年8月27日 00:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:07", tag: "macro", tagText: "宏观", text: "6月22日至27日，印度18家初创企业（覆盖地产科技、电商、营销科技、金融科技、航天科技、网络安全、DevOps、农业科技、物流等领域）共获超10.8亿美元融资，显示印度科技创投市场活跃。", source: "Instagram (via Google News)", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1lYlViZkpTQThzVmRuRHQ4elNRZkEydlhUVUlFRGtKenZUSFI4bWc1M3pPczBLelE2NTZkRU1YaHdZMWV6aTlUYUUwcF9XLTNmZUE?oc=5" },
   { time: "22:39", tag: "ai", tagText: "AI", text: "《经济学人》发文探讨中国最新AI突破背后的关键人物，指出中国在人工智能领域持续取得进展，但未披露具体技术细节。文章分析了该突破对全球AI竞争格局的潜在影响。", source: "The Economist", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxOY2EtaE1uZFFLTW5QTUNvb3Zxd01qMHV4eGFMelNISHE0RGNqM1lTZVNsaXhhb1gyV0ZXZXEzM3pIejlHU01BaGZIMHRrRzY2SU40Wm1pY1JnNXkxUk1qaU85WXlLZVV1c1d5MnV1N2ZtLUM0UjYtdXkwTDJoUTVwVmhXV3RTcWQ0YmhaRElFZW5mWHQ1VWVRMEpNWTY3UmdZdDIwaVA1eGFDX3Ry?oc=5" },
   { time: "22:07", tag: "geo", tagText: "地缘", text: "Anthropic的旗舰AI模型Mythos因特朗普政府以安全为由下达最后通牒，被迫下线已超两周。公司紧急与政府谈判，但情况持续恶化，双方尚未达成一致。该事件标志着美国政府与AI巨头间的模型安全博弈进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/957327/anthropic-mythos-fable-ai-trump-administration-negotiations" },
   { time: "21:30", tag: "tech", tagText: "科技", text: "苹果因AI投入成本上升，多款产品涨价。库克称价格上涨“不可避免”，并形容公司定价“不可持续”。16英寸MacBook Pro涨价300美元，11英寸iPad Air价格也随之上涨。分析认为，大型科技公司对AI的巨额投资正转嫁给消费者。", source: "The Verge", url: "https://www.theverge.com/report/958678/apple-consumer-price-increase-ai-big-tech" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
   { time: "00:45", tag: "tech", tagText: "科技", text: "苹果Vision Pro负责人Paul Meade据悉将离职并加入OpenAI硬件团队。这位苹果副总裁的跳槽，标志着OpenAI在硬件领域的布局进一步增强，同时也引发外界对苹果空间计算业务未来方向的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/" },
   { time: "00:29", tag: "ai", tagText: "AI", text: "分析师预测：物理AI将在未来4-5年成为AI增长最快的领域之一。该分析师曾给出SpaceX 250美元目标价，指出机器人、自动驾驶等实体AI应用将加速发展。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdmlOSXBmTUg1X3lnZF93Z3Z6bU5fX25qWW9hTW1HSzZzQjAzTlFzd0VsZ1pkZWxXZVRXRzZ4aVVyVllaclZQQVI2eE5zNDU3V3lENE84SFJRUVlKOUVTdU9pQnlhMkxoYnRlby1scWU3TWt4QWtqRnVwVENwNWR2d0ZPVFR5Vkl3XzMwQTdMTEtqNC01MkdCYVJLLWxKZmNXUHNtN3dXZzZiRGV3ZkY2bzRvT0NCRC1hcTFRRE50U3AxLWJnZlBMTVlpVDlEbnNSSU1lcVc2OGJYTk9hd2x3dldaMVEycDNMOXBFZ0pPOA?oc=5" },
-  { time: "00:07", tag: "macro", tagText: "宏观", text: "6月22日至27日，印度18家初创企业（覆盖地产科技、电商、营销科技、金融科技、航天科技、网络安全、DevOps、农业科技、物流等领域）共获超10.8亿美元融资，显示印度科技创投市场活跃。", source: "Instagram (via Google News)", url: "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1lYlViZkpTQThzVmRuRHQ4elNRZkEydlhUVUlFRGtKenZUSFI4bWc1M3pPczBLelE2NTZkRU1YaHdZMWV6aTlUYUUwcF9XLTNmZUE?oc=5" },
 ];
-const aiBreakingDate = "2026年8月26日 22:53 CST";
+const aiBreakingDate = "2026年8月27日 00:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
