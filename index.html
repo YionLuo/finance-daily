@@ -1616,30 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 28.49,
+  score: 26.49,
   rating: "fear",
-  timestamp: "2026-09-16T18:04:41+00:00",
+  timestamp: "2026-09-16T21:45:13+00:00",
   previousClose: 28.66,
   previous1Week: 38.2,
   previous1Month: 64.31,
   previous1Year: 64.37,
-  date: "2026年9月17日 02:08 CST"
+  date: "2026年9月17日 06:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "21:22", tag: "macro", tagText: "宏观", text: "美国8月零售销售大幅反弹，创五个月来最大增幅，显示经济在夏末明显提速，为美联储即将启动的加息提供了新的数据支撑。消费韧性同时缓解了市场对经济快速降温的担忧。", source: "Reuters", url: "https://finance.yahoo.com/economy/articles/us-retail-sales-rebound-sharply-123724094.html" },
-  { time: "21:21", tag: "tech", tagText: "科技", text: "存储芯片短缺危机持续发酵，苹果和微软被迫提价以覆盖成本，但对小型消费电子公司而言已成“生存危机”。小企业面临更严峻的供应短缺和成本飙升，行业洗牌加速。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/memory-crunch-shaking-apple-and-microsoft-existential-for-small-guys.html" },
-  { time: "21:20", tag: "macro", tagText: "宏观", text: "美联储料将宣布三年来首次加息。交易员押注FOMC加息25个基点的概率超过90%，华尔街普遍视本次加息为几乎板上钉钉，但仍有少数观点认为可能按兵不动。市场同时押注，随着加息周期重启，特朗普可能很快对美联储主席沃什（Kevin Warsh）转变态度。决议公布前，美股期货小幅走高，道指上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/fed-meeting-today-live-updates.html" },
-  { time: "21:04", tag: "tech", tagText: "科技", text: "英特尔与SK海力士据报正就于美国本土生产存储芯片展开磋商，消息推动两家公司股价大涨。若交易达成，将是英特尔代工业务的重大突破——该公司一直在争取重量级客户以支撑其芯片制造业务。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/intel-sk-hynix-us-memory-chips.html" },
-  { time: "21:03", tag: "macro", tagText: "宏观", text: "10年期美债收益率触及5%，为多年高位，意味着美国政府的债务利息账单将显著膨胀。分析指出，收益率维持高位的时间越长，财政状况恶化的速度越快，利息支出对预算的挤压效应将持续放大。", source: "MarketWatch", url: "https://www.marketwatch.com/story/5-treasury-yields-mean-americas-debt-bill-just-got-a-lot-bigger-8a5702b0?mod=mw_rss_topstories" },
-  { time: "20:06", tag: "geo", tagText: "地缘", text: "沙特称也门胡塞武装以无人机袭击麦加，胡塞武装否认这一指控。伊斯兰合作组织谴责此次袭击为“卑劣”行径。麦加是伊斯兰教最神圣的圣地，也是每年朝觐的核心地点，事件令中东紧张局势进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/us-iran-war-trump-hormuz.html" },
-  { time: "20:02", tag: "macro", tagText: "宏观", text: "伊朗战争带来的油价与利率“双重打击”正传导至美国消费者：能源成本与借贷成本同步上升，迫使家庭更多动用储蓄。据估算，这一冲击给美国家庭带来的成本约为每户1700美元。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/oil-prices-treasury-yields-consumers-iran.html" },
-  { time: "17:00", tag: "macro", tagText: "宏观", text: "国际清算银行（BIS）警告，人工智能领域的“狂热”可能以长期投资泡沫告终。若回报不及预期，对科技公司的资金支持或将大幅缩减，进而威胁全球经济。", source: "Financial Times", url: "https://www.ft.com/content/e81ce414-e4bd-4e8c-bac7-94f7bf17def4" },
   { time: "05:54", tag: "ai", tagText: "AI", text: "OpenAI正考虑在IPO前进行新一轮融资，估值高达1.2万亿美元。在推出新模型后，这家由Sam Altman领导的初创公司希望借助市场对其技术的旺盛需求完成融资。", source: "Financial Times", url: "https://www.ft.com/content/27509db8-b032-4437-9b2a-e909f466022f?syn-25a6b1a6=1" },
   { time: "05:50", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋在Dreamforce大会上表示，AI创新与安全是'伪选择'，与Anthropic CEO Amodei呼吁放缓模型开发的立场形成分歧。此前Amodei发表文章敦促行业放慢开发节奏，黄仁勋则与OpenAI、Anthropic及SpaceX的减速努力保持距离。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/nvidia-and-anthropic-ceos-diverge-on-ai-safety-at-dreamforce.html" },
+  { time: "05:40", tag: "tech", tagText: "科技", text: "亚马逊获得认股权证，可购买最多3.4亿美元的Generac股票，作为为其数据中心供应备用发电机的协议一部分。消息推动这家电力设备公司股价大涨逾40%，凸显AI数据中心对电力保障的旺盛需求。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/amazon-obtains-right-to-buy-up-to-340m-of-generac-boosting-stock-.html" },
   { time: "05:31", tag: "macro", tagText: "宏观", text: "美国人口普查局数据显示，2025年美国民众收入上升、贫困率下降。数据发布之际，美联储正考虑可能放缓经济增长的加息举措。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/income-poverty-census-fed-interest-rates.html" },
+  { time: "05:25", tag: "tech", tagText: "科技", text: "东南亚超级应用Grab以14.9亿美元收购Atome Financial 60%股权，进一步加码数字金融与先买后付业务，交易成为该地区金融科技领域最新一笔重大整合。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPOFhUUXJBd0sxeHRnejRFd21TRnNXLVFsY3JPeHp6Y0RuUXhsMEZ3U0cySmFTSkEwdkRySnk0Q0RzckVMaUozMzl1bDFqWTRCMnVtS0NrbFVEVmdQVWJ5Nkd6bXhxRDh4d2xqdnZQSWRuU1dBZkVNWXc1X1lLck1MT2FKcVZ0VHZ2UThKVkRhVTNFQ3Y3czdQaWg0Vng4T2d5R2tCNWltcGM5MlhycGQ2bTM1UlN6dnRPUVNIWjl5bmptTVE5WDhYc2ZaSjE1TTJPVWItdTU4bW9NN3U0Rnc?oc=5" },
+  { time: "05:00", tag: "macro", tagText: "宏观", text: "美联储一致投票加息25个基点，为2023年以来首次，主席沃什警告'通胀过高且已持续太久'，并暗示可能进一步行动。特朗普随即要求利率降至1%或以下，并威胁对美贸易顺差国切断贸易。市场剧烈震荡，道指盘中一度跌700点、收跌约600点，标普500与纳指同步走低，美债收益率上行。DoubleLine的冈拉克则认为本应加息50个基点。", source: "Financial Times", url: "https://www.ft.com/content/f5ce5c38-76e3-4212-8c60-4c868f6dee70?syn-25a6b1a6=1" },
   { time: "04:17", tag: "macro", tagText: "宏观", text: "美股延续跌势，标普500收于逾一个月最低，道指下跌约328点。10年期美债收益率一度触及5%、创2007年以来新高，原油价格突破106美元/桶，双双施压股市。市场正等待美联储利率决议。", source: "CNBC", url: "https://www.cnbc.com/2026/09/14/stock-market-today-live-updates.html" },
   { time: "04:16", tag: "crypto", tagText: "加密", text: "美国参议院就《Clarity法案》进行的程序性投票未能通过，加密货币市场监管框架立法受挫，对投入创纪录游说资金的加密行业构成重大打击。比特币及Coinbase等加密股应声下挫，特朗普相关利益冲突争议是分歧焦点之一。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/senate-cloture-vote-on-clarity-act-fails-dealing-regulatory-setback-to-crypto-industry.html" },
   { time: "04:08", tag: "geo", tagText: "地缘", text: "美国国会预算办公室（CBO）估算，美伊战争前五个月平均每日耗资2.46亿美元，截至8月1日国防部相关支出已达381亿美元，凸显冲突的财政成本。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/cbo-iran-war-cost-pentagon-weapons.html" },
@@ -1649,11 +1644,21 @@ const breakingNews = [
   { time: "03:30", tag: "macro", tagText: "宏观", text: "德国考虑逐步将退休年龄提高至70岁（至2092年），以应对养老金资金缺口。分析指出，此举仅能部分解决社保财务问题，美国是否跟进引发讨论。", source: "MarketWatch", url: "https://www.marketwatch.com/story/could-the-u-s-join-germany-in-raising-its-retirement-age-3282e0bd" },
   { time: "03:30", tag: "ai", tagText: "AI", text: "自7月1日起，美国Medicare将首次覆盖GLP-1类减肥药物，合格受益人每月仅需支付50美元。专家提醒患者需关注副作用及肌肉流失风险。此举有望显著扩大减肥药市场规模。", source: "MarketWatch", url: "https://www.marketwatch.com/story/millions-of-older-americans-will-soon-have-medicare-access-to-glp-1s-for-weight-loss-heres-what-they-need-to-know-758efe4c" },
   { time: "03:13", tag: "ai", tagText: "AI", text: "OpenAI、谷歌与Anthropic正就AI安全议题商讨合作。相关讨论自谷歌Demis Hassabis于7月提出建立美国主导的'标准机构'提案以来持续进行。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/open-ai-google-anthropic-safety.html" },
+  { time: "02:31", tag: "geo", tagText: "地缘", text: "特朗普的石油盟友、Continental Resources创始人哈罗德·哈姆计划投资委内瑞拉，成为美国军方拘押总统马杜罗之后，最新一家进军该国的西方石油生产商，或为委内瑞拉原油重返国际市场铺路。", source: "Financial Times", url: "https://www.ft.com/content/7be92efe-13d6-4d02-9f77-0e8229b3b8fa?syn-25a6b1a6=1" },
+  { time: "00:34", tag: "ai", tagText: "AI", text: "法国财政部长表示，呼吁放缓人工智能发展的声音实际上有利于美国行业龙头，欧洲若因此自我设限将在AI竞赛中落后，应加快而非放慢步伐。此番表态凸显美欧在AI监管与产业竞争上的分歧。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxNYnRUUTFmUnVOYlVxNXJZUXJyYkwwT2gwZTAzazE5Q1NWUTE4WXlpc2Q5UjNYakdfMU9ndkJJTnNSeGR0a0dBeXRpYnFXY2ZkT2VqVXg4WTFzZnBwNGR6aUlYeWpDdUw0MXRXazdQTHpsU05JSVkxRVI5U0tSbl9ZbkJQci1GWWhLRzVmY3RlRDk4RWgtTGZGQ3Z3VWxmY3IyX05FcHllYUtlMl8zdEdiYm16R2NxaEI3N1g1REY1LWhNbGQxeGVlN2JCQzYyZw?oc=5" },
+  { time: "21:22", tag: "macro", tagText: "宏观", text: "美国8月零售销售大幅反弹，创五个月来最大增幅，显示经济在夏末明显提速，为美联储即将启动的加息提供了新的数据支撑。消费韧性同时缓解了市场对经济快速降温的担忧。", source: "Reuters", url: "https://finance.yahoo.com/economy/articles/us-retail-sales-rebound-sharply-123724094.html" },
+  { time: "21:21", tag: "tech", tagText: "科技", text: "存储芯片短缺危机持续发酵，苹果和微软被迫提价以覆盖成本，但对小型消费电子公司而言已成“生存危机”。小企业面临更严峻的供应短缺和成本飙升，行业洗牌加速。", source: "CNBC", url: "https://www.cnbc.com/2026/06/27/memory-crunch-shaking-apple-and-microsoft-existential-for-small-guys.html" },
+  { time: "21:20", tag: "macro", tagText: "宏观", text: "美联储料将宣布三年来首次加息。交易员押注FOMC加息25个基点的概率超过90%，华尔街普遍视本次加息为几乎板上钉钉，但仍有少数观点认为可能按兵不动。市场同时押注，随着加息周期重启，特朗普可能很快对美联储主席沃什（Kevin Warsh）转变态度。决议公布前，美股期货小幅走高，道指上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/fed-meeting-today-live-updates.html" },
 ];
-const breakingDate = "2026年9月17日 02:08 CST";
+const breakingDate = "2026年9月17日 06:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:47", tag: "ai", tagText: "AI", text: "美国AI数据中心建设引发的社区抵制蔓延至费城：官员提议在一处曾被已关停炼油厂严重影响的社区新建数据中心，激起当地居民强烈反弹。报道指出，从全美范围看，AI算力扩张正越来越多地与承载过重工业负担的社区发生碰撞，土地、环境与电力资源的矛盾持续激化。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/the-ai-data-center-boom-is-colliding-with-cities-scarred-by-big-industry/" },
+  { time: "05:08", tag: "tech", tagText: "科技", text: "据Ars Technica报道，一家追踪流星的非营利组织遭到网络攻击，受到「致命打击」，预计未来数周将基本处于停摆状态。该事件凸显科研与公共观测类小型机构在网络安全防护上的脆弱性。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/09/nonprofit-that-tracks-meteors-taken-down-by-critical-blow-from-a-cyberattack/" },
+  { time: "05:07", tag: "ai", tagText: "AI", text: "TechCrunch报道，Anthropic与OpenAI计划在各自AI实验室内部嵌入独立安全评估人员。研究者对这一前所未有的访问权限表示欢迎，但警告真正有意义的监督需要透明度与独立性作保障，否则「独立评估」可能流于形式，沦为实验室的公关工具。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/anthropic-and-openai-want-to-embed-safety-evaluators-will-they-really-be-independent/" },
+  { time: "04:40", tag: "ai", tagText: "AI", text: "《The Verge》报道，一份最新报告警告称，AI热潮产生的电子垃圾规模被严重低估：到2050年，仅AI数据中心产生的电子废弃物就可能多达2300万个40英尺集装箱，足以绕地球一圈。报告呼吁在AI基建高速扩张的同时同步建立回收与监管机制，否则算力竞赛将留下巨大的环境负担。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996470/ai-data-center-e-waste-ban" },
+  { time: "04:12", tag: "tech", tagText: "科技", text: "TechCrunch报道，在旗下Ray-Ban智能眼镜被指控被用于偷拍、引发「色狼眼镜」争议后，Meta正准备推出一款不带摄像头的智能眼镜，以缓解隐私质疑，并争取对拍摄功能敏感的用户群体。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/after-accusations-of-selling-perv-glasses-meta-prepares-to-sell-a-pair-without-a-camera/" },
   { time: "01:42", tag: "ai", tagText: "AI", text: "TechCrunch报道，一项名为「AI Contact Hotline」的新机制上线，为目睹不当行为的AI智能体提供向监管方举报的隐蔽渠道。这反映出随着AI代理自主性提升，如何对其实施监督与问责正成为治理领域的新课题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
   { time: "01:20", tag: "tech", tagText: "科技", text: "据The Information报道，苹果计划重返服务器市场，并可能与英伟达合作，以抓住AI算力热潮。苹果曾于2011年停产Xserve产品线，此后基本退出企业服务器领域。若消息属实，这将意味着苹果在自研芯片之外，开始以服务器硬件切入AI基础设施市场，可能对现有数据中心供应链格局产生影响。", source: "The Verge", url: "https://www.theverge.com/tech/996321/apple-servers-ai-nvidia" },
@@ -1665,17 +1670,12 @@ const aiBreakingNews = [
   { time: "00:45", tag: "tech", tagText: "科技", text: "苹果Vision Pro负责人Paul Meade据悉将离职并加入OpenAI硬件团队。这位苹果副总裁的跳槽，标志着OpenAI在硬件领域的布局进一步增强，同时也引发外界对苹果空间计算业务未来方向的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/" },
   { time: "00:42", tag: "tech", tagText: "科技", text: "马斯克公开警示英伟达面临的供应链风险。此番表态正值AI算力需求高企、先进制程与封装产能瓶颈受到市场广泛关注之际，凸显英伟达在需求旺盛背景下对上下游供应链的高度依赖。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNWE2QkNhci04WjYwRkwtUldaWnlWb1kyZ1didllKaDc5U002SlJFSkotRnBKS3ZYejlEQ241aXNJaGNob185bjlWaTgyM3dlZ1dKUXpXQnVMUnBWNlJBWFh5bWpadFAyWGdMSG1HQVNubG0td2pKMTI5SmZIdzI2Qk5JNzIyaHpfSHZmTmdVR1R0bzZPZTFqdg?oc=5" },
   { time: "00:30", tag: "ai", tagText: "AI", text: "Anthropic将Claude聊天与Cowork功能合并为统一界面，并同步推出Docs和Slides两款新工具，用户可在Claude对话中直接创建文档与演示文稿，并支持导出、编辑和分享。相关功能首批面向Pro和Max订阅用户开放。此举标志着Anthropic正把Claude从对话助手扩展为覆盖办公协作全流程的生产力套件，直接对标谷歌Gemini与微软Copilot的办公生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/" },
+  { time: "00:15", tag: "ai", tagText: "AI", text: "UVA Health发布的研究对大型语言模型在生物医学研究中的表现进行了系统测试，结果显示LLM在文献梳理与假设生成等方面展现潜力，但在准确性、可复现性和事实性上仍存在明显短板，提示科研场景应用需谨慎验证。", source: "UVA Health", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbDloc1I3d2NnTDlJdUZUaGNUN3hXTV9ubEJnZlFqdS1iQ3NiV2pQZTJLYlJ3anl2WHN4cnVBR09SYnc2UEVWdktqV3VqanFvRlJKVDcxTnV6SWVGOW91aVNWeE8wYW5ENlJrdnpwanNKMlI3aUZ4TlhhRlczSXB2cWg2Um5ubDNuSFE0LVZ2bHBqU3pMR0dxZzhCRHVjb0hId3ItaGIwOW03Vjl6Vmc?oc=5" },
   { time: "21:23", tag: "tech", tagText: "科技", text: "据TechCrunch报道，SK海力士正与英特尔洽谈在美国本土生产存储芯片。SK海力士回应称目前尚未敲定任何计划或安排。若合作落地，将标志着美国在AI驱动的存储芯片（尤其是HBM等高带宽内存）供应链本地化上再迈出一步，也有助于英特尔盘活其美国晶圆厂产能。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/sk-hynix-reportedly-in-talks-with-intel-to-build-memory-chips-in-us/" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "印度IT巨头Infosys前首席执行官创办的AI初创公司再获5300万美元融资。继此前多轮融资后，本轮资金进一步显示资本市场对由资深企业软件高管带队、面向企业级AI应用方向的团队持续看好，也反映出印度AI创业生态正加速吸引全球资本。", source: "TechCrunch", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUFd1UlB6TUNfekw3YnpDSEx2Um9sTGV6b1JKa1R3ajlUY0Z3eEVfbTloZ3dKWVJBQnQzNGNsMjRCQmRmS1ktNC13V3labXNheHl6UzZkeFE0Z3ZwSVVqR3N2dHFMRGZGUTVDR0dGM1NqQkJVc0lzREpQQTFmWWRpZkFCWDRVRzlpcVhDcENnS000a3hGVDVKNlpDMFRaOHNPbFZ3ZDh1X01nOUZLUU93?oc=5" },
   { time: "20:47", tag: "ai", tagText: "AI", text: "OpenAI表示，过去数周一直在与Anthropic和谷歌DeepMind就AI安全议题进行沟通协作。三家头部AI实验室罕见地就安全标准展开协调，凸显在模型能力快速提升、监管呼声升温的背景下，前沿开发者正试图在行业内部先行建立安全共识与协同机制。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTFA3cFltTF9IVXpQTjYwUUVWODBWMkc3REVNLXR6SzZEak04c0NRdDZmaTBnQ3BYSDdCWWhiY3VnWDZ0cFFPb3NxYTF0WV9QUHhBSmhHcUtLcHdqeG1wT045dXJpSUluTFE2VHB6NWNQcFBFQ2VRbTcwVWd3?oc=5" },
-  { time: "18:42", tag: "tech", tagText: "科技", text: "TrendForce报道，Meta计划于2027年上半年部署其委托台积电代工的新一代自研AI芯片，并宣称在能效上优于英伟达方案。此举显示大型科技公司正加速推进自研加速器以降低对英伟达的依赖、控制算力成本，同时也将进一步带动台积电先进制程与先进封装需求。", source: "TrendForce", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNMWRZYjJaSmpWLTFva3ZLcV9LMTB0TzlGUU9nMFdwczd4YS1RQktBMzJEOEdSV29uX0wxNVZlNnhaaklkZXVaVTNwV3VVTjV4ZVplaVVNZHlvYnRXSGNHODVyempkeWF0Z3AwWHpTUU5mTDcxUmRNNkZIUk5MdWVGNlZCX0lsSldEVDU5ZGVteWgwMk9ZLUcwaWFRNGFHamhGekdfMmg0ZXJaNUZWRjdPdU9FU1l0RkhsbFEyeklzSV9rSEJuZ1g4Vk4wWlppbmVvSVdUeQ?oc=5" },
-  { time: "18:34", tag: "ai", tagText: "AI", text: "亚马逊在印度推出Alexa+助手，并首次支持印地语，所有用户均可参与早期体验。这是亚马逊将生成式AI助手推向新兴市场、以本地语言能力争夺语音入口的关键一步，也预示着AI助手在印度这一超大市场的竞争将明显升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/amazon-launches-alexa-in-india-with-hindi-support/" },
-  { time: "09:08", tag: "geo", tagText: "地缘", text: "英伟达CEO黄仁勋将出席特朗普与习近平的国宴，AI与芯片议题成为中美高层会晤的核心焦点。在中美科技博弈持续、先进制程与算力供应高度敏感的背景下，全球最大AI芯片厂商掌门人现身元首级外交场合，凸显半导体产业已成为双边关系的关键变量。", source: "bloomingbit", url: "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8xeTVkeVFXUXRqZ3cwTVRzYXZ0X01xb3dLVnlRdHpxUWoxN3RnMkp3R2wzNXJwQVpIRnIxeWJ6MFcwQktGcjEyckVhS3RfR1dYc3NQRg?oc=5" },
-  { time: "08:20", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋公开反对对AI实施监管，称AI并非某种「外星心智」，而只是硬件与软件的集合，因此各AI产品制造商完全可以通过工程手段自行保障安全，「把安全交给我们」。此番表态正值各国加快推进AI安全立法之际，代表产业界对监管介入的强硬立场。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/we-dont-need-ai-regulation-leave-safety-to-us-nvidias-jensen-huang-says/" },
-  { time: "07:34", tag: "ai", tagText: "AI", text: "《纽约时报》与锡耶纳大学联合发布的最新民调显示，AI与数据中心在几乎所有调查中都不受欢迎，印证了此前多项民调的走向，也解释了政界人士正越来越多地对AI扩张采取审慎甚至反对立场。随着中期选举临近，AI算力基建的民意阻力正从地方社区上升为全国性政治议题。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/995917/data-center-nyt-midterm-poll-september" },
-  { time: "05:47", tag: "ai", tagText: "AI", text: "美国AI数据中心建设引发的社区抵制蔓延至费城：官员提议在一处曾被已关停炼油厂严重影响的社区新建数据中心，激起当地居民强烈反弹。报道指出，从全美范围看，AI算力扩张正越来越多地与承载过重工业负担的社区发生碰撞，土地、环境与电力资源的矛盾持续激化。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/the-ai-data-center-boom-is-colliding-with-cities-scarred-by-big-industry/" },
 ];
-const aiBreakingDate = "2026年9月17日 02:08 CST";
+const aiBreakingDate = "2026年9月17日 06:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
