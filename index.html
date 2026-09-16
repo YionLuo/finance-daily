@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27.71,
+  score: 28.49,
   rating: "fear",
-  timestamp: "2026-09-16T13:09:31+00:00",
+  timestamp: "2026-09-16T18:04:41+00:00",
   previousClose: 28.66,
   previous1Week: 38.2,
   previous1Month: 64.31,
   previous1Year: 64.37,
-  date: "2026年9月16日 21:26 CST"
+  date: "2026年9月17日 02:08 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,11 +1650,23 @@ const breakingNews = [
   { time: "03:30", tag: "ai", tagText: "AI", text: "自7月1日起，美国Medicare将首次覆盖GLP-1类减肥药物，合格受益人每月仅需支付50美元。专家提醒患者需关注副作用及肌肉流失风险。此举有望显著扩大减肥药市场规模。", source: "MarketWatch", url: "https://www.marketwatch.com/story/millions-of-older-americans-will-soon-have-medicare-access-to-glp-1s-for-weight-loss-heres-what-they-need-to-know-758efe4c" },
   { time: "03:13", tag: "ai", tagText: "AI", text: "OpenAI、谷歌与Anthropic正就AI安全议题商讨合作。相关讨论自谷歌Demis Hassabis于7月提出建立美国主导的'标准机构'提案以来持续进行。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/open-ai-google-anthropic-safety.html" },
 ];
-const breakingDate = "2026年9月16日 21:26 CST";
+const breakingDate = "2026年9月17日 02:08 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:42", tag: "ai", tagText: "AI", text: "TechCrunch报道，一项名为「AI Contact Hotline」的新机制上线，为目睹不当行为的AI智能体提供向监管方举报的隐蔽渠道。这反映出随着AI代理自主性提升，如何对其实施监督与问责正成为治理领域的新课题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/" },
+  { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
+  { time: "01:20", tag: "tech", tagText: "科技", text: "据The Information报道，苹果计划重返服务器市场，并可能与英伟达合作，以抓住AI算力热潮。苹果曾于2011年停产Xserve产品线，此后基本退出企业服务器领域。若消息属实，这将意味着苹果在自研芯片之外，开始以服务器硬件切入AI基础设施市场，可能对现有数据中心供应链格局产生影响。", source: "The Verge", url: "https://www.theverge.com/tech/996321/apple-servers-ai-nvidia" },
+  { time: "01:16", tag: "ai", tagText: "AI", text: "Facebook（Meta）推出面向创作者的全新AI伴侣应用。该应用目前正在与部分创作者进行测试，内置了Facebook最新发布的AI创作助手，旨在帮助创作者更高效地管理内容、互动和创作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" },
+  { time: "01:00", tag: "ai", tagText: "AI", text: "谷歌推出面向Google Home的MCP（Model Context Protocol）服务器早期访问，允许Claude、ChatGPT等第三方AI智能体接入并控制家中的联网设备、查看摄像头摘要、读取智能家居数据。这是谷歌首次以标准化协议向外部AI开放智能家居入口，意味着智能家居平台正从封闭生态转向「智能体可调用」的基础设施，也加剧了各家AI助手对家庭场景入口的争夺。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/" },
+  { time: "01:00", tag: "ai", tagText: "AI", text: "制造业AI初创公司CADDi完成1.14亿美元D轮融资，估值达12亿美元，晋升独角兽。该公司利用AI解析制造业图纸与供应链数据，帮助工厂提升采购与生产效率，反映出AI在传统制造业数字化改造中的商业化进展正获得资本认可。", source: "fortune.com", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd3FpVERha3hBZnV4MDNqYU5iOVhUUnFwemhmU1h3YUV2dnZFcWF3TEdEd2pHblJiVW1KTUJmMVJXazRoZzFmdmxCSGRlXzVwdG5rdTM3MGM4aEtsRXlCbHdhMVk2OHZsZXFSdHpxNkU0Y3Y4bXVVR2U2dENnZ0xPSVZuSTlwclg5OEsxZ3lqYnNmSGlmeHhtdF9sZk1IVFVsMVFfQg?oc=5" },
+  { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
+  { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
+  { time: "00:45", tag: "tech", tagText: "科技", text: "苹果Vision Pro负责人Paul Meade据悉将离职并加入OpenAI硬件团队。这位苹果副总裁的跳槽，标志着OpenAI在硬件领域的布局进一步增强，同时也引发外界对苹果空间计算业务未来方向的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/" },
+  { time: "00:42", tag: "tech", tagText: "科技", text: "马斯克公开警示英伟达面临的供应链风险。此番表态正值AI算力需求高企、先进制程与封装产能瓶颈受到市场广泛关注之际，凸显英伟达在需求旺盛背景下对上下游供应链的高度依赖。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNWE2QkNhci04WjYwRkwtUldaWnlWb1kyZ1didllKaDc5U002SlJFSkotRnBKS3ZYejlEQ241aXNJaGNob185bjlWaTgyM3dlZ1dKUXpXQnVMUnBWNlJBWFh5bWpadFAyWGdMSG1HQVNubG0td2pKMTI5SmZIdzI2Qk5JNzIyaHpfSHZmTmdVR1R0bzZPZTFqdg?oc=5" },
+  { time: "00:30", tag: "ai", tagText: "AI", text: "Anthropic将Claude聊天与Cowork功能合并为统一界面，并同步推出Docs和Slides两款新工具，用户可在Claude对话中直接创建文档与演示文稿，并支持导出、编辑和分享。相关功能首批面向Pro和Max订阅用户开放。此举标志着Anthropic正把Claude从对话助手扩展为覆盖办公协作全流程的生产力套件，直接对标谷歌Gemini与微软Copilot的办公生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/" },
   { time: "21:23", tag: "tech", tagText: "科技", text: "据TechCrunch报道，SK海力士正与英特尔洽谈在美国本土生产存储芯片。SK海力士回应称目前尚未敲定任何计划或安排。若合作落地，将标志着美国在AI驱动的存储芯片（尤其是HBM等高带宽内存）供应链本地化上再迈出一步，也有助于英特尔盘活其美国晶圆厂产能。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/sk-hynix-reportedly-in-talks-with-intel-to-build-memory-chips-in-us/" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "印度IT巨头Infosys前首席执行官创办的AI初创公司再获5300万美元融资。继此前多轮融资后，本轮资金进一步显示资本市场对由资深企业软件高管带队、面向企业级AI应用方向的团队持续看好，也反映出印度AI创业生态正加速吸引全球资本。", source: "TechCrunch", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUFd1UlB6TUNfekw3YnpDSEx2Um9sTGV6b1JKa1R3ajlUY0Z3eEVfbTloZ3dKWVJBQnQzNGNsMjRCQmRmS1ktNC13V3labXNheHl6UzZkeFE0Z3ZwSVVqR3N2dHFMRGZGUTVDR0dGM1NqQkJVc0lzREpQQTFmWWRpZkFCWDRVRzlpcVhDcENnS000a3hGVDVKNlpDMFRaOHNPbFZ3ZDh1X01nOUZLUU93?oc=5" },
   { time: "20:47", tag: "ai", tagText: "AI", text: "OpenAI表示，过去数周一直在与Anthropic和谷歌DeepMind就AI安全议题进行沟通协作。三家头部AI实验室罕见地就安全标准展开协调，凸显在模型能力快速提升、监管呼声升温的背景下，前沿开发者正试图在行业内部先行建立安全共识与协同机制。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTFA3cFltTF9IVXpQTjYwUUVWODBWMkc3REVNLXR6SzZEak04c0NRdDZmaTBnQ3BYSDdCWWhiY3VnWDZ0cFFPb3NxYTF0WV9QUHhBSmhHcUtLcHdqeG1wT045dXJpSUluTFE2VHB6NWNQcFBFQ2VRbTcwVWd3?oc=5" },
   { time: "18:42", tag: "tech", tagText: "科技", text: "TrendForce报道，Meta计划于2027年上半年部署其委托台积电代工的新一代自研AI芯片，并宣称在能效上优于英伟达方案。此举显示大型科技公司正加速推进自研加速器以降低对英伟达的依赖、控制算力成本，同时也将进一步带动台积电先进制程与先进封装需求。", source: "TrendForce", url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNMWRZYjJaSmpWLTFva3ZLcV9LMTB0TzlGUU9nMFdwczd4YS1RQktBMzJEOEdSV29uX0wxNVZlNnhaaklkZXVaVTNwV3VVTjV4ZVplaVVNZHlvYnRXSGNHODVyempkeWF0Z3AwWHpTUU5mTDcxUmRNNkZIUk5MdWVGNlZCX0lsSldEVDU5ZGVteWgwMk9ZLUcwaWFRNGFHamhGekdfMmg0ZXJaNUZWRjdPdU9FU1l0RkhsbFEyeklzSV9rSEJuZ1g4Vk4wWlppbmVvSVdUeQ?oc=5" },
   { time: "18:34", tag: "ai", tagText: "AI", text: "亚马逊在印度推出Alexa+助手，并首次支持印地语，所有用户均可参与早期体验。这是亚马逊将生成式AI助手推向新兴市场、以本地语言能力争夺语音入口的关键一步，也预示着AI助手在印度这一超大市场的竞争将明显升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/amazon-launches-alexa-in-india-with-hindi-support/" },
@@ -1662,20 +1674,8 @@ const aiBreakingNews = [
   { time: "08:20", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋公开反对对AI实施监管，称AI并非某种「外星心智」，而只是硬件与软件的集合，因此各AI产品制造商完全可以通过工程手段自行保障安全，「把安全交给我们」。此番表态正值各国加快推进AI安全立法之际，代表产业界对监管介入的强硬立场。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/we-dont-need-ai-regulation-leave-safety-to-us-nvidias-jensen-huang-says/" },
   { time: "07:34", tag: "ai", tagText: "AI", text: "《纽约时报》与锡耶纳大学联合发布的最新民调显示，AI与数据中心在几乎所有调查中都不受欢迎，印证了此前多项民调的走向，也解释了政界人士正越来越多地对AI扩张采取审慎甚至反对立场。随着中期选举临近，AI算力基建的民意阻力正从地方社区上升为全国性政治议题。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/995917/data-center-nyt-midterm-poll-september" },
   { time: "05:47", tag: "ai", tagText: "AI", text: "美国AI数据中心建设引发的社区抵制蔓延至费城：官员提议在一处曾被已关停炼油厂严重影响的社区新建数据中心，激起当地居民强烈反弹。报道指出，从全美范围看，AI算力扩张正越来越多地与承载过重工业负担的社区发生碰撞，土地、环境与电力资源的矛盾持续激化。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/the-ai-data-center-boom-is-colliding-with-cities-scarred-by-big-industry/" },
-  { time: "04:12", tag: "ai", tagText: "AI", text: "Meta推出WhatsApp Business MCP服务器，允许Claude、Cursor、Codex、ChatGPT等AI编程智能体自动完成商家账号配置、消息模板创建、测试与故障排查等繁琐流程。此举旨在降低企业接入WhatsApp商务功能的门槛，也标志着AI智能体正加速接管企业软件的部署与运维环节。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/" },
-  { time: "02:34", tag: "ai", tagText: "AI", text: "以色列建筑AI初创公司Buildots完成1.3亿美元融资。该公司通过计算机视觉与AI对施工现场进行进度追踪与偏差分析，帮助建筑企业减少工期延误和成本超支。本轮融资显示建筑科技（ConTech）领域的AI应用持续吸引资本投入。", source: "The Jerusalem Post", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVWlaNlFlbEJna1ZwS2VFYkJGb0NyWnBjWXY4SUtnQm1mOUxXUF85VWtuZ3o3TXpWcnI4eHo0dXNhaUY2NGJTQzQ1dkNCaTNqLUZvOWtvVzdQU19CVGxTSXR6Y1NYaS1XM3ByaWEzakc5aFZEeFAyeTFjYkh1T0hwaHU2cGFqZw?oc=5" },
-  { time: "02:29", tag: "ai", tagText: "AI", text: "TechCrunch报道，受AI热潮推动，到2035年美国数据中心的天然气消耗量可能超过德国与日本两国的总和，成为全球最大的天然气消费主体之一。这意味着AI算力扩张正带来庞大的能源需求与碳排放压力，也将深刻影响美国电力与天然气基础设施的投资格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/us-data-centers-could-consume-more-natural-gas-than-germany-and-japan-combined-by-2035/" },
-  { time: "02:23", tag: "ai", tagText: "AI", text: "路透社报道，AI编程智能体（coding agent）初创公司Factory在新一轮融资中估值升至50亿美元，较上一轮增长约两倍。这显示资本对能够自动完成代码编写与软件工程任务的AI工具赛道持续加码，AI编程已成为企业级AI落地最热门的领域之一。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNG85U1M2Y1MtNHBfZmxIS3FNNWZELW5UeVM4dzFvQUI3R1VxZ1hCS1NPMnZZM3pNZXRWNE5HcG9XNXVvbzFXLVJQRG0zYXE0bHRoZy1kVmdsSFloX0ZWa1lDM1owQWs2NTNsTmo2OE1JemRFd3dPSXFGVzZuc1NBdnNNR3BHemVlSk51OVFwcUIyVGxJZGs5clZ2cGVoT1Ruc29OeFMydExnc3cyQWQ0TTRMN3ItM25YbkRkSXFyWkVRRHc?oc=5" },
-  { time: "01:42", tag: "ai", tagText: "AI", text: "TechCrunch报道，一项名为「AI Contact Hotline」的新机制上线，为目睹不当行为的AI智能体提供向监管方举报的隐蔽渠道。这反映出随着AI代理自主性提升，如何对其实施监督与问责正成为治理领域的新课题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/" },
-  { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
-  { time: "01:16", tag: "ai", tagText: "AI", text: "Facebook（Meta）推出面向创作者的全新AI伴侣应用。该应用目前正在与部分创作者进行测试，内置了Facebook最新发布的AI创作助手，旨在帮助创作者更高效地管理内容、互动和创作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "制造业AI初创公司CADDi完成1.14亿美元D轮融资，估值达12亿美元，晋升独角兽。该公司利用AI解析制造业图纸与供应链数据，帮助工厂提升采购与生产效率，反映出AI在传统制造业数字化改造中的商业化进展正获得资本认可。", source: "fortune.com", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd3FpVERha3hBZnV4MDNqYU5iOVhUUnFwemhmU1h3YUV2dnZFcWF3TEdEd2pHblJiVW1KTUJmMVJXazRoZzFmdmxCSGRlXzVwdG5rdTM3MGM4aEtsRXlCbHdhMVk2OHZsZXFSdHpxNkU0Y3Y4bXVVR2U2dENnZ0xPSVZuSTlwclg5OEsxZ3lqYnNmSGlmeHhtdF9sZk1IVFVsMVFfQg?oc=5" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
-  { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
-  { time: "00:45", tag: "tech", tagText: "科技", text: "苹果Vision Pro负责人Paul Meade据悉将离职并加入OpenAI硬件团队。这位苹果副总裁的跳槽，标志着OpenAI在硬件领域的布局进一步增强，同时也引发外界对苹果空间计算业务未来方向的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/" },
-  { time: "00:42", tag: "tech", tagText: "科技", text: "马斯克公开警示英伟达面临的供应链风险。此番表态正值AI算力需求高企、先进制程与封装产能瓶颈受到市场广泛关注之际，凸显英伟达在需求旺盛背景下对上下游供应链的高度依赖。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNWE2QkNhci04WjYwRkwtUldaWnlWb1kyZ1didllKaDc5U002SlJFSkotRnBKS3ZYejlEQ241aXNJaGNob185bjlWaTgyM3dlZ1dKUXpXQnVMUnBWNlJBWFh5bWpadFAyWGdMSG1HQVNubG0td2pKMTI5SmZIdzI2Qk5JNzIyaHpfSHZmTmdVR1R0bzZPZTFqdg?oc=5" },
 ];
-const aiBreakingDate = "2026年9月16日 21:26 CST";
+const aiBreakingDate = "2026年9月17日 02:08 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
