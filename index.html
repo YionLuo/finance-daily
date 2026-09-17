@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 26.11,
+  score: 29.66,
   rating: "fear",
-  timestamp: "2026-09-17T11:11:31+00:00",
+  timestamp: "2026-09-17T16:43:58+00:00",
   previousClose: 26.49,
   previous1Week: 32.2,
   previous1Month: 59.14,
   previous1Year: 63.77,
-  date: "2026年9月17日 19:32 CST"
+  date: "2026年9月18日 00:50 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:48", tag: "ai", tagText: "AI", text: "Palantir首席执行官Alex Karp在接受CNBC采访时呼吁对人工智能监管制定“合理的指引”，强调规则应兼具安全与创新空间。此番表态正值科技与政策界围绕AI监管框架激烈讨论之际，反映出产业界对监管路径分歧的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/09/17/ai-safety-palantir-karp.html" },
+  { time: "00:35", tag: "tech", tagText: "科技", text: "在支付17亿美元和解金后，Meta宣布对Instagram和Facebook进行面向青少年的全面改版，加强年龄验证与内容限制。这是该公司迄今在青少年安全与监管合规方面最大规模的调整，可能影响其年轻用户活跃度与广告收入结构。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/meta-meta-overhauls-instagram-facebook-163514422.html" },
+  { time: "00:27", tag: "macro", tagText: "宏观", text: "欧洲高收益债市场迎来发行高峰：Assemblin Caverion 成功发行15亿欧元浮息票据。密集的一级市场发行显示，在利率环境变化之际，投资者对欧洲信用债的需求依然强劲，再融资窗口重新打开。", source: "Pitchbook", url: "https://finance.yahoo.com/markets/stocks/articles/assemblin-caverion-prints-1-5b-162749040.html" },
+  { time: "00:22", tag: "crypto", tagText: "加密", text: "美国众议院以38票对5票的压倒性结果推进《数字资产税收确定性法案》（Digital Asset Tax Certainty Act），该法案旨在为加密资产交易确立更清晰的税务规则，尤其影响比特币持有者的申报与纳税义务。法案后续仍需参议院审议。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiggJBVV95cUxQNm5kdVpnWUV4NFhTbVhiZ0VlbnhYU0FuaGI4azJFcWVyVkVUZTZTMFFXUEd3Y1AyOGptVUdzYXg0a25mLS1sbS1FeHFXb00yRm92QTNLbjI0NFczdUM2QkhCRU5ud3N0d0VsTURSbjBTZlQxTGtwTlNtS2lFbW1tZzhpTkc3T0VkOF9sVkN3LVNNOUdCT0I4YXZWRGxVdFBiUnhLZ3hSQlE5LUFxaFJCN2FvejhWNDFkUUIzX0dGdWRQZmFHUjRzWUptcTZweDFlYzhiQjNjTzJfdlI5YkFOYUdISVJKRUhYV003TU93WlNTa0o0Q21zLXVUc2NIUkcxU3c?oc=5" },
+  { time: "00:14", tag: "macro", tagText: "宏观", text: "美国柴油价格创下纪录高位，正对经济形成实质性冲击。卡车运输与铁路货运首当其冲，燃油成本飙升已在吞噬运输企业利润；若能源价格持续高企，影响将向零售、农业及更广泛的经济领域扩散，并可能进一步推升通胀压力。", source: "CNBC", url: "https://www.cnbc.com/2026/09/17/diesel-gas-prices-oil-us-economy.html" },
+  { time: "22:39", tag: "tech", tagText: "科技", text: "在电动车销售乏力之际，通用汽车高调宣传新款V-8发动机，重启与福特、Ram的“皮卡大战”。大型燃油皮卡凭借拖拽与载重能力继续畅销，显示美国车企在电动化转型节奏上重新平衡产品线。", source: "CNBC", url: "https://www.cnbc.com/2026/09/17/chevy-silverado-gmc-sierra-v-8-engines.html" },
+  { time: "22:37", tag: "macro", tagText: "宏观", text: "高企的按揭利率令潜在买家却步，越来越多美国住宅建筑商开始降价促销，尽管建筑成本仍在上升。降价潮凸显美国楼市需求疲软，若持续或拖累新房开工与相关就业。", source: "MarketWatch", url: "https://www.marketwatch.com/story/more-home-builders-cut-prices-as-buyers-get-spooked-4cd4b4ec?mod=mw_rss_topstories" },
   { time: "13:42", tag: "geo", tagText: "地缘", text: "特朗普威胁称，若欧盟批准加拿大成为其首个“准成员国”，将对欧盟征收“非常严重”的关税，并称此举是“敌对行为”。此前欧盟委员会主席冯德莱恩表示，欧盟正为加拿大成为27国集团首个准成员敞开大门。分析认为，这一争端可能进一步加剧美欧贸易紧张。", source: "CNBC", url: "https://www.cnbc.com/2026/09/17/trump-canada-european-union-tariffs-associate-member-ukraine-.html" },
   { time: "13:37", tag: "geo", tagText: "地缘", text: "据报道，特朗普计划下周在联合国大会期间会见海湾国家领导人，商讨伊朗战争的终局方案。华盛顿推动恢复停火谈判的努力似乎已陷入停滞，海湾国家正承受来自伊朗及伊朗支持的胡塞武装不断升级的袭击。霍尔木兹海峡局势持续牵动全球能源市场。", source: "CNBC", url: "https://www.cnbc.com/2026/09/17/us-iran-war-trump-hormuz.html" },
   { time: "13:20", tag: "macro", tagText: "宏观", text: "英国央行预计将于周四维持利率不变，不跟随美联储的加息步伐，尽管英国通胀已升至3.1%，能源成本持续对物价构成压力。市场关注英央行在通胀反弹与经济增长疲弱之间如何权衡。", source: "CNBC", url: "https://www.cnbc.com/2026/09/17/bank-of-england-interest-rate-decision-fed-rate-hike-uk-inflation.html" },
@@ -1642,18 +1649,16 @@ const breakingNews = [
   { time: "07:22", tag: "ai", tagText: "AI", text: "美国核电与储热设备商Holtec撤回IPO，创始人Kris Singh称AI板块遭遇“完美风暴”，市场对数据中心的负面情绪打击了发行计划。这显示AI基础设施投资热潮正面临情绪与融资环境降温。", source: "Financial Times", url: "https://www.ft.com/content/5f4a4fce-72bb-4ea6-862b-1da1234d5b25?syn-25a6b1a6=1" },
   { time: "07:05", tag: "ai", tagText: "AI", text: "OpenAI披露自3月以来六起新的“令人担忧的模型行为”事件，并公布了未来同类事件的披露框架。在AI模型安全争论持续升温之际，此举被视为该公司提高透明度、回应监管压力的动作。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/openai-6-new-instances-of-concerning-model-behavior-since-march.html" },
   { time: "06:32", tag: "geo", tagText: "地缘", text: "美国众议院通过以参议员林赛·格雷厄姆命名的全面对俄制裁法案，并送交总统特朗普签署，距成为法律仅一步之遥。该法案标志着国会对俄施压力度显著升级。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/russia-sanctions-bill-lindsey-graham-congress.html" },
-  { time: "05:54", tag: "ai", tagText: "AI", text: "OpenAI正考虑在IPO前进行新一轮融资，估值高达1.2万亿美元。在推出新模型后，这家由Sam Altman领导的初创公司希望借助市场对其技术的旺盛需求完成融资。", source: "Financial Times", url: "https://www.ft.com/content/27509db8-b032-4437-9b2a-e909f466022f?syn-25a6b1a6=1" },
-  { time: "05:50", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋在Dreamforce大会上表示，AI创新与安全是'伪选择'，与Anthropic CEO Amodei呼吁放缓模型开发的立场形成分歧。此前Amodei发表文章敦促行业放慢开发节奏，黄仁勋则与OpenAI、Anthropic及SpaceX的减速努力保持距离。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/nvidia-and-anthropic-ceos-diverge-on-ai-safety-at-dreamforce.html" },
-  { time: "05:40", tag: "tech", tagText: "科技", text: "亚马逊获得认股权证，可购买最多3.4亿美元的Generac股票，作为为其数据中心供应备用发电机的协议一部分。消息推动这家电力设备公司股价大涨逾40%，凸显AI数据中心对电力保障的旺盛需求。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/amazon-obtains-right-to-buy-up-to-340m-of-generac-boosting-stock-.html" },
-  { time: "05:31", tag: "macro", tagText: "宏观", text: "美国人口普查局数据显示，2025年美国民众收入上升、贫困率下降。数据发布之际，美联储正考虑可能放缓经济增长的加息举措。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/income-poverty-census-fed-interest-rates.html" },
-  { time: "05:25", tag: "tech", tagText: "科技", text: "东南亚超级应用Grab以14.9亿美元收购Atome Financial 60%股权，进一步加码数字金融与先买后付业务，交易成为该地区金融科技领域最新一笔重大整合。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPOFhUUXJBd0sxeHRnejRFd21TRnNXLVFsY3JPeHp6Y0RuUXhsMEZ3U0cySmFTSkEwdkRySnk0Q0RzckVMaUozMzl1bDFqWTRCMnVtS0NrbFVEVmdQVWJ5Nkd6bXhxRDh4d2xqdnZQSWRuU1dBZkVNWXc1X1lLck1MT2FKcVZ0VHZ2UThKVkRhVTNFQ3Y3czdQaWg0Vng4T2d5R2tCNWltcGM5MlhycGQ2bTM1UlN6dnRPUVNIWjl5bmptTVE5WDhYc2ZaSjE1TTJPVWItdTU4bW9NN3U0Rnc?oc=5" },
-  { time: "05:00", tag: "macro", tagText: "宏观", text: "美联储一致投票加息25个基点，为2023年以来首次，主席沃什警告'通胀过高且已持续太久'，并暗示可能进一步行动。特朗普随即要求利率降至1%或以下，并威胁对美贸易顺差国切断贸易。市场剧烈震荡，道指盘中一度跌700点、收跌约600点，标普500与纳指同步走低，美债收益率上行。DoubleLine的冈拉克则认为本应加息50个基点。", source: "Financial Times", url: "https://www.ft.com/content/f5ce5c38-76e3-4212-8c60-4c868f6dee70?syn-25a6b1a6=1" },
-  { time: "04:34", tag: "macro", tagText: "宏观", text: "美联储宣布加息后市场未能企稳：道指下跌600点，标普500与纳指同步走低，美债收益率上行。主席沃什强调通胀仍过高、不排除进一步行动，投资者预期股市与债市将出现更多剧烈波动。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/stock-market-today-live-updates.html" },
 ];
-const breakingDate = "2026年9月17日 19:32 CST";
+const breakingDate = "2026年9月18日 00:50 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:45", tag: "tech", tagText: "科技", text: "苹果Vision Pro负责人Paul Meade据悉将离职并加入OpenAI硬件团队。这位苹果副总裁的跳槽，标志着OpenAI在硬件领域的布局进一步增强，同时也引发外界对苹果空间计算业务未来方向的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "微软AI部门CEO Mustafa Suleyman在播客中称AI威胁真实存在，并直言Anthropic的做法让问题变得更糟。此番表态正值AI安全与监管辩论升温之际，也折射出头部AI公司在安全标准与竞争策略上的公开分歧。", source: "The Verge", url: "https://www.theverge.com/podcast/996412/microsoft-ai-ceo-mustafa-suleyman-regulation-safety-anthropic-claude" },
+  { time: "21:46", tag: "ai", tagText: "AI", text: "TechCrunch报道，两款相互竞争的AI智能体——Instinct与Meta的Muse——同时新增拨打电话能力，用户可借此预订餐厅、取消订阅等。AI助手正从「问答」转向「代办」，但通话权限也带来身份验证、诈骗与骚扰等新风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/rival-ai-agents-instinct-and-metas-muse-both-add-the-ability-to-make-calls/" },
+  { time: "21:38", tag: "ai", tagText: "AI", text: "谷歌、英伟达、Anthropic与Emerald AI组建新联盟，目标是为新建数据中心在电网中释放出100吉瓦的可用容量。此举凸显AI算力扩张正与电力供应正面冲突，也意味着科技巨头开始直接介入能源与电网基础设施的规划布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/google-nvidia-and-anthropic-want-emerald-ai-to-find-space-on-the-grid-for-more-data-centers/" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "Crunchbase盘点近期容易被忽略的几笔初创融资，涵盖浮动式核电站、为机器人建立「成绩单」的评测服务，以及面向农民的语音AI。这些交易显示资本正从通用大模型向能源、农业与机器人基础设施等垂直场景扩散。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxPUFdPbkV5OHg1WFJoRjlfYXR1Ym41SW5uc2VISFJoS0NTUDVFRHZjSkFpV2tSMER0Q2R4YzUtQlM5RlYzYTdJRDlaTjhuYXd0enU2QjNhU0dQME1vYjE4QmRDMnBlRmg2djI2Z1hXb2FRbWdqVmdqeDJQdDFUQU0tRWVub3Z6WVQyd3VFb2V1NGtBa1FjbDVzMHl1VW5ra1cyNUhJbXZuTQ?oc=5" },
   { time: "15:42", tag: "ai", tagText: "AI", text: "南非创业园区22 On Sloane推出AI平台，并设立规模6300万美元的初创基金，专向非洲创始人开放。该基金将AI应用与本地创业生态结合，是非洲市场少见的成规模AI专项资本，反映全球AI投资正从美中向新兴市场延伸。", source: "Dealroom", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOU9WeHhqdC1BdlZwVGpmTGtwWVZmV2pJNHI2bnQtX3diUFhaLVZkWkZxdHdHUzdIeUhSLVlWU2J1aGxGb0FsZkJ1b0NiVjlQOWpPTzFRVExjQ3JDYTRFWmRYQlJwWERNbEgzaTBfMDZBU1VualpUTEUtcDVLWFZhUFRKSzFGNTM3WFpvTzV0VEhtUl9ydDNRMG9nRm84cEg4aGg3TUE4c2ZHQWhtSUE?oc=5" },
   { time: "13:00", tag: "ai", tagText: "AI", text: "总部位于冰岛的语音模拟平台Treble完成1800万美元融资。其语音仿真技术主要服务于语音AI模型开发者、AI可穿戴设备厂商及机器人公司，用于在真实部署前生成高质量、多样化的语音数据进行模型训练与压力测试。此轮融资反映出在语音交互成为AI硬件核心入口的背景下，语音数据与仿真基础设施正成为资本关注的新赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/iceland-based-treble-raises-18-million-for-its-voice-simulation-platform/" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "01:38", tag: "ai", tagText: "AI", text: "数据显示，Anthropic的Claude在付费AI消费者市场中正在赢得份额，逐渐挑战ChatGPT的主导地位。尽管ChatGPT整体领先，但付费用户越来越多地选择Claude，表明AI消费市场格局正在发生变化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" },
   { time: "01:20", tag: "tech", tagText: "科技", text: "据The Information报道，苹果计划重返服务器市场，并可能与英伟达合作，以抓住AI算力热潮。苹果曾于2011年停产Xserve产品线，此后基本退出企业服务器领域。若消息属实，这将意味着苹果在自研芯片之外，开始以服务器硬件切入AI基础设施市场，可能对现有数据中心供应链格局产生影响。", source: "The Verge", url: "https://www.theverge.com/tech/996321/apple-servers-ai-nvidia" },
   { time: "01:16", tag: "ai", tagText: "AI", text: "Facebook（Meta）推出面向创作者的全新AI伴侣应用。该应用目前正在与部分创作者进行测试，内置了Facebook最新发布的AI创作助手，旨在帮助创作者更高效地管理内容、互动和创作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "谷歌推出面向Google Home的MCP（Model Context Protocol）服务器早期访问，允许Claude、ChatGPT等第三方AI智能体接入并控制家中的联网设备、查看摄像头摘要、读取智能家居数据。这是谷歌首次以标准化协议向外部AI开放智能家居入口，意味着智能家居平台正从封闭生态转向「智能体可调用」的基础设施，也加剧了各家AI助手对家庭场景入口的争夺。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "制造业AI初创公司CADDi完成1.14亿美元D轮融资，估值达12亿美元，晋升独角兽。该公司利用AI解析制造业图纸与供应链数据，帮助工厂提升采购与生产效率，反映出AI在传统制造业数字化改造中的商业化进展正获得资本认可。", source: "fortune.com", url: "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd3FpVERha3hBZnV4MDNqYU5iOVhUUnFwemhmU1h3YUV2dnZFcWF3TEdEd2pHblJiVW1KTUJmMVJXazRoZzFmdmxCSGRlXzVwdG5rdTM3MGM4aEtsRXlCbHdhMVk2OHZsZXFSdHpxNkU0Y3Y4bXVVR2U2dENnZ0xPSVZuSTlwclg5OEsxZ3lqYnNmSGlmeHhtdF9sZk1IVFVsMVFfQg?oc=5" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic推出Claude Tag，一个常驻Slack的AI团队成员，能够持续学习公司的组织上下文和机构知识，旨在提升企业生产力并捕获隐性知识。这标志着AI从工具向虚拟同事的进化。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
-  { time: "01:00", tag: "macro", tagText: "宏观", text: "企业AI超级政治行动委员会（Super PAC）在一场地方选举中投入2700万美元，引发对AI利益集团影响政治的担忧。分析指出，AI公司正积极通过政治捐款塑造监管环境。", source: "The Verge", url: "https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district" },
-  { time: "00:45", tag: "tech", tagText: "科技", text: "苹果Vision Pro负责人Paul Meade据悉将离职并加入OpenAI硬件团队。这位苹果副总裁的跳槽，标志着OpenAI在硬件领域的布局进一步增强，同时也引发外界对苹果空间计算业务未来方向的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/" },
 ];
-const aiBreakingDate = "2026年9月17日 19:32 CST";
+const aiBreakingDate = "2026年9月18日 00:50 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
