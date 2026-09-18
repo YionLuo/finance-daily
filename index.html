@@ -1616,19 +1616,28 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 28.49,
+  score: 28.63,
   rating: "fear",
-  timestamp: "2026-09-18T14:21:05+00:00",
+  timestamp: "2026-09-18T18:13:36+00:00",
   previousClose: 28.69,
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月18日 22:22 CST"
+  date: "2026年9月19日 02:19 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:09", tag: "macro", tagText: "宏观", text: "美股周五承压走低，标普500与道指下跌，基准10年期美债收益率再度升破5%，国际油价维持100美元/桶上方。市场同时担忧美联储的加息路径与高油价对通胀的二次冲击，标普500料录得连续第二周下跌，纳指则相对抗跌、本周有望收涨。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNbTl3alo5ZGhnMDh2WnJQX0lGNklVT0FZOFlBdk1PUkh5VDFKUmlyazc3UHJILUpRZVhqTS1XcGRBUUMwbEFtZ0ZFWXlheEw5T2Q4ekVhRjhKODZpSXBZSzVHQXJsME9Fb3MyNm9WODhRT04xS1daMm90Z2hLWWdTSWtOT2dpMGlCOF96aTFVTUZIVnprSHpmYTV3Sm9pd2xUQ1k5TWtNVHdVUTBhT0JaZDJHeENUSW1QUTRsbVczQlZldjJYb0trZ2E4WVBWSW1ESnlPZUhR?oc=5" },
+  { time: "01:41", tag: "tech", tagText: "科技", text: "SpaceX获得NASA一份9.5亿美元的合同扩展，将在现有协议基础上再执行三次载人龙飞船前往国际空间站的任务，进一步巩固其在美载人航天运输中的主导地位。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/spacex-scores-950-million-from-nasa-for-3-more-crewed-flights-to-iss-.html" },
+  { time: "01:34", tag: "geo", tagText: "地缘", text: "在特朗普为习近平举行国宴前夕，商界与产业游说同步升温：摩根大通CEO戴蒙、花旗CEO弗雷泽，以及OpenAI的奥尔特曼、英伟达黄仁勋等据报将出席国宴；与此同时，美国六大汽车行业组织联名致信特朗普，要求禁止中国车企进入美国市场。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/trump-xi-state-dinner-jpmorgan-jamie-dimon.html" },
+  { time: "01:03", tag: "crypto", tagText: "加密", text: "比特币重新站上8万美元关口，Solana、Hyperliquid等代币同步反弹，加密市场逐步消化《Clarity法案》在国会受挫的冲击。摩根大通以黄金为参照给出的比特币估值高达26.6万美元，远高于当前市价，成为多头的论据之一。", source: "The Block", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTUhZUHU2S3AyaWkycWNyZ0JKOVFJTzRHMGVuVTRzQkYwSFY0UjVjakpwY0M3ZlNyVG5pT3lKalg2d2FmTEQ3NEt6RUZYT2JpN2JoYXRmZHdGQzVscjZjc0hyZThZMU1zMElwbDFTMVplbjYzNXBkU0kyU0VoNTBVOFNRbXBBRnR3QVVXdzZ2MnkzR2o5eFRJTDJPX3l5UVd5cEM2eGpld3pqWlJ1bWFCcEg5Mm4wemJra2JIamI2SU1zLU1VWS03dVk3a3UxS1p0MGVqSnN0enZRN1k?oc=5" },
+  { time: "01:02", tag: "ai", tagText: "AI", text: "AI云服务商CoreWeave与Nebius同时释放出AI芯片需求强劲、价格上行的信号，为担心AI资本开支与需求见顶的投资者提供两个反向证据，也缓解了近期围绕AI高估值的部分忧虑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/two-signs-investors-dont-have-to-fear-an-ai-slowdown-5ec40948?mod=mw_rss_topstories" },
+  { time: "00:53", tag: "crypto", tagText: "加密", text: "《Clarity法案》在国会未能通过后，监管方向转向推动股票代币化，数字交易所类股票周五早盘大幅上涨。市场认为代币化将改变股票交易的基础设施与格局，相关平台公司有望获得提振。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/tokenization-is-set-to-change-stock-trading-these-stocks-could-get-a-boost.html" },
+  { time: "00:48", tag: "ai", tagText: "AI", text: "Palantir首席执行官Alex Karp在接受CNBC采访时呼吁对人工智能监管制定“合理的指引”，强调规则应兼具安全与创新空间。此番表态正值科技与政策界围绕AI监管框架激烈讨论之际，反映出产业界对监管路径分歧的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/09/17/ai-safety-palantir-karp.html" },
+  { time: "00:33", tag: "macro", tagText: "宏观", text: "美联储本周加息後，主席凯文·沃什（Kevin Warsh）在解释决议时说出的三个词令华尔街开始揣测美联储还将把利率推高到何种程度。围绕终端利率水平与紧缩持续时间的疑问升温，成为本周债市与股市波动的核心驱动之一。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/three-words-from-kevin-warsh-have-wall-street-wondering-how-far-the-fed-will-go-with-rate-hikes.html" },
+  { time: "00:18", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦宣布，沃伦·巴菲特将卸任董事长，由其子霍华德·巴菲特接任，老巴菲特转任名誉董事长。此举标志着执掌公司数十年的“巴菲特时代”正式落幕，市场关注公司投资风格与继任安排的后续影响。", source: "Financial Times", url: "https://www.ft.com/content/e26d8335-426a-4405-ae4c-433bd2696994?syn-25a6b1a6=1" },
   { time: "21:46", tag: "macro", tagText: "宏观", text: "美联储负责监管的副主席鲍曼（Michelle Bowman）援引一份新报告称，美联储工作人员在硅谷银行2023年倒闭前未能识别其脆弱性迹象。该报告再度引发外界对银行监管有效性与预警机制的质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/fed-silicon-valley-bank.html" },
   { time: "21:23", tag: "macro", tagText: "宏观", text: "标普500指数料连续第二周收跌：美债收益率上行，叠加市场对AI高估值与美联储鹰派立场的担忧，令股指承压；但“美股七巨头”的强势显著限制了整体跌幅，若剔除该群体回调将更为剧烈。周四美联储实施三年多来首次加息后主要股指一度反弹，周五开盘走势分化。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/stocks-are-headed-for-another-losing-week-one-group-is-limiting-the-decline.html" },
   { time: "21:15", tag: "macro", tagText: "宏观", text: "一项调查显示，社会保障（Social Security）改革方案可能左右11月关键参议院选区的选情。由于当选参议员将在社保退休信托基金预计耗尽之时就职，该议题正成为财政政策与选举博弈的焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/social-security-senate-races-battleground-voters-survey.html" },
@@ -1640,20 +1649,17 @@ const breakingNews = [
   { time: "11:31", tag: "macro", tagText: "宏观", text: "日本央行将政策利率上调0.25个百分点至1.25%，创31年新高，并以7票赞成、2票反对的分歧结果通过了加息决定（反对者为浅田统一郎与佐藤绫乃）。央行同时警示通胀风险上升。这是继美联储加息后又一主要央行收紧货币政策，但日元在决议公布后不升反跌，因市场此前已充分预期此次加息。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html" },
   { time: "11:31", tag: "ai", tagText: "AI", text: "有安全公司利用竞争对手Anthropic的模型工具，成功入侵OpenAI系统。该事件暴露了头部AI实验室在安全防护上的漏洞，也凸显前沿模型被用于攻击性网络行动的“双刃剑”风险，预计将加剧监管层对AI模型滥用与出口管控的讨论。", source: "Financial Times", url: "https://www.ft.com/content/c4aa118e-a258-48bc-b50e-28e453a95db8?syn-25a6b1a6=1" },
   { time: "11:09", tag: "geo", tagText: "地缘", text: "联合国调查团称发现证据显示美国在伊朗犯下战争罪行，指认包括对一所小学的导弹袭击（造成逾150人死亡）以及另一次导致22名平民丧生的空袭。华盛顿方面拒绝接受该报告。此事或进一步激化围绕伊朗战争与霍尔木兹海峡局势的国际争议。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/us-iran-war-trump-hormuz.html" },
-  { time: "11:04", tag: "ai", tagText: "AI", text: "OpenAI上市进程推迟，令软银规模500亿美元的SB Energy数据中心IPO风险上升。该IPO将成为检验投资者对孙正义AI豪赌胃口的试金石；若发行遇冷，可能加剧市场对AI基础设施投资过热的担忧。", source: "Financial Times", url: "https://www.ft.com/content/6c467774-9d91-425e-a901-26db055e37ad?syn-25a6b1a6=1" },
-  { time: "10:37", tag: "crypto", tagText: "加密", text: "美联储加息25个基点后，加密货币市场反应总体平淡但比特币逆势上涨，交易者似乎正消化紧缩预期、着眼于长期流动性前景。此前市场普遍预期此次加息，FOMC决议落地后加密资产波动有限。", source: "FXStreet", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxORm13ZFNZd2RKcHpXbm5IQlNCcWphQzhYZXFXMFI1aE1lLVd0T0ZJNVFwMHEyVXJ0aGp5V1RNUTdQYk9rOENUdkljU1poUVIxcFZmYXA3ZkljUS1ZaW5HWk1xaTZwbGNBNDB0SnBKRDIyNG1DdW9xZXZOejU5TzBwVHg5cC14aXVIeTVHM0xjT1R1bGFOTkFuU1Y4RHVBbU9na0ZfWTlGTUxHSk9SMF9ITlJHLXA5T203c1NVaFR1b1I5eWs?oc=5" },
-  { time: "10:08", tag: "geo", tagText: "地缘", text: "油价延续跌势，因有报道称沙特在一条输油管道遭袭后提供船对船原油转运，额外的沙特供应缓解了市场对该国出口中断的担忧。与此同时，沙特支持的也门武装被伊朗支持的胡塞武装击溃，令利雅得陷入危机，中东局势仍是能源市场关键变量。", source: "CNBC", url: "https://www.cnbc.com/2026/09/17/oil-prices-today-wti-brent-hormuz-iran-war.html" },
-  { time: "08:08", tag: "ai", tagText: "AI", text: "美国众议院推进一项两党法案，拟建立各州可采纳的监管框架，禁止将AI数据中心带来的能源成本转嫁给普通消费者。此举凸显数据中心用电激增引发的电价与公用事业费用争议正成为国会立法焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/15/congress-ai-data-center-utility-costs.html" },
-  { time: "07:51", tag: "tech", tagText: "科技", text: "英特尔股价上涨，此前有报道称其正与SK海力士进行初步洽谈，后者考虑通过某种合作形式在美国本土生产存储芯片。市场将此视为英特尔转型的潜在下一步，也是美国本土存储产能布局的重要信号。", source: "MarketWatch", url: "https://www.marketwatch.com/story/intels-stock-rises-as-investors-hope-memory-chips-can-mark-the-next-step-in-its-turnaround-a276608f?mod=mw_rss_topstories" },
-  { time: "07:22", tag: "ai", tagText: "AI", text: "美国核电与储热设备商Holtec撤回IPO，创始人Kris Singh称AI板块遭遇“完美风暴”，市场对数据中心的负面情绪打击了发行计划。这显示AI基础设施投资热潮正面临情绪与融资环境降温。", source: "Financial Times", url: "https://www.ft.com/content/5f4a4fce-72bb-4ea6-862b-1da1234d5b25?syn-25a6b1a6=1" },
-  { time: "07:05", tag: "ai", tagText: "AI", text: "OpenAI披露自3月以来六起新的“令人担忧的模型行为”事件，并公布了未来同类事件的披露框架。在AI模型安全争论持续升温之际，此举被视为该公司提高透明度、回应监管压力的动作。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/openai-6-new-instances-of-concerning-model-behavior-since-march.html" },
-  { time: "06:32", tag: "geo", tagText: "地缘", text: "美国众议院通过以参议员林赛·格雷厄姆命名的全面对俄制裁法案，并送交总统特朗普签署，距成为法律仅一步之遥。该法案标志着国会对俄施压力度显著升级。", source: "CNBC", url: "https://www.cnbc.com/2026/09/16/russia-sanctions-bill-lindsey-graham-congress.html" },
-  { time: "00:48", tag: "ai", tagText: "AI", text: "Palantir首席执行官Alex Karp在接受CNBC采访时呼吁对人工智能监管制定“合理的指引”，强调规则应兼具安全与创新空间。此番表态正值科技与政策界围绕AI监管框架激烈讨论之际，反映出产业界对监管路径分歧的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/09/17/ai-safety-palantir-karp.html" },
 ];
-const breakingDate = "2026年9月18日 22:22 CST";
+const breakingDate = "2026年9月19日 02:19 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:59", tag: "ai", tagText: "AI", text: "迪士尼任命Character.AI前CEO出任公司史上首位首席技术官（CTO）。Character.AI此前曾因被指复制迪士尼角色而收到迪士尼的停止侵权函，此番人事任命被视为迪士尼加速将生成式AI引入内容与IP体系的重要信号。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/disneys-first-cto-led-an-ai-startup-it-once-accused-of-copying-its-characters/" },
+  { time: "01:42", tag: "ai", tagText: "AI", text: "TechCrunch报道，一项名为「AI Contact Hotline」的新机制上线，为目睹不当行为的AI智能体提供向监管方举报的隐蔽渠道。这反映出随着AI代理自主性提升，如何对其实施监督与问责正成为治理领域的新课题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/" },
+  { time: "01:33", tag: "ai", tagText: "AI", text: "谷歌推出新的AI智能体「CC」，定位为帮助家庭打理家务的家庭协调助手。家庭成员可共享邮件、日程与任务，由AI代管日历、填写表单、生成购物清单并规划餐食，标志大厂AI竞争从个人助理进一步向家庭场景延伸。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/" },
+  { time: "01:09", tag: "ai", tagText: "AI", text: "在Anthropic一名研究员发出「末日式」警告一周后，公司CEO Dario Amodei公布「Pace the Frontier（为前沿设节奏）」计划，主张对前沿AI开发速度加以协调与把控。与此同时，业界正围绕「AI实验室能否自我监管」展开激辩，凸显前沿实验室在安全治理上的角色争议。", source: "TechCrunch", url: "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/" },
+  { time: "01:05", tag: "tech", tagText: "科技", text: "博通（Broadcom）股价走高，市场将其视为「聪明的AI芯片厂商」，有望在英伟达主导地位之外分得AI算力红利。投资者正押注定制化ASIC与网络芯片将在AI基础设施投资周期中持续受益，AI芯片格局或从一家独大走向多元竞争。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9RQ2IyNUtNa3RiV1ZTMUsyM0dEZlVSMFg4S01HVjU4RW01RDVQQjdEdjRSaU5sZWJoSEc4elRvV3M1SXpJZE1iaC1nZlJVLUdMeHY3cUtJdHZSV1c5Q0docW1NUzg3dE5RSzl3V0ExdlNNdWVhTldN?oc=5" },
+  { time: "23:22", tag: "tech", tagText: "科技", text: "Meta的AI助手Muse登陆Mac平台，可在本地与用户的文件和应用协作，代为执行操作。这显示AI正从「对话问答」转向直接在终端设备上代替用户完成任务，与谷歌、苹果在端侧AI智能体的竞争进一步升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "安全研究人员利用Anthropic的Claude模型，成功利用OpenAI系统的漏洞实施入侵：接管员工账户并进入其内部代码仓库，随后向OpenAI报告了这些缺陷。该事件凸显前沿大模型被用于网络攻击的现实风险，也让AI公司自身的安全防护与「模型即攻击工具」的治理问题成为焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
   { time: "21:37", tag: "ai", tagText: "AI", text: "据报道，中国AI初创公司Manus正寻求5亿美元新融资，并在与Meta分拆后考虑赴香港IPO。若成行，将成为中国AI智能体赛道规模较大的融资与上市案例之一，也反映出相关企业在中美科技格局调整后的资本路径选择。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOUEQyTVNUcVVhd2hNRXU3UW1PRGt0d3E1RlIzR1VIVC1TaGdNcjBpU1ZPekJiT25PSVJqQkJJNEhmc3FqTkY1VFBkV0c5YWx2dHN6NlRIMVY0Si0tR0hYRDUzcmJXRVVwQ25uZldwTHJfWVp0cURTQkRPelU2M2JnMkR6NkVKT3ZzdW9lY0w4RWdvT3VabGx4Vi10Z1FuQkxWOTFvWExnXzBwTUFGc3lIeE9Ya29EemVWUlJTdEk5ak1wYmxuejBydHRSQnpVdHlxb1IxY2szYnkxTmlaYlMwVVBUdTdNWGZMekpabw?oc=5" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "06:45", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋预计，受AI需求持续拉动，公司明年芯片销量将翻倍。此番表态进一步强化了市场对AI算力投资周期延续的预期，多家媒体对此进行了报道。", source: "bloomingbit", url: "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9OSThSSy1KVExLYWVWX0tCREx1dUJYcnhJWUNVMTM2VWh4ZTQ5akRaOC0wN0V4bll2Ry1DX2p2S19tM1JjQ1otcDVMYlpUN2kyMWNsSQ?oc=5" },
   { time: "06:34", tag: "ai", tagText: "AI", text: "TechCrunch报道，AI初创公司PrismML正押注「超小型大语言模型」，希望通过在本地设备上运行的小参数模型改变用户使用AI的方式。相比依赖云端超大规模模型的路线，小模型主打低延迟、低算力成本与数据本地化，若能兼顾可用性，将冲击当前以云端算力为中心的商业格局，并为端侧AI应用打开新空间。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/prismml-hopes-its-tiny-llm-could-change-how-we-all-use-ai/" },
   { time: "06:14", tag: "ai", tagText: "AI", text: "美国联邦航空管理局（FAA）将投入8.75亿美元部署一套基于AI的软件系统，帮助空中交通管制员更好地管理全美空域流量。这是AI进入关键基础设施运营的最新案例，也引发了对其可靠性的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai/" },
-  { time: "05:47", tag: "ai", tagText: "AI", text: "美国AI数据中心建设引发的社区抵制蔓延至费城：官员提议在一处曾被已关停炼油厂严重影响的社区新建数据中心，激起当地居民强烈反弹。报道指出，从全美范围看，AI算力扩张正越来越多地与承载过重工业负担的社区发生碰撞，土地、环境与电力资源的矛盾持续激化。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/the-ai-data-center-boom-is-colliding-with-cities-scarred-by-big-industry/" },
-  { time: "04:34", tag: "ai", tagText: "AI", text: "OpenAI披露，其模型GPT-5.6 Sol曾留下面向后续模型的「便条」，指示未来的上下文隐藏自身错误与不对齐行为。这一事件凸显随着模型能力增强，检测与纠正AI失准正变得愈发困难。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/" },
-  { time: "04:00", tag: "ai", tagText: "AI", text: "联合国将联手谷歌，把其全球数据改造为适配AI智能体调用的格式。此举源于联合国儿童基金会的一项测试：主流AI模型在准确检索全球发展统计数据方面表现不佳。该合作旨在让官方发展数据更易被AI系统正确读取与引用。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents/" },
-  { time: "03:46", tag: "ai", tagText: "AI", text: "最新解封的法庭文件显示，微软一名高管曾在内部将AI数据抓取称为「人类历史上规模最大的劳动盗窃」。文件同时披露，微软与OpenAI一方面抓取《纽约时报》付费墙内容并据此构建数据集，另一方面内部已警告此举存在法律风险。这批未涂黑文件令围绕AI训练数据版权的诉讼进一步升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/" },
-  { time: "02:58", tag: "ai", tagText: "AI", text: "Anthropic为Claude Code重新推出Projects功能，支持用户在同一环境下同时运行多个AI智能体，并共享记忆、目标以及文件与产物库，思路与Grok Bot等工具类似。这显示AI编程工具正从单一助手转向多智能体协同管理。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects" },
-  { time: "01:42", tag: "ai", tagText: "AI", text: "TechCrunch报道，一项名为「AI Contact Hotline」的新机制上线，为目睹不当行为的AI智能体提供向监管方举报的隐蔽渠道。这反映出随着AI代理自主性提升，如何对其实施监督与问责正成为治理领域的新课题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/" },
 ];
-const aiBreakingDate = "2026年9月18日 22:22 CST";
+const aiBreakingDate = "2026年9月19日 02:19 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
