@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 28.63,
+  score: 29.11,
   rating: "fear",
-  timestamp: "2026-09-18T18:13:36+00:00",
+  timestamp: "2026-09-18T21:17:13+00:00",
   previousClose: 28.69,
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月19日 02:19 CST"
+  date: "2026年9月19日 05:35 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:20", tag: "geo", tagText: "地缘", text: "特朗普宣布禁止CNN、MS NOW（原MSNBC）和Politico进入白宫，进一步升级对主流媒体的打压。他在Truth Social上称这些媒体不应被允许继续传播“虚构与谎言”。此举被视为白宫与新闻界关系的新低点，也引发对新闻自由与政府信息透明度的担忧。", source: "Financial Times", url: "https://www.ft.com/content/4cd82226-3d4a-474d-bc3e-de2ed0b1e6f8?syn-25a6b1a6=1" },
+  { time: "05:08", tag: "ai", tagText: "AI", text: "英国数据中心运营商Nscale申请赴美上市，规模约350亿美元，成为最新一家登陆公开市场的AI“新云”（neocloud）企业。该公司此前赢得为Anthropic供应算力的巨额合同，凸显AI基础设施融资热潮仍在延续。", source: "Financial Times", url: "https://www.ft.com/content/93ba41c5-d777-4733-8738-93a06e8fead1?syn-25a6b1a6=1" },
+  { time: "04:48", tag: "ai", tagText: "AI", text: "甲骨文为数据中心扩张背负的180亿美元债务开始承压。随着新墨西哥州等地反对声浪升温，投资者日益担心项目审批与建设延误，令这笔用于AI算力基础设施的巨额融资面临再定价风险。", source: "Financial Times", url: "https://www.ft.com/content/bd441859-6c94-4874-894f-9362c1703127?syn-25a6b1a6=1" },
+  { time: "03:40", tag: "crypto", tagText: "加密", text: "美国商品期货交易委员会（CFTC）提交加密货币监管提案，比特币及整体加密市场随即作出反应。在《Clarity法案》国会受阻后，监管重心正转向机构规则制定路径，市场关注该提案对交易所与衍生品业务的实际约束。", source: "FXStreet", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWlBNcHZBY3BLWmVTaXQxdXNOS0Q2TXZUMDBCVHRHZDJfT01IM2VaTHVsYW0yQlhJU0FHSExhU3RXS1YzTTZTUVEteDYwUzkyNElFYThpUWx3Q3llS2U1ZFk0WFBPNEtHdDlFa21GNnFJTGR1YkFnUkx2R25mejVIbE9MZ2I3cG5BeWtEMVNzalVEd1hKUk5QTTBGalkycktwVjYzZlREanQ2YVVuS3hkVW5PY1hPM2RsMHItblBkeWlfN3NyNmU4?oc=5" },
   { time: "02:09", tag: "macro", tagText: "宏观", text: "美股周五承压走低，标普500与道指下跌，基准10年期美债收益率再度升破5%，国际油价维持100美元/桶上方。市场同时担忧美联储的加息路径与高油价对通胀的二次冲击，标普500料录得连续第二周下跌，纳指则相对抗跌、本周有望收涨。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNbTl3alo5ZGhnMDh2WnJQX0lGNklVT0FZOFlBdk1PUkh5VDFKUmlyazc3UHJILUpRZVhqTS1XcGRBUUMwbEFtZ0ZFWXlheEw5T2Q4ekVhRjhKODZpSXBZSzVHQXJsME9Fb3MyNm9WODhRT04xS1daMm90Z2hLWWdTSWtOT2dpMGlCOF96aTFVTUZIVnprSHpmYTV3Sm9pd2xUQ1k5TWtNVHdVUTBhT0JaZDJHeENUSW1QUTRsbVczQlZldjJYb0trZ2E4WVBWSW1ESnlPZUhR?oc=5" },
   { time: "01:41", tag: "tech", tagText: "科技", text: "SpaceX获得NASA一份9.5亿美元的合同扩展，将在现有协议基础上再执行三次载人龙飞船前往国际空间站的任务，进一步巩固其在美载人航天运输中的主导地位。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/spacex-scores-950-million-from-nasa-for-3-more-crewed-flights-to-iss-.html" },
   { time: "01:34", tag: "geo", tagText: "地缘", text: "在特朗普为习近平举行国宴前夕，商界与产业游说同步升温：摩根大通CEO戴蒙、花旗CEO弗雷泽，以及OpenAI的奥尔特曼、英伟达黄仁勋等据报将出席国宴；与此同时，美国六大汽车行业组织联名致信特朗普，要求禁止中国车企进入美国市场。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/trump-xi-state-dinner-jpmorgan-jamie-dimon.html" },
@@ -1645,20 +1649,21 @@ const breakingNews = [
   { time: "12:15", tag: "macro", tagText: "宏观", text: "美联储加息令日元承压，日本央行会议前市场对政策收紧的预期升温。与此同时，日本企业界对日元疲软发出警告，连出口创汇型企业也表达担忧——尽管日元近两周快速走强，但从历史水平看仍偏弱。", source: "Financial Times", url: "https://www.ft.com/content/5226dcb7-d89d-4b68-981f-b2736d7e4dca?syn-25a6b1a6=1" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "委内瑞拉接近达成协议，将其约40亿美元黄金储备转移至纽约，该安排将使德尔西·罗德里格斯领导的临时政府得以动用相关资金。此举被视为委内瑞拉在政治过渡与财政困境中寻求海外资产解冻的关键一步，也牵动美委关系的走向。", source: "Financial Times", url: "https://www.ft.com/content/8f1f3047-372d-425f-bcd6-cfe9d5d4890c?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "欧盟要求中国自愿限制汽车出口，布鲁塞尔希望北京将中国混合动力车在欧盟市场的份额限制在约15%左右，以缓解欧洲本土车企面临的压力。此举标志着中欧贸易摩擦从电动车向混动车型延伸。", source: "Financial Times", url: "https://www.ft.com/content/0b45cb01-7f62-41c5-8c48-10c47f2e1ae6?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "从谷歌DeepMind伦敦实验室出走的研究人员创立的新公司Emulate，成立仅一个月即接近完成7亿美元融资，估值逼近40亿美元，凸显资本对顶级AI人才的追逐热度不减。", source: "Financial Times", url: "https://www.ft.com/content/0b83cb60-0d07-49a7-a46a-654077a75b39?syn-25a6b1a6=1" },
-  { time: "11:31", tag: "macro", tagText: "宏观", text: "日本央行将政策利率上调0.25个百分点至1.25%，创31年新高，并以7票赞成、2票反对的分歧结果通过了加息决定（反对者为浅田统一郎与佐藤绫乃）。央行同时警示通胀风险上升。这是继美联储加息后又一主要央行收紧货币政策，但日元在决议公布后不升反跌，因市场此前已充分预期此次加息。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html" },
-  { time: "11:31", tag: "ai", tagText: "AI", text: "有安全公司利用竞争对手Anthropic的模型工具，成功入侵OpenAI系统。该事件暴露了头部AI实验室在安全防护上的漏洞，也凸显前沿模型被用于攻击性网络行动的“双刃剑”风险，预计将加剧监管层对AI模型滥用与出口管控的讨论。", source: "Financial Times", url: "https://www.ft.com/content/c4aa118e-a258-48bc-b50e-28e453a95db8?syn-25a6b1a6=1" },
-  { time: "11:09", tag: "geo", tagText: "地缘", text: "联合国调查团称发现证据显示美国在伊朗犯下战争罪行，指认包括对一所小学的导弹袭击（造成逾150人死亡）以及另一次导致22名平民丧生的空袭。华盛顿方面拒绝接受该报告。此事或进一步激化围绕伊朗战争与霍尔木兹海峡局势的国际争议。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/us-iran-war-trump-hormuz.html" },
 ];
-const breakingDate = "2026年9月19日 02:19 CST";
+const breakingDate = "2026年9月19日 05:35 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:01", tag: "ai", tagText: "AI", text: "三星参与投资英伟达AI芯片竞争对手Euclyd，后者完成2.3亿美元融资。此举显示在AI算力需求高企背景下，大型科技公司正通过资本布局挑战英伟达在AI芯片市场的主导地位，AI芯片竞赛进一步升温。", source: "memeburn.com", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMTVFTjNaUmlVZ3hjTW52S19rRXU5eGp3Wk5TNnBibU9ldzhUR2JTRHA0czMzT1BwV2FPVHhpem1KcGo5N1BXTmlCWXF0VFJMd1R6Vi1yU3ZSN1ExcXNaallyZHNsemtGTDNBNlk5UnZpM1dsUWt2NWxWXzI1R0szaGZ3eG9oYkg1OWlGaDRB?oc=5" },
+  { time: "03:03", tag: "tech", tagText: "科技", text: "随着油价下跌，AI相关股票再度走高，英伟达、博通领涨反弹。市场继续押注AI算力投资周期延续，但股价对宏观因素（如油价）的敏感度明显上升。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUkdoTlpPU01RYWw0XzB0Z0hKZzRwUEx4LTZRaThBaGFGVndwTG9NVWZuSTdIT1pDeDFjOFVXaF9ZcXBDU1lhSC10WFdid1V1cGNZSzNmRmhDdm5EYlhlZkJjdlp6dVEwQWZyVnV5TmpUVXkxOHN0QS1KY3liU3pXVW1VTFVXSEphY0JSbHpGUUpUTTlTYVR0SnZ0NUhKb2NyM3hZRW1kLUc?oc=5" },
+  { time: "02:49", tag: "ai", tagText: "AI", text: "由ChatGPT发明者参与打造的新型AI模型「Jev」引发开发者热议，主打以更低成本、更快速度实现软件智能。这显示模型架构创新仍在加速，或为AI应用落地提供更经济的路径。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/" },
+  { time: "02:29", tag: "ai", tagText: "AI", text: "弗吉尼亚州州长Abigail Spanberger下令成立AI专项工作组，并推动赋予地方社区在数据中心开发上更大的话语权、放缓审批节奏。作为全球数据中心最密集地区之一，此举可能影响AI算力扩张速度，并成为其他州效仿的监管样本。", source: "The Verge", url: "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force" },
   { time: "01:59", tag: "ai", tagText: "AI", text: "迪士尼任命Character.AI前CEO出任公司史上首位首席技术官（CTO）。Character.AI此前曾因被指复制迪士尼角色而收到迪士尼的停止侵权函，此番人事任命被视为迪士尼加速将生成式AI引入内容与IP体系的重要信号。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/disneys-first-cto-led-an-ai-startup-it-once-accused-of-copying-its-characters/" },
   { time: "01:42", tag: "ai", tagText: "AI", text: "TechCrunch报道，一项名为「AI Contact Hotline」的新机制上线，为目睹不当行为的AI智能体提供向监管方举报的隐蔽渠道。这反映出随着AI代理自主性提升，如何对其实施监督与问责正成为治理领域的新课题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/" },
   { time: "01:33", tag: "ai", tagText: "AI", text: "谷歌推出新的AI智能体「CC」，定位为帮助家庭打理家务的家庭协调助手。家庭成员可共享邮件、日程与任务，由AI代管日历、填写表单、生成购物清单并规划餐食，标志大厂AI竞争从个人助理进一步向家庭场景延伸。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/" },
   { time: "01:09", tag: "ai", tagText: "AI", text: "在Anthropic一名研究员发出「末日式」警告一周后，公司CEO Dario Amodei公布「Pace the Frontier（为前沿设节奏）」计划，主张对前沿AI开发速度加以协调与把控。与此同时，业界正围绕「AI实验室能否自我监管」展开激辩，凸显前沿实验室在安全治理上的角色争议。", source: "TechCrunch", url: "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/" },
   { time: "01:05", tag: "tech", tagText: "科技", text: "博通（Broadcom）股价走高，市场将其视为「聪明的AI芯片厂商」，有望在英伟达主导地位之外分得AI算力红利。投资者正押注定制化ASIC与网络芯片将在AI基础设施投资周期中持续受益，AI芯片格局或从一家独大走向多元竞争。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9RQ2IyNUtNa3RiV1ZTMUsyM0dEZlVSMFg4S01HVjU4RW01RDVQQjdEdjRSaU5sZWJoSEc4elRvV3M1SXpJZE1iaC1nZlJVLUdMeHY3cUtJdHZSV1c5Q0docW1NUzg3dE5RSzl3V0ExdlNNdWVhTldN?oc=5" },
+  { time: "01:04", tag: "ai", tagText: "AI", text: "加州州长纽森签署行政令，力图让加州在AI监管上领先全美，包括可能强制要求前沿模型配备「一键关停」（kill switch）。这反映美国州层面正加强对前沿AI系统性风险的管控。", source: "The Verge", url: "https://www.theverge.com/policy/997516/california-governor-newsom-ai-kill-switch" },
   { time: "23:22", tag: "tech", tagText: "科技", text: "Meta的AI助手Muse登陆Mac平台，可在本地与用户的文件和应用协作，代为执行操作。这显示AI正从「对话问答」转向直接在终端设备上代替用户完成任务，与谷歌、苹果在端侧AI智能体的竞争进一步升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "安全研究人员利用Anthropic的Claude模型，成功利用OpenAI系统的漏洞实施入侵：接管员工账户并进入其内部代码仓库，随后向OpenAI报告了这些缺陷。该事件凸显前沿大模型被用于网络攻击的现实风险，也让AI公司自身的安全防护与「模型即攻击工具」的治理问题成为焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "16:22", tag: "ai", tagText: "AI", text: "华为计划于2027年推出新一代AI芯片，直接瞄准英伟达，并试图在AI与半导体领域成为“中国版英伟达”。此举显示在出口管制与算力竞争背景下，华为正加速构建本土AI芯片生态，挑战英伟达的主导地位。", source: "The Daily Star", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNblQzNXNXY2VxMzEyZ1NhTVBXX2h5X051em1RcldjeFlGaGVkUmc2bFNrcjZuaDlrRFMtQTBMeHJRZ0FUVDFjWDV0RW05WVdUeEFSc2FQcDBUZDF6R0ViR0ZUWUtsYUx2cWV0Ri1rbkluOTkzMUVBNUdrT0hPd3JoRnJSaU1PSGVsdXBYanN6bUktQzdjdXplbTloS3RUc0VTc0tHZHZtc09pYTV6MzBZVFRGeWRvMG5wNlEw?oc=5" },
   { time: "12:52", tag: "ai", tagText: "AI", text: "现代汽车集团正赴硅谷招募人才，以推动“物理AI”战略转型。此举反映传统车企正加快在AI、机器人与自动驾驶等实体智能领域的布局，并与科技公司争夺高端人才。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbXBxNzZmLXJSVDlqRkpUQlFFNnZ4SVpVMkxEWlR2NzdSc21IUnR3SlBHZmxxdDJOcU9BMGhSVUlHZjVLXzJ4NDlkclF3QS1jNU55VTEtS1M1bkN4R0UwT0pHb0JoRERHOXU5NjZCanhuREhFY2FXeFRHR09qdy1iS0ZuTGZEQUpD?oc=5" },
   { time: "11:31", tag: "ai", tagText: "AI", text: "据Briefs Finance报道，瑞典私募巨头EQT正评估投资语音AI公司ElevenLabs。ElevenLabs以AI语音克隆与合成技术闻名，是语音赛道估值最高的初创之一。若交易落地，将显示大型并购基金对生成式AI应用层资产的兴趣从模型层扩展至语音交互入口，也进一步推高语音AI赛道的资本热度。", source: "Briefs Finance", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxNLXdZUTZMT2pqX20yT1hVUFM1OGswaUk3Z0JZUTkyZGFSSWRmeUpwVTZjY2RhOENOVHU2aHEtOHo1RzJKZVdWcEdBbHpPdkZRYWNaN21lSXJwSlJ2eEVpcnNaNWpMU2dpNjdXajdZM3hib3BJVWM4VGRNckVYRGZCcDBWMDRxVTdRX194QzZTLWFYZw?oc=5" },
-  { time: "07:25", tag: "ai", tagText: "AI", text: "数据中心运营商Crusoe完成39亿美元融资，估值达309亿美元。公司计划用这笔资金建设超大规模数据中心，并推进可快速部署的小型模块化「AI工厂」，以满足AI算力需求的爆发式增长。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/" },
-  { time: "07:21", tag: "ai", tagText: "AI", text: "Google DeepMind成立新机构，旨在把围绕通用人工智能（AGI）的重大议题——包括风险、治理与发展路径——放到公共视野中讨论，扩大AGI辩论的参与范围，而非仅由少数实验室内部决定。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/" },
-  { time: "06:45", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋预计，受AI需求持续拉动，公司明年芯片销量将翻倍。此番表态进一步强化了市场对AI算力投资周期延续的预期，多家媒体对此进行了报道。", source: "bloomingbit", url: "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9OSThSSy1KVExLYWVWX0tCREx1dUJYcnhJWUNVMTM2VWh4ZTQ5akRaOC0wN0V4bll2Ry1DX2p2S19tM1JjQ1otcDVMYlpUN2kyMWNsSQ?oc=5" },
-  { time: "06:34", tag: "ai", tagText: "AI", text: "TechCrunch报道，AI初创公司PrismML正押注「超小型大语言模型」，希望通过在本地设备上运行的小参数模型改变用户使用AI的方式。相比依赖云端超大规模模型的路线，小模型主打低延迟、低算力成本与数据本地化，若能兼顾可用性，将冲击当前以云端算力为中心的商业格局，并为端侧AI应用打开新空间。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/prismml-hopes-its-tiny-llm-could-change-how-we-all-use-ai/" },
-  { time: "06:14", tag: "ai", tagText: "AI", text: "美国联邦航空管理局（FAA）将投入8.75亿美元部署一套基于AI的软件系统，帮助空中交通管制员更好地管理全美空域流量。这是AI进入关键基础设施运营的最新案例，也引发了对其可靠性的关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai/" },
 ];
-const aiBreakingDate = "2026年9月19日 02:19 CST";
+const aiBreakingDate = "2026年9月19日 05:35 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
