@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月20日 04:31 CST"
+  date: "2026年9月20日 06:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:36", tag: "crypto", tagText: "加密", text: "美国XRP现货ETF资产规模在17.1亿美元停滞不前，资金流入明显放缓。报道指出，在比特币站上8万美元上方、加密市场情绪整体回暖之际，XRP ETF却未能延续此前吸金势头。能否突破20亿美元关口被视为衡量山寨币机构需求与ETF资金黏性的关键指标。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/markets/crypto/articles/xrp-etfs-frozen-1-71-223635167.html" },
+  { time: "04:13", tag: "macro", tagText: "宏观", text: "保诚（Prudential）正退出新兴市场业务，一笔1.85亿美元的出售交易印证了这一战略收缩。此举显示这家保险巨头正在重新聚焦核心市场，也折射出全球保险业在增长放缓、资本回报要求上升背景下的资产组合调整趋势。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/prudential-pru-leaving-emerging-markets-201350497.html" },
+  { time: "03:49", tag: "ai", tagText: "AI", text: "特朗普宣布组建“AI Force”，并拟任命一名“AI沙皇”监督技术发展中的“不良行为”。在各方对AI技术快速推进的担忧升温之际，特朗普此前一直抵制监管呼声，此番表态被视为其在AI治理立场上的调整。市场关注美国AI政策框架的走向，以及其对科技巨头、算力投资与行业合规成本的潜在影响。", source: "Financial Times", url: "https://www.ft.com/content/bcbfe352-9e9f-4ef5-81b2-2e01505b8477?syn-25a6b1a6=1" },
+  { time: "01:14", tag: "tech", tagText: "科技", text: "交付前景显示特斯拉核心汽车业务持续承压，其下一个增长引擎必须兑现。报道称，随着交付预期走弱，市场对特斯拉估值的支撑正从整车销售转向自动驾驶、机器人等新业务；若新引擎迟迟无法落地，股价与盈利预期将面临更大压力。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxPalIxdFRlWXJtU2hrZ1JVNnpPalJDVTJJd2VuaTVpR2I0MW01QkozSXNIUl9nM1dRVVR3cEQ0bGxsdktLdkMtZHRDU1R3MkFpa2JTQlFyX1JnV3RyR3A1eVpOZTFfWWYyOHFLbDE1bnNpczRqR0dKM2p1aGlTNkZTb2wzWTRfQ29ZcEM5VjlaejdTWnV0VUNUWmNSb19YcWs?oc=5" },
   { time: "01:11", tag: "tech", tagText: "科技", text: "美光（Micron）发布一款突破性存储产品，并称其将在很大程度上揭示存储市场的走向。在AI需求推动下，存储芯片行业格局正经历深刻变化，市场关注该产品能否帮助美光巩固其竞争地位。", source: "Insider Monkey", url: "https://finance.yahoo.com/technology/articles/micron-mu-unveils-breakthrough-memory-171152232.html" },
   { time: "00:39", tag: "geo", tagText: "地缘", text: "特朗普禁止三家媒体机构后，MS NOW、CNN与Politico的记者被拒绝进入白宫。事发前一天，特朗普刚以对自身报道为由将这三家媒体禁入。此举进一步加剧白宫与主流媒体之间的紧张关系，并引发外界对新闻自由的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/trump-media-ban-ms-now.html" },
   { time: "23:57", tag: "macro", tagText: "宏观", text: "沃尔玛效仿好市多，将与一家非营利健康保险公司合作销售联邦医疗保险优势计划（Medicare Advantage）。此举标志着这家零售巨头进一步进军医疗健康领域，争夺规模庞大的老年医保市场。", source: "MarketWatch", url: "https://www.marketwatch.com/story/like-costco-walmart-to-sell-medicare-advantage-plans-b31977d2?mod=mw_rss_topstories" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "18:29", tag: "tech", tagText: "科技", text: "据路透报道，派拉蒙最快可能在本周末与多州就华纳兄弟相关交易达成和解。若本周敲定，派拉蒙可避免向华纳兄弟股东支付数百万美元的费用，这场围绕好莱坞资产整合的监管博弈有望阶段性落幕。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/paramount-could-settle-with-states-over-warner-bros-this-weekend-reuters.html" },
   { time: "18:00", tag: "geo", tagText: "地缘", text: "加拿大总理卡尼将其投资推介之旅从“枫叶达沃斯”延伸至法国斯特拉斯堡，同时向华尔街与欧盟抛出橄榄枝。此举是加拿大推动经济多元化、降低对美依赖努力的一部分，反映出在贸易摩擦背景下，盟友正加快寻找替代市场与资本来源。", source: "Financial Times", url: "https://www.ft.com/content/4e7be0a6-a1fd-4161-9656-faff899e938f?syn-25a6b1a6=1" },
   { time: "17:05", tag: "geo", tagText: "地缘", text: "美国国防科技公司Anduril表示，美国对台军售的延迟已开始影响其业务。作为新兴军工承包商，Anduril的此番表态凸显出华盛顿在对台武器交付上的迟滞，不仅牵动台海安全议题，也直接冲击相关国防企业的订单与现金流。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/anduril-says-us-delay-on-taiwan-arms-sales-affecting-its-business.html" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "深海正成为新一轮军备竞赛的战场。出于对海底关键基础设施脆弱性的担忧，各国政府与企业正大举投资水下技术，包括无人潜航器与海底监测系统，以争夺这一新兴战略领域的优势。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/underwater-war-sea-drones-defense-tech.html" },
-  { time: "12:49", tag: "ai", tagText: "AI", text: "一份报告发现，AI聊天机器人在回答金融咨询时“多数时候”给出错误答案。部分机器人忽略了即将实施的税收政策变化，甚至凭空捏造规则，凸显大模型在高准确性要求场景下的可靠性风险。", source: "Financial Times", url: "https://www.ft.com/content/c0cd359d-df84-4208-a789-ffa864b43666" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "美国国务院面临越来越大的压力，要求其披露从委内瑞拉石油中获得的收益。特朗普政府迄今拒绝公布已收取多少资金、以及有多少被送回加拉加斯，引发国会与外界对相关资金流向的质疑。", source: "Financial Times", url: "https://www.ft.com/content/05887f92-c777-48ab-8efa-9a39e7e18a9f?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "投资者正评估Anthropic在IPO后能否维持其激增的营收。OpenAI的强势回归、低价竞争者的涌现以及AI安全担忧，都在考验市场对其商业模式可持续性的信心。", source: "Financial Times", url: "https://www.ft.com/content/96d0a206-a37b-4166-b78d-b27ed24f7d57?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月20日 04:31 CST";
+const breakingDate = "2026年9月20日 06:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:44", tag: "ai", tagText: "AI", text: "咨询巨头埃森哲（Accenture）成为Anthropic的首个「嵌入式评估方」，被形容为将承接其史上风险最高的咨询项目。这标志着大模型厂商正引入第三方机构对模型与企业级部署进行评估，AI治理与合规服务市场或加速成形。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/" },
+  { time: "04:44", tag: "ai", tagText: "AI", text: "Meta推出名为Muse的AI助手，配套Mac应用可直接读取用户的Messages、日历与Notes等个人数据。评测认为其能力确实实用，但深度接入个人信息的做法让「智能」与「窥探」的边界再度成为争议焦点，也预示大厂AI助手正加速争夺桌面端入口与用户数据权限。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy" },
+  { time: "04:39", tag: "tech", tagText: "科技", text: "以AI车牌识别与监控网络闻名的Flock据报正通过员工自愿买断方式缩减编制，若买断不达目标「几乎肯定」要启动裁员。此举显示在监管审视与隐私争议升温的背景下，监控科技公司的扩张节奏和成本结构正承受压力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/" },
   { time: "04:18", tag: "ai", tagText: "AI", text: "TechCrunch报道称，「世界模型」（world model）赛道公司普遍高度保密：从创始团队到其数据供应商，无人愿意透露究竟在构建什么。尽管该领域资金充裕、热度极高，但其技术路线与商业化路径仍笼罩在迷雾之中，引发外界对其真实进展的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/" },
   { time: "03:57", tag: "ai", tagText: "AI", text: "特朗普提出为AI「重新命名」，并称正在筹建一支「AI Force（AI部队）」。他还在无证据的情况下宣称当前的AI反弹情绪是民主党的「骗局」。相关表态显示美国AI议题正进一步政治化，并可能影响后续监管与政府采购方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/" },
   { time: "03:03", tag: "tech", tagText: "科技", text: "随着油价下跌，AI相关股票再度走高，英伟达、博通领涨反弹。市场继续押注AI算力投资周期延续，但股价对宏观因素（如油价）的敏感度明显上升。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUkdoTlpPU01RYWw0XzB0Z0hKZzRwUEx4LTZRaThBaGFGVndwTG9NVWZuSTdIT1pDeDFjOFVXaF9ZcXBDU1lhSC10WFdid1V1cGNZSzNmRmhDdm5EYlhlZkJjdlp6dVEwQWZyVnV5TmpUVXkxOHN0QS1KY3liU3pXVW1VTFVXSEphY0JSbHpGUUpUTTlTYVR0SnZ0NUhKb2NyM3hZRW1kLUc?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "tech", tagText: "科技", text: "由安德森·霍洛维茨（a16z）投资的Vals AI正力图成为AI基准测试的「黄金标准」。在模型数量激增、评测结果愈发遭质疑的背景下，该公司主打中立、可信的第三方评测。若其标准被广泛采纳，将影响模型选型与AI行业的话语权分配。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/" },
   { time: "09:00", tag: "tech", tagText: "科技", text: "印度监管机构要求来电识别类App（如Truecaller）将用户提交的骚扰电话举报单向共享给电信运营商。Truecaller回应称，这一「单向」共享义务相当于把具有商业价值的专有数据资产无偿交给电信运营商，凸显各国在数据权属与反诈治理上的监管张力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/" },
   { time: "07:25", tag: "ai", tagText: "AI", text: "曾用名UP.Labs的初创公司现以「Vantora」名义运营，完成1亿美元融资，全面押注「物理AI」。该公司专为工业类企业孵化并打造新创公司，此番融资显示资本正加速流向将AI与机器人、制造等实体场景结合的方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/" },
-  { time: "07:13", tag: "ai", tagText: "AI", text: "TechCrunch报道，Anthropic正在运营一间从事生物实验的实验室。此前AI领袖们一直宣称AI是治愈人类疾病的关键，而Anthropic研究员同时也在警告AI可能带来灭绝风险，该公司在生物学实验上的实际投入凸显其前沿布局与安全担忧并存的矛盾姿态。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments/" },
-  { time: "07:12", tag: "ai", tagText: "AI", text: "一起AI「幻觉」事件险些触发美军军事行动。一名GovAI研究学者警告称，军方人员必须理解大语言模型固有的不确定性。此事凸显在国防等高危场景中部署LLM的现实风险，也加剧了外界对AI进入军事决策链条的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/" },
-  { time: "05:44", tag: "ai", tagText: "AI", text: "咨询巨头埃森哲（Accenture）成为Anthropic的首个「嵌入式评估方」，被形容为将承接其史上风险最高的咨询项目。这标志着大模型厂商正引入第三方机构对模型与企业级部署进行评估，AI治理与合规服务市场或加速成形。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/" },
 ];
-const aiBreakingDate = "2026年9月20日 04:31 CST";
+const aiBreakingDate = "2026年9月20日 06:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
