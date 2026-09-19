@@ -1623,12 +1623,19 @@ const fearGreedData = {
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月19日 18:48 CST"
+  date: "2026年9月19日 22:19 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:01", tag: "tech", tagText: "科技", text: "得州州长称当地数据中心'自掘坟墓'，电力与水资源压力引发反弹。报道以一个63岁牧场主的案例说明：将土地出租给数据中心可让其推迟领取社保、增加退休储蓄，折射出AI基建热潮与地方资源承载力之间的张力。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/real-estate/articles/texas-data-centers-dug-own-140139976.html" },
+  { time: "21:48", tag: "geo", tagText: "地缘", text: "沙特民防部门发布警报后，首都利雅得主要机场附近出现烟雾与火焰；与此同时，巴基斯坦敦促伊朗保护能源供应与航运安全。事件凸显中东紧张局势对能源运输通道及全球油市的潜在威胁。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/riyadh-airport-smoke-saudi-arabia.html" },
+  { time: "21:00", tag: "macro", tagText: "宏观", text: "在连续五年未能将通胀率压回目标后，美联储领导层认为，只需小幅提高利率，就有望在2029年前把通胀率降至2%。'沃什执掌的美联储'正显示出认真对待通胀的态度，华尔街开始相信这一路径可行，此前多年市场一直怀疑美联储的决心。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/warshs-fed-shows-its-serious-about-taming-inflation-why-wall-street-now-believes-it-55dc5af5?mod=mw_rss_topstories" },
+  { time: "20:43", tag: "macro", tagText: "宏观", text: "巴菲特进一步推进其确保伯克希尔哈撒韦不偏离既定方向的计划，卸任董事长一职，并将该职位交给其子霍华德·巴菲特。此举被视为这家万亿美元级投资公司在后巴菲特时代治理结构安排的关键一步。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/warren-buffett-takes-next-step-in-plan-to-keep-berkshire-from-straying.html" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "随着对失控AI的担忧达到高潮，政策制定者与科技领袖正评估被称为'终止开关'的AI紧急停止按钮是否有效。专家评论称，'不是太少，但可能已经太晚'，凸显前沿AI安全治理的现实困境。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/ai-kill-switch-explained.html" },
+  { time: "19:44", tag: "crypto", tagText: "加密", text: "比特币升破81,000美元，加密市场单日市值增加约1,500亿美元。周末行情延续强势，市场情绪明显回暖，与近期监管路径转向机构规则制定的背景形成呼应。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxON21SSDR4cm5la0p1RVNQVXowalFRa3ByLU9uUDdTT2xwcWVlTTVPMkVJbkpLRjVFR084LU5IX0NzWnlULXRzaUx5UmVnUkFMQ0hjVHYzZmZRN19tU0JFbV9Pb011aWZ1YThzd29GZ1FyUlJqTnZ0RUg0NVV0YzhEcUJpQUc0YVZaLUhtVjF5Y2RrN08tSXZibFVOOVFGSERySHk0RWpqWjFuU0JWMHVZNy1ibXM2UQ?oc=5" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "多位诺贝尔经济学奖得主公开支持加州针对亿万富翁征税的提案。这些进步派学者表示，11月的公投措施可能'开始约束超级富豪的权力'，反映出美国财富税讨论持续升温。", source: "Financial Times", url: "https://www.ft.com/content/94ec0fee-53ab-4d7e-9b17-6b05608ad974?syn-25a6b1a6=1" },
   { time: "18:29", tag: "tech", tagText: "科技", text: "据路透报道，派拉蒙最快可能在本周末与多州就华纳兄弟相关交易达成和解。若本周敲定，派拉蒙可避免向华纳兄弟股东支付数百万美元的费用，这场围绕好莱坞资产整合的监管博弈有望阶段性落幕。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/paramount-could-settle-with-states-over-warner-bros-this-weekend-reuters.html" },
   { time: "18:00", tag: "geo", tagText: "地缘", text: "加拿大总理卡尼将其投资推介之旅从“枫叶达沃斯”延伸至法国斯特拉斯堡，同时向华尔街与欧盟抛出橄榄枝。此举是加拿大推动经济多元化、降低对美依赖努力的一部分，反映出在贸易摩擦背景下，盟友正加快寻找替代市场与资本来源。", source: "Financial Times", url: "https://www.ft.com/content/4e7be0a6-a1fd-4161-9656-faff899e938f?syn-25a6b1a6=1" },
   { time: "17:05", tag: "geo", tagText: "地缘", text: "美国国防科技公司Anduril表示，美国对台军售的延迟已开始影响其业务。作为新兴军工承包商，Anduril的此番表态凸显出华盛顿在对台武器交付上的迟滞，不仅牵动台海安全议题，也直接冲击相关国防企业的订单与现金流。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/anduril-says-us-delay-on-taiwan-arms-sales-affecting-its-business.html" },
@@ -1642,18 +1649,15 @@ const breakingNews = [
   { time: "07:28", tag: "geo", tagText: "地缘", text: "特朗普宣布，美国将依据与格陵兰及丹麦达成的安全协议，在格陵兰建立“大规模军事存在”。丹麦政府称协议最早可能于下周签署，并将尊重格陵兰的主权。格陵兰方面一贯强调该岛“非卖品”，欧盟今年早些时候也曾联合谴责特朗普谋求收购该岛的举动。此番安排被视为美国在北极地区强化军事与战略布局的重要一步。", source: "Financial Times", url: "https://www.ft.com/content/2ecc74bd-2fba-4ca6-9f1c-f0a927ed983c?syn-25a6b1a6=1" },
   { time: "06:33", tag: "ai", tagText: "AI", text: "OpenAI预计到2030年将累计烧钱约2800亿美元。这家AI初创公司预计现金流将深度为负，因其持续大举投资基础设施，同时面临价格竞争压力。该预测凸显AI头部企业在算力与模型军备竞赛中的巨额资本开支，以及市场对AI商业模式盈利前景的持续质疑。", source: "Financial Times", url: "https://www.ft.com/content/6011d061-eee3-4193-b3b7-8ee4155f538c?syn-25a6b1a6=1" },
   { time: "05:35", tag: "ai", tagText: "AI", text: "微软AI部门负责人穆斯塔法·苏莱曼（Mustafa Suleyman）对CNBC表示，OpenAI本周披露的最新“模型行为令人担忧”事件是一个“严重状况”。他是在《Squawk Box》节目中作出上述表态的。此前OpenAI披露了相关模型异常行为，引发业界对前沿AI安全与可控性的新一轮关注。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/microsoft-ai-ceo-openais-latest-ai-revelation-a-serious-situation.html" },
-  { time: "05:20", tag: "geo", tagText: "地缘", text: "特朗普宣布禁止CNN、MS NOW（原MSNBC）和Politico进入白宫，进一步升级对主流媒体的打压。他在Truth Social上称这些媒体不应被允许继续传播“虚构与谎言”。此举被视为白宫与新闻界关系的新低点，也引发对新闻自由与政府信息透明度的担忧。", source: "Financial Times", url: "https://www.ft.com/content/4cd82226-3d4a-474d-bc3e-de2ed0b1e6f8?syn-25a6b1a6=1" },
-  { time: "05:08", tag: "ai", tagText: "AI", text: "英国数据中心运营商Nscale申请赴美上市，规模约350亿美元，成为最新一家登陆公开市场的AI“新云”（neocloud）企业。该公司此前赢得为Anthropic供应算力的巨额合同，凸显AI基础设施融资热潮仍在延续。", source: "Financial Times", url: "https://www.ft.com/content/93ba41c5-d777-4733-8738-93a06e8fead1?syn-25a6b1a6=1" },
-  { time: "04:48", tag: "ai", tagText: "AI", text: "甲骨文为数据中心扩张背负的180亿美元债务开始承压。随着新墨西哥州等地反对声浪升温，投资者日益担心项目审批与建设延误，令这笔用于AI算力基础设施的巨额融资面临再定价风险。", source: "Financial Times", url: "https://www.ft.com/content/bd441859-6c94-4874-894f-9362c1703127?syn-25a6b1a6=1" },
-  { time: "03:40", tag: "crypto", tagText: "加密", text: "美国商品期货交易委员会（CFTC）提交加密货币监管提案，比特币及整体加密市场随即作出反应。在《Clarity法案》国会受阻后，监管重心正转向机构规则制定路径，市场关注该提案对交易所与衍生品业务的实际约束。", source: "FXStreet", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWlBNcHZBY3BLWmVTaXQxdXNOS0Q2TXZUMDBCVHRHZDJfT01IM2VaTHVsYW0yQlhJU0FHSExhU3RXS1YzTTZTUVEteDYwUzkyNElFYThpUWx3Q3llS2U1ZFk0WFBPNEtHdDlFa21GNnFJTGR1YkFnUkx2R25mejVIbE9MZ2I3cG5BeWtEMVNzalVEd1hKUk5QTTBGalkycktwVjYzZlREanQ2YVVuS3hkVW5PY1hPM2RsMHItblBkeWlfN3NyNmU4?oc=5" },
-  { time: "02:09", tag: "macro", tagText: "宏观", text: "美股周五承压走低，标普500与道指下跌，基准10年期美债收益率再度升破5%，国际油价维持100美元/桶上方。市场同时担忧美联储的加息路径与高油价对通胀的二次冲击，标普500料录得连续第二周下跌，纳指则相对抗跌、本周有望收涨。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNbTl3alo5ZGhnMDh2WnJQX0lGNklVT0FZOFlBdk1PUkh5VDFKUmlyazc3UHJILUpRZVhqTS1XcGRBUUMwbEFtZ0ZFWXlheEw5T2Q4ekVhRjhKODZpSXBZSzVHQXJsME9Fb3MyNm9WODhRT04xS1daMm90Z2hLWWdTSWtOT2dpMGlCOF96aTFVTUZIVnprSHpmYTV3Sm9pd2xUQ1k5TWtNVHdVUTBhT0JaZDJHeENUSW1QUTRsbVczQlZldjJYb0trZ2E4WVBWSW1ESnlPZUhR?oc=5" },
-  { time: "01:41", tag: "tech", tagText: "科技", text: "SpaceX获得NASA一份9.5亿美元的合同扩展，将在现有协议基础上再执行三次载人龙飞船前往国际空间站的任务，进一步巩固其在美载人航天运输中的主导地位。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/spacex-scores-950-million-from-nasa-for-3-more-crewed-flights-to-iss-.html" },
-  { time: "01:34", tag: "geo", tagText: "地缘", text: "在特朗普为习近平举行国宴前夕，商界与产业游说同步升温：摩根大通CEO戴蒙、花旗CEO弗雷泽，以及OpenAI的奥尔特曼、英伟达黄仁勋等据报将出席国宴；与此同时，美国六大汽车行业组织联名致信特朗普，要求禁止中国车企进入美国市场。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/trump-xi-state-dinner-jpmorgan-jamie-dimon.html" },
 ];
-const breakingDate = "2026年9月19日 18:48 CST";
+const breakingDate = "2026年9月19日 22:19 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:00", tag: "ai", tagText: "AI", text: "摩根大通在Meta取得一项重大AI突破后改变了对Meta股票的立场，此前其对该股看法偏谨慎。此举显示华尔街正重新评估Meta在AI领域的投入与变现潜力，相关评级/目标价调整或影响大型科技股的资金流向。", source: "Barchart.com", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxPTTA0THVwcS0yZXd5QjBYM3BUU2x4NUNxcmhmbjN6dGZEaHUwbVlMQ092LXRRV3lESVByZ1U4ZjdoeHJOMXE3amJtM1lacEhXZE5zVHBjdWhLc3hGYTM0OXhVMWtjeV85T1lJMy12bDJMck1oZVZGQUk1T0hLREdvcW80VVdQZFJsekJLbllSZ2UtcFRwTnZ2TjZPVFM2UnF0eHh6VF9CT0Fla0pwbHZSYURRQ0h6WGs?oc=5" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "安全研究人员利用Anthropic的Claude模型，成功利用OpenAI系统的漏洞实施入侵：接管员工账户并进入其内部代码仓库，随后向OpenAI报告了这些缺陷。该事件凸显前沿大模型被用于网络攻击的现实风险，也让AI公司自身的安全防护与「模型即攻击工具」的治理问题成为焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "由安德森·霍洛维茨（a16z）投资的Vals AI正力图成为AI基准测试的「黄金标准」。在模型数量激增、评测结果愈发遭质疑的背景下，该公司主打中立、可信的第三方评测。若其标准被广泛采纳，将影响模型选型与AI行业的话语权分配。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/" },
   { time: "09:00", tag: "tech", tagText: "科技", text: "印度监管机构要求来电识别类App（如Truecaller）将用户提交的骚扰电话举报单向共享给电信运营商。Truecaller回应称，这一「单向」共享义务相当于把具有商业价值的专有数据资产无偿交给电信运营商，凸显各国在数据权属与反诈治理上的监管张力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/" },
   { time: "07:25", tag: "ai", tagText: "AI", text: "曾用名UP.Labs的初创公司现以「Vantora」名义运营，完成1亿美元融资，全面押注「物理AI」。该公司专为工业类企业孵化并打造新创公司，此番融资显示资本正加速流向将AI与机器人、制造等实体场景结合的方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/" },
   { time: "07:13", tag: "ai", tagText: "AI", text: "TechCrunch报道，Anthropic正在运营一间从事生物实验的实验室。此前AI领袖们一直宣称AI是治愈人类疾病的关键，而Anthropic研究员同时也在警告AI可能带来灭绝风险，该公司在生物学实验上的实际投入凸显其前沿布局与安全担忧并存的矛盾姿态。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "01:33", tag: "ai", tagText: "AI", text: "谷歌推出新的AI智能体「CC」，定位为帮助家庭打理家务的家庭协调助手。家庭成员可共享邮件、日程与任务，由AI代管日历、填写表单、生成购物清单并规划餐食，标志大厂AI竞争从个人助理进一步向家庭场景延伸。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/" },
   { time: "01:09", tag: "ai", tagText: "AI", text: "在Anthropic一名研究员发出「末日式」警告一周后，公司CEO Dario Amodei公布「Pace the Frontier（为前沿设节奏）」计划，主张对前沿AI开发速度加以协调与把控。与此同时，业界正围绕「AI实验室能否自我监管」展开激辩，凸显前沿实验室在安全治理上的角色争议。", source: "TechCrunch", url: "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/" },
   { time: "01:05", tag: "tech", tagText: "科技", text: "博通（Broadcom）股价走高，市场将其视为「聪明的AI芯片厂商」，有望在英伟达主导地位之外分得AI算力红利。投资者正押注定制化ASIC与网络芯片将在AI基础设施投资周期中持续受益，AI芯片格局或从一家独大走向多元竞争。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9RQ2IyNUtNa3RiV1ZTMUsyM0dEZlVSMFg4S01HVjU4RW01RDVQQjdEdjRSaU5sZWJoSEc4elRvV3M1SXpJZE1iaC1nZlJVLUdMeHY3cUtJdHZSV1c5Q0docW1NUzg3dE5RSzl3V0ExdlNNdWVhTldN?oc=5" },
-  { time: "01:04", tag: "ai", tagText: "AI", text: "加州州长纽森签署行政令，力图让加州在AI监管上领先全美，包括可能强制要求前沿模型配备「一键关停」（kill switch）。这反映美国州层面正加强对前沿AI系统性风险的管控。", source: "The Verge", url: "https://www.theverge.com/policy/997516/california-governor-newsom-ai-kill-switch" },
-  { time: "23:22", tag: "tech", tagText: "科技", text: "Meta的AI助手Muse登陆Mac平台，可在本地与用户的文件和应用协作，代为执行操作。这显示AI正从「对话问答」转向直接在终端设备上代替用户完成任务，与谷歌、苹果在端侧AI智能体的竞争进一步升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "安全研究人员利用Anthropic的Claude模型，成功利用OpenAI系统的漏洞实施入侵：接管员工账户并进入其内部代码仓库，随后向OpenAI报告了这些缺陷。该事件凸显前沿大模型被用于网络攻击的现实风险，也让AI公司自身的安全防护与「模型即攻击工具」的治理问题成为焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
 ];
-const aiBreakingDate = "2026年9月19日 18:48 CST";
+const aiBreakingDate = "2026年9月19日 22:19 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
