@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月19日 13:43 CST"
+  date: "2026年9月19日 18:48 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:29", tag: "tech", tagText: "科技", text: "据路透报道，派拉蒙最快可能在本周末与多州就华纳兄弟相关交易达成和解。若本周敲定，派拉蒙可避免向华纳兄弟股东支付数百万美元的费用，这场围绕好莱坞资产整合的监管博弈有望阶段性落幕。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/paramount-could-settle-with-states-over-warner-bros-this-weekend-reuters.html" },
+  { time: "18:00", tag: "geo", tagText: "地缘", text: "加拿大总理卡尼将其投资推介之旅从“枫叶达沃斯”延伸至法国斯特拉斯堡，同时向华尔街与欧盟抛出橄榄枝。此举是加拿大推动经济多元化、降低对美依赖努力的一部分，反映出在贸易摩擦背景下，盟友正加快寻找替代市场与资本来源。", source: "Financial Times", url: "https://www.ft.com/content/4e7be0a6-a1fd-4161-9656-faff899e938f?syn-25a6b1a6=1" },
+  { time: "17:05", tag: "geo", tagText: "地缘", text: "美国国防科技公司Anduril表示，美国对台军售的延迟已开始影响其业务。作为新兴军工承包商，Anduril的此番表态凸显出华盛顿在对台武器交付上的迟滞，不仅牵动台海安全议题，也直接冲击相关国防企业的订单与现金流。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/anduril-says-us-delay-on-taiwan-arms-sales-affecting-its-business.html" },
   { time: "13:00", tag: "geo", tagText: "地缘", text: "深海正成为新一轮军备竞赛的战场。出于对海底关键基础设施脆弱性的担忧，各国政府与企业正大举投资水下技术，包括无人潜航器与海底监测系统，以争夺这一新兴战略领域的优势。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/underwater-war-sea-drones-defense-tech.html" },
   { time: "12:49", tag: "ai", tagText: "AI", text: "一份报告发现，AI聊天机器人在回答金融咨询时“多数时候”给出错误答案。部分机器人忽略了即将实施的税收政策变化，甚至凭空捏造规则，凸显大模型在高准确性要求场景下的可靠性风险。", source: "Financial Times", url: "https://www.ft.com/content/c0cd359d-df84-4208-a789-ffa864b43666" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "美国国务院面临越来越大的压力，要求其披露从委内瑞拉石油中获得的收益。特朗普政府迄今拒绝公布已收取多少资金、以及有多少被送回加拉加斯，引发国会与外界对相关资金流向的质疑。", source: "Financial Times", url: "https://www.ft.com/content/05887f92-c777-48ab-8efa-9a39e7e18a9f?syn-25a6b1a6=1" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "02:09", tag: "macro", tagText: "宏观", text: "美股周五承压走低，标普500与道指下跌，基准10年期美债收益率再度升破5%，国际油价维持100美元/桶上方。市场同时担忧美联储的加息路径与高油价对通胀的二次冲击，标普500料录得连续第二周下跌，纳指则相对抗跌、本周有望收涨。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNbTl3alo5ZGhnMDh2WnJQX0lGNklVT0FZOFlBdk1PUkh5VDFKUmlyazc3UHJILUpRZVhqTS1XcGRBUUMwbEFtZ0ZFWXlheEw5T2Q4ekVhRjhKODZpSXBZSzVHQXJsME9Fb3MyNm9WODhRT04xS1daMm90Z2hLWWdTSWtOT2dpMGlCOF96aTFVTUZIVnprSHpmYTV3Sm9pd2xUQ1k5TWtNVHdVUTBhT0JaZDJHeENUSW1QUTRsbVczQlZldjJYb0trZ2E4WVBWSW1ESnlPZUhR?oc=5" },
   { time: "01:41", tag: "tech", tagText: "科技", text: "SpaceX获得NASA一份9.5亿美元的合同扩展，将在现有协议基础上再执行三次载人龙飞船前往国际空间站的任务，进一步巩固其在美载人航天运输中的主导地位。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/spacex-scores-950-million-from-nasa-for-3-more-crewed-flights-to-iss-.html" },
   { time: "01:34", tag: "geo", tagText: "地缘", text: "在特朗普为习近平举行国宴前夕，商界与产业游说同步升温：摩根大通CEO戴蒙、花旗CEO弗雷泽，以及OpenAI的奥尔特曼、英伟达黄仁勋等据报将出席国宴；与此同时，美国六大汽车行业组织联名致信特朗普，要求禁止中国车企进入美国市场。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/trump-xi-state-dinner-jpmorgan-jamie-dimon.html" },
-  { time: "01:03", tag: "crypto", tagText: "加密", text: "比特币重新站上8万美元关口，Solana、Hyperliquid等代币同步反弹，加密市场逐步消化《Clarity法案》在国会受挫的冲击。摩根大通以黄金为参照给出的比特币估值高达26.6万美元，远高于当前市价，成为多头的论据之一。", source: "The Block", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTUhZUHU2S3AyaWkycWNyZ0JKOVFJTzRHMGVuVTRzQkYwSFY0UjVjakpwY0M3ZlNyVG5pT3lKalg2d2FmTEQ3NEt6RUZYT2JpN2JoYXRmZHdGQzVscjZjc0hyZThZMU1zMElwbDFTMVplbjYzNXBkU0kyU0VoNTBVOFNRbXBBRnR3QVVXdzZ2MnkzR2o5eFRJTDJPX3l5UVd5cEM2eGpld3pqWlJ1bWFCcEg5Mm4wemJra2JIamI2SU1zLU1VWS03dVk3a3UxS1p0MGVqSnN0enZRN1k?oc=5" },
-  { time: "01:02", tag: "ai", tagText: "AI", text: "AI云服务商CoreWeave与Nebius同时释放出AI芯片需求强劲、价格上行的信号，为担心AI资本开支与需求见顶的投资者提供两个反向证据，也缓解了近期围绕AI高估值的部分忧虑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/two-signs-investors-dont-have-to-fear-an-ai-slowdown-5ec40948?mod=mw_rss_topstories" },
-  { time: "00:53", tag: "crypto", tagText: "加密", text: "《Clarity法案》在国会未能通过后，监管方向转向推动股票代币化，数字交易所类股票周五早盘大幅上涨。市场认为代币化将改变股票交易的基础设施与格局，相关平台公司有望获得提振。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/tokenization-is-set-to-change-stock-trading-these-stocks-could-get-a-boost.html" },
 ];
-const breakingDate = "2026年9月19日 13:43 CST";
+const breakingDate = "2026年9月19日 18:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "安全研究人员利用Anthropic的Claude模型，成功利用OpenAI系统的漏洞实施入侵：接管员工账户并进入其内部代码仓库，随后向OpenAI报告了这些缺陷。该事件凸显前沿大模型被用于网络攻击的现实风险，也让AI公司自身的安全防护与「模型即攻击工具」的治理问题成为焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
 ];
-const aiBreakingDate = "2026年9月19日 13:43 CST";
+const aiBreakingDate = "2026年9月19日 18:48 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
