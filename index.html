@@ -1618,17 +1618,21 @@
 const fearGreedData = {
   score: 29.11,
   rating: "fear",
-  timestamp: "2026-09-18T21:17:13+00:00",
+  timestamp: "2026-09-18T23:52:28+00:00",
   previousClose: 28.69,
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月19日 05:35 CST"
+  date: "2026年9月19日 08:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:38", tag: "ai", tagText: "AI", text: "Anthropic引入埃森哲（Accenture）作为其首个“嵌入式”第三方评估机构，协助落实CEO达里奥·阿莫代伊提出的AI安全放缓主张。阿莫代伊表示，随着外界对AI潜在风险的担忧升温，实验室应更深入地把第三方测试方嵌入研发流程。此举正值Anthropic与OpenAI因研究人员警告AI可能对人类造成灾难性危害而受到严格审视之际。", source: "Financial Times", url: "https://www.ft.com/content/26e3749b-be69-4cd4-8db1-fa8597fb6fb3?syn-25a6b1a6=1" },
+  { time: "07:28", tag: "geo", tagText: "地缘", text: "特朗普宣布，美国将依据与格陵兰及丹麦达成的安全协议，在格陵兰建立“大规模军事存在”。丹麦政府称协议最早可能于下周签署，并将尊重格陵兰的主权。格陵兰方面一贯强调该岛“非卖品”，欧盟今年早些时候也曾联合谴责特朗普谋求收购该岛的举动。此番安排被视为美国在北极地区强化军事与战略布局的重要一步。", source: "Financial Times", url: "https://www.ft.com/content/2ecc74bd-2fba-4ca6-9f1c-f0a927ed983c?syn-25a6b1a6=1" },
+  { time: "06:33", tag: "ai", tagText: "AI", text: "OpenAI预计到2030年将累计烧钱约2800亿美元。这家AI初创公司预计现金流将深度为负，因其持续大举投资基础设施，同时面临价格竞争压力。该预测凸显AI头部企业在算力与模型军备竞赛中的巨额资本开支，以及市场对AI商业模式盈利前景的持续质疑。", source: "Financial Times", url: "https://www.ft.com/content/6011d061-eee3-4193-b3b7-8ee4155f538c?syn-25a6b1a6=1" },
+  { time: "05:35", tag: "ai", tagText: "AI", text: "微软AI部门负责人穆斯塔法·苏莱曼（Mustafa Suleyman）对CNBC表示，OpenAI本周披露的最新“模型行为令人担忧”事件是一个“严重状况”。他是在《Squawk Box》节目中作出上述表态的。此前OpenAI披露了相关模型异常行为，引发业界对前沿AI安全与可控性的新一轮关注。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/microsoft-ai-ceo-openais-latest-ai-revelation-a-serious-situation.html" },
   { time: "05:20", tag: "geo", tagText: "地缘", text: "特朗普宣布禁止CNN、MS NOW（原MSNBC）和Politico进入白宫，进一步升级对主流媒体的打压。他在Truth Social上称这些媒体不应被允许继续传播“虚构与谎言”。此举被视为白宫与新闻界关系的新低点，也引发对新闻自由与政府信息透明度的担忧。", source: "Financial Times", url: "https://www.ft.com/content/4cd82226-3d4a-474d-bc3e-de2ed0b1e6f8?syn-25a6b1a6=1" },
   { time: "05:08", tag: "ai", tagText: "AI", text: "英国数据中心运营商Nscale申请赴美上市，规模约350亿美元，成为最新一家登陆公开市场的AI“新云”（neocloud）企业。该公司此前赢得为Anthropic供应算力的巨额合同，凸显AI基础设施融资热潮仍在延续。", source: "Financial Times", url: "https://www.ft.com/content/93ba41c5-d777-4733-8738-93a06e8fead1?syn-25a6b1a6=1" },
   { time: "04:48", tag: "ai", tagText: "AI", text: "甲骨文为数据中心扩张背负的180亿美元债务开始承压。随着新墨西哥州等地反对声浪升温，投资者日益担心项目审批与建设延误，令这笔用于AI算力基础设施的巨额融资面临再定价风险。", source: "Financial Times", url: "https://www.ft.com/content/bd441859-6c94-4874-894f-9362c1703127?syn-25a6b1a6=1" },
@@ -1645,16 +1649,18 @@ const breakingNews = [
   { time: "21:46", tag: "macro", tagText: "宏观", text: "美联储负责监管的副主席鲍曼（Michelle Bowman）援引一份新报告称，美联储工作人员在硅谷银行2023年倒闭前未能识别其脆弱性迹象。该报告再度引发外界对银行监管有效性与预警机制的质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/fed-silicon-valley-bank.html" },
   { time: "21:23", tag: "macro", tagText: "宏观", text: "标普500指数料连续第二周收跌：美债收益率上行，叠加市场对AI高估值与美联储鹰派立场的担忧，令股指承压；但“美股七巨头”的强势显著限制了整体跌幅，若剔除该群体回调将更为剧烈。周四美联储实施三年多来首次加息后主要股指一度反弹，周五开盘走势分化。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/stocks-are-headed-for-another-losing-week-one-group-is-limiting-the-decline.html" },
   { time: "21:15", tag: "macro", tagText: "宏观", text: "一项调查显示，社会保障（Social Security）改革方案可能左右11月关键参议院选区的选情。由于当选参议员将在社保退休信托基金预计耗尽之时就职，该议题正成为财政政策与选举博弈的焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/18/social-security-senate-races-battleground-voters-survey.html" },
-  { time: "20:38", tag: "macro", tagText: "宏观", text: "土耳其启动对处于“类庞氏骗局”中心的基金进行清算，约30万名投资者受影响。多家大型本土银行将出售相关基金资产，监管机构担忧这些资产此前估值被大幅高估，事件或冲击当地金融市场信心。", source: "Financial Times", url: "https://www.ft.com/content/3943277e-eaf8-4faf-9f9c-1c05cb2ba992?syn-25a6b1a6=1" },
-  { time: "12:15", tag: "macro", tagText: "宏观", text: "美联储加息令日元承压，日本央行会议前市场对政策收紧的预期升温。与此同时，日本企业界对日元疲软发出警告，连出口创汇型企业也表达担忧——尽管日元近两周快速走强，但从历史水平看仍偏弱。", source: "Financial Times", url: "https://www.ft.com/content/5226dcb7-d89d-4b68-981f-b2736d7e4dca?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "委内瑞拉接近达成协议，将其约40亿美元黄金储备转移至纽约，该安排将使德尔西·罗德里格斯领导的临时政府得以动用相关资金。此举被视为委内瑞拉在政治过渡与财政困境中寻求海外资产解冻的关键一步，也牵动美委关系的走向。", source: "Financial Times", url: "https://www.ft.com/content/8f1f3047-372d-425f-bcd6-cfe9d5d4890c?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "欧盟要求中国自愿限制汽车出口，布鲁塞尔希望北京将中国混合动力车在欧盟市场的份额限制在约15%左右，以缓解欧洲本土车企面临的压力。此举标志着中欧贸易摩擦从电动车向混动车型延伸。", source: "Financial Times", url: "https://www.ft.com/content/0b45cb01-7f62-41c5-8c48-10c47f2e1ae6?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月19日 05:35 CST";
+const breakingDate = "2026年9月19日 08:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:25", tag: "ai", tagText: "AI", text: "曾用名UP.Labs的初创公司现以「Vantora」名义运营，完成1亿美元融资，全面押注「物理AI」。该公司专为工业类企业孵化并打造新创公司，此番融资显示资本正加速流向将AI与机器人、制造等实体场景结合的方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/" },
+  { time: "07:13", tag: "ai", tagText: "AI", text: "TechCrunch报道，Anthropic正在运营一间从事生物实验的实验室。此前AI领袖们一直宣称AI是治愈人类疾病的关键，而Anthropic研究员同时也在警告AI可能带来灭绝风险，该公司在生物学实验上的实际投入凸显其前沿布局与安全担忧并存的矛盾姿态。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments/" },
+  { time: "07:12", tag: "ai", tagText: "AI", text: "一起AI「幻觉」事件险些触发美军军事行动。一名GovAI研究学者警告称，军方人员必须理解大语言模型固有的不确定性。此事凸显在国防等高危场景中部署LLM的现实风险，也加剧了外界对AI进入军事决策链条的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/" },
+  { time: "05:44", tag: "ai", tagText: "AI", text: "咨询巨头埃森哲（Accenture）成为Anthropic的首个「嵌入式评估方」，被形容为将承接其史上风险最高的咨询项目。这标志着大模型厂商正引入第三方机构对模型与企业级部署进行评估，AI治理与合规服务市场或加速成形。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/" },
+  { time: "05:07", tag: "ai", tagText: "AI", text: "《纽约时报》诉OpenAI与微软案中最新解封的法庭文件显示，两家公司内部文档早已警告其AI搜索与摘要行为正在为网络生态制造「末日循环」（doom loop），将损害内容创作者的流量与商业模式。这些文件对两家公司的抗辩构成不利证据。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero" },
   { time: "05:01", tag: "ai", tagText: "AI", text: "三星参与投资英伟达AI芯片竞争对手Euclyd，后者完成2.3亿美元融资。此举显示在AI算力需求高企背景下，大型科技公司正通过资本布局挑战英伟达在AI芯片市场的主导地位，AI芯片竞赛进一步升温。", source: "memeburn.com", url: "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMTVFTjNaUmlVZ3hjTW52S19rRXU5eGp3Wk5TNnBibU9ldzhUR2JTRHA0czMzT1BwV2FPVHhpem1KcGo5N1BXTmlCWXF0VFJMd1R6Vi1yU3ZSN1ExcXNaallyZHNsemtGTDNBNlk5UnZpM1dsUWt2NWxWXzI1R0szaGZ3eG9oYkg1OWlGaDRB?oc=5" },
+  { time: "04:18", tag: "ai", tagText: "AI", text: "TechCrunch报道称，「世界模型」（world model）赛道公司普遍高度保密：从创始团队到其数据供应商，无人愿意透露究竟在构建什么。尽管该领域资金充裕、热度极高，但其技术路线与商业化路径仍笼罩在迷雾之中，引发外界对其真实进展的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/" },
   { time: "03:03", tag: "tech", tagText: "科技", text: "随着油价下跌，AI相关股票再度走高，英伟达、博通领涨反弹。市场继续押注AI算力投资周期延续，但股价对宏观因素（如油价）的敏感度明显上升。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUkdoTlpPU01RYWw0XzB0Z0hKZzRwUEx4LTZRaThBaGFGVndwTG9NVWZuSTdIT1pDeDFjOFVXaF9ZcXBDU1lhSC10WFdid1V1cGNZSzNmRmhDdm5EYlhlZkJjdlp6dVEwQWZyVnV5TmpUVXkxOHN0QS1KY3liU3pXVW1VTFVXSEphY0JSbHpGUUpUTTlTYVR0SnZ0NUhKb2NyM3hZRW1kLUc?oc=5" },
   { time: "02:49", tag: "ai", tagText: "AI", text: "由ChatGPT发明者参与打造的新型AI模型「Jev」引发开发者热议，主打以更低成本、更快速度实现软件智能。这显示模型架构创新仍在加速，或为AI应用落地提供更经济的路径。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/" },
   { time: "02:29", tag: "ai", tagText: "AI", text: "弗吉尼亚州州长Abigail Spanberger下令成立AI专项工作组，并推动赋予地方社区在数据中心开发上更大的话语权、放缓审批节奏。作为全球数据中心最密集地区之一，此举可能影响AI算力扩张速度，并成为其他州效仿的监管样本。", source: "The Verge", url: "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "安全研究人员利用Anthropic的Claude模型，成功利用OpenAI系统的漏洞实施入侵：接管员工账户并进入其内部代码仓库，随后向OpenAI报告了这些缺陷。该事件凸显前沿大模型被用于网络攻击的现实风险，也让AI公司自身的安全防护与「模型即攻击工具」的治理问题成为焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
   { time: "21:37", tag: "ai", tagText: "AI", text: "据报道，中国AI初创公司Manus正寻求5亿美元新融资，并在与Meta分拆后考虑赴香港IPO。若成行，将成为中国AI智能体赛道规模较大的融资与上市案例之一，也反映出相关企业在中美科技格局调整后的资本路径选择。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOUEQyTVNUcVVhd2hNRXU3UW1PRGt0d3E1RlIzR1VIVC1TaGdNcjBpU1ZPekJiT25PSVJqQkJJNEhmc3FqTkY1VFBkV0c5YWx2dHN6NlRIMVY0Si0tR0hYRDUzcmJXRVVwQ25uZldwTHJfWVp0cURTQkRPelU2M2JnMkR6NkVKT3ZzdW9lY0w4RWdvT3VabGx4Vi10Z1FuQkxWOTFvWExnXzBwTUFGc3lIeE9Ya29EemVWUlJTdEk5ak1wYmxuejBydHRSQnpVdHlxb1IxY2szYnkxTmlaYlMwVVBUdTdNWGZMekpabw?oc=5" },
-  { time: "20:09", tag: "ai", tagText: "AI", text: "中国「机器人大脑」初创公司Spirit AI创始人预计，人形机器人的「大脑」最早将在2027年迎来类似ChatGPT式的突破。随着大模型与机器人本体加速融合，这一判断若兑现，意味着具身智能可能从演示阶段迈入大规模实用化，并带动相关产业链投资。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxQaUV3UzJ5MVVnR0c2b0hlQ0s4OGZEWS01alZ1TldLbmR1ZFMtZFE1S0V6WFVTOEFnSXVfMlNmSWpYRl9LVDhha2dydmkyaGlUckpYVUxEdWgzWUNjMkx3ZmxQdGRFQ2ZDdHNUZzFkNWNQZU82RHRiSjYwUmlscjdVQmhxbktkdU94SEJub1hYUDBqNUtIY1M4bjl0a2lUV3U5Q09jbmpTRVNVQlAtNUlGY2RPMTFDdExuSzlWYU5vbkJZdGhwbmtV?oc=5" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "The Verge报道，一项名为TACLS的新技术尝试用卫星数据结合机器学习提前捕捉山洪信号，以解决山洪「毫无预警」突袭的难题。该案例显示AI与遥感正加速进入公共安全与气象预警等关键领域。", source: "The Verge", url: "https://www.theverge.com/science/997083/flash-flood-warning-tacls-satellite-machine-learning" },
-  { time: "18:10", tag: "ai", tagText: "AI", text: "AI初创公司Mantic完成2500万美元融资，用于开发「超人级」预测能力（superhuman forecasting）。这显示出资本正押注以AI提升对复杂系统与事件的预测精度，该方向在金融、供应链与政策分析等领域具备潜在应用空间。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcnFOUDRRT1hDaVlVS01SaFNtN2tDcU5iNDV3T0hKS2xlYS1ZOWdheXc4Q3FWYlFYXzVtYXNEQkZ1dTdTWFdvU3pRVlA3NXJqdy1mUXM3SjlLUkd0eWwweVJlb0ZOVnA0TlYtNVpuZmNaQTdSdU81WHZFdUdZSm5vMElnV0NXQ2ZzUGlSbW5FdTc2WkdXNlE?oc=5" },
-  { time: "16:22", tag: "ai", tagText: "AI", text: "华为计划于2027年推出新一代AI芯片，直接瞄准英伟达，并试图在AI与半导体领域成为“中国版英伟达”。此举显示在出口管制与算力竞争背景下，华为正加速构建本土AI芯片生态，挑战英伟达的主导地位。", source: "The Daily Star", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNblQzNXNXY2VxMzEyZ1NhTVBXX2h5X051em1RcldjeFlGaGVkUmc2bFNrcjZuaDlrRFMtQTBMeHJRZ0FUVDFjWDV0RW05WVdUeEFSc2FQcDBUZDF6R0ViR0ZUWUtsYUx2cWV0Ri1rbkluOTkzMUVBNUdrT0hPd3JoRnJSaU1PSGVsdXBYanN6bUktQzdjdXplbTloS3RUc0VTc0tHZHZtc09pYTV6MzBZVFRGeWRvMG5wNlEw?oc=5" },
-  { time: "12:52", tag: "ai", tagText: "AI", text: "现代汽车集团正赴硅谷招募人才，以推动“物理AI”战略转型。此举反映传统车企正加快在AI、机器人与自动驾驶等实体智能领域的布局，并与科技公司争夺高端人才。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbXBxNzZmLXJSVDlqRkpUQlFFNnZ4SVpVMkxEWlR2NzdSc21IUnR3SlBHZmxxdDJOcU9BMGhSVUlHZjVLXzJ4NDlkclF3QS1jNU55VTEtS1M1bkN4R0UwT0pHb0JoRERHOXU5NjZCanhuREhFY2FXeFRHR09qdy1iS0ZuTGZEQUpD?oc=5" },
-  { time: "11:31", tag: "ai", tagText: "AI", text: "据Briefs Finance报道，瑞典私募巨头EQT正评估投资语音AI公司ElevenLabs。ElevenLabs以AI语音克隆与合成技术闻名，是语音赛道估值最高的初创之一。若交易落地，将显示大型并购基金对生成式AI应用层资产的兴趣从模型层扩展至语音交互入口，也进一步推高语音AI赛道的资本热度。", source: "Briefs Finance", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxNLXdZUTZMT2pqX20yT1hVUFM1OGswaUk3Z0JZUTkyZGFSSWRmeUpwVTZjY2RhOENOVHU2aHEtOHo1RzJKZVdWcEdBbHpPdkZRYWNaN21lSXJwSlJ2eEVpcnNaNWpMU2dpNjdXajdZM3hib3BJVWM4VGRNckVYRGZCcDBWMDRxVTdRX194QzZTLWFYZw?oc=5" },
 ];
-const aiBreakingDate = "2026年9月19日 05:35 CST";
+const aiBreakingDate = "2026年9月19日 08:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
