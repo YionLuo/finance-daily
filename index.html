@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月20日 08:58 CST"
+  date: "2026年9月20日 14:03 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "英国、法国等欧洲国家针对以色列在巴勒斯坦被占领土上的企业实施制裁，以色列定居者经济正为冲击做准备。报道称，这些惩罚措施可能产生深远影响，涉及贸易、投资与供应链等多个层面。", source: "Financial Times", url: "https://www.ft.com/content/f780b2a4-13ff-44ec-8225-cf38d4f0c966?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "沙特央行去年退出中国主导的跨境货币平台，该计划是北京推动建立替代美元体系努力的一部分。此举被视为人民币国际化与去美元化进程遭遇的又一挫折，也凸显中东国家在中美之间的平衡考量。", source: "Financial Times", url: "https://www.ft.com/content/ac104987-f43d-4e7d-97b6-057d98f7e422?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "俄罗斯发动新一轮空袭行动，以无人机和导弹打击乌克兰的仓库、钢铁厂、港口和铁路，意图摧毁乌克兰经济。报道称，相关打击已使基辅损失超过15亿美元的税收收入，乌方战时经济承压加剧。", source: "Financial Times", url: "https://www.ft.com/content/0ecc81ad-2119-4763-90fb-ba5d399d913d" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "诺和诺德（Ozempic制造商）将于周一召开股东大会，投资者施压要求其加大并购交易并推出新药，以摆脱对减肥药单一业务的依赖、实现收入多元化。此举反映市场对这家欧洲市值龙头增长可持续性的担忧。", source: "Financial Times", url: "https://www.ft.com/content/e560fd8c-5cc2-4743-90eb-eab71b899ce6?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡曾是氦气、玉米等大宗商品的重要中转枢纽，如今相关货运贸易显著萎缩，企业被迫艰难寻找替代运输路线。这一变化反映中东紧张局势对全球航运与供应链的持续扰动。", source: "Financial Times", url: "https://www.ft.com/content/c9d13509-7a93-40a9-b2d4-c3292028813a?syn-25a6b1a6=1" },
   { time: "08:42", tag: "crypto", tagText: "加密", text: "比特币有望录得一年来首个上涨季度：距离9月30日季度收官仅剩11天。报道指出，若要守住这一里程碑，比特币需在余下交易日内维持当前涨势，避免出现大幅回撤。此前比特币已升破81,000美元，市场情绪明显回暖。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTU9EX0F6eUx0b0Q4cVhJMEtNLU92NXJPTmNvSGk2VVJmamw2dEhRdVN6Mi1xWThSbWY1MFRoVjlXWWVFUTdZcm1vajFTY3BXM0k0OHJYaFRZNmZ6dzZjRWFzUjFaeUstUlo5emkxNVhYay10WTJKT1JpbnZEM2xMUExDZ2YzM1dBWTYtbEpqS0pBUTRzUEFKeENRckJONVdnRTFGWm1mVUNOckc2dm4wSHRlQlhrcS1XUGlUQS10SjhlbGVxWFFxXy01VU1lMUNtMXdiX1U5OXBZUVhHRXN0V2lUZUJXYUhlSlFqUQ?oc=5" },
   { time: "07:35", tag: "crypto", tagText: "加密", text: "比特币现货ETF合计持有全部比特币供应量的6.29%，机构化进程持续深化。报道探讨当这一比例升至10%时可能带来的影响，包括流通盘收紧、价格波动结构变化以及对市场定价权的重塑。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZGdlYS1Bdzhod0ctSVQ5LUszSDNGOVUtclA2cHdLaUpMenpKd2hvUTZQczVWZnVrWkNZcnVfSW1zMGhLazR4blBPay1FLUlmQVdmeHFHVldwakRyeE8xVE83UnVsNkVucXdWeWpCYlpVQW9FX1pnRmUtdDVPOVJJUGhZWGFtUmZFQk1heE80X243Q1pRZjhaMjJDZE80U2pWUmE5RExqUWVWQU0tbVlMeWhteHdMQkRnbVlNVDIzeUNRQXRtdE5VcGczZw?oc=5" },
   { time: "06:36", tag: "crypto", tagText: "加密", text: "美国XRP现货ETF资产规模在17.1亿美元停滞不前，资金流入明显放缓。报道指出，在比特币站上8万美元上方、加密市场情绪整体回暖之际，XRP ETF却未能延续此前吸金势头。能否突破20亿美元关口被视为衡量山寨币机构需求与ETF资金黏性的关键指标。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/markets/crypto/articles/xrp-etfs-frozen-1-71-223635167.html" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "21:30", tag: "macro", tagText: "宏观", text: "数百万退出SAVE还款计划的学生贷款借款人，若不尽快转入可负担的还款方案，月供可能大幅飙升。报道提醒相关借款人关注即将到来的截止期限，避免还款额骤增带来的财务冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/save-student-loan-deadline-avoid-higher-payments.html" },
   { time: "21:00", tag: "macro", tagText: "宏观", text: "在连续五年未能将通胀率压回目标后，美联储领导层认为，只需小幅提高利率，就有望在2029年前把通胀率降至2%。'沃什执掌的美联储'正显示出认真对待通胀的态度，华尔街开始相信这一路径可行，此前多年市场一直怀疑美联储的决心。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/warshs-fed-shows-its-serious-about-taming-inflation-why-wall-street-now-believes-it-55dc5af5?mod=mw_rss_topstories" },
   { time: "20:50", tag: "macro", tagText: "宏观", text: "高盛经济学家约瑟夫·布里格斯表示，尽管经济表现稳健，消费者信心却持续低迷，原因或在于社会整体的“幸福感下降”。这一现象凸显经济数据与民众实际感受之间的脱节，悲观情绪可能拖累后续消费支出前景。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/goldman-sachs-happiness-struggling-consumer-sentiment.html" },
-  { time: "20:43", tag: "macro", tagText: "宏观", text: "巴菲特进一步推进其确保伯克希尔哈撒韦不偏离既定方向的计划，卸任董事长一职，并将该职位交给其子霍华德·巴菲特。此举被视为这家万亿美元级投资公司在后巴菲特时代治理结构安排的关键一步。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/warren-buffett-takes-next-step-in-plan-to-keep-berkshire-from-straying.html" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "随着对失控AI的担忧达到高潮，政策制定者与科技领袖正评估被称为'终止开关'的AI紧急停止按钮是否有效。专家评论称，'不是太少，但可能已经太晚'，凸显前沿AI安全治理的现实困境。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/ai-kill-switch-explained.html" },
-  { time: "19:44", tag: "crypto", tagText: "加密", text: "比特币升破81,000美元，加密市场单日市值增加约1,500亿美元。周末行情延续强势，市场情绪明显回暖，与近期监管路径转向机构规则制定的背景形成呼应。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxON21SSDR4cm5la0p1RVNQVXowalFRa3ByLU9uUDdTT2xwcWVlTTVPMkVJbkpLRjVFR084LU5IX0NzWnlULXRzaUx5UmVnUkFMQ0hjVHYzZmZRN19tU0JFbV9Pb011aWZ1YThzd29GZ1FyUlJqTnZ0RUg0NVV0YzhEcUJpQUc0YVZaLUhtVjF5Y2RrN08tSXZibFVOOVFGSERySHk0RWpqWjFuU0JWMHVZNy1ibXM2UQ?oc=5" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "多位诺贝尔经济学奖得主公开支持加州针对亿万富翁征税的提案。这些进步派学者表示，11月的公投措施可能'开始约束超级富豪的权力'，反映出美国财富税讨论持续升温。", source: "Financial Times", url: "https://www.ft.com/content/94ec0fee-53ab-4d7e-9b17-6b05608ad974?syn-25a6b1a6=1" },
-  { time: "18:29", tag: "tech", tagText: "科技", text: "据路透报道，派拉蒙最快可能在本周末与多州就华纳兄弟相关交易达成和解。若本周敲定，派拉蒙可避免向华纳兄弟股东支付数百万美元的费用，这场围绕好莱坞资产整合的监管博弈有望阶段性落幕。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/paramount-could-settle-with-states-over-warner-bros-this-weekend-reuters.html" },
 ];
-const breakingDate = "2026年9月20日 08:58 CST";
+const breakingDate = "2026年9月20日 14:03 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "09:00", tag: "tech", tagText: "科技", text: "印度监管机构要求来电识别类App（如Truecaller）将用户提交的骚扰电话举报单向共享给电信运营商。Truecaller回应称，这一「单向」共享义务相当于把具有商业价值的专有数据资产无偿交给电信运营商，凸显各国在数据权属与反诈治理上的监管张力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/" },
   { time: "07:25", tag: "ai", tagText: "AI", text: "曾用名UP.Labs的初创公司现以「Vantora」名义运营，完成1亿美元融资，全面押注「物理AI」。该公司专为工业类企业孵化并打造新创公司，此番融资显示资本正加速流向将AI与机器人、制造等实体场景结合的方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/" },
   { time: "05:44", tag: "ai", tagText: "AI", text: "咨询巨头埃森哲（Accenture）成为Anthropic的首个「嵌入式评估方」，被形容为将承接其史上风险最高的咨询项目。这标志着大模型厂商正引入第三方机构对模型与企业级部署进行评估，AI治理与合规服务市场或加速成形。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/" },
   { time: "04:44", tag: "ai", tagText: "AI", text: "Meta推出名为Muse的AI助手，配套Mac应用可直接读取用户的Messages、日历与Notes等个人数据。评测认为其能力确实实用，但深度接入个人信息的做法让「智能」与「窥探」的边界再度成为争议焦点，也预示大厂AI助手正加速争夺桌面端入口与用户数据权限。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "安全研究人员利用Anthropic的Claude模型，成功利用OpenAI系统的漏洞实施入侵：接管员工账户并进入其内部代码仓库，随后向OpenAI报告了这些缺陷。该事件凸显前沿大模型被用于网络攻击的现实风险，也让AI公司自身的安全防护与「模型即攻击工具」的治理问题成为焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "由安德森·霍洛维茨（a16z）投资的Vals AI正力图成为AI基准测试的「黄金标准」。在模型数量激增、评测结果愈发遭质疑的背景下，该公司主打中立、可信的第三方评测。若其标准被广泛采纳，将影响模型选型与AI行业的话语权分配。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/" },
-  { time: "09:00", tag: "tech", tagText: "科技", text: "印度监管机构要求来电识别类App（如Truecaller）将用户提交的骚扰电话举报单向共享给电信运营商。Truecaller回应称，这一「单向」共享义务相当于把具有商业价值的专有数据资产无偿交给电信运营商，凸显各国在数据权属与反诈治理上的监管张力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/" },
 ];
-const aiBreakingDate = "2026年9月20日 08:58 CST";
+const aiBreakingDate = "2026年9月20日 14:03 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
