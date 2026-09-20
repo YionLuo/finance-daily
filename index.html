@@ -1623,12 +1623,18 @@ const fearGreedData = {
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月20日 14:03 CST"
+  date: "2026年9月20日 19:14 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:07", tag: "geo", tagText: "地缘", text: "乌克兰在俄罗斯国家杜马选举投票期间对莫斯科发动大规模无人机袭击。这是俄乌战争全面爆发以来俄罗斯首次举行杜马选举，执政的统一俄罗斯党预计将轻松保住主导地位。袭击凸显乌方远程打击能力持续升级，莫斯科核心区域防空压力加大。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/ukraine-launches-heavy-moscow-drone-attack-as-russia-votes.html" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋正成为特朗普在AI安全议题上最重要的盟友。凭借执掌全球市值最高公司的地位，黄仁勋在AI监管、安全与产业政策等最核心议题上获得特朗普的倾听与信任，其影响力已超出企业界，直接介入华盛顿的AI政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/nvidia-ceo-jensen-huang-emerges-as-trumps-top-ally-in-ai-debate.html" },
+  { time: "18:00", tag: "macro", tagText: "宏观", text: "伊朗战争造成全球车用润滑油（机油）供应短缺，美国零售商开始对机油实施限购，价格已上涨至原先的四倍。润滑油短缺可能进一步推高运输与物流成本，并向消费端传导通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/64f90ab8-5fb0-4594-a900-d03e5ca051e3?syn-25a6b1a6=1" },
+  { time: "15:00", tag: "ai", tagText: "AI", text: "大型科技公司正通过提供担保的方式，将约3000亿美元的AI相关敞口移出资产负债表。华尔街借此把科技巨头的信用实力转化为更廉价的融资，为AI基础设施扩张输血，但也令AI投资的真实杠杆与风险敞口更难被外界看清。", source: "Financial Times", url: "https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563?syn-25a6b1a6=1" },
+  { time: "14:26", tag: "macro", tagText: "宏观", text: "塔塔集团继承人诺埃尔·塔塔（Noel Tata）正面临其职业生涯中最关键的一战，力图阻止这家拥有150年历史的商业帝国被强制上市。其对手包括塔塔集团现任主席以及后者在新德里的强大人脉网络，事件牵动印度最大企业集团的治理与股权格局。", source: "Financial Times", url: "https://www.ft.com/content/a0771c0f-71e6-4c0b-9ff6-9845624f4875?syn-25a6b1a6=1" },
+  { time: "14:17", tag: "geo", tagText: "地缘", text: "美国财政部长贝森特将与中国副总理何立峰举行会谈，议题涵盖人工智能、贸易以及关键矿产。在AI竞争与关键矿产供应链博弈加剧的背景下，此次高层接触被视为中美在敏感经济与技术议题上寻求管控分歧的重要信号。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/bessent-chinas-he-to-hold-talks-on-ai-trade-minerals-reuters.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "英国、法国等欧洲国家针对以色列在巴勒斯坦被占领土上的企业实施制裁，以色列定居者经济正为冲击做准备。报道称，这些惩罚措施可能产生深远影响，涉及贸易、投资与供应链等多个层面。", source: "Financial Times", url: "https://www.ft.com/content/f780b2a4-13ff-44ec-8225-cf38d4f0c966?syn-25a6b1a6=1" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "沙特央行去年退出中国主导的跨境货币平台，该计划是北京推动建立替代美元体系努力的一部分。此举被视为人民币国际化与去美元化进程遭遇的又一挫折，也凸显中东国家在中美之间的平衡考量。", source: "Financial Times", url: "https://www.ft.com/content/ac104987-f43d-4e7d-97b6-057d98f7e422?syn-25a6b1a6=1" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "俄罗斯发动新一轮空袭行动，以无人机和导弹打击乌克兰的仓库、钢铁厂、港口和铁路，意图摧毁乌克兰经济。报道称，相关打击已使基辅损失超过15亿美元的税收收入，乌方战时经济承压加剧。", source: "Financial Times", url: "https://www.ft.com/content/0ecc81ad-2119-4763-90fb-ba5d399d913d" },
@@ -1643,14 +1649,8 @@ const breakingNews = [
   { time: "01:11", tag: "tech", tagText: "科技", text: "美光（Micron）发布一款突破性存储产品，并称其将在很大程度上揭示存储市场的走向。在AI需求推动下，存储芯片行业格局正经历深刻变化，市场关注该产品能否帮助美光巩固其竞争地位。", source: "Insider Monkey", url: "https://finance.yahoo.com/technology/articles/micron-mu-unveils-breakthrough-memory-171152232.html" },
   { time: "00:39", tag: "geo", tagText: "地缘", text: "特朗普禁止三家媒体机构后，MS NOW、CNN与Politico的记者被拒绝进入白宫。事发前一天，特朗普刚以对自身报道为由将这三家媒体禁入。此举进一步加剧白宫与主流媒体之间的紧张关系，并引发外界对新闻自由的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/trump-media-ban-ms-now.html" },
   { time: "23:57", tag: "macro", tagText: "宏观", text: "沃尔玛效仿好市多，将与一家非营利健康保险公司合作销售联邦医疗保险优势计划（Medicare Advantage）。此举标志着这家零售巨头进一步进军医疗健康领域，争夺规模庞大的老年医保市场。", source: "MarketWatch", url: "https://www.marketwatch.com/story/like-costco-walmart-to-sell-medicare-advantage-plans-b31977d2?mod=mw_rss_topstories" },
-  { time: "22:03", tag: "tech", tagText: "科技", text: "美国一名法官释放信号，可能驳回TikTok 4亿美元隐私和解协议的部分内容。TikTok此前同意支付3亿美元，并在法院终止联邦贸易委员会2019年对其前身Musical.ly下达的同意令时再支付1亿美元。该案的最终走向仍存不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/us-judge-signals-rejection-of-part-of-tiktok-privacy-settlement.html" },
-  { time: "22:01", tag: "tech", tagText: "科技", text: "得州州长称当地数据中心'自掘坟墓'，电力与水资源压力引发反弹。报道以一个63岁牧场主的案例说明：将土地出租给数据中心可让其推迟领取社保、增加退休储蓄，折射出AI基建热潮与地方资源承载力之间的张力。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/real-estate/articles/texas-data-centers-dug-own-140139976.html" },
-  { time: "21:48", tag: "geo", tagText: "地缘", text: "沙特民防部门发布警报后，首都利雅得主要机场附近出现烟雾与火焰；与此同时，巴基斯坦敦促伊朗保护能源供应与航运安全。事件凸显中东紧张局势对能源运输通道及全球油市的潜在威胁。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/riyadh-airport-smoke-saudi-arabia.html" },
-  { time: "21:30", tag: "macro", tagText: "宏观", text: "数百万退出SAVE还款计划的学生贷款借款人，若不尽快转入可负担的还款方案，月供可能大幅飙升。报道提醒相关借款人关注即将到来的截止期限，避免还款额骤增带来的财务冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/save-student-loan-deadline-avoid-higher-payments.html" },
-  { time: "21:00", tag: "macro", tagText: "宏观", text: "在连续五年未能将通胀率压回目标后，美联储领导层认为，只需小幅提高利率，就有望在2029年前把通胀率降至2%。'沃什执掌的美联储'正显示出认真对待通胀的态度，华尔街开始相信这一路径可行，此前多年市场一直怀疑美联储的决心。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/warshs-fed-shows-its-serious-about-taming-inflation-why-wall-street-now-believes-it-55dc5af5?mod=mw_rss_topstories" },
-  { time: "20:50", tag: "macro", tagText: "宏观", text: "高盛经济学家约瑟夫·布里格斯表示，尽管经济表现稳健，消费者信心却持续低迷，原因或在于社会整体的“幸福感下降”。这一现象凸显经济数据与民众实际感受之间的脱节，悲观情绪可能拖累后续消费支出前景。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/goldman-sachs-happiness-struggling-consumer-sentiment.html" },
 ];
-const breakingDate = "2026年9月20日 14:03 CST";
+const breakingDate = "2026年9月20日 19:14 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "由安德森·霍洛维茨（a16z）投资的Vals AI正力图成为AI基准测试的「黄金标准」。在模型数量激增、评测结果愈发遭质疑的背景下，该公司主打中立、可信的第三方评测。若其标准被广泛采纳，将影响模型选型与AI行业的话语权分配。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/" },
 ];
-const aiBreakingDate = "2026年9月20日 14:03 CST";
+const aiBreakingDate = "2026年9月20日 19:14 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
