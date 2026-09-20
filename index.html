@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月20日 06:54 CST"
+  date: "2026年9月20日 08:58 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:42", tag: "crypto", tagText: "加密", text: "比特币有望录得一年来首个上涨季度：距离9月30日季度收官仅剩11天。报道指出，若要守住这一里程碑，比特币需在余下交易日内维持当前涨势，避免出现大幅回撤。此前比特币已升破81,000美元，市场情绪明显回暖。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTU9EX0F6eUx0b0Q4cVhJMEtNLU92NXJPTmNvSGk2VVJmamw2dEhRdVN6Mi1xWThSbWY1MFRoVjlXWWVFUTdZcm1vajFTY3BXM0k0OHJYaFRZNmZ6dzZjRWFzUjFaeUstUlo5emkxNVhYay10WTJKT1JpbnZEM2xMUExDZ2YzM1dBWTYtbEpqS0pBUTRzUEFKeENRckJONVdnRTFGWm1mVUNOckc2dm4wSHRlQlhrcS1XUGlUQS10SjhlbGVxWFFxXy01VU1lMUNtMXdiX1U5OXBZUVhHRXN0V2lUZUJXYUhlSlFqUQ?oc=5" },
+  { time: "07:35", tag: "crypto", tagText: "加密", text: "比特币现货ETF合计持有全部比特币供应量的6.29%，机构化进程持续深化。报道探讨当这一比例升至10%时可能带来的影响，包括流通盘收紧、价格波动结构变化以及对市场定价权的重塑。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZGdlYS1Bdzhod0ctSVQ5LUszSDNGOVUtclA2cHdLaUpMenpKd2hvUTZQczVWZnVrWkNZcnVfSW1zMGhLazR4blBPay1FLUlmQVdmeHFHVldwakRyeE8xVE83UnVsNkVucXdWeWpCYlpVQW9FX1pnRmUtdDVPOVJJUGhZWGFtUmZFQk1heE80X243Q1pRZjhaMjJDZE80U2pWUmE5RExqUWVWQU0tbVlMeWhteHdMQkRnbVlNVDIzeUNRQXRtdE5VcGczZw?oc=5" },
   { time: "06:36", tag: "crypto", tagText: "加密", text: "美国XRP现货ETF资产规模在17.1亿美元停滞不前，资金流入明显放缓。报道指出，在比特币站上8万美元上方、加密市场情绪整体回暖之际，XRP ETF却未能延续此前吸金势头。能否突破20亿美元关口被视为衡量山寨币机构需求与ETF资金黏性的关键指标。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/markets/crypto/articles/xrp-etfs-frozen-1-71-223635167.html" },
   { time: "04:13", tag: "macro", tagText: "宏观", text: "保诚（Prudential）正退出新兴市场业务，一笔1.85亿美元的出售交易印证了这一战略收缩。此举显示这家保险巨头正在重新聚焦核心市场，也折射出全球保险业在增长放缓、资本回报要求上升背景下的资产组合调整趋势。", source: "Insider Monkey", url: "https://finance.yahoo.com/markets/stocks/articles/prudential-pru-leaving-emerging-markets-201350497.html" },
   { time: "03:49", tag: "ai", tagText: "AI", text: "特朗普宣布组建“AI Force”，并拟任命一名“AI沙皇”监督技术发展中的“不良行为”。在各方对AI技术快速推进的担忧升温之际，特朗普此前一直抵制监管呼声，此番表态被视为其在AI治理立场上的调整。市场关注美国AI政策框架的走向，以及其对科技巨头、算力投资与行业合规成本的潜在影响。", source: "Financial Times", url: "https://www.ft.com/content/bcbfe352-9e9f-4ef5-81b2-2e01505b8477?syn-25a6b1a6=1" },
@@ -1647,13 +1649,12 @@ const breakingNews = [
   { time: "19:44", tag: "crypto", tagText: "加密", text: "比特币升破81,000美元，加密市场单日市值增加约1,500亿美元。周末行情延续强势，市场情绪明显回暖，与近期监管路径转向机构规则制定的背景形成呼应。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxON21SSDR4cm5la0p1RVNQVXowalFRa3ByLU9uUDdTT2xwcWVlTTVPMkVJbkpLRjVFR084LU5IX0NzWnlULXRzaUx5UmVnUkFMQ0hjVHYzZmZRN19tU0JFbV9Pb011aWZ1YThzd29GZ1FyUlJqTnZ0RUg0NVV0YzhEcUJpQUc0YVZaLUhtVjF5Y2RrN08tSXZibFVOOVFGSERySHk0RWpqWjFuU0JWMHVZNy1ibXM2UQ?oc=5" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "多位诺贝尔经济学奖得主公开支持加州针对亿万富翁征税的提案。这些进步派学者表示，11月的公投措施可能'开始约束超级富豪的权力'，反映出美国财富税讨论持续升温。", source: "Financial Times", url: "https://www.ft.com/content/94ec0fee-53ab-4d7e-9b17-6b05608ad974?syn-25a6b1a6=1" },
   { time: "18:29", tag: "tech", tagText: "科技", text: "据路透报道，派拉蒙最快可能在本周末与多州就华纳兄弟相关交易达成和解。若本周敲定，派拉蒙可避免向华纳兄弟股东支付数百万美元的费用，这场围绕好莱坞资产整合的监管博弈有望阶段性落幕。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/paramount-could-settle-with-states-over-warner-bros-this-weekend-reuters.html" },
-  { time: "18:00", tag: "geo", tagText: "地缘", text: "加拿大总理卡尼将其投资推介之旅从“枫叶达沃斯”延伸至法国斯特拉斯堡，同时向华尔街与欧盟抛出橄榄枝。此举是加拿大推动经济多元化、降低对美依赖努力的一部分，反映出在贸易摩擦背景下，盟友正加快寻找替代市场与资本来源。", source: "Financial Times", url: "https://www.ft.com/content/4e7be0a6-a1fd-4161-9656-faff899e938f?syn-25a6b1a6=1" },
-  { time: "17:05", tag: "geo", tagText: "地缘", text: "美国国防科技公司Anduril表示，美国对台军售的延迟已开始影响其业务。作为新兴军工承包商，Anduril的此番表态凸显出华盛顿在对台武器交付上的迟滞，不仅牵动台海安全议题，也直接冲击相关国防企业的订单与现金流。", source: "CNBC", url: "https://www.cnbc.com/2026/09/19/anduril-says-us-delay-on-taiwan-arms-sales-affecting-its-business.html" },
 ];
-const breakingDate = "2026年9月20日 06:54 CST";
+const breakingDate = "2026年9月20日 08:58 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:25", tag: "ai", tagText: "AI", text: "曾用名UP.Labs的初创公司现以「Vantora」名义运营，完成1亿美元融资，全面押注「物理AI」。该公司专为工业类企业孵化并打造新创公司，此番融资显示资本正加速流向将AI与机器人、制造等实体场景结合的方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/" },
   { time: "05:44", tag: "ai", tagText: "AI", text: "咨询巨头埃森哲（Accenture）成为Anthropic的首个「嵌入式评估方」，被形容为将承接其史上风险最高的咨询项目。这标志着大模型厂商正引入第三方机构对模型与企业级部署进行评估，AI治理与合规服务市场或加速成形。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/" },
   { time: "04:44", tag: "ai", tagText: "AI", text: "Meta推出名为Muse的AI助手，配套Mac应用可直接读取用户的Messages、日历与Notes等个人数据。评测认为其能力确实实用，但深度接入个人信息的做法让「智能」与「窥探」的边界再度成为争议焦点，也预示大厂AI助手正加速争夺桌面端入口与用户数据权限。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy" },
   { time: "04:39", tag: "tech", tagText: "科技", text: "以AI车牌识别与监控网络闻名的Flock据报正通过员工自愿买断方式缩减编制，若买断不达目标「几乎肯定」要启动裁员。此举显示在监管审视与隐私争议升温的背景下，监控科技公司的扩张节奏和成本结构正承受压力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "由安德森·霍洛维茨（a16z）投资的Vals AI正力图成为AI基准测试的「黄金标准」。在模型数量激增、评测结果愈发遭质疑的背景下，该公司主打中立、可信的第三方评测。若其标准被广泛采纳，将影响模型选型与AI行业的话语权分配。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/" },
   { time: "09:00", tag: "tech", tagText: "科技", text: "印度监管机构要求来电识别类App（如Truecaller）将用户提交的骚扰电话举报单向共享给电信运营商。Truecaller回应称，这一「单向」共享义务相当于把具有商业价值的专有数据资产无偿交给电信运营商，凸显各国在数据权属与反诈治理上的监管张力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/" },
-  { time: "07:25", tag: "ai", tagText: "AI", text: "曾用名UP.Labs的初创公司现以「Vantora」名义运营，完成1亿美元融资，全面押注「物理AI」。该公司专为工业类企业孵化并打造新创公司，此番融资显示资本正加速流向将AI与机器人、制造等实体场景结合的方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/" },
 ];
-const aiBreakingDate = "2026年9月20日 06:54 CST";
+const aiBreakingDate = "2026年9月20日 08:58 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
