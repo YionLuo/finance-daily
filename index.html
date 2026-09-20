@@ -1623,17 +1623,22 @@ const fearGreedData = {
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月20日 23:33 CST"
+  date: "2026年9月20日 23:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:24", tag: "ai", tagText: "AI", text: "NextEra Energy的核电押注获得19亿美元新资金支持；与此同时，NextEra与Dominion Energy向弗吉尼亚州提出更大规模的供电方案。两件事共同指向同一趋势：数据中心与AI算力的用电需求激增，正在重塑美国电力投资版图，公用事业公司加速布局核电等基荷电源。", source: "Insider Monkey", url: "https://finance.yahoo.com/energy/articles/nextera-nuclear-bet-just-got-152438612.html" },
+  { time: "23:18", tag: "geo", tagText: "地缘", text: "雪佛龙（CVX）加码委内瑞拉押注，投入更多钻井平台以提升当地原油产量。在美委关系与制裁环境仍存不确定性的背景下，此举显示该公司仍在深化对委内瑞拉重油资源的长期布局，也关系到全球重质原油供应格局。", source: "Insider Monkey", url: "https://finance.yahoo.com/energy/articles/chevron-cvx-supercharges-venezuela-bet-151837921.html" },
   { time: "23:00", tag: "macro", tagText: "宏观", text: "华尔街预计美国将发行约1万亿美元的短期债务，因借贷成本攀升。对短期国库券的依赖加剧，财政部长贝森特正寻求遏制长期利率上升。此举可能加剧市场对债务可持续性和利率波动的担忧。", source: "FT", url: "https://www.ft.com/content/3fcee89f-b69d-4f4b-a944-39fe1c214fb8?syn-25a6b1a6=1" },
+  { time: "22:37", tag: "ai", tagText: "AI", text: "随着从聊天机器人到人形机器人、再到自动化管理系统的AI工具在企业中大规模部署，“机器人关系”部门可能成为未来职场的现实。报道指出，AI的普及正对员工薪酬水平与工作自主权产生深远影响，企业管理和劳资关系面临重构。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/ai-jobs-worker-fears.html" },
   { time: "22:23", tag: "geo", tagText: "地缘", text: "美国国务院敦促美国人重新考虑中东旅行，因胡塞武装袭击加剧且伊朗持续封锁霍尔木兹海峡。地区紧张局势升级可能进一步扰乱全球航运和能源供应。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/us-middle-east-travel-warning-iran-war-hormuz.html" },
   { time: "21:53", tag: "tech", tagText: "科技", text: "中国正追赶SpaceX，瞄准全球太空经济。中国航天科技企业寻求扩大影响力，专家称其正逼近马斯克旗下公司，反映出中美在太空领域的竞争加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/china-is-chasing-spacex-and-setting-its-sights-on-the-global-space-economy-3b9e37ff?mod=mw_rss_topstories" },
   { time: "21:00", tag: "macro", tagText: "宏观", text: "柴油价格创纪录，暴露股市和经济痛点。主要风险在于柴油价格持续高企，将继续推高通胀压力，对运输、物流和消费成本产生连锁影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/record-diesel-prices-are-exposing-pain-points-in-the-stock-market-and-economy-a2079b04?mod=mw_rss_topstories" },
   { time: "20:47", tag: "macro", tagText: "宏观", text: "关税、燃料成本飙升和利率上升正挤压美国企业，尤其是制造商、汽车供应商、零售商和运输企业。多重成本压力可能抑制企业盈利和投资，加剧经济放缓担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/tariffs-fuel-prices-and-interest-rates-squeeze-us-companies.html" },
+  { time: "20:31", tag: "macro", tagText: "宏观", text: "美国中期选举选民对国债问题表现出压倒性的担忧，但分析人士预计今年只会出台小幅修补措施，难以触及财政结构性矛盾。监督机构称，选民普遍感到“有些地方不对劲”，债务可持续性正成为选举周期中的核心财政议题。", source: "MarketWatch", url: "https://www.marketwatch.com/story/midterm-voters-are-overwhelmingly-worried-about-the-national-debt-but-only-small-fixes-are-expected-this-year-758d364e?mod=mw_rss_topstories" },
+  { time: "19:59", tag: "macro", tagText: "宏观", text: "有分析指出，拉美资产正迎来数十年来最佳的投资顺风。以iShares拉美40 ETF（ILF）衡量，该地区年内上涨15%，明显跑赢标普500同期11%的涨幅，资金对新兴市场的配置兴趣明显回升。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/caruso-cabrera-the-investing-tailwinds-for-latin-america-are-the-best-in-decades.html" },
   { time: "19:58", tag: "tech", tagText: "科技", text: "宁德时代（CATL）尽管面临贸易壁垒，仍为美国市场开发皮卡电池。该公司在习近平主席访问华盛顿前发表上述评论，显示中美在电动汽车供应链上的博弈持续。", source: "FT", url: "https://www.ft.com/content/bfe6fc60-51b3-41f0-b6c9-32583735150e?syn-25a6b1a6=1" },
   { time: "19:07", tag: "geo", tagText: "地缘", text: "乌克兰在俄罗斯国家杜马选举投票期间对莫斯科发动大规模无人机袭击。这是俄乌战争全面爆发以来俄罗斯首次举行杜马选举，执政的统一俄罗斯党预计将轻松保住主导地位。袭击凸显乌方远程打击能力持续升级，莫斯科核心区域防空压力加大。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/ukraine-launches-heavy-moscow-drone-attack-as-russia-votes.html" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋正成为特朗普在AI安全议题上最重要的盟友。凭借执掌全球市值最高公司的地位，黄仁勋在AI监管、安全与产业政策等最核心议题上获得特朗普的倾听与信任，其影响力已超出企业界，直接介入华盛顿的AI政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/nvidia-ceo-jensen-huang-emerges-as-trumps-top-ally-in-ai-debate.html" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "英国、法国等欧洲国家针对以色列在巴勒斯坦被占领土上的企业实施制裁，以色列定居者经济正为冲击做准备。报道称，这些惩罚措施可能产生深远影响，涉及贸易、投资与供应链等多个层面。", source: "Financial Times", url: "https://www.ft.com/content/f780b2a4-13ff-44ec-8225-cf38d4f0c966?syn-25a6b1a6=1" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "沙特央行去年退出中国主导的跨境货币平台，该计划是北京推动建立替代美元体系努力的一部分。此举被视为人民币国际化与去美元化进程遭遇的又一挫折，也凸显中东国家在中美之间的平衡考量。", source: "Financial Times", url: "https://www.ft.com/content/ac104987-f43d-4e7d-97b6-057d98f7e422?syn-25a6b1a6=1" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "俄罗斯发动新一轮空袭行动，以无人机和导弹打击乌克兰的仓库、钢铁厂、港口和铁路，意图摧毁乌克兰经济。报道称，相关打击已使基辅损失超过15亿美元的税收收入，乌方战时经济承压加剧。", source: "Financial Times", url: "https://www.ft.com/content/0ecc81ad-2119-4763-90fb-ba5d399d913d" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "诺和诺德（Ozempic制造商）将于周一召开股东大会，投资者施压要求其加大并购交易并推出新药，以摆脱对减肥药单一业务的依赖、实现收入多元化。此举反映市场对这家欧洲市值龙头增长可持续性的担忧。", source: "Financial Times", url: "https://www.ft.com/content/e560fd8c-5cc2-4743-90eb-eab71b899ce6?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "霍尔木兹海峡曾是氦气、玉米等大宗商品的重要中转枢纽，如今相关货运贸易显著萎缩，企业被迫艰难寻找替代运输路线。这一变化反映中东紧张局势对全球航运与供应链的持续扰动。", source: "Financial Times", url: "https://www.ft.com/content/c9d13509-7a93-40a9-b2d4-c3292028813a?syn-25a6b1a6=1" },
-  { time: "08:42", tag: "crypto", tagText: "加密", text: "比特币有望录得一年来首个上涨季度：距离9月30日季度收官仅剩11天。报道指出，若要守住这一里程碑，比特币需在余下交易日内维持当前涨势，避免出现大幅回撤。此前比特币已升破81,000美元，市场情绪明显回暖。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTU9EX0F6eUx0b0Q4cVhJMEtNLU92NXJPTmNvSGk2VVJmamw2dEhRdVN6Mi1xWThSbWY1MFRoVjlXWWVFUTdZcm1vajFTY3BXM0k0OHJYaFRZNmZ6dzZjRWFzUjFaeUstUlo5emkxNVhYay10WTJKT1JpbnZEM2xMUExDZ2YzM1dBWTYtbEpqS0pBUTRzUEFKeENRckJONVdnRTFGWm1mVUNOckc2dm4wSHRlQlhrcS1XUGlUQS10SjhlbGVxWFFxXy01VU1lMUNtMXdiX1U5OXBZUVhHRXN0V2lUZUJXYUhlSlFqUQ?oc=5" },
-  { time: "07:35", tag: "crypto", tagText: "加密", text: "比特币现货ETF合计持有全部比特币供应量的6.29%，机构化进程持续深化。报道探讨当这一比例升至10%时可能带来的影响，包括流通盘收紧、价格波动结构变化以及对市场定价权的重塑。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZGdlYS1Bdzhod0ctSVQ5LUszSDNGOVUtclA2cHdLaUpMenpKd2hvUTZQczVWZnVrWkNZcnVfSW1zMGhLazR4blBPay1FLUlmQVdmeHFHVldwakRyeE8xVE83UnVsNkVucXdWeWpCYlpVQW9FX1pnRmUtdDVPOVJJUGhZWGFtUmZFQk1heE80X243Q1pRZjhaMjJDZE80U2pWUmE5RExqUWVWQU0tbVlMeWhteHdMQkRnbVlNVDIzeUNRQXRtdE5VcGczZw?oc=5" },
-  { time: "06:36", tag: "crypto", tagText: "加密", text: "美国XRP现货ETF资产规模在17.1亿美元停滞不前，资金流入明显放缓。报道指出，在比特币站上8万美元上方、加密市场情绪整体回暖之际，XRP ETF却未能延续此前吸金势头。能否突破20亿美元关口被视为衡量山寨币机构需求与ETF资金黏性的关键指标。", source: "24/7 Wall St.", url: "https://finance.yahoo.com/markets/crypto/articles/xrp-etfs-frozen-1-71-223635167.html" },
 ];
-const breakingDate = "2026年9月20日 23:33 CST";
+const breakingDate = "2026年9月20日 23:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1660,6 +1660,7 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "皮尤研究中心发布覆盖42,151名受访者的全球调查，显示AI被广泛视为「就业杀手」：多数受访者担忧AI冲击工作岗位，并加剧收入不平等。这反映出AI焦虑已从技术圈扩散为全球性共识，可能进一步影响各国监管与政治议程。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs" },
   { time: "21:24", tag: "tech", tagText: "科技", text: "华为公布新一代AI芯片计划，目标2027年推出，直接对标英伟达。此举被视为中国在美方出口管制背景下加速自研算力芯片、构建国产AI硬件生态的关键一步，也意味着全球AI加速器市场的竞争格局可能在2027年前后出现新变量。", source: "The Daily Star", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNblQzNXNXY2VxMzEyZ1NhTVBXX2h5X051em1RcldjeFlGaGVkUmc2bFNrcjZuaDlrRFMtQTBMeHJRZ0FUVDFjWDV0RW05WVdUeEFSc2FQcDBUZDF6R0ViR0ZUWUtsYUx2cWV0Ri1rbkluOTkzMUVBNUdrT0hPd3JoRnJSaU1PSGVsdXBYanN6bUktQzdjdXplbTloS3RUc0VTc0tHZHZtc09pYTV6MzBZVFRGeWRvMG5wNlEw?oc=5" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "由安德森·霍洛维茨（a16z）投资的Vals AI正力图成为AI基准测试的「黄金标准」。在模型数量激增、评测结果愈发遭质疑的背景下，该公司主打中立、可信的第三方评测。若其标准被广泛采纳，将影响模型选型与AI行业的话语权分配。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "在近期多起高调黑客事件引发「AI 或将毁灭人类」的担忧之前，能源系统的网络安全漏洞早已存在且风险持续上升。The Verge 报道指出，真正的最大威胁依然是人类（内部人员疏忽、人为操作与社会工程攻击），而非失控的 AI。这意味着电网等关键基础设施的防护重点，应放在人员流程与访问控制上，而非仅寄望于「AI 对 AI」的技术对抗。", source: "The Verge", url: "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure" },
   { time: "19:07", tag: "tech", tagText: "科技", text: "谷歌威胁情报团队披露，其一名分析师以卧底身份潜入知名供应链黑客组织TeamPCP的核心圈子。该组织以攻击软件供应链著称，此次渗透行动显示大型科技公司正从被动防御转向主动情报搜集，以提前掌握针对企业软件生态的攻击链条。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/" },
   { time: "09:00", tag: "tech", tagText: "科技", text: "印度监管机构要求来电识别类App（如Truecaller）将用户提交的骚扰电话举报单向共享给电信运营商。Truecaller回应称，这一「单向」共享义务相当于把具有商业价值的专有数据资产无偿交给电信运营商，凸显各国在数据权属与反诈治理上的监管张力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/" },
   { time: "07:25", tag: "ai", tagText: "AI", text: "曾用名UP.Labs的初创公司现以「Vantora」名义运营，完成1亿美元融资，全面押注「物理AI」。该公司专为工业类企业孵化并打造新创公司，此番融资显示资本正加速流向将AI与机器人、制造等实体场景结合的方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "02:29", tag: "ai", tagText: "AI", text: "弗吉尼亚州州长Abigail Spanberger下令成立AI专项工作组，并推动赋予地方社区在数据中心开发上更大的话语权、放缓审批节奏。作为全球数据中心最密集地区之一，此举可能影响AI算力扩张速度，并成为其他州效仿的监管样本。", source: "The Verge", url: "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force" },
   { time: "02:02", tag: "ai", tagText: "AI", text: "一桩诉讼指控Anthropic、OpenAI、SpaceXAI与谷歌就「放缓AI发展」达成非法协议，涉嫌违反反垄断法。若指控成立，这将是头部AI实验室之间罕见的协同行为，可能引发监管机构对前沿模型竞争格局的深度审查。", source: "Los Angeles Times", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQQXRkTnBOWHdnZC1icnJVd0E1UGtlV1FuN0FFWFhwWV9rRW1oT2M0dE9DYl9ocmw0MHhRZWdFWUtwZ1pacVdFdExfT2dVTnY2aUZrM3lfeWxmTEtWUWRWQ3NzRkd6am1fZ0ZBTHhJcTJEeTlCbzI3Ung0MXprbHZvMTc2Mmk5cUVQbmt5UTQ1YTNmeGp4RHk2R1pLLTVybUZFTy1ySTR5Z1RsV3FCNkF3X1gwZUEyakRwTjVZUnQzNnkyMl9tMzFOeVNWQkNFTTloR0Zj?oc=5" },
   { time: "01:42", tag: "ai", tagText: "AI", text: "TechCrunch报道，一项名为「AI Contact Hotline」的新机制上线，为目睹不当行为的AI智能体提供向监管方举报的隐蔽渠道。这反映出随着AI代理自主性提升，如何对其实施监督与问责正成为治理领域的新课题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/" },
-  { time: "01:33", tag: "ai", tagText: "AI", text: "谷歌推出新的AI智能体「CC」，定位为帮助家庭打理家务的家庭协调助手。家庭成员可共享邮件、日程与任务，由AI代管日历、填写表单、生成购物清单并规划餐食，标志大厂AI竞争从个人助理进一步向家庭场景延伸。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/" },
 ];
-const aiBreakingDate = "2026年9月20日 23:33 CST";
+const aiBreakingDate = "2026年9月20日 23:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
