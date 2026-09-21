@@ -1623,12 +1623,19 @@ const fearGreedData = {
   previous1Week: 32.69,
   previous1Month: 54.63,
   previous1Year: 66.54,
-  date: "2026年9月21日 08:08 CST"
+  date: "2026年9月21日 14:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:52", tag: "crypto", tagText: "加密", text: "加密市场轮动加速：比特币一度触及8.2万美元，Solana升至七个月新高，以太坊、XRP、狗狗币同步走强，加密概念股录得数月来最佳单日表现。涨势部分受美国SEC推进资产代币化（tokenization）框架提振，资金正从比特币向主流山寨币扩散。", source: "blockhead.co", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxNWU5hSWk4bDBGWXJLdEJlLTBVMTJMalpHOVVHUXJ6MmJrV1FuZm1EbVpyNUlCZnBJZkw2cFQxVG01elM3bUtKSF9IRkU3Zm1MZ2lrZWlBdWlYY09yWXhSbWdTX29GeXM5bnpraVpZN2RnNnJDMmF5c3VkeDNaX282SFdiNktSeFB0ajd1aXpHaDhMbHBINi1NM1Rhc2p2SWh6TUZMUHVGVUJLUE15UVlPVXd6QUw1RmwzRXQyVWt1dGNNRUhO?oc=5" },
+  { time: "12:20", tag: "geo", tagText: "地缘", text: "中国生物医药股周一集体上涨，此前有报道称美国可能继续允许美企与中国药企达成大部分药物授权（licensing）交易。若政策落地，将缓解市场对生物安全类限制升级、中美医药合作收紧的担忧，被视为双边关系边际缓和的又一信号。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/chinese-biopharma-stocks-jump-as-us-plans-to-continue-drug-licensing-deals-.html" },
+  { time: "12:04", tag: "geo", tagText: "地缘", text: "尽管中东紧张持续升级，国际油价周一仍下跌，交易员关注沙特原油出口恢复，且原油流量「异常强劲」。与此同时，伊朗誓言对美方施压进行「痛苦」报复，特朗普威胁若德黑兰不达成协议将摧毁其经济甚至清除其领导层，联合国大会前夕外交博弈复杂化。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/iran-us-oil-prices-crude-saudi-arabia-.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "大众汽车（VW）被剔除出欧洲蓝筹指数Euro Stoxx 50，因其股价跌至16年低点，对这家深陷危机的德国车企构成又一打击。此举反映投资者对欧洲汽车业在需求疲软、电动化转型成本高企及关税压力下的信心持续走弱。", source: "Financial Times", url: "https://www.ft.com/content/188611f3-2536-4bed-a2c0-bbc074e6f783?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "在AI主题对冲基金Situational Awareness爆仓、Jane Street录得亏损后，美联储与英国央行加大对银行向交易公司提供敞口的审查力度，密集质询主经纪商（prime broker）的风险管理。监管趋严可能推高对冲基金融资成本，并抑制高杠杆交易策略。", source: "Financial Times", url: "https://www.ft.com/content/f1d9d398-0666-44cf-96f4-390e6c3f5173?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "西方企业在钠离子电池竞赛中落后于中国。钠电池采用储量丰富的材料，有望降低对稀土及锂的依赖，对电动车与储能至关重要。若中国率先实现规模化量产，将在下一代电池供应链中掌握更大话语权。", source: "Financial Times", url: "https://www.ft.com/content/0e4814df-e102-4874-97d6-f2b0ffaeda6a?syn-25a6b1a6=1" },
+  { time: "08:45", tag: "geo", tagText: "地缘", text: "美国财长贝森特称与中国副总理何立峰的会晤「成功」，双方正朝着「共同愿景」推进，并称赞中美AI对话取得进展。此番表态为9月24日特朗普与习近平峰会铺路，市场关注两大经济体在贸易、科技与AI领域能否达成阶段性缓和。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/bessent-he-lifeng-trump-xi-summit.html" },
   { time: "07:42", tag: "macro", tagText: "宏观", text: "美股本周开局承压后小幅企稳：股指期货周一亚市温和走高，此前道指录得连续第三周下跌，三大股指上周表现分化。本周美国宏观数据日程相对清淡，但市场仍需消化多项可能引发波动的头条事件，投资者关注估值高企与利率环境的角力。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/here-are-the-3-big-things-were-watching-in-the-stock-market-this-week.html" },
   { time: "07:35", tag: "tech", tagText: "科技", text: "分析机构认为，随着苹果推出新的健康监测类设备，其股价可能被高估约31%。市场担忧苹果借健康硬件扩张生态的叙事已较多计入估值，若新产品的商业化贡献不及预期，股价面临回调压力。", source: "simplywall.st", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNkx0YlFUTWdTVUZhcGtqOTBYdTM0SG85bFNQOW9qaXNnaTJER1p2dXlCUU1lbmU4TktYMm1fN3NzNWtVOFlDcEhUTk1FZUEwSF94d1VQUFphaGllcHRlNEpzcWk3UGhtc040TkdQTDBUenhPVGFlUW9CWTdUc0lVTTB4Y2Jjc0s5aERrUDVnblBjM20wbnpvcEJDQnZqZEtZZ01BZWJyR0pCaDl5VVprcmx2d0x6Vk9hTmlSSNIBwgFBVV95cUxPNzl2bjRPYnFzd3ZPUHVlczNoVE56NElPcnBoaDNILTRzbXhtTnFYNVQwT1dIOFpKLXpiM0dIX3F2MnN5LWNXVE9MMlE2RjlLakRWdHAtOXBCOXoyM0V2SThVMjhhT0VRdm5xZjJ1bi0zYmplanhGMXlDZkppREFCWUpzbkUybzZKallvWHFWdEVKTWJ4WXBUTmpaajlKZnNVY096TGw5aWtNVmF2VzFLOENQTkFESEhiT0taM0hjUmtCQQ?oc=5" },
   { time: "04:11", tag: "geo", tagText: "地缘", text: "德国总理梅尔茨在梅克伦堡-前波莫恩州地区选举中遭遇「灾难性」失利，初步结果显示基民盟（CDU）可能无法进入该州议会。梅尔茨公开表态不会辞职，但欧洲其他国家的经验显示，一旦领导人陷入深度不受欢迎状态，几乎从未成功翻身，其执政联盟与政策推进能力或持续承压。", source: "Financial Times", url: "https://www.ft.com/content/d74ce82a-2a15-404a-ae3a-3921e887bab3?syn-25a6b1a6=1" },
@@ -1642,18 +1649,12 @@ const breakingNews = [
   { time: "23:00", tag: "macro", tagText: "宏观", text: "华尔街预计美国将发行约1万亿美元的短期债务，因借贷成本攀升。对短期国库券的依赖加剧，财政部长贝森特正寻求遏制长期利率上升。此举可能加剧市场对债务可持续性和利率波动的担忧。", source: "FT", url: "https://www.ft.com/content/3fcee89f-b69d-4f4b-a944-39fe1c214fb8?syn-25a6b1a6=1" },
   { time: "22:37", tag: "ai", tagText: "AI", text: "随着从聊天机器人到人形机器人、再到自动化管理系统的AI工具在企业中大规模部署，“机器人关系”部门可能成为未来职场的现实。报道指出，AI的普及正对员工薪酬水平与工作自主权产生深远影响，企业管理和劳资关系面临重构。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/ai-jobs-worker-fears.html" },
   { time: "22:23", tag: "geo", tagText: "地缘", text: "美国国务院敦促美国人重新考虑中东旅行，因胡塞武装袭击加剧且伊朗持续封锁霍尔木兹海峡。地区紧张局势升级可能进一步扰乱全球航运和能源供应。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/us-middle-east-travel-warning-iran-war-hormuz.html" },
-  { time: "21:53", tag: "tech", tagText: "科技", text: "中国正追赶SpaceX，瞄准全球太空经济。中国航天科技企业寻求扩大影响力，专家称其正逼近马斯克旗下公司，反映出中美在太空领域的竞争加剧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/china-is-chasing-spacex-and-setting-its-sights-on-the-global-space-economy-3b9e37ff?mod=mw_rss_topstories" },
-  { time: "21:00", tag: "macro", tagText: "宏观", text: "柴油价格创纪录，暴露股市和经济痛点。主要风险在于柴油价格持续高企，将继续推高通胀压力，对运输、物流和消费成本产生连锁影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/record-diesel-prices-are-exposing-pain-points-in-the-stock-market-and-economy-a2079b04?mod=mw_rss_topstories" },
-  { time: "20:47", tag: "macro", tagText: "宏观", text: "关税、燃料成本飙升和利率上升正挤压美国企业，尤其是制造商、汽车供应商、零售商和运输企业。多重成本压力可能抑制企业盈利和投资，加剧经济放缓担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/tariffs-fuel-prices-and-interest-rates-squeeze-us-companies.html" },
-  { time: "20:31", tag: "macro", tagText: "宏观", text: "美国中期选举选民对国债问题表现出压倒性的担忧，但分析人士预计今年只会出台小幅修补措施，难以触及财政结构性矛盾。监督机构称，选民普遍感到“有些地方不对劲”，债务可持续性正成为选举周期中的核心财政议题。", source: "MarketWatch", url: "https://www.marketwatch.com/story/midterm-voters-are-overwhelmingly-worried-about-the-national-debt-but-only-small-fixes-are-expected-this-year-758d364e?mod=mw_rss_topstories" },
-  { time: "19:59", tag: "macro", tagText: "宏观", text: "有分析指出，拉美资产正迎来数十年来最佳的投资顺风。以iShares拉美40 ETF（ILF）衡量，该地区年内上涨15%，明显跑赢标普500同期11%的涨幅，资金对新兴市场的配置兴趣明显回升。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/caruso-cabrera-the-investing-tailwinds-for-latin-america-are-the-best-in-decades.html" },
-  { time: "19:58", tag: "tech", tagText: "科技", text: "宁德时代（CATL）尽管面临贸易壁垒，仍为美国市场开发皮卡电池。该公司在习近平主席访问华盛顿前发表上述评论，显示中美在电动汽车供应链上的博弈持续。", source: "FT", url: "https://www.ft.com/content/bfe6fc60-51b3-41f0-b6c9-32583735150e?syn-25a6b1a6=1" },
-  { time: "19:07", tag: "geo", tagText: "地缘", text: "乌克兰在俄罗斯国家杜马选举投票期间对莫斯科发动大规模无人机袭击。这是俄乌战争全面爆发以来俄罗斯首次举行杜马选举，执政的统一俄罗斯党预计将轻松保住主导地位。袭击凸显乌方远程打击能力持续升级，莫斯科核心区域防空压力加大。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/ukraine-launches-heavy-moscow-drone-attack-as-russia-votes.html" },
 ];
-const breakingDate = "2026年9月21日 08:08 CST";
+const breakingDate = "2026年9月21日 14:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "09:00", tag: "tech", tagText: "科技", text: "印度监管机构要求来电识别类App（如Truecaller）将用户提交的骚扰电话举报单向共享给电信运营商。Truecaller回应称，这一「单向」共享义务相当于把具有商业价值的专有数据资产无偿交给电信运营商，凸显各国在数据权属与反诈治理上的监管张力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/" },
   { time: "04:44", tag: "ai", tagText: "AI", text: "Meta推出名为Muse的AI助手，配套Mac应用可直接读取用户的Messages、日历与Notes等个人数据。评测认为其能力确实实用，但深度接入个人信息的做法让「智能」与「窥探」的边界再度成为争议焦点，也预示大厂AI助手正加速争夺桌面端入口与用户数据权限。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy" },
   { time: "04:39", tag: "tech", tagText: "科技", text: "以AI车牌识别与监控网络闻名的Flock据报正通过员工自愿买断方式缩减编制，若买断不达目标「几乎肯定」要启动裁员。此举显示在监管审视与隐私争议升温的背景下，监控科技公司的扩张节奏和成本结构正承受压力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/" },
   { time: "04:18", tag: "ai", tagText: "AI", text: "TechCrunch报道称，「世界模型」（world model）赛道公司普遍高度保密：从创始团队到其数据供应商，无人愿意透露究竟在构建什么。尽管该领域资金充裕、热度极高，但其技术路线与商业化路径仍笼罩在迷雾之中，引发外界对其真实进展的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "tech", tagText: "科技", text: "由安德森·霍洛维茨（a16z）投资的Vals AI正力图成为AI基准测试的「黄金标准」。在模型数量激增、评测结果愈发遭质疑的背景下，该公司主打中立、可信的第三方评测。若其标准被广泛采纳，将影响模型选型与AI行业的话语权分配。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "在近期多起高调黑客事件引发「AI 或将毁灭人类」的担忧之前，能源系统的网络安全漏洞早已存在且风险持续上升。The Verge 报道指出，真正的最大威胁依然是人类（内部人员疏忽、人为操作与社会工程攻击），而非失控的 AI。这意味着电网等关键基础设施的防护重点，应放在人员流程与访问控制上，而非仅寄望于「AI 对 AI」的技术对抗。", source: "The Verge", url: "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure" },
   { time: "19:07", tag: "tech", tagText: "科技", text: "谷歌威胁情报团队披露，其一名分析师以卧底身份潜入知名供应链黑客组织TeamPCP的核心圈子。该组织以攻击软件供应链著称，此次渗透行动显示大型科技公司正从被动防御转向主动情报搜集，以提前掌握针对企业软件生态的攻击链条。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/" },
-  { time: "09:00", tag: "tech", tagText: "科技", text: "印度监管机构要求来电识别类App（如Truecaller）将用户提交的骚扰电话举报单向共享给电信运营商。Truecaller回应称，这一「单向」共享义务相当于把具有商业价值的专有数据资产无偿交给电信运营商，凸显各国在数据权属与反诈治理上的监管张力。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/" },
 ];
-const aiBreakingDate = "2026年9月21日 08:08 CST";
+const aiBreakingDate = "2026年9月21日 14:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
