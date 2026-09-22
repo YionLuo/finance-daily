@@ -1616,19 +1616,31 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 36.06,
+  score: 35.97,
   rating: "fear",
-  timestamp: "2026-09-22T15:30:05+00:00",
+  timestamp: "2026-09-22T18:40:08+00:00",
   previousClose: 33.71,
   previous1Week: 27.97,
   previous1Month: 54.66,
   previous1Year: 66.51,
-  date: "2026年9月22日 23:33 CST"
+  date: "2026年9月23日 02:45 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:37", tag: "macro", tagText: "宏观", text: "美国财长贝森特对CNBC表示，政府正在评估禁止柴油出口的可行性，包括全面或部分禁令是否可行，主要考量美国整体炼油能力。此举正值特朗普政府对伊朗施压导致燃料价格飙升、共和党高层议员要求在中期选举前限制柴油出口之际，凸显能源成本问题已演变为选举政治议题。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/trump-diesel-export-ban-urkaine-russia-iran.html" },
+  { time: "02:32", tag: "geo", tagText: "地缘", text: "美国在联合国大会期间与格陵兰及丹麦达成协议，将扩大在北极前哨的军事存在。特朗普称该协议赋予美国对这块丹麦属地的「安全永久控制权」，标志着美国在北极战略布局上的重大推进。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/trump-greenland-security-deal-military-bases-.html" },
+  { time: "02:32", tag: "macro", tagText: "宏观", text: "周一美股走高，纳斯达克指数涨约2%并迈向纪录收盘，标普500上涨约1%，道指开盘后上行。芯片股大涨是主要推手，同时油价与美债收益率回落。AI相关个股再度成为市场核心动力。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxNam9GTktGNDJ3TmRkQW9Fbk51TWJadS1aVnNEYUwydEgwb0NCLVQ2NHJjQ19aTUloUVJWSk9wVklRcmxhMVFBTDFCV2RQRHFNRy1RNVFMcHM4T2wxVjB5dlVjMGZmdXBkTmNVNFZxb0NpRTg1aGFEeWx3amk2MndtVTRIQVpKaVk?oc=5" },
+  { time: "02:28", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI推出更廉价模型，这是行业呼吁放缓以来的首批发布。OpenAI推出GPT-6 Sol与GPT-6 Luna，Anthropic发布Claude Opus 5.5，显示在监管与安全争论升温之际，头部AI公司仍加速产品迭代与价格竞争。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/anthropic-openai-cheaper-ai-models.html" },
+  { time: "02:28", tag: "macro", tagText: "宏观", text: "礼来CEO表示，自7月Medicare开始覆盖GLP-1类药物以来，已有约70万名新增参保老年人开始使用此类药物，其中约70%使用礼来产品。这是衡量新医保覆盖扩大药物可及性的最新数据，也凸显礼来在减肥药市场的领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/eli-lilly-ceo-david-ricks-glp-1s-medicare-coverage.html" },
+  { time: "02:24", tag: "geo", tagText: "地缘", text: "特朗普在联合国大会发表强硬讲话，威胁若伊朗不放弃其核与导弹计划将「彻底摧毁」伊朗，同时抨击古巴，并为人工智能发展辩护。他称美国官员与伊朗代表团举行了「非常好的会晤」，并宣称美国「将不再允许对美威胁在西半球任何地方立足」。此番表态令美伊紧张局势升级，成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/trump-un-speech-today.html" },
+  { time: "02:15", tag: "geo", tagText: "地缘", text: "一批共和党高层议员要求特朗普在中期选举前禁止美国柴油出口。伊朗战争引发的燃料价格危机正令来自农业腹地的议员承压，此举反映美国国内能源成本问题已演变为选举政治议题。", source: "Financial Times", url: "https://www.ft.com/content/319c7b67-b585-407e-a0da-6e23b1612180?syn-25a6b1a6=1" },
+  { time: "02:03", tag: "macro", tagText: "宏观", text: "美国银行警告，若伊朗战争引发的供应中断持续升级，布伦特原油可能突破每桶150美元。分析师已上调油价预期，但市场对冲突走向及油价的判断仍存巨大分歧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/bank-of-america-says-brent-crude-oil-could-top-150-a-barrel-if-iran-war-disruptions-persist-.html" },
+  { time: "02:01", tag: "ai", tagText: "AI", text: "微软AI负责人公开呼吁为人工智能设立安全「防护栏」，而白宫对广泛监管仍持抵制态度，凸显美国AI政策在行业自律与政府立规之间的分歧。在AI能力快速迭代、就业与安全争议升温的背景下，科技巨头与监管层的立场差异将影响后续立法节奏与产业投入方向。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOb2FIWTExcnlzekpmOHNhWTE1cDFaUWZGZ1cwbk5RWEtSWmh1QkQ5U1RYMUtVQndLMTFjdnVWTnJaVllJaTQ3NFZ1RVhHd25RTXhveExubGRuaS1VNkt2aGxhdzI5a3hGX2p1MHJMeFU3T0RqYV9KV2JNeGNsVmFHWGdqekIwcWFfZlY0VWxkT29jYmdxbTRTYmdfTFRjeTNrV3dNLVJPaW96SGFvTHFmNTN1TQ?oc=5" },
+  { time: "01:32", tag: "geo", tagText: "地缘", text: "美国提议与阿拉伯盟友共同设立100亿美元基金，用于在中东建设新的能源基础设施，以绕过霍尔木兹海峡这一关键运输咽喉。特朗普正就该基金进行磋商，意在降低对伊朗威胁下海峡通行受阻的风险。", source: "Financial Times", url: "https://www.ft.com/content/99ba134a-6252-45f3-b312-07b8752a5a98?syn-25a6b1a6=1" },
+  { time: "01:15", tag: "geo", tagText: "地缘", text: "欧盟将把俄罗斯寡头弗里德曼（Mikhail Fridman）和乌斯马诺夫（Alisher Usmanov）从制裁名单中移除，这是将欧盟对俄制裁延长三年的协议的一部分，反映成员国在制裁力度与延续期限上的妥协。", source: "Financial Times", url: "https://www.ft.com/content/760091dd-20be-4152-aa0d-561475a99ee8?syn-25a6b1a6=1" },
+  { time: "23:18", tag: "macro", tagText: "宏观", text: "沙特释放东-西输油管道即将重启的信号。该管道是沙特原油运抵红海的关键路线，因无人机袭击已关闭两周。若恢复运行，将部分缓解市场对中东供应中断的担忧。", source: "Financial Times", url: "https://www.ft.com/content/5b4f8738-3b93-40c8-88d6-08c8ea684e83?syn-25a6b1a6=1" },
   { time: "12:22", tag: "geo", tagText: "地缘", text: "美国财长贝森特对CNBC表示，自周三起所有伊朗航空公司将被「关闭」，并称华盛顿正「前所未有地」施压伊朗。受伊朗与美国紧张局势升级担忧推动，国际油价周二上涨。市场关注霍尔木兹海峡运输风险及中东能源供应前景。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/us-iran-war-trump-hormuz.html" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普与习近平峰会前瞻：习近平最迫切的目标是延长中美贸易休战，预计双方还将讨论台湾、伊朗及人工智能等议题。晚宴部分美方嘉宾名单已流出，但中方企业高管是否出席尚不明确。市场关注峰会在关税、出口管制与AI规则上的潜在突破。", source: "Financial Times", url: "https://www.ft.com/content/9bea08f4-c9e8-450a-9d0f-0af0bf47b64e?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "印度国家证券交易所（NSE）启动23亿美元IPO，为今年印度最大规模公开售股，认购金额已超100亿美元，估值倍数高于纳斯达克。作为全球最大衍生品交易所，其上市历经长期推迟，正值监管机构对期权交易升温加强审查之际。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/india-nse-ipo-billion-nasdaq.html" },
@@ -1637,23 +1649,17 @@ const breakingNews = [
   { time: "09:30", tag: "ai", tagText: "AI", text: "摩根大通CEO戴蒙表示，超大规模云厂商生态系统的AI支出明年可能达到1万亿美元，投资势头仍在加速。此番表态进一步强化市场对AI资本开支周期延续的预期，为芯片与算力产业链提供支撑。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/jamie-dimon-jpm-jpmorgan-indiaconference.html" },
   { time: "09:28", tag: "ai", tagText: "AI", text: "加拿大不列颠哥伦比亚省对OpenAI提起诉讼，指控这家ChatGPT开发商在一起大规模枪击事件中失职——此前袭击者的账户已被标记，但公司未采取行动。该案可能成为AI平台内容与安全责任的重要判例。", source: "Financial Times", url: "https://www.ft.com/content/30d2f29b-e750-4a90-9e8d-b1a7f14e4908?syn-25a6b1a6=1" },
   { time: "07:03", tag: "macro", tagText: "宏观", text: "美国联邦航空管理局（FAA）设备故障叠加Verizon光纤线路被切断，导致纽瓦克自由国际机场、费城国际机场以及纽约地区航班大面积中断，数百架次进出港航班受影响。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/newark-philadelphia-nyc-flight-disruptions.html" },
-  { time: "06:46", tag: "ai", tagText: "AI", text: "得克萨斯州州长阿博特下令暂停数据中心许可审批，距其发布暂停令仅数周。数据中心已成为2026年中期选举热点议题，阿博特正竞选连任，对手为民主党州众议员希诺霍萨。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/texas-governor-abbott-ai-data-center-permits.html" },
-  { time: "06:12", tag: "geo", tagText: "地缘", text: "特朗普在与泽连斯基通话中施压，要求乌克兰停止袭击俄罗斯炼油厂，据官员称他反复强调关键在于「柴油、柴油、柴油」。此举凸显美方对燃料价格飙升的高度焦虑。", source: "Financial Times", url: "https://www.ft.com/content/adb80fa3-b54a-4b3d-8ed2-0ebe55a5e05e?syn-25a6b1a6=1" },
-  { time: "05:30", tag: "ai", tagText: "AI", text: "英国首相伯纳姆将在纽约联合国会议期间首次与特朗普面对面会晤，并呼吁全球协作管控人工智能带来的威胁。", source: "Financial Times", url: "https://www.ft.com/content/697c5196-3aa4-4c59-bad9-a455bcc1858f?syn-25a6b1a6=1" },
-  { time: "05:25", tag: "macro", tagText: "宏观", text: "法国呼吁欧盟立即采取行动压低能源价格，总统马克龙同时敦促欧盟委员会将新甲烷规则的实施推迟一年，以减轻企业成本压力。", source: "Financial Times", url: "https://www.ft.com/content/07c05f00-5c05-4b6d-837b-17118b266ecd?syn-25a6b1a6=1" },
-  { time: "04:00", tag: "macro", tagText: "宏观", text: "英国《金融时报》调查从金融科技公司A7内部大量泄露数据中发现，一个克里姆林宫支持的伪造支付网络经渣打银行、花旗集团等国际大行流转资金达69亿美元，涉及数千笔俄罗斯付款。", source: "Financial Times", url: "https://www.ft.com/content/3848a4ad-1426-4352-ba86-ef1279c4ffd1?syn-25a6b1a6=1" },
-  { time: "03:14", tag: "ai", tagText: "AI", text: "Meta推出的个人AI助手Muse上线约五天下载量达73万次，超过ChatGPT、Grok和Claude发布初期的表现。该产品推动Meta股价录得13年来最佳单月涨幅，也让投资者更相信其AI投入正开始兑现回报。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/meta-muse-personal-ai-agent-downloads.html" },
-  { time: "03:06", tag: "geo", tagText: "地缘", text: "特朗普将于周一在纽约格雷西庄园会见纽约市长马姆达尼，会晤安排在联合国大会前夕。市长新闻办公室称，双方将聚焦影响纽约市及市民的议题。此次会面被视为联邦政府与民主党左翼地方领导人在政策分歧背景下的一次直接接触，也令外界关注纽约在移民、治安与财政议题上与白宫的互动走向。", source: "CNBC", url: "https://www.cnbc.com/2026/09/20/trump-mamdani-gracie-mansion-meeting.html" },
-  { time: "03:00", tag: "macro", tagText: "宏观", text: "派拉蒙与12个州总检察长就反垄断诉讼达成和解，为以1100亿美元收购华纳兄弟探索的交易扫清障碍。根据协议，派拉蒙无需剥离资产，并将继续在加州运营。此前该诉讼可能导致交易推迟至2027年中，并带来数亿美元的额外费用。", source: "Financial Times", url: "https://www.ft.com/content/0bfc882f-fe1b-40cb-a356-162e833f2008?syn-25a6b1a6=1" },
-  { time: "02:32", tag: "macro", tagText: "宏观", text: "周一美股走高，纳斯达克指数涨约2%并迈向纪录收盘，标普500上涨约1%，道指开盘后上行。芯片股大涨是主要推手，同时油价与美债收益率回落。AI相关个股再度成为市场核心动力。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxNam9GTktGNDJ3TmRkQW9Fbk51TWJadS1aVnNEYUwydEgwb0NCLVQ2NHJjQ19aTUloUVJWSk9wVklRcmxhMVFBTDFCV2RQRHFNRy1RNVFMcHM4T2wxVjB5dlVjMGZmdXBkTmNVNFZxb0NpRTg1aGFEeWx3amk2MndtVTRIQVpKaVk?oc=5" },
-  { time: "02:28", tag: "macro", tagText: "宏观", text: "礼来CEO表示，自7月Medicare开始覆盖GLP-1类药物以来，已有约70万名新增参保老年人开始使用此类药物，其中约70%使用礼来产品。这是衡量新医保覆盖扩大药物可及性的最新数据，也凸显礼来在减肥药市场的领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/eli-lilly-ceo-david-ricks-glp-1s-medicare-coverage.html" },
-  { time: "02:15", tag: "geo", tagText: "地缘", text: "一批共和党高层议员要求特朗普在中期选举前禁止美国柴油出口。伊朗战争引发的燃料价格危机正令来自农业腹地的议员承压，此举反映美国国内能源成本问题已演变为选举政治议题。", source: "Financial Times", url: "https://www.ft.com/content/319c7b67-b585-407e-a0da-6e23b1612180?syn-25a6b1a6=1" },
-  { time: "02:01", tag: "ai", tagText: "AI", text: "微软AI负责人公开呼吁为人工智能设立安全「防护栏」，而白宫对广泛监管仍持抵制态度，凸显美国AI政策在行业自律与政府立规之间的分歧。在AI能力快速迭代、就业与安全争议升温的背景下，科技巨头与监管层的立场差异将影响后续立法节奏与产业投入方向。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOb2FIWTExcnlzekpmOHNhWTE1cDFaUWZGZ1cwbk5RWEtSWmh1QkQ5U1RYMUtVQndLMTFjdnVWTnJaVllJaTQ3NFZ1RVhHd25RTXhveExubGRuaS1VNkt2aGxhdzI5a3hGX2p1MHJMeFU3T0RqYV9KV2JNeGNsVmFHWGdqekIwcWFfZlY0VWxkT29jYmdxbTRTYmdfTFRjeTNrV3dNLVJPaW96SGFvTHFmNTN1TQ?oc=5" },
 ];
-const breakingDate = "2026年9月22日 23:33 CST";
+const breakingDate = "2026年9月23日 02:45 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:32", tag: "ai", tagText: "AI", text: "Vocci 推出一款售价 249 美元的智能戒指，把会议记录与笔记功能塞进可穿戴形态，为「AI 会议速记」这一赛道增添了戒指这一全新产品类别。报道同时指出，戒指长期佩戴、可随时收音的特性会引发隐私疑问：在未获明确同意的对话场景中持续采集音频，可能成为新的争议焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/" },
+  { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布两款新模型GPT-6 Sol与Luna，称二者与Astra「同出一源」，主打更低的使用成本与更少的错误率。在Anthropic同日发布新模型的背景下，头部实验室的模型迭代与价格战进一步提速，企业调用成本有望继续下行。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/" },
+  { time: "00:55", tag: "tech", tagText: "科技", text: "英国多家医院因一次IT操作失误，丢失了产科记录长达11年的「查看历史」（访问审计日志），院方仅成功恢复了患者诊疗数据。事件凸显医疗等关键行业在数据备份与审计追溯上的薄弱环节，也意味着相关机构可能面临合规与追责压力。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/09/it-mistake-erases-11-years-of-viewing-history-for-hospitals-maternity-records/" },
+  { time: "00:34", tag: "tech", tagText: "科技", text: "风投机构Andreessen Horowitz（a16z）成立「Horowitz Andreessen Academy」，定位为年轻人创办或加入硅谷初创公司的输送管道，且宣称「没有作业」，并已与Palantir、谷歌和Meta建立合作。此举被视为顶级VC向人才上游延伸、提前锁定AI时代创业者的新尝试。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/998813/andreessen-horowitz-ai-academy" },
+  { time: "00:30", tag: "ai", tagText: "AI", text: "Anthropic发布Claude Opus 5.5，官方称其为「迄今测试过的最强模型」，性能达到Fable级别的同时下调价格，并针对近期「失控AI黑客」事件强化了网络安全防护措施。降价+性能升级的组合将进一步压缩前沿模型市场的定价空间。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/" },
+  { time: "00:01", tag: "geo", tagText: "地缘", text: "特朗普在联合国大会演讲中称，美国已「正式」将人工智能（AI）更名为「超级智能」（super intelligence）。该表态虽被普遍视为政治修辞而非实际政策变更，但反映出美国官方话语体系正试图把AI议题上升到国家战略与安全层面。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
   { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "宾州Chesterbrook的AI网络公司Cornelis Networks完成2.05亿美元融资。该公司专注为高性能计算与AI集群提供高速互联架构，此轮大额融资显示在算力集群规模快速扩张的背景下，网络与互连环节正成为资本竞逐的新热点。", source: "VISTA.Today", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTFA0U1FCRDFneVlWdEh0NjVoaXJHNmc1MFVoNWl5VHdVb2pHNlRDdkY1S3VaTlhWZHVoa1I0aUVXTnhnNU5SNU5Dcno0emZPVU9EdFg2WWRvZ2FDUVhRSEczNFdRYkwwNkttaThrenpsZ29JTnZfRGpaVQ?oc=5" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "14:23", tag: "ai", tagText: "AI", text: "AI云服务初创公司Verda完成1.89亿美元融资。此轮大额融资显示出资本仍在持续押注AI基础设施层：随着模型训练与推理对GPU算力的需求膨胀，能够提供AI专用云与算力调度的服务商成为英伟达之外的重要受益者，也反映出市场对「算力供给瓶颈」这一主题的长期看好。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVFdiaVpkcmdRN0d2bHhiYkFTTThRSUhJZ1h5ODFrcnBzREJiLUZfLVlRUV84X1VYNEQzWmZmY2xvcm9FUGNPSDZwXzh3clFiVnctT0RraW5KTExDRlVGdHNEWVh5TXJMaXE5bHZEbFhHX2xBNkxoZ0R1YkRtZWkwUW9sNDR6VkVnT0UwU0g4YmEzcm9xMDFMS3pBSko2RDZiR3puUDRiaUx0UlVFRVE?oc=5" },
   { time: "12:49", tag: "tech", tagText: "科技", text: "阿里巴巴发布被称为中国迄今最强AI芯片的产品，直接对标英伟达，BABA股价隔夜大幅拉升。此举延续了在美方出口管制背景下中国厂商加速自研算力的趋势，也意味着国产AI芯片正从「替代」走向正面竞争，与华为此前公布的芯片路线图形成合围之势。市场关注该芯片的实际量产规模、代工产能与生态（软件栈、开发者迁移成本）能否支撑其挑战英伟达的CUDA护城河。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOUGRPRW9PNE9qMC1UNm8tYXUycWRsZXQxUk5Td2RGMUxOV0NmeVl1b29lMWxtNzlsakQ4d2FnYlRYLU96ZXVVLWhGSzcwWlFPUTZ0NWFyWlMzNTFWNFVqR0NnSFRJTnV1VDhWXzlvOTBZZU1nSWdaZEZIc215Wi00SjFkRHdrVmlEWTJSV2p4NVJfNUxSdHF0c1NVYVVmVEdoUTRrZFBCTU56NDNFODVNMnI4RjJ1MHYtOEs2ckdGZTZyclFRR2pDVXE5TWY1ZWdySWl4Y1A2TzZrNlo0TGwxSjM2YkU1UQ?oc=5" },
   { time: "12:33", tag: "ai", tagText: "AI", text: "AMD市值首次突破1万亿美元，成为又一家跻身「万亿俱乐部」的芯片厂商，主要受AI算力需求持续爆发推动。报道指出，随着数据中心加速器订单激增，AMD在AI芯片市场对英伟达的挑战者地位进一步巩固，其股价与估值在年内大幅攀升。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYW1lRGZ0ZWhCVjNYajd6MmljOTI5bk52X3c0dVBvTFc0MU1McDQ0LUdYZk94Yk9IM0VhV0tjc3E1cEZTX1dUekw5VDAyYnlRNmVzeXRtS1E3NHJTVzhhdTVxQzVVdHF1aURzekxjWXRxNXRHanFrWFNobmZ2STFtYlUyWUVDeGhC?oc=5" },
-  { time: "06:24", tag: "tech", tagText: "科技", text: "Meta高度特权化的AI助手Muse被曝存在严重的0-day漏洞：攻击者可用简单的ClickFix手法完全劫持这一新型智能体。鉴于Muse被授予了远超普通应用的系统权限，该漏洞意味着用户设备与账户面临被全面接管的风险，也再次凸显具备执行能力的AI代理在安全隔离上的结构性隐患。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/" },
-  { time: "04:29", tag: "ai", tagText: "AI", text: "加州州长纽森签署七项法案，收紧对AI数据中心的能源与水资源使用监管，核心目的是防止数据中心把电网升级、供水等公用事业成本转嫁给普通居民。这是美国AI基础设施建设热潮下，地方政府首次以成体系立法方式对算力扩张的资源外部性设限，可能为其他州提供范本。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/998453/california-ai-data-center-bills" },
-  { time: "04:15", tag: "ai", tagText: "AI", text: "OpenAI宣布成立数学顾问小组，此前其AI系统已解决100多个公开数学难题。报道同时指出，该顾问小组无权放缓或改变OpenAI既有的数学研究路线，显示公司希望在引入外部学术监督的同时，保持研发节奏不受制约。此举被视为AI在形式化推理领域能力跃升后，对学术与产业边界的一次重新协商。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/" },
-  { time: "03:19", tag: "ai", tagText: "AI", text: "Appfigures估算显示，Meta新推出的AI智能体Muse在美加上线后的下载量与日活用户数均超过ChatGPT移动端同期表现。这表明Meta借助社交生态的分发能力，在消费级AI助手的用户争夺上取得领先开局，也对OpenAI在移动入口的优势构成直接挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch/" },
-  { time: "02:50", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋在采访中称外界对AI的恐惧被夸大。The Verge指出，作为AI热潮中潜在获利最大的人，黄仁勋认为自己比深耕AI数十年的研究者更懂这项技术。此番表态正值业界与监管层围绕AI风险、安全与是否应当放缓发展的争论持续升温之际。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/997936/nvidia-jensen-huang-ai-fears-overblown" },
-  { time: "02:32", tag: "ai", tagText: "AI", text: "Vocci 推出一款售价 249 美元的智能戒指，把会议记录与笔记功能塞进可穿戴形态，为「AI 会议速记」这一赛道增添了戒指这一全新产品类别。报道同时指出，戒指长期佩戴、可随时收音的特性会引发隐私疑问：在未获明确同意的对话场景中持续采集音频，可能成为新的争议焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/" },
 ];
-const aiBreakingDate = "2026年9月22日 23:33 CST";
+const aiBreakingDate = "2026年9月23日 02:45 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
