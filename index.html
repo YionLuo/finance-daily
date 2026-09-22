@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 37.17,
+  score: 36.06,
   rating: "fear",
-  timestamp: "2026-09-22T14:40:13+00:00",
+  timestamp: "2026-09-22T15:30:05+00:00",
   previousClose: 33.71,
   previous1Week: 27.97,
   previous1Month: 54.66,
   previous1Year: 66.51,
-  date: "2026年9月22日 22:41 CST"
+  date: "2026年9月22日 23:33 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,11 @@ const breakingNews = [
   { time: "02:15", tag: "geo", tagText: "地缘", text: "一批共和党高层议员要求特朗普在中期选举前禁止美国柴油出口。伊朗战争引发的燃料价格危机正令来自农业腹地的议员承压，此举反映美国国内能源成本问题已演变为选举政治议题。", source: "Financial Times", url: "https://www.ft.com/content/319c7b67-b585-407e-a0da-6e23b1612180?syn-25a6b1a6=1" },
   { time: "02:01", tag: "ai", tagText: "AI", text: "微软AI负责人公开呼吁为人工智能设立安全「防护栏」，而白宫对广泛监管仍持抵制态度，凸显美国AI政策在行业自律与政府立规之间的分歧。在AI能力快速迭代、就业与安全争议升温的背景下，科技巨头与监管层的立场差异将影响后续立法节奏与产业投入方向。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOb2FIWTExcnlzekpmOHNhWTE1cDFaUWZGZ1cwbk5RWEtSWmh1QkQ5U1RYMUtVQndLMTFjdnVWTnJaVllJaTQ3NFZ1RVhHd25RTXhveExubGRuaS1VNkt2aGxhdzI5a3hGX2p1MHJMeFU3T0RqYV9KV2JNeGNsVmFHWGdqekIwcWFfZlY0VWxkT29jYmdxbTRTYmdfTFRjeTNrV3dNLVJPaW96SGFvTHFmNTN1TQ?oc=5" },
 ];
-const breakingDate = "2026年9月22日 22:41 CST";
+const breakingDate = "2026年9月22日 23:33 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
   { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "宾州Chesterbrook的AI网络公司Cornelis Networks完成2.05亿美元融资。该公司专注为高性能计算与AI集群提供高速互联架构，此轮大额融资显示在算力集群规模快速扩张的背景下，网络与互连环节正成为资本竞逐的新热点。", source: "VISTA.Today", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTFA0U1FCRDFneVlWdEh0NjVoaXJHNmc1MFVoNWl5VHdVb2pHNlRDdkY1S3VaTlhWZHVoa1I0aUVXTnhnNU5SNU5Dcno0emZPVU9EdFg2WWRvZ2FDUVhRSEczNFdRYkwwNkttaThrenpsZ29JTnZfRGpaVQ?oc=5" },
   { time: "21:39", tag: "ai", tagText: "AI", text: "TechRepublic报道，若供应商产能跟得上，英伟达明年的芯片销量可能翻倍。这一预测凸显全球AI算力需求依旧强劲，同时也把关键瓶颈指向台积电等上游代工与封装环节——能否交付，而非订单多寡，将决定英伟达的实际上限。", source: "TechRepublic", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYWV4Y2ZJbFBld1pvd0tRYjJaWkt6aVp1U2RoT2wwejdJRVJkcVZNY3I5ZzJiR2V5TXRRaERnSXQtUXh6eC14NkN0NE03aUpPeWIybkgzNlFXemw2Qk5XdngxT05sU09UdTVTU1R3QmpvZ29KQXh1TktfMjVYLTdLTkQ1MUtqa2hobzEzbS1LRm1IbXBl?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "03:19", tag: "ai", tagText: "AI", text: "Appfigures估算显示，Meta新推出的AI智能体Muse在美加上线后的下载量与日活用户数均超过ChatGPT移动端同期表现。这表明Meta借助社交生态的分发能力，在消费级AI助手的用户争夺上取得领先开局，也对OpenAI在移动入口的优势构成直接挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch/" },
   { time: "02:50", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋在采访中称外界对AI的恐惧被夸大。The Verge指出，作为AI热潮中潜在获利最大的人，黄仁勋认为自己比深耕AI数十年的研究者更懂这项技术。此番表态正值业界与监管层围绕AI风险、安全与是否应当放缓发展的争论持续升温之际。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/997936/nvidia-jensen-huang-ai-fears-overblown" },
   { time: "02:32", tag: "ai", tagText: "AI", text: "Vocci 推出一款售价 249 美元的智能戒指，把会议记录与笔记功能塞进可穿戴形态，为「AI 会议速记」这一赛道增添了戒指这一全新产品类别。报道同时指出，戒指长期佩戴、可随时收音的特性会引发隐私疑问：在未获明确同意的对话场景中持续采集音频，可能成为新的争议焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/" },
-  { time: "02:30", tag: "tech", tagText: "科技", text: "一款新AI模型可从常规心电图（ECG）读数中识别心脏病标志物，被视为临床筛查的重要突破。若能在基层医疗中普及，有望以极低成本提升心血管疾病的早期检出率，也是AI在医疗诊断落地中较为扎实的一类应用进展。", source: "Good News Network", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxOblBtQ2diLWlNUUNITUNGTW1yN1ZiTzdIRXdkcEZlSnhDOXczZTJIMWJtWjVJQVEzMl9GRmxneFNIS3Z1NXlLZXVNWElpcWJVUVJXakQyR0M3R1IyTzQ2WFZ1eUs5LV9jMHo4ZWtBV0ZZYlRhSVdtY3ItbEVLNVlFWUVCU2s5UV9oMU8zOTZYZjRwUjZtRjhVWWI4elAyZ3JJSndSNXVoUkU0bXdhOUxtWEI4cWcwMGtTN0wwVWtDZGlkMlhLa1ZnNUh3?oc=5" },
 ];
-const aiBreakingDate = "2026年9月22日 22:41 CST";
+const aiBreakingDate = "2026年9月22日 23:33 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
