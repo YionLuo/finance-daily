@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 35.11,
+  score: 36.89,
   rating: "fear",
-  timestamp: "2026-09-23T11:07:01+00:00",
+  timestamp: "2026-09-23T15:32:17+00:00",
   previousClose: 35.23,
   previous1Week: 27.31,
   previous1Month: 54.66,
   previous1Year: 56.77,
-  date: "2026年9月23日 19:24 CST"
+  date: "2026年9月23日 23:33 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,17 @@ const breakingNews = [
   { time: "04:46", tag: "crypto", tagText: "加密", text: "在全面加密监管法案《Clarity Act》未能通过参议院后，美国州级与联邦监管机构正加紧填补规则真空，各自推进加密资产监管框架。这一监管碎片化局面可能加大市场合规成本与不确定性，行业对统一联邦规则的期待落空。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/clarity-act-crypto-rules-regulators.html" },
   { time: "04:21", tag: "macro", tagText: "宏观", text: "美股周二分化：纳斯达克综合指数收于纪录新高，标普500基本收平，道指下跌185点。芯片股继续领涨，油价连续第五个交易日下滑，「AI FOMO」情绪回归，推动科技股指数完全收复夏季回调失地。MarketWatch指出，纳指此番快速冲高向投资者传递的信号是——不要等回调再买入，部分分析师认为乐观前景有基本面改善支撑。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/stock-market-today-live-updates.html" },
 ];
-const breakingDate = "2026年9月23日 19:24 CST";
+const breakingDate = "2026年9月23日 23:33 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:19", tag: "ai", tagText: "AI", text: "YouTube在年度「Made on YouTube」活动中一口气发布多项AI功能：一是让用户用自然语言描述想看的内容，由Gemini据此生成「自定义信息流」，等于把推荐算法的主导权部分交给用户；二是为创作者在Studio应用中新增选题灵感生成、缩略图表现监测等工具，大幅降低内容策划与优化的门槛；三是YouTube Music引入对话式AI，帮助听众发现音乐、探索艺人并找到此前容易错过的播客。此举延续了平台把大模型深度嵌入推荐与创作链路的思路。", source: "The Verge", url: "https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests" },
+  { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
+  { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "宾州Chesterbrook的AI网络公司Cornelis Networks完成2.05亿美元融资。该公司专注为高性能计算与AI集群提供高速互联架构，此轮大额融资显示在算力集群规模快速扩张的背景下，网络与互连环节正成为资本竞逐的新热点。", source: "VISTA.Today", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTFA0U1FCRDFneVlWdEh0NjVoaXJHNmc1MFVoNWl5VHdVb2pHNlRDdkY1S3VaTlhWZHVoa1I0aUVXTnhnNU5SNU5Dcno0emZPVU9EdFg2WWRvZ2FDUVhRSEczNFdRYkwwNkttaThrenpsZ29JTnZfRGpaVQ?oc=5" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "Spotify面向美国Premium用户上线「Taste Profile」（品味档案）功能，允许听众查看平台如何理解自己的音乐偏好，并用自然语言直接调整推荐结果。这是流媒体平台首次把推荐算法的「黑箱」向用户打开并交出一部分控制权，被视为在AI推荐透明化与用户主权方向上的一次重要试验，也可能成为其他内容平台效仿的模板。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/23/spotify-is-giving-you-the-keys-to-its-recommendation-algorithm-with-u-s-launch-of-taste-profile/" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "企业级AI Agent初创公司Ema完成7700万美元融资，公司主攻以AI代理替代传统企业软件与外包服务的工作流。此轮融资反映出资本正加速押注「AI吞噬企业软件与服务」这一逻辑，即用可自主执行的智能体取代按席位收费的SaaS模式和人力交付的服务外包。", source: "TechCrunch", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQTlkT0dzTlZZN1pCLWpmdTdUY3Jzb0lrN2FEVG9scE5hdFhUZE1TdkZmZjByaE9VSTlweDNXV2xPYTg5SVh4N2I1VTZsblhYcFVZSDRDbl8zazAxOXJOSHlfQkZEbUhJUHFzX0FTWnVuRDFNUzREZnBnTU5nT1BDdGRYMVhvSVNGVjNSMG9CQVZjVnRfQjdjRDQtMFlMN3Q4VkY5bkNNYVpUclU?oc=5" },
+  { time: "19:02", tag: "ai", tagText: "AI", text: "OpenAI挖来三名Patreon前高管，负责锚定其在创作者领域的产品战略。Patreon联合创始人兼技术负责人Sam Yam在创办该创作者订阅平台13年后宣布离职加盟。此举被解读为OpenAI正筹备面向创作者的新产品发布，试图把内容变现与订阅经济纳入其生态版图。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999249/openai-creators-patreon-execs-hire-sam-yam" },
   { time: "18:37", tag: "macro", tagText: "宏观", text: "澳洲联储主席布洛克（Bullock）表示，要让通胀回落至目标水平，劳动力市场需要进一步走弱。此番表态被解读为澳央行愿意容忍失业率上行以压制物价压力，为后续政策路径定下偏鹰基调，市场对澳元利率与降息节奏的预期或将随之调整。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSDZtX3RfZFU5RVR3dGU2ckpKZTQyTUFGVF8wMlotelZ4N3JkQnFvUlAwZHFGa1lJV3JBQ1NWaVFnSFZzZHNucW96S3BiaWh1U2s1Vm4zMllTejhEOEtveE9mTVFfRXo1LVEyTTU0X2NuX1BzcThLTFJfRFZWcWgzdENwWWMwU01KZ3FCeE9tQjB3bExETWVzNDRBYTZJcS1ac1lPR25uWHNrN1J6akstVUVmYmlfNlpiNmtN?oc=5" },
   { time: "18:30", tag: "ai", tagText: "AI", text: "《印度时报》报道称，OpenAI、Anthropic等头部AI公司的员工普遍反映，长期从事AI安全与前沿风险相关工作带来严重心理负担。报道指出，在竞速发布与安全担忧的双重压力下，一线研究与对齐团队出现焦虑、倦怠等情绪，凸显AI行业高速扩张背后的人才心理健康问题。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMijwJBVV95cUxQYXJvZVFBWWlybU4teGl1VjlDMjQ4OWtaUFh2RzJrUnZRUjI0MzRFa1pySVVEdXh4UTFKcV9FWVI4OEg1eHlPTUVSSDJwMHZmRVRPN2ZXeGlfVEE5QllnNzZzdlQ5MWFkUHA5aEJ2RE9BNlQyRVhiSWVnY2RQSjlJazBUUU1reGMyVjl5d0kwM1pGQkdKcS12OW93ZkpTbzF0VVNzRkVKU0RBNk9PcDRaOWdOQU1zZEc2c0NacDVNYk1Qb3Z6X2lXQXZKWUpvTGR0R21YaTdwaC1PWTF2ejJSa2oyQXltUHV3WU5nVWVZSGNNMVZWUE5YVWxNUVY0VkRQOUg2UnZzR0xKeHY4ZktN0gGUAkFVX3lxTFBzZWRwZ3d5UXEwS1FkdjVtSURNNlZRVF9tSEh0WHNLSEcySlFfOFNTRmZteGRGS05nU3RLX05fY0VUMDQyOElsb1BUbHBUbG40M2JZZlJvQVFJbHkwZWlPUFFJUURsVXRsbHpnOWlUclRVa0J0OEFfU3p4ZVZYQ1RlMDN0VTlZYmV0bWY1ak5raVJqckd2aVFYN1FFbW1xVUtYeDhLNGtmV1ZaUHZqSzN1TlNfSW5UZEpELWxkU2x2aDJ6MXBNVnpmNURlT3R0T0tPcGZ5czVxV2Y0OWxicmFFZ2RERzBYNTl1b1l1R3BRdE5CSl90Q0lSRElNY1lCeUZ1RkE1bzlVRk9hajk1NWpwemRHXw?oc=5" },
   { time: "13:55", tag: "ai", tagText: "AI", text: "韩国国家增长基金正评估参与本土AI基础设施初创公司Vessl AI的1.5亿美元C轮融资。Vessl AI主打机器学习运维（MLOps）与AI算力调度平台，若主权级别基金入局，将成为韩国以国家资本扶持本土AI基础设施的重要案例，也反映亚洲AI算力层融资持续升温。", source: "KED Global", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE5nbEZXMDk2dnhlZU5MNHZjVVFldUlxeXhMa3cwVE80TDBHZWx3c2lOSGw1akFkdTFvVGh3ckk4dWFIRk9ndTVvdjhSM1UtYUlmSGxPaHdjMkNLRzM0YXk1T0xFZVd3ZU8wVGdpZ2FXbF9KeFRO?oc=5" },
@@ -1667,15 +1674,8 @@ const aiBreakingNews = [
   { time: "02:40", tag: "ai", tagText: "AI", text: "AMD市值突破1万亿美元，成为继英伟达、博通和美光之后又一家因AI算力需求而被推上万亿市值的芯片厂商。消息反映出市场对AI加速器与数据中心芯片的持续押注已从单一龙头扩散到整个供应链，AMD在MI系列加速器上的进展成为其股价与估值重估的核心驱动。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdld6bXFjTE5YZnpzYnB0UEdOZnRfRGlxcFJZclE1N2xFeU5mc0Rxd0YtRHlqVERsYlo2bEcyMEJHWHU0T2t4NVVzNzBObnhDWUNZRExZME10bDRWYk5hMmFIYTVaSmRwRTRkbDViT3BQREZxTG9NMDlfMmtTVExoRUk0TTJQc1ZnWENaYnRzem55eHhUdEJ6X0J2RjRfOGhJSmZmLVo0WThFam9ObW51aHNKUQ?oc=5" },
   { time: "02:32", tag: "ai", tagText: "AI", text: "Vocci 推出一款售价 249 美元的智能戒指，把会议记录与笔记功能塞进可穿戴形态，为「AI 会议速记」这一赛道增添了戒指这一全新产品类别。报道同时指出，戒指长期佩戴、可随时收音的特性会引发隐私疑问：在未获明确同意的对话场景中持续采集音频，可能成为新的争议焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布两款新模型GPT-6 Sol与Luna，称二者与Astra「同出一源」，主打更低的使用成本与更少的错误率。在Anthropic同日发布新模型的背景下，头部实验室的模型迭代与价格战进一步提速，企业调用成本有望继续下行。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/" },
-  { time: "00:55", tag: "tech", tagText: "科技", text: "英国多家医院因一次IT操作失误，丢失了产科记录长达11年的「查看历史」（访问审计日志），院方仅成功恢复了患者诊疗数据。事件凸显医疗等关键行业在数据备份与审计追溯上的薄弱环节，也意味着相关机构可能面临合规与追责压力。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/09/it-mistake-erases-11-years-of-viewing-history-for-hospitals-maternity-records/" },
-  { time: "00:34", tag: "tech", tagText: "科技", text: "风投机构Andreessen Horowitz（a16z）成立「Horowitz Andreessen Academy」，定位为年轻人创办或加入硅谷初创公司的输送管道，且宣称「没有作业」，并已与Palantir、谷歌和Meta建立合作。此举被视为顶级VC向人才上游延伸、提前锁定AI时代创业者的新尝试。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/998813/andreessen-horowitz-ai-academy" },
-  { time: "00:30", tag: "ai", tagText: "AI", text: "Anthropic发布Claude Opus 5.5，官方称其为「迄今测试过的最强模型」，性能达到Fable级别的同时下调价格，并针对近期「失控AI黑客」事件强化了网络安全防护措施。降价+性能升级的组合将进一步压缩前沿模型市场的定价空间。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/" },
-  { time: "00:01", tag: "geo", tagText: "地缘", text: "特朗普在联合国大会演讲中称，美国已「正式」将人工智能（AI）更名为「超级智能」（super intelligence）。该表态虽被普遍视为政治修辞而非实际政策变更，但反映出美国官方话语体系正试图把AI议题上升到国家战略与安全层面。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence" },
-  { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
-  { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "宾州Chesterbrook的AI网络公司Cornelis Networks完成2.05亿美元融资。该公司专注为高性能计算与AI集群提供高速互联架构，此轮大额融资显示在算力集群规模快速扩张的背景下，网络与互连环节正成为资本竞逐的新热点。", source: "VISTA.Today", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTFA0U1FCRDFneVlWdEh0NjVoaXJHNmc1MFVoNWl5VHdVb2pHNlRDdkY1S3VaTlhWZHVoa1I0aUVXTnhnNU5SNU5Dcno0emZPVU9EdFg2WWRvZ2FDUVhRSEczNFdRYkwwNkttaThrenpsZ29JTnZfRGpaVQ?oc=5" },
 ];
-const aiBreakingDate = "2026年9月23日 19:24 CST";
+const aiBreakingDate = "2026年9月23日 23:33 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
