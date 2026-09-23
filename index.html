@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 36.89,
+  score: 36.06,
   rating: "fear",
-  timestamp: "2026-09-23T15:32:17+00:00",
+  timestamp: "2026-09-23T16:42:35+00:00",
   previousClose: 35.23,
   previous1Week: 27.31,
   previous1Month: 54.66,
   previous1Year: 56.77,
-  date: "2026年9月23日 23:33 CST"
+  date: "2026年9月24日 00:46 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,11 @@ const breakingNews = [
   { time: "04:46", tag: "crypto", tagText: "加密", text: "在全面加密监管法案《Clarity Act》未能通过参议院后，美国州级与联邦监管机构正加紧填补规则真空，各自推进加密资产监管框架。这一监管碎片化局面可能加大市场合规成本与不确定性，行业对统一联邦规则的期待落空。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/clarity-act-crypto-rules-regulators.html" },
   { time: "04:21", tag: "macro", tagText: "宏观", text: "美股周二分化：纳斯达克综合指数收于纪录新高，标普500基本收平，道指下跌185点。芯片股继续领涨，油价连续第五个交易日下滑，「AI FOMO」情绪回归，推动科技股指数完全收复夏季回调失地。MarketWatch指出，纳指此番快速冲高向投资者传递的信号是——不要等回调再买入，部分分析师认为乐观前景有基本面改善支撑。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/stock-market-today-live-updates.html" },
 ];
-const breakingDate = "2026年9月23日 23:33 CST";
+const breakingDate = "2026年9月24日 00:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:23", tag: "ai", tagText: "AI", text: "美国参议员伯尼·桑德斯（无党籍，佛蒙特州）与众议员格雷格·卡萨尔（民主党，得州）联合提出新法案，拟全面禁止任何人开发「人工超级智能」。法案将超级智能定义为能力超越人类的人工智能系统，并规定违规开发者将承担刑事责任、最高可被判监禁。此举标志着美国国会对前沿AI风险的立法博弈进一步升级，也延续了桑德斯此前对AI权力集中的批评立场。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act" },
   { time: "23:19", tag: "ai", tagText: "AI", text: "YouTube在年度「Made on YouTube」活动中一口气发布多项AI功能：一是让用户用自然语言描述想看的内容，由Gemini据此生成「自定义信息流」，等于把推荐算法的主导权部分交给用户；二是为创作者在Studio应用中新增选题灵感生成、缩略图表现监测等工具，大幅降低内容策划与优化的门槛；三是YouTube Music引入对话式AI，帮助听众发现音乐、探索艺人并找到此前容易错过的播客。此举延续了平台把大模型深度嵌入推荐与创作链路的思路。", source: "The Verge", url: "https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
   { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "03:09", tag: "ai", tagText: "AI", text: "Meta承认其AI助手Muse与竞品OpenClaw的相似「并非巧合」。Meta坚称Muse是「从零构建」，但表示该助手「深受OpenClaw启发」，甚至连部分工作区文件名与内容都高度雷同。此事在AI圈引发对模型与产品「复刻」边界的讨论，也可能为后续知识产权与商业机密争议埋下伏笔。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/meta-admits-muses-likeness-to-openclaw-isnt-a-coincidence/" },
   { time: "02:40", tag: "ai", tagText: "AI", text: "AMD市值突破1万亿美元，成为继英伟达、博通和美光之后又一家因AI算力需求而被推上万亿市值的芯片厂商。消息反映出市场对AI加速器与数据中心芯片的持续押注已从单一龙头扩散到整个供应链，AMD在MI系列加速器上的进展成为其股价与估值重估的核心驱动。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdld6bXFjTE5YZnpzYnB0UEdOZnRfRGlxcFJZclE1N2xFeU5mc0Rxd0YtRHlqVERsYlo2bEcyMEJHWHU0T2t4NVVzNzBObnhDWUNZRExZME10bDRWYk5hMmFIYTVaSmRwRTRkbDViT3BQREZxTG9NMDlfMmtTVExoRUk0TTJQc1ZnWENaYnRzem55eHhUdEJ6X0J2RjRfOGhJSmZmLVo0WThFam9ObW51aHNKUQ?oc=5" },
   { time: "02:32", tag: "ai", tagText: "AI", text: "Vocci 推出一款售价 249 美元的智能戒指，把会议记录与笔记功能塞进可穿戴形态，为「AI 会议速记」这一赛道增添了戒指这一全新产品类别。报道同时指出，戒指长期佩戴、可随时收音的特性会引发隐私疑问：在未获明确同意的对话场景中持续采集音频，可能成为新的争议焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/" },
-  { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布两款新模型GPT-6 Sol与Luna，称二者与Astra「同出一源」，主打更低的使用成本与更少的错误率。在Anthropic同日发布新模型的背景下，头部实验室的模型迭代与价格战进一步提速，企业调用成本有望继续下行。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/" },
 ];
-const aiBreakingDate = "2026年9月23日 23:33 CST";
+const aiBreakingDate = "2026年9月24日 00:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
