@@ -1618,12 +1618,12 @@
 const fearGreedData = {
   score: 35.26,
   rating: "fear",
-  timestamp: "2026-09-22T21:40:43+00:00",
+  timestamp: "2026-09-22T23:59:55+00:00",
   previousClose: 33.71,
   previous1Week: 27.97,
   previous1Month: 54.66,
   previous1Year: 66.51,
-  date: "2026年9月23日 05:59 CST"
+  date: "2026年9月23日 08:19 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,14 +1650,17 @@ const breakingNews = [
   { time: "01:15", tag: "geo", tagText: "地缘", text: "欧盟将把俄罗斯寡头弗里德曼（Mikhail Fridman）和乌斯马诺夫（Alisher Usmanov）从制裁名单中移除，这是将欧盟对俄制裁延长三年的协议的一部分，反映成员国在制裁力度与延续期限上的妥协。", source: "Financial Times", url: "https://www.ft.com/content/760091dd-20be-4152-aa0d-561475a99ee8?syn-25a6b1a6=1" },
   { time: "23:18", tag: "macro", tagText: "宏观", text: "沙特释放东-西输油管道即将重启的信号。该管道是沙特原油运抵红海的关键路线，因无人机袭击已关闭两周。若恢复运行，将部分缓解市场对中东供应中断的担忧。", source: "Financial Times", url: "https://www.ft.com/content/5b4f8738-3b93-40c8-88d6-08c8ea684e83?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月23日 05:59 CST";
+const breakingDate = "2026年9月23日 08:19 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:17", tag: "ai", tagText: "AI", text: "OpenAI在接连发布引人注目的数学成果、却因此陷入声誉危机后，正着手咨询人类数学家，希望找到一条「不那么灾难性」的前进路径。报道称该公司于周一组建由顶尖数学家构成的顾问小组，为后续模型在数学推理与科研场景中的对外表述和发布方式把关。此举被视为OpenAI在AI数学能力宣传翻车后，试图重建学术信任与外部沟通机制。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999167/openai-elite-mathematicians-panel" },
   { time: "05:56", tag: "ai", tagText: "AI", text: "AI训练数据公司Snorkel AI完成3.5亿美元E轮融资，估值由此前的约11.7亿美元升至35亿美元，三年内翻了三倍。这家成立七年的初创公司主攻「数据即服务」模式，为大模型训练提供标注、合成与数据编排能力。此轮融资反映在模型能力趋同、真实数据枯竭的背景下，高质量训练数据正成为资本竞逐的关键环节。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/" },
+  { time: "04:52", tag: "tech", tagText: "科技", text: "曾因R1设备表现不及预期而备受质疑的Rabbit，推出无需其硬件即可使用的独立AI agent，并将新系统命名为OS3。公司称OS3主打「agentic」能力，意味着这家消费级AI硬件公司正把重心从卖设备转向卖软件与代理服务，以扩大用户覆盖面。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999094/rabbit-ai-agent-os3" },
   { time: "04:00", tag: "tech", tagText: "科技", text: "高通发布两款新一代智能手机芯片，主打端侧AI算力。高通称其旗舰型号可在本地运行300亿参数的混合专家（MoE）模型，意味着部分大模型推理将不再依赖云端。此举延续了芯片厂商把AI能力从数据中心推向手机、PC等终端的趋势，端侧推理的隐私性与时延优势成为主要卖点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/qualcomm-launches-two-new-smartphone-chips-with-emphasis-on-ai/" },
   { time: "03:45", tag: "tech", tagText: "科技", text: "微软宣布瓦解一个名为EvilTokens的AI辅助攻击平台。该平台提供端到端的攻击工具链，让批量账户劫持与系统入侵变得更快、更容易，据报已导致约1.2万个目标被攻陷。事件凸显生成式AI正被武器化用于降低网络攻击门槛，也说明平台级安全厂商与AI滥用之间的攻防正在升级。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/" },
   { time: "03:09", tag: "ai", tagText: "AI", text: "Meta承认其AI助手Muse与竞品OpenClaw的相似「并非巧合」。Meta坚称Muse是「从零构建」，但表示该助手「深受OpenClaw启发」，甚至连部分工作区文件名与内容都高度雷同。此事在AI圈引发对模型与产品「复刻」边界的讨论，也可能为后续知识产权与商业机密争议埋下伏笔。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/meta-admits-muses-likeness-to-openclaw-isnt-a-coincidence/" },
+  { time: "02:40", tag: "ai", tagText: "AI", text: "AMD市值突破1万亿美元，成为继英伟达、博通和美光之后又一家因AI算力需求而被推上万亿市值的芯片厂商。消息反映出市场对AI加速器与数据中心芯片的持续押注已从单一龙头扩散到整个供应链，AMD在MI系列加速器上的进展成为其股价与估值重估的核心驱动。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdld6bXFjTE5YZnpzYnB0UEdOZnRfRGlxcFJZclE1N2xFeU5mc0Rxd0YtRHlqVERsYlo2bEcyMEJHWHU0T2t4NVVzNzBObnhDWUNZRExZME10bDRWYk5hMmFIYTVaSmRwRTRkbDViT3BQREZxTG9NMDlfMmtTVExoRUk0TTJQc1ZnWENaYnRzem55eHhUdEJ6X0J2RjRfOGhJSmZmLVo0WThFam9ObW51aHNKUQ?oc=5" },
   { time: "02:32", tag: "ai", tagText: "AI", text: "Vocci 推出一款售价 249 美元的智能戒指，把会议记录与笔记功能塞进可穿戴形态，为「AI 会议速记」这一赛道增添了戒指这一全新产品类别。报道同时指出，戒指长期佩戴、可随时收音的特性会引发隐私疑问：在未获明确同意的对话场景中持续采集音频，可能成为新的争议焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "OpenAI发布两款新模型GPT-6 Sol与Luna，称二者与Astra「同出一源」，主打更低的使用成本与更少的错误率。在Anthropic同日发布新模型的背景下，头部实验室的模型迭代与价格战进一步提速，企业调用成本有望继续下行。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/" },
   { time: "00:55", tag: "tech", tagText: "科技", text: "英国多家医院因一次IT操作失误，丢失了产科记录长达11年的「查看历史」（访问审计日志），院方仅成功恢复了患者诊疗数据。事件凸显医疗等关键行业在数据备份与审计追溯上的薄弱环节，也意味着相关机构可能面临合规与追责压力。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/09/it-mistake-erases-11-years-of-viewing-history-for-hospitals-maternity-records/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "21:37", tag: "ai", tagText: "AI", text: "24/7 Wall St.报道，一份报告指出芯片价格将上涨约10%，AMD股价随之上涨5%，英伟达与台积电亦小幅走高。消息反映在AI需求旺盛与产能紧张的背景下，芯片厂商正获得更强的定价权，涨价预期被视为行业景气度的又一信号。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNHhmaHYxUHcySHdWVkYyeDRZcEowRlRuREVRX1ViSGRsRm0yLWEyckpyZHItOTBBelFnYlE0T19INEM3VDhQaTYyQmNTZ05Kd1J3dUdHUHRkMDhFekFLckFJOXFlaHpENWhmMFh0NHc4Q3d0Q1JLakpDYTRteDB4Y3hKR29YOXBoeHExQldWN1JuazBLeVNpaUtHc3paX2MxYTdjRTQzdktMYUxGUnZ1TzFsN2ZqVDZ2dk1oTVI2SkV1N3VDN2JzZzVYdkp5Qmc?oc=5" },
   { time: "21:36", tag: "tech", tagText: "科技", text: "苹果就「未能交付AI升级版Siri」的指控达成2.5亿美元和解，符合条件的美国iPhone用户现已可提交索赔。该案被视为对AI功能营销承诺的重要检验：厂商宣传的AI能力若迟迟无法落地，将面临实质性的法律与赔付成本。", source: "The Verge", url: "https://www.theverge.com/tech/998191/apple-siri-ai-iphone-16-class-action-lawsuit-settlement" },
   { time: "21:24", tag: "tech", tagText: "科技", text: "华为公布新一代AI芯片计划，目标2027年推出，直接对标英伟达。此举被视为中国在美方出口管制背景下加速自研算力芯片、构建国产AI硬件生态的关键一步，也意味着全球AI加速器市场的竞争格局可能在2027年前后出现新变量。", source: "The Daily Star", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNblQzNXNXY2VxMzEyZ1NhTVBXX2h5X051em1RcldjeFlGaGVkUmc2bFNrcjZuaDlrRFMtQTBMeHJRZ0FUVDFjWDV0RW05WVdUeEFSc2FQcDBUZDF6R0ViR0ZUWUtsYUx2cWV0Ri1rbkluOTkzMUVBNUdrT0hPd3JoRnJSaU1PSGVsdXBYanN6bUktQzdjdXplbTloS3RUc0VTc0tHZHZtc09pYTV6MzBZVFRGeWRvMG5wNlEw?oc=5" },
-  { time: "21:20", tag: "tech", tagText: "科技", text: "华为AI芯片需求激增、供不应求。报道显示，在美方出口管制推动国产替代的背景下，华为自研AI算力芯片订单已超出其现有产能，供需缺口进一步凸显中国本土算力供给的紧张与产业链扩产压力。", source: "IDNFinancials", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX2dPYTdvS0dqaU9zYzdRRDFfaFFtR245MHlKX1Q2LURzWWlxdUo4dWp6Zm9SYm50dnVvU1hsTGlGa19LSl9yS1d5aW02WldhMmJtTE12b1RXajI4U19yT2FXbzVHQjVKZktxR194czJwOHd4SF9QU0tzN2E4TTdZaDBoVjFSb2hBSUlV?oc=5" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "TechCrunch复盘宾夕法尼亚州近两年的AI数据中心争议：电价上涨、水资源消耗、噪音、土地占用与电网升级成本转嫁，让几乎每一方都能找到反对建设的理由。报道显示，AI基建的阻力正从个别社区的审批博弈，演变为跨州的政治性议题，并直接抬高数据中心的落地周期与成本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/everyone-can-find-a-reason-to-dislike-data-center-construction/" },
-  { time: "20:23", tag: "ai", tagText: "AI", text: "英国AI数据中心开发商Nscale正式启动IPO，将再次检验华尔街对「高度集中式AI押注」的胃口。该公司收入绝大部分来自微软与Anthropic两大客户，其招股定价与认购情况被视为市场如何为AI基建类「单一客户风险」定价的关键试金石，也被看作AI算力投资情绪的风向标。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/nscales-ipo-will-test-wall-streets-appetite-for-concentrated-ai-bets-once-again/" },
 ];
-const aiBreakingDate = "2026年9月23日 05:59 CST";
+const aiBreakingDate = "2026年9月23日 08:19 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
