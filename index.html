@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 35.23,
+  score: 35.11,
   rating: "fear",
-  timestamp: "2026-09-23T00:00:00+00:00",
+  timestamp: "2026-09-23T11:07:01+00:00",
   previousClose: 35.23,
   previous1Week: 27.31,
   previous1Month: 54.66,
   previous1Year: 56.77,
-  date: "2026年9月23日 13:50 CST"
+  date: "2026年9月23日 19:24 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:18", tag: "ai", tagText: "AI", text: "CoreWeave股价较5月高点已下跌近40%，债务担忧令投资者恐慌。但一位分析师认为这轮抛售被过度放大，该股可能迎来大幅反弹。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-coreweaves-beaten-down-stock-could-be-due-for-a-major-comeback-46068534?mod=mw_rss_topstories" },
+  { time: "19:14", tag: "macro", tagText: "宏观", text: "随着利率走高，美国金融股下跌。利率上升可能抑制银行贷款增长并推高银行融资成本，这对整体市场构成压力，被视为更广泛市场的隐忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/financial-stocks-are-falling-as-rates-rise-why-thats-a-problem-for-the-broader-market-70bd9b04?mod=mw_rss_topstories" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "随着30年期房贷利率升破7%，上周近10%的借款人选择风险更高的可调利率抵押贷款（ARM）以寻求更低利率。这种向风险产品转移的趋势引发对借款人偿债能力的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/nearly-10percent-of-borrowers-opted-for-riskier-mortgages-last-week.html" },
+  { time: "18:53", tag: "tech", tagText: "科技", text: "Stifel将微软评级由「持有」上调至「买入」，看好Azure云业务与Copilot AI助手带来的增长动能。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/microsoft-will-get-a-boost-from-azure-and-copilot-stifel-says.html" },
+  { time: "18:41", tag: "geo", tagText: "地缘", text: "泽连斯基表示乌克兰已准备好与俄罗斯达成「能源停火」，前提是莫斯科停止攻击关键基础设施。他同时呼吁举行与普京、特朗普的三方会谈。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ukraine-war-zelenskyy-putin-trump-russia.html" },
+  { time: "17:47", tag: "tech", tagText: "科技", text: "欧洲AI无人机制造商Tekever估值达到64亿美元。乌克兰战争推动国防科技投资升温，欧洲多国掀起重整军备浪潮，带动区域国防科技初创企业大额融资。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ai-drone-maker-ukraine-war-defense-tech.html" },
+  { time: "17:14", tag: "ai", tagText: "AI", text: "特朗普与习近平峰会将于9月24日登场，AI安全议题被正式列入议程。分析人士称，美中将在芯片与AI安全领域展开对话，但双方都不愿放慢AI发展步伐，近期AI安全担忧升温成为焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/trump-xi-meeting-ai-safety-chips-us-china-dialogue.html" },
   { time: "13:26", tag: "geo", tagText: "地缘", text: "美国与伊朗在联合国大会期间举行自6月以来的首次面对面会谈，特朗普称威特科夫与库什纳同伊朗代表团进行了「良好会晤」，同时仍威胁若伊朗不弃核将「彻底摧毁」伊朗。受外交解决中东冲突的希望推动，国际油价走低，布伦特原油在亚洲交易时段跌破每桶99美元，势将录得逾12个月来最长连跌。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/iran-us-talks-crude-oil-un-wti.html" },
   { time: "12:12", tag: "macro", tagText: "宏观", text: "摩根士丹利建议投资者分散配置至日本与欧洲市场，重点看好两地银行与国防板块。该行认为，在美股集中度偏高、地缘与政策不确定性上升的背景下，日欧股市提供了更具吸引力的风险回报机会。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/morgan-stanley-investors-diversify-markets-equities-.html" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "中国正审查数据中心对博通（Broadcom）交换机的依赖程度。此举是北京推动本土厂商替代、降低对海外AI基础设施依赖这一整体行动的一部分，或对博通在华数据中心网络芯片业务构成压力，并加速国产交换芯片的导入。", source: "Financial Times", url: "https://www.ft.com/content/b97dde39-7813-4a51-8176-3699e2a468b1?syn-25a6b1a6=1" },
@@ -1642,18 +1649,14 @@ const breakingNews = [
   { time: "04:58", tag: "crypto", tagText: "加密", text: "随着市场行情回暖，比特币投资者近期买入近10亿美元的比特币ETF。资金重新流入现货ETF被视为机构资金重返加密市场的信号，与此前数月的观望情绪形成对比。", source: "Bitcoin Magazine", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxOMmRET3VySTJGUWJCQlJtdDlYaFcxV1hMZUFtRXhHcWV3SjhSTnl3ZXB4RUt3bU1wU2U2bHBNeEkzWC1JbFozMGVBc0NMQUVVXzZOUkh4MEkyTEZhbHprdWNYRHpMck1HS2haY0YyYjdCT2hBRGVXTXhCUDBIMEtyag?oc=5" },
   { time: "04:46", tag: "crypto", tagText: "加密", text: "在全面加密监管法案《Clarity Act》未能通过参议院后，美国州级与联邦监管机构正加紧填补规则真空，各自推进加密资产监管框架。这一监管碎片化局面可能加大市场合规成本与不确定性，行业对统一联邦规则的期待落空。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/clarity-act-crypto-rules-regulators.html" },
   { time: "04:21", tag: "macro", tagText: "宏观", text: "美股周二分化：纳斯达克综合指数收于纪录新高，标普500基本收平，道指下跌185点。芯片股继续领涨，油价连续第五个交易日下滑，「AI FOMO」情绪回归，推动科技股指数完全收复夏季回调失地。MarketWatch指出，纳指此番快速冲高向投资者传递的信号是——不要等回调再买入，部分分析师认为乐观前景有基本面改善支撑。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/stock-market-today-live-updates.html" },
-  { time: "04:00", tag: "geo", tagText: "地缘", text: "美国政府和海湾国家亿万富翁正支持Todd Boehly牵头的一个财团，竞购俄罗斯卢克石油（Lukoil）的国际资产。该财团试图击败凯雷（Carlyle）——后者已于今年1月达成收购这家俄罗斯集团海外业务的协议。交易涉及对俄制裁下的资产处置与地缘政治博弈。", source: "Financial Times", url: "https://www.ft.com/content/152aa77b-977f-4607-8a09-77291f85d2a0?syn-25a6b1a6=1" },
-  { time: "02:37", tag: "macro", tagText: "宏观", text: "美国财长贝森特对CNBC表示，政府正在评估禁止柴油出口的可行性，包括全面或部分禁令是否可行，主要考量美国整体炼油能力。此举正值特朗普政府对伊朗施压导致燃料价格飙升、共和党高层议员要求在中期选举前限制柴油出口之际，凸显能源成本问题已演变为选举政治议题。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/trump-diesel-export-ban-urkaine-russia-iran.html" },
-  { time: "02:32", tag: "geo", tagText: "地缘", text: "美国在联合国大会期间与格陵兰及丹麦达成协议，将扩大在北极前哨的军事存在。特朗普称该协议赋予美国对这块丹麦属地的「安全永久控制权」，标志着美国在北极战略布局上的重大推进。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/trump-greenland-security-deal-military-bases-.html" },
-  { time: "02:32", tag: "macro", tagText: "宏观", text: "周一美股走高，纳斯达克指数涨约2%并迈向纪录收盘，标普500上涨约1%，道指开盘后上行。芯片股大涨是主要推手，同时油价与美债收益率回落。AI相关个股再度成为市场核心动力。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxNam9GTktGNDJ3TmRkQW9Fbk51TWJadS1aVnNEYUwydEgwb0NCLVQ2NHJjQ19aTUloUVJWSk9wVklRcmxhMVFBTDFCV2RQRHFNRy1RNVFMcHM4T2wxVjB5dlVjMGZmdXBkTmNVNFZxb0NpRTg1aGFEeWx3amk2MndtVTRIQVpKaVk?oc=5" },
-  { time: "02:28", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI推出更廉价模型，这是行业呼吁放缓以来的首批发布。OpenAI推出GPT-6 Sol与GPT-6 Luna，Anthropic发布Claude Opus 5.5，显示在监管与安全争论升温之际，头部AI公司仍加速产品迭代与价格竞争。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/anthropic-openai-cheaper-ai-models.html" },
-  { time: "02:28", tag: "macro", tagText: "宏观", text: "礼来CEO表示，自7月Medicare开始覆盖GLP-1类药物以来，已有约70万名新增参保老年人开始使用此类药物，其中约70%使用礼来产品。这是衡量新医保覆盖扩大药物可及性的最新数据，也凸显礼来在减肥药市场的领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/eli-lilly-ceo-david-ricks-glp-1s-medicare-coverage.html" },
-  { time: "02:24", tag: "geo", tagText: "地缘", text: "特朗普在联合国大会发表强硬讲话，威胁若伊朗不放弃其核与导弹计划将「彻底摧毁」伊朗，同时抨击古巴，并为人工智能发展辩护。他称美国官员与伊朗代表团举行了「非常好的会晤」，并宣称美国「将不再允许对美威胁在西半球任何地方立足」。此番表态令美伊紧张局势升级，成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/trump-un-speech-today.html" },
 ];
-const breakingDate = "2026年9月23日 13:50 CST";
+const breakingDate = "2026年9月23日 19:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "18:37", tag: "macro", tagText: "宏观", text: "澳洲联储主席布洛克（Bullock）表示，要让通胀回落至目标水平，劳动力市场需要进一步走弱。此番表态被解读为澳央行愿意容忍失业率上行以压制物价压力，为后续政策路径定下偏鹰基调，市场对澳元利率与降息节奏的预期或将随之调整。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSDZtX3RfZFU5RVR3dGU2ckpKZTQyTUFGVF8wMlotelZ4N3JkQnFvUlAwZHFGa1lJV3JBQ1NWaVFnSFZzZHNucW96S3BiaWh1U2s1Vm4zMllTejhEOEtveE9mTVFfRXo1LVEyTTU0X2NuX1BzcThLTFJfRFZWcWgzdENwWWMwU01KZ3FCeE9tQjB3bExETWVzNDRBYTZJcS1ac1lPR25uWHNrN1J6akstVUVmYmlfNlpiNmtN?oc=5" },
+  { time: "18:30", tag: "ai", tagText: "AI", text: "《印度时报》报道称，OpenAI、Anthropic等头部AI公司的员工普遍反映，长期从事AI安全与前沿风险相关工作带来严重心理负担。报道指出，在竞速发布与安全担忧的双重压力下，一线研究与对齐团队出现焦虑、倦怠等情绪，凸显AI行业高速扩张背后的人才心理健康问题。", source: "The Times of India", url: "https://news.google.com/rss/articles/CBMijwJBVV95cUxQYXJvZVFBWWlybU4teGl1VjlDMjQ4OWtaUFh2RzJrUnZRUjI0MzRFa1pySVVEdXh4UTFKcV9FWVI4OEg1eHlPTUVSSDJwMHZmRVRPN2ZXeGlfVEE5QllnNzZzdlQ5MWFkUHA5aEJ2RE9BNlQyRVhiSWVnY2RQSjlJazBUUU1reGMyVjl5d0kwM1pGQkdKcS12OW93ZkpTbzF0VVNzRkVKU0RBNk9PcDRaOWdOQU1zZEc2c0NacDVNYk1Qb3Z6X2lXQXZKWUpvTGR0R21YaTdwaC1PWTF2ejJSa2oyQXltUHV3WU5nVWVZSGNNMVZWUE5YVWxNUVY0VkRQOUg2UnZzR0xKeHY4ZktN0gGUAkFVX3lxTFBzZWRwZ3d5UXEwS1FkdjVtSURNNlZRVF9tSEh0WHNLSEcySlFfOFNTRmZteGRGS05nU3RLX05fY0VUMDQyOElsb1BUbHBUbG40M2JZZlJvQVFJbHkwZWlPUFFJUURsVXRsbHpnOWlUclRVa0J0OEFfU3p4ZVZYQ1RlMDN0VTlZYmV0bWY1ak5raVJqckd2aVFYN1FFbW1xVUtYeDhLNGtmV1ZaUHZqSzN1TlNfSW5UZEpELWxkU2x2aDJ6MXBNVnpmNURlT3R0T0tPcGZ5czVxV2Y0OWxicmFFZ2RERzBYNTl1b1l1R3BRdE5CSl90Q0lSRElNY1lCeUZ1RkE1bzlVRk9hajk1NWpwemRHXw?oc=5" },
+  { time: "13:55", tag: "ai", tagText: "AI", text: "韩国国家增长基金正评估参与本土AI基础设施初创公司Vessl AI的1.5亿美元C轮融资。Vessl AI主打机器学习运维（MLOps）与AI算力调度平台，若主权级别基金入局，将成为韩国以国家资本扶持本土AI基础设施的重要案例，也反映亚洲AI算力层融资持续升温。", source: "KED Global", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE5nbEZXMDk2dnhlZU5MNHZjVVFldUlxeXhMa3cwVE80TDBHZWx3c2lOSGw1akFkdTFvVGh3ckk4dWFIRk9ndTVvdjhSM1UtYUlmSGxPaHdjMkNLRzM0YXk1T0xFZVd3ZU8wVGdpZ2FXbF9KeFRO?oc=5" },
   { time: "12:59", tag: "ai", tagText: "AI", text: "希腊总理米佐塔基斯本周接受TechCrunch采访时罕见直言：没有任何政府已为AI即将带来的冲击做好准备，各国当前的治理努力「还在打昨天的仗」。在贸易出访场合多数领导人只会重复既定说辞的背景下，这番表态凸显政策制定者对AI演进速度远超监管节奏的普遍焦虑，也呼应了近期各方对政府AI治理能力与前瞻性不足的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/were-already-fighting-yesterdays-battle-greeces-prime-minister-gets-candid-about-ai/" },
   { time: "08:17", tag: "ai", tagText: "AI", text: "OpenAI在接连发布引人注目的数学成果、却因此陷入声誉危机后，正着手咨询人类数学家，希望找到一条「不那么灾难性」的前进路径。报道称该公司于周一组建由顶尖数学家构成的顾问小组，为后续模型在数学推理与科研场景中的对外表述和发布方式把关。此举被视为OpenAI在AI数学能力宣传翻车后，试图重建学术信任与外部沟通机制。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999167/openai-elite-mathematicians-panel" },
   { time: "05:56", tag: "ai", tagText: "AI", text: "AI训练数据公司Snorkel AI完成3.5亿美元E轮融资，估值由此前的约11.7亿美元升至35亿美元，三年内翻了三倍。这家成立七年的初创公司主攻「数据即服务」模式，为大模型训练提供标注、合成与数据编排能力。此轮融资反映在模型能力趋同、真实数据枯竭的背景下，高质量训练数据正成为资本竞逐的关键环节。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
   { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "宾州Chesterbrook的AI网络公司Cornelis Networks完成2.05亿美元融资。该公司专注为高性能计算与AI集群提供高速互联架构，此轮大额融资显示在算力集群规模快速扩张的背景下，网络与互连环节正成为资本竞逐的新热点。", source: "VISTA.Today", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTFA0U1FCRDFneVlWdEh0NjVoaXJHNmc1MFVoNWl5VHdVb2pHNlRDdkY1S3VaTlhWZHVoa1I0aUVXTnhnNU5SNU5Dcno0emZPVU9EdFg2WWRvZ2FDUVhRSEczNFdRYkwwNkttaThrenpsZ29JTnZfRGpaVQ?oc=5" },
-  { time: "21:39", tag: "ai", tagText: "AI", text: "TechRepublic报道，若供应商产能跟得上，英伟达明年的芯片销量可能翻倍。这一预测凸显全球AI算力需求依旧强劲，同时也把关键瓶颈指向台积电等上游代工与封装环节——能否交付，而非订单多寡，将决定英伟达的实际上限。", source: "TechRepublic", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYWV4Y2ZJbFBld1pvd0tRYjJaWkt6aVp1U2RoT2wwejdJRVJkcVZNY3I5ZzJiR2V5TXRRaERnSXQtUXh6eC14NkN0NE03aUpPeWIybkgzNlFXemw2Qk5XdngxT05sU09UdTVTU1R3QmpvZ29KQXh1TktfMjVYLTdLTkQ1MUtqa2hobzEzbS1LRm1IbXBl?oc=5" },
-  { time: "21:37", tag: "ai", tagText: "AI", text: "24/7 Wall St.报道，一份报告指出芯片价格将上涨约10%，AMD股价随之上涨5%，英伟达与台积电亦小幅走高。消息反映在AI需求旺盛与产能紧张的背景下，芯片厂商正获得更强的定价权，涨价预期被视为行业景气度的又一信号。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNHhmaHYxUHcySHdWVkYyeDRZcEowRlRuREVRX1ViSGRsRm0yLWEyckpyZHItOTBBelFnYlE0T19INEM3VDhQaTYyQmNTZ05Kd1J3dUdHUHRkMDhFekFLckFJOXFlaHpENWhmMFh0NHc4Q3d0Q1JLakpDYTRteDB4Y3hKR29YOXBoeHExQldWN1JuazBLeVNpaUtHc3paX2MxYTdjRTQzdktMYUxGUnZ1TzFsN2ZqVDZ2dk1oTVI2SkV1N3VDN2JzZzVYdkp5Qmc?oc=5" },
-  { time: "21:36", tag: "tech", tagText: "科技", text: "苹果就「未能交付AI升级版Siri」的指控达成2.5亿美元和解，符合条件的美国iPhone用户现已可提交索赔。该案被视为对AI功能营销承诺的重要检验：厂商宣传的AI能力若迟迟无法落地，将面临实质性的法律与赔付成本。", source: "The Verge", url: "https://www.theverge.com/tech/998191/apple-siri-ai-iphone-16-class-action-lawsuit-settlement" },
 ];
-const aiBreakingDate = "2026年9月23日 13:50 CST";
+const aiBreakingDate = "2026年9月23日 19:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
