@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 35.26,
+  score: 35.23,
   rating: "fear",
-  timestamp: "2026-09-22T23:59:55+00:00",
-  previousClose: 33.71,
-  previous1Week: 27.97,
+  timestamp: "2026-09-23T00:00:00+00:00",
+  previousClose: 35.23,
+  previous1Week: 27.31,
   previous1Month: 54.66,
-  previous1Year: 66.51,
-  date: "2026年9月23日 08:19 CST"
+  previous1Year: 56.77,
+  date: "2026年9月23日 13:50 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:26", tag: "geo", tagText: "地缘", text: "美国与伊朗在联合国大会期间举行自6月以来的首次面对面会谈，特朗普称威特科夫与库什纳同伊朗代表团进行了「良好会晤」，同时仍威胁若伊朗不弃核将「彻底摧毁」伊朗。受外交解决中东冲突的希望推动，国际油价走低，布伦特原油在亚洲交易时段跌破每桶99美元，势将录得逾12个月来最长连跌。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/iran-us-talks-crude-oil-un-wti.html" },
+  { time: "12:12", tag: "macro", tagText: "宏观", text: "摩根士丹利建议投资者分散配置至日本与欧洲市场，重点看好两地银行与国防板块。该行认为，在美股集中度偏高、地缘与政策不确定性上升的背景下，日欧股市提供了更具吸引力的风险回报机会。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/morgan-stanley-investors-diversify-markets-equities-.html" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "中国正审查数据中心对博通（Broadcom）交换机的依赖程度。此举是北京推动本土厂商替代、降低对海外AI基础设施依赖这一整体行动的一部分，或对博通在华数据中心网络芯片业务构成压力，并加速国产交换芯片的导入。", source: "Financial Times", url: "https://www.ft.com/content/b97dde39-7813-4a51-8176-3699e2a468b1?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "受供应紧张推动，欧洲柴油价格飙升，司机每次加满油箱的成本较年初高出约40%，合计每日多支出2.03亿欧元。燃油成本危机正挤压欧洲家庭与企业，并加剧该地区的通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/76b51a19-0387-4eed-a343-980b1135de2c?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "减肥药Ozempic制造商诺和诺德（Novo Nordisk）表示，对美国上市升级持开放态度。CEO杜斯塔达尔称，让美国投资者直接持有这家丹麦药企股票具有「优势」，此举或提升其估值与在美融资能力。", source: "Financial Times", url: "https://www.ft.com/content/00d53ca3-725f-4fa8-b452-cef562a13514?syn-25a6b1a6=1" },
+  { time: "11:08", tag: "tech", tagText: "科技", text: "韩国太阳能股大涨，因市场预计美国对中国太阳能产品的限制措施将在特朗普与习近平峰会前维持不变。若美方继续对华设限，韩国及非中国产能的太阳能制造商有望受益于订单转移。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/korean-solar-stocks-jump-as-curbs-on-china-expected-to-stay-in-place.html" },
   { time: "05:26", tag: "ai", tagText: "AI", text: "Meta新推出的AI助手应用Muse登上App Store下载榜首位，下载速度超过ChatGPT早期表现，重新点燃市场对该公司AI战略的信心，股价随之突破上行。此前Meta在AI投入与落地节奏上一直受到投资者质疑，Muse的病毒式传播被视为其「ChatGPT时刻」的潜在开端。", source: "MarketWatch", url: "https://www.marketwatch.com/story/could-metas-viral-muse-app-be-the-companys-chatgpt-moment-8e7075aa?mod=mw_rss_topstories" },
   { time: "05:15", tag: "macro", tagText: "宏观", text: "特朗普披露7月进行的1100多笔证券交易，其中包括分别最高达2500万美元的微软和亚马逊股票卖出。抛售时点正值7月20日「科技七雄」大涨、这些股票单日合计增加2910亿美元市值的当天。该披露再度引发对总统本人交易与政策信息之间潜在利益冲突的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/trump-trades-microsoft-amazon-july-financial-disclosure.html" },
   { time: "05:07", tag: "macro", tagText: "宏观", text: "特朗普政府以涉嫌欺诈为由取消了约76万份「奥巴马医改」（ACA）参保登记。由副总统万斯领导的白宫「消除欺诈」工作组估计，此举将节省约22亿美元的纳税人补贴支出。该行动料将引发关于医保覆盖范围与政治动机的争议。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/trump-administration-removes-around-760000-obamacare-enrollments.html" },
@@ -1643,17 +1649,12 @@ const breakingNews = [
   { time: "02:28", tag: "ai", tagText: "AI", text: "Anthropic与OpenAI推出更廉价模型，这是行业呼吁放缓以来的首批发布。OpenAI推出GPT-6 Sol与GPT-6 Luna，Anthropic发布Claude Opus 5.5，显示在监管与安全争论升温之际，头部AI公司仍加速产品迭代与价格竞争。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/anthropic-openai-cheaper-ai-models.html" },
   { time: "02:28", tag: "macro", tagText: "宏观", text: "礼来CEO表示，自7月Medicare开始覆盖GLP-1类药物以来，已有约70万名新增参保老年人开始使用此类药物，其中约70%使用礼来产品。这是衡量新医保覆盖扩大药物可及性的最新数据，也凸显礼来在减肥药市场的领先地位。", source: "CNBC", url: "https://www.cnbc.com/2026/09/21/eli-lilly-ceo-david-ricks-glp-1s-medicare-coverage.html" },
   { time: "02:24", tag: "geo", tagText: "地缘", text: "特朗普在联合国大会发表强硬讲话，威胁若伊朗不放弃其核与导弹计划将「彻底摧毁」伊朗，同时抨击古巴，并为人工智能发展辩护。他称美国官员与伊朗代表团举行了「非常好的会晤」，并宣称美国「将不再允许对美威胁在西半球任何地方立足」。此番表态令美伊紧张局势升级，成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/trump-un-speech-today.html" },
-  { time: "02:15", tag: "geo", tagText: "地缘", text: "一批共和党高层议员要求特朗普在中期选举前禁止美国柴油出口。伊朗战争引发的燃料价格危机正令来自农业腹地的议员承压，此举反映美国国内能源成本问题已演变为选举政治议题。", source: "Financial Times", url: "https://www.ft.com/content/319c7b67-b585-407e-a0da-6e23b1612180?syn-25a6b1a6=1" },
-  { time: "02:03", tag: "macro", tagText: "宏观", text: "美国银行警告，若伊朗战争引发的供应中断持续升级，布伦特原油可能突破每桶150美元。分析师已上调油价预期，但市场对冲突走向及油价的判断仍存巨大分歧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/22/bank-of-america-says-brent-crude-oil-could-top-150-a-barrel-if-iran-war-disruptions-persist-.html" },
-  { time: "02:01", tag: "ai", tagText: "AI", text: "微软AI负责人公开呼吁为人工智能设立安全「防护栏」，而白宫对广泛监管仍持抵制态度，凸显美国AI政策在行业自律与政府立规之间的分歧。在AI能力快速迭代、就业与安全争议升温的背景下，科技巨头与监管层的立场差异将影响后续立法节奏与产业投入方向。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxOb2FIWTExcnlzekpmOHNhWTE1cDFaUWZGZ1cwbk5RWEtSWmh1QkQ5U1RYMUtVQndLMTFjdnVWTnJaVllJaTQ3NFZ1RVhHd25RTXhveExubGRuaS1VNkt2aGxhdzI5a3hGX2p1MHJMeFU3T0RqYV9KV2JNeGNsVmFHWGdqekIwcWFfZlY0VWxkT29jYmdxbTRTYmdfTFRjeTNrV3dNLVJPaW96SGFvTHFmNTN1TQ?oc=5" },
-  { time: "01:32", tag: "geo", tagText: "地缘", text: "美国提议与阿拉伯盟友共同设立100亿美元基金，用于在中东建设新的能源基础设施，以绕过霍尔木兹海峡这一关键运输咽喉。特朗普正就该基金进行磋商，意在降低对伊朗威胁下海峡通行受阻的风险。", source: "Financial Times", url: "https://www.ft.com/content/99ba134a-6252-45f3-b312-07b8752a5a98?syn-25a6b1a6=1" },
-  { time: "01:15", tag: "geo", tagText: "地缘", text: "欧盟将把俄罗斯寡头弗里德曼（Mikhail Fridman）和乌斯马诺夫（Alisher Usmanov）从制裁名单中移除，这是将欧盟对俄制裁延长三年的协议的一部分，反映成员国在制裁力度与延续期限上的妥协。", source: "Financial Times", url: "https://www.ft.com/content/760091dd-20be-4152-aa0d-561475a99ee8?syn-25a6b1a6=1" },
-  { time: "23:18", tag: "macro", tagText: "宏观", text: "沙特释放东-西输油管道即将重启的信号。该管道是沙特原油运抵红海的关键路线，因无人机袭击已关闭两周。若恢复运行，将部分缓解市场对中东供应中断的担忧。", source: "Financial Times", url: "https://www.ft.com/content/5b4f8738-3b93-40c8-88d6-08c8ea684e83?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月23日 08:19 CST";
+const breakingDate = "2026年9月23日 13:50 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "12:59", tag: "ai", tagText: "AI", text: "希腊总理米佐塔基斯本周接受TechCrunch采访时罕见直言：没有任何政府已为AI即将带来的冲击做好准备，各国当前的治理努力「还在打昨天的仗」。在贸易出访场合多数领导人只会重复既定说辞的背景下，这番表态凸显政策制定者对AI演进速度远超监管节奏的普遍焦虑，也呼应了近期各方对政府AI治理能力与前瞻性不足的质疑。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/were-already-fighting-yesterdays-battle-greeces-prime-minister-gets-candid-about-ai/" },
   { time: "08:17", tag: "ai", tagText: "AI", text: "OpenAI在接连发布引人注目的数学成果、却因此陷入声誉危机后，正着手咨询人类数学家，希望找到一条「不那么灾难性」的前进路径。报道称该公司于周一组建由顶尖数学家构成的顾问小组，为后续模型在数学推理与科研场景中的对外表述和发布方式把关。此举被视为OpenAI在AI数学能力宣传翻车后，试图重建学术信任与外部沟通机制。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999167/openai-elite-mathematicians-panel" },
   { time: "05:56", tag: "ai", tagText: "AI", text: "AI训练数据公司Snorkel AI完成3.5亿美元E轮融资，估值由此前的约11.7亿美元升至35亿美元，三年内翻了三倍。这家成立七年的初创公司主攻「数据即服务」模式，为大模型训练提供标注、合成与数据编排能力。此轮融资反映在模型能力趋同、真实数据枯竭的背景下，高质量训练数据正成为资本竞逐的关键环节。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/" },
   { time: "04:52", tag: "tech", tagText: "科技", text: "曾因R1设备表现不及预期而备受质疑的Rabbit，推出无需其硬件即可使用的独立AI agent，并将新系统命名为OS3。公司称OS3主打「agentic」能力，意味着这家消费级AI硬件公司正把重心从卖设备转向卖软件与代理服务，以扩大用户覆盖面。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999094/rabbit-ai-agent-os3" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:39", tag: "ai", tagText: "AI", text: "TechRepublic报道，若供应商产能跟得上，英伟达明年的芯片销量可能翻倍。这一预测凸显全球AI算力需求依旧强劲，同时也把关键瓶颈指向台积电等上游代工与封装环节——能否交付，而非订单多寡，将决定英伟达的实际上限。", source: "TechRepublic", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYWV4Y2ZJbFBld1pvd0tRYjJaWkt6aVp1U2RoT2wwejdJRVJkcVZNY3I5ZzJiR2V5TXRRaERnSXQtUXh6eC14NkN0NE03aUpPeWIybkgzNlFXemw2Qk5XdngxT05sU09UdTVTU1R3QmpvZ29KQXh1TktfMjVYLTdLTkQ1MUtqa2hobzEzbS1LRm1IbXBl?oc=5" },
   { time: "21:37", tag: "ai", tagText: "AI", text: "24/7 Wall St.报道，一份报告指出芯片价格将上涨约10%，AMD股价随之上涨5%，英伟达与台积电亦小幅走高。消息反映在AI需求旺盛与产能紧张的背景下，芯片厂商正获得更强的定价权，涨价预期被视为行业景气度的又一信号。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNHhmaHYxUHcySHdWVkYyeDRZcEowRlRuREVRX1ViSGRsRm0yLWEyckpyZHItOTBBelFnYlE0T19INEM3VDhQaTYyQmNTZ05Kd1J3dUdHUHRkMDhFekFLckFJOXFlaHpENWhmMFh0NHc4Q3d0Q1JLakpDYTRteDB4Y3hKR29YOXBoeHExQldWN1JuazBLeVNpaUtHc3paX2MxYTdjRTQzdktMYUxGUnZ1TzFsN2ZqVDZ2dk1oTVI2SkV1N3VDN2JzZzVYdkp5Qmc?oc=5" },
   { time: "21:36", tag: "tech", tagText: "科技", text: "苹果就「未能交付AI升级版Siri」的指控达成2.5亿美元和解，符合条件的美国iPhone用户现已可提交索赔。该案被视为对AI功能营销承诺的重要检验：厂商宣传的AI能力若迟迟无法落地，将面临实质性的法律与赔付成本。", source: "The Verge", url: "https://www.theverge.com/tech/998191/apple-siri-ai-iphone-16-class-action-lawsuit-settlement" },
-  { time: "21:24", tag: "tech", tagText: "科技", text: "华为公布新一代AI芯片计划，目标2027年推出，直接对标英伟达。此举被视为中国在美方出口管制背景下加速自研算力芯片、构建国产AI硬件生态的关键一步，也意味着全球AI加速器市场的竞争格局可能在2027年前后出现新变量。", source: "The Daily Star", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNblQzNXNXY2VxMzEyZ1NhTVBXX2h5X051em1RcldjeFlGaGVkUmc2bFNrcjZuaDlrRFMtQTBMeHJRZ0FUVDFjWDV0RW05WVdUeEFSc2FQcDBUZDF6R0ViR0ZUWUtsYUx2cWV0Ri1rbkluOTkzMUVBNUdrT0hPd3JoRnJSaU1PSGVsdXBYanN6bUktQzdjdXplbTloS3RUc0VTc0tHZHZtc09pYTV6MzBZVFRGeWRvMG5wNlEw?oc=5" },
 ];
-const aiBreakingDate = "2026年9月23日 08:19 CST";
+const aiBreakingDate = "2026年9月23日 13:50 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
