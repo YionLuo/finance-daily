@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 34.69,
+  score: 34.63,
   rating: "fear",
-  timestamp: "2026-09-23T23:18:16+00:00",
-  previousClose: 35.23,
-  previous1Week: 27.31,
-  previous1Month: 54.66,
-  previous1Year: 56.77,
-  date: "2026年9月24日 07:36 CST"
+  timestamp: "2026-09-24T00:00:00+00:00",
+  previousClose: 34.69,
+  previous1Week: 28.29,
+  previous1Month: 54.97,
+  previous1Year: 54.57,
+  date: "2026年9月24日 12:34 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:12", tag: "macro", tagText: "宏观", text: "摩根士丹利建议投资者分散配置至日本与欧洲市场，重点看好两地银行与国防板块。该行认为，在美股集中度偏高、地缘与政策不确定性上升的背景下，日欧股市提供了更具吸引力的风险回报机会。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/morgan-stanley-investors-diversify-markets-equities-.html" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "中国正审查数据中心对博通（Broadcom）交换机的依赖程度。此举是北京推动本土厂商替代、降低对海外AI基础设施依赖这一整体行动的一部分，或对博通在华数据中心网络芯片业务构成压力，并加速国产交换芯片的导入。", source: "Financial Times", url: "https://www.ft.com/content/b97dde39-7813-4a51-8176-3699e2a468b1?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "受供应紧张推动，欧洲柴油价格飙升，司机每次加满油箱的成本较年初高出约40%，合计每日多支出2.03亿欧元。燃油成本危机正挤压欧洲家庭与企业，并加剧该地区的通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/76b51a19-0387-4eed-a343-980b1135de2c?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "减肥药Ozempic制造商诺和诺德（Novo Nordisk）表示，对美国上市升级持开放态度。CEO杜斯塔达尔称，让美国投资者直接持有这家丹麦药企股票具有「优势」，此举或提升其估值与在美融资能力。", source: "Financial Times", url: "https://www.ft.com/content/00d53ca3-725f-4fa8-b452-cef562a13514?syn-25a6b1a6=1" },
+  { time: "11:08", tag: "tech", tagText: "科技", text: "韩国太阳能股大涨，因市场预计美国对中国太阳能产品的限制措施将在特朗普与习近平峰会前维持不变。若美方继续对华设限，韩国及非中国产能的太阳能制造商有望受益于订单转移。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/korean-solar-stocks-jump-as-curbs-on-china-expected-to-stay-in-place.html" },
   { time: "04:09", tag: "geo", tagText: "地缘", text: "特朗普与习近平会晤之际，中国汽车制造商成为美国汽车业的「潘多拉魔盒」。美国车企与国会议员正施压，要求维持对中国整车及中国厂商的限制，担忧开放市场将冲击本土产业。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/trump-xi-chinese-automakers-us-access.html" },
   { time: "04:03", tag: "macro", tagText: "宏观", text: "美债抛售加剧：10年期美债收益率飙升至2007年以来最高（19年高位），30年期收益率突破5%，华尔街担忧美联储将进一步加息。美股应声下挫，道指跌超300点，纳指与标普500自纪录高位回落，纳指跌约1%，罗素2000跌超1%。分析师指出，随着5%收益率失去震撼力，投资者已开始担忧6%的情景。", source: "Financial Times", url: "https://www.ft.com/content/5b11b598-7c77-4bdf-82bf-a763adf71a72?syn-25a6b1a6=1" },
   { time: "03:55", tag: "ai", tagText: "AI", text: "OpenAI的奥特曼与Anthropic的阿莫代伊在联合国呼吁AI安全领域合作，此前特朗普拒绝了控制AI的「全球主义方案」。阿莫代伊主张达成「范围狭窄」的AI安全协议，包括通用的模型测试标准，以及针对具有国际重大影响的AI事件的通报机制；多位科技高管认为应放缓AI开发节奏以管控风险。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/altman-amodei-un-ai-safety.html" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "17:47", tag: "tech", tagText: "科技", text: "欧洲AI无人机制造商Tekever估值达到64亿美元。乌克兰战争推动国防科技投资升温，欧洲多国掀起重整军备浪潮，带动区域国防科技初创企业大额融资。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ai-drone-maker-ukraine-war-defense-tech.html" },
   { time: "17:14", tag: "ai", tagText: "AI", text: "特朗普与习近平峰会将于9月24日登场，AI安全议题被正式列入议程。分析人士称，美中将在芯片与AI安全领域展开对话，但双方都不愿放慢AI发展步伐，近期AI安全担忧升温成为焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/trump-xi-meeting-ai-safety-chips-us-china-dialogue.html" },
   { time: "13:26", tag: "geo", tagText: "地缘", text: "美国与伊朗在联合国大会期间举行自6月以来的首次面对面会谈，特朗普称威特科夫与库什纳同伊朗代表团进行了「良好会晤」，同时仍威胁若伊朗不弃核将「彻底摧毁」伊朗。受外交解决中东冲突的希望推动，国际油价走低，布伦特原油在亚洲交易时段跌破每桶99美元，势将录得逾12个月来最长连跌。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/iran-us-talks-crude-oil-un-wti.html" },
-  { time: "12:12", tag: "macro", tagText: "宏观", text: "摩根士丹利建议投资者分散配置至日本与欧洲市场，重点看好两地银行与国防板块。该行认为，在美股集中度偏高、地缘与政策不确定性上升的背景下，日欧股市提供了更具吸引力的风险回报机会。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/morgan-stanley-investors-diversify-markets-equities-.html" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "中国正审查数据中心对博通（Broadcom）交换机的依赖程度。此举是北京推动本土厂商替代、降低对海外AI基础设施依赖这一整体行动的一部分，或对博通在华数据中心网络芯片业务构成压力，并加速国产交换芯片的导入。", source: "Financial Times", url: "https://www.ft.com/content/b97dde39-7813-4a51-8176-3699e2a468b1?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "受供应紧张推动，欧洲柴油价格飙升，司机每次加满油箱的成本较年初高出约40%，合计每日多支出2.03亿欧元。燃油成本危机正挤压欧洲家庭与企业，并加剧该地区的通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/76b51a19-0387-4eed-a343-980b1135de2c?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "tech", tagText: "科技", text: "减肥药Ozempic制造商诺和诺德（Novo Nordisk）表示，对美国上市升级持开放态度。CEO杜斯塔达尔称，让美国投资者直接持有这家丹麦药企股票具有「优势」，此举或提升其估值与在美融资能力。", source: "Financial Times", url: "https://www.ft.com/content/00d53ca3-725f-4fa8-b452-cef562a13514?syn-25a6b1a6=1" },
-  { time: "11:08", tag: "tech", tagText: "科技", text: "韩国太阳能股大涨，因市场预计美国对中国太阳能产品的限制措施将在特朗普与习近平峰会前维持不变。若美方继续对华设限，韩国及非中国产能的太阳能制造商有望受益于订单转移。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/korean-solar-stocks-jump-as-curbs-on-china-expected-to-stay-in-place.html" },
 ];
-const breakingDate = "2026年9月24日 07:36 CST";
+const breakingDate = "2026年9月24日 12:34 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:15", tag: "ai", tagText: "AI", text: "Meta在Connect 2026大会上发布Muse Charm——一款专为其AI智能体Muse打造的独立硬件设备，外形类似电子宠物Tamagotchi，旨在为Muse提供又一个移动「住所」。扎克伯格在主题演讲结尾短暂展示了该产品。此举标志Meta将AI智能体从纯软件延伸至专用可穿戴硬件，进一步加码「AI+硬件」战略。", source: "The Verge", url: "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware" },
+  { time: "07:39", tag: "tech", tagText: "科技", text: "Meta推出无摄像头版AI智能眼镜，称其更轻便、续航最长可达12小时。在Connect 2026现场，与会者佩戴各色智能眼镜，隐私争议中的「偷拍眼镜」顾虑在此不再是焦点。Meta通过去掉摄像头弱化隐私担忧，同时以音频与AI交互为核心卖点，拓展智能眼镜的形态与用户群。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/23/meta-introduces-camera-free-ai-glasses/" },
   { time: "07:19", tag: "ai", tagText: "AI", text: "Meta在年度Connect 2026大会上由扎克伯格发表主题演讲，重点围绕AI与智能眼镜等可穿戴设备。公司同时宣布大幅升级其AI智能体Muse：为每个Muse智能体配置专属邮箱地址，新增视频通话能力（用户可与其实时视频对话），并强化代理执行能力。The Verge在门洛帕克现场跟进报道。", source: "The Verge", url: "https://www.theverge.com/tech/999454/meta-muse-ai-agent-video-chat-connect-2026" },
   { time: "04:50", tag: "ai", tagText: "AI", text: "长期追踪科技股的Wedbush知名分析师Dan Ives发起一只规模2亿美元的基金，专门投资AI初创企业。此举被视为卖方明星分析师直接下场做早期投资的最新案例，也反映资本对AI赛道的持续加码。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNSEVvZnZBM0Q2TVE0TGdycEt1RkhNaTNjaUs0THYxYURNOERYZ1NVTzhLZmdNc2YzNGVCRWx0dVFubloyUXNpUFZjUG0wd1RDdmdOZ04zM3JLNlRPdXh6ek9oUlJ0blctNWZHUEcxWUdBdXY3dGVGYWU2Y1Z2cmkxWXA3RmdMRnhpckRKdDNJZnRJem14TnRPUzRHX0ZSaV9ZUzJqWHk4bTJ4ZXU0NFZ1SA?oc=5" },
   { time: "04:00", tag: "tech", tagText: "科技", text: "高通发布两款新一代智能手机芯片，主打端侧AI算力。高通称其旗舰型号可在本地运行300亿参数的混合专家（MoE）模型，意味着部分大模型推理将不再依赖云端。此举延续了芯片厂商把AI能力从数据中心推向手机、PC等终端的趋势，端侧推理的隐私性与时延优势成为主要卖点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/qualcomm-launches-two-new-smartphone-chips-with-emphasis-on-ai/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "宾州Chesterbrook的AI网络公司Cornelis Networks完成2.05亿美元融资。该公司专注为高性能计算与AI集群提供高速互联架构，此轮大额融资显示在算力集群规模快速扩张的背景下，网络与互连环节正成为资本竞逐的新热点。", source: "VISTA.Today", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTFA0U1FCRDFneVlWdEh0NjVoaXJHNmc1MFVoNWl5VHdVb2pHNlRDdkY1S3VaTlhWZHVoa1I0aUVXTnhnNU5SNU5Dcno0emZPVU9EdFg2WWRvZ2FDUVhRSEczNFdRYkwwNkttaThrenpsZ29JTnZfRGpaVQ?oc=5" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "Spotify面向美国Premium用户上线「Taste Profile」（品味档案）功能，允许听众查看平台如何理解自己的音乐偏好，并用自然语言直接调整推荐结果。这是流媒体平台首次把推荐算法的「黑箱」向用户打开并交出一部分控制权，被视为在AI推荐透明化与用户主权方向上的一次重要试验，也可能成为其他内容平台效仿的模板。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/23/spotify-is-giving-you-the-keys-to-its-recommendation-algorithm-with-u-s-launch-of-taste-profile/" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "企业级AI Agent初创公司Ema完成7700万美元融资，公司主攻以AI代理替代传统企业软件与外包服务的工作流。此轮融资反映出资本正加速押注「AI吞噬企业软件与服务」这一逻辑，即用可自主执行的智能体取代按席位收费的SaaS模式和人力交付的服务外包。", source: "TechCrunch", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQTlkT0dzTlZZN1pCLWpmdTdUY3Jzb0lrN2FEVG9scE5hdFhUZE1TdkZmZjByaE9VSTlweDNXV2xPYTg5SVh4N2I1VTZsblhYcFVZSDRDbl8zazAxOXJOSHlfQkZEbUhJUHFzX0FTWnVuRDFNUzREZnBnTU5nT1BDdGRYMVhvSVNGVjNSMG9CQVZjVnRfQjdjRDQtMFlMN3Q4VkY5bkNNYVpUclU?oc=5" },
-  { time: "19:02", tag: "ai", tagText: "AI", text: "OpenAI挖来三名Patreon前高管，负责锚定其在创作者领域的产品战略。Patreon联合创始人兼技术负责人Sam Yam在创办该创作者订阅平台13年后宣布离职加盟。此举被解读为OpenAI正筹备面向创作者的新产品发布，试图把内容变现与订阅经济纳入其生态版图。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999249/openai-creators-patreon-execs-hire-sam-yam" },
 ];
-const aiBreakingDate = "2026年9月24日 07:36 CST";
+const aiBreakingDate = "2026年9月24日 12:34 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
