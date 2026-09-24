@@ -1618,17 +1618,20 @@
 const fearGreedData = {
   score: 34.63,
   rating: "fear",
-  timestamp: "2026-09-24T00:00:00+00:00",
+  timestamp: "2026-09-24T09:34:16+00:00",
   previousClose: 34.69,
   previous1Week: 28.29,
   previous1Month: 54.97,
   previous1Year: 54.57,
-  date: "2026年9月24日 12:34 CST"
+  date: "2026年9月24日 17:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:47", tag: "tech", tagText: "科技", text: "欧洲AI无人机制造商Tekever估值达到64亿美元。乌克兰战争推动国防科技投资升温，欧洲多国掀起重整军备浪潮，带动区域国防科技初创企业大额融资。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ai-drone-maker-ukraine-war-defense-tech.html" },
+  { time: "17:14", tag: "ai", tagText: "AI", text: "特朗普与习近平峰会将于9月24日登场，AI安全议题被正式列入议程。分析人士称，美中将在芯片与AI安全领域展开对话，但双方都不愿放慢AI发展步伐，近期AI安全担忧升温成为焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/trump-xi-meeting-ai-safety-chips-us-china-dialogue.html" },
+  { time: "13:26", tag: "geo", tagText: "地缘", text: "美国与伊朗在联合国大会期间举行自6月以来的首次面对面会谈，特朗普称威特科夫与库什纳同伊朗代表团进行了「良好会晤」，同时仍威胁若伊朗不弃核将「彻底摧毁」伊朗。受外交解决中东冲突的希望推动，国际油价走低，布伦特原油在亚洲交易时段跌破每桶99美元，势将录得逾12个月来最长连跌。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/iran-us-talks-crude-oil-un-wti.html" },
   { time: "12:12", tag: "macro", tagText: "宏观", text: "摩根士丹利建议投资者分散配置至日本与欧洲市场，重点看好两地银行与国防板块。该行认为，在美股集中度偏高、地缘与政策不确定性上升的背景下，日欧股市提供了更具吸引力的风险回报机会。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/morgan-stanley-investors-diversify-markets-equities-.html" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "中国正审查数据中心对博通（Broadcom）交换机的依赖程度。此举是北京推动本土厂商替代、降低对海外AI基础设施依赖这一整体行动的一部分，或对博通在华数据中心网络芯片业务构成压力，并加速国产交换芯片的导入。", source: "Financial Times", url: "https://www.ft.com/content/b97dde39-7813-4a51-8176-3699e2a468b1?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "受供应紧张推动，欧洲柴油价格飙升，司机每次加满油箱的成本较年初高出约40%，合计每日多支出2.03亿欧元。燃油成本危机正挤压欧洲家庭与企业，并加剧该地区的通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/76b51a19-0387-4eed-a343-980b1135de2c?syn-25a6b1a6=1" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "19:00", tag: "macro", tagText: "宏观", text: "随着30年期房贷利率升破7%，上周近10%的借款人选择风险更高的可调利率抵押贷款（ARM）以寻求更低利率。这种向风险产品转移的趋势引发对借款人偿债能力的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/nearly-10percent-of-borrowers-opted-for-riskier-mortgages-last-week.html" },
   { time: "18:53", tag: "tech", tagText: "科技", text: "Stifel将微软评级由「持有」上调至「买入」，看好Azure云业务与Copilot AI助手带来的增长动能。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/microsoft-will-get-a-boost-from-azure-and-copilot-stifel-says.html" },
   { time: "18:41", tag: "geo", tagText: "地缘", text: "泽连斯基表示乌克兰已准备好与俄罗斯达成「能源停火」，前提是莫斯科停止攻击关键基础设施。他同时呼吁举行与普京、特朗普的三方会谈。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ukraine-war-zelenskyy-putin-trump-russia.html" },
-  { time: "17:47", tag: "tech", tagText: "科技", text: "欧洲AI无人机制造商Tekever估值达到64亿美元。乌克兰战争推动国防科技投资升温，欧洲多国掀起重整军备浪潮，带动区域国防科技初创企业大额融资。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ai-drone-maker-ukraine-war-defense-tech.html" },
-  { time: "17:14", tag: "ai", tagText: "AI", text: "特朗普与习近平峰会将于9月24日登场，AI安全议题被正式列入议程。分析人士称，美中将在芯片与AI安全领域展开对话，但双方都不愿放慢AI发展步伐，近期AI安全担忧升温成为焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/trump-xi-meeting-ai-safety-chips-us-china-dialogue.html" },
-  { time: "13:26", tag: "geo", tagText: "地缘", text: "美国与伊朗在联合国大会期间举行自6月以来的首次面对面会谈，特朗普称威特科夫与库什纳同伊朗代表团进行了「良好会晤」，同时仍威胁若伊朗不弃核将「彻底摧毁」伊朗。受外交解决中东冲突的希望推动，国际油价走低，布伦特原油在亚洲交易时段跌破每桶99美元，势将录得逾12个月来最长连跌。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/iran-us-talks-crude-oil-un-wti.html" },
 ];
-const breakingDate = "2026年9月24日 12:34 CST";
+const breakingDate = "2026年9月24日 17:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "17:04", tag: "ai", tagText: "AI", text: "谷歌DeepMind新任负责人科雷·卡武克乔格鲁（Koray Kavukcuoglu）在首次接受媒体采访、与The Information对谈时透露，备受期待的Gemini 4「已接近准备就绪」。此前谷歌在旗舰级AI模型的发布节奏上落后于竞争对手，外界普遍认为Gemini 4是谷歌重夺领先地位的关键一役。此番表态意味着发布窗口或已临近。", source: "The Verge", url: "https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu" },
+  { time: "12:44", tag: "ai", tagText: "AI", text: "知名投资人比尔·阿克曼（Bill Ackman）公开称赞一项AI在罕见病领域的突破「令人难以置信」：据报某AI模型为一名濒危患者找出了可行的药物组合方案。该案例被视为AI在药物重定向与临床辅助决策上从概念走向真实救治的重要信号，也再度点燃资本对AI医疗应用前景的想象。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxQU21WeUtOLXVlcnZYMjEyYTFsS3g2UnBPTGdVR3hnM25MYk9XVVlxam1kLUNNNS05LWU5VTRxX09LeHc4MHNRMlJjQlJVUUtkOVFPMG1uaFVaY082cUNkS2VFR3RVREphRkRNRUdYQXNfSzNVc3ZwOTRDVTRzaFp4U19TNWZPZTRXbk05Z1czcWlVWWx0d2t5Ulp0b0sxWE5kOUQtbF9kbi05SmhNQWZj?oc=5" },
   { time: "08:15", tag: "ai", tagText: "AI", text: "Meta在Connect 2026大会上发布Muse Charm——一款专为其AI智能体Muse打造的独立硬件设备，外形类似电子宠物Tamagotchi，旨在为Muse提供又一个移动「住所」。扎克伯格在主题演讲结尾短暂展示了该产品。此举标志Meta将AI智能体从纯软件延伸至专用可穿戴硬件，进一步加码「AI+硬件」战略。", source: "The Verge", url: "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware" },
   { time: "07:39", tag: "tech", tagText: "科技", text: "Meta推出无摄像头版AI智能眼镜，称其更轻便、续航最长可达12小时。在Connect 2026现场，与会者佩戴各色智能眼镜，隐私争议中的「偷拍眼镜」顾虑在此不再是焦点。Meta通过去掉摄像头弱化隐私担忧，同时以音频与AI交互为核心卖点，拓展智能眼镜的形态与用户群。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/23/meta-introduces-camera-free-ai-glasses/" },
   { time: "07:19", tag: "ai", tagText: "AI", text: "Meta在年度Connect 2026大会上由扎克伯格发表主题演讲，重点围绕AI与智能眼镜等可穿戴设备。公司同时宣布大幅升级其AI智能体Muse：为每个Muse智能体配置专属邮箱地址，新增视频通话能力（用户可与其实时视频对话），并强化代理执行能力。The Verge在门洛帕克现场跟进报道。", source: "The Verge", url: "https://www.theverge.com/tech/999454/meta-muse-ai-agent-video-chat-connect-2026" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "23:19", tag: "ai", tagText: "AI", text: "YouTube在年度「Made on YouTube」活动中一口气发布多项AI功能：一是让用户用自然语言描述想看的内容，由Gemini据此生成「自定义信息流」，等于把推荐算法的主导权部分交给用户；二是为创作者在Studio应用中新增选题灵感生成、缩略图表现监测等工具，大幅降低内容策划与优化的门槛；三是YouTube Music引入对话式AI，帮助听众发现音乐、探索艺人并找到此前容易错过的播客。此举延续了平台把大模型深度嵌入推荐与创作链路的思路。", source: "The Verge", url: "https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
   { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "宾州Chesterbrook的AI网络公司Cornelis Networks完成2.05亿美元融资。该公司专注为高性能计算与AI集群提供高速互联架构，此轮大额融资显示在算力集群规模快速扩张的背景下，网络与互连环节正成为资本竞逐的新热点。", source: "VISTA.Today", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTFA0U1FCRDFneVlWdEh0NjVoaXJHNmc1MFVoNWl5VHdVb2pHNlRDdkY1S3VaTlhWZHVoa1I0aUVXTnhnNU5SNU5Dcno0emZPVU9EdFg2WWRvZ2FDUVhRSEczNFdRYkwwNkttaThrenpsZ29JTnZfRGpaVQ?oc=5" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "Spotify面向美国Premium用户上线「Taste Profile」（品味档案）功能，允许听众查看平台如何理解自己的音乐偏好，并用自然语言直接调整推荐结果。这是流媒体平台首次把推荐算法的「黑箱」向用户打开并交出一部分控制权，被视为在AI推荐透明化与用户主权方向上的一次重要试验，也可能成为其他内容平台效仿的模板。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/23/spotify-is-giving-you-the-keys-to-its-recommendation-algorithm-with-u-s-launch-of-taste-profile/" },
 ];
-const aiBreakingDate = "2026年9月24日 12:34 CST";
+const aiBreakingDate = "2026年9月24日 17:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
