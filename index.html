@@ -1616,19 +1616,31 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 34.63,
+  score: 35.17,
   rating: "fear",
-  timestamp: "2026-09-24T09:34:16+00:00",
+  timestamp: "2026-09-24T14:53:23+00:00",
   previousClose: 34.69,
   previous1Week: 28.29,
   previous1Month: 54.97,
   previous1Year: 54.57,
-  date: "2026年9月24日 17:54 CST"
+  date: "2026年9月24日 22:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:50", tag: "tech", tagText: "科技", text: "甲骨文（Oracle）就“木星项目”（Project Jupiter）数据中心发出不可抗力通知，称若该数据中心无法在2028年如期上线，希望推迟相关付款。消息令甲骨文股价下跌5%并拖累纳斯达克走低，投资者担忧AI基础设施扩张进度与资本开支风险，此前已有报道称公司正设法规避项目延期带来的部分成本。", source: "CNBC / MarketWatch", url: "https://www.cnbc.com/2026/09/24/oracle-data-center-force-majeure.html" },
+  { time: "22:50", tag: "macro", tagText: "宏观", text: "美国新的医疗补助（Medicaid）工作要求落地后，将有数百万美国人失去医保资格，预计未来10年联邦Medicaid支出将被削减约1万亿美元。低收入成年人、照护者及农村居民受冲击最大，相关变化正值中期选举临近之际。", source: "MarketWatch", url: "https://www.marketwatch.com/story/millions-will-lose-medicaid-once-new-work-rules-kick-in-these-groups-will-be-hit-the-hardest-507694d3?mod=mw_rss_topstories" },
+  { time: "22:48", tag: "tech", tagText: "科技", text: "巴里·迪勒（Barry Diller）旗下People Inc.撤回收购美高梅度假村（MGM Resorts）剩余流通股的收购要约，MGM股价应声重挫9%，成为当日美股跌幅最大的个股之一。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/barry-diller-people-mgm-resorts.html" },
+  { time: "22:44", tag: "ai", tagText: "AI", text: "Meta在Connect大会上展示Muse AI助手，并计划将其推向面向面部的可穿戴设备。摩根大通称Muse有潜力成为自ChatGPT以来最重要的AI应用，并上调Meta目标价；本周科技股受此提振走高，但消费者是否愿意为AI硬件买单仍存疑问。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meta-gets-price-target-boost-as-jpmorgan-says-muse-agent-has-potential-to-become-the-top-ai-application-since-chatgpt-280ca648?mod=mw_rss_topstories" },
+  { time: "22:26", tag: "macro", tagText: "宏观", text: "费城联储主席安娜·保尔森表示，为把通胀拉回目标水平，她和同僚可能还需进一步加息，但幅度将是“温和的”。在通胀指标走高、长端美债收益率上行的背景下，市场对美联储继续收紧货币政策的预期升温，美股与债市承压。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/philadelphia-feds-anna-paulson-says-modest-rate-moves-likely-ahead-to-tame-inflation.html" },
+  { time: "22:23", tag: "tech", tagText: "科技", text: "诺顿杀毒软件母公司Gen Digital已向域名与网站托管服务商GoDaddy发出收购要约，双方谈判仍处于早期阶段。若交易达成，Gen Digital将把业务从网络安全扩展至更广泛的互联网基础设施服务。", source: "Financial Times", url: "https://www.ft.com/content/6cc7149f-a9f1-47f6-9faf-b98a28f9aedc?syn-25a6b1a6=1" },
+  { time: "19:18", tag: "ai", tagText: "AI", text: "CoreWeave股价较5月高点已下跌近40%，债务担忧令投资者恐慌。但一位分析师认为这轮抛售被过度放大，该股可能迎来大幅反弹。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-coreweaves-beaten-down-stock-could-be-due-for-a-major-comeback-46068534?mod=mw_rss_topstories" },
+  { time: "19:14", tag: "macro", tagText: "宏观", text: "随着利率走高，美国金融股下跌。利率上升可能抑制银行贷款增长并推高银行融资成本，这对整体市场构成压力，被视为更广泛市场的隐忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/financial-stocks-are-falling-as-rates-rise-why-thats-a-problem-for-the-broader-market-70bd9b04?mod=mw_rss_topstories" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "随着30年期房贷利率升破7%，上周近10%的借款人选择风险更高的可调利率抵押贷款（ARM）以寻求更低利率。这种向风险产品转移的趋势引发对借款人偿债能力的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/nearly-10percent-of-borrowers-opted-for-riskier-mortgages-last-week.html" },
+  { time: "18:53", tag: "tech", tagText: "科技", text: "Stifel将微软评级由「持有」上调至「买入」，看好Azure云业务与Copilot AI助手带来的增长动能。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/microsoft-will-get-a-boost-from-azure-and-copilot-stifel-says.html" },
+  { time: "18:44", tag: "geo", tagText: "地缘", text: "丹麦情报部门警告，俄罗斯可能在数月内向北约邻国派兵或攻击关键基础设施，称这一风险“虽低但正在上升”。此番评估加剧欧洲对俄乌冲突外溢及北约东翼安全的担忧。", source: "Financial Times", url: "https://www.ft.com/content/b4141b98-0118-4624-8cb0-5d158ba0751d?syn-25a6b1a6=1" },
+  { time: "18:41", tag: "geo", tagText: "地缘", text: "泽连斯基表示乌克兰已准备好与俄罗斯达成「能源停火」，前提是莫斯科停止攻击关键基础设施。他同时呼吁举行与普京、特朗普的三方会谈。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ukraine-war-zelenskyy-putin-trump-russia.html" },
   { time: "17:47", tag: "tech", tagText: "科技", text: "欧洲AI无人机制造商Tekever估值达到64亿美元。乌克兰战争推动国防科技投资升温，欧洲多国掀起重整军备浪潮，带动区域国防科技初创企业大额融资。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ai-drone-maker-ukraine-war-defense-tech.html" },
   { time: "17:14", tag: "ai", tagText: "AI", text: "特朗普与习近平峰会将于9月24日登场，AI安全议题被正式列入议程。分析人士称，美中将在芯片与AI安全领域展开对话，但双方都不愿放慢AI发展步伐，近期AI安全担忧升温成为焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/trump-xi-meeting-ai-safety-chips-us-china-dialogue.html" },
   { time: "13:26", tag: "geo", tagText: "地缘", text: "美国与伊朗在联合国大会期间举行自6月以来的首次面对面会谈，特朗普称威特科夫与库什纳同伊朗代表团进行了「良好会晤」，同时仍威胁若伊朗不弃核将「彻底摧毁」伊朗。受外交解决中东冲突的希望推动，国际油价走低，布伦特原油在亚洲交易时段跌破每桶99美元，势将录得逾12个月来最长连跌。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/iran-us-talks-crude-oil-un-wti.html" },
@@ -1637,23 +1649,12 @@ const breakingNews = [
   { time: "12:00", tag: "macro", tagText: "宏观", text: "受供应紧张推动，欧洲柴油价格飙升，司机每次加满油箱的成本较年初高出约40%，合计每日多支出2.03亿欧元。燃油成本危机正挤压欧洲家庭与企业，并加剧该地区的通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/76b51a19-0387-4eed-a343-980b1135de2c?syn-25a6b1a6=1" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "减肥药Ozempic制造商诺和诺德（Novo Nordisk）表示，对美国上市升级持开放态度。CEO杜斯塔达尔称，让美国投资者直接持有这家丹麦药企股票具有「优势」，此举或提升其估值与在美融资能力。", source: "Financial Times", url: "https://www.ft.com/content/00d53ca3-725f-4fa8-b452-cef562a13514?syn-25a6b1a6=1" },
   { time: "11:08", tag: "tech", tagText: "科技", text: "韩国太阳能股大涨，因市场预计美国对中国太阳能产品的限制措施将在特朗普与习近平峰会前维持不变。若美方继续对华设限，韩国及非中国产能的太阳能制造商有望受益于订单转移。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/korean-solar-stocks-jump-as-curbs-on-china-expected-to-stay-in-place.html" },
-  { time: "04:09", tag: "geo", tagText: "地缘", text: "特朗普与习近平会晤之际，中国汽车制造商成为美国汽车业的「潘多拉魔盒」。美国车企与国会议员正施压，要求维持对中国整车及中国厂商的限制，担忧开放市场将冲击本土产业。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/trump-xi-chinese-automakers-us-access.html" },
-  { time: "04:03", tag: "macro", tagText: "宏观", text: "美债抛售加剧：10年期美债收益率飙升至2007年以来最高（19年高位），30年期收益率突破5%，华尔街担忧美联储将进一步加息。美股应声下挫，道指跌超300点，纳指与标普500自纪录高位回落，纳指跌约1%，罗素2000跌超1%。分析师指出，随着5%收益率失去震撼力，投资者已开始担忧6%的情景。", source: "Financial Times", url: "https://www.ft.com/content/5b11b598-7c77-4bdf-82bf-a763adf71a72?syn-25a6b1a6=1" },
-  { time: "03:55", tag: "ai", tagText: "AI", text: "OpenAI的奥特曼与Anthropic的阿莫代伊在联合国呼吁AI安全领域合作，此前特朗普拒绝了控制AI的「全球主义方案」。阿莫代伊主张达成「范围狭窄」的AI安全协议，包括通用的模型测试标准，以及针对具有国际重大影响的AI事件的通报机制；多位科技高管认为应放缓AI开发节奏以管控风险。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/altman-amodei-un-ai-safety.html" },
-  { time: "03:49", tag: "macro", tagText: "宏观", text: "美国柴油价格屡创新纪录，成为美国人钱包的「沉默杀手」，并料将进一步推高食品杂货账单，随着感恩节临近压力加剧。与此同时，石油行业警告称，若特朗普实施柴油出口禁令，只会带来短暂缓解，随后因炼厂减产而令油价再度上涨。", source: "MarketWatch", url: "https://www.marketwatch.com/story/record-breaking-diesel-prices-look-set-to-push-grocery-bills-even-higher-and-thanksgiving-is-getting-closer-178d3959?mod=mw_rss_topstories" },
-  { time: "03:00", tag: "geo", tagText: "地缘", text: "以色列选举委员会禁止主要阿拉伯政党参加下月大选投票，由总理内塔尼亚胡极右翼联盟成员牵头发起，将Ra'am与联合名单党（Joint List）排除在选举之外。", source: "Financial Times", url: "https://www.ft.com/content/05ffcb10-869e-4857-bed7-fcb025f8e02f?syn-25a6b1a6=1" },
-  { time: "02:12", tag: "macro", tagText: "宏观", text: "标普全球通胀指标升至2022年10月以来最高，叠加美联储官员巴尔（Barr）讲话，市场目前预计下一次加息将在10月落地。分析指出，利率上行将显著推高消费借贷成本，但对年轻家庭与低收入家庭的冲击远大于其他群体，「加息是一种钝器」。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/market-sees-next-fed-hike-in-october-following-barr-comments-hot-inflation.html" },
-  { time: "01:46", tag: "crypto", tagText: "加密", text: "受比特币上涨吸引投资者重返市场，韩国加密货币交易量激增17倍。", source: "KED Global", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTFAwQWt5MXdVS3E1RlE0aVZuQkJOTWw4VTdidDEwNDA3Wl94R2d2aksyS3BoMjFNcHZYaWZ2M2V3VGk4VEtYVmRMX0E3ZEt0emlDUDY5bWZydmVkVTVVVjRjU1ctU3ZwTHdLYUZISVRZWDlaU0FiS2c?oc=5" },
-  { time: "19:18", tag: "ai", tagText: "AI", text: "CoreWeave股价较5月高点已下跌近40%，债务担忧令投资者恐慌。但一位分析师认为这轮抛售被过度放大，该股可能迎来大幅反弹。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-coreweaves-beaten-down-stock-could-be-due-for-a-major-comeback-46068534?mod=mw_rss_topstories" },
-  { time: "19:14", tag: "macro", tagText: "宏观", text: "随着利率走高，美国金融股下跌。利率上升可能抑制银行贷款增长并推高银行融资成本，这对整体市场构成压力，被视为更广泛市场的隐忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/financial-stocks-are-falling-as-rates-rise-why-thats-a-problem-for-the-broader-market-70bd9b04?mod=mw_rss_topstories" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "随着30年期房贷利率升破7%，上周近10%的借款人选择风险更高的可调利率抵押贷款（ARM）以寻求更低利率。这种向风险产品转移的趋势引发对借款人偿债能力的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/nearly-10percent-of-borrowers-opted-for-riskier-mortgages-last-week.html" },
-  { time: "18:53", tag: "tech", tagText: "科技", text: "Stifel将微软评级由「持有」上调至「买入」，看好Azure云业务与Copilot AI助手带来的增长动能。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/microsoft-will-get-a-boost-from-azure-and-copilot-stifel-says.html" },
-  { time: "18:41", tag: "geo", tagText: "地缘", text: "泽连斯基表示乌克兰已准备好与俄罗斯达成「能源停火」，前提是莫斯科停止攻击关键基础设施。他同时呼吁举行与普京、特朗普的三方会谈。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ukraine-war-zelenskyy-putin-trump-russia.html" },
 ];
-const breakingDate = "2026年9月24日 17:54 CST";
+const breakingDate = "2026年9月24日 22:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
   { time: "17:04", tag: "ai", tagText: "AI", text: "谷歌DeepMind新任负责人科雷·卡武克乔格鲁（Koray Kavukcuoglu）在首次接受媒体采访、与The Information对谈时透露，备受期待的Gemini 4「已接近准备就绪」。此前谷歌在旗舰级AI模型的发布节奏上落后于竞争对手，外界普遍认为Gemini 4是谷歌重夺领先地位的关键一役。此番表态意味着发布窗口或已临近。", source: "The Verge", url: "https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu" },
   { time: "12:44", tag: "ai", tagText: "AI", text: "知名投资人比尔·阿克曼（Bill Ackman）公开称赞一项AI在罕见病领域的突破「令人难以置信」：据报某AI模型为一名濒危患者找出了可行的药物组合方案。该案例被视为AI在药物重定向与临床辅助决策上从概念走向真实救治的重要信号，也再度点燃资本对AI医疗应用前景的想象。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxQU21WeUtOLXVlcnZYMjEyYTFsS3g2UnBPTGdVR3hnM25MYk9XVVlxam1kLUNNNS05LWU5VTRxX09LeHc4MHNRMlJjQlJVUUtkOVFPMG1uaFVaY082cUNkS2VFR3RVREphRkRNRUdYQXNfSzNVc3ZwOTRDVTRzaFp4U19TNWZPZTRXbk05Z1czcWlVWWx0d2t5Ulp0b0sxWE5kOUQtbF9kbi05SmhNQWZj?oc=5" },
   { time: "08:15", tag: "ai", tagText: "AI", text: "Meta在Connect 2026大会上发布Muse Charm——一款专为其AI智能体Muse打造的独立硬件设备，外形类似电子宠物Tamagotchi，旨在为Muse提供又一个移动「住所」。扎克伯格在主题演讲结尾短暂展示了该产品。此举标志Meta将AI智能体从纯软件延伸至专用可穿戴硬件，进一步加码「AI+硬件」战略。", source: "The Verge", url: "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "00:23", tag: "ai", tagText: "AI", text: "美国参议员伯尼·桑德斯（无党籍，佛蒙特州）与众议员格雷格·卡萨尔（民主党，得州）联合提出新法案，拟全面禁止任何人开发「人工超级智能」。法案将超级智能定义为能力超越人类的人工智能系统，并规定违规开发者将承担刑事责任、最高可被判监禁。此举标志着美国国会对前沿AI风险的立法博弈进一步升级，也延续了桑德斯此前对AI权力集中的批评立场。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act" },
   { time: "23:19", tag: "ai", tagText: "AI", text: "YouTube在年度「Made on YouTube」活动中一口气发布多项AI功能：一是让用户用自然语言描述想看的内容，由Gemini据此生成「自定义信息流」，等于把推荐算法的主导权部分交给用户；二是为创作者在Studio应用中新增选题灵感生成、缩略图表现监测等工具，大幅降低内容策划与优化的门槛；三是YouTube Music引入对话式AI，帮助听众发现音乐、探索艺人并找到此前容易错过的播客。此举延续了平台把大模型深度嵌入推荐与创作链路的思路。", source: "The Verge", url: "https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
-  { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
 ];
-const aiBreakingDate = "2026年9月24日 17:54 CST";
+const aiBreakingDate = "2026年9月24日 22:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
