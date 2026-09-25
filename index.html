@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 36,
+  score: 35.71,
   rating: "fear",
-  timestamp: "2026-09-25T07:23:31+00:00",
+  timestamp: "2026-09-25T13:33:57+00:00",
   previousClose: 36.11,
   previous1Week: 30.43,
   previous1Month: 59.6,
   previous1Year: 50.66,
-  date: "2026年9月25日 15:39 CST"
+  date: "2026年9月25日 21:38 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,12 @@ const breakingNews = [
   { time: "22:50", tag: "macro", tagText: "宏观", text: "美国新的医疗补助（Medicaid）工作要求落地后，将有数百万美国人失去医保资格，预计未来10年联邦Medicaid支出将被削减约1万亿美元。低收入成年人、照护者及农村居民受冲击最大，相关变化正值中期选举临近之际。", source: "MarketWatch", url: "https://www.marketwatch.com/story/millions-will-lose-medicaid-once-new-work-rules-kick-in-these-groups-will-be-hit-the-hardest-507694d3?mod=mw_rss_topstories" },
   { time: "22:48", tag: "tech", tagText: "科技", text: "巴里·迪勒（Barry Diller）旗下People Inc.撤回收购美高梅度假村（MGM Resorts）剩余流通股的收购要约，MGM股价应声重挫9%，成为当日美股跌幅最大的个股之一。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/barry-diller-people-mgm-resorts.html" },
 ];
-const breakingDate = "2026年9月25日 15:39 CST";
+const breakingDate = "2026年9月25日 21:38 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:00", tag: "tech", tagText: "科技", text: "苹果凭借Apple Intelligence进军家庭安防摄像头市场，与亚马逊Ring/Alexa、谷歌Nest/Gemini展开正面较量。The Verge实测指出，苹果强调本地端侧AI与隐私保护，但在识别准确度、误报控制与生态联动的成熟度上仍需追赶已深耕多年的对手；智能家居正成为三家巨头AI落地的新战场。", source: "The Verge", url: "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "微软正式发布全新Copilot「超级应用」，把聊天、编程与Autopilot自动化三类AI能力整合进单一界面，取代此前分散的产品形态。微软高层称该应用的行业影响力有望与Office比肩，标志着Copilot从Office插件升级为统一的AI入口级平台，与OpenAI的ChatGPT、谷歌Gemini在消费与企业端正面竞争。", source: "The Verge", url: "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot" },
   { time: "14:33", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋在韩国会见三星电子会长李在镕与SK集团会长崔泰源，就深化韩国AI芯片合作展开磋商。此次会面被视为英伟达进一步绑定韩国存储与代工产能、巩固其AI加速器供应链的关键动作，市场关注高带宽内存（HBM）供货与先进制程代工的合作细节。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNem9sUThTM0R6bzJ2WWMtdmxWSXdjQTNGZlN4dWpZMnZwaDR3NXhpRU5KV1R3OVJCcHVLS1NfM0RpLWZQTE40cGhqQlV1bjZ6SEFJV2EzaTEwT0trRVBhVjYzOWRKQXpWYzhWMHVFNHBxbmlYQndCZFBhYWttUEFKbUpjNXhPTGxV0gGcAUFVX3lxTE9BMk1kcU1KV2RKWm0xU3pRX0plamg2T0stZEdIcjVVM3hLZ1Y1SEhEajMwYWNZLS1FX0YxaUJvLXFJN1lobllpNXQ1U2tNdE9GX19aQTV3LTdrSXhybDg5cmczNF9RQzl5SVJ6VDNOVGNocWY0dlFiaDVxUl9PNjF4U2J4aUdDMC1fdFoxY0VlX1VGd2hXVmRBY3Z6TQ?oc=5" },
   { time: "13:00", tag: "ai", tagText: "AI", text: "风险投资机构Lightspeed正募集一支规模2.5亿美元的印度新基金，重点投向早期阶段的AI初创公司。此举反映全球资本正在印度AI赛道加速布局，押注当地工程师红利、低成本算力与快速增长的本地企业级AI应用需求。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOGgzTjlnbEVmaHNNdlBuZ2w3SkdpTG9kalJLUWQ2UWlvclZSWEY1Wnk4WDlkSVRuVlRHUjlLSWlHTFpVZFpuWkozSHI0REJDRGg5ckNVVVZ6aGx1Q1A2WUFXd01RT2hnSy1CN3pCWXhQS29DSVduM056U3JtY0M5Z2pldmE1Q0dMNEc3aGNUMm1tY05rMTBUWU1KcUhnOU0?oc=5" },
   { time: "11:11", tag: "ai", tagText: "AI", text: "AlphaGo联合创造者为其新创立的AI公司完成融资，具体金额与投资方暂未披露。作为深度强化学习领域的标志性人物，其再度创业受到业界高度关注，被视为强化学习与大模型智能体方向新一轮技术与资本结合的信号。", source: "Briefs Finance", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUk51YWh0YnI1WlNXbnVva0p5d05uVGlrZWl0bWlfVGVYSE1KS3pnelgySUlQVWM1RXcxUElROUd4bFl1ZmhxeHpsNXJaR3EwSzJJb2NQN2o3Z3JlX1ZjMXBOaDV3NF9XOUlDN1JzUVRIRnBSa2R0ZWx3VEM5dXIzWDNWRjNEb3o4N1VybEZYcy0?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "00:23", tag: "ai", tagText: "AI", text: "美国参议员伯尼·桑德斯（无党籍，佛蒙特州）与众议员格雷格·卡萨尔（民主党，得州）联合提出新法案，拟全面禁止任何人开发「人工超级智能」。法案将超级智能定义为能力超越人类的人工智能系统，并规定违规开发者将承担刑事责任、最高可被判监禁。此举标志着美国国会对前沿AI风险的立法博弈进一步升级，也延续了桑德斯此前对AI权力集中的批评立场。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act" },
   { time: "00:04", tag: "ai", tagText: "AI", text: "谷歌开始测试让Gemini替用户打电话：该「早期实验」功能率先面向美国Pixel 11用户开放，且需订阅Gemini服务。用户可委托Gemini致电本地商家完成订位、查询库存或改约等事宜，无需再排队等待人工接听。这是AI智能体从数字世界走向真实世界服务场景的又一落地尝试。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1000116/google-gemini-business-phone-calls" },
   { time: "23:19", tag: "ai", tagText: "AI", text: "YouTube在年度「Made on YouTube」活动中一口气发布多项AI功能：一是让用户用自然语言描述想看的内容，由Gemini据此生成「自定义信息流」，等于把推荐算法的主导权部分交给用户；二是为创作者在Studio应用中新增选题灵感生成、缩略图表现监测等工具，大幅降低内容策划与优化的门槛；三是YouTube Music引入对话式AI，帮助听众发现音乐、探索艺人并找到此前容易错过的播客。此举延续了平台把大模型深度嵌入推荐与创作链路的思路。", source: "The Verge", url: "https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests" },
-  { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
-  { time: "22:43", tag: "ai", tagText: "AI", text: "「氛围编程」（vibe coding）热度持续兑现：Lovable年化营收已突破6亿美元。联合创始人Fabian Hedin表示，平台用户创建的应用程序每月获得接近10亿次浏览。这显示自然语言生成应用的开发模式正快速商业化，并对传统软件开发与低代码工具市场形成冲击。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/24/lovables-annualized-revenue-crosses-600m-as-vibe-coding-takes-off/" },
 ];
-const aiBreakingDate = "2026年9月25日 15:39 CST";
+const aiBreakingDate = "2026年9月25日 21:38 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
