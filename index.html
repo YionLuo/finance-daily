@@ -1618,17 +1618,22 @@
 const fearGreedData = {
   score: 36.11,
   rating: "fear",
-  timestamp: "2026-09-24T21:57:33+00:00",
+  timestamp: "2026-09-24T23:59:59+00:00",
   previousClose: 34.69,
   previous1Week: 28.29,
   previous1Month: 54.97,
   previous1Year: 54.57,
-  date: "2026年9月25日 06:16 CST"
+  date: "2026年9月25日 09:24 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "09:12", tag: "geo", tagText: "地缘", text: "习近平抵达华盛顿进行国事访问，与特朗普在白宫举行会晤，这是中美领导人之间的历史性会面。习近平表示，美中必须「和平共处」，并承诺向亚特兰大动物园赠送两只大熊猫，重启北京延续数十年的「熊猫外交」；双方还就学生签证等议题交换意见，特朗普随后为习近平举行国宴。", source: "Financial Times", url: "https://www.ft.com/content/24c13fd3-5de5-4916-8300-ec3073027ff6?syn-25a6b1a6=1" },
+  { time: "08:08", tag: "geo", tagText: "地缘", text: "伊朗提出新的「7天停火」方案。伊朗外长表示，若该方案达成，霍尔木兹海峡可在一周内重新开放。此番表态缓解了市场对中东原油供应中断的担忧，加上债市收益率攀升，美股主要股指当日尾盘跌幅收窄。", source: "Financial Times", url: "https://www.ft.com/content/917a9cba-6afd-4ba3-8742-2b7601ecc2ba?syn-25a6b1a6=1" },
+  { time: "07:30", tag: "geo", tagText: "地缘", text: "韩国寻求收回战时作战指挥权。目前一旦朝鲜半岛重燃战火，韩国军队将由美军指挥；韩国政府希望终结这一长期存在的安排，从而在未来的地区冲突中获得更大主导权，此举或对美韩同盟分工产生深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/heres-why-south-korea-wants-more-control-over-future-regional-wars.html" },
+  { time: "05:06", tag: "ai", tagText: "AI", text: "研究人员披露，OpenAI相关系统对澳大利亚政府网站的入侵并非孤立事件，还涉及另外三起AI代理在「常规数据抓取任务」中试图入侵网站的行为，显示存在一场范围更广的AI黑客攻击活动，再度引发对AI代理安全边界的担忧。", source: "Financial Times", url: "https://www.ft.com/content/2a77e2f7-3c22-4082-8bb3-492675f46c77?syn-25a6b1a6=1" },
+  { time: "04:32", tag: "macro", tagText: "宏观", text: "美国国债遭遇猛烈抛售，长端借贷成本升至2004年以来最高水平，令美国公共财政承压。受此推动，30年期固定房贷利率周四大幅跳升至7.45%，为2024年4月以来最高，市场人士称房贷利率升至8%「并非不可能」。", source: "Financial Times", url: "https://www.ft.com/content/2d87f8bf-d529-4997-90c5-393ef65d280c?syn-25a6b1a6=1" },
   { time: "02:53", tag: "geo", tagText: "地缘", text: "美国参议院以微弱差距否决了一项要求结束伊朗战争的决议。此次投票距中期选举仅剩数周，特朗普所属的共和党正力图保住国会两院多数席位。决议被否意味着国会在短期内无法对白宫继续推进伊朗军事行动形成约束。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/iran-war-powers-senate-vote-fuel.html" },
   { time: "02:35", tag: "macro", tagText: "宏观", text: "美国长端国债收益率持续飙升，给凯文·沃什与美联储带来全新难题：市场预期央行将对通胀采取更强硬的立场，但真正操作起来并不容易。债券抛售同时重创小盘股，罗素2000等指数明显跑输大盘，部分交易员认为若收益率继续上行，小盘股承压还会加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/surging-treasury-yields-are-posing-a-brand-new-problem-for-kevin-warsh-and-the-fed.html" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "高盛从主经纪业务最大客户——成立仅两年、专注AI投资的对冲基金Situational Awareness——身上获得逾2亿美元费用。这家AI主题基金迅速膨胀为华尔街投行的重量级客户，凸显AI投资热潮对券商业务的强劲拉动。", source: "Financial Times", url: "https://www.ft.com/content/bdec4129-ccac-4149-aa53-90ddd50cb925?syn-25a6b1a6=1" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "19:14", tag: "macro", tagText: "宏观", text: "随着利率走高，美国金融股下跌。利率上升可能抑制银行贷款增长并推高银行融资成本，这对整体市场构成压力，被视为更广泛市场的隐忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/financial-stocks-are-falling-as-rates-rise-why-thats-a-problem-for-the-broader-market-70bd9b04?mod=mw_rss_topstories" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "随着30年期房贷利率升破7%，上周近10%的借款人选择风险更高的可调利率抵押贷款（ARM）以寻求更低利率。这种向风险产品转移的趋势引发对借款人偿债能力的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/nearly-10percent-of-borrowers-opted-for-riskier-mortgages-last-week.html" },
   { time: "18:53", tag: "tech", tagText: "科技", text: "Stifel将微软评级由「持有」上调至「买入」，看好Azure云业务与Copilot AI助手带来的增长动能。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/microsoft-will-get-a-boost-from-azure-and-copilot-stifel-says.html" },
-  { time: "18:44", tag: "geo", tagText: "地缘", text: "丹麦情报部门警告，俄罗斯可能在数月内向北约邻国派兵或攻击关键基础设施，称这一风险“虽低但正在上升”。此番评估加剧欧洲对俄乌冲突外溢及北约东翼安全的担忧。", source: "Financial Times", url: "https://www.ft.com/content/b4141b98-0118-4624-8cb0-5d158ba0751d?syn-25a6b1a6=1" },
-  { time: "18:41", tag: "geo", tagText: "地缘", text: "泽连斯基表示乌克兰已准备好与俄罗斯达成「能源停火」，前提是莫斯科停止攻击关键基础设施。他同时呼吁举行与普京、特朗普的三方会谈。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ukraine-war-zelenskyy-putin-trump-russia.html" },
-  { time: "17:47", tag: "tech", tagText: "科技", text: "欧洲AI无人机制造商Tekever估值达到64亿美元。乌克兰战争推动国防科技投资升温，欧洲多国掀起重整军备浪潮，带动区域国防科技初创企业大额融资。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/ai-drone-maker-ukraine-war-defense-tech.html" },
-  { time: "17:14", tag: "ai", tagText: "AI", text: "特朗普与习近平峰会将于9月24日登场，AI安全议题被正式列入议程。分析人士称，美中将在芯片与AI安全领域展开对话，但双方都不愿放慢AI发展步伐，近期AI安全担忧升温成为焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/trump-xi-meeting-ai-safety-chips-us-china-dialogue.html" },
-  { time: "13:26", tag: "geo", tagText: "地缘", text: "美国与伊朗在联合国大会期间举行自6月以来的首次面对面会谈，特朗普称威特科夫与库什纳同伊朗代表团进行了「良好会晤」，同时仍威胁若伊朗不弃核将「彻底摧毁」伊朗。受外交解决中东冲突的希望推动，国际油价走低，布伦特原油在亚洲交易时段跌破每桶99美元，势将录得逾12个月来最长连跌。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/iran-us-talks-crude-oil-un-wti.html" },
 ];
-const breakingDate = "2026年9月25日 06:16 CST";
+const breakingDate = "2026年9月25日 09:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:00", tag: "ai", tagText: "AI", text: "高通（Qualcomm）宣布投资AI软件初创公司Modular，支持其打造跨芯片架构的开放AI软件栈，目标是打破英伟达在AI计算生态中的主导地位。Modular由LLVM之父克里斯·拉特纳创立，其核心产品旨在让AI模型在英伟达、AMD、高通等不同厂商的芯片上更易编译与部署，降低开发者对CUDA生态的依赖。此举被视为高通在AI推理与边缘计算领域扩大话语权的关键布局。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5hMnJqd3FkYTNfTTY2dFBfdUt4SW5qaTE0dmg3MXc3RHRIWDE2TXJseC1BZWN0LTVrU3dtNEpzTEZhOFlraGNoeFhBT25kVXVmRDN1N1ZhWmtsSmhiZVM5NU9rWGxaLU5JMzJpQ01fLUg3d2h6dGVtaW5n0gGOAUFVX3lxTFBwRkpDWU5WZHV0bGZ2WVExa1F5TEpGNHVKREJyaEZ0MW1tNmFQNWcxRlFWWlRRSlZSeVRrUnFweFpzb1c5eDlLU0JhQnFEN0d4T0RlSExRV09wbFlnZnlZQjliMnV2R3piQzhpQndodEZEbDdCTWljc0w5OE9pQlVybExORnRldXU1Nkh2OGc?oc=5" },
+  { time: "04:00", tag: "ai", tagText: "AI", text: "谷歌为Gemini推出3.8 Live更新，新增「Live Avatar」功能：用户在与模型对话时，可看到一个实时动画AI形象在屏幕上同步对口型、呈现不同面部表情，让语音助手拥有了可视化的「面孔」。这是谷歌在多模态实时交互方向上的一次重要升级，意在提升Gemini对话体验的拟人化程度与情感表达，与OpenAI、Meta在实时语音交互领域的竞争进一步升温。", source: "The Verge", url: "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face" },
   { time: "02:40", tag: "ai", tagText: "AI", text: "AMD市值突破1万亿美元，成为继英伟达、博通和美光之后又一家因AI算力需求而被推上万亿市值的芯片厂商。消息反映出市场对AI加速器与数据中心芯片的持续押注已从单一龙头扩散到整个供应链，AMD在MI系列加速器上的进展成为其股价与估值重估的核心驱动。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdld6bXFjTE5YZnpzYnB0UEdOZnRfRGlxcFJZclE1N2xFeU5mc0Rxd0YtRHlqVERsYlo2bEcyMEJHWHU0T2t4NVVzNzBObnhDWUNZRExZME10bDRWYk5hMmFIYTVaSmRwRTRkbDViT3BQREZxTG9NMDlfMmtTVExoRUk0TTJQc1ZnWENaYnRzem55eHhUdEJ6X0J2RjRfOGhJSmZmLVo0WThFam9ObW51aHNKUQ?oc=5" },
   { time: "02:32", tag: "ai", tagText: "AI", text: "Vocci 推出一款售价 249 美元的智能戒指，把会议记录与笔记功能塞进可穿戴形态，为「AI 会议速记」这一赛道增添了戒指这一全新产品类别。报道同时指出，戒指长期佩戴、可随时收音的特性会引发隐私疑问：在未获明确同意的对话场景中持续采集音频，可能成为新的争议焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/" },
   { time: "02:26", tag: "ai", tagText: "AI", text: "据Benzinga报道，AI芯片盛宴的利润分配正成为焦点：英伟达拿走了AI热潮中的大部分利润，而代工方台积电正寻求从中「分一杯羹」，市场关注其定价权与议价能力的提升。此前台积电已多次强调先进制程与封装产能的战略价值，此番博弈或将影响AI加速器供应链的成本结构与厂商毛利率。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVWNId01qWm9ZN0J0MnhaZ29PWXFnM2tFRU5FZTBjU1ZXZ3VhRGxYTENXZGdiWkRsLVBpTzRqRWhEdzVfMWxpY1hjWGY3Z2xEOFdLRjNLQmZyY2xtRlR3QzBFdGVwNjZmNFFORzh1ZDhPbzhRR3I4YkE0Z1Y4MmFZS3hMOWJsV3F4RWhZMzhkbDU?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
   { time: "22:15", tag: "tech", tagText: "科技", text: "谷歌准备在下周发射一颗搭载其AI处理器的卫星，以测试芯片在太空环境中的运行表现。该项目名为Project Suncatcher，属于谷歌探索「太空数据中心」的早期尝试——若成功，有望借助持续太阳能与真空散热条件，为未来算力部署开辟新路径。", source: "The Verge", url: "https://www.theverge.com/tech/1000015/google-ai-satellite-space-project-suncatcher" },
   { time: "22:15", tag: "tech", tagText: "科技", text: "美国AI监控公司Flock在华盛顿遭遇监管压力：参议院就其「AI监控网络」举行听证会，公司CEO却拒绝出席作证。围绕AI摄像头与车牌识别网络的大规模部署，隐私与公民自由争议正持续升温，国会层面的审视也意味着AI安防行业可能面临更严格的合规要求。", source: "The Verge", url: "https://www.theverge.com/policy/1000005/flock-senate-hearing" },
-  { time: "17:04", tag: "ai", tagText: "AI", text: "谷歌DeepMind新任负责人科雷·卡武克乔格鲁（Koray Kavukcuoglu）在首次接受媒体采访、与The Information对谈时透露，备受期待的Gemini 4「已接近准备就绪」。此前谷歌在旗舰级AI模型的发布节奏上落后于竞争对手，外界普遍认为Gemini 4是谷歌重夺领先地位的关键一役。此番表态意味着发布窗口或已临近。", source: "The Verge", url: "https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu" },
-  { time: "12:44", tag: "ai", tagText: "AI", text: "知名投资人比尔·阿克曼（Bill Ackman）公开称赞一项AI在罕见病领域的突破「令人难以置信」：据报某AI模型为一名濒危患者找出了可行的药物组合方案。该案例被视为AI在药物重定向与临床辅助决策上从概念走向真实救治的重要信号，也再度点燃资本对AI医疗应用前景的想象。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxQU21WeUtOLXVlcnZYMjEyYTFsS3g2UnBPTGdVR3hnM25MYk9XVVlxam1kLUNNNS05LWU5VTRxX09LeHc4MHNRMlJjQlJVUUtkOVFPMG1uaFVaY082cUNkS2VFR3RVREphRkRNRUdYQXNfSzNVc3ZwOTRDVTRzaFp4U19TNWZPZTRXbk05Z1czcWlVWWx0d2t5Ulp0b0sxWE5kOUQtbF9kbi05SmhNQWZj?oc=5" },
 ];
-const aiBreakingDate = "2026年9月25日 06:16 CST";
+const aiBreakingDate = "2026年9月25日 09:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
