@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 36.11,
+  score: 36,
   rating: "fear",
-  timestamp: "2026-09-24T23:59:59+00:00",
-  previousClose: 34.69,
-  previous1Week: 28.29,
-  previous1Month: 54.97,
-  previous1Year: 54.57,
-  date: "2026年9月25日 09:24 CST"
+  timestamp: "2026-09-25T07:23:31+00:00",
+  previousClose: 36.11,
+  previous1Week: 30.43,
+  previous1Month: 59.6,
+  previous1Year: 50.66,
+  date: "2026年9月25日 15:39 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:51", tag: "crypto", tagText: "加密", text: "今日将有价值约160亿美元的比特币期权到期，为年内规模最大的到期之一。市场关注最大痛点价位及做市商对冲行为可能引发的波动放大效应。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeTlvak1zazNQVzJjbnRvakR5WU02TG1xaUFkUlJONktkbkE3d2FqMHowX0g5eF9oR1AtNjRCaFVUZnFfNDJ0SEVDWEwwVWZ5Y3c2OEd2UnR6aDh1eHE4ZlVQcTQ4ZWhCOFJKZUN1dGFXZURMSFU3Z2ZBYVVvUzhWd1dVZHRZVU96MEJEcU9KOVp1VXZ6VzNydFN6c3c?oc=5" },
+  { time: "14:13", tag: "crypto", tagText: "加密", text: "加密交易平台Bitget怀疑朝鲜应对一起3.52亿美元黑客攻击负责，这是今年规模最大的加密安全事件之一，再度引发对朝鲜黑客组织针对交易所发动攻击的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/25/crypto-platform-bitget-suspects-north-korea-in-352-million-hack.html" },
+  { time: "12:25", tag: "tech", tagText: "科技", text: "特斯拉开始交付Semi电动卡车，并重申年产5万辆的目标。此举被视为特斯拉在重卡领域商业化落地的关键一步，但产能爬坡与充电网络配套仍是市场关注焦点。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQzBxaVVUaHZ2LThjc2g3SVVFNnBjWUp6TjFaSnE2VkVhWHMwcmlKTEtCcXdCRWdsVU5wUXBocmNWMlRBdGoyMlREVjdwOEhzQ2pHLXBwaldFWVM3MDgtY0hXekhrRGJlUDUtRjF4T1RzTUd6OXFUUll3bmt2OFBsVkRjVmZvSjg5Zk1JS2Y2cU41eFBzUXd3VVVCMThNVXZoVmNHd0ZsSURwUnQ5VUdadmJn?oc=5" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "欧盟敦促英国提高对中国汽车的关税，以避免英国成为规避欧盟壁垒的「欧洲制造」漏洞。伦敦方面一直力争让英国产品获得同等待遇，但仍拒绝加入关税同盟，双方贸易关系面临新的紧张。", source: "Financial Times", url: "https://www.ft.com/content/5453be91-7bd9-4097-9e83-870354d3a248?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "随着西方对「无国籍船舶」的打击力度加大，俄罗斯持续扩大本国船队规模，悬挂俄罗斯国旗的船只数量增加三分之一，以维持化石燃料出口、规避制裁。", source: "Financial Times", url: "https://www.ft.com/content/fe377a54-88d7-4d6c-a763-fd56bc608827?syn-25a6b1a6=1" },
+  { time: "11:24", tag: "geo", tagText: "地缘", text: "美国政府正式申请加入马斯克针对欧盟处罚其社交平台X的法律挑战，凸显美欧在科技监管与数字主权问题上的摩擦进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/09/25/us-government-seeks-to-join-musk-in-challenge-against-eus-fine-on-x.html" },
+  { time: "09:40", tag: "ai", tagText: "AI", text: "台积电（TSMC）展开合作，扩大面向High NA EUV光刻的大尺寸光掩模产能。随着先进制程对高数值孔径极紫外光刻需求上升，光掩模供应能力成为2纳米以下制程竞争的关键环节。", source: "qz.com", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxPckN3c09MNWlYcjR6U2g0ODVsSjNJSHpzaTZUdFVZVnNsRTNQVFhmdEU4MW56LUdmOWx2Y0dYUmttYlBub0R4emhleDJSbTJNdlVRaWxMLUJSOHUzdjRrb1JtcndKTjZRYndJejE3eTQxdDlJMVpfUzBaVl95NVc4V2pFY2R3OEQ5Wmc?oc=5" },
   { time: "09:12", tag: "geo", tagText: "地缘", text: "习近平抵达华盛顿进行国事访问，与特朗普在白宫举行会晤，这是中美领导人之间的历史性会面。习近平表示，美中必须「和平共处」，并承诺向亚特兰大动物园赠送两只大熊猫，重启北京延续数十年的「熊猫外交」；双方还就学生签证等议题交换意见，特朗普随后为习近平举行国宴。", source: "Financial Times", url: "https://www.ft.com/content/24c13fd3-5de5-4916-8300-ec3073027ff6?syn-25a6b1a6=1" },
   { time: "08:08", tag: "geo", tagText: "地缘", text: "伊朗提出新的「7天停火」方案。伊朗外长表示，若该方案达成，霍尔木兹海峡可在一周内重新开放。此番表态缓解了市场对中东原油供应中断的担忧，加上债市收益率攀升，美股主要股指当日尾盘跌幅收窄。", source: "Financial Times", url: "https://www.ft.com/content/917a9cba-6afd-4ba3-8742-2b7601ecc2ba?syn-25a6b1a6=1" },
   { time: "07:30", tag: "geo", tagText: "地缘", text: "韩国寻求收回战时作战指挥权。目前一旦朝鲜半岛重燃战火，韩国军队将由美军指挥；韩国政府希望终结这一长期存在的安排，从而在未来的地区冲突中获得更大主导权，此举或对美韩同盟分工产生深远影响。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/heres-why-south-korea-wants-more-control-over-future-regional-wars.html" },
@@ -1642,18 +1649,14 @@ const breakingNews = [
   { time: "22:50", tag: "tech", tagText: "科技", text: "甲骨文（Oracle）就“木星项目”（Project Jupiter）数据中心发出不可抗力通知，称若该数据中心无法在2028年如期上线，希望推迟相关付款。消息令甲骨文股价下跌5%并拖累纳斯达克走低，投资者担忧AI基础设施扩张进度与资本开支风险，此前已有报道称公司正设法规避项目延期带来的部分成本。", source: "CNBC / MarketWatch", url: "https://www.cnbc.com/2026/09/24/oracle-data-center-force-majeure.html" },
   { time: "22:50", tag: "macro", tagText: "宏观", text: "美国新的医疗补助（Medicaid）工作要求落地后，将有数百万美国人失去医保资格，预计未来10年联邦Medicaid支出将被削减约1万亿美元。低收入成年人、照护者及农村居民受冲击最大，相关变化正值中期选举临近之际。", source: "MarketWatch", url: "https://www.marketwatch.com/story/millions-will-lose-medicaid-once-new-work-rules-kick-in-these-groups-will-be-hit-the-hardest-507694d3?mod=mw_rss_topstories" },
   { time: "22:48", tag: "tech", tagText: "科技", text: "巴里·迪勒（Barry Diller）旗下People Inc.撤回收购美高梅度假村（MGM Resorts）剩余流通股的收购要约，MGM股价应声重挫9%，成为当日美股跌幅最大的个股之一。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/barry-diller-people-mgm-resorts.html" },
-  { time: "22:44", tag: "ai", tagText: "AI", text: "Meta在Connect大会上展示Muse AI助手，并计划将其推向面向面部的可穿戴设备。摩根大通称Muse有潜力成为自ChatGPT以来最重要的AI应用，并上调Meta目标价；本周科技股受此提振走高，但消费者是否愿意为AI硬件买单仍存疑问。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meta-gets-price-target-boost-as-jpmorgan-says-muse-agent-has-potential-to-become-the-top-ai-application-since-chatgpt-280ca648?mod=mw_rss_topstories" },
-  { time: "22:26", tag: "macro", tagText: "宏观", text: "费城联储主席安娜·保尔森表示，为把通胀拉回目标水平，她和同僚可能还需进一步加息，但幅度将是“温和的”。在通胀指标走高、长端美债收益率上行的背景下，市场对美联储继续收紧货币政策的预期升温，美股与债市承压。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/philadelphia-feds-anna-paulson-says-modest-rate-moves-likely-ahead-to-tame-inflation.html" },
-  { time: "22:23", tag: "tech", tagText: "科技", text: "诺顿杀毒软件母公司Gen Digital已向域名与网站托管服务商GoDaddy发出收购要约，双方谈判仍处于早期阶段。若交易达成，Gen Digital将把业务从网络安全扩展至更广泛的互联网基础设施服务。", source: "Financial Times", url: "https://www.ft.com/content/6cc7149f-a9f1-47f6-9faf-b98a28f9aedc?syn-25a6b1a6=1" },
-  { time: "19:18", tag: "ai", tagText: "AI", text: "CoreWeave股价较5月高点已下跌近40%，债务担忧令投资者恐慌。但一位分析师认为这轮抛售被过度放大，该股可能迎来大幅反弹。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-coreweaves-beaten-down-stock-could-be-due-for-a-major-comeback-46068534?mod=mw_rss_topstories" },
-  { time: "19:14", tag: "macro", tagText: "宏观", text: "随着利率走高，美国金融股下跌。利率上升可能抑制银行贷款增长并推高银行融资成本，这对整体市场构成压力，被视为更广泛市场的隐忧。", source: "MarketWatch", url: "https://www.marketwatch.com/story/financial-stocks-are-falling-as-rates-rise-why-thats-a-problem-for-the-broader-market-70bd9b04?mod=mw_rss_topstories" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "随着30年期房贷利率升破7%，上周近10%的借款人选择风险更高的可调利率抵押贷款（ARM）以寻求更低利率。这种向风险产品转移的趋势引发对借款人偿债能力的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/nearly-10percent-of-borrowers-opted-for-riskier-mortgages-last-week.html" },
-  { time: "18:53", tag: "tech", tagText: "科技", text: "Stifel将微软评级由「持有」上调至「买入」，看好Azure云业务与Copilot AI助手带来的增长动能。", source: "CNBC", url: "https://www.cnbc.com/2026/09/23/microsoft-will-get-a-boost-from-azure-and-copilot-stifel-says.html" },
 ];
-const breakingDate = "2026年9月25日 09:24 CST";
+const breakingDate = "2026年9月25日 15:39 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:33", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋在韩国会见三星电子会长李在镕与SK集团会长崔泰源，就深化韩国AI芯片合作展开磋商。此次会面被视为英伟达进一步绑定韩国存储与代工产能、巩固其AI加速器供应链的关键动作，市场关注高带宽内存（HBM）供货与先进制程代工的合作细节。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNem9sUThTM0R6bzJ2WWMtdmxWSXdjQTNGZlN4dWpZMnZwaDR3NXhpRU5KV1R3OVJCcHVLS1NfM0RpLWZQTE40cGhqQlV1bjZ6SEFJV2EzaTEwT0trRVBhVjYzOWRKQXpWYzhWMHVFNHBxbmlYQndCZFBhYWttUEFKbUpjNXhPTGxV0gGcAUFVX3lxTE9BMk1kcU1KV2RKWm0xU3pRX0plamg2T0stZEdIcjVVM3hLZ1Y1SEhEajMwYWNZLS1FX0YxaUJvLXFJN1lobllpNXQ1U2tNdE9GX19aQTV3LTdrSXhybDg5cmczNF9RQzl5SVJ6VDNOVGNocWY0dlFiaDVxUl9PNjF4U2J4aUdDMC1fdFoxY0VlX1VGd2hXVmRBY3Z6TQ?oc=5" },
+  { time: "13:00", tag: "ai", tagText: "AI", text: "风险投资机构Lightspeed正募集一支规模2.5亿美元的印度新基金，重点投向早期阶段的AI初创公司。此举反映全球资本正在印度AI赛道加速布局，押注当地工程师红利、低成本算力与快速增长的本地企业级AI应用需求。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOGgzTjlnbEVmaHNNdlBuZ2w3SkdpTG9kalJLUWQ2UWlvclZSWEY1Wnk4WDlkSVRuVlRHUjlLSWlHTFpVZFpuWkozSHI0REJDRGg5ckNVVVZ6aGx1Q1A2WUFXd01RT2hnSy1CN3pCWXhQS29DSVduM056U3JtY0M5Z2pldmE1Q0dMNEc3aGNUMm1tY05rMTBUWU1KcUhnOU0?oc=5" },
+  { time: "11:11", tag: "ai", tagText: "AI", text: "AlphaGo联合创造者为其新创立的AI公司完成融资，具体金额与投资方暂未披露。作为深度强化学习领域的标志性人物，其再度创业受到业界高度关注，被视为强化学习与大模型智能体方向新一轮技术与资本结合的信号。", source: "Briefs Finance", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUk51YWh0YnI1WlNXbnVva0p5d05uVGlrZWl0bWlfVGVYSE1KS3pnelgySUlQVWM1RXcxUElROUd4bFl1ZmhxeHpsNXJaR3EwSzJJb2NQN2o3Z3JlX1ZjMXBOaDV3NF9XOUlDN1JzUVRIRnBSa2R0ZWx3VEM5dXIzWDNWRjNEb3o4N1VybEZYcy0?oc=5" },
   { time: "08:00", tag: "ai", tagText: "AI", text: "高通（Qualcomm）宣布投资AI软件初创公司Modular，支持其打造跨芯片架构的开放AI软件栈，目标是打破英伟达在AI计算生态中的主导地位。Modular由LLVM之父克里斯·拉特纳创立，其核心产品旨在让AI模型在英伟达、AMD、高通等不同厂商的芯片上更易编译与部署，降低开发者对CUDA生态的依赖。此举被视为高通在AI推理与边缘计算领域扩大话语权的关键布局。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5hMnJqd3FkYTNfTTY2dFBfdUt4SW5qaTE0dmg3MXc3RHRIWDE2TXJseC1BZWN0LTVrU3dtNEpzTEZhOFlraGNoeFhBT25kVXVmRDN1N1ZhWmtsSmhiZVM5NU9rWGxaLU5JMzJpQ01fLUg3d2h6dGVtaW5n0gGOAUFVX3lxTFBwRkpDWU5WZHV0bGZ2WVExa1F5TEpGNHVKREJyaEZ0MW1tNmFQNWcxRlFWWlRRSlZSeVRrUnFweFpzb1c5eDlLU0JhQnFEN0d4T0RlSExRV09wbFlnZnlZQjliMnV2R3piQzhpQndodEZEbDdCTWljc0w5OE9pQlVybExORnRldXU1Nkh2OGc?oc=5" },
   { time: "04:00", tag: "ai", tagText: "AI", text: "谷歌为Gemini推出3.8 Live更新，新增「Live Avatar」功能：用户在与模型对话时，可看到一个实时动画AI形象在屏幕上同步对口型、呈现不同面部表情，让语音助手拥有了可视化的「面孔」。这是谷歌在多模态实时交互方向上的一次重要升级，意在提升Gemini对话体验的拟人化程度与情感表达，与OpenAI、Meta在实时语音交互领域的竞争进一步升温。", source: "The Verge", url: "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face" },
   { time: "02:40", tag: "ai", tagText: "AI", text: "AMD市值突破1万亿美元，成为继英伟达、博通和美光之后又一家因AI算力需求而被推上万亿市值的芯片厂商。消息反映出市场对AI加速器与数据中心芯片的持续押注已从单一龙头扩散到整个供应链，AMD在MI系列加速器上的进展成为其股价与估值重估的核心驱动。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdld6bXFjTE5YZnpzYnB0UEdOZnRfRGlxcFJZclE1N2xFeU5mc0Rxd0YtRHlqVERsYlo2bEcyMEJHWHU0T2t4NVVzNzBObnhDWUNZRExZME10bDRWYk5hMmFIYTVaSmRwRTRkbDViT3BQREZxTG9NMDlfMmtTVExoRUk0TTJQc1ZnWENaYnRzem55eHhUdEJ6X0J2RjRfOGhJSmZmLVo0WThFam9ObW51aHNKUQ?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "23:19", tag: "ai", tagText: "AI", text: "YouTube在年度「Made on YouTube」活动中一口气发布多项AI功能：一是让用户用自然语言描述想看的内容，由Gemini据此生成「自定义信息流」，等于把推荐算法的主导权部分交给用户；二是为创作者在Studio应用中新增选题灵感生成、缩略图表现监测等工具，大幅降低内容策划与优化的门槛；三是YouTube Music引入对话式AI，帮助听众发现音乐、探索艺人并找到此前容易错过的播客。此举延续了平台把大模型深度嵌入推荐与创作链路的思路。", source: "The Verge", url: "https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "美国小行星采矿初创公司AstroForge宣布，其下一艘探测器Autonomy-1将由一个基于Transformer架构的小型AI模型直接接管航天器控制，而非依赖地面指令。若验证成功，这将是自主AI模型首次在深空任务中担任「指挥官」角色，有望减少深空探测对地面通信链路的依赖、提升探测器的自主决策与任务执行能力，也为AI在航天领域的落地提供了新的试验样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/" },
   { time: "22:43", tag: "ai", tagText: "AI", text: "「氛围编程」（vibe coding）热度持续兑现：Lovable年化营收已突破6亿美元。联合创始人Fabian Hedin表示，平台用户创建的应用程序每月获得接近10亿次浏览。这显示自然语言生成应用的开发模式正快速商业化，并对传统软件开发与低代码工具市场形成冲击。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/24/lovables-annualized-revenue-crosses-600m-as-vibe-coding-takes-off/" },
-  { time: "22:39", tag: "tech", tagText: "科技", text: "谷歌推出售价899美元的AI原生笔记本Googlebook，押注用户会为Gemini换新电脑。该设备将Gemini深度绑定到光标、语音听写、桌面小组件等交互环节，把AI助手从独立应用变成操作系统级入口，被视为谷歌在PC端对抗微软Copilot+与苹果生态的关键一役。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/" },
-  { time: "22:15", tag: "tech", tagText: "科技", text: "谷歌准备在下周发射一颗搭载其AI处理器的卫星，以测试芯片在太空环境中的运行表现。该项目名为Project Suncatcher，属于谷歌探索「太空数据中心」的早期尝试——若成功，有望借助持续太阳能与真空散热条件，为未来算力部署开辟新路径。", source: "The Verge", url: "https://www.theverge.com/tech/1000015/google-ai-satellite-space-project-suncatcher" },
-  { time: "22:15", tag: "tech", tagText: "科技", text: "美国AI监控公司Flock在华盛顿遭遇监管压力：参议院就其「AI监控网络」举行听证会，公司CEO却拒绝出席作证。围绕AI摄像头与车牌识别网络的大规模部署，隐私与公民自由争议正持续升温，国会层面的审视也意味着AI安防行业可能面临更严格的合规要求。", source: "The Verge", url: "https://www.theverge.com/policy/1000005/flock-senate-hearing" },
 ];
-const aiBreakingDate = "2026年9月25日 09:24 CST";
+const aiBreakingDate = "2026年9月25日 15:39 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
