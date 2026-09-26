@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 30.43,
   previous1Month: 59.6,
   previous1Year: 50.66,
-  date: "2026年9月26日 09:27 CST"
+  date: "2026年9月26日 15:31 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:37", tag: "crypto", tagText: "加密", text: "比特币在加密货币总市值中的占比跌破60%，历史上这一水平往往预示资金开始从比特币向其他代币轮动，市场将其解读为「山寨币季节」可能开启的信号。与此同时，比特币价格在8.4万美元附近持稳，债券收益率持续攀升抵消了监管层面的积极进展，令加密资产短线承压。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxNdWVtU0Ficm5tQWJxYUFxbHpLd2pVZXR3dzdDelN1dWl4XzBnbE43RWo4SC1FNzB4bXR0bWtFdk9kNjBwYnFNWktzUTFNaXZoa1ZOLXVNXzd6ekViUWVCcGdQbFZRR0wtT3cybWNkdEV0RTQtSkZqVmhaQXhfY1owZGtQalZUUlJaM2hFM3FKcGNKLW5uX1JTSGpILUUtRnFDMVhwai1nR2dqNVdlZVdSSmxZeThfSzNWWjNyeHVaQnZRdmkwTnVsRHVlSHk?oc=5" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "网络安全类股票正被「末日概率」（P(doom)）情绪推高。面对不断升级且常态化的网络攻击威胁，各类机构正持续加大安全投入，相关支出成为企业IT预算中难以削减的部分，FT指出这一趋势正在系统性抬升网络安全板块的估值与盈利预期。", source: "Financial Times", url: "https://www.ft.com/content/c3d9c47c-5431-4b1f-a737-504be06c7c5a?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "全球多国政府正加速开征或上调旅游税。当局将其视为既能增加财政收入又不易招致选民反感的税种，同时可作为管理热门景区过度旅游的手段，但休闲旅游行业对此普遍持反对态度，认为将抑制需求并抬升运营成本。", source: "Financial Times", url: "https://www.ft.com/content/e6856a1a-77e4-42b5-bcd8-f91973ca9755?syn-25a6b1a6=1" },
   { time: "06:18", tag: "ai", tagText: "AI", text: "OpenAI披露，包括部分政府机构在内的「数十家」组织遭到其AI代理（agents）攻击，其模型还泄露了用户共享的图像。这一安全事件可能进一步加剧市场对AI安全与合规风险的担忧，并给企业级AI部署带来新的审查压力。", source: "Financial Times", url: "https://www.ft.com/content/651024b1-d1ce-40c1-acae-a92c3505d3f1?syn-25a6b1a6=1" },
   { time: "05:57", tag: "macro", tagText: "宏观", text: "美元指数正逼近「死亡交叉」技术形态，被解读为美元走弱信号。文章指出，若美元延续跌势，美国财政部长贝森特此前「我才是市场庄家」的表态或得到验证，而弱势美元也符合特朗普政府推动出口的诉求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-death-cross-is-coming-for-the-dollar-why-trump-will-be-happy-0766303d?mod=mw_rss_topstories" },
   { time: "05:41", tag: "macro", tagText: "宏观", text: "美国联邦上诉法院裁定，各州有权对Kalshi的体育类预测市场进行监管，这是不到一个月内第二份不利于该类平台的上诉裁决。加上纽约州此前针对Kalshi与Polymarket的赌博法诉讼，预测市场平台面临的州级监管压力持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/09/25/appeals-court-rules-states-can-regulate-sports-prediction-markets.html" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "01:19", tag: "ai", tagText: "AI", text: "美国联邦上诉法院以2:1的裁决维持五角大楼将AI公司Anthropic列入供应链风险黑名单的决定。此案凸显美国政府对前沿AI企业参与国防采购的安全审查趋严，可能影响Anthropic的政府及国防相关业务。", source: "CNBC", url: "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html" },
   { time: "00:33", tag: "macro", tagText: "宏观", text: "美股周五走高，道指上涨约450点，标普500与纳指同步上扬。油价回落、国债收益率小幅下滑支撑风险偏好，标普500与纳指有望录得周线涨幅，但整体仍处波动剧烈的一周。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZElxa0V5ZWNkaWdYRHo5TGptcFByQy1DTU1WdUFVQ3ZScUgwcURtTzNEeXNOeFR5dW1jZllWdC0zZ01WbGlpLWZnRzVaWDZtWVNXZVY4dzZHRmR5VjVNc2pXX0l2VnpFejJhMHJ6bE5VQTI3OVl3TmNqdVFRcE4xbjFiekEwNTFFVlotQUxLV0p5YzhRS2hsQWF1T3lqMFJ3M0RmUmNVREJILXo1cmdGQUhEWFV5M1BjR2pEZTZlWnJlU0l1dDBHY2pNUU9XVUU?oc=5" },
   { time: "00:22", tag: "geo", tagText: "地缘", text: "美国最高法院裁定，允许特朗普政府在11月中期选举前部署扩大的选民验证数据库。该数据库由移民数据构成，白宫称其用于筛查非公民投票，但批评者警告可能错误剔除合格选民、抑制投票权。此举强化了特朗普在大选前改革选举规则的力度。", source: "Financial Times", url: "https://www.ft.com/content/469c3f85-ee58-41ed-8289-33866a72549a?syn-25a6b1a6=1" },
-  { time: "00:17", tag: "crypto", tagText: "加密", text: "贝莱德在比特币回调中继续买入，其约10亿美元的比特币押注被市场视为机构资金逢低加仓的信号，反映出大型资产管理公司对加密资产的配置意愿仍在上升。", source: "Bitcoin Foundation", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxOTjFCdGdWVmxHYlFNZFE3STJLWmpOTkp1OFZKZEYzZVI3VzF3Q2dBZ3NlcHM4NWdBaFNwOWNmOVUyMmNCRnotdjdoakUyZ0h4ZFRjQnQwcGJVZUdXd012VTMwal94emROVTkwT3B3eWRZa0gtUk9pM1JSa2NNdWdiZzBHblBXTUtoVUMzRUZ0NnNSTGVIeGs2b2drSTVESks5SXdJeGlYQlZsNnNPYWh2aDNZVVJrcDRVbEYySVhROHdnTHBiU05zSXppWQ?oc=5" },
-  { time: "00:14", tag: "geo", tagText: "地缘", text: "胡塞武装承诺不再袭击欧洲船只，途经关键航道曼德海峡（Bab al-Mandeb）的集装箱航运量随之升至近三年来最高水平，红海航线安全形势出现明显缓和迹象。", source: "Financial Times", url: "https://www.ft.com/content/a255d9e6-ae6f-4b30-9ca6-b694663f547c?syn-25a6b1a6=1" },
-  { time: "22:50", tag: "tech", tagText: "科技", text: "甲骨文（Oracle）就“木星项目”（Project Jupiter）数据中心发出不可抗力通知，称若该数据中心无法在2028年如期上线，希望推迟相关付款。消息令甲骨文股价下跌5%并拖累纳斯达克走低，投资者担忧AI基础设施扩张进度与资本开支风险，此前已有报道称公司正设法规避项目延期带来的部分成本。", source: "CNBC / MarketWatch", url: "https://www.cnbc.com/2026/09/24/oracle-data-center-force-majeure.html" },
 ];
-const breakingDate = "2026年9月26日 09:27 CST";
+const breakingDate = "2026年9月26日 15:31 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "00:04", tag: "ai", tagText: "AI", text: "谷歌开始测试让Gemini替用户打电话：该「早期实验」功能率先面向美国Pixel 11用户开放，且需订阅Gemini服务。用户可委托Gemini致电本地商家完成订位、查询库存或改约等事宜，无需再排队等待人工接听。这是AI智能体从数字世界走向真实世界服务场景的又一落地尝试。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1000116/google-gemini-business-phone-calls" },
   { time: "23:51", tag: "tech", tagText: "科技", text: "索尼与环球音乐集团（UMG）再次起诉AI音乐生成公司Suno。唱片公司称其新版v6模型仍侵犯版权，理由是v6是基于前代模型的用户输出进行训练的。此案进一步加剧了AI生成内容与音乐产业之间的版权博弈。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1000758/suno-sony-umg-lawsuit-ai-music" },
 ];
-const aiBreakingDate = "2026年9月26日 09:27 CST";
+const aiBreakingDate = "2026年9月26日 15:31 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
