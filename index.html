@@ -1623,15 +1623,18 @@ const fearGreedData = {
   previous1Week: 30.43,
   previous1Month: 59.6,
   previous1Year: 50.66,
-  date: "2026年9月26日 23:33 CST"
+  date: "2026年9月27日 01:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:22", tag: "ai", tagText: "AI", text: "新研究以硬数据揭示：选择「AI暴露度高」的大学专业可能削弱毕业生就业前景并压低起薪。在大量学生因AI而重新考虑专业方向之际，该发现为AI对劳动力市场结构性冲击提供了新的量化证据，也可能影响未来高教与人才供给格局。", source: "MarketWatch", url: "https://www.marketwatch.com/story/choosing-these-ai-exposed-college-majors-could-dent-your-job-prospects-and-lower-your-pay-b80576cb?mod=mw_rss_topstories" },
+  { time: "23:48", tag: "macro", tagText: "宏观", text: "免税市政债收益率正处在「甜蜜点」：经应税等价调整后，市政债相对公司债的收益率优势在过去两个月大幅走阔。对高收入人群及高税率州投资者而言，当前配置价值突出，但机构提示这一窗口可能不会持续太久。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tax-free-bond-yields-are-in-a-sweet-spot-get-in-before-its-too-late-94b8adac?mod=mw_rss_topstories" },
   { time: "23:30", tag: "macro", tagText: "宏观", text: "新工作规定生效后，数百万美国人将失去Medicaid医保覆盖。改革预计在未来10年削减约1万亿美元联邦Medicaid支出，需要兼顾照护责任、就业不稳定以及农村地区的群体受冲击最大。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/millions-will-lose-medicaid-once-new-work-rules-kick-in-these-groups-will-be-hit-the-hardest-507694d3?mod=mw_rss_topstories" },
   { time: "22:55", tag: "tech", tagText: "科技", text: "美国联邦陪审团裁定苹果侵犯Taction Technology两项触觉反馈（haptics）专利，需赔偿逾57亿美元，涉及iPhone与Apple Watch。苹果计划上诉，这是近年规模最大的专利侵权裁决之一，或对可穿戴设备交互技术专利格局产生示范效应。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/apple-taction-technology-patent-infringement-verdict.html" },
   { time: "22:19", tag: "macro", tagText: "宏观", text: "美国国会一项新提案拟将从事体力劳动工人的社会保障（Social Security）全额退休年龄由67岁下调至60岁。分析警告，此举将进一步加大社保信托基金压力并推高整个体系的成本。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/a-new-bill-in-congress-would-lower-the-retirement-age-to-60-see-who-would-qualify-10563052?mod=mw_rss_topstories" },
+  { time: "21:30", tag: "macro", tagText: "宏观", text: "美国10年期国债收益率升至约19年来最高水平，背后是通胀黏性、国债供给激增以及AI驱动的投资热潮共同作用。作为全球资产定价基准，其持续走高正对股票估值、企业融资成本和全球资金流向构成压力，被视为当前市场最关键的风险变量之一。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/10-year-treasury-yield-is-at-its-highest-in-19-years-how-we-got-here.html" },
   { time: "21:14", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦自年初以来将其在美国第二大住宅建筑商Lennar的持股近乎翻倍，加码押注美国楼市的长期复苏，该公司股价此前持续低迷。此举被视为对住房市场触底信号的又一重量级背书。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/berkshire-adds-to-nearly-doubled-stake-in-slumping-homebuilder.html" },
   { time: "20:39", tag: "geo", tagText: "地缘", text: "特朗普拒绝伊朗提出的有条件停火方案。据《华尔街日报》报道，他预计将在11月中期选举后重启对伊朗的轰炸行动；与此同时，沙特支持的联军拦截了来袭飞行物。中东局势再度升级，能源价格与避险资产面临扰动风险。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/trump-rejects-irans-conditional-ceasefire-proposal-wsj-reports.html" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "中国数据中心制造商正试图切入美国AI基础设施的建设热潮，把美国超大规模算力需求视为重要机会。但报道指出，中企在这一市场仍面临监管审查、供应链限制与数据安全顾虑等多重路障。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/china-us-ai-data-centers.html" },
@@ -1646,14 +1649,16 @@ const breakingNews = [
   { time: "06:18", tag: "ai", tagText: "AI", text: "OpenAI披露，包括部分政府机构在内的「数十家」组织遭到其AI代理（agents）攻击，其模型还泄露了用户共享的图像。这一安全事件可能进一步加剧市场对AI安全与合规风险的担忧，并给企业级AI部署带来新的审查压力。", source: "Financial Times", url: "https://www.ft.com/content/651024b1-d1ce-40c1-acae-a92c3505d3f1?syn-25a6b1a6=1" },
   { time: "05:57", tag: "macro", tagText: "宏观", text: "美元指数正逼近「死亡交叉」技术形态，被解读为美元走弱信号。文章指出，若美元延续跌势，美国财政部长贝森特此前「我才是市场庄家」的表态或得到验证，而弱势美元也符合特朗普政府推动出口的诉求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-death-cross-is-coming-for-the-dollar-why-trump-will-be-happy-0766303d?mod=mw_rss_topstories" },
   { time: "05:41", tag: "macro", tagText: "宏观", text: "美国联邦上诉法院裁定，各州有权对Kalshi的体育类预测市场进行监管，这是不到一个月内第二份不利于该类平台的上诉裁决。加上纽约州此前针对Kalshi与Polymarket的赌博法诉讼，预测市场平台面临的州级监管压力持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/09/25/appeals-court-rules-states-can-regulate-sports-prediction-markets.html" },
-  { time: "05:38", tag: "geo", tagText: "地缘", text: "特朗普与习近平结束为期两天的华盛顿国事访问，双方重仪式、轻实质，在台湾与伊朗等敏感议题上均未取得明确成果。分析认为此次峰会象征意义大于实际突破，中美在关键分歧上仍维持僵持。", source: "CNBC", url: "https://www.cnbc.com/2026/09/25/trump-xi-summit-takeaways.html" },
-  { time: "05:37", tag: "macro", tagText: "宏观", text: "英超联盟裁定曼城违反115项财务规则中的大部分条款，这是英格兰足球史上最重大的财务合规裁决之一，可能对英超财务公平竞赛体系及俱乐部估值、赞助与转播格局产生深远影响。", source: "BBC", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBpelk0cjFmcTVESzNFSEkxRGRKZ2xNV2IyU0gtSGdyTzJjT1g2RUtnZm1iVkp1MTN2SXhQNkl1bTFPS3djeEpHb0dlR3hTMjFGUmN6VDhkOVhGZ3RQOWY5T016UGpKbG5U?oc=5" },
-  { time: "05:16", tag: "tech", tagText: "科技", text: "沃尔玛CEO发表公开信，明确排除基于购物者身份进行个性化定价，承诺不会利用AI与电子货架标签根据顾客画像调整价格。这一表态回应了外界对零售业AI应用可能损害消费者利益的担忧，也为行业定价伦理设定参照。", source: "Financial Times", url: "https://www.ft.com/content/632e21a3-b889-4423-a1d9-be16b3e680bd?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月26日 23:33 CST";
+const breakingDate = "2026年9月27日 01:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:00", tag: "ai", tagText: "AI", text: "ChatGPT移动应用新增基于语音的智能体（agentic）功能。Plus与Pro订阅用户可在手机端通过Work标签，用语音下达并完成多步骤代理任务，标志着OpenAI把桌面端agent能力进一步推向移动场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/23/chatgpt-mobile-app-gets-voice-based-agentic-features/" },
+  { time: "00:49", tag: "ai", tagText: "AI", text: "一项新报告显示，即便每天都使用AI的美国人，仍普遍对其感到不安。研究指出，更高的使用暴露度并未消解公众对AI的忧虑，也没有削弱民众对AI监管的支持，这对以「用得多就会接受」为假设的行业游说构成挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/" },
+  { time: "00:48", tag: "ai", tagText: "AI", text: "英国《金融时报》撰文探讨AI在数学领域取得的最新突破对人类知识发现意味着什么。文章聚焦AI在定理证明与数学问题求解上的进展，分析其对科研范式、人类研究者角色以及「机器发现」边界的深远影响。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWVQ4X1pXTnFiR0d3dHlFNndpOVhULUx3d052eFBidEU4elNxcG0zQzRGWU1QakIya3hDLWxRMjlfY0tNLTVfTWFYb1hnVnVlUFhqNnhYSko2VVk4bUI4LXRPZWhrXzJvaVhwX0REcnpMcFUwT1hhWUsxY0pZWjJDRWVMSXc?oc=5" },
+  { time: "00:35", tag: "ai", tagText: "AI", text: "AI语音公司ElevenLabs首席执行官接受TechCrunch采访时谈及毛利率、IPO时间表，以及是否应告知客户「电话另一端是机器人」。该公司为大量客服电话提供AI语音支持，据报其最新估值已达220亿美元。创始人的表态为观察AI语音商业化的成本结构、盈利路径与上市节奏提供了窗口。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/" },
+  { time: "00:23", tag: "ai", tagText: "AI", text: "美国参议员伯尼·桑德斯（无党籍，佛蒙特州）与众议员格雷格·卡萨尔（民主党，得州）联合提出新法案，拟全面禁止任何人开发「人工超级智能」。法案将超级智能定义为能力超越人类的人工智能系统，并规定违规开发者将承担刑事责任、最高可被判监禁。此举标志着美国国会对前沿AI风险的立法博弈进一步升级，也延续了桑德斯此前对AI权力集中的批评立场。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "Cloudflare首席执行官马修·普林斯（Matthew Prince）在The Verge播客中谈AI时代开放网络的存亡：面对AI抓取导致的内容价值被掏空、以及「谷歌零点击」（Google Zero）式流量崩塌，Cloudflare正推进按抓取付费（pay-per-crawl）等机制，试图在AI爬虫、内容方与广告生态之间重建付费与授权的平衡。普林斯认为，若不能为内容生产者建立可持续回报，开放网络的商业模式将难以为继。", source: "The Verge", url: "https://www.theverge.com/podcast/1000344/cloudflare-matthew-prince-google-zero-ai-web-advertising" },
   { time: "20:39", tag: "geo", tagText: "地缘", text: "中美元首峰会结束，双方同意延长贸易休战。南华早报指出，相比关税层面的延续性安排，AI 才是本次峰会真正的突破点——报道分析认为，两国在人工智能领域的沟通机制与竞争边界问题成为峰会核心议题之一，市场关注后续是否形成可执行的 AI 安全与产业对话框架。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR29DbHRpckN6TkVPdy1CbjNQUFIteVR3eGJnRzdTM293M2pLWEx1bnlfVDNfcHZuN2hhU283R3FGM2dLXzFLQUNCamNiRVctUTV4d1lWUndYY1lJSDBkN2xNNFNKbmFkbG9RSXgzOWFHdVdNSXRzMFNWNzdwMVhEQ1JLNVl6X1pYdU5FcVBjWFFCSUZtUy1qUVY4VkRqbms4Ujh5Q0dtcVQ0TUVXajBPUXY5Q3hNRXdWY1BpQVNrRlNqNzhwbjVB?oc=5" },
   { time: "18:30", tag: "tech", tagText: "科技", text: "福布斯报道，初创公司 Corgi 在五个月内连续完成四轮融资，估值已飙升至 50 亿美元。如此密集的融资节奏与估值跃升，反映出当前资本对具备快速扩张能力的新锐科技标的极度追捧，也再度引发市场对早期项目估值泡沫化的讨论。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMXpDdTFYZzE5VEFmQXU0QVEzZjJBWlpRQkhJUVFRT1VRMENaZjd4SWRUSEFQcURWM3R2MXZTdHJac2tLZ0o4eDhvYXhSU29BcTdNc3dJNzhDbDhqbGRpcVRBV1RBUEV6ZHdycWw4R3p0Q3VpZzlkMWxhN3JmV2pFY0U5ZjFsdw?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "01:29", tag: "tech", tagText: "科技", text: "安全研究显示，部分Supabase客户因配置不当，正将大量民众数据公开暴露在互联网上。该发现凸显出AI生成、凭感觉编码（vibe-coded）的应用在缺乏正确安全配置时，极易泄露用户数据，为快速兴起的AI应用开发热潮敲响警钟。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/" },
   { time: "01:24", tag: "ai", tagText: "AI", text: "前沿AI模型Astra与Opus通过了图灵的另一项测试——完成了艾伦·图灵二战期间的密码破译工作。这标志着AI在自主数学推理与密码分析能力上再下一城，被视为继语言、编程之后AI能力的又一里程碑式进展。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test/" },
   { time: "01:14", tag: "ai", tagText: "AI", text: "两名开发者Peter James与Jonny L. Saunders称，仅需极少的提示诱导，Meta的AI智能体Muse便会将整个文件系统打包交出，两人均独立复现了该行为。Muse上线后迅速登顶应用商店并拥有约60万美国日活用户，这一安全漏洞引发外界对消费级AI智能体权限边界与数据隔离的担忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "ChatGPT移动应用新增基于语音的智能体（agentic）功能。Plus与Pro订阅用户可在手机端通过Work标签，用语音下达并完成多步骤代理任务，标志着OpenAI把桌面端agent能力进一步推向移动场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/23/chatgpt-mobile-app-gets-voice-based-agentic-features/" },
-  { time: "00:49", tag: "ai", tagText: "AI", text: "一项新报告显示，即便每天都使用AI的美国人，仍普遍对其感到不安。研究指出，更高的使用暴露度并未消解公众对AI的忧虑，也没有削弱民众对AI监管的支持，这对以「用得多就会接受」为假设的行业游说构成挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/" },
-  { time: "00:48", tag: "ai", tagText: "AI", text: "英国《金融时报》撰文探讨AI在数学领域取得的最新突破对人类知识发现意味着什么。文章聚焦AI在定理证明与数学问题求解上的进展，分析其对科研范式、人类研究者角色以及「机器发现」边界的深远影响。", source: "Financial Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWVQ4X1pXTnFiR0d3dHlFNndpOVhULUx3d052eFBidEU4elNxcG0zQzRGWU1QakIya3hDLWxRMjlfY0tNLTVfTWFYb1hnVnVlUFhqNnhYSko2VVk4bUI4LXRPZWhrXzJvaVhwX0REcnpMcFUwT1hhWUsxY0pZWjJDRWVMSXc?oc=5" },
-  { time: "00:35", tag: "ai", tagText: "AI", text: "AI语音公司ElevenLabs首席执行官接受TechCrunch采访时谈及毛利率、IPO时间表，以及是否应告知客户「电话另一端是机器人」。该公司为大量客服电话提供AI语音支持，据报其最新估值已达220亿美元。创始人的表态为观察AI语音商业化的成本结构、盈利路径与上市节奏提供了窗口。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/" },
-  { time: "00:23", tag: "ai", tagText: "AI", text: "美国参议员伯尼·桑德斯（无党籍，佛蒙特州）与众议员格雷格·卡萨尔（民主党，得州）联合提出新法案，拟全面禁止任何人开发「人工超级智能」。法案将超级智能定义为能力超越人类的人工智能系统，并规定违规开发者将承担刑事责任、最高可被判监禁。此举标志着美国国会对前沿AI风险的立法博弈进一步升级，也延续了桑德斯此前对AI权力集中的批评立场。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act" },
 ];
-const aiBreakingDate = "2026年9月26日 23:33 CST";
+const aiBreakingDate = "2026年9月27日 01:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
