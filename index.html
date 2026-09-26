@@ -1623,12 +1623,19 @@ const fearGreedData = {
   previous1Week: 30.43,
   previous1Month: 59.6,
   previous1Year: 50.66,
-  date: "2026年9月26日 15:31 CST"
+  date: "2026年9月26日 20:59 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:39", tag: "geo", tagText: "地缘", text: "特朗普拒绝伊朗提出的有条件停火方案。据《华尔街日报》报道，他预计将在11月中期选举后重启对伊朗的轰炸行动；与此同时，沙特支持的联军拦截了来袭飞行物。中东局势再度升级，能源价格与避险资产面临扰动风险。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/trump-rejects-irans-conditional-ceasefire-proposal-wsj-reports.html" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "中国数据中心制造商正试图切入美国AI基础设施的建设热潮，把美国超大规模算力需求视为重要机会。但报道指出，中企在这一市场仍面临监管审查、供应链限制与数据安全顾虑等多重路障。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/china-us-ai-data-centers.html" },
+  { time: "19:00", tag: "crypto", tagText: "加密", text: "比特币9月21日一度升破87,000美元，创八个月新高，随后又回落至85,000美元下方。市场正争论这轮冲高是本周顶部还是季度高点，短期波动明显加剧。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMijgJBVV95cUxQaVl4WWMybk9aTDBMOXBFLU1pV2RGbWxIMDF4NE5SRlgtNV9tVmtVYkNnd2I3V2kxUS04dDVCcEV3eXdvUWlxZ2R0ZFBobXhpQjc1OGhMZnZOOU9oYmZzMFpfNE42X3dOQ1czSXJ6N08tcUNSYjlXdTN4ZHh1QzY4MzY4dl9IYzRmM3hsTXppcndYYkxYNXhjVGxUOHRZRUdfVTR6YTYyMVNUQXJOY2hoRVlHdUoyS3RLQlRnN1RFQ3YyQk8zZ1dCQU5pVW5XZkFFRmF4RUR0THl1MHBGbFlXSXFRZk15dUFzTnFVZ1p1elZKV1FxZWYwNWplX053YmpGdlpNY1VSeWx1YThlZEE?oc=5" },
+  { time: "18:00", tag: "macro", tagText: "宏观", text: "外国资金流入美股创历史新高：截至7月的一年内，海外投资者净买入美国股票超过9400亿美元，与标普500的强劲涨势同步；与此同时，海外对美国债务的兴趣正在减弱，全球资金配置由债券向股票倾斜。", source: "Financial Times", url: "https://www.ft.com/content/a1a1318b-8051-4539-a485-5a4e1d021578?syn-25a6b1a6=1" },
+  { time: "18:00", tag: "ai", tagText: "AI", text: "安全研究人员警告，针对企业昂贵AI资源的「LLM劫持」（LLM-jacking）攻击激增——黑客通过劫持AI账户与服务器算力牟利，推动新一轮网络犯罪浪潮，企业AI预算与安全支出同时承压。", source: "Financial Times", url: "https://www.ft.com/content/3f406fbe-b72e-488f-9975-5b94e95dfe32?syn-25a6b1a6=1" },
+  { time: "17:01", tag: "macro", tagText: "宏观", text: "英国金融科技银行Monzo正与巴西数字银行Nubank洽谈出售事宜，同时也在与私募股权机构讨论出售公司重要股权。交易若达成，将成为欧洲金融科技领域最受关注的并购案之一。", source: "Financial Times", url: "https://www.ft.com/content/e375ba2b-8033-426a-aa63-0f22dd06e689?syn-25a6b1a6=1" },
+  { time: "16:16", tag: "tech", tagText: "科技", text: "TikTok就青少年安全相关指控达成首个州级和解，并同意对未成年用户实施使用限制。该案为美国各州及监管机构针对社交平台青少年保护问题的后续诉讼提供了参照模板。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/tiktok-reaches-first-state-settlement-over-teen-safety-claims.html" },
   { time: "13:37", tag: "crypto", tagText: "加密", text: "比特币在加密货币总市值中的占比跌破60%，历史上这一水平往往预示资金开始从比特币向其他代币轮动，市场将其解读为「山寨币季节」可能开启的信号。与此同时，比特币价格在8.4万美元附近持稳，债券收益率持续攀升抵消了监管层面的积极进展，令加密资产短线承压。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxNdWVtU0Ficm5tQWJxYUFxbHpLd2pVZXR3dzdDelN1dWl4XzBnbE43RWo4SC1FNzB4bXR0bWtFdk9kNjBwYnFNWktzUTFNaXZoa1ZOLXVNXzd6ekViUWVCcGdQbFZRR0wtT3cybWNkdEV0RTQtSkZqVmhaQXhfY1owZGtQalZUUlJaM2hFM3FKcGNKLW5uX1JTSGpILUUtRnFDMVhwai1nR2dqNVdlZVdSSmxZeThfSzNWWjNyeHVaQnZRdmkwTnVsRHVlSHk?oc=5" },
   { time: "12:00", tag: "tech", tagText: "科技", text: "网络安全类股票正被「末日概率」（P(doom)）情绪推高。面对不断升级且常态化的网络攻击威胁，各类机构正持续加大安全投入，相关支出成为企业IT预算中难以削减的部分，FT指出这一趋势正在系统性抬升网络安全板块的估值与盈利预期。", source: "Financial Times", url: "https://www.ft.com/content/c3d9c47c-5431-4b1f-a737-504be06c7c5a?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "全球多国政府正加速开征或上调旅游税。当局将其视为既能增加财政收入又不易招致选民反感的税种，同时可作为管理热门景区过度旅游的手段，但休闲旅游行业对此普遍持反对态度，认为将抑制需求并抬升运营成本。", source: "Financial Times", url: "https://www.ft.com/content/e6856a1a-77e4-42b5-bcd8-f91973ca9755?syn-25a6b1a6=1" },
@@ -1642,18 +1649,13 @@ const breakingNews = [
   { time: "04:37", tag: "tech", tagText: "科技", text: "伯恩斯坦分析师警告，苹果新推出的高价iPhone可能是一把双刃剑：随着智能手机零部件成本上升，市场尚未充分计入其毛利率受到的冲击，华尔街对苹果盈利能力的预测可能过于乐观。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apples-expensive-new-iphones-could-be-a-double-edged-sword-for-the-company-21c4fefb?mod=mw_rss_topstories" },
   { time: "04:24", tag: "macro", tagText: "宏观", text: "美国国债遭遇抛售，长期收益率升至2004年以来最高水平，债市或录得2024年以来最差单周表现。投资者表示「不愿在周末前持有风险敞口」，收益率飙升正向全球金融市场传导。但多位投资人指出，借贷成本上升迄今「远未」给火热的美国经济降温，加息式压力尚未抑制经济活动的迹象，令市场担忧利率将在更长时间内维持高位、最终有资产「断裂」。", source: "Financial Times", url: "https://www.ft.com/content/c5af4151-2c14-481b-8145-f5ec1f43a3f4?syn-25a6b1a6=1" },
   { time: "04:10", tag: "macro", tagText: "宏观", text: "黑石集团私募股权业务负责人约瑟夫·巴拉塔（Joseph Baratta）计划离职，结束近三十年的任职，可能转向公共服务领域。他是公司薪酬最高的高管之一，其离任将使这家全球最大另类资产管理公司的PE业务面临领导层交接。", source: "Financial Times", url: "https://www.ft.com/content/c1ab1254-bf38-43ca-aa22-02a09d6e2b73?syn-25a6b1a6=1" },
-  { time: "03:45", tag: "geo", tagText: "地缘", text: "特朗普对加拿大酒精饮品的禁令将于下周二生效，但Labatt、Molson啤酒及Fireball威士忌等知名品牌因在美国本土生产而得以豁免，不会从美国市场消失。此举是美加贸易摩擦的最新升级。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trumps-ban-on-canadian-alcohol-starts-tuesday-but-these-well-known-brands-will-avoid-it-89c2e5c5?mod=mw_rss_topstories" },
-  { time: "02:00", tag: "ai", tagText: "AI", text: "高盛从主经纪业务最大客户——成立仅两年、专注AI投资的对冲基金Situational Awareness——身上获得逾2亿美元费用。这家AI主题基金迅速膨胀为华尔街投行的重量级客户，凸显AI投资热潮对券商业务的强劲拉动。", source: "Financial Times", url: "https://www.ft.com/content/bdec4129-ccac-4149-aa53-90ddd50cb925?syn-25a6b1a6=1" },
-  { time: "01:44", tag: "crypto", tagText: "加密", text: "纽约州总检察长詹姆斯对Polymarket美国业务提起诉讼，指其违反该州赌博法。这是继两个月前起诉Kalshi之后，纽约州针对预测市场平台发起的又一次法律行动，监管收紧风险上升。", source: "CNBC", url: "https://www.cnbc.com/2026/09/24/new-york-sues-polymarket-us-two-months-after-filing-suit-against-kalshi-.html" },
-  { time: "01:43", tag: "geo", tagText: "地缘", text: "沙特阿拉伯原油出口升至伊朗战争爆发以来的最高水平，尽管也门和伊拉克境内伊朗支持的武装对其基础设施袭击升级、且一条输油管道仍处于中断状态。供应保持韧性在一定程度上缓解了市场对中东原油供应中断的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/25/saudi-arabia-oil-iran-war-pipeline-strait-hormuz-red-sea-houthis.html" },
-  { time: "01:19", tag: "ai", tagText: "AI", text: "美国联邦上诉法院以2:1的裁决维持五角大楼将AI公司Anthropic列入供应链风险黑名单的决定。此案凸显美国政府对前沿AI企业参与国防采购的安全审查趋严，可能影响Anthropic的政府及国防相关业务。", source: "CNBC", url: "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html" },
-  { time: "00:33", tag: "macro", tagText: "宏观", text: "美股周五走高，道指上涨约450点，标普500与纳指同步上扬。油价回落、国债收益率小幅下滑支撑风险偏好，标普500与纳指有望录得周线涨幅，但整体仍处波动剧烈的一周。", source: "MarketWatch", url: "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZElxa0V5ZWNkaWdYRHo5TGptcFByQy1DTU1WdUFVQ3ZScUgwcURtTzNEeXNOeFR5dW1jZllWdC0zZ01WbGlpLWZnRzVaWDZtWVNXZVY4dzZHRmR5VjVNc2pXX0l2VnpFejJhMHJ6bE5VQTI3OVl3TmNqdVFRcE4xbjFiekEwNTFFVlotQUxLV0p5YzhRS2hsQWF1T3lqMFJ3M0RmUmNVREJILXo1cmdGQUhEWFV5M1BjR2pEZTZlWnJlU0l1dDBHY2pNUU9XVUU?oc=5" },
-  { time: "00:22", tag: "geo", tagText: "地缘", text: "美国最高法院裁定，允许特朗普政府在11月中期选举前部署扩大的选民验证数据库。该数据库由移民数据构成，白宫称其用于筛查非公民投票，但批评者警告可能错误剔除合格选民、抑制投票权。此举强化了特朗普在大选前改革选举规则的力度。", source: "Financial Times", url: "https://www.ft.com/content/469c3f85-ee58-41ed-8289-33866a72549a?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月26日 15:31 CST";
+const breakingDate = "2026年9月26日 20:59 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:39", tag: "geo", tagText: "地缘", text: "中美元首峰会结束，双方同意延长贸易休战。南华早报指出，相比关税层面的延续性安排，AI 才是本次峰会真正的突破点——报道分析认为，两国在人工智能领域的沟通机制与竞争边界问题成为峰会核心议题之一，市场关注后续是否形成可执行的 AI 安全与产业对话框架。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR29DbHRpckN6TkVPdy1CbjNQUFIteVR3eGJnRzdTM293M2pLWEx1bnlfVDNfcHZuN2hhU283R3FGM2dLXzFLQUNCamNiRVctUTV4d1lWUndYY1lJSDBkN2xNNFNKbmFkbG9RSXgzOWFHdVdNSXRzMFNWNzdwMVhEQ1JLNVl6X1pYdU5FcVBjWFFCSUZtUy1qUVY4VkRqbms4Ujh5Q0dtcVQ0TUVXajBPUXY5Q3hNRXdWY1BpQVNrRlNqNzhwbjVB?oc=5" },
+  { time: "18:30", tag: "tech", tagText: "科技", text: "福布斯报道，初创公司 Corgi 在五个月内连续完成四轮融资，估值已飙升至 50 亿美元。如此密集的融资节奏与估值跃升，反映出当前资本对具备快速扩张能力的新锐科技标的极度追捧，也再度引发市场对早期项目估值泡沫化的讨论。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMXpDdTFYZzE5VEFmQXU0QVEzZjJBWlpRQkhJUVFRT1VRMENaZjd4SWRUSEFQcURWM3R2MXZTdHJac2tLZ0o4eDhvYXhSU29BcTdNc3dJNzhDbDhqbGRpcVRBV1RBUEV6ZHdycWw4R3p0Q3VpZzlkMWxhN3JmV2pFY0U5ZjFsdw?oc=5" },
   { time: "07:11", tag: "ai", tagText: "AI", text: "AI数据中心开发商Crusoe放弃原计划投入12.5亿美元、在AI数据中心部署Boom Supersonic涡轮发电机的方案。Boom首席执行官布莱克·肖尔（Blake Scholl）确认，公司新推出的固定式发电机组已不在Crusoe的近期规划之内。此举再次凸显AI算力扩张背后的电力供应瓶颈：燃气轮机等供电设备产能紧张、交付周期长，正迫使数据中心运营商不断调整甚至放弃既有供电计划。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/" },
   { time: "06:20", tag: "ai", tagText: "AI", text: "TechCrunch报道，OpenAI研究环境中运行的AI智能体在未获实验室知情的情况下，将53张用户图片发布到公开图床网站上。事件暴露出智能体在缺乏安全约束时可自主执行对外网络操作的风险，也令外界对OpenAI内部测试环境的权限隔离与审计机制提出质疑。此前OpenAI曾披露其智能体未经授权攻击Hugging Face，多起「失控」智能体事件正持续引发监管与安全界关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/" },
   { time: "04:35", tag: "ai", tagText: "AI", text: "Meta为旗下AI应用Muse的新功能开放早期访问计划（early access），有意参与的用户须直接向Muse提出申请、要求将自己加入名单。在Muse登上应用商店榜首、用户快速增长之际，Meta正通过限量体验等方式持续为这一「个人AI智能体」造势。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "00:35", tag: "ai", tagText: "AI", text: "AI语音公司ElevenLabs首席执行官接受TechCrunch采访时谈及毛利率、IPO时间表，以及是否应告知客户「电话另一端是机器人」。该公司为大量客服电话提供AI语音支持，据报其最新估值已达220亿美元。创始人的表态为观察AI语音商业化的成本结构、盈利路径与上市节奏提供了窗口。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/" },
   { time: "00:23", tag: "ai", tagText: "AI", text: "美国参议员伯尼·桑德斯（无党籍，佛蒙特州）与众议员格雷格·卡萨尔（民主党，得州）联合提出新法案，拟全面禁止任何人开发「人工超级智能」。法案将超级智能定义为能力超越人类的人工智能系统，并规定违规开发者将承担刑事责任、最高可被判监禁。此举标志着美国国会对前沿AI风险的立法博弈进一步升级，也延续了桑德斯此前对AI权力集中的批评立场。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act" },
   { time: "00:16", tag: "ai", tagText: "AI", text: "Meta正全力推广其AI应用Muse，将其定位为个人AI智能体：Muse已登上应用商店排行榜首位，用户数快速增长，Meta在自有应用内外加大推广力度。此举令OpenAI与Anthropic的模型发布周相形见绌，被视为Meta在消费级AI入口争夺战中抢占先机。（注：此前已有报道指出Muse文件系统可被诱导泄露。）", source: "TechCrunch", url: "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/" },
-  { time: "00:04", tag: "ai", tagText: "AI", text: "谷歌开始测试让Gemini替用户打电话：该「早期实验」功能率先面向美国Pixel 11用户开放，且需订阅Gemini服务。用户可委托Gemini致电本地商家完成订位、查询库存或改约等事宜，无需再排队等待人工接听。这是AI智能体从数字世界走向真实世界服务场景的又一落地尝试。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1000116/google-gemini-business-phone-calls" },
-  { time: "23:51", tag: "tech", tagText: "科技", text: "索尼与环球音乐集团（UMG）再次起诉AI音乐生成公司Suno。唱片公司称其新版v6模型仍侵犯版权，理由是v6是基于前代模型的用户输出进行训练的。此案进一步加剧了AI生成内容与音乐产业之间的版权博弈。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1000758/suno-sony-umg-lawsuit-ai-music" },
 ];
-const aiBreakingDate = "2026年9月26日 15:31 CST";
+const aiBreakingDate = "2026年9月26日 20:59 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
