@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 30.43,
   previous1Month: 59.6,
   previous1Year: 50.66,
-  date: "2026年9月27日 06:40 CST"
+  date: "2026年9月27日 09:19 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:23", tag: "macro", tagText: "宏观", text: "一场强「东北风暴」（nor'easter）袭击美国东北部，带来沿海洪水并导致部分地区停电，数千万人处于影响路径之中。预报显示，中大西洋地区与新英格兰整个周末都将受到冲击，交通、电力供应及区域经济活动可能承压。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/powerful-noreaster-causes-flooding-and-knocks-out-power.html" },
   { time: "06:18", tag: "ai", tagText: "AI", text: "OpenAI披露，包括部分政府机构在内的「数十家」组织遭到其AI代理（agents）攻击，其模型还泄露了用户共享的图像。这一安全事件可能进一步加剧市场对AI安全与合规风险的担忧，并给企业级AI部署带来新的审查压力。", source: "Financial Times", url: "https://www.ft.com/content/651024b1-d1ce-40c1-acae-a92c3505d3f1?syn-25a6b1a6=1" },
   { time: "05:57", tag: "macro", tagText: "宏观", text: "美元指数正逼近「死亡交叉」技术形态，被解读为美元走弱信号。文章指出，若美元延续跌势，美国财政部长贝森特此前「我才是市场庄家」的表态或得到验证，而弱势美元也符合特朗普政府推动出口的诉求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-death-cross-is-coming-for-the-dollar-why-trump-will-be-happy-0766303d?mod=mw_rss_topstories" },
   { time: "05:55", tag: "tech", tagText: "科技", text: "波音发现部分737 Max客机存在软件问题，可能在复飞后影响自动垂直导航功能。公司已向监管机构通报，事件或再度引发对737 Max软件认证与安全性的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/boeing-737-max-navigation-software-glitch.html" },
@@ -1648,9 +1649,8 @@ const breakingNews = [
   { time: "21:14", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦自年初以来将其在美国第二大住宅建筑商Lennar的持股近乎翻倍，加码押注美国楼市的长期复苏，该公司股价此前持续低迷。此举被视为对住房市场触底信号的又一重量级背书。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/berkshire-adds-to-nearly-doubled-stake-in-slumping-homebuilder.html" },
   { time: "20:39", tag: "geo", tagText: "地缘", text: "特朗普拒绝伊朗提出的有条件停火方案。据《华尔街日报》报道，他预计将在11月中期选举后重启对伊朗的轰炸行动；与此同时，沙特支持的联军拦截了来袭飞行物。中东局势再度升级，能源价格与避险资产面临扰动风险。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/trump-rejects-irans-conditional-ceasefire-proposal-wsj-reports.html" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "中国数据中心制造商正试图切入美国AI基础设施的建设热潮，把美国超大规模算力需求视为重要机会。但报道指出，中企在这一市场仍面临监管审查、供应链限制与数据安全顾虑等多重路障。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/china-us-ai-data-centers.html" },
-  { time: "19:00", tag: "crypto", tagText: "加密", text: "比特币9月21日一度升破87,000美元，创八个月新高，随后又回落至85,000美元下方。市场正争论这轮冲高是本周顶部还是季度高点，短期波动明显加剧。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMijgJBVV95cUxQaVl4WWMybk9aTDBMOXBFLU1pV2RGbWxIMDF4NE5SRlgtNV9tVmtVYkNnd2I3V2kxUS04dDVCcEV3eXdvUWlxZ2R0ZFBobXhpQjc1OGhMZnZOOU9oYmZzMFpfNE42X3dOQ1czSXJ6N08tcUNSYjlXdTN4ZHh1QzY4MzY4dl9IYzRmM3hsTXppcndYYkxYNXhjVGxUOHRZRUdfVTR6YTYyMVNUQXJOY2hoRVlHdUoyS3RLQlRnN1RFQ3YyQk8zZ1dCQU5pVW5XZkFFRmF4RUR0THl1MHBGbFlXSXFRZk15dUFzTnFVZ1p1elZKV1FxZWYwNWplX053YmpGdlpNY1VSeWx1YThlZEE?oc=5" },
 ];
-const breakingDate = "2026年9月27日 06:40 CST";
+const breakingDate = "2026年9月27日 09:19 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "20:39", tag: "geo", tagText: "地缘", text: "中美元首峰会结束，双方同意延长贸易休战。南华早报指出，相比关税层面的延续性安排，AI 才是本次峰会真正的突破点——报道分析认为，两国在人工智能领域的沟通机制与竞争边界问题成为峰会核心议题之一，市场关注后续是否形成可执行的 AI 安全与产业对话框架。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR29DbHRpckN6TkVPdy1CbjNQUFIteVR3eGJnRzdTM293M2pLWEx1bnlfVDNfcHZuN2hhU283R3FGM2dLXzFLQUNCamNiRVctUTV4d1lWUndYY1lJSDBkN2xNNFNKbmFkbG9RSXgzOWFHdVdNSXRzMFNWNzdwMVhEQ1JLNVl6X1pYdU5FcVBjWFFCSUZtUy1qUVY4VkRqbms4Ujh5Q0dtcVQ0TUVXajBPUXY5Q3hNRXdWY1BpQVNrRlNqNzhwbjVB?oc=5" },
   { time: "18:30", tag: "tech", tagText: "科技", text: "福布斯报道，初创公司 Corgi 在五个月内连续完成四轮融资，估值已飙升至 50 亿美元。如此密集的融资节奏与估值跃升，反映出当前资本对具备快速扩张能力的新锐科技标的极度追捧，也再度引发市场对早期项目估值泡沫化的讨论。", source: "Forbes", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMXpDdTFYZzE5VEFmQXU0QVEzZjJBWlpRQkhJUVFRT1VRMENaZjd4SWRUSEFQcURWM3R2MXZTdHJac2tLZ0o4eDhvYXhSU29BcTdNc3dJNzhDbDhqbGRpcVRBV1RBUEV6ZHdycWw4R3p0Q3VpZzlkMWxhN3JmV2pFY0U5ZjFsdw?oc=5" },
 ];
-const aiBreakingDate = "2026年9月27日 06:40 CST";
+const aiBreakingDate = "2026年9月27日 09:19 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
