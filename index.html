@@ -1623,19 +1623,23 @@ const fearGreedData = {
   previous1Week: 30.43,
   previous1Month: 59.6,
   previous1Year: 50.66,
-  date: "2026年9月28日 06:01 CST"
+  date: "2026年9月28日 08:33 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:32", tag: "geo", tagText: "地缘", text: "国际油价周一上涨逾1%，此前特朗普拒绝了伊朗旨在结束冲突、重开霍尔木兹海峡的和平提议。WTI与布伦特原油双双走高，市场对中东供应中断的担忧再度升温。", source: "CNBC", url: "https://www.cnbc.com/2026/09/28/oil-price-today-wti-brent-trump-iran.html" },
+  { time: "07:16", tag: "crypto", tagText: "加密", text: "山寨币集体大涨，加密货币总市值逼近3万亿美元，其中比特币现金（BCH）与NEAR领涨逾30%。资金明显从比特币向山寨币轮动，市场风险偏好回暖。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaDI5XzRNRzZ5OVhRM2dJTG80bmgwaUROcDVTa1c1VFZLbmU4cGtJMUY0UTRVQUNnWmhUOTJPelNBc01SdWhKZW9BYmMxT20wUlZkaFFDakV3czEzSHJJZWhuS2dYZGJTZ1phdEk3aWZuOHNTX0RzVWxxTndxVWtBTTdtdS1zUkZqdDhWS3RXa21BWktMQ2tFTURETWJzeUFmYVVKQ0dn?oc=5" },
   { time: "05:57", tag: "macro", tagText: "宏观", text: "美元指数正逼近「死亡交叉」技术形态，被解读为美元走弱信号。文章指出，若美元延续跌势，美国财政部长贝森特此前「我才是市场庄家」的表态或得到验证，而弱势美元也符合特朗普政府推动出口的诉求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-death-cross-is-coming-for-the-dollar-why-trump-will-be-happy-0766303d?mod=mw_rss_topstories" },
   { time: "05:55", tag: "tech", tagText: "科技", text: "波音发现部分737 Max客机存在软件问题，可能在复飞后影响自动垂直导航功能。公司已向监管机构通报，事件或再度引发对737 Max软件认证与安全性的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/boeing-737-max-navigation-software-glitch.html" },
   { time: "05:41", tag: "macro", tagText: "宏观", text: "美国联邦上诉法院裁定，各州有权对Kalshi的体育类预测市场进行监管，这是不到一个月内第二份不利于该类平台的上诉裁决。加上纽约州此前针对Kalshi与Polymarket的赌博法诉讼，预测市场平台面临的州级监管压力持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/09/25/appeals-court-rules-states-can-regulate-sports-prediction-markets.html" },
   { time: "05:38", tag: "geo", tagText: "地缘", text: "中期选举临近，以特朗普为主角的纳税人资助电视广告在全美范围扩大投放，引发两党共同质疑。争议焦点在于此类宣传是否违反有关政府资金不得用于政治宣传的限制。若争议升级，可能演变为选举周期内的监管与法律博弈。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/trump-government-funded-ads-midterms.html" },
   { time: "05:21", tag: "macro", tagText: "宏观", text: "特朗普批准新的燃油经济性标准，推翻拜登时期旨在推动电动车普及的更严格规定。此举将影响美国车企的产品规划与电动车转型节奏，并可能引发环保与监管争议。", source: "CNBC", url: "https://www.cnbc.com/2026/09/26/trump-fuel-economy-cafe-standards.html" },
+  { time: "05:00", tag: "macro", tagText: "宏观", text: "全球表现最差的市场印尼推出新举措提振流动性，允许股票以不足1美分的极小价格单位交易。此举旨在降低低价股门槛、刺激成交，但也被视为市场长期低迷背景下的无奈之举。", source: "Financial Times", url: "https://www.ft.com/content/04923b0e-a955-4cfa-bd05-cd828807f61d?syn-25a6b1a6=1" },
   { time: "04:39", tag: "macro", tagText: "宏观", text: "标普500周期调整市盈率（CAPE）升至互联网泡沫以来最高水平，估值警报再度拉响。历史数据显示，在CAPE极高时期，高估值成长股波动加剧，而股息股与防御性资产往往跑赢大盘，长期回报相对更稳。市场人士将此视为对当前美股高位的又一警示信号。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMijgJBVV95cUxPb3F3OWVKaDd0amxDSEc0dzFSNmJpbVJfVkJlQUI5QzVjVXpCemNBVnBHUl9RM2oxaWJJTE9CNlIySi14X3BWclo2V2JwYkQyaV9RWHJjVks3cXlud29neG1XS3JObUM5UEdJRmRaaG52QVcwd3VEWENjelFFM0dZSlFWb0VaeFR5cXQ4Wm1wdDRURVc4Um5rSndYRVNnLWl6RUdVa3VCZWpzb0JsQlhlXzF6NWZxSDZpWlRJVFZpWmR3RXlUOXNoQldyQm0zRzRDLWVnVG1xSXZtb2g0UTd4bVFnY3B3WU55ZjRqU0dSdTBqTFA1cDhNcDZQVENHeHJWcTFvR3lUV3FGQVliMFE?oc=5" },
   { time: "04:31", tag: "geo", tagText: "地缘", text: "美方特使透露，特朗普曾直接询问中国国家主席习近平是否愿意购买美国武器，引发外界对中美军事与贸易关系新动向的关注。与此同时，美国政府否认曾为安抚北京而推迟一项价值140亿美元的对台军售案。两则消息叠加，使台海与中美博弈的敏感度再度上升。", source: "Financial Times", url: "https://www.ft.com/content/8b4690d4-7c02-48af-b117-56faf21c389d?syn-25a6b1a6=1" },
+  { time: "03:13", tag: "ai", tagText: "AI", text: "Anthropic首席执行官Dario Amodei在缺席特朗普为中国国家主席习近平举办的国宴后，将于近期与特朗普会面。此前多位科技巨头CEO出席该晚宴，Amodei的缺席引发关注，此次会面或涉及AI政策与监管议题。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/dario-amodei-set-to-have-dinner-with-trump-after-missing-state-dinner.html" },
   { time: "02:16", tag: "ai", tagText: "AI", text: "据The Information报道，中国正评估允许字节跳动与阿里巴巴等企业采购英伟达新一代AI芯片，官员近期已要求相关公司上报购买RTX PRO 5500等芯片的计划。若最终放行，将意味着中国在收紧多年后重新部分开放英伟达的AI算力市场，对英伟达营收预期及中美科技管制格局均构成重大变量。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/china-bytedance-alibaba-nvidia-chips.html" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "美国企业正加速拥抱成本更低的「开放」AI模型，采用者已远超硅谷范围，其中不少是中国厂商推出的替代方案，用以取代OpenAI与Anthropic的闭源系统。这一趋势凸显企业对AI使用成本的敏感度上升，也可能削弱美国头部模型厂商的定价权与市场份额，并给中美AI生态竞争带来新的变量。", source: "Financial Times", url: "https://www.ft.com/content/d9de4776-1fc9-4f2b-aaaf-9961c35d8acd?syn-25a6b1a6=1" },
   { time: "21:30", tag: "geo", tagText: "地缘", text: "伊朗外长表示，间接谈判仍是打破美伊僵局的唯一途径，并保留与美方继续沟通的渠道；与此同时，伊朗海军宣称捕获一架美军水下无人机，正在分析其数据。此举显示双方在对抗与外交之间维持微妙平衡，任何擦枪走火都可能推高海湾地区紧张并冲击油市。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/iran-foreign-minister-keeps-indirect-talks-with-us-open-state-media.html" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "19:00", tag: "macro", tagText: "宏观", text: "人工智能基础设施建设未见放缓，但美债收益率飙升正推高其融资成本。依赖发债扩张的数据中心及AI相关企业面临更高的利息负担与再融资风险，若收益率继续上行，或对AI资本开支节奏与相关企业信用状况形成实质压力。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/debt-hungry-data-center-companies-increased-risk-bond-yields-spike.html" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "即将公布的美国就业报告成为债市焦点。若数据再次强劲，可能推动10年期与30年期美债收益率大幅上行，并迫使美联储在10月再度加息。投资者正密切关注该报告对利率路径与全球资产定价的连锁影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-the-upcoming-jobs-report-could-send-10-year-and-30-year-treasury-yields-surging-67eab4ba?mod=mw_rss_topstories" },
   { time: "18:28", tag: "crypto", tagText: "加密", text: "比特币在经历1月以来最佳单周表现后企稳于84,000美元附近，市场情绪明显回暖。不过短期持有者抛售与获利了结压力仍存，后续走势将取决于宏观利率环境与机构资金流入的持续性。", source: "CryptoTicker", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxNVTNUM0F0bzQ0UWdlYlBuUGZYSVJ1LUNfbmFDYTVkdVZDVHpkQU1pNmY0MmxQZ0dCRXduT3lMSGRuRWZzVlJlcFMycFMzbURyTHVhazVrLWdkUVgzTFVMZDlyaTRYYTQ5dW12dHB0X0NwUlZ6LUF4RVNYRFJGdmVOcQ?oc=5" },
-  { time: "15:13", tag: "ai", tagText: "AI", text: "澳大利亚针对AI的专项调查将传唤OpenAI与Anthropic两家公司的CEO出席作证。此案背景是澳洲Medicare（医保）数据泄露事件，被视为美国以外最受关注的「AI代理访问外部系统」事件之一。听证可能推动AI代理权限边界、模型安全责任的监管框架加速收紧，并对全球AI厂商的合规成本与产品设计产生影响。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/openai-anthropic-ceos-called-to-appear-at-australian-ai-probe.html" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "瑞士举行公投，决定是否将其中立地位以更严格的形式写入制度：若通过，瑞士在未遭攻击的情况下不得与任何军事联盟合作。此举可能限制瑞士与北约、欧盟在防务与安全领域的协作空间，并对其作为国际金融与外交枢纽的定位产生深远影响，欧洲安全格局亦将受牵动。", source: "Financial Times", url: "https://www.ft.com/content/aaf4c7d7-b4bc-4b5c-83b7-7f761d315b63?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "美国住房成本高企，私募股权与机构投资者成为中期选举的核心攻击靶心。FT分析显示，越来越多选民与候选人将房价与租金飙升归咎于机构大规模收购住宅。随着选举临近，针对机构购房的税收、融资与监管限制提案可能增多，房屋建筑商与相关资管机构的政策风险上升。", source: "Financial Times", url: "https://www.ft.com/content/7e91f857-30d9-4bf9-b7c9-ec04d4a6e1ed?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "尼加拉瓜向中国矿企授予覆盖其约十分之一国土的采矿特许权，涉及数十项金矿等矿产开采许可。此举显著加深北京在中美洲的战略立足点，在美中争夺区域影响力的背景下具有敏感意义，也引发对资源主权、环境与当地社会治理的担忧。", source: "Financial Times", url: "https://www.ft.com/content/452648fd-90d6-450f-9739-073f5b6a0d18?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月28日 06:01 CST";
+const breakingDate = "2026年9月28日 08:33 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "19:38", tag: "tech", tagText: "科技", text: "悉尼科学家研发出全球首个面向人工智能的冷却技术，旨在应对AI计算产生的散热挑战，或有助于提升数据中心能效与算力部署密度。", source: "7NEWS", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQy16Z2ZzQ2QyWUJocWs0MGxpNXVna1lLdlNaMEpERGd2LWJQdkt2bTJZZmxDNlpkejNfckp6MHB1c2lSbVhkdy10TGp3ZlVLR3BXbEJlX3lmYlhGZFlWQVJlTFQ4OFRoLWdmVFF4YkszX0gtTFNTMC1GanQtemdtVTVPcF9xMmZCQ1BWeE9PMHF6d2JpSVJ1M2FRMUR1YzNjeW1QX3hZa3ZUTDRtS0NpVmlOaGIxMFhRTmVaWWU2OXNEX3N3ZGfSAcsBQVVfeXFMTzNtQ1JHZUF3a0IxMVVQaElMRmtDSlU0Ykd1U2EyV0hDdm1zdGplN1luaVR0SWVmUWRaa3VEdUtrMDdfMktFdmlSczVVa0lYMFMtUENrLUp4LVlGN3hBX0wtTjYydGZBMnNDOGluUFF4VWRtNVdvckFzcUItYU93aXNYdTlxMm9Yby1PcjcxWEZEbEt4WkFGWFpHVW5HWVF4Nzh2cDlBRkNEUi1zbzBzVThMYVZMeFFhcktRanhLVHFPY2ZnV1pRTVYycEU?oc=5" },
   { time: "13:00", tag: "ai", tagText: "AI", text: "2026年InnoTrans国际轨道交通技术展在柏林举行，全球铁路行业齐聚一堂。本届展会主议题聚焦人工智能、机器人技术及自动驾驶，显示这些技术正加速融入轨道交通的运营、维护与安全体系。", source: "亚洲经济", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9fV0c2VFpWbzNxSFJSeFFqaldfUXJPMDdBWHlfXzZDT3AydW1qYllOV2lxWXZRYng0WElUZklzRlI2dC1mV0NHWjFET0YzaUs4dnVkbnFzQURBdF9qeU5VNThMdmY?oc=5" },
 ];
-const aiBreakingDate = "2026年9月28日 06:01 CST";
+const aiBreakingDate = "2026年9月28日 08:33 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
