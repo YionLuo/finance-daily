@@ -1623,12 +1623,19 @@ const fearGreedData = {
   previous1Week: 30.43,
   previous1Month: 59.6,
   previous1Year: 50.66,
-  date: "2026年9月28日 08:33 CST"
+  date: "2026年9月28日 14:40 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:07", tag: "macro", tagText: "宏观", text: "华侨银行（OCBC）认为，作为全球最被低估的货币之一，日元正接近转折点。若日本央行政策正常化与美日利差收窄预期升温，日元有望迎来升值拐点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/28/yen-undervalued-turning-point-ocbc.html" },
+  { time: "12:12", tag: "tech", tagText: "科技", text: "SpaceX准备将星舰（Starship）火箭首次送入轨道，计划于周一凌晨进行历史性试飞。这一巨型火箭的入轨测试是马斯克旗下公司推进深空任务与NASA登月计划的关键一步，成功与否将影响后续发射节奏。", source: "CNBC", url: "https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html" },
+  { time: "12:04", tag: "geo", tagText: "地缘", text: "美国与中国同意对从鹅肝到骆驼等非敏感商品建立约600亿美元的低关税机制，由贸易委员会下调相关商品关税，作为两国缓和紧张、推进贸易休战的具体成果。此举被视为超级大国在长期摩擦后试图稳定经贸关系的重要一步，但分析人士强调休战能否持续仍取决于后续能否拿出更多『实质性成果』——特朗普与习近平上周在华盛顿会晤，并计划今年内再会面两次。", source: "Financial Times", url: "https://www.ft.com/content/b1ba7dd2-3e3a-4944-b637-ff7db3b636e1?syn-25a6b1a6=1" },
+  { time: "12:04", tag: "macro", tagText: "宏观", text: "中国8月规模以上工业企业利润同比增长4.2%，为今年以来最弱增速。面对需求疲软与激烈竞争，行业整合加速。经济学家预计，北京将更依赖刺激政策来稳定企业盈利能力。", source: "CNBC", url: "https://www.cnbc.com/2026/09/28/china-posts-weakest-industrial-profit-growth-this-year-expanding-4point2percent-in-august-.html" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "欧盟国家正考虑对俄罗斯的混合攻击采取类似北约的联合应对机制。今年以来针对欧洲的混合行动包括无人机袭击、炸弹与纵火事件，已引发要求更强硬回应的呼声。", source: "Financial Times", url: "https://www.ft.com/content/5513b441-a575-4c73-8532-cb09216c4406?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "通用汽车对美国市场发出警告。随着中国竞争对手加速进入美国，底特律车企正寻求『避风港』，通用将继续削减成本并聚焦更便宜的电动车，以应对全球竞争者的扩张。", source: "Financial Times", url: "https://www.ft.com/content/b4dde6f6-f91f-4d3e-8ce1-ab8be69dab47?syn-25a6b1a6=1" },
+  { time: "11:50", tag: "macro", tagText: "宏观", text: "澳大利亚金矿商Northern Star Resources拒绝了Gold Fields提出的270亿美元收购要约，股价应声大涨逾9%。该交易若达成将成为全球黄金行业最大并购之一，反映在金价高企背景下矿业整合升温。", source: "CNBC", url: "https://www.cnbc.com/2026/09/28/northern-star-shares-gold-fields-takeover-bid.html" },
   { time: "08:32", tag: "geo", tagText: "地缘", text: "国际油价周一上涨逾1%，此前特朗普拒绝了伊朗旨在结束冲突、重开霍尔木兹海峡的和平提议。WTI与布伦特原油双双走高，市场对中东供应中断的担忧再度升温。", source: "CNBC", url: "https://www.cnbc.com/2026/09/28/oil-price-today-wti-brent-trump-iran.html" },
   { time: "07:16", tag: "crypto", tagText: "加密", text: "山寨币集体大涨，加密货币总市值逼近3万亿美元，其中比特币现金（BCH）与NEAR领涨逾30%。资金明显从比特币向山寨币轮动，市场风险偏好回暖。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaDI5XzRNRzZ5OVhRM2dJTG80bmgwaUROcDVTa1c1VFZLbmU4cGtJMUY0UTRVQUNnWmhUOTJPelNBc01SdWhKZW9BYmMxT20wUlZkaFFDakV3czEzSHJJZWhuS2dYZGJTZ1phdEk3aWZuOHNTX0RzVWxxTndxVWtBTTdtdS1zUkZqdDhWS3RXa21BWktMQ2tFTURETWJzeUFmYVVKQ0dn?oc=5" },
   { time: "05:57", tag: "macro", tagText: "宏观", text: "美元指数正逼近「死亡交叉」技术形态，被解读为美元走弱信号。文章指出，若美元延续跌势，美国财政部长贝森特此前「我才是市场庄家」的表态或得到验证，而弱势美元也符合特朗普政府推动出口的诉求。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-death-cross-is-coming-for-the-dollar-why-trump-will-be-happy-0766303d?mod=mw_rss_topstories" },
@@ -1642,18 +1649,12 @@ const breakingNews = [
   { time: "03:13", tag: "ai", tagText: "AI", text: "Anthropic首席执行官Dario Amodei在缺席特朗普为中国国家主席习近平举办的国宴后，将于近期与特朗普会面。此前多位科技巨头CEO出席该晚宴，Amodei的缺席引发关注，此次会面或涉及AI政策与监管议题。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/dario-amodei-set-to-have-dinner-with-trump-after-missing-state-dinner.html" },
   { time: "02:16", tag: "ai", tagText: "AI", text: "据The Information报道，中国正评估允许字节跳动与阿里巴巴等企业采购英伟达新一代AI芯片，官员近期已要求相关公司上报购买RTX PRO 5500等芯片的计划。若最终放行，将意味着中国在收紧多年后重新部分开放英伟达的AI算力市场，对英伟达营收预期及中美科技管制格局均构成重大变量。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/china-bytedance-alibaba-nvidia-chips.html" },
   { time: "01:00", tag: "ai", tagText: "AI", text: "美国企业正加速拥抱成本更低的「开放」AI模型，采用者已远超硅谷范围，其中不少是中国厂商推出的替代方案，用以取代OpenAI与Anthropic的闭源系统。这一趋势凸显企业对AI使用成本的敏感度上升，也可能削弱美国头部模型厂商的定价权与市场份额，并给中美AI生态竞争带来新的变量。", source: "Financial Times", url: "https://www.ft.com/content/d9de4776-1fc9-4f2b-aaaf-9961c35d8acd?syn-25a6b1a6=1" },
-  { time: "21:30", tag: "geo", tagText: "地缘", text: "伊朗外长表示，间接谈判仍是打破美伊僵局的唯一途径，并保留与美方继续沟通的渠道；与此同时，伊朗海军宣称捕获一架美军水下无人机，正在分析其数据。此举显示双方在对抗与外交之间维持微妙平衡，任何擦枪走火都可能推高海湾地区紧张并冲击油市。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/iran-foreign-minister-keeps-indirect-talks-with-us-open-state-media.html" },
-  { time: "21:00", tag: "macro", tagText: "宏观", text: "美股主要股指虽徘徊于纪录高位，但市场内部已显露裂痕：油价高企、美债收益率上行，加上美联储为可能进一步加息做准备，正对估值构成压力。分析师警告，指数强势掩盖了市场承压的事实，一旦利率或大宗商品再度上行，回调风险将迅速放大。", source: "MarketWatch", url: "https://www.marketwatch.com/story/look-closer-and-wall-streets-rally-is-showing-cracks-94952048?mod=mw_rss_topstories" },
-  { time: "19:32", tag: "macro", tagText: "宏观", text: "华尔街机构资金重新取代散户成为股市主要驱动力。有机构认为，机构投资者风险偏好回升是「合理偏建设性」的信号，意味着本轮反弹的资金结构较此前由散户推动的阶段更为稳固，但也对流动性变化更为敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/institutional-investors-stocks-treaurys-retail-traders.html" },
-  { time: "19:10", tag: "geo", tagText: "地缘", text: "英国警方在美军使用的RAF Fairford空军基地附近宣布发生「重大事件」并逮捕多名涉爆人员。该基地此前获英方授权供美军对伊朗导弹基地实施打击。事件发生在美伊紧张升温之际，可能引发对英国本土军事设施安全的担忧，并加剧西方与伊朗的对峙。", source: "Financial Times", url: "https://www.ft.com/content/875027a3-db29-40a6-b17c-fa97c30fd07b?syn-25a6b1a6=1" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "人工智能基础设施建设未见放缓，但美债收益率飙升正推高其融资成本。依赖发债扩张的数据中心及AI相关企业面临更高的利息负担与再融资风险，若收益率继续上行，或对AI资本开支节奏与相关企业信用状况形成实质压力。", source: "CNBC", url: "https://www.cnbc.com/2026/09/27/debt-hungry-data-center-companies-increased-risk-bond-yields-spike.html" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "即将公布的美国就业报告成为债市焦点。若数据再次强劲，可能推动10年期与30年期美债收益率大幅上行，并迫使美联储在10月再度加息。投资者正密切关注该报告对利率路径与全球资产定价的连锁影响。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-the-upcoming-jobs-report-could-send-10-year-and-30-year-treasury-yields-surging-67eab4ba?mod=mw_rss_topstories" },
-  { time: "18:28", tag: "crypto", tagText: "加密", text: "比特币在经历1月以来最佳单周表现后企稳于84,000美元附近，市场情绪明显回暖。不过短期持有者抛售与获利了结压力仍存，后续走势将取决于宏观利率环境与机构资金流入的持续性。", source: "CryptoTicker", url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxNVTNUM0F0bzQ0UWdlYlBuUGZYSVJ1LUNfbmFDYTVkdVZDVHpkQU1pNmY0MmxQZ0dCRXduT3lMSGRuRWZzVlJlcFMycFMzbURyTHVhazVrLWdkUVgzTFVMZDlyaTRYYTQ5dW12dHB0X0NwUlZ6LUF4RVNYRFJGdmVOcQ?oc=5" },
 ];
-const breakingDate = "2026年9月28日 08:33 CST";
+const breakingDate = "2026年9月28日 14:40 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:00", tag: "ai", tagText: "AI", text: "2026年InnoTrans国际轨道交通技术展在柏林举行，全球铁路行业齐聚一堂。本届展会主议题聚焦人工智能、机器人技术及自动驾驶，显示这些技术正加速融入轨道交通的运营、维护与安全体系。", source: "亚洲经济", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9fV0c2VFpWbzNxSFJSeFFqaldfUXJPMDdBWHlfXzZDT3AydW1qYllOV2lxWXZRYng0WElUZklzRlI2dC1mV0NHWjFET0YzaUs4dnVkbnFzQURBdF9qeU5VNThMdmY?oc=5" },
   { time: "05:02", tag: "ai", tagText: "AI", text: "保险公司称AI已在推高医疗成本：蓝十字蓝盾协会表示，医院使用AI工具在两年内令医疗支出额外增加9.42亿美元。该指控可能加剧围绕AI医疗应用成本效益与监管的争论。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/" },
   { time: "04:34", tag: "ai", tagText: "AI", text: "Anthropic首席执行官达里奥·阿莫代伊（Dario Amodei）将与美国总统特朗普共进晚餐，这是两人首次一对一会面。会面正值华盛顿在AI监管、算力供给与国家安全议题上加快行动之际，被视为前沿AI实验室与政府高层直接沟通的重要信号。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/" },
   { time: "03:13", tag: "ai", tagText: "AI", text: "Anthropic与CDN及云服务商Akamai达成重磅协议：未来七年将向后者云基础设施支付116亿美元，押注CPU算力路线，交易总额最高可能扩大至约200亿美元。协议还包含一项不寻常安排，Akamai将向Anthropic提供相应回报（细节尚未完整披露）。此举凸显头部AI公司为支撑模型训练与推理，正加速锁定长期、多元化的算力供给。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "00:23", tag: "ai", tagText: "AI", text: "美国参议员伯尼·桑德斯（无党籍，佛蒙特州）与众议员格雷格·卡萨尔（民主党，得州）联合提出新法案，拟全面禁止任何人开发「人工超级智能」。法案将超级智能定义为能力超越人类的人工智能系统，并规定违规开发者将承担刑事责任、最高可被判监禁。此举标志着美国国会对前沿AI风险的立法博弈进一步升级，也延续了桑德斯此前对AI权力集中的批评立场。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act" },
   { time: "20:39", tag: "geo", tagText: "地缘", text: "中美元首峰会结束，双方同意延长贸易休战。南华早报指出，相比关税层面的延续性安排，AI 才是本次峰会真正的突破点——报道分析认为，两国在人工智能领域的沟通机制与竞争边界问题成为峰会核心议题之一，市场关注后续是否形成可执行的 AI 安全与产业对话框架。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR29DbHRpckN6TkVPdy1CbjNQUFIteVR3eGJnRzdTM293M2pLWEx1bnlfVDNfcHZuN2hhU283R3FGM2dLXzFLQUNCamNiRVctUTV4d1lWUndYY1lJSDBkN2xNNFNKbmFkbG9RSXgzOWFHdVdNSXRzMFNWNzdwMVhEQ1JLNVl6X1pYdU5FcVBjWFFCSUZtUy1qUVY4VkRqbms4Ujh5Q0dtcVQ0TUVXajBPUXY5Q3hNRXdWY1BpQVNrRlNqNzhwbjVB?oc=5" },
   { time: "19:38", tag: "tech", tagText: "科技", text: "悉尼科学家研发出全球首个面向人工智能的冷却技术，旨在应对AI计算产生的散热挑战，或有助于提升数据中心能效与算力部署密度。", source: "7NEWS", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQy16Z2ZzQ2QyWUJocWs0MGxpNXVna1lLdlNaMEpERGd2LWJQdkt2bTJZZmxDNlpkejNfckp6MHB1c2lSbVhkdy10TGp3ZlVLR3BXbEJlX3lmYlhGZFlWQVJlTFQ4OFRoLWdmVFF4YkszX0gtTFNTMC1GanQtemdtVTVPcF9xMmZCQ1BWeE9PMHF6d2JpSVJ1M2FRMUR1YzNjeW1QX3hZa3ZUTDRtS0NpVmlOaGIxMFhRTmVaWWU2OXNEX3N3ZGfSAcsBQVVfeXFMTzNtQ1JHZUF3a0IxMVVQaElMRmtDSlU0Ykd1U2EyV0hDdm1zdGplN1luaVR0SWVmUWRaa3VEdUtrMDdfMktFdmlSczVVa0lYMFMtUENrLUp4LVlGN3hBX0wtTjYydGZBMnNDOGluUFF4VWRtNVdvckFzcUItYU93aXNYdTlxMm9Yby1PcjcxWEZEbEt4WkFGWFpHVW5HWVF4Nzh2cDlBRkNEUi1zbzBzVThMYVZMeFFhcktRanhLVHFPY2ZnV1pRTVYycEU?oc=5" },
-  { time: "13:00", tag: "ai", tagText: "AI", text: "2026年InnoTrans国际轨道交通技术展在柏林举行，全球铁路行业齐聚一堂。本届展会主议题聚焦人工智能、机器人技术及自动驾驶，显示这些技术正加速融入轨道交通的运营、维护与安全体系。", source: "亚洲经济", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9fV0c2VFpWbzNxSFJSeFFqaldfUXJPMDdBWHlfXzZDT3AydW1qYllOV2lxWXZRYng0WElUZklzRlI2dC1mV0NHWjFET0YzaUs4dnVkbnFzQURBdF9qeU5VNThMdmY?oc=5" },
 ];
-const aiBreakingDate = "2026年9月28日 08:33 CST";
+const aiBreakingDate = "2026年9月28日 14:40 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
