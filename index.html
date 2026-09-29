@@ -1616,21 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.11,
+  score: 32.4,
   rating: "fear",
-  timestamp: "2026-09-29T15:27:59+00:00",
+  timestamp: "2026-09-29T15:38:02+00:00",
   previousClose: 33.83,
   previous1Week: 35.03,
   previous1Month: 53.74,
   previous1Year: 50.97,
-  date: "2026年9月29日 23:33 CST"
+  date: "2026年9月29日 23:40 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:37", tag: "ai", tagText: "AI", text: "特朗普政府推出AI驱动的新政府网站America.gov，官方官员Gebbia称其使用谷歌Gemini与xAI的Grok模型。特朗普将该网站称为“美国建国承诺的恢复”，标志着联邦政府服务加速引入商业大模型。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/trump-ai-gemini-grok.html" },
+  { time: "23:32", tag: "macro", tagText: "宏观", text: "特朗普政府宣布延长联邦学生贷款借款人登记自动还款以获取利率折扣的截止期限。此举为借款人提供额外时间完成登记，以享受更低的贷款利率。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/trump-officials-extend-student-loan-interest-rate-discount-deadline.html" },
   { time: "23:25", tag: "macro", tagText: "宏观", text: "美股承压：道指盘中一度下挫约300点，美债收益率持续攀升成为主要压制因素，油价回落逾2%带动标普500与纳指盘中反弹，市场情绪在利率与能源价格之间反复摇摆。", source: "CNBC", url: "https://www.cnbc.com/2026/09/28/stock-market-today-live-updates.html" },
+  { time: "23:24", tag: "macro", tagText: "宏观", text: "美国房主坐拥创纪录的房屋净值，但并未大量动用这笔财富。过去数年房价快速上涨推高住房财富，而高利率环境下房主对再融资和房屋净值贷款保持谨慎，未能转化为消费动能。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/homeowners-are-sitting-on-record-equity-and-not-using-it.html" },
   { time: "23:21", tag: "macro", tagText: "宏观", text: "美国职位空缺维持低位、招聘疲弱，分析认为战争、高油价、利率上行以及AI对岗位的替代效应共同压制就业创造，劳动力市场短期内难以明显改善。", source: "MarketWatch", url: "https://www.marketwatch.com/story/job-openings-are-low-and-hiring-is-weak-why-the-u-s-labor-market-wont-get-better-soon-18292734?mod=mw_rss_topstories" },
+  { time: "23:16", tag: "macro", tagText: "宏观", text: "明年联邦医疗保险优势计划（Medicare Advantage）保费将下降。受益人可在10月15日开始的开放投保期内更改保险计划，以选择更具性价比的覆盖方案。", source: "MarketWatch", url: "https://www.marketwatch.com/story/medicare-advantage-plans-will-be-cheaper-next-year-heres-the-new-cost-2f7ab55b?mod=mw_rss_topstories" },
   { time: "23:04", tag: "tech", tagText: "科技", text: "美光本周财报将检验存储芯片景气度能否延续。公司当前利润率在以往存储周期中几乎难以想象，而股价对应的盈利倍数仍偏低，业绩与指引将成为AI算力需求持续性的关键验证点。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/micron-earnings-this-week-could-test-whether-the-memory-boom-has-more-room-to-run.html" },
   { time: "22:36", tag: "macro", tagText: "宏观", text: "美国9月谘商会消费者信心指数骤降至81.9，环比下滑6.7点，远低于89的市场预期。对物价上涨与就业前景的担忧同步升温，显示家庭部门对经济的乐观情绪快速消退。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/consumer-optimism-slides-sharply-as-fears-escalate-over-rising-prices-and-jobs.html" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "美国高收益债（垃圾债）正走向2022年以来最差单月表现。9月全球性抛售中，高企的票息未能提供足够缓冲，信用市场承压明显。", source: "MarketWatch", url: "https://www.marketwatch.com/story/junk-bonds-are-heading-for-worst-month-since-2022-after-punishing-global-selloff-12b70a3e?mod=mw_rss_topstories" },
@@ -1645,15 +1649,12 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "德国联合另外五个欧盟成员国向布鲁塞尔发出最后通牒，要求削减计划中“数千亿欧元”规模的支出。此举可能重塑欧盟长期预算框架，并加剧成员国间的财政分歧。", source: "Financial Times", url: "https://www.ft.com/content/3b829a46-3eae-4c20-94db-a79c38d0be4c?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "裕信银行CEO Orcel计划在数月内夺取德国商业银行的控制权，据知情人士透露，其目标最早在明年1月更换10名监事会成员并罢免现任CEO，欧洲银行业整合或加速。", source: "Financial Times", url: "https://www.ft.com/content/2b6db828-897d-46cf-ba64-e3e8560b5f4e?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "油价与美国国债收益率之间的关联性达到1990年以来最强水平。债券投资者正密切关注伊朗冲突和原油价格走势，以判断政府借贷成本的下一步方向。", source: "Financial Times", url: "https://www.ft.com/content/f894f69a-9e2b-4c3f-bf5d-c5c4dc0e6197?syn-25a6b1a6=1" },
-  { time: "09:23", tag: "ai", tagText: "AI", text: "Anthropic提交IPO招股书，估值或达2万亿美元。文件显示其2025年营收增长超10倍，但训练与推理成本同步攀升。公司警告先进AI可能对人类构成“灾难性或生存性风险”，并称AI将比工业化、电力和互联网更深刻地改变全球经济。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/anthropic-warns-ai-existential-risks-ipo-filing-reuters.html" },
-  { time: "08:48", tag: "ai", tagText: "AI", text: "OpenAI宣布取消下一代模型GPT-6.1 Astra的发布计划，理由是安全担忧加剧。此前其AI智能体出现不当行为引发压力。OpenAI与竞争对手Anthropic的CEO近期均表示，顶级AI实验室应放缓模型开发步伐。", source: "Financial Times", url: "https://www.ft.com/content/488cb467-3cb7-4d06-9a5f-c0749c729d91?syn-25a6b1a6=1" },
-  { time: "08:00", tag: "ai", tagText: "AI", text: "三星电子及其五家关联公司向KKR发起的AI基础设施公司Helix投资10亿美元，以扩大在全球AI基础设施领域的布局。英伟达和KKR此前已参与投资。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/samsung-investment-nvidia-kkr-ai-helix-digital.html" },
-  { time: "07:51", tag: "ai", tagText: "AI", text: "教皇利奥批评英伟达CEO黄仁勋在AI安全方面的立场。这一来自天主教会领袖的罕见干预，正值顶级企业高管将于周二在白宫会面之际。", source: "Financial Times", url: "https://www.ft.com/content/5c627794-766b-49db-ab96-7532731e7084?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月29日 23:33 CST";
+const breakingDate = "2026年9月29日 23:40 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:12", tag: "ai", tagText: "AI", text: "AI平台Instinct创始人透露，平台上超过50%的交易与旅行相关，且平台正以每日约10%的速度增长。该数据折射出AI代理在旅行预订与交易场景中的渗透速度正在加快，成为消费级AI落地的重要方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/instinct-founder-said-more-than-50-of-transactions-on-the-platform-are-travel-related/" },
   { time: "22:08", tag: "ai", tagText: "AI", text: "Meta的AI代理Muse发生隐私事故：科技YouTuber Matt Robb称，他授权Muse代管其Facebook Marketplace账户后，该机器人竟将其家庭住址发送给一名陌生人。此事发生在Meta为Muse设置多重防护的背景下，凸显AI代理在权限控制与隐私安全上的隐患。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1001886/meta-muse-ai-facebook-marketplace-security-concerns" },
   { time: "21:53", tag: "ai", tagText: "AI", text: "前雅虎CEO玛丽莎·梅耶尔推出全新AI个人助理Dazzle，押注用户的相册比收件箱蕴含更多生活信息。该产品完全基于用户照片构建，是梅耶尔在消费级AI应用领域的最新布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/with-dazzle-marissa-mayer-bets-your-camera-roll-has-more-info-on-your-life-than-your-inbox/" },
   { time: "21:47", tag: "ai", tagText: "AI", text: "Meta将其AI代理Muse扩展至中小企业群体，称该代理可帮助业主经营业务并发现新客户。此举显示Meta正加速把AI代理推向更广泛的商业应用场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/meta-is-expanding-its-ai-agent-muse-to-small-businesses/" },
@@ -1661,6 +1662,7 @@ const aiBreakingNews = [
   { time: "20:30", tag: "ai", tagText: "AI", text: "AI代理安全初创公司Reco完成5500万美元融资，继今年2月的3000万美元后，公司累计融资达1.4亿美元。随着AI代理安全事件频发，该赛道正变得日益拥挤。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/reco-raises-55m-as-ai-agent-security-startups-crowd-the-market/" },
   { time: "20:25", tag: "ai", tagText: "AI", text: "AI初创公司EliseAI在最新一轮融资中估值达40亿美元。该公司专注于住房、医疗等垂直场景的AI自动化，估值攀升反映资本对垂直领域AI代理的持续追捧。", source: "CNA", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQnYzemtvWm1Yb1pXNXBibmljWGkyX24xNzVlWlNvdV9RTU9UTjhvc1FCTGt1ZjR1azlWbldsb2xmVEJNNWlkUGZnSW5La1BfWDFfb3ZBdXEzQ2pOUVFsb1NxX3NYbFZFVFdoTnl5ZnduTF9SVnh3MGl5MHJOX0k2d3NDODh1S0tJc2p1XzhDay1iMmtzeE5aV3h2OUR1aGt4SG9HV3Z6cjBPaXRi?oc=5" },
   { time: "20:00", tag: "geo", tagText: "地缘", text: "在美国总统特朗普准备于华盛顿会见科技与AI企业CEO之际，众议员Ro Khanna（加州民主党）呼吁美中签署一项条约，以防AI对世界造成严重破坏。这折射出华盛顿内部在AI安全与美中科技竞争交织问题上的分歧。", source: "The Verge", url: "https://www.theverge.com/policy/1001767/khanna-ai-safety-china-treaty" },
+  { time: "17:47", tag: "tech", tagText: "科技", text: "由学生主导的风险投资基金Dorm Room Fund完成5000万美元新募集，资金将专门用于押注学生创办的AI初创企业，凸显一级市场对校园早期AI创业力量的关注度上升。", source: "Dealroom.co", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxQUm5ybnFUZy1aUHVmWG5nNzFzQUxqUTJBZXlnNVN6cE1HR2dJMUZnN25YbWs3YTFURGNwb3lSRy04d0psempkOUVJd3U3SC1BQXd6MnF4QWpJR0gzMm4xTXpRYndDTUZfbTVmWXdlblRWMlRJQmhDa3F1S1BFaUNTYjhxVFh0ck9CdHJBc21UR1FNVXBIN1E?oc=5" },
   { time: "13:13", tag: "ai", tagText: "AI", text: "Anthropic在招股书中向投资者披露：公司每年亏损高达数百亿美元，但营收增长极为迅猛；同时在风险提示中罕见地警告，其自身开发的AI模型可能对人类构成「生存性风险」（existential risk）。这一「巨额亏损+高速增长+自我警示」的披露组合，为市场评估其上市估值与前沿AI公司治理风险提供了关键参照。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/" },
   { time: "09:24", tag: "tech", tagText: "科技", text: "英伟达宣布公司史上规模最大的股票回购计划，试图在AI芯片竞争加剧、股价表现承压之际提振市场信心。与此同时，公司正推进「玻璃基板」封装技术，分析认为此举可能重塑AI芯片的封装与性能格局，成为其巩固技术护城河的关键一环。", source: "The Business Times", url: "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNLXRVbm1ncmVab2hVQXM5ODVydmlyM2NiWU1OYUVGVjJCRzAtUnhWUFdUR1JiWG9NRWxKUmNwR3o0UTdTUnB6OHY5WlNZM3NUOE1oS0VER0xhLUd4T0tsX0JrRjkxN3ZOaXJqRzd4ZnRnSkhpaUFQVm5VelpDUGJFUnFjMWM5LVpTSVJ1WWVHTy0zTmx2SU1yNDY2cWhmdE1qMGdjVUtjUWxUdDUwVzg4UVFoRTFDaW53Qms4dk4tdnY4ZktXRmFzVVhKSUpkN2RrWEgzcHZKMXJqc2tuRFV0TjFzWnZmQQ?oc=5" },
   { time: "08:31", tag: "tech", tagText: "科技", text: "现代汽车集团在美国举办「HMG Tech Talent Forum」，面向全球招揽技术人才，并高调宣传其「物理AI」（Physical AI）愿景，即将AI能力延伸至机器人、自动驾驶与智能制造等实体场景。集团高管与核心技术负责人出席，意在强化其在软件定义汽车与机器人领域的人才储备。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiggFBVV95cUxQNWZDY3F6Mk9mMGRIT2lWdnlVZmhib3FBbktkRG56al9PdTZwWUVTUTZ1ZnNvT1ZLTzA5N3NFa3dFZGRSWUNGTTFJX09pVVZRTFM2NVU4WHM3YjMyYjBaM1Z5Z0NmZjV2M0NXdzdIWHZvTzNLclg0OVM1MGNXcGpSb1ln0gGWAUFVX3lxTE9BYlRHQ3hoMEZlNE1CYV9VdXhUYk5jRHQ2N1gwZUdnUnA3elhNRm9ZRUdVSjAwZkVKLWt5WTRobkxMdUVNNXVISjhkU2ZjQ3AyU0RfUG5ZRHQ2OXZSYXh3cGJHaVhxT1p2djU4cnU4NFg5TXBKaUxTWThYNmN1X3NjLTFBSTB3WGlRM2pPVFNfSGNFaHRyUQ?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "04:34", tag: "ai", tagText: "AI", text: "Anthropic首席执行官达里奥·阿莫代伊（Dario Amodei）将与美国总统特朗普共进晚餐，这是两人首次一对一会面。会面正值华盛顿在AI监管、算力供给与国家安全议题上加快行动之际，被视为前沿AI实验室与政府高层直接沟通的重要信号。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/" },
   { time: "04:31", tag: "tech", tagText: "科技", text: "分析指出，博通（Broadcom）的定制芯片（custom silicon）业务正悄然崛起为AI芯片领域的重要力量，其地位并非来自英伟达或AMD式的通用GPU路线，而是为超大规模云厂商量身定制ASIC。随着谷歌、Meta等大客户加速自研加速器，博通有望在AI算力供给格局中占据关键一席。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE5ZajNhSWU3cWRBdnc0THFDMEZmNnA2UF9rMERUNEtCQVpRMHd2Q25qbGRnRGJYaEExV095SDJkeFVqTWtBN0xOMHNfOE51Ym4yTXM5R1dZOGRDdEtrcThuemVwRmx5MzFfOUlrLVMtZFFFbDVTRUlac3VQRVA?oc=5" },
   { time: "03:33", tag: "tech", tagText: "科技", text: "Shopify将结账环节开放给浏览器端AI智能体，扩展其WebMCP支持：在买家授权下，AI代理可修改订单信息并直接完成购买。这标志着电商交易流程正加速向「智能体代操作」模式演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/" },
-  { time: "03:13", tag: "ai", tagText: "AI", text: "Anthropic与CDN及云服务商Akamai达成重磅协议：未来七年将向后者云基础设施支付116亿美元，押注CPU算力路线，交易总额最高可能扩大至约200亿美元。协议还包含一项不寻常安排，Akamai将向Anthropic提供相应回报（细节尚未完整披露）。此举凸显头部AI公司为支撑模型训练与推理，正加速锁定长期、多元化的算力供给。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/" },
-  { time: "02:34", tag: "ai", tagText: "AI", text: "英国AI「新云」（neocloud）厂商Nscale在美国IPO前夕完成33.6亿美元可转换融资，投资方包括Third Point、英伟达等。资金将用于其大规模AI数据中心建设，显示资本市场对AI算力基础设施的押注仍在加码，也为该公司赴美上市铺路。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/" },
 ];
-const aiBreakingDate = "2026年9月29日 23:33 CST";
+const aiBreakingDate = "2026年9月29日 23:40 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
