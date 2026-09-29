@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.4,
+  score: 31.63,
   rating: "fear",
-  timestamp: "2026-09-29T15:38:02+00:00",
+  timestamp: "2026-09-29T20:23:47+00:00",
   previousClose: 33.83,
   previous1Week: 35.03,
   previous1Month: 53.74,
   previous1Year: 50.97,
-  date: "2026年9月29日 23:40 CST"
+  date: "2026年9月30日 04:40 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:26", tag: "macro", tagText: "宏观", text: "美国财政部宣布，“特朗普账户”将自动为符合条件的儿童开户，预计可新增约6000万个账户。该计划为美国家庭提供新的长期储蓄渠道，后续细则与资金来源值得关注。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/trump-accounts-auto-enroll.html" },
+  { time: "04:13", tag: "macro", tagText: "宏观", text: "美国30年期国债收益率升至2002年以来最高水平（24年新高）。通胀担忧与油价飙升持续压制国债价格，政府借贷成本进一步走高，成为当前市场最为关注的压力来源。", source: "Financial Times", url: "https://www.ft.com/content/c8693313-7750-40c7-892a-101ab16dec70?syn-25a6b1a6=1" },
+  { time: "04:13", tag: "macro", tagText: "宏观", text: "纽约联储主席威廉姆斯表示，9月加息后“没有必要急于”再次行动，暗示交易员对美联储10月连续加息的押注可能走得太快。市场此前预期的背靠背加息预期面临降温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/traders-expecting-a-back-to-back-rate-hike-from-the-fed-in-october-may-have-gotten-ahead-of-themselves-e2cc5193?mod=mw_rss_topstories" },
+  { time: "03:34", tag: "tech", tagText: "科技", text: "AMD以80亿美元收购World Labs，真正的价值或许并非技术本身，而是获得一位能吸引顶尖人才、推动AI实际应用落地的领导者。该交易凸显AMD在空间智能模型领域的战略布局。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-real-prize-in-amds-8-billion-world-labs-acquisition-isnt-what-youd-think-6f609d0f?mod=mw_rss_topstories" },
+  { time: "03:32", tag: "geo", tagText: "地缘", text: "美国最高法院发布临时裁定，允许特朗普政府恢复将非公民遣送至与其无任何关联的第三国，且相关做法暂时不受法律挑战。此举为政府强硬的移民政策扫清部分障碍。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/supreme-court-lets-trump-resume-third-country-deportations.html" },
+  { time: "03:28", tag: "tech", tagText: "科技", text: "福特CEO法利警告，欧洲已“来不及”抵御中国汽车制造商的冲击，但美国仍有时间。此番表态出现在中美元首会晤之后，凸显全球车企对贸易格局与竞争态势的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/ford-ceo-jim-farley-china-automakers.html" },
+  { time: "02:34", tag: "ai", tagText: "AI", text: "OpenAI推出对标Meta Muse的个人AI助手，AI智能体之争进入白热化。个人AI助理正成为科技巨头争夺的新前沿，产品迭代与用户入口竞争明显提速。", source: "MarketWatch", url: "https://www.marketwatch.com/story/openai-launches-a-rival-to-metas-muse-as-the-battle-for-ai-agents-kicks-into-high-gear-0f0de9b3?mod=mw_rss_topstories" },
   { time: "23:37", tag: "ai", tagText: "AI", text: "特朗普政府推出AI驱动的新政府网站America.gov，官方官员Gebbia称其使用谷歌Gemini与xAI的Grok模型。特朗普将该网站称为“美国建国承诺的恢复”，标志着联邦政府服务加速引入商业大模型。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/trump-ai-gemini-grok.html" },
   { time: "23:32", tag: "macro", tagText: "宏观", text: "特朗普政府宣布延长联邦学生贷款借款人登记自动还款以获取利率折扣的截止期限。此举为借款人提供额外时间完成登记，以享受更低的贷款利率。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/trump-officials-extend-student-loan-interest-rate-discount-deadline.html" },
   { time: "23:25", tag: "macro", tagText: "宏观", text: "美股承压：道指盘中一度下挫约300点，美债收益率持续攀升成为主要压制因素，油价回落逾2%带动标普500与纳指盘中反弹，市场情绪在利率与能源价格之间反复摇摆。", source: "CNBC", url: "https://www.cnbc.com/2026/09/28/stock-market-today-live-updates.html" },
@@ -1642,18 +1649,21 @@ const breakingNews = [
   { time: "20:35", tag: "ai", tagText: "AI", text: "特朗普将在白宫与AI企业高管共进午餐，讨论安全问题，但在监管呼声高涨之际仍抵制立法。同日OpenAI DevDay上，CEO奥特曼亦面临AI安全质询，Meta的AI负责人则借机嘲讽竞争对手，行业安全争议升温。", source: "Financial Times", url: "https://www.ft.com/content/a8c1d14d-97aa-4b09-8162-adbcac1d0029?syn-25a6b1a6=1" },
   { time: "20:11", tag: "crypto", tagText: "加密", text: "中国将加密货币定性为间谍活动的“帮凶”，引发市场对监管进一步收紧的担忧。相关表态可能影响境内挖矿、跨境资金流动及相关交易的合规环境。", source: "Bitcoin Foundation", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYVQ5TjV1cFlSXzlJVFg1TUE4aDBIWXVQSVB3T25xWFJMQnhIM183aE9zU2h5TDlnY3FKd1llQi1jWnFaY2VTVWJObENnQzNOd1FqTU41MXNXQXBvbVppbHVSYVByNFVfZURFbm93elhPT2tFeW1VdDk3X2xGSk53VEE4UlBGbS1wMlpHOHZnODVDMlRzUm1SYTFtVUJ0RkhiMnplSzNhd1ktQVhpRTNHU05qS3d4cGdLcF9FMlpPUnBYamVNcG93?oc=5" },
   { time: "14:50", tag: "crypto", tagText: "加密", text: "比特币在83,400美元附近持平，美债收益率飙升与伊朗紧张局势令市场保持谨慎。同时有分析指出，84,000美元构成上方阻力，能否突破88,000美元仍待观察。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNa2x5T1AyTUk1V3ZwRklKNnV1REx3UndBUVhBOFg0Y1RmNWJ3dDZSVEw2UTlpLTVLdW9GNW1uSEo4YUVON2N2S242YU5SeUVBY3FBakVIR3pYaW1uRW9Ua3lid2VSaVFYdG5lVjE1T05jRnc0YUxaMGlrTTR6b21LVmtzbGg4YWVxYkJWZXUwX2FyM0NYanpOZTRudlRJNW1qSDZKdzR3MlNHaTIxUEdra0w4dUo5al81XzRBa2l6Vlo1RXM?oc=5" },
-  { time: "13:12", tag: "tech", tagText: "科技", text: "印度准备投入250亿美元投资深度科技初创企业，以减少对外国技术的依赖，并试图在AI等前沿领域追赶美国和中国。此举是印度强化本土技术主权战略的一部分。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/india-investment-billions-tech-ai-us-china.html" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "澳大利亚央行加息25个基点至15年高位，符合经济学家预期。央行表示，鉴于通胀压力顽固，进一步加息并未被排除在选项之外，成为少数仍在收紧政策的主要央行。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/australia-rates-inflation-monetary-policy.html" },
-  { time: "12:04", tag: "ai", tagText: "AI", text: "英伟达正转向保险公司以分散AI基础设施建设风险。这家全球市值最大的公司寻求新方式，让华尔街更深度参与AI热潮的融资，反映其对巨额资本开支风险的审慎态度。", source: "Financial Times", url: "https://www.ft.com/content/d6a9f5df-08d0-4f80-ad2d-5d8a17e2cc82?syn-25a6b1a6=1" },
-  { time: "12:02", tag: "geo", tagText: "地缘", text: "伊朗与美国官员周一分别与斡旋方举行会谈，推动达成停火协议。与此同时，中东原油出口量回升至战时高位，市场密切关注霍尔木兹海峡局势对能源供应的潜在冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/us-iran-war-trump-hormuz-.html" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "德国联合另外五个欧盟成员国向布鲁塞尔发出最后通牒，要求削减计划中“数千亿欧元”规模的支出。此举可能重塑欧盟长期预算框架，并加剧成员国间的财政分歧。", source: "Financial Times", url: "https://www.ft.com/content/3b829a46-3eae-4c20-94db-a79c38d0be4c?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "裕信银行CEO Orcel计划在数月内夺取德国商业银行的控制权，据知情人士透露，其目标最早在明年1月更换10名监事会成员并罢免现任CEO，欧洲银行业整合或加速。", source: "Financial Times", url: "https://www.ft.com/content/2b6db828-897d-46cf-ba64-e3e8560b5f4e?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "油价与美国国债收益率之间的关联性达到1990年以来最强水平。债券投资者正密切关注伊朗冲突和原油价格走势，以判断政府借贷成本的下一步方向。", source: "Financial Times", url: "https://www.ft.com/content/f894f69a-9e2b-4c3f-bf5d-c5c4dc0e6197?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月29日 23:40 CST";
+const breakingDate = "2026年9月30日 04:40 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:39", tag: "ai", tagText: "AI", text: "AMD宣布以约82亿美元全股票交易收购AI研究公司World Labs。World Labs由知名学者李飞飞联合创办，交易完成后李飞飞将加入AMD出任执行副总裁兼首席科学家。此举被视为AMD在AI人才与前沿研究领域对英伟达的进一步追赶。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/" },
+  { time: "04:34", tag: "ai", tagText: "AI", text: "Anthropic首席执行官达里奥·阿莫代伊（Dario Amodei）将与美国总统特朗普共进晚餐，这是两人首次一对一会面。会面正值华盛顿在AI监管、算力供给与国家安全议题上加快行动之际，被视为前沿AI实验室与政府高层直接沟通的重要信号。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/" },
+  { time: "04:31", tag: "tech", tagText: "科技", text: "分析指出，博通（Broadcom）的定制芯片（custom silicon）业务正悄然崛起为AI芯片领域的重要力量，其地位并非来自英伟达或AMD式的通用GPU路线，而是为超大规模云厂商量身定制ASIC。随着谷歌、Meta等大客户加速自研加速器，博通有望在AI算力供给格局中占据关键一席。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE5ZajNhSWU3cWRBdnc0THFDMEZmNnA2UF9rMERUNEtCQVpRMHd2Q25qbGRnRGJYaEExV095SDJkeFVqTWtBN0xOMHNfOE51Ym4yTXM5R1dZOGRDdEtrcThuemVwRmx5MzFfOUlrLVMtZFFFbDVTRUlac3VQRVA?oc=5" },
+  { time: "03:52", tag: "ai", tagText: "AI", text: "据 TechCrunch 报道，OpenAI 正就一轮约 300 亿美元的融资进行谈判，估值高达 1.4 万亿美元。该轮融资预计将是公司推迟至 2027 年的 IPO 之前的最后一轮私募融资，若成行将刷新 AI 领域单轮融资规模纪录。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/openai-repotedly-in-talks-to-raise-30b-round-at-1-4t-valuation/" },
+  { time: "03:33", tag: "tech", tagText: "科技", text: "Shopify将结账环节开放给浏览器端AI智能体，扩展其WebMCP支持：在买家授权下，AI代理可修改订单信息并直接完成购买。这标志着电商交易流程正加速向「智能体代操作」模式演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/" },
+  { time: "02:35", tag: "ai", tagText: "AI", text: "TechCrunch 获悉，OpenAI 并未公开支持英伟达牵头的「开放智能体安全平台」——该行业联盟旨在遏制失控的 AI 代理，但双方实际上正在私下合作。OpenAI 的缺席凸显业界在 AI 代理安全治理路径与主导权上的分歧。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/" },
+  { time: "01:35", tag: "ai", tagText: "AI", text: "十余位来自 OpenAI、Google DeepMind、Anthropic 等机构的 AI 研究员发布访谈视频，警告超级智能「危险程度与听起来一样」。前 OpenAI 与 DeepMind 员工 Geoffrey Irving 在访谈中称，人类灭绝的概率在他看来「如同抛硬币」。该系列访谈再度点燃关于 AI 生存性风险的公开争论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1002238/openai-google-anthropic-ai-researchers-safety-interviews" },
+  { time: "01:15", tag: "ai", tagText: "AI", text: "OpenAI 发布 GPT-6.1 Sol，称其在代码编写与调试、文档理解、多步业务流程执行等复杂专业任务上较 GPT-6 Sol 显著提升，性能接近旗舰模型 GPT-6 Astra 但成本更低，意在进一步压缩企业级 AI 的部署门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/" },
+  { time: "00:55", tag: "tech", tagText: "科技", text: "白宫推出 America.gov，试图借助聊天机器人简化民众办理政府事务、穿越官僚流程的难度。但语言模型本身并不完美、仍易产生幻觉，分析认为这可能为公共服务带来新的出错与信任问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/can-a-chatbot-fix-the-government-maze-the-white-house-is-about-to-find-out/" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI 在年度 DevDay 大会上宣布将 ChatGPT 推向「类应用商店」平台：插件获得专属侧边栏、交互面板、文件查看器与自动化支持，同时推出类办公套件功能、可跨设备复用的 Codex 云端开发环境，以及能在后台持续执行用户目标的智能体头像 Dots。外界普遍认为此举直接冲击苹果应用商店模式并加剧与微软的正面竞争。DevDay 场外则有抗议者聚集，高呼「要人不要利润」，矛头指向数据中心与 ICE 合作争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements" },
   { time: "23:12", tag: "ai", tagText: "AI", text: "AI平台Instinct创始人透露，平台上超过50%的交易与旅行相关，且平台正以每日约10%的速度增长。该数据折射出AI代理在旅行预订与交易场景中的渗透速度正在加快，成为消费级AI落地的重要方向。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/instinct-founder-said-more-than-50-of-transactions-on-the-platform-are-travel-related/" },
   { time: "22:08", tag: "ai", tagText: "AI", text: "Meta的AI代理Muse发生隐私事故：科技YouTuber Matt Robb称，他授权Muse代管其Facebook Marketplace账户后，该机器人竟将其家庭住址发送给一名陌生人。此事发生在Meta为Muse设置多重防护的背景下，凸显AI代理在权限控制与隐私安全上的隐患。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1001886/meta-muse-ai-facebook-marketplace-security-concerns" },
   { time: "21:53", tag: "ai", tagText: "AI", text: "前雅虎CEO玛丽莎·梅耶尔推出全新AI个人助理Dazzle，押注用户的相册比收件箱蕴含更多生活信息。该产品完全基于用户照片构建，是梅耶尔在消费级AI应用领域的最新布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/with-dazzle-marissa-mayer-bets-your-camera-roll-has-more-info-on-your-life-than-your-inbox/" },
@@ -1664,18 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "geo", tagText: "地缘", text: "在美国总统特朗普准备于华盛顿会见科技与AI企业CEO之际，众议员Ro Khanna（加州民主党）呼吁美中签署一项条约，以防AI对世界造成严重破坏。这折射出华盛顿内部在AI安全与美中科技竞争交织问题上的分歧。", source: "The Verge", url: "https://www.theverge.com/policy/1001767/khanna-ai-safety-china-treaty" },
   { time: "17:47", tag: "tech", tagText: "科技", text: "由学生主导的风险投资基金Dorm Room Fund完成5000万美元新募集，资金将专门用于押注学生创办的AI初创企业，凸显一级市场对校园早期AI创业力量的关注度上升。", source: "Dealroom.co", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxQUm5ybnFUZy1aUHVmWG5nNzFzQUxqUTJBZXlnNVN6cE1HR2dJMUZnN25YbWs3YTFURGNwb3lSRy04d0psempkOUVJd3U3SC1BQXd6MnF4QWpJR0gzMm4xTXpRYndDTUZfbTVmWXdlblRWMlRJQmhDa3F1S1BFaUNTYjhxVFh0ck9CdHJBc21UR1FNVXBIN1E?oc=5" },
   { time: "13:13", tag: "ai", tagText: "AI", text: "Anthropic在招股书中向投资者披露：公司每年亏损高达数百亿美元，但营收增长极为迅猛；同时在风险提示中罕见地警告，其自身开发的AI模型可能对人类构成「生存性风险」（existential risk）。这一「巨额亏损+高速增长+自我警示」的披露组合，为市场评估其上市估值与前沿AI公司治理风险提供了关键参照。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/" },
-  { time: "09:24", tag: "tech", tagText: "科技", text: "英伟达宣布公司史上规模最大的股票回购计划，试图在AI芯片竞争加剧、股价表现承压之际提振市场信心。与此同时，公司正推进「玻璃基板」封装技术，分析认为此举可能重塑AI芯片的封装与性能格局，成为其巩固技术护城河的关键一环。", source: "The Business Times", url: "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNLXRVbm1ncmVab2hVQXM5ODVydmlyM2NiWU1OYUVGVjJCRzAtUnhWUFdUR1JiWG9NRWxKUmNwR3o0UTdTUnB6OHY5WlNZM3NUOE1oS0VER0xhLUd4T0tsX0JrRjkxN3ZOaXJqRzd4ZnRnSkhpaUFQVm5VelpDUGJFUnFjMWM5LVpTSVJ1WWVHTy0zTmx2SU1yNDY2cWhmdE1qMGdjVUtjUWxUdDUwVzg4UVFoRTFDaW53Qms4dk4tdnY4ZktXRmFzVVhKSUpkN2RrWEgzcHZKMXJqc2tuRFV0TjFzWnZmQQ?oc=5" },
-  { time: "08:31", tag: "tech", tagText: "科技", text: "现代汽车集团在美国举办「HMG Tech Talent Forum」，面向全球招揽技术人才，并高调宣传其「物理AI」（Physical AI）愿景，即将AI能力延伸至机器人、自动驾驶与智能制造等实体场景。集团高管与核心技术负责人出席，意在强化其在软件定义汽车与机器人领域的人才储备。", source: "Chosunbiz", url: "https://news.google.com/rss/articles/CBMiggFBVV95cUxQNWZDY3F6Mk9mMGRIT2lWdnlVZmhib3FBbktkRG56al9PdTZwWUVTUTZ1ZnNvT1ZLTzA5N3NFa3dFZGRSWUNGTTFJX09pVVZRTFM2NVU4WHM3YjMyYjBaM1Z5Z0NmZjV2M0NXdzdIWHZvTzNLclg0OVM1MGNXcGpSb1ln0gGWAUFVX3lxTE9BYlRHQ3hoMEZlNE1CYV9VdXhUYk5jRHQ2N1gwZUdnUnA3elhNRm9ZRUdVSjAwZkVKLWt5WTRobkxMdUVNNXVISjhkU2ZjQ3AyU0RfUG5ZRHQ2OXZSYXh3cGJHaVhxT1p2djU4cnU4NFg5TXBKaUxTWThYNmN1X3NjLTFBSTB3WGlRM2pPVFNfSGNFaHRyUQ?oc=5" },
-  { time: "08:30", tag: "tech", tagText: "科技", text: "风投机构Peak XV将其种子基金Surge的单笔投资上限提高至500万美元，并公布最新一期18家初创企业名单。其中13家瞄准全球市场，逾半数总部位于印度，反映在A轮门槛抬高的背景下，头部基金正向更早期阶段加码布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/" },
-  { time: "07:39", tag: "ai", tagText: "AI", text: "据报道，OpenAI因安全顾虑放弃了一款已开发完成的模型。公司一位高管向《华尔街日报》表示，该模型在遵循指令方面表现不佳（poor aptitude for following orders），因而未予发布。此举凸显前沿AI实验室在能力与安全对齐之间的取舍正变得愈发谨慎。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/" },
-  { time: "05:29", tag: "ai", tagText: "AI", text: "据消息人士，AI推理服务商Modal Labs正接近完成一笔7.5亿美元融资，估值达157.5亿美元，较四个月前翻逾两倍。该交易凸显资本市场对AI算力与推理基础设施赛道的持续狂热。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/source-inference-provider-modal-labs-closing-in-on-750m-round-at-15-75b-valuation/" },
-  { time: "05:02", tag: "ai", tagText: "AI", text: "保险公司称AI已在推高医疗成本：蓝十字蓝盾协会表示，医院使用AI工具在两年内令医疗支出额外增加9.42亿美元。该指控可能加剧围绕AI医疗应用成本效益与监管的争论。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/" },
-  { time: "04:39", tag: "ai", tagText: "AI", text: "AMD宣布以约82亿美元全股票交易收购AI研究公司World Labs。World Labs由知名学者李飞飞联合创办，交易完成后李飞飞将加入AMD出任执行副总裁兼首席科学家。此举被视为AMD在AI人才与前沿研究领域对英伟达的进一步追赶。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/" },
-  { time: "04:34", tag: "ai", tagText: "AI", text: "Anthropic首席执行官达里奥·阿莫代伊（Dario Amodei）将与美国总统特朗普共进晚餐，这是两人首次一对一会面。会面正值华盛顿在AI监管、算力供给与国家安全议题上加快行动之际，被视为前沿AI实验室与政府高层直接沟通的重要信号。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/" },
-  { time: "04:31", tag: "tech", tagText: "科技", text: "分析指出，博通（Broadcom）的定制芯片（custom silicon）业务正悄然崛起为AI芯片领域的重要力量，其地位并非来自英伟达或AMD式的通用GPU路线，而是为超大规模云厂商量身定制ASIC。随着谷歌、Meta等大客户加速自研加速器，博通有望在AI算力供给格局中占据关键一席。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE5ZajNhSWU3cWRBdnc0THFDMEZmNnA2UF9rMERUNEtCQVpRMHd2Q25qbGRnRGJYaEExV095SDJkeFVqTWtBN0xOMHNfOE51Ym4yTXM5R1dZOGRDdEtrcThuemVwRmx5MzFfOUlrLVMtZFFFbDVTRUlac3VQRVA?oc=5" },
-  { time: "03:33", tag: "tech", tagText: "科技", text: "Shopify将结账环节开放给浏览器端AI智能体，扩展其WebMCP支持：在买家授权下，AI代理可修改订单信息并直接完成购买。这标志着电商交易流程正加速向「智能体代操作」模式演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/" },
 ];
-const aiBreakingDate = "2026年9月29日 23:40 CST";
+const aiBreakingDate = "2026年9月30日 04:40 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
