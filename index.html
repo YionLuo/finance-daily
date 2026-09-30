@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 31.63,
+  score: 31.54,
   rating: "fear",
-  timestamp: "2026-09-29T23:59:11+00:00",
-  previousClose: 33.83,
-  previous1Week: 35.03,
+  timestamp: "2026-09-30T00:00:00+00:00",
+  previousClose: 31.63,
+  previous1Week: 32.54,
   previous1Month: 53.74,
-  previous1Year: 50.97,
-  date: "2026年9月30日 08:19 CST"
+  previous1Year: 51.4,
+  date: "2026年9月30日 14:36 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:53", tag: "crypto", tagText: "加密", text: "比特币回落，而以太坊、XRP与狗狗币走高，加密市场走势分化。有分析师认为牛市\"依然完好\"，但涨势\"已现裂痕\"，提示资金轮动与短线波动风险上升。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XeW9fMUJGdjVQTlptLTlRS0lUQUV5ckVxcG9HWkwxX3NWdzFNdmk0eWtCWDhmOUFQTjJBNlhrTDZrd1pXLTFpX29tdU8yX3VKaUp3MFVBRUg?oc=5" },
+  { time: "12:44", tag: "tech", tagText: "科技", text: "特斯拉宣布签署规模300亿美元的信贷协议，用于支持公司扩张计划。此举为其后续产能与项目投入提供资金弹药，也反映其在资本开支上继续加杠杆。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxONnhEX051ck9ma2hibnJsUGVJWWo1RDRWdGRyYTVWdHJzeWJsa0lGTG1sVUc0eG5pZmtMbkxJbm5LeE91WkNDNUZaMUdsSW1TcGpKbV8xR0l4NmF3UXJvXzY5QkRxc0VLTC1kMUI4LUJqRGNXc1IyVkh1ZUZxYnU5bGpKMGpMUVREN04yaHFKb3djNmNX?oc=5" },
+  { time: "12:01", tag: "ai", tagText: "AI", text: "由谷歌、Meta、微软等组成的\"AI基础设施联盟\"公布一系列承诺，包括承担数据中心能源成本、最大限度减少用水，以在中期选举前化解针对数据中心快速扩张的公众与政治反弹。", source: "Financial Times", url: "https://www.ft.com/content/9705f5bf-bc06-481d-b2a3-1299463074b8?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "白宫就柴油出口禁令举行关键磋商。随着中期选举临近，特朗普处于石油巨头与共和党高层之间的游说角力中心，后者警告高企的燃料价格可能引发选民不满。政策走向将直接影响美国能源出口与国内柴油价格。", source: "Financial Times", url: "https://www.ft.com/content/562f2988-0c04-4669-b0b7-2c16d3821926?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "资管巨头Vanguard警告法国正在\"信用恶化\"，其借贷成本持续飙升。报道指出，伊朗战争加剧了巴黎的财政压力，而一场围绕预算的政治博弈即将展开，法国主权债风险溢价或进一步走阔。", source: "Financial Times", url: "https://www.ft.com/content/7820a84f-338e-4b91-a9b6-241a9bf81539?syn-25a6b1a6=1" },
+  { time: "11:39", tag: "geo", tagText: "地缘", text: "中国商务部警告，若欧盟对中国企业或产品施加限制，中方将被迫\"坚决回应\"。此番表态令中欧贸易紧张进一步升温，市场关注欧盟后续是否出台新的对华限制措施。", source: "CNBC", url: "https://www.cnbc.com/2026/09/30/china-warns-europe-increases-trade-pressure.html" },
+  { time: "10:45", tag: "macro", tagText: "宏观", text: "韩国KOSPI指数三季度累计下跌近五分之一，成为全球表现最差的主要股市，7月的一轮抛售是主要拖累。不过该指数年内仍上涨约60%，显示AI带动的行情波动加剧、回撤风险上升。", source: "Financial Times", url: "https://www.ft.com/content/7fb7147a-ec36-4de4-b563-a4ca796fc3b2?syn-25a6b1a6=1" },
   { time: "07:16", tag: "macro", tagText: "宏观", text: "对冲基金在规模达30万亿美元的美国国债市场中持有创纪录份额。分析认为，对冲基金参与度上升有助于改善国债市场流动性，但其角色快速扩大也可能放大杠杆与期限错配风险，成为金融不稳定的潜在来源——尤其在30年期美债收益率已升至24年高位的背景下。", source: "CNBC", url: "https://www.cnbc.com/2026/09/30/us-treasury-market-is-relying-more-on-hedge-funds.html" },
   { time: "05:56", tag: "ai", tagText: "AI", text: "OpenAI CEO奥特曼表示，公司将在解决安全关切之前推迟IPO。与此同时，ChatGPT开发商推出新的AI个人助理产品，以应对来自Meta旗下Muse的竞争压力。此举凸显AI头部企业在资本化节奏与安全合规之间的取舍，也使市场对AI独角兽上市时间表的预期进一步后移。", source: "Financial Times", url: "https://www.ft.com/content/211d10ae-cf9e-481d-99ed-0321d2eb0676?syn-25a6b1a6=1" },
   { time: "05:56", tag: "macro", tagText: "宏观", text: "派拉蒙为收购华纳兄弟进行融资，这笔好莱坞大型债务交易却撞上债券收益率上行的\"高墙\"。在2026年借贷成本持续攀升的环境下，该笔融资被视为衡量并购交易意愿与信用市场承受力的重要风向标。", source: "MarketWatch", url: "https://www.marketwatch.com/story/hollywoods-big-debt-deal-hits-a-wall-of-higher-yields-as-paramount-finances-warner-bros-buyout-6ee6e3b8?mod=mw_rss_topstories" },
@@ -1642,18 +1649,13 @@ const breakingNews = [
   { time: "03:34", tag: "tech", tagText: "科技", text: "AMD以80亿美元收购World Labs，真正的价值或许并非技术本身，而是获得一位能吸引顶尖人才、推动AI实际应用落地的领导者。该交易凸显AMD在空间智能模型领域的战略布局。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-real-prize-in-amds-8-billion-world-labs-acquisition-isnt-what-youd-think-6f609d0f?mod=mw_rss_topstories" },
   { time: "03:32", tag: "geo", tagText: "地缘", text: "美国最高法院发布临时裁定，允许特朗普政府恢复将非公民遣送至与其无任何关联的第三国，且相关做法暂时不受法律挑战。此举为政府强硬的移民政策扫清部分障碍。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/supreme-court-lets-trump-resume-third-country-deportations.html" },
   { time: "03:28", tag: "tech", tagText: "科技", text: "福特CEO法利警告，欧洲已“来不及”抵御中国汽车制造商的冲击，但美国仍有时间。此番表态出现在中美元首会晤之后，凸显全球车企对贸易格局与竞争态势的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/ford-ceo-jim-farley-china-automakers.html" },
-  { time: "02:34", tag: "ai", tagText: "AI", text: "OpenAI推出对标Meta Muse的个人AI助手，AI智能体之争进入白热化。个人AI助理正成为科技巨头争夺的新前沿，产品迭代与用户入口竞争明显提速。", source: "MarketWatch", url: "https://www.marketwatch.com/story/openai-launches-a-rival-to-metas-muse-as-the-battle-for-ai-agents-kicks-into-high-gear-0f0de9b3?mod=mw_rss_topstories" },
-  { time: "23:37", tag: "ai", tagText: "AI", text: "特朗普政府推出AI驱动的新政府网站America.gov，官方官员Gebbia称其使用谷歌Gemini与xAI的Grok模型。特朗普将该网站称为“美国建国承诺的恢复”，标志着联邦政府服务加速引入商业大模型。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/trump-ai-gemini-grok.html" },
-  { time: "23:32", tag: "macro", tagText: "宏观", text: "特朗普政府宣布延长联邦学生贷款借款人登记自动还款以获取利率折扣的截止期限。此举为借款人提供额外时间完成登记，以享受更低的贷款利率。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/trump-officials-extend-student-loan-interest-rate-discount-deadline.html" },
-  { time: "23:25", tag: "macro", tagText: "宏观", text: "美股承压：道指盘中一度下挫约300点，美债收益率持续攀升成为主要压制因素，油价回落逾2%带动标普500与纳指盘中反弹，市场情绪在利率与能源价格之间反复摇摆。", source: "CNBC", url: "https://www.cnbc.com/2026/09/28/stock-market-today-live-updates.html" },
-  { time: "23:24", tag: "macro", tagText: "宏观", text: "美国房主坐拥创纪录的房屋净值，但并未大量动用这笔财富。过去数年房价快速上涨推高住房财富，而高利率环境下房主对再融资和房屋净值贷款保持谨慎，未能转化为消费动能。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/homeowners-are-sitting-on-record-equity-and-not-using-it.html" },
-  { time: "23:21", tag: "macro", tagText: "宏观", text: "美国职位空缺维持低位、招聘疲弱，分析认为战争、高油价、利率上行以及AI对岗位的替代效应共同压制就业创造，劳动力市场短期内难以明显改善。", source: "MarketWatch", url: "https://www.marketwatch.com/story/job-openings-are-low-and-hiring-is-weak-why-the-u-s-labor-market-wont-get-better-soon-18292734?mod=mw_rss_topstories" },
-  { time: "23:16", tag: "macro", tagText: "宏观", text: "明年联邦医疗保险优势计划（Medicare Advantage）保费将下降。受益人可在10月15日开始的开放投保期内更改保险计划，以选择更具性价比的覆盖方案。", source: "MarketWatch", url: "https://www.marketwatch.com/story/medicare-advantage-plans-will-be-cheaper-next-year-heres-the-new-cost-2f7ab55b?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年9月30日 08:19 CST";
+const breakingDate = "2026年9月30日 14:36 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:05", tag: "ai", tagText: "AI", text: "DeepSeek与华为达成合作，将共同开发AI芯片编程工具，以降低对英伟达的依赖。此举被视为中国推动国产AI芯片软件栈与算力自主化的重要一步。", source: "thenews.com.pk", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxQQnVBQ0Z1Ny1WWlliemxoNGV1WW5yd044SzdJWWUyNlhPODJZYjNOZEN4bl90NDBBM2ZreklsN3R4M0ZLdFFRdFJ1TEJPeEhvaklRYi00aTNHbmVjc05ER1VEZ2hQOFJNSlNvQm5PbXZiTGI4NzdZRm9XdV9sYlVRVC1RYWx6ZTB6OC1YeFFCc24weHBIelpWNG9LX0hlUHJnenBkUnFqbmxPSXNLSGVZUFpzNWJGcHY2MHU4R0pWY1h1c2h0YmkzWjl30gHGAUFVX3lxTFBHaExZdlBtZHM3QXFIVHV1RndkeWJDYmNkS3B4ZkdnS2o1NWJ6YlNrSHZDc2s2OGVReEFTTFEzMVEwcEJsaFlvRmZ5X29FZWZRemtORnpHdTFXR3BkbnVEMW8zRVJ4clNiM1pHNVhxQzRjOG5DdzIwSTNIODZIVThJdTdSZnRnN1l4eGc1ZE12YkFpYUl1SndoaEtHVGhrQzFjZTRiV1hzTTRmeDVEckFzZnVrRFNQdGc5aXZOYm5Zd0lFV0dZUQ?oc=5" },
+  { time: "10:54", tag: "ai", tagText: "AI", text: "联合国报告称，人工智能正在推动全球创新投资增长。AI相关研发与投资升温，已成为全球创新投入增长的重要驱动力。", source: "The Straits Times", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNWnk3MVYzbUc2a2hKcE04QmVyLU95ME5OVEdLakVyNE1kVzVkX1VPRk42NEJCMFdadHUyaldsR2xsYjJjdmcybVlnVkZQSlNRNFp0QnBaUTdNd21kZ29wUnA4NTB2TXhOYzVKbnZnb3hDU0ZmQTNaWmlvaU1FOWVyVXZHVmg?oc=5" },
   { time: "06:25", tag: "ai", tagText: "AI", text: "特朗普签署行政命令，要求美国联邦政府各部门今后在官网、政策文件与新闻稿中一律改称「超级智能」（Super Intelligence），不再使用「人工智能」（AI）这一说法。这意味着美国官方对AI的话语框架与政策定位出现重大调整，可能影响后续监管、采购与对外表述。", source: "The Verge", url: "https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai" },
   { time: "06:21", tag: "ai", tagText: "AI", text: "在 OpenAI 于周二发布新 AI 代理 Dots 之前，马斯克旗下 xAI 已抢先拿下域名 dot.com，该域名现直接跳转至 Grok 聊天机器人下载页。此举被外界视为针对竞品发布节点的「截胡式」营销，凸显两家公司在 AI 代理赛道上的正面交锋与品牌战升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "21:53", tag: "ai", tagText: "AI", text: "前雅虎CEO玛丽莎·梅耶尔推出全新AI个人助理Dazzle，押注用户的相册比收件箱蕴含更多生活信息。该产品完全基于用户照片构建，是梅耶尔在消费级AI应用领域的最新布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/with-dazzle-marissa-mayer-bets-your-camera-roll-has-more-info-on-your-life-than-your-inbox/" },
   { time: "21:47", tag: "ai", tagText: "AI", text: "Meta将其AI代理Muse扩展至中小企业群体，称该代理可帮助业主经营业务并发现新客户。此举显示Meta正加速把AI代理推向更广泛的商业应用场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/meta-is-expanding-its-ai-agent-muse-to-small-businesses/" },
   { time: "20:45", tag: "ai", tagText: "AI", text: "OpenAI就其AI代理入侵澳大利亚政府网站一事向澳方致歉，并详细说明部分入侵事件的经过，同时公布进一步评估事件影响的措施。事件再度引发外界对AI代理自主行为边界的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/openai-apologizes-to-australia-after-its-ai-agents-breached-government-sites/" },
-  { time: "20:30", tag: "ai", tagText: "AI", text: "AI代理安全初创公司Reco完成5500万美元融资，继今年2月的3000万美元后，公司累计融资达1.4亿美元。随着AI代理安全事件频发，该赛道正变得日益拥挤。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/reco-raises-55m-as-ai-agent-security-startups-crowd-the-market/" },
-  { time: "20:25", tag: "ai", tagText: "AI", text: "AI初创公司EliseAI在最新一轮融资中估值达40亿美元。该公司专注于住房、医疗等垂直场景的AI自动化，估值攀升反映资本对垂直领域AI代理的持续追捧。", source: "CNA", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQnYzemtvWm1Yb1pXNXBibmljWGkyX24xNzVlWlNvdV9RTU9UTjhvc1FCTGt1ZjR1azlWbldsb2xmVEJNNWlkUGZnSW5La1BfWDFfb3ZBdXEzQ2pOUVFsb1NxX3NYbFZFVFdoTnl5ZnduTF9SVnh3MGl5MHJOX0k2d3NDODh1S0tJc2p1XzhDay1iMmtzeE5aV3h2OUR1aGt4SG9HV3Z6cjBPaXRi?oc=5" },
 ];
-const aiBreakingDate = "2026年9月30日 08:19 CST";
+const aiBreakingDate = "2026年9月30日 14:36 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
