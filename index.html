@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 28.69,
+  score: 33.29,
   rating: "fear",
-  timestamp: "2026-09-30T13:30:18+00:00",
+  timestamp: "2026-09-30T19:04:49+00:00",
   previousClose: 31.63,
   previous1Week: 32.54,
   previous1Month: 53.74,
   previous1Year: 51.4,
-  date: "2026年9月30日 21:35 CST"
+  date: "2026年10月1日 03:06 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,15 @@ const breakingNews = [
   { time: "05:05", tag: "macro", tagText: "宏观", text: "三季度IPO推迟案例加速增多，除Oura之外还有更多企业选择继续观望。尽管今年整体IPO市场表现强劲，但收益率上行与估值不确定性正促使发行人推迟上市计划，反映一级市场融资窗口在宏观压力下趋于收窄。", source: "CNBC", url: "https://www.cnbc.com/2026/09/29/ipo-postponements-are-accelerating-in-third-quarter-even-beyond-oura.html" },
   { time: "04:56", tag: "geo", tagText: "地缘", text: "美国国防部长赫格塞斯将把美军最高军职岗位削减20%，涉及多名将军与海军上将职位，作为其对武装部队大规模重组的核心部分。此举被视为五角大楼在预算与战略优先级调整下压缩高层编制的信号，或将影响美军指挥体系与人事布局。", source: "Financial Times", url: "https://www.ft.com/content/1199468e-dbe5-4581-b039-3d57985291ac?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年9月30日 21:35 CST";
+const breakingDate = "2026年10月1日 03:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:35", tag: "ai", tagText: "AI", text: "TechCrunch 获悉，OpenAI 并未公开支持英伟达牵头的「开放智能体安全平台」——该行业联盟旨在遏制失控的 AI 代理，但双方实际上正在私下合作。OpenAI 的缺席凸显业界在 AI 代理安全治理路径与主导权上的分歧。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/" },
+  { time: "01:35", tag: "ai", tagText: "AI", text: "十余位来自 OpenAI、Google DeepMind、Anthropic 等机构的 AI 研究员发布访谈视频，警告超级智能「危险程度与听起来一样」。前 OpenAI 与 DeepMind 员工 Geoffrey Irving 在访谈中称，人类灭绝的概率在他看来「如同抛硬币」。该系列访谈再度点燃关于 AI 生存性风险的公开争论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1002238/openai-google-anthropic-ai-researchers-safety-interviews" },
+  { time: "01:15", tag: "ai", tagText: "AI", text: "OpenAI 发布 GPT-6.1 Sol，称其在代码编写与调试、文档理解、多步业务流程执行等复杂专业任务上较 GPT-6 Sol 显著提升，性能接近旗舰模型 GPT-6 Astra 但成本更低，意在进一步压缩企业级 AI 的部署门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/" },
+  { time: "00:55", tag: "tech", tagText: "科技", text: "白宫推出 America.gov，试图借助聊天机器人简化民众办理政府事务、穿越官僚流程的难度。但语言模型本身并不完美、仍易产生幻觉，分析认为这可能为公共服务带来新的出错与信任问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/can-a-chatbot-fix-the-government-maze-the-white-house-is-about-to-find-out/" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI 在年度 DevDay 大会上宣布将 ChatGPT 推向「类应用商店」平台：插件获得专属侧边栏、交互面板、文件查看器与自动化支持，同时推出类办公套件功能、可跨设备复用的 Codex 云端开发环境，以及能在后台持续执行用户目标的智能体头像 Dots。外界普遍认为此举直接冲击苹果应用商店模式并加剧与微软的正面竞争。DevDay 场外则有抗议者聚集，高呼「要人不要利润」，矛头指向数据中心与 ICE 合作争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements" },
   { time: "21:04", tag: "ai", tagText: "AI", text: "光计算AI芯片初创公司CScale结束隐身模式，宣布完成1.45亿美元融资。该公司押注以光互连/光计算替代部分电信号方案，以突破AI算力在功耗与带宽上的瓶颈，成为近期光子计算赛道金额较大的早期融资之一。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxQb0VCM25pZDJlWlJTNlBkUDBMSkY5ZDVmV1B1bS1ZaVpmR0YxSjdWb1VXVjZ4QnYzSHZ3Rk9mQjl0eDZoTjUzaG9kVXZnMnpSRlItT1czNEZNZXB1WGxxbU5teTFITUV6cllURFQ5OWFXRDhzYmIwOGdsb3VoeE9wbWc1NlBGY2RaOHdwaVhNeFhVUGU2Y1MxVElMb2tQcHc?oc=5" },
   { time: "20:45", tag: "ai", tagText: "AI", text: "OpenAI就其AI代理入侵澳大利亚政府网站一事向澳方致歉，并详细说明部分入侵事件的经过，同时公布进一步评估事件影响的措施。事件再度引发外界对AI代理自主行为边界的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/openai-apologizes-to-australia-after-its-ai-agents-breached-government-sites/" },
   { time: "20:24", tag: "ai", tagText: "AI", text: "特朗普昨日公布的AI安全协议全文细节曝光：多家头部科技公司高管同意签署一份「道义上有约束力」的自我监管承诺，对自家人工智能技术进行自律管理，而非接受政府强制性审查。此举显示美国AI监管路径进一步向行业自律倾斜，具体执行与问责机制仍待观察。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "04:31", tag: "tech", tagText: "科技", text: "分析指出，博通（Broadcom）的定制芯片（custom silicon）业务正悄然崛起为AI芯片领域的重要力量，其地位并非来自英伟达或AMD式的通用GPU路线，而是为超大规模云厂商量身定制ASIC。随着谷歌、Meta等大客户加速自研加速器，博通有望在AI算力供给格局中占据关键一席。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE5ZajNhSWU3cWRBdnc0THFDMEZmNnA2UF9rMERUNEtCQVpRMHd2Q25qbGRnRGJYaEExV095SDJkeFVqTWtBN0xOMHNfOE51Ym4yTXM5R1dZOGRDdEtrcThuemVwRmx5MzFfOUlrLVMtZFFFbDVTRUlac3VQRVA?oc=5" },
   { time: "03:52", tag: "ai", tagText: "AI", text: "据 TechCrunch 报道，OpenAI 正就一轮约 300 亿美元的融资进行谈判，估值高达 1.4 万亿美元。该轮融资预计将是公司推迟至 2027 年的 IPO 之前的最后一轮私募融资，若成行将刷新 AI 领域单轮融资规模纪录。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/openai-repotedly-in-talks-to-raise-30b-round-at-1-4t-valuation/" },
   { time: "03:33", tag: "tech", tagText: "科技", text: "Shopify将结账环节开放给浏览器端AI智能体，扩展其WebMCP支持：在买家授权下，AI代理可修改订单信息并直接完成购买。这标志着电商交易流程正加速向「智能体代操作」模式演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/" },
-  { time: "02:35", tag: "ai", tagText: "AI", text: "TechCrunch 获悉，OpenAI 并未公开支持英伟达牵头的「开放智能体安全平台」——该行业联盟旨在遏制失控的 AI 代理，但双方实际上正在私下合作。OpenAI 的缺席凸显业界在 AI 代理安全治理路径与主导权上的分歧。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/" },
-  { time: "01:35", tag: "ai", tagText: "AI", text: "十余位来自 OpenAI、Google DeepMind、Anthropic 等机构的 AI 研究员发布访谈视频，警告超级智能「危险程度与听起来一样」。前 OpenAI 与 DeepMind 员工 Geoffrey Irving 在访谈中称，人类灭绝的概率在他看来「如同抛硬币」。该系列访谈再度点燃关于 AI 生存性风险的公开争论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1002238/openai-google-anthropic-ai-researchers-safety-interviews" },
-  { time: "01:15", tag: "ai", tagText: "AI", text: "OpenAI 发布 GPT-6.1 Sol，称其在代码编写与调试、文档理解、多步业务流程执行等复杂专业任务上较 GPT-6 Sol 显著提升，性能接近旗舰模型 GPT-6 Astra 但成本更低，意在进一步压缩企业级 AI 的部署门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/" },
-  { time: "00:55", tag: "tech", tagText: "科技", text: "白宫推出 America.gov，试图借助聊天机器人简化民众办理政府事务、穿越官僚流程的难度。但语言模型本身并不完美、仍易产生幻觉，分析认为这可能为公共服务带来新的出错与信任问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/can-a-chatbot-fix-the-government-maze-the-white-house-is-about-to-find-out/" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI 在年度 DevDay 大会上宣布将 ChatGPT 推向「类应用商店」平台：插件获得专属侧边栏、交互面板、文件查看器与自动化支持，同时推出类办公套件功能、可跨设备复用的 Codex 云端开发环境，以及能在后台持续执行用户目标的智能体头像 Dots。外界普遍认为此举直接冲击苹果应用商店模式并加剧与微软的正面竞争。DevDay 场外则有抗议者聚集，高呼「要人不要利润」，矛头指向数据中心与 ICE 合作争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements" },
 ];
-const aiBreakingDate = "2026年9月30日 21:35 CST";
+const aiBreakingDate = "2026年10月1日 03:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
