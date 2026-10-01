@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 26.94,
+  score: 28.4,
   rating: "fear",
-  timestamp: "2026-10-01T15:32:16+00:00",
+  timestamp: "2026-10-01T18:45:37+00:00",
   previousClose: 30.83,
   previous1Week: 35.74,
   previous1Month: 44.86,
   previous1Year: 52.49,
-  date: "2026年10月1日 23:34 CST"
+  date: "2026年10月2日 02:48 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:37", tag: "geo", tagText: "地缘", text: "美国财政部宣布对伊朗汽车与铁路行业实施新一轮制裁，代号“经济弃儿行动”（Operation Economic Outcast）。财长贝森特8月推出该计划时，特朗普曾称其为对伊朗的“经济诺曼底日”。此举进一步收紧对伊经济施压，或影响中东局势与全球能源市场风险溢价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/treasury-sanctions-iran-auto-rail.html" },
+  { time: "02:29", tag: "ai", tagText: "AI", text: "谷歌发布最新AI模型，宣称在编程与网络安全能力上取得重大进展，但华尔街更关注的“个人智能体”（personal agent）赛道谷歌仍显落后。市场担忧其在AI代理竞争中掉队，进而影响后续商业化与生态卡位。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/google-gemini-4-arrives-as-wall-street-shifts-to-personal-agents.html" },
+  { time: "02:23", tag: "geo", tagText: "地缘", text: "因有报道称美国正向中东派遣第三个航母打击群，布伦特原油周四跳涨逾4%。地缘紧张升级令市场担忧中东供应中断风险，油价波动明显加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/oil-prices-today-wti-brent.html" },
+  { time: "01:54", tag: "geo", tagText: "地缘", text: "德国总理默茨警告，欧洲需为来自俄罗斯的“严重混合攻击”做好准备，称莫斯科在乌克兰战争问题上的升级举动反映出“绝望”。此番表态凸显欧洲对俄安全威胁的担忧持续上升。", source: "Financial Times", url: "https://www.ft.com/content/04992c30-21da-46f3-8b95-ca82b2791521?syn-25a6b1a6=1" },
+  { time: "01:52", tag: "macro", tagText: "宏观", text: "美联储负责货币政策的副主席杰斐逊释放偏鸽信号，暗示央行将在10月会议上维持利率不变。其表态与纽约联储主席威廉姆斯的鸽派言论相呼应，市场对政策路径的预期趋于宽松。", source: "Financial Times", url: "https://www.ft.com/content/e3a53272-385d-40a8-ac77-408f4c136f6f?syn-25a6b1a6=1" },
+  { time: "01:50", tag: "macro", tagText: "宏观", text: "欧盟国家就释放柴油战略储备展开紧急磋商。特朗普政府施压欧洲国家释放储备，并警告若不行动可能禁止美国柴油出口，跨大西洋能源贸易紧张加剧，欧洲能源独立议题再度升温。", source: "Financial Times", url: "https://www.ft.com/content/0234bcc7-386c-40b6-9f04-88aef3a1e24c?syn-25a6b1a6=1" },
+  { time: "00:06", tag: "macro", tagText: "宏观", text: "美国30年期抵押贷款利率出现四年来最大单周跳升，升至近7.3%，创约三年新高，令本已低迷的房地产市场再受打击。借贷成本飙升与国债收益率走高同步，购房者负担进一步加重。", source: "MarketWatch", url: "https://www.marketwatch.com/story/30-year-mortgage-rate-posts-biggest-jump-in-four-years-e288f596?mod=mw_rss_topstories" },
   { time: "23:19", tag: "macro", tagText: "宏观", text: "美国制造商协会调查显示，制造业仍在扩张且新订单充足，但高企的能源价格与特朗普新一轮关税正在压制增长空间，企业普遍反映通胀压力居高不下且短期内难见改善。这意味着成本端压力可能继续向终端价格传导，给美联储的政策路径增添变数。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-manufacturers-say-inflation-is-bad-and-not-getting-any-better-8281edef?mod=mw_rss_topstories" },
   { time: "22:39", tag: "macro", tagText: "宏观", text: "美国财政部称，已有超过6000万名儿童被自动纳入“特朗普账户”（Trump Accounts）计划。该计划规模庞大，被视为本届政府在家庭储蓄与资本市场参与方面的标志性政策，后续资金流向及财政影响值得关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/treasury-trump-accounts-auto-enroll-more-than-60-million-children.html" },
   { time: "22:36", tag: "tech", tagText: "科技", text: "9月，包括约翰·阿诺德、斯坦利·德鲁肯米勒等亿万富翁家族办公室将资金投向地热能源与脑机接口等前沿技术。超高净值私人投资机构正加速布局硬科技赛道，其动向往往被视为早期风险资本的风向标。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html" },
@@ -1642,21 +1649,20 @@ const breakingNews = [
   { time: "20:24", tag: "macro", tagText: "宏观", text: "ADP报告显示，美国9月私营部门新增就业9万人，好于预期，招聘在短暂放缓后重新提速；同时8月消费者支出在短暂回落后反弹。两份数据共同指向美国经济动能再度增强，与通胀降温形成微妙组合。", source: "CNBC", url: "https://www.cnbc.com/2026/09/30/private-sector-jobs-rose-by-90000-in-september-better-than-expected-adp-reports.html" },
   { time: "20:20", tag: "ai", tagText: "AI", text: "博通（Broadcom）将向Anthropic提供最高420亿美元贷款，用于后者租赁其芯片。Anthropic的IPO招股书披露了其与这家芯片制造商之间广泛的合作关系，其中包括这笔巨额融资安排。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/broadcom-lending-anthropic-42-billion-chips-reuters.html" },
   { time: "19:35", tag: "geo", tagText: "地缘", text: "俄罗斯威胁称，若北约对加里宁格勒实施封锁，俄方不排除对北约国家实施核打击。克里姆林宫指责西方防务联盟正策划封锁这一波罗的海飞地，令欧洲地缘紧张局势进一步升级。", source: "Financial Times", url: "https://www.ft.com/content/1bb7ec8d-7252-4fa3-8c4a-81fa5b6906a2?syn-25a6b1a6=1" },
-  { time: "19:24", tag: "geo", tagText: "地缘", text: "俄罗斯延长柴油出口禁令。该限制最初为回应乌克兰无人机对俄炼油厂的持续袭击而实施，延长后可能进一步加剧全球柴油供应紧张，并推高成品油价格。", source: "Financial Times", url: "https://www.ft.com/content/fc705366-9a91-4e99-9c07-e962dca6354b?syn-25a6b1a6=1" },
-  { time: "19:20", tag: "tech", tagText: "科技", text: "埃森哲（Accenture）股价大幅上涨，公司公布全年营收达742亿美元。尽管市场此前担忧AI可能冲击咨询行业，但业绩表现缓解了相关疑虑。", source: "Financial Times", url: "https://www.ft.com/content/e1074ce0-cd16-4a91-9934-50df917b3b20?syn-25a6b1a6=1" },
-  { time: "19:13", tag: "geo", tagText: "地缘", text: "日本首相表示，其政府政策将提振市场对日元的信心。此前美国干预汇市的努力成效不足，未能有效支撑日元汇率。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/japan-yen-dollar-trump-intervention.html" },
-  { time: "19:09", tag: "macro", tagText: "宏观", text: "尼日利亚丹格特集团在肯尼亚动工建设价值160亿美元的东非炼油厂。该项目将大幅提升非洲本土炼化能力，并可能重塑东非及区域成品油贸易与供应格局。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLW04LThTcE5MdHd5LTBPYTlKb3BhLW5sRUxfcDBOMmlSaUxCLVJnaERPeHVjYURJU3dudWdLTWRUVzk1bTl4OEkxZ2d1amNzQ0VQOFBBeElJM1JXTDlxaEFoNnpPTExGM0hCQkJ4ZGZaRjBUcXROMzJLYlFRS0ZtV2tfNzc4SHlqY3FacUUxT0dDdUdkd2x5MVc4X0tieU4ycGRtRzYyenhLNnVIaG03ZTlNOVZKSkk?oc=5" },
-  { time: "17:20", tag: "macro", tagText: "宏观", text: "印度股市遭遇近年来最长连跌，Sensex与Nifty指数持续下挫，市值合计蒸发约6万亿卢比（6 lakh crore），市场情绪明显承压。", source: "Times of India", url: "https://news.google.com/rss/articles/CBMikAJBVV95cUxPNWxfbDM3Qjd4Tm13aUg3T2R4ZFhjMElFdHIyQldHcVltX0ZtZXdsakJOT3U3ekFfT3VWZ0RDem5ZR2JIXzJsSlBuUDR4SzA4bTJkWVg5WkluaVFVWTBUYzJwbnFnTUhOempLeFluOEdnVUgwcGpvM2N1d0Z1TWVoaEhPR2RSMVluWG9KVUduWHJkMG9tTkoxcHdrcFkzV255N3BZemFHRVJTT3VGXzktYWdGX3YwQ2haMnp4cmdycDZmM2N3dmdqWmtaWkRYam5NVTlLZF9fdlVYMDBGWXZyWVJaWklfMUJ0a0EwY3QtNm5QSkpqOE44dmVWdzJ0MlpIQVA1UERwVl9teHpEY1dvctIBlgJBVV95cUxQckQ3bm4wX25ncVFVQVhkQjAzV2dka25EUGRINzhjSkhNOWptUTVFeUt0MWdCZkVWWHI2VG9mLXNKc2tHeWxtMXN4RlJ2dDYxMFJRQ2RrQzdkdkR1Vy16QVJtZUtJZWpRTVl5SmtOcjhSUmZrOFdFZGd3QUY0TDUzNlN5eDFuaEVKZF96dURyV3JyOVpYQ1V0SERONjBHek9VVHlod3NDZjJPY3VrcFBjc2ozUGgxbXQ2SHhMMGhpZVBjdmRpWVZxclRaQmduLXhuZEhLNzgxVnRYemxkelVXUV9DQVF0QjhUQ1JRS1NCZUlyOUZkTUw2WG5VaXhMZUNRSDNUYlJQY2xYbUJKX0RtdlV0Y0RKUQ?oc=5" },
-  { time: "16:52", tag: "crypto", tagText: "加密", text: "花旗（Citi）上调比特币和以太坊价格预测，理由是加密市场活动强劲。该行预计此前相对平静的币价走势将发生变化。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVHIxQ2w0Yk5PREktR1RYTlhhbF9DY2tMNTZnVmk0V2dNUTQ3NlRnNHdFVGRZcUtsa2drNGdIZTlhcXFtaUJpaDIwQTJLeEFwaW1DUWhGTWxhMXdIblplX2NqcVIwdWlRdkphUmRhRzZvY3EtZ3pyRE1tM2MwV3dzSENXaHBzY2syUmtHWmF5Q1pwUHF1am05eFJMOF9zaXp4S1J6aldBVmN5OUNKMTUzTA?oc=5" },
-  { time: "13:53", tag: "crypto", tagText: "加密", text: "比特币回落，而以太坊、XRP与狗狗币走高，加密市场走势分化。有分析师认为牛市\"依然完好\"，但涨势\"已现裂痕\"，提示资金轮动与短线波动风险上升。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XeW9fMUJGdjVQTlptLTlRS0lUQUV5ckVxcG9HWkwxX3NWdzFNdmk0eWtCWDhmOUFQTjJBNlhrTDZrd1pXLTFpX29tdU8yX3VKaUp3MFVBRUg?oc=5" },
 ];
-const breakingDate = "2026年10月1日 23:34 CST";
+const breakingDate = "2026年10月2日 02:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:14", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI 在一项内部调查后与三名安全研究人员解除了合作关系。调查认定这三人对公司的敏感信息处理不当。这是 OpenAI 内部安全与治理团队近期又一次人员动荡，外界持续关注其在商业化提速背景下的安全研究独立性。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/" },
+  { time: "00:49", tag: "ai", tagText: "AI", text: "亚马逊云科技旗下 Strand Labs 发布决策模型 Strands Decider 2B，被视为对 Jev 类产品的自家克隆。随着决策类模型在网络上密集涌现，低成本、专用化的「决策智能」正成为继通用大模型之后的又一竞争热点，云厂商借自有模型抢占企业决策场景入口。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/" },
+  { time: "00:44", tag: "tech", tagText: "科技", text: "Shopify 推出名为 Canvas 的建站工具，商家可直接与其 AI 智能体 Sidekick 对话来创建和定制网店，并实时看到页面变化。该功能把「对话即开发」引入电商建站环节，进一步降低中小商家的开店门槛，也是 Shopify 将 AI 深度嵌入商家工作流的最新一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/" },
   { time: "23:12", tag: "ai", tagText: "AI", text: "Airbnb 首席执行官 Brian Chesky 在访谈中提出，AI 智能体需要属于自己的操作系统，并透露 Airbnb 正着手让平台对智能体更友好。他就消费级 AI 现状及为何世界需要一个「AI 原生操作系统」发表了看法，代表大型消费平台对代理时代入口的押注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/brian-chesky-interview-ai-agents-need-their-own-operating-system/" },
   { time: "22:36", tag: "ai", tagText: "AI", text: "OpenAI 在年度 DevDay 大会上发布新版 AI 智能体，正面迎战 Meta 的 Muse 代理平台——后者上线后增长迅猛。CEO 山姆·奥特曼亲自站台，但分析认为 OpenAI 的付费模式在 Meta 的免费策略面前面临严峻挑战，智能体平台的「免费 vs 付费」之争正成为行业焦点。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle" },
+  { time: "22:29", tag: "tech", tagText: "科技", text: "媒体报道称，一项 AI 辅助的材料研究突破有望让电动汽车摆脱对稀土的依赖。若该技术路径可规模化落地，将削弱稀土供给集中带来的供应链风险，并可能重塑电机与电池关键材料的全球格局，对新能源车产业链的成本与地缘风险具有潜在深远影响。", source: "Futura", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVkZvMFV4WmZnaEcxeWQwcjM3NS1wQXotekMtSGw0bWptRWw1S1NveEFNRy1hZDJLc3F3aTRVX24wMTFpUV9aNFNhelJPd1VxbFhsOS1Dckl4SFY5U2JzWnNPM0wtYUVLaW1IS2dUcXhVZE1mdGctc3ZDNDhlZ1B4NU5rZEJJeXNxbWpVYmRDVl9CRC1mZXlCTWNOTUZzSnJ2NURVdmJxdmNqNlcwcDlpV2R2cFN2NVQtR3Q0?oc=5" },
+  { time: "22:07", tag: "macro", tagText: "宏观", text: "「木头姐」凯西·伍德（Cathie Wood）旗下基金买入约 8150 万美元的一只近期大涨的半导体股票。此前有分析指出，AI 推动的万亿美元级芯片景气周期仍在扩张，受益者已不止英伟达一家。该笔加仓被视为对 AI 芯片产业链持续看多的信号。", source: "thestreet.com", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxNOUl6VzZCUlJxdTRSZFR4R09tLWtHWFlhcjlNY28zSUpGbjl3cFdDekllWHdWOXZ4SDRncUR0N3QzMExIbUd0bnJTckQyc19VanNBczhic2paR0dCWjRUR0ZnUlFZQU5rZXVodUx4SjJybDJ3YTdVMkppMjZjWklCQkRYSjVWc0RxazNmcjBNeXZFTkxTRG5JcDlPZTJmVDR3cG1yeTlrTW9fdGNsd3BPQ1E5S01SQQ?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "The Verge 披露历时数月的调查报道，还原投资人 Kevin O'Leary 在犹他州建设「全球最大数据中心之一」的计划如何演变为一场烂尾风波。该案例被视为 AI 算力基建热潮背后地方阻力、执行风险与资本狂热矛盾的代表性样本。", source: "The Verge", url: "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash" },
+  { time: "21:59", tag: "ai", tagText: "AI", text: "据报道，博通（Broadcom）将向 Anthropic 提供约 420 亿美元贷款，帮助其应对激增的算力成本并为下一代 AI 芯片提供资金。此举凸显头部大模型公司正越来越多地依赖芯片与代工伙伴的融资安排来锁定算力，也意味着博通与 Anthropic 的绑定进一步加深。", source: "Ventureburn", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTE5uWkFTY2VVdGFHUi1JZldzWmhnS0xoNDFudUllNEtMeXJKQ2RmaWdoUEx6RXZkRkRIUTRRSVVyaDJpOEc1OXE2QXA1VHU5TldhTWh4UzAtTHFkblZQa29nTGVyc05Dd2FYNGExc05hRjVRMEdTeHdnTl9tTdIBe0FVX3lxTE5uWkFTY2VVdGFHUi1JZldzWmhnS0xoNDFudUllNEtMeXJKQ2RmaWdoUEx6RXZkRkRIUTRRSVVyaDJpOEc1OXE2QXA1VHU5TldhTWh4UzAtTHFkblZQa29nTGVyc05Dd2FYNGExc05hRjVRMEdTeHdnTl9tTQ?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "由前谷歌和SpaceX产品经理创立的Satlyt完成800万美元融资，旨在将AI运行于卫星之上。该公司希望成为轨道计算领域的安卓，提供可在多家公司卫星上运行的开放软件，与SpaceX封闭的一体化iPhone式方案形成对比。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites/" },
   { time: "18:43", tag: "ai", tagText: "AI", text: "AI网络安全初创公司Armadin在新一轮融资后估值超过25亿美元。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRVNRVnY0bEVHMFFBV095N0xyYkVsTTNWdDNEOHJ0cVhoSFpJUVFrZ1pxZkNuX191dDdlSF9oRVQ1MHFoVmt5UzVBNDN1NjR6UUhxcDBNLVVYUXhUYWloMC1GWjVtSjdTUjJLOHVlR1R5aHV3aXIyTEhmVE94b1lCOXdqbGNMeTA2ckU3cWxwbzlqXzFsRGdMa2dLQ0FOR21TM0lEcHFPd3d4VURrazd6NXVER0dfUDFDUjZ5TGdUMjZ0WXBJYVlZYXVZdnQxbXAy?oc=5" },
   { time: "16:15", tag: "tech", tagText: "科技", text: "韩国风险投资融资额创四年新高，AI与机器人交易活跃。", source: "KED Global", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTFBfSjNsaUNOZ2tCaFJZUkpoSTlndVVoWVNGMEJqMVFQRDA2VEZWd25BU0xucWgyb0stQ3RpS3ZCdlZEWDhuVkUybVZJM3A4R0NZa212VlZ0Y19ONU9sRnBYV2l3SjdEZ28tTTJKT3JSZFN6X0Jo?oc=5" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "05:07", tag: "ai", tagText: "AI", text: "将 AI 代理引入硬件设计的初创公司 Flow Engineering 以 7.5 亿美元估值完成融资，投资方包括 Valor、Atreides 与红杉资本，红杉合伙人 Roelof Botha 同时以天使投资人身份加入董事会。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/" },
   { time: "04:44", tag: "tech", tagText: "科技", text: "安全研究人员警告，攻击者正持续利用 Zimbra 邮件系统的一个关键漏洞窃取邮件：一封简单的恶意邮件即可让攻击者远程注入操作系统命令，进而接管服务器。相关漏洞已被在野利用，企业需尽快修补。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/09/attackers-have-been-exploiting-critical-zimbra-flaw-to-steal-emails/" },
   { time: "04:41", tag: "ai", tagText: "AI", text: "谷歌发布新一代前沿模型 Gemini 4 Argon，称其在基准测试中领先 OpenAI 与 Anthropic。谷歌表示该模型在复杂工作流、真实软件工程及企业级任务中达到「前沿性能」，但因能力过强，目前仅向「受信任的网络防御者」开放。", source: "The Verge", url: "https://www.theverge.com/tech/1002980/google-gemini-4-argon" },
-  { time: "04:39", tag: "ai", tagText: "AI", text: "AMD宣布以约82亿美元全股票交易收购AI研究公司World Labs。World Labs由知名学者李飞飞联合创办，交易完成后李飞飞将加入AMD出任执行副总裁兼首席科学家。此举被视为AMD在AI人才与前沿研究领域对英伟达的进一步追赶。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/" },
-  { time: "04:34", tag: "ai", tagText: "AI", text: "Anthropic首席执行官达里奥·阿莫代伊（Dario Amodei）将与美国总统特朗普共进晚餐，这是两人首次一对一会面。会面正值华盛顿在AI监管、算力供给与国家安全议题上加快行动之际，被视为前沿AI实验室与政府高层直接沟通的重要信号。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/" },
-  { time: "04:31", tag: "tech", tagText: "科技", text: "分析指出，博通（Broadcom）的定制芯片（custom silicon）业务正悄然崛起为AI芯片领域的重要力量，其地位并非来自英伟达或AMD式的通用GPU路线，而是为超大规模云厂商量身定制ASIC。随着谷歌、Meta等大客户加速自研加速器，博通有望在AI算力供给格局中占据关键一席。", source: "AOL.com", url: "https://news.google.com/rss/articles/CBMifEFVX3lxTE5ZajNhSWU3cWRBdnc0THFDMEZmNnA2UF9rMERUNEtCQVpRMHd2Q25qbGRnRGJYaEExV095SDJkeFVqTWtBN0xOMHNfOE51Ym4yTXM5R1dZOGRDdEtrcThuemVwRmx5MzFfOUlrLVMtZFFFbDVTRUlac3VQRVA?oc=5" },
-  { time: "03:52", tag: "ai", tagText: "AI", text: "据 TechCrunch 报道，OpenAI 正就一轮约 300 亿美元的融资进行谈判，估值高达 1.4 万亿美元。该轮融资预计将是公司推迟至 2027 年的 IPO 之前的最后一轮私募融资，若成行将刷新 AI 领域单轮融资规模纪录。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/openai-repotedly-in-talks-to-raise-30b-round-at-1-4t-valuation/" },
-  { time: "03:33", tag: "tech", tagText: "科技", text: "Shopify将结账环节开放给浏览器端AI智能体，扩展其WebMCP支持：在买家授权下，AI代理可修改订单信息并直接完成购买。这标志着电商交易流程正加速向「智能体代操作」模式演进。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "OpenAI 推出「Decisions API」，被视为对 Jev 类产品的克隆，凸显快速、廉价智能的价值。报道称该工具或有助于这家人工智能前沿实验室管控其大规模并行的「蜂群式」AI 代理。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/" },
 ];
-const aiBreakingDate = "2026年10月1日 23:34 CST";
+const aiBreakingDate = "2026年10月2日 02:48 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
