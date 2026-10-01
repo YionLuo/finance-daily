@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 30.83,
+  score: 30.71,
   rating: "fear",
-  timestamp: "2026-09-30T23:21:22+00:00",
-  previousClose: 31.63,
-  previous1Week: 32.54,
-  previous1Month: 53.74,
-  previous1Year: 51.4,
-  date: "2026年10月1日 07:40 CST"
+  timestamp: "2026-10-01T00:00:00+00:00",
+  previousClose: 30.83,
+  previous1Week: 35.74,
+  previous1Month: 44.86,
+  previous1Year: 52.49,
+  date: "2026年10月1日 13:38 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:44", tag: "tech", tagText: "科技", text: "特斯拉宣布签署规模300亿美元的信贷协议，用于支持公司扩张计划。此举为其后续产能与项目投入提供资金弹药，也反映其在资本开支上继续加杠杆。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxONnhEX051ck9ma2hibnJsUGVJWWo1RDRWdGRyYTVWdHJzeWJsa0lGTG1sVUc0eG5pZmtMbkxJbm5LeE91WkNDNUZaMUdsSW1TcGpKbV8xR0l4NmF3UXJvXzY5QkRxc0VLTC1kMUI4LUJqRGNXc1IyVkh1ZUZxYnU5bGpKMGpMUVREN04yaHFKb3djNmNX?oc=5" },
+  { time: "12:01", tag: "ai", tagText: "AI", text: "由谷歌、Meta、微软等组成的\"AI基础设施联盟\"公布一系列承诺，包括承担数据中心能源成本、最大限度减少用水，以在中期选举前化解针对数据中心快速扩张的公众与政治反弹。", source: "Financial Times", url: "https://www.ft.com/content/9705f5bf-bc06-481d-b2a3-1299463074b8?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "白宫就柴油出口禁令举行关键磋商。随着中期选举临近，特朗普处于石油巨头与共和党高层之间的游说角力中心，后者警告高企的燃料价格可能引发选民不满。政策走向将直接影响美国能源出口与国内柴油价格。", source: "Financial Times", url: "https://www.ft.com/content/562f2988-0c04-4669-b0b7-2c16d3821926?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "资管巨头Vanguard警告法国正在\"信用恶化\"，其借贷成本持续飙升。报道指出，伊朗战争加剧了巴黎的财政压力，而一场围绕预算的政治博弈即将展开，法国主权债风险溢价或进一步走阔。", source: "Financial Times", url: "https://www.ft.com/content/7820a84f-338e-4b91-a9b6-241a9bf81539?syn-25a6b1a6=1" },
+  { time: "11:39", tag: "geo", tagText: "地缘", text: "中国商务部警告，若欧盟对中国企业或产品施加限制，中方将被迫\"坚决回应\"。此番表态令中欧贸易紧张进一步升温，市场关注欧盟后续是否出台新的对华限制措施。", source: "CNBC", url: "https://www.cnbc.com/2026/09/30/china-warns-europe-increases-trade-pressure.html" },
+  { time: "10:45", tag: "macro", tagText: "宏观", text: "韩国KOSPI指数三季度累计下跌近五分之一，成为全球表现最差的主要股市，7月的一轮抛售是主要拖累。不过该指数年内仍上涨约60%，显示AI带动的行情波动加剧、回撤风险上升。", source: "Financial Times", url: "https://www.ft.com/content/7fb7147a-ec36-4de4-b563-a4ca796fc3b2?syn-25a6b1a6=1" },
   { time: "07:16", tag: "macro", tagText: "宏观", text: "对冲基金在规模达30万亿美元的美国国债市场中持有创纪录份额。分析认为，对冲基金参与度上升有助于改善国债市场流动性，但其角色快速扩大也可能放大杠杆与期限错配风险，成为金融不稳定的潜在来源——尤其在30年期美债收益率已升至24年高位的背景下。", source: "CNBC", url: "https://www.cnbc.com/2026/09/30/us-treasury-market-is-relying-more-on-hedge-funds.html" },
   { time: "05:56", tag: "ai", tagText: "AI", text: "OpenAI CEO奥特曼表示，公司将在解决安全关切之前推迟IPO。与此同时，ChatGPT开发商推出新的AI个人助理产品，以应对来自Meta旗下Muse的竞争压力。此举凸显AI头部企业在资本化节奏与安全合规之间的取舍，也使市场对AI独角兽上市时间表的预期进一步后移。", source: "Financial Times", url: "https://www.ft.com/content/211d10ae-cf9e-481d-99ed-0321d2eb0676?syn-25a6b1a6=1" },
   { time: "05:56", tag: "macro", tagText: "宏观", text: "派拉蒙为收购华纳兄弟进行融资，这笔好莱坞大型债务交易却撞上债券收益率上行的\"高墙\"。在2026年借贷成本持续攀升的环境下，该笔融资被视为衡量并购交易意愿与信用市场承受力的重要风向标。", source: "MarketWatch", url: "https://www.marketwatch.com/story/hollywoods-big-debt-deal-hits-a-wall-of-higher-yields-as-paramount-finances-warner-bros-buyout-6ee6e3b8?mod=mw_rss_topstories" },
@@ -1643,17 +1649,12 @@ const breakingNews = [
   { time: "19:24", tag: "geo", tagText: "地缘", text: "俄罗斯延长柴油出口禁令。该限制最初为回应乌克兰无人机对俄炼油厂的持续袭击而实施，延长后可能进一步加剧全球柴油供应紧张，并推高成品油价格。", source: "Financial Times", url: "https://www.ft.com/content/fc705366-9a91-4e99-9c07-e962dca6354b?syn-25a6b1a6=1" },
   { time: "19:09", tag: "macro", tagText: "宏观", text: "尼日利亚丹格特集团在肯尼亚动工建设价值160亿美元的东非炼油厂。该项目将大幅提升非洲本土炼化能力，并可能重塑东非及区域成品油贸易与供应格局。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLW04LThTcE5MdHd5LTBPYTlKb3BhLW5sRUxfcDBOMmlSaUxCLVJnaERPeHVjYURJU3dudWdLTWRUVzk1bTl4OEkxZ2d1amNzQ0VQOFBBeElJM1JXTDlxaEFoNnpPTExGM0hCQkJ4ZGZaRjBUcXROMzJLYlFRS0ZtV2tfNzc4SHlqY3FacUUxT0dDdUdkd2x5MVc4X0tieU4ycGRtRzYyenhLNnVIaG03ZTlNOVZKSkk?oc=5" },
   { time: "13:53", tag: "crypto", tagText: "加密", text: "比特币回落，而以太坊、XRP与狗狗币走高，加密市场走势分化。有分析师认为牛市\"依然完好\"，但涨势\"已现裂痕\"，提示资金轮动与短线波动风险上升。", source: "Cryptonews.net", url: "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XeW9fMUJGdjVQTlptLTlRS0lUQUV5ckVxcG9HWkwxX3NWdzFNdmk0eWtCWDhmOUFQTjJBNlhrTDZrd1pXLTFpX29tdU8yX3VKaUp3MFVBRUg?oc=5" },
-  { time: "12:44", tag: "tech", tagText: "科技", text: "特斯拉宣布签署规模300亿美元的信贷协议，用于支持公司扩张计划。此举为其后续产能与项目投入提供资金弹药，也反映其在资本开支上继续加杠杆。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxONnhEX051ck9ma2hibnJsUGVJWWo1RDRWdGRyYTVWdHJzeWJsa0lGTG1sVUc0eG5pZmtMbkxJbm5LeE91WkNDNUZaMUdsSW1TcGpKbV8xR0l4NmF3UXJvXzY5QkRxc0VLTC1kMUI4LUJqRGNXc1IyVkh1ZUZxYnU5bGpKMGpMUVREN04yaHFKb3djNmNX?oc=5" },
-  { time: "12:01", tag: "ai", tagText: "AI", text: "由谷歌、Meta、微软等组成的\"AI基础设施联盟\"公布一系列承诺，包括承担数据中心能源成本、最大限度减少用水，以在中期选举前化解针对数据中心快速扩张的公众与政治反弹。", source: "Financial Times", url: "https://www.ft.com/content/9705f5bf-bc06-481d-b2a3-1299463074b8?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "白宫就柴油出口禁令举行关键磋商。随着中期选举临近，特朗普处于石油巨头与共和党高层之间的游说角力中心，后者警告高企的燃料价格可能引发选民不满。政策走向将直接影响美国能源出口与国内柴油价格。", source: "Financial Times", url: "https://www.ft.com/content/562f2988-0c04-4669-b0b7-2c16d3821926?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "资管巨头Vanguard警告法国正在\"信用恶化\"，其借贷成本持续飙升。报道指出，伊朗战争加剧了巴黎的财政压力，而一场围绕预算的政治博弈即将展开，法国主权债风险溢价或进一步走阔。", source: "Financial Times", url: "https://www.ft.com/content/7820a84f-338e-4b91-a9b6-241a9bf81539?syn-25a6b1a6=1" },
-  { time: "11:39", tag: "geo", tagText: "地缘", text: "中国商务部警告，若欧盟对中国企业或产品施加限制，中方将被迫\"坚决回应\"。此番表态令中欧贸易紧张进一步升温，市场关注欧盟后续是否出台新的对华限制措施。", source: "CNBC", url: "https://www.cnbc.com/2026/09/30/china-warns-europe-increases-trade-pressure.html" },
-  { time: "10:45", tag: "macro", tagText: "宏观", text: "韩国KOSPI指数三季度累计下跌近五分之一，成为全球表现最差的主要股市，7月的一轮抛售是主要拖累。不过该指数年内仍上涨约60%，显示AI带动的行情波动加剧、回撤风险上升。", source: "Financial Times", url: "https://www.ft.com/content/7fb7147a-ec36-4de4-b563-a4ca796fc3b2?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月1日 07:40 CST";
+const breakingDate = "2026年10月1日 13:38 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:01", tag: "ai", tagText: "AI", text: "一项最新发布的「AI 巨头地图」将全球语言模型版图划分为六大势力阵营，尝试以统一框架梳理各主要实验室与模型家族在能力、生态和影响力上的分布格局。该图谱被视为对当前大模型竞争格局的一次系统性切片，凸显出头部力量正从单一模型比拼转向多极阵营化竞争。", source: "Bioengineer.org", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWHdseWFONmFWNGdHS0M1ck94Y1NBaHpfVF9jcEpzbmNGaWhaaU5SUmc0bC1xRG5yQTVGQnBGY0x4WVl5UFZBZXh5WUs5NFR6YlNtMTBfLVdJQ1ItcndXU3JZcE9zWldRX1R5Y1Z5UlpONzdiLXg0dkxaMkM1SXkwdHR1Ym85NmtrNy1VRE1Talhfc2ZyWVZITEdB?oc=5" },
   { time: "06:25", tag: "ai", tagText: "AI", text: "特朗普签署行政命令，要求美国联邦政府各部门今后在官网、政策文件与新闻稿中一律改称「超级智能」（Super Intelligence），不再使用「人工智能」（AI）这一说法。这意味着美国官方对AI的话语框架与政策定位出现重大调整，可能影响后续监管、采购与对外表述。", source: "The Verge", url: "https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai" },
   { time: "06:21", tag: "ai", tagText: "AI", text: "在 OpenAI 于周二发布新 AI 代理 Dots 之前，马斯克旗下 xAI 已抢先拿下域名 dot.com，该域名现直接跳转至 Grok 聊天机器人下载页。此举被外界视为针对竞品发布节点的「截胡式」营销，凸显两家公司在 AI 代理赛道上的正面交锋与品牌战升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "01:35", tag: "ai", tagText: "AI", text: "十余位来自 OpenAI、Google DeepMind、Anthropic 等机构的 AI 研究员发布访谈视频，警告超级智能「危险程度与听起来一样」。前 OpenAI 与 DeepMind 员工 Geoffrey Irving 在访谈中称，人类灭绝的概率在他看来「如同抛硬币」。该系列访谈再度点燃关于 AI 生存性风险的公开争论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1002238/openai-google-anthropic-ai-researchers-safety-interviews" },
   { time: "01:15", tag: "ai", tagText: "AI", text: "OpenAI 发布 GPT-6.1 Sol，称其在代码编写与调试、文档理解、多步业务流程执行等复杂专业任务上较 GPT-6 Sol 显著提升，性能接近旗舰模型 GPT-6 Astra 但成本更低，意在进一步压缩企业级 AI 的部署门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/" },
   { time: "00:55", tag: "tech", tagText: "科技", text: "白宫推出 America.gov，试图借助聊天机器人简化民众办理政府事务、穿越官僚流程的难度。但语言模型本身并不完美、仍易产生幻觉，分析认为这可能为公共服务带来新的出错与信任问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/can-a-chatbot-fix-the-government-maze-the-white-house-is-about-to-find-out/" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI 在年度 DevDay 大会上宣布将 ChatGPT 推向「类应用商店」平台：插件获得专属侧边栏、交互面板、文件查看器与自动化支持，同时推出类办公套件功能、可跨设备复用的 Codex 云端开发环境，以及能在后台持续执行用户目标的智能体头像 Dots。外界普遍认为此举直接冲击苹果应用商店模式并加剧与微软的正面竞争。DevDay 场外则有抗议者聚集，高呼「要人不要利润」，矛头指向数据中心与 ICE 合作争议。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements" },
 ];
-const aiBreakingDate = "2026年10月1日 07:40 CST";
+const aiBreakingDate = "2026年10月1日 13:38 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
