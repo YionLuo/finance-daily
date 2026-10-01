@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 28.4,
+  score: 28.09,
   rating: "fear",
-  timestamp: "2026-10-01T18:45:37+00:00",
+  timestamp: "2026-10-01T22:48:21+00:00",
   previousClose: 30.83,
   previous1Week: 35.74,
   previous1Month: 44.86,
   previous1Year: 52.49,
-  date: "2026年10月2日 02:48 CST"
+  date: "2026年10月2日 07:05 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,11 +1650,23 @@ const breakingNews = [
   { time: "20:20", tag: "ai", tagText: "AI", text: "博通（Broadcom）将向Anthropic提供最高420亿美元贷款，用于后者租赁其芯片。Anthropic的IPO招股书披露了其与这家芯片制造商之间广泛的合作关系，其中包括这笔巨额融资安排。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/broadcom-lending-anthropic-42-billion-chips-reuters.html" },
   { time: "19:35", tag: "geo", tagText: "地缘", text: "俄罗斯威胁称，若北约对加里宁格勒实施封锁，俄方不排除对北约国家实施核打击。克里姆林宫指责西方防务联盟正策划封锁这一波罗的海飞地，令欧洲地缘紧张局势进一步升级。", source: "Financial Times", url: "https://www.ft.com/content/1bb7ec8d-7252-4fa3-8c4a-81fa5b6906a2?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月2日 02:48 CST";
+const breakingDate = "2026年10月2日 07:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:25", tag: "ai", tagText: "AI", text: "特朗普签署行政命令，要求美国联邦政府各部门今后在官网、政策文件与新闻稿中一律改称「超级智能」（Super Intelligence），不再使用「人工智能」（AI）这一说法。这意味着美国官方对AI的话语框架与政策定位出现重大调整，可能影响后续监管、采购与对外表述。", source: "The Verge", url: "https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai" },
+  { time: "06:21", tag: "ai", tagText: "AI", text: "在 OpenAI 于周二发布新 AI 代理 Dots 之前，马斯克旗下 xAI 已抢先拿下域名 dot.com，该域名现直接跳转至 Grok 聊天机器人下载页。此举被外界视为针对竞品发布节点的「截胡式」营销，凸显两家公司在 AI 代理赛道上的正面交锋与品牌战升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/" },
+  { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
+  { time: "05:08", tag: "geo", tagText: "地缘", text: "据 TechCrunch 报道，马斯克旗下 AI 聊天机器人 Grok 曾就入侵委内瑞拉并抓捕总统尼古拉斯·马杜罗一事向特朗普提供意见，并据称对该行动表示支持。报道称特朗普在作出相关决定前曾征询 Grok 的看法，此举再度引发外界对 AI 系统介入重大军事与外交决策的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president/" },
+  { time: "05:07", tag: "ai", tagText: "AI", text: "将 AI 代理引入硬件设计的初创公司 Flow Engineering 以 7.5 亿美元估值完成融资，投资方包括 Valor、Atreides 与红杉资本，红杉合伙人 Roelof Botha 同时以天使投资人身份加入董事会。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/" },
+  { time: "04:44", tag: "tech", tagText: "科技", text: "安全研究人员警告，攻击者正持续利用 Zimbra 邮件系统的一个关键漏洞窃取邮件：一封简单的恶意邮件即可让攻击者远程注入操作系统命令，进而接管服务器。相关漏洞已被在野利用，企业需尽快修补。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/09/attackers-have-been-exploiting-critical-zimbra-flaw-to-steal-emails/" },
+  { time: "04:41", tag: "ai", tagText: "AI", text: "谷歌发布新一代前沿模型 Gemini 4 Argon，称其在基准测试中领先 OpenAI 与 Anthropic。谷歌表示该模型在复杂工作流、真实软件工程及企业级任务中达到「前沿性能」，但因能力过强，目前仅向「受信任的网络防御者」开放。", source: "The Verge", url: "https://www.theverge.com/tech/1002980/google-gemini-4-argon" },
+  { time: "04:28", tag: "tech", tagText: "科技", text: "Ars Technica 报道，美国联邦政府网络安全遭遇糟糕的一个月：一个月内已有两家联邦机构遭黑客入侵，大量敏感数据外泄。事件凸显联邦系统在防护与响应上的持续漏洞，具体受影响机构与数据范围尚未完全披露。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/" },
+  { time: "03:47", tag: "ai", tagText: "AI", text: "谷歌在 Gemini Live 中上线 Guided Vision 功能，今日起面向兼容的 Android 设备开放。用户共享摄像头画面后，AI 可对镜头指向的任意对象进行实时语音描述，帮助阅读细小文字等，被视为多模态实时助手向日常场景落地的一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision" },
+  { time: "03:18", tag: "tech", tagText: "科技", text: "谷歌已将其首枚先进芯片送入轨道，为「太空数据中心」铺路，但公司测算认为，SpaceX 的星舰需要发射约 1800 次，这一构想才具备真正落地的基础。该表态为轨道算力的商业化前景给出了明确的规模门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/" },
   { time: "02:14", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI 在一项内部调查后与三名安全研究人员解除了合作关系。调查认定这三人对公司的敏感信息处理不当。这是 OpenAI 内部安全与治理团队近期又一次人员动荡，外界持续关注其在商业化提速背景下的安全研究独立性。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/" },
+  { time: "01:49", tag: "tech", tagText: "科技", text: "内存大厂高管预计 RAM 供应紧张将持续至 2028 年。美光 CEO 表示，2027 年的内存售价「远高于 2026 年」，AI 算力需求推动的存储涨价周期仍看不到终点，或将持续推高服务器、PC 与消费电子成本。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/10/memory-supplies-are-only-getting-tighter-micron-ceo-says/" },
+  { time: "01:12", tag: "tech", tagText: "科技", text: "美国联邦法官驳回两起针对谷歌 AI Overviews 的反垄断诉讼，原告为在线教育公司 Chegg 与《滚石》母公司 Penske Media，二者指控谷歌的 AI 摘要功能截流网页流量。判决暂时为谷歌的生成式搜索产品扫清一项重大法律风险。", source: "The Verge", url: "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed" },
   { time: "00:49", tag: "ai", tagText: "AI", text: "亚马逊云科技旗下 Strand Labs 发布决策模型 Strands Decider 2B，被视为对 Jev 类产品的自家克隆。随着决策类模型在网络上密集涌现，低成本、专用化的「决策智能」正成为继通用大模型之后的又一竞争热点，云厂商借自有模型抢占企业决策场景入口。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/" },
   { time: "00:44", tag: "tech", tagText: "科技", text: "Shopify 推出名为 Canvas 的建站工具，商家可直接与其 AI 智能体 Sidekick 对话来创建和定制网店，并实时看到页面变化。该功能把「对话即开发」引入电商建站环节，进一步降低中小商家的开店门槛，也是 Shopify 将 AI 深度嵌入商家工作流的最新一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/" },
   { time: "23:12", tag: "ai", tagText: "AI", text: "Airbnb 首席执行官 Brian Chesky 在访谈中提出，AI 智能体需要属于自己的操作系统，并透露 Airbnb 正着手让平台对智能体更友好。他就消费级 AI 现状及为何世界需要一个「AI 原生操作系统」发表了看法，代表大型消费平台对代理时代入口的押注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/brian-chesky-interview-ai-agents-need-their-own-operating-system/" },
@@ -1662,20 +1674,8 @@ const aiBreakingNews = [
   { time: "22:29", tag: "tech", tagText: "科技", text: "媒体报道称，一项 AI 辅助的材料研究突破有望让电动汽车摆脱对稀土的依赖。若该技术路径可规模化落地，将削弱稀土供给集中带来的供应链风险，并可能重塑电机与电池关键材料的全球格局，对新能源车产业链的成本与地缘风险具有潜在深远影响。", source: "Futura", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVkZvMFV4WmZnaEcxeWQwcjM3NS1wQXotekMtSGw0bWptRWw1S1NveEFNRy1hZDJLc3F3aTRVX24wMTFpUV9aNFNhelJPd1VxbFhsOS1Dckl4SFY5U2JzWnNPM0wtYUVLaW1IS2dUcXhVZE1mdGctc3ZDNDhlZ1B4NU5rZEJJeXNxbWpVYmRDVl9CRC1mZXlCTWNOTUZzSnJ2NURVdmJxdmNqNlcwcDlpV2R2cFN2NVQtR3Q0?oc=5" },
   { time: "22:07", tag: "macro", tagText: "宏观", text: "「木头姐」凯西·伍德（Cathie Wood）旗下基金买入约 8150 万美元的一只近期大涨的半导体股票。此前有分析指出，AI 推动的万亿美元级芯片景气周期仍在扩张，受益者已不止英伟达一家。该笔加仓被视为对 AI 芯片产业链持续看多的信号。", source: "thestreet.com", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxNOUl6VzZCUlJxdTRSZFR4R09tLWtHWFlhcjlNY28zSUpGbjl3cFdDekllWHdWOXZ4SDRncUR0N3QzMExIbUd0bnJTckQyc19VanNBczhic2paR0dCWjRUR0ZnUlFZQU5rZXVodUx4SjJybDJ3YTdVMkppMjZjWklCQkRYSjVWc0RxazNmcjBNeXZFTkxTRG5JcDlPZTJmVDR3cG1yeTlrTW9fdGNsd3BPQ1E5S01SQQ?oc=5" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "The Verge 披露历时数月的调查报道，还原投资人 Kevin O'Leary 在犹他州建设「全球最大数据中心之一」的计划如何演变为一场烂尾风波。该案例被视为 AI 算力基建热潮背后地方阻力、执行风险与资本狂热矛盾的代表性样本。", source: "The Verge", url: "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash" },
-  { time: "21:59", tag: "ai", tagText: "AI", text: "据报道，博通（Broadcom）将向 Anthropic 提供约 420 亿美元贷款，帮助其应对激增的算力成本并为下一代 AI 芯片提供资金。此举凸显头部大模型公司正越来越多地依赖芯片与代工伙伴的融资安排来锁定算力，也意味着博通与 Anthropic 的绑定进一步加深。", source: "Ventureburn", url: "https://news.google.com/rss/articles/CBMie0FVX3lxTE5uWkFTY2VVdGFHUi1JZldzWmhnS0xoNDFudUllNEtMeXJKQ2RmaWdoUEx6RXZkRkRIUTRRSVVyaDJpOEc1OXE2QXA1VHU5TldhTWh4UzAtTHFkblZQa29nTGVyc05Dd2FYNGExc05hRjVRMEdTeHdnTl9tTdIBe0FVX3lxTE5uWkFTY2VVdGFHUi1JZldzWmhnS0xoNDFudUllNEtMeXJKQ2RmaWdoUEx6RXZkRkRIUTRRSVVyaDJpOEc1OXE2QXA1VHU5TldhTWh4UzAtTHFkblZQa29nTGVyc05Dd2FYNGExc05hRjVRMEdTeHdnTl9tTQ?oc=5" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "由前谷歌和SpaceX产品经理创立的Satlyt完成800万美元融资，旨在将AI运行于卫星之上。该公司希望成为轨道计算领域的安卓，提供可在多家公司卫星上运行的开放软件，与SpaceX封闭的一体化iPhone式方案形成对比。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites/" },
-  { time: "18:43", tag: "ai", tagText: "AI", text: "AI网络安全初创公司Armadin在新一轮融资后估值超过25亿美元。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRVNRVnY0bEVHMFFBV095N0xyYkVsTTNWdDNEOHJ0cVhoSFpJUVFrZ1pxZkNuX191dDdlSF9oRVQ1MHFoVmt5UzVBNDN1NjR6UUhxcDBNLVVYUXhUYWloMC1GWjVtSjdTUjJLOHVlR1R5aHV3aXIyTEhmVE94b1lCOXdqbGNMeTA2ckU3cWxwbzlqXzFsRGdMa2dLQ0FOR21TM0lEcHFPd3d4VURrazd6NXVER0dfUDFDUjZ5TGdUMjZ0WXBJYVlZYXVZdnQxbXAy?oc=5" },
-  { time: "16:15", tag: "tech", tagText: "科技", text: "韩国风险投资融资额创四年新高，AI与机器人交易活跃。", source: "KED Global", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTFBfSjNsaUNOZ2tCaFJZUkpoSTlndVVoWVNGMEJqMVFQRDA2VEZWd25BU0xucWgyb0stQ3RpS3ZCdlZEWDhuVkUybVZJM3A4R0NZa212VlZ0Y19ONU9sRnBYV2l3SjdEZ28tTTJKT3JSZFN6X0Jo?oc=5" },
-  { time: "15:25", tag: "tech", tagText: "科技", text: "以色列初创企业9月融资额达27.7亿美元，主要由五笔巨额融资推动。", source: "calcalistech.com", url: "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9la2JKVzlzNU1jei1neEozNHBIa2tOMWd2R2tyaF9veHhJakJRTmlpOEN2SVZxY3kxcDZBOS1NdTFITUpSMUI5ZUNsOHZaQ1JydDMtaURHT21hZ1h2bDBPdTFjNjQyaWRz?oc=5" },
-  { time: "08:01", tag: "ai", tagText: "AI", text: "一项最新发布的「AI 巨头地图」将全球语言模型版图划分为六大势力阵营，尝试以统一框架梳理各主要实验室与模型家族在能力、生态和影响力上的分布格局。该图谱被视为对当前大模型竞争格局的一次系统性切片，凸显出头部力量正从单一模型比拼转向多极阵营化竞争。", source: "Bioengineer.org", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWHdseWFONmFWNGdHS0M1ck94Y1NBaHpfVF9jcEpzbmNGaWhaaU5SUmc0bC1xRG5yQTVGQnBGY0x4WVl5UFZBZXh5WUs5NFR6YlNtMTBfLVdJQ1ItcndXU3JZcE9zWldRX1R5Y1Z5UlpONzdiLXg0dkxaMkM1SXkwdHR1Ym85NmtrNy1VRE1Talhfc2ZyWVZITEdB?oc=5" },
-  { time: "06:25", tag: "ai", tagText: "AI", text: "特朗普签署行政命令，要求美国联邦政府各部门今后在官网、政策文件与新闻稿中一律改称「超级智能」（Super Intelligence），不再使用「人工智能」（AI）这一说法。这意味着美国官方对AI的话语框架与政策定位出现重大调整，可能影响后续监管、采购与对外表述。", source: "The Verge", url: "https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai" },
-  { time: "06:21", tag: "ai", tagText: "AI", text: "在 OpenAI 于周二发布新 AI 代理 Dots 之前，马斯克旗下 xAI 已抢先拿下域名 dot.com，该域名现直接跳转至 Grok 聊天机器人下载页。此举被外界视为针对竞品发布节点的「截胡式」营销，凸显两家公司在 AI 代理赛道上的正面交锋与品牌战升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/" },
-  { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
-  { time: "05:07", tag: "ai", tagText: "AI", text: "将 AI 代理引入硬件设计的初创公司 Flow Engineering 以 7.5 亿美元估值完成融资，投资方包括 Valor、Atreides 与红杉资本，红杉合伙人 Roelof Botha 同时以天使投资人身份加入董事会。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/" },
-  { time: "04:44", tag: "tech", tagText: "科技", text: "安全研究人员警告，攻击者正持续利用 Zimbra 邮件系统的一个关键漏洞窃取邮件：一封简单的恶意邮件即可让攻击者远程注入操作系统命令，进而接管服务器。相关漏洞已被在野利用，企业需尽快修补。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/09/attackers-have-been-exploiting-critical-zimbra-flaw-to-steal-emails/" },
-  { time: "04:41", tag: "ai", tagText: "AI", text: "谷歌发布新一代前沿模型 Gemini 4 Argon，称其在基准测试中领先 OpenAI 与 Anthropic。谷歌表示该模型在复杂工作流、真实软件工程及企业级任务中达到「前沿性能」，但因能力过强，目前仅向「受信任的网络防御者」开放。", source: "The Verge", url: "https://www.theverge.com/tech/1002980/google-gemini-4-argon" },
 ];
-const aiBreakingDate = "2026年10月2日 02:48 CST";
+const aiBreakingDate = "2026年10月2日 07:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
