@@ -1618,12 +1618,12 @@
 const fearGreedData = {
   score: 28.09,
   rating: "fear",
-  timestamp: "2026-10-01T22:48:21+00:00",
+  timestamp: "2026-10-01T23:59:56+00:00",
   previousClose: 30.83,
   previous1Week: 35.74,
   previous1Month: 44.86,
   previous1Year: 52.49,
-  date: "2026年10月2日 07:05 CST"
+  date: "2026年10月2日 10:10 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,11 @@ const breakingNews = [
   { time: "20:20", tag: "ai", tagText: "AI", text: "博通（Broadcom）将向Anthropic提供最高420亿美元贷款，用于后者租赁其芯片。Anthropic的IPO招股书披露了其与这家芯片制造商之间广泛的合作关系，其中包括这笔巨额融资安排。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/broadcom-lending-anthropic-42-billion-chips-reuters.html" },
   { time: "19:35", tag: "geo", tagText: "地缘", text: "俄罗斯威胁称，若北约对加里宁格勒实施封锁，俄方不排除对北约国家实施核打击。克里姆林宫指责西方防务联盟正策划封锁这一波罗的海飞地，令欧洲地缘紧张局势进一步升级。", source: "Financial Times", url: "https://www.ft.com/content/1bb7ec8d-7252-4fa3-8c4a-81fa5b6906a2?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月2日 07:05 CST";
+const breakingDate = "2026年10月2日 10:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "09:52", tag: "ai", tagText: "AI", text: "据《朝鲜日报》报道，英伟达与博通分别推进规模高达5000亿美元和420亿美元的贷款/融资安排，用于支撑AI芯片产能与需求的持续扩张。此举被视为AI算力投资周期仍在加速的信号，也意味着芯片厂商正通过大规模债务与信贷工具锁定长期订单与供应链资源。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM1M5RVcxQXBmWHNVRnNhanJteWdVZGVFMUM0Smw5MUd6c2RXNnIyWWtQSmVsRTVOUlNXbGhBSVhveURwcWJISDFuZUk2cjU1b2FuOW45MVhRNVVFc3NYT0FIQmdMelRobmpPYUhTSFpOVVIzS1p2Smx0MHRuYTZ6OURMVjJ5YkY0?oc=5" },
   { time: "06:25", tag: "ai", tagText: "AI", text: "特朗普签署行政命令，要求美国联邦政府各部门今后在官网、政策文件与新闻稿中一律改称「超级智能」（Super Intelligence），不再使用「人工智能」（AI）这一说法。这意味着美国官方对AI的话语框架与政策定位出现重大调整，可能影响后续监管、采购与对外表述。", source: "The Verge", url: "https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai" },
   { time: "06:21", tag: "ai", tagText: "AI", text: "在 OpenAI 于周二发布新 AI 代理 Dots 之前，马斯克旗下 xAI 已抢先拿下域名 dot.com，该域名现直接跳转至 Grok 聊天机器人下载页。此举被外界视为针对竞品发布节点的「截胡式」营销，凸显两家公司在 AI 代理赛道上的正面交锋与品牌战升级。", source: "TechCrunch", url: "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:36", tag: "ai", tagText: "AI", text: "OpenAI 在年度 DevDay 大会上发布新版 AI 智能体，正面迎战 Meta 的 Muse 代理平台——后者上线后增长迅猛。CEO 山姆·奥特曼亲自站台，但分析认为 OpenAI 的付费模式在 Meta 的免费策略面前面临严峻挑战，智能体平台的「免费 vs 付费」之争正成为行业焦点。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle" },
   { time: "22:29", tag: "tech", tagText: "科技", text: "媒体报道称，一项 AI 辅助的材料研究突破有望让电动汽车摆脱对稀土的依赖。若该技术路径可规模化落地，将削弱稀土供给集中带来的供应链风险，并可能重塑电机与电池关键材料的全球格局，对新能源车产业链的成本与地缘风险具有潜在深远影响。", source: "Futura", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVkZvMFV4WmZnaEcxeWQwcjM3NS1wQXotekMtSGw0bWptRWw1S1NveEFNRy1hZDJLc3F3aTRVX24wMTFpUV9aNFNhelJPd1VxbFhsOS1Dckl4SFY5U2JzWnNPM0wtYUVLaW1IS2dUcXhVZE1mdGctc3ZDNDhlZ1B4NU5rZEJJeXNxbWpVYmRDVl9CRC1mZXlCTWNOTUZzSnJ2NURVdmJxdmNqNlcwcDlpV2R2cFN2NVQtR3Q0?oc=5" },
   { time: "22:07", tag: "macro", tagText: "宏观", text: "「木头姐」凯西·伍德（Cathie Wood）旗下基金买入约 8150 万美元的一只近期大涨的半导体股票。此前有分析指出，AI 推动的万亿美元级芯片景气周期仍在扩张，受益者已不止英伟达一家。该笔加仓被视为对 AI 芯片产业链持续看多的信号。", source: "thestreet.com", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxNOUl6VzZCUlJxdTRSZFR4R09tLWtHWFlhcjlNY28zSUpGbjl3cFdDekllWHdWOXZ4SDRncUR0N3QzMExIbUd0bnJTckQyc19VanNBczhic2paR0dCWjRUR0ZnUlFZQU5rZXVodUx4SjJybDJ3YTdVMkppMjZjWklCQkRYSjVWc0RxazNmcjBNeXZFTkxTRG5JcDlPZTJmVDR3cG1yeTlrTW9fdGNsd3BPQ1E5S01SQQ?oc=5" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "The Verge 披露历时数月的调查报道，还原投资人 Kevin O'Leary 在犹他州建设「全球最大数据中心之一」的计划如何演变为一场烂尾风波。该案例被视为 AI 算力基建热潮背后地方阻力、执行风险与资本狂热矛盾的代表性样本。", source: "The Verge", url: "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash" },
 ];
-const aiBreakingDate = "2026年10月2日 07:05 CST";
+const aiBreakingDate = "2026年10月2日 10:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
