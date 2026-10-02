@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 30.4,
+  score: 31.34,
   rating: "fear",
-  timestamp: "2026-10-02T15:34:58+00:00",
+  timestamp: "2026-10-02T16:09:56+00:00",
   previousClose: 28.09,
   previous1Week: 36.94,
   previous1Month: 46.06,
   previous1Year: 54.54,
-  date: "2026年10月2日 23:35 CST"
+  date: "2026年10月3日 00:13 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:45", tag: "macro", tagText: "宏观", text: "欧元区9月通胀升至3.8%，创三年新高，且高于市场预期。能源价格飙升与地缘冲突冲击令物价压力重新抬头，市场对欧洲央行货币政策路径的预期趋于复杂，此前市场普遍预期通胀将逐步回落。", source: "Financial Times", url: "https://www.ft.com/content/6394fdc7-5fa5-4ec3-8bde-52633acd2b57?syn-25a6b1a6=1" },
+  { time: "23:20", tag: "tech", tagText: "科技", text: "礼来与诺和诺德正押注胰淀素（amylin）打造继GLP-1之后的新一代减肥药。胰淀素被视为治疗肥胖与糖尿病的另一条生物学杠杆，两家公司希望借此在快速膨胀的减重市场中延续领先优势。", source: "CNBC", url: "https://www.cnbc.com/2026/10/02/lilly-novo-amylin-obesity-drugs.html" },
   { time: "23:19", tag: "macro", tagText: "宏观", text: "美国制造商协会调查显示，制造业仍在扩张且新订单充足，但高企的能源价格与特朗普新一轮关税正在压制增长空间，企业普遍反映通胀压力居高不下且短期内难见改善。这意味着成本端压力可能继续向终端价格传导，给美联储的政策路径增添变数。", source: "MarketWatch", url: "https://www.marketwatch.com/story/u-s-manufacturers-say-inflation-is-bad-and-not-getting-any-better-8281edef?mod=mw_rss_topstories" },
   { time: "23:18", tag: "ai", tagText: "AI", text: "信用评级机构Egan-Jones最新报告警告，人工智能将导致屏幕型岗位大量流失并冲击房地产市场，称'经济全面颠覆几乎已成定局'，高薪岗位与房价面临风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/another-viral-ai-doomsday-report-claims-its-over-why-home-prices-could-take-a-hit-as-screen-based-jobs-disappear-4bed48bc?mod=mw_rss_topstories" },
   { time: "23:13", tag: "macro", tagText: "宏观", text: "在伊朗战争和美国强劲经济数据引发的通胀担忧推动全球债券收益率飙升之际，趋势跟踪型量化对冲基金大举押注债市抛售并斩获丰厚收益。全球债市抛售加剧，10年期美债收益率已升至2002年以来最高水平。", source: "Financial Times", url: "https://www.ft.com/content/75b0ab84-a252-4ea1-9058-c9ee7ca07f4f?syn-25a6b1a6=1" },
@@ -1636,24 +1638,23 @@ const breakingNews = [
   { time: "22:57", tag: "crypto", tagText: "加密", text: "比特币形成'金叉'技术形态，被视为第四季度大幅上涨的前兆。分析师指出，在展望四季度最佳交易机会时，比特币的图表走势在所有资产中最为突出。", source: "CNBC", url: "https://www.cnbc.com/2026/10/02/bitcoin-just-formed-a-golden-cross-pattern-the-crypto-is-setting-up-for-a-big-fourth-quarter.html" },
   { time: "22:39", tag: "macro", tagText: "宏观", text: "美国财政部称，已有超过6000万名儿童被自动纳入“特朗普账户”（Trump Accounts）计划。该计划规模庞大，被视为本届政府在家庭储蓄与资本市场参与方面的标志性政策，后续资金流向及财政影响值得关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/treasury-trump-accounts-auto-enroll-more-than-60-million-children.html" },
   { time: "22:36", tag: "tech", tagText: "科技", text: "9月，包括约翰·阿诺德、斯坦利·德鲁肯米勒等亿万富翁家族办公室将资金投向地热能源与脑机接口等前沿技术。超高净值私人投资机构正加速布局硬科技赛道，其动向往往被视为早期风险资本的风向标。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html" },
+  { time: "22:32", tag: "geo", tagText: "地缘", text: "以色列最高法院一致裁定，推翻禁止阿拉伯政党参加即将举行的选举的禁令，为Ra'am党和联合名单党参选扫清障碍。若议会选举出现悬峙局面，阿拉伯政党或将成为左右组阁天平的关键力量。", source: "Financial Times", url: "https://www.ft.com/content/9bbcd715-1417-49b6-bc56-1745f17cd674?syn-25a6b1a6=1" },
   { time: "22:25", tag: "macro", tagText: "宏观", text: "美国9月非农就业仅新增2.9万人，远低于市场预期的8.4万人，失业率升至4.2%，招聘明显放缓。疲软数据促使交易员削减对美联储进一步加息的押注，美股三大指数应声上涨，纳斯达克在英伟达带动下创历史新高，道指则迈向周线下跌。", source: "Financial Times", url: "https://www.ft.com/content/7fc80097-1926-4306-81e0-83d90a3d8a1d?syn-25a6b1a6=1" },
+  { time: "22:05", tag: "tech", tagText: "科技", text: "大卫·埃里森宣布，派拉蒙与华纳兄弟探索合并后的新公司将命名为Skydance。这标志着在18个月内经历两笔重大收购后，这家媒体巨头完成了'回归本源'式的整合，好莱坞格局面临重塑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/02/paramount-warner-bros-discovery-skydance.html" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "最新数据显示，美国有超过1000万名老年人生活在贫困线以下，而社会保障金削减的阴云正在逼近。即便是拥有部分储蓄的退休人群也普遍感到入不敷出，凸显美国养老保障体系的财务压力与政治敏感性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/more-than-10-million-older-adults-are-now-living-in-poverty-as-social-security-cuts-loom-i-dont-know-how-anyone-is-making-it-237ab798?mod=mw_rss_topstories" },
   { time: "21:59", tag: "ai", tagText: "AI", text: "美光（Micron）最新财报超出预期并给出强劲指引，数据中心业务收入同比激增11倍，主要受AI需求爆发推动，过去一年股价累涨逾500%。不过由于市场预期本就极高、超预期幅度不及以往，财报公布后股价反而走低，显示AI硬件板块的估值容错空间正在收窄。", source: "CNBC", url: "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html" },
   { time: "21:51", tag: "crypto", tagText: "加密", text: "加密基金上周录得35.5亿美元资金净流入，比特币继续领跑，以太坊与Solana同步获得资金追捧。不过在资金面回暖的同时，链上数据显示比特币巨鲸同期抛售约25.2亿美元，而ETH巨鲸则净买入约1.62亿美元，资金轮动迹象明显，短线波动风险上升。", source: "bitcoinfoundation.org", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxNaGxCVjk5YkRYRzRVODlWS1pteUIzSmc1dlRPaUlNSDBxMzJMOWZXcmNvNTJBNkJ2VlJQNldMTzRjQ3YtUVNVU2VMQi1USDcyeFRiTi1tT1VuanJHamxkemU5SEJUbUtQd0s3LXJIZGpKVlR0OGJ0bzVNeFNIUXJrdWZGbGhydEtmSURMNVZNMTdhVHc0TW9zcmFxbnBFWFY5d3VHdkZYRWNwcUFIRWdpeUdyNlM?oc=5" },
   { time: "21:48", tag: "macro", tagText: "宏观", text: "美国财政部与国税局本周对富人用来规避资本利得税的一种ETF策略发出警告，财长贝森特与IRS联手打击相关避税安排，涉及税法第351条。", source: "CNBC", url: "https://www.cnbc.com/2026/10/02/treasury-irs-capital-gains-income-tax-section-351-warning.html" },
   { time: "21:20", tag: "tech", tagText: "科技", text: "特斯拉第三季度交付48.65万辆汽车，超出华尔街预期，创下本年度最佳三个月销售表现，但同比仍略低于去年同期。在美国消费者电动车需求走弱之际，欧洲销量持续复苏。财报公布后特斯拉股价大幅上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/10/02/tesla-tsla-q3-2026-vehicle-delivery-production.html" },
+  { time: "21:10", tag: "macro", tagText: "宏观", text: "香港股市大幅下挫，汇丰、阿里巴巴、腾讯及小米等权重股集体走低。在美股因疲软就业数据震荡、全球债市收益率高企的背景下，港股承压反映出亚洲市场风险偏好明显降温。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOelZJMVlDblVVSHhxUk1JWGc1MURzRHVDN3FmeXVNMWxySVZHSG5TNTk1R1NDbkdjX3dISEpNek15WTNPNVQ3ampsRHVpNVp2TnNPRDFWbmNXQTY3N1p3al90c2hpSHQwZkc5ZmwtT3ZNcURFd3pWUE1KY21xX21pUDJ0dnBzM0pGcUpuWE8teXNKbTh2LXU0aXl1MzJXLUhJS2c?oc=5" },
   { time: "20:56", tag: "macro", tagText: "宏观", text: "全球政府债券抛售加剧，10年期美债收益率升至2002年以来最高水平，各国主权债借贷成本普遍回到多年高位。投资者正在通胀数据走软、收益率攀升以及美联储下一次利率决定的不确定性之间权衡。受AI相关个股上涨带动，美股期货在新季度首个交易日小幅走高。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/us-treasury-bond-yield.html" },
   { time: "20:42", tag: "ai", tagText: "AI", text: "谷歌将把其首个人工智能数据中心送入太空。随着AI算力需求激增，科技界领袖开始探讨轨道数据中心能否帮助缓解行业面临的电力紧张问题。", source: "MarketWatch", url: "https://www.marketwatch.com/story/google-is-sending-its-first-ai-data-center-to-space-22b7c44d?mod=mw_rss_topstories" },
-  { time: "20:36", tag: "geo", tagText: "地缘", text: "英国首相伯纳姆表示，重新加入欧盟是英国的选项之一，称\"走到最后一步\"是可能的。英国政府正对与欧盟27国的关系进行全面评估，此番表态显示英国对欧政策可能出现重大转向。", source: "Financial Times", url: "https://www.ft.com/content/d740f13d-38bc-4460-bcd5-2922472fc209?syn-25a6b1a6=1" },
-  { time: "20:28", tag: "ai", tagText: "AI", text: "特朗普在白宫与科技领袖会晤后，AI安全议题反而更加不明朗。行业立场基本未见改变，安全与监管路径仍高度不确定，市场关注后续是否会有实质性政策落地。", source: "CNBC", url: "https://www.cnbc.com/2026/09/30/after-trump-meeting-with-tech-leaders-ai-safety-in-more-chaotic-state.html" },
-  { time: "20:24", tag: "macro", tagText: "宏观", text: "ADP报告显示，美国9月私营部门新增就业9万人，好于预期，招聘在短暂放缓后重新提速；同时8月消费者支出在短暂回落后反弹。两份数据共同指向美国经济动能再度增强，与通胀降温形成微妙组合。", source: "CNBC", url: "https://www.cnbc.com/2026/09/30/private-sector-jobs-rose-by-90000-in-september-better-than-expected-adp-reports.html" },
-  { time: "20:20", tag: "ai", tagText: "AI", text: "博通（Broadcom）将向Anthropic提供最高420亿美元贷款，用于后者租赁其芯片。Anthropic的IPO招股书披露了其与这家芯片制造商之间广泛的合作关系，其中包括这笔巨额融资安排。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/broadcom-lending-anthropic-42-billion-chips-reuters.html" },
-  { time: "19:35", tag: "geo", tagText: "地缘", text: "俄罗斯威胁称，若北约对加里宁格勒实施封锁，俄方不排除对北约国家实施核打击。克里姆林宫指责西方防务联盟正策划封锁这一波罗的海飞地，令欧洲地缘紧张局势进一步升级。", source: "Financial Times", url: "https://www.ft.com/content/1bb7ec8d-7252-4fa3-8c4a-81fa5b6906a2?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月2日 23:35 CST";
+const breakingDate = "2026年10月3日 00:13 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:39", tag: "ai", tagText: "AI", text: "教宗良十四世公开表态不欣赏 AI 生成艺术，称「艺术与机器基于他人创作的数百万张图像、通过统计计算所生成之物之间，首先存在本体论上的差异，其次才是美学差异」。这一表态将 AI 生成内容对创作者权益与创作本质的冲击推向宗教与伦理维度，梵蒂冈在 AI 议题上的立场再度受到关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/02/pope-leo-xiv-is-not-a-fan-of-ai-generated-art/" },
   { time: "23:12", tag: "ai", tagText: "AI", text: "Airbnb 首席执行官 Brian Chesky 在访谈中提出，AI 智能体需要属于自己的操作系统，并透露 Airbnb 正着手让平台对智能体更友好。他就消费级 AI 现状及为何世界需要一个「AI 原生操作系统」发表了看法，代表大型消费平台对代理时代入口的押注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/brian-chesky-interview-ai-agents-need-their-own-operating-system/" },
   { time: "22:36", tag: "ai", tagText: "AI", text: "OpenAI 在年度 DevDay 大会上发布新版 AI 智能体，正面迎战 Meta 的 Muse 代理平台——后者上线后增长迅猛。CEO 山姆·奥特曼亲自站台，但分析认为 OpenAI 的付费模式在 Meta 的免费策略面前面临严峻挑战，智能体平台的「免费 vs 付费」之争正成为行业焦点。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle" },
   { time: "22:29", tag: "tech", tagText: "科技", text: "媒体报道称，一项 AI 辅助的材料研究突破有望让电动汽车摆脱对稀土的依赖。若该技术路径可规模化落地，将削弱稀土供给集中带来的供应链风险，并可能重塑电机与电池关键材料的全球格局，对新能源车产业链的成本与地缘风险具有潜在深远影响。", source: "Futura", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVkZvMFV4WmZnaEcxeWQwcjM3NS1wQXotekMtSGw0bWptRWw1S1NveEFNRy1hZDJLc3F3aTRVX24wMTFpUV9aNFNhelJPd1VxbFhsOS1Dckl4SFY5U2JzWnNPM0wtYUVLaW1IS2dUcXhVZE1mdGctc3ZDNDhlZ1B4NU5rZEJJeXNxbWpVYmRDVl9CRC1mZXlCTWNOTUZzSnJ2NURVdmJxdmNqNlcwcDlpV2R2cFN2NVQtR3Q0?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "04:28", tag: "tech", tagText: "科技", text: "Ars Technica 报道，美国联邦政府网络安全遭遇糟糕的一个月：一个月内已有两家联邦机构遭黑客入侵，大量敏感数据外泄。事件凸显联邦系统在防护与响应上的持续漏洞，具体受影响机构与数据范围尚未完全披露。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/" },
   { time: "03:47", tag: "ai", tagText: "AI", text: "谷歌在 Gemini Live 中上线 Guided Vision 功能，今日起面向兼容的 Android 设备开放。用户共享摄像头画面后，AI 可对镜头指向的任意对象进行实时语音描述，帮助阅读细小文字等，被视为多模态实时助手向日常场景落地的一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision" },
   { time: "03:18", tag: "tech", tagText: "科技", text: "谷歌已将其首枚先进芯片送入轨道，为「太空数据中心」铺路，但公司测算认为，SpaceX 的星舰需要发射约 1800 次，这一构想才具备真正落地的基础。该表态为轨道算力的商业化前景给出了明确的规模门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/" },
-  { time: "02:14", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，OpenAI 在一项内部调查后与三名安全研究人员解除了合作关系。调查认定这三人对公司的敏感信息处理不当。这是 OpenAI 内部安全与治理团队近期又一次人员动荡，外界持续关注其在商业化提速背景下的安全研究独立性。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/" },
 ];
-const aiBreakingDate = "2026年10月2日 23:35 CST";
+const aiBreakingDate = "2026年10月3日 00:13 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
