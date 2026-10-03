@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 36.94,
   previous1Month: 46.06,
   previous1Year: 54.54,
-  date: "2026年10月3日 23:32 CST"
+  date: "2026年10月4日 01:11 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,11 @@ const breakingNews = [
   { time: "04:32", tag: "macro", tagText: "宏观", text: "美国司法部表示，不会重启对前美联储主席鲍威尔的刑事调查。此前美联储监察长发布报告，认定针对其总部大楼翻修管理不善的指控缺乏刑事移交依据，从而为这起牵动央行独立性的争议画上句号。", source: "CNBC", url: "https://www.cnbc.com/2026/10/02/doj-says-it-will-not-reopen-criminal-probe-into-former-fed-chair-powell.html" },
   { time: "04:20", tag: "macro", tagText: "宏观", text: "美股周五全线上涨，纳斯达克综合指数盘中创历史新高并录得三连涨。9月非农仅新增2.9万人，招聘明显放缓，市场对美联储进一步加息的押注迅速降温，利率见顶预期升温，科技股与英伟达等权重股领涨。本周市场同时受制于高企的收益率与油价，投资者关注下周能否迎来双重缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/10/01/stock-market-today-live-updates-.html" },
 ];
-const breakingDate = "2026年10月3日 23:32 CST";
+const breakingDate = "2026年10月4日 01:11 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:49", tag: "ai", tagText: "AI", text: "卡普空（Capcom）在 Capcom Open Conference RE: 2026 上透露，正为「与 AI 共同创作游戏」的未来做准备。公司程序员石田智之（Satoshi Ishida）介绍了相关实践方向，显示这家曾以新作《Pragmata》描绘 AI 恐怖面的日本厂商，对生成式 AI 融入游戏开发流程持相当积极的态度。此举反映出主流游戏工作室正加速把 AI 纳入内容生产管线。", source: "The Verge", url: "https://www.theverge.com/games/1004418/capcom-ai-game-development" },
   { time: "23:12", tag: "ai", tagText: "AI", text: "Airbnb 首席执行官 Brian Chesky 在访谈中提出，AI 智能体需要属于自己的操作系统，并透露 Airbnb 正着手让平台对智能体更友好。他就消费级 AI 现状及为何世界需要一个「AI 原生操作系统」发表了看法，代表大型消费平台对代理时代入口的押注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/brian-chesky-interview-ai-agents-need-their-own-operating-system/" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "音频采样平台 Splice 首席执行官 Kakul Srivastava 表示，AI 生成邮件正在「杀死对话」。Splice 是大量制作人获取 one-shot 与旋律 Loop 的素材库，其采样曾进入 Lisa 等热门作品。她认为 AI 批量代写的邮件让沟通变得程式化、失去人味，并谈及生成式 AI 对音乐创作与从业者的冲击。", source: "The Verge", url: "https://www.theverge.com/entertainment/1004162/splice-ceo-kakul-srivastava-ai-interview" },
   { time: "22:36", tag: "ai", tagText: "AI", text: "OpenAI 在年度 DevDay 大会上发布新版 AI 智能体，正面迎战 Meta 的 Muse 代理平台——后者上线后增长迅猛。CEO 山姆·奥特曼亲自站台，但分析认为 OpenAI 的付费模式在 Meta 的免费策略面前面临严峻挑战，智能体平台的「免费 vs 付费」之争正成为行业焦点。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "04:28", tag: "tech", tagText: "科技", text: "Ars Technica 报道，美国联邦政府网络安全遭遇糟糕的一个月：一个月内已有两家联邦机构遭黑客入侵，大量敏感数据外泄。事件凸显联邦系统在防护与响应上的持续漏洞，具体受影响机构与数据范围尚未完全披露。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/" },
   { time: "04:08", tag: "tech", tagText: "科技", text: "苹果宣布将收紧 macOS 的「完全磁盘访问权限」（Full Disk Access）管控，理由是能力日益增强的 AI 智能体让应用广泛读取用户文件、信息、邮件与浏览历史的风险「大幅上升」。新措施将限制应用一次性取得全盘权限，改为更细粒度的授权与更严格的提示，预计将影响一批依赖全盘访问的备份、清理与开发类工具。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/" },
   { time: "03:47", tag: "ai", tagText: "AI", text: "谷歌在 Gemini Live 中上线 Guided Vision 功能，今日起面向兼容的 Android 设备开放。用户共享摄像头画面后，AI 可对镜头指向的任意对象进行实时语音描述，帮助阅读细小文字等，被视为多模态实时助手向日常场景落地的一步。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision" },
-  { time: "03:18", tag: "tech", tagText: "科技", text: "谷歌已将其首枚先进芯片送入轨道，为「太空数据中心」铺路，但公司测算认为，SpaceX 的星舰需要发射约 1800 次，这一构想才具备真正落地的基础。该表态为轨道算力的商业化前景给出了明确的规模门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/" },
 ];
-const aiBreakingDate = "2026年10月3日 23:32 CST";
+const aiBreakingDate = "2026年10月4日 01:11 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
