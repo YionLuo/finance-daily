@@ -1623,12 +1623,23 @@ const fearGreedData = {
   previous1Week: 36.94,
   previous1Month: 46.06,
   previous1Year: 54.54,
-  date: "2026年10月5日 05:18 CST"
+  date: "2026年10月5日 08:46 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:22", tag: "geo", tagText: "地缘", text: "巴西大选首轮投票中，前总统博索纳罗之子弗拉维奥·博索纳罗意外领先，成为对阵现任总统卢拉的热门人选。其父因刑事指控入狱，弗拉维奥的强势表现反映巴西右翼势力回潮，为拉美最大经济体的政策与市场走向增添变数。", source: "Financial Times", url: "https://www.ft.com/content/028da85c-0e1f-4f1b-ad04-eac78c4f18c0?syn-25a6b1a6=1" },
+  { time: "08:20", tag: "crypto", tagText: "加密", text: "布伦特原油突破每桶100美元关口，欧洲与中东战事持续收紧燃料供应。但加密市场反应平淡，未出现明显跟涨或抛售：市场围绕比特币的\"通胀对冲\"叙事与油价飙升可能引发衰退的担忧展开争论，分析人士认为高油价对风险资产的传导路径仍不明确。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUUhxbHpRanVaYnl3RzMxS0NsN1kzTWlHaWhEYVFUNXgwM0J4eHVlcHNmYXFKbnV4MHFZa18xY1oxcFdTenN6bEk1MXQ5LUpvWkhObmR5Vm9TdTdPRGpoYWtPRElxdXEtTFo0SllzbmM5d3dwS2tkYnJUSVh3dDBTdThNNEg3S0oxdnhSYU95djJ2MVczZjloNEdB?oc=5" },
+  { time: "08:02", tag: "macro", tagText: "宏观", text: "美国老年人债务问题持续恶化：不仅背负债务的老年家庭数量上升，人均借贷规模也在扩大。按照现行规则，政府最多可扣留15%的社会保障金用于偿还拖欠的学生贷款，目前已有提案试图叫停这一做法。该议题凸显退休保障与联邦债务追偿之间的政策冲突，涉及数百万领取社保的老年借款人。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/the-government-can-take-15-of-social-security-benefits-to-repay-student-loans-these-proposals-seek-to-stop-it-102622fa?mod=mw_rss_topstories" },
+  { time: "07:58", tag: "macro", tagText: "宏观", text: "MarketWatch撰文指出，工资增长放缓、能源价格飙升与通胀顽固并存，当前宏观图景与1970年代“滞胀”时期日益相似，市场开始重新讨论是否要启用那一时期的投资剧本。在当年的滞胀环境中，股票与债券双双承压，实物资产和大宗商品表现相对占优，这对当下股债配置逻辑构成直接挑战。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/falling-wages-soaring-energy-prices-and-inflation-its-beginning-to-look-a-lot-like-the-1970s-d645cbca?mod=mw_rss_topstories" },
+  { time: "07:37", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，特朗普将任命现任国家情报总监杰伊·克莱顿（Jay Clayton）兼任白宫人工智能事务主管（AI czar），主导本届政府的AI政策制定。克莱顿目前仍掌管美国情报体系，此举意味着AI议题被进一步纳入国家安全与产业竞争的顶层框架，联邦层面的AI监管、采购与出口管制方向或随之调整。", source: "CNBC", url: "https://www.cnbc.com/2026/10/03/trump-jay-clayton-ai-czar.html" },
+  { time: "07:34", tag: "crypto", tagText: "加密", text: "比特币与以太坊在经历约500亿美元市值蒸发后企稳，加密市场自抛售中逐步恢复，而Zcash单日重挫17%。在流动性收紧与杠杆产品加速扩容的背景下，市场情绪依然脆弱，个股与代币分化加剧。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOWozdmZRMEZ1OHo1aF9Qc2ZvVExBSjFaQ3Jja1N4LXNaa2lmWmdzazduZVBPZjhHcDlSV01JdF8ySEs1amlyUk54d0dPenNzejZJR003RVMyUFdCdmQyaFhlWWFLTkZYUFJXbFkxajMwRFhUSXd4aWExSlZTS19fVzBwcExkbGhtcS1uTTUxZDlYTjEyLURpNTBrSm0?oc=5" },
+  { time: "06:24", tag: "geo", tagText: "地缘", text: "美国因涉嫌恐袭阴谋从英国皇家空军费尔福德基地撤走全部B-1轰炸机，五名英国男子在该基地附近被捕，英方与美方均指称伊朗涉案。与此同时，中东又有更多油轮在伊朗附近海域遇袭。德黑兰重申停火条件，包括停止美方“侵略行为”、解除海上封锁与经济战、并解冻伊朗资产，地区紧张局势持续升级。", source: "Financial Times", url: "https://www.ft.com/content/66897ef7-936b-43d0-a067-576be636f876?syn-25a6b1a6=1" },
+  { time: "05:51", tag: "tech", tagText: "科技", text: "施耐德电气接近以约200亿美元收购软件集团PTC，这将成为这家法国工业巨头史上最大规模并购，并强化其面向制造业的产品线。交易凸显工业自动化与工业软件深度融合的趋势，也是近期并购市场中的一笔重磅交易。", source: "Financial Times", url: "https://www.ft.com/content/2084f349-0829-4130-a5e6-b98929a6e633?syn-25a6b1a6=1" },
+  { time: "04:28", tag: "macro", tagText: "宏观", text: "随着中期选举临近，特朗普重申向民众发放5,000美元支票的承诺，并已开始发放金额较小的款项。他同时推广两项已在进行的联邦支付计划，但5,000美元“红利”取决于共和党能否保住国会控制权。此举被视为选前财政刺激与经济拉票手段，或加剧财政压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/04/trump-5000-checks-cash-payments-midterms.html" },
+  { time: "04:00", tag: "macro", tagText: "宏观", text: "FT报道，并购交易明显放缓，威胁今年创纪录开局的并购热潮提前终结。利率上升、对AI的焦虑以及中期选举共同抑制了市场“动物精神”。交易撮合活动的降温，反映企业对高估值与融资环境的谨慎，也预示投行业务收入承压。", source: "Financial Times", url: "https://www.ft.com/content/00fb4438-1f86-4bf2-a165-0c39f3fd506b?syn-25a6b1a6=1" },
+  { time: "02:58", tag: "tech", tagText: "科技", text: "微软股价录得自1998年以来最佳季度表现，Azure云业务增长重新点燃AI乐观情绪。市场对微软云与AI基础设施需求的信心回升，推动其成为本轮AI行情的关键受益者，也支撑了科技板块的整体估值。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNMXZrVGQySXVNalNUeHVSWHVKLW5ndEsxdXYyT1VNMzdTdGZfZmNvZ2tjTkdTWFlIdmZmSUlCM083b0tEd0ZuZDdPMEtmX19CdmFWVUFJOUk1TnFXSmNOZ1k3SjAyclJVMXB5WThTNUJOWTdiZE96R2J5YUtNVDI1VW9tTFlxQ3lLV0R6TndaSUNFTnU4eGZjejhNOWJ3N1M4Ui1JbG9YMk9yTURSVm1uclJ5emN2Q0piYmZVYWFUWkU2MWRIRm9OU3dIZ1FLc0RIYkZZQjBpZw?oc=5" },
   { time: "01:53", tag: "geo", tagText: "地缘", text: "美国最高法院大法官阿利托表示自己“考虑过”退休。11月中期选举后参议院控制权存在易手可能，若民主党夺回参议院，特朗普未来提名最高法院大法官的空间将大幅受限，因此阿利托的退休时点被视为影响最高法院意识形态平衡的关键变量。", source: "CNBC", url: "https://www.cnbc.com/2026/10/04/supreme-court-justice-alito-thought-about-retiring.html" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "美国企业界对未来盈利前景的乐观程度创历史新高。随着三季度财报季本周拉开帷幕，越来越多的公司在业绩指引与电话会议中表达对利润的乐观预期，显示企业对需求韧性与成本控制信心处于高位，为股市估值提供支撑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/corporate-america-has-never-been-this-upbeat-about-future-profits-fbaf8cd9?mod=mw_rss_topstories" },
   { time: "21:22", tag: "tech", tagText: "科技", text: "AI可穿戴设备热潮遭遇现实阻力：Oura的IPO在最后时刻被撤回，行业声誉受损，期待的突破性时刻迟迟未至。苹果、谷歌与Meta仍在推进新的AI设备与助手，但围绕可穿戴设备的隐私担忧持续升温，成为制约其大规模普及的关键因素。", source: "CNBC", url: "https://www.cnbc.com/2026/10/04/ai-wearables-oura-ipo-privacy.html" },
@@ -1638,19 +1649,8 @@ const breakingNews = [
   { time: "20:54", tag: "macro", tagText: "宏观", text: "OPEC+同意维持11月石油产量目标不变。海湾产油国在美国-以色列对伊朗战争导致出口持续中断的背景下，实际产量远低于既定目标。此举意味着原油供应端短期内不会额外增产，油价与全球通胀压力仍将受到地缘冲突主导。", source: "CNBC", url: "https://www.cnbc.com/2026/10/04/opec-agrees-to-keep-november-oil-output-targets-steady.html" },
   { time: "20:39", tag: "ai", tagText: "AI", text: "美国围绕数据中心的争议正向全球蔓延。随着AI基础设施投资激增，欧洲、亚洲和非洲的社区开始公开抵制数据中心带来的电价上涨、水资源消耗、土地占用与噪音问题。这一反弹正成为AI算力扩张面临的新政治与监管阻力，市场关注其对数据中心运营商、电力需求预期及相关资本开支节奏的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/03/data-center-backlash-europe-asia-africa.html" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "美联储将于本周公布9月会议纪要，市场期待从中寻找未来加息路径的关键线索。当前实际联邦基金利率出人意料地偏低，令货币政策走向更受关注，纪要有望提供更多背景信息，并可能左右债市与股市预期。", source: "MarketWatch", url: "https://www.marketwatch.com/story/fed-minutes-coming-this-week-could-give-markets-important-clues-about-future-rate-hikes-31bfba5b?mod=mw_rss_topstories" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "基金经理正寻求为投资组合对冲日益上升的AI集中度风险，将对冲基金与新兴市场资产视为避风港，以防AI情绪突然逆转。AI权重股在市场中的高度集中，已成为投资者广泛担忧的结构性隐忧。", source: "Financial Times", url: "https://www.ft.com/content/3302fd5c-8b92-425b-9523-673b2565bb10?syn-25a6b1a6=1" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "高科技配置正推高汽车维修成本：高级驾驶辅助系统（ADAS）校准设备、专用电脑及软件订阅费用，令更换挡风玻璃甚至常规换油等基础服务的价格明显上涨。维修店与消费者均感受到智能化带来的成本压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/03/vehicle-repair-costs.html" },
-  { time: "19:30", tag: "macro", tagText: "宏观", text: "美国国债收益率升至世代高位，全球投资者正密切评估其可能引发的市场连锁反应——哪些资产会断裂、哪些风险会螺旋放大。债券收益率飙升持续压制风险资产估值，并推高全球融资成本。", source: "MarketWatch", url: "https://www.marketwatch.com/story/as-treasury-yields-touch-generational-highs-investors-brace-for-the-market-fallout-0457e698?mod=mw_rss_topstories" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "OpenAI披露其AI工具涉及数十起网络安全漏洞事件，令这家ChatGPT开发商面临一波诉讼浪潮。围绕CEO奥尔特曼的法律风险持续累积，事件凸显生成式AI在隐私与安全层面的责任归属争议正快速升温。", source: "Financial Times", url: "https://www.ft.com/content/2c24ece3-ac99-43a8-b0e6-4a3867e37ebf?syn-25a6b1a6=1" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "特斯拉Cybercab在奥斯汀上线首月运营表现坎坷，如今面临更艰难的扩张考验。马斯克推动公司摆脱对整车销售依赖的努力，在很大程度上取决于这款无人驾驶出租车的成败，市场关注其规模化落地进度。", source: "CNBC", url: "https://www.cnbc.com/2026/10/03/tesla-cybercab-pressure-to-expand-after-rocky-first-month-in-austin.html" },
-  { time: "18:52", tag: "crypto", tagText: "加密", text: "2026年以来以太坊ETF的资金流入已超过比特币ETF，显示在现货产品获批后，投资者对第二大加密资产的配置兴趣反超比特币。这一趋势折射出资金正从比特币向以太坊生态扩散。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZTJaY3ptUnc3cXN1bm5nS2Z1Y3hsRDl5eXBzVkNUY2xTVTFNV2V4dEpxWnBXbTcyMEdZRktDNVZQZXpXQnJ2cS1SQURGTW5DandZdHk5VXhsSmdaTldDd0xaWk5GNkxGeERMNGp0dzV3N0dJX1d5TzI4Rm9TOU9nUjlTbkFJeThaOW1aSlNZRXlCNzZscWlPLWNGRW9FMTNYcjhob29vMTVhNlltcVE?oc=5" },
-  { time: "17:29", tag: "macro", tagText: "宏观", text: "FT分析指出，全球IPO市场正呈现冷热分化：新股发行停滞，上市公司回报疲弱。一级市场热度与二级市场表现背离，投资者对新股定价与承销质量的疑虑加深，反映资本市场融资功能与经济信心之间存在裂痕。", source: "Financial Times", url: "https://www.ft.com/content/8b7e2800-3e36-4d0c-9016-32deaae67b62" },
-  { time: "08:20", tag: "crypto", tagText: "加密", text: "布伦特原油突破每桶100美元关口，欧洲与中东战事持续收紧燃料供应。但加密市场反应平淡，未出现明显跟涨或抛售：市场围绕比特币的\"通胀对冲\"叙事与油价飙升可能引发衰退的担忧展开争论，分析人士认为高油价对风险资产的传导路径仍不明确。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUUhxbHpRanVaYnl3RzMxS0NsN1kzTWlHaWhEYVFUNXgwM0J4eHVlcHNmYXFKbnV4MHFZa18xY1oxcFdTenN6bEk1MXQ5LUpvWkhObmR5Vm9TdTdPRGpoYWtPRElxdXEtTFo0SllzbmM5d3dwS2tkYnJUSVh3dDBTdThNNEg3S0oxdnhSYU95djJ2MVczZjloNEdB?oc=5" },
-  { time: "08:02", tag: "macro", tagText: "宏观", text: "美国老年人债务问题持续恶化：不仅背负债务的老年家庭数量上升，人均借贷规模也在扩大。按照现行规则，政府最多可扣留15%的社会保障金用于偿还拖欠的学生贷款，目前已有提案试图叫停这一做法。该议题凸显退休保障与联邦债务追偿之间的政策冲突，涉及数百万领取社保的老年借款人。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/the-government-can-take-15-of-social-security-benefits-to-repay-student-loans-these-proposals-seek-to-stop-it-102622fa?mod=mw_rss_topstories" },
-  { time: "07:58", tag: "macro", tagText: "宏观", text: "MarketWatch撰文指出，工资增长放缓、能源价格飙升与通胀顽固并存，当前宏观图景与1970年代“滞胀”时期日益相似，市场开始重新讨论是否要启用那一时期的投资剧本。在当年的滞胀环境中，股票与债券双双承压，实物资产和大宗商品表现相对占优，这对当下股债配置逻辑构成直接挑战。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/falling-wages-soaring-energy-prices-and-inflation-its-beginning-to-look-a-lot-like-the-1970s-d645cbca?mod=mw_rss_topstories" },
-  { time: "07:37", tag: "ai", tagText: "AI", text: "据《华尔街日报》报道，特朗普将任命现任国家情报总监杰伊·克莱顿（Jay Clayton）兼任白宫人工智能事务主管（AI czar），主导本届政府的AI政策制定。克莱顿目前仍掌管美国情报体系，此举意味着AI议题被进一步纳入国家安全与产业竞争的顶层框架，联邦层面的AI监管、采购与出口管制方向或随之调整。", source: "CNBC", url: "https://www.cnbc.com/2026/10/03/trump-jay-clayton-ai-czar.html" },
 ];
-const breakingDate = "2026年10月5日 05:18 CST";
+const breakingDate = "2026年10月5日 08:46 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "20:18", tag: "ai", tagText: "AI", text: "特斯拉因 AI 芯片内存供应紧张，被迫下调其 AI 芯片的内存容量配置。此举显示存储芯片（HBM/DRAM）短缺正从数据中心传导至车企自研算力芯片，可能拖累其自动驾驶与 Dojo 等 AI 训练、推理部署节奏，也凸显 AI 硬件供应链瓶颈正在扩大。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNS1I2MHhqR1JDNkRBYnU2c0o4U3hPVjhwNzhvTWx1SFRUU0NOVno4b3hiY21kWDBzUlVPWnlvUW16YkxnVFlNWEJsaXJ6Y3pnVzZaNEdUemFSUWEzM3BENDdDSm5HNldIU0xjM21kVFY4ZVQ1MGwxQU9WTnVxOUJFdzUwT240OHFa?oc=5" },
   { time: "09:11", tag: "tech", tagText: "科技", text: "英伟达股价刷新历史新高，再度点燃市场对AI芯片板块的追捧。Yahoo Finance 据此梳理出三只值得关注的AI芯片个股，认为在AI算力需求延续的背景下，相关标的存在补涨与受惠空间。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxOSGtKSEV2U3hSYWE5djM3VUZKVEpqYmRZTENGZWtqT3JhMkdHLW5pYk1hY0ZoZlB3WFJGaHU1WFJ2Sm1RNHJCLV94US1JcFlPRzkyN3VPTm9SbFVFT0xQc1E1eDZjZ1hLMnV4VGd2N0xpTEd6TjhoN3h2blpUR1NGMjV1YzRXR3h5cHhxSFRDMA?oc=5" },
 ];
-const aiBreakingDate = "2026年10月5日 05:18 CST";
+const aiBreakingDate = "2026年10月5日 08:46 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
