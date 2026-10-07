@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 47.31,
+  score: 47.37,
   rating: "neutral",
-  timestamp: "2026-10-06T21:18:48+00:00",
+  timestamp: "2026-10-06T23:59:49+00:00",
   previousClose: 43.03,
   previous1Week: 28.86,
   previous1Month: 45.23,
   previous1Year: 53.97,
-  date: "2026年10月7日 05:35 CST"
+  date: "2026年10月7日 09:28 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:49", tag: "crypto", tagText: "加密", text: "前BitMEX CEO Arthur Hayes称AI基础设施热潮存在严重过度建设，\"数万亿美元正被浪费\"。他押注AI泡沫终将破裂并迫使政府出手救助，而由此引发的流动性与财政扩张将推动加密货币走高。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/flop-ai-boom-arthur-hayes-bitcoin-bitmex-coinferencex-.html" },
+  { time: "07:18", tag: "geo", tagText: "地缘", text: "特朗普称将与普京通话讨论肺鼠疫事件。美国加大对莫斯科施压力度，要求其就这起已造成一人死亡的事件披露更多信息，事件引发外界对俄境内公共卫生与信息透明度的担忧。", source: "Financial Times", url: "https://www.ft.com/content/dcf35eaf-e1d3-4289-bc7a-e0c91725ad59?syn-25a6b1a6=1" },
+  { time: "06:28", tag: "ai", tagText: "AI", text: "SpaceX寻求通过由Apollo牵头的融资筹集400亿美元，用于购买英伟达芯片。这笔重磅债务交易是支撑AI的芯片及其他基础设施巨额支出的最新迹象，显示AI算力军备竞赛正从科技巨头蔓延至航天等领域。", source: "Financial Times", url: "https://www.ft.com/content/d3f5928d-f38c-4666-8f7a-8737f9c45f51?syn-25a6b1a6=1" },
+  { time: "05:09", tag: "macro", tagText: "宏观", text: "特朗普表示正考虑暂停联邦汽油税。燃料价格飙升在中期选举前四周给总统及其共和党带来巨大压力，此举被视为选举前的政治性减负措施，但可能影响联邦公路信托基金收入。", source: "Financial Times", url: "https://www.ft.com/content/3fd43fc5-4973-4a26-9d9c-47b6361e6217?syn-25a6b1a6=1" },
+  { time: "05:00", tag: "crypto", tagText: "加密", text: "新加坡正试图与本土加密公司Hyperliquid Labs及其广受欢迎的永续合约产品保持距离，该产品被称为\"加密领域最危险的产品\"。以厌恶风险和丑闻著称的城邦正面临本土创新与金融稳定之间的两难。", source: "Financial Times", url: "https://www.ft.com/content/cd851d45-596b-4745-8c28-ce7ace1d3e43?syn-25a6b1a6=1" },
   { time: "04:58", tag: "macro", tagText: "宏观", text: "标普500指数盘中与收盘均创历史新高，纳斯达克同步刷新纪录。科技股（尤其“七巨头”与AI概念股）走强、油价回落以及美债收益率下行，帮助美股克服此前数月的市场冲击。分析人士提醒，本轮涨势对少数大型科技股的依赖度日益上升，一旦AI交易降温或债券收益率再度走高，回调风险不容忽视。", source: "Financial Times", url: "https://www.ft.com/content/1c1ee003-f041-4c66-a971-f08d488d11f7?syn-25a6b1a6=1" },
   { time: "04:36", tag: "geo", tagText: "地缘", text: "国防科技初创公司Anduril宣布投资37亿美元新建船厂，为美国海军顶级潜艇制造零部件。创始人Palmer Luckey此举正值特朗普政府试图降低对传统“主承包商”的依赖，反映国防科技新势力正加速切入核心军工供应链，或重塑美国海军装备采购格局。", source: "Financial Times", url: "https://www.ft.com/content/a6339e0c-4114-413a-a23c-916ed4392ce0?syn-25a6b1a6=1" },
   { time: "04:00", tag: "geo", tagText: "地缘", text: "因伊朗袭击风险上升，通过霍尔木兹海峡的船长薪酬飙升至每月10万美元，海员须获得高额薪资与奖金才愿冒险通行。这一劳动力成本激增凸显中东冲突对全球航运与能源供应链的冲击正从运费向人力成本端传导。", source: "Financial Times", url: "https://www.ft.com/content/0d665e5b-d8c8-4f1e-acf5-bba7193b4e6e?syn-25a6b1a6=1" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "18:00", tag: "macro", tagText: "宏观", text: "派拉蒙对华纳兄弟探索（WBD）的收购将于周二完成交割。这项交易历经竞购对手挑战与反垄断审查，最终落地后将重塑好莱坞制片厂与流媒体行业格局，成为近年来规模最大的媒体并购之一。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/paramount-wbd-deal-timeline.html" },
   { time: "17:58", tag: "geo", tagText: "地缘", text: "美国众议院中国问题特别委员会主席穆勒纳尔（John Moolenaar）敦促美联储重新审视香港接入美元流动性工具（FIMA回购便利）的资格。在中国力推人民币国际化之际，此举可能加大香港离岸美元融资渠道的政治不确定性，并进一步凸显美元体系被武器化的风险。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/hong-kong-fed-fima-dollar-liquidity-china-moolenaar.html" },
   { time: "17:11", tag: "geo", tagText: "地缘", text: "德国前情报机构负责人汉宁（August Hanning）因涉嫌叛国被捕，他被怀疑向外国势力出售国家机密。事件震动德国安全与情报体系，或引发对西方情报网络渗透风险的进一步审视。", source: "Financial Times", url: "https://www.ft.com/content/4c565931-6ac7-4b4c-be72-d86e8e3a8aec?syn-25a6b1a6=1" },
-  { time: "16:53", tag: "geo", tagText: "地缘", text: "也门部队在大规模反攻中从伊朗支持的胡塞武装手中夺回红海重要港口城市摩卡。中东供应中断风险持续发酵，布伦特原油在每桶100美元附近交投，市场对冲突进一步升级及其对能源运输的影响保持高度警惕。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/iran-war-yemen-saudi-arabia-mokha-oil.html" },
-  { time: "15:16", tag: "geo", tagText: "地缘", text: "迪拜航空（Flydubai）未遂劫机案涉案副驾驶曾在新西兰接受飞行训练。在阿联酋主导的调查中，以色列国家安全总局（辛贝特）已对其展开审讯，事件加剧了外界对中东航空安全与地区安全联动的关注。", source: "Financial Times", url: "https://www.ft.com/content/04cac391-0379-4a97-a7fd-354b613f661f?syn-25a6b1a6=1" },
-  { time: "14:57", tag: "macro", tagText: "宏观", text: "量化趋势基金凭借在债券与原油市场的重仓布局大幅跑赢股市。这类基金以“更早、逆向且正确”的策略捕捉利率与大宗商品趋势，成为今年表现最突出的对冲基金策略之一，反映市场波动加剧下的资金偏好转移。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/trend-following-hedge-funds-beat-stock-market.html" },
-  { time: "12:33", tag: "crypto", tagText: "加密", text: "比特币维持在85,000美元上方。此前美国财政部放弃加密钱包申报计划，CFTC亦提出新的数字资产监管规则，监管环境边际转松；但比特币仍较一年前126,000美元的历史高点回落约32%，显示市场在监管明朗化预期与深度调整之间继续拉锯。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNLW5VbVJRdjVpRkFaVjRMcm9hTHFDZXp6NmV5WFp1TVFWTDZUMjEwZ3pBYjQyNnhQb1Q1WTBDbkNSbEtHX3JPdGtNRmZHNWhGZmxlblZVY1EtRlMtbVVob2tVZmJHZ2luazJGeDdvdzVNbmVLQzMwTGJncm9GcGhfSnFya1o0emJ5a2VvN0lJRnhZVFQ3WGZlV2kwaXQ3UmJ5TnlDVjM4Q1lSLUJfT2Y1M1ZFZFRucWZkeVhTVGtmMEh3Q3ctM0NEZllhcmRhQmNNRU5ET2JBeGVnWmp2NXBhYUxwQXVUdXZtcW1sSjdIb2ZobWdjcmRZMQ?oc=5" },
-  { time: "10:39", tag: "geo", tagText: "地缘", text: "印度财政部长西塔拉曼确认印美贸易谈判陷入僵局，直言双方“让与取”的空间已十分有限。这是市场对两国能否达成贸易协议愈发怀疑的最新信号，凸显在关税与市场准入等核心议题上分歧依旧，协议前景蒙上阴影。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/india-us-trade-deal-deal-sitharaman.html" },
 ];
-const breakingDate = "2026年10月7日 05:35 CST";
+const breakingDate = "2026年10月7日 09:28 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:00", tag: "ai", tagText: "AI", text: "The Verge 梳理了围绕「AI 接管数学」的持续争议：随着模型在数学证明与难题上取得进展，数学家群体在工具价值、署名权与研究范式上分歧加剧。相关讨论正从技术圈扩散到学术评价与科研资助层面。", source: "The Verge", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxOXzNEckh1SXVQTGtqbTI4OXRuaHRPc25iV1NtSUxGdUUwZG9oOFM1NzRoNmpzMjRMeFFvRDZHbzVtTW1JWU5UcjZkS0ZiUVphNVdUNW5wbHdxRlkyYjFhQTZnY1BWSE5rWHJ5anNzWnZLZzQyOEpPY3FoWUl3SUY1RFkxSEdZYmsyc3AxZGk1RDljLVJmUlNpdm8taHI?oc=5" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
   { time: "05:09", tag: "ai", tagText: "AI", text: "英伟达暂停了与美国俄勒冈州中小学及高校合作的 AI 教育项目。该项目此前旨在向学校提供 AI 课程与算力资源，暂停原因尚待公司进一步说明。此举恰逢各地对校园 AI 引入、数据隐私与商业合作审查趋严之际，可能影响其他州类似项目的推进节奏。", source: "GovTech", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxOQ1dHeEhJOGl1U0tDdWE1dTNJbFFpdzNDbXlVRTQ2dUF1WG1ZblRHUTdFNDI2V0FOb09OVzdjQThJT1Z2dGdPQ0o2UmdvTlNwemVVRUtqb0lPRGlHSF9PTUNmN2E4b0lGRWhkSTdBbWRxLVdIZURRWDBXSTBoanJtMDNVSDRnS1h1Mklzd0xTYV9LQ00xU1NrZ3dtSHBldw?oc=5" },
   { time: "05:09", tag: "ai", tagText: "AI", text: "曾以 Napster 颠覆音乐产业的肖恩·帕克（Sean Parker）正围绕音乐业务重建 Stability AI，且此次获得了唱片公司的背书与资金支持。这意味着曾经与音乐行业对立的一方，正转为与版权方合作开发 AI 音乐工具，也标志着 Stability AI 在图像生成业务承压后寻求新的战略重心。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "tech", tagText: "科技", text: "一项调查显示，受博通收购后授权费用上涨影响，约 90% 的 VMware 用户正考虑替代方案。用户在迁移过程中最关心的是「降低风险、避免不必要的中断」，而运维复杂度被视为迁移的首要障碍。这表明虚拟化市场正因涨价而出现大规模重估。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/10/operational-complexity-a-top-barrier-for-vmware-migrations-survey/" },
   { time: "19:23", tag: "ai", tagText: "AI", text: "DeepSeek 的融资轮持续膨胀，动力电池龙头宁德时代（CATL）与腾讯均参与了本轮投资。报道称这家中国 AI 初创公司正着眼于 2027 年启动 IPO，产业资本与互联网巨头的共同入局凸显其在国内大模型版图中的战略地位。", source: "The Decoder", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxQd0xkd1h4bkRWSXVfbGhxNmRueVA5b09wQUZUaGRsWENLblR2WXBxVVVyZmlJbmVrQzdpTmdXbGtSV0loaFhXVUNsRnlXT3VjME9CR3lHLWNXaWZUWE9zdjR1YjhsWEQxSzdDQURiZ25tSUd3SFFCTXpJaHh4dXp5ZDB2RmMtLWRrdGRMdnY1MEdmcnZnOGRQcWQ5QUdpVkVsMy0yQWdUMjhOdkJpdC1KRjVZUThsQQ?oc=5" },
   { time: "14:28", tag: "ai", tagText: "AI", text: "总部位于巴黎的 WhiteLab Genomics 完成 2320 万欧元融资，将用于加速 AI 驱动的基因组医学开发。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPeWctX0p5SEtRNHpwQlpscGNpRFR6Rl95NC1BOGY2ZnpkeW0zSzk1MEwxQjBUemtzX2JmT0dsTjFEME9uRlVtR045TXpCMEdkT2hlNnZfMVlyUWF0M2Vsc0F5bjA2UnRmWGY5RkhXc3JPdWplaGZRRVFHa0pKVGVRRVBwREFDNGp6Rjlab1dNREZnQkFHejRVLUJfcXk0QTU1N0kyWVhBTUgyTHJtZzBFekctd2RaRGx4bzJBVlRXa3hHTldsR1hNWFBWSDFjc21XZ093QXVqbw?oc=5" },
-  { time: "08:00", tag: "ai", tagText: "AI", text: "The Verge 梳理了围绕「AI 接管数学」的持续争议：随着模型在数学证明与难题上取得进展，数学家群体在工具价值、署名权与研究范式上分歧加剧。相关讨论正从技术圈扩散到学术评价与科研资助层面。", source: "The Verge", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxOXzNEckh1SXVQTGtqbTI4OXRuaHRPc25iV1NtSUxGdUUwZG9oOFM1NzRoNmpzMjRMeFFvRDZHbzVtTW1JWU5UcjZkS0ZiUVphNVdUNW5wbHdxRlkyYjFhQTZnY1BWSE5rWHJ5anNzWnZLZzQyOEpPY3FoWUl3SUY1RFkxSEdZYmsyc3AxZGk1RDljLVJmUlNpdm8taHI?oc=5" },
 ];
-const aiBreakingDate = "2026年10月7日 05:35 CST";
+const aiBreakingDate = "2026年10月7日 09:28 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
