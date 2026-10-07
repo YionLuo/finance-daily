@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 47.37,
+  score: 47.34,
   rating: "neutral",
-  timestamp: "2026-10-06T23:59:49+00:00",
-  previousClose: 43.03,
-  previous1Week: 28.86,
+  timestamp: "2026-10-07T08:14:46+00:00",
+  previousClose: 47.2,
+  previous1Week: 30.26,
   previous1Month: 45.23,
-  previous1Year: 53.97,
-  date: "2026年10月7日 09:28 CST"
+  previous1Year: 51.86,
+  date: "2026年10月7日 16:32 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:29", tag: "macro", tagText: "宏观", text: "雪佛龙CEO沃斯警告称，禁止柴油出口将是\"不明智\"的举措，可能适得其反。在燃料价格飙升、特朗普政府考虑限制出口以平抑油价之际，他指出口禁令会扰乱全球市场、削弱炼油积极性，反而可能推高美国国内价格。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/chevron-ceo-diesel-export-ban-trump-supply.html" },
+  { time: "14:16", tag: "macro", tagText: "宏观", text: "IMF总裁格奥尔基耶娃警告，AI既是全球经济增长的希望，也是风险来源。这项提振增长预期的技术同时推高通胀与债券收益率，而此时各国公共债务水平本已攀升，政策制定者面临稳增长与控通胀的两难。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/economy-inflation-ai-trade-imf-iran-hormuz-trump-.html" },
+  { time: "13:29", tag: "geo", tagText: "地缘", text: "油价上涨，胡塞武装对沙特的袭击以及伊朗加大针对霍尔木兹海峡油轮的袭击，令交易员对供应的担忧盖过了先前的供应恢复预期。中东冲突再度威胁全球能源供应链，交易商重新评估原油供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/oil-prices-today-brent-wti-hormuz.html" },
+  { time: "13:11", tag: "macro", tagText: "宏观", text: "印度央行自2023年以来首次加息，因通胀风险上升。汇丰与高盛预计印度央行将于12月再次加息。此举凸显在新兴市场通胀压力抬头背景下，货币政策转向紧缩。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/india-rbi-interest-rates-inflation.html" },
+  { time: "12:27", tag: "crypto", tagText: "加密", text: "比特币闪崩，一度暴跌约2000美元，超4亿美元加密多头头寸遭清算。市场正评估这究竟是一次健康回调还是更大的警示信号，此前加密市场已连续走高。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNNWRTS3Z3bWFTMi0zbDB4cHN6bVI4aDBCV0FjZl9RNFZuSWlMX3ByTHlaT0JlR2dCQks0dHNvZUZPN2dCdll3ZzFIcGJ5cmNjUk41U1VheWlMYVpfdXhfd2x4eUE0NHNGdlRxUUFpTWYzWjhYR2hCTW9MZlhlaU04VWRVdFBEUTFZMUdaWVJwaGtzSi1fMWVFSA?oc=5" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "强劲的AI支出为美国又一财报季奠定基础。标普500企业盈利预计同比增长27%，在股市创历史新高与长期借贷成本高企的背景下，AI相关资本开支成为盈利增长的核心引擎。", source: "Financial Times", url: "https://www.ft.com/content/7c38e8e3-8035-4036-8bc0-5fba2fbf77cb?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "欧盟委员会正考虑对大型企业征收一项广泛税项，以避免单独针对美国数字服务巨头，从而实现向科技巨擘征税的目的。此举意在规避与华盛顿的直接对抗，但可能加剧美欧贸易紧张。", source: "Financial Times", url: "https://www.ft.com/content/ad06ed89-f600-4694-8c95-7d53b6d3315b?syn-25a6b1a6=1" },
   { time: "08:49", tag: "crypto", tagText: "加密", text: "前BitMEX CEO Arthur Hayes称AI基础设施热潮存在严重过度建设，\"数万亿美元正被浪费\"。他押注AI泡沫终将破裂并迫使政府出手救助，而由此引发的流动性与财政扩张将推动加密货币走高。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/flop-ai-boom-arthur-hayes-bitcoin-bitmex-coinferencex-.html" },
   { time: "07:18", tag: "geo", tagText: "地缘", text: "特朗普称将与普京通话讨论肺鼠疫事件。美国加大对莫斯科施压力度，要求其就这起已造成一人死亡的事件披露更多信息，事件引发外界对俄境内公共卫生与信息透明度的担忧。", source: "Financial Times", url: "https://www.ft.com/content/dcf35eaf-e1d3-4289-bc7a-e0c91725ad59?syn-25a6b1a6=1" },
   { time: "06:28", tag: "ai", tagText: "AI", text: "SpaceX寻求通过由Apollo牵头的融资筹集400亿美元，用于购买英伟达芯片。这笔重磅债务交易是支撑AI的芯片及其他基础设施巨额支出的最新迹象，显示AI算力军备竞赛正从科技巨头蔓延至航天等领域。", source: "Financial Times", url: "https://www.ft.com/content/d3f5928d-f38c-4666-8f7a-8737f9c45f51?syn-25a6b1a6=1" },
@@ -1642,18 +1649,12 @@ const breakingNews = [
   { time: "02:48", tag: "ai", tagText: "AI", text: "Meta与OpenAI董事长Bret Taylor创办的初创公司Sierra等企业联手制定技术标准，旨在规范企业“与AI机器人做生意”的流程，解决当前AI代理（AI agent）商务中缺乏统一规则、互操作性差导致的“混乱”局面，为AI智能体的商业化落地铺路。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/meta-joins-companies-to-tame-chaos-of-doing-business-with-ai-bots.html" },
   { time: "00:15", tag: "tech", tagText: "科技", text: "Meta旗下Muse产品走俏推动AMD股价创出新高。个人AI智能体（AI agent）热潮正带动CPU需求回升，过去一个月AMD与英特尔股价跑赢其他超大型科技股。市场逻辑正在从数据中心GPU训练转向端侧智能体推理，计算需求结构变化为传统芯片厂商打开新的增长窗口。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/meta-muse-gives-amd-a-boost-as-ai-momentum-shifts-to-personal-agents-.html" },
   { time: "23:52", tag: "macro", tagText: "宏观", text: "美国8月贸易逆差扩大至1056亿美元，为去年特朗普关税落地前以来的最阔水平，较7月激增13.7%，并高于道琼斯102亿美元的预期。逆差大幅走阔凸显进口商在关税环境下的抢跑效应与贸易结构失衡，或对三季度GDP增速构成拖累，并加剧华盛顿在贸易政策上的争论。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-since-just-before-trump-tariffs-enacted-last-year.html" },
-  { time: "23:37", tag: "ai", tagText: "AI", text: "谷歌与巴尔的摩的Constellation能源达成协议，通过提升现有核电站出力为数据中心供电。此举被视为AI算力需求推动电力供给紧张的直接回应，利好其他拥有核电资产的独立发电商（IPP）。受此提振，核电股大幅上涨，反映出资本市场正加速为AI用电缺口定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/google-constellation-energy-ceg-nuclear-power-data-center.html" },
-  { time: "22:35", tag: "geo", tagText: "地缘", text: "德国选择党（AfD）成员Tobias Rausch在四名来自主流政党的神秘支持者秘密投票下，当选德国首个州议会议长。这是德国极右翼势力首次执掌州级议会要职，标志着德国政治版图进一步碎片化，也令主流政党“防火墙”策略面临严峻考验，或影响未来德国财政与欧盟政策的走向。", source: "Financial Times", url: "https://www.ft.com/content/76db879a-2c53-4aee-8354-b30185f1d3a4?syn-25a6b1a6=1" },
-  { time: "22:06", tag: "crypto", tagText: "加密", text: "在美国《CLARITY法案》立法失败、监管框架仍存缺口的背景下，首批3倍杠杆比特币与以太坊ETF获准通过美国监管审查。这显示尽管整体加密立法遇阻，监管机构对高杠杆数字资产产品的审批态度有所松动，机构与投机资金或获得新的交易工具，同时也引发对杠杆风险与投资者保护的担忧。", source: "CCN.com", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE9qRWNwS3ZNbDdsdk5OdWdhdXk3czZuYnJiaWpWanRHVnFWYktqRENYajh0WTlZQlNaQng5ZFp1VWFSQTQtVnNSRHFoVG1WQXBVQkZfRTgxNkJBanAxcGhiTXY3Sk54R1hXejllcTVvT24zU3NlaWw3NEdSZjY2dw?oc=5" },
-  { time: "22:00", tag: "macro", tagText: "宏观", text: "法国债券遭选前抛售，债市对该国财政与政治前景投出不信任票。市场担忧法国债务风险外溢，可能动摇整个欧元区。分析人士指出，若法国借贷成本持续攀升并引发评级或利差问题，欧洲央行政策空间与欧元稳定性都将面临考验，这是当前欧元区最值得警惕的尾部风险之一。", source: "Financial Times", url: "https://www.ft.com/content/9b252b46-a87c-45e7-a09a-45a39ce077b8?syn-25a6b1a6=1" },
-  { time: "18:00", tag: "macro", tagText: "宏观", text: "派拉蒙对华纳兄弟探索（WBD）的收购将于周二完成交割。这项交易历经竞购对手挑战与反垄断审查，最终落地后将重塑好莱坞制片厂与流媒体行业格局，成为近年来规模最大的媒体并购之一。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/paramount-wbd-deal-timeline.html" },
-  { time: "17:58", tag: "geo", tagText: "地缘", text: "美国众议院中国问题特别委员会主席穆勒纳尔（John Moolenaar）敦促美联储重新审视香港接入美元流动性工具（FIMA回购便利）的资格。在中国力推人民币国际化之际，此举可能加大香港离岸美元融资渠道的政治不确定性，并进一步凸显美元体系被武器化的风险。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/hong-kong-fed-fima-dollar-liquidity-china-moolenaar.html" },
-  { time: "17:11", tag: "geo", tagText: "地缘", text: "德国前情报机构负责人汉宁（August Hanning）因涉嫌叛国被捕，他被怀疑向外国势力出售国家机密。事件震动德国安全与情报体系，或引发对西方情报网络渗透风险的进一步审视。", source: "Financial Times", url: "https://www.ft.com/content/4c565931-6ac7-4b4c-be72-d86e8e3a8aec?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月7日 09:28 CST";
+const breakingDate = "2026年10月7日 16:32 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:28", tag: "ai", tagText: "AI", text: "总部位于巴黎的 WhiteLab Genomics 完成 2320 万欧元融资，将用于加速 AI 驱动的基因组医学开发。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPeWctX0p5SEtRNHpwQlpscGNpRFR6Rl95NC1BOGY2ZnpkeW0zSzk1MEwxQjBUemtzX2JmT0dsTjFEME9uRlVtR045TXpCMEdkT2hlNnZfMVlyUWF0M2Vsc0F5bjA2UnRmWGY5RkhXc3JPdWplaGZRRVFHa0pKVGVRRVBwREFDNGp6Rjlab1dNREZnQkFHejRVLUJfcXk0QTU1N0kyWVhBTUgyTHJtZzBFekctd2RaRGx4bzJBVlRXa3hHTldsR1hNWFBWSDFjc21XZ093QXVqbw?oc=5" },
   { time: "08:00", tag: "ai", tagText: "AI", text: "The Verge 梳理了围绕「AI 接管数学」的持续争议：随着模型在数学证明与难题上取得进展，数学家群体在工具价值、署名权与研究范式上分歧加剧。相关讨论正从技术圈扩散到学术评价与科研资助层面。", source: "The Verge", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxOXzNEckh1SXVQTGtqbTI4OXRuaHRPc25iV1NtSUxGdUUwZG9oOFM1NzRoNmpzMjRMeFFvRDZHbzVtTW1JWU5UcjZkS0ZiUVphNVdUNW5wbHdxRlkyYjFhQTZnY1BWSE5rWHJ5anNzWnZLZzQyOEpPY3FoWUl3SUY1RFkxSEdZYmsyc3AxZGk1RDljLVJmUlNpdm8taHI?oc=5" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
   { time: "05:09", tag: "ai", tagText: "AI", text: "英伟达暂停了与美国俄勒冈州中小学及高校合作的 AI 教育项目。该项目此前旨在向学校提供 AI 课程与算力资源，暂停原因尚待公司进一步说明。此举恰逢各地对校园 AI 引入、数据隐私与商业合作审查趋严之际，可能影响其他州类似项目的推进节奏。", source: "GovTech", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxOQ1dHeEhJOGl1U0tDdWE1dTNJbFFpdzNDbXlVRTQ2dUF1WG1ZblRHUTdFNDI2V0FOb09OVzdjQThJT1Z2dGdPQ0o2UmdvTlNwemVVRUtqb0lPRGlHSF9PTUNmN2E4b0lGRWhkSTdBbWRxLVdIZURRWDBXSTBoanJtMDNVSDRnS1h1Mklzd0xTYV9LQ00xU1NrZ3dtSHBldw?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:19", tag: "ai", tagText: "AI", text: "Google 将于 10 月 9 日起收紧 Gemini 免费版权限：原本可在 Gemini Flash Lite、Flash 与 Pro 之间自由选择的免费用户，将被限制为只能使用 Flash Lite 模型。此举意味着 Gemini 高端模型的免费入口基本关闭，用户需付费订阅才能继续调用 Flash 与 Pro。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1005451/google-gemini-free-flash-lite-only" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "一项调查显示，受博通收购后授权费用上涨影响，约 90% 的 VMware 用户正考虑替代方案。用户在迁移过程中最关心的是「降低风险、避免不必要的中断」，而运维复杂度被视为迁移的首要障碍。这表明虚拟化市场正因涨价而出现大规模重估。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/10/operational-complexity-a-top-barrier-for-vmware-migrations-survey/" },
   { time: "19:23", tag: "ai", tagText: "AI", text: "DeepSeek 的融资轮持续膨胀，动力电池龙头宁德时代（CATL）与腾讯均参与了本轮投资。报道称这家中国 AI 初创公司正着眼于 2027 年启动 IPO，产业资本与互联网巨头的共同入局凸显其在国内大模型版图中的战略地位。", source: "The Decoder", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxQd0xkd1h4bkRWSXVfbGhxNmRueVA5b09wQUZUaGRsWENLblR2WXBxVVVyZmlJbmVrQzdpTmdXbGtSV0loaFhXVUNsRnlXT3VjME9CR3lHLWNXaWZUWE9zdjR1YjhsWEQxSzdDQURiZ25tSUd3SFFCTXpJaHh4dXp5ZDB2RmMtLWRrdGRMdnY1MEdmcnZnOGRQcWQ5QUdpVkVsMy0yQWdUMjhOdkJpdC1KRjVZUThsQQ?oc=5" },
-  { time: "14:28", tag: "ai", tagText: "AI", text: "总部位于巴黎的 WhiteLab Genomics 完成 2320 万欧元融资，将用于加速 AI 驱动的基因组医学开发。", source: "EU-Startups", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPeWctX0p5SEtRNHpwQlpscGNpRFR6Rl95NC1BOGY2ZnpkeW0zSzk1MEwxQjBUemtzX2JmT0dsTjFEME9uRlVtR045TXpCMEdkT2hlNnZfMVlyUWF0M2Vsc0F5bjA2UnRmWGY5RkhXc3JPdWplaGZRRVFHa0pKVGVRRVBwREFDNGp6Rjlab1dNREZnQkFHejRVLUJfcXk0QTU1N0kyWVhBTUgyTHJtZzBFekctd2RaRGx4bzJBVlRXa3hHTldsR1hNWFBWSDFjc21XZ093QXVqbw?oc=5" },
 ];
-const aiBreakingDate = "2026年10月7日 09:28 CST";
+const aiBreakingDate = "2026年10月7日 16:32 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
