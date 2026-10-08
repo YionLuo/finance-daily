@@ -1618,19 +1618,28 @@
 const fearGreedData = {
   score: 44.6,
   rating: "fear",
-  timestamp: "2026-10-07T21:40:06+00:00",
+  timestamp: "2026-10-07T23:59:52+00:00",
   previousClose: 47.2,
   previous1Week: 30.26,
   previous1Month: 45.23,
   previous1Year: 51.86,
-  date: "2026年10月8日 05:56 CST"
+  date: "2026年10月8日 09:48 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:51", tag: "tech", tagText: "科技", text: "三星电子公布第三季度初步业绩，预计营业利润首次突破100万亿韩元，达到创纪录的约800亿美元，同比激增约九倍，受AI热潮推动存储芯片需求爆发。作为全球最大存储芯片制造商，三星的业绩凸显AI基础设施巨额投资对芯片行业的强劲拉动。", source: "CNBC / FT", url: "https://www.cnbc.com/2026/10/08/samsung-q3-earnings.html" },
+  { time: "08:49", tag: "crypto", tagText: "加密", text: "前BitMEX CEO Arthur Hayes称AI基础设施热潮存在严重过度建设，\"数万亿美元正被浪费\"。他押注AI泡沫终将破裂并迫使政府出手救助，而由此引发的流动性与财政扩张将推动加密货币走高。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/flop-ai-boom-arthur-hayes-bitcoin-bitmex-coinferencex-.html" },
+  { time: "08:15", tag: "ai", tagText: "AI", text: "英国《金融时报》报道，中国正加速在内蒙古等能源富集的内陆地区建设AI数据中心，将内蒙古打造为国家庞大AI雄心的\"发动机房\"。该系列报道显示，算力基建正与中国能源布局深度协同，成为其AI战略的关键支撑。", source: "FT", url: "https://www.ft.com/content/e1dd8bff-b06d-4a40-bbb7-c0a6a36f1c8e?syn-25a6b1a6=1" },
+  { time: "08:14", tag: "macro", tagText: "宏观", text: "CNBC报道警告，超级厄尔尼诺现象正在形成，成为印度经济的最新逆风。分析指出印度可能面临粮食危机与经济冲击，通胀与增长风险同步上升，给本已承压的新兴市场再添不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/el-nino-food-economy-crisis-india.html" },
+  { time: "07:18", tag: "geo", tagText: "地缘", text: "特朗普称将与普京通话讨论肺鼠疫事件。美国加大对莫斯科施压力度，要求其就这起已造成一人死亡的事件披露更多信息，事件引发外界对俄境内公共卫生与信息透明度的担忧。", source: "Financial Times", url: "https://www.ft.com/content/dcf35eaf-e1d3-4289-bc7a-e0c91725ad59?syn-25a6b1a6=1" },
+  { time: "06:29", tag: "ai", tagText: "AI", text: "有分析师称Anthropic的IPO将成为今年\"最荒谬的IPO\"。该公司据报计划在感恩节前登陆纳斯达克，一家看空机构建议投资者回避此次发行。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/anthropic-will-be-most-ridiculous-ipo-of-year-analyst-says.html" },
+  { time: "06:28", tag: "ai", tagText: "AI", text: "SpaceX寻求通过由Apollo牵头的融资筹集400亿美元，用于购买英伟达芯片。这笔重磅债务交易是支撑AI的芯片及其他基础设施巨额支出的最新迹象，显示AI算力军备竞赛正从科技巨头蔓延至航天等领域。", source: "Financial Times", url: "https://www.ft.com/content/d3f5928d-f38c-4666-8f7a-8737f9c45f51?syn-25a6b1a6=1" },
+  { time: "05:24", tag: "geo", tagText: "地缘", text: "特朗普表示正考虑\"解雇\"其竞选顾问Chris LaCivita与James Blair，称二人在大选前不到一个月指导亲俄政府的行为可能构成\"利益冲突\"，此事发生在其巴尔干之行之后。", source: "FT", url: "https://www.ft.com/content/ea58254a-947e-4e87-86d2-95ffbd8a1c9d?syn-25a6b1a6=1" },
   { time: "05:09", tag: "macro", tagText: "宏观", text: "特朗普表示正考虑暂停联邦汽油税。燃料价格飙升在中期选举前四周给总统及其共和党带来巨大压力，此举被视为选举前的政治性减负措施，但可能影响联邦公路信托基金收入。", source: "Financial Times", url: "https://www.ft.com/content/3fd43fc5-4973-4a26-9d9c-47b6361e6217?syn-25a6b1a6=1" },
   { time: "05:00", tag: "crypto", tagText: "加密", text: "新加坡正试图与本土加密公司Hyperliquid Labs及其广受欢迎的永续合约产品保持距离，该产品被称为\"加密领域最危险的产品\"。以厌恶风险和丑闻著称的城邦正面临本土创新与金融稳定之间的两难。", source: "Financial Times", url: "https://www.ft.com/content/cd851d45-596b-4745-8c28-ce7ace1d3e43?syn-25a6b1a6=1" },
+  { time: "04:33", tag: "macro", tagText: "宏观", text: "一艘超级油轮从美国墨西哥湾沿岸运往中国的租船费高达7600万美元，约为战前水平的10倍。波斯湾战争导致可用油轮短缺，航运成本急剧飙升，进一步推升全球能源与通胀压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/supertanker-from-us-to-china-chartered-for-76-million-source.html" },
   { time: "00:18", tag: "macro", tagText: "宏观", text: "纽约联储消费者预期调查显示，美国消费者对未来12个月通胀预期的中值升至3.9%，为2023年5月以来最高水平，通胀担忧明显升温。该数据与近期长端美债收益率飙升相互印证，令市场对美联储政策路径的焦虑加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/inflation-fears-on-the-rise-as-one-year-outlook-in-fed-survey-hits-highest-since-may-2023.html" },
   { time: "00:15", tag: "tech", tagText: "科技", text: "Meta旗下Muse产品走俏推动AMD股价创出新高。个人AI智能体（AI agent）热潮正带动CPU需求回升，过去一个月AMD与英特尔股价跑赢其他超大型科技股。市场逻辑正在从数据中心GPU训练转向端侧智能体推理，计算需求结构变化为传统芯片厂商打开新的增长窗口。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/meta-muse-gives-amd-a-boost-as-ai-momentum-shifts-to-personal-agents-.html" },
   { time: "23:52", tag: "macro", tagText: "宏观", text: "美国8月贸易逆差扩大至1056亿美元，为去年特朗普关税落地前以来的最阔水平，较7月激增13.7%，并高于道琼斯102亿美元的预期。逆差大幅走阔凸显进口商在关税环境下的抢跑效应与贸易结构失衡，或对三季度GDP增速构成拖累，并加剧华盛顿在贸易政策上的争论。", source: "CNBC", url: "https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-since-just-before-trump-tariffs-enacted-last-year.html" },
@@ -1640,22 +1649,14 @@ const breakingNews = [
   { time: "21:46", tag: "tech", tagText: "科技", text: "美国国会一委员会认定，在线交易平台微牛（Webull）与中国的关系构成国家安全风险，称其并非所宣称的普通美国公司，客户数据面临被中国监控的风险。消息公布后该公司股价当日大跌18%。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/webull-china-national-security-risk-congress.html" },
   { time: "21:23", tag: "macro", tagText: "宏观", text: "法国学生抗议在数周动荡后于周三暂时平息，但在预算谈判前夕，债券市场对法国政府的压力进一步加大。法国正夹在愤怒的学生群体与毫不宽容的债市之间，财政与政治风险叠加。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/french-student-protests-budget-deadlock.html" },
   { time: "16:29", tag: "macro", tagText: "宏观", text: "雪佛龙CEO沃斯警告称，禁止柴油出口将是\"不明智\"的举措，可能适得其反。在燃料价格飙升、特朗普政府考虑限制出口以平抑油价之际，他指出口禁令会扰乱全球市场、削弱炼油积极性，反而可能推高美国国内价格。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/chevron-ceo-diesel-export-ban-trump-supply.html" },
-  { time: "14:16", tag: "macro", tagText: "宏观", text: "IMF总裁格奥尔基耶娃警告，AI既是全球经济增长的希望，也是风险来源。这项提振增长预期的技术同时推高通胀与债券收益率，而此时各国公共债务水平本已攀升，政策制定者面临稳增长与控通胀的两难。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/economy-inflation-ai-trade-imf-iran-hormuz-trump-.html" },
-  { time: "13:29", tag: "geo", tagText: "地缘", text: "油价上涨，胡塞武装对沙特的袭击以及伊朗加大针对霍尔木兹海峡油轮的袭击，令交易员对供应的担忧盖过了先前的供应恢复预期。中东冲突再度威胁全球能源供应链，交易商重新评估原油供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/oil-prices-today-brent-wti-hormuz.html" },
-  { time: "13:11", tag: "macro", tagText: "宏观", text: "印度央行自2023年以来首次加息，因通胀风险上升。汇丰与高盛预计印度央行将于12月再次加息。此举凸显在新兴市场通胀压力抬头背景下，货币政策转向紧缩。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/india-rbi-interest-rates-inflation.html" },
-  { time: "12:27", tag: "crypto", tagText: "加密", text: "比特币闪崩，一度暴跌约2000美元，超4亿美元加密多头头寸遭清算。市场正评估这究竟是一次健康回调还是更大的警示信号，此前加密市场已连续走高。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNNWRTS3Z3bWFTMi0zbDB4cHN6bVI4aDBCV0FjZl9RNFZuSWlMX3ByTHlaT0JlR2dCQks0dHNvZUZPN2dCdll3ZzFIcGJ5cmNjUk41U1VheWlMYVpfdXhfd2x4eUE0NHNGdlRxUUFpTWYzWjhYR2hCTW9MZlhlaU04VWRVdFBEUTFZMUdaWVJwaGtzSi1fMWVFSA?oc=5" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "强劲的AI支出为美国又一财报季奠定基础。标普500企业盈利预计同比增长27%，在股市创历史新高与长期借贷成本高企的背景下，AI相关资本开支成为盈利增长的核心引擎。", source: "Financial Times", url: "https://www.ft.com/content/7c38e8e3-8035-4036-8bc0-5fba2fbf77cb?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "欧盟委员会正考虑对大型企业征收一项广泛税项，以避免单独针对美国数字服务巨头，从而实现向科技巨擘征税的目的。此举意在规避与华盛顿的直接对抗，但可能加剧美欧贸易紧张。", source: "Financial Times", url: "https://www.ft.com/content/ad06ed89-f600-4694-8c95-7d53b6d3315b?syn-25a6b1a6=1" },
-  { time: "08:49", tag: "crypto", tagText: "加密", text: "前BitMEX CEO Arthur Hayes称AI基础设施热潮存在严重过度建设，\"数万亿美元正被浪费\"。他押注AI泡沫终将破裂并迫使政府出手救助，而由此引发的流动性与财政扩张将推动加密货币走高。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/flop-ai-boom-arthur-hayes-bitcoin-bitmex-coinferencex-.html" },
-  { time: "07:18", tag: "geo", tagText: "地缘", text: "特朗普称将与普京通话讨论肺鼠疫事件。美国加大对莫斯科施压力度，要求其就这起已造成一人死亡的事件披露更多信息，事件引发外界对俄境内公共卫生与信息透明度的担忧。", source: "Financial Times", url: "https://www.ft.com/content/dcf35eaf-e1d3-4289-bc7a-e0c91725ad59?syn-25a6b1a6=1" },
-  { time: "06:28", tag: "ai", tagText: "AI", text: "SpaceX寻求通过由Apollo牵头的融资筹集400亿美元，用于购买英伟达芯片。这笔重磅债务交易是支撑AI的芯片及其他基础设施巨额支出的最新迹象，显示AI算力军备竞赛正从科技巨头蔓延至航天等领域。", source: "Financial Times", url: "https://www.ft.com/content/d3f5928d-f38c-4666-8f7a-8737f9c45f51?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月8日 05:56 CST";
+const breakingDate = "2026年10月8日 09:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
   { time: "05:09", tag: "ai", tagText: "AI", text: "英伟达暂停了与美国俄勒冈州中小学及高校合作的 AI 教育项目。该项目此前旨在向学校提供 AI 课程与算力资源，暂停原因尚待公司进一步说明。此举恰逢各地对校园 AI 引入、数据隐私与商业合作审查趋严之际，可能影响其他州类似项目的推进节奏。", source: "GovTech", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxOQ1dHeEhJOGl1U0tDdWE1dTNJbFFpdzNDbXlVRTQ2dUF1WG1ZblRHUTdFNDI2V0FOb09OVzdjQThJT1Z2dGdPQ0o2UmdvTlNwemVVRUtqb0lPRGlHSF9PTUNmN2E4b0lGRWhkSTdBbWRxLVdIZURRWDBXSTBoanJtMDNVSDRnS1h1Mklzd0xTYV9LQ00xU1NrZ3dtSHBldw?oc=5" },
+  { time: "05:00", tag: "ai", tagText: "AI", text: "《财富》杂志撰文指出，中国 AI 初创企业在大模型能力上已基本可以与美国同行比肩，但在资金层面仍明显落后。报道认为，美国头部 AI 公司获得的融资规模远超中国同类企业，资金差距可能制约中国 AI 公司在算力扩张、顶尖人才争夺以及长期研发投入上的后劲，成为其下一阶段增长的关键瓶颈。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiekFVX3lxTE5DTk5PNjcyV2hBZ3lLeXNSY3k5VmlUUUlZai03a0VMSGtRbjZwa0Q3a2NIaDZ5bEpPRHk3LWl1MXhQMmRrSjUzMG81ZjhncnBOalo0YWN0bU1ieEZLS2hlU19pTzVUUXM1WW5yZURiUE1TRkpJSWw4amFR?oc=5" },
   { time: "04:48", tag: "ai", tagText: "AI", text: "Hermes 智能体开发商 Nous Research 确认完成 9,000 万美元 B 轮融资，估值达到 15 亿美元，并同步面向企业用户推出 AI 智能体产品，从研究型开源社区向商业化落地加速转型。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/" },
   { time: "03:10", tag: "ai", tagText: "AI", text: "OpenAI 随 GPT-6 一同推送 ChatGPT 全新「智能界面」（Intelligent UI）：聊天机器人将以图片、图表和按钮等交互式视觉元素回答用户提问，而非仅输出文字。该更新正面向所有用户逐步开放，被视为 ChatGPT 交互范式的一次重大转变。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6" },
   { time: "02:42", tag: "tech", tagText: "科技", text: "微软在旧金山举行 Windows 与 Surface 专场发布会：推出搭载英伟达芯片、可本地运行 AI 模型与智能体的 Surface Laptop Ultra AI PC，并同步发布改版 Windows 11；Copilot 获得更大权限，可读取本地文件并在操作系统层面代为执行操作。面向开发者的 Surface RTX Spark Dev Box 同日开启预售，售价 5,999 美元，预计 11 月发货，价格高于英伟达此前推出的 DGX Spark 迷你主机。", source: "The Verge", url: "https://www.theverge.com/tech/1007147/microsoft-surface-laptop-ultra-windows-event-everything-announced" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:40", tag: "ai", tagText: "AI", text: "Google DeepMind、Meta 与 AI 药物发现初创公司 Isomorphic Labs 联合向 Biohub 投资 3 亿美元。Biohub 是马克·扎克伯格夫妇创立的非营利生物医学研究机构，本轮资金将用于推动「虚拟细胞」（virtual cell）研究，即以 AI 模拟细胞行为以加速药物与疾病研究。", source: "The Verge", url: "https://www.theverge.com/tech/1006766/google-meta-biohub-investment-virtual-cell" },
   { time: "22:36", tag: "ai", tagText: "AI", text: "Google Labs 正在测试一款名为 Playground 的 AI 游戏创作平台，用户只需输入简单文本提示，即可在浏览器中搭建游戏。此举显示 Google 正探索把生成式 AI 引入游戏开发与 UGC 创作环节。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/07/google-experiments-with-an-ai-powered-gaming-platform/" },
   { time: "22:33", tag: "ai", tagText: "AI", text: "法国 AI 实验室 Mistral 发布 Mistral Large 4，这是一款参数规模达 1 万亿的多模态大模型，官方称其目标是在闭源与开源阵营中同时实现超越，直接对标美国与中国的头部竞品。该模型的推出被视为欧洲试图在基础模型竞赛中重新占据一席之地的关键动作。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "Google 上线全新 SynthID 网站，任何用户都可上传或检测图片、视频、音频，判断其是否为 AI 生成内容。该工具旨在为 AI 生成媒体的识别提供公开、易用的验证入口。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/" },
 ];
-const aiBreakingDate = "2026年10月8日 05:56 CST";
+const aiBreakingDate = "2026年10月8日 09:48 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
