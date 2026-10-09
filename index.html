@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 38.06,
+  score: 44.6,
   rating: "fear",
-  timestamp: "2026-10-09T08:36:31+00:00",
+  timestamp: "2026-10-09T16:01:47+00:00",
   previousClose: 37.89,
   previous1Week: 39.97,
   previous1Month: 38.2,
   previous1Year: 48.63,
-  date: "2026年10月9日 16:53 CST"
+  date: "2026年10月10日 00:06 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,19 @@ const breakingNews = [
   { time: "05:00", tag: "crypto", tagText: "加密", text: "新加坡正试图与本土加密公司Hyperliquid Labs及其广受欢迎的永续合约产品保持距离，该产品被称为\"加密领域最危险的产品\"。以厌恶风险和丑闻著称的城邦正面临本土创新与金融稳定之间的两难。", source: "Financial Times", url: "https://www.ft.com/content/cd851d45-596b-4745-8c28-ce7ace1d3e43?syn-25a6b1a6=1" },
   { time: "04:35", tag: "macro", tagText: "宏观", text: "美国司法部下令全面更新针对政府欺诈案件的起诉策略，要求检察官动用全部可用权力追回资金并寻求更严厉量刑。此举反映华府加大打击骗取政府资金行为的执法力度。", source: "Financial Times", url: "https://www.ft.com/content/dbcc35ba-db23-4be3-b2c0-4a0d8ecb7375?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月9日 16:53 CST";
+const breakingDate = "2026年10月10日 00:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:00", tag: "ai", tagText: "AI", text: "AI 安全公司 Goodfire 发布新型「由内而外」监控器，称其成本远低于传统方案。不同于调用第二个 AI 逐条审阅智能体的全部行为，该监控器直接深入模型内部运行过程，以更低开销识别失控或越权的 AI 智能体。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "Natura 推出售价 99 美元的 Interface 智能戒指，用户轻按手指即可召唤 AI 智能体完成任务、记录想法与控制设备，同时兼具健康追踪功能。该产品将 AI 智能体入口从手机、眼镜延伸至可穿戴戒指形态。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/naturas-smart-ring-puts-ai-agents-on-your-finger/" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI 为面向青少年的 ChatGPT for Teens 模式新增大学申请规划工具 College Planner 与 Notecards，帮助用户梳理申请流程与材料。该模式此前已内置安全防护与休息提醒。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1005194/openai-chatgpt-teens-college-planner-notecards" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "Anthropic 面向初创企业推出扶持计划：符合条件的企业可免费使用一年的 Claude Team 企业版服务，并获得 1000 美元 token 额度。公司解释称，之所以推出该计划，是因为相信 AI 的收益主要通过「在模型之上构建产品的公司」触达大众，而非仅靠模型本身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/" },
+  { time: "23:43", tag: "ai", tagText: "AI", text: "a16z 合伙人 Olivia Moore 在 TechCrunch 访谈中指出，消费者 AI 仍存在巨大机会，但关键在于行业能否跳出订阅与 API 收费的单一模式、开拓更多元收入来源。她认为消费级 AI 的商业模式尚未定型，具备结构性增长空间。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/09/a16zs-olivia-moore-on-the-state-of-consumer-ai/" },
+  { time: "23:34", tag: "tech", tagText: "科技", text: "现代汽车集团从大型科技公司招募多名 AI 高管，以强化其在人工智能领域的技术能力。此举反映传统车企正加速追赶智能化与自动驾驶的技术竞赛。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc2pKd00wTUFaQzVoZkJFZnlGSEtFZmk4OWs4d2lIcFMxUlJKOVV5cFFreTNuQi1sV2NuR1R4UHJ0d1VMYzctMFNsNHd0bDFxMUNkbkFxMjlsSk5SVUZyRW4tTXFtS0NyUEpiLTBRZlNaTzN6MnpVV0hUR0FGN3RtYWdxMjl6aTQx?oc=5" },
+  { time: "23:27", tag: "ai", tagText: "AI", text: "Google 推出实验性笔记应用 Google AI Edge Foresight，可完全离线转录会议与音频文件，并借助端侧 AI 生成笔记、回答问题，且免费开放。该应用被视为对 Granola 的直接竞争，主打本地优先与隐私保护。", source: "The Verge", url: "https://www.theverge.com/tech/1007985/google-ai-notetaking-app-transcribe-offline" },
+  { time: "23:25", tag: "tech", tagText: "科技", text: "开源办公套件 LibreOffice 的开发者表示，已将「不加入 AI」视为一项正式的软件功能，明确没有计划在默认配置中引入 AI 能力，理由是保护用户隐私。这一表态与微软、Google 等厂商在办公软件中全面植入 AI 助手的方向形成鲜明反差。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "曾以邀请制、零营销、几乎无官网的非常规打法迅速蹿红的 AI 智能体初创公司 Instinct，如今正面临新晋对手 Muse 的冲击。The Verge 体验后指出，Instinct 能否在竞争快速升温的智能体赛道中存活，已成为观察消费级 AI 创业公司生存能力的一个样本。", source: "The Verge", url: "https://www.theverge.com/tech/1008254/instinct-agent-ai-hands-on-muse-dots" },
   { time: "14:32", tag: "tech", tagText: "科技", text: "CTech 报道称，网络安全领域融资规模创下四年来新高，其中以色列初创企业表现突出，吸纳了全球近一半的相关资金。这一数据反映出在 AI 与网络攻击风险上升的背景下，资本市场对网络安全赛道的投入明显回暖。", source: "CTech", url: "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4yRV8tVXFXT3lNTmFuZFpjSnBxOWpXclNLcENOLUFKT0VXaVFFWVdfT0RNZ2xpNkJzYnlMeGxDdTJyTXBKbHFjOGdqWVd0dm5LNjFOcldSaWFwRmlCYmdhZjE0cWlWREE?oc=5" },
   { time: "05:53", tag: "ai", tagText: "AI", text: "Anthropic 推出名为 OSS Scanner 的免费服务，为开源项目提供安全漏洞扫描。加入该计划的开源项目将获得「全面、定期」的安全检查。此举被视为 Anthropic 在开源生态与 AI 安全议题上建立影响力的一步，也回应了业界对 AI 辅助安全审查能力的关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
@@ -1665,17 +1674,8 @@ const aiBreakingNews = [
   { time: "02:19", tag: "ai", tagText: "AI", text: "据 TechCrunch 报道，OpenAI 的年化收入据称比此前预期低约 200 亿美元。此前多家媒体称其年化收入约 700 亿美元，而新报道称实际规模远低于该水平。若属实，将加剧市场对 AI 基础设施巨额资本开支能否获得相应回报的担忧，并可能影响整个 AI 产业链的估值逻辑。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/" },
   { time: "02:19", tag: "ai", tagText: "AI", text: "知名 AI 模型评测榜单 LMArena 的运营公司在 10 个月内估值几乎翻倍至 31 亿美元，最新完成由 Lightspeed 与 Khosla 领投的 2 亿美元融资。公司同时扩展评测维度，开始衡量模型在「说谎」等对齐问题上的表现。这显示第三方模型评测正成为 AI 生态中具备独立商业价值的关键环节。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1b-valuation-in-10-months/" },
   { time: "01:58", tag: "ai", tagText: "AI", text: "《今日美国》（USA Today）母公司联合旗下多家地方报纸起诉 OpenAI，指控其未经授权复制「数十万篇」文章用于训练 AI 模型。这是美国主流新闻出版机构针对 OpenAI 版权问题提起的又一宗诉讼，此前《纽约时报》等已发起类似诉讼，案件走向将直接影响 AI 训练数据的合法边界与授权商业模式。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1008198/usa-today-openai-copyright-lawsuit" },
-  { time: "01:57", tag: "tech", tagText: "科技", text: "SpaceXAI 宣布以价值 150 万美元的算力支持争议性 Linux 发行版 Omarchy，并加入负责该项目治理的 Omacom 基金会。该发行版由知名开发者 David Heinemeier Hansson 主导，此前因其技术路线与社区争议受到关注。此举被视为马斯克系 AI 力量向开源操作系统生态延伸的信号。", source: "The Verge", url: "https://www.theverge.com/tech/1008148/spacexai-omarchy-grok-david-heinemeier-hansson" },
-  { time: "01:00", tag: "ai", tagText: "AI", text: "Anthropic 一年多来首次更新使用政策，明确禁止对 Claude 的极端「滥用或残忍行为」，并将选举干预、武器研发、监控等高风险用途列入禁止范围；普通用户的抱怨与批评不受影响。新规反映出头部模型厂商正针对选举周期与高风险滥用场景收紧治理框架。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1008100/anthropic-new-usage-policy-abuse-claude" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "AI 安全公司 Goodfire 发布新型「由内而外」监控器，称其成本远低于传统方案。不同于调用第二个 AI 逐条审阅智能体的全部行为，该监控器直接深入模型内部运行过程，以更低开销识别失控或越权的 AI 智能体。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "Natura 推出售价 99 美元的 Interface 智能戒指，用户轻按手指即可召唤 AI 智能体完成任务、记录想法与控制设备，同时兼具健康追踪功能。该产品将 AI 智能体入口从手机、眼镜延伸至可穿戴戒指形态。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/naturas-smart-ring-puts-ai-agents-on-your-finger/" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI 为面向青少年的 ChatGPT for Teens 模式新增大学申请规划工具 College Planner 与 Notecards，帮助用户梳理申请流程与材料。该模式此前已内置安全防护与休息提醒。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1005194/openai-chatgpt-teens-college-planner-notecards" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "Anthropic 面向初创企业推出扶持计划：符合条件的企业可免费使用一年的 Claude Team 企业版服务，并获得 1000 美元 token 额度。公司解释称，之所以推出该计划，是因为相信 AI 的收益主要通过「在模型之上构建产品的公司」触达大众，而非仅靠模型本身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/" },
-  { time: "23:34", tag: "tech", tagText: "科技", text: "现代汽车集团从大型科技公司招募多名 AI 高管，以强化其在人工智能领域的技术能力。此举反映传统车企正加速追赶智能化与自动驾驶的技术竞赛。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc2pKd00wTUFaQzVoZkJFZnlGSEtFZmk4OWs4d2lIcFMxUlJKOVV5cFFreTNuQi1sV2NuR1R4UHJ0d1VMYzctMFNsNHd0bDFxMUNkbkFxMjlsSk5SVUZyRW4tTXFtS0NyUEpiLTBRZlNaTzN6MnpVV0hUR0FGN3RtYWdxMjl6aTQx?oc=5" },
-  { time: "23:27", tag: "ai", tagText: "AI", text: "Google 推出实验性笔记应用 Google AI Edge Foresight，可完全离线转录会议与音频文件，并借助端侧 AI 生成笔记、回答问题，且免费开放。该应用被视为对 Granola 的直接竞争，主打本地优先与隐私保护。", source: "The Verge", url: "https://www.theverge.com/tech/1007985/google-ai-notetaking-app-transcribe-offline" },
-  { time: "23:25", tag: "tech", tagText: "科技", text: "开源办公套件 LibreOffice 的开发者表示，已将「不加入 AI」视为一项正式的软件功能，明确没有计划在默认配置中引入 AI 能力，理由是保护用户隐私。这一表态与微软、Google 等厂商在办公软件中全面植入 AI 助手的方向形成鲜明反差。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/" },
 ];
-const aiBreakingDate = "2026年10月9日 16:53 CST";
+const aiBreakingDate = "2026年10月10日 00:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
