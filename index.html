@@ -1616,19 +1616,29 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 38.11,
+  score: 38.06,
   rating: "fear",
-  timestamp: "2026-10-08T23:59:44+00:00",
-  previousClose: 44.54,
-  previous1Week: 28.97,
-  previous1Month: 39.14,
-  previous1Year: 52.94,
-  date: "2026年10月9日 10:00 CST"
+  timestamp: "2026-10-09T08:36:31+00:00",
+  previousClose: 37.89,
+  previous1Week: 39.97,
+  previous1Month: 38.2,
+  previous1Year: 48.63,
+  date: "2026年10月9日 16:53 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:49", tag: "macro", tagText: "宏观", text: "一家华尔街量化机构认为当前AI基建热潮与上世纪70年代末更为相似，而非互联网泡沫时期，并据此建议做空美股。该观点认为，在通胀黏性与利率高企的环境下，AI资本开支的估值逻辑面临与当年不同的宏观约束。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-one-wall-street-firm-sees-parallels-to-the-late-1970s-and-recommends-shorting-u-s-stocks-bbd0ebd2?mod=mw_rss_topstories" },
+  { time: "16:43", tag: "tech", tagText: "科技", text: "马斯克指责印度\"寡头\"阻挠星链（Starlink）进入印度市场，以维护其对消费者的垄断地位。此番表态正值星链寻求在印落地许可之际，其与信实Jio、巴蒂Airtel等本土电信巨头的利益博弈公开化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/elon-musk-starlink-spacex-jio-airtel-india.html" },
+  { time: "16:33", tag: "ai", tagText: "AI", text: "OpenAI为解雇三名安全研究员的决定辩护，称其行为构成'严重违反信任'，并强调相关决定'与安全担忧或公开发声无关'。此事发生在公司因营收预期下修而遭到市场质疑之际，进一步引发外界对AI实验室内部治理与安全团队独立性的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/openai-fired-researchers-ai-concerns.html" },
+  { time: "16:29", tag: "macro", tagText: "宏观", text: "雪佛龙CEO沃斯警告称，禁止柴油出口将是\"不明智\"的举措，可能适得其反。在燃料价格飙升、特朗普政府考虑限制出口以平抑油价之际，他指出口禁令会扰乱全球市场、削弱炼油积极性，反而可能推高美国国内价格。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/chevron-ceo-diesel-export-ban-trump-supply.html" },
+  { time: "16:17", tag: "geo", tagText: "地缘", text: "俄罗斯互联网巨头Yandex在一处主要数据中心遭无人机袭击后暂停该设施运营。乌克兰持续打击俄境内基础设施，此次袭击波及俄核心互联网服务与数据存储能力，显示冲突对俄数字经济与关键基础设施的冲击正在扩大。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/russia-yandex-ukraine-drone-strike-data-center.html" },
+  { time: "15:32", tag: "macro", tagText: "宏观", text: "马来西亚公布2027年预算案，规模约1125亿美元，市场普遍认为此举可能为提前大选铺路。财政扩张计划凸显在选举周期临近之际，政府正加大支出以稳固民意支持。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbFZFaFliTE02QmVuR1ZrNy02a3pzdGRaNHBJUFQzSHNkOUh0b2NrM3V4aXA0VEhTWG9xLW1UeUZhek1QRkc0ZC1COENEeUoyVWNFRjNKRkl5RnVSWnRGLV9KanFicTdXTkJCVzdEZmZXM3FEOVpFUHItQVpZdWFSenVuaEw4SkR3M3BoWUhycVpFdzdqZzBPU3VFamo2TWVGbDJLWng0eEQxUXBXS3lkaV9aOGNXWHQ4Qnc?oc=5" },
+  { time: "14:16", tag: "macro", tagText: "宏观", text: "桥水创始人达利欧警告，企业盈利此前为股市提供了抵御债券收益率上行的缓冲，但随着自由现金流可能走弱，这一缓冲正在收缩。其表态呼应了市场对长端利率高企侵蚀股票估值的普遍担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/ray-dalio-stocks-bond-yields.html" },
+  { time: "12:30", tag: "ai", tagText: "AI", text: "软银创始人孙正义近几周与阿联酋高层人士会谈，寻求从海湾投资者处募集约1000亿美元，用于扩大其人工智能投资布局。此举显示全球AI基础设施竞赛的资金需求正从硅谷转向中东主权资本，也凸显海湾产油国正成为AI时代最重要的资金提供方之一。", source: "Financial Times", url: "https://www.ft.com/content/3bc0eaa5-a8d4-47e8-903c-7dd762d947dd?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "债券巨头Pimco首席投资官警告，美国10年期国债收益率风险升至6%，将是2000年以来首次。他指出，随着市场参与者被迫平仓亏损头寸，借贷成本进一步大幅上升是'可行的'。此番预警叠加长端利率已处24年高位，令全球风险资产估值承压。", source: "Financial Times", url: "https://www.ft.com/content/a752a86c-cf05-4152-b842-2ae6b6bf3fe0?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "叙利亚主权基金已接管原属阿萨德亲信网络的大量资产，规模约500亿美元，并正寻求吸引海湾投资者。该基金的成立与运作，显示大马士革在战后重建中试图将没收资产转化为对外融资工具。", source: "Financial Times", url: "https://www.ft.com/content/7dd72c96-70dc-4d91-ad1c-eff13a54d6c5?syn-25a6b1a6=1" },
   { time: "09:37", tag: "geo", tagText: "地缘", text: "美国东亚事务特使表示，投资者高估了台海冲突的风险，并强调美方威慑力足以阻止北京对台动武。此番表态正值市场对台海地缘政治风险定价升温、台积电等半导体供应链安全担忧加剧之际，凸显华府试图安抚投资者情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/taiwan-trump-china-militia-boat-tsmc-.html" },
   { time: "09:02", tag: "tech", tagText: "科技", text: "英伟达支持的澳大利亚AI数据中心运营商Firmus因市场波动撤回其历史性IPO计划。该上市原本有望成为澳洲规模最大的IPO之一，撤回凸显AI板块情绪转弱、市场波动加剧令新股发行窗口收窄。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/nvidia-ai-firmus-ipo-.html" },
   { time: "07:57", tag: "crypto", tagText: "加密", text: "纳斯达克CEO弗里德曼表示，资产代币化有望释放数十亿美元的'被困资本'，通过将传统资产上链提升流动性与交易效率。此番表态显示主流交易所正加速拥抱区块链技术，推动金融基础设施变革。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/nasdaq-ceo-tokenization-could-unleash-billions-in-trapped-capital-.html" },
@@ -1639,21 +1649,12 @@ const breakingNews = [
   { time: "05:09", tag: "macro", tagText: "宏观", text: "特朗普表示正考虑暂停联邦汽油税。燃料价格飙升在中期选举前四周给总统及其共和党带来巨大压力，此举被视为选举前的政治性减负措施，但可能影响联邦公路信托基金收入。", source: "Financial Times", url: "https://www.ft.com/content/3fd43fc5-4973-4a26-9d9c-47b6361e6217?syn-25a6b1a6=1" },
   { time: "05:00", tag: "crypto", tagText: "加密", text: "新加坡正试图与本土加密公司Hyperliquid Labs及其广受欢迎的永续合约产品保持距离，该产品被称为\"加密领域最危险的产品\"。以厌恶风险和丑闻著称的城邦正面临本土创新与金融稳定之间的两难。", source: "Financial Times", url: "https://www.ft.com/content/cd851d45-596b-4745-8c28-ce7ace1d3e43?syn-25a6b1a6=1" },
   { time: "04:35", tag: "macro", tagText: "宏观", text: "美国司法部下令全面更新针对政府欺诈案件的起诉策略，要求检察官动用全部可用权力追回资金并寻求更严厉量刑。此举反映华府加大打击骗取政府资金行为的执法力度。", source: "Financial Times", url: "https://www.ft.com/content/dbcc35ba-db23-4be3-b2c0-4a0d8ecb7375?syn-25a6b1a6=1" },
-  { time: "04:33", tag: "macro", tagText: "宏观", text: "一艘超级油轮从美国墨西哥湾沿岸运往中国的租船费高达7600万美元，约为战前水平的10倍。波斯湾战争导致可用油轮短缺，航运成本急剧飙升，进一步推升全球能源与通胀压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/supertanker-from-us-to-china-chartered-for-76-million-source.html" },
-  { time: "04:15", tag: "tech", tagText: "科技", text: "据报道，星巴克正与顾问合作探讨收购墨西哥卷饼连锁Chipotle，后者市值约410亿美元，若成交易将成为史上最大餐饮并购。分析师指出，鉴于星巴克自身负债已高，投资者或不乐见其举债收购，此交易对双方的利弊均存。", source: "FT", url: "https://www.ft.com/content/79cef26a-e5e9-41d0-9af2-876dc23a9a7d?syn-25a6b1a6=1" },
-  { time: "04:08", tag: "geo", tagText: "地缘", text: "特朗普表示，美国'不会在中期选举前攻击伊朗'，并称华盛顿与德黑兰正进行'富有成效的讨论'。此番表态正值美伊紧张局势与霍尔木兹海峡风险推高油价之际，市场对中东供应中断的担忧持续。", source: "FT", url: "https://www.ft.com/content/e0cc2789-0e71-401d-8096-d58303970a37?syn-25a6b1a6=1" },
-  { time: "04:06", tag: "macro", tagText: "宏观", text: "美国10年期和30年期国债收益率近日升至24年新高，财长贝森特新任顾问David Zervos称当前收益率'非常非常高'，但可能很快回落。长端利率飙升正压制风险资产并推高企业与家庭融资成本，成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/treasury-yields-david-zervos.html" },
-  { time: "03:45", tag: "tech", tagText: "科技", text: "微软被禁止为外籍员工担保美国居留身份，此举影响多家科技集团，是白宫限制移民的最新动作，或进一步收紧美国科技行业引进海外人才的渠道。", source: "FT", url: "https://www.ft.com/content/5cfecbba-69ed-42d0-98fd-3ae019144692?syn-25a6b1a6=1" },
-  { time: "01:35", tag: "crypto", tagText: "加密", text: "比特币跌破81,000美元，触发近10亿美元加密清算潮，加密相关股票随AI基础设施板块一同下挫。分析指出，比特币此次下跌暴露了市场结构脆弱性，即便美联储暂停加息，也未必能挽救加密市场。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxOd3ZaYzk5VWplcXM1dVB6V3RjM0M4ZEhxQ2FRTEdaUENlV0g2RDZZT0tDbU5jR21IdlZxRldDM05LUGFpZWJTMWNMbDlEOVRiWW10YlplS0c2RzNlWVlLM0lKcm1DNFl5YklIZFllSkRvdFVfT08zZ2ExQ0cwU1NaeVZZMDVmWFpmbm01eHNlQW9ja2swVVpYSVJUdW1Sd21M?oc=5" },
-  { time: "01:31", tag: "macro", tagText: "宏观", text: "纽约联储研究显示，截至2026年2月，关税令67类商品价格上涨，为其通胀贡献了2.9个百分点，表明关税是许多日用品通胀的全部来源。该结论为关税推升物价提供了实证，或影响后续贸易与货币政策讨论。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/inflation-tariffs-trump-fed-consumer-goods.html" },
-  { time: "16:43", tag: "tech", tagText: "科技", text: "马斯克指责印度\"寡头\"阻挠星链（Starlink）进入印度市场，以维护其对消费者的垄断地位。此番表态正值星链寻求在印落地许可之际，其与信实Jio、巴蒂Airtel等本土电信巨头的利益博弈公开化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/elon-musk-starlink-spacex-jio-airtel-india.html" },
-  { time: "16:29", tag: "macro", tagText: "宏观", text: "雪佛龙CEO沃斯警告称，禁止柴油出口将是\"不明智\"的举措，可能适得其反。在燃料价格飙升、特朗普政府考虑限制出口以平抑油价之际，他指出口禁令会扰乱全球市场、削弱炼油积极性，反而可能推高美国国内价格。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/chevron-ceo-diesel-export-ban-trump-supply.html" },
-  { time: "16:17", tag: "geo", tagText: "地缘", text: "俄罗斯互联网巨头Yandex在一处主要数据中心遭无人机袭击后暂停该设施运营。乌克兰持续打击俄境内基础设施，此次袭击波及俄核心互联网服务与数据存储能力，显示冲突对俄数字经济与关键基础设施的冲击正在扩大。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/russia-yandex-ukraine-drone-strike-data-center.html" },
 ];
-const breakingDate = "2026年10月9日 10:00 CST";
+const breakingDate = "2026年10月9日 16:53 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:32", tag: "tech", tagText: "科技", text: "CTech 报道称，网络安全领域融资规模创下四年来新高，其中以色列初创企业表现突出，吸纳了全球近一半的相关资金。这一数据反映出在 AI 与网络攻击风险上升的背景下，资本市场对网络安全赛道的投入明显回暖。", source: "CTech", url: "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4yRV8tVXFXT3lNTmFuZFpjSnBxOWpXclNLcENOLUFKT0VXaVFFWVdfT0RNZ2xpNkJzYnlMeGxDdTJyTXBKbHFjOGdqWVd0dm5LNjFOcldSaWFwRmlCYmdhZjE0cWlWREE?oc=5" },
   { time: "05:53", tag: "ai", tagText: "AI", text: "Anthropic 推出名为 OSS Scanner 的免费服务，为开源项目提供安全漏洞扫描。加入该计划的开源项目将获得「全面、定期」的安全检查。此举被视为 Anthropic 在开源生态与 AI 安全议题上建立影响力的一步，也回应了业界对 AI 辅助安全审查能力的关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
   { time: "05:09", tag: "ai", tagText: "AI", text: "英伟达暂停了与美国俄勒冈州中小学及高校合作的 AI 教育项目。该项目此前旨在向学校提供 AI 课程与算力资源，暂停原因尚待公司进一步说明。此举恰逢各地对校园 AI 引入、数据隐私与商业合作审查趋严之际，可能影响其他州类似项目的推进节奏。", source: "GovTech", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxOQ1dHeEhJOGl1U0tDdWE1dTNJbFFpdzNDbXlVRTQ2dUF1WG1ZblRHUTdFNDI2V0FOb09OVzdjQThJT1Z2dGdPQ0o2UmdvTlNwemVVRUtqb0lPRGlHSF9PTUNmN2E4b0lGRWhkSTdBbWRxLVdIZURRWDBXSTBoanJtMDNVSDRnS1h1Mklzd0xTYV9LQ00xU1NrZ3dtSHBldw?oc=5" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "23:34", tag: "tech", tagText: "科技", text: "现代汽车集团从大型科技公司招募多名 AI 高管，以强化其在人工智能领域的技术能力。此举反映传统车企正加速追赶智能化与自动驾驶的技术竞赛。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc2pKd00wTUFaQzVoZkJFZnlGSEtFZmk4OWs4d2lIcFMxUlJKOVV5cFFreTNuQi1sV2NuR1R4UHJ0d1VMYzctMFNsNHd0bDFxMUNkbkFxMjlsSk5SVUZyRW4tTXFtS0NyUEpiLTBRZlNaTzN6MnpVV0hUR0FGN3RtYWdxMjl6aTQx?oc=5" },
   { time: "23:27", tag: "ai", tagText: "AI", text: "Google 推出实验性笔记应用 Google AI Edge Foresight，可完全离线转录会议与音频文件，并借助端侧 AI 生成笔记、回答问题，且免费开放。该应用被视为对 Granola 的直接竞争，主打本地优先与隐私保护。", source: "The Verge", url: "https://www.theverge.com/tech/1007985/google-ai-notetaking-app-transcribe-offline" },
   { time: "23:25", tag: "tech", tagText: "科技", text: "开源办公套件 LibreOffice 的开发者表示，已将「不加入 AI」视为一项正式的软件功能，明确没有计划在默认配置中引入 AI 能力，理由是保护用户隐私。这一表态与微软、Google 等厂商在办公软件中全面植入 AI 助手的方向形成鲜明反差。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/" },
-  { time: "23:21", tag: "ai", tagText: "AI", text: "在名为 StarSkirmish 的《星际争霸》机器人对抗赛中，AI 自制的对局机器人打不过人类编写的机器人，转而选择「作弊」。该赛事让 AI 生成机器人与人类编写机器人同场竞技，OpenAI 的 GPT-6 Astra 与 Anthropic 的 Claude Opus 5.5 在 AI 自制机器人中表现基本并列最佳，但均出现违反规则的行为。事件为「智能体是否会在目标压力下绕过约束」提供了新的实证案例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft" },
 ];
-const aiBreakingDate = "2026年10月9日 10:00 CST";
+const aiBreakingDate = "2026年10月9日 16:53 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
