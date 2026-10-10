@@ -1618,18 +1618,19 @@
 const fearGreedData = {
   score: 45,
   rating: "fear",
-  timestamp: "2026-10-09T21:17:31+00:00",
+  timestamp: "2026-10-09T23:59:54+00:00",
   previousClose: 37.89,
   previous1Week: 39.97,
   previous1Month: 38.2,
   previous1Year: 48.63,
-  date: "2026年10月10日 05:35 CST"
+  date: "2026年10月10日 09:40 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
   { time: "05:35", tag: "tech", tagText: "科技", text: "SpaceX同意收购一个全国性频谱牌照组合，以推动星链（Starlink）更深地打入美国电信市场。消息重创美国电信股，AT&T、Verizon和T-Mobile股价大幅下挫，市场担忧星链对传统移动运营商的竞争冲击加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/spacex-spectrum-license-att-verizon-tmobile.html" },
+  { time: "05:30", tag: "tech", tagText: "科技", text: "据日经亚洲报道，苹果10月将iPhone 18 Pro与iPhone 18 Pro Max的零部件订单下调约15%。此举引发市场对新一代iPhone需求是否正在降温的担忧，成为观察高端消费电子景气度的重要信号。", source: "MarketWatch", url: "https://www.marketwatch.com/story/is-iphone-18-demand-cooling-off-heres-how-deep-apple-reportedly-is-cutting-component-orders-a44244ee?mod=mw_rss_topstories" },
   { time: "05:24", tag: "tech", tagText: "科技", text: "微软股价逼近里程碑，市值有望重新站上4万亿美元大关，并可能刷新历史新高，进一步巩固其此前被视为'复兴'的估值修复。市场关注其AI与云计算业务对业绩的持续拉动。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microsoft-is-nearing-a-big-milestone-that-solidifies-its-revival-580d1ba8?mod=mw_rss_topstories" },
   { time: "05:24", tag: "geo", tagText: "地缘", text: "特朗普表示正考虑\"解雇\"其竞选顾问Chris LaCivita与James Blair，称二人在大选前不到一个月指导亲俄政府的行为可能构成\"利益冲突\"，此事发生在其巴尔干之行之后。", source: "FT", url: "https://www.ft.com/content/ea58254a-947e-4e87-86d2-95ffbd8a1c9d?syn-25a6b1a6=1" },
   { time: "05:19", tag: "ai", tagText: "AI", text: "OpenAI向投资者透露，截至9月底其年化营收约500亿美元，较此前广泛报道的约700亿美元低约200亿美元，令市场对AI盈利前景产生怀疑。受此冲击，英伟达、甲骨文、CoreWeave等AI概念股集体下挫，纳斯达克指数跌约1%，标普500同步走低；美债收益率高企与油价上涨进一步加剧抛压。", source: "FT", url: "https://www.ft.com/content/b66a9858-f8fb-46cb-b506-44bfe26fca2a?syn-25a6b1a6=1" },
@@ -1640,20 +1641,21 @@ const breakingNews = [
   { time: "04:35", tag: "macro", tagText: "宏观", text: "美国司法部下令全面更新针对政府欺诈案件的起诉策略，要求检察官动用全部可用权力追回资金并寻求更严厉量刑。此举反映华府加大打击骗取政府资金行为的执法力度。", source: "Financial Times", url: "https://www.ft.com/content/dbcc35ba-db23-4be3-b2c0-4a0d8ecb7375?syn-25a6b1a6=1" },
   { time: "04:34", tag: "geo", tagText: "地缘", text: "特朗普与普京达成协议，由俄罗斯增加柴油供应，以压低美国及全球油价。此举距美国11月中期选举仅数周，被视为选举前的政治性减负，但策略师警告可能'太少也太迟'，难以迅速平抑已受东欧及中东冲突扰动的燃料市场。", source: "Financial Times", url: "https://www.ft.com/content/84ca76fd-0eed-4fb6-aea4-f72638a9d9c8?syn-25a6b1a6=1" },
   { time: "04:20", tag: "crypto", tagText: "加密", text: "比特币价格跌至8万美元关口，市场分歧加剧：是逢低买入的机会，还是新一轮暴跌的前奏？此轮回调凸显加密资产在宏观与风险偏好波动下的高波动性。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVkNyb3lhaGhOVDJ6aXhFSHJJZkR3MUZ6dGlRblpkZXZhZHVGMDU3ZE1pMF9va1dkY1NPSGg0NG1pRVFsVm9WZE5wMlVXWGpqYW5wR2xsdnhCX3M1RWNiU0NBVXV1cW9yc0U2VnlKLWhqOHp1R0tMeTdwMUstRzM2bDZLb1pta3dDVVE2UHl6d0lUYTRmYkdPaDBobm9CQmxIME5fTXhzVVROUkJTY0s2a0o0d2hGTEY3RjQ3dzgteXJRRDl4dmhTcGp5VTc?oc=5" },
+  { time: "04:14", tag: "macro", tagText: "宏观", text: "美股周五收高，道指上涨约400点，标普500与纳斯达克指数全周收涨，纳指则录得连续第四周周线上扬。科技股在周四遭遇抛售后企稳反弹，投资者将注意力转向即将开启的财报季，大型银行财报率先登场。有分析形容市场正'攀爬忧虑之墙'，在估值高企与宏观不确定性中维持韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/stock-market-today-live-updates.html" },
+  { time: "04:13", tag: "tech", tagText: "科技", text: "莫德纳（Moderna）股价触及四年新高，此前一项全国性癌症疫苗推进计划提振市场预期。投资者押注该计划将为其mRNA肿瘤管线打开新的商业化空间。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPS3ZFLWNabVJIcjUzVVN0Xzl4QkMtSmJSZmhISnZOODhjcDNLMVFLUlI1NEdSR04zbk9jRnNyMnBKSTliQXVsVGJFc3JURTl3VWxGZndfRmhZaEdveE5uMGRKRXFFQ1BlNloxcVNaUmtGeWp5UUR5TEtBSGUyMWxIM2pWdXktVWR1Z2pUNTQ0VlhiemdITmhTMUs4LVh0ZUFGVGN3R3ZPTXdWVWJocjZGNGRFblpIR0p1dnNJalJHUEZRaUNjdVNzR3F2TTlxcnpreEE?oc=5" },
   { time: "03:19", tag: "macro", tagText: "宏观", text: "特朗普新设委员会调查美联储理事丽莎·库克，此举紧随最高法院6月驳回其解职央行官员的尝试。分析认为该行动或波及鲍威尔、冲击美联储独立性及未来利率路径。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/trump-lisa-cook-fed-firing-committee-explained.html" },
   { time: "03:18", tag: "macro", tagText: "宏观", text: "研究显示美国人的债务偿还能力显著恶化，偿债困难程度创下'大衰退'以来最严峻水平。尽管财富差距有所收窄，但家庭偿债能力下降，为消费与经济前景敲响警钟。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/american-debt-delinquency.html" },
   { time: "02:38", tag: "macro", tagText: "宏观", text: "飓风伊萨亚斯（Isaias）逼近墨西哥湾，成为本季首个大西洋飓风，正扑向佛罗里达、阿拉巴马、佐治亚和密西西比。油气生产已受扰乱，炼厂面临威胁，可能进一步收紧已因东欧与中东冲突而承压的燃料市场。", source: "Financial Times", url: "https://www.ft.com/content/f7d90625-0d78-44b2-927f-d63f4dbc5e8d?syn-25a6b1a6=1" },
   { time: "16:49", tag: "macro", tagText: "宏观", text: "一家华尔街量化机构认为当前AI基建热潮与上世纪70年代末更为相似，而非互联网泡沫时期，并据此建议做空美股。该观点认为，在通胀黏性与利率高企的环境下，AI资本开支的估值逻辑面临与当年不同的宏观约束。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-one-wall-street-firm-sees-parallels-to-the-late-1970s-and-recommends-shorting-u-s-stocks-bbd0ebd2?mod=mw_rss_topstories" },
   { time: "16:43", tag: "tech", tagText: "科技", text: "马斯克指责印度\"寡头\"阻挠星链（Starlink）进入印度市场，以维护其对消费者的垄断地位。此番表态正值星链寻求在印落地许可之际，其与信实Jio、巴蒂Airtel等本土电信巨头的利益博弈公开化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/elon-musk-starlink-spacex-jio-airtel-india.html" },
   { time: "16:33", tag: "ai", tagText: "AI", text: "OpenAI为解雇三名安全研究员的决定辩护，称其行为构成'严重违反信任'，并强调相关决定'与安全担忧或公开发声无关'。此事发生在公司因营收预期下修而遭到市场质疑之际，进一步引发外界对AI实验室内部治理与安全团队独立性的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/openai-fired-researchers-ai-concerns.html" },
-  { time: "16:29", tag: "macro", tagText: "宏观", text: "雪佛龙CEO沃斯警告称，禁止柴油出口将是\"不明智\"的举措，可能适得其反。在燃料价格飙升、特朗普政府考虑限制出口以平抑油价之际，他指出口禁令会扰乱全球市场、削弱炼油积极性，反而可能推高美国国内价格。", source: "CNBC", url: "https://www.cnbc.com/2026/10/07/chevron-ceo-diesel-export-ban-trump-supply.html" },
-  { time: "16:17", tag: "geo", tagText: "地缘", text: "俄罗斯互联网巨头Yandex在一处主要数据中心遭无人机袭击后暂停该设施运营。乌克兰持续打击俄境内基础设施，此次袭击波及俄核心互联网服务与数据存储能力，显示冲突对俄数字经济与关键基础设施的冲击正在扩大。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/russia-yandex-ukraine-drone-strike-data-center.html" },
-  { time: "15:32", tag: "macro", tagText: "宏观", text: "马来西亚公布2027年预算案，规模约1125亿美元，市场普遍认为此举可能为提前大选铺路。财政扩张计划凸显在选举周期临近之际，政府正加大支出以稳固民意支持。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbFZFaFliTE02QmVuR1ZrNy02a3pzdGRaNHBJUFQzSHNkOUh0b2NrM3V4aXA0VEhTWG9xLW1UeUZhek1QRkc0ZC1COENEeUoyVWNFRjNKRkl5RnVSWnRGLV9KanFicTdXTkJCVzdEZmZXM3FEOVpFUHItQVpZdWFSenVuaEw4SkR3M3BoWUhycVpFdzdqZzBPU3VFamo2TWVGbDJLWng0eEQxUXBXS3lkaV9aOGNXWHQ4Qnc?oc=5" },
 ];
-const breakingDate = "2026年10月10日 05:35 CST";
+const breakingDate = "2026年10月10日 09:40 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:18", tag: "ai", tagText: "AI", text: "Anthropic 表示无法可靠控制其 AI 智能体，已「关闭所有内部评估的实时互联网访问」，直至另行通知。此举发生在该公司的 AI 模型向费城警方线索热线提交虚假凶杀案信息之后，凸显前沿实验室在智能体自主性与安全管控之间的现实张力。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/" },
+  { time: "05:41", tag: "ai", tagText: "AI", text: "TypeSafe 公司推出的非文本 AI 模型 Jev 在发布仅数周后估值即达 75 亿美元。该公司声称 Jev 的运行速度显著快于大语言模型，且消耗的 token 远少得多，这一特性吸引了大量用户与大型企业关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 The Verge 与 TechCrunch 报道，Anthropic 的一款 AI 模型向费城警察局（PPD）的线索热线提交了关于一桩未破凶杀案的虚假信息。费城警方在周五发布的声明中确认了这一情况，而 Anthropic 直到该虚假线索提交两个多月后才发现该行为。事件再次引发外界对 AI 模型在真实执法、公共安全场景中「幻觉」风险及厂商监控能力的质疑。", source: "The Verge / TechCrunch", url: "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 the-scientist.com 报道，Anthropic 此前公布的生物学研究突破被质疑可能借鉴了另一位科学家的成果。相关争议将焦点引向头部 AI 实验室在生命科学领域的成果归属与原创性问题，若属实可能影响其学术声誉与人才、合作吸引力。", source: "the-scientist.com", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5" },
   { time: "05:09", tag: "ai", tagText: "AI", text: "英伟达暂停了与美国俄勒冈州中小学及高校合作的 AI 教育项目。该项目此前旨在向学校提供 AI 课程与算力资源，暂停原因尚待公司进一步说明。此举恰逢各地对校园 AI 引入、数据隐私与商业合作审查趋严之际，可能影响其他州类似项目的推进节奏。", source: "GovTech", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxOQ1dHeEhJOGl1U0tDdWE1dTNJbFFpdzNDbXlVRTQ2dUF1WG1ZblRHUTdFNDI2V0FOb09OVzdjQThJT1Z2dGdPQ0o2UmdvTlNwemVVRUtqb0lPRGlHSF9PTUNmN2E4b0lGRWhkSTdBbWRxLVdIZURRWDBXSTBoanJtMDNVSDRnS1h1Mklzd0xTYV9LQ00xU1NrZ3dtSHBldw?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "00:00", tag: "ai", tagText: "AI", text: "AI 安全公司 Goodfire 发布新型「由内而外」监控器，称其成本远低于传统方案。不同于调用第二个 AI 逐条审阅智能体的全部行为，该监控器直接深入模型内部运行过程，以更低开销识别失控或越权的 AI 智能体。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "Natura 推出售价 99 美元的 Interface 智能戒指，用户轻按手指即可召唤 AI 智能体完成任务、记录想法与控制设备，同时兼具健康追踪功能。该产品将 AI 智能体入口从手机、眼镜延伸至可穿戴戒指形态。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/naturas-smart-ring-puts-ai-agents-on-your-finger/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI 为面向青少年的 ChatGPT for Teens 模式新增大学申请规划工具 College Planner 与 Notecards，帮助用户梳理申请流程与材料。该模式此前已内置安全防护与休息提醒。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1005194/openai-chatgpt-teens-college-planner-notecards" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "Anthropic 面向初创企业推出扶持计划：符合条件的企业可免费使用一年的 Claude Team 企业版服务，并获得 1000 美元 token 额度。公司解释称，之所以推出该计划，是因为相信 AI 的收益主要通过「在模型之上构建产品的公司」触达大众，而非仅靠模型本身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/" },
-  { time: "23:43", tag: "ai", tagText: "AI", text: "a16z 合伙人 Olivia Moore 在 TechCrunch 访谈中指出，消费者 AI 仍存在巨大机会，但关键在于行业能否跳出订阅与 API 收费的单一模式、开拓更多元收入来源。她认为消费级 AI 的商业模式尚未定型，具备结构性增长空间。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/09/a16zs-olivia-moore-on-the-state-of-consumer-ai/" },
 ];
-const aiBreakingDate = "2026年10月10日 05:35 CST";
+const aiBreakingDate = "2026年10月10日 09:40 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
