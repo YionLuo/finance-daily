@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 39.97,
   previous1Month: 38.2,
   previous1Year: 48.63,
-  date: "2026年10月10日 09:40 CST"
+  date: "2026年10月10日 16:23 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:00", tag: "tech", tagText: "科技", text: "微软第一财季营收达900亿美元，资本开支同比翻倍，并推出'执行容器'（Execution Containers）。资本开支大幅扩张凸显其在AI基础设施上的持续重投入，成为市场关注焦点。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxQN0FKODN0eXU2bzAyd01sVElQRWxSNlp2UEV5bzZOcE1OWGlCWVVvM2J3bmRoRTFCVlhnbmJHX0tkSDhOaEpBM0Y2bUZFeTBJZ1I5dDRPelpQMnAwUmVGdkpDRm9hS3d4LVZNTlMtQ1VCSGhCYkM4cTB3Q1FtLU1hYlYwMkZsRzJsVE14c1lqSnlDVGYwUUcxb1Zibk5Xa1V4SWNSTmYzR3RTdklpdUdadW1YZUpZNHJ4blphclp6U3JONFdCdVE?oc=5" },
+  { time: "14:36", tag: "geo", tagText: "地缘", text: "沙特阿拉伯接连发生致命机场袭击事件后，其旗舰峰会面临压力。商界高管正权衡是否出席世界石油理事会能源大会和未来投资倡议（FII）。袭击事件可能削弱沙特作为全球商业与能源枢纽的吸引力，令其招商引资与石油外交计划受挫。", source: "Financial Times", url: "https://www.ft.com/content/e29fd05b-9e71-474c-906e-c3fd45dfaa03?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "乌克兰农民因资金短缺且出口持续受阻，正失去为2027年播种的动力。分析人士警告，随着粮食出口被困，大宗商品市场可能'迅速反转'，全球粮食供应与价格面临新风险。", source: "CNBC", url: "https://www.cnbc.com/2026/10/10/ukraine-grain-exports-russia-harvest.html" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "俄罗斯扩大对乌克兰的空中打击，过去一周无人机袭击了基辅的两座桥梁和扎波罗热的一座桥梁。普京将空袭目标瞄准关键基础设施，进一步扰乱乌克兰的物流与后勤补给，冲突升级风险上升。", source: "Financial Times", url: "https://www.ft.com/content/4e4ea744-6603-499b-baf7-83c74e4dc53e?syn-25a6b1a6=1" },
   { time: "05:35", tag: "tech", tagText: "科技", text: "SpaceX同意收购一个全国性频谱牌照组合，以推动星链（Starlink）更深地打入美国电信市场。消息重创美国电信股，AT&T、Verizon和T-Mobile股价大幅下挫，市场担忧星链对传统移动运营商的竞争冲击加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/spacex-spectrum-license-att-verizon-tmobile.html" },
   { time: "05:30", tag: "tech", tagText: "科技", text: "据日经亚洲报道，苹果10月将iPhone 18 Pro与iPhone 18 Pro Max的零部件订单下调约15%。此举引发市场对新一代iPhone需求是否正在降温的担忧，成为观察高端消费电子景气度的重要信号。", source: "MarketWatch", url: "https://www.marketwatch.com/story/is-iphone-18-demand-cooling-off-heres-how-deep-apple-reportedly-is-cutting-component-orders-a44244ee?mod=mw_rss_topstories" },
   { time: "05:24", tag: "tech", tagText: "科技", text: "微软股价逼近里程碑，市值有望重新站上4万亿美元大关，并可能刷新历史新高，进一步巩固其此前被视为'复兴'的估值修复。市场关注其AI与云计算业务对业绩的持续拉动。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microsoft-is-nearing-a-big-milestone-that-solidifies-its-revival-580d1ba8?mod=mw_rss_topstories" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "04:13", tag: "tech", tagText: "科技", text: "莫德纳（Moderna）股价触及四年新高，此前一项全国性癌症疫苗推进计划提振市场预期。投资者押注该计划将为其mRNA肿瘤管线打开新的商业化空间。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPS3ZFLWNabVJIcjUzVVN0Xzl4QkMtSmJSZmhISnZOODhjcDNLMVFLUlI1NEdSR04zbk9jRnNyMnBKSTliQXVsVGJFc3JURTl3VWxGZndfRmhZaEdveE5uMGRKRXFFQ1BlNloxcVNaUmtGeWp5UUR5TEtBSGUyMWxIM2pWdXktVWR1Z2pUNTQ0VlhiemdITmhTMUs4LVh0ZUFGVGN3R3ZPTXdWVWJocjZGNGRFblpIR0p1dnNJalJHUEZRaUNjdVNzR3F2TTlxcnpreEE?oc=5" },
   { time: "03:19", tag: "macro", tagText: "宏观", text: "特朗普新设委员会调查美联储理事丽莎·库克，此举紧随最高法院6月驳回其解职央行官员的尝试。分析认为该行动或波及鲍威尔、冲击美联储独立性及未来利率路径。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/trump-lisa-cook-fed-firing-committee-explained.html" },
   { time: "03:18", tag: "macro", tagText: "宏观", text: "研究显示美国人的债务偿还能力显著恶化，偿债困难程度创下'大衰退'以来最严峻水平。尽管财富差距有所收窄，但家庭偿债能力下降，为消费与经济前景敲响警钟。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/american-debt-delinquency.html" },
-  { time: "02:38", tag: "macro", tagText: "宏观", text: "飓风伊萨亚斯（Isaias）逼近墨西哥湾，成为本季首个大西洋飓风，正扑向佛罗里达、阿拉巴马、佐治亚和密西西比。油气生产已受扰乱，炼厂面临威胁，可能进一步收紧已因东欧与中东冲突而承压的燃料市场。", source: "Financial Times", url: "https://www.ft.com/content/f7d90625-0d78-44b2-927f-d63f4dbc5e8d?syn-25a6b1a6=1" },
-  { time: "16:49", tag: "macro", tagText: "宏观", text: "一家华尔街量化机构认为当前AI基建热潮与上世纪70年代末更为相似，而非互联网泡沫时期，并据此建议做空美股。该观点认为，在通胀黏性与利率高企的环境下，AI资本开支的估值逻辑面临与当年不同的宏观约束。", source: "MarketWatch", url: "https://www.marketwatch.com/story/why-one-wall-street-firm-sees-parallels-to-the-late-1970s-and-recommends-shorting-u-s-stocks-bbd0ebd2?mod=mw_rss_topstories" },
-  { time: "16:43", tag: "tech", tagText: "科技", text: "马斯克指责印度\"寡头\"阻挠星链（Starlink）进入印度市场，以维护其对消费者的垄断地位。此番表态正值星链寻求在印落地许可之际，其与信实Jio、巴蒂Airtel等本土电信巨头的利益博弈公开化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/elon-musk-starlink-spacex-jio-airtel-india.html" },
-  { time: "16:33", tag: "ai", tagText: "AI", text: "OpenAI为解雇三名安全研究员的决定辩护，称其行为构成'严重违反信任'，并强调相关决定'与安全担忧或公开发声无关'。此事发生在公司因营收预期下修而遭到市场质疑之际，进一步引发外界对AI实验室内部治理与安全团队独立性的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/openai-fired-researchers-ai-concerns.html" },
 ];
-const breakingDate = "2026年10月10日 09:40 CST";
+const breakingDate = "2026年10月10日 16:23 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "00:00", tag: "ai", tagText: "AI", text: "Natura 推出售价 99 美元的 Interface 智能戒指，用户轻按手指即可召唤 AI 智能体完成任务、记录想法与控制设备，同时兼具健康追踪功能。该产品将 AI 智能体入口从手机、眼镜延伸至可穿戴戒指形态。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/naturas-smart-ring-puts-ai-agents-on-your-finger/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "OpenAI 为面向青少年的 ChatGPT for Teens 模式新增大学申请规划工具 College Planner 与 Notecards，帮助用户梳理申请流程与材料。该模式此前已内置安全防护与休息提醒。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1005194/openai-chatgpt-teens-college-planner-notecards" },
 ];
-const aiBreakingDate = "2026年10月10日 09:40 CST";
+const aiBreakingDate = "2026年10月10日 16:23 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
