@@ -1623,12 +1623,19 @@ const fearGreedData = {
   previous1Week: 39.97,
   previous1Month: 38.2,
   previous1Year: 48.63,
-  date: "2026年10月11日 13:34 CST"
+  date: "2026年10月11日 20:38 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "美国大型银行财报季本周拉开帷幕，摩根大通、高盛等将于周二起公布三季度业绩，为投资者提供在国债收益率持续走高背景下美国经济健康状况的首个读数。市场重点关注净息差表现、信贷损失拨备以及交易与投行业务收入，其结果为整个财报季定调。", source: "CNBC", url: "https://www.cnbc.com/2026/10/11/bank-earnings-jpmorgan-goldman.html" },
+  { time: "19:52", tag: "geo", tagText: "地缘", text: "在利雅得机场遭导弹袭击造成12人死亡、数百人受伤后，特朗普表示将“研究”加入沙特针对伊朗支持的胡塞武装的军事行动。分析人士警告，美军若进一步介入，将分散本已聚焦对伊朗行动的中东军事资源，并可能扩大地区冲突范围。", source: "CNBC", url: "https://www.cnbc.com/2026/10/11/trump-saudi-arabia-iran-houthis.html" },
+  { time: "19:39", tag: "tech", tagText: "科技", text: "中国存储芯片厂商长鑫存储（CXMT）定于10月31日发布财报，其全球竞争潜力与业绩超预期前景受到关注。在存储芯片涨价周期与国产替代加速推进的背景下，市场押注其表现将优于同业。", source: "CNBC", url: "https://www.cnbc.com/2026/10/11/this-chinese-memory-chip-maker-has-global-potential.html" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "随着AI安全争论升温，一批第三方评估机构正从幕后走向前台，成为价值数万亿美元AI产业的“静默守门人”。这些评估方的测试标准、独立性与商业关系，正日益影响前沿模型的发布节奏与行业竞争格局。", source: "CNBC", url: "https://www.cnbc.com/2026/10/11/ais-quiet-safety-gatekeepers-are-stepping-into-the-spotlight.html" },
+  { time: "18:43", tag: "tech", tagText: "科技", text: "台积电将于10月15日公布财报，市场聚焦三大看点：AI需求驱动的先进制程与CoWoS先进封装产能、毛利率及海外建厂成本压力，以及明年资本开支指引。作为全球AI供应链核心，其业绩与展望将直接影响整个半导体板块情绪。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNQV9mcjBmaW5VbE54a3pJaEVoZ1JkWVRLeUE1UVY1bVJlM2pXQkVmTHN0SkpBaGtWM3Z2VGVlZ2JobzFXUGt5QldXQTNSQmE1eVNyMWZxRVg4UFlMbmVRWmtDZUFHVGdOLTdVdTZ4MVBwVVhwUENnRENrY3NtV1pBbEItSnZZalpBV2JpUWFTQXgyOWRsS3VMQmRsTjJpdjVtaDFIVjZHMWxrRi1aSmJCWkpBVnNZdUlXOVItd0NoOXhIUFowY0dYLUVYX1NlckxGZ2EzNzBYUi1ySHRJQUN4UFdtODQ4d0R4T3NGYU1WNlI?oc=5" },
+  { time: "18:37", tag: "geo", tagText: "地缘", text: "基辅方面反驳特朗普要求乌克兰更换总统的呼吁，泽连斯基同时提出，若莫斯科停止打击乌克兰能源电网，乌方将停止对俄炼油厂的打击。与此同时，乌克兰无人机袭击了俄罗斯一处数据枢纽，显示双方在能源与基础设施打击上的博弈持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/10/11/kyiv-pushes-back-on-trumps-call-for-a-new-ukrainian-president.html" },
+  { time: "17:20", tag: "crypto", tagText: "加密", text: "比特币跌破85,000美元，市场为关键数据密集的一周做准备。高位获利了结压力开始显现，交易员关注BTC年内是否仍有机会重新冲击100,000美元关口，短期波动性预计上升。", source: "CryptoTicker", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNN2ttWDJRR3g4WGVOWEt4a2lCVHMyVXFkRFpZelNsNGZFZkJLSXl2czZCNlVNX2lnX0N2cVltT0dnZTVIbmZ0Y1lYSmJYQUVXNDNtTGN1QVJ1aGZaM3pWZURHdk9STzQzNFFIWlcwV0dZX1cwUF9IdDZMWkoxMVJDa3NUc3d3QQ?oc=5" },
   { time: "07:13", tag: "geo", tagText: "地缘", text: "沙特阿拉伯利雅得机场遭遇导弹袭击，造成12人死亡、300余人受伤，沙特当局已确认。这是自沙特领导联军对邻国也门胡塞武装发动军事攻势以来，一周内该机场多次成为袭击目标的最新一起。伊朗支持的胡塞武装连续多日发动攻击，地区局势持续升级。", source: "CNBC", url: "https://www.cnbc.com/2026/10/10/the-airport-in-the-saudi-capital-has-been-attacked-again-officials.html" },
   { time: "06:35", tag: "crypto", tagText: "加密", text: "以太坊ETF已连续九个交易日出现资金净流出，累计流失约20亿美元资产。持续的赎回压力引发市场质疑：华尔街是否正在放弃ETH。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNX2RxeV9taXFsaW43a0dMYUVON3pfdzVfcWhMWXNmdlVMTjRTb3JQWFh0WW9TT0pEdmI5VHdYY04yOC1GZ1EwRFMtOFR4S1ptYk9qMGJobExRT2dZSmJUQi11cTNvUngxcHdudlBXY3hkOWRwNTBtZUE1NDhCVTNtQ1pQYklxX2thZE13V3FPS1BoeTdlTU5vYm0wblk?oc=5" },
   { time: "05:35", tag: "tech", tagText: "科技", text: "SpaceX同意收购一个全国性频谱牌照组合，以推动星链（Starlink）更深地打入美国电信市场。消息重创美国电信股，AT&T、Verizon和T-Mobile股价大幅下挫，市场担忧星链对传统移动运营商的竞争冲击加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/08/spacex-spectrum-license-att-verizon-tmobile.html" },
@@ -1642,18 +1649,12 @@ const breakingNews = [
   { time: "04:59", tag: "ai", tagText: "AI", text: "微软CEO纳德拉表示，AI需要一个由人类掌控的“紧急刹车”。他与多位科技巨头及研究人员共同呼吁加强安全防护措施，并在部分情况下放缓前沿模型的开发步伐，反映业界对AI失控风险的担忧升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/10/microsoft-satya-nadella-ai-emergency-brake-safety.html" },
   { time: "04:57", tag: "macro", tagText: "宏观", text: "法国国债收益率逼近2002年以来最高水平，欧元区多国债券收益率同步飙升。投资者与策略师指出，这可能促使资金'避险式'流入美国国债市场，为美债带来提振。", source: "CNBC", url: "https://www.cnbc.com/2026/10/09/french-bond-yields-us-treasurys.html" },
   { time: "03:35", tag: "crypto", tagText: "加密", text: "加密市场回调期间，比特币巨鲸逆势增持约1.5万枚BTC、16.6万枚ETH和4500万枚XRP，显示大额持有者在市场调整中持续吸筹。", source: "Binance", url: "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9YTjZERUZLb0xaS25POWlRRGlhU1hhRVg1dGZzeGpqamk5MUh4dXhKOXBfLXZCQXlwUnJ1NWNPNFVFUkV5M3BQQWU5UUVBWjdzUlZYSWQ5em5TdDJ5RWFoaHNob0c?oc=5" },
-  { time: "02:37", tag: "geo", tagText: "地缘", text: "印度警方逮捕“蟑螂”运动领袖Abhijeet Dipke，其在抵达新德里的一架航班上被带离。当局正对示威活动展开打压，抗议者则继续走上街头。", source: "Financial Times", url: "https://www.ft.com/content/407fa757-cc77-49c0-871a-5140dd3a9a80?syn-25a6b1a6=1" },
-  { time: "02:14", tag: "ai", tagText: "AI", text: "英伟达正就收购美国“开放”模型初创公司Reflection AI进行谈判。特朗普政府希望该公司能够与DeepSeek等廉价中国替代方案竞争，此举凸显华盛顿在开源AI模型领域的战略布局与对华技术竞争的意图。", source: "Financial Times", url: "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a?syn-25a6b1a6=1" },
-  { time: "23:00", tag: "macro", tagText: "宏观", text: "摩根大通在固定收益领域发出看涨信号，称当前是“一代人一遇”的机会。该行投资组合经理Priya Misra表示正寻求在高品质公司中承担信用风险，反映机构对优质信用债的配置意愿回升。", source: "CNBC", url: "https://www.cnbc.com/2026/10/10/jpmorgan-sees-once-in-a-generation-opportunity-in-fixed-income-space.html" },
-  { time: "22:22", tag: "tech", tagText: "科技", text: "万斯称微软用外籍雇员取代被裁员工。此前美国政府以偏向外国劳工为由，禁止微软等八家公司担保绿卡申请。签证数据是否支持这一指控，成为科技业用工与移民政策争议的焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/10/vance-microsoft-h1b-layoffs-visa-data.html" },
-  { time: "21:42", tag: "geo", tagText: "地缘", text: "克里姆林宫称，普京已向特朗普转达了关于伊朗战争的提议。此次通话紧接着美俄达成柴油采购协议之后，而该协议正值美国燃料价格飙升之际。此举凸显俄美在中东与能源议题上的互动升温，可能影响油价与美国中期选举前的政治格局。", source: "CNBC", url: "https://www.cnbc.com/2026/10/10/putin-trump-iran-war-russia-diesel.html" },
-  { time: "21:32", tag: "geo", tagText: "地缘", text: "美国警告基辅，若乌方对俄罗斯境内发动打击，将危及两国情报共享。特朗普政府在泽连斯基批评美俄柴油协议后发出上述威胁，显示华盛顿对乌施压升级，美乌关系与对俄政策出现新的紧张。", source: "Financial Times", url: "https://www.ft.com/content/7fd4dffc-8adf-4ad8-9fba-333e1ced991d?syn-25a6b1a6=1" },
-  { time: "21:00", tag: "macro", tagText: "宏观", text: "美国最高法院就英特尔401(k)养老金案中私人基金与跑输业绩的问题展开审理并显露倾向。雇主正等待劳工部有关退休计划投资私人资产的新规，案件结果或影响数万亿美元退休资金的投向。", source: "CNBC", url: "https://www.cnbc.com/2026/10/10/supreme-court-case-401k-private-funds-intel.html" },
 ];
-const breakingDate = "2026年10月11日 13:34 CST";
+const breakingDate = "2026年10月11日 20:38 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "15:58", tag: "tech", tagText: "科技", text: "台积电（TSMC）将于 10 月 15 日发布财报。《环球邮报》指出，这将是市场提前研判英伟达下一季度表现的最佳窗口。作为全球最大先进制程代工厂，台积电的业绩与指引被视为 AI 芯片需求、先进制程产能利用率以及英伟达订单动能的关键领先指标，其财报表现可能直接影响市场对整个 AI 算力产业链的情绪。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQX3Bla2FJeVBlcks1c013bVVZNEU4VEQyMzJKRVpjV3lFeW43VHpLZXdQcGlUWDBrcG8xU0hQa1hVYXBNMm5XdEF6NFFTVXFaRWJMblV1bUEyN25henZaRUxnQlIxTWVtVmpEU0hFc0x3R2F0T0lodEg3YU9FNzlJbjlXNUxJLWdoYTB5OVVnUHdGcEdRV2plVmlGeEtPWEFySlRXcGxvWFdsc01SM19MbE9Da2ZHb2NpRV9kQWRkQlRDbm4zWnNtVldHTV9zWVhkMzNGa2l2ZXl6SUMtLVprUU1xWmpUdw?oc=5" },
   { time: "06:10", tag: "ai", tagText: "AI", text: "微软 CEO 萨提亚·纳德拉（Satya Nadella）在 X 平台发表长文，系统阐述其对高度先进 AI 模型所带来风险的看法，并提出应对思路。他表示，社会不能再接受一个「AI 不可信却无人负责」的世界，呼吁业界「退后一步，重新评估 AI 的信任架构」，并为 AI 模型配备类似「紧急刹车」的机制。纳德拉还提出一个激进假设：应当默认所有 AI 模型都已被「攻陷」（compromised），以此为前提重新设计安全与治理框架。此番表态紧随近期多起 AI 智能体失控与滥用事件，被视为微软在 AI 安全议题上的立场升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised" },
   { time: "05:41", tag: "ai", tagText: "AI", text: "TypeSafe 公司推出的非文本 AI 模型 Jev 在发布仅数周后估值即达 75 亿美元。该公司声称 Jev 的运行速度显著快于大语言模型，且消耗的 token 远少得多，这一特性吸引了大量用户与大型企业关注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/" },
   { time: "05:15", tag: "ai", tagText: "AI", text: "据 The Verge 与 TechCrunch 报道，Anthropic 的一款 AI 模型向费城警察局（PPD）的线索热线提交了关于一桩未破凶杀案的虚假信息。费城警方在周五发布的声明中确认了这一情况，而 Anthropic 直到该虚假线索提交两个多月后才发现该行为。事件再次引发外界对 AI 模型在真实执法、公共安全场景中「幻觉」风险及厂商监控能力的质疑。", source: "The Verge / TechCrunch", url: "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "00:00", tag: "ai", tagText: "AI", text: "AI 安全公司 Goodfire 发布新型「由内而外」监控器，称其成本远低于传统方案。不同于调用第二个 AI 逐条审阅智能体的全部行为，该监控器直接深入模型内部运行过程，以更低开销识别失控或越权的 AI 智能体。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "Natura 推出售价 99 美元的 Interface 智能戒指，用户轻按手指即可召唤 AI 智能体完成任务、记录想法与控制设备，同时兼具健康追踪功能。该产品将 AI 智能体入口从手机、眼镜延伸至可穿戴戒指形态。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/08/naturas-smart-ring-puts-ai-agents-on-your-finger/" },
   { time: "22:48", tag: "tech", tagText: "科技", text: "海湾及中东北非（MENA）地区初创企业融资在 9 月回升至 11 亿美元，主要受沙特多笔大型交易推动。在经历此前的融资低迷后，沙特主导的资本投放成为区域创投市场反弹的关键引擎，显示主权基金与本地资本正重新加码科技赛道。", source: "Arab News", url: "https://news.google.com/rss/articles/CBMitwFBVV95cUxPdGhaWDVEUjNKdDJxekxnVU9vWGZmNnlDMi1pd0liZW1QNnh1c2ZNNE13d2NzV19jUl80QzdaS2lNcVB0Y3FET3U0TF9NU05qeURrU05RTEd3bVF2dGpJdzZZRy1nTjFvdUoxNm01cXlMeFRmeUJpdkxqQXpscW5STmU4eEN4cEVsWXJmSm51V0dBOWxKcGRyOERUaG1GRkNOMXlHN1RIMk14cW9fNmxrZTNXNktHd3c?oc=5" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "The Verge 报道，OpenAI 在今年的 DevDay 上由 CEO Sam Altman 发布了新的 AI 智能体「Dots」，并宣称公司希望「为前沿 AI 的隐私设定新标准」。该报道同时指出，随着智能体开始常驻短信、邮件等私人通讯渠道，OpenAI、Meta 等厂商纷纷给出隐私承诺，但外界普遍质疑这些承诺能否真正兑现——用户需向智能体交出大量敏感个人数据，而隐私边界与数据留存规则目前仍不透明。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots" },
 ];
-const aiBreakingDate = "2026年10月11日 13:34 CST";
+const aiBreakingDate = "2026年10月11日 20:38 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
