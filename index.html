@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 44.29,
+  score: 44.74,
   rating: "fear",
-  timestamp: "2026-10-13T17:23:11+00:00",
+  timestamp: "2026-10-13T22:17:25+00:00",
   previousClose: 45.74,
   previous1Week: 46.8,
   previous1Month: 32.69,
   previous1Year: 29.74,
-  date: "2026年10月14日 01:32 CST"
+  date: "2026年10月14日 06:37 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:00", tag: "geo", tagText: "地缘", text: "沙特阿美（Saudi Aramco）总部遭疑似胡塞武装袭击。此前沙特领导的多国联军对也门首都萨那的目标实施打击，伊朗支持的胡塞武装随即实施报复。这是沙特核心能源设施再度成为袭击目标，市场关注其对该国原油生产与出口能力的潜在影响，以及中东局势进一步升级对油价的扰动。", source: "Financial Times", url: "https://www.ft.com/content/a25417b3-d4e4-4b89-b14d-6370a85ce3c4?syn-25a6b1a6=1" },
+  { time: "05:27", tag: "geo", tagText: "地缘", text: "梵蒂冈宣布，教皇利奥被诊断患有肺癌。医生已切除其右肺下叶，属根治性手术。梵蒂冈未披露后续治疗方案与预后细节。教皇健康状况历来牵动全球天主教徒及国际政治格局，此前其多次就国际冲突与贫困议题发声。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/pope-leo-diagnosed-lung-cancer-vatican-says.html" },
+  { time: "04:54", tag: "ai", tagText: "AI", text: "美国联邦调查局（FBI）逮捕了一名沙特籍OpenAI员工，其涉嫌在OpenAI会议室安装录音设备。该AI实验室发现窃听装置后向FBI报案，美方已对其提起起诉。此事发生在ChatGPT开发商及其竞争对手因AI安全实践而面临日益严格审查之际，也令AI企业与地缘政治、国家安全议题的交集再度升温。", source: "Financial Times", url: "https://www.ft.com/content/2c3b583a-3ddc-4920-a350-9698c119435c?syn-25a6b1a6=1" },
+  { time: "04:45", tag: "macro", tagText: "宏观", text: "美国银行（Bank of America）因违反反洗钱规定被美国财政部处以12亿美元罚款。该处罚在美银发布季度财报前不到一天公布，凸显监管机构对大型银行合规体系的持续高压。市场关注该笔罚金对美银当季盈利与资本回报计划的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/bank-of-america-treasury-money-laundering.html" },
+  { time: "04:29", tag: "macro", tagText: "宏观", text: "联合健康（UnitedHealth）再度上调业绩指引，第三季度医疗赔付率（医疗成本占保费收入比）为88.4%，显示其控费措施见效。在保险公司普遍面临医疗支出上升压力的背景下，该巨头对医疗成本的有效控制成为其盈利超预期的关键，也为即将公布的保险板块财报定下基调。", source: "MarketWatch", url: "https://www.marketwatch.com/story/unitedhealth-keeps-medical-costs-under-control-and-raises-its-outlook-again-71abc99c?mod=mw_rss_topstories" },
   { time: "01:07", tag: "macro", tagText: "宏观", text: "沃尔玛扩大员工医疗福利，在通过新的预先授权程序后，为患2型糖尿病的员工免费提供诺和诺德的Ozempic与礼来的Mounjaro，同时承担部分吸入剂和胰岛素费用。此举被视为美国大型雇主应对药价与员工健康成本压力的重要信号。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/walmart-glp-1s-inhalers-insulin-employee-benefits.html" },
   { time: "00:53", tag: "geo", tagText: "地缘", text: "特朗普与俄罗斯达成的柴油协议，所涉供应量不足美国两周的柴油需求。在中期选举不到一个月之际，特朗普正面临压低燃油价格的政治压力，此举被视为缓解柴油价格的政治操作，但对整体供应格局影响有限。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/trump-putin-zelenskyy-russia-ukraine-diesel-oil-price.html" },
   { time: "00:52", tag: "tech", tagText: "科技", text: "苹果发布带屏幕的智能家居中枢HomeView，将其定位为Siri AI能力的展示平台，同时推出新款Apple TV 4K与HomePod mini。此举标志着苹果正式加大在智能家居与AI助手硬件领域的投入。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/apple-homeview-smart-home-siri-ai.html" },
@@ -1644,17 +1649,17 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "FT报道指出，未来12个月内欧盟五大成员国中将有四国举行选举，欧洲极右翼势力正逼近权力中心，整个欧盟的格局可能被永久改变。", source: "FT", url: "https://www.ft.com/content/ec433e1f-bdb4-4a1c-868e-e1c7c4121f45?syn-25a6b1a6=1" },
   { time: "11:49", tag: "macro", tagText: "宏观", text: "国际油价下跌，交易员正在权衡俄罗斯柴油供应前景与沙特-胡塞武装冲突可能带来的供应中断风险之间的博弈。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/oil-prices-today-brent-wti-hormuz.html" },
   { time: "11:19", tag: "macro", tagText: "宏观", text: "IMF警告亚洲“僵尸企业”风险上升。该地区无法偿付债务的企业占比自2008年以来已翻倍，凸显企业资产负债表恶化与金融脆弱性加剧。", source: "FT", url: "https://www.ft.com/content/ee4105fc-aa85-47ef-aa64-1fc3f344d740?syn-25a6b1a6=1" },
-  { time: "10:58", tag: "ai", tagText: "AI", text: "亚洲科技股遭遇猛烈抛售，SK海力士、三星电子与软银股价大幅下挫，韩国Kospi指数跌破6,000点。美股存储芯片股隔夜大跌的冲击蔓延至亚洲市场，而博通（Broadcom）CEO将当前AI投资规模形容为\"赌场\"的言论，进一步加剧了市场对AI资本开支过热的担忧。", source: "Financial Times", url: "https://www.ft.com/content/e16f0422-cf75-4cc9-962d-4605e421dc63?syn-25a6b1a6=1" },
-  { time: "10:02", tag: "geo", tagText: "地缘", text: "沙特领导联军对也门胡塞武装的军事行动令巴基斯坦陷入两难。伊斯兰堡与利雅得之间的防务协定、以及其在财政上对沙特的依赖，使巴基斯坦几乎没有回避这场冲突的回旋余地，凸显中东战事的外溢压力。", source: "Financial Times", url: "https://www.ft.com/content/7da76744-99d0-43b0-8682-b927a82096f7?syn-25a6b1a6=1" },
-  { time: "10:00", tag: "macro", tagText: "宏观", text: "国际货币基金组织（IMF）在年会期间连发警告：政府债券市场风险正在恶化，收益率可能出现急剧且无序的飙升；同时预计主要经济体将录得自新冠疫情以来最大规模的预算赤字，并呼吁各国采取\"紧急\"行动重建公共财政。IMF还指出，全球经济正呈现\"K型\"分化——受油价冲击较小、且受益于AI需求的经济体正在领先，其他经济体则掉队，美国在这一分化格局中的位置备受关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/treasury-yields-imf-debt-inflation-.html" },
-  { time: "09:55", tag: "crypto", tagText: "加密", text: "随着国际油价走高，加密货币市场承压，比特币、以太坊、XRP与狗狗币普遍下跌。有分析师认为此轮回调\"并非终点\"，但油价上涨与地缘政治风险上升正持续压制风险资产情绪。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMikwJBVV95cUxPZHF4dkI0LUFha1ZTM001RXFIVXF3empCNllBdlBaUDZwRkw1QTFKZGNyS3BwcnRhb2tfSzZqOUt1aVJUOFJtYzYzQ3RnN2RhVV9SRThCdlRUc3Y2dy05eWFsbG15SVYxOWMxXzFGSmRnMEZ6VXRFOV9CRFRaRVRxdmFpUGN6c0laTlV3NFNNTW1CY0packVpUUptdHpFdGJiNnA1TGFOdE5nUWN2Rm85TFRwb0dwYXFVNTJub294N1ZSeWE3TmhwVmpTTWlqeGlBVXlHWmtzb1ZzV01LajJEV2JrM2Q4a3ZuSlF3a0pCbHRqNmNPMTQtS1U2RjFCTHRiQ0RwUmtsUnIyeUpiN1BPb2VwWQ?oc=5" },
-  { time: "08:56", tag: "macro", tagText: "宏观", text: "美股大型银行财报季将于周二盘前揭幕，摩根大通、高盛、花旗与富国银行率先公布业绩，摩根士丹利紧随其后。市场聚焦盈利动能能否支撑高企估值，此前分析师已上调多家银行预期。周一三大股指涨跌互现，标普500指数收盘基本持平，投资者在财报及CPI数据公布前保持观望。", source: "CNBC", url: "https://www.cnbc.com/2026/10/12/stock-market-today-live-updates.html" },
 ];
-const breakingDate = "2026年10月14日 01:32 CST";
+const breakingDate = "2026年10月14日 06:37 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:00", tag: "ai", tagText: "AI", text: "宇树科技（Unitree）CEO 预测，机器人有望在未来一到两年内迎来属于自己的「ChatGPT 时刻」，而这一突破将由 OpenAI 的 GPT-7 驱动。此番表态意味着人形机器人厂商正把通用大模型视为实现具身智能跃迁的关键，若模型能力如期兑现，机器人从演示走向通用作业的时间表可能大幅提前。", source: "TechRadar", url: "https://news.google.com/rss/articles/CBMiogJBVV95cUxOei14X2pBVE5WZTlISG90OHZ6LWtiZTM4cVQwTGh0dXJFRkRuODhlcFcySllqUHhjZFBjLTdJWXhvaEpvOE1ISnc2VGFza1J0TWFJWHZsenpTck13MUdnR0lUYm9WMWttOGZFeGhwODN6M3hFby1UVGFRSkJyNUVnUjZXUk8tSm1pZlNNMkwyV013T1dQX0ktZE0tdjJrN2lvV04wVmdVUHBKNjktcmZpdFYtYnBKYXM4bFR3ckRsNFl3cEx0bFBXOTZIT2QxNmY1SkNwQ1A0UENwQlgzX2JHeWw5aEtEcmFuTzk5RTRXRnNfZE9yMjJrYVVXUmNMdVFDSzg5WExGU2VKU3ZmTURHYTZqWnl1dC04b0lGY0liRmlHZw?oc=5" },
+  { time: "04:45", tag: "tech", tagText: "科技", text: "OpenAI 一名工程师被逮捕。公司称在其办公区发现一枚「复杂的录音设备」，涉事员工被确认为 35 岁的 Abdulrahman Alfozan。事件发生在 OpenAI 推进大规模模型研发与多起商业诉讼的敏感期，或加剧外界对这家头部 AI 公司内部信息安全与保密机制的关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1010642/openai-employee-arrested-recording-device" },
+  { time: "04:36", tag: "tech", tagText: "科技", text: "美国联邦法官裁定，苹果可获取 OpenAI 涉及前苹果员工的面试材料，以及案件关键人物的私人讯息与证词。该案围绕苹果商业秘密纠纷展开，法院要求 OpenAI 交出招聘记录，意味着苹果正试图证明其前员工流向 OpenAI 的过程中存在不当行为。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/" },
+  { time: "03:42", tag: "tech", tagText: "科技", text: "Shopify 宣布向更多 AI 代理开放其商品目录，代理将可浏览并直接完成购买。此前公司已布局「代理式电商」，此次扩展让购物者可以配置让 AI 代为选购的范围。这标志着电商平台正主动为「AI 代购」铺路，但也将交易授权与责任归属问题推向台前。", source: "The Verge", url: "https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents" },
   { time: "01:30", tag: "ai", tagText: "AI", text: "密歇根大学衍生公司 Laplace Intelligence 利用 AI 代理与交互式仿真，在机器人、自动驾驶车辆投入真实世界前对其进行「红队」压力测试。该初创公司已实现盈利，押注自动驾驶与机器人规模化落地前的安全验证需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/" },
+  { time: "01:18", tag: "tech", tagText: "科技", text: "企业安全初创公司 Pluto Security 完成 4200 万美元融资。公司指出，当企业把 AI 工具开放给全员后，员工往往以意料之外的方式使用这些工具，由此形成新的安全缺口。此轮融资反映出资本市场对「AI 带来的企业内部安全治理」这一新兴赛道的押注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/" },
   { time: "01:01", tag: "ai", tagText: "AI", text: "Meta 为 Facebook 推出「Your Algorithm」功能，允许用户直接添加和管理希望出现在信息流及 Reels 中的主题。Meta 称用户调整后推荐结果会「立即响应」，这是平台把推荐算法控制权部分交还给用户的最新尝试。", source: "The Verge", url: "https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai" },
   { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌宣布新功能，支持用户构建并使用仅供自己使用的私人 Android 应用：通过 AI Studio「vibe-coding」生成的应用无需连接电脑即可安装，也不必上架 Play Store 面向所有用户发布。此举降低了个人化 App 的开发与分发门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/" },
   { time: "00:42", tag: "ai", tagText: "AI", text: "演员 Mia Goth 表示，Instagram 任由一张 AI 生成的她的图像在平台上传播「令人无法理解」。相关图像来自一个带有蓝色认证标记的账号，事件凸显社交平台在 AI 深度伪造内容与账号认证机制上的管控漏洞。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "19:54", tag: "tech", tagText: "科技", text: "据 Yahoo Finance 报道，Qnity 押注本地化生产，力图从英伟达与台积电手中争取更多 AI 芯片业务。其 CEO 力推「local-for-local」（本地为本地）策略，反映 AI 芯片供应链区域化趋势正在加速。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZTl3ajA2ZjAzbUpmcVUzWFB2by1rZUpJdVVCaGIxM09ZZFk0SDU0Yi0wYVZTVHV6WDVhMWVBbkZXLUVzbWszLTE3UkdKbG5QbE9ydXlnVk5NMUtSYzdWRlZrYVJSYVVsa0d6SHNYalE1R0dWTzFnUmExQzFqakpROGZnWkpJdTJNZU9GLTFRUWo5Zld2ZVk4VXducw?oc=5" },
   { time: "16:24", tag: "macro", tagText: "宏观", text: "哈萨克斯坦初创企业生态进入新阶段，融资规模与 AI 采用率同步上升。报道称，随着本地资本与政策支持加码，中亚创投市场正从萌芽走向成型，AI 应用成为带动创业公司增长的主要抓手。", source: "The Astana Times", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ19IZmNrQkg5NmQ0SmRnOVEzOU4yTDNia1o1YlQ4Z19VdDZNd0taLUpFcW55dmp1cktvbXlJRzlIR1p3Yk1qUjgzLWJGNy1sM0VkN2VUem91QkJhS0lCTUI2QUIyZURQRjBzWGNsVUNJTUNrUURSVThoaDk0YjFrZklKZGV5SjZvdGF0ZnQ3OWROOEZub3VuU3ZNdGpSRFZfQnVEa2VpUFhfd2V3U1BYcDlR?oc=5" },
   { time: "15:35", tag: "tech", tagText: "科技", text: "半导体工程（Semiconductor Engineering）发布 2026 年第三季度初创企业融资盘点，梳理芯片、设备、材料与 EDA 等半导体产业链的季度融资动向。在 AI 算力需求持续拉动下，半导体上游初创公司仍是资本关注重点，但资金明显向具备量产与客户验证能力的团队集中。", source: "Semiconductor Engineering", url: "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5ldzVsaFRFSFRPcXhuOHlLM0pmZkVEbWJmQjZPRHpLOUlYRDdpZHkwdXc2RnhjSWctUGUwOWIzLThpUFdOWmQzMUtrMW1NWXZKdTlyLW9IaXZBQzhoZzhwYkp3?oc=5" },
-  { time: "15:21", tag: "ai", tagText: "AI", text: "博通（Broadcom）就 AI 需求的可持续性发出警告，触发韩国半导体板块大幅下挫，SK 海力士与三星电子股价均显著走低。市场担忧 AI 算力投资的高速增长难以长期延续，此前推动存储芯片与 AI 供应链估值走高的乐观预期面临修正压力。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiowJBVV95cUxPYWctTE1RMzBXUU94ckhKbjdyTXBhR1VLQ19LSVVHcUJBcFRDVkJjV0FnaWNjYXhlTllVS0VHMGg4MUxWWmlpMjRTRVJ6SWZuRWNuMEQzeFJMbUtoeXkzekJOaF9oVm9YOHF5bUlDMDM4YTV3eHU2REQxNEFiMHN6akhUZEtSUmFjWWRnNmRZQXZyTldOdVVsc1loalB3UWtNdzhBVkhSbUJIaVVEaFg0R2hPbTIyWkRBMEdzRmR5TGl2Z0kxbGUyRjI3OTNQX056Z21BTF91VG92WHJpV09KdTVaX3FleERnb2NQLVhodFItaFBhWThqUXZESXZOZGI3UVpFY241c2hTLXFJRmFxZ3RUZFR6MnNua1R1Mm1LMkVINzA?oc=5" },
-  { time: "14:08", tag: "ai", tagText: "AI", text: "在带领现代汽车跻身全球前三后，会长郑义宣将下一阶段押注于「物理 AI」（Physical AI），即把人工智能与机器人、自动驾驶和智能制造深度结合。此举显示韩国头部工业集团正把 AI 从软件层面向实体产业延伸，寻求新的增长曲线。", source: "The Korea Herald", url: "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1xa0JJd29IRjl6UldPc2FtU0ZKU0lQSjJrMXM3T1Qxb0lMRXFtYlZhRUVYUzg2NzEyZWNYMWtXOHFWWmFWNThObGdhMjB3TFhVbTlIWXNhSQ?oc=5" },
-  { time: "13:53", tag: "ai", tagText: "AI", text: "印度本土 AI 公司 Sarvam AI 正洽谈新一轮融资，拟募资最多 3 亿美元，投后估值约 30 亿美元。该轮融资若落地，将成为印度生成式 AI 领域规模最大的交易之一，反映资本对非美地区主权 AI 与本地语言大模型的兴趣升温。", source: "ET Enterprise AI", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUHBFVVlISnVKVkVsS0dGN2FxRG0tYU81bE1oRmRVQXJWUjZ3blR1aTI1XzlDOXpTb3h6cjh2UmNRVlpmbGJOZGR4eGVyOGUtVUZxRVlmU05FUXZ0bnM4UmszanZWSEd2YXlzaTJGTXlWV0VfUUo2VGdJRG5OTDg3Zkp0b1ZrWkpHREt6NjdPNEI0QUs4VkRydHpyVDN4Sm4zS3p3U1dvRnlkeXVfb2JMWXQ1MDVHdXJFbGcwS0tsbEVCWGlDdkt6U2dSb2hEU2tUVzNSb252dEhwZ9IB3wFBVV95cUxNc0laT0xZd1ItT2VtQ0RsTnlrT3FJV3E5TlEwWXpKNk0weW94N2ZqQ3V3RjJnSmxEeUlEOHBqd3pKOXpBVkpiTS1NYnU1WEhvYmhzSExfcmRtekxGTDFseV9Pc2MtaTdPcHRSN2VoMkJtTjk3ajM4Zi1XRWhLcDZMQ1YtY3FfWjJtYzUwbFA3dGEwOVZCajBISE54WnJHQ1FoX1dpYmdPQ1RGeUVrLWNWQVNzX1k1T3ByRy1hT3RVUGZfdk02NHZrNUxXbTN0RnVfaFF3bDZYaUJxRGJWT0pV?oc=5" },
-  { time: "10:38", tag: "ai", tagText: "AI", text: "据 The Standard (HK) 报道，一份报告显示，英伟达在中国 AI 芯片市场的份额正在下降，华为等本土厂商正快速缩小差距。这一变化反映出在美国出口管制与国产替代持续推进下，中国 AI 算力芯片竞争格局正在重塑，英伟达在中国市场的领先地位面临更大压力。", source: "The Standard (HK)", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNOWc2aURYYUVzWnVtenNjQVNDRVNReFRPOXNKNTJsWWhhZ2hDbnN3cGNwQkJlaGNFUjliVWk4TmRsTjN4a2JqQS1ObTZqQ0xwSEdGbEl1WE82cFh0UmdzYldhNnZKYnFLZWhKRnhBVU5id3hGZUpxNDJLREJ3R1pHN3lld2ZIUUo4bXRoWVZfcTU4NXhYdjBYak9rRklZZ1lXOVdkRjFLY0ZTZnJvWkIyS05UZktpTG9pc2RyYVVDcXpEZw?oc=5" },
-  { time: "09:10", tag: "tech", tagText: "科技", text: "IT Brief Asia 报道，新加坡初创企业吸纳了东南亚地区约 91% 的风险投资资金，凸显区域资本高度集中于单一市场。分析认为，在东南亚整体融资环境趋紧的背景下，新加坡凭借成熟的创投生态、政策支持与人才聚集进一步扩大领先优势，而印尼、越南等其他市场获得的资金占比被持续压缩。", source: "IT Brief Asia", url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMGE4TkFLX29SVkMxdUh1ODJ1WTM2dUhFS3VGTXVocU1qUnRkRmJYLUV6cHh5SEMwYU9HZmh5dDVhczBJcERNU01fQ2QtNGJWQWE4SXVheWdQS1VNVktKRmpGVDFpZW50dFdqVE5xNmFoa3pwT3RTT1A4eEFwU2NOMGZNYXVZdw?oc=5" },
 ];
-const aiBreakingDate = "2026年10月14日 01:32 CST";
+const aiBreakingDate = "2026年10月14日 06:37 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
