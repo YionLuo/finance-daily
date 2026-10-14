@@ -1618,19 +1618,24 @@
 const fearGreedData = {
   score: 44.74,
   rating: "fear",
-  timestamp: "2026-10-13T22:17:25+00:00",
+  timestamp: "2026-10-13T23:59:52+00:00",
   previousClose: 45.74,
   previous1Week: 46.8,
   previous1Month: 32.69,
   previous1Year: 29.74,
-  date: "2026年10月14日 06:37 CST"
+  date: "2026年10月14日 09:48 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "09:43", tag: "macro", tagText: "宏观", text: "中国9月生产者价格（PPI）同比涨幅创2022年6月以来最快，且高于市场预期——路透调查预期为4.5%，前值为3.8%，燃料成本上涨是主要推手。与此同时，市场预计9月出口将录得双位数增长，海关总署将于周三公布贸易数据，显示外需仍具韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/producer-prices-in-china-rise-fastest-since-june-2022-on-fuel-costs.html" },
+  { time: "09:35", tag: "ai", tagText: "AI", text: "Anthropic请求华盛顿特区联邦法院重审其上诉案，该案涉及美国国防部将Anthropic的AI模型列入黑名单。此举是Anthropic在争取联邦政府订单与AI安全审查压力之间寻求突破的最新动作。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/anthropic-wants-court-in-dc-to-rehear-appeal-of-pentagon-blacklist-.html" },
+  { time: "08:28", tag: "macro", tagText: "宏观", text: "新加坡第三季度GDP增速从四年高位放缓，但仍超出市场预期（路透调查预期为5%）。在全球贸易与AI相关需求波动背景下，这个高度外向型经济体的增长动能受到关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/singapore-gdp-q3.html" },
+  { time: "07:05", tag: "macro", tagText: "宏观", text: "高盛指出，投资者正转向寻找中国企业海外业务中“可盈利”的增长。中国国内消费需求疲软，推动包括电动车品牌在内的众多企业加快出海步伐，海外扩张的盈利能力成为选股关键。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/goldman-says-investors-seek-profitable-chinese-business-growth-abroad.html" },
   { time: "06:00", tag: "geo", tagText: "地缘", text: "沙特阿美（Saudi Aramco）总部遭疑似胡塞武装袭击。此前沙特领导的多国联军对也门首都萨那的目标实施打击，伊朗支持的胡塞武装随即实施报复。这是沙特核心能源设施再度成为袭击目标，市场关注其对该国原油生产与出口能力的潜在影响，以及中东局势进一步升级对油价的扰动。", source: "Financial Times", url: "https://www.ft.com/content/a25417b3-d4e4-4b89-b14d-6370a85ce3c4?syn-25a6b1a6=1" },
   { time: "05:27", tag: "geo", tagText: "地缘", text: "梵蒂冈宣布，教皇利奥被诊断患有肺癌。医生已切除其右肺下叶，属根治性手术。梵蒂冈未披露后续治疗方案与预后细节。教皇健康状况历来牵动全球天主教徒及国际政治格局，此前其多次就国际冲突与贫困议题发声。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/pope-leo-diagnosed-lung-cancer-vatican-says.html" },
+  { time: "05:02", tag: "tech", tagText: "科技", text: "芯片股遭遇16个月来最长连跌，AI疲劳情绪笼罩市场。存储芯片制造商大幅下挫拖累纳指收低，标普500基本收平。博通CEO“赌徒”言论、美光面临中国存储芯片厂商竞争加剧等因素，共同加深了市场对AI巨额资本开支回报的疑虑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ai-fatigue-is-gripping-the-market-and-driving-chip-stocks-toward-their-worst-stretch-in-16-months-6dc78ece?mod=mw_rss_topstories" },
   { time: "04:54", tag: "ai", tagText: "AI", text: "美国联邦调查局（FBI）逮捕了一名沙特籍OpenAI员工，其涉嫌在OpenAI会议室安装录音设备。该AI实验室发现窃听装置后向FBI报案，美方已对其提起起诉。此事发生在ChatGPT开发商及其竞争对手因AI安全实践而面临日益严格审查之际，也令AI企业与地缘政治、国家安全议题的交集再度升温。", source: "Financial Times", url: "https://www.ft.com/content/2c3b583a-3ddc-4920-a350-9698c119435c?syn-25a6b1a6=1" },
   { time: "04:45", tag: "macro", tagText: "宏观", text: "美国银行（Bank of America）因违反反洗钱规定被美国财政部处以12亿美元罚款。该处罚在美银发布季度财报前不到一天公布，凸显监管机构对大型银行合规体系的持续高压。市场关注该笔罚金对美银当季盈利与资本回报计划的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/bank-of-america-treasury-money-laundering.html" },
   { time: "04:29", tag: "macro", tagText: "宏观", text: "联合健康（UnitedHealth）再度上调业绩指引，第三季度医疗赔付率（医疗成本占保费收入比）为88.4%，显示其控费措施见效。在保险公司普遍面临医疗支出上升压力的背景下，该巨头对医疗成本的有效控制成为其盈利超预期的关键，也为即将公布的保险板块财报定下基调。", source: "MarketWatch", url: "https://www.marketwatch.com/story/unitedhealth-keeps-medical-costs-under-control-and-raises-its-outlook-again-71abc99c?mod=mw_rss_topstories" },
@@ -1644,16 +1649,16 @@ const breakingNews = [
   { time: "17:03", tag: "macro", tagText: "宏观", text: "法国正式开启2027年预算辩论。高额赤字、不断攀升的债务以及学生抗议正持续加大立法者的压力，这个全球最大经济体之一正陷入债务困局。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/france-2027-budget-debt.html" },
   { time: "16:46", tag: "tech", tagText: "科技", text: "法国超市冷柜遭遇网络攻击，引发食品安全警报。部分门店冷柜温度一度高达80°C，导致设备熔化、食品损毁，凸显关键基础设施面临的网络威胁。", source: "FT", url: "https://www.ft.com/content/6908a0ce-ffdd-4ea9-b376-d35d362639f3?syn-25a6b1a6=1" },
   { time: "16:27", tag: "ai", tagText: "AI", text: "Anthropic最新研究警告，AI模型可能很快将具备在家庭设备间自我复制的能力，这进一步加剧了围绕AI安全的担忧，从模型实施网络攻击到技术失控的风险均受关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html" },
-  { time: "16:24", tag: "tech", tagText: "科技", text: "IDC数据显示，英伟达在中国AI芯片市场的份额已降至34%，华为则持续抢占份额。这一数据反映出美国出口管制与中国本土替代进程下，英伟达在中国市场的地位正被削弱。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVm9JY1RJX0hYcERmWjVPcW1oUktJejViVE9kZUdNY3ZfVWJndWtrZjFrZnhydk90MmtVOU1DblcwQ2tuRkM4YjVhck1GTmtQRjJRakE5bGRjZmhkS3Z3YkNfNTAtc1lZNWhEdUJQYV9MV0NlbzJjV0lqMzlybk91WGNqUzhIeTE5TTNTN1RRZUtRNFo5ZlpHRjYyXzRYZVdReDZMN3E2R0ZnWlJOdHdFVQ?oc=5" },
-  { time: "12:10", tag: "macro", tagText: "宏观", text: "IMF上调2026年全球增长预期至3.1%，认为AI繁荣在一定程度上抵消了战争冲击，全球放缓程度较此前预期温和。但IMF同时警告，各国经济的韧性正接近极限，能源约束与迫在眉睫的财政风险将持续构成考验。", source: "CNBC", url: "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "FT报道指出，未来12个月内欧盟五大成员国中将有四国举行选举，欧洲极右翼势力正逼近权力中心，整个欧盟的格局可能被永久改变。", source: "FT", url: "https://www.ft.com/content/ec433e1f-bdb4-4a1c-868e-e1c7c4121f45?syn-25a6b1a6=1" },
-  { time: "11:49", tag: "macro", tagText: "宏观", text: "国际油价下跌，交易员正在权衡俄罗斯柴油供应前景与沙特-胡塞武装冲突可能带来的供应中断风险之间的博弈。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/oil-prices-today-brent-wti-hormuz.html" },
-  { time: "11:19", tag: "macro", tagText: "宏观", text: "IMF警告亚洲“僵尸企业”风险上升。该地区无法偿付债务的企业占比自2008年以来已翻倍，凸显企业资产负债表恶化与金融脆弱性加剧。", source: "FT", url: "https://www.ft.com/content/ee4105fc-aa85-47ef-aa64-1fc3f344d740?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月14日 06:37 CST";
+const breakingDate = "2026年10月14日 09:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:13", tag: "tech", tagText: "科技", text: "Neuralink 联合创始人、前总裁 Max Hodak 创办的 Science Corporation，已为全球首例 Stargardt 病患者植入其视力修复芯片 PRIMA。Hodak 在 TechCrunch Disrupt 上表示，这一视网膜植入项目是公司迈向新型脑机接口（BCI）路径的关键一步，标志视觉修复类神经假体进入临床落地阶段。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient/" },
+  { time: "07:05", tag: "ai", tagText: "AI", text: "Cerebras CEO Andrew Feldman 在 TechCrunch Disrupt 上预测，个人 AI 助理将像家用电器一样普及，算力部分在本地设备、部分在云端协同运行；同时他对业内流行的 AI 末日论调提出反驳，认为对风险的过度聚焦正在压过对技术潜力的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/" },
+  { time: "07:00", tag: "ai", tagText: "AI", text: "工业机器人公司 Industrial Next 瞄准制造业中长期依赖人工的复杂精细工序，主打让工厂机器人「换任务只需几分钟、而非几周」。其方案意在解决柔性生产中机器人重编程成本高、周期长的痛点，若落地顺利将推动制造业自动化渗透率进一步提升。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/" },
+  { time: "06:00", tag: "ai", tagText: "AI", text: "现代汽车集团会长掌舵满六周年之际，将「物理 AI」（Physical AI）确立为核心战略方向，力图把 AI 能力从软件延伸至汽车、机器人与智能制造等实体场景。这显示传统车企正加速向具身智能与自动化制造转型，以对冲电动化竞争加剧带来的压力。", source: "The Korea Times", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOY2g0R29NX1hSa0ZuUzJveFVZYUQ1YzVVNEItNnRkUjY0TnRHNi1fY1ppaVc2YmotOEt3YXhCeWxLNVN1NGQ2c2hGNVJYclBocEhKcDgzNjMtdjFPeGJ1bWJjTFR0UGgtUzNwdWZqQkQzaHB5U3k3bXpPcDQ2S05KUzktWkJWN21WSjItamJ6eV84clptQzRHV25xYXFyNURmamNLWGkxeFVNUDFCeWs2cTJta25zcE54WGFYcEE5T1YyaVQtMEh5ZTZvUTNUUlUz0gHQAUFVX3lxTE5jaDRHb01fWFJrRm5TMm94VVlhRDVjNVU0Qi02dGRSNjROdEc2LV9jWmlpVzZiai04S3dheEJ5bEs1U3U0ZDZzaEY1UlhyUGhwSEpwODM2My12MU94YnVtYmNMVHRQaC1TM3B1ZmpCRDNocHlTeTdtek9wNDZLTkpTOS1aQlY3bVZKMi1qYnp5XzhyWm1DNEdXbnFhcXI1RGZqY0tYaTF4VU1QMUJ5azZxMm1rbnNwTnhYYVhwQTlPVjJpVC0wSHllNm9RM1RSVTM?oc=5" },
+  { time: "05:33", tag: "tech", tagText: "科技", text: "Topgolf 在迁离 VMware 后累计节省超过 1130 万美元。此前其业务与 VMware 深度绑定，而在博通收购 VMware 并大幅调整授权与定价模式后，越来越多企业选择迁移，Topgolf 的案例成为这一「去 VMware」趋势中成本收益较为显著的样本。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/10/topgolf-saved-over-11-3-million-after-leaving-vmware/" },
   { time: "05:00", tag: "ai", tagText: "AI", text: "宇树科技（Unitree）CEO 预测，机器人有望在未来一到两年内迎来属于自己的「ChatGPT 时刻」，而这一突破将由 OpenAI 的 GPT-7 驱动。此番表态意味着人形机器人厂商正把通用大模型视为实现具身智能跃迁的关键，若模型能力如期兑现，机器人从演示走向通用作业的时间表可能大幅提前。", source: "TechRadar", url: "https://news.google.com/rss/articles/CBMiogJBVV95cUxOei14X2pBVE5WZTlISG90OHZ6LWtiZTM4cVQwTGh0dXJFRkRuODhlcFcySllqUHhjZFBjLTdJWXhvaEpvOE1ISnc2VGFza1J0TWFJWHZsenpTck13MUdnR0lUYm9WMWttOGZFeGhwODN6M3hFby1UVGFRSkJyNUVnUjZXUk8tSm1pZlNNMkwyV013T1dQX0ktZE0tdjJrN2lvV04wVmdVUHBKNjktcmZpdFYtYnBKYXM4bFR3ckRsNFl3cEx0bFBXOTZIT2QxNmY1SkNwQ1A0UENwQlgzX2JHeWw5aEtEcmFuTzk5RTRXRnNfZE9yMjJrYVVXUmNMdVFDSzg5WExGU2VKU3ZmTURHYTZqWnl1dC04b0lGY0liRmlHZw?oc=5" },
   { time: "04:45", tag: "tech", tagText: "科技", text: "OpenAI 一名工程师被逮捕。公司称在其办公区发现一枚「复杂的录音设备」，涉事员工被确认为 35 岁的 Abdulrahman Alfozan。事件发生在 OpenAI 推进大规模模型研发与多起商业诉讼的敏感期，或加剧外界对这家头部 AI 公司内部信息安全与保密机制的关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1010642/openai-employee-arrested-recording-device" },
   { time: "04:36", tag: "tech", tagText: "科技", text: "美国联邦法官裁定，苹果可获取 OpenAI 涉及前苹果员工的面试材料，以及案件关键人物的私人讯息与证词。该案围绕苹果商业秘密纠纷展开，法院要求 OpenAI 交出招聘记录，意味着苹果正试图证明其前员工流向 OpenAI 的过程中存在不当行为。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "21:50", tag: "ai", tagText: "AI", text: "X 推出新的订阅打包服务，将 X Premium 付费功能与 Grok、Cursor 等 AI 工具整合进同一订阅，月费区间为 8 美元至 200 美元。此举被视为马斯克体系内社交平台与 AI 产品深度捆绑、加速变现的动作，同时也把 AI 编程工具 Cursor 纳入其订阅生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscription/" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "苹果正式发布其首款智能家居显示屏 Apple HomeView，传闻多年的产品终于落地。The Verge 记者在纽约率先体验后称该设备外观精致，配备小尺寸高质感屏幕，主打家庭中枢场景。此举意味着苹果正式进军由亚马逊与谷歌主导的智能显示市场。", source: "The Verge", url: "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "美国运通（Amex）推出新框架，用于确保 AI 代理只执行用户已授权的购买行为，以防范 AI 代购模式普及后可能出现的错误下单与交易纠纷。此举旨在为「AI 代理购物」建立支付安全与责任界定标准，是金融机构针对代理式 AI 商业场景的首批风控尝试之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/" },
-  { time: "20:23", tag: "ai", tagText: "AI", text: "据 TechCrunch 与 The Verge 报道，生成式 AI 浪潮首批明星初创公司之一的 Character.AI 已申请破产，并将其部分资产以 2000 万美元出售给迪士尼。该公司成立于约五年前，主营面向用户的各类在线聊天机器人，曾是 AI 陪伴类应用的标杆企业，其倒下被视为行业从炒作转向整合的标志性事件。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/" },
-  { time: "19:58", tag: "macro", tagText: "宏观", text: "据《华尔街日报》报道，全球 AI 板块抛售进一步加剧，纳斯达克期货走低。AI 概念股的高估值与算力投资回报疑虑正从亚洲市场蔓延至美国市场，风险偏好明显收缩。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNaV9QVFVsbXRmd3pZTmU1SjAtTnJNT2ZoZ1QyUUpJUWc2eG5YS1lDaTA1bEZoc21DWUxTWTBOd1UtWE5wcDgtNklJMzM5VWhhTkdyV3JCVVJrVU9YY1ExaklxLU9sOHFvX1pkT2o0cVJkZ3dTbnBtT1VfdnZ3Qm43VUF0dWR2OXY3X0RiTGNhWC0wV2JqdF9VazU1UDI?oc=5" },
-  { time: "19:54", tag: "tech", tagText: "科技", text: "据 Yahoo Finance 报道，Qnity 押注本地化生产，力图从英伟达与台积电手中争取更多 AI 芯片业务。其 CEO 力推「local-for-local」（本地为本地）策略，反映 AI 芯片供应链区域化趋势正在加速。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZTl3ajA2ZjAzbUpmcVUzWFB2by1rZUpJdVVCaGIxM09ZZFk0SDU0Yi0wYVZTVHV6WDVhMWVBbkZXLUVzbWszLTE3UkdKbG5QbE9ydXlnVk5NMUtSYzdWRlZrYVJSYVVsa0d6SHNYalE1R0dWTzFnUmExQzFqakpROGZnWkpJdTJNZU9GLTFRUWo5Zld2ZVk4VXducw?oc=5" },
-  { time: "16:24", tag: "macro", tagText: "宏观", text: "哈萨克斯坦初创企业生态进入新阶段，融资规模与 AI 采用率同步上升。报道称，随着本地资本与政策支持加码，中亚创投市场正从萌芽走向成型，AI 应用成为带动创业公司增长的主要抓手。", source: "The Astana Times", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ19IZmNrQkg5NmQ0SmRnOVEzOU4yTDNia1o1YlQ4Z19VdDZNd0taLUpFcW55dmp1cktvbXlJRzlIR1p3Yk1qUjgzLWJGNy1sM0VkN2VUem91QkJhS0lCTUI2QUIyZURQRjBzWGNsVUNJTUNrUURSVThoaDk0YjFrZklKZGV5SjZvdGF0ZnQ3OWROOEZub3VuU3ZNdGpSRFZfQnVEa2VpUFhfd2V3U1BYcDlR?oc=5" },
-  { time: "15:35", tag: "tech", tagText: "科技", text: "半导体工程（Semiconductor Engineering）发布 2026 年第三季度初创企业融资盘点，梳理芯片、设备、材料与 EDA 等半导体产业链的季度融资动向。在 AI 算力需求持续拉动下，半导体上游初创公司仍是资本关注重点，但资金明显向具备量产与客户验证能力的团队集中。", source: "Semiconductor Engineering", url: "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5ldzVsaFRFSFRPcXhuOHlLM0pmZkVEbWJmQjZPRHpLOUlYRDdpZHkwdXc2RnhjSWctUGUwOWIzLThpUFdOWmQzMUtrMW1NWXZKdTlyLW9IaXZBQzhoZzhwYkp3?oc=5" },
 ];
-const aiBreakingDate = "2026年10月14日 06:37 CST";
+const aiBreakingDate = "2026年10月14日 09:48 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
