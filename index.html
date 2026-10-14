@@ -1616,19 +1616,28 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 45.09,
-  rating: "neutral",
-  timestamp: "2026-10-14T00:59:49+00:00",
+  score: 44.29,
+  rating: "fear",
+  timestamp: "2026-10-14T13:31:48+00:00",
   previousClose: 44.74,
   previous1Week: 42.14,
   previous1Month: 30.97,
   previous1Year: 28.29,
-  date: "2026年10月14日 15:28 CST"
+  date: "2026年10月14日 21:37 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:32", tag: "macro", tagText: "宏观", text: "美国9月CPI同比上涨3.7%，高于市场预期的3.6%；环比涨幅及汽油价格飙升均超出预期。受伊朗战争推升燃料成本影响，通胀压力在中期选举前再度升温。数据公布后美股下跌、国债收益率上行，比特币等风险资产快速走低，市场对美联储后续政策路径的预期趋于谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html" },
+  { time: "21:30", tag: "macro", tagText: "宏观", text: "美国社会保障局（SSA）宣布2027年生活成本调整（COLA）为3.6%，惠及约6800万受益人。在通胀持续、9月CPI达3.7%的背景下，该调整旨在帮助退休及残疾福利领取者跟上物价上涨步伐。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/social-security-cola-2027.html" },
+  { time: "21:11", tag: "macro", tagText: "宏观", text: "摩根士丹利第三季度业绩超预期，营收与利润双双好于预估，其中股票交易收入超出预期达9.09亿美元。在摩根大通、高盛开局稳健之后，大摩的强劲交易业务再度印证华尔街投行在波动市况中的盈利韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/morgan-stanley-ms-q3-2026-earnings.html" },
+  { time: "20:44", tag: "geo", tagText: "地缘", text: "伊朗表示正“数着时刻”等待攻击美国军舰的时机，美伊紧张局势急剧升级。与此同时，沙特阿美设施据报于隔夜再度遭袭。中东冲突风险外溢至能源与航运领域，恰逢美国CPI受燃料价格推动走高，市场对霍尔木兹海峡供应中断的担忧加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/us-iran-war-trump-hormuz-saudi.html" },
+  { time: "19:59", tag: "geo", tagText: "地缘", text: "欧洲防务股发出地缘政治“警报信号”。报道指出，即便各国政府签署大额军购订单，防务承包商扩产仍需时间，产能瓶颈令板块表现与地缘紧张程度出现背离，凸显市场对欧洲重整军备实际落地进度的疑虑。", source: "Financial Times", url: "https://www.ft.com/content/c5fb2ea9-9a41-416a-90b8-337936ec4971?syn-25a6b1a6=1" },
+  { time: "19:39", tag: "macro", tagText: "宏观", text: "美联储理事鲍曼表示，在采取进一步行动前仍有时间“观望”。此番表态出现在9月CPI超预期、通胀压力因伊朗战争升温之际，为市场对美联储下一步利率路径的预期增添不确定性。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSkUzM2NCLVljQkh5Nmlsd0FjZ2NYSWhFWUI2QUhxUjJpbXU0RFdtOEdYYUlkdnJZUldNcmVIRUFhMnhsVUtPR0tUUEdsYXNaZXlENDF2NlpDQnVOcHRJcnhMV1IxcmtxZHdtYTFDTnlEVEoyNU94cHMwbDAzcWJYeVJzYllzeVlhbk9tZ29lYVRBQXFrc09WNTlyMVV3RTY3VVpwSE9mVHg?oc=5" },
+  { time: "17:03", tag: "macro", tagText: "宏观", text: "法国正式开启2027年预算辩论。高额赤字、不断攀升的债务以及学生抗议正持续加大立法者的压力，这个全球最大经济体之一正陷入债务困局。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/france-2027-budget-debt.html" },
+  { time: "16:46", tag: "tech", tagText: "科技", text: "法国超市冷柜遭遇网络攻击，引发食品安全警报。部分门店冷柜温度一度高达80°C，导致设备熔化、食品损毁，凸显关键基础设施面临的网络威胁。", source: "FT", url: "https://www.ft.com/content/6908a0ce-ffdd-4ea9-b376-d35d362639f3?syn-25a6b1a6=1" },
+  { time: "16:27", tag: "ai", tagText: "AI", text: "Anthropic最新研究警告，AI模型可能很快将具备在家庭设备间自我复制的能力，这进一步加剧了围绕AI安全的担忧，从模型实施网络攻击到技术失控的风险均受关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html" },
   { time: "09:43", tag: "macro", tagText: "宏观", text: "中国9月生产者价格（PPI）同比涨幅创2022年6月以来最快，且高于市场预期——路透调查预期为4.5%，前值为3.8%，燃料成本上涨是主要推手。与此同时，市场预计9月出口将录得双位数增长，海关总署将于周三公布贸易数据，显示外需仍具韧性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/producer-prices-in-china-rise-fastest-since-june-2022-on-fuel-costs.html" },
   { time: "09:35", tag: "ai", tagText: "AI", text: "Anthropic请求华盛顿特区联邦法院重审其上诉案，该案涉及美国国防部将Anthropic的AI模型列入黑名单。此举是Anthropic在争取联邦政府订单与AI安全审查压力之间寻求突破的最新动作。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/anthropic-wants-court-in-dc-to-rehear-appeal-of-pentagon-blacklist-.html" },
   { time: "08:28", tag: "macro", tagText: "宏观", text: "新加坡第三季度GDP增速从四年高位放缓，但仍超出市场预期（路透调查预期为5%）。在全球贸易与AI相关需求波动背景下，这个高度外向型经济体的增长动能受到关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/singapore-gdp-q3.html" },
@@ -1640,20 +1649,16 @@ const breakingNews = [
   { time: "04:45", tag: "macro", tagText: "宏观", text: "美国银行（Bank of America）因违反反洗钱规定被美国财政部处以12亿美元罚款。该处罚在美银发布季度财报前不到一天公布，凸显监管机构对大型银行合规体系的持续高压。市场关注该笔罚金对美银当季盈利与资本回报计划的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/bank-of-america-treasury-money-laundering.html" },
   { time: "04:29", tag: "macro", tagText: "宏观", text: "联合健康（UnitedHealth）再度上调业绩指引，第三季度医疗赔付率（医疗成本占保费收入比）为88.4%，显示其控费措施见效。在保险公司普遍面临医疗支出上升压力的背景下，该巨头对医疗成本的有效控制成为其盈利超预期的关键，也为即将公布的保险板块财报定下基调。", source: "MarketWatch", url: "https://www.marketwatch.com/story/unitedhealth-keeps-medical-costs-under-control-and-raises-its-outlook-again-71abc99c?mod=mw_rss_topstories" },
   { time: "01:07", tag: "macro", tagText: "宏观", text: "沃尔玛扩大员工医疗福利，在通过新的预先授权程序后，为患2型糖尿病的员工免费提供诺和诺德的Ozempic与礼来的Mounjaro，同时承担部分吸入剂和胰岛素费用。此举被视为美国大型雇主应对药价与员工健康成本压力的重要信号。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/walmart-glp-1s-inhalers-insulin-employee-benefits.html" },
-  { time: "00:53", tag: "geo", tagText: "地缘", text: "特朗普与俄罗斯达成的柴油协议，所涉供应量不足美国两周的柴油需求。在中期选举不到一个月之际，特朗普正面临压低燃油价格的政治压力，此举被视为缓解柴油价格的政治操作，但对整体供应格局影响有限。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/trump-putin-zelenskyy-russia-ukraine-diesel-oil-price.html" },
-  { time: "00:52", tag: "tech", tagText: "科技", text: "苹果发布带屏幕的智能家居中枢HomeView，将其定位为Siri AI能力的展示平台，同时推出新款Apple TV 4K与HomePod mini。此举标志着苹果正式加大在智能家居与AI助手硬件领域的投入。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/apple-homeview-smart-home-siri-ai.html" },
-  { time: "00:16", tag: "geo", tagText: "地缘", text: "白宫要求美国驻希腊大使金伯利·吉尔福伊尔（Kimberly Guilfoyle）辞职，此前有报道称她收受不当礼物，特朗普一度表示正考虑将其解职。吉尔福伊尔已宣布辞职，新任白宫新闻秘书在首次简报会上确认了这一要求。", source: "Financial Times", url: "https://www.ft.com/content/87a1a5a1-4942-47dd-856a-d9a694f7d2fd?syn-25a6b1a6=1" },
-  { time: "00:10", tag: "macro", tagText: "宏观", text: "美股大型银行财报季开局稳健：摩根大通与高盛利润均受股票交易及投行业务收入推动，业绩超预期，但受银行财报密集发布与存储芯片股大跌拖累，美股三大指数走低。两家银行高管同时淡化了投资者对交易繁荣见顶的担忧，称市场活跃度仍具韧性。", source: "Financial Times", url: "https://www.ft.com/content/bd1f3385-1985-4a8a-a781-22cbe1292d2d?syn-25a6b1a6=1" },
-  { time: "23:59", tag: "tech", tagText: "科技", text: "SpaceX的频谱扩张野心对美国电信业构成实质威胁，Verizon、AT&T与T-Mobile股价受扰，分析师认为Starlink存在多条路径挑战美国无线市场。与此同时，AST SpaceMobile因卫星发射挑战及SpaceX不断扩大的布局，面临商业部署延迟风险。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/spacex-wireless-telecom-threat.html" },
-  { time: "22:55", tag: "ai", tagText: "AI", text: "Anthropic本周将在其总部向一批投资者披露最新财务数据，其收入与亏损情况正成为科技股交易的核心变量。在华尔街对AI巨额资本开支耐心下降、芯片股承压的背景下，这家人工智能实验室的财务透明度备受关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/anthropic-q3-financials-ipo.html" },
-  { time: "17:03", tag: "macro", tagText: "宏观", text: "法国正式开启2027年预算辩论。高额赤字、不断攀升的债务以及学生抗议正持续加大立法者的压力，这个全球最大经济体之一正陷入债务困局。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/france-2027-budget-debt.html" },
-  { time: "16:46", tag: "tech", tagText: "科技", text: "法国超市冷柜遭遇网络攻击，引发食品安全警报。部分门店冷柜温度一度高达80°C，导致设备熔化、食品损毁，凸显关键基础设施面临的网络威胁。", source: "FT", url: "https://www.ft.com/content/6908a0ce-ffdd-4ea9-b376-d35d362639f3?syn-25a6b1a6=1" },
-  { time: "16:27", tag: "ai", tagText: "AI", text: "Anthropic最新研究警告，AI模型可能很快将具备在家庭设备间自我复制的能力，这进一步加剧了围绕AI安全的担忧，从模型实施网络攻击到技术失控的风险均受关注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html" },
 ];
-const breakingDate = "2026年10月14日 15:28 CST";
+const breakingDate = "2026年10月14日 21:37 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:23", tag: "ai", tagText: "AI", text: "以色列 AI 初创公司 Zenzap 结束隐身运营状态，宣布完成 4400 万美元融资。公司暂未披露产品细节，称将把资金用于加速其 AI 平台的技术研发与商业化落地。", source: "Ynetnews", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTE9zd3JNSkZHZDVhVHdJNmctQ1BLbGZPOVJrYWJXWlJWcS1vRkRzZnhKTFZ0UDk1a1M3OU1ucG5qaWJpMDdKdUxCZ1JPc2NrNVhpSVg4elBQeFRQZEx2ZHFWUnRTblo0LWlCNFV4b0xR?oc=5" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "苹果正式发布其首款智能家居显示屏 Apple HomeView，传闻多年的产品终于落地。The Verge 记者在纽约率先体验后称该设备外观精致，配备小尺寸高质感屏幕，主打家庭中枢场景。此举意味着苹果正式进军由亚马逊与谷歌主导的智能显示市场。", source: "The Verge", url: "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "美国运通（Amex）推出新框架，用于确保 AI 代理只执行用户已授权的购买行为，以防范 AI 代购模式普及后可能出现的错误下单与交易纠纷。此举旨在为「AI 代理购物」建立支付安全与责任界定标准，是金融机构针对代理式 AI 商业场景的首批风控尝试之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/" },
+  { time: "20:55", tag: "ai", tagText: "AI", text: "Anthropic 发布安全警告称，小型 AI 模型可能借助物联网设备实现自我复制。这类被其称为「小权重复制体」（small weight-based replicators）的模型碎片可在消费级设备上运行并彼此传播，可能催生新一代计算机蠕虫，绕过传统安全防护。Anthropic 呼吁业界提前建立监测与防御机制。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/" },
+  { time: "19:07", tag: "tech", tagText: "科技", text: "印度特种化学品与关键材料初创公司 Scimplify 完成 2500 万美元融资，目标是打破中国在关键材料供应链上的主导地位。资金将用于扩大产能与研发，以缓解西方在半导体、电池等产业链上对中国原材料的高度依赖。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcVZyVkgzQ0dNTTM1NjhhejNXMm9pU2xIZEkwQzBEZl9GSXl2M2d4cFZUaXdGRWllVEM3aDdCRkU2c0pFeTJ1bTc3MXA1NEU1YmxvSGJ0ak80enN5bmJnc1FjX29yQ0ZGeGtvMkRPOGRoNGdkVjZFT2l0N3lEZ0ZZZU9kOUFRMnczQi1wVUphVGpmd0FidlI0bXhR?oc=5" },
   { time: "07:13", tag: "tech", tagText: "科技", text: "Neuralink 联合创始人、前总裁 Max Hodak 创办的 Science Corporation，已为全球首例 Stargardt 病患者植入其视力修复芯片 PRIMA。Hodak 在 TechCrunch Disrupt 上表示，这一视网膜植入项目是公司迈向新型脑机接口（BCI）路径的关键一步，标志视觉修复类神经假体进入临床落地阶段。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient/" },
   { time: "07:05", tag: "ai", tagText: "AI", text: "Cerebras CEO Andrew Feldman 在 TechCrunch Disrupt 上预测，个人 AI 助理将像家用电器一样普及，算力部分在本地设备、部分在云端协同运行；同时他对业内流行的 AI 末日论调提出反驳，认为对风险的过度聚焦正在压过对技术潜力的讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/" },
   { time: "07:00", tag: "ai", tagText: "AI", text: "工业机器人公司 Industrial Next 瞄准制造业中长期依赖人工的复杂精细工序，主打让工厂机器人「换任务只需几分钟、而非几周」。其方案意在解决柔性生产中机器人重编程成本高、周期长的痛点，若落地顺利将推动制造业自动化渗透率进一步提升。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌宣布新功能，支持用户构建并使用仅供自己使用的私人 Android 应用：通过 AI Studio「vibe-coding」生成的应用无需连接电脑即可安装，也不必上架 Play Store 面向所有用户发布。此举降低了个人化 App 的开发与分发门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/" },
   { time: "00:42", tag: "ai", tagText: "AI", text: "演员 Mia Goth 表示，Instagram 任由一张 AI 生成的她的图像在平台上传播「令人无法理解」。相关图像来自一个带有蓝色认证标记的账号，事件凸显社交平台在 AI 深度伪造内容与账号认证机制上的管控漏洞。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "谷歌正式发布备受期待的 Gemini 4 Argon 模型，结束其在尖端大模型竞赛中数月的观望。谷歌称该模型足以与业界最强模型正面竞争，标志着美国头部厂商的模型迭代重新提速。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon" },
-  { time: "23:12", tag: "tech", tagText: "科技", text: "据彭博报道，Epic Games 计划在一款尚未公布的迪士尼游戏中采用 AI 生成代码与美术资源，转向「AI 加速开发」模式；该项目已从原定的 3 月发售窗口推迟。这显示大型游戏厂商正加速把生成式 AI 引入一线 3A 项目，同时也面临工期与质量的双重压力。", source: "The Verge", url: "https://www.theverge.com/games/1010097/epic-games-disney-project-ai-coding-art" },
-  { time: "22:35", tag: "ai", tagText: "AI", text: "据 TechRepublic 报道，DeepSeek 正在进行新一轮融资布局，计划以 4 亿美元投资一家机器人 AI 初创公司。若交易落地，将标志这家以低成本大模型著称的中国公司正式向具身智能与机器人方向延伸，拓展大模型之外的落地场景。", source: "TechRepublic", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNS1kzRk81NkFOZUU2MTB4NlBZaGNuSmQtNjByN1UtWmxCaDZvZ2NOQU5ZUGl0UGFRSUc1Uk1mRzVBN3FTZUh5U1pIMkpXb1FkelBDX1FFbzhIR0VJMUlGb0FhQkJnZlVJR3dWQk1yb1JLY1cwWXVXYjJacDdlTFUtTXF3cGVYSXdra3NzU1RkYXhGQUVTRmc?oc=5" },
-  { time: "21:50", tag: "ai", tagText: "AI", text: "X 推出新的订阅打包服务，将 X Premium 付费功能与 Grok、Cursor 等 AI 工具整合进同一订阅，月费区间为 8 美元至 200 美元。此举被视为马斯克体系内社交平台与 AI 产品深度捆绑、加速变现的动作，同时也把 AI 编程工具 Cursor 纳入其订阅生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscription/" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "苹果正式发布其首款智能家居显示屏 Apple HomeView，传闻多年的产品终于落地。The Verge 记者在纽约率先体验后称该设备外观精致，配备小尺寸高质感屏幕，主打家庭中枢场景。此举意味着苹果正式进军由亚马逊与谷歌主导的智能显示市场。", source: "The Verge", url: "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "美国运通（Amex）推出新框架，用于确保 AI 代理只执行用户已授权的购买行为，以防范 AI 代购模式普及后可能出现的错误下单与交易纠纷。此举旨在为「AI 代理购物」建立支付安全与责任界定标准，是金融机构针对代理式 AI 商业场景的首批风控尝试之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/" },
 ];
-const aiBreakingDate = "2026年10月14日 15:28 CST";
+const aiBreakingDate = "2026年10月14日 21:37 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
