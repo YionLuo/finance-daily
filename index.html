@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 29.91,
+  score: 31.91,
   rating: "fear",
-  timestamp: "2026-10-15T13:04:16+00:00",
+  timestamp: "2026-10-15T15:33:28+00:00",
   previousClose: 32.33,
   previous1Week: 39.8,
   previous1Month: 27.97,
   previous1Year: 27.41,
-  date: "2026年10月15日 21:20 CST"
+  date: "2026年10月15日 23:36 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,12 @@ const breakingNews = [
   { time: "04:57", tag: "macro", tagText: "宏观", text: "贝莱德表示，其管理资产规模在增长15%后已接近15.5万亿美元，相当于美国经济规模的一半左右。这一体量再度凸显全球最大资产管理公司在资本市场中的系统重要性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/blackrock-now-has-assets-equal-to-half-the-size-of-the-u-s-economy-after-15-growth-c382b289?mod=mw_rss_topstories" },
   { time: "04:24", tag: "tech", tagText: "科技", text: "国防科技初创公司Anduril的员工股权招标（tender offer）将公司估值推高至约900亿美元。该公司是美国国防科技热潮以及特朗普推动军工产业再工业化计划的主要受益者之一。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/anduril-tender-offer-valuation.html" },
 ];
-const breakingDate = "2026年10月15日 21:20 CST";
+const breakingDate = "2026年10月15日 23:36 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:02", tag: "ai", tagText: "AI", text: "Rivian 计划将 AI 代理引入其车辆，具体实现方式预计将在公司 12 月举办的「AI & Autonomy Day」活动上进一步揭晓。此举显示车企正把生成式 AI 代理从座舱助手延伸至更广泛的车辆交互与控制场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/" },
+  { time: "22:30", tag: "tech", tagText: "科技", text: "微软与英伟达上周在旧金山举办发布活动，推出首批搭载 RTX Spark 平台的 AI PC 笔记本，微软正针对该平台优化 Windows（包括记事本等系统级应用），新一波 AI PC 就此进入市场。", source: "The Verge", url: "https://www.theverge.com/tech/1011996/microsoft-windows-rtx-spark-platform-changes-notepad" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌正式上线「通用购物车」（Universal Cart）AI 工具，赶在黑色星期五及年末购物季前推出。该功能今年 5 月在 I/O 开发者大会上首次预览，可跨商家汇总商品、由 AI 智能管理购物车与比价，相当于把 Gemini 能力嵌入电商入口，直接对亚马逊的购物生态构成挑战。", source: "The Verge", url: "https://www.theverge.com/tech/1011797/google-ai-universal-cart-shopping-tool-launch" },
   { time: "21:00", tag: "tech", tagText: "科技", text: "苹果正式发布其首款智能家居显示屏 Apple HomeView，传闻多年的产品终于落地。The Verge 记者在纽约率先体验后称该设备外观精致，配备小尺寸高质感屏幕，主打家庭中枢场景。此举意味着苹果正式进军由亚马逊与谷歌主导的智能显示市场。", source: "The Verge", url: "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "亚马逊旗下 Bee 发布被收购后的首批新品，命名为 Frontier 与 Eclipse：一款为升级版可穿戴设备，另一款为信用卡大小、可吸附在手机上的 AI 录音器，起售价 75 美元。两款产品可实时记录并摘要对话，并首次接入购物能力，用户可借语音直接下单，凸显亚马逊把「常时聆听」型 AI 硬件与电商闭环绑定的战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "00:43", tag: "ai", tagText: "AI", text: "OpenAI 指控一名前员工在跳槽苹果前带走逾 100 份涉及公司产品规划的文件。在周三提交的法律文书中，OpenAI 称该未具名员工将这些资料发送出去，并已向苹果方面展示相关产品计划，事件令两家公司在 AI 人才与知识产权上的摩擦公开化。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1011276/openai-employee-unreleased-product-plans" },
   { time: "00:42", tag: "macro", tagText: "宏观", text: "太空初创企业融资在第三季度创下 208 亿美元的历史纪录，基础设施类投资激增，成为推高融资规模的主要动力。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSmdJRkVWT25MTUxHMDVhYmRBOFBSMWFnXzUyemtGTWhIN3JJcFRKcGgzR3Q3Q0NRRVpSUGozcDRzUmhCcUp0RzZoX1JEb3FmWDQwcVFqTmpCUEduSTU0WEd1VmZVRHk4M2FBZ0lsLTdRZFY0Y19PNFBpZWNkTnFTSU1rM0xjMy1Bc2IzVF92ZWxYOU8wRi0wM0FpSWVUZWQ0ZnU2RktJUQ?oc=5" },
   { time: "00:42", tag: "ai", tagText: "AI", text: "演员 Mia Goth 表示，Instagram 任由一张 AI 生成的她的图像在平台上传播「令人无法理解」。相关图像来自一个带有蓝色认证标记的账号，事件凸显社交平台在 AI 深度伪造内容与账号认证机制上的管控漏洞。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce" },
-  { time: "00:19", tag: "ai", tagText: "AI", text: "英伟达发布 cuPotential 库，并宣布多家半导体龙头采用 CUDA-X，推动 AI 深入芯片设计与制造环节，打造所谓「AI 定义的晶圆厂」。公司同时与 ChipAgents 合作推出 Build-A-Chip-Bench，用于自主芯片设计与实现，覆盖设计、良率优化等流程。", source: "NVIDIA Newsroom", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQY0JQSW1rVk16Vk96aEt1QzRJeHNUNXZfclVRVlBFdmhhQ09HS2N3YUlfRnRTejgtdGkwc040QWdHbXkyVXFJcW1uaTdZdV9EMUo0ZDN6cnFiOWxneTlidVpIYmljSHJkTVJaNmhUTDRwb2czQXNtN00taFQ5MkhBZVlITUN6QTBYcUVrdV8tQXFtcDJ2d2EwRjVONU1VdGRCNUhRRnBUbUp1UFRfMmNqaWFJMVdRVXRLa2UzTF9yVmhnM0VadXk3TzRSTjJMZGJn?oc=5" },
-  { time: "00:05", tag: "ai", tagText: "AI", text: "微软推出新的机器学习工具用于改进天气预报。研究人员称，传统基于物理的预报乃至现有 AI 模型在两周之后可靠性都会明显下降，而新方法借助机器学习缓解了这一长期难题。", source: "The Verge", url: "https://www.theverge.com/science/1011127/ai-weather-forecast-microsoft" },
 ];
-const aiBreakingDate = "2026年10月15日 21:20 CST";
+const aiBreakingDate = "2026年10月15日 23:36 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
