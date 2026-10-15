@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 31.91,
+  score: 31.83,
   rating: "fear",
-  timestamp: "2026-10-15T15:33:28+00:00",
+  timestamp: "2026-10-15T18:07:34+00:00",
   previousClose: 32.33,
   previous1Week: 39.8,
   previous1Month: 27.97,
   previous1Year: 27.41,
-  date: "2026年10月15日 23:36 CST"
+  date: "2026年10月16日 02:12 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "01:55", tag: "geo", tagText: "地缘", text: "美国司法部起诉加利福尼亚州，围绕邮寄选票的选民公民身份核查问题展开法律战。此时距决定国会两院控制权的中期选举已不足一个月，选举合规争议持续升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/california-mail-ballots-voting-lawsuit.html" },
+  { time: "01:52", tag: "tech", tagText: "科技", text: "苹果与Meta达成合作，使其Muse AI模型（Muse Spark Open）更易在Mac电脑上本地运行，通过集群式Mac Studio系统实现本地化部署。此举凸显科技巨头在端侧AI与开源模型生态上的合作加深。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/apple-meta-partner-ai.html" },
+  { time: "01:06", tag: "macro", tagText: "宏观", text: "美国2027年社会保障生活成本调整（COLA）确定为3.6%，逾6800万受益人平均每月社保金将增加约75美元，以应对持续的通胀压力。与此同时，围绕COLA是否应设限、削减甚至取消的政策争论正在升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-securitys-cola-will-be-3-6-in-2027-as-inflation-persists-f7c9dff2?mod=mw_rss_topstories" },
+  { time: "00:07", tag: "crypto", tagText: "加密", text: "比特币面临8万美元关键考验，市场普遍认为这一关口将决定加密市场本轮牛市周期能否延续。在AI交易动荡、宏观不确定性加剧的背景下，加密资产走势受到密切关注。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUlVLMFNfb1hhNjNVZnJBRkNPYlR2Uk9FeWc2NVc4MWdFRTRRZm9XdzJ4b1RJd0piOWNCN0IwbmhxMU1BNW1Oalc0UHRQNWs0R1l2aW0yZHdrbzZob21Hb1NEUWJaRFBCc3V6WnVZUS1YQ3F4bUtQZ3MxMFVDUVFoaGRmZzZ1TGdrTVJxdkVreXJPdUdtZS1qYnJqeDNLSHVhcUJwSHdBWTJQNnczR2Q3WTRCaTU?oc=5" },
+  { time: "23:25", tag: "ai", tagText: "AI", text: "AI基础设施债务市场承压：投资者正在抛售数据中心债券，AI基础设施提供商与neocloud公司发行的债券已跌向困境（stressed）区间，市场担忧AI融资的可持续性，有分析师称AI借款方正面临\"达尔文时刻\"。与此同时，避险资金涌入美国国债，全球芯片股连续两日遭遇抛售，《金融时报》警告AI危机冲击股市的风险正在上升。", source: "Financial Times", url: "https://www.ft.com/content/678bcd31-6c2a-447b-a68c-ce6dec220bbc?syn-25a6b1a6=1" },
   { time: "21:18", tag: "macro", tagText: "宏观", text: "美国9月生产者价格指数（PPI）同比上涨6.3%，为2022年以来最大涨幅，远超市场预期的5.5%，环比增幅亦高于预期。批发端通胀意外跳升，令投资者对美联储政策路径与债市走向更趋谨慎，并进一步加剧风险资产抛售压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/september-producer-price-index-retail-sales-data.html" },
   { time: "21:00", tag: "geo", tagText: "地缘", text: "瑞信在Greensill和解中从保险公司获得8亿美元赔付。但据《金融时报》报道，承保保单的保险公司并非主要出资方，经纪商Marsh将承担最大份额。此为Greensill倒闭相关纠纷的重要进展。", source: "Financial Times", url: "https://www.ft.com/content/43c9d38a-652a-45df-b3be-c3dead3390f1?syn-25a6b1a6=1" },
   { time: "20:40", tag: "macro", tagText: "宏观", text: "在美国债务突破40万亿美元、10年期国债收益率维持在5%以上之际，IMF就美国财政前景发出债务警告，美国财政部则驳斥其预测\"一团糟\"。分析指出，2万亿美元赤字与5%以上的国债收益率正成为美国经济最大挑战，持续推高家庭与政府的借贷成本。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/zervos-imf-us-debt-warning.html" },
@@ -1644,16 +1649,22 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基表示将恢复对俄罗斯炼油厂的打击，并在采访中对美国撤回情报共享、削弱星链服务表达强烈不满。马斯克则回应称，对星链速度或使用的任何限制均由美国军方决定，并最终取决于总统。", source: "Financial Times", url: "https://www.ft.com/content/4d79b52f-1f0d-4739-82ab-7ecfb4251326?syn-25a6b1a6=1" },
   { time: "11:48", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic第三季度营收据称高达168亿美元，为即将到来的IPO铺路。尽管增速惊人，但市场对其估值仍存疑虑，科技股期货随之走低，反映投资者对AI商业化回报前景趋于谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/anthropics-third-quarter-revenue-hits-16point8-billion-ipo.html" },
   { time: "05:54", tag: "macro", tagText: "宏观", text: "美国小盘股在两个月内从历史高点回落10%，正式进入回调区间，创下投资者不愿看到的里程碑。市场将此轮快速下跌归因于通胀数据超预期推动加息押注升温、以及对AI相关交易的广泛抛售，风险偏好明显降温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/from-a-record-high-to-a-10-drop-in-just-two-months-why-small-cap-stocks-have-unraveled-so-fast-1cf0f4d5?mod=mw_rss_topstories" },
-  { time: "05:40", tag: "macro", tagText: "宏观", text: "美国银行（BofA）公布的季度财报利润不及市场预期，再加上高达12亿美元的政府罚款，投资者失望情绪升温，股价随之下跌。该行成为本轮银行财报季中表现承压的代表，凸显监管成本对业绩的拖累。", source: "MarketWatch", url: "https://www.marketwatch.com/story/bank-of-america-adds-a-profit-miss-to-the-misery-of-a-1-2-billion-government-fine-d4420bfa?mod=mw_rss_topstories" },
-  { time: "05:37", tag: "geo", tagText: "地缘", text: "乌克兰因星链（Starlink）服务受限与情报缺口而措手不及。报道称，莫斯科无视特朗普提出的“能源停火”，而基辅部队在马斯克旗下卫星网络上遭遇连接问题，凸显其对单一商业卫星通信体系的高度依赖正成为安全软肋。", source: "Financial Times", url: "https://www.ft.com/content/37085602-726a-44dc-a859-51caab38eb75?syn-25a6b1a6=1" },
-  { time: "05:09", tag: "ai", tagText: "AI", text: "OpenAI遭美国8个州联合起诉，焦点是ChatGPT的安全隐患，尤其是公司在保护儿童方面的措施。该公司正面临愈演愈烈的安全与合规审查压力，此前已因模型安全实践受到多方质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html" },
-  { time: "04:57", tag: "macro", tagText: "宏观", text: "贝莱德表示，其管理资产规模在增长15%后已接近15.5万亿美元，相当于美国经济规模的一半左右。这一体量再度凸显全球最大资产管理公司在资本市场中的系统重要性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/blackrock-now-has-assets-equal-to-half-the-size-of-the-u-s-economy-after-15-growth-c382b289?mod=mw_rss_topstories" },
-  { time: "04:24", tag: "tech", tagText: "科技", text: "国防科技初创公司Anduril的员工股权招标（tender offer）将公司估值推高至约900亿美元。该公司是美国国防科技热潮以及特朗普推动军工产业再工业化计划的主要受益者之一。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/anduril-tender-offer-valuation.html" },
 ];
-const breakingDate = "2026年10月15日 23:36 CST";
+const breakingDate = "2026年10月16日 02:12 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:00", tag: "ai", tagText: "AI", text: "初创公司 Apate.ai 将 AI 代理派去「卧底」被骗，以此收集诈骗情报。与多数企业用 AI 代理加速产品交付或优化工作流不同，Apate 让代理主动接触诈骗者，用于构建反欺诈情报体系。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/" },
+  { time: "01:30", tag: "ai", tagText: "AI", text: "密歇根大学衍生公司 Laplace Intelligence 利用 AI 代理与交互式仿真，在机器人、自动驾驶车辆投入真实世界前对其进行「红队」压力测试。该初创公司已实现盈利，押注自动驾驶与机器人规模化落地前的安全验证需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/" },
+  { time: "01:18", tag: "tech", tagText: "科技", text: "企业安全初创公司 Pluto Security 完成 4200 万美元融资。公司指出，当企业把 AI 工具开放给全员后，员工往往以意料之外的方式使用这些工具，由此形成新的安全缺口。此轮融资反映出资本市场对「AI 带来的企业内部安全治理」这一新兴赛道的押注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/" },
+  { time: "01:03", tag: "macro", tagText: "宏观", text: "美联储官员 Goolsbee 警告，AI 资本支出热潮的影响已从局部涨价扩散为更广泛的通胀压力，成为货币政策制定者需要关注的新变量。此番表态意味着 AI 基础设施投资周期正被纳入通胀与利率路径的评估框架。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQ2NqUDZVdWhRYnU0QWZTazJmdE9QZ1lCZm96UUlhVHhQR0tqeTlqUlo4c2I3ZmlEMENmLTJCYVFPV2hkR25icGFiV0N4UHRDRUJUS2VpS2pBZnBxUEtnT1k5Q3pobHVxX0xoQ21aY052Y0MxdGIzTV9zYlprSTBhZ2lKeHV5MzBsQ3l6VUl3OWFsWkhrM0NHeXFRSVctZzNF?oc=5" },
+  { time: "01:01", tag: "ai", tagText: "AI", text: "Meta 为 Facebook 推出「Your Algorithm」功能，允许用户直接添加和管理希望出现在信息流及 Reels 中的主题。Meta 称用户调整后推荐结果会「立即响应」，这是平台把推荐算法控制权部分交还给用户的最新尝试。", source: "The Verge", url: "https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai" },
+  { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌宣布新功能，支持用户构建并使用仅供自己使用的私人 Android 应用：通过 AI Studio「vibe-coding」生成的应用无需连接电脑即可安装，也不必上架 Play Store 面向所有用户发布。此举降低了个人化 App 的开发与分发门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/" },
+  { time: "00:45", tag: "ai", tagText: "AI", text: "分析指出，英伟达与博通正以两条不同叙事主导 AI 芯片格局：英伟达凭 GPU 软硬件生态继续把持训练与推理的通用算力，博通则依靠定制 ASIC 与网络芯片承接超大规模云厂商的自研需求。两条路线的此消彼长，正在重塑数据中心算力供应链与竞争格局。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMzdfSmxzV0ZUdGlxTzV4YzAyYW5iVVhfcHBsb2lLRXBpRUVfX3c3a2dPYkxzYmtLS0ZONjdEVjROQ3ZpUUw0NlZsQnRTTHZLQmVlVWV4MkZxVjc1bW5ETXR6ZXBicEtCTHdtemtmc1BTSEs5VVBRQlJCZEJGaHp5c0ZNTW1oNHVEN09sQVl0SFluVHBtd2dqalB2VURYaEhjZFJsMjhn?oc=5" },
+  { time: "00:43", tag: "ai", tagText: "AI", text: "OpenAI 指控一名前员工在跳槽苹果前带走逾 100 份涉及公司产品规划的文件。在周三提交的法律文书中，OpenAI 称该未具名员工将这些资料发送出去，并已向苹果方面展示相关产品计划，事件令两家公司在 AI 人才与知识产权上的摩擦公开化。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1011276/openai-employee-unreleased-product-plans" },
+  { time: "00:42", tag: "macro", tagText: "宏观", text: "太空初创企业融资在第三季度创下 208 亿美元的历史纪录，基础设施类投资激增，成为推高融资规模的主要动力。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSmdJRkVWT25MTUxHMDVhYmRBOFBSMWFnXzUyemtGTWhIN3JJcFRKcGgzR3Q3Q0NRRVpSUGozcDRzUmhCcUp0RzZoX1JEb3FmWDQwcVFqTmpCUEduSTU0WEd1VmZVRHk4M2FBZ0lsLTdRZFY0Y19PNFBpZWNkTnFTSU1rM0xjMy1Bc2IzVF92ZWxYOU8wRi0wM0FpSWVUZWQ0ZnU2RktJUQ?oc=5" },
+  { time: "00:42", tag: "ai", tagText: "AI", text: "演员 Mia Goth 表示，Instagram 任由一张 AI 生成的她的图像在平台上传播「令人无法理解」。相关图像来自一个带有蓝色认证标记的账号，事件凸显社交平台在 AI 深度伪造内容与账号认证机制上的管控漏洞。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce" },
+  { time: "00:21", tag: "tech", tagText: "科技", text: "The Verge 关注到一股新兴消费硬件趋势：越来越多以「AI 助手」「随身穿戴」为卖点的设备，会持续采集使用者周围所有人的语音与环境信息，而被拍摄、被录音的旁观者根本无从表示同意。随着这类设备进入家庭与公共场所，数据同意与隐私边界正引发更大争议。", source: "The Verge", url: "https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent" },
   { time: "23:02", tag: "ai", tagText: "AI", text: "Rivian 计划将 AI 代理引入其车辆，具体实现方式预计将在公司 12 月举办的「AI & Autonomy Day」活动上进一步揭晓。此举显示车企正把生成式 AI 代理从座舱助手延伸至更广泛的车辆交互与控制场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/" },
   { time: "22:30", tag: "tech", tagText: "科技", text: "微软与英伟达上周在旧金山举办发布活动，推出首批搭载 RTX Spark 平台的 AI PC 笔记本，微软正针对该平台优化 Windows（包括记事本等系统级应用），新一波 AI PC 就此进入市场。", source: "The Verge", url: "https://www.theverge.com/tech/1011996/microsoft-windows-rtx-spark-platform-changes-notepad" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌正式上线「通用购物车」（Universal Cart）AI 工具，赶在黑色星期五及年末购物季前推出。该功能今年 5 月在 I/O 开发者大会上首次预览，可跨商家汇总商品、由 AI 智能管理购物车与比价，相当于把 Gemini 能力嵌入电商入口，直接对亚马逊的购物生态构成挑战。", source: "The Verge", url: "https://www.theverge.com/tech/1011797/google-ai-universal-cart-shopping-tool-launch" },
@@ -1663,19 +1674,8 @@ const aiBreakingNews = [
   { time: "13:49", tag: "ai", tagText: "AI", text: "英伟达 CEO 表示，将停止向“危险的 AI”出售芯片，并反驳 AI 需求放缓的说法。此举凸显头部芯片厂商在 AI 安全与销售政策上的最新立场。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQX0VWOWdYeUxZQ0kwSk0xMm1xeEx3MnVhQ2I5Y1A3OTR1amFqb3lOcjBYTTkzQkVqRnBnaUdfc1IxT05VdGJSSkVOeXdQaURFYTJIeUdTYWI4cVlIdzdadVI0bHFTYXdFTnd4UGpBSVVIR1RiS2FYdVhScXEzd2V6SFFDVzJxRGxH?oc=5" },
   { time: "12:30", tag: "ai", tagText: "AI", text: "Figma 宣布推出新功能，用于定义 AI 代理在其平台上的工作方式；同时将其代码层（code layers）功能开放公测，进一步把 AI 代理引入设计协作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/" },
   { time: "09:51", tag: "tech", tagText: "科技", text: "Verizon CTO 呼吁在 6G 上行链路上实现突破，以满足 AI 带来的上行数据需求增长。这显示电信运营商正为 AI 时代的网络架构提前布局。", source: "ET Telecom", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOb3JZY0VDXzYyNlhKT3dNdGhOV2hrZEVxeTJzWTY3Y3QtNmNQOXZTbmZvZ1lRNkp1OFVXcDBiTHl1a1FqS0pZTlFTQ3FzazdkeDU2dTVoSTRtUmRIanhVVU1FWVFTLVJVSzBURDFjamppZlhJM1llQmNDRmNiNktKaWkwc3dIU01GTi1BQmwwUTk4Q2gxbjhPY3BoWlFGcWxuV0FKRjNCQnNhdk0tNjY1bzltV3JHV2lOWWJDTTRPRmpqYnhkQkxTS05sX3QtNGlo0gHQAUFVX3lxTE5vclljRUNfNjI2WEpPd010aE5XaGtkRXF5MnNZNjdjdC02Y1A5dlNuZm9nWVE2SnU4VVdwMGJMeXVrUWpLSllOUVNDcXNrN2R4NTZ1NWhJNG1SZEhqeFVVTUVZUVMtUlVLMFREMWNqamlmWEkzWWVCY0NGY2I2S0ppaTBzd0hTTUZOLUFCbDBROThDaDFuOE9jcGhaUUZxbG5XQUpGM0JCc2F2TS02NjVvOW1XckdXaU5ZYkNNNE9GampieGRCTFNLTmxfdC00aWg?oc=5" },
-  { time: "05:30", tag: "ai", tagText: "AI", text: "美国监控技术公司 Flock 首席执行官 Langley 公开称，其设备的麦克风「只检测枪声」；但公司官网对该功能的描述与之不符，引发外界质疑。此番表态正值 Flock 面临 ACLU 等隐私倡导组织及公众日益升温的审查，批评者担心其技术被滥用。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/" },
-  { time: "02:47", tag: "ai", tagText: "AI", text: "纽约州总检察长 Letitia James 披露，多州已对 Character.AI 展开长达数年的联合调查。随着该公司进入破产程序，检方要求对通过破产流程出售的消费者数据施加保护措施，大量用户聊天与个人数据的最终去向成为焦点。", source: "The Verge", url: "https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy" },
-  { time: "02:23", tag: "ai", tagText: "AI", text: "面对 AI 生成音乐大量涌入流媒体平台，YouTube Music 推出新标签，会在播放页标明完全由 AI 生成、或部分参与（如作曲、演唱）的歌曲。同日 Deezer 也表示，将于年底前上线开关，允许用户直接过滤掉 AI 生成音乐。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/" },
-  { time: "02:00", tag: "ai", tagText: "AI", text: "初创公司 Apate.ai 将 AI 代理派去「卧底」被骗，以此收集诈骗情报。与多数企业用 AI 代理加速产品交付或优化工作流不同，Apate 让代理主动接触诈骗者，用于构建反欺诈情报体系。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/" },
-  { time: "01:30", tag: "ai", tagText: "AI", text: "密歇根大学衍生公司 Laplace Intelligence 利用 AI 代理与交互式仿真，在机器人、自动驾驶车辆投入真实世界前对其进行「红队」压力测试。该初创公司已实现盈利，押注自动驾驶与机器人规模化落地前的安全验证需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/" },
-  { time: "01:18", tag: "tech", tagText: "科技", text: "企业安全初创公司 Pluto Security 完成 4200 万美元融资。公司指出，当企业把 AI 工具开放给全员后，员工往往以意料之外的方式使用这些工具，由此形成新的安全缺口。此轮融资反映出资本市场对「AI 带来的企业内部安全治理」这一新兴赛道的押注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/" },
-  { time: "01:01", tag: "ai", tagText: "AI", text: "Meta 为 Facebook 推出「Your Algorithm」功能，允许用户直接添加和管理希望出现在信息流及 Reels 中的主题。Meta 称用户调整后推荐结果会「立即响应」，这是平台把推荐算法控制权部分交还给用户的最新尝试。", source: "The Verge", url: "https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai" },
-  { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌宣布新功能，支持用户构建并使用仅供自己使用的私人 Android 应用：通过 AI Studio「vibe-coding」生成的应用无需连接电脑即可安装，也不必上架 Play Store 面向所有用户发布。此举降低了个人化 App 的开发与分发门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/" },
-  { time: "00:43", tag: "ai", tagText: "AI", text: "OpenAI 指控一名前员工在跳槽苹果前带走逾 100 份涉及公司产品规划的文件。在周三提交的法律文书中，OpenAI 称该未具名员工将这些资料发送出去，并已向苹果方面展示相关产品计划，事件令两家公司在 AI 人才与知识产权上的摩擦公开化。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1011276/openai-employee-unreleased-product-plans" },
-  { time: "00:42", tag: "macro", tagText: "宏观", text: "太空初创企业融资在第三季度创下 208 亿美元的历史纪录，基础设施类投资激增，成为推高融资规模的主要动力。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSmdJRkVWT25MTUxHMDVhYmRBOFBSMWFnXzUyemtGTWhIN3JJcFRKcGgzR3Q3Q0NRRVpSUGozcDRzUmhCcUp0RzZoX1JEb3FmWDQwcVFqTmpCUEduSTU0WEd1VmZVRHk4M2FBZ0lsLTdRZFY0Y19PNFBpZWNkTnFTSU1rM0xjMy1Bc2IzVF92ZWxYOU8wRi0wM0FpSWVUZWQ0ZnU2RktJUQ?oc=5" },
-  { time: "00:42", tag: "ai", tagText: "AI", text: "演员 Mia Goth 表示，Instagram 任由一张 AI 生成的她的图像在平台上传播「令人无法理解」。相关图像来自一个带有蓝色认证标记的账号，事件凸显社交平台在 AI 深度伪造内容与账号认证机制上的管控漏洞。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce" },
 ];
-const aiBreakingDate = "2026年10月15日 23:36 CST";
+const aiBreakingDate = "2026年10月16日 02:12 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
