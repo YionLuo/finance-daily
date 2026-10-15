@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.45,
+  score: 29.91,
   rating: "fear",
-  timestamp: "2026-10-15T00:59:54+00:00",
+  timestamp: "2026-10-15T13:04:16+00:00",
   previousClose: 32.33,
   previous1Week: 39.8,
   previous1Month: 27.97,
   previous1Year: 27.41,
-  date: "2026年10月15日 15:19 CST"
+  date: "2026年10月15日 21:20 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:18", tag: "macro", tagText: "宏观", text: "美国9月生产者价格指数（PPI）同比上涨6.3%，为2022年以来最大涨幅，远超市场预期的5.5%，环比增幅亦高于预期。批发端通胀意外跳升，令投资者对美联储政策路径与债市走向更趋谨慎，并进一步加剧风险资产抛售压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/september-producer-price-index-retail-sales-data.html" },
+  { time: "21:00", tag: "geo", tagText: "地缘", text: "瑞信在Greensill和解中从保险公司获得8亿美元赔付。但据《金融时报》报道，承保保单的保险公司并非主要出资方，经纪商Marsh将承担最大份额。此为Greensill倒闭相关纠纷的重要进展。", source: "Financial Times", url: "https://www.ft.com/content/43c9d38a-652a-45df-b3be-c3dead3390f1?syn-25a6b1a6=1" },
+  { time: "20:40", tag: "macro", tagText: "宏观", text: "在美国债务突破40万亿美元、10年期国债收益率维持在5%以上之际，IMF就美国财政前景发出债务警告，美国财政部则驳斥其预测\"一团糟\"。分析指出，2万亿美元赤字与5%以上的国债收益率正成为美国经济最大挑战，持续推高家庭与政府的借贷成本。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/zervos-imf-us-debt-warning.html" },
+  { time: "20:01", tag: "tech", tagText: "科技", text: "芝加哥期权交易所（Cboe）将延长主要股票与ETF的期权交易时段，覆盖24只交投最活跃个股及5只ETF，新增美东时间早7:30至9:25及下午4:00至4:15的交易，进一步拓展盘前盘后衍生品交易。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/cboe-stock-etf-options-extended-hours.html" },
+  { time: "20:00", tag: "geo", tagText: "地缘", text: "德国总理默茨誓言顶住压力继续推进不受欢迎的改革，并宣称\"我们是防火墙\"。他在接受《金融时报》专访时表示，决心带领欧洲应对动荡时代。", source: "Financial Times", url: "https://www.ft.com/content/da781749-f146-48a7-9b5c-83911addabae?syn-25a6b1a6=1" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "亚马逊推出新款Bee系列\"个人AI\"设备：售价75美元的Bee Frontier为可穿戴手环的升级版，100美元的Bee Eclipse可连接用户智能手机。两款设备均具备监听对话的功能，凸显消费级AI硬件竞争升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/amazon-bee-frontier-eclipse-ai-devices.html" },
+  { time: "18:44", tag: "geo", tagText: "地缘", text: "美国军方正评估对伊朗的打击选项，据报包括可能动用其武库中最大的非核炸弹之一\"炸弹之母\"（MOAB）；与此同时伊朗誓言继续战斗。中东紧张局势进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/us-iran-war-trump-hormuz.html" },
   { time: "15:15", tag: "macro", tagText: "宏观", text: "全球AI抛售加剧，亚洲股市全线重挫。韩国Kospi一度暴跌7%至8%并触发熔断，日经225指数大跌5%，追随隔夜美股跌势。此前美国CPI数据超预期升温加息押注，叠加市场对AI板块高估值的担忧，风险资产遭广泛抛售。", source: "Financial Times", url: "https://www.ft.com/content/cf5f1209-da29-4ce1-b425-0e83818bf9ec?syn-25a6b1a6=1" },
   { time: "15:15", tag: "macro", tagText: "宏观", text: "英国8月经济环比增长0.1%，好于市场预期。但该国仍深陷由粘性通胀与能源成本飙升引发的生活成本危机，增长动能脆弱，前景仍面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/uk-gdp-august-2026-economy.html" },
   { time: "14:22", tag: "tech", tagText: "科技", text: "印度亿万富翁安巴尼旗下的Jio Platforms将于本月晚些时候启动大规模IPO，但因与马斯克围绕卫星互联网的争执而面临估值审视，市场对其定价与预期回报趋于谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/india-starlink-musk-jio-ambani-ipo.html" },
@@ -1642,18 +1649,15 @@ const breakingNews = [
   { time: "05:09", tag: "ai", tagText: "AI", text: "OpenAI遭美国8个州联合起诉，焦点是ChatGPT的安全隐患，尤其是公司在保护儿童方面的措施。该公司正面临愈演愈烈的安全与合规审查压力，此前已因模型安全实践受到多方质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html" },
   { time: "04:57", tag: "macro", tagText: "宏观", text: "贝莱德表示，其管理资产规模在增长15%后已接近15.5万亿美元，相当于美国经济规模的一半左右。这一体量再度凸显全球最大资产管理公司在资本市场中的系统重要性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/blackrock-now-has-assets-equal-to-half-the-size-of-the-u-s-economy-after-15-growth-c382b289?mod=mw_rss_topstories" },
   { time: "04:24", tag: "tech", tagText: "科技", text: "国防科技初创公司Anduril的员工股权招标（tender offer）将公司估值推高至约900亿美元。该公司是美国国防科技热潮以及特朗普推动军工产业再工业化计划的主要受益者之一。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/anduril-tender-offer-valuation.html" },
-  { time: "04:19", tag: "ai", tagText: "AI", text: "戴尔股价暴跌11%，领跌数据中心板块。巴克莱下调戴尔、慧与（HPE）与NetApp评级，理由是担忧企业级AI的采用时机滞后。分析师认为相关个股进一步上行空间有限，内存组件市场格局也可能生变。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/dell-stock-barclays-enterprise-ai.html" },
-  { time: "04:16", tag: "macro", tagText: "宏观", text: "Perella Weinberg与Piper Sandler放弃合并谈判。该交易原本将缔造一家股权价值超过60亿美元的独立投资银行，谈判破裂反映出中型投行整合道路上的分歧与阻力。", source: "Financial Times", url: "https://www.ft.com/content/dadac221-a4dd-4935-897e-7f7faebe8f17?syn-25a6b1a6=1" },
-  { time: "02:24", tag: "crypto", tagText: "加密", text: "比特币与以太坊领跌，加密货币市场在通胀数据超预期、市场加息押注升温后承压回落。债券收益率上行令风险资产普遍遭抛售，数字资产同步走弱，市场情绪转向谨慎。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQm5TbTljZE1JSEFDWTZTY2U2V2cybU9ZX1BnZDZyVDh2ck1lbHZBQWNiYXpXZ0x5eC1DLVd6VjhqcjJCTkdkMDMzbkZ3LWZfdTl4ZUp2eF8xUWExRVR4dXpqeG5mNVAxVTh2R1ZWaFk0R3NDYWZ2N0FMME5NV3oyaVJHNUhFR3lpdURXVC1SQUVYY0Zxa25VR2RJWlllbUttOUE?oc=5" },
-  { time: "02:23", tag: "ai", tagText: "AI", text: "CoreWeave股价暴跌15%，其债券收益率逼近15%，凸显市场对AI领域举债狂潮的担忧。该公司持续大举借贷以扩张数据中心与算力，随着债券价格暴跌、收益率飙升，投资者开始质疑AI基础设施建设的融资可持续性，相关信用风险成为焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html" },
-  { time: "02:18", tag: "geo", tagText: "地缘", text: "一艘集装箱船在霍尔木兹海峡沉没，伊朗近几周加大了对过境商船的袭击力度，试图掐断原油出口的复苏势头。此举令本就因伊朗战争而紧张的中东局势进一步升级，能源与航运通道安全风险外溢。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/container-ship-sinks-strait-hormuz-as-iran-war-attacks.html" },
-  { time: "01:58", tag: "tech", tagText: "科技", text: "伯克希尔·哈撒韦向科技集团Bending Spoons追加3.3亿美元投资。消息公布后，这家同时拥有AOL与Vimeo的综合企业股价一度飙升逾40%，随后回落，显示市场对其扩大科技投资布局反应积极。", source: "Financial Times", url: "https://www.ft.com/content/3f821be4-f137-4cc9-b0b0-b2014f2607c2?syn-25a6b1a6=1" },
-  { time: "01:08", tag: "macro", tagText: "宏观", text: "房利美大幅上调2027年房贷利率预测，另有机构预计利率将维持在7%以上，对购房者与卖房者均构成利空。在通胀居高不下、债券收益率上行的背景下，美国住房市场融资成本恐长期高企。", source: "CNBC", url: "https://www.cnbc.com/2026/10/14/fannie-mae-sharply-raises-mortgage-rate-forecast-for-2027-.html" },
 ];
-const breakingDate = "2026年10月15日 15:19 CST";
+const breakingDate = "2026年10月15日 21:20 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌正式上线「通用购物车」（Universal Cart）AI 工具，赶在黑色星期五及年末购物季前推出。该功能今年 5 月在 I/O 开发者大会上首次预览，可跨商家汇总商品、由 AI 智能管理购物车与比价，相当于把 Gemini 能力嵌入电商入口，直接对亚马逊的购物生态构成挑战。", source: "The Verge", url: "https://www.theverge.com/tech/1011797/google-ai-universal-cart-shopping-tool-launch" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "苹果正式发布其首款智能家居显示屏 Apple HomeView，传闻多年的产品终于落地。The Verge 记者在纽约率先体验后称该设备外观精致，配备小尺寸高质感屏幕，主打家庭中枢场景。此举意味着苹果正式进军由亚马逊与谷歌主导的智能显示市场。", source: "The Verge", url: "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "亚马逊旗下 Bee 发布被收购后的首批新品，命名为 Frontier 与 Eclipse：一款为升级版可穿戴设备，另一款为信用卡大小、可吸附在手机上的 AI 录音器，起售价 75 美元。两款产品可实时记录并摘要对话，并首次接入购物能力，用户可借语音直接下单，凸显亚马逊把「常时聆听」型 AI 硬件与电商闭环绑定的战略。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/" },
+  { time: "19:00", tag: "tech", tagText: "科技", text: "The Verge 调查披露，卡通造型陪伴机器人 Eiliko 存在严重隐私隐患：设备经 Wi-Fi 将用户（包括儿童）的对话与情绪数据回传至中国境内服务器，且缺乏有效防护，可被入侵窃取。事件再度引发对 AI 玩具数据安全与跨境传输的担忧。", source: "The Verge", url: "https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab" },
   { time: "13:49", tag: "ai", tagText: "AI", text: "英伟达 CEO 表示，将停止向“危险的 AI”出售芯片，并反驳 AI 需求放缓的说法。此举凸显头部芯片厂商在 AI 安全与销售政策上的最新立场。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQX0VWOWdYeUxZQ0kwSk0xMm1xeEx3MnVhQ2I5Y1A3OTR1amFqb3lOcjBYTTkzQkVqRnBnaUdfc1IxT05VdGJSSkVOeXdQaURFYTJIeUdTYWI4cVlIdzdadVI0bHFTYXdFTnd4UGpBSVVIR1RiS2FYdVhScXEzd2V6SFFDVzJxRGxH?oc=5" },
   { time: "12:30", tag: "ai", tagText: "AI", text: "Figma 宣布推出新功能，用于定义 AI 代理在其平台上的工作方式；同时将其代码层（code layers）功能开放公测，进一步把 AI 代理引入设计协作流程。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/" },
   { time: "09:51", tag: "tech", tagText: "科技", text: "Verizon CTO 呼吁在 6G 上行链路上实现突破，以满足 AI 带来的上行数据需求增长。这显示电信运营商正为 AI 时代的网络架构提前布局。", source: "ET Telecom", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOb3JZY0VDXzYyNlhKT3dNdGhOV2hrZEVxeTJzWTY3Y3QtNmNQOXZTbmZvZ1lRNkp1OFVXcDBiTHl1a1FqS0pZTlFTQ3FzazdkeDU2dTVoSTRtUmRIanhVVU1FWVFTLVJVSzBURDFjamppZlhJM1llQmNDRmNiNktKaWkwc3dIU01GTi1BQmwwUTk4Q2gxbjhPY3BoWlFGcWxuV0FKRjNCQnNhdk0tNjY1bzltV3JHV2lOWWJDTTRPRmpqYnhkQkxTS05sX3QtNGlo0gHQAUFVX3lxTE5vclljRUNfNjI2WEpPd010aE5XaGtkRXF5MnNZNjdjdC02Y1A5dlNuZm9nWVE2SnU4VVdwMGJMeXVrUWpLSllOUVNDcXNrN2R4NTZ1NWhJNG1SZEhqeFVVTUVZUVMtUlVLMFREMWNqamlmWEkzWWVCY0NGY2I2S0ppaTBzd0hTTUZOLUFCbDBROThDaDFuOE9jcGhaUUZxbG5XQUpGM0JCc2F2TS02NjVvOW1XckdXaU5ZYkNNNE9GampieGRCTFNLTmxfdC00aWg?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "00:42", tag: "ai", tagText: "AI", text: "演员 Mia Goth 表示，Instagram 任由一张 AI 生成的她的图像在平台上传播「令人无法理解」。相关图像来自一个带有蓝色认证标记的账号，事件凸显社交平台在 AI 深度伪造内容与账号认证机制上的管控漏洞。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce" },
   { time: "00:19", tag: "ai", tagText: "AI", text: "英伟达发布 cuPotential 库，并宣布多家半导体龙头采用 CUDA-X，推动 AI 深入芯片设计与制造环节，打造所谓「AI 定义的晶圆厂」。公司同时与 ChipAgents 合作推出 Build-A-Chip-Bench，用于自主芯片设计与实现，覆盖设计、良率优化等流程。", source: "NVIDIA Newsroom", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQY0JQSW1rVk16Vk96aEt1QzRJeHNUNXZfclVRVlBFdmhhQ09HS2N3YUlfRnRTejgtdGkwc040QWdHbXkyVXFJcW1uaTdZdV9EMUo0ZDN6cnFiOWxneTlidVpIYmljSHJkTVJaNmhUTDRwb2czQXNtN00taFQ5MkhBZVlITUN6QTBYcUVrdV8tQXFtcDJ2d2EwRjVONU1VdGRCNUhRRnBUbUp1UFRfMmNqaWFJMVdRVXRLa2UzTF9yVmhnM0VadXk3TzRSTjJMZGJn?oc=5" },
   { time: "00:05", tag: "ai", tagText: "AI", text: "微软推出新的机器学习工具用于改进天气预报。研究人员称，传统基于物理的预报乃至现有 AI 模型在两周之后可靠性都会明显下降，而新方法借助机器学习缓解了这一长期难题。", source: "The Verge", url: "https://www.theverge.com/science/1011127/ai-weather-forecast-microsoft" },
-  { time: "00:00", tag: "tech", tagText: "科技", text: "Android 推出新的反诈骗防护功能，强化 Google Messages 中的诈骗识别与拦截，并新增多项防护工具，帮助用户规避移动端欺诈。", source: "The Verge", url: "https://www.theverge.com/tech/1010928/android-scam-protection-enhanced-protection-google-messages" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "谷歌正式发布备受期待的 Gemini 4 Argon 模型，结束其在尖端大模型竞赛中数月的观望。谷歌称该模型足以与业界最强模型正面竞争，标志着美国头部厂商的模型迭代重新提速。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon" },
-  { time: "21:23", tag: "ai", tagText: "AI", text: "以色列 AI 初创公司 Zenzap 结束隐身运营状态，宣布完成 4400 万美元融资。公司暂未披露产品细节，称将把资金用于加速其 AI 平台的技术研发与商业化落地。", source: "Ynetnews", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTE9zd3JNSkZHZDVhVHdJNmctQ1BLbGZPOVJrYWJXWlJWcS1vRkRzZnhKTFZ0UDk1a1M3OU1ucG5qaWJpMDdKdUxCZ1JPc2NrNVhpSVg4elBQeFRQZEx2ZHFWUnRTblo0LWlCNFV4b0xR?oc=5" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "苹果正式发布其首款智能家居显示屏 Apple HomeView，传闻多年的产品终于落地。The Verge 记者在纽约率先体验后称该设备外观精致，配备小尺寸高质感屏幕，主打家庭中枢场景。此举意味着苹果正式进军由亚马逊与谷歌主导的智能显示市场。", source: "The Verge", url: "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look" },
 ];
-const aiBreakingDate = "2026年10月15日 15:19 CST";
+const aiBreakingDate = "2026年10月15日 21:20 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
