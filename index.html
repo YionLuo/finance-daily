@@ -1616,19 +1616,27 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 31.46,
+  score: 32.09,
   rating: "fear",
-  timestamp: "2026-10-16T00:00:00+00:00",
+  timestamp: "2026-10-16T12:01:16+00:00",
   previousClose: 31.54,
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月16日 15:02 CST"
+  date: "2026年10月16日 20:18 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:16", tag: "tech", tagText: "科技", text: "被称作\"欧洲版SpaceX\"的Eutelsat股价本周飙升19%，周五继续走高。竞争对手Starshield在乌克兰的服务限制引发批评，市场借机重新评估欧洲卫星通信运营商的替代价值。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/eutelsat-starshield-ukraine-spacex.html" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "苹果首款折叠屏手机iPhone Duo于周五开启预售，起售价约2000美元，标志着苹果正式进入由三星和谷歌主导的折叠屏手机市场，其实用性与定价成为市场关注焦点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/is-apples-foldable-iphone-duo-worth-2-000-see-how-it-stacks-up-against-other-foldable-phones-c9066b13?mod=mw_rss_topstories" },
+  { time: "19:45", tag: "macro", tagText: "宏观", text: "美债有望录得今年2月以来最佳单周表现。随着AI相关交易动荡引发避险需求，投资者纷纷转向政府债券，推动借贷成本从数十年高位回落，持续数周的债市抛售暂告中止。", source: "Financial Times", url: "https://www.ft.com/content/4c4f03f4-f878-4bd6-8128-5be7e3bb8ca1?syn-25a6b1a6=1" },
+  { time: "18:56", tag: "macro", tagText: "宏观", text: "挪威2万亿美元主权财富基金有望获准投资国防企业。现行伦理投资规则使其无法投资洛克希德·马丁、波音等公司，随着欧洲防务支出上升，相关限制或面临调整。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/norway-sovereign-wealth-fund-defense-investment.html" },
+  { time: "18:56", tag: "macro", tagText: "宏观", text: "标普500指数近40%的成分股已处于熊市区间。指数整体强劲表现主要依赖头部权重股的拉动，但底层个股中约四成较52周高点下跌至少20%，市场分化显著，分析师列出10只潜在反弹标的。", source: "MarketWatch", url: "https://www.marketwatch.com/story/nearly-40-of-the-s-p-500-is-in-a-bear-market-here-are-10-of-those-stocks-that-analysts-say-can-gain-up-to-81-93a51af6?mod=mw_rss_topstories" },
+  { time: "18:29", tag: "geo", tagText: "地缘", text: "欧盟誓言继续维持对俄罗斯的制裁。在特朗普与莫斯科达成燃料协议、美国对俄立场出现转向后，欧洲领导人集体靠拢乌克兰总统泽连斯基，重申对俄施压立场，美欧在俄乌问题上的分歧进一步扩大。", source: "Financial Times", url: "https://www.ft.com/content/ee6dfd48-fa31-4bde-9962-2f9f09c36798?syn-25a6b1a6=1" },
+  { time: "18:00", tag: "geo", tagText: "地缘", text: "随着中期选举临近，美国共和党人开始公开反对特朗普的关税政策，称贸易战已成为关键选区选战中的沉重负担，党内围绕\"政治生存\"出现裂痕。", source: "Financial Times", url: "https://www.ft.com/content/e2acd655-0a6a-4de6-9404-c838f6e7b8cb?syn-25a6b1a6=1" },
+  { time: "17:46", tag: "geo", tagText: "地缘", text: "特朗普表示，美国不会对伊朗动用核武器，也不会向伊朗派遣地面部队。此番表态正值美方据报正在权衡对伊新一轮军事打击选项、中东紧张局势持续升温之际。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/us-iran-war-trump-hormuz.html" },
   { time: "14:45", tag: "geo", tagText: "地缘", text: "美国国务卿卢比奥将访问印度，参观信实工业位于古吉拉特邦贾姆纳格尔的大型炼油厂。在美国柴油价格飙升之际，信实不仅投资美国炼厂、采购委内瑞拉原油，其强大的柴油供应能力更令贾姆纳格尔成为此行焦点，凸显印度在美能源与地缘布局中的分量上升。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/marco-rubio-reliance-jamnagar-refinery.html" },
   { time: "14:37", tag: "macro", tagText: "宏观", text: "美联储主席沃什（Warsh）未就本月是否再度加息给出信号，称自9月加息以来经济『大体符合我们的预期』，并赞扬全球央行在抗通胀上的『同步收紧』、没有『搭便车者』。市场对美联储10月按兵不动的押注因此升温。沃什同时表示，AI的发展路径将『非常坎坷』。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/feds-warsh-says-ai-development-path-will-be-very-bumpy-.html" },
   { time: "14:11", tag: "geo", tagText: "地缘", text: "俄罗斯在美国邀请下重返G20会议桌（曼谷），此举激怒欧洲盟友，考验华盛顿对莫斯科的外交接触会在多大程度上损害与欧洲的关系。美欧在俄乌问题上的裂痕进一步显现。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/g20-russia-ukraine-trump-diesel-europe-.html" },
@@ -1641,19 +1649,14 @@ const breakingNews = [
   { time: "08:54", tag: "macro", tagText: "宏观", text: "尽管印度央行（RBI）出手干预，市场仍预计印度卢比将进一步走弱至1美元兑100卢比水平。RBI最新举措已帮助卢比从96.79回升至95附近，但中东局势（伊朗战争）引发的油价与资本外流担忧持续压制卢比。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/india-rupee-rbi-dollar-iran-war.html" },
   { time: "08:44", tag: "macro", tagText: "宏观", text: "全球指数提供商MSCI警告，可能将印尼从其主要指数中剔除，加剧市场对东南亚最大经济体可投资性的担忧。若成真，恐引发被动资金外流并推高印尼融资成本。", source: "Financial Times", url: "https://www.ft.com/content/753fa2ed-1763-462b-a4c0-ded9b53baf3c" },
   { time: "08:06", tag: "geo", tagText: "地缘", text: "新加坡持续遭遇严重雾霾，扰乱日常生活与企业运营。总理黄循财警告将采取行动，当局已推出防护措施并发布警告，区域跨境烟霾问题再度升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/singapore-haze-wong-warning-indonesia.html" },
-  { time: "07:08", tag: "tech", tagText: "科技", text: "Netflix宣布首席内容官Bela Bajaria将离职，由前迪士尼高管Peter Rice接任。此番高层变动正值流媒体竞争加剧、行业内容战略面临调整之际。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/netflix-bela-bajaria-peter-rice.html" },
-  { time: "05:54", tag: "macro", tagText: "宏观", text: "美国小盘股在两个月内从历史高点回落10%，正式进入回调区间，创下投资者不愿看到的里程碑。市场将此轮快速下跌归因于通胀数据超预期推动加息押注升温、以及对AI相关交易的广泛抛售，风险偏好明显降温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/from-a-record-high-to-a-10-drop-in-just-two-months-why-small-cap-stocks-have-unraveled-so-fast-1cf0f4d5?mod=mw_rss_topstories" },
-  { time: "05:10", tag: "geo", tagText: "地缘", text: "特朗普政府正考虑放松对俄罗斯与伊朗\"影子船队\"的限制。急于在11月中期选举前压低燃油成本的白宫，可能允许被列入黑名单的油轮重返全球贸易，此举或影响国际原油与制裁格局。", source: "Financial Times", url: "https://www.ft.com/content/6dfa9879-589a-4af3-9374-b546a945a219?syn-25a6b1a6=1" },
-  { time: "01:55", tag: "geo", tagText: "地缘", text: "美国司法部起诉加利福尼亚州，围绕邮寄选票的选民公民身份核查问题展开法律战。此时距决定国会两院控制权的中期选举已不足一个月，选举合规争议持续升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/california-mail-ballots-voting-lawsuit.html" },
-  { time: "01:52", tag: "tech", tagText: "科技", text: "苹果与Meta达成合作，使其Muse AI模型（Muse Spark Open）更易在Mac电脑上本地运行，通过集群式Mac Studio系统实现本地化部署。此举凸显科技巨头在端侧AI与开源模型生态上的合作加深。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/apple-meta-partner-ai.html" },
-  { time: "01:06", tag: "macro", tagText: "宏观", text: "美国2027年社会保障生活成本调整（COLA）确定为3.6%，逾6800万受益人平均每月社保金将增加约75美元，以应对持续的通胀压力。与此同时，围绕COLA是否应设限、削减甚至取消的政策争论正在升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-securitys-cola-will-be-3-6-in-2027-as-inflation-persists-f7c9dff2?mod=mw_rss_topstories" },
-  { time: "00:07", tag: "crypto", tagText: "加密", text: "比特币面临8万美元关键考验，市场普遍认为这一关口将决定加密市场本轮牛市周期能否延续。在AI交易动荡、宏观不确定性加剧的背景下，加密资产走势受到密切关注。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUlVLMFNfb1hhNjNVZnJBRkNPYlR2Uk9FeWc2NVc4MWdFRTRRZm9XdzJ4b1RJd0piOWNCN0IwbmhxMU1BNW1Oalc0UHRQNWs0R1l2aW0yZHdrbzZob21Hb1NEUWJaRFBCc3V6WnVZUS1YQ3F4bUtQZ3MxMFVDUVFoaGRmZzZ1TGdrTVJxdkVreXJPdUdtZS1qYnJqeDNLSHVhcUJwSHdBWTJQNnczR2Q3WTRCaTU?oc=5" },
-  { time: "23:25", tag: "ai", tagText: "AI", text: "AI基础设施债务市场承压：投资者正在抛售数据中心债券，AI基础设施提供商与neocloud公司发行的债券已跌向困境（stressed）区间，市场担忧AI融资的可持续性，有分析师称AI借款方正面临\"达尔文时刻\"。与此同时，避险资金涌入美国国债，全球芯片股连续两日遭遇抛售，《金融时报》警告AI危机冲击股市的风险正在上升。", source: "Financial Times", url: "https://www.ft.com/content/678bcd31-6c2a-447b-a68c-ce6dec220bbc?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月16日 15:02 CST";
+const breakingDate = "2026年10月16日 20:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:05", tag: "ai", tagText: "AI", text: "西门子与英伟达合作，利用 AI 与加速计算将 AI 芯片光刻流程提速 12 倍。该技术有望缩短先进制程芯片的开发与量产周期，并降低晶圆厂的计算成本。", source: "eeNews Europe", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSTBRUWZJRGRWaFpSb2VRUXVRVlpVVS1BTmlGcWFYMWctVVFCc3RnRkJiYnduY0drZWx3d1ZRd2FBenQtMnBuSU5pOFBwMUIwcU1KYUZ0YVBNQVVLTTRaNzNpQWVLa0pCS0VGZUZzQ0hUNzN0ZDYyOTBoX0JwMXVJbzdodDdZVWZiMGRJQkVjRnU?oc=5" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase 数据显示，2026 年第三季度亚洲初创企业融资额接近历史最高水平，主要受 AI 赛道驱动。资本高度集中表明亚洲一级市场正把 AI 视为核心增长引擎。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxOS1I3dDhSeGJaWDFhT0lZbWxnbmJ6eWU0cTNTMTJ2VU5ucjBPWWw4WERYbTlsMnA5V2c1eWRDWEgxYldldk5qQk9FemxnQ1J1TlRWR1N0dEE0TXVXaGl0ZEUxbnhUZkV0dXMyS1VFbTZlVWltSG9hTmFHYW9mempmQmdLdVR5dVE?oc=5" },
+  { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
   { time: "09:06", tag: "ai", tagText: "AI", text: "英伟达 CEO 黄仁勋就 AI 芯片需求激增与市场担忧发表看法。当前市场正关注 AI 基础设施资本开支是否过热、芯片需求能否持续，其表态被视为对相关疑虑的回应。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPanMwYW9jX0o5YVQ2YWVKekwtQXkzNFlEWld0c1gwRXZiZFBQeThoZHpoRi1TdnpZdlhSV2lMbnR1NmlGTzFrMEpkNDRHYTlOeEEwU1FQVTdEUWI0OGt1YmpybFMwVi1LLXhyQVJuWGVsUWdZREk2ZjZ3VmNMUWdIbV9pLU5lVjA5TExWdWtVMHNyOWJtbUVCOW1OUXJ1dlR6dXVhMXVOaTRqTmRNaXc?oc=5" },
   { time: "08:49", tag: "macro", tagText: "宏观", text: "有统计显示，美国风险投资资金中约五分之四正流向 AI 初创公司，一级市场资本高度集中于人工智能赛道。这种「虹吸效应」意味着非 AI 领域的初创企业融资难度进一步上升，也令市场对 AI 估值泡沫的讨论升温。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNd1FKNi1aM3VPUGFnOHB4WHVBaWcwUUtmcE1ibnlMVEc4MlA3QThMZEhTQWxZOURMU2QwaE50b0g3dzh3VkVxY3N5TEp6VFNLcDhnbHJiOGlJc19RcG5GMUdsTUc5Y3djSnF1OGM1NmZyM1RxU1owWU9PLUdEMm5qR2MtUmdHdWoya21CNndPY0lfUVZ4V2VCb0ZhckNuelExOXo5Qlk3SE5qNzNxMVE?oc=5" },
   { time: "07:55", tag: "ai", tagText: "AI", text: "首份针对通用大模型操控机械臂的评测报告出炉：模型完成单个任务至少需要 30 分钟，综合成本约为人工的 10 倍。结果显示，具身智能虽在通用性上有所突破，但距离经济可行、可稳定部署的工业场景仍相当遥远。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5xY21Nazdnd3EtcklzYm1teDloZnE2YlpCcWx5aVlIUFhpdFpyeUZlcHJzVGgzMmRBcV9GWE02elRab0wtNUwydHhUQVktWnBMVTFDM1U0T2VTWmx0WFg1RlZ2X01QR3RRbndHWUJ2cV9mdWhaLWc?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "01:30", tag: "ai", tagText: "AI", text: "密歇根大学衍生公司 Laplace Intelligence 利用 AI 代理与交互式仿真，在机器人、自动驾驶车辆投入真实世界前对其进行「红队」压力测试。该初创公司已实现盈利，押注自动驾驶与机器人规模化落地前的安全验证需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/" },
   { time: "01:18", tag: "tech", tagText: "科技", text: "企业安全初创公司 Pluto Security 完成 4200 万美元融资。公司指出，当企业把 AI 工具开放给全员后，员工往往以意料之外的方式使用这些工具，由此形成新的安全缺口。此轮融资反映出资本市场对「AI 带来的企业内部安全治理」这一新兴赛道的押注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/" },
   { time: "01:03", tag: "macro", tagText: "宏观", text: "美联储官员 Goolsbee 警告，AI 资本支出热潮的影响已从局部涨价扩散为更广泛的通胀压力，成为货币政策制定者需要关注的新变量。此番表态意味着 AI 基础设施投资周期正被纳入通胀与利率路径的评估框架。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQ2NqUDZVdWhRYnU0QWZTazJmdE9QZ1lCZm96UUlhVHhQR0tqeTlqUlo4c2I3ZmlEMENmLTJCYVFPV2hkR25icGFiV0N4UHRDRUJUS2VpS2pBZnBxUEtnT1k5Q3pobHVxX0xoQ21aY052Y0MxdGIzTV9zYlprSTBhZ2lKeHV5MzBsQ3l6VUl3OWFsWkhrM0NHeXFRSVctZzNF?oc=5" },
-  { time: "01:01", tag: "ai", tagText: "AI", text: "Meta 为 Facebook 推出「Your Algorithm」功能，允许用户直接添加和管理希望出现在信息流及 Reels 中的主题。Meta 称用户调整后推荐结果会「立即响应」，这是平台把推荐算法控制权部分交还给用户的最新尝试。", source: "The Verge", url: "https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai" },
-  { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌宣布新功能，支持用户构建并使用仅供自己使用的私人 Android 应用：通过 AI Studio「vibe-coding」生成的应用无需连接电脑即可安装，也不必上架 Play Store 面向所有用户发布。此举降低了个人化 App 的开发与分发门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/" },
-  { time: "00:45", tag: "ai", tagText: "AI", text: "分析指出，英伟达与博通正以两条不同叙事主导 AI 芯片格局：英伟达凭 GPU 软硬件生态继续把持训练与推理的通用算力，博通则依靠定制 ASIC 与网络芯片承接超大规模云厂商的自研需求。两条路线的此消彼长，正在重塑数据中心算力供应链与竞争格局。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMzdfSmxzV0ZUdGlxTzV4YzAyYW5iVVhfcHBsb2lLRXBpRUVfX3c3a2dPYkxzYmtLS0ZONjdEVjROQ3ZpUUw0NlZsQnRTTHZLQmVlVWV4MkZxVjc1bW5ETXR6ZXBicEtCTHdtemtmc1BTSEs5VVBRQlJCZEJGaHp5c0ZNTW1oNHVEN09sQVl0SFluVHBtd2dqalB2VURYaEhjZFJsMjhn?oc=5" },
 ];
-const aiBreakingDate = "2026年10月16日 15:02 CST";
+const aiBreakingDate = "2026年10月16日 20:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
