@@ -1616,22 +1616,29 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.09,
+  score: 28.17,
   rating: "fear",
-  timestamp: "2026-10-16T12:01:16+00:00",
+  timestamp: "2026-10-16T15:31:41+00:00",
   previousClose: 31.54,
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月16日 20:18 CST"
+  date: "2026年10月16日 23:35 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:31", tag: "macro", tagText: "宏观", text: "美股周五走势分化：道指上涨、纳斯达克下滑，投资者继续从AI股票轮动撤出，标普500与纳指本周或录得周线下跌。CoreWeave、Nebius等\"新云\"（neocloud）个股遭重挫，高盛指出估值与融资担忧是主因，OpenAI与Anthropic的估值差距随之扩大。与此同时，资金转向基础设施软件板块，投资者押注软件公司更能应对来年挑战，半导体板块则被冷落。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/stock-market-today-live-updates.html" },
+  { time: "23:18", tag: "ai", tagText: "AI", text: "纽约市议会就Grok的安全性问题及生成性化图像一事，质询SpaceX全球政府事务AI负责人Gabriela Castillo Madrid，AI内容安全与平台责任再度成为监管焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/spacex-policy-manger-to-testify-in-nyc-council-ai-safety-investigation.html" },
+  { time: "23:01", tag: "ai", tagText: "AI", text: "美国国家情报总监克莱顿（Clayton）表示，OpenAI一名沙特籍人士涉及的安全案件显示美国在AI领域的领导地位正面临威胁。他指出，AI会\"放大\"针对美国数字基础设施的既有网络安全风险，相关案件已引发对AI间谍活动与技术外流的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/ai-espionage-openai-jay-clayton.html" },
+  { time: "22:58", tag: "ai", tagText: "AI", text: "花旗成为最新一家限制AI代理（AI agent）访问客户账户的美国银行。美国银行业担心聊天机器人可能将数十亿美元存款转移至收益率更高的账户，从而冲击存款基础，多家大型银行已相继收紧相关权限。", source: "Financial Times", url: "https://www.ft.com/content/f49c8e39-f07f-4177-9948-aabe55e5ed91?syn-25a6b1a6=1" },
+  { time: "22:26", tag: "tech", tagText: "科技", text: "蓝色起源（Blue Origin）宣布计划投资3.3亿美元扩建佛罗里达州设施，以提升New Glenn火箭的发射频率，目标是在本十年末实现每周多次发射，加快与SpaceX在商业与政府发射市场的竞争。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/blue-origin-new-glenn-florida-expansion.html" },
+  { time: "22:23", tag: "crypto", tagText: "加密", text: "德意志银行准备推出加密资产托管服务，成为最新一家布局数字资产基础设施的欧洲大型银行，显示传统金融机构正加速进入加密托管领域。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYXdMRTFBYklHOHRkUmc5QWlUV3JrLXVYN0ZyUElDSkVzc3IzSDUyT3RpckZYMXNadTE0N1JoSEVIend2amcweTQ3TnJkS2drSU56T05YdVV1UU50NE1fUGV5bGx5WjE2OG9jMFVadXZXczdhTnl1RWN4S2JzbG5URS1USmlWTUl2bDhIam1taDZ5RXgtREpiMFBTRjQ3VFAwODJZ?oc=5" },
   { time: "20:16", tag: "tech", tagText: "科技", text: "被称作\"欧洲版SpaceX\"的Eutelsat股价本周飙升19%，周五继续走高。竞争对手Starshield在乌克兰的服务限制引发批评，市场借机重新评估欧洲卫星通信运营商的替代价值。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/eutelsat-starshield-ukraine-spacex.html" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "苹果首款折叠屏手机iPhone Duo于周五开启预售，起售价约2000美元，标志着苹果正式进入由三星和谷歌主导的折叠屏手机市场，其实用性与定价成为市场关注焦点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/is-apples-foldable-iphone-duo-worth-2-000-see-how-it-stacks-up-against-other-foldable-phones-c9066b13?mod=mw_rss_topstories" },
   { time: "19:45", tag: "macro", tagText: "宏观", text: "美债有望录得今年2月以来最佳单周表现。随着AI相关交易动荡引发避险需求，投资者纷纷转向政府债券，推动借贷成本从数十年高位回落，持续数周的债市抛售暂告中止。", source: "Financial Times", url: "https://www.ft.com/content/4c4f03f4-f878-4bd6-8128-5be7e3bb8ca1?syn-25a6b1a6=1" },
+  { time: "19:00", tag: "crypto", tagText: "加密", text: "比特币跌破8万美元关口，但持有10至1万枚BTC的钱包数量却创下历史新高，市场猜测大额买家正在逢低增持。与此同时，与加密交易所相关的\"高风险基金\"规模合计已达1880亿美元，引发对加密生态杠杆与风险的关注。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQZlNac3kyMXQyR3FLbF9LN2ZxbFFBbHpIV3RBWmQ5OGViakdQOVV3MDhSUFNERHVOMUJuQ05XbGUxTExSdjI2NWszVy1LbkhEbnVZOHBmSm5PamtfTzBWdmxVRlkxTzVmZnBUQWw2dXNIVmFaNVZEUjlGdC1pYkhoTjdtY1RIR3NmTUlOSnExUUFIOUtjVlpxV093RzZtSXBoTXA5RW9KaE9oVC1VYnhRTWVKSlUwZW8tZlNERmw0LXkzVEhVeXF5Nng2dkljZ200T0dLZ2hzTXdRbE1ubUZBYndwcGp6SkNfUzN3LVNjSy1TaXZjbVEwX254c1g?oc=5" },
   { time: "18:56", tag: "macro", tagText: "宏观", text: "挪威2万亿美元主权财富基金有望获准投资国防企业。现行伦理投资规则使其无法投资洛克希德·马丁、波音等公司，随着欧洲防务支出上升，相关限制或面临调整。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/norway-sovereign-wealth-fund-defense-investment.html" },
   { time: "18:56", tag: "macro", tagText: "宏观", text: "标普500指数近40%的成分股已处于熊市区间。指数整体强劲表现主要依赖头部权重股的拉动，但底层个股中约四成较52周高点下跌至少20%，市场分化显著，分析师列出10只潜在反弹标的。", source: "MarketWatch", url: "https://www.marketwatch.com/story/nearly-40-of-the-s-p-500-is-in-a-bear-market-here-are-10-of-those-stocks-that-analysts-say-can-gain-up-to-81-93a51af6?mod=mw_rss_topstories" },
   { time: "18:29", tag: "geo", tagText: "地缘", text: "欧盟誓言继续维持对俄罗斯的制裁。在特朗普与莫斯科达成燃料协议、美国对俄立场出现转向后，欧洲领导人集体靠拢乌克兰总统泽连斯基，重申对俄施压立场，美欧在俄乌问题上的分歧进一步扩大。", source: "Financial Times", url: "https://www.ft.com/content/ee6dfd48-fa31-4bde-9962-2f9f09c36798?syn-25a6b1a6=1" },
@@ -1642,18 +1649,14 @@ const breakingNews = [
   { time: "14:11", tag: "geo", tagText: "地缘", text: "俄罗斯在美国邀请下重返G20会议桌（曼谷），此举激怒欧洲盟友，考验华盛顿对莫斯科的外交接触会在多大程度上损害与欧洲的关系。美欧在俄乌问题上的裂痕进一步显现。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/g20-russia-ukraine-trump-diesel-europe-.html" },
   { time: "13:56", tag: "geo", tagText: "地缘", text: "一艘新加坡货柜船在霍尔木兹海峡遇袭沉没后，海事专家表示新加坡船只仍将继续通行这一危险航道。此前已有两艘集装箱船遭袭，中东紧张局势持续升温，市场关注该水道对全球能源与航运的冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/strait-hormuz-singapore-ships-attacked.html" },
   { time: "12:54", tag: "ai", tagText: "AI", text: "澳大利亚数据中心运营商Firmus与AirTrunk的相关决定，进一步加剧了市场对AI借贷狂热的担忧，并引发数据中心IPO溃败与市场大跌。《金融时报》指出，这一事件成为AI基础设施融资链条脆弱性的最新注脚。", source: "Financial Times", url: "https://www.ft.com/content/537c9a68-7b6f-41a7-80ff-acac5c52e80d?syn-25a6b1a6=1" },
-  { time: "11:53", tag: "tech", tagText: "科技", text: "韩国娱乐巨头Hybe股价大涨10%。防弹少年团（BTS）世界巡演以及全球对新一代K-pop组合的需求上升，推动市场大幅上调其盈利预期。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/bts-concerts-hybe-katseye-cortis.html" },
-  { time: "11:12", tag: "macro", tagText: "宏观", text: "英国央行行长贝利表示，能源价格对通胀的全面影响『目前仍处早期阶段』。他警告，若高成本持续较长时间，将挤压企业利润率，并促使部分企业提高售价，从而延长通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/b6255adb-3ce5-4463-92cd-de2f8e9a1f74?syn-25a6b1a6=1" },
-  { time: "10:42", tag: "tech", tagText: "科技", text: "特斯拉公开展示可『飞行』的Roadster跑车，并给出2028年量产的指引。分析师Gene Munster称其为『工程炫技』，除暗示特斯拉与SpaceX的协同之外『没有商业价值』。消息公布后特斯拉股价表现反复，当日收跌1.3%至362.44美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-may-finally-debut-a-flying-car-today-after-testing-fans-patience-for-nearly-a-decade-9a23c8e8?mod=mw_rss_topstories" },
-  { time: "09:35", tag: "geo", tagText: "地缘", text: "据路透报道，限制乌克兰使用『星盾』（Starshield）卫星服务的命令来自白宫内部，此举影响了乌方无人机作战能力。在美乌紧张关系升温之际，这一动向引发对美方援乌立场的进一步猜测。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/order-to-limit-starshield-for-ukraine-came-from-inside-white-house-reuters-reports.html" },
-  { time: "08:54", tag: "macro", tagText: "宏观", text: "尽管印度央行（RBI）出手干预，市场仍预计印度卢比将进一步走弱至1美元兑100卢比水平。RBI最新举措已帮助卢比从96.79回升至95附近，但中东局势（伊朗战争）引发的油价与资本外流担忧持续压制卢比。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/india-rupee-rbi-dollar-iran-war.html" },
-  { time: "08:44", tag: "macro", tagText: "宏观", text: "全球指数提供商MSCI警告，可能将印尼从其主要指数中剔除，加剧市场对东南亚最大经济体可投资性的担忧。若成真，恐引发被动资金外流并推高印尼融资成本。", source: "Financial Times", url: "https://www.ft.com/content/753fa2ed-1763-462b-a4c0-ded9b53baf3c" },
-  { time: "08:06", tag: "geo", tagText: "地缘", text: "新加坡持续遭遇严重雾霾，扰乱日常生活与企业运营。总理黄循财警告将采取行动，当局已推出防护措施并发布警告，区域跨境烟霾问题再度升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/singapore-haze-wong-warning-indonesia.html" },
 ];
-const breakingDate = "2026年10月16日 20:18 CST";
+const breakingDate = "2026年10月16日 23:35 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:33", tag: "ai", tagText: "AI", text: "Vercel 的 AI 网关数据显示，Jev 已成为该平台有史以来采纳速度最快的 AI 模型。Vercel 的 AI gateway 类似 OpenRouter，为开发者提供统一 API 接入多家模型，其采纳数据被视为观察模型市场份额与开发者偏好的重要风向标，也显示新兴模型正更快地切入生产环境。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/" },
+  { time: "23:00", tag: "tech", tagText: "科技", text: "英伟达 RTX Spark N1X 超级芯片正式落地，The Verge 团队实测了华硕、惠普、联想等多款搭载该芯片的 Windows on Arm 笔记本。RTX Spark 定位高性能计算，被视为英伟达从 GPU 供应商向 PC 处理器市场延伸的关键一步，将直接冲击高通、英特尔与 AMD 的主导地位，Windows on Arm 生态格局或因此重塑。", source: "The Verge", url: "https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions" },
+  { time: "22:02", tag: "ai", tagText: "AI", text: "Meta 的新服务条款被指允许其免费抓取新闻网站内容用于 AI 训练。据 Nieman Lab 报道，新条款可能授权 Meta 爬取并使用与其平台商家「相关」的网站内容，范围涵盖在线出版商。这意味着新闻机构内容或再次被无偿用于模型训练，出版商与平台之间围绕版权、流量与内容价值的博弈将进一步升级。", source: "The Verge", url: "https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers" },
   { time: "20:05", tag: "ai", tagText: "AI", text: "西门子与英伟达合作，利用 AI 与加速计算将 AI 芯片光刻流程提速 12 倍。该技术有望缩短先进制程芯片的开发与量产周期，并降低晶圆厂的计算成本。", source: "eeNews Europe", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSTBRUWZJRGRWaFpSb2VRUXVRVlpVVS1BTmlGcWFYMWctVVFCc3RnRkJiYnduY0drZWx3d1ZRd2FBenQtMnBuSU5pOFBwMUIwcU1KYUZ0YVBNQVVLTTRaNzNpQWVLa0pCS0VGZUZzQ0hUNzN0ZDYyOTBoX0JwMXVJbzdodDdZVWZiMGRJQkVjRnU?oc=5" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase 数据显示，2026 年第三季度亚洲初创企业融资额接近历史最高水平，主要受 AI 赛道驱动。资本高度集中表明亚洲一级市场正把 AI 视为核心增长引擎。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxOS1I3dDhSeGJaWDFhT0lZbWxnbmJ6eWU0cTNTMTJ2VU5ucjBPWWw4WERYbTlsMnA5V2c1eWRDWEgxYldldk5qQk9FemxnQ1J1TlRWR1N0dEE0TXVXaGl0ZEUxbnhUZkV0dXMyS1VFbTZlVWltSG9hTmFHYW9mempmQmdLdVR5dVE?oc=5" },
   { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "02:15", tag: "ai", tagText: "AI", text: "Meta 发布开放权重模型 Muse Spark Open，称其为「迄今能力最强的美国开放权重模型」，并与苹果合作让其可直接在 Apple Silicon 芯片的 Mac 上本地运行（基于 MLX 框架）。这是 Meta 在开源大模型路线上的又一次加码，也意味着头部社交平台与硬件厂商正联手把强模型推向端侧本地推理。", source: "The Verge", url: "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx" },
   { time: "02:13", tag: "tech", tagText: "科技", text: "字节跳动据报正就采购定制 AI 芯片进行深入谈判。作为 TikTok 母公司，其自研/定制芯片动作反映出中国大型科技公司在美国出口管制与算力成本压力下，加速寻求替代性算力方案，以减少对英伟达通用 GPU 的依赖。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxOazFSUzlyMVNXYmNDX0lNNldJUmpwT0hWcmRDc000U2pUc1c3dURCeXE2STJ2QkdfYjNZaHFzeUtIUXZDSlpRRUJEbzRDa0J0V1E3ZTQ2eWNoVk1tV3dOWW1uX0g2WXhpSWI4aURLWjNGUGt2TXltR2JldEplaUZLT2NjLWxVSWhvaTdwYkJrREVCTGprV2Q3ZUpEczltU3ROdS1BbVNUWmc1aWp3enJXOTdTd3BNUQ?oc=5" },
   { time: "02:00", tag: "ai", tagText: "AI", text: "初创公司 Apate.ai 将 AI 代理派去「卧底」被骗，以此收集诈骗情报。与多数企业用 AI 代理加速产品交付或优化工作流不同，Apate 让代理主动接触诈骗者，用于构建反欺诈情报体系。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/" },
-  { time: "01:30", tag: "ai", tagText: "AI", text: "密歇根大学衍生公司 Laplace Intelligence 利用 AI 代理与交互式仿真，在机器人、自动驾驶车辆投入真实世界前对其进行「红队」压力测试。该初创公司已实现盈利，押注自动驾驶与机器人规模化落地前的安全验证需求。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/" },
-  { time: "01:18", tag: "tech", tagText: "科技", text: "企业安全初创公司 Pluto Security 完成 4200 万美元融资。公司指出，当企业把 AI 工具开放给全员后，员工往往以意料之外的方式使用这些工具，由此形成新的安全缺口。此轮融资反映出资本市场对「AI 带来的企业内部安全治理」这一新兴赛道的押注。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/" },
-  { time: "01:03", tag: "macro", tagText: "宏观", text: "美联储官员 Goolsbee 警告，AI 资本支出热潮的影响已从局部涨价扩散为更广泛的通胀压力，成为货币政策制定者需要关注的新变量。此番表态意味着 AI 基础设施投资周期正被纳入通胀与利率路径的评估框架。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQ2NqUDZVdWhRYnU0QWZTazJmdE9QZ1lCZm96UUlhVHhQR0tqeTlqUlo4c2I3ZmlEMENmLTJCYVFPV2hkR25icGFiV0N4UHRDRUJUS2VpS2pBZnBxUEtnT1k5Q3pobHVxX0xoQ21aY052Y0MxdGIzTV9zYlprSTBhZ2lKeHV5MzBsQ3l6VUl3OWFsWkhrM0NHeXFRSVctZzNF?oc=5" },
 ];
-const aiBreakingDate = "2026年10月16日 20:18 CST";
+const aiBreakingDate = "2026年10月16日 23:35 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
