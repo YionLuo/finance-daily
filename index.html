@@ -1616,19 +1616,28 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 31.54,
+  score: 31.46,
   rating: "fear",
-  timestamp: "2026-10-15T23:59:53+00:00",
-  previousClose: 32.33,
-  previous1Week: 39.8,
-  previous1Month: 27.97,
-  previous1Year: 27.41,
-  date: "2026年10月16日 09:11 CST"
+  timestamp: "2026-10-16T00:00:00+00:00",
+  previousClose: 31.54,
+  previous1Week: 46.49,
+  previous1Month: 27.31,
+  previous1Year: 23.11,
+  date: "2026年10月16日 15:02 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:45", tag: "geo", tagText: "地缘", text: "美国国务卿卢比奥将访问印度，参观信实工业位于古吉拉特邦贾姆纳格尔的大型炼油厂。在美国柴油价格飙升之际，信实不仅投资美国炼厂、采购委内瑞拉原油，其强大的柴油供应能力更令贾姆纳格尔成为此行焦点，凸显印度在美能源与地缘布局中的分量上升。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/marco-rubio-reliance-jamnagar-refinery.html" },
+  { time: "14:37", tag: "macro", tagText: "宏观", text: "美联储主席沃什（Warsh）未就本月是否再度加息给出信号，称自9月加息以来经济『大体符合我们的预期』，并赞扬全球央行在抗通胀上的『同步收紧』、没有『搭便车者』。市场对美联储10月按兵不动的押注因此升温。沃什同时表示，AI的发展路径将『非常坎坷』。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/feds-warsh-says-ai-development-path-will-be-very-bumpy-.html" },
+  { time: "14:11", tag: "geo", tagText: "地缘", text: "俄罗斯在美国邀请下重返G20会议桌（曼谷），此举激怒欧洲盟友，考验华盛顿对莫斯科的外交接触会在多大程度上损害与欧洲的关系。美欧在俄乌问题上的裂痕进一步显现。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/g20-russia-ukraine-trump-diesel-europe-.html" },
+  { time: "13:56", tag: "geo", tagText: "地缘", text: "一艘新加坡货柜船在霍尔木兹海峡遇袭沉没后，海事专家表示新加坡船只仍将继续通行这一危险航道。此前已有两艘集装箱船遭袭，中东紧张局势持续升温，市场关注该水道对全球能源与航运的冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/strait-hormuz-singapore-ships-attacked.html" },
+  { time: "12:54", tag: "ai", tagText: "AI", text: "澳大利亚数据中心运营商Firmus与AirTrunk的相关决定，进一步加剧了市场对AI借贷狂热的担忧，并引发数据中心IPO溃败与市场大跌。《金融时报》指出，这一事件成为AI基础设施融资链条脆弱性的最新注脚。", source: "Financial Times", url: "https://www.ft.com/content/537c9a68-7b6f-41a7-80ff-acac5c52e80d?syn-25a6b1a6=1" },
+  { time: "11:53", tag: "tech", tagText: "科技", text: "韩国娱乐巨头Hybe股价大涨10%。防弹少年团（BTS）世界巡演以及全球对新一代K-pop组合的需求上升，推动市场大幅上调其盈利预期。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/bts-concerts-hybe-katseye-cortis.html" },
+  { time: "11:12", tag: "macro", tagText: "宏观", text: "英国央行行长贝利表示，能源价格对通胀的全面影响『目前仍处早期阶段』。他警告，若高成本持续较长时间，将挤压企业利润率，并促使部分企业提高售价，从而延长通胀压力。", source: "Financial Times", url: "https://www.ft.com/content/b6255adb-3ce5-4463-92cd-de2f8e9a1f74?syn-25a6b1a6=1" },
+  { time: "10:42", tag: "tech", tagText: "科技", text: "特斯拉公开展示可『飞行』的Roadster跑车，并给出2028年量产的指引。分析师Gene Munster称其为『工程炫技』，除暗示特斯拉与SpaceX的协同之外『没有商业价值』。消息公布后特斯拉股价表现反复，当日收跌1.3%至362.44美元。", source: "MarketWatch", url: "https://www.marketwatch.com/story/tesla-may-finally-debut-a-flying-car-today-after-testing-fans-patience-for-nearly-a-decade-9a23c8e8?mod=mw_rss_topstories" },
+  { time: "09:35", tag: "geo", tagText: "地缘", text: "据路透报道，限制乌克兰使用『星盾』（Starshield）卫星服务的命令来自白宫内部，此举影响了乌方无人机作战能力。在美乌紧张关系升温之际，这一动向引发对美方援乌立场的进一步猜测。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/order-to-limit-starshield-for-ukraine-came-from-inside-white-house-reuters-reports.html" },
   { time: "08:54", tag: "macro", tagText: "宏观", text: "尽管印度央行（RBI）出手干预，市场仍预计印度卢比将进一步走弱至1美元兑100卢比水平。RBI最新举措已帮助卢比从96.79回升至95附近，但中东局势（伊朗战争）引发的油价与资本外流担忧持续压制卢比。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/india-rupee-rbi-dollar-iran-war.html" },
   { time: "08:44", tag: "macro", tagText: "宏观", text: "全球指数提供商MSCI警告，可能将印尼从其主要指数中剔除，加剧市场对东南亚最大经济体可投资性的担忧。若成真，恐引发被动资金外流并推高印尼融资成本。", source: "Financial Times", url: "https://www.ft.com/content/753fa2ed-1763-462b-a4c0-ded9b53baf3c" },
   { time: "08:06", tag: "geo", tagText: "地缘", text: "新加坡持续遭遇严重雾霾，扰乱日常生活与企业运营。总理黄循财警告将采取行动，当局已推出防护措施并发布警告，区域跨境烟霾问题再度升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/singapore-haze-wong-warning-indonesia.html" },
@@ -1640,20 +1649,12 @@ const breakingNews = [
   { time: "01:06", tag: "macro", tagText: "宏观", text: "美国2027年社会保障生活成本调整（COLA）确定为3.6%，逾6800万受益人平均每月社保金将增加约75美元，以应对持续的通胀压力。与此同时，围绕COLA是否应设限、削减甚至取消的政策争论正在升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-securitys-cola-will-be-3-6-in-2027-as-inflation-persists-f7c9dff2?mod=mw_rss_topstories" },
   { time: "00:07", tag: "crypto", tagText: "加密", text: "比特币面临8万美元关键考验，市场普遍认为这一关口将决定加密市场本轮牛市周期能否延续。在AI交易动荡、宏观不确定性加剧的背景下，加密资产走势受到密切关注。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUlVLMFNfb1hhNjNVZnJBRkNPYlR2Uk9FeWc2NVc4MWdFRTRRZm9XdzJ4b1RJd0piOWNCN0IwbmhxMU1BNW1Oalc0UHRQNWs0R1l2aW0yZHdrbzZob21Hb1NEUWJaRFBCc3V6WnVZUS1YQ3F4bUtQZ3MxMFVDUVFoaGRmZzZ1TGdrTVJxdkVreXJPdUdtZS1qYnJqeDNLSHVhcUJwSHdBWTJQNnczR2Q3WTRCaTU?oc=5" },
   { time: "23:25", tag: "ai", tagText: "AI", text: "AI基础设施债务市场承压：投资者正在抛售数据中心债券，AI基础设施提供商与neocloud公司发行的债券已跌向困境（stressed）区间，市场担忧AI融资的可持续性，有分析师称AI借款方正面临\"达尔文时刻\"。与此同时，避险资金涌入美国国债，全球芯片股连续两日遭遇抛售，《金融时报》警告AI危机冲击股市的风险正在上升。", source: "Financial Times", url: "https://www.ft.com/content/678bcd31-6c2a-447b-a68c-ce6dec220bbc?syn-25a6b1a6=1" },
-  { time: "21:18", tag: "macro", tagText: "宏观", text: "美国9月生产者价格指数（PPI）同比上涨6.3%，为2022年以来最大涨幅，远超市场预期的5.5%，环比增幅亦高于预期。批发端通胀意外跳升，令投资者对美联储政策路径与债市走向更趋谨慎，并进一步加剧风险资产抛售压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/september-producer-price-index-retail-sales-data.html" },
-  { time: "21:00", tag: "geo", tagText: "地缘", text: "瑞信在Greensill和解中从保险公司获得8亿美元赔付。但据《金融时报》报道，承保保单的保险公司并非主要出资方，经纪商Marsh将承担最大份额。此为Greensill倒闭相关纠纷的重要进展。", source: "Financial Times", url: "https://www.ft.com/content/43c9d38a-652a-45df-b3be-c3dead3390f1?syn-25a6b1a6=1" },
-  { time: "20:40", tag: "macro", tagText: "宏观", text: "在美国债务突破40万亿美元、10年期国债收益率维持在5%以上之际，IMF就美国财政前景发出债务警告，美国财政部则驳斥其预测\"一团糟\"。分析指出，2万亿美元赤字与5%以上的国债收益率正成为美国经济最大挑战，持续推高家庭与政府的借贷成本。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/zervos-imf-us-debt-warning.html" },
-  { time: "20:01", tag: "tech", tagText: "科技", text: "芝加哥期权交易所（Cboe）将延长主要股票与ETF的期权交易时段，覆盖24只交投最活跃个股及5只ETF，新增美东时间早7:30至9:25及下午4:00至4:15的交易，进一步拓展盘前盘后衍生品交易。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/cboe-stock-etf-options-extended-hours.html" },
-  { time: "20:00", tag: "geo", tagText: "地缘", text: "德国总理默茨誓言顶住压力继续推进不受欢迎的改革，并宣称\"我们是防火墙\"。他在接受《金融时报》专访时表示，决心带领欧洲应对动荡时代。", source: "Financial Times", url: "https://www.ft.com/content/da781749-f146-48a7-9b5c-83911addabae?syn-25a6b1a6=1" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "亚马逊推出新款Bee系列\"个人AI\"设备：售价75美元的Bee Frontier为可穿戴手环的升级版，100美元的Bee Eclipse可连接用户智能手机。两款设备均具备监听对话的功能，凸显消费级AI硬件竞争升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/amazon-bee-frontier-eclipse-ai-devices.html" },
-  { time: "18:44", tag: "geo", tagText: "地缘", text: "美国军方正评估对伊朗的打击选项，据报包括可能动用其武库中最大的非核炸弹之一\"炸弹之母\"（MOAB）；与此同时伊朗誓言继续战斗。中东紧张局势进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/us-iran-war-trump-hormuz.html" },
-  { time: "15:15", tag: "macro", tagText: "宏观", text: "全球AI抛售加剧，亚洲股市全线重挫。韩国Kospi一度暴跌7%至8%并触发熔断，日经225指数大跌5%，追随隔夜美股跌势。此前美国CPI数据超预期升温加息押注，叠加市场对AI板块高估值的担忧，风险资产遭广泛抛售。", source: "Financial Times", url: "https://www.ft.com/content/cf5f1209-da29-4ce1-b425-0e83818bf9ec?syn-25a6b1a6=1" },
-  { time: "15:15", tag: "macro", tagText: "宏观", text: "英国8月经济环比增长0.1%，好于市场预期。但该国仍深陷由粘性通胀与能源成本飙升引发的生活成本危机，增长动能脆弱，前景仍面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/uk-gdp-august-2026-economy.html" },
 ];
-const breakingDate = "2026年10月16日 09:11 CST";
+const breakingDate = "2026年10月16日 15:02 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "09:06", tag: "ai", tagText: "AI", text: "英伟达 CEO 黄仁勋就 AI 芯片需求激增与市场担忧发表看法。当前市场正关注 AI 基础设施资本开支是否过热、芯片需求能否持续，其表态被视为对相关疑虑的回应。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPanMwYW9jX0o5YVQ2YWVKekwtQXkzNFlEWld0c1gwRXZiZFBQeThoZHpoRi1TdnpZdlhSV2lMbnR1NmlGTzFrMEpkNDRHYTlOeEEwU1FQVTdEUWI0OGt1YmpybFMwVi1LLXhyQVJuWGVsUWdZREk2ZjZ3VmNMUWdIbV9pLU5lVjA5TExWdWtVMHNyOWJtbUVCOW1OUXJ1dlR6dXVhMXVOaTRqTmRNaXc?oc=5" },
   { time: "08:49", tag: "macro", tagText: "宏观", text: "有统计显示，美国风险投资资金中约五分之四正流向 AI 初创公司，一级市场资本高度集中于人工智能赛道。这种「虹吸效应」意味着非 AI 领域的初创企业融资难度进一步上升，也令市场对 AI 估值泡沫的讨论升温。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNd1FKNi1aM3VPUGFnOHB4WHVBaWcwUUtmcE1ibnlMVEc4MlA3QThMZEhTQWxZOURMU2QwaE50b0g3dzh3VkVxY3N5TEp6VFNLcDhnbHJiOGlJc19RcG5GMUdsTUc5Y3djSnF1OGM1NmZyM1RxU1owWU9PLUdEMm5qR2MtUmdHdWoya21CNndPY0lfUVZ4V2VCb0ZhckNuelExOXo5Qlk3SE5qNzNxMVE?oc=5" },
   { time: "07:55", tag: "ai", tagText: "AI", text: "首份针对通用大模型操控机械臂的评测报告出炉：模型完成单个任务至少需要 30 分钟，综合成本约为人工的 10 倍。结果显示，具身智能虽在通用性上有所突破，但距离经济可行、可稳定部署的工业场景仍相当遥远。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5xY21Nazdnd3EtcklzYm1teDloZnE2YlpCcWx5aVlIUFhpdFpyeUZlcHJzVGgzMmRBcV9GWE02elRab0wtNUwydHhUQVktWnBMVTFDM1U0T2VTWmx0WFg1RlZ2X01QR3RRbndHWUJ2cV9mdWhaLWc?oc=5" },
   { time: "07:45", tag: "tech", tagText: "科技", text: "卡路里识别应用 Cal AI 依靠一支由中小网红组成的「推广军团」实现病毒式增长，两年内营收超 3000 万美元，并于今年 3 月被 MyFitnessPal 收购（金额未披露）。该案例成为 AI 消费应用借助 KOL 分销快速起量的典型样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "01:01", tag: "ai", tagText: "AI", text: "Meta 为 Facebook 推出「Your Algorithm」功能，允许用户直接添加和管理希望出现在信息流及 Reels 中的主题。Meta 称用户调整后推荐结果会「立即响应」，这是平台把推荐算法控制权部分交还给用户的最新尝试。", source: "The Verge", url: "https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai" },
   { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌宣布新功能，支持用户构建并使用仅供自己使用的私人 Android 应用：通过 AI Studio「vibe-coding」生成的应用无需连接电脑即可安装，也不必上架 Play Store 面向所有用户发布。此举降低了个人化 App 的开发与分发门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/" },
   { time: "00:45", tag: "ai", tagText: "AI", text: "分析指出，英伟达与博通正以两条不同叙事主导 AI 芯片格局：英伟达凭 GPU 软硬件生态继续把持训练与推理的通用算力，博通则依靠定制 ASIC 与网络芯片承接超大规模云厂商的自研需求。两条路线的此消彼长，正在重塑数据中心算力供应链与竞争格局。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMzdfSmxzV0ZUdGlxTzV4YzAyYW5iVVhfcHBsb2lLRXBpRUVfX3c3a2dPYkxzYmtLS0ZONjdEVjROQ3ZpUUw0NlZsQnRTTHZLQmVlVWV4MkZxVjc1bW5ETXR6ZXBicEtCTHdtemtmc1BTSEs5VVBRQlJCZEJGaHp5c0ZNTW1oNHVEN09sQVl0SFluVHBtd2dqalB2VURYaEhjZFJsMjhn?oc=5" },
-  { time: "00:43", tag: "ai", tagText: "AI", text: "OpenAI 指控一名前员工在跳槽苹果前带走逾 100 份涉及公司产品规划的文件。在周三提交的法律文书中，OpenAI 称该未具名员工将这些资料发送出去，并已向苹果方面展示相关产品计划，事件令两家公司在 AI 人才与知识产权上的摩擦公开化。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1011276/openai-employee-unreleased-product-plans" },
 ];
-const aiBreakingDate = "2026年10月16日 09:11 CST";
+const aiBreakingDate = "2026年10月16日 15:02 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
