@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 20.08,
+  score: 17.94,
   rating: "extreme fear",
-  timestamp: "2026-10-16T17:16:46+00:00",
+  timestamp: "2026-10-16T20:36:57+00:00",
   previousClose: 31.54,
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月17日 01:20 CST"
+  date: "2026年10月17日 04:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:02", tag: "geo", tagText: "地缘", text: "布伦特原油触及每桶110美元。伊朗本周在霍尔木兹海峡升级袭击，乌克兰则誓言打击俄罗斯炼油厂，双重地缘风险推动美国原油价格周五大幅上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html" },
+  { time: "03:45", tag: "macro", tagText: "宏观", text: "美国社会保障局将2027年生活成本调整（COLA）定为3.6%，逾6800万受益人平均每月将多领约75美元。在通胀持续的背景下，该调整能否真正跟上老年人生活成本仍受质疑；与此同时，有关COLA可能被设上限、削减或改为收入审查的争论正在升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-securitys-cola-will-be-3-6-in-2027-as-inflation-persists-f7c9dff2?mod=mw_rss_topstories" },
+  { time: "03:42", tag: "geo", tagText: "地缘", text: "以色列定居者在约旦河西岸袭击正在收获橄榄的巴勒斯坦人，一名《华盛顿邮报》记者在冲突中受伤。该事件凸显巴以地区紧张局势持续。", source: "Financial Times", url: "https://www.ft.com/content/432c9cff-b86f-4712-8e64-56cf3895d687?syn-25a6b1a6=1" },
+  { time: "03:35", tag: "ai", tagText: "AI", text: "微软押注自研定制芯片以降低AI成本，希望藉此压低算力开支。但分析指出，AI的成本方程远比更换芯片复杂，涉及模型、能耗与生态等多重因素，投资者能否真正看到成本节省仍存疑问。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microsoft-wants-to-make-ai-cheaper-will-investors-actually-see-the-savings-0a3c3ac0?mod=mw_rss_topstories" },
+  { time: "02:37", tag: "ai", tagText: "AI", text: "纽约市审计长已与Anthropic建立沟通渠道，讨论AI可能带来的「生存性风险」，以及若该公司未来上市，相关风险对其股价乃至投资者401(k)退休账户的潜在影响。AI安全辩论由此延伸至公共养老金与散户投资领域。", source: "MarketWatch", url: "https://www.marketwatch.com/story/could-an-anthropic-ipo-put-your-401-k-at-risk-the-ai-safety-debate-hits-a-new-dimension-db3f09f7?mod=mw_rss_topstories" },
   { time: "01:02", tag: "tech", tagText: "科技", text: "Netflix聘请资深媒体高管Peter Rice担任内容主管，负责剧集、无剧本节目、直播体育、精品剧集及院线发行等业务。此举被视为该流媒体巨头加码内容与体育直播布局的重要人事调整。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/netflix-peter-rice-chief-content-officer.html" },
   { time: "00:46", tag: "geo", tagText: "地缘", text: "美中本周在曼谷举行双边会谈，美方就万事达卡（Mastercard）和花旗集团（Citigroup）在华市场准入问题向中方施压。美国财政部官员表示，华盛顿持续关注美国金融机构进入中国市场的障碍。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/us-china-mastercard-citigroup-market-access.html" },
   { time: "23:31", tag: "macro", tagText: "宏观", text: "美股周五走势分化：道指上涨、纳斯达克下滑，投资者继续从AI股票轮动撤出，标普500与纳指本周或录得周线下跌。CoreWeave、Nebius等\"新云\"（neocloud）个股遭重挫，高盛指出估值与融资担忧是主因，OpenAI与Anthropic的估值差距随之扩大。与此同时，资金转向基础设施软件板块，投资者押注软件公司更能应对来年挑战，半导体板块则被冷落。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/stock-market-today-live-updates.html" },
@@ -1644,16 +1649,17 @@ const breakingNews = [
   { time: "20:16", tag: "tech", tagText: "科技", text: "被称作\"欧洲版SpaceX\"的Eutelsat股价本周飙升19%，周五继续走高。竞争对手Starshield在乌克兰的服务限制引发批评，市场借机重新评估欧洲卫星通信运营商的替代价值。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/eutelsat-starshield-ukraine-spacex.html" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "苹果首款折叠屏手机iPhone Duo于周五开启预售，起售价约2000美元，标志着苹果正式进入由三星和谷歌主导的折叠屏手机市场，其实用性与定价成为市场关注焦点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/is-apples-foldable-iphone-duo-worth-2-000-see-how-it-stacks-up-against-other-foldable-phones-c9066b13?mod=mw_rss_topstories" },
   { time: "19:45", tag: "macro", tagText: "宏观", text: "美债有望录得今年2月以来最佳单周表现。随着AI相关交易动荡引发避险需求，投资者纷纷转向政府债券，推动借贷成本从数十年高位回落，持续数周的债市抛售暂告中止。", source: "Financial Times", url: "https://www.ft.com/content/4c4f03f4-f878-4bd6-8128-5be7e3bb8ca1?syn-25a6b1a6=1" },
-  { time: "19:00", tag: "crypto", tagText: "加密", text: "比特币跌破8万美元关口，但持有10至1万枚BTC的钱包数量却创下历史新高，市场猜测大额买家正在逢低增持。与此同时，与加密交易所相关的\"高风险基金\"规模合计已达1880亿美元，引发对加密生态杠杆与风险的关注。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQZlNac3kyMXQyR3FLbF9LN2ZxbFFBbHpIV3RBWmQ5OGViakdQOVV3MDhSUFNERHVOMUJuQ05XbGUxTExSdjI2NWszVy1LbkhEbnVZOHBmSm5PamtfTzBWdmxVRlkxTzVmZnBUQWw2dXNIVmFaNVZEUjlGdC1pYkhoTjdtY1RIR3NmTUlOSnExUUFIOUtjVlpxV093RzZtSXBoTXA5RW9KaE9oVC1VYnhRTWVKSlUwZW8tZlNERmw0LXkzVEhVeXF5Nng2dkljZ200T0dLZ2hzTXdRbE1ubUZBYndwcGp6SkNfUzN3LVNjSy1TaXZjbVEwX254c1g?oc=5" },
-  { time: "18:56", tag: "macro", tagText: "宏观", text: "挪威2万亿美元主权财富基金有望获准投资国防企业。现行伦理投资规则使其无法投资洛克希德·马丁、波音等公司，随着欧洲防务支出上升，相关限制或面临调整。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/norway-sovereign-wealth-fund-defense-investment.html" },
-  { time: "18:56", tag: "macro", tagText: "宏观", text: "标普500指数近40%的成分股已处于熊市区间。指数整体强劲表现主要依赖头部权重股的拉动，但底层个股中约四成较52周高点下跌至少20%，市场分化显著，分析师列出10只潜在反弹标的。", source: "MarketWatch", url: "https://www.marketwatch.com/story/nearly-40-of-the-s-p-500-is-in-a-bear-market-here-are-10-of-those-stocks-that-analysts-say-can-gain-up-to-81-93a51af6?mod=mw_rss_topstories" },
-  { time: "18:29", tag: "geo", tagText: "地缘", text: "欧盟誓言继续维持对俄罗斯的制裁。在特朗普与莫斯科达成燃料协议、美国对俄立场出现转向后，欧洲领导人集体靠拢乌克兰总统泽连斯基，重申对俄施压立场，美欧在俄乌问题上的分歧进一步扩大。", source: "Financial Times", url: "https://www.ft.com/content/ee6dfd48-fa31-4bde-9962-2f9f09c36798?syn-25a6b1a6=1" },
-  { time: "18:00", tag: "geo", tagText: "地缘", text: "随着中期选举临近，美国共和党人开始公开反对特朗普的关税政策，称贸易战已成为关键选区选战中的沉重负担，党内围绕\"政治生存\"出现裂痕。", source: "Financial Times", url: "https://www.ft.com/content/e2acd655-0a6a-4de6-9404-c838f6e7b8cb?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月17日 01:20 CST";
+const breakingDate = "2026年10月17日 04:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:32", tag: "tech", tagText: "科技", text: "安全研究人员披露，有攻击者通过定向广告投放「零点击」漏洞利用代码，无需用户任何交互即可在设备上安装雇佣兵级间谍软件。这被认为是雇佣兵间谍软件首次被确认通过定向广告渠道分发，显示广告投放网络正被武器化为攻击入口，对企业与个人终端安全构成新的系统性威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/targeted-ads-delivered-0-click-exploits-to-install-mercenary-malware/" },
+  { time: "03:55", tag: "ai", tagText: "AI", text: "亚马逊设备负责人 Panos Panay 在 TechCrunch Disrupt 上描绘了一个「后应用」未来：环境式 AI 设备在后台持续运行，主动预判用户需求，而不再等待用户下达命令。这一表态指向亚马逊硬件战略的转向——从语音助手式交互走向无处不在的 ambient AI，也预示应用生态的入口可能被重构。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/" },
+  { time: "03:40", tag: "tech", tagText: "科技", text: "英伟达宣布扩展 CUDA-X 工具链，将 AI 能力进一步引入半导体制造环节，覆盖工艺仿真、缺陷检测与产能优化等场景。此举意味着英伟达正把自身从「芯片供应商」推进为制造业 AI 基础设施平台，试图在晶圆厂与设备商的数字化改造中锁定新的算力与软件需求。", source: "Advanced Manufacturing", url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPNFp4TDF6dTA2RXZzNHc4R3pwbVpocGFVRXYtYzlyNjYybDB0MWtHM1lqOE05eTdfYU9pTUFLSlV0eXA5Y1M2NEpZaUY1aFFvWDZVQUowcDhGQVRuYU9ZVTU5TGo2d2JyV2VJSXAzakM1TkttSlRURTZQSjJxazRmLThha0JoMUZxS3l3a2lsRHlVd3RtYVdVd202TU9qM3RxRHJveDU5N2k5dnVwLWsxZzQ4ZUxfVjlpa25aekRTMEhLLVRnZUE4Z1NPVkNLNVhtUkVqaUxBT1pTekRjMGxCNFNONkVNbnJRMTVjdnBWSnhNdw?oc=5" },
+  { time: "03:14", tag: "ai", tagText: "AI", text: "Anthropic 向 AI 安全评估机构 METR 开放接近员工级别的访问权限，允许其审查公司内部流程、风险与事故记录，并放弃了对 METR 评估报告的事先否决权。此举被视为前沿模型公司在外部独立审计与透明度上的一次罕见让步，可能为行业 AI 安全治理设立新参照。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/" },
+  { time: "02:15", tag: "ai", tagText: "AI", text: "Meta 发布开放权重模型 Muse Spark Open，称其为「迄今能力最强的美国开放权重模型」，并与苹果合作让其可直接在 Apple Silicon 芯片的 Mac 上本地运行（基于 MLX 框架）。这是 Meta 在开源大模型路线上的又一次加码，也意味着头部社交平台与硬件厂商正联手把强模型推向端侧本地推理。", source: "The Verge", url: "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx" },
+  { time: "01:52", tag: "ai", tagText: "AI", text: "印度成为最新一个报告出现「失控 AI 代理」活动的国家。调查显示，攻击者借助应用配置、公开代码仓库中暴露的凭据与连接设置，以及权限过宽的云角色，为 AI 代理打开进入企业系统的通道，使其在无人授权的情况下自主执行操作。该事件凸显企业在快速部署 AI 代理时普遍存在的身份与权限治理缺口，被视为继模型安全之后的新一类现实威胁。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/" },
   { time: "00:30", tag: "ai", tagText: "AI", text: "在英伟达机器人平台负责产品营销七年后转身做投资的 Amulya Vishwanath 表示，机器人产业目前仍处于「乐高时代」，执行器、机械结构等基础模块尚未标准化，因此迟迟没有迎来属于自己的「ChatGPT 时刻」。她强调「物理 AI」的内涵远不止机器人本身，投资机会更多在于让机器获得感知与行动能力的基础层技术。", source: "TechCrunch", url: "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/" },
   { time: "00:01", tag: "ai", tagText: "AI", text: "初创公司 Elorian 发布首个 AI 模型 Glimpse，主打「用图像进行推理」而非仅仅「对图像进行推理」。据其内部评测，Glimpse 在科学图表推理和短视频字幕任务上超过 GPT-6 Astra，在其他视觉推理任务上亦具竞争力，显示多模态模型竞争正从「看懂图」转向「以图为思考载体」。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/" },
   { time: "23:33", tag: "ai", tagText: "AI", text: "Vercel 的 AI 网关数据显示，Jev 已成为该平台有史以来采纳速度最快的 AI 模型。Vercel 的 AI gateway 类似 OpenRouter，为开发者提供统一 API 接入多家模型，其采纳数据被视为观察模型市场份额与开发者偏好的重要风向标，也显示新兴模型正更快地切入生产环境。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "07:45", tag: "tech", tagText: "科技", text: "卡路里识别应用 Cal AI 依靠一支由中小网红组成的「推广军团」实现病毒式增长，两年内营收超 3000 万美元，并于今年 3 月被 MyFitnessPal 收购（金额未披露）。该案例成为 AI 消费应用借助 KOL 分销快速起量的典型样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/" },
   { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
   { time: "06:36", tag: "tech", tagText: "科技", text: "世嘉在灾难性上线后，将《全面战争：幕府将军 2 完整版》从各商店下架。玩家集中投诉大量 bug，以及疑似由 AI 生成的画面放大（upscaling）效果，成为游戏行业对「滥用 AI 降本」反弹的最新案例。", source: "The Verge", url: "https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled" },
-  { time: "05:54", tag: "ai", tagText: "AI", text: "研究人员借助 AI 在基因组重建与编辑上取得新突破，使已灭绝的渡渡鸟（Dodo）更接近「复活」。这一进展推动了去灭绝（de-extinction）领域的发展，也再度引发关于生物伦理与生态风险的讨论。", source: "GreekReporter.com", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE0weGx5VmhhV093Y1k2T1EwZlNYSnMxdXdNekkxNHJtaVBCNW83ckNPNkpIeS1LMzBOQVkzanRwUUdjZHdjTFBvSFJXNmYzVkxPLUlXV1U3enRJbEZnR0dkbzdiekljazF6aHY2TDRjOEZjZ25Z?oc=5" },
-  { time: "04:32", tag: "tech", tagText: "科技", text: "安全研究人员披露，有攻击者通过定向广告投放「零点击」漏洞利用代码，无需用户任何交互即可在设备上安装雇佣兵级间谍软件。这被认为是雇佣兵间谍软件首次被确认通过定向广告渠道分发，显示广告投放网络正被武器化为攻击入口，对企业与个人终端安全构成新的系统性威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/targeted-ads-delivered-0-click-exploits-to-install-mercenary-malware/" },
-  { time: "03:55", tag: "ai", tagText: "AI", text: "亚马逊设备负责人 Panos Panay 在 TechCrunch Disrupt 上描绘了一个「后应用」未来：环境式 AI 设备在后台持续运行，主动预判用户需求，而不再等待用户下达命令。这一表态指向亚马逊硬件战略的转向——从语音助手式交互走向无处不在的 ambient AI，也预示应用生态的入口可能被重构。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/" },
-  { time: "03:40", tag: "tech", tagText: "科技", text: "英伟达宣布扩展 CUDA-X 工具链，将 AI 能力进一步引入半导体制造环节，覆盖工艺仿真、缺陷检测与产能优化等场景。此举意味着英伟达正把自身从「芯片供应商」推进为制造业 AI 基础设施平台，试图在晶圆厂与设备商的数字化改造中锁定新的算力与软件需求。", source: "Advanced Manufacturing", url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPNFp4TDF6dTA2RXZzNHc4R3pwbVpocGFVRXYtYzlyNjYybDB0MWtHM1lqOE05eTdfYU9pTUFLSlV0eXA5Y1M2NEpZaUY1aFFvWDZVQUowcDhGQVRuYU9ZVTU5TGo2d2JyV2VJSXAzakM1TkttSlRURTZQSjJxazRmLThha0JoMUZxS3l3a2lsRHlVd3RtYVdVd202TU9qM3RxRHJveDU5N2k5dnVwLWsxZzQ4ZUxfVjlpa25aekRTMEhLLVRnZUE4Z1NPVkNLNVhtUkVqaUxBT1pTekRjMGxCNFNONkVNbnJRMTVjdnBWSnhNdw?oc=5" },
-  { time: "03:14", tag: "ai", tagText: "AI", text: "Anthropic 向 AI 安全评估机构 METR 开放接近员工级别的访问权限，允许其审查公司内部流程、风险与事故记录，并放弃了对 METR 评估报告的事先否决权。此举被视为前沿模型公司在外部独立审计与透明度上的一次罕见让步，可能为行业 AI 安全治理设立新参照。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/" },
-  { time: "02:15", tag: "ai", tagText: "AI", text: "Meta 发布开放权重模型 Muse Spark Open，称其为「迄今能力最强的美国开放权重模型」，并与苹果合作让其可直接在 Apple Silicon 芯片的 Mac 上本地运行（基于 MLX 框架）。这是 Meta 在开源大模型路线上的又一次加码，也意味着头部社交平台与硬件厂商正联手把强模型推向端侧本地推理。", source: "The Verge", url: "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx" },
 ];
-const aiBreakingDate = "2026年10月17日 01:20 CST";
+const aiBreakingDate = "2026年10月17日 04:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
