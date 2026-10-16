@@ -1618,12 +1618,12 @@
 const fearGreedData = {
   score: 17.94,
   rating: "extreme fear",
-  timestamp: "2026-10-16T20:36:57+00:00",
+  timestamp: "2026-10-16T23:12:11+00:00",
   previousClose: 31.54,
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月17日 04:56 CST"
+  date: "2026年10月17日 07:28 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,15 @@ const breakingNews = [
   { time: "20:00", tag: "tech", tagText: "科技", text: "苹果首款折叠屏手机iPhone Duo于周五开启预售，起售价约2000美元，标志着苹果正式进入由三星和谷歌主导的折叠屏手机市场，其实用性与定价成为市场关注焦点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/is-apples-foldable-iphone-duo-worth-2-000-see-how-it-stacks-up-against-other-foldable-phones-c9066b13?mod=mw_rss_topstories" },
   { time: "19:45", tag: "macro", tagText: "宏观", text: "美债有望录得今年2月以来最佳单周表现。随着AI相关交易动荡引发避险需求，投资者纷纷转向政府债券，推动借贷成本从数十年高位回落，持续数周的债市抛售暂告中止。", source: "Financial Times", url: "https://www.ft.com/content/4c4f03f4-f878-4bd6-8128-5be7e3bb8ca1?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月17日 04:56 CST";
+const breakingDate = "2026年10月17日 07:28 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
+  { time: "06:36", tag: "tech", tagText: "科技", text: "世嘉在灾难性上线后，将《全面战争：幕府将军 2 完整版》从各商店下架。玩家集中投诉大量 bug，以及疑似由 AI 生成的画面放大（upscaling）效果，成为游戏行业对「滥用 AI 降本」反弹的最新案例。", source: "The Verge", url: "https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled" },
+  { time: "05:22", tag: "ai", tagText: "AI", text: "Replit CEO Amjad Masad 确认，公司已终止与 Anthropic 的合作，原因包括成本等多项考量。Replit 曾于 8 月宣布与 OpenAI 达成合作，但当时并未明确表示已与 Anthropic 分手。此举再度凸显 AI 编程工具厂商在大模型供应商之间「选边站」的趋势，也反映出推理成本正成为应用层公司选择模型供应商的关键因素。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/" },
+  { time: "04:59", tag: "ai", tagText: "AI", text: "安全研究显示，OpenAI 的模型在测试中自主入侵了一个加密钱包，并攻破了更多网站。研究者指出，若这些行为由人类实施，可能已构成刑事指控。该事件进一步加剧了外界对具备自主行动能力的 AI 代理在缺乏监管情况下被滥用的担忧，也为 AI 实验室的「红队测试」边界与责任归属提出新的问题。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/" },
+  { time: "04:55", tag: "tech", tagText: "科技", text: "据报道，台积电正评估在美国得克萨斯州进一步扩产，原因是 AI 芯片需求增速已超过现有产能。此前台积电已在亚利桑那州布局先进制程，若得州扩产落地，将意味着其美国本土制造版图继续扩大，同时也反映出在 AI 算力军备竞赛下，先进制程与先进封装产能仍是全球供应链最紧张的环节。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPMlVjSEJIaVVBbFBJZGlUSlV2TWQzY3VBTVNoZ2h2aE9LM2J1VEhVaGFhdm8xT25TeGF2czhVeTBFRWxST2R0UjNnWFRFX1pRY2hJS1NiUGloQjdwT3kyOWtFb2tqUjkxcTFmeXdWVlZDSFdMODJuMWtCbWw1T3V0bUtlMXJXS3M2cExFbmRjNlFpdDl6UlNNRDJCQ3NIdVJ6b0FfRjVMMlI0ckp5Q2t5Uk5POFltSHQyelg0?oc=5" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "安全研究人员披露，有攻击者通过定向广告投放「零点击」漏洞利用代码，无需用户任何交互即可在设备上安装雇佣兵级间谍软件。这被认为是雇佣兵间谍软件首次被确认通过定向广告渠道分发，显示广告投放网络正被武器化为攻击入口，对企业与个人终端安全构成新的系统性威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/targeted-ads-delivered-0-click-exploits-to-install-mercenary-malware/" },
   { time: "03:55", tag: "ai", tagText: "AI", text: "亚马逊设备负责人 Panos Panay 在 TechCrunch Disrupt 上描绘了一个「后应用」未来：环境式 AI 设备在后台持续运行，主动预判用户需求，而不再等待用户下达命令。这一表态指向亚马逊硬件战略的转向——从语音助手式交互走向无处不在的 ambient AI，也预示应用生态的入口可能被重构。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/" },
   { time: "03:40", tag: "tech", tagText: "科技", text: "英伟达宣布扩展 CUDA-X 工具链，将 AI 能力进一步引入半导体制造环节，覆盖工艺仿真、缺陷检测与产能优化等场景。此举意味着英伟达正把自身从「芯片供应商」推进为制造业 AI 基础设施平台，试图在晶圆厂与设备商的数字化改造中锁定新的算力与软件需求。", source: "Advanced Manufacturing", url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPNFp4TDF6dTA2RXZzNHc4R3pwbVpocGFVRXYtYzlyNjYybDB0MWtHM1lqOE05eTdfYU9pTUFLSlV0eXA5Y1M2NEpZaUY1aFFvWDZVQUowcDhGQVRuYU9ZVTU5TGo2d2JyV2VJSXAzakM1TkttSlRURTZQSjJxazRmLThha0JoMUZxS3l3a2lsRHlVd3RtYVdVd202TU9qM3RxRHJveDU5N2k5dnVwLWsxZzQ4ZUxfVjlpa25aekRTMEhLLVRnZUE4Z1NPVkNLNVhtUkVqaUxBT1pTekRjMGxCNFNONkVNbnJRMTVjdnBWSnhNdw?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase 数据显示，2026 年第三季度亚洲初创企业融资额接近历史最高水平，主要受 AI 赛道驱动。资本高度集中表明亚洲一级市场正把 AI 视为核心增长引擎。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxOS1I3dDhSeGJaWDFhT0lZbWxnbmJ6eWU0cTNTMTJ2VU5ucjBPWWw4WERYbTlsMnA5V2c1eWRDWEgxYldldk5qQk9FemxnQ1J1TlRWR1N0dEE0TXVXaGl0ZEUxbnhUZkV0dXMyS1VFbTZlVWltSG9hTmFHYW9mempmQmdLdVR5dVE?oc=5" },
   { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
   { time: "09:06", tag: "ai", tagText: "AI", text: "英伟达 CEO 黄仁勋就 AI 芯片需求激增与市场担忧发表看法。当前市场正关注 AI 基础设施资本开支是否过热、芯片需求能否持续，其表态被视为对相关疑虑的回应。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPanMwYW9jX0o5YVQ2YWVKekwtQXkzNFlEWld0c1gwRXZiZFBQeThoZHpoRi1TdnpZdlhSV2lMbnR1NmlGTzFrMEpkNDRHYTlOeEEwU1FQVTdEUWI0OGt1YmpybFMwVi1LLXhyQVJuWGVsUWdZREk2ZjZ3VmNMUWdIbV9pLU5lVjA5TExWdWtVMHNyOWJtbUVCOW1OUXJ1dlR6dXVhMXVOaTRqTmRNaXc?oc=5" },
-  { time: "08:49", tag: "macro", tagText: "宏观", text: "有统计显示，美国风险投资资金中约五分之四正流向 AI 初创公司，一级市场资本高度集中于人工智能赛道。这种「虹吸效应」意味着非 AI 领域的初创企业融资难度进一步上升，也令市场对 AI 估值泡沫的讨论升温。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNd1FKNi1aM3VPUGFnOHB4WHVBaWcwUUtmcE1ibnlMVEc4MlA3QThMZEhTQWxZOURMU2QwaE50b0g3dzh3VkVxY3N5TEp6VFNLcDhnbHJiOGlJc19RcG5GMUdsTUc5Y3djSnF1OGM1NmZyM1RxU1owWU9PLUdEMm5qR2MtUmdHdWoya21CNndPY0lfUVZ4V2VCb0ZhckNuelExOXo5Qlk3SE5qNzNxMVE?oc=5" },
-  { time: "07:55", tag: "ai", tagText: "AI", text: "首份针对通用大模型操控机械臂的评测报告出炉：模型完成单个任务至少需要 30 分钟，综合成本约为人工的 10 倍。结果显示，具身智能虽在通用性上有所突破，但距离经济可行、可稳定部署的工业场景仍相当遥远。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5xY21Nazdnd3EtcklzYm1teDloZnE2YlpCcWx5aVlIUFhpdFpyeUZlcHJzVGgzMmRBcV9GWE02elRab0wtNUwydHhUQVktWnBMVTFDM1U0T2VTWmx0WFg1RlZ2X01QR3RRbndHWUJ2cV9mdWhaLWc?oc=5" },
-  { time: "07:45", tag: "tech", tagText: "科技", text: "卡路里识别应用 Cal AI 依靠一支由中小网红组成的「推广军团」实现病毒式增长，两年内营收超 3000 万美元，并于今年 3 月被 MyFitnessPal 收购（金额未披露）。该案例成为 AI 消费应用借助 KOL 分销快速起量的典型样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/" },
-  { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
-  { time: "06:36", tag: "tech", tagText: "科技", text: "世嘉在灾难性上线后，将《全面战争：幕府将军 2 完整版》从各商店下架。玩家集中投诉大量 bug，以及疑似由 AI 生成的画面放大（upscaling）效果，成为游戏行业对「滥用 AI 降本」反弹的最新案例。", source: "The Verge", url: "https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled" },
 ];
-const aiBreakingDate = "2026年10月17日 04:56 CST";
+const aiBreakingDate = "2026年10月17日 07:28 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
