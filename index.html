@@ -1618,18 +1618,23 @@
 const fearGreedData = {
   score: 31.54,
   rating: "fear",
-  timestamp: "2026-10-15T21:50:00+00:00",
+  timestamp: "2026-10-15T23:59:53+00:00",
   previousClose: 32.33,
   previous1Week: 39.8,
   previous1Month: 27.97,
   previous1Year: 27.41,
-  date: "2026年10月16日 06:08 CST"
+  date: "2026年10月16日 09:11 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:54", tag: "macro", tagText: "宏观", text: "尽管印度央行（RBI）出手干预，市场仍预计印度卢比将进一步走弱至1美元兑100卢比水平。RBI最新举措已帮助卢比从96.79回升至95附近，但中东局势（伊朗战争）引发的油价与资本外流担忧持续压制卢比。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/india-rupee-rbi-dollar-iran-war.html" },
+  { time: "08:44", tag: "macro", tagText: "宏观", text: "全球指数提供商MSCI警告，可能将印尼从其主要指数中剔除，加剧市场对东南亚最大经济体可投资性的担忧。若成真，恐引发被动资金外流并推高印尼融资成本。", source: "Financial Times", url: "https://www.ft.com/content/753fa2ed-1763-462b-a4c0-ded9b53baf3c" },
+  { time: "08:06", tag: "geo", tagText: "地缘", text: "新加坡持续遭遇严重雾霾，扰乱日常生活与企业运营。总理黄循财警告将采取行动，当局已推出防护措施并发布警告，区域跨境烟霾问题再度升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/singapore-haze-wong-warning-indonesia.html" },
+  { time: "07:08", tag: "tech", tagText: "科技", text: "Netflix宣布首席内容官Bela Bajaria将离职，由前迪士尼高管Peter Rice接任。此番高层变动正值流媒体竞争加剧、行业内容战略面临调整之际。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/netflix-bela-bajaria-peter-rice.html" },
   { time: "05:54", tag: "macro", tagText: "宏观", text: "美国小盘股在两个月内从历史高点回落10%，正式进入回调区间，创下投资者不愿看到的里程碑。市场将此轮快速下跌归因于通胀数据超预期推动加息押注升温、以及对AI相关交易的广泛抛售，风险偏好明显降温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/from-a-record-high-to-a-10-drop-in-just-two-months-why-small-cap-stocks-have-unraveled-so-fast-1cf0f4d5?mod=mw_rss_topstories" },
+  { time: "05:10", tag: "geo", tagText: "地缘", text: "特朗普政府正考虑放松对俄罗斯与伊朗\"影子船队\"的限制。急于在11月中期选举前压低燃油成本的白宫，可能允许被列入黑名单的油轮重返全球贸易，此举或影响国际原油与制裁格局。", source: "Financial Times", url: "https://www.ft.com/content/6dfa9879-589a-4af3-9374-b546a945a219?syn-25a6b1a6=1" },
   { time: "01:55", tag: "geo", tagText: "地缘", text: "美国司法部起诉加利福尼亚州，围绕邮寄选票的选民公民身份核查问题展开法律战。此时距决定国会两院控制权的中期选举已不足一个月，选举合规争议持续升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/california-mail-ballots-voting-lawsuit.html" },
   { time: "01:52", tag: "tech", tagText: "科技", text: "苹果与Meta达成合作，使其Muse AI模型（Muse Spark Open）更易在Mac电脑上本地运行，通过集群式Mac Studio系统实现本地化部署。此举凸显科技巨头在端侧AI与开源模型生态上的合作加深。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/apple-meta-partner-ai.html" },
   { time: "01:06", tag: "macro", tagText: "宏观", text: "美国2027年社会保障生活成本调整（COLA）确定为3.6%，逾6800万受益人平均每月社保金将增加约75美元，以应对持续的通胀压力。与此同时，围绕COLA是否应设限、削减甚至取消的政策争论正在升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/social-securitys-cola-will-be-3-6-in-2027-as-inflation-persists-f7c9dff2?mod=mw_rss_topstories" },
@@ -1644,16 +1649,17 @@ const breakingNews = [
   { time: "18:44", tag: "geo", tagText: "地缘", text: "美国军方正评估对伊朗的打击选项，据报包括可能动用其武库中最大的非核炸弹之一\"炸弹之母\"（MOAB）；与此同时伊朗誓言继续战斗。中东紧张局势进一步升级。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/us-iran-war-trump-hormuz.html" },
   { time: "15:15", tag: "macro", tagText: "宏观", text: "全球AI抛售加剧，亚洲股市全线重挫。韩国Kospi一度暴跌7%至8%并触发熔断，日经225指数大跌5%，追随隔夜美股跌势。此前美国CPI数据超预期升温加息押注，叠加市场对AI板块高估值的担忧，风险资产遭广泛抛售。", source: "Financial Times", url: "https://www.ft.com/content/cf5f1209-da29-4ce1-b425-0e83818bf9ec?syn-25a6b1a6=1" },
   { time: "15:15", tag: "macro", tagText: "宏观", text: "英国8月经济环比增长0.1%，好于市场预期。但该国仍深陷由粘性通胀与能源成本飙升引发的生活成本危机，增长动能脆弱，前景仍面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/uk-gdp-august-2026-economy.html" },
-  { time: "14:22", tag: "tech", tagText: "科技", text: "印度亿万富翁安巴尼旗下的Jio Platforms将于本月晚些时候启动大规模IPO，但因与马斯克围绕卫星互联网的争执而面临估值审视，市场对其定价与预期回报趋于谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/india-starlink-musk-jio-ambani-ipo.html" },
-  { time: "13:59", tag: "ai", tagText: "AI", text: "台积电第三季度利润同比大增65%，连续第六个季度创历史新高，并超出市场预期，AI需求持续拉动。作为全球最大芯片代工厂，其业绩凸显AI算力热潮对企业盈利的强劲支撑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/tsmc-third-quarter-profit-global-ai-.html" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "投资者预计金价将在两年内刷新历史纪录。各国央行9月购金量创近两年单月新高，在全球不确定性加剧及美元信用担忧下，央行与机构持续增持黄金，避险配置需求旺盛。", source: "Financial Times", url: "https://www.ft.com/content/7761de04-7fac-4f7b-bddb-8457e425b642?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基表示将恢复对俄罗斯炼油厂的打击，并在采访中对美国撤回情报共享、削弱星链服务表达强烈不满。马斯克则回应称，对星链速度或使用的任何限制均由美国军方决定，并最终取决于总统。", source: "Financial Times", url: "https://www.ft.com/content/4d79b52f-1f0d-4739-82ab-7ecfb4251326?syn-25a6b1a6=1" },
-  { time: "11:48", tag: "ai", tagText: "AI", text: "AI初创公司Anthropic第三季度营收据称高达168亿美元，为即将到来的IPO铺路。尽管增速惊人，但市场对其估值仍存疑虑，科技股期货随之走低，反映投资者对AI商业化回报前景趋于谨慎。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/anthropics-third-quarter-revenue-hits-16point8-billion-ipo.html" },
 ];
-const breakingDate = "2026年10月16日 06:08 CST";
+const breakingDate = "2026年10月16日 09:11 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:49", tag: "macro", tagText: "宏观", text: "有统计显示，美国风险投资资金中约五分之四正流向 AI 初创公司，一级市场资本高度集中于人工智能赛道。这种「虹吸效应」意味着非 AI 领域的初创企业融资难度进一步上升，也令市场对 AI 估值泡沫的讨论升温。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNd1FKNi1aM3VPUGFnOHB4WHVBaWcwUUtmcE1ibnlMVEc4MlA3QThMZEhTQWxZOURMU2QwaE50b0g3dzh3VkVxY3N5TEp6VFNLcDhnbHJiOGlJc19RcG5GMUdsTUc5Y3djSnF1OGM1NmZyM1RxU1owWU9PLUdEMm5qR2MtUmdHdWoya21CNndPY0lfUVZ4V2VCb0ZhckNuelExOXo5Qlk3SE5qNzNxMVE?oc=5" },
+  { time: "07:55", tag: "ai", tagText: "AI", text: "首份针对通用大模型操控机械臂的评测报告出炉：模型完成单个任务至少需要 30 分钟，综合成本约为人工的 10 倍。结果显示，具身智能虽在通用性上有所突破，但距离经济可行、可稳定部署的工业场景仍相当遥远。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5xY21Nazdnd3EtcklzYm1teDloZnE2YlpCcWx5aVlIUFhpdFpyeUZlcHJzVGgzMmRBcV9GWE02elRab0wtNUwydHhUQVktWnBMVTFDM1U0T2VTWmx0WFg1RlZ2X01QR3RRbndHWUJ2cV9mdWhaLWc?oc=5" },
+  { time: "07:45", tag: "tech", tagText: "科技", text: "卡路里识别应用 Cal AI 依靠一支由中小网红组成的「推广军团」实现病毒式增长，两年内营收超 3000 万美元，并于今年 3 月被 MyFitnessPal 收购（金额未披露）。该案例成为 AI 消费应用借助 KOL 分销快速起量的典型样本。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/" },
+  { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
+  { time: "06:36", tag: "tech", tagText: "科技", text: "世嘉在灾难性上线后，将《全面战争：幕府将军 2 完整版》从各商店下架。玩家集中投诉大量 bug，以及疑似由 AI 生成的画面放大（upscaling）效果，成为游戏行业对「滥用 AI 降本」反弹的最新案例。", source: "The Verge", url: "https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled" },
+  { time: "05:54", tag: "ai", tagText: "AI", text: "研究人员借助 AI 在基因组重建与编辑上取得新突破，使已灭绝的渡渡鸟（Dodo）更接近「复活」。这一进展推动了去灭绝（de-extinction）领域的发展，也再度引发关于生物伦理与生态风险的讨论。", source: "GreekReporter.com", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE0weGx5VmhhV093Y1k2T1EwZlNYSnMxdXdNekkxNHJtaVBCNW83ckNPNkpIeS1LMzBOQVkzanRwUUdjZHdjTFBvSFJXNmYzVkxPLUlXV1U3enRJbEZnR0dkbzdiekljazF6aHY2TDRjOEZjZ25Z?oc=5" },
   { time: "04:32", tag: "tech", tagText: "科技", text: "安全研究人员披露，有攻击者通过定向广告投放「零点击」漏洞利用代码，无需用户任何交互即可在设备上安装雇佣兵级间谍软件。这被认为是雇佣兵间谍软件首次被确认通过定向广告渠道分发，显示广告投放网络正被武器化为攻击入口，对企业与个人终端安全构成新的系统性威胁。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/targeted-ads-delivered-0-click-exploits-to-install-mercenary-malware/" },
   { time: "03:55", tag: "ai", tagText: "AI", text: "亚马逊设备负责人 Panos Panay 在 TechCrunch Disrupt 上描绘了一个「后应用」未来：环境式 AI 设备在后台持续运行，主动预判用户需求，而不再等待用户下达命令。这一表态指向亚马逊硬件战略的转向——从语音助手式交互走向无处不在的 ambient AI，也预示应用生态的入口可能被重构。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/" },
   { time: "03:40", tag: "tech", tagText: "科技", text: "英伟达宣布扩展 CUDA-X 工具链，将 AI 能力进一步引入半导体制造环节，覆盖工艺仿真、缺陷检测与产能优化等场景。此举意味着英伟达正把自身从「芯片供应商」推进为制造业 AI 基础设施平台，试图在晶圆厂与设备商的数字化改造中锁定新的算力与软件需求。", source: "Advanced Manufacturing", url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPNFp4TDF6dTA2RXZzNHc4R3pwbVpocGFVRXYtYzlyNjYybDB0MWtHM1lqOE05eTdfYU9pTUFLSlV0eXA5Y1M2NEpZaUY1aFFvWDZVQUowcDhGQVRuYU9ZVTU5TGo2d2JyV2VJSXAzakM1TkttSlRURTZQSjJxazRmLThha0JoMUZxS3l3a2lsRHlVd3RtYVdVd202TU9qM3RxRHJveDU5N2k5dnVwLWsxZzQ4ZUxfVjlpa25aekRTMEhLLVRnZUE4Z1NPVkNLNVhtUkVqaUxBT1pTekRjMGxCNFNONkVNbnJRMTVjdnBWSnhNdw?oc=5" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "01:00", tag: "tech", tagText: "科技", text: "谷歌宣布新功能，支持用户构建并使用仅供自己使用的私人 Android 应用：通过 AI Studio「vibe-coding」生成的应用无需连接电脑即可安装，也不必上架 Play Store 面向所有用户发布。此举降低了个人化 App 的开发与分发门槛。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/" },
   { time: "00:45", tag: "ai", tagText: "AI", text: "分析指出，英伟达与博通正以两条不同叙事主导 AI 芯片格局：英伟达凭 GPU 软硬件生态继续把持训练与推理的通用算力，博通则依靠定制 ASIC 与网络芯片承接超大规模云厂商的自研需求。两条路线的此消彼长，正在重塑数据中心算力供应链与竞争格局。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMzdfSmxzV0ZUdGlxTzV4YzAyYW5iVVhfcHBsb2lLRXBpRUVfX3c3a2dPYkxzYmtLS0ZONjdEVjROQ3ZpUUw0NlZsQnRTTHZLQmVlVWV4MkZxVjc1bW5ETXR6ZXBicEtCTHdtemtmc1BTSEs5VVBRQlJCZEJGaHp5c0ZNTW1oNHVEN09sQVl0SFluVHBtd2dqalB2VURYaEhjZFJsMjhn?oc=5" },
   { time: "00:43", tag: "ai", tagText: "AI", text: "OpenAI 指控一名前员工在跳槽苹果前带走逾 100 份涉及公司产品规划的文件。在周三提交的法律文书中，OpenAI 称该未具名员工将这些资料发送出去，并已向苹果方面展示相关产品计划，事件令两家公司在 AI 人才与知识产权上的摩擦公开化。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1011276/openai-employee-unreleased-product-plans" },
-  { time: "00:42", tag: "macro", tagText: "宏观", text: "太空初创企业融资在第三季度创下 208 亿美元的历史纪录，基础设施类投资激增，成为推高融资规模的主要动力。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSmdJRkVWT25MTUxHMDVhYmRBOFBSMWFnXzUyemtGTWhIN3JJcFRKcGgzR3Q3Q0NRRVpSUGozcDRzUmhCcUp0RzZoX1JEb3FmWDQwcVFqTmpCUEduSTU0WEd1VmZVRHk4M2FBZ0lsLTdRZFY0Y19PNFBpZWNkTnFTSU1rM0xjMy1Bc2IzVF92ZWxYOU8wRi0wM0FpSWVUZWQ0ZnU2RktJUQ?oc=5" },
-  { time: "00:42", tag: "ai", tagText: "AI", text: "演员 Mia Goth 表示，Instagram 任由一张 AI 生成的她的图像在平台上传播「令人无法理解」。相关图像来自一个带有蓝色认证标记的账号，事件凸显社交平台在 AI 深度伪造内容与账号认证机制上的管控漏洞。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce" },
-  { time: "00:21", tag: "tech", tagText: "科技", text: "The Verge 关注到一股新兴消费硬件趋势：越来越多以「AI 助手」「随身穿戴」为卖点的设备，会持续采集使用者周围所有人的语音与环境信息，而被拍摄、被录音的旁观者根本无从表示同意。随着这类设备进入家庭与公共场所，数据同意与隐私边界正引发更大争议。", source: "The Verge", url: "https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent" },
-  { time: "23:02", tag: "ai", tagText: "AI", text: "Rivian 计划将 AI 代理引入其车辆，具体实现方式预计将在公司 12 月举办的「AI & Autonomy Day」活动上进一步揭晓。此举显示车企正把生成式 AI 代理从座舱助手延伸至更广泛的车辆交互与控制场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/" },
-  { time: "22:30", tag: "tech", tagText: "科技", text: "微软与英伟达上周在旧金山举办发布活动，推出首批搭载 RTX Spark 平台的 AI PC 笔记本，微软正针对该平台优化 Windows（包括记事本等系统级应用），新一波 AI PC 就此进入市场。", source: "The Verge", url: "https://www.theverge.com/tech/1011996/microsoft-windows-rtx-spark-platform-changes-notepad" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "谷歌正式上线「通用购物车」（Universal Cart）AI 工具，赶在黑色星期五及年末购物季前推出。该功能今年 5 月在 I/O 开发者大会上首次预览，可跨商家汇总商品、由 AI 智能管理购物车与比价，相当于把 Gemini 能力嵌入电商入口，直接对亚马逊的购物生态构成挑战。", source: "The Verge", url: "https://www.theverge.com/tech/1011797/google-ai-universal-cart-shopping-tool-launch" },
 ];
-const aiBreakingDate = "2026年10月16日 06:08 CST";
+const aiBreakingDate = "2026年10月16日 09:11 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
