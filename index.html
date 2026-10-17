@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月18日 01:01 CST"
+  date: "2026年10月18日 03:13 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,11 @@ const breakingNews = [
   { time: "08:47", tag: "ai", tagText: "AI", text: "Anthropic在最新芯片融资中向黑石提供两位数收益率；高借贷成本使该AI实验室实现投资级评级的目标复杂化，反映AI基础设施融资成本上升。", source: "Financial Times", url: "https://www.ft.com/content/cb4034e1-475f-40b9-a5f9-256e91aacb89?syn-25a6b1a6=1" },
   { time: "04:02", tag: "geo", tagText: "地缘", text: "布伦特原油触及每桶110美元。伊朗本周在霍尔木兹海峡升级袭击，乌克兰则誓言打击俄罗斯炼油厂，双重地缘风险推动美国原油价格周五大幅上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html" },
 ];
-const breakingDate = "2026年10月18日 01:01 CST";
+const breakingDate = "2026年10月18日 03:13 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:15", tag: "ai", tagText: "AI", text: "Meta 发布开放权重模型 Muse Spark Open，称其为「迄今能力最强的美国开放权重模型」，并与苹果合作让其可直接在 Apple Silicon 芯片的 Mac 上本地运行（基于 MLX 框架）。这是 Meta 在开源大模型路线上的又一次加码，也意味着头部社交平台与硬件厂商正联手把强模型推向端侧本地推理。", source: "The Verge", url: "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx" },
   { time: "00:30", tag: "ai", tagText: "AI", text: "在英伟达机器人平台负责产品营销七年后转身做投资的 Amulya Vishwanath 表示，机器人产业目前仍处于「乐高时代」，执行器、机械结构等基础模块尚未标准化，因此迟迟没有迎来属于自己的「ChatGPT 时刻」。她强调「物理 AI」的内涵远不止机器人本身，投资机会更多在于让机器获得感知与行动能力的基础层技术。", source: "TechCrunch", url: "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/" },
   { time: "00:01", tag: "ai", tagText: "AI", text: "初创公司 Elorian 发布首个 AI 模型 Glimpse，主打「用图像进行推理」而非仅仅「对图像进行推理」。据其内部评测，Glimpse 在科学图表推理和短视频字幕任务上超过 GPT-6 Astra，在其他视觉推理任务上亦具竞争力，显示多模态模型竞争正从「看懂图」转向「以图为思考载体」。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/" },
   { time: "23:33", tag: "ai", tagText: "AI", text: "Vercel 的 AI 网关数据显示，Jev 已成为该平台有史以来采纳速度最快的 AI 模型。Vercel 的 AI gateway 类似 OpenRouter，为开发者提供统一 API 接入多家模型，其采纳数据被视为观察模型市场份额与开发者偏好的重要风向标，也显示新兴模型正更快地切入生产环境。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "03:55", tag: "ai", tagText: "AI", text: "亚马逊设备负责人 Panos Panay 在 TechCrunch Disrupt 上描绘了一个「后应用」未来：环境式 AI 设备在后台持续运行，主动预判用户需求，而不再等待用户下达命令。这一表态指向亚马逊硬件战略的转向——从语音助手式交互走向无处不在的 ambient AI，也预示应用生态的入口可能被重构。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/" },
   { time: "03:40", tag: "tech", tagText: "科技", text: "英伟达宣布扩展 CUDA-X 工具链，将 AI 能力进一步引入半导体制造环节，覆盖工艺仿真、缺陷检测与产能优化等场景。此举意味着英伟达正把自身从「芯片供应商」推进为制造业 AI 基础设施平台，试图在晶圆厂与设备商的数字化改造中锁定新的算力与软件需求。", source: "Advanced Manufacturing", url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPNFp4TDF6dTA2RXZzNHc4R3pwbVpocGFVRXYtYzlyNjYybDB0MWtHM1lqOE05eTdfYU9pTUFLSlV0eXA5Y1M2NEpZaUY1aFFvWDZVQUowcDhGQVRuYU9ZVTU5TGo2d2JyV2VJSXAzakM1TkttSlRURTZQSjJxazRmLThha0JoMUZxS3l3a2lsRHlVd3RtYVdVd202TU9qM3RxRHJveDU5N2k5dnVwLWsxZzQ4ZUxfVjlpa25aekRTMEhLLVRnZUE4Z1NPVkNLNVhtUkVqaUxBT1pTekRjMGxCNFNONkVNbnJRMTVjdnBWSnhNdw?oc=5" },
   { time: "03:14", tag: "ai", tagText: "AI", text: "Anthropic 向 AI 安全评估机构 METR 开放接近员工级别的访问权限，允许其审查公司内部流程、风险与事故记录，并放弃了对 METR 评估报告的事先否决权。此举被视为前沿模型公司在外部独立审计与透明度上的一次罕见让步，可能为行业 AI 安全治理设立新参照。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/" },
-  { time: "02:15", tag: "ai", tagText: "AI", text: "Meta 发布开放权重模型 Muse Spark Open，称其为「迄今能力最强的美国开放权重模型」，并与苹果合作让其可直接在 Apple Silicon 芯片的 Mac 上本地运行（基于 MLX 框架）。这是 Meta 在开源大模型路线上的又一次加码，也意味着头部社交平台与硬件厂商正联手把强模型推向端侧本地推理。", source: "The Verge", url: "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx" },
 ];
-const aiBreakingDate = "2026年10月18日 01:01 CST";
+const aiBreakingDate = "2026年10月18日 03:13 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
