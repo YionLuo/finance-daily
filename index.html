@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月18日 13:44 CST"
+  date: "2026年10月18日 18:54 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:00", tag: "tech", tagText: "科技", text: "埃森哲正寻求出售其在华业务，估值最高达15亿美元。作为全球最大IT咨询公司，埃森哲股价近月因AI冲击担忧而波动；此举反映跨国咨询机构在地缘政治与AI转型压力下调整中国布局。", source: "Financial Times", url: "https://www.ft.com/content/2dfdd513-26a6-4a10-9cae-5242eb4ee3ed?syn-25a6b1a6=1" },
+  { time: "15:41", tag: "tech", tagText: "科技", text: "苹果股价近下跌近10%，最新财报令华尔街分歧加大，而散户视回调为买入机会。市场关注AI进展、iPhone需求及高估值能否支撑，苹果股价波动可能影响科技股整体情绪。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNa1VpQUtobElmVUZBaENva0FaZEVhRjlRQXNwR1M4bmF6U1E5UWVRTDhHVkNseFdXTTdRQnZnU180QXZtaElCYkc5RnVMMy1RRW1jQm1vZmVOc2hibFZ0N21tczBUWkFCeEtzaVEtQmRTdzQzWXFRbERreWoyQ3FDaVMtdk91SGRoblJLR2FjZTJ2OXFSaGtxX3FrRHV5cFJBZW9VaGNQOFBrbmt3VWFPRFMwa0FoY2ROYVREcVlDQUpmOG1YSmdOaFEwRm83YlczTXlhZWZhelZaN3FGcEdRdjNKY3BIRWQ1ZWd3ejVYV3hleGc?oc=5" },
+  { time: "15:22", tag: "geo", tagText: "地缘", text: "特朗普推动的俄罗斯柴油协议可能为普京带来资金之外的战略收益，并给乌克兰带来麻烦。协议对俄财政影响或有限，但引发对美国对乌支持力度、乌克兰谈判筹码及普京下一步行动的更大疑问。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/trump-diesel-russia-ukraine-war.html" },
+  { time: "14:13", tag: "macro", tagText: "宏观", text: "英国央行副行长警告，对冲基金活动可能提高全球债市冲击风险。其高杠杆与流动性错配可能放大市场波动，监管层正关注非银机构在国债市场中的角色。", source: "CNBC", url: "https://www.cnbc.com/2026/10/18/hedge-funds-bond-market-turmoil.html" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "英国《金融时报》警告，美国规模约10万亿美元的AI基础设施投资热潮开始出现裂痕。对AI未来的巨额押注正撞上现实世界难以回避的经济约束——电力供应、电网接入、建设成本与融资压力，令超大规模数据中心的回报周期面临重估。", source: "Financial Times", url: "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "FT对94位经济学家的调查显示，全球经济正迎来由AI驱动的增长提速，且红利释放范围将远超美国和中国，更多经济体有望受益于AI带来的生产率提升。该预期与市场对AI资本开支可持续性的担忧形成对照。", source: "Financial Times", url: "https://www.ft.com/content/c6aeb3a1-1874-4947-8ffc-4d993301244a?syn-25a6b1a6=1" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "俄罗斯\"影子舰队\"油轮被发现在同一时间出现在两个不同地点，通过伪造位置信号规避追踪。该欺骗手法呈现明显协调性，表明莫斯科正加强对这支规避西方制裁的油轮船队的直接控制，将加大西方执法与保险核查难度。", source: "Financial Times", url: "https://www.ft.com/content/f9dd0c26-3de3-4ecc-8a08-7d08f0946d08?syn-25a6b1a6=1" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "02:40", tag: "tech", tagText: "科技", text: "苹果首款折叠屏手机iPhone Duo于周五开启预售，定价约2,000美元，正式进军由三星和谷歌主导的折叠屏市场。市场关注其高价能否被接受，以及该产品能否为苹果硬件业务打开新的增长空间。", source: "MarketWatch", url: "https://www.marketwatch.com/story/is-apples-foldable-iphone-duo-worth-2-000-see-how-it-stacks-up-against-other-foldable-phones-c9066b13?mod=mw_rss_topstories" },
   { time: "01:58", tag: "geo", tagText: "地缘", text: "以色列定居者在约旦河西岸袭击欧洲外交官，比利时外长谴责暴力并称其政府将推动欧盟对责任人实施制裁。事件加剧以色列与欧洲国家紧张关系，也使加沙战后外交斡旋更趋复杂。", source: "Financial Times", url: "https://www.ft.com/content/35a08f82-6830-41fa-83ae-d3765f3970e0" },
   { time: "01:35", tag: "tech", tagText: "科技", text: "英伟达估值已明显低于其历史常态倍数，市场开始聚焦客户债务风险：大量AI算力采购依赖举债融资，若下游现金流不及预期，可能反噬芯片需求与英伟达订单质量。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZ0RqY1JjcXVtOWFoM2F2ZmRINWluWTJqV2UyQU5UaldWN1ozeDhrMHV0X280WWIzYlU5dTVRUTFwbDB1OXJZc3ZHeU9zRWhMOV90dlZYQkFyR0ViSXRRbTQxbjFDQ1MwNXlrTTh6Vld2clBiS256VlR4UkNKUTRWbUZjcjBSTWZBZ1pWZ3ZRa1MydEQ3cHowaA?oc=5" },
-  { time: "00:46", tag: "geo", tagText: "地缘", text: "美中本周在曼谷举行双边会谈，美方就万事达卡（Mastercard）和花旗集团（Citigroup）在华市场准入问题向中方施压。美国财政部官员表示，华盛顿持续关注美国金融机构进入中国市场的障碍。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/us-china-mastercard-citigroup-market-access.html" },
-  { time: "00:45", tag: "tech", tagText: "科技", text: "韩国财政部长表示，半导体市场至少到2027年仍将保持稳健，因供应持续偏紧，即便全球芯片股近期遭遇抛售。该表态缓解了市场对芯片周期见顶的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/south-korea-semiconductor-outlook-lee-hyoung-il.html" },
-  { time: "23:31", tag: "macro", tagText: "宏观", text: "美股周五走势分化：道指上涨、纳斯达克下滑，投资者继续从AI股票轮动撤出，标普500与纳指本周或录得周线下跌。CoreWeave、Nebius等\"新云\"（neocloud）个股遭重挫，高盛指出估值与融资担忧是主因，OpenAI与Anthropic的估值差距随之扩大。与此同时，资金转向基础设施软件板块，投资者押注软件公司更能应对来年挑战，半导体板块则被冷落。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/stock-market-today-live-updates.html" },
-  { time: "23:21", tag: "tech", tagText: "科技", text: "英国竞争与市场管理局（CMA）计划强制苹果允许竞争对手支付服务商接入其数字钱包（Tap-to-Pay）技术，苹果准备就此发起法律抗辩。此举是英国针对大型科技公司支付与移动生态监管的最新升级。", source: "Financial Times", url: "https://www.ft.com/content/d05f87bf-225b-43f9-86e6-2f9537cd75c6?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月18日 13:44 CST";
+const breakingDate = "2026年10月18日 18:54 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
+  { time: "17:02", tag: "ai", tagText: "AI", text: "曾参与 Kimi 关键突破的天才少年已离开月之暗面（Moonshot AI）赴美发展，成为又一起中国顶尖 AI 人才流向美国的案例。", source: "Seoul Economic Daily", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWEgzeUlLNlhPQUt1Z0c3SmdfN21DeHI1dE5HMjJLeWdkSTRYYm80R0hiWi1yOTlYYW1mT3dVOXBpa3ROY21vbGM4aE9KVFFaMVlGcWVsMW94VGRPM2ZFN3YyWlhBbDRFbFVGb0hFcnJYeHBVeWwtOHVtM3Q1TGlUMk9UUUlnc0dYaTNLbzlab29qUW1JcFppQzZqTkFwTm1lUng3WnBJTQ?oc=5" },
+  { time: "16:31", tag: "ai", tagText: "AI", text: "36氪报道称，继 OpenAI 之后，AI 再次攻克广义黎曼猜想；若该成果获数学界确认，将成为 AI 驱动数学发现的重大突破。", source: "eu.36kr.com", url: "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5KSmJRZi16cUd4ZXhFSGx4NUNzWlNpQ0RzeHpXZmswMUlyaURhYlMyWFZuWXQ1cVlYZGQ0SUtfNEhOSldsUmtscUpFMEdvYk5ZUVZr?oc=5" },
   { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
   { time: "06:09", tag: "ai", tagText: "AI", text: "AI 初创公司 AIsa 完成逾 900 万美元融资，稳定币发行商 Tether 参与本轮投资。这是 Tether 在 AI 领域的最新一笔布局，延续了加密资本向人工智能基础设施与早期 AI 项目扩张的趋势；目前公司未披露具体估值与资金用途细节。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaXFUSGFpX1hEVDEzQlNTQ0JEOE4wRXVWLVhyUDFjRHZIdlpZbmQ4MEhuME5fbUt1am40bjdDRzRPUGwySG5DRk9qNEQzQ0R2bG1HMC1Cd0wxSzlZNkV3RHFyVXNrak1NV0NVMy15QVh0X0JLRVZ0Q1dMZDhVNjFFc2RRXy1FeVV0d0oxbEFsYnE4cEdYd3E2c0tBeTBqNi1wZTlv?oc=5" },
   { time: "05:22", tag: "ai", tagText: "AI", text: "Replit CEO Amjad Masad 确认，公司已终止与 Anthropic 的合作，原因包括成本等多项考量。Replit 曾于 8 月宣布与 OpenAI 达成合作，但当时并未明确表示已与 Anthropic 分手。此举再度凸显 AI 编程工具厂商在大模型供应商之间「选边站」的趋势，也反映出推理成本正成为应用层公司选择模型供应商的关键因素。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "23:04", tag: "ai", tagText: "AI", text: "在遭到外界强烈反弹后，Meta 再次修改服务条款，删除了可能允许其抓取新闻网站等站点内容用于训练 AI 的表述。此举被视为内容方与 AI 公司在数据授权与版权边界上的又一次博弈，也显示监管与舆论压力正迫使大模型厂商收紧数据获取条款。", source: "The Verge", url: "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "随着自主 AI 代理成为行业热点，越来越多网站开始主动封堵 OpenAI、Meta、Google 等公司的代理程序。这些代理可代替用户浏览网页、预订餐厅等，但网站运营方担忧流量、安全与内容被滥用，正通过反机器人措施限制其访问，围绕开放网络与 AI 抓取的冲突进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web" },
   { time: "20:20", tag: "geo", tagText: "地缘", text: "台湾即将把向中国大陆走私英伟达芯片列为刑事犯罪。此举旨在配合美国出口管制、堵住先进 AI 芯片经台湾转运至大陆的漏洞，显示全球对 AI 算力供应链的监管正在进一步收紧。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb1pHcU9SeHNnbmpjQlpzVXVDNmNEUTJlTllEdkoySjBFWmJYMEs3ZENORlBpMVpISFBJRFpvZnUzRlhUWUVtLWNJc1gxOWJKRXFsVGExR0xZdjM1X0lHOFdUQTN5T0tuNEZmOHlNWk1TNkk4c3BkRjJZMEFXV1ltNW5lZ2lCX3B2Q0ctWEo2aVd5RVdzYXFZdVV3TXNKQ0J4QU0zc1FrRXd5dktfYVJIR0J5SVk?oc=5" },
-  { time: "20:05", tag: "ai", tagText: "AI", text: "西门子与英伟达合作，利用 AI 与加速计算将 AI 芯片光刻流程提速 12 倍。该技术有望缩短先进制程芯片的开发与量产周期，并降低晶圆厂的计算成本。", source: "eeNews Europe", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSTBRUWZJRGRWaFpSb2VRUXVRVlpVVS1BTmlGcWFYMWctVVFCc3RnRkJiYnduY0drZWx3d1ZRd2FBenQtMnBuSU5pOFBwMUIwcU1KYUZ0YVBNQVVLTTRaNzNpQWVLa0pCS0VGZUZzQ0hUNzN0ZDYyOTBoX0JwMXVJbzdodDdZVWZiMGRJQkVjRnU?oc=5" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase 数据显示，2026 年第三季度亚洲初创企业融资额接近历史最高水平，主要受 AI 赛道驱动。资本高度集中表明亚洲一级市场正把 AI 视为核心增长引擎。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxOS1I3dDhSeGJaWDFhT0lZbWxnbmJ6eWU0cTNTMTJ2VU5ucjBPWWw4WERYbTlsMnA5V2c1eWRDWEgxYldldk5qQk9FemxnQ1J1TlRWR1N0dEE0TXVXaGl0ZEUxbnhUZkV0dXMyS1VFbTZlVWltSG9hTmFHYW9mempmQmdLdVR5dVE?oc=5" },
-  { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
 ];
-const aiBreakingDate = "2026年10月18日 13:44 CST";
+const aiBreakingDate = "2026年10月18日 18:54 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
