@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月18日 23:30 CST"
+  date: "2026年10月19日 02:00 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,13 @@ const breakingNews = [
   { time: "03:35", tag: "geo", tagText: "地缘", text: "特朗普在9月签署针对俄罗斯入侵乌克兰的《格雷厄姆法案》后，又在广泛新制裁生效前予以豁免。泽连斯基谴责此举\"错误\"。豁免可能削弱对俄施压力度，影响俄乌和谈前景及能源市场的地缘风险定价。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/10/17/trump-waives-russia-related-sanctions-tariffs-before-they-take-effect-.html" },
   { time: "03:15", tag: "macro", tagText: "宏观", text: "法国多地爆发大规模示威，数万人抗议生活成本高企及对教育体系的不满，部分城市示威者与警察发生冲突。社会动荡令法国政府在通胀压力与财政整顿之间面临更大政治阻力。", source: "Financial Times", url: "https://www.ft.com/content/bcb6c27a-f082-4867-ade4-ae6eb757b780?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月18日 23:30 CST";
+const breakingDate = "2026年10月19日 02:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:30", tag: "ai", tagText: "AI", text: "聊天机器人初创公司 Character.AI 本周申请破产后，迪士尼已同意聘用其大部分员工。这意味着这家一度被视为 AI 陪伴类应用代表的公司，其团队将被大型媒体集团整体吸收，也凸显在高昂算力与商业化压力下，中小 AI 应用公司的生存困境正加速行业整合。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/" },
+  { time: "00:30", tag: "ai", tagText: "AI", text: "在英伟达机器人平台负责产品营销七年后转身做投资的 Amulya Vishwanath 表示，机器人产业目前仍处于「乐高时代」，执行器、机械结构等基础模块尚未标准化，因此迟迟没有迎来属于自己的「ChatGPT 时刻」。她强调「物理 AI」的内涵远不止机器人本身，投资机会更多在于让机器获得感知与行动能力的基础层技术。", source: "TechCrunch", url: "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/" },
+  { time: "00:01", tag: "ai", tagText: "AI", text: "初创公司 Elorian 发布首个 AI 模型 Glimpse，主打「用图像进行推理」而非仅仅「对图像进行推理」。据其内部评测，Glimpse 在科学图表推理和短视频字幕任务上超过 GPT-6 Astra，在其他视觉推理任务上亦具竞争力，显示多模态模型竞争正从「看懂图」转向「以图为思考载体」。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/" },
   { time: "23:24", tag: "tech", tagText: "科技", text: "印度初创企业融资周报显示，10月12日至17日共有27家印度初创公司合计融资逾3.28亿美元，覆盖金融科技、健康科技、AI、电动车、电子、食品科技与深科技等领域；其中AI初创公司本周融资约5000万美元，在当周约3.03亿美元的另一统计口径总融资额中占比显著。", source: "tech-insider.org", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE5qak5hTFFYX0pVa0wxc3JHb3A2a21pU0JrUUhJakNmS1diMEMxSkxaT2ZGNFdOYWJ1NVlNSWZBRXJnMGFUUTNPcl9tYVlPVnVpRUh3Q1JMaFF6V3lFWU5ydThicE84MzgwRktyYVJNejJlUWdwTDZCUVZXX1lQQQ?oc=5" },
   { time: "23:04", tag: "ai", tagText: "AI", text: "在遭到外界强烈反弹后，Meta 再次修改服务条款，删除了可能允许其抓取新闻网站等站点内容用于训练 AI 的表述。此举被视为内容方与 AI 公司在数据授权与版权边界上的又一次博弈，也显示监管与舆论压力正迫使大模型厂商收紧数据获取条款。", source: "The Verge", url: "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "随着自主 AI 代理成为行业热点，越来越多网站开始主动封堵 OpenAI、Meta、Google 等公司的代理程序。这些代理可代替用户浏览网页、预订餐厅等，但网站运营方担忧流量、安全与内容被滥用，正通过反机器人措施限制其访问，围绕开放网络与 AI 抓取的冲突进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "03:55", tag: "ai", tagText: "AI", text: "亚马逊设备负责人 Panos Panay 在 TechCrunch Disrupt 上描绘了一个「后应用」未来：环境式 AI 设备在后台持续运行，主动预判用户需求，而不再等待用户下达命令。这一表态指向亚马逊硬件战略的转向——从语音助手式交互走向无处不在的 ambient AI，也预示应用生态的入口可能被重构。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/" },
   { time: "03:40", tag: "tech", tagText: "科技", text: "英伟达宣布扩展 CUDA-X 工具链，将 AI 能力进一步引入半导体制造环节，覆盖工艺仿真、缺陷检测与产能优化等场景。此举意味着英伟达正把自身从「芯片供应商」推进为制造业 AI 基础设施平台，试图在晶圆厂与设备商的数字化改造中锁定新的算力与软件需求。", source: "Advanced Manufacturing", url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPNFp4TDF6dTA2RXZzNHc4R3pwbVpocGFVRXYtYzlyNjYybDB0MWtHM1lqOE05eTdfYU9pTUFLSlV0eXA5Y1M2NEpZaUY1aFFvWDZVQUowcDhGQVRuYU9ZVTU5TGo2d2JyV2VJSXAzakM1TkttSlRURTZQSjJxazRmLThha0JoMUZxS3l3a2lsRHlVd3RtYVdVd202TU9qM3RxRHJveDU5N2k5dnVwLWsxZzQ4ZUxfVjlpa25aekRTMEhLLVRnZUE4Z1NPVkNLNVhtUkVqaUxBT1pTekRjMGxCNFNONkVNbnJRMTVjdnBWSnhNdw?oc=5" },
   { time: "03:14", tag: "ai", tagText: "AI", text: "Anthropic 向 AI 安全评估机构 METR 开放接近员工级别的访问权限，允许其审查公司内部流程、风险与事故记录，并放弃了对 METR 评估报告的事先否决权。此举被视为前沿模型公司在外部独立审计与透明度上的一次罕见让步，可能为行业 AI 安全治理设立新参照。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/" },
-  { time: "02:15", tag: "ai", tagText: "AI", text: "Meta 发布开放权重模型 Muse Spark Open，称其为「迄今能力最强的美国开放权重模型」，并与苹果合作让其可直接在 Apple Silicon 芯片的 Mac 上本地运行（基于 MLX 框架）。这是 Meta 在开源大模型路线上的又一次加码，也意味着头部社交平台与硬件厂商正联手把强模型推向端侧本地推理。", source: "The Verge", url: "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx" },
-  { time: "00:30", tag: "ai", tagText: "AI", text: "在英伟达机器人平台负责产品营销七年后转身做投资的 Amulya Vishwanath 表示，机器人产业目前仍处于「乐高时代」，执行器、机械结构等基础模块尚未标准化，因此迟迟没有迎来属于自己的「ChatGPT 时刻」。她强调「物理 AI」的内涵远不止机器人本身，投资机会更多在于让机器获得感知与行动能力的基础层技术。", source: "TechCrunch", url: "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/" },
-  { time: "00:01", tag: "ai", tagText: "AI", text: "初创公司 Elorian 发布首个 AI 模型 Glimpse，主打「用图像进行推理」而非仅仅「对图像进行推理」。据其内部评测，Glimpse 在科学图表推理和短视频字幕任务上超过 GPT-6 Astra，在其他视觉推理任务上亦具竞争力，显示多模态模型竞争正从「看懂图」转向「以图为思考载体」。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/" },
 ];
-const aiBreakingDate = "2026年10月18日 23:30 CST";
+const aiBreakingDate = "2026年10月19日 02:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
