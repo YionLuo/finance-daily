@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月18日 22:29 CST"
+  date: "2026年10月18日 23:30 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:14", tag: "geo", tagText: "地缘", text: "俄罗斯圣彼得堡遭遇迄今最大规模乌克兰无人机袭击，打击目标涉及科技基础设施；此前俄军袭击乌克兰电力变电站，双方对能源与关键基础设施的攻击持续升级。", source: "Financial Times", url: "https://www.ft.com/content/734dad42-2eef-4a70-8947-c73997e49fd1?syn-25a6b1a6=1" },
+  { time: "22:41", tag: "ai", tagText: "AI", text: "台积电（TSMC）AI需求创纪录，但成本压力同步上升。市场关注其扩产投资、利润率及AI芯片供应链成本变化对后续业绩的影响。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNd0pfQktLNjdPVl90MEhsY0Ixc0VwSXFEb01FeF9wR01qc2FDd1FJN2tCYXd1cEJKaWNFWlQ5NXN0VjE2YVd3ZEplOVFUc01heGRSM3RvcDZaSE02Qk8yVDNCdjJOQ3FCNExsQ3A0YkVJVV9yX0FsMXVBdnVkS19mcl9CWW1ZLURUMVF3UzdubGMtQjA?oc=5" },
+  { time: "22:13", tag: "tech", tagText: "科技", text: "微软退出与Nscale的英国数据中心交易，Nscale的IPO压力随之上升。此举凸显AI基础设施扩张热潮下，企业合作与融资环境正面临重新评估。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMWJiWGp4UWtueGdqZ25vdW9jaVhscUVQbU52WHk2RnRUQ2UtenJCTzRLTFFSM0NfZTlLQlU5TWVPd2djV3UtN1kzMTlnZmRfanpnUExxdVhyUmVBQm0wTmxGbmFOUkJnTlN3ejFGSTlzTDBLZzNpTWRwOVFzSE5waG44aG9USHFRNDB5ejNsMTBBTklmNFRGbXllUUV4aDdoMXkzMUxn?oc=5" },
   { time: "18:00", tag: "tech", tagText: "科技", text: "埃森哲正寻求出售其在华业务，估值最高达15亿美元。作为全球最大IT咨询公司，埃森哲股价近月因AI冲击担忧而波动；此举反映跨国咨询机构在地缘政治与AI转型压力下调整中国布局。", source: "Financial Times", url: "https://www.ft.com/content/2dfdd513-26a6-4a10-9cae-5242eb4ee3ed?syn-25a6b1a6=1" },
   { time: "15:41", tag: "tech", tagText: "科技", text: "苹果股价近下跌近10%，最新财报令华尔街分歧加大，而散户视回调为买入机会。市场关注AI进展、iPhone需求及高估值能否支撑，苹果股价波动可能影响科技股整体情绪。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNa1VpQUtobElmVUZBaENva0FaZEVhRjlRQXNwR1M4bmF6U1E5UWVRTDhHVkNseFdXTTdRQnZnU180QXZtaElCYkc5RnVMMy1RRW1jQm1vZmVOc2hibFZ0N21tczBUWkFCeEtzaVEtQmRTdzQzWXFRbERreWoyQ3FDaVMtdk91SGRoblJLR2FjZTJ2OXFSaGtxX3FrRHV5cFJBZW9VaGNQOFBrbmt3VWFPRFMwa0FoY2ROYVREcVlDQUpmOG1YSmdOaFEwRm83YlczTXlhZWZhelZaN3FGcEdRdjNKY3BIRWQ1ZWd3ejVYV3hleGc?oc=5" },
   { time: "15:22", tag: "geo", tagText: "地缘", text: "特朗普推动的俄罗斯柴油协议可能为普京带来资金之外的战略收益，并给乌克兰带来麻烦。协议对俄财政影响或有限，但引发对美国对乌支持力度、乌克兰谈判筹码及普京下一步行动的更大疑问。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/trump-diesel-russia-ukraine-war.html" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "03:54", tag: "geo", tagText: "地缘", text: "特朗普在肯塔基州集会上高调宣扬个人权力，为中期选举造势，但其自我标榜与选民不满情绪形成反差：越来越多美国人认为总统更关注自身利益而非国家利益，为共和党中期选情增添变数。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/trump-touts-his-power-at-kentucky-rally-ahead-of-midterms.html" },
   { time: "03:35", tag: "geo", tagText: "地缘", text: "特朗普在9月签署针对俄罗斯入侵乌克兰的《格雷厄姆法案》后，又在广泛新制裁生效前予以豁免。泽连斯基谴责此举\"错误\"。豁免可能削弱对俄施压力度，影响俄乌和谈前景及能源市场的地缘风险定价。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/10/17/trump-waives-russia-related-sanctions-tariffs-before-they-take-effect-.html" },
   { time: "03:15", tag: "macro", tagText: "宏观", text: "法国多地爆发大规模示威，数万人抗议生活成本高企及对教育体系的不满，部分城市示威者与警察发生冲突。社会动荡令法国政府在通胀压力与财政整顿之间面临更大政治阻力。", source: "Financial Times", url: "https://www.ft.com/content/bcb6c27a-f082-4867-ade4-ae6eb757b780?syn-25a6b1a6=1" },
-  { time: "02:40", tag: "tech", tagText: "科技", text: "苹果首款折叠屏手机iPhone Duo于周五开启预售，定价约2,000美元，正式进军由三星和谷歌主导的折叠屏市场。市场关注其高价能否被接受，以及该产品能否为苹果硬件业务打开新的增长空间。", source: "MarketWatch", url: "https://www.marketwatch.com/story/is-apples-foldable-iphone-duo-worth-2-000-see-how-it-stacks-up-against-other-foldable-phones-c9066b13?mod=mw_rss_topstories" },
-  { time: "01:58", tag: "geo", tagText: "地缘", text: "以色列定居者在约旦河西岸袭击欧洲外交官，比利时外长谴责暴力并称其政府将推动欧盟对责任人实施制裁。事件加剧以色列与欧洲国家紧张关系，也使加沙战后外交斡旋更趋复杂。", source: "Financial Times", url: "https://www.ft.com/content/35a08f82-6830-41fa-83ae-d3765f3970e0" },
-  { time: "01:35", tag: "tech", tagText: "科技", text: "英伟达估值已明显低于其历史常态倍数，市场开始聚焦客户债务风险：大量AI算力采购依赖举债融资，若下游现金流不及预期，可能反噬芯片需求与英伟达订单质量。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZ0RqY1JjcXVtOWFoM2F2ZmRINWluWTJqV2UyQU5UaldWN1ozeDhrMHV0X280WWIzYlU5dTVRUTFwbDB1OXJZc3ZHeU9zRWhMOV90dlZYQkFyR0ViSXRRbTQxbjFDQ1MwNXlrTTh6Vld2clBiS256VlR4UkNKUTRWbUZjcjBSTWZBZ1pWZ3ZRa1MydEQ3cHowaA?oc=5" },
 ];
-const breakingDate = "2026年10月18日 22:29 CST";
+const breakingDate = "2026年10月18日 23:30 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:24", tag: "tech", tagText: "科技", text: "印度初创企业融资周报显示，10月12日至17日共有27家印度初创公司合计融资逾3.28亿美元，覆盖金融科技、健康科技、AI、电动车、电子、食品科技与深科技等领域；其中AI初创公司本周融资约5000万美元，在当周约3.03亿美元的另一统计口径总融资额中占比显著。", source: "tech-insider.org", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE5qak5hTFFYX0pVa0wxc3JHb3A2a21pU0JrUUhJakNmS1diMEMxSkxaT2ZGNFdOYWJ1NVlNSWZBRXJnMGFUUTNPcl9tYVlPVnVpRUh3Q1JMaFF6V3lFWU5ydThicE84MzgwRktyYVJNejJlUWdwTDZCUVZXX1lQQQ?oc=5" },
+  { time: "23:04", tag: "ai", tagText: "AI", text: "在遭到外界强烈反弹后，Meta 再次修改服务条款，删除了可能允许其抓取新闻网站等站点内容用于训练 AI 的表述。此举被视为内容方与 AI 公司在数据授权与版权边界上的又一次博弈，也显示监管与舆论压力正迫使大模型厂商收紧数据获取条款。", source: "The Verge", url: "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "随着自主 AI 代理成为行业热点，越来越多网站开始主动封堵 OpenAI、Meta、Google 等公司的代理程序。这些代理可代替用户浏览网页、预订餐厅等，但网站运营方担忧流量、安全与内容被滥用，正通过反机器人措施限制其访问，围绕开放网络与 AI 抓取的冲突进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web" },
   { time: "20:20", tag: "geo", tagText: "地缘", text: "台湾即将把向中国大陆走私英伟达芯片列为刑事犯罪。此举旨在配合美国出口管制、堵住先进 AI 芯片经台湾转运至大陆的漏洞，显示全球对 AI 算力供应链的监管正在进一步收紧。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb1pHcU9SeHNnbmpjQlpzVXVDNmNEUTJlTllEdkoySjBFWmJYMEs3ZENORlBpMVpISFBJRFpvZnUzRlhUWUVtLWNJc1gxOWJKRXFsVGExR0xZdjM1X0lHOFdUQTN5T0tuNEZmOHlNWk1TNkk4c3BkRjJZMEFXV1ltNW5lZ2lCX3B2Q0ctWEo2aVd5RVdzYXFZdVV3TXNKQ0J4QU0zc1FrRXd5dktfYVJIR0J5SVk?oc=5" },
   { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "02:15", tag: "ai", tagText: "AI", text: "Meta 发布开放权重模型 Muse Spark Open，称其为「迄今能力最强的美国开放权重模型」，并与苹果合作让其可直接在 Apple Silicon 芯片的 Mac 上本地运行（基于 MLX 框架）。这是 Meta 在开源大模型路线上的又一次加码，也意味着头部社交平台与硬件厂商正联手把强模型推向端侧本地推理。", source: "The Verge", url: "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx" },
   { time: "00:30", tag: "ai", tagText: "AI", text: "在英伟达机器人平台负责产品营销七年后转身做投资的 Amulya Vishwanath 表示，机器人产业目前仍处于「乐高时代」，执行器、机械结构等基础模块尚未标准化，因此迟迟没有迎来属于自己的「ChatGPT 时刻」。她强调「物理 AI」的内涵远不止机器人本身，投资机会更多在于让机器获得感知与行动能力的基础层技术。", source: "TechCrunch", url: "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/" },
   { time: "00:01", tag: "ai", tagText: "AI", text: "初创公司 Elorian 发布首个 AI 模型 Glimpse，主打「用图像进行推理」而非仅仅「对图像进行推理」。据其内部评测，Glimpse 在科学图表推理和短视频字幕任务上超过 GPT-6 Astra，在其他视觉推理任务上亦具竞争力，显示多模态模型竞争正从「看懂图」转向「以图为思考载体」。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/" },
-  { time: "23:33", tag: "ai", tagText: "AI", text: "Vercel 的 AI 网关数据显示，Jev 已成为该平台有史以来采纳速度最快的 AI 模型。Vercel 的 AI gateway 类似 OpenRouter，为开发者提供统一 API 接入多家模型，其采纳数据被视为观察模型市场份额与开发者偏好的重要风向标，也显示新兴模型正更快地切入生产环境。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/" },
-  { time: "23:04", tag: "ai", tagText: "AI", text: "在遭到外界强烈反弹后，Meta 再次修改服务条款，删除了可能允许其抓取新闻网站等站点内容用于训练 AI 的表述。此举被视为内容方与 AI 公司在数据授权与版权边界上的又一次博弈，也显示监管与舆论压力正迫使大模型厂商收紧数据获取条款。", source: "The Verge", url: "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites" },
 ];
-const aiBreakingDate = "2026年10月18日 22:29 CST";
+const aiBreakingDate = "2026年10月18日 23:30 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
