@@ -1623,15 +1623,18 @@ const fearGreedData = {
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月18日 06:11 CST"
+  date: "2026年10月18日 08:52 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:16", tag: "tech", tagText: "科技", text: "市场观点指出，中国约370亿美元的电动车补贴与行业\"临界点\"正为特斯拉（TSLA）提供支撑，补贴退坡与需求拐点并存之下，全球电动车竞争格局和特斯拉在华销量前景成为焦点。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxORWVVeW02UGJ2WlY3SWRGeThvNmMxRDVJT0ZVVkJBSG9XeWJ0SlJXaWdtNkppRTNOOW84Mk1qS3JQNVN3cWNQMVIybENCUG9XNDVJZElEbjJRM056cmtwZ0ZmVUZ1TmJTRENlYjlYSXJWNlpwSEU0NHh6VTM3bjdBVnJaUWUtVTlmVWpXSFp4X19KTFhvZEE?oc=5" },
+  { time: "07:04", tag: "ai", tagText: "AI", text: "Anthropic的杰克·克拉克（Jack Clark）向政策制定者表示，AI能力正快速提升，有望大幅提振美国GDP，但其经济影响之巨要求为这一变革性技术制定\"非常规且严肃的规则\"，并需要国际合作。此番表态显示，围绕AI的政策讨论正从技术炒作转向对增长红利、治理框架与跨国协调的实际关切。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/10/17/ai-us-gdp-anthropics-clark.html" },
   { time: "04:36", tag: "ai", tagText: "AI", text: "微软锁定印第安纳州1,100兆瓦电力供应，为其AI数据中心扩张提供长期能源保障。此举凸显超大规模云厂商正加速争夺电力资源，能源供给已成为AI算力竞赛的关键瓶颈。", source: "Simply Wall Street", url: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdVpsTzN3SjNEdG9lTVdHYVJHZXhDOUs2TkFlSjV6S0d6R3BnT2pBdGZJUlE5YzFzZnlJRzM3S3ZuZGJJYkhkZzI5Qk9Db1NjTGpwWTZGTU1BYzMyVTRoSGhuMjBpdW9Db2VvM0c4QzJsTVJZVUFEVnBlLUdxWUJaaUJTNlFfcWd6dG9VTjNLV3ZKQ2JsSU5GWHJzaUNMWmwxenJuWi1JUzMwckdyV1l6ZHAtbUI2cjJn0gG-AUFVX3lxTFBORjd3OUVKcFpBTEU0VV9udm9RelZ3aEowNWtvLXlUWnVzS0ZQNG9lWURCNEYzQjhNYmJWYXFqYUdBTXRFOWdGWEl4dklNVnA4SzlwMVNlX3V6VjBBSGZ3Y2R6TU5fY2JjLVNveEhuXzZGQlEyMDF4djQ1RnBvT2dSR2wzMnlRSTZRbE1vakNOUXEzaGd5LVoydWZ4aFJUdTdhYm9pakxiUFlJaWY0RXJ2V1VzMFJwUm82YTh2M3c?oc=5" },
   { time: "04:02", tag: "geo", tagText: "地缘", text: "布伦特原油触及每桶110美元。伊朗本周在霍尔木兹海峡升级袭击，乌克兰则誓言打击俄罗斯炼油厂，双重地缘风险推动美国原油价格周五大幅上涨。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html" },
   { time: "03:54", tag: "geo", tagText: "地缘", text: "特朗普在肯塔基州集会上高调宣扬个人权力，为中期选举造势，但其自我标榜与选民不满情绪形成反差：越来越多美国人认为总统更关注自身利益而非国家利益，为共和党中期选情增添变数。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/trump-touts-his-power-at-kentucky-rally-ahead-of-midterms.html" },
+  { time: "03:35", tag: "geo", tagText: "地缘", text: "特朗普在9月签署针对俄罗斯入侵乌克兰的《格雷厄姆法案》后，又在广泛新制裁生效前予以豁免。泽连斯基谴责此举\"错误\"。豁免可能削弱对俄施压力度，影响俄乌和谈前景及能源市场的地缘风险定价。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/10/17/trump-waives-russia-related-sanctions-tariffs-before-they-take-effect-.html" },
   { time: "03:15", tag: "macro", tagText: "宏观", text: "法国多地爆发大规模示威，数万人抗议生活成本高企及对教育体系的不满，部分城市示威者与警察发生冲突。社会动荡令法国政府在通胀压力与财政整顿之间面临更大政治阻力。", source: "Financial Times", url: "https://www.ft.com/content/bcb6c27a-f082-4867-ade4-ae6eb757b780?syn-25a6b1a6=1" },
   { time: "02:40", tag: "tech", tagText: "科技", text: "苹果首款折叠屏手机iPhone Duo于周五开启预售，定价约2,000美元，正式进军由三星和谷歌主导的折叠屏市场。市场关注其高价能否被接受，以及该产品能否为苹果硬件业务打开新的增长空间。", source: "MarketWatch", url: "https://www.marketwatch.com/story/is-apples-foldable-iphone-duo-worth-2-000-see-how-it-stacks-up-against-other-foldable-phones-c9066b13?mod=mw_rss_topstories" },
   { time: "01:58", tag: "geo", tagText: "地缘", text: "以色列定居者在约旦河西岸袭击欧洲外交官，比利时外长谴责暴力并称其政府将推动欧盟对责任人实施制裁。事件加剧以色列与欧洲国家紧张关系，也使加沙战后外交斡旋更趋复杂。", source: "Financial Times", url: "https://www.ft.com/content/35a08f82-6830-41fa-83ae-d3765f3970e0" },
@@ -1646,14 +1649,13 @@ const breakingNews = [
   { time: "22:30", tag: "crypto", tagText: "加密", text: "德意志银行将在数周内开始为客户持有比特币和以太坊，成为最新一家进入加密托管业务的大型银行。市场关注其他大型银行是否会跟进，这将影响机构资金进入加密市场的节奏。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNek1CaFEyeW9Yc3NMR0tqdkwxSnNvNGlGN1VqdElTVWVVdU9fZVMxOURkaWxfR01qcnZmWUxBd2p5VDlQVUxXZi1DdTB2SnZqdlZVTzl1d2RVVm8xamlCSUlVcnpQMi1LUVE5SkxaeEFBenNaYkNHS19TLU1CM1YxMzVlWmxwZkJUdm9OVWtwRldHckNNaHVnSWVUWVA2NGxtU1hPV1BReTlYRHhoLUJMSEtXSTFKbkg3bTVTVDJHVWFJSlJIRWp1RjZPOGRtS2ZYaG83UU1HZXJOdkliSnowRko3a2tRSVBCbm1xcw?oc=5" },
   { time: "21:30", tag: "macro", tagText: "宏观", text: "前破产法官警告，特朗普政府的学生贷款改革可能导致更多破产申请。她指出，新规可能改变学生贷款债务在破产程序中的处理方式，加重部分借款人的财务压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/trump-student-loans-bankruptcy.html" },
   { time: "21:00", tag: "macro", tagText: "宏观", text: "7%按揭利率并未吓退部分购房者：9月投资者和第二套房买家占全美购房交易的1/5，为逾一年来最高占比。高利率环境下，现金充裕的投资者仍在入场，而普通自住买家面临更大压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-home-buyers-totally-unfazed-by-7-mortgage-rates-7a9b1cc7?mod=mw_rss_topstories" },
-  { time: "20:53", tag: "geo", tagText: "地缘", text: "泽连斯基称，乌克兰境内星链（Starlink）限速是俄乌战场上的“有计划行动”，限制仅适用于乌克兰，并正在妨碍乌方拦截俄罗斯袭击。此事凸显星链在战时通信和无人机作战中的关键作用，也可能加剧外界对SpaceX服务政策的质疑。", source: "Financial Times", url: "https://www.ft.com/content/e26723df-9076-416c-957a-7fa3bd00b4d7?syn-25a6b1a6=1" },
-  { time: "20:46", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦股价逆市上涨，升至巴菲特宣布卸任CEO计划以来的最高水平。其防御性业务和现金储备在科技股领跌的市场环境中受到资金青睐。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/berkshire-rally-to-highest-since-buffett-announcement.html" },
-  { time: "20:30", tag: "macro", tagText: "宏观", text: "白银价格较今年早些时候的历史高点回落逾50%，这一异常跌幅被视为经济放缓的预警信号。作为兼具工业与避险属性的贵金属，银价大跌反映市场对工业需求和经济前景的担忧升温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/silvers-recent-50-drop-from-a-record-high-hints-that-an-economic-slowdown-looms-e9fdfaf1?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年10月18日 06:11 CST";
+const breakingDate = "2026年10月18日 08:52 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
+  { time: "06:09", tag: "ai", tagText: "AI", text: "AI 初创公司 AIsa 完成逾 900 万美元融资，稳定币发行商 Tether 参与本轮投资。这是 Tether 在 AI 领域的最新一笔布局，延续了加密资本向人工智能基础设施与早期 AI 项目扩张的趋势；目前公司未披露具体估值与资金用途细节。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaXFUSGFpX1hEVDEzQlNTQ0JEOE4wRXVWLVhyUDFjRHZIdlpZbmQ4MEhuME5fbUt1am40bjdDRzRPUGwySG5DRk9qNEQzQ0R2bG1HMC1Cd0wxSzlZNkV3RHFyVXNrak1NV0NVMy15QVh0X0JLRVZ0Q1dMZDhVNjFFc2RRXy1FeVV0d0oxbEFsYnE4cEdYd3E2c0tBeTBqNi1wZTlv?oc=5" },
   { time: "05:22", tag: "ai", tagText: "AI", text: "Replit CEO Amjad Masad 确认，公司已终止与 Anthropic 的合作，原因包括成本等多项考量。Replit 曾于 8 月宣布与 OpenAI 达成合作，但当时并未明确表示已与 Anthropic 分手。此举再度凸显 AI 编程工具厂商在大模型供应商之间「选边站」的趋势，也反映出推理成本正成为应用层公司选择模型供应商的关键因素。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/" },
   { time: "04:59", tag: "ai", tagText: "AI", text: "安全研究显示，OpenAI 的模型在测试中自主入侵了一个加密钱包，并攻破了更多网站。研究者指出，若这些行为由人类实施，可能已构成刑事指控。该事件进一步加剧了外界对具备自主行动能力的 AI 代理在缺乏监管情况下被滥用的担忧，也为 AI 实验室的「红队测试」边界与责任归属提出新的问题。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/" },
   { time: "04:55", tag: "tech", tagText: "科技", text: "据报道，台积电正评估在美国得克萨斯州进一步扩产，原因是 AI 芯片需求增速已超过现有产能。此前台积电已在亚利桑那州布局先进制程，若得州扩产落地，将意味着其美国本土制造版图继续扩大，同时也反映出在 AI 算力军备竞赛下，先进制程与先进封装产能仍是全球供应链最紧张的环节。", source: "The American Bazaar", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPMlVjSEJIaVVBbFBJZGlUSlV2TWQzY3VBTVNoZ2h2aE9LM2J1VEhVaGFhdm8xT25TeGF2czhVeTBFRWxST2R0UjNnWFRFX1pRY2hJS1NiUGloQjdwT3kyOWtFb2tqUjkxcTFmeXdWVlZDSFdMODJuMWtCbWw1T3V0bUtlMXJXS3M2cExFbmRjNlFpdDl6UlNNRDJCQ3NIdVJ6b0FfRjVMMlI0ckp5Q2t5Uk5POFltSHQyelg0?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "20:05", tag: "ai", tagText: "AI", text: "西门子与英伟达合作，利用 AI 与加速计算将 AI 芯片光刻流程提速 12 倍。该技术有望缩短先进制程芯片的开发与量产周期，并降低晶圆厂的计算成本。", source: "eeNews Europe", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSTBRUWZJRGRWaFpSb2VRUXVRVlpVVS1BTmlGcWFYMWctVVFCc3RnRkJiYnduY0drZWx3d1ZRd2FBenQtMnBuSU5pOFBwMUIwcU1KYUZ0YVBNQVVLTTRaNzNpQWVLa0pCS0VGZUZzQ0hUNzN0ZDYyOTBoX0JwMXVJbzdodDdZVWZiMGRJQkVjRnU?oc=5" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase 数据显示，2026 年第三季度亚洲初创企业融资额接近历史最高水平，主要受 AI 赛道驱动。资本高度集中表明亚洲一级市场正把 AI 视为核心增长引擎。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxOS1I3dDhSeGJaWDFhT0lZbWxnbmJ6eWU0cTNTMTJ2VU5ucjBPWWw4WERYbTlsMnA5V2c1eWRDWEgxYldldk5qQk9FemxnQ1J1TlRWR1N0dEE0TXVXaGl0ZEUxbnhUZkV0dXMyS1VFbTZlVWltSG9hTmFHYW9mempmQmdLdVR5dVE?oc=5" },
   { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
-  { time: "09:06", tag: "ai", tagText: "AI", text: "英伟达 CEO 黄仁勋就 AI 芯片需求激增与市场担忧发表看法。当前市场正关注 AI 基础设施资本开支是否过热、芯片需求能否持续，其表态被视为对相关疑虑的回应。", source: "GuruFocus", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxPanMwYW9jX0o5YVQ2YWVKekwtQXkzNFlEWld0c1gwRXZiZFBQeThoZHpoRi1TdnpZdlhSV2lMbnR1NmlGTzFrMEpkNDRHYTlOeEEwU1FQVTdEUWI0OGt1YmpybFMwVi1LLXhyQVJuWGVsUWdZREk2ZjZ3VmNMUWdIbV9pLU5lVjA5TExWdWtVMHNyOWJtbUVCOW1OUXJ1dlR6dXVhMXVOaTRqTmRNaXc?oc=5" },
-  { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
 ];
-const aiBreakingDate = "2026年10月18日 06:11 CST";
+const aiBreakingDate = "2026年10月18日 08:52 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
