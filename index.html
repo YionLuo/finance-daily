@@ -1623,12 +1623,18 @@ const fearGreedData = {
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月18日 08:52 CST"
+  date: "2026年10月18日 13:44 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:00", tag: "ai", tagText: "AI", text: "英国《金融时报》警告，美国规模约10万亿美元的AI基础设施投资热潮开始出现裂痕。对AI未来的巨额押注正撞上现实世界难以回避的经济约束——电力供应、电网接入、建设成本与融资压力，令超大规模数据中心的回报周期面临重估。", source: "Financial Times", url: "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "FT对94位经济学家的调查显示，全球经济正迎来由AI驱动的增长提速，且红利释放范围将远超美国和中国，更多经济体有望受益于AI带来的生产率提升。该预期与市场对AI资本开支可持续性的担忧形成对照。", source: "Financial Times", url: "https://www.ft.com/content/c6aeb3a1-1874-4947-8ffc-4d993301244a?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "俄罗斯\"影子舰队\"油轮被发现在同一时间出现在两个不同地点，通过伪造位置信号规避追踪。该欺骗手法呈现明显协调性，表明莫斯科正加强对这支规避西方制裁的油轮船队的直接控制，将加大西方执法与保险核查难度。", source: "Financial Times", url: "https://www.ft.com/content/f9dd0c26-3de3-4ecc-8a08-7d08f0946d08?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "tech", tagText: "科技", text: "Anthropic正引入律师团队，帮助其AI代理（AI agent）代表人类进行交易谈判。随着机器开始代人类做出承诺与签约，科技公司被迫直面谈判规则、授权边界与法律责任归属问题，AI代理商业化进入规则制定阶段。", source: "Financial Times", url: "https://www.ft.com/content/f7c26ac0-f5f2-443a-86b2-39d62f7920a9?syn-25a6b1a6=1" },
+  { time: "10:35", tag: "geo", tagText: "地缘", text: "乌克兰总统泽连斯基称，星链（Starlink）在乌克兰境内被限速是\"有计划的行动\"，相关限制正在妨碍乌军拦截俄罗斯无人机和导弹袭击。此事凸显乌克兰对马斯克旗下卫星通信系统的高度依赖，以及私营企业在战时通信中的关键角色。", source: "Financial Times", url: "https://www.ft.com/content/e26723df-9076-416c-957a-7fa3bd00b4d7?syn-25a6b1a6=1" },
+  { time: "09:50", tag: "crypto", tagText: "加密", text: "加密货币市场本周收低，比特币下跌2.4%，以太坊下跌4.5%。在美股AI板块轮动降温、风险偏好回落的背景下，主流加密资产跟随风险资产走弱，市场关注机构资金流入节奏能否提供支撑。", source: "BusinessToday Malaysia", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUUFjc3ZTdjVEak1vRWVDUWVlNFRZbVZhTUt1OXdxdTV6ZldRV2x2eEZsWGx1V016WDlkekpxdXkxSWk5aHI0cmVQMTJNeURlREttNDdkajAwN296OXRvQjRURG8yVG5HWDlsc3FmQ1gxZUJIUEhBTVcwNEdXQUdocy1MSm1wZi1uN05FYnZqQ2hVUTkweHNEQzFnY3JnaFdraHdhWEo5N2ZGdjBVRkFFTDNqbzROQQ?oc=5" },
   { time: "07:16", tag: "tech", tagText: "科技", text: "市场观点指出，中国约370亿美元的电动车补贴与行业\"临界点\"正为特斯拉（TSLA）提供支撑，补贴退坡与需求拐点并存之下，全球电动车竞争格局和特斯拉在华销量前景成为焦点。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMilgFBVV95cUxORWVVeW02UGJ2WlY3SWRGeThvNmMxRDVJT0ZVVkJBSG9XeWJ0SlJXaWdtNkppRTNOOW84Mk1qS3JQNVN3cWNQMVIybENCUG9XNDVJZElEbjJRM056cmtwZ0ZmVUZ1TmJTRENlYjlYSXJWNlpwSEU0NHh6VTM3bjdBVnJaUWUtVTlmVWpXSFp4X19KTFhvZEE?oc=5" },
   { time: "07:04", tag: "ai", tagText: "AI", text: "Anthropic的杰克·克拉克（Jack Clark）向政策制定者表示，AI能力正快速提升，有望大幅提振美国GDP，但其经济影响之巨要求为这一变革性技术制定\"非常规且严肃的规则\"，并需要国际合作。此番表态显示，围绕AI的政策讨论正从技术炒作转向对增长红利、治理框架与跨国协调的实际关切。", source: "US Top News and Analysis", url: "https://www.cnbc.com/2026/10/17/ai-us-gdp-anthropics-clark.html" },
   { time: "04:36", tag: "ai", tagText: "AI", text: "微软锁定印第安纳州1,100兆瓦电力供应，为其AI数据中心扩张提供长期能源保障。此举凸显超大规模云厂商正加速争夺电力资源，能源供给已成为AI算力竞赛的关键瓶颈。", source: "Simply Wall Street", url: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdVpsTzN3SjNEdG9lTVdHYVJHZXhDOUs2TkFlSjV6S0d6R3BnT2pBdGZJUlE5YzFzZnlJRzM3S3ZuZGJJYkhkZzI5Qk9Db1NjTGpwWTZGTU1BYzMyVTRoSGhuMjBpdW9Db2VvM0c4QzJsTVJZVUFEVnBlLUdxWUJaaUJTNlFfcWd6dG9VTjNLV3ZKQ2JsSU5GWHJzaUNMWmwxenJuWi1JUzMwckdyV1l6ZHAtbUI2cjJn0gG-AUFVX3lxTFBORjd3OUVKcFpBTEU0VV9udm9RelZ3aEowNWtvLXlUWnVzS0ZQNG9lWURCNEYzQjhNYmJWYXFqYUdBTXRFOWdGWEl4dklNVnA4SzlwMVNlX3V6VjBBSGZ3Y2R6TU5fY2JjLVNveEhuXzZGQlEyMDF4djQ1RnBvT2dSR2wzMnlRSTZRbE1vakNOUXEzaGd5LVoydWZ4aFJUdTdhYm9pakxiUFlJaWY0RXJ2V1VzMFJwUm82YTh2M3c?oc=5" },
@@ -1643,14 +1649,8 @@ const breakingNews = [
   { time: "00:45", tag: "tech", tagText: "科技", text: "韩国财政部长表示，半导体市场至少到2027年仍将保持稳健，因供应持续偏紧，即便全球芯片股近期遭遇抛售。该表态缓解了市场对芯片周期见顶的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/south-korea-semiconductor-outlook-lee-hyoung-il.html" },
   { time: "23:31", tag: "macro", tagText: "宏观", text: "美股周五走势分化：道指上涨、纳斯达克下滑，投资者继续从AI股票轮动撤出，标普500与纳指本周或录得周线下跌。CoreWeave、Nebius等\"新云\"（neocloud）个股遭重挫，高盛指出估值与融资担忧是主因，OpenAI与Anthropic的估值差距随之扩大。与此同时，资金转向基础设施软件板块，投资者押注软件公司更能应对来年挑战，半导体板块则被冷落。", source: "CNBC", url: "https://www.cnbc.com/2026/10/15/stock-market-today-live-updates.html" },
   { time: "23:21", tag: "tech", tagText: "科技", text: "英国竞争与市场管理局（CMA）计划强制苹果允许竞争对手支付服务商接入其数字钱包（Tap-to-Pay）技术，苹果准备就此发起法律抗辩。此举是英国针对大型科技公司支付与移动生态监管的最新升级。", source: "Financial Times", url: "https://www.ft.com/content/d05f87bf-225b-43f9-86e6-2f9537cd75c6?syn-25a6b1a6=1" },
-  { time: "23:18", tag: "ai", tagText: "AI", text: "纽约市议会就Grok的安全性问题及生成性化图像一事，质询SpaceX全球政府事务AI负责人Gabriela Castillo Madrid，AI内容安全与平台责任再度成为监管焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/spacex-policy-manger-to-testify-in-nyc-council-ai-safety-investigation.html" },
-  { time: "23:01", tag: "ai", tagText: "AI", text: "美国国家情报总监克莱顿（Clayton）表示，OpenAI一名沙特籍人士涉及的安全案件显示美国在AI领域的领导地位正面临威胁。他指出，AI会\"放大\"针对美国数字基础设施的既有网络安全风险，相关案件已引发对AI间谍活动与技术外流的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/16/ai-espionage-openai-jay-clayton.html" },
-  { time: "22:58", tag: "ai", tagText: "AI", text: "花旗成为最新一家限制AI代理（AI agent）访问客户账户的美国银行。美国银行业担心聊天机器人可能将数十亿美元存款转移至收益率更高的账户，从而冲击存款基础，多家大型银行已相继收紧相关权限。", source: "Financial Times", url: "https://www.ft.com/content/f49c8e39-f07f-4177-9948-aabe55e5ed91?syn-25a6b1a6=1" },
-  { time: "22:30", tag: "crypto", tagText: "加密", text: "德意志银行将在数周内开始为客户持有比特币和以太坊，成为最新一家进入加密托管业务的大型银行。市场关注其他大型银行是否会跟进，这将影响机构资金进入加密市场的节奏。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNek1CaFEyeW9Yc3NMR0tqdkwxSnNvNGlGN1VqdElTVWVVdU9fZVMxOURkaWxfR01qcnZmWUxBd2p5VDlQVUxXZi1DdTB2SnZqdlZVTzl1d2RVVm8xamlCSUlVcnpQMi1LUVE5SkxaeEFBenNaYkNHS19TLU1CM1YxMzVlWmxwZkJUdm9OVWtwRldHckNNaHVnSWVUWVA2NGxtU1hPV1BReTlYRHhoLUJMSEtXSTFKbkg3bTVTVDJHVWFJSlJIRWp1RjZPOGRtS2ZYaG83UU1HZXJOdkliSnowRko3a2tRSVBCbm1xcw?oc=5" },
-  { time: "21:30", tag: "macro", tagText: "宏观", text: "前破产法官警告，特朗普政府的学生贷款改革可能导致更多破产申请。她指出，新规可能改变学生贷款债务在破产程序中的处理方式，加重部分借款人的财务压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/trump-student-loans-bankruptcy.html" },
-  { time: "21:00", tag: "macro", tagText: "宏观", text: "7%按揭利率并未吓退部分购房者：9月投资者和第二套房买家占全美购房交易的1/5，为逾一年来最高占比。高利率环境下，现金充裕的投资者仍在入场，而普通自住买家面临更大压力。", source: "MarketWatch", url: "https://www.marketwatch.com/story/meet-the-home-buyers-totally-unfazed-by-7-mortgage-rates-7a9b1cc7?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年10月18日 08:52 CST";
+const breakingDate = "2026年10月18日 13:44 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase 数据显示，2026 年第三季度亚洲初创企业融资额接近历史最高水平，主要受 AI 赛道驱动。资本高度集中表明亚洲一级市场正把 AI 视为核心增长引擎。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihwFBVV95cUxOS1I3dDhSeGJaWDFhT0lZbWxnbmJ6eWU0cTNTMTJ2VU5ucjBPWWw4WERYbTlsMnA5V2c1eWRDWEgxYldldk5qQk9FemxnQ1J1TlRWR1N0dEE0TXVXaGl0ZEUxbnhUZkV0dXMyS1VFbTZlVWltSG9hTmFHYW9mempmQmdLdVR5dVE?oc=5" },
   { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
 ];
-const aiBreakingDate = "2026年10月18日 08:52 CST";
+const aiBreakingDate = "2026年10月18日 13:44 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
