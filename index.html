@@ -1623,12 +1623,19 @@ const fearGreedData = {
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月19日 09:04 CST"
+  date: "2026年10月19日 14:06 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:29", tag: "geo", tagText: "地缘", text: "日本首相高市早苗否认其政策应对日元疲软及日本国债收益率上升负责，驳斥相关批评。此番表态正值市场对日本财政扩张与货币政策正常化担忧升温、日元与JGB走势敏感之际。", source: "CNBC", url: "https://www.cnbc.com/2026/10/19/takaichi-weak-yen-jgb-yields.html" },
+  { time: "13:03", tag: "macro", tagText: "宏观", text: "中国三季度GDP同比增长4.5%，增速加快并超出市场预期，主要受出口强劲（尤其是科技类产品外需）拉动，一定程度上抵消了消费需求疲软。分析师认为，这一增速使全球第二大经济体有望实现全年增长目标。", source: "CNBC / FT", url: "https://www.cnbc.com/2026/10/19/chinas-economic-growth-quickens-to-4point6percent-as-exports-surge-stimulus-rolls-out.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "英国央行正就巴克莱银行展开审查，此前有投诉称该行交易员在为其私人信贷贷款提供融资的衍生品风险敞口上存在虚假陈述、低估风险。此事凸显监管对私人信贷领域透明度与风险披露的关注升温。", source: "FT", url: "https://www.ft.com/content/f3127b4f-d33a-4431-acff-021829f3aa72?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "利率上升正使房地产复苏脱轨，债券收益率飙升威胁到数月前刚达成的交易，买家被迫重新谈判，行业情绪「极为悲观」。", source: "FT", url: "https://www.ft.com/content/aef890f1-e3f5-4add-b1fc-6187e2658106?syn-25a6b1a6=1" },
+  { time: "11:56", tag: "geo", tagText: "地缘", text: "据报道，普京提议举行与特朗普和习近平的三方峰会以决定乌克兰命运。消息传出之际，乌克兰与其最大军事支持者美国之间的紧张关系正不断加剧，或影响俄乌和谈走向。", source: "CNBC", url: "https://www.cnbc.com/2026/10/19/putin-trump-xi-ukraine-war-energy.html" },
+  { time: "11:38", tag: "crypto", tagText: "加密", text: "比特币上涨至82,500美元，股市同步走高，主要受中国三季度GDP超预期提振，风险偏好回暖推动加密资产与股票市场联袂上行。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQOG04VV9paTdUeWhZMXhoaHVDLUJXLUt4RnplUzd1aFlIWWN0QjBSdW5Ia05ZMHh6bjdtZzdUWFk2TUh0dUhpUE1vbXN0eXpkaG91MC1HTGdIQW1CTWZ5aWVLS1IxM25FczJxdkg0NTJ3bFowclJuQXNkUDZNYm41Qm5xbE5YcWpSU1BuWWFtM0ZXQWdSUG1TUjZieDBHXy04ZUdWUDZyaHJNTlJvTDJTTWlkVTRtbmJZbW5B?oc=5" },
+  { time: "11:00", tag: "macro", tagText: "宏观", text: "印尼基准股指跌至六年最低，市场对MSCI可能下调印尼市场评级的担忧加剧，引发资金外流与投资者信心恶化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/19/indonesian-stocks-msci-downgrade-fears-mount.html" },
   { time: "08:55", tag: "geo", tagText: "地缘", text: "奥地利航空一架由特拉维夫飞往维也纳的航班因受到「威胁」紧急备降保加利亚索菲亚，航空公司确认航班安全降落。事件凸显中东安全局势紧张背景下，民航航线与航空安保风险上升，可能影响区域航班安排与旅行需求。", source: "Financial Times", url: "https://www.ft.com/content/77b859ab-e380-413d-894b-2fe3cf6417c5" },
   { time: "07:28", tag: "crypto", tagText: "加密", text: "美国SEC推动的代币化股票监管框架遭到发行方反弹：博通（Broadcom）与威瑞森（Verizon）对OKX与洲际交易所（ICE）合作的代币化股票上市提出异议。此举显示传统上市公司对股权上链的法律归属、投资者权利与合规风险仍存重大顾虑，代币化证券的落地路径面临阻力。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQTkdMMmxWMDNsZFE2ckZfdVVyS2ZtS3I4bHpJZVZJV3phOEhmaGdqc0paTE9QV3M1MFBkRktlYkxUaEVpZU9UTVlxUzEtNWl6eDRlU1MyM3VhM1Q4WUdkcVpHUHBBUmlsZUdYclRMRnY4a3J2bjA1WHJJakxQTkZpdVRkZ0hjQWQyV0dQcTBqbHozeHZJTWhJLTE2VnBjUW5ydnN2QmhSS05OZjVJcE5OWkIyOVVGcnRqd1JWeXlBMVVUWUhBNWVJNWw1REVnU1J4U0IxSmpjaGkwUQ?oc=5" },
   { time: "07:00", tag: "macro", tagText: "宏观", text: "印度财政部长将本国股市表现落后归因于资本「轻易撤离」与流动性过剩，并警告持续的资金外流是印度2027年面临的最大风险之一。此番表态正值外资从印度股市撤出、AI相关交易分流全球资金之际，市场关注印度后续是否出台稳定资本流动与提振估值的政策。", source: "CNBC", url: "https://www.cnbc.com/2026/10/18/india-ai-nifty50-sensex-investors.html" },
@@ -1642,15 +1649,8 @@ const breakingNews = [
   { time: "03:15", tag: "macro", tagText: "宏观", text: "法国多地爆发大规模示威，数万人抗议生活成本高企及对教育体系的不满，部分城市示威者与警察发生冲突。社会动荡令法国政府在通胀压力与财政整顿之间面临更大政治阻力。", source: "Financial Times", url: "https://www.ft.com/content/bcb6c27a-f082-4867-ade4-ae6eb757b780?syn-25a6b1a6=1" },
   { time: "03:00", tag: "geo", tagText: "地缘", text: "美国陆军太平洋司令部司令罗纳德·克拉克呼吁在亚洲展示更强军力，以强化对华威慑。此举反映出美国对中国地区雄心及安全挑战的担忧升温，并可能加剧亚太军事博弈。", source: "Financial Times", url: "https://www.ft.com/content/4ed89331-df18-4f2d-817b-9a7b304fd4e4?syn-25a6b1a6=1" },
   { time: "02:20", tag: "ai", tagText: "AI", text: "英伟达股价进入技术性回调，此前上升楔形形态跌破，同时AI股票泡沫指数跳升。市场对AI板块高估值和上涨动能可持续性的担忧升温。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQWVNlMTM0ZWpQeVhNWWpnYW9ZM2FnQWNYbDltSVJvenViVEdqRklPdXYxRDk5QTZIcjdkYXlwRzFUWmRxNkM4dTREc2xDME53QnhMZVJfeG9Uc0l5RTQ1WlYyWEpYcVU2Z3VvbjNKc01wbG5ranFmS2dYTE95bG1jcWEzU3RiNHY1LWJNS0dKZV9XYmo0MlJROTVUbGZFOENUazBnd0RKc0JlOEVadGF3ajEtNW80elBOVHFNcF9DWTJWR2l5VXFJSW9TZHpMTnIzMC1MUi1BU1c?oc=5" },
-  { time: "00:00", tag: "geo", tagText: "地缘", text: "美国驻欧盟大使普兹德警告，若布鲁塞尔限制非欧盟企业获取卫星频谱，美国可能实施“毁灭性”报复。此事凸显美欧在卫星互联网、数字主权与科技监管上的摩擦升级。", source: "Financial Times", url: "https://www.ft.com/content/d1e28d93-8574-4a46-946a-b261c401d6fa?syn-25a6b1a6=1" },
-  { time: "23:14", tag: "geo", tagText: "地缘", text: "俄罗斯圣彼得堡遭遇迄今最大规模乌克兰无人机袭击，打击目标涉及科技基础设施；此前俄军袭击乌克兰电力变电站，双方对能源与关键基础设施的攻击持续升级。", source: "Financial Times", url: "https://www.ft.com/content/734dad42-2eef-4a70-8947-c73997e49fd1?syn-25a6b1a6=1" },
-  { time: "22:41", tag: "ai", tagText: "AI", text: "台积电（TSMC）AI需求创纪录，但成本压力同步上升。市场关注其扩产投资、利润率及AI芯片供应链成本变化对后续业绩的影响。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNd0pfQktLNjdPVl90MEhsY0Ixc0VwSXFEb01FeF9wR01qc2FDd1FJN2tCYXd1cEJKaWNFWlQ5NXN0VjE2YVd3ZEplOVFUc01heGRSM3RvcDZaSE02Qk8yVDNCdjJOQ3FCNExsQ3A0YkVJVV9yX0FsMXVBdnVkS19mcl9CWW1ZLURUMVF3UzdubGMtQjA?oc=5" },
-  { time: "22:13", tag: "tech", tagText: "科技", text: "微软退出与Nscale的英国数据中心交易，Nscale的IPO压力随之上升。此举凸显AI基础设施扩张热潮下，企业合作与融资环境正面临重新评估。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMWJiWGp4UWtueGdqZ25vdW9jaVhscUVQbU52WHk2RnRUQ2UtenJCTzRLTFFSM0NfZTlLQlU5TWVPd2djV3UtN1kzMTlnZmRfanpnUExxdVhyUmVBQm0wTmxGbmFOUkJnTlN3ejFGSTlzTDBLZzNpTWRwOVFzSE5waG44aG9USHFRNDB5ejNsMTBBTklmNFRGbXllUUV4aDdoMXkzMUxn?oc=5" },
-  { time: "18:00", tag: "tech", tagText: "科技", text: "埃森哲正寻求出售其在华业务，估值最高达15亿美元。作为全球最大IT咨询公司，埃森哲股价近月因AI冲击担忧而波动；此举反映跨国咨询机构在地缘政治与AI转型压力下调整中国布局。", source: "Financial Times", url: "https://www.ft.com/content/2dfdd513-26a6-4a10-9cae-5242eb4ee3ed?syn-25a6b1a6=1" },
-  { time: "15:41", tag: "tech", tagText: "科技", text: "苹果股价近下跌近10%，最新财报令华尔街分歧加大，而散户视回调为买入机会。市场关注AI进展、iPhone需求及高估值能否支撑，苹果股价波动可能影响科技股整体情绪。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNa1VpQUtobElmVUZBaENva0FaZEVhRjlRQXNwR1M4bmF6U1E5UWVRTDhHVkNseFdXTTdRQnZnU180QXZtaElCYkc5RnVMMy1RRW1jQm1vZmVOc2hibFZ0N21tczBUWkFCeEtzaVEtQmRTdzQzWXFRbERreWoyQ3FDaVMtdk91SGRoblJLR2FjZTJ2OXFSaGtxX3FrRHV5cFJBZW9VaGNQOFBrbmt3VWFPRFMwa0FoY2ROYVREcVlDQUpmOG1YSmdOaFEwRm83YlczTXlhZWZhelZaN3FGcEdRdjNKY3BIRWQ1ZWd3ejVYV3hleGc?oc=5" },
-  { time: "15:22", tag: "geo", tagText: "地缘", text: "特朗普推动的俄罗斯柴油协议可能为普京带来资金之外的战略收益，并给乌克兰带来麻烦。协议对俄财政影响或有限，但引发对美国对乌支持力度、乌克兰谈判筹码及普京下一步行动的更大疑问。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/trump-diesel-russia-ukraine-war.html" },
 ];
-const breakingDate = "2026年10月19日 09:04 CST";
+const breakingDate = "2026年10月19日 14:06 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
   { time: "17:02", tag: "ai", tagText: "AI", text: "曾参与 Kimi 关键突破的天才少年已离开月之暗面（Moonshot AI）赴美发展，成为又一起中国顶尖 AI 人才流向美国的案例。", source: "Seoul Economic Daily", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWEgzeUlLNlhPQUt1Z0c3SmdfN21DeHI1dE5HMjJLeWdkSTRYYm80R0hiWi1yOTlYYW1mT3dVOXBpa3ROY21vbGM4aE9KVFFaMVlGcWVsMW94VGRPM2ZFN3YyWlhBbDRFbFVGb0hFcnJYeHBVeWwtOHVtM3Q1TGlUMk9UUUlnc0dYaTNLbzlab29qUW1JcFppQzZqTkFwTm1lUng3WnBJTQ?oc=5" },
 ];
-const aiBreakingDate = "2026年10月19日 09:04 CST";
+const aiBreakingDate = "2026年10月19日 14:06 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
