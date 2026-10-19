@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 17.94,
-  rating: "extreme fear",
-  timestamp: "2026-10-16T23:59:49+00:00",
-  previousClose: 31.54,
-  previous1Week: 46.49,
-  previous1Month: 27.31,
-  previous1Year: 23.11,
-  date: "2026年10月19日 14:06 CST"
+  score: 26.33,
+  rating: "fear",
+  timestamp: "2026-10-19T14:32:22+00:00",
+  previousClose: 17.94,
+  previous1Week: 46.34,
+  previous1Month: 30.43,
+  previous1Year: 22.33,
+  date: "2026年10月19日 22:35 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,18 @@ const breakingNews = [
   { time: "03:00", tag: "geo", tagText: "地缘", text: "美国陆军太平洋司令部司令罗纳德·克拉克呼吁在亚洲展示更强军力，以强化对华威慑。此举反映出美国对中国地区雄心及安全挑战的担忧升温，并可能加剧亚太军事博弈。", source: "Financial Times", url: "https://www.ft.com/content/4ed89331-df18-4f2d-817b-9a7b304fd4e4?syn-25a6b1a6=1" },
   { time: "02:20", tag: "ai", tagText: "AI", text: "英伟达股价进入技术性回调，此前上升楔形形态跌破，同时AI股票泡沫指数跳升。市场对AI板块高估值和上涨动能可持续性的担忧升温。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQWVNlMTM0ZWpQeVhNWWpnYW9ZM2FnQWNYbDltSVJvenViVEdqRklPdXYxRDk5QTZIcjdkYXlwRzFUWmRxNkM4dTREc2xDME53QnhMZVJfeG9Uc0l5RTQ1WlYyWEpYcVU2Z3VvbjNKc01wbG5ranFmS2dYTE95bG1jcWEzU3RiNHY1LWJNS0dKZV9XYmo0MlJROTVUbGZFOENUazBnd0RKc0JlOEVadGF3ajEtNW80elBOVHFNcF9DWTJWR2l5VXFJSW9TZHpMTnIzMC1MUi1BU1c?oc=5" },
 ];
-const breakingDate = "2026年10月19日 14:06 CST";
+const breakingDate = "2026年10月19日 22:35 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:00", tag: "ai", tagText: "AI", text: "随着自主 AI 代理成为行业热点，越来越多网站开始主动封堵 OpenAI、Meta、Google 等公司的代理程序。这些代理可代替用户浏览网页、预订餐厅等，但网站运营方担忧流量、安全与内容被滥用，正通过反机器人措施限制其访问，围绕开放网络与 AI 抓取的冲突进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web" },
+  { time: "20:20", tag: "geo", tagText: "地缘", text: "台湾即将把向中国大陆走私英伟达芯片列为刑事犯罪。此举旨在配合美国出口管制、堵住先进 AI 芯片经台湾转运至大陆的漏洞，显示全球对 AI 算力供应链的监管正在进一步收紧。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb1pHcU9SeHNnbmpjQlpzVXVDNmNEUTJlTllEdkoySjBFWmJYMEs3ZENORlBpMVpISFBJRFpvZnUzRlhUWUVtLWNJc1gxOWJKRXFsVGExR0xZdjM1X0lHOFdUQTN5T0tuNEZmOHlNWk1TNkk4c3BkRjJZMEFXV1ltNW5lZ2lCX3B2Q0ctWEo2aVd5RVdzYXFZdVV3TXNKQ0J4QU0zc1FrRXd5dktfYVJIR0J5SVk?oc=5" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "美国中期选举临近，民主党人正把加强AI监管作为竞选议题，认为这有助于在夺回国会控制权后主导这一新兴政治议题。民调显示民主党有望获胜，但党内对具体监管路径仍存分歧。", source: "The Verge", url: "https://www.theverge.com/policy/1013113/democrats-ai-midterms" },
+  { time: "19:43", tag: "ai", tagText: "AI", text: "AI芯片初创公司Tenstorrent在新一轮融资中估值翻逾一倍至62亿美元，显示资本仍在持续押注英伟达之外的AI芯片新势力。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZEZuZHdVV1dZN3BpaFczenc4QkhZYjdjblNqRHd5UnllS3otOS04MUtCYjJtejZYbENlaE9nUFljbmdJN1RDaEdxZkxpSlhoMlMxdFhYWmdGaW4xejVjZ2hwS0U3b2lJNUJRUVRvak51Mzk4N3B0M3duMGQydWtYNHUwMG43d2hNS21mYV9jcXRQSjdRRFRXZkZPdVRmaUV1dlE4cEhQN18xcE9Yb1ZnTkF6Y3g4OU9waG1yV0dvOHBnM0lldTczYjgzVmdtTEd1UGxVNVdGYVhfNVpR?oc=5" },
+  { time: "19:36", tag: "tech", tagText: "科技", text: "据报道，英伟达正推动三星与台积电共同参与下一代AI芯片生产，显示其正多元化先进芯片供应，并强化与亚洲两大半导体巨头的合作。", source: "Stocks Down Under", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTFBlWDRCeHBRM3RrWUNhWlBpYWFpUEpkOGxiUTdfM1BsUlhiNUpqdEptT1I0NTY0T2gzUmtSY0lJQ3cyc3ljQV9rQ1p1TWw5R1R2YXpGOUozRWpNQlhzZnJ3bU5pYmxaMGZEVTdQcEV5VW84WkFRVmJj?oc=5" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase News数据显示，拉美初创企业第三季度融资额同比增长26%，风投对该地区的兴趣明显回升，显示全球创投活动在部分地区出现回暖。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOE1SSDkzWE9oREhNM21ucUdDcWVHUTZreGU0SkNkb28xeUdQbTNVcnBMVWstbVFQQk9YY0pDUktIa01Rc2t3bGZWREhzLVp2VUNTWVRtVjFLVnBQS2lRU0ZzWjRITGZKc0RfbGkwbkhULUFTRVFZMWw4OER4b3lKR0FPUmdHT0lkNXdjNXFHbVROWHZV?oc=5" },
+  { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
+  { time: "17:02", tag: "ai", tagText: "AI", text: "曾参与 Kimi 关键突破的天才少年已离开月之暗面（Moonshot AI）赴美发展，成为又一起中国顶尖 AI 人才流向美国的案例。", source: "Seoul Economic Daily", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWEgzeUlLNlhPQUt1Z0c3SmdfN21DeHI1dE5HMjJLeWdkSTRYYm80R0hiWi1yOTlYYW1mT3dVOXBpa3ROY21vbGM4aE9KVFFaMVlGcWVsMW94VGRPM2ZFN3YyWlhBbDRFbFVGb0hFcnJYeHBVeWwtOHVtM3Q1TGlUMk9UUUlnc0dYaTNLbzlab29qUW1JcFppQzZqTkFwTm1lUng3WnBJTQ?oc=5" },
   { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
   { time: "06:09", tag: "ai", tagText: "AI", text: "AI 初创公司 AIsa 完成逾 900 万美元融资，稳定币发行商 Tether 参与本轮投资。这是 Tether 在 AI 领域的最新一笔布局，延续了加密资本向人工智能基础设施与早期 AI 项目扩张的趋势；目前公司未披露具体估值与资金用途细节。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaXFUSGFpX1hEVDEzQlNTQ0JEOE4wRXVWLVhyUDFjRHZIdlpZbmQ4MEhuME5fbUt1am40bjdDRzRPUGwySG5DRk9qNEQzQ0R2bG1HMC1Cd0wxSzlZNkV3RHFyVXNrak1NV0NVMy15QVh0X0JLRVZ0Q1dMZDhVNjFFc2RRXy1FeVV0d0oxbEFsYnE4cEdYd3E2c0tBeTBqNi1wZTlv?oc=5" },
   { time: "05:22", tag: "ai", tagText: "AI", text: "Replit CEO Amjad Masad 确认，公司已终止与 Anthropic 的合作，原因包括成本等多项考量。Replit 曾于 8 月宣布与 OpenAI 达成合作，但当时并未明确表示已与 Anthropic 分手。此举再度凸显 AI 编程工具厂商在大模型供应商之间「选边站」的趋势，也反映出推理成本正成为应用层公司选择模型供应商的关键因素。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/" },
@@ -1666,16 +1674,8 @@ const aiBreakingNews = [
   { time: "03:14", tag: "ai", tagText: "AI", text: "Anthropic 向 AI 安全评估机构 METR 开放接近员工级别的访问权限，允许其审查公司内部流程、风险与事故记录，并放弃了对 METR 评估报告的事先否决权。此举被视为前沿模型公司在外部独立审计与透明度上的一次罕见让步，可能为行业 AI 安全治理设立新参照。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/" },
   { time: "02:28", tag: "tech", tagText: "科技", text: "美国费城女子 Carolyn Marvin 因故意阻挡 Uber 配送机器人的通行路线、且拒绝让开而被警方逮捕，并被控扰乱治安。她向当地媒体 ABC13 表示「我知道它们正在测试」。这是自主配送机器人大规模进入城市公共空间后，罕见出现的人机路权冲突进入执法层面的案例，也引发外界对机器人路权、行人权利与监管边界的讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot" },
   { time: "00:30", tag: "ai", tagText: "AI", text: "聊天机器人初创公司 Character.AI 本周申请破产后，迪士尼已同意聘用其大部分员工。这意味着这家一度被视为 AI 陪伴类应用代表的公司，其团队将被大型媒体集团整体吸收，也凸显在高昂算力与商业化压力下，中小 AI 应用公司的生存困境正加速行业整合。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/" },
-  { time: "00:30", tag: "ai", tagText: "AI", text: "在英伟达机器人平台负责产品营销七年后转身做投资的 Amulya Vishwanath 表示，机器人产业目前仍处于「乐高时代」，执行器、机械结构等基础模块尚未标准化，因此迟迟没有迎来属于自己的「ChatGPT 时刻」。她强调「物理 AI」的内涵远不止机器人本身，投资机会更多在于让机器获得感知与行动能力的基础层技术。", source: "TechCrunch", url: "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/" },
-  { time: "00:01", tag: "ai", tagText: "AI", text: "初创公司 Elorian 发布首个 AI 模型 Glimpse，主打「用图像进行推理」而非仅仅「对图像进行推理」。据其内部评测，Glimpse 在科学图表推理和短视频字幕任务上超过 GPT-6 Astra，在其他视觉推理任务上亦具竞争力，显示多模态模型竞争正从「看懂图」转向「以图为思考载体」。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/" },
-  { time: "23:24", tag: "tech", tagText: "科技", text: "印度初创企业融资周报显示，10月12日至17日共有27家印度初创公司合计融资逾3.28亿美元，覆盖金融科技、健康科技、AI、电动车、电子、食品科技与深科技等领域；其中AI初创公司本周融资约5000万美元，在当周约3.03亿美元的另一统计口径总融资额中占比显著。", source: "tech-insider.org", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTE5qak5hTFFYX0pVa0wxc3JHb3A2a21pU0JrUUhJakNmS1diMEMxSkxaT2ZGNFdOYWJ1NVlNSWZBRXJnMGFUUTNPcl9tYVlPVnVpRUh3Q1JMaFF6V3lFWU5ydThicE84MzgwRktyYVJNejJlUWdwTDZCUVZXX1lQQQ?oc=5" },
-  { time: "23:04", tag: "ai", tagText: "AI", text: "在遭到外界强烈反弹后，Meta 再次修改服务条款，删除了可能允许其抓取新闻网站等站点内容用于训练 AI 的表述。此举被视为内容方与 AI 公司在数据授权与版权边界上的又一次博弈，也显示监管与舆论压力正迫使大模型厂商收紧数据获取条款。", source: "The Verge", url: "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "随着自主 AI 代理成为行业热点，越来越多网站开始主动封堵 OpenAI、Meta、Google 等公司的代理程序。这些代理可代替用户浏览网页、预订餐厅等，但网站运营方担忧流量、安全与内容被滥用，正通过反机器人措施限制其访问，围绕开放网络与 AI 抓取的冲突进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web" },
-  { time: "20:20", tag: "geo", tagText: "地缘", text: "台湾即将把向中国大陆走私英伟达芯片列为刑事犯罪。此举旨在配合美国出口管制、堵住先进 AI 芯片经台湾转运至大陆的漏洞，显示全球对 AI 算力供应链的监管正在进一步收紧。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb1pHcU9SeHNnbmpjQlpzVXVDNmNEUTJlTllEdkoySjBFWmJYMEs3ZENORlBpMVpISFBJRFpvZnUzRlhUWUVtLWNJc1gxOWJKRXFsVGExR0xZdjM1X0lHOFdUQTN5T0tuNEZmOHlNWk1TNkk4c3BkRjJZMEFXV1ltNW5lZ2lCX3B2Q0ctWEo2aVd5RVdzYXFZdVV3TXNKQ0J4QU0zc1FrRXd5dktfYVJIR0J5SVk?oc=5" },
-  { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
-  { time: "17:02", tag: "ai", tagText: "AI", text: "曾参与 Kimi 关键突破的天才少年已离开月之暗面（Moonshot AI）赴美发展，成为又一起中国顶尖 AI 人才流向美国的案例。", source: "Seoul Economic Daily", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWEgzeUlLNlhPQUt1Z0c3SmdfN21DeHI1dE5HMjJLeWdkSTRYYm80R0hiWi1yOTlYYW1mT3dVOXBpa3ROY21vbGM4aE9KVFFaMVlGcWVsMW94VGRPM2ZFN3YyWlhBbDRFbFVGb0hFcnJYeHBVeWwtOHVtM3Q1TGlUMk9UUUlnc0dYaTNLbzlab29qUW1JcFppQzZqTkFwTm1lUng3WnBJTQ?oc=5" },
 ];
-const aiBreakingDate = "2026年10月19日 14:06 CST";
+const aiBreakingDate = "2026年10月19日 22:35 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
