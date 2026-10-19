@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 46.49,
   previous1Month: 27.31,
   previous1Year: 23.11,
-  date: "2026年10月19日 07:00 CST"
+  date: "2026年10月19日 09:04 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:55", tag: "geo", tagText: "地缘", text: "奥地利航空一架由特拉维夫飞往维也纳的航班因受到「威胁」紧急备降保加利亚索菲亚，航空公司确认航班安全降落。事件凸显中东安全局势紧张背景下，民航航线与航空安保风险上升，可能影响区域航班安排与旅行需求。", source: "Financial Times", url: "https://www.ft.com/content/77b859ab-e380-413d-894b-2fe3cf6417c5" },
+  { time: "07:28", tag: "crypto", tagText: "加密", text: "美国SEC推动的代币化股票监管框架遭到发行方反弹：博通（Broadcom）与威瑞森（Verizon）对OKX与洲际交易所（ICE）合作的代币化股票上市提出异议。此举显示传统上市公司对股权上链的法律归属、投资者权利与合规风险仍存重大顾虑，代币化证券的落地路径面临阻力。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQTkdMMmxWMDNsZFE2ckZfdVVyS2ZtS3I4bHpJZVZJV3phOEhmaGdqc0paTE9QV3M1MFBkRktlYkxUaEVpZU9UTVlxUzEtNWl6eDRlU1MyM3VhM1Q4WUdkcVpHUHBBUmlsZUdYclRMRnY4a3J2bjA1WHJJakxQTkZpdVRkZ0hjQWQyV0dQcTBqbHozeHZJTWhJLTE2VnBjUW5ydnN2QmhSS05OZjVJcE5OWkIyOVVGcnRqd1JWeXlBMVVUWUhBNWVJNWw1REVnU1J4U0IxSmpjaGkwUQ?oc=5" },
+  { time: "07:00", tag: "macro", tagText: "宏观", text: "印度财政部长将本国股市表现落后归因于资本「轻易撤离」与流动性过剩，并警告持续的资金外流是印度2027年面临的最大风险之一。此番表态正值外资从印度股市撤出、AI相关交易分流全球资金之际，市场关注印度后续是否出台稳定资本流动与提振估值的政策。", source: "CNBC", url: "https://www.cnbc.com/2026/10/18/india-ai-nifty50-sensex-investors.html" },
   { time: "06:55", tag: "ai", tagText: "AI", text: "Claude开发商Anthropic宣布将公司5%的股份划入新设立的公共利益基金，用于应对AI对就业的冲击等社会影响。公司表示，以有限责任公司（LLC）形式设立该基金，可在资金使用方式上获得更大灵活性。此举使Anthropic成为最新一家就AI社会成本作出制度化安排的前沿AI实验室，也延续了其此前在AI代理谈判授权等治理议题上的探索。", source: "CNBC", url: "https://www.cnbc.com/2026/10/18/anthropic-ai-public-benefit-fund.html" },
   { time: "06:22", tag: "crypto", tagText: "加密", text: "CryptoRank报告显示，加密货币市场第三季度上涨39%，终结此前连续三个季度的下跌。虽然本周比特币、以太坊等主流资产随风险偏好回落而走低，但季度级别的强劲反弹表明，在机构资金流入与监管预期改善的推动下，市场情绪已较此前明显修复。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTHpjbGluVVh2aEF3bnRvQ1ozakxGbmZKUWd4TFgxSkZCSXA5dmtCR1lnNk0xbWJxdE0xUG1HUno4QmJTWExpcFJka3R4WXVraDByYXQ5eG5uZldFTWlqbm9iWTFsRHZabng4eHpKWlo0ZkdwZDVRcVI5eFF3ZW5TaG1fQUZaQWNfUXhQbDBINWxiTWc4NjF2czA3RG9obXdtTEE?oc=5" },
   { time: "06:15", tag: "macro", tagText: "宏观", text: "美股期货周一盘前走高，纳指期货领涨，投资者在AI交易回调中逢跌买入，道指期货同步上行。本周市场焦点集中于Meta、特斯拉等大型科技股财报，以及AI资本开支前景与「AI泡沫」担忧的再定价；此前英伟达已进入技术性回调，AI板块动能可持续性受到审视。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9HbFJwRngzU3pDcVBXWDRFNkVpcDJNc1RGR1RQWF81S19DMlk5WUhxdUREWWhVaHF4blA1aHZPakNFWTBlWTJPXzdUXzZ1Rm13cDZlVFpyQ21hemtsdWxMUlh0eXgzS25nSGZCWGtsVXpqMFJHd2Yw0gF8QVVfeXFMTUZvN0xGZEdUVnJjWFhMb2d1SnNvOERHV2lRREpINzJFM1JrNi1sM0FMV2Z4UnpGVVdZNmR5OTE2S1I3VGZwTVVQZkFhSF8tRWtDOWJ3cDB3bnNSaFRubkJNMXVuVkl3TWhIa2VscHBweU1RRHBjNnd3d0xTTg?oc=5" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "18:00", tag: "tech", tagText: "科技", text: "埃森哲正寻求出售其在华业务，估值最高达15亿美元。作为全球最大IT咨询公司，埃森哲股价近月因AI冲击担忧而波动；此举反映跨国咨询机构在地缘政治与AI转型压力下调整中国布局。", source: "Financial Times", url: "https://www.ft.com/content/2dfdd513-26a6-4a10-9cae-5242eb4ee3ed?syn-25a6b1a6=1" },
   { time: "15:41", tag: "tech", tagText: "科技", text: "苹果股价近下跌近10%，最新财报令华尔街分歧加大，而散户视回调为买入机会。市场关注AI进展、iPhone需求及高估值能否支撑，苹果股价波动可能影响科技股整体情绪。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNa1VpQUtobElmVUZBaENva0FaZEVhRjlRQXNwR1M4bmF6U1E5UWVRTDhHVkNseFdXTTdRQnZnU180QXZtaElCYkc5RnVMMy1RRW1jQm1vZmVOc2hibFZ0N21tczBUWkFCeEtzaVEtQmRTdzQzWXFRbERreWoyQ3FDaVMtdk91SGRoblJLR2FjZTJ2OXFSaGtxX3FrRHV5cFJBZW9VaGNQOFBrbmt3VWFPRFMwa0FoY2ROYVREcVlDQUpmOG1YSmdOaFEwRm83YlczTXlhZWZhelZaN3FGcEdRdjNKY3BIRWQ1ZWd3ejVYV3hleGc?oc=5" },
   { time: "15:22", tag: "geo", tagText: "地缘", text: "特朗普推动的俄罗斯柴油协议可能为普京带来资金之外的战略收益，并给乌克兰带来麻烦。协议对俄财政影响或有限，但引发对美国对乌支持力度、乌克兰谈判筹码及普京下一步行动的更大疑问。", source: "CNBC", url: "https://www.cnbc.com/2026/10/17/trump-diesel-russia-ukraine-war.html" },
-  { time: "14:13", tag: "macro", tagText: "宏观", text: "英国央行副行长警告，对冲基金活动可能提高全球债市冲击风险。其高杠杆与流动性错配可能放大市场波动，监管层正关注非银机构在国债市场中的角色。", source: "CNBC", url: "https://www.cnbc.com/2026/10/18/hedge-funds-bond-market-turmoil.html" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "英国《金融时报》警告，美国规模约10万亿美元的AI基础设施投资热潮开始出现裂痕。对AI未来的巨额押注正撞上现实世界难以回避的经济约束——电力供应、电网接入、建设成本与融资压力，令超大规模数据中心的回报周期面临重估。", source: "Financial Times", url: "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "FT对94位经济学家的调查显示，全球经济正迎来由AI驱动的增长提速，且红利释放范围将远超美国和中国，更多经济体有望受益于AI带来的生产率提升。该预期与市场对AI资本开支可持续性的担忧形成对照。", source: "Financial Times", url: "https://www.ft.com/content/c6aeb3a1-1874-4947-8ffc-4d993301244a?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月19日 07:00 CST";
+const breakingDate = "2026年10月19日 09:04 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "17:35", tag: "ai", tagText: "AI", text: "台积电在 AI 芯片产能争夺中掌握主动权。英伟达、苹果与 AMD 正争抢有限的先进制程与封装产能，台积电由此获得更强的定价与分配话语权，AI 需求对晶圆代工产能的挤压进一步显现。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQkJwR1ozRmlGcXpxTVBrWGlFdzJ2bmlKQ0FnUWRtbTZVaHdLM3JCVVlJem1tRG1zX3hSZ2dHQTV0NGxuRktnRjBFX2pPd1NrMkRPQUU3SEJ0Tk1rcWpkNEtRUmpRc3BkVnRiMmotN09ZNTFmWVU3NWx4ajRDaGJSNDZsODNvQ1p1TTlsX183SDBXdHU0cW5xZWhRTXIwZnZxMDFLQUtnc0tPQnZoV2RrRFExRGNkeDhvNXlIY0dNMHVaSXJzV1V4aXA1bVBkaTIwbmVwZ1EwVXNOZHpIN2V2R2ZjNA?oc=5" },
   { time: "17:02", tag: "ai", tagText: "AI", text: "曾参与 Kimi 关键突破的天才少年已离开月之暗面（Moonshot AI）赴美发展，成为又一起中国顶尖 AI 人才流向美国的案例。", source: "Seoul Economic Daily", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWEgzeUlLNlhPQUt1Z0c3SmdfN21DeHI1dE5HMjJLeWdkSTRYYm80R0hiWi1yOTlYYW1mT3dVOXBpa3ROY21vbGM4aE9KVFFaMVlGcWVsMW94VGRPM2ZFN3YyWlhBbDRFbFVGb0hFcnJYeHBVeWwtOHVtM3Q1TGlUMk9UUUlnc0dYaTNLbzlab29qUW1JcFppQzZqTkFwTm1lUng3WnBJTQ?oc=5" },
 ];
-const aiBreakingDate = "2026年10月19日 07:00 CST";
+const aiBreakingDate = "2026年10月19日 09:04 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
