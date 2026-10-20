@@ -1618,12 +1618,12 @@
 const fearGreedData = {
   score: 27.2,
   rating: "fear",
-  timestamp: "2026-10-20T20:14:58+00:00",
+  timestamp: "2026-10-20T23:30:11+00:00",
   previousClose: 23.11,
   previous1Week: 44.11,
   previous1Month: 30.43,
   previous1Year: 29.86,
-  date: "2026年10月21日 04:27 CST"
+  date: "2026年10月21日 07:47 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,11 @@ const breakingNews = [
   { time: "12:00", tag: "macro", tagText: "宏观", text: "英国央行正就巴克莱银行展开审查，此前有投诉称该行交易员在为其私人信贷贷款提供融资的衍生品风险敞口上存在虚假陈述、低估风险。此事凸显监管对私人信贷领域透明度与风险披露的关注升温。", source: "FT", url: "https://www.ft.com/content/f3127b4f-d33a-4431-acff-021829f3aa72?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "利率上升正使房地产复苏脱轨，债券收益率飙升威胁到数月前刚达成的交易，买家被迫重新谈判，行业情绪「极为悲观」。", source: "FT", url: "https://www.ft.com/content/aef890f1-e3f5-4add-b1fc-6187e2658106?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月21日 04:27 CST";
+const breakingDate = "2026年10月21日 07:47 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:39", tag: "ai", tagText: "AI", text: "据报 Nscale 与 Anthropic 正洽谈第二笔规模约 450 亿美元的算力协议。两家公司今年 8 月刚宣布一笔同等规模的 450 亿美元算力交易，若新协议落地，Anthropic 的长期算力锁定规模将再翻一倍，反映头部 AI 实验室对数据中心与加速芯片的争夺仍在加速。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/" },
   { time: "04:21", tag: "ai", tagText: "AI", text: "Anthropic 表示，过去一年其员工结构明显趋于资深化，初级员工占比下降，员工投入会议的时间也有所增加。公司称这反映出 AI 业务复杂度上升、内部协作与协调需求增强。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/" },
   { time: "04:09", tag: "ai", tagText: "AI", text: "亚马逊推出 TorchNeuron 开发工具，直指英伟达对 PyTorch 生态的掌控。PyTorch 是构建大多数 AI 应用的免费开源工具包，亚马逊希望通过该工具让更多开发者在包括其自研 Trainium 芯片在内的非英伟达硬件上运行应用。这是亚马逊迄今对英伟达算力霸权发起的最有力一击，意在削弱 CUDA 生态的锁定效应。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/" },
   { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "ai", tagText: "AI", text: "据《财富》独家报道，构建「智能体云」（agentic cloud）的初创公司 Daytona 在最新一轮融资中估值达 10 亿美元。该公司为自主 AI 代理提供运行、调度与隔离所需的基础设施，此轮估值反映出市场对 AI 代理底层算力与执行环境的押注正在升温。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxOaThmSzZMdDVvNU1rVXNtemZrVnU3WnZMQ2QxWTR3eXdaTTlxczN2T2RZZU5URHZ6aTJRd0l1WlRQSk5ObFdHMjVNUUJfZkUxMTlnZ2lZd1Q3YTJTakJnN0hXQW9TRlp2MXFRYjQ0dlpuS3JJTTYyaUw2RS1RRDR4VHByVDhUaV9lT0g4WWtTbEl4V2k0SVJEOXhGSVpuN1JrQUxuYTlueFh0R0VqYmo2VzhQU1liZVhSOGc?oc=5" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "在超大规模云厂商财报临近之际，AI芯片股反弹，市场同时关注Meta的股权融资动向。投资者等待大型云厂商业绩以判断AI算力需求，并评估Meta融资对科技股情绪的影响。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVDBqcUlXdU5sa0R5OWFJdnJNSmUzOW9ONWIxejVfTnJZTkxPbjlsV3l1TER0Ti1neGwwT2x1V2VyQnF2RDlaUkQyOU4zUkxXNXBjUWhvcU9LOXFHUnJUSnVJOHBNd2VtcUxIWjdZd3c0RlUwdE03QVFRZl9JVjBWT25NN2xzV0tvTldtc3dkdk04VXZ4MzFrMERULS1PY1g0ZWJEZ05WQ0tNRy0xTk5zVVJaSE1KeWVzeEcwWlVVb3R1LXBo?oc=5" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "会议记录工具Otter.ai宣布从General Catalyst旗下Customer Value Fund融资3.2亿美元；该基金以不稀释股权的方式向初创公司提供资本。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/otter-ai-raises-320-million-from-general-catalysts-growth-fund-for-its-meeting-tool/" },
-  { time: "07:39", tag: "ai", tagText: "AI", text: "据报 Nscale 与 Anthropic 正洽谈第二笔规模约 450 亿美元的算力协议。两家公司今年 8 月刚宣布一笔同等规模的 450 亿美元算力交易，若新协议落地，Anthropic 的长期算力锁定规模将再翻一倍，反映头部 AI 实验室对数据中心与加速芯片的争夺仍在加速。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/" },
 ];
-const aiBreakingDate = "2026年10月21日 04:27 CST";
+const aiBreakingDate = "2026年10月21日 07:47 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
