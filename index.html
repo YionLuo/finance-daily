@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27,
+  score: 27.2,
   rating: "fear",
-  timestamp: "2026-10-20T16:43:16+00:00",
+  timestamp: "2026-10-20T20:14:58+00:00",
   previousClose: 23.11,
   previous1Week: 44.11,
   previous1Month: 30.43,
   previous1Year: 29.86,
-  date: "2026年10月21日 00:49 CST"
+  date: "2026年10月21日 04:27 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:23", tag: "macro", tagText: "宏观", text: "美联航下调2026年利润展望，因燃油价格持续攀升；尽管票价上涨，旅客仍继续订票。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/united-airlines-ual-3q-2026-earnings.html" },
+  { time: "04:12", tag: "tech", tagText: "科技", text: "SpaceX第三季度营收同比增长161%，受Starlink与AI数据中心交易推动；资本开支超过190亿美元，高于华尔街预期。", source: "Financial Times", url: "https://www.ft.com/content/f2a2a578-5a2e-42ff-b4c9-8bafff271b37?syn-25a6b1a6=1" },
+  { time: "04:10", tag: "tech", tagText: "科技", text: "Netflix第三季度业绩超预期，但给出悲观指引：流媒体观看增长停滞、当季利润可能令市场失望，公司同时调整创意管理层。", source: "Financial Times", url: "https://www.ft.com/content/1b5d97dc-535a-42d9-ac0e-2c00e91c0aed?syn-25a6b1a6=1" },
+  { time: "04:06", tag: "tech", tagText: "科技", text: "美国联邦航空管理局批准波音737 Max 10认证，结束多年延迟；该机型为737家族最大型号，原定2020年投运，因安全审查等推迟。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/boeing-737-max-10-certification.html" },
+  { time: "02:06", tag: "macro", tagText: "宏观", text: "特朗普因对加拿大商品加征50%关税被起诉，诉状援引1930年《关税法》第338条；这是针对其贸易议程的最新法律挑战。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/trump-tariffs-canada-section-338-lawsuit.html" },
   { time: "19:19", tag: "macro", tagText: "宏观", text: "受中东局势持续紧张影响，国际油价延续涨势：美国WTI原油突破109美元/桶，布伦特原油升至五个月新高。投资者正密切跟踪冲突升级对霍尔木兹海峡航运与全球供应的潜在冲击，能源价格上行也加剧了市场对通胀与央行政策路径的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/oil-price-wti-brent-crude.html" },
   { time: "18:47", tag: "tech", tagText: "科技", text: "Loop Capital下调苹果评级，理由是对iPhone销售放缓的担忧——苹果iPhone相关收入预计将不及预期，投资者在加仓该科技巨头前应保持谨慎。此消息加剧了市场对大型科技股估值与硬件需求周期的疑虑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/apple-loop-capital-downgrade-iphone-sales.html" },
   { time: "18:46", tag: "macro", tagText: "宏观", text: "通用汽车第三季度业绩超出华尔街预期，并收窄全年盈利指引区间、上调调整后汽车自由现金流展望。在关税与需求波动背景下，公司成本控制与定价能力支撑了盈利韧性，为密集发布财报的本周提供正面参照。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html" },
@@ -1644,16 +1649,17 @@ const breakingNews = [
   { time: "12:00", tag: "geo", tagText: "地缘", text: "伊朗战争与霍尔木兹供应中断促使买家转向美洲，加拿大至阿根廷的投资与产量激增，全球石油权力平衡正向美洲倾斜。", source: "Financial Times", url: "https://www.ft.com/content/cfa976d5-e320-4ee8-8c86-84733471a4a1?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "英国央行正就巴克莱银行展开审查，此前有投诉称该行交易员在为其私人信贷贷款提供融资的衍生品风险敞口上存在虚假陈述、低估风险。此事凸显监管对私人信贷领域透明度与风险披露的关注升温。", source: "FT", url: "https://www.ft.com/content/f3127b4f-d33a-4431-acff-021829f3aa72?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "利率上升正使房地产复苏脱轨，债券收益率飙升威胁到数月前刚达成的交易，买家被迫重新谈判，行业情绪「极为悲观」。", source: "FT", url: "https://www.ft.com/content/aef890f1-e3f5-4add-b1fc-6187e2658106?syn-25a6b1a6=1" },
-  { time: "11:56", tag: "geo", tagText: "地缘", text: "据报道，普京提议举行与特朗普和习近平的三方峰会以决定乌克兰命运。消息传出之际，乌克兰与其最大军事支持者美国之间的紧张关系正不断加剧，或影响俄乌和谈走向。", source: "CNBC", url: "https://www.cnbc.com/2026/10/19/putin-trump-xi-ukraine-war-energy.html" },
-  { time: "11:38", tag: "crypto", tagText: "加密", text: "比特币上涨至82,500美元，股市同步走高，主要受中国三季度GDP超预期提振，风险偏好回暖推动加密资产与股票市场联袂上行。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQOG04VV9paTdUeWhZMXhoaHVDLUJXLUt4RnplUzd1aFlIWWN0QjBSdW5Ia05ZMHh6bjdtZzdUWFk2TUh0dUhpUE1vbXN0eXpkaG91MC1HTGdIQW1CTWZ5aWVLS1IxM25FczJxdkg0NTJ3bFowclJuQXNkUDZNYm41Qm5xbE5YcWpSU1BuWWFtM0ZXQWdSUG1TUjZieDBHXy04ZUdWUDZyaHJNTlJvTDJTTWlkVTRtbmJZbW5B?oc=5" },
-  { time: "11:00", tag: "macro", tagText: "宏观", text: "印尼基准股指跌至六年最低，市场对MSCI可能下调印尼市场评级的担忧加剧，引发资金外流与投资者信心恶化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/19/indonesian-stocks-msci-downgrade-fears-mount.html" },
-  { time: "10:44", tag: "tech", tagText: "科技", text: "印度电信巨头Jio Platforms的IPO锚定认购额已超260亿美元，贝莱德、GIC等参与；公司拟募资至多32亿美元，按卢比计为印度史上最大IPO。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/jio-ipo-gic-blackrock-.html" },
-  { time: "10:16", tag: "ai", tagText: "AI", text: "德国总理默茨在柏林行业峰会上呼吁企业“向AI敞开大门”，英伟达同时宣布计划投资四家德国初创公司，显示欧洲AI基础设施与生态竞赛升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/german-chancellor-urges-businesses-to-embrace-ai.html" },
 ];
-const breakingDate = "2026年10月21日 00:49 CST";
+const breakingDate = "2026年10月21日 04:27 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:21", tag: "ai", tagText: "AI", text: "Anthropic 表示，过去一年其员工结构明显趋于资深化，初级员工占比下降，员工投入会议的时间也有所增加。公司称这反映出 AI 业务复杂度上升、内部协作与协调需求增强。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/" },
+  { time: "04:09", tag: "ai", tagText: "AI", text: "亚马逊推出 TorchNeuron 开发工具，直指英伟达对 PyTorch 生态的掌控。PyTorch 是构建大多数 AI 应用的免费开源工具包，亚马逊希望通过该工具让更多开发者在包括其自研 Trainium 芯片在内的非英伟达硬件上运行应用。这是亚马逊迄今对英伟达算力霸权发起的最有力一击，意在削弱 CUDA 生态的锁定效应。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/" },
+  { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
+  { time: "02:36", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 推出聊天锁定功能：用户可锁定涉及私人话题或惊喜计划的对话，在把设备交给他人时防止被查看，进一步强化隐私保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/" },
+  { time: "01:55", tag: "ai", tagText: "AI", text: "据彭博报道，前谷歌 CEO 埃里克·施密特持有领先 AI 实验室 Anthropic 约 1% 的股份，约为该公司 CEO 达里奥·阿莫代伊持股的一半，显示科技大佬对头部 AI 公司的深度布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei/" },
+  { time: "01:12", tag: "ai", tagText: "AI", text: "Meta 的 AI 伴侣应用 Muse 上线 40 天在美国下载量突破 1000 万，成为史上仅 11 款应用达成过的里程碑，早期数据显示其用户留存率也高于同类产品。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/metas-muse-hits-10m-u-s-downloads-in-40-days-a-milestone-reached-by-only-11-other-apps/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "初创公司 Electric Plant 打造了一款 AI 驱动的「植物翻译器」，通过解读植物茎秆中流动的微弱电信号，帮人类「听懂」植物在说什么。该方向基于一种研究假设：植物会以电信号形式进行交流，而 AI 模型可把这些信号与特定状态对应起来，未来或可用于农业监测与作物健康预警。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/plants-can-speak-using-electricity-so-this-startup-built-an-ai-model-to-decipher-their-language/" },
   { time: "23:54", tag: "ai", tagText: "AI", text: "路透社报道，AI 初创公司 ASI 在最新一轮融资中估值达 30 亿美元，成为又一家跻身独角兽行列的 AI 企业。报道未披露本轮具体融资金额与投资方构成，但该估值显示资本仍在持续加注 AI 赛道。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNWjR1SjBuOXZkbzFpSXdTZHpVc0R5bVhDZlJGNWNEVkZOX3RCeDhSSEg4UkJUWlg0ZWkxNFhIb0VfdExYQWpRblJKSnZaY28tdDEtcU9wSk9xcy1CWTYxal9YRXRqV29FcTdFTlNPLVdpdGJ6VEFOX3Bfb1hGb0J0MUtUVE5LMm1hZ2RWQmdsOUJzTlVuYllaNWs1aE91QQ?oc=5" },
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "19:00", tag: "ai", tagText: "AI", text: "在超大规模云厂商财报临近之际，AI芯片股反弹，市场同时关注Meta的股权融资动向。投资者等待大型云厂商业绩以判断AI算力需求，并评估Meta融资对科技股情绪的影响。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVDBqcUlXdU5sa0R5OWFJdnJNSmUzOW9ONWIxejVfTnJZTkxPbjlsV3l1TER0Ti1neGwwT2x1V2VyQnF2RDlaUkQyOU4zUkxXNXBjUWhvcU9LOXFHUnJUSnVJOHBNd2VtcUxIWjdZd3c0RlUwdE03QVFRZl9JVjBWT25NN2xzV0tvTldtc3dkdk04VXZ4MzFrMERULS1PY1g0ZWJEZ05WQ0tNRy0xTk5zVVJaSE1KeWVzeEcwWlVVb3R1LXBo?oc=5" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "会议记录工具Otter.ai宣布从General Catalyst旗下Customer Value Fund融资3.2亿美元；该基金以不稀释股权的方式向初创公司提供资本。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/otter-ai-raises-320-million-from-general-catalysts-growth-fund-for-its-meeting-tool/" },
   { time: "07:39", tag: "ai", tagText: "AI", text: "据报 Nscale 与 Anthropic 正洽谈第二笔规模约 450 亿美元的算力协议。两家公司今年 8 月刚宣布一笔同等规模的 450 亿美元算力交易，若新协议落地，Anthropic 的长期算力锁定规模将再翻一倍，反映头部 AI 实验室对数据中心与加速芯片的争夺仍在加速。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/" },
-  { time: "06:49", tag: "ai", tagText: "AI", text: "Hugging Face 政策负责人表示，「嵌入式 AI 评估器」并非解决模型评测难题的简单方案。当前 AI 实验室普遍以基准测试作为衡量模型优劣的中立标准，但评测体系本身面临公正性与可操纵性争议，行业亟需更透明的第三方评估机制。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/" },
-  { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
-  { time: "06:09", tag: "ai", tagText: "AI", text: "AI 初创公司 AIsa 完成逾 900 万美元融资，稳定币发行商 Tether 参与本轮投资。这是 Tether 在 AI 领域的最新一笔布局，延续了加密资本向人工智能基础设施与早期 AI 项目扩张的趋势；目前公司未披露具体估值与资金用途细节。", source: "Pluang", url: "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaXFUSGFpX1hEVDEzQlNTQ0JEOE4wRXVWLVhyUDFjRHZIdlpZbmQ4MEhuME5fbUt1am40bjdDRzRPUGwySG5DRk9qNEQzQ0R2bG1HMC1Cd0wxSzlZNkV3RHFyVXNrak1NV0NVMy15QVh0X0JLRVZ0Q1dMZDhVNjFFc2RRXy1FeVV0d0oxbEFsYnE4cEdYd3E2c0tBeTBqNi1wZTlv?oc=5" },
-  { time: "06:04", tag: "ai", tagText: "AI", text: "微软警告企业应将员工使用的 AI 代理视为「内部威胁」级别的风险源。微软称，当代理接入并非由 OpenAI、Anthropic 等模型厂商控制的系统时，前沿模型「无法被完全信任」，企业需要对其行为进行密切监控与权限约束。这凸显企业级 AI 代理在落地中的安全治理难题。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/" },
-  { time: "04:21", tag: "ai", tagText: "AI", text: "Anthropic 表示，过去一年其员工结构明显趋于资深化，初级员工占比下降，员工投入会议的时间也有所增加。公司称这反映出 AI 业务复杂度上升、内部协作与协调需求增强。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/" },
-  { time: "04:09", tag: "ai", tagText: "AI", text: "亚马逊推出 TorchNeuron 开发工具，直指英伟达对 PyTorch 生态的掌控。PyTorch 是构建大多数 AI 应用的免费开源工具包，亚马逊希望通过该工具让更多开发者在包括其自研 Trainium 芯片在内的非英伟达硬件上运行应用。这是亚马逊迄今对英伟达算力霸权发起的最有力一击，意在削弱 CUDA 生态的锁定效应。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/" },
 ];
-const aiBreakingDate = "2026年10月21日 00:49 CST";
+const aiBreakingDate = "2026年10月21日 04:27 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
