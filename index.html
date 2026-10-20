@@ -1616,19 +1616,26 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 22.99,
+  score: 23.12,
   rating: "extreme fear",
-  timestamp: "2026-10-20T00:00:00+00:00",
+  timestamp: "2026-10-20T11:04:01+00:00",
   previousClose: 23.11,
   previous1Week: 44.11,
   previous1Month: 30.43,
   previous1Year: 29.86,
-  date: "2026年10月20日 13:54 CST"
+  date: "2026年10月20日 19:23 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:19", tag: "macro", tagText: "宏观", text: "受中东局势持续紧张影响，国际油价延续涨势：美国WTI原油突破109美元/桶，布伦特原油升至五个月新高。投资者正密切跟踪冲突升级对霍尔木兹海峡航运与全球供应的潜在冲击，能源价格上行也加剧了市场对通胀与央行政策路径的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/oil-price-wti-brent-crude.html" },
+  { time: "18:47", tag: "tech", tagText: "科技", text: "Loop Capital下调苹果评级，理由是对iPhone销售放缓的担忧——苹果iPhone相关收入预计将不及预期，投资者在加仓该科技巨头前应保持谨慎。此消息加剧了市场对大型科技股估值与硬件需求周期的疑虑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/apple-loop-capital-downgrade-iphone-sales.html" },
+  { time: "18:46", tag: "macro", tagText: "宏观", text: "通用汽车第三季度业绩超出华尔街预期，并收窄全年盈利指引区间、上调调整后汽车自由现金流展望。在关税与需求波动背景下，公司成本控制与定价能力支撑了盈利韧性，为密集发布财报的本周提供正面参照。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html" },
+  { time: "18:45", tag: "geo", tagText: "地缘", text: "英国宣布将部署战机协助沙特阿拉伯防御胡塞武装袭击。此举发生在沙特持续遭到该武装组织导弹与无人机打击之际，标志英国对其海湾盟友的军事支持升级，也令红海与波斯湾方向的地区安全风险进一步上升。", source: "Financial Times", url: "https://www.ft.com/content/59a3252c-3ea6-4e1e-bcc7-fef15cce16da?syn-25a6b1a6=1" },
+  { time: "18:22", tag: "crypto", tagText: "加密", text: "比特币跌至81,400美元附近，亚洲芯片股下挫拖累风险偏好，尽管此前比特币ETF录得一个月来最大单周流入，仍未能阻止价格下滑。期权交易员正加大下行保护仓位，市场情绪转向防御。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPeVhLdzAwVjMyTUU2d0g3eGp0a1JvbF9YZGlOSlNpVWxYQUFYR1FWd2VycWNqUFJjUFJObW5QaG1UVTJ2V0xiYXhHbUNzblk3aDRRdjhEbUtlUnFqV3p6OXoxQktWUXJEelR4M0JzNFFvdVVCRjg3bDVOTjNSNTI2NEFwTXpYUVRGamc2U1ZYRlhUNERvNFNTZl9pRXdRTjBiSkg2TFBab1U0UzhSN2ctMXpCcm5IU2ZZT0pYc0FzUHoyWDJlTjl1Qm9nalR5SmM0Q2g2b2NB?oc=5" },
+  { time: "16:50", tag: "geo", tagText: "地缘", text: "加拿大阿尔伯塔省首次举行的分离公投初步结果显示，当地选民选择留在加拿大。该结果缓解了油气重镇阿尔伯塔与联邦政府之间的政治不确定性，也避免了总理卡尼在与特朗普博弈期间再添内部动荡。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/alberta-canada-vote-remain.html" },
+  { time: "15:03", tag: "ai", tagText: "AI", text: "韩国数据中心承建商Elice上市首日股价暴跌32%，成为全球AI交易遇冷的又一案例。仅10月就有三家由英伟达、黑石、软银等AI巨头支持的数据中心企业推迟IPO，显示投资者对AI基础设施估值与回报前景的信心正在动摇。", source: "Financial Times", url: "https://www.ft.com/content/cddafc0a-1ae6-467b-84b8-34c172002b6a?syn-25a6b1a6=1" },
   { time: "13:29", tag: "geo", tagText: "地缘", text: "日本首相高市早苗否认其政策应对日元疲软及日本国债收益率上升负责，驳斥相关批评。此番表态正值市场对日本财政扩张与货币政策正常化担忧升温、日元与JGB走势敏感之际。", source: "CNBC", url: "https://www.cnbc.com/2026/10/19/takaichi-weak-yen-jgb-yields.html" },
   { time: "13:27", tag: "macro", tagText: "宏观", text: "IMF与世界银行曼谷会议聚焦债务、AI与乌克兰风险；与2018年不同，中国议题明显退居次要，全球财长更担忧高债务、收益率上升及地缘冲突对金融稳定的冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/imf-debt-yields-russia-china-takeaway-.html" },
   { time: "13:03", tag: "macro", tagText: "宏观", text: "中国三季度GDP同比增长4.5%，增速加快并超出市场预期，主要受出口强劲（尤其是科技类产品外需）拉动，一定程度上抵消了消费需求疲软。分析师认为，这一增速使全球第二大经济体有望实现全年增长目标。", source: "CNBC / FT", url: "https://www.cnbc.com/2026/10/19/chinas-economic-growth-quickens-to-4point6percent-as-exports-surge-stimulus-rolls-out.html" },
@@ -1642,18 +1649,13 @@ const breakingNews = [
   { time: "11:00", tag: "macro", tagText: "宏观", text: "印尼基准股指跌至六年最低，市场对MSCI可能下调印尼市场评级的担忧加剧，引发资金外流与投资者信心恶化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/19/indonesian-stocks-msci-downgrade-fears-mount.html" },
   { time: "10:44", tag: "tech", tagText: "科技", text: "印度电信巨头Jio Platforms的IPO锚定认购额已超260亿美元，贝莱德、GIC等参与；公司拟募资至多32亿美元，按卢比计为印度史上最大IPO。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/jio-ipo-gic-blackrock-.html" },
   { time: "10:16", tag: "ai", tagText: "AI", text: "德国总理默茨在柏林行业峰会上呼吁企业“向AI敞开大门”，英伟达同时宣布计划投资四家德国初创公司，显示欧洲AI基础设施与生态竞赛升温。", source: "CNBC", url: "https://www.cnbc.com/2026/10/20/german-chancellor-urges-businesses-to-embrace-ai.html" },
-  { time: "08:55", tag: "geo", tagText: "地缘", text: "奥地利航空一架由特拉维夫飞往维也纳的航班因受到「威胁」紧急备降保加利亚索菲亚，航空公司确认航班安全降落。事件凸显中东安全局势紧张背景下，民航航线与航空安保风险上升，可能影响区域航班安排与旅行需求。", source: "Financial Times", url: "https://www.ft.com/content/77b859ab-e380-413d-894b-2fe3cf6417c5" },
-  { time: "08:14", tag: "geo", tagText: "地缘", text: "特朗普特使威特科夫与库什纳预计前往挪威会见泽连斯基，推动新一轮乌克兰谈判；与此同时，能源紧张正成为美国中期选举前的重要压力。", source: "Financial Times", url: "https://www.ft.com/content/581d8a59-b128-4f68-9f34-6c066b36ca5b?syn-25a6b1a6=1" },
-  { time: "07:28", tag: "crypto", tagText: "加密", text: "美国SEC推动的代币化股票监管框架遭到发行方反弹：博通（Broadcom）与威瑞森（Verizon）对OKX与洲际交易所（ICE）合作的代币化股票上市提出异议。此举显示传统上市公司对股权上链的法律归属、投资者权利与合规风险仍存重大顾虑，代币化证券的落地路径面临阻力。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQTkdMMmxWMDNsZFE2ckZfdVVyS2ZtS3I4bHpJZVZJV3phOEhmaGdqc0paTE9QV3M1MFBkRktlYkxUaEVpZU9UTVlxUzEtNWl6eDRlU1MyM3VhM1Q4WUdkcVpHUHBBUmlsZUdYclRMRnY4a3J2bjA1WHJJakxQTkZpdVRkZ0hjQWQyV0dQcTBqbHozeHZJTWhJLTE2VnBjUW5ydnN2QmhSS05OZjVJcE5OWkIyOVVGcnRqd1JWeXlBMVVUWUhBNWVJNWw1REVnU1J4U0IxSmpjaGkwUQ?oc=5" },
-  { time: "07:00", tag: "macro", tagText: "宏观", text: "印度财政部长将本国股市表现落后归因于资本「轻易撤离」与流动性过剩，并警告持续的资金外流是印度2027年面临的最大风险之一。此番表态正值外资从印度股市撤出、AI相关交易分流全球资金之际，市场关注印度后续是否出台稳定资本流动与提振估值的政策。", source: "CNBC", url: "https://www.cnbc.com/2026/10/18/india-ai-nifty50-sensex-investors.html" },
-  { time: "06:55", tag: "ai", tagText: "AI", text: "Claude开发商Anthropic宣布将公司5%的股份划入新设立的公共利益基金，用于应对AI对就业的冲击等社会影响。公司表示，以有限责任公司（LLC）形式设立该基金，可在资金使用方式上获得更大灵活性。此举使Anthropic成为最新一家就AI社会成本作出制度化安排的前沿AI实验室，也延续了其此前在AI代理谈判授权等治理议题上的探索。", source: "CNBC", url: "https://www.cnbc.com/2026/10/18/anthropic-ai-public-benefit-fund.html" },
-  { time: "06:22", tag: "crypto", tagText: "加密", text: "CryptoRank报告显示，加密货币市场第三季度上涨39%，终结此前连续三个季度的下跌。虽然本周比特币、以太坊等主流资产随风险偏好回落而走低，但季度级别的强劲反弹表明，在机构资金流入与监管预期改善的推动下，市场情绪已较此前明显修复。", source: "CryptoRank", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTHpjbGluVVh2aEF3bnRvQ1ozakxGbmZKUWd4TFgxSkZCSXA5dmtCR1lnNk0xbWJxdE0xUG1HUno4QmJTWExpcFJka3R4WXVraDByYXQ5eG5uZldFTWlqbm9iWTFsRHZabng4eHpKWlo0ZkdwZDVRcVI5eFF3ZW5TaG1fQUZaQWNfUXhQbDBINWxiTWc4NjF2czA3RG9obXdtTEE?oc=5" },
-  { time: "06:15", tag: "macro", tagText: "宏观", text: "美股期货周一盘前走高，纳指期货领涨，投资者在AI交易回调中逢跌买入，道指期货同步上行。本周市场焦点集中于Meta、特斯拉等大型科技股财报，以及AI资本开支前景与「AI泡沫」担忧的再定价；此前英伟达已进入技术性回调，AI板块动能可持续性受到审视。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE9HbFJwRngzU3pDcVBXWDRFNkVpcDJNc1RGR1RQWF81S19DMlk5WUhxdUREWWhVaHF4blA1aHZPakNFWTBlWTJPXzdUXzZ1Rm13cDZlVFpyQ21hemtsdWxMUlh0eXgzS25nSGZCWGtsVXpqMFJHd2Yw0gF8QVVfeXFMTUZvN0xGZEdUVnJjWFhMb2d1SnNvOERHV2lRREpINzJFM1JrNi1sM0FMV2Z4UnpGVVdZNmR5OTE2S1I3VGZwTVVQZkFhSF8tRWtDOWJ3cDB3bnNSaFRubkJNMXVuVkl3TWhIa2VscHBweU1RRHBjNnd3d0xTTg?oc=5" },
 ];
-const breakingDate = "2026年10月20日 13:54 CST";
+const breakingDate = "2026年10月20日 19:23 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:00", tag: "ai", tagText: "AI", text: "在超大规模云厂商财报临近之际，AI芯片股反弹，市场同时关注Meta的股权融资动向。投资者等待大型云厂商业绩以判断AI算力需求，并评估Meta融资对科技股情绪的影响。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVDBqcUlXdU5sa0R5OWFJdnJNSmUzOW9ONWIxejVfTnJZTkxPbjlsV3l1TER0Ti1neGwwT2x1V2VyQnF2RDlaUkQyOU4zUkxXNXBjUWhvcU9LOXFHUnJUSnVJOHBNd2VtcUxIWjdZd3c0RlUwdE03QVFRZl9JVjBWT25NN2xzV0tvTldtc3dkdk04VXZ4MzFrMERULS1PY1g0ZWJEZ05WQ0tNRy0xTk5zVVJaSE1KeWVzeEcwWlVVb3R1LXBo?oc=5" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "会议记录工具Otter.ai宣布从General Catalyst旗下Customer Value Fund融资3.2亿美元；该基金以不稀释股权的方式向初创公司提供资本。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/otter-ai-raises-320-million-from-general-catalysts-growth-fund-for-its-meeting-tool/" },
   { time: "07:39", tag: "ai", tagText: "AI", text: "据报 Nscale 与 Anthropic 正洽谈第二笔规模约 450 亿美元的算力协议。两家公司今年 8 月刚宣布一笔同等规模的 450 亿美元算力交易，若新协议落地，Anthropic 的长期算力锁定规模将再翻一倍，反映头部 AI 实验室对数据中心与加速芯片的争夺仍在加速。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/" },
   { time: "06:49", tag: "ai", tagText: "AI", text: "Hugging Face 政策负责人表示，「嵌入式 AI 评估器」并非解决模型评测难题的简单方案。当前 AI 实验室普遍以基准测试作为衡量模型优劣的中立标准，但评测体系本身面临公正性与可操纵性争议，行业亟需更透明的第三方评估机制。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/" },
   { time: "06:43", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 的 Google Chrome 扩展加入新能力，可直接读取用户当前已打开的浏览器标签页内容；此前以 Atlas 为名的独立浏览器方案已不再推进。此举进一步把 AI 助手嵌入日常浏览工作流，同时也让「AI 可访问哪些页面数据」的边界问题受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "23:37", tag: "ai", tagText: "AI", text: "英伟达发布一系列新的开放模型，用于在企业数据中心和个人 PC 上运行 AI 代理（agent）。此举顺应企业希望将自有开源模型部署在自己数据中心、而非依赖云端 API 的趋势，同时推动在设备端本地运行、保障隐私的私有 AI 代理走向实用化。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "随着自主 AI 代理成为行业热点，越来越多网站开始主动封堵 OpenAI、Meta、Google 等公司的代理程序。这些代理可代替用户浏览网页、预订餐厅等，但网站运营方担忧流量、安全与内容被滥用，正通过反机器人措施限制其访问，围绕开放网络与 AI 抓取的冲突进一步升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web" },
   { time: "20:20", tag: "geo", tagText: "地缘", text: "台湾即将把向中国大陆走私英伟达芯片列为刑事犯罪。此举旨在配合美国出口管制、堵住先进 AI 芯片经台湾转运至大陆的漏洞，显示全球对 AI 算力供应链的监管正在进一步收紧。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb1pHcU9SeHNnbmpjQlpzVXVDNmNEUTJlTllEdkoySjBFWmJYMEs3ZENORlBpMVpISFBJRFpvZnUzRlhUWUVtLWNJc1gxOWJKRXFsVGExR0xZdjM1X0lHOFdUQTN5T0tuNEZmOHlNWk1TNkk4c3BkRjJZMEFXV1ltNW5lZ2lCX3B2Q0ctWEo2aVd5RVdzYXFZdVV3TXNKQ0J4QU0zc1FrRXd5dktfYVJIR0J5SVk?oc=5" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "美国中期选举临近，民主党人正把加强AI监管作为竞选议题，认为这有助于在夺回国会控制权后主导这一新兴政治议题。民调显示民主党有望获胜，但党内对具体监管路径仍存分歧。", source: "The Verge", url: "https://www.theverge.com/policy/1013113/democrats-ai-midterms" },
-  { time: "19:43", tag: "ai", tagText: "AI", text: "AI芯片初创公司Tenstorrent在新一轮融资中估值翻逾一倍至62亿美元，显示资本仍在持续押注英伟达之外的AI芯片新势力。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZEZuZHdVV1dZN3BpaFczenc4QkhZYjdjblNqRHd5UnllS3otOS04MUtCYjJtejZYbENlaE9nUFljbmdJN1RDaEdxZkxpSlhoMlMxdFhYWmdGaW4xejVjZ2hwS0U3b2lJNUJRUVRvak51Mzk4N3B0M3duMGQydWtYNHUwMG43d2hNS21mYV9jcXRQSjdRRFRXZkZPdVRmaUV1dlE4cEhQN18xcE9Yb1ZnTkF6Y3g4OU9waG1yV0dvOHBnM0lldTczYjgzVmdtTEd1UGxVNVdGYVhfNVpR?oc=5" },
 ];
-const aiBreakingDate = "2026年10月20日 13:54 CST";
+const aiBreakingDate = "2026年10月20日 19:23 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
