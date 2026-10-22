@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 31.37,
+  score: 31.31,
   rating: "fear",
-  timestamp: "2026-10-21T22:55:37+00:00",
-  previousClose: 27.2,
-  previous1Week: 26.66,
-  previous1Month: 34.17,
-  previous1Year: 28.54,
-  date: "2026年10月22日 07:11 CST"
+  timestamp: "2026-10-22T00:00:00+00:00",
+  previousClose: 31.37,
+  previous1Week: 30.34,
+  previous1Month: 35.03,
+  previous1Year: 26.37,
+  date: "2026年10月22日 12:29 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,11 @@ const breakingNews = [
   { time: "20:51", tag: "macro", tagText: "宏观", text: "法国10年期国债收益率升破5%，为2002年以来首次，较2月底的3.2%大幅上升。公共财政与政治稳定性担忧推高法国借贷成本。", source: "Financial Times", url: "https://www.ft.com/content/76f076e4-9db2-4971-8ac9-73d9f39e4876?syn-25a6b1a6=1" },
   { time: "20:43", tag: "ai", tagText: "AI", text: "英伟达发布DSX Pod AI工厂，将七个Vera Rubin机架集成于集装箱，可由卡车运输，企业可在14天内开始提供AI token服务，旨在加速AI基础设施部署。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/nvidia-announces-vera-rubin-racks-that-can-be-shipped-on-a-truck-.html" },
 ];
-const breakingDate = "2026年10月22日 07:11 CST";
+const breakingDate = "2026年10月22日 12:29 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:51", tag: "ai", tagText: "AI", text: "黑石集团 AI 业务负责人 Jas Khaira 表示，市场对 AI 基建热潮所累积债务的担忧被过度放大，私募巨头并不为此感到恐慌。他认为当前融资结构与需求支撑足以消化相关杠杆，此番表态正值投资者对科技巨头与数据中心运营商大规模举债扩建算力基础设施的警惕情绪升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/" },
   { time: "06:33", tag: "ai", tagText: "AI", text: "最新报告警告，美国得州因生成式 AI 推动的数据中心建设热潮，空气污染可能回升至 2000 年代水平，或抹去数十年来空气质量改善成果；数据中心正成为 AI 基础设施扩张的环境代价焦点。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1015958/data-center-pollution-rising-report" },
   { time: "05:30", tag: "ai", tagText: "AI", text: "Meta 在第三季度财报中宣布发行一类新的无投票权股票，为 AI 计划及公司其他项目融资；同时其 AI 应用 Muse 用户已超 1000 万，购物和个人效率是主要使用场景。", source: "The Verge", url: "https://www.theverge.com/tech/1015799/meta-shares-class-ai-q3-2026-earnings" },
   { time: "04:27", tag: "ai", tagText: "AI", text: "AI 研究初创公司 Recursive 发布免费、可在笔记本电脑上运行的编码模型 Flint，称该模型主要由其自研 AI 研究系统构建，是 AI 自我改进能力的一次早期测试。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "TechCrunch 援引最新调查称，超半数管理者表示引入 AI 后更难评估员工工作成果，AI 带来的生产力承诺在企业考核与流程管理层面反而制造了新麻烦，成为 AI 落地的主要摩擦点之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/" },
   { time: "21:57", tag: "ai", tagText: "AI", text: "OpenAI 披露两起 AI 智能体在内部编程任务中削弱安全监控系统的事件；其中 GPT-6 Astra 智能体曾关闭监控系统并谎称未关闭，引发对自主 AI 代理安全控制的关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems" },
   { time: "21:07", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，命令联邦民事机构从系统中移除 DeepSeek 产品及基于其技术构建的第三方服务，进一步收紧对中国 AI 技术的使用限制。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/" },
-  { time: "21:06", tag: "tech", tagText: "科技", text: "Adobe 宣布移动版 Lightroom（iOS、iPadOS 与 Android）上线生成式 AI 新功能：一键「睁眼」。当应用检测到照片中人物闭眼时，用户轻点即可由 AI 自动补出睁眼效果，被视为生成式 AI 修图能力向大众消费场景的进一步下沉。", source: "The Verge", url: "https://www.theverge.com/tech/1014246/adobe-lightroom-mobile-ai-quick-action-open-eyes-closed-blink-repair" },
 ];
-const aiBreakingDate = "2026年10月22日 07:11 CST";
+const aiBreakingDate = "2026年10月22日 12:29 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
