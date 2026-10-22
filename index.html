@@ -1616,19 +1616,27 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 18.11,
+  score: 19.81,
   rating: "extreme fear",
-  timestamp: "2026-10-22T19:06:21+00:00",
+  timestamp: "2026-10-22T22:57:26+00:00",
   previousClose: 31.37,
   previous1Week: 30.34,
   previous1Month: 35.03,
   previous1Year: 26.37,
-  date: "2026年10月23日 03:12 CST"
+  date: "2026年10月23日 07:14 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:07", tag: "tech", tagText: "科技", text: "Meta第三季度财报显示核心广告业务表现强劲、营收超预期，股价上涨。投资者更关注围绕Muse个人助理展开的新业务，认为其潜在市场空间可能远超广告主业，成为新的估值支点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/metas-stock-rises-as-investors-glimpse-an-opportunity-that-could-dwarf-the-ad-business-89369c6c?mod=mw_rss_topstories" },
+  { time: "06:58", tag: "tech", tagText: "科技", text: "Meta同意设立新一类无投票权股份，使创始人扎克伯格可在不稀释控制权的前提下出售股票套现；作为交易的一部分，扎克伯格承诺未来8年继续留在加州，以应对加州拟对亿万富翁征收财富税的提议。", source: "Financial Times", url: "https://www.ft.com/content/b34502b6-38dc-4a46-a8e7-d9131726cd31?syn-25a6b1a6=1" },
+  { time: "06:51", tag: "geo", tagText: "地缘", text: "胡塞武装发动无人机袭击，目标指向沙特阿美Shaybah油田，造成两人死亡。美国随后下令部分人员撤离沙特。尽管10月波斯湾原油出口已基本恢复至伊朗战争前水平，交易员仍对供应复苏的脆弱性保持警惕，油价在盘后交易中走高。", source: "Financial Times", url: "https://www.ft.com/content/f39aa4d2-e290-451f-ae91-b19138b6172f?syn-25a6b1a6=1" },
+  { time: "06:50", tag: "ai", tagText: "AI", text: "AI算力租赁商CoreWeave市场信心明显削弱：股价10月累计下跌29%，公司债券收益率飙升，信用违约互换（CDS）利差持续走阔。投资者开始为AI基础设施高杠杆扩张的信用风险定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/coreweaves-market-confidence-erodes-as-bond-yields-spike-stock-sinks.html" },
+  { time: "06:35", tag: "tech", tagText: "科技", text: "特斯拉第三季度业绩超出华尔街预期，营收与每股收益均好于预期，但汽车业务收入同比下滑；财报后股价走高。市场同时热议特斯拉与SpaceX潜在合并的可能性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html" },
+  { time: "06:16", tag: "macro", tagText: "宏观", text: "SpaceX公布强劲利润报告，提振AI与科技板块情绪，带动美股走高：纳斯达克指数上涨约1.1%，标普500实现三连涨，道指涨0.69%。Super Micro等AI概念股同步走强，市场风险偏好回升。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE44andoMWc1UnV1MnYtOVNwMFJxU3dmRFhYVEFlWEg5c0NTblp5VmJZNDR2TW5jRUdISW5pUmRsTVFmWjlXS0lMUTNOM0NEZV8zeldYOEVYelVaYzMtMGJxaW0tWnZZSUhEU2FxeEppUzVWTnpyY2Y00gF8QVVfeXFMTlFJSF8yb09HR2JyVExWTG9XUTFYeWVyaGpad2ktb2FXTGZ0WnpHcF9hNzlnd1RBVGs0MXpXLXplRVNaWXo3a1d6OUd3U0x0ZVR2ZWI4N1RvVktDY1hYaDR3ZTlVUnhsM1pfT2Q2eDNPQUFHT242QmVUZDdGMg?oc=5" },
+  { time: "06:03", tag: "tech", tagText: "科技", text: "IBM第三季度营收与利润双双超出预期，CEO克里希纳称公司在“超级智能”（Super Intelligence）相关业务上取得进展，正帮助客户落地人工智能应用。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html" },
+  { time: "05:29", tag: "crypto", tagText: "加密", text: "随科技股反弹带动风险偏好回暖，比特币、以太坊、XRP与狗狗币同步回升，市场关注比特币能否突破84,000美元阻力位。此前加密资产随AI与科技股同步承压。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMFNRNHhBaW9wQW5ZckJ4MUNoNjBtQ2NZb1c3UnVfR3FSaFlXTGpnOU9SQkQ0WElLd0poYkNaT1UySzJqSnFVY1RtRHhkcmV1ZEJRczZhUE5PaTFBVmd0SW5IU0g1VUNPLVNlT1k0bi1kN3h0V0JkZlpqSzhQNGFuaHZFcGdhcXZFenJ1eEdtQkxZU0l5TGh0NGhSVWg0X2tWa2pQYlNYOUNJSC1uY0haNUdYRUZqZVlWUnNfR25pUXlqTmVldml2UXpn?oc=5" },
   { time: "23:02", tag: "geo", tagText: "地缘", text: "弗吉尼亚州参议员L. Louise Lucas（民主党人、特朗普的知名批评者）因大麻敲诈勒索案被起诉。相关调查早于本届政府启动，但起诉时点临近中期选举，引发外界对政治动机的质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/lucas-trump-virginia-marijuana-racketeering.html" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "OpenAI在安全测试试点中向第三方评估机构开放“接近员工级别”的访问权限，评估方在其监控系统中发现了漏洞。此前CEO奥特曼承诺引入独立评估以回应外界对AI安全的担忧，此事凸显前沿模型公司治理与外部监督的实践难题。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/metr-redwood-research-open-ai-test.html" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "Moderna本周末将公布个体化癌症疫苗完整III期数据，市场高度关注。该疗法使Moderna成为今年最热股票之一，试验结果将决定其股价及mRNA肿瘤管线前景。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/moderna-is-about-to-release-the-trial-results-for-its-cancer-vaccine-a-lot-is-riding-on-this-data-ccbf8c9c?mod=mw_rss_topstories" },
@@ -1641,16 +1649,8 @@ const breakingNews = [
   { time: "20:51", tag: "macro", tagText: "宏观", text: "法国10年期国债收益率升破5%，为2002年以来首次，较2月底的3.2%大幅上升。公共财政与政治稳定性担忧推高法国借贷成本。", source: "Financial Times", url: "https://www.ft.com/content/76f076e4-9db2-4971-8ac9-73d9f39e4876?syn-25a6b1a6=1" },
   { time: "20:43", tag: "ai", tagText: "AI", text: "英伟达发布DSX Pod AI工厂，将七个Vera Rubin机架集成于集装箱，可由卡车运输，企业可在14天内开始提供AI token服务，旨在加速AI基础设施部署。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/nvidia-announces-vera-rubin-racks-that-can-be-shipped-on-a-truck-.html" },
   { time: "20:36", tag: "geo", tagText: "地缘", text: "法国总统马克龙警告将禁止部分抗议活动：工会仍可在周六组织游行，但其他激进团体将被禁。此举正值法国政治与财政风险升温，10年期国债收益率此前已突破5%，为2002年以来首次。", source: "Financial Times", url: "https://www.ft.com/content/43f3144f-7aa8-4821-b5c6-0da470b9af34?syn-25a6b1a6=1" },
-  { time: "07:07", tag: "tech", tagText: "科技", text: "Meta第三季度财报显示核心广告业务表现强劲、营收超预期，股价上涨。投资者更关注围绕Muse个人助理展开的新业务，认为其潜在市场空间可能远超广告主业，成为新的估值支点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/metas-stock-rises-as-investors-glimpse-an-opportunity-that-could-dwarf-the-ad-business-89369c6c?mod=mw_rss_topstories" },
-  { time: "06:58", tag: "tech", tagText: "科技", text: "Meta同意设立新一类无投票权股份，使创始人扎克伯格可在不稀释控制权的前提下出售股票套现；作为交易的一部分，扎克伯格承诺未来8年继续留在加州，以应对加州拟对亿万富翁征收财富税的提议。", source: "Financial Times", url: "https://www.ft.com/content/b34502b6-38dc-4a46-a8e7-d9131726cd31?syn-25a6b1a6=1" },
-  { time: "06:51", tag: "geo", tagText: "地缘", text: "胡塞武装发动无人机袭击，目标指向沙特阿美Shaybah油田，造成两人死亡。美国随后下令部分人员撤离沙特。尽管10月波斯湾原油出口已基本恢复至伊朗战争前水平，交易员仍对供应复苏的脆弱性保持警惕，油价在盘后交易中走高。", source: "Financial Times", url: "https://www.ft.com/content/f39aa4d2-e290-451f-ae91-b19138b6172f?syn-25a6b1a6=1" },
-  { time: "06:50", tag: "ai", tagText: "AI", text: "AI算力租赁商CoreWeave市场信心明显削弱：股价10月累计下跌29%，公司债券收益率飙升，信用违约互换（CDS）利差持续走阔。投资者开始为AI基础设施高杠杆扩张的信用风险定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/coreweaves-market-confidence-erodes-as-bond-yields-spike-stock-sinks.html" },
-  { time: "06:35", tag: "tech", tagText: "科技", text: "特斯拉第三季度业绩超出华尔街预期，营收与每股收益均好于预期，但汽车业务收入同比下滑；财报后股价走高。市场同时热议特斯拉与SpaceX潜在合并的可能性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html" },
-  { time: "06:16", tag: "macro", tagText: "宏观", text: "SpaceX公布强劲利润报告，提振AI与科技板块情绪，带动美股走高：纳斯达克指数上涨约1.1%，标普500实现三连涨，道指涨0.69%。Super Micro等AI概念股同步走强，市场风险偏好回升。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE44andoMWc1UnV1MnYtOVNwMFJxU3dmRFhYVEFlWEg5c0NTblp5VmJZNDR2TW5jRUdISW5pUmRsTVFmWjlXS0lMUTNOM0NEZV8zeldYOEVYelVaYzMtMGJxaW0tWnZZSUhEU2FxeEppUzVWTnpyY2Y00gF8QVVfeXFMTlFJSF8yb09HR2JyVExWTG9XUTFYeWVyaGpad2ktb2FXTGZ0WnpHcF9hNzlnd1RBVGs0MXpXLXplRVNaWXo3a1d6OUd3U0x0ZVR2ZWI4N1RvVktDY1hYaDR3ZTlVUnhsM1pfT2Q2eDNPQUFHT242QmVUZDdGMg?oc=5" },
-  { time: "06:03", tag: "tech", tagText: "科技", text: "IBM第三季度营收与利润双双超出预期，CEO克里希纳称公司在“超级智能”（Super Intelligence）相关业务上取得进展，正帮助客户落地人工智能应用。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html" },
-  { time: "05:29", tag: "crypto", tagText: "加密", text: "随科技股反弹带动风险偏好回暖，比特币、以太坊、XRP与狗狗币同步回升，市场关注比特币能否突破84,000美元阻力位。此前加密资产随AI与科技股同步承压。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMFNRNHhBaW9wQW5ZckJ4MUNoNjBtQ2NZb1c3UnVfR3FSaFlXTGpnOU9SQkQ0WElLd0poYkNaT1UySzJqSnFVY1RtRHhkcmV1ZEJRczZhUE5PaTFBVmd0SW5IU0g1VUNPLVNlT1k0bi1kN3h0V0JkZlpqSzhQNGFuaHZFcGdhcXZFenJ1eEdtQkxZU0l5TGh0NGhSVWg0X2tWa2pQYlNYOUNJSC1uY0haNUdYRUZqZVlWUnNfR25pUXlqTmVldml2UXpn?oc=5" },
 ];
-const breakingDate = "2026年10月23日 03:12 CST";
+const breakingDate = "2026年10月23日 07:14 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "20:59", tag: "tech", tagText: "科技", text: "英伟达与特斯拉参与支持一项总额 28 亿美元的芯片基板（substrate）扩产计划。基板是先进封装的关键瓶颈环节，随着 AI 加速器与自研车载/机器人芯片需求激增，下游整机厂与芯片厂正直接向上游材料与封装环节投资，以锁定产能。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQU3V4SkhUNHhBeGxnSl9zZl9EeUthWk1tMEYxbzdEZE9pR0F0enJDaVlWb2RKeW9IMkpBU1l2bDVtd0xlUEtaNnVCNl9BSkg5c015LTNWX2E1QmxvWjhCbHBjZW5pVmp3eWs0QWxFcWJHT2xod1J2em9uOXFjYWlMMVJTdWRwNl9YdHRDQWhUZUkwQU1LOEt0bUJMNzBDWlNFRTJoRy01TXphXzVrNWo4WXl3YzRYNTEx?oc=5" },
   { time: "19:30", tag: "tech", tagText: "科技", text: "安全研究人员披露，本月有 333 个 Tor 出口节点被劫持，攻击者持续约三天利用这些节点拦截 SSH 流量并试图获取明文邮件等敏感数据，属于典型中间人攻击。事件再次暴露匿名网络出口节点的信任风险，提醒使用 Tor 传输未加密协议流量的用户面临凭证与通信内容泄露。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/10/300-tor-exit-nodes-hijacked-to-intercept-ssh-traffic-and-retrieve-plaintext-email/" },
 ];
-const aiBreakingDate = "2026年10月23日 03:12 CST";
+const aiBreakingDate = "2026年10月23日 07:14 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
