@@ -1616,20 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 19.81,
+  score: 20.47,
   rating: "extreme fear",
-  timestamp: "2026-10-23T00:00:00+00:00",
+  timestamp: "2026-10-23T09:38:16+00:00",
   previousClose: 19.81,
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月23日 12:34 CST"
+  date: "2026年10月23日 17:56 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "17:41", tag: "macro", tagText: "宏观", text: "沃尔沃汽车股价暴跌27%，CEO称中国销量下滑“比预想更快”，中国和美国市场环境恶化拖累自由现金流。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/volvo-cars-q3-earnings-job-cuts.html" },
+  { time: "17:04", tag: "ai", tagText: "AI", text: "Anthropic与英国并购基金Hg合作成立欧洲咨询公司，为企业客户提供AI部署建议。这是AI公司向企业服务与咨询领域扩张的最新动作。", source: "Financial Times", url: "https://www.ft.com/content/df70bf20-e809-48d0-8485-f8f514a7fbc4?syn-25a6b1a6=1" },
+  { time: "17:03", tag: "macro", tagText: "宏观", text: "法国债务与政治风险升温，借贷成本飙升，市场担忧欧元区危机信号重燃。穆迪将在周五美股收盘后更新法国主权信用评级，法国债市动荡已外溢至海外市场。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/france-debt-euro-zone-contagion.html" },
+  { time: "16:10", tag: "geo", tagText: "地缘", text: "瑞典防务企业萨博订单同比增长两倍，此前与乌克兰达成“鹰狮”战斗机协议。欧洲各国正加快把防务支出承诺转化为实际军力，推动军工企业订单积压。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/saab-q3-earnings-figther-jet-maker-beats-expectations-as-orders-triple.html" },
   { time: "12:05", tag: "tech", tagText: "科技", text: "SK海力士股价盘初下跌后反弹，此前其美国子公司Solidigm的IPO计划审查被叫停。市场关注存储芯片业务前景及子公司上市融资安排变化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "柏林州选获胜方提议强制收购约12万套公寓，欧洲最大房东Vonovia面临约80亿欧元潜在损失。该计划凸显德国住房政策风险及对地产投资的影响。", source: "Financial Times", url: "https://www.ft.com/content/57e5b584-78b8-49a5-be2b-c02bba63886a?syn-25a6b1a6=1" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普特使迈克·沃尔兹警告伊朗，必须就其核计划达成“有意义的协议”，并称美国已为与伊朗的长期对峙做好准备。此番表态加剧中东地缘政治风险。", source: "Financial Times", url: "https://www.ft.com/content/70379a26-c20e-4501-aec9-a9a0089cdd3d?syn-25a6b1a6=1" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "加州公务员退休基金（CalPERS）削减“科技七巨头”持仓，因对高估值和AI资本开支激增的担忧升温。大型养老基金从科技股撤退，凸显机构对AI行情的谨慎态度。", source: "Financial Times", url: "https://www.ft.com/content/e842173f-6f9f-4115-9e5f-a0f06f0df18d?syn-25a6b1a6=1" },
   { time: "11:41", tag: "macro", tagText: "宏观", text: "全球科技股抛售引发避险需求，日元兑美元走强，亚太股市跟随华尔街下挫。市场关注科技股估值调整以及资金向避险资产轮动。", source: "Financial Times", url: "https://www.ft.com/content/8948193b-438b-4d71-a0b1-31dff56fc308?syn-25a6b1a6=1" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "06:03", tag: "tech", tagText: "科技", text: "IBM第三季度营收与利润双双超出预期，CEO克里希纳称公司在“超级智能”（Super Intelligence）相关业务上取得进展，正帮助客户落地人工智能应用。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html" },
   { time: "05:29", tag: "crypto", tagText: "加密", text: "随科技股反弹带动风险偏好回暖，比特币、以太坊、XRP与狗狗币同步回升，市场关注比特币能否突破84,000美元阻力位。此前加密资产随AI与科技股同步承压。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMFNRNHhBaW9wQW5ZckJ4MUNoNjBtQ2NZb1c3UnVfR3FSaFlXTGpnOU9SQkQ0WElLd0poYkNaT1UySzJqSnFVY1RtRHhkcmV1ZEJRczZhUE5PaTFBVmd0SW5IU0g1VUNPLVNlT1k0bi1kN3h0V0JkZlpqSzhQNGFuaHZFcGdhcXZFenJ1eEdtQkxZU0l5TGh0NGhSVWg0X2tWa2pQYlNYOUNJSC1uY0haNUdYRUZqZVlWUnNfR25pUXlqTmVldml2UXpn?oc=5" },
   { time: "23:02", tag: "geo", tagText: "地缘", text: "弗吉尼亚州参议员L. Louise Lucas（民主党人、特朗普的知名批评者）因大麻敲诈勒索案被起诉。相关调查早于本届政府启动，但起诉时点临近中期选举，引发外界对政治动机的质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/lucas-trump-virginia-marijuana-racketeering.html" },
-  { time: "23:00", tag: "ai", tagText: "AI", text: "OpenAI在安全测试试点中向第三方评估机构开放“接近员工级别”的访问权限，评估方在其监控系统中发现了漏洞。此前CEO奥特曼承诺引入独立评估以回应外界对AI安全的担忧，此事凸显前沿模型公司治理与外部监督的实践难题。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/metr-redwood-research-open-ai-test.html" },
-  { time: "23:00", tag: "tech", tagText: "科技", text: "Moderna本周末将公布个体化癌症疫苗完整III期数据，市场高度关注。该疗法使Moderna成为今年最热股票之一，试验结果将决定其股价及mRNA肿瘤管线前景。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/moderna-is-about-to-release-the-trial-results-for-its-cancer-vaccine-a-lot-is-riding-on-this-data-ccbf8c9c?mod=mw_rss_topstories" },
-  { time: "22:52", tag: "macro", tagText: "宏观", text: "美国航空预计2026年亏损扩大，原因是燃油成本飙升，并计划明年放缓运力增长。这是本月第四家因油价上涨而下调2026年指引的美国大型航司，显示能源冲击正沿产业链向航空业与消费端传导。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/american-airlines-aal-q3-2026-earnings.html" },
-  { time: "22:50", tag: "geo", tagText: "地缘", text: "特朗普特使威特科夫访问莫斯科会见普京，推动结束乌克兰战争，俄方释放一名美国公民。威特科夫在未包括乌克兰的和平会谈中称普京为“人道主义者”引发争议；泽连斯基称华盛顿重申对乌安全保障承诺。", source: "Financial Times", url: "https://www.ft.com/content/d7345d46-f000-49b1-99f6-57edfbd5f0af?syn-25a6b1a6=1" },
-  { time: "22:30", tag: "macro", tagText: "宏观", text: "美股周四下挫，纳指领跌，标普与道指同步走低。Meta预计未来资本开支将达“数千亿美元”，市值单日蒸发逾1000亿美元，引发市场对AI投资回报的担忧；特斯拉同样承压。与此同时，油价跳涨进一步压制风险偏好，AI交易与能源成本成为当前市场两大压力源。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/stock-market-today-live-updates.html" },
 ];
-const breakingDate = "2026年10月23日 12:34 CST";
+const breakingDate = "2026年10月23日 17:56 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "21:11", tag: "ai", tagText: "AI", text: "据 TechCrunch 报道，DeepSeek 在数日内完成约 150 亿美元融资，成为中国规模最大的融资轮之一。此举发生在特朗普政府以国家安全为由要求联邦机构清除 DeepSeek 技术之后不久，显示中国 AI 头部企业在本土资本支持下加速补充算力与研发弹药，也凸显中美 AI 资本与技术体系进一步分叉。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/" },
   { time: "21:07", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，命令联邦民事机构从系统中移除 DeepSeek 产品及基于其技术构建的第三方服务，进一步收紧对中国 AI 技术的使用限制。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/" },
 ];
-const aiBreakingDate = "2026年10月23日 12:34 CST";
+const aiBreakingDate = "2026年10月23日 17:56 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
