@@ -1616,19 +1616,20 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 19.73,
+  score: 20.55,
   rating: "extreme fear",
-  timestamp: "2026-10-23T14:53:41+00:00",
+  timestamp: "2026-10-23T19:03:40+00:00",
   previousClose: 19.81,
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月23日 22:55 CST"
+  date: "2026年10月24日 03:05 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:02", tag: "geo", tagText: "地缘", text: "弗吉尼亚州参议员L. Louise Lucas（民主党人、特朗普的知名批评者）因大麻敲诈勒索案被起诉。相关调查早于本届政府启动，但起诉时点临近中期选举，引发外界对政治动机的质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/lucas-trump-virginia-marijuana-racketeering.html" },
   { time: "17:41", tag: "macro", tagText: "宏观", text: "沃尔沃汽车股价暴跌27%，CEO称中国销量下滑“比预想更快”，中国和美国市场环境恶化拖累自由现金流。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/volvo-cars-q3-earnings-job-cuts.html" },
   { time: "17:04", tag: "ai", tagText: "AI", text: "Anthropic与英国并购基金Hg合作成立欧洲咨询公司，为企业客户提供AI部署建议。这是AI公司向企业服务与咨询领域扩张的最新动作。", source: "Financial Times", url: "https://www.ft.com/content/df70bf20-e809-48d0-8485-f8f514a7fbc4?syn-25a6b1a6=1" },
   { time: "17:03", tag: "macro", tagText: "宏观", text: "法国债务与政治风险升温，借贷成本飙升，市场担忧欧元区危机信号重燃。穆迪将在周五美股收盘后更新法国主权信用评级，法国债市动荡已外溢至海外市场。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/france-debt-euro-zone-contagion.html" },
@@ -1648,12 +1649,23 @@ const breakingNews = [
   { time: "06:16", tag: "macro", tagText: "宏观", text: "SpaceX公布强劲利润报告，提振AI与科技板块情绪，带动美股走高：纳斯达克指数上涨约1.1%，标普500实现三连涨，道指涨0.69%。Super Micro等AI概念股同步走强，市场风险偏好回升。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE44andoMWc1UnV1MnYtOVNwMFJxU3dmRFhYVEFlWEg5c0NTblp5VmJZNDR2TW5jRUdISW5pUmRsTVFmWjlXS0lMUTNOM0NEZV8zeldYOEVYelVaYzMtMGJxaW0tWnZZSUhEU2FxeEppUzVWTnpyY2Y00gF8QVVfeXFMTlFJSF8yb09HR2JyVExWTG9XUTFYeWVyaGpad2ktb2FXTGZ0WnpHcF9hNzlnd1RBVGs0MXpXLXplRVNaWXo3a1d6OUd3U0x0ZVR2ZWI4N1RvVktDY1hYaDR3ZTlVUnhsM1pfT2Q2eDNPQUFHT242QmVUZDdGMg?oc=5" },
   { time: "06:03", tag: "tech", tagText: "科技", text: "IBM第三季度营收与利润双双超出预期，CEO克里希纳称公司在“超级智能”（Super Intelligence）相关业务上取得进展，正帮助客户落地人工智能应用。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html" },
   { time: "05:29", tag: "crypto", tagText: "加密", text: "随科技股反弹带动风险偏好回暖，比特币、以太坊、XRP与狗狗币同步回升，市场关注比特币能否突破84,000美元阻力位。此前加密资产随AI与科技股同步承压。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMFNRNHhBaW9wQW5ZckJ4MUNoNjBtQ2NZb1c3UnVfR3FSaFlXTGpnOU9SQkQ0WElLd0poYkNaT1UySzJqSnFVY1RtRHhkcmV1ZEJRczZhUE5PaTFBVmd0SW5IU0g1VUNPLVNlT1k0bi1kN3h0V0JkZlpqSzhQNGFuaHZFcGdhcXZFenJ1eEdtQkxZU0l5TGh0NGhSVWg0X2tWa2pQYlNYOUNJSC1uY0haNUdYRUZqZVlWUnNfR25pUXlqTmVldml2UXpn?oc=5" },
-  { time: "23:02", tag: "geo", tagText: "地缘", text: "弗吉尼亚州参议员L. Louise Lucas（民主党人、特朗普的知名批评者）因大麻敲诈勒索案被起诉。相关调查早于本届政府启动，但起诉时点临近中期选举，引发外界对政治动机的质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/lucas-trump-virginia-marijuana-racketeering.html" },
 ];
-const breakingDate = "2026年10月23日 22:55 CST";
+const breakingDate = "2026年10月24日 03:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:00", tag: "ai", tagText: "AI", text: "Canva发布其首个图像生成模型，向所有用户开放，承诺以更低成本提供更好、更可定制的生成效果，正式加入AI图像生成竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/" },
+  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
+  { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
+  { time: "02:36", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 推出聊天锁定功能：用户可锁定涉及私人话题或惊喜计划的对话，在把设备交给他人时防止被查看，进一步强化隐私保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/" },
+  { time: "00:52", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，可能将用户使用个性化 AI 功能时产生的 Gmail、Google Photos 等个人数据用于广告定向。该变化由 Android Authority 发现，意味着谷歌在推进个性化 AI 的同时，正扩大个人数据在广告业务中的使用范围。", source: "The Verge", url: "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update" },
+  { time: "00:47", tag: "geo", tagText: "地缘", text: "微软指称，一个与中国结盟的黑客组织利用AI智能体攻破IT巨头ConnectWise后，入侵并监视数千家客户企业，显示AI代理正被用于加速大规模网络间谍活动。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "Uber将ChatGPT Work推广至全部3万名员工，此前仅小范围试点；这显示大型企业正把AI代理工具从试验转向全公司部署。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/" },
+  { time: "23:50", tag: "ai", tagText: "AI", text: "美国联邦披露显示，OpenAI、Anthropic和英伟达在7—9月均创下各自最高季度游说支出，其中英伟达花费最多，反映AI巨头正加大在华盛顿的政策投入。", source: "The Verge", url: "https://www.theverge.com/policy/1016585/openai-anthropic-nvidia-lobbying-records" },
+  { time: "23:12", tag: "tech", tagText: "科技", text: "PHP被披露存在两个安全漏洞，可能危及大量网站；按部分统计，全球多达70%的网站使用PHP，维基百科等均受影响，安全团队正紧急修补。", source: "The Verge", url: "https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down" },
+  { time: "23:03", tag: "ai", tagText: "AI", text: "Spotify 联席 CEO Gustav Söderström 表示，公司当前的 AI 押注是成为“AI 智能体首选的音乐服务”：随着代理式 AI 替用户完成点播、发现与订阅操作，音乐平台需要让自家接口、推荐与版权体系对智能体友好，从而在流量入口从人转向代理的过程中保住分发话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/" },
+  { time: "23:00", tag: "ai", tagText: "AI", text: "谷歌宣布将对话式 Gemini AI 助手引入苹果 CarPlay，首先面向美国驾驶员开放，可用于导航等语音交互；此前该助手已登陆 Android Auto。", source: "The Verge", url: "https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps" },
+  { time: "22:47", tag: "ai", tagText: "AI", text: "Meta 在出版商反对后推迟执行新商业条款。出版商担忧，新条款可能允许 Meta 抓取新闻网站内容用于 AI 训练；Fast Company 此前报道了这一争议，Meta 现决定暂缓强制执行。", source: "The Verge", url: "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping" },
   { time: "22:34", tag: "tech", tagText: "科技", text: "三星电机与英伟达扩大 AI 封装基板生产合作，以应对 AI 芯片封装与高性能计算需求增长，显示 AI 硬件供应链投资继续升温。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWR6eWlwRjkxSERueUJSSVk1N0hEaWN4UHRkM2FDVTRUTHpiYjZNbk5SblZTOEhodGQ3ZGNsWHIyWTgzaVNYaUJyQWx2aTdrRHZ3T1BFdDZ1M1JvNXZONkZ3Snl5Y0doek9JRU1yMklYTUxnQkxjck1LTDRINEdpX3E2SzltcnJC?oc=5" },
   { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
@@ -1662,20 +1674,8 @@ const aiBreakingNews = [
   { time: "21:11", tag: "ai", tagText: "AI", text: "据 TechCrunch 报道，DeepSeek 在数日内完成约 150 亿美元融资，成为中国规模最大的融资轮之一。此举发生在特朗普政府以国家安全为由要求联邦机构清除 DeepSeek 技术之后不久，显示中国 AI 头部企业在本土资本支持下加速补充算力与研发弹药，也凸显中美 AI 资本与技术体系进一步分叉。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/" },
   { time: "21:07", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，命令联邦民事机构从系统中移除 DeepSeek 产品及基于其技术构建的第三方服务，进一步收紧对中国 AI 技术的使用限制。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "Uber 竞争对手 inDrive 计划于2027年上半年在哈萨克斯坦首都测试 Pony.ai 的 Robotaxi，并携手英伟达推进中亚自动驾驶布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/" },
-  { time: "08:45", tag: "ai", tagText: "AI", text: "MIT 研究人员将13个 AI 智能体置于虚拟孤岛，在无事可做的情况下，它们自发发明游戏、悼念丢失的戒指，并最终提升了任务表现，为多智能体自主行为研究提供新观察。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/" },
-  { time: "08:39", tag: "tech", tagText: "科技", text: "尼日利亚今年前9个月初创企业融资额达6.35亿美元，居非洲首位，显示资本仍在加速流入非洲科技生态。", source: "tech-insider.org", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTFBKTHllRmR5Q2VWVGNRejNXY2NzbHNkRzgya2pfTERLRmpnN0F5cTI1U0NYdHVFYm1WODViUE1RSDBib1BPbExMSFZzeGhVVE0wRUFRVE1sX3FQbmo2Q3BELXU2REEzdG00RjhSZzJiT05sSDVqcVAzUnU2OF83Zw?oc=5" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "Canva发布其首个图像生成模型，向所有用户开放，承诺以更低成本提供更好、更可定制的生成效果，正式加入AI图像生成竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/" },
-  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
-  { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
-  { time: "02:36", tag: "ai", tagText: "AI", text: "OpenAI 为 ChatGPT 推出聊天锁定功能：用户可锁定涉及私人话题或惊喜计划的对话，在把设备交给他人时防止被查看，进一步强化隐私保护。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/" },
-  { time: "00:47", tag: "geo", tagText: "地缘", text: "微软指称，一个与中国结盟的黑客组织利用AI智能体攻破IT巨头ConnectWise后，入侵并监视数千家客户企业，显示AI代理正被用于加速大规模网络间谍活动。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "Uber将ChatGPT Work推广至全部3万名员工，此前仅小范围试点；这显示大型企业正把AI代理工具从试验转向全公司部署。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/" },
-  { time: "23:50", tag: "ai", tagText: "AI", text: "美国联邦披露显示，OpenAI、Anthropic和英伟达在7—9月均创下各自最高季度游说支出，其中英伟达花费最多，反映AI巨头正加大在华盛顿的政策投入。", source: "The Verge", url: "https://www.theverge.com/policy/1016585/openai-anthropic-nvidia-lobbying-records" },
-  { time: "23:12", tag: "tech", tagText: "科技", text: "PHP被披露存在两个安全漏洞，可能危及大量网站；按部分统计，全球多达70%的网站使用PHP，维基百科等均受影响，安全团队正紧急修补。", source: "The Verge", url: "https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down" },
-  { time: "23:03", tag: "ai", tagText: "AI", text: "Spotify 联席 CEO Gustav Söderström 表示，公司当前的 AI 押注是成为“AI 智能体首选的音乐服务”：随着代理式 AI 替用户完成点播、发现与订阅操作，音乐平台需要让自家接口、推荐与版权体系对智能体友好，从而在流量入口从人转向代理的过程中保住分发话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/" },
-  { time: "23:00", tag: "ai", tagText: "AI", text: "谷歌宣布将对话式 Gemini AI 助手引入苹果 CarPlay，首先面向美国驾驶员开放，可用于导航等语音交互；此前该助手已登陆 Android Auto。", source: "The Verge", url: "https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps" },
 ];
-const aiBreakingDate = "2026年10月23日 22:55 CST";
+const aiBreakingDate = "2026年10月24日 03:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
