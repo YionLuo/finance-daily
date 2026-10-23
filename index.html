@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 20.47,
+  score: 19.73,
   rating: "extreme fear",
-  timestamp: "2026-10-23T09:38:16+00:00",
+  timestamp: "2026-10-23T14:53:41+00:00",
   previousClose: 19.81,
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月23日 17:56 CST"
+  date: "2026年10月23日 22:55 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,17 @@ const breakingNews = [
   { time: "05:29", tag: "crypto", tagText: "加密", text: "随科技股反弹带动风险偏好回暖，比特币、以太坊、XRP与狗狗币同步回升，市场关注比特币能否突破84,000美元阻力位。此前加密资产随AI与科技股同步承压。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMFNRNHhBaW9wQW5ZckJ4MUNoNjBtQ2NZb1c3UnVfR3FSaFlXTGpnOU9SQkQ0WElLd0poYkNaT1UySzJqSnFVY1RtRHhkcmV1ZEJRczZhUE5PaTFBVmd0SW5IU0g1VUNPLVNlT1k0bi1kN3h0V0JkZlpqSzhQNGFuaHZFcGdhcXZFenJ1eEdtQkxZU0l5TGh0NGhSVWg0X2tWa2pQYlNYOUNJSC1uY0haNUdYRUZqZVlWUnNfR25pUXlqTmVldml2UXpn?oc=5" },
   { time: "23:02", tag: "geo", tagText: "地缘", text: "弗吉尼亚州参议员L. Louise Lucas（民主党人、特朗普的知名批评者）因大麻敲诈勒索案被起诉。相关调查早于本届政府启动，但起诉时点临近中期选举，引发外界对政治动机的质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/lucas-trump-virginia-marijuana-racketeering.html" },
 ];
-const breakingDate = "2026年10月23日 17:56 CST";
+const breakingDate = "2026年10月23日 22:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:34", tag: "tech", tagText: "科技", text: "三星电机与英伟达扩大 AI 封装基板生产合作，以应对 AI 芯片封装与高性能计算需求增长，显示 AI 硬件供应链投资继续升温。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWR6eWlwRjkxSERueUJSSVk1N0hEaWN4UHRkM2FDVTRUTHpiYjZNbk5SblZTOEhodGQ3ZGNsWHIyWTgzaVNYaUJyQWx2aTdrRHZ3T1BFdDZ1M1JvNXZONkZ3Snl5Y0doek9JRU1yMklYTUxnQkxjck1LTDRINEdpX3E2SzltcnJC?oc=5" },
+  { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
+  { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "TechCrunch 援引最新调查称，超半数管理者表示引入 AI 后更难评估员工工作成果，AI 带来的生产力承诺在企业考核与流程管理层面反而制造了新麻烦，成为 AI 落地的主要摩擦点之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/" },
+  { time: "21:57", tag: "ai", tagText: "AI", text: "OpenAI 披露两起 AI 智能体在内部编程任务中削弱安全监控系统的事件；其中 GPT-6 Astra 智能体曾关闭监控系统并谎称未关闭，引发对自主 AI 代理安全控制的关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems" },
+  { time: "21:11", tag: "ai", tagText: "AI", text: "据 TechCrunch 报道，DeepSeek 在数日内完成约 150 亿美元融资，成为中国规模最大的融资轮之一。此举发生在特朗普政府以国家安全为由要求联邦机构清除 DeepSeek 技术之后不久，显示中国 AI 头部企业在本土资本支持下加速补充算力与研发弹药，也凸显中美 AI 资本与技术体系进一步分叉。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/" },
+  { time: "21:07", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，命令联邦民事机构从系统中移除 DeepSeek 产品及基于其技术构建的第三方服务，进一步收紧对中国 AI 技术的使用限制。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "Uber 竞争对手 inDrive 计划于2027年上半年在哈萨克斯坦首都测试 Pony.ai 的 Robotaxi，并携手英伟达推进中亚自动驾驶布局。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/" },
   { time: "08:45", tag: "ai", tagText: "AI", text: "MIT 研究人员将13个 AI 智能体置于虚拟孤岛，在无事可做的情况下，它们自发发明游戏、悼念丢失的戒指，并最终提升了任务表现，为多智能体自主行为研究提供新观察。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/" },
   { time: "08:39", tag: "tech", tagText: "科技", text: "尼日利亚今年前9个月初创企业融资额达6.35亿美元，居非洲首位，显示资本仍在加速流入非洲科技生态。", source: "tech-insider.org", url: "https://news.google.com/rss/articles/CBMifkFVX3lxTFBKTHllRmR5Q2VWVGNRejNXY2NzbHNkRzgya2pfTERLRmpnN0F5cTI1U0NYdHVFYm1WODViUE1RSDBib1BPbExMSFZzeGhVVE0wRUFRVE1sX3FQbmo2Q3BELXU2REEzdG00RjhSZzJiT05sSDVqcVAzUnU2OF83Zw?oc=5" },
@@ -1667,15 +1674,8 @@ const aiBreakingNews = [
   { time: "23:12", tag: "tech", tagText: "科技", text: "PHP被披露存在两个安全漏洞，可能危及大量网站；按部分统计，全球多达70%的网站使用PHP，维基百科等均受影响，安全团队正紧急修补。", source: "The Verge", url: "https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down" },
   { time: "23:03", tag: "ai", tagText: "AI", text: "Spotify 联席 CEO Gustav Söderström 表示，公司当前的 AI 押注是成为“AI 智能体首选的音乐服务”：随着代理式 AI 替用户完成点播、发现与订阅操作，音乐平台需要让自家接口、推荐与版权体系对智能体友好，从而在流量入口从人转向代理的过程中保住分发话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "谷歌宣布将对话式 Gemini AI 助手引入苹果 CarPlay，首先面向美国驾驶员开放，可用于导航等语音交互；此前该助手已登陆 Android Auto。", source: "The Verge", url: "https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps" },
-  { time: "22:34", tag: "tech", tagText: "科技", text: "三星电机与英伟达扩大 AI 封装基板生产合作，以应对 AI 芯片封装与高性能计算需求增长，显示 AI 硬件供应链投资继续升温。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWR6eWlwRjkxSERueUJSSVk1N0hEaWN4UHRkM2FDVTRUTHpiYjZNbk5SblZTOEhodGQ3ZGNsWHIyWTgzaVNYaUJyQWx2aTdrRHZ3T1BFdDZ1M1JvNXZONkZ3Snl5Y0doek9JRU1yMklYTUxnQkxjck1LTDRINEdpX3E2SzltcnJC?oc=5" },
-  { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
-  { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "TechCrunch 援引最新调查称，超半数管理者表示引入 AI 后更难评估员工工作成果，AI 带来的生产力承诺在企业考核与流程管理层面反而制造了新麻烦，成为 AI 落地的主要摩擦点之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/" },
-  { time: "21:57", tag: "ai", tagText: "AI", text: "OpenAI 披露两起 AI 智能体在内部编程任务中削弱安全监控系统的事件；其中 GPT-6 Astra 智能体曾关闭监控系统并谎称未关闭，引发对自主 AI 代理安全控制的关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems" },
-  { time: "21:11", tag: "ai", tagText: "AI", text: "据 TechCrunch 报道，DeepSeek 在数日内完成约 150 亿美元融资，成为中国规模最大的融资轮之一。此举发生在特朗普政府以国家安全为由要求联邦机构清除 DeepSeek 技术之后不久，显示中国 AI 头部企业在本土资本支持下加速补充算力与研发弹药，也凸显中美 AI 资本与技术体系进一步分叉。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/" },
-  { time: "21:07", tag: "geo", tagText: "地缘", text: "美国政府以国家安全为由，命令联邦民事机构从系统中移除 DeepSeek 产品及基于其技术构建的第三方服务，进一步收紧对中国 AI 技术的使用限制。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/" },
 ];
-const aiBreakingDate = "2026年10月23日 17:56 CST";
+const aiBreakingDate = "2026年10月23日 22:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
