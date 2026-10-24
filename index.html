@@ -1623,12 +1623,24 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月24日 08:35 CST"
+  date: "2026年10月24日 13:41 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:47", tag: "crypto", tagText: "加密", text: "比特币周末继续下挫，逼近8万美元关口，瑞波币（XRP）失守关键支撑位。加密市场跟随科技股与AI板块的调整而走弱，投资者风险偏好明显降温，市场关注8万美元一线能否形成有效支撑。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNUGRoaHRWLW5LOTRrZm5UOWY5YTZaZUlxeF9FQWdwbzFwQ1lMS1FSdS1WVmo2dkRVb3FTNjhQQ2Raakk2SFpaYi1hN1huMzVMT2ZHbTNQejhRZEV5LTY3VHRaTVJOcGl0ZUFNQmRLYzRjWjNZWXZxc1J2aTZGS3NhSU4yMkp6RElqVDdsZ2JGOWxZUmFHeS15dnhEbXpKQQ?oc=5" },
+  { time: "12:05", tag: "tech", tagText: "科技", text: "SK海力士股价盘初下跌后反弹，此前其美国子公司Solidigm的IPO计划审查被叫停。市场关注存储芯片业务前景及子公司上市融资安排变化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "飞马（Pegasus）间谍软件开发商NSO集团前CEO沙莱夫·胡利奥（Shalev Hulio）寻求转型，呼吁各国政府信任其新技术并摆脱对美国AI的依赖，主打“主权AI”与国家安全牌。这反映出各国政府对数据主权与AI供应链安全的诉求正在催生新的防务科技市场。", source: "Financial Times", url: "https://www.ft.com/content/f9592534-1a3d-409d-9a57-f05919440032?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "macro", tagText: "宏观", text: "柏林州选获胜方提议强制收购约12万套公寓，欧洲最大房东Vonovia面临约80亿欧元潜在损失。该计划凸显德国住房政策风险及对地产投资的影响。", source: "Financial Times", url: "https://www.ft.com/content/57e5b584-78b8-49a5-be2b-c02bba63886a?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普特使迈克·沃尔兹警告伊朗，必须就其核计划达成“有意义的协议”，并称美国已为与伊朗的长期对峙做好准备。此番表态加剧中东地缘政治风险。", source: "Financial Times", url: "https://www.ft.com/content/70379a26-c20e-4501-aec9-a9a0089cdd3d?syn-25a6b1a6=1" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "加州公务员退休基金（CalPERS）削减“科技七巨头”持仓，因对高估值和AI资本开支激增的担忧升温。大型养老基金从科技股撤退，凸显机构对AI行情的谨慎态度。", source: "Financial Times", url: "https://www.ft.com/content/e842173f-6f9f-4115-9e5f-a0f06f0df18d?syn-25a6b1a6=1" },
+  { time: "11:41", tag: "macro", tagText: "宏观", text: "全球科技股抛售引发避险需求，日元兑美元走强，亚太股市跟随华尔街下挫。市场关注科技股估值调整以及资金向避险资产轮动。", source: "Financial Times", url: "https://www.ft.com/content/8948193b-438b-4d71-a0b1-31dff56fc308?syn-25a6b1a6=1" },
+  { time: "10:47", tag: "geo", tagText: "地缘", text: "一份情报备忘录警告称，伊朗正策划在中东地区杀害美国公民，相关计划已进入“后期阶段”。随着美伊围绕核问题的对峙重新升温，地区安全风险上升，美方在中东的人员与设施面临更高威胁。", source: "Financial Times", url: "https://www.ft.com/content/e2e82393-c7ca-4bc1-b270-022b3702d9e7?syn-25a6b1a6=1" },
+  { time: "09:23", tag: "macro", tagText: "宏观", text: "随着北京收紧对境外财富的税收监管，富裕中国客户对美国银行账户的需求加快。银行家和律师称，这反映资本外流压力与离岸财富配置需求上升。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/wealthy-chinese-tax-offshore-trusts-capital-control-.html" },
+  { time: "09:16", tag: "tech", tagText: "科技", text: "苹果股价创历史新高，市值反超英伟达，此前公司发布两款iPhone新机。资金从AI芯片龙头向消费电子巨头轮动，显示投资者在AI资本开支担忧升温之际寻求更稳健的现金流标的。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPTDNJSXExelJGYWlmWmw1OVdUaHdiYlY1c0dpSi1QZjg4UFFkZ2lFSUxwdUZsQTVMSWwtMDREM1YtWlp0MFV1Uy1UMXliLThGU2lkdFFfRWNCTDZTUExSX0Z6SWxxWUdnTnVSM2cxek9uRXVIZTV6WlpOcXdweTJYSUsyZFNnTXBBdWN4MHdhNTVMaXBHUks1TWtsU0cxM2swRHQ0WTRORjYzNkd2TmE2cFYzQ2M4ZmE0czhMNDZBV1R1MG5KTmx4RXRrUXV5UVg5RmFlcXM0c1o3NDhKdWF0a3AyVGdoaGpVWlBQSnlCVW1NbGJz?oc=5" },
+  { time: "08:22", tag: "geo", tagText: "地缘", text: "美国高管团队退出规模250亿美元的阿拉斯加LNG项目Polar Train。该项目前CEO向FT表示，俄罗斯能源巨头Novatek在未获华盛顿批准的情况下为这一战略项目出资并实际掌控运营，引发对美国能源安全与外资审查漏洞的担忧。", source: "Financial Times", url: "https://www.ft.com/content/e9cfbfbb-e65a-4303-aebb-20d59319ef1b?syn-25a6b1a6=1" },
+  { time: "07:46", tag: "macro", tagText: "宏观", text: "华尔街周五收跌，结束震荡的一周。AI基础设施相关信用风险升温、科技股估值承压以及地缘政治不确定性共同压制风险偏好，市场等待大型云厂商财报提供方向。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxQR01KeXBjdXBubVRzTlJfWWJTMHctb2hFS2pVT21ydWtZNzBaMldxd1c2ZUJGNWhIeGV6MUxvQVZvSl9GdFh5QThQbFpuT0IwYi02Y3JGM19YSWJ3LXMtb29RbS1WZUljdGtsS2dockxHVm5SWnBSMzJpM0Y4RFItdW5SMzFsdXg2LWtrYWE1SC1TQlkxOERJZHNtQVREdw?oc=5" },
   { time: "07:13", tag: "geo", tagText: "地缘", text: "美国财政部提议收紧对敏感中国科技领域的投资限制，覆盖人工智能、高超音速武器和生物技术等。此举可能进一步加剧美中科技与资本脱钩。", source: "Financial Times", url: "https://www.ft.com/content/f57a1f1c-60ce-432d-a901-673ae7d1241e?syn-25a6b1a6=1" },
   { time: "07:07", tag: "tech", tagText: "科技", text: "Meta第三季度财报显示核心广告业务表现强劲、营收超预期，股价上涨。投资者更关注围绕Muse个人助理展开的新业务，认为其潜在市场空间可能远超广告主业，成为新的估值支点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/metas-stock-rises-as-investors-glimpse-an-opportunity-that-could-dwarf-the-ad-business-89369c6c?mod=mw_rss_topstories" },
   { time: "06:58", tag: "tech", tagText: "科技", text: "Meta同意设立新一类无投票权股份，使创始人扎克伯格可在不稀释控制权的前提下出售股票套现；作为交易的一部分，扎克伯格承诺未来8年继续留在加州，以应对加州拟对亿万富翁征收财富税的提议。", source: "Financial Times", url: "https://www.ft.com/content/b34502b6-38dc-4a46-a8e7-d9131726cd31?syn-25a6b1a6=1" },
@@ -1637,20 +1649,8 @@ const breakingNews = [
   { time: "06:35", tag: "tech", tagText: "科技", text: "特斯拉第三季度业绩超出华尔街预期，营收与每股收益均好于预期，但汽车业务收入同比下滑；财报后股价走高。市场同时热议特斯拉与SpaceX潜在合并的可能性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html" },
   { time: "06:16", tag: "macro", tagText: "宏观", text: "SpaceX公布强劲利润报告，提振AI与科技板块情绪，带动美股走高：纳斯达克指数上涨约1.1%，标普500实现三连涨，道指涨0.69%。Super Micro等AI概念股同步走强，市场风险偏好回升。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE44andoMWc1UnV1MnYtOVNwMFJxU3dmRFhYVEFlWEg5c0NTblp5VmJZNDR2TW5jRUdISW5pUmRsTVFmWjlXS0lMUTNOM0NEZV8zeldYOEVYelVaYzMtMGJxaW0tWnZZSUhEU2FxeEppUzVWTnpyY2Y00gF8QVVfeXFMTlFJSF8yb09HR2JyVExWTG9XUTFYeWVyaGpad2ktb2FXTGZ0WnpHcF9hNzlnd1RBVGs0MXpXLXplRVNaWXo3a1d6OUd3U0x0ZVR2ZWI4N1RvVktDY1hYaDR3ZTlVUnhsM1pfT2Q2eDNPQUFHT242QmVUZDdGMg?oc=5" },
   { time: "06:03", tag: "tech", tagText: "科技", text: "IBM第三季度营收与利润双双超出预期，CEO克里希纳称公司在“超级智能”（Super Intelligence）相关业务上取得进展，正帮助客户落地人工智能应用。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html" },
-  { time: "05:29", tag: "crypto", tagText: "加密", text: "随科技股反弹带动风险偏好回暖，比特币、以太坊、XRP与狗狗币同步回升，市场关注比特币能否突破84,000美元阻力位。此前加密资产随AI与科技股同步承压。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMFNRNHhBaW9wQW5ZckJ4MUNoNjBtQ2NZb1c3UnVfR3FSaFlXTGpnOU9SQkQ0WElLd0poYkNaT1UySzJqSnFVY1RtRHhkcmV1ZEJRczZhUE5PaTFBVmd0SW5IU0g1VUNPLVNlT1k0bi1kN3h0V0JkZlpqSzhQNGFuaHZFcGdhcXZFenJ1eEdtQkxZU0l5TGh0NGhSVWg0X2tWa2pQYlNYOUNJSC1uY0haNUdYRUZqZVlWUnNfR25pUXlqTmVldml2UXpn?oc=5" },
-  { time: "23:02", tag: "geo", tagText: "地缘", text: "弗吉尼亚州参议员L. Louise Lucas（民主党人、特朗普的知名批评者）因大麻敲诈勒索案被起诉。相关调查早于本届政府启动，但起诉时点临近中期选举，引发外界对政治动机的质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/lucas-trump-virginia-marijuana-racketeering.html" },
-  { time: "17:41", tag: "macro", tagText: "宏观", text: "沃尔沃汽车股价暴跌27%，CEO称中国销量下滑“比预想更快”，中国和美国市场环境恶化拖累自由现金流。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/volvo-cars-q3-earnings-job-cuts.html" },
-  { time: "17:04", tag: "ai", tagText: "AI", text: "Anthropic与英国并购基金Hg合作成立欧洲咨询公司，为企业客户提供AI部署建议。这是AI公司向企业服务与咨询领域扩张的最新动作。", source: "Financial Times", url: "https://www.ft.com/content/df70bf20-e809-48d0-8485-f8f514a7fbc4?syn-25a6b1a6=1" },
-  { time: "17:03", tag: "macro", tagText: "宏观", text: "法国债务与政治风险升温，借贷成本飙升，市场担忧欧元区危机信号重燃。穆迪将在周五美股收盘后更新法国主权信用评级，法国债市动荡已外溢至海外市场。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/france-debt-euro-zone-contagion.html" },
-  { time: "16:10", tag: "geo", tagText: "地缘", text: "瑞典防务企业萨博订单同比增长两倍，此前与乌克兰达成“鹰狮”战斗机协议。欧洲各国正加快把防务支出承诺转化为实际军力，推动军工企业订单积压。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/saab-q3-earnings-figther-jet-maker-beats-expectations-as-orders-triple.html" },
-  { time: "12:05", tag: "tech", tagText: "科技", text: "SK海力士股价盘初下跌后反弹，此前其美国子公司Solidigm的IPO计划审查被叫停。市场关注存储芯片业务前景及子公司上市融资安排变化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "柏林州选获胜方提议强制收购约12万套公寓，欧洲最大房东Vonovia面临约80亿欧元潜在损失。该计划凸显德国住房政策风险及对地产投资的影响。", source: "Financial Times", url: "https://www.ft.com/content/57e5b584-78b8-49a5-be2b-c02bba63886a?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普特使迈克·沃尔兹警告伊朗，必须就其核计划达成“有意义的协议”，并称美国已为与伊朗的长期对峙做好准备。此番表态加剧中东地缘政治风险。", source: "Financial Times", url: "https://www.ft.com/content/70379a26-c20e-4501-aec9-a9a0089cdd3d?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "加州公务员退休基金（CalPERS）削减“科技七巨头”持仓，因对高估值和AI资本开支激增的担忧升温。大型养老基金从科技股撤退，凸显机构对AI行情的谨慎态度。", source: "Financial Times", url: "https://www.ft.com/content/e842173f-6f9f-4115-9e5f-a0f06f0df18d?syn-25a6b1a6=1" },
-  { time: "11:41", tag: "macro", tagText: "宏观", text: "全球科技股抛售引发避险需求，日元兑美元走强，亚太股市跟随华尔街下挫。市场关注科技股估值调整以及资金向避险资产轮动。", source: "Financial Times", url: "https://www.ft.com/content/8948193b-438b-4d71-a0b1-31dff56fc308?syn-25a6b1a6=1" },
-  { time: "09:23", tag: "macro", tagText: "宏观", text: "随着北京收紧对境外财富的税收监管，富裕中国客户对美国银行账户的需求加快。银行家和律师称，这反映资本外流压力与离岸财富配置需求上升。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/wealthy-chinese-tax-offshore-trusts-capital-control-.html" },
 ];
-const breakingDate = "2026年10月24日 08:35 CST";
+const breakingDate = "2026年10月24日 13:41 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "TechCrunch 援引最新调查称，超半数管理者表示引入 AI 后更难评估员工工作成果，AI 带来的生产力承诺在企业考核与流程管理层面反而制造了新麻烦，成为 AI 落地的主要摩擦点之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/" },
 ];
-const aiBreakingDate = "2026年10月24日 08:35 CST";
+const aiBreakingDate = "2026年10月24日 13:41 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
