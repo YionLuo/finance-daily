@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月24日 13:41 CST"
+  date: "2026年10月24日 18:47 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:20", tag: "geo", tagText: "地缘", text: "乌克兰军方称Starlink服务限制已解除；此前无人机通信系统降速削弱了基辅抵御俄军打击的能力。", source: "Financial Times", url: "https://www.ft.com/content/5b5592f4-c59d-4eb1-af78-078dc32fcab8" },
+  { time: "18:00", tag: "ai", tagText: "AI", text: "CNBC调查显示，美国选民普遍反对在住所附近建设AI数据中心，这给特朗普和共和党在中期选举前带来政治挑战；其推动的大规模AI基建面临地方阻力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/trump-ai-data-centers-voter-backlash-midterms.html" },
+  { time: "14:23", tag: "macro", tagText: "宏观", text: "法国骚乱冲击市场，国债收益率升至24年高位；投资者正评估预算、增长及行业风险，并准备迎接更多抗议活动。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/france-riots-paris-unrest-debt-budget.html" },
   { time: "12:47", tag: "crypto", tagText: "加密", text: "比特币周末继续下挫，逼近8万美元关口，瑞波币（XRP）失守关键支撑位。加密市场跟随科技股与AI板块的调整而走弱，投资者风险偏好明显降温，市场关注8万美元一线能否形成有效支撑。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNUGRoaHRWLW5LOTRrZm5UOWY5YTZaZUlxeF9FQWdwbzFwQ1lMS1FSdS1WVmo2dkRVb3FTNjhQQ2Raakk2SFpaYi1hN1huMzVMT2ZHbTNQejhRZEV5LTY3VHRaTVJOcGl0ZUFNQmRLYzRjWjNZWXZxc1J2aTZGS3NhSU4yMkp6RElqVDdsZ2JGOWxZUmFHeS15dnhEbXpKQQ?oc=5" },
   { time: "12:05", tag: "tech", tagText: "科技", text: "SK海力士股价盘初下跌后反弹，此前其美国子公司Solidigm的IPO计划审查被叫停。市场关注存储芯片业务前景及子公司上市融资安排变化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "飞马（Pegasus）间谍软件开发商NSO集团前CEO沙莱夫·胡利奥（Shalev Hulio）寻求转型，呼吁各国政府信任其新技术并摆脱对美国AI的依赖，主打“主权AI”与国家安全牌。这反映出各国政府对数据主权与AI供应链安全的诉求正在催生新的防务科技市场。", source: "Financial Times", url: "https://www.ft.com/content/f9592534-1a3d-409d-9a57-f05919440032?syn-25a6b1a6=1" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "06:58", tag: "tech", tagText: "科技", text: "Meta同意设立新一类无投票权股份，使创始人扎克伯格可在不稀释控制权的前提下出售股票套现；作为交易的一部分，扎克伯格承诺未来8年继续留在加州，以应对加州拟对亿万富翁征收财富税的提议。", source: "Financial Times", url: "https://www.ft.com/content/b34502b6-38dc-4a46-a8e7-d9131726cd31?syn-25a6b1a6=1" },
   { time: "06:51", tag: "geo", tagText: "地缘", text: "胡塞武装发动无人机袭击，目标指向沙特阿美Shaybah油田，造成两人死亡。美国随后下令部分人员撤离沙特。尽管10月波斯湾原油出口已基本恢复至伊朗战争前水平，交易员仍对供应复苏的脆弱性保持警惕，油价在盘后交易中走高。", source: "Financial Times", url: "https://www.ft.com/content/f39aa4d2-e290-451f-ae91-b19138b6172f?syn-25a6b1a6=1" },
   { time: "06:50", tag: "ai", tagText: "AI", text: "AI算力租赁商CoreWeave市场信心明显削弱：股价10月累计下跌29%，公司债券收益率飙升，信用违约互换（CDS）利差持续走阔。投资者开始为AI基础设施高杠杆扩张的信用风险定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/coreweaves-market-confidence-erodes-as-bond-yields-spike-stock-sinks.html" },
-  { time: "06:35", tag: "tech", tagText: "科技", text: "特斯拉第三季度业绩超出华尔街预期，营收与每股收益均好于预期，但汽车业务收入同比下滑；财报后股价走高。市场同时热议特斯拉与SpaceX潜在合并的可能性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html" },
-  { time: "06:16", tag: "macro", tagText: "宏观", text: "SpaceX公布强劲利润报告，提振AI与科技板块情绪，带动美股走高：纳斯达克指数上涨约1.1%，标普500实现三连涨，道指涨0.69%。Super Micro等AI概念股同步走强，市场风险偏好回升。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE44andoMWc1UnV1MnYtOVNwMFJxU3dmRFhYVEFlWEg5c0NTblp5VmJZNDR2TW5jRUdISW5pUmRsTVFmWjlXS0lMUTNOM0NEZV8zeldYOEVYelVaYzMtMGJxaW0tWnZZSUhEU2FxeEppUzVWTnpyY2Y00gF8QVVfeXFMTlFJSF8yb09HR2JyVExWTG9XUTFYeWVyaGpad2ktb2FXTGZ0WnpHcF9hNzlnd1RBVGs0MXpXLXplRVNaWXo3a1d6OUd3U0x0ZVR2ZWI4N1RvVktDY1hYaDR3ZTlVUnhsM1pfT2Q2eDNPQUFHT242QmVUZDdGMg?oc=5" },
-  { time: "06:03", tag: "tech", tagText: "科技", text: "IBM第三季度营收与利润双双超出预期，CEO克里希纳称公司在“超级智能”（Super Intelligence）相关业务上取得进展，正帮助客户落地人工智能应用。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html" },
 ];
-const breakingDate = "2026年10月24日 13:41 CST";
+const breakingDate = "2026年10月24日 18:47 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "14:22", tag: "ai", tagText: "AI", text: "Tech-Insider 汇总本周 AI 融资称，AI 芯片初创公司 Tenstorrent 完成 15 亿美元融资，为本周最大 AI 融资之一；大额资金继续流向 AI 芯片与算力基础设施赛道。", source: "Tech-Insider", url: "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcEZvcTUtYjJ0cTRtXzdJVi1NS25PT2RFQmEyVDBaTUZXcm95N2tXWng5ZUY4Q3RoME5wdFVReVctSHdLZUxtVjJETDg4ZzRjY3NPRmg0Q0JZOEFLdlM1WER1ekxvZEV1NjhsNFRvTVNzUm5BQVJrSFd6dHJOWF8wcmduRTNRNURvX2x5UA?oc=5" },
   { time: "07:01", tag: "ai", tagText: "AI", text: "英国宣布投入1亿英镑，与OpenAI和Anthropic合作建立生物安全实验室，以应对AI与生物安全交叉风险。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxObEgtSy0yTlpneW1Oa2l0NkVTV29zRjdpNXZ5eXBiSmt1dWRwMWV2bU90UE0xZU84T0NLUF9UNFNyRl9GaUZvS0xVRVhxNkgyT0hUSEFmeDJ1eXNIeHFzZnkyeVR3WjJCRDdKZ3lyNFV0eFAwSndyNlljNnQ4NzZpYnJybzZlUVF2Yzhqdm9EV0didDBLZ3B2RWVKczRuY05QY2ZaRUhPQ2praDFGeGNUTWx3?oc=5" },
   { time: "05:11", tag: "ai", tagText: "AI", text: "OpenAI 表示，在一系列 AI 智能体越权/黑客事件后，其最先进模型已改为在无互联网访问的离线环境中训练和测试，以降低模型自主访问外部系统带来的安全风险。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet" },
   { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:34", tag: "tech", tagText: "科技", text: "三星电机与英伟达扩大 AI 封装基板生产合作，以应对 AI 芯片封装与高性能计算需求增长，显示 AI 硬件供应链投资继续升温。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWR6eWlwRjkxSERueUJSSVk1N0hEaWN4UHRkM2FDVTRUTHpiYjZNbk5SblZTOEhodGQ3ZGNsWHIyWTgzaVNYaUJyQWx2aTdrRHZ3T1BFdDZ1M1JvNXZONkZ3Snl5Y0doek9JRU1yMklYTUxnQkxjck1LTDRINEdpX3E2SzltcnJC?oc=5" },
   { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "TechCrunch 援引最新调查称，超半数管理者表示引入 AI 后更难评估员工工作成果，AI 带来的生产力承诺在企业考核与流程管理层面反而制造了新麻烦，成为 AI 落地的主要摩擦点之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/" },
 ];
-const aiBreakingDate = "2026年10月24日 13:41 CST";
+const aiBreakingDate = "2026年10月24日 18:47 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
