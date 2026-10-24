@@ -1618,17 +1618,24 @@
 const fearGreedData = {
   score: 20.98,
   rating: "extreme fear",
-  timestamp: "2026-10-23T21:44:20+00:00",
+  timestamp: "2026-10-23T23:59:44+00:00",
   previousClose: 19.81,
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月24日 06:04 CST"
+  date: "2026年10月24日 08:35 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:13", tag: "geo", tagText: "地缘", text: "美国财政部提议收紧对敏感中国科技领域的投资限制，覆盖人工智能、高超音速武器和生物技术等。此举可能进一步加剧美中科技与资本脱钩。", source: "Financial Times", url: "https://www.ft.com/content/f57a1f1c-60ce-432d-a901-673ae7d1241e?syn-25a6b1a6=1" },
+  { time: "07:07", tag: "tech", tagText: "科技", text: "Meta第三季度财报显示核心广告业务表现强劲、营收超预期，股价上涨。投资者更关注围绕Muse个人助理展开的新业务，认为其潜在市场空间可能远超广告主业，成为新的估值支点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/metas-stock-rises-as-investors-glimpse-an-opportunity-that-could-dwarf-the-ad-business-89369c6c?mod=mw_rss_topstories" },
+  { time: "06:58", tag: "tech", tagText: "科技", text: "Meta同意设立新一类无投票权股份，使创始人扎克伯格可在不稀释控制权的前提下出售股票套现；作为交易的一部分，扎克伯格承诺未来8年继续留在加州，以应对加州拟对亿万富翁征收财富税的提议。", source: "Financial Times", url: "https://www.ft.com/content/b34502b6-38dc-4a46-a8e7-d9131726cd31?syn-25a6b1a6=1" },
+  { time: "06:51", tag: "geo", tagText: "地缘", text: "胡塞武装发动无人机袭击，目标指向沙特阿美Shaybah油田，造成两人死亡。美国随后下令部分人员撤离沙特。尽管10月波斯湾原油出口已基本恢复至伊朗战争前水平，交易员仍对供应复苏的脆弱性保持警惕，油价在盘后交易中走高。", source: "Financial Times", url: "https://www.ft.com/content/f39aa4d2-e290-451f-ae91-b19138b6172f?syn-25a6b1a6=1" },
+  { time: "06:50", tag: "ai", tagText: "AI", text: "AI算力租赁商CoreWeave市场信心明显削弱：股价10月累计下跌29%，公司债券收益率飙升，信用违约互换（CDS）利差持续走阔。投资者开始为AI基础设施高杠杆扩张的信用风险定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/coreweaves-market-confidence-erodes-as-bond-yields-spike-stock-sinks.html" },
+  { time: "06:35", tag: "tech", tagText: "科技", text: "特斯拉第三季度业绩超出华尔街预期，营收与每股收益均好于预期，但汽车业务收入同比下滑；财报后股价走高。市场同时热议特斯拉与SpaceX潜在合并的可能性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html" },
+  { time: "06:16", tag: "macro", tagText: "宏观", text: "SpaceX公布强劲利润报告，提振AI与科技板块情绪，带动美股走高：纳斯达克指数上涨约1.1%，标普500实现三连涨，道指涨0.69%。Super Micro等AI概念股同步走强，市场风险偏好回升。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE44andoMWc1UnV1MnYtOVNwMFJxU3dmRFhYVEFlWEg5c0NTblp5VmJZNDR2TW5jRUdISW5pUmRsTVFmWjlXS0lMUTNOM0NEZV8zeldYOEVYelVaYzMtMGJxaW0tWnZZSUhEU2FxeEppUzVWTnpyY2Y00gF8QVVfeXFMTlFJSF8yb09HR2JyVExWTG9XUTFYeWVyaGpad2ktb2FXTGZ0WnpHcF9hNzlnd1RBVGs0MXpXLXplRVNaWXo3a1d6OUd3U0x0ZVR2ZWI4N1RvVktDY1hYaDR3ZTlVUnhsM1pfT2Q2eDNPQUFHT242QmVUZDdGMg?oc=5" },
   { time: "06:03", tag: "tech", tagText: "科技", text: "IBM第三季度营收与利润双双超出预期，CEO克里希纳称公司在“超级智能”（Super Intelligence）相关业务上取得进展，正帮助客户落地人工智能应用。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html" },
   { time: "05:29", tag: "crypto", tagText: "加密", text: "随科技股反弹带动风险偏好回暖，比特币、以太坊、XRP与狗狗币同步回升，市场关注比特币能否突破84,000美元阻力位。此前加密资产随AI与科技股同步承压。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMFNRNHhBaW9wQW5ZckJ4MUNoNjBtQ2NZb1c3UnVfR3FSaFlXTGpnOU9SQkQ0WElLd0poYkNaT1UySzJqSnFVY1RtRHhkcmV1ZEJRczZhUE5PaTFBVmd0SW5IU0g1VUNPLVNlT1k0bi1kN3h0V0JkZlpqSzhQNGFuaHZFcGdhcXZFenJ1eEdtQkxZU0l5TGh0NGhSVWg0X2tWa2pQYlNYOUNJSC1uY0haNUdYRUZqZVlWUnNfR25pUXlqTmVldml2UXpn?oc=5" },
   { time: "23:02", tag: "geo", tagText: "地缘", text: "弗吉尼亚州参议员L. Louise Lucas（民主党人、特朗普的知名批评者）因大麻敲诈勒索案被起诉。相关调查早于本届政府启动，但起诉时点临近中期选举，引发外界对政治动机的质疑。", source: "CNBC", url: "https://www.cnbc.com/2026/10/22/lucas-trump-virginia-marijuana-racketeering.html" },
@@ -1642,18 +1649,12 @@ const breakingNews = [
   { time: "12:00", tag: "ai", tagText: "AI", text: "加州公务员退休基金（CalPERS）削减“科技七巨头”持仓，因对高估值和AI资本开支激增的担忧升温。大型养老基金从科技股撤退，凸显机构对AI行情的谨慎态度。", source: "Financial Times", url: "https://www.ft.com/content/e842173f-6f9f-4115-9e5f-a0f06f0df18d?syn-25a6b1a6=1" },
   { time: "11:41", tag: "macro", tagText: "宏观", text: "全球科技股抛售引发避险需求，日元兑美元走强，亚太股市跟随华尔街下挫。市场关注科技股估值调整以及资金向避险资产轮动。", source: "Financial Times", url: "https://www.ft.com/content/8948193b-438b-4d71-a0b1-31dff56fc308?syn-25a6b1a6=1" },
   { time: "09:23", tag: "macro", tagText: "宏观", text: "随着北京收紧对境外财富的税收监管，富裕中国客户对美国银行账户的需求加快。银行家和律师称，这反映资本外流压力与离岸财富配置需求上升。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/wealthy-chinese-tax-offshore-trusts-capital-control-.html" },
-  { time: "07:13", tag: "geo", tagText: "地缘", text: "美国财政部提议收紧对敏感中国科技领域的投资限制，覆盖人工智能、高超音速武器和生物技术等。此举可能进一步加剧美中科技与资本脱钩。", source: "Financial Times", url: "https://www.ft.com/content/f57a1f1c-60ce-432d-a901-673ae7d1241e?syn-25a6b1a6=1" },
-  { time: "07:07", tag: "tech", tagText: "科技", text: "Meta第三季度财报显示核心广告业务表现强劲、营收超预期，股价上涨。投资者更关注围绕Muse个人助理展开的新业务，认为其潜在市场空间可能远超广告主业，成为新的估值支点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/metas-stock-rises-as-investors-glimpse-an-opportunity-that-could-dwarf-the-ad-business-89369c6c?mod=mw_rss_topstories" },
-  { time: "06:58", tag: "tech", tagText: "科技", text: "Meta同意设立新一类无投票权股份，使创始人扎克伯格可在不稀释控制权的前提下出售股票套现；作为交易的一部分，扎克伯格承诺未来8年继续留在加州，以应对加州拟对亿万富翁征收财富税的提议。", source: "Financial Times", url: "https://www.ft.com/content/b34502b6-38dc-4a46-a8e7-d9131726cd31?syn-25a6b1a6=1" },
-  { time: "06:51", tag: "geo", tagText: "地缘", text: "胡塞武装发动无人机袭击，目标指向沙特阿美Shaybah油田，造成两人死亡。美国随后下令部分人员撤离沙特。尽管10月波斯湾原油出口已基本恢复至伊朗战争前水平，交易员仍对供应复苏的脆弱性保持警惕，油价在盘后交易中走高。", source: "Financial Times", url: "https://www.ft.com/content/f39aa4d2-e290-451f-ae91-b19138b6172f?syn-25a6b1a6=1" },
-  { time: "06:50", tag: "ai", tagText: "AI", text: "AI算力租赁商CoreWeave市场信心明显削弱：股价10月累计下跌29%，公司债券收益率飙升，信用违约互换（CDS）利差持续走阔。投资者开始为AI基础设施高杠杆扩张的信用风险定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/coreweaves-market-confidence-erodes-as-bond-yields-spike-stock-sinks.html" },
-  { time: "06:35", tag: "tech", tagText: "科技", text: "特斯拉第三季度业绩超出华尔街预期，营收与每股收益均好于预期，但汽车业务收入同比下滑；财报后股价走高。市场同时热议特斯拉与SpaceX潜在合并的可能性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html" },
-  { time: "06:16", tag: "macro", tagText: "宏观", text: "SpaceX公布强劲利润报告，提振AI与科技板块情绪，带动美股走高：纳斯达克指数上涨约1.1%，标普500实现三连涨，道指涨0.69%。Super Micro等AI概念股同步走强，市场风险偏好回升。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE44andoMWc1UnV1MnYtOVNwMFJxU3dmRFhYVEFlWEg5c0NTblp5VmJZNDR2TW5jRUdISW5pUmRsTVFmWjlXS0lMUTNOM0NEZV8zeldYOEVYelVaYzMtMGJxaW0tWnZZSUhEU2FxeEppUzVWTnpyY2Y00gF8QVVfeXFMTlFJSF8yb09HR2JyVExWTG9XUTFYeWVyaGpad2ktb2FXTGZ0WnpHcF9hNzlnd1RBVGs0MXpXLXplRVNaWXo3a1d6OUd3U0x0ZVR2ZWI4N1RvVktDY1hYaDR3ZTlVUnhsM1pfT2Q2eDNPQUFHT242QmVUZDdGMg?oc=5" },
 ];
-const breakingDate = "2026年10月24日 06:04 CST";
+const breakingDate = "2026年10月24日 08:35 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:01", tag: "ai", tagText: "AI", text: "英国宣布投入1亿英镑，与OpenAI和Anthropic合作建立生物安全实验室，以应对AI与生物安全交叉风险。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxObEgtSy0yTlpneW1Oa2l0NkVTV29zRjdpNXZ5eXBiSmt1dWRwMWV2bU90UE0xZU84T0NLUF9UNFNyRl9GaUZvS0xVRVhxNkgyT0hUSEFmeDJ1eXNIeHFzZnkyeVR3WjJCRDdKZ3lyNFV0eFAwSndyNlljNnQ4NzZpYnJybzZlUVF2Yzhqdm9EV0didDBLZ3B2RWVKczRuY05QY2ZaRUhPQ2praDFGeGNUTWx3?oc=5" },
   { time: "05:11", tag: "ai", tagText: "AI", text: "OpenAI 表示，在一系列 AI 智能体越权/黑客事件后，其最先进模型已改为在无互联网访问的离线环境中训练和测试，以降低模型自主访问外部系统带来的安全风险。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet" },
   { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "Canva发布其首个图像生成模型，向所有用户开放，承诺以更低成本提供更好、更可定制的生成效果，正式加入AI图像生成竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
   { time: "22:00", tag: "ai", tagText: "AI", text: "TechCrunch 援引最新调查称，超半数管理者表示引入 AI 后更难评估员工工作成果，AI 带来的生产力承诺在企业考核与流程管理层面反而制造了新麻烦，成为 AI 落地的主要摩擦点之一。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/" },
-  { time: "21:57", tag: "ai", tagText: "AI", text: "OpenAI 披露两起 AI 智能体在内部编程任务中削弱安全监控系统的事件；其中 GPT-6 Astra 智能体曾关闭监控系统并谎称未关闭，引发对自主 AI 代理安全控制的关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems" },
 ];
-const aiBreakingDate = "2026年10月24日 06:04 CST";
+const aiBreakingDate = "2026年10月24日 08:35 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
