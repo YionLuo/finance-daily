@@ -1623,12 +1623,19 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月24日 18:47 CST"
+  date: "2026年10月24日 22:26 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "21:10", tag: "tech", tagText: "科技", text: "生物科技板块集体走强，临床数据利好、并购交易回暖及新药物技术平台推动行业复苏。分析师看好相关ETF与个股，认为创新药周期重启，但提醒个股分化明显、需精选标的。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/biotech-stocks-drug-innovation-rally.html" },
+  { time: "20:59", tag: "tech", tagText: "科技", text: "由于发动机等关键零部件严重短缺，热门机型被提前数年拆解、回收零件。航空供应链紧张正推高维护成本、拖慢机队扩张，对航空公司运力与成本构成中期压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/spirit-airlines-planes-scrapped-engine-shortage.html" },
+  { time: "20:48", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦股价创历史新高，完全收复2025年股东大会巴菲特意外宣布卸任后的全部跌幅，耗时约18个月。市场对新管理层的资本配置能力与公司护城河信心回升，\"巴菲特溢价消失\"的担忧暂告缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/berkshire-record-high-without-buffett.html" },
+  { time: "20:25", tag: "tech", tagText: "科技", text: "Moderna个体化癌症疫苗首个三期临床数据公布后，市场认为其\"很可能\"获得批准，但 skeptics 质疑其在长期防复发方面是否优于现有疗法。这是mRNA肿瘤疫苗商业化的关键节点，也牵动公司估值修复逻辑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-real-test-for-modernas-cancer-vaccine-isnt-about-beating-keytruda-its-keeping-cancer-from-coming-back-in-the-long-term-da9af99f?mod=mw_rss_topstories" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "AI行情催生主题ETF发行潮，华尔街基金公司竞相推出细分主题产品，试图捕捉\"下一个大交易\"。资金对AI主线的高涨热情与产品同质化并存，分析人士提示主题ETF集中发行往往伴随追高与流动性风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ai-fever-ignites-a-boom-in-thematic-etfs-as-fund-managers-hunt-for-their-next-big-hit-82d1566c?mod=mw_rss_topstories" },
+  { time: "19:30", tag: "macro", tagText: "宏观", text: "市场人士指出，美联储主席凯文·沃什的\"非回答\"式表态已难以安抚投资者。经济学家认为，真正关键的是沃什能否清晰、可信地传达货币政策策略与反应函数，而非回避提问；沟通不畅本身正在成为一项政策风险，加剧利率路径的不确定性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/non-answers-arent-working-this-is-what-investors-really-need-from-the-fed-673a9dce?mod=mw_rss_topstories" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "英伟达正从芯片供应商转变为AI产业的\"融资方\"，随着算力租赁商（neocloud）股价与债券同步承压，其承担的信用与交易对手风险迎来首次重大考验。投资者担忧，一旦下游算力需求或融资环境恶化，风险可能沿AI基建链条向英伟达自身传导。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/nvidias-role-as-ai-financier-faces-first-big-test-as-neoclouds-take-market-hit.html" },
   { time: "18:20", tag: "geo", tagText: "地缘", text: "乌克兰军方称Starlink服务限制已解除；此前无人机通信系统降速削弱了基辅抵御俄军打击的能力。", source: "Financial Times", url: "https://www.ft.com/content/5b5592f4-c59d-4eb1-af78-078dc32fcab8" },
   { time: "18:00", tag: "ai", tagText: "AI", text: "CNBC调查显示，美国选民普遍反对在住所附近建设AI数据中心，这给特朗普和共和党在中期选举前带来政治挑战；其推动的大规模AI基建面临地方阻力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/trump-ai-data-centers-voter-backlash-midterms.html" },
   { time: "14:23", tag: "macro", tagText: "宏观", text: "法国骚乱冲击市场，国债收益率升至24年高位；投资者正评估预算、增长及行业风险，并准备迎接更多抗议活动。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/france-riots-paris-unrest-debt-budget.html" },
@@ -1642,18 +1649,14 @@ const breakingNews = [
   { time: "10:47", tag: "geo", tagText: "地缘", text: "一份情报备忘录警告称，伊朗正策划在中东地区杀害美国公民，相关计划已进入“后期阶段”。随着美伊围绕核问题的对峙重新升温，地区安全风险上升，美方在中东的人员与设施面临更高威胁。", source: "Financial Times", url: "https://www.ft.com/content/e2e82393-c7ca-4bc1-b270-022b3702d9e7?syn-25a6b1a6=1" },
   { time: "09:23", tag: "macro", tagText: "宏观", text: "随着北京收紧对境外财富的税收监管，富裕中国客户对美国银行账户的需求加快。银行家和律师称，这反映资本外流压力与离岸财富配置需求上升。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/wealthy-chinese-tax-offshore-trusts-capital-control-.html" },
   { time: "09:16", tag: "tech", tagText: "科技", text: "苹果股价创历史新高，市值反超英伟达，此前公司发布两款iPhone新机。资金从AI芯片龙头向消费电子巨头轮动，显示投资者在AI资本开支担忧升温之际寻求更稳健的现金流标的。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPTDNJSXExelJGYWlmWmw1OVdUaHdiYlY1c0dpSi1QZjg4UFFkZ2lFSUxwdUZsQTVMSWwtMDREM1YtWlp0MFV1Uy1UMXliLThGU2lkdFFfRWNCTDZTUExSX0Z6SWxxWUdnTnVSM2cxek9uRXVIZTV6WlpOcXdweTJYSUsyZFNnTXBBdWN4MHdhNTVMaXBHUks1TWtsU0cxM2swRHQ0WTRORjYzNkd2TmE2cFYzQ2M4ZmE0czhMNDZBV1R1MG5KTmx4RXRrUXV5UVg5RmFlcXM0c1o3NDhKdWF0a3AyVGdoaGpVWlBQSnlCVW1NbGJz?oc=5" },
-  { time: "08:22", tag: "geo", tagText: "地缘", text: "美国高管团队退出规模250亿美元的阿拉斯加LNG项目Polar Train。该项目前CEO向FT表示，俄罗斯能源巨头Novatek在未获华盛顿批准的情况下为这一战略项目出资并实际掌控运营，引发对美国能源安全与外资审查漏洞的担忧。", source: "Financial Times", url: "https://www.ft.com/content/e9cfbfbb-e65a-4303-aebb-20d59319ef1b?syn-25a6b1a6=1" },
-  { time: "07:46", tag: "macro", tagText: "宏观", text: "华尔街周五收跌，结束震荡的一周。AI基础设施相关信用风险升温、科技股估值承压以及地缘政治不确定性共同压制风险偏好，市场等待大型云厂商财报提供方向。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxQR01KeXBjdXBubVRzTlJfWWJTMHctb2hFS2pVT21ydWtZNzBaMldxd1c2ZUJGNWhIeGV6MUxvQVZvSl9GdFh5QThQbFpuT0IwYi02Y3JGM19YSWJ3LXMtb29RbS1WZUljdGtsS2dockxHVm5SWnBSMzJpM0Y4RFItdW5SMzFsdXg2LWtrYWE1SC1TQlkxOERJZHNtQVREdw?oc=5" },
-  { time: "07:13", tag: "geo", tagText: "地缘", text: "美国财政部提议收紧对敏感中国科技领域的投资限制，覆盖人工智能、高超音速武器和生物技术等。此举可能进一步加剧美中科技与资本脱钩。", source: "Financial Times", url: "https://www.ft.com/content/f57a1f1c-60ce-432d-a901-673ae7d1241e?syn-25a6b1a6=1" },
-  { time: "07:07", tag: "tech", tagText: "科技", text: "Meta第三季度财报显示核心广告业务表现强劲、营收超预期，股价上涨。投资者更关注围绕Muse个人助理展开的新业务，认为其潜在市场空间可能远超广告主业，成为新的估值支点。", source: "MarketWatch", url: "https://www.marketwatch.com/story/metas-stock-rises-as-investors-glimpse-an-opportunity-that-could-dwarf-the-ad-business-89369c6c?mod=mw_rss_topstories" },
-  { time: "06:58", tag: "tech", tagText: "科技", text: "Meta同意设立新一类无投票权股份，使创始人扎克伯格可在不稀释控制权的前提下出售股票套现；作为交易的一部分，扎克伯格承诺未来8年继续留在加州，以应对加州拟对亿万富翁征收财富税的提议。", source: "Financial Times", url: "https://www.ft.com/content/b34502b6-38dc-4a46-a8e7-d9131726cd31?syn-25a6b1a6=1" },
-  { time: "06:51", tag: "geo", tagText: "地缘", text: "胡塞武装发动无人机袭击，目标指向沙特阿美Shaybah油田，造成两人死亡。美国随后下令部分人员撤离沙特。尽管10月波斯湾原油出口已基本恢复至伊朗战争前水平，交易员仍对供应复苏的脆弱性保持警惕，油价在盘后交易中走高。", source: "Financial Times", url: "https://www.ft.com/content/f39aa4d2-e290-451f-ae91-b19138b6172f?syn-25a6b1a6=1" },
-  { time: "06:50", tag: "ai", tagText: "AI", text: "AI算力租赁商CoreWeave市场信心明显削弱：股价10月累计下跌29%，公司债券收益率飙升，信用违约互换（CDS）利差持续走阔。投资者开始为AI基础设施高杠杆扩张的信用风险定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/21/coreweaves-market-confidence-erodes-as-bond-yields-spike-stock-sinks.html" },
 ];
-const breakingDate = "2026年10月24日 18:47 CST";
+const breakingDate = "2026年10月24日 22:26 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
+  { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
+  { time: "20:05", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋提出将芯片作为贷款抵押品，以释放约5000亿美元资金用于AI基础设施建设，旨在拓宽AI算力投资的融资渠道。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5seDBRODlWTWJOZXh0R2F3UFEtRGd1dUt5V09HZmtjbl9WdnJhTXNZUVIxcmdjTXdJRzl3am9NNGJJMDd1cmFNcnJ4Mmt1R2h4NWprQzctcGlUbW1wTXQ4bE1tN21TMklnZE4tZnRpRFNDU3NOTGc?oc=5" },
   { time: "14:22", tag: "ai", tagText: "AI", text: "Tech-Insider 汇总本周 AI 融资称，AI 芯片初创公司 Tenstorrent 完成 15 亿美元融资，为本周最大 AI 融资之一；大额资金继续流向 AI 芯片与算力基础设施赛道。", source: "Tech-Insider", url: "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcEZvcTUtYjJ0cTRtXzdJVi1NS25PT2RFQmEyVDBaTUZXcm95N2tXWng5ZUY4Q3RoME5wdFVReVctSHdLZUxtVjJETDg4ZzRjY3NPRmg0Q0JZOEFLdlM1WER1ekxvZEV1NjhsNFRvTVNzUm5BQVJrSFd6dHJOWF8wcmduRTNRNURvX2x5UA?oc=5" },
   { time: "07:01", tag: "ai", tagText: "AI", text: "英国宣布投入1亿英镑，与OpenAI和Anthropic合作建立生物安全实验室，以应对AI与生物安全交叉风险。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxObEgtSy0yTlpneW1Oa2l0NkVTV29zRjdpNXZ5eXBiSmt1dWRwMWV2bU90UE0xZU84T0NLUF9UNFNyRl9GaUZvS0xVRVhxNkgyT0hUSEFmeDJ1eXNIeHFzZnkyeVR3WjJCRDdKZ3lyNFV0eFAwSndyNlljNnQ4NzZpYnJybzZlUVF2Yzhqdm9EV0didDBLZ3B2RWVKczRuY05QY2ZaRUhPQ2praDFGeGNUTWx3?oc=5" },
   { time: "05:11", tag: "ai", tagText: "AI", text: "OpenAI 表示，在一系列 AI 智能体越权/黑客事件后，其最先进模型已改为在无互联网访问的离线环境中训练和测试，以降低模型自主访问外部系统带来的安全风险。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "23:03", tag: "ai", tagText: "AI", text: "Spotify 联席 CEO Gustav Söderström 表示，公司当前的 AI 押注是成为“AI 智能体首选的音乐服务”：随着代理式 AI 替用户完成点播、发现与订阅操作，音乐平台需要让自家接口、推荐与版权体系对智能体友好，从而在流量入口从人转向代理的过程中保住分发话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "谷歌宣布将对话式 Gemini AI 助手引入苹果 CarPlay，首先面向美国驾驶员开放，可用于导航等语音交互；此前该助手已登陆 Android Auto。", source: "The Verge", url: "https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps" },
   { time: "22:47", tag: "ai", tagText: "AI", text: "Meta 在出版商反对后推迟执行新商业条款。出版商担忧，新条款可能允许 Meta 抓取新闻网站内容用于 AI 训练；Fast Company 此前报道了这一争议，Meta 现决定暂缓强制执行。", source: "The Verge", url: "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping" },
-  { time: "22:34", tag: "tech", tagText: "科技", text: "三星电机与英伟达扩大 AI 封装基板生产合作，以应对 AI 芯片封装与高性能计算需求增长，显示 AI 硬件供应链投资继续升温。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWR6eWlwRjkxSERueUJSSVk1N0hEaWN4UHRkM2FDVTRUTHpiYjZNbk5SblZTOEhodGQ3ZGNsWHIyWTgzaVNYaUJyQWx2aTdrRHZ3T1BFdDZ1M1JvNXZONkZ3Snl5Y0doek9JRU1yMklYTUxnQkxjck1LTDRINEdpX3E2SzltcnJC?oc=5" },
-  { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
-  { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
 ];
-const aiBreakingDate = "2026年10月24日 18:47 CST";
+const aiBreakingDate = "2026年10月24日 22:26 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
