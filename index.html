@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月25日 02:03 CST"
+  date: "2026年10月25日 04:41 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:57", tag: "geo", tagText: "地缘", text: "阿拉斯加参议院认证之争升级：候选人玛丽·佩尔托拉（Mary Peltola）与一个投票权组织提起诉讼，挑战特朗普抢先阻止民主党参议员胜选获得认证的做法。案件涉及选举认证权限与行政干预的边界，为中期选举前的美国政治增添新的不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/alaska-senate-doj-certification-lawsuit.html" },
+  { time: "03:19", tag: "geo", tagText: "地缘", text: "以色列央行拒绝内塔尼亚胡提出的利用加密货币规避国际制裁的计划。批评者警告，该提议将使以色列沦为“经济弃儿”，并冲击其金融体系的国际信誉。央行与总理在加密政策上的公开分歧，令市场关注以色列在制裁环境下的资本流动与合规风险。", source: "Financial Times", url: "https://www.ft.com/content/39e475e7-0392-4856-aaaf-5ab3e35b8215?syn-25a6b1a6=1" },
+  { time: "00:18", tag: "tech", tagText: "科技", text: "沃尔玛、百思买等大型零售商已开始启用电子价签，引发“千人千价”争议。支持者称其可提升补货与促销效率，批评者担忧零售商可依据用户数据实施差异化定价，价格透明度与消费者公平问题或引来监管审视。", source: "MarketWatch", url: "https://www.marketwatch.com/story/walmart-best-buy-and-other-stores-now-use-digital-price-tags-critics-say-they-could-lead-to-different-prices-for-different-shoppers-19e2f4da?mod=mw_rss_topstories" },
+  { time: "23:30", tag: "tech", tagText: "科技", text: "分析指出，在AI资本开支激增、同业自由现金流普遍承压的背景下，微软可能成为唯一维持自由现金流为正的超大规模云厂商。这一财务韧性差异被视为MSFT估值的重要支撑，也凸显市场对“AI烧钱换增长”模式的审视正在加深。", source: "Barchart.com", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQWFpDcUN6TWdfQ1AxeUMtTzZyNjdTRnJONzg0YWZTNFV6V2k5WDZxdl9TQXBrU1p0bk9PMVFLRkxma3VMdGNkSW8xcXczX1U1OUJBODNUN3BjaTZqMmNFcFFWQTZDb0VRZWRRY0Jnd2R4Wlk0TWFtbWpja2x0REQwd2xLaExFSVVDYnJfQm1iUl8xYndVMkZVZmRtV3JSVE5jMVBnRTA3T3diZ2ZZM0ktZDhqdldZajNyekE4WVNSVWJkZjI4X0g0cHB4T2FMcGJOTE1F?oc=5" },
+  { time: "23:00", tag: "crypto", tagText: "加密", text: "麦当劳、微软、谷歌等大型企业对“代币化股票”明确说不。分析认为，企业拒绝将自家股票上链，主要出于合规、法律归属与品牌风险顾虑，但这并不构成代币化股票发展的致命障碍——发行与交易基础设施仍在持续推进，机构对链上资产的需求并未消失。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNbm5pWDd4RndldEZ5NU1XRVVESnRLMmdDSUdqU3BDdUx0a29iMEFEMFY1UThtWk5VdDhXd2JMMllwd3h1M0FVZzNNZkM2NmVHUm4wd0FQMk81UDlYZksycnV5N2JIQ1hoYmNsbHlSTURFMkhyc0pSemo2MEt6R2N0amtPenJQWkNZNG1BSUhmbm1MYThvS3ZaNWJsWGtZbmlkOTQtX1Y0RElUYkNwQjlDSWo2MUp4NmJUVU14TWZJaGxpeUZCdzRyWg?oc=5" },
   { time: "21:10", tag: "tech", tagText: "科技", text: "生物科技板块集体走强，临床数据利好、并购交易回暖及新药物技术平台推动行业复苏。分析师看好相关ETF与个股，认为创新药周期重启，但提醒个股分化明显、需精选标的。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/biotech-stocks-drug-innovation-rally.html" },
   { time: "20:59", tag: "tech", tagText: "科技", text: "由于发动机等关键零部件严重短缺，热门机型被提前数年拆解、回收零件。航空供应链紧张正推高维护成本、拖慢机队扩张，对航空公司运力与成本构成中期压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/spirit-airlines-planes-scrapped-engine-shortage.html" },
   { time: "20:48", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦股价创历史新高，完全收复2025年股东大会巴菲特意外宣布卸任后的全部跌幅，耗时约18个月。市场对新管理层的资本配置能力与公司护城河信心回升，\"巴菲特溢价消失\"的担忧暂告缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/berkshire-record-high-without-buffett.html" },
@@ -1644,16 +1649,18 @@ const breakingNews = [
   { time: "12:00", tag: "ai", tagText: "AI", text: "飞马（Pegasus）间谍软件开发商NSO集团前CEO沙莱夫·胡利奥（Shalev Hulio）寻求转型，呼吁各国政府信任其新技术并摆脱对美国AI的依赖，主打“主权AI”与国家安全牌。这反映出各国政府对数据主权与AI供应链安全的诉求正在催生新的防务科技市场。", source: "Financial Times", url: "https://www.ft.com/content/f9592534-1a3d-409d-9a57-f05919440032?syn-25a6b1a6=1" },
   { time: "12:00", tag: "macro", tagText: "宏观", text: "柏林州选获胜方提议强制收购约12万套公寓，欧洲最大房东Vonovia面临约80亿欧元潜在损失。该计划凸显德国住房政策风险及对地产投资的影响。", source: "Financial Times", url: "https://www.ft.com/content/57e5b584-78b8-49a5-be2b-c02bba63886a?syn-25a6b1a6=1" },
   { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普特使迈克·沃尔兹警告伊朗，必须就其核计划达成“有意义的协议”，并称美国已为与伊朗的长期对峙做好准备。此番表态加剧中东地缘政治风险。", source: "Financial Times", url: "https://www.ft.com/content/70379a26-c20e-4501-aec9-a9a0089cdd3d?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "加州公务员退休基金（CalPERS）削减“科技七巨头”持仓，因对高估值和AI资本开支激增的担忧升温。大型养老基金从科技股撤退，凸显机构对AI行情的谨慎态度。", source: "Financial Times", url: "https://www.ft.com/content/e842173f-6f9f-4115-9e5f-a0f06f0df18d?syn-25a6b1a6=1" },
-  { time: "11:41", tag: "macro", tagText: "宏观", text: "全球科技股抛售引发避险需求，日元兑美元走强，亚太股市跟随华尔街下挫。市场关注科技股估值调整以及资金向避险资产轮动。", source: "Financial Times", url: "https://www.ft.com/content/8948193b-438b-4d71-a0b1-31dff56fc308?syn-25a6b1a6=1" },
-  { time: "10:47", tag: "geo", tagText: "地缘", text: "一份情报备忘录警告称，伊朗正策划在中东地区杀害美国公民，相关计划已进入“后期阶段”。随着美伊围绕核问题的对峙重新升温，地区安全风险上升，美方在中东的人员与设施面临更高威胁。", source: "Financial Times", url: "https://www.ft.com/content/e2e82393-c7ca-4bc1-b270-022b3702d9e7?syn-25a6b1a6=1" },
-  { time: "09:23", tag: "macro", tagText: "宏观", text: "随着北京收紧对境外财富的税收监管，富裕中国客户对美国银行账户的需求加快。银行家和律师称，这反映资本外流压力与离岸财富配置需求上升。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/wealthy-chinese-tax-offshore-trusts-capital-control-.html" },
-  { time: "09:16", tag: "tech", tagText: "科技", text: "苹果股价创历史新高，市值反超英伟达，此前公司发布两款iPhone新机。资金从AI芯片龙头向消费电子巨头轮动，显示投资者在AI资本开支担忧升温之际寻求更稳健的现金流标的。", source: "Stocktwits", url: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPTDNJSXExelJGYWlmWmw1OVdUaHdiYlY1c0dpSi1QZjg4UFFkZ2lFSUxwdUZsQTVMSWwtMDREM1YtWlp0MFV1Uy1UMXliLThGU2lkdFFfRWNCTDZTUExSX0Z6SWxxWUdnTnVSM2cxek9uRXVIZTV6WlpOcXdweTJYSUsyZFNnTXBBdWN4MHdhNTVMaXBHUks1TWtsU0cxM2swRHQ0WTRORjYzNkd2TmE2cFYzQ2M4ZmE0czhMNDZBV1R1MG5KTmx4RXRrUXV5UVg5RmFlcXM0c1o3NDhKdWF0a3AyVGdoaGpVWlBQSnlCVW1NbGJz?oc=5" },
 ];
-const breakingDate = "2026年10月25日 02:03 CST";
+const breakingDate = "2026年10月25日 04:41 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
+  { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
+  { time: "03:00", tag: "ai", tagText: "AI", text: "Canva发布其首个图像生成模型，向所有用户开放，承诺以更低成本提供更好、更可定制的生成效果，正式加入AI图像生成竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/" },
+  { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
+  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
+  { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
+  { time: "02:32", tag: "ai", tagText: "AI", text: "宾夕法尼亚州州长 Josh Shapiro 签署《人工智能欺骗性广告法案》，要求所有由 AI 生成的广告必须进行披露标注。该法适用于任何广告形式，旨在防止深度伪造与AI合成内容误导消费者，成为州层面AI广告监管的最新案例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act" },
   { time: "00:52", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，可能将用户使用个性化 AI 功能时产生的 Gmail、Google Photos 等个人数据用于广告定向。该变化由 Android Authority 发现，意味着谷歌在推进个性化 AI 的同时，正扩大个人数据在广告业务中的使用范围。", source: "The Verge", url: "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update" },
   { time: "00:47", tag: "geo", tagText: "地缘", text: "微软指称，一个与中国结盟的黑客组织利用AI智能体攻破IT巨头ConnectWise后，入侵并监视数千家客户企业，显示AI代理正被用于加速大规模网络间谍活动。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "Uber将ChatGPT Work推广至全部3万名员工，此前仅小范围试点；这显示大型企业正把AI代理工具从试验转向全公司部署。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/" },
@@ -1667,15 +1674,8 @@ const aiBreakingNews = [
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
   { time: "20:05", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋提出将芯片作为贷款抵押品，以释放约5000亿美元资金用于AI基础设施建设，旨在拓宽AI算力投资的融资渠道。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5seDBRODlWTWJOZXh0R2F3UFEtRGd1dUt5V09HZmtjbl9WdnJhTXNZUVIxcmdjTXdJRzl3am9NNGJJMDd1cmFNcnJ4Mmt1R2h4NWprQzctcGlUbW1wTXQ4bE1tN21TMklnZE4tZnRpRFNDU3NOTGc?oc=5" },
   { time: "14:22", tag: "ai", tagText: "AI", text: "Tech-Insider 汇总本周 AI 融资称，AI 芯片初创公司 Tenstorrent 完成 15 亿美元融资，为本周最大 AI 融资之一；大额资金继续流向 AI 芯片与算力基础设施赛道。", source: "Tech-Insider", url: "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcEZvcTUtYjJ0cTRtXzdJVi1NS25PT2RFQmEyVDBaTUZXcm95N2tXWng5ZUY4Q3RoME5wdFVReVctSHdLZUxtVjJETDg4ZzRjY3NPRmg0Q0JZOEFLdlM1WER1ekxvZEV1NjhsNFRvTVNzUm5BQVJrSFd6dHJOWF8wcmduRTNRNURvX2x5UA?oc=5" },
-  { time: "07:01", tag: "ai", tagText: "AI", text: "英国宣布投入1亿英镑，与OpenAI和Anthropic合作建立生物安全实验室，以应对AI与生物安全交叉风险。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxObEgtSy0yTlpneW1Oa2l0NkVTV29zRjdpNXZ5eXBiSmt1dWRwMWV2bU90UE0xZU84T0NLUF9UNFNyRl9GaUZvS0xVRVhxNkgyT0hUSEFmeDJ1eXNIeHFzZnkyeVR3WjJCRDdKZ3lyNFV0eFAwSndyNlljNnQ4NzZpYnJybzZlUVF2Yzhqdm9EV0didDBLZ3B2RWVKczRuY05QY2ZaRUhPQ2praDFGeGNUTWx3?oc=5" },
-  { time: "05:11", tag: "ai", tagText: "AI", text: "OpenAI 表示，在一系列 AI 智能体越权/黑客事件后，其最先进模型已改为在无互联网访问的离线环境中训练和测试，以降低模型自主访问外部系统带来的安全风险。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet" },
-  { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
-  { time: "03:00", tag: "ai", tagText: "AI", text: "Canva发布其首个图像生成模型，向所有用户开放，承诺以更低成本提供更好、更可定制的生成效果，正式加入AI图像生成竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/" },
-  { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
-  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
-  { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
 ];
-const aiBreakingDate = "2026年10月25日 02:03 CST";
+const aiBreakingDate = "2026年10月25日 04:41 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
