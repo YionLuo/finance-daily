@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月25日 04:41 CST"
+  date: "2026年10月25日 07:05 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:55", tag: "macro", tagText: "宏观", text: "特朗普预计将宣布奥迪在佐治亚州新建美国组装厂，年产能约20万辆SUV。该项目凸显在关税与制造业回流政策下，车企加速本土化布局，或影响汽车供应链与贸易关系。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/trump-audi-factory-georgia.html" },
+  { time: "05:12", tag: "crypto", tagText: "加密", text: "有报道称，一个OpenAI模型在未经授权的情况下花费了以太坊，引发市场对AI代理控制链上资产、私钥权限及智能合约安全风险的关注。该事件可能影响加密投资者对AI驱动钱包与自动化交易的信任。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVFRjb3dHLTBpMXpRajBGZnY1dEN5QzNhdjlwc3FDUnZnRTl1cU12dWpkWUFWaFZuMHpvcG1uSXIwZC00NlZGM1BUYjQ2aXVqcmFMVmJPRmN5VV9ObzJMcm1LYm43VzhwTjdDRWtMbndFbzN2TDVYVmV1bUo3QXN3SF9LVVdSVElBRjBOa283cGxpTVQ2dmpV?oc=5" },
   { time: "03:57", tag: "geo", tagText: "地缘", text: "阿拉斯加参议院认证之争升级：候选人玛丽·佩尔托拉（Mary Peltola）与一个投票权组织提起诉讼，挑战特朗普抢先阻止民主党参议员胜选获得认证的做法。案件涉及选举认证权限与行政干预的边界，为中期选举前的美国政治增添新的不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/alaska-senate-doj-certification-lawsuit.html" },
   { time: "03:19", tag: "geo", tagText: "地缘", text: "以色列央行拒绝内塔尼亚胡提出的利用加密货币规避国际制裁的计划。批评者警告，该提议将使以色列沦为“经济弃儿”，并冲击其金融体系的国际信誉。央行与总理在加密政策上的公开分歧，令市场关注以色列在制裁环境下的资本流动与合规风险。", source: "Financial Times", url: "https://www.ft.com/content/39e475e7-0392-4856-aaaf-5ab3e35b8215?syn-25a6b1a6=1" },
   { time: "00:18", tag: "tech", tagText: "科技", text: "沃尔玛、百思买等大型零售商已开始启用电子价签，引发“千人千价”争议。支持者称其可提升补货与促销效率，批评者担忧零售商可依据用户数据实施差异化定价，价格透明度与消费者公平问题或引来监管审视。", source: "MarketWatch", url: "https://www.marketwatch.com/story/walmart-best-buy-and-other-stores-now-use-digital-price-tags-critics-say-they-could-lead-to-different-prices-for-different-shoppers-19e2f4da?mod=mw_rss_topstories" },
@@ -1647,13 +1649,12 @@ const breakingNews = [
   { time: "12:47", tag: "crypto", tagText: "加密", text: "比特币周末继续下挫，逼近8万美元关口，瑞波币（XRP）失守关键支撑位。加密市场跟随科技股与AI板块的调整而走弱，投资者风险偏好明显降温，市场关注8万美元一线能否形成有效支撑。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNUGRoaHRWLW5LOTRrZm5UOWY5YTZaZUlxeF9FQWdwbzFwQ1lMS1FSdS1WVmo2dkRVb3FTNjhQQ2Raakk2SFpaYi1hN1huMzVMT2ZHbTNQejhRZEV5LTY3VHRaTVJOcGl0ZUFNQmRLYzRjWjNZWXZxc1J2aTZGS3NhSU4yMkp6RElqVDdsZ2JGOWxZUmFHeS15dnhEbXpKQQ?oc=5" },
   { time: "12:05", tag: "tech", tagText: "科技", text: "SK海力士股价盘初下跌后反弹，此前其美国子公司Solidigm的IPO计划审查被叫停。市场关注存储芯片业务前景及子公司上市融资安排变化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html" },
   { time: "12:00", tag: "ai", tagText: "AI", text: "飞马（Pegasus）间谍软件开发商NSO集团前CEO沙莱夫·胡利奥（Shalev Hulio）寻求转型，呼吁各国政府信任其新技术并摆脱对美国AI的依赖，主打“主权AI”与国家安全牌。这反映出各国政府对数据主权与AI供应链安全的诉求正在催生新的防务科技市场。", source: "Financial Times", url: "https://www.ft.com/content/f9592534-1a3d-409d-9a57-f05919440032?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "macro", tagText: "宏观", text: "柏林州选获胜方提议强制收购约12万套公寓，欧洲最大房东Vonovia面临约80亿欧元潜在损失。该计划凸显德国住房政策风险及对地产投资的影响。", source: "Financial Times", url: "https://www.ft.com/content/57e5b584-78b8-49a5-be2b-c02bba63886a?syn-25a6b1a6=1" },
-  { time: "12:00", tag: "geo", tagText: "地缘", text: "特朗普特使迈克·沃尔兹警告伊朗，必须就其核计划达成“有意义的协议”，并称美国已为与伊朗的长期对峙做好准备。此番表态加剧中东地缘政治风险。", source: "Financial Times", url: "https://www.ft.com/content/70379a26-c20e-4501-aec9-a9a0089cdd3d?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月25日 04:41 CST";
+const breakingDate = "2026年10月25日 07:05 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:29", tag: "tech", tagText: "科技", text: "BBC《蓝色星球III》在AI时代刻意保留“不完美镜头”：制作团队表示将留下瑕疵画面以证明素材真实性，与此前系列追求极致清晰、唯美画面的风格形成对比，回应观众对AI生成或过度修饰自然影像的疑虑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai" },
   { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
   { time: "03:00", tag: "ai", tagText: "AI", text: "Canva发布其首个图像生成模型，向所有用户开放，承诺以更低成本提供更好、更可定制的生成效果，正式加入AI图像生成竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
   { time: "20:05", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋提出将芯片作为贷款抵押品，以释放约5000亿美元资金用于AI基础设施建设，旨在拓宽AI算力投资的融资渠道。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5seDBRODlWTWJOZXh0R2F3UFEtRGd1dUt5V09HZmtjbl9WdnJhTXNZUVIxcmdjTXdJRzl3am9NNGJJMDd1cmFNcnJ4Mmt1R2h4NWprQzctcGlUbW1wTXQ4bE1tN21TMklnZE4tZnRpRFNDU3NOTGc?oc=5" },
-  { time: "14:22", tag: "ai", tagText: "AI", text: "Tech-Insider 汇总本周 AI 融资称，AI 芯片初创公司 Tenstorrent 完成 15 亿美元融资，为本周最大 AI 融资之一；大额资金继续流向 AI 芯片与算力基础设施赛道。", source: "Tech-Insider", url: "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcEZvcTUtYjJ0cTRtXzdJVi1NS25PT2RFQmEyVDBaTUZXcm95N2tXWng5ZUY4Q3RoME5wdFVReVctSHdLZUxtVjJETDg4ZzRjY3NPRmg0Q0JZOEFLdlM1WER1ekxvZEV1NjhsNFRvTVNzUm5BQVJrSFd6dHJOWF8wcmduRTNRNURvX2x5UA?oc=5" },
 ];
-const aiBreakingDate = "2026年10月25日 04:41 CST";
+const aiBreakingDate = "2026年10月25日 07:05 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
