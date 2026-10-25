@@ -1623,12 +1623,18 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月25日 09:04 CST"
+  date: "2026年10月25日 14:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "欧洲奢侈品集团市值合计蒸发约2500亿欧元，因中国消费者需求减弱，且全球股市降温加剧了该行业下行压力。", source: "Financial Times", url: "https://www.ft.com/content/1c3065cf-538f-433a-9749-0355a3642c7c?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "巴西大选进入白热化，博索纳罗与卢拉对决结果难料；右翼挑战者寻求击败左翼总统，并让拉美最大经济体更靠近特朗普。", source: "Financial Times", url: "https://www.ft.com/content/29033fb9-2dc7-4af0-a2ff-55d1bdd5dece?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "黑海已成为全球最致命航运路线，俄乌冲突中商船船员死亡人数超过海湾地区；航运安全风险上升。", source: "Financial Times", url: "https://www.ft.com/content/8c874f60-0041-476d-9c53-8524c374443f?syn-25a6b1a6=1" },
+  { time: "12:47", tag: "crypto", tagText: "加密", text: "比特币周末继续下挫，逼近8万美元关口，瑞波币（XRP）失守关键支撑位。加密市场跟随科技股与AI板块的调整而走弱，投资者风险偏好明显降温，市场关注8万美元一线能否形成有效支撑。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNUGRoaHRWLW5LOTRrZm5UOWY5YTZaZUlxeF9FQWdwbzFwQ1lMS1FSdS1WVmo2dkRVb3FTNjhQQ2Raakk2SFpaYi1hN1huMzVMT2ZHbTNQejhRZEV5LTY3VHRaTVJOcGl0ZUFNQmRLYzRjWjNZWXZxc1J2aTZGS3NhSU4yMkp6RElqVDdsZ2JGOWxZUmFHeS15dnhEbXpKQQ?oc=5" },
+  { time: "12:05", tag: "tech", tagText: "科技", text: "SK海力士股价盘初下跌后反弹，此前其美国子公司Solidigm的IPO计划审查被叫停。市场关注存储芯片业务前景及子公司上市融资安排变化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html" },
+  { time: "12:00", tag: "ai", tagText: "AI", text: "飞马（Pegasus）间谍软件开发商NSO集团前CEO沙莱夫·胡利奥（Shalev Hulio）寻求转型，呼吁各国政府信任其新技术并摆脱对美国AI的依赖，主打“主权AI”与国家安全牌。这反映出各国政府对数据主权与AI供应链安全的诉求正在催生新的防务科技市场。", source: "Financial Times", url: "https://www.ft.com/content/f9592534-1a3d-409d-9a57-f05919440032?syn-25a6b1a6=1" },
   { time: "06:55", tag: "macro", tagText: "宏观", text: "特朗普预计将宣布奥迪在佐治亚州新建美国组装厂，年产能约20万辆SUV。该项目凸显在关税与制造业回流政策下，车企加速本土化布局，或影响汽车供应链与贸易关系。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/trump-audi-factory-georgia.html" },
   { time: "05:12", tag: "crypto", tagText: "加密", text: "有报道称，一个OpenAI模型在未经授权的情况下花费了以太坊，引发市场对AI代理控制链上资产、私钥权限及智能合约安全风险的关注。该事件可能影响加密投资者对AI驱动钱包与自动化交易的信任。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVFRjb3dHLTBpMXpRajBGZnY1dEN5QzNhdjlwc3FDUnZnRTl1cU12dWpkWUFWaFZuMHpvcG1uSXIwZC00NlZGM1BUYjQ2aXVqcmFMVmJPRmN5VV9ObzJMcm1LYm43VzhwTjdDRWtMbndFbzN2TDVYVmV1bUo3QXN3SF9LVVdSVElBRjBOa283cGxpTVQ2dmpV?oc=5" },
   { time: "03:57", tag: "geo", tagText: "地缘", text: "阿拉斯加参议院认证之争升级：候选人玛丽·佩尔托拉（Mary Peltola）与一个投票权组织提起诉讼，挑战特朗普抢先阻止民主党参议员胜选获得认证的做法。案件涉及选举认证权限与行政干预的边界，为中期选举前的美国政治增添新的不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/alaska-senate-doj-certification-lawsuit.html" },
@@ -1643,14 +1649,8 @@ const breakingNews = [
   { time: "20:00", tag: "ai", tagText: "AI", text: "AI行情催生主题ETF发行潮，华尔街基金公司竞相推出细分主题产品，试图捕捉\"下一个大交易\"。资金对AI主线的高涨热情与产品同质化并存，分析人士提示主题ETF集中发行往往伴随追高与流动性风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ai-fever-ignites-a-boom-in-thematic-etfs-as-fund-managers-hunt-for-their-next-big-hit-82d1566c?mod=mw_rss_topstories" },
   { time: "19:30", tag: "macro", tagText: "宏观", text: "市场人士指出，美联储主席凯文·沃什的\"非回答\"式表态已难以安抚投资者。经济学家认为，真正关键的是沃什能否清晰、可信地传达货币政策策略与反应函数，而非回避提问；沟通不畅本身正在成为一项政策风险，加剧利率路径的不确定性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/non-answers-arent-working-this-is-what-investors-really-need-from-the-fed-673a9dce?mod=mw_rss_topstories" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "英伟达正从芯片供应商转变为AI产业的\"融资方\"，随着算力租赁商（neocloud）股价与债券同步承压，其承担的信用与交易对手风险迎来首次重大考验。投资者担忧，一旦下游算力需求或融资环境恶化，风险可能沿AI基建链条向英伟达自身传导。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/nvidias-role-as-ai-financier-faces-first-big-test-as-neoclouds-take-market-hit.html" },
-  { time: "18:20", tag: "geo", tagText: "地缘", text: "乌克兰军方称Starlink服务限制已解除；此前无人机通信系统降速削弱了基辅抵御俄军打击的能力。", source: "Financial Times", url: "https://www.ft.com/content/5b5592f4-c59d-4eb1-af78-078dc32fcab8" },
-  { time: "18:00", tag: "ai", tagText: "AI", text: "CNBC调查显示，美国选民普遍反对在住所附近建设AI数据中心，这给特朗普和共和党在中期选举前带来政治挑战；其推动的大规模AI基建面临地方阻力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/trump-ai-data-centers-voter-backlash-midterms.html" },
-  { time: "14:23", tag: "macro", tagText: "宏观", text: "法国骚乱冲击市场，国债收益率升至24年高位；投资者正评估预算、增长及行业风险，并准备迎接更多抗议活动。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/france-riots-paris-unrest-debt-budget.html" },
-  { time: "12:47", tag: "crypto", tagText: "加密", text: "比特币周末继续下挫，逼近8万美元关口，瑞波币（XRP）失守关键支撑位。加密市场跟随科技股与AI板块的调整而走弱，投资者风险偏好明显降温，市场关注8万美元一线能否形成有效支撑。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNUGRoaHRWLW5LOTRrZm5UOWY5YTZaZUlxeF9FQWdwbzFwQ1lMS1FSdS1WVmo2dkRVb3FTNjhQQ2Raakk2SFpaYi1hN1huMzVMT2ZHbTNQejhRZEV5LTY3VHRaTVJOcGl0ZUFNQmRLYzRjWjNZWXZxc1J2aTZGS3NhSU4yMkp6RElqVDdsZ2JGOWxZUmFHeS15dnhEbXpKQQ?oc=5" },
-  { time: "12:05", tag: "tech", tagText: "科技", text: "SK海力士股价盘初下跌后反弹，此前其美国子公司Solidigm的IPO计划审查被叫停。市场关注存储芯片业务前景及子公司上市融资安排变化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "飞马（Pegasus）间谍软件开发商NSO集团前CEO沙莱夫·胡利奥（Shalev Hulio）寻求转型，呼吁各国政府信任其新技术并摆脱对美国AI的依赖，主打“主权AI”与国家安全牌。这反映出各国政府对数据主权与AI供应链安全的诉求正在催生新的防务科技市场。", source: "Financial Times", url: "https://www.ft.com/content/f9592534-1a3d-409d-9a57-f05919440032?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月25日 09:04 CST";
+const breakingDate = "2026年10月25日 14:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
   { time: "20:05", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋提出将芯片作为贷款抵押品，以释放约5000亿美元资金用于AI基础设施建设，旨在拓宽AI算力投资的融资渠道。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5seDBRODlWTWJOZXh0R2F3UFEtRGd1dUt5V09HZmtjbl9WdnJhTXNZUVIxcmdjTXdJRzl3am9NNGJJMDd1cmFNcnJ4Mmt1R2h4NWprQzctcGlUbW1wTXQ4bE1tN21TMklnZE4tZnRpRFNDU3NOTGc?oc=5" },
 ];
-const aiBreakingDate = "2026年10月25日 09:04 CST";
+const aiBreakingDate = "2026年10月25日 14:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
