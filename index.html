@@ -1623,17 +1623,21 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月26日 02:54 CST"
+  date: "2026年10月26日 05:39 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "05:29", tag: "geo", tagText: "地缘", text: "巴西总统决选计票因最高法院延长投票时间而暂停。此次决选选情胶着，右翼挑战者有望击败左翼现任总统，使巴西进一步靠拢美国，反映拉美地区保守化转向。多地因公交与渡轮运力不足引发交通投诉，加剧选举紧张氛围，结果或影响巴西财政、货币政策及对美关系走向。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/brazil-lula-bolsonaro-presidential-election-runoff.html" },
+  { time: "05:01", tag: "geo", tagText: "地缘", text: "塞尔维亚前总统武契奇在议会选举中承认败给反对派“学生名单”。该草根政党脱胎于历时两年、以反腐和反压迫为核心诉求的抗议运动，此次投票率接近历史高位。政权更迭或重塑巴尔干地区政治格局，并影响塞尔维亚在欧盟与俄罗斯之间的平衡立场。", source: "Financial Times", url: "https://www.ft.com/content/546f21f5-22d3-4696-8371-7bef8c0410b3?syn-25a6b1a6=1" },
+  { time: "03:06", tag: "ai", tagText: "AI", text: "分析指出，英伟达（NVDA）已实质失去中国AI加速器市场，出口管制与本土替代品崛起令其在华营收前景大幅收窄。作为全球最重要的AI芯片供应商，其在中国市场份额的流失凸显地缘政治对半导体供应链的深刻影响，投资者正重新评估其长期增长空间。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZXBrdnEtYnZLWk95RmJjZlRTeFR2ZjZDaGM5dDR4VW9KNWdDZjRjTmJidlY0eWExNVJVYUZ2NGJlNlo3NXZYMzFTZkhYeUU4ZC1RSGUzMXhLYkdkRUZXMEt5bVJRY1E0LW52Z0QzaWFYRTE3bDh1SVBMWnRNZUs0dndHVXBXdmZkYjBoRWFsX0p6RG8?oc=5" },
   { time: "02:18", tag: "geo", tagText: "地缘", text: "乌克兰方面反驳马斯克关于其军方在无人机作战中违反星链使用条款的说法，强调商业版星链的技术限制本身就无法支持中远程打击任务。此事凸显战时商业卫星通信服务在军民两用边界上的争议，也牵动乌军无人机作战能力与西方供应商关系的敏感议题。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/ukraine-musk-starlink-terms-dispute.html" },
   { time: "02:16", tag: "macro", tagText: "宏观", text: "美国医院连锁Bon Secours接近以约60亿美元收购贝恩资本支持的Surgery Partners，成为非营利医疗机构寻求大规模交易的又一案例。交易反映在手术中心等门诊业务利润率承压、私募股权退出需求上升的背景下，医疗行业整合正在加速。", source: "Financial Times", url: "https://www.ft.com/content/e7b82fe0-db51-49cf-bad4-2168a905652b?syn-25a6b1a6=1" },
   { time: "01:47", tag: "geo", tagText: "地缘", text: "法国极右翼领袖勒庞正式启动总统竞选，承诺推动国家“复兴”，并自称是唯一能够恢复秩序与团结的候选人。其竞选声势上升可能加剧法国财政与欧盟政策路径的不确定性，此前法国已因不平等与生活成本问题爆发大规模抗议。", source: "Financial Times", url: "https://www.ft.com/content/fd1c3f30-2789-4fca-a93f-57850b1448a8?syn-25a6b1a6=1" },
   { time: "01:37", tag: "geo", tagText: "地缘", text: "委内瑞拉反对派领袖、诺贝尔和平奖得主马查多结束流亡回国，直接挑战该国获特朗普支持的临时政府。事件可能重塑委内瑞拉政治格局，并对美国在拉美的政策布局及该国石油出口前景产生影响。", source: "Financial Times", url: "https://www.ft.com/content/f691e41e-dd01-4ac0-ade7-5f7ca23d6135" },
   { time: "00:42", tag: "macro", tagText: "宏观", text: "奥迪CEO为在乔治亚州投资约40亿美元建厂的计划辩护，称这是扩大销量、降低美国关税敞口的商业决策，尽管大众集团正推进重组且面临关税压力。该项目显示欧洲车企在贸易壁垒上升背景下加速本土化生产布局。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/audi-georgia-us-plant-tariffs-volkswagen.html" },
+  { time: "00:34", tag: "crypto", tagText: "加密", text: "比特币再次跌破80,000美元关口，市场关注77,600美元是否为下一支撑位；本月迄今比特币跌约3%，以太坊跌约12%。加密市场持续回调，投资者情绪谨慎，正密切关注技术面支撑与宏观资金流向，短期波动风险上升。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxQLXFPRFZTWWlraFpwdHo4ZEF1NjdBYXZuODFING9XUFh4ekpSMkxtbndLcGpfcWg3NVdEQXhxdkZ5d25tWEtXT0hqMXVaekZmcjBGbEVVdW1Hanh6eW9NdmMydlp2c1ZVUExXOVdVZ2syUEwxenRod3BLc2VTbVp0azBpdGJlbmNkR1B4S1dyUTVuWW44RnJXZk5XQ25sR0FMUmJ2Y2JSYnZOQlh4cHdfQ09ZOE15SkRnNElKZjVvWE9GZkJzQVJj?oc=5" },
   { time: "23:30", tag: "tech", tagText: "科技", text: "分析指出，在AI资本开支激增、同业自由现金流普遍承压的背景下，微软可能成为唯一维持自由现金流为正的超大规模云厂商。这一财务韧性差异被视为MSFT估值的重要支撑，也凸显市场对“AI烧钱换增长”模式的审视正在加深。", source: "Barchart.com", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQWFpDcUN6TWdfQ1AxeUMtTzZyNjdTRnJONzg0YWZTNFV6V2k5WDZxdl9TQXBrU1p0bk9PMVFLRkxma3VMdGNkSW8xcXczX1U1OUJBODNUN3BjaTZqMmNFcFFWQTZDb0VRZWRRY0Jnd2R4Wlk0TWFtbWpja2x0REQwd2xLaExFSVVDYnJfQm1iUl8xYndVMkZVZmRtV3JSVE5jMVBnRTA3T3diZ2ZZM0ktZDhqdldZajNyekE4WVNSVWJkZjI4X0g0cHB4T2FMcGJOTE1F?oc=5" },
   { time: "23:00", tag: "crypto", tagText: "加密", text: "麦当劳、微软、谷歌等大型企业对“代币化股票”明确说不。分析认为，企业拒绝将自家股票上链，主要出于合规、法律归属与品牌风险顾虑，但这并不构成代币化股票发展的致命障碍——发行与交易基础设施仍在持续推进，机构对链上资产的需求并未消失。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNbm5pWDd4RndldEZ5NU1XRVVESnRLMmdDSUdqU3BDdUx0a29iMEFEMFY1UThtWk5VdDhXd2JMMllwd3h1M0FVZzNNZkM2NmVHUm4wd0FQMk81UDlYZksycnV5N2JIQ1hoYmNsbHlSTURFMkhyc0pSemo2MEt6R2N0amtPenJQWkNZNG1BSUhmbm1MYThvS3ZaNWJsWGtZbmlkOTQtX1Y0RElUYkNwQjlDSWo2MUp4NmJUVU14TWZJaGxpeUZCdzRyWg?oc=5" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "标普500指数中超过三分之一公司将在未来一周公布财报，市场信心出现裂痕。策略师警告，在情绪谨慎偏负的背景下，财报季可能成为市场波动来源。", source: "MarketWatch", url: "https://www.marketwatch.com/story/more-than-a-third-of-s-p-500-companies-are-about-to-report-earnings-as-market-confidence-cracks-03b7a8f1?mod=mw_rss_topstories" },
@@ -1645,15 +1649,15 @@ const breakingNews = [
   { time: "20:26", tag: "macro", tagText: "宏观", text: "伦敦最著名的商业街牛津街正式禁止机动车通行，以重振客流与商业活力。此举具争议性，但恰逢大型品牌加大旗舰店投资，被视为实体零售与城市商业地产政策的重要试验。", source: "Financial Times", url: "https://www.ft.com/content/73a2ca6f-29b7-49e5-b8c7-0bde6c4e945b?syn-25a6b1a6=1" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC调查显示，经济仍是2026年中期选举的关键议题，但选民更担忧特朗普试探总统权力边界以及民主社会主义政策。政治与政策不确定性可能影响市场情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/cnbc-survey-midterm-election-voter-fears.html" },
   { time: "19:50", tag: "tech", tagText: "科技", text: "SpaceX的无线覆盖网络设计方案引起华尔街关注。分析师认为，相比大规模基础设施建设，屋顶、广告牌等小型站点布局可能更关键。这被视为SpaceX切入移动通信市场的路径，或对现有运营商格局构成潜在冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/spacex-cell-sites-wireless-network.html" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "FT民调显示，美国选民对特朗普政府腐败问题的担忧升温，并将贪腐与生活成本危机联系起来；随着中期选举临近，政治与政策不确定性成为市场关注点。", source: "Financial Times", url: "https://www.ft.com/content/2770ef24-198c-49bc-8cb8-b9d40108d797?syn-25a6b1a6=1" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "英伟达正从芯片供应商转变为AI产业的\"融资方\"，随着算力租赁商（neocloud）股价与债券同步承压，其承担的信用与交易对手风险迎来首次重大考验。投资者担忧，一旦下游算力需求或融资环境恶化，风险可能沿AI基建链条向英伟达自身传导。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/nvidias-role-as-ai-financier-faces-first-big-test-as-neoclouds-take-market-hit.html" },
-  { time: "17:29", tag: "crypto", tagText: "加密", text: "美国SEC批准杠杆比特币和以太坊基金上市交易，为加密ETF市场引入更高风险产品；分析人士提醒，杠杆产品波动和费用风险较高，适合专业投资者。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUnVqNFZtMWdtM21HSVg5VVlNanRuNU45bWJjRXhDaWZCekNRWEtmaFRkNFJqZXRPOHRGZG9vZFBJUWpqa0N4UUxJYnREdTVNXzdGY3hhUzg5RmV1TFBoa0dFMV8wcHNyV3p3YmU2X0VNU0V0TDFTcUJDVldVT0ZReU5lYllPQ1BBVjZ0d1FhQ3JaWXZsRTRF?oc=5" },
-  { time: "16:06", tag: "macro", tagText: "宏观", text: "法国骚乱冲击市场，国债收益率升至24年高位；投资者正评估预算、增长与行业风险，并准备迎接更多抗议活动。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/france-riots-paris-unrest-debt-budget.html" },
 ];
-const breakingDate = "2026年10月26日 02:54 CST";
+const breakingDate = "2026年10月26日 05:39 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:31", tag: "ai", tagText: "AI", text: "xAI 旗下 Grok 发布其 AI 生成的《奥德赛》影片首七分钟片段，被视为 AI 视频生成迈向长片制作的最新尝试。报道评价画面质量尚可，但在艺术性、灵感与人文表达方面仍显不足。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/" },
+  { time: "05:29", tag: "tech", tagText: "科技", text: "BBC《蓝色星球III》在AI时代刻意保留“不完美镜头”：制作团队表示将留下瑕疵画面以证明素材真实性，与此前系列追求极致清晰、唯美画面的风格形成对比，回应观众对AI生成或过度修饰自然影像的疑虑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai" },
+  { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
+  { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
   { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
   { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
   { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
   { time: "21:25", tag: "tech", tagText: "科技", text: "Reddit 子版块 r/opensource 版主发布新投稿规则，禁止使用或由 AI 生成的项目，同时限制非英语使用者等。该规则以「如果你的项目使用 AI、由 AI 制作……」为开头，在开源社区引发对 AI 生成内容与治理边界的讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "The Verge专栏分析指出，谷歌AI搜索改版正在重塑在线出版生态：AI摘要减少外链点击、改变流量分配，出版商面临访问量和收入压力，被迫调整内容与SEO策略。", source: "The Verge", url: "https://www.theverge.com/column/1017983/google-ai-search-online-publishing" },
-  { time: "13:14", tag: "ai", tagText: "AI", text: "英伟达与竞争对手正围绕机器人开发者生态展开争夺。随着机器人成为AI落地的重要场景，各厂商通过开发平台、工具链与生态合作吸引机器人开发者，以抢占下一代物理AI入口。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNVRfamt5V2FBX20tYkZ4amhid0VxSXZBak9zTXp4VjBWWUVfc2xZUkpCMl9ZQ0ZSbFY4ellyU0ZfVVpQRFByNzAzM2V6cktkNnFqMXNrTnhUQXZSNndJMnZRXzVGLUR4RXNvVms3WXFYNmxDbWxyVkpLeDdEdEFZLXo4ZWFZcWNv?oc=5" },
-  { time: "05:29", tag: "tech", tagText: "科技", text: "BBC《蓝色星球III》在AI时代刻意保留“不完美镜头”：制作团队表示将留下瑕疵画面以证明素材真实性，与此前系列追求极致清晰、唯美画面的风格形成对比，回应观众对AI生成或过度修饰自然影像的疑虑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai" },
-  { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
-  { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
 ];
-const aiBreakingDate = "2026年10月26日 02:54 CST";
+const aiBreakingDate = "2026年10月26日 05:39 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
