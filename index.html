@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月25日 23:30 CST"
+  date: "2026年10月26日 00:00 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1636,7 +1636,10 @@ const breakingNews = [
   { time: "21:10", tag: "tech", tagText: "科技", text: "生物科技板块集体走强，临床数据利好、并购交易回暖及新药物技术平台推动行业复苏。分析师看好相关ETF与个股，认为创新药周期重启，但提醒个股分化明显、需精选标的。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/biotech-stocks-drug-innovation-rally.html" },
   { time: "21:08", tag: "macro", tagText: "宏观", text: "报道称捷蓝航空债权人正与重组顾问PJT Partners合作。伊朗战争导致航空燃油成本飙升，尽管票价上涨且需求稳定，美国航司利润率仍承压。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/jetblue-creditors-pjt-partners-restructuring-adviser.html" },
   { time: "20:59", tag: "tech", tagText: "科技", text: "由于发动机等关键零部件严重短缺，热门机型被提前数年拆解、回收零件。航空供应链紧张正推高维护成本、拖慢机队扩张，对航空公司运力与成本构成中期压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/spirit-airlines-planes-scrapped-engine-shortage.html" },
+  { time: "20:44", tag: "macro", tagText: "宏观", text: "市场聚焦美联储新任主席凯文·沃什的政策沟通能力。经济学家指出，投资者真正需要的是清晰、可预期的策略表述，而非含糊其辞的“非答案”；沟通可信度将直接影响利率路径定价与市场波动。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/non-answers-arent-working-this-is-what-investors-really-need-from-the-fed-673a9dce?mod=mw_rss_topstories" },
+  { time: "20:26", tag: "macro", tagText: "宏观", text: "伦敦最著名的商业街牛津街正式禁止机动车通行，以重振客流与商业活力。此举具争议性，但恰逢大型品牌加大旗舰店投资，被视为实体零售与城市商业地产政策的重要试验。", source: "Financial Times", url: "https://www.ft.com/content/73a2ca6f-29b7-49e5-b8c7-0bde6c4e945b?syn-25a6b1a6=1" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC调查显示，经济仍是2026年中期选举的关键议题，但选民更担忧特朗普试探总统权力边界以及民主社会主义政策。政治与政策不确定性可能影响市场情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/cnbc-survey-midterm-election-voter-fears.html" },
+  { time: "19:50", tag: "tech", tagText: "科技", text: "SpaceX的无线覆盖网络设计方案引起华尔街关注。分析师认为，相比大规模基础设施建设，屋顶、广告牌等小型站点布局可能更关键。这被视为SpaceX切入移动通信市场的路径，或对现有运营商格局构成潜在冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/spacex-cell-sites-wireless-network.html" },
   { time: "19:00", tag: "macro", tagText: "宏观", text: "FT民调显示，美国选民对特朗普政府腐败问题的担忧升温，并将贪腐与生活成本危机联系起来；随着中期选举临近，政治与政策不确定性成为市场关注点。", source: "Financial Times", url: "https://www.ft.com/content/2770ef24-198c-49bc-8cb8-b9d40108d797?syn-25a6b1a6=1" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "英伟达正从芯片供应商转变为AI产业的\"融资方\"，随着算力租赁商（neocloud）股价与债券同步承压，其承担的信用与交易对手风险迎来首次重大考验。投资者担忧，一旦下游算力需求或融资环境恶化，风险可能沿AI基建链条向英伟达自身传导。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/nvidias-role-as-ai-financier-faces-first-big-test-as-neoclouds-take-market-hit.html" },
   { time: "17:29", tag: "crypto", tagText: "加密", text: "美国SEC批准杠杆比特币和以太坊基金上市交易，为加密ETF市场引入更高风险产品；分析人士提醒，杠杆产品波动和费用风险较高，适合专业投资者。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUnVqNFZtMWdtM21HSVg5VVlNanRuNU45bWJjRXhDaWZCekNRWEtmaFRkNFJqZXRPOHRGZG9vZFBJUWpqa0N4UUxJYnREdTVNXzdGY3hhUzg5RmV1TFBoa0dFMV8wcHNyV3p3YmU2X0VNU0V0TDFTcUJDVldVT0ZReU5lYllPQ1BBVjZ0d1FhQ3JaWXZsRTRF?oc=5" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "13:00", tag: "geo", tagText: "地缘", text: "巴西大选进入白热化，博索纳罗与卢拉对决结果难料；右翼挑战者寻求击败左翼总统，并让拉美最大经济体更靠近特朗普。", source: "Financial Times", url: "https://www.ft.com/content/29033fb9-2dc7-4af0-a2ff-55d1bdd5dece?syn-25a6b1a6=1" },
   { time: "13:00", tag: "geo", tagText: "地缘", text: "黑海已成为全球最致命航运路线，俄乌冲突中商船船员死亡人数超过海湾地区；航运安全风险上升。", source: "Financial Times", url: "https://www.ft.com/content/8c874f60-0041-476d-9c53-8524c374443f?syn-25a6b1a6=1" },
   { time: "12:47", tag: "crypto", tagText: "加密", text: "比特币周末继续下挫，逼近8万美元关口，瑞波币（XRP）失守关键支撑位。加密市场跟随科技股与AI板块的调整而走弱，投资者风险偏好明显降温，市场关注8万美元一线能否形成有效支撑。", source: "CryptoPotato", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxNUGRoaHRWLW5LOTRrZm5UOWY5YTZaZUlxeF9FQWdwbzFwQ1lMS1FSdS1WVmo2dkRVb3FTNjhQQ2Raakk2SFpaYi1hN1huMzVMT2ZHbTNQejhRZEV5LTY3VHRaTVJOcGl0ZUFNQmRLYzRjWjNZWXZxc1J2aTZGS3NhSU4yMkp6RElqVDdsZ2JGOWxZUmFHeS15dnhEbXpKQQ?oc=5" },
-  { time: "12:05", tag: "tech", tagText: "科技", text: "SK海力士股价盘初下跌后反弹，此前其美国子公司Solidigm的IPO计划审查被叫停。市场关注存储芯片业务前景及子公司上市融资安排变化。", source: "CNBC", url: "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html" },
-  { time: "12:00", tag: "ai", tagText: "AI", text: "飞马（Pegasus）间谍软件开发商NSO集团前CEO沙莱夫·胡利奥（Shalev Hulio）寻求转型，呼吁各国政府信任其新技术并摆脱对美国AI的依赖，主打“主权AI”与国家安全牌。这反映出各国政府对数据主权与AI供应链安全的诉求正在催生新的防务科技市场。", source: "Financial Times", url: "https://www.ft.com/content/f9592534-1a3d-409d-9a57-f05919440032?syn-25a6b1a6=1" },
-  { time: "06:55", tag: "macro", tagText: "宏观", text: "特朗普预计将宣布奥迪在佐治亚州新建美国组装厂，年产能约20万辆SUV。该项目凸显在关税与制造业回流政策下，车企加速本土化布局，或影响汽车供应链与贸易关系。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/trump-audi-factory-georgia.html" },
 ];
-const breakingDate = "2026年10月25日 23:30 CST";
+const breakingDate = "2026年10月26日 00:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "00:00", tag: "ai", tagText: "AI", text: "Uber将ChatGPT Work推广至全部3万名员工，此前仅小范围试点；这显示大型企业正把AI代理工具从试验转向全公司部署。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/" },
   { time: "23:12", tag: "tech", tagText: "科技", text: "PHP被披露存在两个安全漏洞，可能危及大量网站；按部分统计，全球多达70%的网站使用PHP，维基百科等均受影响，安全团队正紧急修补。", source: "The Verge", url: "https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down" },
   { time: "23:03", tag: "ai", tagText: "AI", text: "Spotify 联席 CEO Gustav Söderström 表示，公司当前的 AI 押注是成为“AI 智能体首选的音乐服务”：随着代理式 AI 替用户完成点播、发现与订阅操作，音乐平台需要让自家接口、推荐与版权体系对智能体友好，从而在流量入口从人转向代理的过程中保住分发话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "一项新研究发现，在近500场选举对决中，被要求二选一时，xAI的Grok模型压倒性地倾向推荐共和党候选人，而OpenAI的GPT则偏向民主党，两者在超过90%的竞选中立场相反。这凸显大模型在政治议题上的系统性偏差，以及AI在选举信息场中的潜在影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" },
@@ -1661,6 +1662,7 @@ const aiBreakingNews = [
   { time: "22:47", tag: "ai", tagText: "AI", text: "Meta 在出版商反对后推迟执行新商业条款。出版商担忧，新条款可能允许 Meta 抓取新闻网站内容用于 AI 训练；Fast Company 此前报道了这一争议，Meta 现决定暂缓强制执行。", source: "The Verge", url: "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping" },
   { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
+  { time: "21:25", tag: "tech", tagText: "科技", text: "Reddit 子版块 r/opensource 版主发布新投稿规则，禁止使用或由 AI 生成的项目，同时限制非英语使用者等。该规则以「如果你的项目使用 AI、由 AI 制作……」为开头，在开源社区引发对 AI 生成内容与治理边界的讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "The Verge专栏分析指出，谷歌AI搜索改版正在重塑在线出版生态：AI摘要减少外链点击、改变流量分配，出版商面临访问量和收入压力，被迫调整内容与SEO策略。", source: "The Verge", url: "https://www.theverge.com/column/1017983/google-ai-search-online-publishing" },
   { time: "13:14", tag: "ai", tagText: "AI", text: "英伟达与竞争对手正围绕机器人开发者生态展开争夺。随着机器人成为AI落地的重要场景，各厂商通过开发平台、工具链与生态合作吸引机器人开发者，以抢占下一代物理AI入口。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNVRfamt5V2FBX20tYkZ4amhid0VxSXZBak9zTXp4VjBWWUVfc2xZUkpCMl9ZQ0ZSbFY4ellyU0ZfVVpQRFByNzAzM2V6cktkNnFqMXNrTnhUQXZSNndJMnZRXzVGLUR4RXNvVms3WXFYNmxDbWxyVkpLeDdEdEFZLXo4ZWFZcWNv?oc=5" },
   { time: "05:29", tag: "tech", tagText: "科技", text: "BBC《蓝色星球III》在AI时代刻意保留“不完美镜头”：制作团队表示将留下瑕疵画面以证明素材真实性，与此前系列追求极致清晰、唯美画面的风格形成对比，回应观众对AI生成或过度修饰自然影像的疑虑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
   { time: "02:32", tag: "ai", tagText: "AI", text: "宾夕法尼亚州州长 Josh Shapiro 签署《人工智能欺骗性广告法案》，要求所有由 AI 生成的广告必须进行披露标注。该法适用于任何广告形式，旨在防止深度伪造与AI合成内容误导消费者，成为州层面AI广告监管的最新案例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act" },
   { time: "00:52", tag: "ai", tagText: "AI", text: "谷歌更新隐私政策，可能将用户使用个性化 AI 功能时产生的 Gmail、Google Photos 等个人数据用于广告定向。该变化由 Android Authority 发现，意味着谷歌在推进个性化 AI 的同时，正扩大个人数据在广告业务中的使用范围。", source: "The Verge", url: "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update" },
-  { time: "00:47", tag: "geo", tagText: "地缘", text: "微软指称，一个与中国结盟的黑客组织利用AI智能体攻破IT巨头ConnectWise后，入侵并监视数千家客户企业，显示AI代理正被用于加速大规模网络间谍活动。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "Uber将ChatGPT Work推广至全部3万名员工，此前仅小范围试点；这显示大型企业正把AI代理工具从试验转向全公司部署。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/" },
 ];
-const aiBreakingDate = "2026年10月25日 23:30 CST";
+const aiBreakingDate = "2026年10月26日 00:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
