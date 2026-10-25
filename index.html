@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月25日 14:01 CST"
+  date: "2026年10月25日 19:14 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "FT民调显示，美国选民对特朗普政府腐败问题的担忧升温，并将贪腐与生活成本危机联系起来；随着中期选举临近，政治与政策不确定性成为市场关注点。", source: "Financial Times", url: "https://www.ft.com/content/2770ef24-198c-49bc-8cb8-b9d40108d797?syn-25a6b1a6=1" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "英伟达正从芯片供应商转变为AI产业的\"融资方\"，随着算力租赁商（neocloud）股价与债券同步承压，其承担的信用与交易对手风险迎来首次重大考验。投资者担忧，一旦下游算力需求或融资环境恶化，风险可能沿AI基建链条向英伟达自身传导。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/nvidias-role-as-ai-financier-faces-first-big-test-as-neoclouds-take-market-hit.html" },
+  { time: "17:29", tag: "crypto", tagText: "加密", text: "美国SEC批准杠杆比特币和以太坊基金上市交易，为加密ETF市场引入更高风险产品；分析人士提醒，杠杆产品波动和费用风险较高，适合专业投资者。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUnVqNFZtMWdtM21HSVg5VVlNanRuNU45bWJjRXhDaWZCekNRWEtmaFRkNFJqZXRPOHRGZG9vZFBJUWpqa0N4UUxJYnREdTVNXzdGY3hhUzg5RmV1TFBoa0dFMV8wcHNyV3p3YmU2X0VNU0V0TDFTcUJDVldVT0ZReU5lYllPQ1BBVjZ0d1FhQ3JaWXZsRTRF?oc=5" },
+  { time: "16:06", tag: "macro", tagText: "宏观", text: "法国骚乱冲击市场，国债收益率升至24年高位；投资者正评估预算、增长与行业风险，并准备迎接更多抗议活动。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/france-riots-paris-unrest-debt-budget.html" },
+  { time: "14:38", tag: "geo", tagText: "地缘", text: "特朗普称对伊朗的打击可能今日发生，地缘政治风险升温；市场关注中东局势对能源价格和风险资产的潜在冲击。", source: "BeInCrypto", url: "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4wYmMxUUF6dnhERmdLZWllUVVsNFdmZDk2V1lkbTFhYXY5S0JJWjBwdVFjbHlGc3p2cXUxNno1aWZlRTF6a2VPUzRjOVhvNnkzUEVtLUVvVE5tdGxHek1iUzZHMXhQUQ?oc=5" },
   { time: "13:00", tag: "macro", tagText: "宏观", text: "欧洲奢侈品集团市值合计蒸发约2500亿欧元，因中国消费者需求减弱，且全球股市降温加剧了该行业下行压力。", source: "Financial Times", url: "https://www.ft.com/content/1c3065cf-538f-433a-9749-0355a3642c7c?syn-25a6b1a6=1" },
   { time: "13:00", tag: "geo", tagText: "地缘", text: "巴西大选进入白热化，博索纳罗与卢拉对决结果难料；右翼挑战者寻求击败左翼总统，并让拉美最大经济体更靠近特朗普。", source: "Financial Times", url: "https://www.ft.com/content/29033fb9-2dc7-4af0-a2ff-55d1bdd5dece?syn-25a6b1a6=1" },
   { time: "13:00", tag: "geo", tagText: "地缘", text: "黑海已成为全球最致命航运路线，俄乌冲突中商船船员死亡人数超过海湾地区；航运安全风险上升。", source: "Financial Times", url: "https://www.ft.com/content/8c874f60-0041-476d-9c53-8524c374443f?syn-25a6b1a6=1" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "23:00", tag: "crypto", tagText: "加密", text: "麦当劳、微软、谷歌等大型企业对“代币化股票”明确说不。分析认为，企业拒绝将自家股票上链，主要出于合规、法律归属与品牌风险顾虑，但这并不构成代币化股票发展的致命障碍——发行与交易基础设施仍在持续推进，机构对链上资产的需求并未消失。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNbm5pWDd4RndldEZ5NU1XRVVESnRLMmdDSUdqU3BDdUx0a29iMEFEMFY1UThtWk5VdDhXd2JMMllwd3h1M0FVZzNNZkM2NmVHUm4wd0FQMk81UDlYZksycnV5N2JIQ1hoYmNsbHlSTURFMkhyc0pSemo2MEt6R2N0amtPenJQWkNZNG1BSUhmbm1MYThvS3ZaNWJsWGtZbmlkOTQtX1Y0RElUYkNwQjlDSWo2MUp4NmJUVU14TWZJaGxpeUZCdzRyWg?oc=5" },
   { time: "21:10", tag: "tech", tagText: "科技", text: "生物科技板块集体走强，临床数据利好、并购交易回暖及新药物技术平台推动行业复苏。分析师看好相关ETF与个股，认为创新药周期重启，但提醒个股分化明显、需精选标的。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/biotech-stocks-drug-innovation-rally.html" },
   { time: "20:59", tag: "tech", tagText: "科技", text: "由于发动机等关键零部件严重短缺，热门机型被提前数年拆解、回收零件。航空供应链紧张正推高维护成本、拖慢机队扩张，对航空公司运力与成本构成中期压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/spirit-airlines-planes-scrapped-engine-shortage.html" },
-  { time: "20:48", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦股价创历史新高，完全收复2025年股东大会巴菲特意外宣布卸任后的全部跌幅，耗时约18个月。市场对新管理层的资本配置能力与公司护城河信心回升，\"巴菲特溢价消失\"的担忧暂告缓解。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/berkshire-record-high-without-buffett.html" },
-  { time: "20:25", tag: "tech", tagText: "科技", text: "Moderna个体化癌症疫苗首个三期临床数据公布后，市场认为其\"很可能\"获得批准，但 skeptics 质疑其在长期防复发方面是否优于现有疗法。这是mRNA肿瘤疫苗商业化的关键节点，也牵动公司估值修复逻辑。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-real-test-for-modernas-cancer-vaccine-isnt-about-beating-keytruda-its-keeping-cancer-from-coming-back-in-the-long-term-da9af99f?mod=mw_rss_topstories" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "AI行情催生主题ETF发行潮，华尔街基金公司竞相推出细分主题产品，试图捕捉\"下一个大交易\"。资金对AI主线的高涨热情与产品同质化并存，分析人士提示主题ETF集中发行往往伴随追高与流动性风险。", source: "MarketWatch", url: "https://www.marketwatch.com/story/ai-fever-ignites-a-boom-in-thematic-etfs-as-fund-managers-hunt-for-their-next-big-hit-82d1566c?mod=mw_rss_topstories" },
-  { time: "19:30", tag: "macro", tagText: "宏观", text: "市场人士指出，美联储主席凯文·沃什的\"非回答\"式表态已难以安抚投资者。经济学家认为，真正关键的是沃什能否清晰、可信地传达货币政策策略与反应函数，而非回避提问；沟通不畅本身正在成为一项政策风险，加剧利率路径的不确定性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/non-answers-arent-working-this-is-what-investors-really-need-from-the-fed-673a9dce?mod=mw_rss_topstories" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "英伟达正从芯片供应商转变为AI产业的\"融资方\"，随着算力租赁商（neocloud）股价与债券同步承压，其承担的信用与交易对手风险迎来首次重大考验。投资者担忧，一旦下游算力需求或融资环境恶化，风险可能沿AI基建链条向英伟达自身传导。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/nvidias-role-as-ai-financier-faces-first-big-test-as-neoclouds-take-market-hit.html" },
 ];
-const breakingDate = "2026年10月25日 14:01 CST";
+const breakingDate = "2026年10月25日 19:14 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:14", tag: "ai", tagText: "AI", text: "英伟达与竞争对手正围绕机器人开发者生态展开争夺。随着机器人成为AI落地的重要场景，各厂商通过开发平台、工具链与生态合作吸引机器人开发者，以抢占下一代物理AI入口。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNVRfamt5V2FBX20tYkZ4amhid0VxSXZBak9zTXp4VjBWWUVfc2xZUkpCMl9ZQ0ZSbFY4ellyU0ZfVVpQRFByNzAzM2V6cktkNnFqMXNrTnhUQXZSNndJMnZRXzVGLUR4RXNvVms3WXFYNmxDbWxyVkpLeDdEdEFZLXo4ZWFZcWNv?oc=5" },
   { time: "05:29", tag: "tech", tagText: "科技", text: "BBC《蓝色星球III》在AI时代刻意保留“不完美镜头”：制作团队表示将留下瑕疵画面以证明素材真实性，与此前系列追求极致清晰、唯美画面的风格形成对比，回应观众对AI生成或过度修饰自然影像的疑虑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai" },
   { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:47", tag: "ai", tagText: "AI", text: "Meta 在出版商反对后推迟执行新商业条款。出版商担忧，新条款可能允许 Meta 抓取新闻网站内容用于 AI 训练；Fast Company 此前报道了这一争议，Meta 现决定暂缓强制执行。", source: "The Verge", url: "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping" },
   { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
-  { time: "20:05", tag: "ai", tagText: "AI", text: "英伟达CEO黄仁勋提出将芯片作为贷款抵押品，以释放约5000亿美元资金用于AI基础设施建设，旨在拓宽AI算力投资的融资渠道。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5seDBRODlWTWJOZXh0R2F3UFEtRGd1dUt5V09HZmtjbl9WdnJhTXNZUVIxcmdjTXdJRzl3am9NNGJJMDd1cmFNcnJ4Mmt1R2h4NWprQzctcGlUbW1wTXQ4bE1tN21TMklnZE4tZnRpRFNDU3NOTGc?oc=5" },
 ];
-const aiBreakingDate = "2026年10月25日 14:01 CST";
+const aiBreakingDate = "2026年10月25日 19:14 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
