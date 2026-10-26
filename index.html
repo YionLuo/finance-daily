@@ -1623,14 +1623,19 @@ const fearGreedData = {
   previous1Week: 22.07,
   previous1Month: 32.54,
   previous1Year: 27.57,
-  date: "2026年10月26日 05:39 CST"
+  date: "2026年10月26日 08:07 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:03", tag: "macro", tagText: "宏观", text: "全球养老金体系正面临人口结构危机：寿命延长与出生率下降持续挤压退休财务。报道称，若不大幅改革，养老金缺口可能演变为“定时炸弹”，影响数亿人的退休保障与主权财政。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/pension-funds-ageing-crisis-risk-investment.html" },
+  { time: "08:00", tag: "macro", tagText: "宏观", text: "高盛将韩国Kospi指数目标下调25%至9,000点，但仍维持看多韩国股市，认为较当前水平有逾60%上行空间。此次下调反映盈利与宏观压力，但未改变其结构性乐观判断。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/goldman-slashes-kospi-target-korea-stocks.html" },
+  { time: "07:55", tag: "geo", tagText: "地缘", text: "法国因不平等与生活成本上升爆发的抗议进入第二个周末，全国约41万人参与，多座城市发生冲突。社会动荡加剧法国政府的财政与政治压力，并可能影响欧元区政策预期。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/france-protests-paris-cost-of-living-inequality.html" },
+  { time: "07:52", tag: "macro", tagText: "宏观", text: "美股期货上涨，交易员试图从标普500指数的下跌周中恢复；市场聚焦周三美联储政策决议。投资者关注利率路径指引及对经济数据的最新评估。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/stock-market-today-live-updates.html" },
   { time: "05:29", tag: "geo", tagText: "地缘", text: "巴西总统决选计票因最高法院延长投票时间而暂停。此次决选选情胶着，右翼挑战者有望击败左翼现任总统，使巴西进一步靠拢美国，反映拉美地区保守化转向。多地因公交与渡轮运力不足引发交通投诉，加剧选举紧张氛围，结果或影响巴西财政、货币政策及对美关系走向。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/brazil-lula-bolsonaro-presidential-election-runoff.html" },
   { time: "05:01", tag: "geo", tagText: "地缘", text: "塞尔维亚前总统武契奇在议会选举中承认败给反对派“学生名单”。该草根政党脱胎于历时两年、以反腐和反压迫为核心诉求的抗议运动，此次投票率接近历史高位。政权更迭或重塑巴尔干地区政治格局，并影响塞尔维亚在欧盟与俄罗斯之间的平衡立场。", source: "Financial Times", url: "https://www.ft.com/content/546f21f5-22d3-4696-8371-7bef8c0410b3?syn-25a6b1a6=1" },
+  { time: "03:21", tag: "geo", tagText: "地缘", text: "英国不会加入加拿大主导的防务银行，消息人士称。该决定可能削弱这一新机构在西方防务融资领域的覆盖范围，也反映各国在国防产业融资安排上的分歧。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdUt0ejc0NEtPd0U5enNlek5yek5Jak91bUlPdGtLY3FzQ2I3THJXTkhpVFYtdVZPUjZwRnY5ZnBGcmp3dGh1d2d2dlBvNExnTlRKZ2pPamp1X0ZBQzNib2ZGcFJZX3FBdWZsUEV6UkhNWG1WYzc1Y3ZBY1Y3X01qaURXejBwWUZIcHZrMDlWd3ptX2ZKX0wwTEJmci1fOWt5My1IZlY2cURXYVE?oc=5" },
   { time: "03:06", tag: "ai", tagText: "AI", text: "分析指出，英伟达（NVDA）已实质失去中国AI加速器市场，出口管制与本土替代品崛起令其在华营收前景大幅收窄。作为全球最重要的AI芯片供应商，其在中国市场份额的流失凸显地缘政治对半导体供应链的深刻影响，投资者正重新评估其长期增长空间。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZXBrdnEtYnZLWk95RmJjZlRTeFR2ZjZDaGM5dDR4VW9KNWdDZjRjTmJidlY0eWExNVJVYUZ2NGJlNlo3NXZYMzFTZkhYeUU4ZC1RSGUzMXhLYkdkRUZXMEt5bVJRY1E0LW52Z0QzaWFYRTE3bDh1SVBMWnRNZUs0dndHVXBXdmZkYjBoRWFsX0p6RG8?oc=5" },
   { time: "02:18", tag: "geo", tagText: "地缘", text: "乌克兰方面反驳马斯克关于其军方在无人机作战中违反星链使用条款的说法，强调商业版星链的技术限制本身就无法支持中远程打击任务。此事凸显战时商业卫星通信服务在军民两用边界上的争议，也牵动乌军无人机作战能力与西方供应商关系的敏感议题。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/ukraine-musk-starlink-terms-dispute.html" },
   { time: "02:16", tag: "macro", tagText: "宏观", text: "美国医院连锁Bon Secours接近以约60亿美元收购贝恩资本支持的Surgery Partners，成为非营利医疗机构寻求大规模交易的又一案例。交易反映在手术中心等门诊业务利润率承压、私募股权退出需求上升的背景下，医疗行业整合正在加速。", source: "Financial Times", url: "https://www.ft.com/content/e7b82fe0-db51-49cf-bad4-2168a905652b?syn-25a6b1a6=1" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "21:41", tag: "geo", tagText: "地缘", text: "沙特称拦截了来自伊朗支持的胡塞武装的导弹和无人机；胡塞方面宣称袭击机场和能源设施。地区供应风险上升，市场关注对石油与航运的潜在冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/saudi-arabia-houthi-missile-drone-interceptions.html" },
   { time: "21:10", tag: "tech", tagText: "科技", text: "生物科技板块集体走强，临床数据利好、并购交易回暖及新药物技术平台推动行业复苏。分析师看好相关ETF与个股，认为创新药周期重启，但提醒个股分化明显、需精选标的。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/biotech-stocks-drug-innovation-rally.html" },
   { time: "21:08", tag: "macro", tagText: "宏观", text: "报道称捷蓝航空债权人正与重组顾问PJT Partners合作。伊朗战争导致航空燃油成本飙升，尽管票价上涨且需求稳定，美国航司利润率仍承压。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/jetblue-creditors-pjt-partners-restructuring-adviser.html" },
-  { time: "20:59", tag: "tech", tagText: "科技", text: "由于发动机等关键零部件严重短缺，热门机型被提前数年拆解、回收零件。航空供应链紧张正推高维护成本、拖慢机队扩张，对航空公司运力与成本构成中期压力。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/spirit-airlines-planes-scrapped-engine-shortage.html" },
-  { time: "20:44", tag: "macro", tagText: "宏观", text: "市场聚焦美联储新任主席凯文·沃什的政策沟通能力。经济学家指出，投资者真正需要的是清晰、可预期的策略表述，而非含糊其辞的“非答案”；沟通可信度将直接影响利率路径定价与市场波动。", source: "MarketWatch.com - Top Stories", url: "https://www.marketwatch.com/story/non-answers-arent-working-this-is-what-investors-really-need-from-the-fed-673a9dce?mod=mw_rss_topstories" },
-  { time: "20:26", tag: "macro", tagText: "宏观", text: "伦敦最著名的商业街牛津街正式禁止机动车通行，以重振客流与商业活力。此举具争议性，但恰逢大型品牌加大旗舰店投资，被视为实体零售与城市商业地产政策的重要试验。", source: "Financial Times", url: "https://www.ft.com/content/73a2ca6f-29b7-49e5-b8c7-0bde6c4e945b?syn-25a6b1a6=1" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "CNBC调查显示，经济仍是2026年中期选举的关键议题，但选民更担忧特朗普试探总统权力边界以及民主社会主义政策。政治与政策不确定性可能影响市场情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/cnbc-survey-midterm-election-voter-fears.html" },
-  { time: "19:50", tag: "tech", tagText: "科技", text: "SpaceX的无线覆盖网络设计方案引起华尔街关注。分析师认为，相比大规模基础设施建设，屋顶、广告牌等小型站点布局可能更关键。这被视为SpaceX切入移动通信市场的路径，或对现有运营商格局构成潜在冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/spacex-cell-sites-wireless-network.html" },
 ];
-const breakingDate = "2026年10月26日 05:39 CST";
+const breakingDate = "2026年10月26日 08:07 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:04", tag: "tech", tagText: "科技", text: "朝鲜日报报道，随着半导体企业间的联盟加速成形，定制化HBM（高带宽内存）时代正式开启。业内将HBM从过去以标准化规格供货，转向按客户加速器与系统需求进行定制设计，这反映出AI芯片对内存带宽、功耗与散热的要求日益严苛，也意味着存储厂商与AI芯片、云厂商之间的绑定将进一步加深。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbWNxMlJDS0FxQlFqbHlYZVJuMnZ3RVN1UDY4R1VDbzEtcnM2QWttSksxV1pMbm9jX2NuNGNFSGVnTkdyM010enp0SFRld09DQmhBLU9nQktWb3d2Z1dFSkd3TVZMMHlzeVMxdV9YS3VwejJjRVgzSEF4Mm1HZTFsVC1FVTFidHk3?oc=5" },
   { time: "05:31", tag: "ai", tagText: "AI", text: "xAI 旗下 Grok 发布其 AI 生成的《奥德赛》影片首七分钟片段，被视为 AI 视频生成迈向长片制作的最新尝试。报道评价画面质量尚可，但在艺术性、灵感与人文表达方面仍显不足。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/" },
   { time: "05:29", tag: "tech", tagText: "科技", text: "BBC《蓝色星球III》在AI时代刻意保留“不完美镜头”：制作团队表示将留下瑕疵画面以证明素材真实性，与此前系列追求极致清晰、唯美画面的风格形成对比，回应观众对AI生成或过度修饰自然影像的疑虑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai" },
   { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
   { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
   { time: "21:25", tag: "tech", tagText: "科技", text: "Reddit 子版块 r/opensource 版主发布新投稿规则，禁止使用或由 AI 生成的项目，同时限制非英语使用者等。该规则以「如果你的项目使用 AI、由 AI 制作……」为开头，在开源社区引发对 AI 生成内容与治理边界的讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "The Verge专栏分析指出，谷歌AI搜索改版正在重塑在线出版生态：AI摘要减少外链点击、改变流量分配，出版商面临访问量和收入压力，被迫调整内容与SEO策略。", source: "The Verge", url: "https://www.theverge.com/column/1017983/google-ai-search-online-publishing" },
 ];
-const aiBreakingDate = "2026年10月26日 05:39 CST";
+const aiBreakingDate = "2026年10月26日 08:07 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
