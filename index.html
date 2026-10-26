@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27.02,
+  score: 27.08,
   rating: "fear",
-  timestamp: "2026-10-26T19:05:25+00:00",
+  timestamp: "2026-10-26T23:26:22+00:00",
   previousClose: 20.98,
   previous1Week: 20.8,
   previous1Month: 36.94,
   previous1Year: 32.46,
-  date: "2026年10月27日 03:10 CST"
+  date: "2026年10月27日 07:45 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
+  { time: "06:46", tag: "geo", tagText: "地缘", text: "以色列大选投票展开，数万名旅居海外的以色列公民专程飞回国投票，选情胶着。此次选举结果将影响以色列内政走向及其中东政策，进而牵动地区局势与能源市场风险定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/israeli-election-citizens-flying-back-vote.html" },
+  { time: "06:24", tag: "geo", tagText: "地缘", text: "美国司法部第三次对前FBI局长詹姆斯·科米提起刑事诉讼，此次指控其泄露国防机密信息。科米多年来一直是特朗普的政治目标，此举被视为白宫与情报、司法体系紧张关系的最新升级。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/james-comey-indictment-national-defense-doj-trump.html" },
+  { time: "05:46", tag: "tech", tagText: "科技", text: "《华尔街日报》报道，DoorDash正就收购Instacart（Maplebear）进行“深入谈判”，交易对Instacart估值约170亿美元。分析师称，此举意在补齐生鲜杂货与即时配送能力，以对抗沃尔玛和亚马逊在本地零售配送领域的扩张。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1?mod=mw_rss_topstories" },
+  { time: "05:16", tag: "ai", tagText: "AI", text: "路透报道，华尔街多家银行与黑石（Blackstone）已安排约630亿美元融资，用于支持博通为Anthropic供应AI芯片。该笔巨额融资凸显AI基础设施资本开支正从股权融资延伸至债务市场，也使AI交易的杠杆风险受到关注。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQZU9zQUUycTh6SXBkQ25GQUJKTWJabmR3Q1gtYXlZWDJSUWk2cmxGWWRsUlZlSTdVNEtsdDY5d0hVakZ1ZkVDMDFiV2NrdjFaQnNVZUxRMjNESzluZFVBc0s3YU9pZjNZMVR1WEdIOVFrc2phbnRZYWpuYnRXY29Rd0FiVnItWTR1akVvNXhfWDAyNHJId040M2R0Q29HZTAwVzYxUl9OVy0wNWFrV2M3ME1Td25NUGI5cnhOY2JyQUVFS3ZOUGdEZVh1X2pQZWp4NGc?oc=5" },
+  { time: "05:08", tag: "crypto", tagText: "加密", text: "比特币跌破8万美元关口，市场在美联储利率决议前保持谨慎。此前加密市场已因风险偏好降温和AI交易波动而承压，本次议息结果被视为决定短期方向的关键变量。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONXVNSWNBZmJ1VXp0VUtVWHNHdVVpREtERzV3cmlCSzh2UjA2RUFmUjVqaW1zbGVlTW5nM3haSDFhYVl6WjU3SkdYLWNuYS04ek5UbWJfVzYwNExlWUNJcWJ3R045SUg4dm1taEY1RHNnUjZhYVhXaUExMThYR09MeElqeF9weFRiajlQSFlMUk93UFVqdlA1eTg1RmxmT2k0TElvckpHVVl0SWc3MTFfekJDTkVzVFJRRTUtU29xelZiTzlYSUdzWEpRSjI5Q0t4ZWZiaF93?oc=5" },
   { time: "02:43", tag: "tech", tagText: "科技", text: "苹果回应多名用户报告新款折叠屏手机iPhone Duo屏幕损坏，称已知悉问题并将在AppleCare保修范围内为用户更换设备。这是苹果首代折叠机型遭遇的可靠性质疑，市场关注其对销量、保修成本及后续产品迭代的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html" },
   { time: "02:37", tag: "macro", tagText: "宏观", text: "美国联邦贸易委员会（FTC）联合20个州起诉Dollar General，指控其向消费者收取高于标示价格的费用。该案是监管机构针对零售定价行为的最新执法行动，若败诉公司可能面临罚款、赔偿与整改成本，并可能波及整个折扣零售行业的定价合规审查。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/ftc-dollar-general-lawsuit.html" },
   { time: "02:05", tag: "geo", tagText: "地缘", text: "联邦法官裁定，特朗普政府解雇前曼哈顿联邦检察官Maurene Comey（前FBI局长James Comey之女）属违法行为。这一裁决打击了行政部门有关总统拥有广泛免职权的主张，并可能为其他被解职官员的诉讼提供先例，涉及行政权边界的法律与政治博弈升温。", source: "Financial Times", url: "https://www.ft.com/content/627ed704-f736-4fa2-91c9-67e53577fb7f?syn-25a6b1a6=1" },
@@ -1643,17 +1649,13 @@ const breakingNews = [
   { time: "22:36", tag: "geo", tagText: "地缘", text: "特朗普表示将很快决定是与伊朗“达成协议”还是“彻底了结”，中东紧张局势持续升级。市场关注霍尔木兹海峡航运与原油供应风险，此前沙特称已拦截胡塞武装的导弹和无人机。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/us-iran-war-hormuz.html" },
   { time: "22:05", tag: "ai", tagText: "AI", text: "Meta宣布规模950亿美元的股票增发计划，为AI基础设施与“超级智能”扩张融资；英伟达、AMD与博通据悉将认购至多50亿美元股份。此次增发凸显超大规模云厂商AI资本开支的融资压力正由自身现金流转向股权市场。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/meta-stock-offering-ai.html" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "标普500指数中超过三分之一公司将在未来一周公布财报，市场信心出现裂痕。策略师警告，在情绪谨慎偏负的背景下，财报季可能成为市场波动来源。", source: "MarketWatch", url: "https://www.marketwatch.com/story/more-than-a-third-of-s-p-500-companies-are-about-to-report-earnings-as-market-confidence-cracks-03b7a8f1?mod=mw_rss_topstories" },
-  { time: "21:52", tag: "geo", tagText: "地缘", text: "巴西总统决选结果出炉：80岁的左翼现任总统卢拉击败弗拉维奥·博索纳罗重新当选，这是1989年恢复直选以来首次有候选人在首轮落败后赢得决选。巴西股市与雷亚尔大跌，投资者押注其政策将加剧财政赤字压力；博索纳罗据报拒绝承认败选。卢拉胜选也是对特朗普扩大美国在拉美影响力的打击。", source: "Financial Times", url: "https://www.ft.com/content/7585a18f-88d9-4fcd-882d-ed938c7c9c41?syn-25a6b1a6=1" },
-  { time: "21:43", tag: "ai", tagText: "AI", text: "马斯克称超过200家neocloud（新型云服务商）将面临“孔雀鱼级死亡”，相关股票应声下跌。投资者本已质疑这类企业债务驱动的扩张模式，以及大规模AI基础设施投资能否产生长期回报，此番表态进一步打击情绪。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/neocloud-stocks-today-coreweave-nebius-iren-elon-musk.html" },
-  { time: "21:41", tag: "geo", tagText: "地缘", text: "沙特称拦截了来自伊朗支持的胡塞武装的导弹和无人机；胡塞方面宣称袭击机场和能源设施。地区供应风险上升，市场关注对石油与航运的潜在冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/saudi-arabia-houthi-missile-drone-interceptions.html" },
-  { time: "21:10", tag: "tech", tagText: "科技", text: "生物科技板块集体走强，临床数据利好、并购交易回暖及新药物技术平台推动行业复苏。分析师看好相关ETF与个股，认为创新药周期重启，但提醒个股分化明显、需精选标的。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/biotech-stocks-drug-innovation-rally.html" },
-  { time: "21:08", tag: "macro", tagText: "宏观", text: "报道称捷蓝航空债权人正与重组顾问PJT Partners合作。伊朗战争导致航空燃油成本飙升，尽管票价上涨且需求稳定，美国航司利润率仍承压。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/jetblue-creditors-pjt-partners-restructuring-adviser.html" },
-  { time: "08:03", tag: "macro", tagText: "宏观", text: "全球养老金体系正面临人口结构危机：寿命延长与出生率下降持续挤压退休财务。报道称，若不大幅改革，养老金缺口可能演变为“定时炸弹”，影响数亿人的退休保障与主权财政。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/pension-funds-ageing-crisis-risk-investment.html" },
 ];
-const breakingDate = "2026年10月27日 03:10 CST";
+const breakingDate = "2026年10月27日 07:45 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:34", tag: "ai", tagText: "AI", text: "OpenAI 公布三项“重大”科学发现，并宣布与学术界合作的新模式。距其上次一次性发布数百篇论文（称其中包含若干长期悬而未决的数学问题的解法）不到一个月，OpenAI 再度在数学、物理等领域发布研究成果，示范了 AI 辅助科研与高校协作的新路径——由 AI 提出猜想、验证推导，再由学者进行审阅。此举被认为是 OpenAI 在科研声誉与人才争夺上的又一次主动出击。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics" },
+  { time: "05:45", tag: "ai", tagText: "AI", text: "Anthropic 在赴美上市前的 S-1 文件中披露，其数据中心严重依赖天然气发电，并警告在电力供应与合适选址上正面临激烈竞争。The Verge 指出，这份文件让生成式 AI 的“甲烷依赖”暴露无遗：算力扩张正把大型 AI 公司变成能源密集型实体，其气候与电力成本风险也将成为 IPO 投资者必须评估的新变量。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018994/anthropic-ipo-ai-data-center-energy-climate-risk" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
   { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
   { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "22:35", tag: "ai", tagText: "AI", text: "Anthropic正式向美国SEC提交S-1文件，启动IPO程序，有望抢先OpenAI上市。文件显示公司营收高速增长、亏损扩大、企业采用率显著提升，并设置特殊治理结构以维持创始团队控制权及AI安全使命。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/" },
   { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
   { time: "21:39", tag: "ai", tagText: "AI", text: "一项研究发现，AI在谈判建议中存在性别偏见：面对女性用户时更倾向引导其关注照护类福利，而非争取更高薪酬，可能对职场薪酬平等产生负面影响。", source: "Canadian HR Reporter", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNeE5tczdEYjdVbWdlSkF3OWlGSS1WZ3NEMFJpcUR3Vlpyd2xIN2x4NXFJUDJVMHh6OXZNNW05SUNIZ2J5UjV2alN6MGZ3ZlRJWDlhLW05VUdsM3EyWFZfcm9DSzNzZE5jSG9wYnVvaTVuQ3N4YjRfZUc3c19UNFRqZktUMnBsNTVleUx5YVBySEVwR0NVaXpjUGVQR192clpsZ0xtQWFNSnlQanhkLTV3aVBBM2FqdjN6WktueWtiRnI2RU9tMXc?oc=5" },
-  { time: "20:22", tag: "ai", tagText: "AI", text: "AI模型初创公司Hypersphere完成数亿元人民币天使轮融资，显示资本仍在加注AI基础模型赛道。", source: "TechNode", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMEFDTkZmdGVHOW4zZXNHWXVFMzBNMlZzSXJ4MEVVMGh5blJpU2gzSEpJbklGMEVDRkoyNERnUTNzeUJUdDQ0bDl3RkNLRERBZDRad3E2eFpnNEZpbUNhQXZBV3VjamxSSm5uZEt4d2s2WjNhYkFXNzVvdXFwVnpJNE9TNWZfOG15QV9ULXRTcEwzcy1ROWpXWjhQNXNaMmVIZXZaRDMxYjN0OTBYTkFCRFpRUQ?oc=5" },
-  { time: "19:00", tag: "tech", tagText: "科技", text: "Crunchbase News报道，2026年迄今加州初创企业融资额已超过美国历史上任何单一年份的全美初创融资总额，凸显AI热潮下资本高度集中于加州。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZmNHdFJwVThneldHNms3UmVGeW9HUEk4V0ZPaFpiV0t6ZTQ3VTRmQ1FISnR1RThjVXFWQnNjbjM1aUxtQ2V4elFTa1M0cHBiVEc2NlQtQ3JYMDIwU1l0aXdQVk1UNWtld1pTWkU1OUtkaUtyRkw3ejZKbnpNZHp4NWplbFliQjB4a3BtS25nZlplanhnNnVQNF9B?oc=5" },
 ];
-const aiBreakingDate = "2026年10月27日 03:10 CST";
+const aiBreakingDate = "2026年10月27日 07:45 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
