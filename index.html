@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 20.98,
+  score: 22.01,
   rating: "extreme fear",
-  timestamp: "2026-10-23T23:59:44+00:00",
-  previousClose: 19.81,
-  previous1Week: 22.07,
-  previous1Month: 32.54,
-  previous1Year: 27.57,
-  date: "2026年10月26日 13:59 CST"
+  timestamp: "2026-10-26T12:30:13+00:00",
+  previousClose: 20.98,
+  previous1Week: 20.8,
+  previous1Month: 36.94,
+  previous1Year: 32.46,
+  date: "2026年10月26日 20:47 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,12 @@ const breakingNews = [
   { time: "21:10", tag: "tech", tagText: "科技", text: "生物科技板块集体走强，临床数据利好、并购交易回暖及新药物技术平台推动行业复苏。分析师看好相关ETF与个股，认为创新药周期重启，但提醒个股分化明显、需精选标的。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/biotech-stocks-drug-innovation-rally.html" },
   { time: "21:08", tag: "macro", tagText: "宏观", text: "报道称捷蓝航空债权人正与重组顾问PJT Partners合作。伊朗战争导致航空燃油成本飙升，尽管票价上涨且需求稳定，美国航司利润率仍承压。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/jetblue-creditors-pjt-partners-restructuring-adviser.html" },
 ];
-const breakingDate = "2026年10月26日 13:59 CST";
+const breakingDate = "2026年10月26日 20:47 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:22", tag: "ai", tagText: "AI", text: "AI模型初创公司Hypersphere完成数亿元人民币天使轮融资，显示资本仍在加注AI基础模型赛道。", source: "TechNode", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMEFDTkZmdGVHOW4zZXNHWXVFMzBNMlZzSXJ4MEVVMGh5blJpU2gzSEpJbklGMEVDRkoyNERnUTNzeUJUdDQ0bDl3RkNLRERBZDRad3E2eFpnNEZpbUNhQXZBV3VjamxSSm5uZEt4d2s2WjNhYkFXNzVvdXFwVnpJNE9TNWZfOG15QV9ULXRTcEwzcy1ROWpXWjhQNXNaMmVIZXZaRDMxYjN0OTBYTkFCRFpRUQ?oc=5" },
+  { time: "19:00", tag: "tech", tagText: "科技", text: "Crunchbase News报道，2026年迄今加州初创企业融资额已超过美国历史上任何单一年份的全美初创融资总额，凸显AI热潮下资本高度集中于加州。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZmNHdFJwVThneldHNms3UmVGeW9HUEk4V0ZPaFpiV0t6ZTQ3VTRmQ1FISnR1RThjVXFWQnNjbjM1aUxtQ2V4elFTa1M0cHBiVEc2NlQtQ3JYMDIwU1l0aXdQVk1UNWtld1pTWkU1OUtkaUtyRkw3ejZKbnpNZHp4NWplbFliQjB4a3BtS25nZlplanhnNnVQNF9B?oc=5" },
   { time: "06:04", tag: "tech", tagText: "科技", text: "朝鲜日报报道，随着半导体企业间的联盟加速成形，定制化HBM（高带宽内存）时代正式开启。业内将HBM从过去以标准化规格供货，转向按客户加速器与系统需求进行定制设计，这反映出AI芯片对内存带宽、功耗与散热的要求日益严苛，也意味着存储厂商与AI芯片、云厂商之间的绑定将进一步加深。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbWNxMlJDS0FxQlFqbHlYZVJuMnZ3RVN1UDY4R1VDbzEtcnM2QWttSksxV1pMbm9jX2NuNGNFSGVnTkdyM010enp0SFRld09DQmhBLU9nQktWb3d2Z1dFSkd3TVZMMHlzeVMxdV9YS3VwejJjRVgzSEF4Mm1HZTFsVC1FVTFidHk3?oc=5" },
   { time: "05:31", tag: "ai", tagText: "AI", text: "xAI 旗下 Grok 发布其 AI 生成的《奥德赛》影片首七分钟片段，被视为 AI 视频生成迈向长片制作的最新尝试。报道评价画面质量尚可，但在艺术性、灵感与人文表达方面仍显不足。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/" },
   { time: "05:29", tag: "tech", tagText: "科技", text: "BBC《蓝色星球III》在AI时代刻意保留“不完美镜头”：制作团队表示将留下瑕疵画面以证明素材真实性，与此前系列追求极致清晰、唯美画面的风格形成对比，回应观众对AI生成或过度修饰自然影像的疑虑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "23:00", tag: "ai", tagText: "AI", text: "谷歌宣布将对话式 Gemini AI 助手引入苹果 CarPlay，首先面向美国驾驶员开放，可用于导航等语音交互；此前该助手已登陆 Android Auto。", source: "The Verge", url: "https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps" },
   { time: "22:47", tag: "ai", tagText: "AI", text: "Meta 在出版商反对后推迟执行新商业条款。出版商担忧，新条款可能允许 Meta 抓取新闻网站内容用于 AI 训练；Fast Company 此前报道了这一争议，Meta 现决定暂缓强制执行。", source: "The Verge", url: "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping" },
   { time: "22:25", tag: "ai", tagText: "AI", text: "CoreWeave 推出面向机器人和自动驾驶开发的 Physical AI 模板，帮助开发者更快构建、训练和部署物理 AI 应用。", source: "AI Insider", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOHdkM0tjMHVidmtBaWJNeUxfcEkzS25fNkt2aThhMlBVdExZY21iekJ2dDFUdWY5a3lGcXgxemRUZHdFd3NyLXJQYzdwb0dGbXhvdHZXOThBbUJyaGhiTl9mb0hhS3pOaGdTMUx6SUI0US1nU1FRdUVSLUFxYTd5dDhhMW9mYWZUNUlfMWRTWVVxRHp5R01Xa2FUY0NxTXRGUXdLQWt6VUVna3dzS2ZB?oc=5" },
-  { time: "22:18", tag: "ai", tagText: "AI", text: "Spotify 宣布过去一年从其推荐系统中移除逾 5000 万首被认定为 AI 生成垃圾内容或 spam 的歌曲，以清理平台推荐质量、应对 AI 内容泛滥。", source: "The Verge", url: "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed" },
-  { time: "21:25", tag: "tech", tagText: "科技", text: "Reddit 子版块 r/opensource 版主发布新投稿规则，禁止使用或由 AI 生成的项目，同时限制非英语使用者等。该规则以「如果你的项目使用 AI、由 AI 制作……」为开头，在开源社区引发对 AI 生成内容与治理边界的讨论。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban" },
 ];
-const aiBreakingDate = "2026年10月26日 13:59 CST";
+const aiBreakingDate = "2026年10月26日 20:47 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
