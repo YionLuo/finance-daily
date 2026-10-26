@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 29.91,
+  score: 27.02,
   rating: "fear",
-  timestamp: "2026-10-26T15:29:26+00:00",
+  timestamp: "2026-10-26T19:05:25+00:00",
   previousClose: 20.98,
   previous1Week: 20.8,
   previous1Month: 36.94,
   previous1Year: 32.46,
-  date: "2026年10月26日 23:31 CST"
+  date: "2026年10月27日 03:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "02:43", tag: "tech", tagText: "科技", text: "苹果回应多名用户报告新款折叠屏手机iPhone Duo屏幕损坏，称已知悉问题并将在AppleCare保修范围内为用户更换设备。这是苹果首代折叠机型遭遇的可靠性质疑，市场关注其对销量、保修成本及后续产品迭代的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html" },
+  { time: "02:37", tag: "macro", tagText: "宏观", text: "美国联邦贸易委员会（FTC）联合20个州起诉Dollar General，指控其向消费者收取高于标示价格的费用。该案是监管机构针对零售定价行为的最新执法行动，若败诉公司可能面临罚款、赔偿与整改成本，并可能波及整个折扣零售行业的定价合规审查。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/ftc-dollar-general-lawsuit.html" },
+  { time: "02:05", tag: "geo", tagText: "地缘", text: "联邦法官裁定，特朗普政府解雇前曼哈顿联邦检察官Maurene Comey（前FBI局长James Comey之女）属违法行为。这一裁决打击了行政部门有关总统拥有广泛免职权的主张，并可能为其他被解职官员的诉讼提供先例，涉及行政权边界的法律与政治博弈升温。", source: "Financial Times", url: "https://www.ft.com/content/627ed704-f736-4fa2-91c9-67e53577fb7f?syn-25a6b1a6=1" },
+  { time: "01:40", tag: "tech", tagText: "科技", text: "微软向约6万名员工提供自愿离职买断方案，试图在AI基础设施大规模扩张与资本效率之间取得平衡。此举反映超大规模云厂商在AI资本开支激增背景下正同步推进人员与成本优化，也显示AI带来的效率提升正在重塑大型科技公司的人力结构。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html" },
+  { time: "01:36", tag: "geo", tagText: "地缘", text: "CNBC最新调查显示，曾在2024年助特朗普入主白宫的选民联盟已明显削弱，经济与生活成本问题成为主要流失原因。距离中期选举仅一年，这一变化可能影响共和党的国会选情与后续政策议程（包括关税与财政谈判）的推进空间。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/trump-approval-midterms-cnbc-survey.html" },
+  { time: "00:01", tag: "macro", tagText: "宏观", text: "缅因州共和党参议员Susan Collins称已成功游说特朗普放弃对加拿大的部分关税。面对艰难的中期选举选情，这位五届参议员将反关税立场作为竞选卖点，显示共和党内部在贸易政策上的分歧扩大，关税走向的不确定性仍将影响企业成本与通胀预期。", source: "MarketWatch", url: "https://www.marketwatch.com/story/some-republicans-are-opposing-trump-on-tariffs-maines-susan-collins-just-got-him-to-back-down-on-canadian-levies-02b202ae?mod=mw_rss_topstories" },
   { time: "23:30", tag: "tech", tagText: "科技", text: "分析指出，在AI资本开支激增、同业自由现金流普遍承压的背景下，微软可能成为唯一维持自由现金流为正的超大规模云厂商。这一财务韧性差异被视为MSFT估值的重要支撑，也凸显市场对“AI烧钱换增长”模式的审视正在加深。", source: "Barchart.com", url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQWFpDcUN6TWdfQ1AxeUMtTzZyNjdTRnJONzg0YWZTNFV6V2k5WDZxdl9TQXBrU1p0bk9PMVFLRkxma3VMdGNkSW8xcXczX1U1OUJBODNUN3BjaTZqMmNFcFFWQTZDb0VRZWRRY0Jnd2R4Wlk0TWFtbWpja2x0REQwd2xLaExFSVVDYnJfQm1iUl8xYndVMkZVZmRtV3JSVE5jMVBnRTA3T3diZ2ZZM0ktZDhqdldZajNyekE4WVNSVWJkZjI4X0g0cHB4T2FMcGJOTE1F?oc=5" },
   { time: "23:24", tag: "macro", tagText: "宏观", text: "美股周一小幅高开走高，纳指涨约1%，Anthropic递交IPO文件提振科技股情绪；油价回落亦提供支撑。本周市场焦点为周三美联储利率决议，以及微软、谷歌等大型科技股密集发布财报，被视为数周来最大考验。", source: "CNBC", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE1RYndxMUwyOEhHdkN2LUJFcFM5OXViRV9sLV9PNGdiZDJTdjVMTXBYeVh3LXBBdW5EYkRBd1hzWXhPT1hXVUxTYmR3YjU2Rnpuekk4V0hRd0tId3NERjBXb1IydTBKSDRNM25RRFptRHFIYXNrOGxn0gF8QVVfeXFMTzZtMm5Xc0pMVlEta0dPbmY1S0Y0RUZmaF84alY2X3Iwb04tajltY0JIMGNFZ2dtaWp3ZDFhZ09RV2tjVm1KbU9HRm9WeWYxT25mc0d5bjgyLVJfMFZ0OTNxM3g5Umc5XzBidXpQR21ld203cUpxNTA2RjhlWA?oc=5" },
   { time: "23:19", tag: "macro", tagText: "宏观", text: "阿波罗全球管理（Apollo）将收购阿布扎比支持的另类资产管理公司Mubadala Capital近10%股份，进一步推进其在被誉为“资本之都”的阿布扎比的布局。交易显示海湾主权资本与华尔街资管巨头在私募市场的绑定持续加深。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/apollo-mubadala-capital-stake.html" },
@@ -1643,17 +1649,21 @@ const breakingNews = [
   { time: "21:10", tag: "tech", tagText: "科技", text: "生物科技板块集体走强，临床数据利好、并购交易回暖及新药物技术平台推动行业复苏。分析师看好相关ETF与个股，认为创新药周期重启，但提醒个股分化明显、需精选标的。", source: "CNBC", url: "https://www.cnbc.com/2026/10/24/biotech-stocks-drug-innovation-rally.html" },
   { time: "21:08", tag: "macro", tagText: "宏观", text: "报道称捷蓝航空债权人正与重组顾问PJT Partners合作。伊朗战争导致航空燃油成本飙升，尽管票价上涨且需求稳定，美国航司利润率仍承压。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/jetblue-creditors-pjt-partners-restructuring-adviser.html" },
   { time: "08:03", tag: "macro", tagText: "宏观", text: "全球养老金体系正面临人口结构危机：寿命延长与出生率下降持续挤压退休财务。报道称，若不大幅改革，养老金缺口可能演变为“定时炸弹”，影响数亿人的退休保障与主权财政。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/pension-funds-ageing-crisis-risk-investment.html" },
-  { time: "08:00", tag: "macro", tagText: "宏观", text: "高盛将韩国Kospi指数目标下调25%至9,000点，但仍维持看多韩国股市，认为较当前水平有逾60%上行空间。此次下调反映盈利与宏观压力，但未改变其结构性乐观判断。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/goldman-slashes-kospi-target-korea-stocks.html" },
-  { time: "07:55", tag: "geo", tagText: "地缘", text: "法国因不平等与生活成本上升爆发的抗议进入第二个周末，全国约41万人参与，多座城市发生冲突。社会动荡加剧法国政府的财政与政治压力，并可能影响欧元区政策预期。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/france-protests-paris-cost-of-living-inequality.html" },
-  { time: "07:52", tag: "macro", tagText: "宏观", text: "美股期货上涨，交易员试图从标普500指数的下跌周中恢复；市场聚焦周三美联储政策决议。投资者关注利率路径指引及对经济数据的最新评估。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/stock-market-today-live-updates.html" },
-  { time: "05:29", tag: "geo", tagText: "地缘", text: "巴西总统决选计票因最高法院延长投票时间而暂停。此次决选选情胶着，右翼挑战者有望击败左翼现任总统，使巴西进一步靠拢美国，反映拉美地区保守化转向。多地因公交与渡轮运力不足引发交通投诉，加剧选举紧张氛围，结果或影响巴西财政、货币政策及对美关系走向。", source: "CNBC", url: "https://www.cnbc.com/2026/10/25/brazil-lula-bolsonaro-presidential-election-runoff.html" },
-  { time: "05:01", tag: "geo", tagText: "地缘", text: "塞尔维亚前总统武契奇在议会选举中承认败给反对派“学生名单”。该草根政党脱胎于历时两年、以反腐和反压迫为核心诉求的抗议运动，此次投票率接近历史高位。政权更迭或重塑巴尔干地区政治格局，并影响塞尔维亚在欧盟与俄罗斯之间的平衡立场。", source: "Financial Times", url: "https://www.ft.com/content/546f21f5-22d3-4696-8371-7bef8c0410b3?syn-25a6b1a6=1" },
-  { time: "03:21", tag: "geo", tagText: "地缘", text: "英国不会加入加拿大主导的防务银行，消息人士称。该决定可能削弱这一新机构在西方防务融资领域的覆盖范围，也反映各国在国防产业融资安排上的分歧。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdUt0ejc0NEtPd0U5enNlek5yek5Jak91bUlPdGtLY3FzQ2I3THJXTkhpVFYtdVZPUjZwRnY5ZnBGcmp3dGh1d2d2dlBvNExnTlRKZ2pPamp1X0ZBQzNib2ZGcFJZX3FBdWZsUEV6UkhNWG1WYzc1Y3ZBY1Y3X01qaURXejBwWUZIcHZrMDlWd3ptX2ZKX0wwTEJmci1fOWt5My1IZlY2cURXYVE?oc=5" },
 ];
-const breakingDate = "2026年10月26日 23:31 CST";
+const breakingDate = "2026年10月27日 03:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
+  { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
+  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
+  { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
+  { time: "02:32", tag: "ai", tagText: "AI", text: "宾夕法尼亚州州长 Josh Shapiro 签署《人工智能欺骗性广告法案》，要求所有由 AI 生成的广告必须进行披露标注。该法适用于任何广告形式，旨在防止深度伪造与AI合成内容误导消费者，成为州层面AI广告监管的最新案例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act" },
+  { time: "01:30", tag: "tech", tagText: "科技", text: "二手奢侈品寄售平台The RealReal升级机器人防御系统，使AI代理更难在其网站自动购物；在代理式购物兴起背景下，零售商开始限制AI代理访问，平台与AI代理之间的摩擦升温。", source: "The Verge", url: "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal" },
+  { time: "00:57", tag: "ai", tagText: "AI", text: "阿波罗全球管理首席经济学家指出，尽管企业在人工智能领域投入巨额资金且市场热炒，但对科技行业以外的美国企业而言，这项技术迄今带来的财务回报几乎为零。这一判断对当前由AI资本开支驱动的生产率与盈利预期构成直接质疑，也呼应了市场对AI投资回报周期过长的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/" },
+  { time: "00:46", tag: "ai", tagText: "AI", text: "SpaceX在监管文件中披露，已与Apollo锁定约400亿美元有约束力融资承诺，用于支付AI芯片及相关数据中心设备，显示AI基础设施军备竞赛正延伸到航天与科技巨头之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/" },
+  { time: "23:58", tag: "tech", tagText: "科技", text: "微软向美国、英国、加拿大和印度最多6万名员工提供自愿买断方案；首席人力官Amy Coleman在内部信中表示，此举旨在给员工提供选择。该规模反映科技行业重组仍在持续。", source: "The Verge", url: "https://www.theverge.com/tech/1018666/microsoft-expands-buyouts-60000-employees-eligible" },
+  { time: "23:56", tag: "ai", tagText: "AI", text: "OpenAI、Anthropic与谷歌DeepMind加入英国新设立的AI生物安全任务，参与合作应对AI可能带来的生物安全风险，表明前沿AI公司正加大与政府在安全治理上的协作。", source: "Brave New Coin", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ3ZtM2FBa2c1Um1ia2hhM1dmOGk3OWVwd3NCRFFSTk1Wa0hwTXFWdzZjQlNNcEpXU2pWUkR3WjNhNm5TSHhJNEdBZHBFNmpIa214TTQ2Z052QVcya1FMeUJndElHcEoxN1dvdXpabTFzMkxxeXZRZ0lVMS1GWWo2czE3VXBsZ3BTR2g1dUlrSEVjN0ZQVUZIcjZzYU1jWWd5VVFmRUZxTEJqUQ?oc=5" },
   { time: "23:12", tag: "tech", tagText: "科技", text: "PHP被披露存在两个安全漏洞，可能危及大量网站；按部分统计，全球多达70%的网站使用PHP，维基百科等均受影响，安全团队正紧急修补。", source: "The Verge", url: "https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down" },
   { time: "23:03", tag: "ai", tagText: "AI", text: "Spotify 联席 CEO Gustav Söderström 表示，公司当前的 AI 押注是成为“AI 智能体首选的音乐服务”：随着代理式 AI 替用户完成点播、发现与订阅操作，音乐平台需要让自家接口、推荐与版权体系对智能体友好，从而在流量入口从人转向代理的过程中保住分发话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/" },
   { time: "23:00", tag: "ai", tagText: "AI", text: "一项新研究发现，在近500场选举对决中，被要求二选一时，xAI的Grok模型压倒性地倾向推荐共和党候选人，而OpenAI的GPT则偏向民主党，两者在超过90%的竞选中立场相反。这凸显大模型在政治议题上的系统性偏差，以及AI在选举信息场中的潜在影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" },
@@ -1664,18 +1674,8 @@ const aiBreakingNews = [
   { time: "21:39", tag: "ai", tagText: "AI", text: "一项研究发现，AI在谈判建议中存在性别偏见：面对女性用户时更倾向引导其关注照护类福利，而非争取更高薪酬，可能对职场薪酬平等产生负面影响。", source: "Canadian HR Reporter", url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxNeE5tczdEYjdVbWdlSkF3OWlGSS1WZ3NEMFJpcUR3Vlpyd2xIN2x4NXFJUDJVMHh6OXZNNW05SUNIZ2J5UjV2alN6MGZ3ZlRJWDlhLW05VUdsM3EyWFZfcm9DSzNzZE5jSG9wYnVvaTVuQ3N4YjRfZUc3c19UNFRqZktUMnBsNTVleUx5YVBySEVwR0NVaXpjUGVQR192clpsZ0xtQWFNSnlQanhkLTV3aVBBM2FqdjN6WktueWtiRnI2RU9tMXc?oc=5" },
   { time: "20:22", tag: "ai", tagText: "AI", text: "AI模型初创公司Hypersphere完成数亿元人民币天使轮融资，显示资本仍在加注AI基础模型赛道。", source: "TechNode", url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMEFDTkZmdGVHOW4zZXNHWXVFMzBNMlZzSXJ4MEVVMGh5blJpU2gzSEpJbklGMEVDRkoyNERnUTNzeUJUdDQ0bDl3RkNLRERBZDRad3E2eFpnNEZpbUNhQXZBV3VjamxSSm5uZEt4d2s2WjNhYkFXNzVvdXFwVnpJNE9TNWZfOG15QV9ULXRTcEwzcy1ROWpXWjhQNXNaMmVIZXZaRDMxYjN0OTBYTkFCRFpRUQ?oc=5" },
   { time: "19:00", tag: "tech", tagText: "科技", text: "Crunchbase News报道，2026年迄今加州初创企业融资额已超过美国历史上任何单一年份的全美初创融资总额，凸显AI热潮下资本高度集中于加州。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZmNHdFJwVThneldHNms3UmVGeW9HUEk4V0ZPaFpiV0t6ZTQ3VTRmQ1FISnR1RThjVXFWQnNjbjM1aUxtQ2V4elFTa1M0cHBiVEc2NlQtQ3JYMDIwU1l0aXdQVk1UNWtld1pTWkU1OUtkaUtyRkw3ejZKbnpNZHp4NWplbFliQjB4a3BtS25nZlplanhnNnVQNF9B?oc=5" },
-  { time: "06:04", tag: "tech", tagText: "科技", text: "朝鲜日报报道，随着半导体企业间的联盟加速成形，定制化HBM（高带宽内存）时代正式开启。业内将HBM从过去以标准化规格供货，转向按客户加速器与系统需求进行定制设计，这反映出AI芯片对内存带宽、功耗与散热的要求日益严苛，也意味着存储厂商与AI芯片、云厂商之间的绑定将进一步加深。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbWNxMlJDS0FxQlFqbHlYZVJuMnZ3RVN1UDY4R1VDbzEtcnM2QWttSksxV1pMbm9jX2NuNGNFSGVnTkdyM010enp0SFRld09DQmhBLU9nQktWb3d2Z1dFSkd3TVZMMHlzeVMxdV9YS3VwejJjRVgzSEF4Mm1HZTFsVC1FVTFidHk3?oc=5" },
-  { time: "05:31", tag: "ai", tagText: "AI", text: "xAI 旗下 Grok 发布其 AI 生成的《奥德赛》影片首七分钟片段，被视为 AI 视频生成迈向长片制作的最新尝试。报道评价画面质量尚可，但在艺术性、灵感与人文表达方面仍显不足。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/" },
-  { time: "05:29", tag: "tech", tagText: "科技", text: "BBC《蓝色星球III》在AI时代刻意保留“不完美镜头”：制作团队表示将留下瑕疵画面以证明素材真实性，与此前系列追求极致清晰、唯美画面的风格形成对比，回应观众对AI生成或过度修饰自然影像的疑虑。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai" },
-  { time: "03:32", tag: "ai", tagText: "AI", text: "Jack Dorsey 旗下 Block 发布 AI 模型 Dessa，称完全基于人类对话从零训练，主打更自然、甚至略带笨拙感的语音交流；Block 还展示了该模型与人类的多段对话。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech" },
-  { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
-  { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
-  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
-  { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
-  { time: "02:32", tag: "ai", tagText: "AI", text: "宾夕法尼亚州州长 Josh Shapiro 签署《人工智能欺骗性广告法案》，要求所有由 AI 生成的广告必须进行披露标注。该法适用于任何广告形式，旨在防止深度伪造与AI合成内容误导消费者，成为州层面AI广告监管的最新案例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act" },
-  { time: "00:57", tag: "ai", tagText: "AI", text: "阿波罗全球管理首席经济学家指出，尽管企业在人工智能领域投入巨额资金且市场热炒，但对科技行业以外的美国企业而言，这项技术迄今带来的财务回报几乎为零。这一判断对当前由AI资本开支驱动的生产率与盈利预期构成直接质疑，也呼应了市场对AI投资回报周期过长的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/" },
 ];
-const aiBreakingDate = "2026年10月26日 23:31 CST";
+const aiBreakingDate = "2026年10月27日 03:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
