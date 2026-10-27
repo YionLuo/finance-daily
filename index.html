@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 28.45,
+  score: 32.63,
   rating: "fear",
-  timestamp: "2026-10-27T10:04:16+00:00",
+  timestamp: "2026-10-27T15:29:09+00:00",
   previousClose: 27.08,
   previous1Week: 29.57,
   previous1Month: 36.94,
   previous1Year: 37.34,
-  date: "2026年10月27日 18:23 CST"
+  date: "2026年10月27日 23:33 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,13 @@ const breakingNews = [
   { time: "02:05", tag: "geo", tagText: "地缘", text: "联邦法官裁定，特朗普政府解雇前曼哈顿联邦检察官Maurene Comey（前FBI局长James Comey之女）属违法行为。这一裁决打击了行政部门有关总统拥有广泛免职权的主张，并可能为其他被解职官员的诉讼提供先例，涉及行政权边界的法律与政治博弈升温。", source: "Financial Times", url: "https://www.ft.com/content/627ed704-f736-4fa2-91c9-67e53577fb7f?syn-25a6b1a6=1" },
   { time: "01:40", tag: "tech", tagText: "科技", text: "微软向约6万名员工提供自愿离职买断方案，试图在AI基础设施大规模扩张与资本效率之间取得平衡。此举反映超大规模云厂商在AI资本开支激增背景下正同步推进人员与成本优化，也显示AI带来的效率提升正在重塑大型科技公司的人力结构。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html" },
 ];
-const breakingDate = "2026年10月27日 18:23 CST";
+const breakingDate = "2026年10月27日 23:33 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:12", tag: "tech", tagText: "科技", text: "PHP被披露存在两个安全漏洞，可能危及大量网站；按部分统计，全球多达70%的网站使用PHP，维基百科等均受影响，安全团队正紧急修补。", source: "The Verge", url: "https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down" },
+  { time: "23:03", tag: "ai", tagText: "AI", text: "Spotify 联席 CEO Gustav Söderström 表示，公司当前的 AI 押注是成为“AI 智能体首选的音乐服务”：随着代理式 AI 替用户完成点播、发现与订阅操作，音乐平台需要让自家接口、推荐与版权体系对智能体友好，从而在流量入口从人转向代理的过程中保住分发话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/" },
+  { time: "23:00", tag: "ai", tagText: "AI", text: "一项新研究发现，在近500场选举对决中，被要求二选一时，xAI的Grok模型压倒性地倾向推荐共和党候选人，而OpenAI的GPT则偏向民主党，两者在超过90%的竞选中立场相反。这凸显大模型在政治议题上的系统性偏差，以及AI在选举信息场中的潜在影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" },
   { time: "18:00", tag: "ai", tagText: "AI", text: "美国各地针对大型数据中心快速扩建的反对声浪正在跨党派升温。围绕电力消耗、土地占用、基础设施成本与环境影响的争议，正成为2026年中期选举中少数能同时动员左右翼选民的地方议题，可能拖慢AI算力基础设施建设。", source: "The Verge", url: "https://www.theverge.com/policy/1019152/data-centers-midterm-elections" },
   { time: "13:58", tag: "tech", tagText: "科技", text: "三星与英伟达建立合作，为AI芯片供应基板。此举旨在保障先进AI芯片封装所需关键材料与产能，也反映AI算力竞赛正向上游半导体材料、封装和供应链环节延伸。", source: "ET Datacenters", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPWHcxWEpnenJ1R3VBcXlXeTZQVWw0TDdUWTNjcTlwY0dOSktoLW0xaktGcklzd3RjNElCSlJCc2tVbjR4T3otN2VETXVydUFMS3dDX0VHNTlHYkpqeXdYeHlDanFSc0VGc19rZE5KZGo1NjdmVW1RV19KaVlLUWtkQlo3QUhSdEtvd2llRjk4WDU0bzF6dHE4MmdGNVpIbmJpRGNkVUQyV0lsU05LWXZjN25pRlB0XzBIOUxfeTM3a21WQ21JR1ZMSXhKNlZUcWk0XzBFenZHTGLSAdwBQVVfeXFMUEhfTTVPeEtFOTctUUFzMTlqdGI4NFZHX2RxTmRkdUwzTlRYOEVoWl8wR0F6WUotZFRVdTk0dzF6bk1OTURYbEE1UGdMNjJ2SUZIU05BNEFvbFJkNkJyTGZXV3Y1SnpfQXlGVEhVNFp5LVFhV2ZlMy1XSnlRVzBuTjVDMTZwMG9UNjRlV0x6bTUtekJJRlJfUzVtbDdhRE91blVfQTBKYjVBX2hwcjNmTEhPR1ZqN3J3UmtzQVVMN1ZZelZPN212cC16RkNTNXFnWldQbkJMaTJtLU5meQ?oc=5" },
   { time: "11:45", tag: "ai", tagText: "AI", text: "IOL 报道称，AI 公司 Dessa 在语音人工智能方面取得突破：机器已具备聆听、对话乃至模仿人声的能力。报道以“机器正在听、正在说、正在模仿”形容这一进展，反映出语音合成与语音克隆技术的拟真度正快速提升，同时也再度引发对深度伪造与身份冒用风险的担忧。", source: "IOL", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOcnVhVDR0WmVDMTRiYllRaXp3Z3VuUHBTZGM3OHJLMGo5LW9EOHppYmp1cGNHQXJXX3J1TTN5bFpWZVhvdzRKX1ZkcXA3RkMxUEtSdkhKNVZfNmo2LVJjZ1lwR0sxbjhIVW5kZ3h5akJtcnVtMTFxRnRBMUFBQm1FTXBXTWRYdDlCQ2JIdlBfX25CeVNaQ1hka0RZU3VZbWpIVE92ZjBfMmtSbGh1QUhsdU9qVmJtSzJ5SUJVLVpJRTZYN2FOZWhUOVR2TlZuRXJPLXBJNjNjNWNGZThBclVINDFnYw?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "00:46", tag: "ai", tagText: "AI", text: "SpaceX在监管文件中披露，已与Apollo锁定约400亿美元有约束力融资承诺，用于支付AI芯片及相关数据中心设备，显示AI基础设施军备竞赛正延伸到航天与科技巨头之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/" },
   { time: "23:58", tag: "tech", tagText: "科技", text: "微软向美国、英国、加拿大和印度最多6万名员工提供自愿买断方案；首席人力官Amy Coleman在内部信中表示，此举旨在给员工提供选择。该规模反映科技行业重组仍在持续。", source: "The Verge", url: "https://www.theverge.com/tech/1018666/microsoft-expands-buyouts-60000-employees-eligible" },
   { time: "23:56", tag: "ai", tagText: "AI", text: "OpenAI、Anthropic与谷歌DeepMind加入英国新设立的AI生物安全任务，参与合作应对AI可能带来的生物安全风险，表明前沿AI公司正加大与政府在安全治理上的协作。", source: "Brave New Coin", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ3ZtM2FBa2c1Um1ia2hhM1dmOGk3OWVwd3NCRFFSTk1Wa0hwTXFWdzZjQlNNcEpXU2pWUkR3WjNhNm5TSHhJNEdBZHBFNmpIa214TTQ2Z052QVcya1FMeUJndElHcEoxN1dvdXpabTFzMkxxeXZRZ0lVMS1GWWo2czE3VXBsZ3BTR2g1dUlrSEVjN0ZQVUZIcjZzYU1jWWd5VVFmRUZxTEJqUQ?oc=5" },
-  { time: "23:12", tag: "tech", tagText: "科技", text: "PHP被披露存在两个安全漏洞，可能危及大量网站；按部分统计，全球多达70%的网站使用PHP，维基百科等均受影响，安全团队正紧急修补。", source: "The Verge", url: "https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down" },
-  { time: "23:03", tag: "ai", tagText: "AI", text: "Spotify 联席 CEO Gustav Söderström 表示，公司当前的 AI 押注是成为“AI 智能体首选的音乐服务”：随着代理式 AI 替用户完成点播、发现与订阅操作，音乐平台需要让自家接口、推荐与版权体系对智能体友好，从而在流量入口从人转向代理的过程中保住分发话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/" },
-  { time: "23:00", tag: "ai", tagText: "AI", text: "一项新研究发现，在近500场选举对决中，被要求二选一时，xAI的Grok模型压倒性地倾向推荐共和党候选人，而OpenAI的GPT则偏向民主党，两者在超过90%的竞选中立场相反。这凸显大模型在政治议题上的系统性偏差，以及AI在选举信息场中的潜在影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" },
 ];
-const aiBreakingDate = "2026年10月27日 18:23 CST";
+const aiBreakingDate = "2026年10月27日 23:33 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
