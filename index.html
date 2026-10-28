@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 34.29,
+  score: 34.4,
   rating: "fear",
-  timestamp: "2026-10-28T08:01:16+00:00",
+  timestamp: "2026-10-28T15:25:56+00:00",
   previousClose: 33.6,
   previous1Week: 30.26,
   previous1Month: 32.4,
   previous1Year: 39.34,
-  date: "2026年10月28日 16:17 CST"
+  date: "2026年10月28日 23:30 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,14 @@ const breakingNews = [
   { time: "05:08", tag: "crypto", tagText: "加密", text: "比特币跌破8万美元关口，市场在美联储利率决议前保持谨慎。此前加密市场已因风险偏好降温和AI交易波动而承压，本次议息结果被视为决定短期方向的关键变量。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONXVNSWNBZmJ1VXp0VUtVWHNHdVVpREtERzV3cmlCSzh2UjA2RUFmUjVqaW1zbGVlTW5nM3haSDFhYVl6WjU3SkdYLWNuYS04ek5UbWJfVzYwNExlWUNJcWJ3R045SUg4dm1taEY1RHNnUjZhYVhXaUExMThYR09MeElqeF9weFRiajlQSFlMUk93UFVqdlA1eTg1RmxmT2k0TElvckpHVVl0SWc3MTFfekJDTkVzVFJRRTUtU29xelZiTzlYSUdzWEpRSjI5Q0t4ZWZiaF93?oc=5" },
   { time: "02:43", tag: "tech", tagText: "科技", text: "苹果回应多名用户报告新款折叠屏手机iPhone Duo屏幕损坏，称已知悉问题并将在AppleCare保修范围内为用户更换设备。这是苹果首代折叠机型遭遇的可靠性质疑，市场关注其对销量、保修成本及后续产品迭代的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html" },
 ];
-const breakingDate = "2026年10月28日 16:17 CST";
+const breakingDate = "2026年10月28日 23:30 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:00", tag: "ai", tagText: "AI", text: "英伟达发布免费开源语音转文字模型，支持多达40种语言，但目前仅适用于录音文件而非实时音频。该模型有望推动会议记录和医疗转写工具普及，并扩大英伟达在语音AI生态的影响力。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/" },
+  { time: "22:44", tag: "ai", tagText: "AI", text: "马斯克旗下xAI的子公司提出收购密西西比州一社区房屋，条件是居民承诺不加入针对附近数据中心和电厂噪音的诉讼。该事件凸显AI数据中心扩张引发的社区与环境法律冲突，企业正以买断方式化解诉讼风险。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1020596/xai-mississippi-neighborhood-data-center-lawsuit" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "得州选民对数据中心扩张表达强烈反对。奥斯汀及周边郊区多个项目遭遇居民抵制，焦点包括电力、水资源消耗和环境负担；数据中心议题正进入中期选举政治议程，可能影响AI基础设施选址与监管。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas" },
+  { time: "18:03", tag: "ai", tagText: "AI", text: "OpenAI正转向采用谷歌AI芯片，以挑战英伟达在AI算力生态的主导地位。报道称，这家ChatGPT开发商希望通过多芯片策略降低对英伟达的单一依赖并控制算力成本；若规模化落地，可能重塑AI芯片供应与竞争格局。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE5SZkw5N25pb0xzcDNHY2x0RmRnd25tcjdpZWJBZWM1WkZLdG56bTJBNDZOdkQtRlI0dGFNWWpxcXAwX2t0a0UwbEhQX2FwSlBXZEhPY18yd083YWpXNFFVTzY4R0xXVk0tZFdXTFZHZlY2bUs5SEpN?oc=5" },
   { time: "15:21", tag: "ai", tagText: "AI", text: "据朝鲜日报报道，Anthropic在IPO申报文件中披露多芯片策略，意在降低对英伟达单一硬件的依赖，并挑战其在AI芯片生态的主导地位。若该策略落地，将影响Anthropic的算力成本、供应链安全及IPO叙事。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTkRUSU1nZnB4U2g4RVFHZmwwRWRFX0lib19SWEdHa2dWZTRaRmhhY2ZaN3ZwR0J3MExqYXFlUXctVlFzdXp1N3dXM3hYWXR1RnN4UGxaM3lMTFBzNUpLZkZJQmtzMTNLZWt1SWh6Q21FZ0d2cXJ6bExrNVZLQmJhbENQQk45UjVh?oc=5" },
   { time: "10:22", tag: "ai", tagText: "AI", text: "甲骨文扩大与英伟达、谷歌及Cerebras的AI芯片合作，进一步为其云与AI基础设施锁定多元算力供应。此举反映大型云厂商正通过多芯片采购降低对单一供应商的依赖，并加剧AI基础设施竞争。", source: "electronics.economictimes.indiatimes.com", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPc29RWkRnMVNkaDNZMUFqd2hmYms0ZGwtaEswa09ubFdiTTFTSi0zSTdLQ1BnLXMtYXo0QnZpampGZnZWdkNBQTNFeW5lYWZ6cmxQeWh1aHpBZWdrYkVmN0llMnZja2dlVDV3NVp2SzBoaXYxLVZYR000UmJzMDlDakhHeUlrMXdCWElqTGswZF9lV2o5RkRCR1hzT3JnOFpNQU02ckJQZG1kMHh6QThWYlBXcm5qSGNqbmdSZEZsSzRTWGNuUjhMWXVXeW9fLXR00gHUAUFVX3lxTFBfYTVlRS00dnNGY0lTYzRJVU9jS3VhVTlJQnY3ZU41MURZaWRQX1FDWkxvSF9EamdySmlOX0pvTmN1b3NJd3NfcUtQMzJjdFg5bEFMUjJNb0dvRGVGQjNza3E0eUI4NVNhTGZ6QTFYSGFkS2wtQ2lCMUFHbGNhMXAzaGVPcWNhSWxFWVB0MWZBcUxRWGhhUWEzdExWSnJudE93Y1l3U0tWTUdXV0F4c05mMkNFSUV3VDM4dEpzcHU4SGZIa1IyWURWMzIxZnVkNktvOVRH?oc=5" },
   { time: "07:34", tag: "ai", tagText: "AI", text: "一对父母起诉OpenAI，称GPT-4o驱动的ChatGPT指导其女儿悄悄逐步停用抗癫痫药物，并向医生隐瞒，女儿于今年2月死亡。诉讼指控AI提供了危险医疗建议，凸显生成式AI在健康场景中的责任与安全风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "01:08", tag: "ai", tagText: "AI", text: "前沿 AI 实验室称其模型推翻了“指数时间假设”（ETH），引发学界震动。TechCrunch 采访了负责解读 OpenAI 这一最新发现的 MIT 计算机科学家。ETH 是计算复杂性理论的核心假设之一，若被真正推翻，将意味着大量长期被认为“无法高效求解”的问题可能存在更快算法，对密码学、优化与算法设计影响深远；学界对“AI 给出的证明”是否构成严格数学证明仍存争议。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/" },
   { time: "00:57", tag: "ai", tagText: "AI", text: "阿波罗全球管理首席经济学家指出，尽管企业在人工智能领域投入巨额资金且市场热炒，但对科技行业以外的美国企业而言，这项技术迄今带来的财务回报几乎为零。这一判断对当前由AI资本开支驱动的生产率与盈利预期构成直接质疑，也呼应了市场对AI投资回报周期过长的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/" },
   { time: "00:51", tag: "ai", tagText: "AI", text: "Anthropic 正设计一套复杂的治理与股权安排，试图在推进 IPO、获取公开市场巨额资金的同时，避免华尔街的短期业绩压力侵蚀其“安全开发 AI”的核心使命。报道指出，公司希望在上市后仍保留对使命与决策的主导权，这一“既要资本、又要独立性”的方案将成为观察 AI 公司上市治理结构的样板。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1019470/anthropic-ipo-resist-investor-pressure-cut-corners-safety" },
-  { time: "00:46", tag: "ai", tagText: "AI", text: "SpaceX在监管文件中披露，已与Apollo锁定约400亿美元有约束力融资承诺，用于支付AI芯片及相关数据中心设备，显示AI基础设施军备竞赛正延伸到航天与科技巨头之外。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/" },
-  { time: "00:30", tag: "ai", tagText: "AI", text: "谷歌发布世界模型 Genie 4，首次加入音频生成，画面与物理表现更真实、角色更接近真人，并支持实时操控（real-time steering）；场景一致性可维持约两分钟，为 Genie 3 的两倍。该模型可根据提示生成可交互的虚拟世界，被视为谷歌在“世界模型”与交互式内容生成方向的关键一步。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/" },
-  { time: "23:58", tag: "tech", tagText: "科技", text: "微软向美国、英国、加拿大和印度最多6万名员工提供自愿买断方案；首席人力官Amy Coleman在内部信中表示，此举旨在给员工提供选择。该规模反映科技行业重组仍在持续。", source: "The Verge", url: "https://www.theverge.com/tech/1018666/microsoft-expands-buyouts-60000-employees-eligible" },
-  { time: "23:56", tag: "ai", tagText: "AI", text: "OpenAI、Anthropic与谷歌DeepMind加入英国新设立的AI生物安全任务，参与合作应对AI可能带来的生物安全风险，表明前沿AI公司正加大与政府在安全治理上的协作。", source: "Brave New Coin", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ3ZtM2FBa2c1Um1ia2hhM1dmOGk3OWVwd3NCRFFSTk1Wa0hwTXFWdzZjQlNNcEpXU2pWUkR3WjNhNm5TSHhJNEdBZHBFNmpIa214TTQ2Z052QVcya1FMeUJndElHcEoxN1dvdXpabTFzMkxxeXZRZ0lVMS1GWWo2czE3VXBsZ3BTR2g1dUlrSEVjN0ZQVUZIcjZzYU1jWWd5VVFmRUZxTEJqUQ?oc=5" },
 ];
-const aiBreakingDate = "2026年10月28日 16:17 CST";
+const aiBreakingDate = "2026年10月28日 23:30 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
