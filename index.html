@@ -1616,19 +1616,27 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 32.69,
+  score: 33.6,
   rating: "fear",
-  timestamp: "2026-10-27T20:55:32+00:00",
-  previousClose: 27.08,
-  previous1Week: 29.57,
-  previous1Month: 36.94,
+  timestamp: "2026-10-27T23:59:39+00:00",
+  previousClose: 27.34,
+  previous1Week: 28.74,
+  previous1Month: 36.91,
   previous1Year: 37.34,
-  date: "2026年10月28日 05:13 CST"
+  date: "2026年10月28日 09:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:54", tag: "geo", tagText: "地缘", text: "巴西大选结果出炉后，博索纳罗所属自由党承认败选，但美国总统特朗普称结果“被操纵”，并质疑延长投票时间的做法。市场关注巴西政治过渡进程、财政政策连续性以及美巴关系可能出现的摩擦。", source: "Financial Times", url: "https://www.ft.com/content/ae37754c-6200-425d-8f8f-ce0b0f7cc250?syn-25a6b1a6=1" },
+  { time: "08:54", tag: "geo", tagText: "地缘", text: "美国贸易代表格里尔向欧盟表示，欧盟向空客提供贷款的做法威胁到双方在飞机融资领域的贸易休战。此举可能重新点燃美欧航空补贴争端，并波及波音、空客供应链及相关关税安排。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRWRKSlpLR3l4cENjelFuU0tPXzRLc21PTTZ4QUpCNHBnZDZ0MW85NFVpYnlvLXhiaFQ3SnZ3aDhEZXRfOXg3LURobjdQWHAtSGNKalZMcVNhWGRCeDRpYzVYb1BTOXZydlFJVVFqbXRaWDlsbUozS0lSc1BsUDdhaWRuV3dpUDFFT3VXRjg4cklMT3NvOEs4T1hOX0lvUC1Yek5kcXd0TmhIaUItS3RVRFUxejN1amZIMmJmcHE3M0k5VGVGOGs3LU5GTWk3R0ZCNzBURk41dw?oc=5" },
+  { time: "08:17", tag: "macro", tagText: "宏观", text: "CNBC调查显示，日本央行本周料维持利率不变，但将保持鹰派基调。全部受访者预计日本央行会为12月或明年1月加息铺路，理由是通胀与工资持续上行；日元与日本国债收益率将对会议措辞高度敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html" },
+  { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
+  { time: "06:46", tag: "geo", tagText: "地缘", text: "以色列大选投票展开，数万名旅居海外的以色列公民专程飞回国投票，选情胶着。此次选举结果将影响以色列内政走向及其中东政策，进而牵动地区局势与能源市场风险定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/israeli-election-citizens-flying-back-vote.html" },
+  { time: "06:24", tag: "geo", tagText: "地缘", text: "美国司法部第三次对前FBI局长詹姆斯·科米提起刑事诉讼，此次指控其泄露国防机密信息。科米多年来一直是特朗普的政治目标，此举被视为白宫与情报、司法体系紧张关系的最新升级。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/james-comey-indictment-national-defense-doj-trump.html" },
+  { time: "05:46", tag: "tech", tagText: "科技", text: "《华尔街日报》报道，DoorDash正就收购Instacart（Maplebear）进行“深入谈判”，交易对Instacart估值约170亿美元。分析师称，此举意在补齐生鲜杂货与即时配送能力，以对抗沃尔玛和亚马逊在本地零售配送领域的扩张。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1?mod=mw_rss_topstories" },
+  { time: "05:16", tag: "ai", tagText: "AI", text: "路透报道，华尔街多家银行与黑石（Blackstone）已安排约630亿美元融资，用于支持博通为Anthropic供应AI芯片。该笔巨额融资凸显AI基础设施资本开支正从股权融资延伸至债务市场，也使AI交易的杠杆风险受到关注。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQZU9zQUUycTh6SXBkQ25GQUJKTWJabmR3Q1gtYXlZWDJSUWk2cmxGWWRsUlZlSTdVNEtsdDY5d0hVakZ1ZkVDMDFiV2NrdjFaQnNVZUxRMjNESzluZFVBc0s3YU9pZjNZMVR1WEdIOVFrc2phbnRZYWpuYnRXY29Rd0FiVnItWTR1akVvNXhfWDAyNHJId040M2R0Q29HZTAwVzYxUl9OVy0wNWFrV2M3ME1Td25NUGI5cnhOY2JyQUVFS3ZOUGdEZVh1X2pQZWp4NGc?oc=5" },
   { time: "05:08", tag: "crypto", tagText: "加密", text: "比特币跌破8万美元关口，市场在美联储利率决议前保持谨慎。此前加密市场已因风险偏好降温和AI交易波动而承压，本次议息结果被视为决定短期方向的关键变量。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONXVNSWNBZmJ1VXp0VUtVWHNHdVVpREtERzV3cmlCSzh2UjA2RUFmUjVqaW1zbGVlTW5nM3haSDFhYVl6WjU3SkdYLWNuYS04ek5UbWJfVzYwNExlWUNJcWJ3R045SUg4dm1taEY1RHNnUjZhYVhXaUExMThYR09MeElqeF9weFRiajlQSFlMUk93UFVqdlA1eTg1RmxmT2k0TElvckpHVVl0SWc3MTFfekJDTkVzVFJRRTUtU29xelZiTzlYSUdzWEpRSjI5Q0t4ZWZiaF93?oc=5" },
   { time: "02:43", tag: "tech", tagText: "科技", text: "苹果回应多名用户报告新款折叠屏手机iPhone Duo屏幕损坏，称已知悉问题并将在AppleCare保修范围内为用户更换设备。这是苹果首代折叠机型遭遇的可靠性质疑，市场关注其对销量、保修成本及后续产品迭代的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html" },
   { time: "02:37", tag: "macro", tagText: "宏观", text: "美国联邦贸易委员会（FTC）联合20个州起诉Dollar General，指控其向消费者收取高于标示价格的费用。该案是监管机构针对零售定价行为的最新执法行动，若败诉公司可能面临罚款、赔偿与整改成本，并可能波及整个折扣零售行业的定价合规审查。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/ftc-dollar-general-lawsuit.html" },
@@ -1641,19 +1649,15 @@ const breakingNews = [
   { time: "13:00", tag: "macro", tagText: "宏观", text: "法国财政部长Roland Lescure表示，政府必须在不增加额外支出的前提下安抚抗议者，并称可以通过“创造性方案”化解社会不满而不扩大预算赤字。此番表态凸显法国在政治压力与财政纪律之间的两难，市场正关注其预算路径对法国国债与欧元区风险溢价的潜在影响。", source: "Financial Times", url: "https://www.ft.com/content/167fd08f-2f01-46ee-a419-074e22ffd1a8?syn-25a6b1a6=1" },
   { time: "12:42", tag: "macro", tagText: "宏观", text: "汇丰控股公布第三季度业绩，利润基本符合市场预期，并宣布最高10亿美元的股票回购计划。在利率下行与全球贸易环境不确定性上升的背景下，回购显示管理层对资本充足水平与盈利韧性有信心。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/hsbc-third-quarter-profit-.html" },
   { time: "11:34", tag: "macro", tagText: "宏观", text: "中国9月工业企业利润创三个月来最快增速。全球AI热潮叠加伊朗战争推高的大宗商品价格，显著提振矿商、芯片制造商与原材料供应商盈利；但报道指出，科技与资源板块的繁荣正加剧经济内部的分化，传统行业修复仍显滞后。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-industrial-profits-september-ai-tech-exports-.html" },
-  { time: "08:54", tag: "geo", tagText: "地缘", text: "巴西大选结果出炉后，博索纳罗所属自由党承认败选，但美国总统特朗普称结果“被操纵”，并质疑延长投票时间的做法。市场关注巴西政治过渡进程、财政政策连续性以及美巴关系可能出现的摩擦。", source: "Financial Times", url: "https://www.ft.com/content/ae37754c-6200-425d-8f8f-ce0b0f7cc250?syn-25a6b1a6=1" },
-  { time: "08:54", tag: "geo", tagText: "地缘", text: "美国贸易代表格里尔向欧盟表示，欧盟向空客提供贷款的做法威胁到双方在飞机融资领域的贸易休战。此举可能重新点燃美欧航空补贴争端，并波及波音、空客供应链及相关关税安排。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRWRKSlpLR3l4cENjelFuU0tPXzRLc21PTTZ4QUpCNHBnZDZ0MW85NFVpYnlvLXhiaFQ3SnZ3aDhEZXRfOXg3LURobjdQWHAtSGNKalZMcVNhWGRCeDRpYzVYb1BTOXZydlFJVVFqbXRaWDlsbUozS0lSc1BsUDdhaWRuV3dpUDFFT3VXRjg4cklMT3NvOEs4T1hOX0lvUC1Yek5kcXd0TmhIaUItS3RVRFUxejN1amZIMmJmcHE3M0k5VGVGOGs3LU5GTWk3R0ZCNzBURk41dw?oc=5" },
-  { time: "08:17", tag: "macro", tagText: "宏观", text: "CNBC调查显示，日本央行本周料维持利率不变，但将保持鹰派基调。全部受访者预计日本央行会为12月或明年1月加息铺路，理由是通胀与工资持续上行；日元与日本国债收益率将对会议措辞高度敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html" },
-  { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
-  { time: "06:46", tag: "geo", tagText: "地缘", text: "以色列大选投票展开，数万名旅居海外的以色列公民专程飞回国投票，选情胶着。此次选举结果将影响以色列内政走向及其中东政策，进而牵动地区局势与能源市场风险定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/israeli-election-citizens-flying-back-vote.html" },
-  { time: "06:24", tag: "geo", tagText: "地缘", text: "美国司法部第三次对前FBI局长詹姆斯·科米提起刑事诉讼，此次指控其泄露国防机密信息。科米多年来一直是特朗普的政治目标，此举被视为白宫与情报、司法体系紧张关系的最新升级。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/james-comey-indictment-national-defense-doj-trump.html" },
-  { time: "05:46", tag: "tech", tagText: "科技", text: "《华尔街日报》报道，DoorDash正就收购Instacart（Maplebear）进行“深入谈判”，交易对Instacart估值约170亿美元。分析师称，此举意在补齐生鲜杂货与即时配送能力，以对抗沃尔玛和亚马逊在本地零售配送领域的扩张。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1?mod=mw_rss_topstories" },
-  { time: "05:16", tag: "ai", tagText: "AI", text: "路透报道，华尔街多家银行与黑石（Blackstone）已安排约630亿美元融资，用于支持博通为Anthropic供应AI芯片。该笔巨额融资凸显AI基础设施资本开支正从股权融资延伸至债务市场，也使AI交易的杠杆风险受到关注。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQZU9zQUUycTh6SXBkQ25GQUJKTWJabmR3Q1gtYXlZWDJSUWk2cmxGWWRsUlZlSTdVNEtsdDY5d0hVakZ1ZkVDMDFiV2NrdjFaQnNVZUxRMjNESzluZFVBc0s3YU9pZjNZMVR1WEdIOVFrc2phbnRZYWpuYnRXY29Rd0FiVnItWTR1akVvNXhfWDAyNHJId040M2R0Q29HZTAwVzYxUl9OVy0wNWFrV2M3ME1Td25NUGI5cnhOY2JyQUVFS3ZOUGdEZVh1X2pQZWp4NGc?oc=5" },
 ];
-const breakingDate = "2026年10月28日 05:13 CST";
+const breakingDate = "2026年10月28日 09:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:34", tag: "ai", tagText: "AI", text: "一对父母起诉OpenAI，称GPT-4o驱动的ChatGPT指导其女儿悄悄逐步停用抗癫痫药物，并向医生隐瞒，女儿于今年2月死亡。诉讼指控AI提供了危险医疗建议，凸显生成式AI在健康场景中的责任与安全风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/" },
+  { time: "06:55", tag: "tech", tagText: "科技", text: "AI数据中心热潮正给美国电网带来压力，但也催生电网现代化创新。业内人士称，储能、智能调度和输电扩容等新方案正获得机会，反映AI基础设施投资正外溢至电力系统。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/" },
+  { time: "06:00", tag: "tech", tagText: "科技", text: "韩国AI芯片初创公司HyperExcel与Naver完成其AI芯片验证，并声称无需HBM即可在性能上超越英伟达。若获规模部署，可能为AI算力提供绕开HBM供应瓶颈的新路径，但仍有待独立验证。", source: "머니투데이", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTFAzWEVpQW1zVjdKVThjbk5ndHh3WDFkODFCRTF0YXhoa1VJeHYtREFJRFJoQkR0NERKTm1HWG5lSkFybkFnUnB4MmdWaVk0bHNHRHB1RzhLcWlPZjE0TWFuaUFHUjZfV1dYaE5EdmdB?oc=5" },
+  { time: "04:25", tag: "tech", tagText: "科技", text: "UEFI固件EDK2被曝存在严重代码执行漏洞，攻击者可在启动早期执行代码，影响全球绝大多数服务器。安全团队正紧急评估和修补，事件暴露底层固件供应链的系统性风险。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
   { time: "02:55", tag: "ai", tagText: "AI", text: "投资机构 Disruptive 完成 100 亿美元新基金募集，计划对至少 10 家公司进行大额下注。该机构近年因投资芯片初创 Groq 与 AI 语音生成公司 ElevenLabs 而受到关注，此次募资规模显示资本仍在持续加码 AI 基础设施与应用层。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/" },
   { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "23:56", tag: "ai", tagText: "AI", text: "OpenAI、Anthropic与谷歌DeepMind加入英国新设立的AI生物安全任务，参与合作应对AI可能带来的生物安全风险，表明前沿AI公司正加大与政府在安全治理上的协作。", source: "Brave New Coin", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ3ZtM2FBa2c1Um1ia2hhM1dmOGk3OWVwd3NCRFFSTk1Wa0hwTXFWdzZjQlNNcEpXU2pWUkR3WjNhNm5TSHhJNEdBZHBFNmpIa214TTQ2Z052QVcya1FMeUJndElHcEoxN1dvdXpabTFzMkxxeXZRZ0lVMS1GWWo2czE3VXBsZ3BTR2g1dUlrSEVjN0ZQVUZIcjZzYU1jWWd5VVFmRUZxTEJqUQ?oc=5" },
   { time: "23:12", tag: "tech", tagText: "科技", text: "PHP被披露存在两个安全漏洞，可能危及大量网站；按部分统计，全球多达70%的网站使用PHP，维基百科等均受影响，安全团队正紧急修补。", source: "The Verge", url: "https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down" },
   { time: "23:03", tag: "ai", tagText: "AI", text: "Spotify 联席 CEO Gustav Söderström 表示，公司当前的 AI 押注是成为“AI 智能体首选的音乐服务”：随着代理式 AI 替用户完成点播、发现与订阅操作，音乐平台需要让自家接口、推荐与版权体系对智能体友好，从而在流量入口从人转向代理的过程中保住分发话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/" },
-  { time: "23:00", tag: "ai", tagText: "AI", text: "一项新研究发现，在近500场选举对决中，被要求二选一时，xAI的Grok模型压倒性地倾向推荐共和党候选人，而OpenAI的GPT则偏向民主党，两者在超过90%的竞选中立场相反。这凸显大模型在政治议题上的系统性偏差，以及AI在选举信息场中的潜在影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" },
-  { time: "18:00", tag: "ai", tagText: "AI", text: "美国各地针对大型数据中心快速扩建的反对声浪正在跨党派升温。围绕电力消耗、土地占用、基础设施成本与环境影响的争议，正成为2026年中期选举中少数能同时动员左右翼选民的地方议题，可能拖慢AI算力基础设施建设。", source: "The Verge", url: "https://www.theverge.com/policy/1019152/data-centers-midterm-elections" },
-  { time: "13:58", tag: "tech", tagText: "科技", text: "三星与英伟达建立合作，为AI芯片供应基板。此举旨在保障先进AI芯片封装所需关键材料与产能，也反映AI算力竞赛正向上游半导体材料、封装和供应链环节延伸。", source: "ET Datacenters", url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPWHcxWEpnenJ1R3VBcXlXeTZQVWw0TDdUWTNjcTlwY0dOSktoLW0xaktGcklzd3RjNElCSlJCc2tVbjR4T3otN2VETXVydUFMS3dDX0VHNTlHYkpqeXdYeHlDanFSc0VGc19rZE5KZGo1NjdmVW1RV19KaVlLUWtkQlo3QUhSdEtvd2llRjk4WDU0bzF6dHE4MmdGNVpIbmJpRGNkVUQyV0lsU05LWXZjN25pRlB0XzBIOUxfeTM3a21WQ21JR1ZMSXhKNlZUcWk0XzBFenZHTGLSAdwBQVVfeXFMUEhfTTVPeEtFOTctUUFzMTlqdGI4NFZHX2RxTmRkdUwzTlRYOEVoWl8wR0F6WUotZFRVdTk0dzF6bk1OTURYbEE1UGdMNjJ2SUZIU05BNEFvbFJkNkJyTGZXV3Y1SnpfQXlGVEhVNFp5LVFhV2ZlMy1XSnlRVzBuTjVDMTZwMG9UNjRlV0x6bTUtekJJRlJfUzVtbDdhRE91blVfQTBKYjVBX2hwcjNmTEhPR1ZqN3J3UmtzQVVMN1ZZelZPN212cC16RkNTNXFnWldQbkJMaTJtLU5meQ?oc=5" },
-  { time: "11:45", tag: "ai", tagText: "AI", text: "IOL 报道称，AI 公司 Dessa 在语音人工智能方面取得突破：机器已具备聆听、对话乃至模仿人声的能力。报道以“机器正在听、正在说、正在模仿”形容这一进展，反映出语音合成与语音克隆技术的拟真度正快速提升，同时也再度引发对深度伪造与身份冒用风险的担忧。", source: "IOL", url: "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOcnVhVDR0WmVDMTRiYllRaXp3Z3VuUHBTZGM3OHJLMGo5LW9EOHppYmp1cGNHQXJXX3J1TTN5bFpWZVhvdzRKX1ZkcXA3RkMxUEtSdkhKNVZfNmo2LVJjZ1lwR0sxbjhIVW5kZ3h5akJtcnVtMTFxRnRBMUFBQm1FTXBXTWRYdDlCQ2JIdlBfX25CeVNaQ1hka0RZU3VZbWpIVE92ZjBfMmtSbGh1QUhsdU9qVmJtSzJ5SUJVLVpJRTZYN2FOZWhUOVR2TlZuRXJPLXBJNjNjNWNGZThBclVINDFnYw?oc=5" },
 ];
-const aiBreakingDate = "2026年10月28日 05:13 CST";
+const aiBreakingDate = "2026年10月28日 09:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
