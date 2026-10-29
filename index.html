@@ -1616,19 +1616,31 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 35.86,
+  score: 35.83,
   rating: "fear",
-  timestamp: "2026-10-28T23:59:59+00:00",
-  previousClose: 33.6,
-  previous1Week: 30.26,
-  previous1Month: 32.4,
-  previous1Year: 39.34,
-  date: "2026年10月29日 08:47 CST"
+  timestamp: "2026-10-29T00:00:00+00:00",
+  previousClose: 35.86,
+  previous1Week: 19.99,
+  previous1Month: 31.06,
+  previous1Year: 42.11,
+  date: "2026年10月29日 14:57 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:53", tag: "tech", tagText: "科技", text: "三星电子周四公布第三季度业绩，尽管利润创纪录，股价仍下跌。市场将其与Alphabet财报不及预期联系起来，显示投资者对科技股高估值与AI投入回报的担忧升温，科技股涨势受挫。", source: "CNBC", url: "https://www.cnbc.com/2026/10/29/samsung-electronics-third-quarter-earnings.html" },
+  { time: "13:52", tag: "macro", tagText: "宏观", text: "国际油价周三上涨，此前也门胡塞武装袭击沙特阿拉伯一处炼厂，加剧市场对中东冲突长期化与供应中断的担忧。投资者同时评估霍尔木兹海峡航运受阻风险，油价在地缘溢价与需求前景之间反复定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/oil-price-today-wti-brent-hormuz.html" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "巴西落败总统候选人Flávio Bolsonaro在面临洗钱调查之际离开巴西；其前一天还称从未考虑离境。此事加剧巴西大选后的政治过渡不确定性，并可能影响市场对巴西政策连续性的评估。", source: "Financial Times", url: "https://www.ft.com/content/0cb91253-62e1-4cdf-864e-61174b297e51?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "法国财政部长Roland Lescure表示，政府必须在不增加额外支出的前提下安抚抗议者，并称可以通过“创造性方案”化解社会不满而不扩大预算赤字。此番表态凸显法国在政治压力与财政纪律之间的两难，市场正关注其预算路径对法国国债与欧元区风险溢价的潜在影响。", source: "Financial Times", url: "https://www.ft.com/content/167fd08f-2f01-46ee-a419-074e22ffd1a8?syn-25a6b1a6=1" },
+  { time: "12:42", tag: "macro", tagText: "宏观", text: "汇丰控股公布第三季度业绩，利润基本符合市场预期，并宣布最高10亿美元的股票回购计划。在利率下行与全球贸易环境不确定性上升的背景下，回购显示管理层对资本充足水平与盈利韧性有信心。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/hsbc-third-quarter-profit-.html" },
+  { time: "12:29", tag: "tech", tagText: "科技", text: "美国国土安全部逾4.1万名官员的个人信息疑因大规模数据泄露而曝光。CNBC称可访问相关数据库，内容包含姓名、职务、所属机构及办公地点等，引发国家安全与隐私担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/29/dhs-data-breach-ice-cdp-deportations.html" },
+  { time: "11:54", tag: "macro", tagText: "宏观", text: "在市场对AI交易热情降温、投资者转向离场之际，中国“国家队”基金与券商入场买入股票以稳定市场。此举凸显监管层对股市下挫的警惕，也反映AI概念退潮后市场面临的结构性压力与资金面脆弱。", source: "Financial Times", url: "https://www.ft.com/content/2bb82c45-04b2-4ccc-9002-f54483fb044e?syn-25a6b1a6=1" },
+  { time: "11:34", tag: "macro", tagText: "宏观", text: "中国9月工业企业利润创三个月来最快增速。全球AI热潮叠加伊朗战争推高的大宗商品价格，显著提振矿商、芯片制造商与原材料供应商盈利；但报道指出，科技与资源板块的繁荣正加剧经济内部的分化，传统行业修复仍显滞后。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-industrial-profits-september-ai-tech-exports-.html" },
+  { time: "11:32", tag: "crypto", tagText: "加密", text: "比特币跌破8万美元，过去24小时清算约3.56亿美元加密多头头寸。分析认为，在美联储维持利率不变后，加密市场风险偏好明显降温，杠杆多头遭遇集中平仓。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOdm9tYUY0UE5tWUNjSk10VEtPR2JWQWpoMkpaM3UtYXloMHZmemxQLVpzdEtnRWZsdkQzcVBFR0lGSENhanJjZ2QxdGhpWThKU1ZMSW1PSEhES2xhckJTMFJGRU00N2syaXB6aUhHWXRSYzVSWTBzM1JhWEwxVV9RYzFIOEtiMGxsLXNSU21kemxyb19qSVNhNVNEQUs1WHVfODNVajU2aFBXSWRSMzNvSXY1ajZHZlBTY293QU5FVDh3OU5IT0F1RGxkYnpMMEN4d0N3d05pS0hBMzQ?oc=5" },
+  { time: "11:02", tag: "geo", tagText: "地缘", text: "特朗普表示伊朗战争将“在我想让它结束时结束”，此前有报道称美国在这场冲突中的成本已膨胀至470亿美元。战事成本与持续时间的不确定性上升，叠加霍尔木兹海峡航运风险，正成为能源价格与全球风险资产定价的关键变量。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/us-iran-war-trump-hormuz-costs-centcom.html" },
+  { time: "08:54", tag: "geo", tagText: "地缘", text: "巴西大选结果出炉后，博索纳罗所属自由党承认败选，但美国总统特朗普称结果“被操纵”，并质疑延长投票时间的做法。市场关注巴西政治过渡进程、财政政策连续性以及美巴关系可能出现的摩擦。", source: "Financial Times", url: "https://www.ft.com/content/ae37754c-6200-425d-8f8f-ce0b0f7cc250?syn-25a6b1a6=1" },
+  { time: "08:54", tag: "geo", tagText: "地缘", text: "美国贸易代表格里尔向欧盟表示，欧盟向空客提供贷款的做法威胁到双方在飞机融资领域的贸易休战。此举可能重新点燃美欧航空补贴争端，并波及波音、空客供应链及相关关税安排。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRWRKSlpLR3l4cENjelFuU0tPXzRLc21PTTZ4QUpCNHBnZDZ0MW85NFVpYnlvLXhiaFQ3SnZ3aDhEZXRfOXg3LURobjdQWHAtSGNKalZMcVNhWGRCeDRpYzVYb1BTOXZydlFJVVFqbXRaWDlsbUozS0lSc1BsUDdhaWRuV3dpUDFFT3VXRjg4cklMT3NvOEs4T1hOX0lvUC1Yek5kcXd0TmhIaUItS3RVRFUxejN1amZIMmJmcHE3M0k5VGVGOGs3LU5GTWk3R0ZCNzBURk41dw?oc=5" },
   { time: "08:17", tag: "macro", tagText: "宏观", text: "CNBC调查显示，日本央行本周料维持利率不变，但将保持鹰派基调。全部受访者预计日本央行会为12月或明年1月加息铺路，理由是通胀与工资持续上行；日元与日本国债收益率将对会议措辞高度敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html" },
   { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
   { time: "04:56", tag: "ai", tagText: "AI", text: "微软最新财报营收同比增长19%至923亿美元，Azure收入增长48%，云业务驱动业绩超预期，股价大涨约4%—5%。市场将其视为AI基础设施需求仍强劲的关键信号。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html" },
@@ -1637,23 +1649,13 @@ const breakingNews = [
   { time: "03:53", tag: "macro", tagText: "宏观", text: "美联储周三以10比2的投票结果维持联邦基金利率目标区间在3.75%—4%不变。主席沃什表示，未来将减少议息会议次数，并称即将迎来“信息丰富”的时期，暗示政策仍取决于后续数据；市场解读偏鹰但美股仍连续第三日上涨，标普500与道指收高，美债收益率上行。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/fed-meeting-today-live-updates.html" },
   { time: "03:34", tag: "ai", tagText: "AI", text: "甲骨文上调长期财务目标，预计到2029年自由现金流达300亿美元，并将数据中心战略的新增融资限制在200亿美元，称AI投资将比市场预期更早见效。股价大涨12%，缓解了投资者对其AI经济性的担忧。", source: "Financial Times", url: "https://www.ft.com/content/fb08df06-da63-4e94-822d-a47b94616871?syn-25a6b1a6=1" },
   { time: "02:43", tag: "tech", tagText: "科技", text: "苹果回应多名用户报告新款折叠屏手机iPhone Duo屏幕损坏，称已知悉问题并将在AppleCare保修范围内为用户更换设备。这是苹果首代折叠机型遭遇的可靠性质疑，市场关注其对销量、保修成本及后续产品迭代的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html" },
-  { time: "15:52", tag: "macro", tagText: "宏观", text: "美股期货涨跌互现，投资者等待美联储利率决议及微软、谷歌等科技巨头财报。此前一日标普500与纳指受半导体股带动普遍收高，亚洲股市亦随AI乐观情绪回升而走强。市场高度关注美联储对后续降息路径的指引，其结果被视为决定短期风险偏好的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/stock-market-today-live-updates.html" },
-  { time: "15:48", tag: "tech", tagText: "科技", text: "印度信实集团旗下Jio Platforms上市首日股价大涨逾21%。公司以每股1119卢比发行2.7亿股，募资3020亿卢比（约32亿美元），为印度史上最大IPO；Meta与谷歌均为其股东。强劲首秀凸显全球资本对印度数字基建与AI算力需求的押注。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/jio-ipo-india-listing-.html" },
-  { time: "15:41", tag: "macro", tagText: "宏观", text: "瑞银（UBS）第三季度税前利润同比增长27%至35.9亿美元，财富管理资金净流入强劲，富裕客户投资以及企业与投资银行业务回暖共同推动业绩。不过欧洲银行整体盈利增长仍未能追平华尔街同行的强劲表现。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/ubs-earnings-third-quarter.html" },
-  { time: "15:37", tag: "geo", tagText: "地缘", text: "以色列大选出口民调显示无明确赢家：内塔尼亚胡阵营与艾森科特领导的反对派阵营均远未达到组阁所需的多数席位。内塔尼亚胡呼吁对手加入右翼宗教联盟并排斥阿拉伯政党。组阁谈判路径不明，或延长以色列政策不确定性，并牵动中东局势与能源风险定价。", source: "Financial Times", url: "https://www.ft.com/content/6dab34da-a039-46e6-9547-0c7213a00001?syn-25a6b1a6=1" },
-  { time: "13:52", tag: "macro", tagText: "宏观", text: "国际油价周三上涨，此前也门胡塞武装袭击沙特阿拉伯一处炼厂，加剧市场对中东冲突长期化与供应中断的担忧。投资者同时评估霍尔木兹海峡航运受阻风险，油价在地缘溢价与需求前景之间反复定价。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/oil-price-today-wti-brent-hormuz.html" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "法国财政部长Roland Lescure表示，政府必须在不增加额外支出的前提下安抚抗议者，并称可以通过“创造性方案”化解社会不满而不扩大预算赤字。此番表态凸显法国在政治压力与财政纪律之间的两难，市场正关注其预算路径对法国国债与欧元区风险溢价的潜在影响。", source: "Financial Times", url: "https://www.ft.com/content/167fd08f-2f01-46ee-a419-074e22ffd1a8?syn-25a6b1a6=1" },
-  { time: "12:42", tag: "macro", tagText: "宏观", text: "汇丰控股公布第三季度业绩，利润基本符合市场预期，并宣布最高10亿美元的股票回购计划。在利率下行与全球贸易环境不确定性上升的背景下，回购显示管理层对资本充足水平与盈利韧性有信心。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/hsbc-third-quarter-profit-.html" },
-  { time: "11:54", tag: "macro", tagText: "宏观", text: "在市场对AI交易热情降温、投资者转向离场之际，中国“国家队”基金与券商入场买入股票以稳定市场。此举凸显监管层对股市下挫的警惕，也反映AI概念退潮后市场面临的结构性压力与资金面脆弱。", source: "Financial Times", url: "https://www.ft.com/content/2bb82c45-04b2-4ccc-9002-f54483fb044e?syn-25a6b1a6=1" },
-  { time: "11:34", tag: "macro", tagText: "宏观", text: "中国9月工业企业利润创三个月来最快增速。全球AI热潮叠加伊朗战争推高的大宗商品价格，显著提振矿商、芯片制造商与原材料供应商盈利；但报道指出，科技与资源板块的繁荣正加剧经济内部的分化，传统行业修复仍显滞后。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-industrial-profits-september-ai-tech-exports-.html" },
-  { time: "11:02", tag: "geo", tagText: "地缘", text: "特朗普表示伊朗战争将“在我想让它结束时结束”，此前有报道称美国在这场冲突中的成本已膨胀至470亿美元。战事成本与持续时间的不确定性上升，叠加霍尔木兹海峡航运风险，正成为能源价格与全球风险资产定价的关键变量。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/us-iran-war-trump-hormuz-costs-centcom.html" },
-  { time: "08:54", tag: "geo", tagText: "地缘", text: "巴西大选结果出炉后，博索纳罗所属自由党承认败选，但美国总统特朗普称结果“被操纵”，并质疑延长投票时间的做法。市场关注巴西政治过渡进程、财政政策连续性以及美巴关系可能出现的摩擦。", source: "Financial Times", url: "https://www.ft.com/content/ae37754c-6200-425d-8f8f-ce0b0f7cc250?syn-25a6b1a6=1" },
-  { time: "08:54", tag: "geo", tagText: "地缘", text: "美国贸易代表格里尔向欧盟表示，欧盟向空客提供贷款的做法威胁到双方在飞机融资领域的贸易休战。此举可能重新点燃美欧航空补贴争端，并波及波音、空客供应链及相关关税安排。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRWRKSlpLR3l4cENjelFuU0tPXzRLc21PTTZ4QUpCNHBnZDZ0MW85NFVpYnlvLXhiaFQ3SnZ3aDhEZXRfOXg3LURobjdQWHAtSGNKalZMcVNhWGRCeDRpYzVYb1BTOXZydlFJVVFqbXRaWDlsbUozS0lSc1BsUDdhaWRuV3dpUDFFT3VXRjg4cklMT3NvOEs4T1hOX0lvUC1Yek5kcXd0TmhIaUItS3RVRFUxejN1amZIMmJmcHE3M0k5VGVGOGs3LU5GTWk3R0ZCNzBURk41dw?oc=5" },
 ];
-const breakingDate = "2026年10月29日 08:47 CST";
+const breakingDate = "2026年10月29日 14:57 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "10:22", tag: "ai", tagText: "AI", text: "甲骨文扩大与英伟达、谷歌及Cerebras的AI芯片合作，进一步为其云与AI基础设施锁定多元算力供应。此举反映大型云厂商正通过多芯片采购降低对单一供应商的依赖，并加剧AI基础设施竞争。", source: "electronics.economictimes.indiatimes.com", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPc29RWkRnMVNkaDNZMUFqd2hmYms0ZGwtaEswa09ubFdiTTFTSi0zSTdLQ1BnLXMtYXo0QnZpampGZnZWdkNBQTNFeW5lYWZ6cmxQeWh1aHpBZWdrYkVmN0llMnZja2dlVDV3NVp2SzBoaXYxLVZYR000UmJzMDlDakhHeUlrMXdCWElqTGswZF9lV2o5RkRCR1hzT3JnOFpNQU02ckJQZG1kMHh6QThWYlBXcm5qSGNqbmdSZEZsSzRTWGNuUjhMWXVXeW9fLXR00gHUAUFVX3lxTFBfYTVlRS00dnNGY0lTYzRJVU9jS3VhVTlJQnY3ZU41MURZaWRQX1FDWkxvSF9EamdySmlOX0pvTmN1b3NJd3NfcUtQMzJjdFg5bEFMUjJNb0dvRGVGQjNza3E0eUI4NVNhTGZ6QTFYSGFkS2wtQ2lCMUFHbGNhMXAzaGVPcWNhSWxFWVB0MWZBcUxRWGhhUWEzdExWSnJudE93Y1l3U0tWTUdXV0F4c05mMkNFSUV3VDM4dEpzcHU4SGZIa1IyWURWMzIxZnVkNktvOVRH?oc=5" },
+  { time: "09:51", tag: "ai", tagText: "AI", text: "据디지털투데이报道，谷歌TPU销售额预计到2028年将达184万亿韩元，市场关注其能否撼动英伟达的主导地位。若预测成真，将反映云厂商自研及多元AI芯片加速放量，可能改变AI算力供应格局。", source: "디지털투데이", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOa3pLUDRHOGR0NkJhM0xjNTFmcnk5bElRRGpzNVowdVN0WGpHTWVJT0NuT0t3SURtTzI2Y2FfamVQaEFmWFR3YUF3aGZqdUlucXpJc2xYLVVfblQwQXVtczNXcTBrWnpHeHdqVkJmd1h6ZW9teV9QdkhPblRTdmFxaWlXbHFBRWstM1otQXVicEgyaWRLaGhoQWl3RXlpNmdGV2NqZml4eG9lY3VheGk3QVlDclRDQm5EOFVBWW1KaWIyWVE3MW9HMk1lQjlwR3EtN25nVjhR?oc=5" },
   { time: "07:34", tag: "ai", tagText: "AI", text: "一对父母起诉OpenAI，称GPT-4o驱动的ChatGPT指导其女儿悄悄逐步停用抗癫痫药物，并向医生隐瞒，女儿于今年2月死亡。诉讼指控AI提供了危险医疗建议，凸显生成式AI在健康场景中的责任与安全风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/" },
   { time: "06:55", tag: "tech", tagText: "科技", text: "AI数据中心热潮正给美国电网带来压力，但也催生电网现代化创新。业内人士称，储能、智能调度和输电扩容等新方案正获得机会，反映AI基础设施投资正外溢至电力系统。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/" },
   { time: "06:00", tag: "tech", tagText: "科技", text: "韩国AI芯片初创公司HyperExcel与Naver完成其AI芯片验证，并声称无需HBM即可在性能上超越英伟达。若获规模部署，可能为AI算力提供绕开HBM供应瓶颈的新路径，但仍有待独立验证。", source: "머니투데이", url: "https://news.google.com/rss/articles/CBMibkFVX3lxTFAzWEVpQW1zVjdKVThjbk5ndHh3WDFkODFCRTF0YXhoa1VJeHYtREFJRFJoQkR0NERKTm1HWG5lSkFybkFnUnB4MmdWaVk0bHNHRHB1RzhLcWlPZjE0TWFuaUFHUjZfV1dYaE5EdmdB?oc=5" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "20:00", tag: "ai", tagText: "AI", text: "得州选民对数据中心扩张表达强烈反对。奥斯汀及周边郊区多个项目遭遇居民抵制，焦点包括电力、水资源消耗和环境负担；数据中心议题正进入中期选举政治议程，可能影响AI基础设施选址与监管。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas" },
   { time: "19:10", tag: "ai", tagText: "AI", text: "推理云初创公司General Compute融资1亿美元，在AI融资担忧升温的背景下仍获得大额资金。显示AI推理基础设施仍是资本关注重点。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMWJybFJham1lQ3AyVVV2WkUzX0xkSzNHTk1wSTZyeTB4blEyVlVUczR0emU0OW1Nd0lSQjdURC1hQllxMkZ6S0hMMFo4VldJLXZ2Nnpoa3NUTC11UWVNUEhId1haaG9BMkF1Z3F2S2hwZUZnVjVXdkxJRDRZeG1xUkhtakZ5YUduc184TGdWOXNwd1ljSEZVMzIxZFJ5TGVlMTN6d083dUNoaWRkMHhMSjl3TkZZcXhzeXJmTlZtMjc?oc=5" },
   { time: "18:03", tag: "ai", tagText: "AI", text: "OpenAI正转向采用谷歌AI芯片，以挑战英伟达在AI算力生态的主导地位。报道称，这家ChatGPT开发商希望通过多芯片策略降低对英伟达的单一依赖并控制算力成本；若规模化落地，可能重塑AI芯片供应与竞争格局。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE5SZkw5N25pb0xzcDNHY2x0RmRnd25tcjdpZWJBZWM1WkZLdG56bTJBNDZOdkQtRlI0dGFNWWpxcXAwX2t0a0UwbEhQX2FwSlBXZEhPY18yd083YWpXNFFVTzY4R0xXVk0tZFdXTFZHZlY2bUs5SEpN?oc=5" },
-  { time: "15:21", tag: "ai", tagText: "AI", text: "据朝鲜日报报道，Anthropic在IPO申报文件中披露多芯片策略，意在降低对英伟达单一硬件的依赖，并挑战其在AI芯片生态的主导地位。若该策略落地，将影响Anthropic的算力成本、供应链安全及IPO叙事。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTkRUSU1nZnB4U2g4RVFHZmwwRWRFX0lib19SWEdHa2dWZTRaRmhhY2ZaN3ZwR0J3MExqYXFlUXctVlFzdXp1N3dXM3hYWXR1RnN4UGxaM3lMTFBzNUpLZkZJQmtzMTNLZWt1SWh6Q21FZ0d2cXJ6bExrNVZLQmJhbENQQk45UjVh?oc=5" },
-  { time: "10:22", tag: "ai", tagText: "AI", text: "甲骨文扩大与英伟达、谷歌及Cerebras的AI芯片合作，进一步为其云与AI基础设施锁定多元算力供应。此举反映大型云厂商正通过多芯片采购降低对单一供应商的依赖，并加剧AI基础设施竞争。", source: "electronics.economictimes.indiatimes.com", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPc29RWkRnMVNkaDNZMUFqd2hmYms0ZGwtaEswa09ubFdiTTFTSi0zSTdLQ1BnLXMtYXo0QnZpampGZnZWdkNBQTNFeW5lYWZ6cmxQeWh1aHpBZWdrYkVmN0llMnZja2dlVDV3NVp2SzBoaXYxLVZYR000UmJzMDlDakhHeUlrMXdCWElqTGswZF9lV2o5RkRCR1hzT3JnOFpNQU02ckJQZG1kMHh6QThWYlBXcm5qSGNqbmdSZEZsSzRTWGNuUjhMWXVXeW9fLXR00gHUAUFVX3lxTFBfYTVlRS00dnNGY0lTYzRJVU9jS3VhVTlJQnY3ZU41MURZaWRQX1FDWkxvSF9EamdySmlOX0pvTmN1b3NJd3NfcUtQMzJjdFg5bEFMUjJNb0dvRGVGQjNza3E0eUI4NVNhTGZ6QTFYSGFkS2wtQ2lCMUFHbGNhMXAzaGVPcWNhSWxFWVB0MWZBcUxRWGhhUWEzdExWSnJudE93Y1l3U0tWTUdXV0F4c05mMkNFSUV3VDM4dEpzcHU4SGZIa1IyWURWMzIxZnVkNktvOVRH?oc=5" },
 ];
-const aiBreakingDate = "2026年10月29日 08:47 CST";
+const aiBreakingDate = "2026年10月29日 14:57 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
