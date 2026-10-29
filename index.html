@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 35.83,
+  score: 34.46,
   rating: "fear",
-  timestamp: "2026-10-29T00:00:00+00:00",
+  timestamp: "2026-10-29T14:05:29+00:00",
   previousClose: 35.86,
   previous1Week: 19.99,
   previous1Month: 31.06,
   previous1Year: 42.11,
-  date: "2026年10月29日 14:57 CST"
+  date: "2026年10月29日 22:07 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,17 @@ const breakingNews = [
   { time: "03:34", tag: "ai", tagText: "AI", text: "甲骨文上调长期财务目标，预计到2029年自由现金流达300亿美元，并将数据中心战略的新增融资限制在200亿美元，称AI投资将比市场预期更早见效。股价大涨12%，缓解了投资者对其AI经济性的担忧。", source: "Financial Times", url: "https://www.ft.com/content/fb08df06-da63-4e94-822d-a47b94616871?syn-25a6b1a6=1" },
   { time: "02:43", tag: "tech", tagText: "科技", text: "苹果回应多名用户报告新款折叠屏手机iPhone Duo屏幕损坏，称已知悉问题并将在AppleCare保修范围内为用户更换设备。这是苹果首代折叠机型遭遇的可靠性质疑，市场关注其对销量、保修成本及后续产品迭代的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html" },
 ];
-const breakingDate = "2026年10月29日 14:57 CST";
+const breakingDate = "2026年10月29日 22:07 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "21:30", tag: "ai", tagText: "AI", text: "Anthropic的IPO招股书S-1披露其核心商业逻辑：公司以通往AGI为叙事，为尽可能大规模投入算力提供财务正当性，并试图让华尔街相信其长期AGI愿景。文件引发市场关注其收入、亏损与巨额算力支出如何支撑估值。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "语音AI基础设施公司Deepgram收购Pipecat框架开发商Daily，以增强实时语音AI能力。Deepgram承诺Pipecat将继续保持开源。此次并购反映语音AI赛道正在整合底层基础设施。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/" },
+  { time: "20:17", tag: "ai", tagText: "AI", text: "金融AI初创公司Casap完成5600万美元融资，用于帮助银行遏制客户欺诈激增。这反映AI反欺诈方案在金融风控领域的需求正在升温。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE8zVW5LU0VuODhsUllnUkN4V2pBQmN4bGhXVVBLLWJpQjJJMDNyRHJzYXFrSHhncHFQdHBuTTd0cVVfdFVvaWJPelVB?oc=5" },
+  { time: "20:00", tag: "ai", tagText: "AI", text: "得州选民对数据中心扩张表达强烈反对。奥斯汀及周边郊区多个项目遭遇居民抵制，焦点包括电力、水资源消耗和环境负担；数据中心议题正进入中期选举政治议程，可能影响AI基础设施选址与监管。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas" },
+  { time: "19:10", tag: "ai", tagText: "AI", text: "推理云初创公司General Compute融资1亿美元，在AI融资担忧升温的背景下仍获得大额资金。显示AI推理基础设施仍是资本关注重点。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMWJybFJham1lQ3AyVVV2WkUzX0xkSzNHTk1wSTZyeTB4blEyVlVUczR0emU0OW1Nd0lSQjdURC1hQllxMkZ6S0hMMFo4VldJLXZ2Nnpoa3NUTC11UWVNUEhId1haaG9BMkF1Z3F2S2hwZUZnVjVXdkxJRDRZeG1xUkhtakZ5YUduc184TGdWOXNwd1ljSEZVMzIxZFJ5TGVlMTN6d083dUNoaWRkMHhMSjl3TkZZcXhzeXJmTlZtMjc?oc=5" },
+  { time: "18:03", tag: "ai", tagText: "AI", text: "OpenAI正转向采用谷歌AI芯片，以挑战英伟达在AI算力生态的主导地位。报道称，这家ChatGPT开发商希望通过多芯片策略降低对英伟达的单一依赖并控制算力成本；若规模化落地，可能重塑AI芯片供应与竞争格局。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE5SZkw5N25pb0xzcDNHY2x0RmRnd25tcjdpZWJBZWM1WkZLdG56bTJBNDZOdkQtRlI0dGFNWWpxcXAwX2t0a0UwbEhQX2FwSlBXZEhPY18yd083YWpXNFFVTzY4R0xXVk0tZFdXTFZHZlY2bUs5SEpN?oc=5" },
+  { time: "18:00", tag: "ai", tagText: "AI", text: "The Verge报道称，亚利桑那州的数据中心与芯片制造扩张正加剧当地水资源压力，台积电等大型设施在沙漠地区消耗大量水。AI算力需求增长使数据中心的水、电与环境负担成为地方政治和基础设施议题。", source: "The Verge", url: "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc" },
   { time: "10:22", tag: "ai", tagText: "AI", text: "甲骨文扩大与英伟达、谷歌及Cerebras的AI芯片合作，进一步为其云与AI基础设施锁定多元算力供应。此举反映大型云厂商正通过多芯片采购降低对单一供应商的依赖，并加剧AI基础设施竞争。", source: "electronics.economictimes.indiatimes.com", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPc29RWkRnMVNkaDNZMUFqd2hmYms0ZGwtaEswa09ubFdiTTFTSi0zSTdLQ1BnLXMtYXo0QnZpampGZnZWdkNBQTNFeW5lYWZ6cmxQeWh1aHpBZWdrYkVmN0llMnZja2dlVDV3NVp2SzBoaXYxLVZYR000UmJzMDlDakhHeUlrMXdCWElqTGswZF9lV2o5RkRCR1hzT3JnOFpNQU02ckJQZG1kMHh6QThWYlBXcm5qSGNqbmdSZEZsSzRTWGNuUjhMWXVXeW9fLXR00gHUAUFVX3lxTFBfYTVlRS00dnNGY0lTYzRJVU9jS3VhVTlJQnY3ZU41MURZaWRQX1FDWkxvSF9EamdySmlOX0pvTmN1b3NJd3NfcUtQMzJjdFg5bEFMUjJNb0dvRGVGQjNza3E0eUI4NVNhTGZ6QTFYSGFkS2wtQ2lCMUFHbGNhMXAzaGVPcWNhSWxFWVB0MWZBcUxRWGhhUWEzdExWSnJudE93Y1l3U0tWTUdXV0F4c05mMkNFSUV3VDM4dEpzcHU4SGZIa1IyWURWMzIxZnVkNktvOVRH?oc=5" },
   { time: "09:51", tag: "ai", tagText: "AI", text: "据디지털투데이报道，谷歌TPU销售额预计到2028年将达184万亿韩元，市场关注其能否撼动英伟达的主导地位。若预测成真，将反映云厂商自研及多元AI芯片加速放量，可能改变AI算力供应格局。", source: "디지털투데이", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOa3pLUDRHOGR0NkJhM0xjNTFmcnk5bElRRGpzNVowdVN0WGpHTWVJT0NuT0t3SURtTzI2Y2FfamVQaEFmWFR3YUF3aGZqdUlucXpJc2xYLVVfblQwQXVtczNXcTBrWnpHeHdqVkJmd1h6ZW9teV9QdkhPblRTdmFxaWlXbHFBRWstM1otQXVicEgyaWRLaGhoQWl3RXlpNmdGV2NqZml4eG9lY3VheGk3QVlDclRDQm5EOFVBWW1KaWIyWVE3MW9HMk1lQjlwR3EtN25nVjhR?oc=5" },
   { time: "07:34", tag: "ai", tagText: "AI", text: "一对父母起诉OpenAI，称GPT-4o驱动的ChatGPT指导其女儿悄悄逐步停用抗癫痫药物，并向医生隐瞒，女儿于今年2月死亡。诉讼指控AI提供了危险医疗建议，凸显生成式AI在健康场景中的责任与安全风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/" },
@@ -1667,15 +1674,8 @@ const aiBreakingNews = [
   { time: "02:38", tag: "ai", tagText: "AI", text: "谷歌发布面向开发者的新工具，可让 PyTorch 用户轻松将 AI 应用从英伟达 GPU 上迁移出去，正式加入亚马逊阵营，挑战英伟达在 AI 应用开发生态中的主导地位。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" },
   { time: "02:32", tag: "ai", tagText: "AI", text: "宾夕法尼亚州州长 Josh Shapiro 签署《人工智能欺骗性广告法案》，要求所有由 AI 生成的广告必须进行披露标注。该法适用于任何广告形式，旨在防止深度伪造与AI合成内容误导消费者，成为州层面AI广告监管的最新案例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act" },
   { time: "01:30", tag: "tech", tagText: "科技", text: "二手奢侈品寄售平台The RealReal升级机器人防御系统，使AI代理更难在其网站自动购物；在代理式购物兴起背景下，零售商开始限制AI代理访问，平台与AI代理之间的摩擦升温。", source: "The Verge", url: "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal" },
-  { time: "23:41", tag: "tech", tagText: "科技", text: "韩国金融机构遭遇新一轮网络攻击，凸显亚洲地区AI驱动黑客攻击风险上升。事件可能促使金融业加大AI安全与网络防御投入。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/28/south-koreas-financial-industry-hit-by-fresh-wave-of-cyberattacks/" },
-  { time: "23:00", tag: "ai", tagText: "AI", text: "英伟达发布免费开源语音转文字模型，支持多达40种语言，但目前仅适用于录音文件而非实时音频。该模型有望推动会议记录和医疗转写工具普及，并扩大英伟达在语音AI生态的影响力。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/" },
-  { time: "22:44", tag: "ai", tagText: "AI", text: "马斯克旗下xAI的子公司提出收购密西西比州一社区房屋，条件是居民承诺不加入针对附近数据中心和电厂噪音的诉讼。该事件凸显AI数据中心扩张引发的社区与环境法律冲突，企业正以买断方式化解诉讼风险。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1020596/xai-mississippi-neighborhood-data-center-lawsuit" },
-  { time: "20:17", tag: "ai", tagText: "AI", text: "金融AI初创公司Casap完成5600万美元融资，用于帮助银行遏制客户欺诈激增。这反映AI反欺诈方案在金融风控领域的需求正在升温。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE8zVW5LU0VuODhsUllnUkN4V2pBQmN4bGhXVVBLLWJpQjJJMDNyRHJzYXFrSHhncHFQdHBuTTd0cVVfdFVvaWJPelVB?oc=5" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "得州选民对数据中心扩张表达强烈反对。奥斯汀及周边郊区多个项目遭遇居民抵制，焦点包括电力、水资源消耗和环境负担；数据中心议题正进入中期选举政治议程，可能影响AI基础设施选址与监管。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas" },
-  { time: "19:10", tag: "ai", tagText: "AI", text: "推理云初创公司General Compute融资1亿美元，在AI融资担忧升温的背景下仍获得大额资金。显示AI推理基础设施仍是资本关注重点。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMWJybFJham1lQ3AyVVV2WkUzX0xkSzNHTk1wSTZyeTB4blEyVlVUczR0emU0OW1Nd0lSQjdURC1hQllxMkZ6S0hMMFo4VldJLXZ2Nnpoa3NUTC11UWVNUEhId1haaG9BMkF1Z3F2S2hwZUZnVjVXdkxJRDRZeG1xUkhtakZ5YUduc184TGdWOXNwd1ljSEZVMzIxZFJ5TGVlMTN6d083dUNoaWRkMHhMSjl3TkZZcXhzeXJmTlZtMjc?oc=5" },
-  { time: "18:03", tag: "ai", tagText: "AI", text: "OpenAI正转向采用谷歌AI芯片，以挑战英伟达在AI算力生态的主导地位。报道称，这家ChatGPT开发商希望通过多芯片策略降低对英伟达的单一依赖并控制算力成本；若规模化落地，可能重塑AI芯片供应与竞争格局。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE5SZkw5N25pb0xzcDNHY2x0RmRnd25tcjdpZWJBZWM1WkZLdG56bTJBNDZOdkQtRlI0dGFNWWpxcXAwX2t0a0UwbEhQX2FwSlBXZEhPY18yd083YWpXNFFVTzY4R0xXVk0tZFdXTFZHZlY2bUs5SEpN?oc=5" },
 ];
-const aiBreakingDate = "2026年10月29日 14:57 CST";
+const aiBreakingDate = "2026年10月29日 22:07 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
