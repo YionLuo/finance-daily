@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 34.57,
+  score: 34.6,
   rating: "fear",
-  timestamp: "2026-10-29T20:01:00+00:00",
+  timestamp: "2026-10-29T23:59:48+00:00",
   previousClose: 35.86,
   previous1Week: 19.99,
   previous1Month: 31.06,
   previous1Year: 42.11,
-  date: "2026年10月30日 04:11 CST"
+  date: "2026年10月30日 08:48 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:17", tag: "macro", tagText: "宏观", text: "CNBC调查显示，日本央行本周料维持利率不变，但将保持鹰派基调。全部受访者预计日本央行会为12月或明年1月加息铺路，理由是通胀与工资持续上行；日元与日本国债收益率将对会议措辞高度敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html" },
+  { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
+  { time: "04:56", tag: "ai", tagText: "AI", text: "微软最新财报营收同比增长19%至923亿美元，Azure收入增长48%，云业务驱动业绩超预期，股价大涨约4%—5%。市场将其视为AI基础设施需求仍强劲的关键信号。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html" },
+  { time: "04:35", tag: "macro", tagText: "宏观", text: "联邦快递在调整财年后的首份季报中营收和利润均超华尔街预期，并上调业绩指引。作为全球物流与经济活动的风向标，其展望改善暗示企业补库存和货运需求可能正在企稳。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/fedex-fdx-sept-2026-earnings.html" },
+  { time: "04:15", tag: "ai", tagText: "AI", text: "Alphabet季度搜索业务不及预期，同时AI相关资本开支升至逾500亿美元，自由现金流进一步下滑且资本开支指引令人失望，股价大跌7%。投资者担忧其AI投入回报周期拉长，成为AI交易降温的最新警讯。", source: "Financial Times", url: "https://www.ft.com/content/eb386156-5bf9-4edd-80f2-803fdee1e33d?syn-25a6b1a6=1" },
   { time: "03:53", tag: "macro", tagText: "宏观", text: "美联储周三以10比2的投票结果维持联邦基金利率目标区间在3.75%—4%不变。主席沃什表示，未来将减少议息会议次数，并称即将迎来“信息丰富”的时期，暗示政策仍取决于后续数据；市场解读偏鹰但美股仍连续第三日上涨，标普500与道指收高，美债收益率上行。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/fed-meeting-today-live-updates.html" },
   { time: "03:34", tag: "ai", tagText: "AI", text: "甲骨文上调长期财务目标，预计到2029年自由现金流达300亿美元，并将数据中心战略的新增融资限制在200亿美元，称AI投资将比市场预期更早见效。股价大涨12%，缓解了投资者对其AI经济性的担忧。", source: "Financial Times", url: "https://www.ft.com/content/fb08df06-da63-4e94-822d-a47b94616871?syn-25a6b1a6=1" },
   { time: "02:43", tag: "tech", tagText: "科技", text: "苹果回应多名用户报告新款折叠屏手机iPhone Duo屏幕损坏，称已知悉问题并将在AppleCare保修范围内为用户更换设备。这是苹果首代折叠机型遭遇的可靠性质疑，市场关注其对销量、保修成本及后续产品迭代的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html" },
@@ -1644,18 +1649,16 @@ const breakingNews = [
   { time: "11:02", tag: "geo", tagText: "地缘", text: "特朗普表示伊朗战争将“在我想让它结束时结束”，此前有报道称美国在这场冲突中的成本已膨胀至470亿美元。战事成本与持续时间的不确定性上升，叠加霍尔木兹海峡航运风险，正成为能源价格与全球风险资产定价的关键变量。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/us-iran-war-trump-hormuz-costs-centcom.html" },
   { time: "08:54", tag: "geo", tagText: "地缘", text: "巴西大选结果出炉后，博索纳罗所属自由党承认败选，但美国总统特朗普称结果“被操纵”，并质疑延长投票时间的做法。市场关注巴西政治过渡进程、财政政策连续性以及美巴关系可能出现的摩擦。", source: "Financial Times", url: "https://www.ft.com/content/ae37754c-6200-425d-8f8f-ce0b0f7cc250?syn-25a6b1a6=1" },
   { time: "08:54", tag: "geo", tagText: "地缘", text: "美国贸易代表格里尔向欧盟表示，欧盟向空客提供贷款的做法威胁到双方在飞机融资领域的贸易休战。此举可能重新点燃美欧航空补贴争端，并波及波音、空客供应链及相关关税安排。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRWRKSlpLR3l4cENjelFuU0tPXzRLc21PTTZ4QUpCNHBnZDZ0MW85NFVpYnlvLXhiaFQ3SnZ3aDhEZXRfOXg3LURobjdQWHAtSGNKalZMcVNhWGRCeDRpYzVYb1BTOXZydlFJVVFqbXRaWDlsbUozS0lSc1BsUDdhaWRuV3dpUDFFT3VXRjg4cklMT3NvOEs4T1hOX0lvUC1Yek5kcXd0TmhIaUItS3RVRFUxejN1amZIMmJmcHE3M0k5VGVGOGs3LU5GTWk3R0ZCNzBURk41dw?oc=5" },
-  { time: "08:17", tag: "macro", tagText: "宏观", text: "CNBC调查显示，日本央行本周料维持利率不变，但将保持鹰派基调。全部受访者预计日本央行会为12月或明年1月加息铺路，理由是通胀与工资持续上行；日元与日本国债收益率将对会议措辞高度敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html" },
-  { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
-  { time: "04:56", tag: "ai", tagText: "AI", text: "微软最新财报营收同比增长19%至923亿美元，Azure收入增长48%，云业务驱动业绩超预期，股价大涨约4%—5%。市场将其视为AI基础设施需求仍强劲的关键信号。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html" },
-  { time: "04:35", tag: "macro", tagText: "宏观", text: "联邦快递在调整财年后的首份季报中营收和利润均超华尔街预期，并上调业绩指引。作为全球物流与经济活动的风向标，其展望改善暗示企业补库存和货运需求可能正在企稳。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/fedex-fdx-sept-2026-earnings.html" },
-  { time: "04:15", tag: "ai", tagText: "AI", text: "Alphabet季度搜索业务不及预期，同时AI相关资本开支升至逾500亿美元，自由现金流进一步下滑且资本开支指引令人失望，股价大跌7%。投资者担忧其AI投入回报周期拉长，成为AI交易降温的最新警讯。", source: "Financial Times", url: "https://www.ft.com/content/eb386156-5bf9-4edd-80f2-803fdee1e33d?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年10月30日 04:11 CST";
+const breakingDate = "2026年10月30日 08:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:42", tag: "ai", tagText: "AI", text: "亚马逊CEO Jassy表示，AWS未来将成为一项万亿美元收入的业务，但前提是持续大规模资本开支。他于周四强调，公司目标是成为AI云计算领域的领导者，为此将继续投入数据中心、芯片与算力基础设施，短期内资本支出仍将高企，投资者需在增长与利润率之间做权衡。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/" },
   { time: "04:08", tag: "tech", tagText: "科技", text: "Reddit宣布将转向登录后才能访问的体验，以应对AI搜索导致搜索流量下滑。公司正重新审视开放网络根基，旨在保护用户群与商业模式；此举可能影响内容可发现性、搜索索引及AI训练数据获取。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/" },
+  { time: "04:05", tag: "tech", tagText: "科技", text: "Rivian扩大与大众的合资业务范围，新增AI语音助手方向。该合资体此前规模为58亿美元，公司未披露本次扩容是否带来估值提升。此举反映传统车企与电动车新势力正通过联合开发，加速把生成式AI能力嵌入车载交互与智能座舱。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/" },
   { time: "03:56", tag: "ai", tagText: "AI", text: "OpenAI支持的Thrive Holdings以153亿美元收购ADT，计划将AI引入家庭安全业务。交易显示AI资本正加速进入传统安防与智能家居场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/" },
+  { time: "03:14", tag: "ai", tagText: "AI", text: "Meta低调上线AI时尚应用Style Sketch，可连接Instagram，将用户已发布的照片转化为虚拟衣橱，也支持拍照、录制短视频或从相册上传图片手动添加单品。这是Meta把社交图像资产与生成式AI消费级场景结合的又一次试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
   { time: "02:55", tag: "ai", tagText: "AI", text: "投资机构 Disruptive 完成 100 亿美元新基金募集，计划对至少 10 家公司进行大额下注。该机构近年因投资芯片初创 Groq 与 AI 语音生成公司 ElevenLabs 而受到关注，此次募资规模显示资本仍在持续加码 AI 基础设施与应用层。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/" },
   { time: "02:45", tag: "ai", tagText: "AI", text: "谷歌Gemini聊天现在可直接生成、预览和编辑Google Docs、PDF、Sheets、幻灯片、Markdown、TXT及代码文件。新能力把Gemini从对话助手推进到办公文档生产与编辑工作流。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "ai", tagText: "AI", text: "语音AI基础设施公司Deepgram收购Pipecat框架开发商Daily，以增强实时语音AI能力。Deepgram承诺Pipecat将继续保持开源。此次并购反映语音AI赛道正在整合底层基础设施。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/" },
   { time: "20:17", tag: "ai", tagText: "AI", text: "金融AI初创公司Casap完成5600万美元融资，用于帮助银行遏制客户欺诈激增。这反映AI反欺诈方案在金融风控领域的需求正在升温。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE8zVW5LU0VuODhsUllnUkN4V2pBQmN4bGhXVVBLLWJpQjJJMDNyRHJzYXFrSHhncHFQdHBuTTd0cVVfdFVvaWJPelVB?oc=5" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "得州选民对数据中心扩张表达强烈反对。奥斯汀及周边郊区多个项目遭遇居民抵制，焦点包括电力、水资源消耗和环境负担；数据中心议题正进入中期选举政治议程，可能影响AI基础设施选址与监管。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas" },
-  { time: "19:10", tag: "ai", tagText: "AI", text: "推理云初创公司General Compute融资1亿美元，在AI融资担忧升温的背景下仍获得大额资金。显示AI推理基础设施仍是资本关注重点。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMWJybFJham1lQ3AyVVV2WkUzX0xkSzNHTk1wSTZyeTB4blEyVlVUczR0emU0OW1Nd0lSQjdURC1hQllxMkZ6S0hMMFo4VldJLXZ2Nnpoa3NUTC11UWVNUEhId1haaG9BMkF1Z3F2S2hwZUZnVjVXdkxJRDRZeG1xUkhtakZ5YUduc184TGdWOXNwd1ljSEZVMzIxZFJ5TGVlMTN6d083dUNoaWRkMHhMSjl3TkZZcXhzeXJmTlZtMjc?oc=5" },
-  { time: "18:03", tag: "ai", tagText: "AI", text: "OpenAI正转向采用谷歌AI芯片，以挑战英伟达在AI算力生态的主导地位。报道称，这家ChatGPT开发商希望通过多芯片策略降低对英伟达的单一依赖并控制算力成本；若规模化落地，可能重塑AI芯片供应与竞争格局。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE5SZkw5N25pb0xzcDNHY2x0RmRnd25tcjdpZWJBZWM1WkZLdG56bTJBNDZOdkQtRlI0dGFNWWpxcXAwX2t0a0UwbEhQX2FwSlBXZEhPY18yd083YWpXNFFVTzY4R0xXVk0tZFdXTFZHZlY2bUs5SEpN?oc=5" },
-  { time: "18:00", tag: "ai", tagText: "AI", text: "The Verge报道称，亚利桑那州的数据中心与芯片制造扩张正加剧当地水资源压力，台积电等大型设施在沙漠地区消耗大量水。AI算力需求增长使数据中心的水、电与环境负担成为地方政治和基础设施议题。", source: "The Verge", url: "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc" },
 ];
-const aiBreakingDate = "2026年10月30日 04:11 CST";
+const aiBreakingDate = "2026年10月30日 08:48 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
