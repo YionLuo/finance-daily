@@ -1616,19 +1616,20 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 22.31,
-  rating: "extreme fear",
-  timestamp: "2026-10-30T19:07:44+00:00",
+  score: 26.24,
+  rating: "fear",
+  timestamp: "2026-10-30T23:18:12+00:00",
   previousClose: 34.6,
   previous1Week: 16.69,
   previous1Month: 30.31,
   previous1Year: 37.06,
-  date: "2026年10月31日 03:10 CST"
+  date: "2026年10月31日 07:38 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
   { time: "14:53", tag: "tech", tagText: "科技", text: "三星电子周四公布第三季度业绩，尽管利润创纪录，股价仍下跌。市场将其与Alphabet财报不及预期联系起来，显示投资者对科技股高估值与AI投入回报的担忧升温，科技股涨势受挫。", source: "CNBC", url: "https://www.cnbc.com/2026/10/29/samsung-electronics-third-quarter-earnings.html" },
   { time: "14:35", tag: "tech", tagText: "科技", text: "亚马逊与英特尔最新财报公布后股价大跌，引发全球科技股抛售加剧。纳斯达克100期货下挫，日本科技权重股拖累日经225指数走低，美股料低开，道指与标普500此前涨势中断。市场担忧AI资本开支高企而回报周期拉长，叠加近期Alphabet、三星等财报疲软，投资者对科技股高估值的警惕明显升温。", source: "Financial Times", url: "https://www.ft.com/content/3ba953ae-84bb-4de4-959e-baec3e908fb3?syn-25a6b1a6=1" },
   { time: "14:35", tag: "geo", tagText: "地缘", text: "伊朗称四艘油轮在霍尔木兹海峡触雷，胡塞武装袭击持续，市场对美方在中期选举后重启军事行动的担忧上升。霍尔木兹航运风险溢价再度抬头，投资者关注油价跳涨与全球供应链受冲击的可能，中东局势长期化风险加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/10/30/iran-trump-hormuz-oil-middle-east-.html" },
@@ -1648,12 +1649,12 @@ const breakingNews = [
   { time: "08:54", tag: "geo", tagText: "地缘", text: "巴西大选结果出炉后，博索纳罗所属自由党承认败选，但美国总统特朗普称结果“被操纵”，并质疑延长投票时间的做法。市场关注巴西政治过渡进程、财政政策连续性以及美巴关系可能出现的摩擦。", source: "Financial Times", url: "https://www.ft.com/content/ae37754c-6200-425d-8f8f-ce0b0f7cc250?syn-25a6b1a6=1" },
   { time: "08:54", tag: "geo", tagText: "地缘", text: "美国贸易代表格里尔向欧盟表示，欧盟向空客提供贷款的做法威胁到双方在飞机融资领域的贸易休战。此举可能重新点燃美欧航空补贴争端，并波及波音、空客供应链及相关关税安排。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRWRKSlpLR3l4cENjelFuU0tPXzRLc21PTTZ4QUpCNHBnZDZ0MW85NFVpYnlvLXhiaFQ3SnZ3aDhEZXRfOXg3LURobjdQWHAtSGNKalZMcVNhWGRCeDRpYzVYb1BTOXZydlFJVVFqbXRaWDlsbUozS0lSc1BsUDdhaWRuV3dpUDFFT3VXRjg4cklMT3NvOEs4T1hOX0lvUC1Yek5kcXd0TmhIaUItS3RVRFUxejN1amZIMmJmcHE3M0k5VGVGOGs3LU5GTWk3R0ZCNzBURk41dw?oc=5" },
   { time: "08:17", tag: "macro", tagText: "宏观", text: "CNBC调查显示，日本央行本周料维持利率不变，但将保持鹰派基调。全部受访者预计日本央行会为12月或明年1月加息铺路，理由是通胀与工资持续上行；日元与日本国债收益率将对会议措辞高度敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html" },
-  { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
 ];
-const breakingDate = "2026年10月31日 03:10 CST";
+const breakingDate = "2026年10月31日 07:38 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:08", tag: "tech", tagText: "科技", text: "Reddit宣布将转向登录后才能访问的体验，以应对AI搜索导致搜索流量下滑。公司正重新审视开放网络根基，旨在保护用户群与商业模式；此举可能影响内容可发现性、搜索索引及AI训练数据获取。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
   { time: "02:55", tag: "ai", tagText: "AI", text: "投资机构 Disruptive 完成 100 亿美元新基金募集，计划对至少 10 家公司进行大额下注。该机构近年因投资芯片初创 Groq 与 AI 语音生成公司 ElevenLabs 而受到关注，此次募资规模显示资本仍在持续加码 AI 基础设施与应用层。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/" },
   { time: "02:45", tag: "ai", tagText: "AI", text: "谷歌Gemini聊天现在可直接生成、预览和编辑Google Docs、PDF、Sheets、幻灯片、Markdown、TXT及代码文件。新能力把Gemini从对话助手推进到办公文档生产与编辑工作流。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "17:00", tag: "tech", tagText: "科技", text: "维基百科运营方维基媒体基金会在多起标志性AI版权诉讼中采取中间立场：主张法院应依法保护大语言模型对受版权作品进行训练，但同时应为版权人保留必要边界。该案结果将直接影响开放网络内容的可获得性与AI训练数据合规框架，被视为决定“开放网络能否存续”的关键判例之一。", source: "The Verge", url: "https://www.theverge.com/policy/1022880/wikipedia-openai-new-york-times-copyright" },
   { time: "12:59", tag: "ai", tagText: "AI", text: "随着AI芯片需求激增，被称为“中国英伟达”的芯片公司创始人首次进入中国十大富豪榜，凸显本土AI算力产业链造富效应与市场热度。", source: "VnExpress International", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQd2Q0akZBd3p1ZkNITXp0d25NR1psYjNLTFpiUExvQmd5ZE02V0dWNlFQYjhvOXZYS0IwMDhvTFRKNFZsUTVjZkZyOG1qRlRGNlg0dno2WnJDbFdobDZfaWpmMU96YlFCV09LaGNJaWtSTEstWlFNUWJsSnRkQ2g0dGxIWS10cXZOSFFPdGZaa1VveXRrWEI2ZDhlSjVNcEllMzNxY3VwMDhfb2pqck5ZMFY0c3paNFpERml1cnBVYmNUaEVucXZSeHFTd1QybHlnblE?oc=5" },
   { time: "07:42", tag: "ai", tagText: "AI", text: "亚马逊CEO Jassy表示，AWS未来将成为一项万亿美元收入的业务，但前提是持续大规模资本开支。他于周四强调，公司目标是成为AI云计算领域的领导者，为此将继续投入数据中心、芯片与算力基础设施，短期内资本支出仍将高企，投资者需在增长与利润率之间做权衡。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/" },
-  { time: "04:08", tag: "tech", tagText: "科技", text: "Reddit宣布将转向登录后才能访问的体验，以应对AI搜索导致搜索流量下滑。公司正重新审视开放网络根基，旨在保护用户群与商业模式；此举可能影响内容可发现性、搜索索引及AI训练数据获取。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/" },
 ];
-const aiBreakingDate = "2026年10月31日 03:10 CST";
+const aiBreakingDate = "2026年10月31日 07:38 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
