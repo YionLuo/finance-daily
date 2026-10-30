@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 28.73,
-  rating: "fear",
-  timestamp: "2026-10-30T13:57:30+00:00",
+  score: 22.31,
+  rating: "extreme fear",
+  timestamp: "2026-10-30T19:07:44+00:00",
   previousClose: 34.6,
   previous1Week: 16.69,
   previous1Month: 30.31,
   previous1Year: 37.06,
-  date: "2026年10月30日 22:00 CST"
+  date: "2026年10月31日 03:10 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,18 @@ const breakingNews = [
   { time: "08:17", tag: "macro", tagText: "宏观", text: "CNBC调查显示，日本央行本周料维持利率不变，但将保持鹰派基调。全部受访者预计日本央行会为12月或明年1月加息铺路，理由是通胀与工资持续上行；日元与日本国债收益率将对会议措辞高度敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html" },
   { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
 ];
-const breakingDate = "2026年10月30日 22:00 CST";
+const breakingDate = "2026年10月31日 03:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
+  { time: "02:55", tag: "ai", tagText: "AI", text: "投资机构 Disruptive 完成 100 亿美元新基金募集，计划对至少 10 家公司进行大额下注。该机构近年因投资芯片初创 Groq 与 AI 语音生成公司 ElevenLabs 而受到关注，此次募资规模显示资本仍在持续加码 AI 基础设施与应用层。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/" },
+  { time: "02:45", tag: "ai", tagText: "AI", text: "谷歌Gemini聊天现在可直接生成、预览和编辑Google Docs、PDF、Sheets、幻灯片、Markdown、TXT及代码文件。新能力把Gemini从对话助手推进到办公文档生产与编辑工作流。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs" },
+  { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
+  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
+  { time: "02:21", tag: "tech", tagText: "科技", text: "谷歌宣布，其搭载自研TPU芯片的“太阳捕手”（Project Suncatcher）试验卫星已在轨成功启动张量处理单元，并首次从太空向地面传回AI响应。卫星上运行的是谷歌DeepMind的Gemma 4模型，还生成了一首“打油诗”。这是谷歌把AI数据中心搬上轨道计划的关键里程碑，验证了太空在轨算力的可行性，也为其未来用太阳能卫星网络承载AI推理的设想提供了初步证据。", source: "The Verge", url: "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission" },
+  { time: "01:38", tag: "ai", tagText: "AI", text: "星巴克CEO Brian Niccol在财报电话会上表示，公司计划探索在得来速（drive-thru）场景中，通过AI为到店车辆展示“个性化数字菜单”。这意味着点单屏可能根据用户历史偏好动态调整推荐内容，是大型连锁餐饮把生成式AI落到高频消费场景的最新尝试。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru" },
+  { time: "22:58", tag: "ai", tagText: "AI", text: "教皇利奥十四世在周五的教宗讲话中呼吁对AI进行“解除武装”，强调“机器是工具，不是人”，并指出人类“有责任去引导、改变，并在必要时拒绝其应用”。此番表态是宗教权威对AI军事化与伦理边界的最新介入，可能影响欧洲及全球AI治理话语。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai" },
   { time: "21:54", tag: "ai", tagText: "AI", text: "DoorDash披露，来自AI代理（智能体）的订单目前仅“数百单”，规模仍极小。公司表示愿意与第三方代理开发商合作，但在代理式购物生态中保持谨慎。此前已有多家零售商限制AI代理自动访问与下单，显示“AI替你点外卖/购物”仍处早期试验阶段，平台在接口开放、身份验证与反欺诈上的规则尚未成型。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/" },
   { time: "21:30", tag: "ai", tagText: "AI", text: "Anthropic的IPO招股书S-1披露其核心商业逻辑：公司以通往AGI为叙事，为尽可能大规模投入算力提供财务正当性，并试图让华尔街相信其长期AGI愿景。文件引发市场关注其收入、亏损与巨额算力支出如何支撑估值。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive" },
   { time: "21:01", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman表示，他理解数学家在面对大量AI生成结果时的困扰，但OpenAI对数学领域的“轰炸”不会停止。相关报道梳理了AI近期频繁产出数学成果所引发的争议：从证明可信度、同行评审流程到研究优先级，学界正被迫重建评估标准；这也被视为AI在基础科学研究中角色上升的重要信号。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview" },
@@ -1666,16 +1674,8 @@ const aiBreakingNews = [
   { time: "12:59", tag: "ai", tagText: "AI", text: "随着AI芯片需求激增，被称为“中国英伟达”的芯片公司创始人首次进入中国十大富豪榜，凸显本土AI算力产业链造富效应与市场热度。", source: "VnExpress International", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQd2Q0akZBd3p1ZkNITXp0d25NR1psYjNLTFpiUExvQmd5ZE02V0dWNlFQYjhvOXZYS0IwMDhvTFRKNFZsUTVjZkZyOG1qRlRGNlg0dno2WnJDbFdobDZfaWpmMU96YlFCV09LaGNJaWtSTEstWlFNUWJsSnRkQ2g0dGxIWS10cXZOSFFPdGZaa1VveXRrWEI2ZDhlSjVNcEllMzNxY3VwMDhfb2pqck5ZMFY0c3paNFpERml1cnBVYmNUaEVucXZSeHFTd1QybHlnblE?oc=5" },
   { time: "07:42", tag: "ai", tagText: "AI", text: "亚马逊CEO Jassy表示，AWS未来将成为一项万亿美元收入的业务，但前提是持续大规模资本开支。他于周四强调，公司目标是成为AI云计算领域的领导者，为此将继续投入数据中心、芯片与算力基础设施，短期内资本支出仍将高企，投资者需在增长与利润率之间做权衡。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/" },
   { time: "04:08", tag: "tech", tagText: "科技", text: "Reddit宣布将转向登录后才能访问的体验，以应对AI搜索导致搜索流量下滑。公司正重新审视开放网络根基，旨在保护用户群与商业模式；此举可能影响内容可发现性、搜索索引及AI训练数据获取。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/" },
-  { time: "04:05", tag: "tech", tagText: "科技", text: "Rivian扩大与大众的合资业务范围，新增AI语音助手方向。该合资体此前规模为58亿美元，公司未披露本次扩容是否带来估值提升。此举反映传统车企与电动车新势力正通过联合开发，加速把生成式AI能力嵌入车载交互与智能座舱。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/" },
-  { time: "03:56", tag: "ai", tagText: "AI", text: "OpenAI支持的Thrive Holdings以153亿美元收购ADT，计划将AI引入家庭安全业务。交易显示AI资本正加速进入传统安防与智能家居场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/" },
-  { time: "03:14", tag: "ai", tagText: "AI", text: "Meta低调上线AI时尚应用Style Sketch，可连接Instagram，将用户已发布的照片转化为虚拟衣橱，也支持拍照、录制短视频或从相册上传图片手动添加单品。这是Meta把社交图像资产与生成式AI消费级场景结合的又一次试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/" },
-  { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
-  { time: "02:55", tag: "ai", tagText: "AI", text: "投资机构 Disruptive 完成 100 亿美元新基金募集，计划对至少 10 家公司进行大额下注。该机构近年因投资芯片初创 Groq 与 AI 语音生成公司 ElevenLabs 而受到关注，此次募资规模显示资本仍在持续加码 AI 基础设施与应用层。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/" },
-  { time: "02:45", tag: "ai", tagText: "AI", text: "谷歌Gemini聊天现在可直接生成、预览和编辑Google Docs、PDF、Sheets、幻灯片、Markdown、TXT及代码文件。新能力把Gemini从对话助手推进到办公文档生产与编辑工作流。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs" },
-  { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
-  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
 ];
-const aiBreakingDate = "2026年10月30日 22:00 CST";
+const aiBreakingDate = "2026年10月31日 03:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
