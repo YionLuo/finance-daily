@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 16.69,
   previous1Month: 30.31,
   previous1Year: 37.06,
-  date: "2026年10月31日 13:21 CST"
+  date: "2026年10月31日 20:10 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:00", tag: "macro", tagText: "宏观", text: "美国中期选举进入最后阶段，10位超级金主合计投入约10亿美元，推动本轮选举成为有记录以来最昂贵的周期。巨额政治献金凸显少数富豪对国会控制权与政策议程的影响力，也引发对竞选财务规则的关注。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/these-10-megadonors-have-spent-a-total-of-1-billion-on-the-midterm-elections-0dc279cf?mod=mw_rss_topstories" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "Anthropic的纳斯达克上市之路变得更崎岖。本周超大规模云厂商的谨慎预测打击科技股，纳指录得自3月以来首次三周连跌，反映市场对AI资本开支与估值回报的担忧升温，也可能影响AI独角兽IPO窗口。", source: "CNBC", url: "https://www.cnbc.com/2026/10/31/anthropic-ipo-ai-spending.html" },
+  { time: "17:36", tag: "macro", tagText: "宏观", text: "惠誉在法国第三季度经济意外萎缩数据公布数小时后，罕见地未按日程下调法国主权评级展望。此举加剧市场对法国财政状况、赤字路径与政治不确定性的担忧，或推高其融资成本并影响欧元资产。", source: "Financial Times", url: "https://www.ft.com/content/852b05a1-4090-4aee-afc6-4d4c353ef3cf?syn-25a6b1a6=1" },
+  { time: "15:04", tag: "geo", tagText: "地缘", text: "美国批准向乌克兰出售价值21亿美元的“爱国者”拦截导弹。泽连斯基欢迎这一“强有力决定”，但呼吁立即交付，以应对持续空袭。此举可能影响俄乌冲突防空能力、美欧对乌援助节奏及美俄关系。", source: "Financial Times", url: "https://www.ft.com/content/321cf4f9-d236-4b50-a52c-c2a21f7c447b?syn-25a6b1a6=1" },
+  { time: "14:53", tag: "tech", tagText: "科技", text: "三星电子周四公布第三季度业绩，尽管利润创纪录，股价仍下跌。市场将其与Alphabet财报不及预期联系起来，显示投资者对科技股高估值与AI投入回报的担忧升温，科技股涨势受挫。", source: "CNBC", url: "https://www.cnbc.com/2026/10/29/samsung-electronics-third-quarter-earnings.html" },
   { time: "13:00", tag: "ai", tagText: "AI", text: "FT分析指出，科技行业出现生产率上升而就业下降，可能是AI冲击劳动力市场的首个清晰证据；但其他行业的就业与生产率变化仍不明朗，尚难判断影响是否已扩散。", source: "Financial Times", url: "https://www.ft.com/content/7f27aa5f-5994-4f82-aed8-1cade18fb487?syn-25a6b1a6=1" },
   { time: "13:00", tag: "geo", tagText: "地缘", text: "欧洲在如何影响美俄谈判上出现分歧，多国担心在乌克兰和平谈判中被边缘化，因而各自向普京展开接触，协调明显不足。分析认为这可能削弱欧洲在安全架构、制裁安排与对乌援助上的议价能力。", source: "Financial Times", url: "https://www.ft.com/content/ba3a2569-3ff1-4bdc-aa78-657efbd13716?syn-25a6b1a6=1" },
   { time: "13:00", tag: "ai", tagText: "AI", text: "英伟达支持的AI云服务商Nscale推进350亿美元IPO，其核心西弗吉尼亚数据中心园区却面临施工问题、当地反对与融资风险。该项目被视为检验AI基础设施投资热潮成败的关键样本，也反映“新云”厂商在高杠杆扩张下的脆弱性。", source: "Financial Times", url: "https://www.ft.com/content/ee86c4b6-1fe4-467e-8f18-9c08df288aff?syn-25a6b1a6=1" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "11:02", tag: "geo", tagText: "地缘", text: "特朗普表示伊朗战争将“在我想让它结束时结束”，此前有报道称美国在这场冲突中的成本已膨胀至470亿美元。战事成本与持续时间的不确定性上升，叠加霍尔木兹海峡航运风险，正成为能源价格与全球风险资产定价的关键变量。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/us-iran-war-trump-hormuz-costs-centcom.html" },
   { time: "08:54", tag: "geo", tagText: "地缘", text: "巴西大选结果出炉后，博索纳罗所属自由党承认败选，但美国总统特朗普称结果“被操纵”，并质疑延长投票时间的做法。市场关注巴西政治过渡进程、财政政策连续性以及美巴关系可能出现的摩擦。", source: "Financial Times", url: "https://www.ft.com/content/ae37754c-6200-425d-8f8f-ce0b0f7cc250?syn-25a6b1a6=1" },
   { time: "08:54", tag: "geo", tagText: "地缘", text: "美国贸易代表格里尔向欧盟表示，欧盟向空客提供贷款的做法威胁到双方在飞机融资领域的贸易休战。此举可能重新点燃美欧航空补贴争端，并波及波音、空客供应链及相关关税安排。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRWRKSlpLR3l4cENjelFuU0tPXzRLc21PTTZ4QUpCNHBnZDZ0MW85NFVpYnlvLXhiaFQ3SnZ3aDhEZXRfOXg3LURobjdQWHAtSGNKalZMcVNhWGRCeDRpYzVYb1BTOXZydlFJVVFqbXRaWDlsbUozS0lSc1BsUDdhaWRuV3dpUDFFT3VXRjg4cklMT3NvOEs4T1hOX0lvUC1Yek5kcXd0TmhIaUItS3RVRFUxejN1amZIMmJmcHE3M0k5VGVGOGs3LU5GTWk3R0ZCNzBURk41dw?oc=5" },
-  { time: "08:38", tag: "crypto", tagText: "加密", text: "美国2026年中期选举临近，加密市场关注国会控制权变化对稳定币立法、SEC监管取向及比特币走势的影响；选举结果可能影响未来数年加密政策方向。", source: "CryptoTicker.io", url: "https://news.google.com/rss/articles/CBMic0FVX3lxTE91dnJsa3lCTDQxNDlORmZwQ1BNNWZmZ1ZJZ2wtc2h6Wk5xN0RscVNKbUl0ZTZNQ1JlSDNsbEJoZnFvY2h5U2JFVS1hRmMtNWpKSEdBdFBCMW5fS1Vlb0tBZURLVUhvQmd5ckdTbWRfZTk3VVU?oc=5" },
-  { time: "08:17", tag: "macro", tagText: "宏观", text: "CNBC调查显示，日本央行本周料维持利率不变，但将保持鹰派基调。全部受访者预计日本央行会为12月或明年1月加息铺路，理由是通胀与工资持续上行；日元与日本国债收益率将对会议措辞高度敏感。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html" },
-  { time: "08:05", tag: "ai", tagText: "AI", text: "OpenAI将融资目标下调100亿美元至约200亿美元，估值约1.25万亿美元；此举显示在科技股估值与AI投入回报担忧升温之际，公司正在收缩融资雄心。", source: "Financial Times", url: "https://www.ft.com/content/7a3ad950-1b3b-4d9e-8c15-65a61ae6180f?syn-25a6b1a6=1" },
-  { time: "07:10", tag: "macro", tagText: "宏观", text: "CNBC《中国连线》指出，中国城市之下存在“财政悬崖”：北京整体仍有举债空间，但债务沉重的地方政府正大幅削减支出，使增长与地方债务化解的难度上升。报道援引IMF数据，认为地方政府债务与房地产低迷正挤压财政腾挪空间，如何管理地方债务成为市场关注焦点。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html" },
-  { time: "14:53", tag: "tech", tagText: "科技", text: "三星电子周四公布第三季度业绩，尽管利润创纪录，股价仍下跌。市场将其与Alphabet财报不及预期联系起来，显示投资者对科技股高估值与AI投入回报的担忧升温，科技股涨势受挫。", source: "CNBC", url: "https://www.cnbc.com/2026/10/29/samsung-electronics-third-quarter-earnings.html" },
 ];
-const breakingDate = "2026年10月31日 13:21 CST";
+const breakingDate = "2026年10月31日 20:10 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:00", tag: "geo", tagText: "地缘", text: "缅因州参议员Susan Collins在中期选举最后一场辩论中，被现场观众以“我很害怕”打断，矛头直指AI数据中心的用电、水耗与噪音问题。报道称，数据中心争议正成为缅因州选情的关键变量，可能决定参议院控制权归属。这反映AI基建的地方反弹正从环保议题升级为全国性政治议题，直接影响选举与数据中心审批节奏。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers" },
+  { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase数据显示，尽管AI投入持续升温，全球旅游科技融资仍将滑向多年低点。资本正从旅游预订、出行服务等传统赛道撤出，转向回报叙事更强的AI基础设施与应用层，反映风险投资在整体收紧背景下进一步向AI集中，非AI垂直行业面临融资“挤出效应”。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPYUdJY3dma29nX01YTGw2cGw0SDRRLVBjZzBGbVFhSjY5SGExNV9xdnpTWDY3T0JkSEJLQkppRzRYeDVfYWdWNkVldWlQTk5JRzNBNGV0Sl9zM2p1OWwyYy00bzFzQ0JpVWU4R2plQUNoTTBwdlJ2N3ljaE9zUm5EeUFsaVZOdkw1Ml9BY1JhZw?oc=5" },
   { time: "12:59", tag: "ai", tagText: "AI", text: "随着AI芯片需求激增，被称为“中国英伟达”的芯片公司创始人首次进入中国十大富豪榜，凸显本土AI算力产业链造富效应与市场热度。", source: "VnExpress International", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQd2Q0akZBd3p1ZkNITXp0d25NR1psYjNLTFpiUExvQmd5ZE02V0dWNlFQYjhvOXZYS0IwMDhvTFRKNFZsUTVjZkZyOG1qRlRGNlg0dno2WnJDbFdobDZfaWpmMU96YlFCV09LaGNJaWtSTEstWlFNUWJsSnRkQ2g0dGxIWS10cXZOSFFPdGZaa1VveXRrWEI2ZDhlSjVNcEllMzNxY3VwMDhfb2pqck5ZMFY0c3paNFpERml1cnBVYmNUaEVucXZSeHFTd1QybHlnblE?oc=5" },
   { time: "09:20", tag: "ai", tagText: "AI", text: "英伟达正考虑为Nscale位于西弗吉尼亚州的AI数据中心贷款提供共同签署或担保。此举发生在投资者对AI资本开支愈发谨慎之际，由芯片供应商为数据中心项目融资背书，既可缓解项目资金压力，也可能把AI基础设施扩张风险进一步传导至英伟达。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/" },
   { time: "07:42", tag: "ai", tagText: "AI", text: "亚马逊CEO Jassy表示，AWS未来将成为一项万亿美元收入的业务，但前提是持续大规模资本开支。他于周四强调，公司目标是成为AI云计算领域的领导者，为此将继续投入数据中心、芯片与算力基础设施，短期内资本支出仍将高企，投资者需在增长与利润率之间做权衡。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Runware正在建设工厂，以流水线方式生产预制化AI数据中心，目标是把数据中心变成可标准化、可快速交付的“产品”，并宣称可在48小时内上线。真正的考验在于能否在如此规模下兑现交付能力。若模式跑通，将改变当前AI算力基建高度依赖现场施工、交付周期漫长的格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/" },
   { time: "21:00", tag: "ai", tagText: "AI", text: "语音AI基础设施公司Deepgram收购Pipecat框架开发商Daily，以增强实时语音AI能力。Deepgram承诺Pipecat将继续保持开源。此次并购反映语音AI赛道正在整合底层基础设施。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/" },
   { time: "20:17", tag: "ai", tagText: "AI", text: "金融AI初创公司Casap完成5600万美元融资，用于帮助银行遏制客户欺诈激增。这反映AI反欺诈方案在金融风控领域的需求正在升温。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE8zVW5LU0VuODhsUllnUkN4V2pBQmN4bGhXVVBLLWJpQjJJMDNyRHJzYXFrSHhncHFQdHBuTTd0cVVfdFVvaWJPelVB?oc=5" },
-  { time: "19:00", tag: "geo", tagText: "地缘", text: "缅因州参议员Susan Collins在中期选举最后一场辩论中，被现场观众以“我很害怕”打断，矛头直指AI数据中心的用电、水耗与噪音问题。报道称，数据中心争议正成为缅因州选情的关键变量，可能决定参议院控制权归属。这反映AI基建的地方反弹正从环保议题升级为全国性政治议题，直接影响选举与数据中心审批节奏。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase数据显示，尽管AI投入持续升温，全球旅游科技融资仍将滑向多年低点。资本正从旅游预订、出行服务等传统赛道撤出，转向回报叙事更强的AI基础设施与应用层，反映风险投资在整体收紧背景下进一步向AI集中，非AI垂直行业面临融资“挤出效应”。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPYUdJY3dma29nX01YTGw2cGw0SDRRLVBjZzBGbVFhSjY5SGExNV9xdnpTWDY3T0JkSEJLQkppRzRYeDVfYWdWNkVldWlQTk5JRzNBNGV0Sl9zM2p1OWwyYy00bzFzQ0JpVWU4R2plQUNoTTBwdlJ2N3ljaE9zUm5EeUFsaVZOdkw1Ml9BY1JhZw?oc=5" },
 ];
-const aiBreakingDate = "2026年10月31日 13:21 CST";
+const aiBreakingDate = "2026年10月31日 20:10 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
