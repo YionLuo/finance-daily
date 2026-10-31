@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 16.69,
   previous1Month: 30.31,
   previous1Year: 37.06,
-  date: "2026年11月1日 01:38 CST"
+  date: "2026年11月1日 05:24 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:12", tag: "ai", tagText: "AI", text: "SpaceX 未能驳回 NAACP 就其孟菲斯数据中心空气污染提起的诉讼；相关 Colossus 数据中心及配套电厂由 SpaceXAI/xAI 建设，长期遭社区反对。案件推进可能加大 AI 基础设施扩张的环保与法律风险。", source: "CNBC", url: "https://www.cnbc.com/2026/10/31/xai-naacp-clean-air-act-lawsuit-dismissal.html" },
+  { time: "03:56", tag: "ai", tagText: "AI", text: "OpenAI 下调最新一轮融资目标，现计划最多筹集 200 亿美元；交易仍在进行且尚未关闭，最终金额可能变化。市场关注此轮融资对 OpenAI 估值、AI 资本开支及行业竞争格局的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/10/31/openai-fundraising-20-billion-valuation.html" },
+  { time: "01:26", tag: "ai", tagText: "AI", text: "美国联邦医疗保险（Medicare）测试用 AI 进行事前授权以控制浪费性医疗支出，结果医疗服务量随即大幅下降。该试验凸显 AI 在医保控费中的效果与潜在争议，可能影响患者就医可及性及医保支出路径。", source: "MarketWatch", url: "https://www.marketwatch.com/story/medicare-used-ai-to-pre-approve-patient-care-and-it-immediately-led-to-a-large-drop-in-medical-services-dc38a210" },
   { time: "20:00", tag: "macro", tagText: "宏观", text: "美国中期选举进入最后阶段，10位超级金主合计投入约10亿美元，推动本轮选举成为有记录以来最昂贵的周期。巨额政治献金凸显少数富豪对国会控制权与政策议程的影响力，也引发对竞选财务规则的关注。", source: "MarketWatch.com", url: "https://www.marketwatch.com/story/these-10-megadonors-have-spent-a-total-of-1-billion-on-the-midterm-elections-0dc279cf?mod=mw_rss_topstories" },
   { time: "19:00", tag: "ai", tagText: "AI", text: "Anthropic的纳斯达克上市之路变得更崎岖。本周超大规模云厂商的谨慎预测打击科技股，纳指录得自3月以来首次三周连跌，反映市场对AI资本开支与估值回报的担忧升温，也可能影响AI独角兽IPO窗口。", source: "CNBC", url: "https://www.cnbc.com/2026/10/31/anthropic-ipo-ai-spending.html" },
   { time: "17:36", tag: "macro", tagText: "宏观", text: "惠誉在法国第三季度经济意外萎缩数据公布数小时后，罕见地未按日程下调法国主权评级展望。此举加剧市场对法国财政状况、赤字路径与政治不确定性的担忧，或推高其融资成本并影响欧元资产。", source: "Financial Times", url: "https://www.ft.com/content/852b05a1-4090-4aee-afc6-4d4c353ef3cf?syn-25a6b1a6=1" },
@@ -1646,14 +1649,18 @@ const breakingNews = [
   { time: "11:54", tag: "macro", tagText: "宏观", text: "在市场对AI交易热情降温、投资者转向离场之际，中国“国家队”基金与券商入场买入股票以稳定市场。此举凸显监管层对股市下挫的警惕，也反映AI概念退潮后市场面临的结构性压力与资金面脆弱。", source: "Financial Times", url: "https://www.ft.com/content/2bb82c45-04b2-4ccc-9002-f54483fb044e?syn-25a6b1a6=1" },
   { time: "11:34", tag: "macro", tagText: "宏观", text: "中国9月工业企业利润创三个月来最快增速。全球AI热潮叠加伊朗战争推高的大宗商品价格，显著提振矿商、芯片制造商与原材料供应商盈利；但报道指出，科技与资源板块的繁荣正加剧经济内部的分化，传统行业修复仍显滞后。", source: "CNBC", url: "https://www.cnbc.com/2026/10/27/china-industrial-profits-september-ai-tech-exports-.html" },
   { time: "11:32", tag: "crypto", tagText: "加密", text: "比特币跌破8万美元，过去24小时清算约3.56亿美元加密多头头寸。分析认为，在美联储维持利率不变后，加密市场风险偏好明显降温，杠杆多头遭遇集中平仓。", source: "CoinDesk", url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOdm9tYUY0UE5tWUNjSk10VEtPR2JWQWpoMkpaM3UtYXloMHZmemxQLVpzdEtnRWZsdkQzcVBFR0lGSENhanJjZ2QxdGhpWThKU1ZMSW1PSEhES2xhckJTMFJGRU00N2syaXB6aUhHWXRSYzVSWTBzM1JhWEwxVV9RYzFIOEtiMGxsLXNSU21kemxyb19qSVNhNVNEQUs1WHVfODNVajU2aFBXSWRSMzNvSXY1ajZHZlBTY293QU5FVDh3OU5IT0F1RGxkYnpMMEN4d0N3d05pS0hBMzQ?oc=5" },
-  { time: "11:02", tag: "geo", tagText: "地缘", text: "特朗普表示伊朗战争将“在我想让它结束时结束”，此前有报道称美国在这场冲突中的成本已膨胀至470亿美元。战事成本与持续时间的不确定性上升，叠加霍尔木兹海峡航运风险，正成为能源价格与全球风险资产定价的关键变量。", source: "CNBC", url: "https://www.cnbc.com/2026/10/28/us-iran-war-trump-hormuz-costs-centcom.html" },
-  { time: "08:54", tag: "geo", tagText: "地缘", text: "巴西大选结果出炉后，博索纳罗所属自由党承认败选，但美国总统特朗普称结果“被操纵”，并质疑延长投票时间的做法。市场关注巴西政治过渡进程、财政政策连续性以及美巴关系可能出现的摩擦。", source: "Financial Times", url: "https://www.ft.com/content/ae37754c-6200-425d-8f8f-ce0b0f7cc250?syn-25a6b1a6=1" },
-  { time: "08:54", tag: "geo", tagText: "地缘", text: "美国贸易代表格里尔向欧盟表示，欧盟向空客提供贷款的做法威胁到双方在飞机融资领域的贸易休战。此举可能重新点燃美欧航空补贴争端，并波及波音、空客供应链及相关关税安排。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRWRKSlpLR3l4cENjelFuU0tPXzRLc21PTTZ4QUpCNHBnZDZ0MW85NFVpYnlvLXhiaFQ3SnZ3aDhEZXRfOXg3LURobjdQWHAtSGNKalZMcVNhWGRCeDRpYzVYb1BTOXZydlFJVVFqbXRaWDlsbUozS0lSc1BsUDdhaWRuV3dpUDFFT3VXRjg4cklMT3NvOEs4T1hOX0lvUC1Yek5kcXd0TmhIaUItS3RVRFUxejN1amZIMmJmcHE3M0k5VGVGOGs3LU5GTWk3R0ZCNzBURk41dw?oc=5" },
 ];
-const breakingDate = "2026年11月1日 01:38 CST";
+const breakingDate = "2026年11月1日 05:24 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "05:17", tag: "ai", tagText: "AI", text: "美国法官裁定，全国有色人种协进会（NAACP）针对xAI数据中心污染提起的《清洁空气法》诉讼可以继续推进。该诉讼指控SpaceX旗下的xAI违反清洁空气法，凸显AI数据中心面临的环境监管与法律风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" },
+  { time: "04:08", tag: "tech", tagText: "科技", text: "Reddit宣布将转向登录后才能访问的体验，以应对AI搜索导致搜索流量下滑。公司正重新审视开放网络根基，旨在保护用户群与商业模式；此举可能影响内容可发现性、搜索索引及AI训练数据获取。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/" },
+  { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
+  { time: "02:55", tag: "ai", tagText: "AI", text: "投资机构 Disruptive 完成 100 亿美元新基金募集，计划对至少 10 家公司进行大额下注。该机构近年因投资芯片初创 Groq 与 AI 语音生成公司 ElevenLabs 而受到关注，此次募资规模显示资本仍在持续加码 AI 基础设施与应用层。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/" },
+  { time: "02:45", tag: "ai", tagText: "AI", text: "谷歌Gemini聊天现在可直接生成、预览和编辑Google Docs、PDF、Sheets、幻灯片、Markdown、TXT及代码文件。新能力把Gemini从对话助手推进到办公文档生产与编辑工作流。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs" },
+  { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
+  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
   { time: "01:38", tag: "ai", tagText: "AI", text: "星巴克CEO Brian Niccol在财报电话会上表示，公司计划探索在得来速（drive-thru）场景中，通过AI为到店车辆展示“个性化数字菜单”。这意味着点单屏可能根据用户历史偏好动态调整推荐内容，是大型连锁餐饮把生成式AI落到高频消费场景的最新尝试。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru" },
   { time: "00:13", tag: "ai", tagText: "AI", text: "据TechCrunch报道，OpenAI最新一轮融资未达预期，已下调融资目标。此举反映在AI资本开支高企的背景下，投资者对高估值AI公司的出资态度趋于谨慎。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/" },
   { time: "22:58", tag: "ai", tagText: "AI", text: "教皇利奥十四世在周五的教宗讲话中呼吁对AI进行“解除武装”，强调“机器是工具，不是人”，并指出人类“有责任去引导、改变，并在必要时拒绝其应用”。此番表态是宗教权威对AI军事化与伦理边界的最新介入，可能影响欧洲及全球AI治理话语。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai" },
@@ -1667,15 +1674,8 @@ const aiBreakingNews = [
   { time: "19:00", tag: "macro", tagText: "宏观", text: "Crunchbase数据显示，尽管AI投入持续升温，全球旅游科技融资仍将滑向多年低点。资本正从旅游预订、出行服务等传统赛道撤出，转向回报叙事更强的AI基础设施与应用层，反映风险投资在整体收紧背景下进一步向AI集中，非AI垂直行业面临融资“挤出效应”。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMijwFBVV95cUxPYUdJY3dma29nX01YTGw2cGw0SDRRLVBjZzBGbVFhSjY5SGExNV9xdnpTWDY3T0JkSEJLQkppRzRYeDVfYWdWNkVldWlQTk5JRzNBNGV0Sl9zM2p1OWwyYy00bzFzQ0JpVWU4R2plQUNoTTBwdlJ2N3ljaE9zUm5EeUFsaVZOdkw1Ml9BY1JhZw?oc=5" },
   { time: "12:59", tag: "ai", tagText: "AI", text: "随着AI芯片需求激增，被称为“中国英伟达”的芯片公司创始人首次进入中国十大富豪榜，凸显本土AI算力产业链造富效应与市场热度。", source: "VnExpress International", url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQd2Q0akZBd3p1ZkNITXp0d25NR1psYjNLTFpiUExvQmd5ZE02V0dWNlFQYjhvOXZYS0IwMDhvTFRKNFZsUTVjZkZyOG1qRlRGNlg0dno2WnJDbFdobDZfaWpmMU96YlFCV09LaGNJaWtSTEstWlFNUWJsSnRkQ2g0dGxIWS10cXZOSFFPdGZaa1VveXRrWEI2ZDhlSjVNcEllMzNxY3VwMDhfb2pqck5ZMFY0c3paNFpERml1cnBVYmNUaEVucXZSeHFTd1QybHlnblE?oc=5" },
   { time: "09:20", tag: "ai", tagText: "AI", text: "英伟达正考虑为Nscale位于西弗吉尼亚州的AI数据中心贷款提供共同签署或担保。此举发生在投资者对AI资本开支愈发谨慎之际，由芯片供应商为数据中心项目融资背书，既可缓解项目资金压力，也可能把AI基础设施扩张风险进一步传导至英伟达。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/" },
-  { time: "07:42", tag: "ai", tagText: "AI", text: "亚马逊CEO Jassy表示，AWS未来将成为一项万亿美元收入的业务，但前提是持续大规模资本开支。他于周四强调，公司目标是成为AI云计算领域的领导者，为此将继续投入数据中心、芯片与算力基础设施，短期内资本支出仍将高企，投资者需在增长与利润率之间做权衡。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/" },
-  { time: "04:08", tag: "tech", tagText: "科技", text: "Reddit宣布将转向登录后才能访问的体验，以应对AI搜索导致搜索流量下滑。公司正重新审视开放网络根基，旨在保护用户群与商业模式；此举可能影响内容可发现性、搜索索引及AI训练数据获取。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/" },
-  { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
-  { time: "02:55", tag: "ai", tagText: "AI", text: "投资机构 Disruptive 完成 100 亿美元新基金募集，计划对至少 10 家公司进行大额下注。该机构近年因投资芯片初创 Groq 与 AI 语音生成公司 ElevenLabs 而受到关注，此次募资规模显示资本仍在持续加码 AI 基础设施与应用层。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/" },
-  { time: "02:45", tag: "ai", tagText: "AI", text: "谷歌Gemini聊天现在可直接生成、预览和编辑Google Docs、PDF、Sheets、幻灯片、Markdown、TXT及代码文件。新能力把Gemini从对话助手推进到办公文档生产与编辑工作流。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs" },
-  { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
-  { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
 ];
-const aiBreakingDate = "2026年11月1日 01:38 CST";
+const aiBreakingDate = "2026年11月1日 05:24 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
