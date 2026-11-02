@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 16.69,
   previous1Month: 30.31,
   previous1Year: 37.06,
-  date: "2026年11月2日 07:30 CST"
+  date: "2026年11月2日 13:49 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "中东与乌克兰冲突已大幅削减全球炼油产能，推动成品油裂解价差与利润率升至高位，但埃克森美孚、壳牌等石油巨头仍抵制新建炼厂的压力。企业更倾向通过回购与分红回报股东，而非投入周期长、面临能源转型风险的炼化项目，这意味着燃油价格高企与供应紧张可能持续更久。", source: "Financial Times", url: "https://www.ft.com/content/4d63f08d-3556-4d84-8e1d-40f866741d15?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "德国未能完成冬季天然气储气目标，作为欧盟最大经济体将被迫更多依赖现货市场采购，推高自身及周边欧盟国家的气价风险。分析认为，这凸显欧洲在失去俄罗斯管道气后，冬季供应缓冲愈发薄弱，若遇寒潮或供应中断，工业用气与居民取暖成本将首当其冲。", source: "Financial Times", url: "https://www.ft.com/content/99b0bbf1-4604-4e56-bc66-9f49d2814737?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "黑海战事持续升级，俄罗斯被迫改由数千英里外的北极港口出口粮食，运输成本显著上升并转嫁给海外买家。此举扰乱全球小麦与谷物贸易流向，加剧依赖俄粮的中东、北非国家进口成本压力，也为全球粮价增添地缘风险溢价。", source: "Financial Times", url: "https://www.ft.com/content/50aeab56-c5e3-44c5-9117-8fadc2f980fb?syn-25a6b1a6=1" },
   { time: "03:10", tag: "geo", tagText: "地缘", text: "美国康涅狄格州民主党参议员克里斯·墨菲突发中风并住院，其办公室称他目前已清醒、意识清楚。此事发生在中期选举前夕，可能影响参议院席位安排与立法议程。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/chris-murphy-stroke-senate-hospital.html" },
   { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
   { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "15:04", tag: "geo", tagText: "地缘", text: "美国批准向乌克兰出售价值21亿美元的“爱国者”拦截导弹。泽连斯基欢迎这一“强有力决定”，但呼吁立即交付，以应对持续空袭。此举可能影响俄乌冲突防空能力、美欧对乌援助节奏及美俄关系。", source: "Financial Times", url: "https://www.ft.com/content/321cf4f9-d236-4b50-a52c-c2a21f7c447b?syn-25a6b1a6=1" },
   { time: "14:53", tag: "tech", tagText: "科技", text: "三星电子周四公布第三季度业绩，尽管利润创纪录，股价仍下跌。市场将其与Alphabet财报不及预期联系起来，显示投资者对科技股高估值与AI投入回报的担忧升温，科技股涨势受挫。", source: "CNBC", url: "https://www.cnbc.com/2026/10/29/samsung-electronics-third-quarter-earnings.html" },
   { time: "14:00", tag: "ai", tagText: "AI", text: "桑坦德银行、诺华等多家企业在最新财报中表示，人工智能已开始带来实际收益，包括提升营收、削减成本或改善盈利能力。在投资者日益要求AI投入见到回报的背景下，这些案例成为首批可量化的兑现证据，但整体利润贡献规模仍有限。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "中东与乌克兰冲突已大幅削减全球炼油产能，推动成品油裂解价差与利润率升至高位，但埃克森美孚、壳牌等石油巨头仍抵制新建炼厂的压力。企业更倾向通过回购与分红回报股东，而非投入周期长、面临能源转型风险的炼化项目，这意味着燃油价格高企与供应紧张可能持续更久。", source: "Financial Times", url: "https://www.ft.com/content/4d63f08d-3556-4d84-8e1d-40f866741d15?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "德国未能完成冬季天然气储气目标，作为欧盟最大经济体将被迫更多依赖现货市场采购，推高自身及周边欧盟国家的气价风险。分析认为，这凸显欧洲在失去俄罗斯管道气后，冬季供应缓冲愈发薄弱，若遇寒潮或供应中断，工业用气与居民取暖成本将首当其冲。", source: "Financial Times", url: "https://www.ft.com/content/99b0bbf1-4604-4e56-bc66-9f49d2814737?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "黑海战事持续升级，俄罗斯被迫改由数千英里外的北极港口出口粮食，运输成本显著上升并转嫁给海外买家。此举扰乱全球小麦与谷物贸易流向，加剧依赖俄粮的中东、北非国家进口成本压力，也为全球粮价增添地缘风险溢价。", source: "Financial Times", url: "https://www.ft.com/content/50aeab56-c5e3-44c5-9117-8fadc2f980fb?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月2日 07:30 CST";
+const breakingDate = "2026年11月2日 13:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "20:17", tag: "ai", tagText: "AI", text: "金融AI初创公司Casap完成5600万美元融资，用于帮助银行遏制客户欺诈激增。这反映AI反欺诈方案在金融风控领域的需求正在升温。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE8zVW5LU0VuODhsUllnUkN4V2pBQmN4bGhXVVBLLWJpQjJJMDNyRHJzYXFrSHhncHFQdHBuTTd0cVVfdFVvaWJPelVB?oc=5" },
   { time: "19:00", tag: "geo", tagText: "地缘", text: "缅因州参议员Susan Collins在中期选举最后一场辩论中，被现场观众以“我很害怕”打断，矛头直指AI数据中心的用电、水耗与噪音问题。报道称，数据中心争议正成为缅因州选情的关键变量，可能决定参议院控制权归属。这反映AI基建的地方反弹正从环保议题升级为全国性政治议题，直接影响选举与数据中心审批节奏。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers" },
 ];
-const aiBreakingDate = "2026年11月2日 07:30 CST";
+const aiBreakingDate = "2026年11月2日 13:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
