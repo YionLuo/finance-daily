@@ -1616,28 +1616,19 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 26.24,
+  score: 31.94,
   rating: "fear",
-  timestamp: "2026-10-30T23:59:48+00:00",
-  previousClose: 34.6,
-  previous1Week: 16.69,
-  previous1Month: 30.31,
-  previous1Year: 37.06,
-  date: "2026年11月2日 13:49 CST"
+  timestamp: "2026-11-02T15:32:04+00:00",
+  previousClose: 26.24,
+  previous1Week: 29.83,
+  previous1Month: 38.2,
+  previous1Year: 34.46,
+  date: "2026年11月2日 23:34 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "中东与乌克兰冲突已大幅削减全球炼油产能，推动成品油裂解价差与利润率升至高位，但埃克森美孚、壳牌等石油巨头仍抵制新建炼厂的压力。企业更倾向通过回购与分红回报股东，而非投入周期长、面临能源转型风险的炼化项目，这意味着燃油价格高企与供应紧张可能持续更久。", source: "Financial Times", url: "https://www.ft.com/content/4d63f08d-3556-4d84-8e1d-40f866741d15?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "德国未能完成冬季天然气储气目标，作为欧盟最大经济体将被迫更多依赖现货市场采购，推高自身及周边欧盟国家的气价风险。分析认为，这凸显欧洲在失去俄罗斯管道气后，冬季供应缓冲愈发薄弱，若遇寒潮或供应中断，工业用气与居民取暖成本将首当其冲。", source: "Financial Times", url: "https://www.ft.com/content/99b0bbf1-4604-4e56-bc66-9f49d2814737?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "黑海战事持续升级，俄罗斯被迫改由数千英里外的北极港口出口粮食，运输成本显著上升并转嫁给海外买家。此举扰乱全球小麦与谷物贸易流向，加剧依赖俄粮的中东、北非国家进口成本压力，也为全球粮价增添地缘风险溢价。", source: "Financial Times", url: "https://www.ft.com/content/50aeab56-c5e3-44c5-9117-8fadc2f980fb?syn-25a6b1a6=1" },
-  { time: "03:10", tag: "geo", tagText: "地缘", text: "美国康涅狄格州民主党参议员克里斯·墨菲突发中风并住院，其办公室称他目前已清醒、意识清楚。此事发生在中期选举前夕，可能影响参议院席位安排与立法议程。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/chris-murphy-stroke-senate-hospital.html" },
-  { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
-  { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
-  { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
-  { time: "00:34", tag: "ai", tagText: "AI", text: "摩根大通、亚马逊等企业正封堵Meta Muse等AI个人代理，担心其绕过自家入口、夺走客户关系。零售与科技专家警告，减少用户摩擦的技术通常最终胜出，长期封锁可能并非有效策略，围绕AI代理入口的博弈将重塑电商与金融服务的流量格局。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/jpmorgan-amazon-ai-agents-meta-muse.html" },
-  { time: "23:58", tag: "macro", tagText: "宏观", text: "过去一个月原油、AI与债券三大交易的定价逻辑同时变化：市场预期油价继续上行，但美债收益率反而回落。这一组合显示交易员与投资者可能更担心AI概念股泡沫破裂，而非通胀重新抬头，跨资产信号值得警惕。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/oil-bond-yields-ai-market.html" },
   { time: "23:30", tag: "tech", tagText: "科技", text: "微软最新财报营收与利润双双超预期。在AI资本开支高企、投资者对回报周期愈发敏感的背景下，市场关注其云与AI业务增速能否支撑当前估值，以及后续利润率指引。", source: "Barchart", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQT1lkOTk4d0ZMa1ZYOTRrOHhNV0ZmNVJhZ0lOTGVnVTk5S2tYYkw0Y0wyX1lkRWtnVjREZ1pGVmM4bGRjZ292dGNjdzlYNEtEcVBzUGU5X2l2WFF3N2JEZFItZzdxVW9Bc0sycDcyY2swcHVkZ1M1cTBac2R6Nm5LdFpMUXFQYW5KQTduM1NMYkkyLW8yaUwwWWpKT3JUM21DZjYyZUh4X28xWjJCak1EdmJqMFFEQ0dzN2ZDN3hWZTZ3aXF0YmVBRjc2dmZTUVNEa3hiWlN3?oc=5" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "苹果将在周一（罕见时段）发布财报，成为新任CEO John Ternus治下的首份成绩单。投资者关注其如何应对存储芯片价格大涨带来的成本压力，以及消费支出走弱背景下iPhone与服务业务的韧性，这将影响大型科技股整体情绪。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apples-new-earnings-era-begins-at-a-critical-time-for-big-tech-2236a44e?mod=mw_rss_topstories" },
   { time: "22:54", tag: "macro", tagText: "宏观", text: "垃圾债市场遭遇抛售潮，信用投资者形容为“血洗”。发行人采取激进手段将资产转移至债权人追索范围之外，进一步加剧了跌势，反映信用市场对弱资质借款人保护条款恶化与再融资风险的担忧升温。", source: "Financial Times", url: "https://www.ft.com/content/fdc9a85d-d2c4-465f-99ca-609d68b6d443?syn-25a6b1a6=1" },
@@ -1649,11 +1640,31 @@ const breakingNews = [
   { time: "15:04", tag: "geo", tagText: "地缘", text: "美国批准向乌克兰出售价值21亿美元的“爱国者”拦截导弹。泽连斯基欢迎这一“强有力决定”，但呼吁立即交付，以应对持续空袭。此举可能影响俄乌冲突防空能力、美欧对乌援助节奏及美俄关系。", source: "Financial Times", url: "https://www.ft.com/content/321cf4f9-d236-4b50-a52c-c2a21f7c447b?syn-25a6b1a6=1" },
   { time: "14:53", tag: "tech", tagText: "科技", text: "三星电子周四公布第三季度业绩，尽管利润创纪录，股价仍下跌。市场将其与Alphabet财报不及预期联系起来，显示投资者对科技股高估值与AI投入回报的担忧升温，科技股涨势受挫。", source: "CNBC", url: "https://www.cnbc.com/2026/10/29/samsung-electronics-third-quarter-earnings.html" },
   { time: "14:00", tag: "ai", tagText: "AI", text: "桑坦德银行、诺华等多家企业在最新财报中表示，人工智能已开始带来实际收益，包括提升营收、削减成本或改善盈利能力。在投资者日益要求AI投入见到回报的背景下，这些案例成为首批可量化的兑现证据，但整体利润贡献规模仍有限。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "中东与乌克兰冲突已大幅削减全球炼油产能，推动成品油裂解价差与利润率升至高位，但埃克森美孚、壳牌等石油巨头仍抵制新建炼厂的压力。企业更倾向通过回购与分红回报股东，而非投入周期长、面临能源转型风险的炼化项目，这意味着燃油价格高企与供应紧张可能持续更久。", source: "Financial Times", url: "https://www.ft.com/content/4d63f08d-3556-4d84-8e1d-40f866741d15?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "德国未能完成冬季天然气储气目标，作为欧盟最大经济体将被迫更多依赖现货市场采购，推高自身及周边欧盟国家的气价风险。分析认为，这凸显欧洲在失去俄罗斯管道气后，冬季供应缓冲愈发薄弱，若遇寒潮或供应中断，工业用气与居民取暖成本将首当其冲。", source: "Financial Times", url: "https://www.ft.com/content/99b0bbf1-4604-4e56-bc66-9f49d2814737?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "黑海战事持续升级，俄罗斯被迫改由数千英里外的北极港口出口粮食，运输成本显著上升并转嫁给海外买家。此举扰乱全球小麦与谷物贸易流向，加剧依赖俄粮的中东、北非国家进口成本压力，也为全球粮价增添地缘风险溢价。", source: "Financial Times", url: "https://www.ft.com/content/50aeab56-c5e3-44c5-9117-8fadc2f980fb?syn-25a6b1a6=1" },
+  { time: "03:10", tag: "geo", tagText: "地缘", text: "美国康涅狄格州民主党参议员克里斯·墨菲突发中风并住院，其办公室称他目前已清醒、意识清楚。此事发生在中期选举前夕，可能影响参议院席位安排与立法议程。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/chris-murphy-stroke-senate-hospital.html" },
+  { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
+  { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
+  { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
+  { time: "00:34", tag: "ai", tagText: "AI", text: "摩根大通、亚马逊等企业正封堵Meta Muse等AI个人代理，担心其绕过自家入口、夺走客户关系。零售与科技专家警告，减少用户摩擦的技术通常最终胜出，长期封锁可能并非有效策略，围绕AI代理入口的博弈将重塑电商与金融服务的流量格局。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/jpmorgan-amazon-ai-agents-meta-muse.html" },
+  { time: "23:58", tag: "macro", tagText: "宏观", text: "过去一个月原油、AI与债券三大交易的定价逻辑同时变化：市场预期油价继续上行，但美债收益率反而回落。这一组合显示交易员与投资者可能更担心AI概念股泡沫破裂，而非通胀重新抬头，跨资产信号值得警惕。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/oil-bond-yields-ai-market.html" },
 ];
-const breakingDate = "2026年11月2日 13:49 CST";
+const breakingDate = "2026年11月2日 23:34 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:00", tag: "ai", tagText: "AI", text: "Omen AI 以1600万美元收购 Aquatic Labs，两家致力于解决数据中心用水问题的AI初创公司合并。交易反映AI算力扩张背景下，数据中心水资源管理正成为并购与基础设施创新的焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/omen-ai-adds-liquid-know-how-in-16-million-aquatic-labs-acquisition/" },
+  { time: "22:58", tag: "ai", tagText: "AI", text: "教皇利奥十四世在周五的教宗讲话中呼吁对AI进行“解除武装”，强调“机器是工具，不是人”，并指出人类“有责任去引导、改变，并在必要时拒绝其应用”。此番表态是宗教权威对AI军事化与伦理边界的最新介入，可能影响欧洲及全球AI治理话语。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai" },
+  { time: "22:57", tag: "ai", tagText: "AI", text: "据Telecompaper报道，英国主权AI基金已投资AI芯片初创公司Fractile。报道未披露具体投资金额，但此举显示英国正通过国家资本加大对本土AI芯片与算力产业链的扶持。", source: "Telecompaper", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSHc4WWpjLWhNeVBUVHN6aG9MT2o3Q3dOa0R3UFRSQmtXNVE5cXprSmZGc0JhMHd0X2NObnNmandhWnY0Z1JYUzdrOFdnSGU0Tm1jRVlseVd1OEpJdFJpNjZKd1ZDakFsUzFFRXlzMzV0LUJXQlN3RFNmY0huMV80Tk1NanhNTl9SbXBWdlV0MzVUd2ZHRzlXQ0RVUnk0V2hJNFZwRUJubGpVdzg?oc=5" },
+  { time: "21:57", tag: "ai", tagText: "AI", text: "OpenAI 将 ChatGPT 的 Chat 与 Work 标签页合并，并称 ChatGPT 与 Codex 将共用同一使用额度池。此举意在整合聊天与工作场景，可能影响用户配额及开发者调用方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/" },
+  { time: "21:54", tag: "ai", tagText: "AI", text: "DoorDash披露，来自AI代理（智能体）的订单目前仅“数百单”，规模仍极小。公司表示愿意与第三方代理开发商合作，但在代理式购物生态中保持谨慎。此前已有多家零售商限制AI代理自动访问与下单，显示“AI替你点外卖/购物”仍处早期试验阶段，平台在接口开放、身份验证与反欺诈上的规则尚未成型。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/" },
+  { time: "21:30", tag: "ai", tagText: "AI", text: "Anthropic的IPO招股书S-1披露其核心商业逻辑：公司以通往AGI为叙事，为尽可能大规模投入算力提供财务正当性，并试图让华尔街相信其长期AGI愿景。文件引发市场关注其收入、亏损与巨额算力支出如何支撑估值。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive" },
+  { time: "21:01", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman表示，他理解数学家在面对大量AI生成结果时的困扰，但OpenAI对数学领域的“轰炸”不会停止。相关报道梳理了AI近期频繁产出数学成果所引发的争议：从证明可信度、同行评审流程到研究优先级，学界正被迫重建评估标准；这也被视为AI在基础科学研究中角色上升的重要信号。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview" },
+  { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Runware正在建设工厂，以流水线方式生产预制化AI数据中心，目标是把数据中心变成可标准化、可快速交付的“产品”，并宣称可在48小时内上线。真正的考验在于能否在如此规模下兑现交付能力。若模式跑通，将改变当前AI算力基建高度依赖现场施工、交付周期漫长的格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "语音AI基础设施公司Deepgram收购Pipecat框架开发商Daily，以增强实时语音AI能力。Deepgram承诺Pipecat将继续保持开源。此次并购反映语音AI赛道正在整合底层基础设施。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/" },
+  { time: "20:17", tag: "ai", tagText: "AI", text: "金融AI初创公司Casap完成5600万美元融资，用于帮助银行遏制客户欺诈激增。这反映AI反欺诈方案在金融风控领域的需求正在升温。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE8zVW5LU0VuODhsUllnUkN4V2pBQmN4bGhXVVBLLWJpQjJJMDNyRHJzYXFrSHhncHFQdHBuTTd0cVVfdFVvaWJPelVB?oc=5" },
+  { time: "19:00", tag: "geo", tagText: "地缘", text: "缅因州参议员Susan Collins在中期选举最后一场辩论中，被现场观众以“我很害怕”打断，矛头直指AI数据中心的用电、水耗与噪音问题。报道称，数据中心争议正成为缅因州选情的关键变量，可能决定参议院控制权归属。这反映AI基建的地方反弹正从环保议题升级为全国性政治议题，直接影响选举与数据中心审批节奏。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers" },
   { time: "05:55", tag: "ai", tagText: "AI", text: "OpenAI考虑将数据中心更名为“AI算力园区”，以缓解公众对数据中心的强烈抵触情绪。报道称，这一品牌调整意在改善舆论观感，但未必能消解社区对能耗、水资源和噪音等实际问题的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" },
   { time: "05:41", tag: "ai", tagText: "AI", text: "苹果CEO为公司在AI领域的现状辩护，称苹果不会“为了AI而AI”，暗示其更注重将AI融入产品体验，而非追逐概念。此番表态正值外界质疑苹果在生成式AI竞赛中的进度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/" },
   { time: "05:17", tag: "ai", tagText: "AI", text: "美国法官裁定，全国有色人种协进会（NAACP）针对xAI数据中心污染提起的《清洁空气法》诉讼可以继续推进。该诉讼指控SpaceX旗下的xAI违反清洁空气法，凸显AI数据中心面临的环境监管与法律风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" },
@@ -1663,19 +1674,8 @@ const aiBreakingNews = [
   { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
   { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
   { time: "02:12", tag: "tech", tagText: "科技", text: "以色列初创公司在10月至少融资8.72亿美元，网络安全和AI领域领跑。这显示在全球AI投资热潮与安全需求上升的背景下，以色列科技融资活动仍保持活跃。", source: "CTech", url: "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1LaHplQ0Z4N1FUN1RGcEx5VWQ0S1lfVTVwbUNpN2k5M1RNRTFDWnlFVlFSN1NWcUJVUGk5RU1zU19uY1otc1JxSlgxSXlwQnF2MVBHR1Bqa0dUUTFrSGhqX0tJR2JyYTQ?oc=5" },
-  { time: "01:38", tag: "ai", tagText: "AI", text: "星巴克CEO Brian Niccol在财报电话会上表示，公司计划探索在得来速（drive-thru）场景中，通过AI为到店车辆展示“个性化数字菜单”。这意味着点单屏可能根据用户历史偏好动态调整推荐内容，是大型连锁餐饮把生成式AI落到高频消费场景的最新尝试。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru" },
-  { time: "00:13", tag: "ai", tagText: "AI", text: "据TechCrunch报道，OpenAI最新一轮融资未达预期，已下调融资目标。此举反映在AI资本开支高企的背景下，投资者对高估值AI公司的出资态度趋于谨慎。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/" },
-  { time: "22:58", tag: "ai", tagText: "AI", text: "教皇利奥十四世在周五的教宗讲话中呼吁对AI进行“解除武装”，强调“机器是工具，不是人”，并指出人类“有责任去引导、改变，并在必要时拒绝其应用”。此番表态是宗教权威对AI军事化与伦理边界的最新介入，可能影响欧洲及全球AI治理话语。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai" },
-  { time: "22:57", tag: "ai", tagText: "AI", text: "据Telecompaper报道，英国主权AI基金已投资AI芯片初创公司Fractile。报道未披露具体投资金额，但此举显示英国正通过国家资本加大对本土AI芯片与算力产业链的扶持。", source: "Telecompaper", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSHc4WWpjLWhNeVBUVHN6aG9MT2o3Q3dOa0R3UFRSQmtXNVE5cXprSmZGc0JhMHd0X2NObnNmandhWnY0Z1JYUzdrOFdnSGU0Tm1jRVlseVd1OEpJdFJpNjZKd1ZDakFsUzFFRXlzMzV0LUJXQlN3RFNmY0huMV80Tk1NanhNTl9SbXBWdlV0MzVUd2ZHRzlXQ0RVUnk0V2hJNFZwRUJubGpVdzg?oc=5" },
-  { time: "21:54", tag: "ai", tagText: "AI", text: "DoorDash披露，来自AI代理（智能体）的订单目前仅“数百单”，规模仍极小。公司表示愿意与第三方代理开发商合作，但在代理式购物生态中保持谨慎。此前已有多家零售商限制AI代理自动访问与下单，显示“AI替你点外卖/购物”仍处早期试验阶段，平台在接口开放、身份验证与反欺诈上的规则尚未成型。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/" },
-  { time: "21:30", tag: "ai", tagText: "AI", text: "Anthropic的IPO招股书S-1披露其核心商业逻辑：公司以通往AGI为叙事，为尽可能大规模投入算力提供财务正当性，并试图让华尔街相信其长期AGI愿景。文件引发市场关注其收入、亏损与巨额算力支出如何支撑估值。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive" },
-  { time: "21:01", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman表示，他理解数学家在面对大量AI生成结果时的困扰，但OpenAI对数学领域的“轰炸”不会停止。相关报道梳理了AI近期频繁产出数学成果所引发的争议：从证明可信度、同行评审流程到研究优先级，学界正被迫重建评估标准；这也被视为AI在基础科学研究中角色上升的重要信号。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview" },
-  { time: "21:00", tag: "tech", tagText: "科技", text: "初创公司Runware正在建设工厂，以流水线方式生产预制化AI数据中心，目标是把数据中心变成可标准化、可快速交付的“产品”，并宣称可在48小时内上线。真正的考验在于能否在如此规模下兑现交付能力。若模式跑通，将改变当前AI算力基建高度依赖现场施工、交付周期漫长的格局。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "语音AI基础设施公司Deepgram收购Pipecat框架开发商Daily，以增强实时语音AI能力。Deepgram承诺Pipecat将继续保持开源。此次并购反映语音AI赛道正在整合底层基础设施。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/" },
-  { time: "20:17", tag: "ai", tagText: "AI", text: "金融AI初创公司Casap完成5600万美元融资，用于帮助银行遏制客户欺诈激增。这反映AI反欺诈方案在金融风控领域的需求正在升温。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiSkFVX3lxTE8zVW5LU0VuODhsUllnUkN4V2pBQmN4bGhXVVBLLWJpQjJJMDNyRHJzYXFrSHhncHFQdHBuTTd0cVVfdFVvaWJPelVB?oc=5" },
-  { time: "19:00", tag: "geo", tagText: "地缘", text: "缅因州参议员Susan Collins在中期选举最后一场辩论中，被现场观众以“我很害怕”打断，矛头直指AI数据中心的用电、水耗与噪音问题。报道称，数据中心争议正成为缅因州选情的关键变量，可能决定参议院控制权归属。这反映AI基建的地方反弹正从环保议题升级为全国性政治议题，直接影响选举与数据中心审批节奏。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers" },
 ];
-const aiBreakingDate = "2026年11月2日 13:49 CST";
+const aiBreakingDate = "2026年11月2日 23:34 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
