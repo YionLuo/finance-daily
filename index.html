@@ -1618,17 +1618,28 @@
 const fearGreedData = {
   score: 22.73,
   rating: "extreme fear",
-  timestamp: "2026-11-02T23:08:27+00:00",
-  previousClose: 26.24,
-  previous1Week: 29.83,
+  timestamp: "2026-11-03T01:00:00+00:00",
+  previousClose: 22.73,
+  previous1Week: 32.89,
   previous1Month: 38.2,
-  previous1Year: 34.46,
-  date: "2026年11月3日 07:26 CST"
+  previous1Year: 32.6,
+  date: "2026年11月3日 14:30 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:08", tag: "crypto", tagText: "加密", text: "随着美国中期选举投票开始，加密市场整体下跌逾2%，比特币跌破77,000美元。选举结果可能影响美国加密监管立法走向与ETF资金流，投资者在结果明朗前倾向降低风险敞口。", source: "TradingKey", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxPV1J4LUlFR01hTWQzdmxDTTYyeDZEZHFTMXNIeGlLWU9aV2xNbjFRSF9ESjNGLWp5ZWF0UXJQbTB2NFVQU1dXSzdlYTZDRFVZcXFVX3A3RExJZDRUUjZ6TlpXRldicWpTUFVCREdCNGlLbFR3MC1COFhWZ3VrZkl1WEJ1cER5d1NyamtFZ2tFYUhIZk5mLWZ1V24xb2pzMmxnTFI0QmlqMVJ4N3dkSDBCTmM0VGkwVFR5YXBZXw?oc=5" },
+  { time: "14:00", tag: "ai", tagText: "AI", text: "桑坦德银行、诺华等多家企业在最新财报中表示，人工智能已开始带来实际收益，包括提升营收、削减成本或改善盈利能力。在投资者日益要求AI投入见到回报的背景下，这些案例成为首批可量化的兑现证据，但整体利润贡献规模仍有限。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html" },
+  { time: "13:00", tag: "tech", tagText: "科技", text: "英伟达要求数据中心客户降低对中国敞口，告知云计算服务商其客户中多数必须为非中国客户。这是全球最大芯片制造商在中美科技管制持续收紧背景下，对供应链与客户结构作出的明确表态，可能影响中国AI算力供给及相关云厂商的采购与部署节奏。", source: "Financial Times", url: "https://www.ft.com/content/1902df70-1380-4588-bad5-171352b575f2?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "crypto", tagText: "加密", text: "朝鲜否认与Binance被盗案有关，但区块链研究机构正追踪价值数十亿美元的被盗加密资产在多个网络间流转。专家称黑客将代币拆分为小额包以规避追踪，洗钱过程预计需数月。该事件再度暴露中心化交易所的安全与合规风险，并可能强化美国对朝鲜黑客组织的制裁与执法压力。", source: "Financial Times", url: "https://www.ft.com/content/a6212e33-2175-4957-91d1-8f8f6bc3918b?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "中东与乌克兰冲突已大幅削减全球炼油产能，推动成品油裂解价差与利润率升至高位，但埃克森美孚、壳牌等石油巨头仍抵制新建炼厂的压力。企业更倾向通过回购与分红回报股东，而非投入周期长、面临能源转型风险的炼化项目，这意味着燃油价格高企与供应紧张可能持续更久。", source: "Financial Times", url: "https://www.ft.com/content/4d63f08d-3556-4d84-8e1d-40f866741d15?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "德国未能完成冬季天然气储气目标，作为欧盟最大经济体将被迫更多依赖现货市场采购，推高自身及周边欧盟国家的气价风险。分析认为，这凸显欧洲在失去俄罗斯管道气后，冬季供应缓冲愈发薄弱，若遇寒潮或供应中断，工业用气与居民取暖成本将首当其冲。", source: "Financial Times", url: "https://www.ft.com/content/99b0bbf1-4604-4e56-bc66-9f49d2814737?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "黑海战事持续升级，俄罗斯被迫改由数千英里外的北极港口出口粮食，运输成本显著上升并转嫁给海外买家。此举扰乱全球小麦与谷物贸易流向，加剧依赖俄粮的中东、北非国家进口成本压力，也为全球粮价增添地缘风险溢价。", source: "Financial Times", url: "https://www.ft.com/content/50aeab56-c5e3-44c5-9117-8fadc2f980fb?syn-25a6b1a6=1" },
+  { time: "12:11", tag: "geo", tagText: "地缘", text: "美国军方在中期选举投票前一日对伊朗格什姆岛（Qeshm Island）发动打击，华盛顿称此举属防御性措施，针对德黑兰可能动用地对空导弹的风险。副总统万斯表示仍希望与伊朗达成「谈判解决方案」，但市场对战争风险的低估正在被打破。袭击消息公布后油价总体持稳，但地缘风险溢价可能重新抬头，霍尔木兹海峡航运与地区能源出口仍是关注焦点。", source: "Financial Times", url: "https://www.ft.com/content/ebeaca62-8958-459a-be9d-d3d39e441a53?syn-25a6b1a6=1" },
+  { time: "11:46", tag: "macro", tagText: "宏观", text: "澳大利亚联储加息至18年新高以对抗通胀，符合经济学家预期，为今年第五次加息。在多数发达经济体已进入降息或观望阶段之际，澳洲持续紧缩凸显其通胀黏性，澳元与澳洲房地产、银行股将直接受到影响。", source: "CNBC", url: "https://www.cnbc.com/2026/11/03/australia-hikes-rates-18-year-high-finance.html" },
+  { time: "10:47", tag: "ai", tagText: "AI", text: "OpenAI聘请美国陆军前部长Dan Driscoll出任新设立的国家安全职位，负责国家安全现代化事务。此举显示AI公司正加深与国防及政府体系的合作，也意味着前沿模型供应商在军事与安全领域的角色将面临更多监管与伦理审视。", source: "CNBC", url: "https://www.cnbc.com/2026/11/03/openai-hires-dan-driscoll-national-security.html" },
+  { time: "09:50", tag: "tech", tagText: "科技", text: "苹果在新任CEO John Ternus治下的首份财报显示iPhone业务依旧强劲，但公司警告「史无前例」的存储芯片成本将拖累利润率，服务业务展望亦令市场失望，股价盘后下跌。这印证了此前市场对存储涨价挤压硬件厂商业绩的担忧，并可能影响整个消费电子供应链的盈利预期。", source: "CNBC", url: "https://www.cnbc.com/2026/11/02/apple-aapl-q4-2026-earnings-live-updates.html" },
   { time: "03:10", tag: "geo", tagText: "地缘", text: "美国康涅狄格州民主党参议员克里斯·墨菲突发中风并住院，其办公室称他目前已清醒、意识清楚。此事发生在中期选举前夕，可能影响参议院席位安排与立法议程。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/chris-murphy-stroke-senate-hospital.html" },
   { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
   { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
@@ -1638,22 +1649,14 @@ const breakingNews = [
   { time: "23:30", tag: "tech", tagText: "科技", text: "微软最新财报营收与利润双双超预期。在AI资本开支高企、投资者对回报周期愈发敏感的背景下，市场关注其云与AI业务增速能否支撑当前估值，以及后续利润率指引。", source: "Barchart", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQT1lkOTk4d0ZMa1ZYOTRrOHhNV0ZmNVJhZ0lOTGVnVTk5S2tYYkw0Y0wyX1lkRWtnVjREZ1pGVmM4bGRjZ292dGNjdzlYNEtEcVBzUGU5X2l2WFF3N2JEZFItZzdxVW9Bc0sycDcyY2swcHVkZ1M1cTBac2R6Nm5LdFpMUXFQYW5KQTduM1NMYkkyLW8yaUwwWWpKT3JUM21DZjYyZUh4X28xWjJCak1EdmJqMFFEQ0dzN2ZDN3hWZTZ3aXF0YmVBRjc2dmZTUVNEa3hiWlN3?oc=5" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "苹果将在周一（罕见时段）发布财报，成为新任CEO John Ternus治下的首份成绩单。投资者关注其如何应对存储芯片价格大涨带来的成本压力，以及消费支出走弱背景下iPhone与服务业务的韧性，这将影响大型科技股整体情绪。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apples-new-earnings-era-begins-at-a-critical-time-for-big-tech-2236a44e?mod=mw_rss_topstories" },
   { time: "22:54", tag: "macro", tagText: "宏观", text: "垃圾债市场遭遇抛售潮，信用投资者形容为“血洗”。发行人采取激进手段将资产转移至债权人追索范围之外，进一步加剧了跌势，反映信用市场对弱资质借款人保护条款恶化与再融资风险的担忧升温。", source: "Financial Times", url: "https://www.ft.com/content/fdc9a85d-d2c4-465f-99ca-609d68b6d443?syn-25a6b1a6=1" },
-  { time: "22:31", tag: "ai", tagText: "AI", text: "最新季度Meta广告收入增速与谷歌搜索收入增速差距扩大至2021年以来最大。AI推荐与广告工具正在提升Meta的变现效率，而AI搜索摘要等产品对谷歌传统搜索广告形成侵蚀，市场关注AI竞争如何重塑两大科技巨头的广告份额与估值。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/ai-meta-ads-google-search.html" },
-  { time: "22:30", tag: "macro", tagText: "宏观", text: "美国社会保障退休信托基金预计2032年耗尽，若国会不行动，退休福利可能面临削减；11月参议院改选结果将影响届时政策方向。最新预测显示受益人面临实际收入风险，使社保改革成为中期选举后的关键财政议题。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/social-security-benefit-cuts-2032.html" },
-  { time: "20:30", tag: "macro", tagText: "宏观", text: "2026年中期选举可能通过州级税收措施、新债供给和国会构成变化重塑美国市政债市场。投资者关注选举结果对州税政策、基建融资和联邦拨款的影响，市政债收益率与发行节奏可能随之波动。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/election-municipal-bonds.html" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "拥有95年历史的华尔街知名律所Weil Gotshal在顶级人才大量流失后决定关闭，成为法律与金融服务业重大震荡。该所长期承接并购、破产与资本市场业务，其解散可能改变大型交易法律服务格局，并引发客户与合伙人迁移。", source: "FT", url: "https://www.ft.com/content/8332fa3f-2a4a-41ca-8836-44d41d32fe8a?syn-25a6b1a6=1" },
-  { time: "19:36", tag: "geo", tagText: "地缘", text: "德国爆发青年抗议并演变为暴力冲突，柏林示威者与警方冲突，法兰克福商铺遭洗劫，被指与上月法国骚乱相呼应。社会不满与生活成本、就业前景等问题交织，可能加剧欧洲政治紧张和政策不确定性。", source: "FT", url: "https://www.ft.com/content/4ffb1a86-853b-4151-9902-2ff302e79d24?syn-25a6b1a6=1" },
-  { time: "15:04", tag: "geo", tagText: "地缘", text: "美国批准向乌克兰出售价值21亿美元的“爱国者”拦截导弹。泽连斯基欢迎这一“强有力决定”，但呼吁立即交付，以应对持续空袭。此举可能影响俄乌冲突防空能力、美欧对乌援助节奏及美俄关系。", source: "Financial Times", url: "https://www.ft.com/content/321cf4f9-d236-4b50-a52c-c2a21f7c447b?syn-25a6b1a6=1" },
-  { time: "14:53", tag: "tech", tagText: "科技", text: "三星电子周四公布第三季度业绩，尽管利润创纪录，股价仍下跌。市场将其与Alphabet财报不及预期联系起来，显示投资者对科技股高估值与AI投入回报的担忧升温，科技股涨势受挫。", source: "CNBC", url: "https://www.cnbc.com/2026/10/29/samsung-electronics-third-quarter-earnings.html" },
-  { time: "14:00", tag: "ai", tagText: "AI", text: "桑坦德银行、诺华等多家企业在最新财报中表示，人工智能已开始带来实际收益，包括提升营收、削减成本或改善盈利能力。在投资者日益要求AI投入见到回报的背景下，这些案例成为首批可量化的兑现证据，但整体利润贡献规模仍有限。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "中东与乌克兰冲突已大幅削减全球炼油产能，推动成品油裂解价差与利润率升至高位，但埃克森美孚、壳牌等石油巨头仍抵制新建炼厂的压力。企业更倾向通过回购与分红回报股东，而非投入周期长、面临能源转型风险的炼化项目，这意味着燃油价格高企与供应紧张可能持续更久。", source: "Financial Times", url: "https://www.ft.com/content/4d63f08d-3556-4d84-8e1d-40f866741d15?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "德国未能完成冬季天然气储气目标，作为欧盟最大经济体将被迫更多依赖现货市场采购，推高自身及周边欧盟国家的气价风险。分析认为，这凸显欧洲在失去俄罗斯管道气后，冬季供应缓冲愈发薄弱，若遇寒潮或供应中断，工业用气与居民取暖成本将首当其冲。", source: "Financial Times", url: "https://www.ft.com/content/99b0bbf1-4604-4e56-bc66-9f49d2814737?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "黑海战事持续升级，俄罗斯被迫改由数千英里外的北极港口出口粮食，运输成本显著上升并转嫁给海外买家。此举扰乱全球小麦与谷物贸易流向，加剧依赖俄粮的中东、北非国家进口成本压力，也为全球粮价增添地缘风险溢价。", source: "Financial Times", url: "https://www.ft.com/content/50aeab56-c5e3-44c5-9117-8fadc2f980fb?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月3日 07:26 CST";
+const breakingDate = "2026年11月3日 14:30 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:11", tag: "ai", tagText: "AI", text: "BW Disrupt报道，2026年10月AI初创公司融资额超过3.43亿美元，资金重点流向销售和营销自动化领域。该趋势显示资本继续押注能直接改善获客与收入转化的可商业化AI应用。", source: "BW Disrupt", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxNcUk3bU44N0hJcENKN25JSklqbWh6UmlnWml1UjlhMEJ3MkUxSmlwTzlWcG1RN3lRa1E1ZWh5d3VqWWZ0TW1ERzRsb1FCMHNzZ0lIWmFZMzRibTZDZDdvc1ZGSC1RZ29LQ3JQRkRvaFJ5TjJTbTlQUXBWRVFEYWFSN1F4MzVIbDJ6cVQxUDBjQzJWc0drR0VNX3Qxcm9OblBGQWFFU2NDeWZ6NGE2TzVqV2FhYlFhTi1zWTdTMzNZd294WVVM?oc=5" },
+  { time: "11:30", tag: "ai", tagText: "AI", text: "谷歌将其AI实验产品Dreambeans引入印度，新增支持13种印度语言，旨在让AI生成的个人故事触达更广泛大众。此举显示谷歌正加快生成式AI产品的多语言本地化。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/" },
+  { time: "08:35", tag: "ai", tagText: "AI", text: "英特尔（INTC）参与了一轮规模达7亿美元的AI初创公司融资。Yahoo Finance称，这显示芯片巨头正通过资本投资加码AI生态布局，具体投资标的未在摘要中披露。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUmU5ZDh1Y0Iwd0NTcDN0VVQ4czVMTXNOQlhBVU9DdEQ0M3M2MzdpbFN1NUFISkUxVlBVWTFTSUt3c1NNbXhfQ05XS0JJLVNqM09JX0xTOW5QNkN6Sm9PdEdvQkptRTFQQTVxd0pCR1pPUlBHVTc3U21wcnJ6TU1ZVDZsUzN2Sml5S2xuUTVzR3NuZk5BQXdmdg?oc=5" },
   { time: "06:15", tag: "ai", tagText: "AI", text: "Anthropic警告称，其已非常接近RSI（递归自我改进）能力，即AI能够自我训练并引发能力加速跃升。公司称这一节点可能带来AI能力的戏剧性加速，同时也引发对失控风险的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/" },
   { time: "05:55", tag: "ai", tagText: "AI", text: "OpenAI考虑将数据中心更名为“AI算力园区”，以缓解公众对数据中心的强烈抵触情绪。报道称，这一品牌调整意在改善舆论观感，但未必能消解社区对能耗、水资源和噪音等实际问题的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" },
   { time: "05:41", tag: "ai", tagText: "AI", text: "苹果CEO为公司在AI领域的现状辩护，称苹果不会“为了AI而AI”，暗示其更注重将AI融入产品体验，而非追逐概念。此番表态正值外界质疑苹果在生成式AI竞赛中的进度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "22:58", tag: "ai", tagText: "AI", text: "教皇利奥十四世在周五的教宗讲话中呼吁对AI进行“解除武装”，强调“机器是工具，不是人”，并指出人类“有责任去引导、改变，并在必要时拒绝其应用”。此番表态是宗教权威对AI军事化与伦理边界的最新介入，可能影响欧洲及全球AI治理话语。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai" },
   { time: "22:57", tag: "ai", tagText: "AI", text: "据Telecompaper报道，英国主权AI基金已投资AI芯片初创公司Fractile。报道未披露具体投资金额，但此举显示英国正通过国家资本加大对本土AI芯片与算力产业链的扶持。", source: "Telecompaper", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSHc4WWpjLWhNeVBUVHN6aG9MT2o3Q3dOa0R3UFRSQmtXNVE5cXprSmZGc0JhMHd0X2NObnNmandhWnY0Z1JYUzdrOFdnSGU0Tm1jRVlseVd1OEpJdFJpNjZKd1ZDakFsUzFFRXlzMzV0LUJXQlN3RFNmY0huMV80Tk1NanhNTl9SbXBWdlV0MzVUd2ZHRzlXQ0RVUnk0V2hJNFZwRUJubGpVdzg?oc=5" },
   { time: "21:57", tag: "ai", tagText: "AI", text: "OpenAI 将 ChatGPT 的 Chat 与 Work 标签页合并，并称 ChatGPT 与 Codex 将共用同一使用额度池。此举意在整合聊天与工作场景，可能影响用户配额及开发者调用方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/" },
-  { time: "21:54", tag: "ai", tagText: "AI", text: "DoorDash披露，来自AI代理（智能体）的订单目前仅“数百单”，规模仍极小。公司表示愿意与第三方代理开发商合作，但在代理式购物生态中保持谨慎。此前已有多家零售商限制AI代理自动访问与下单，显示“AI替你点外卖/购物”仍处早期试验阶段，平台在接口开放、身份验证与反欺诈上的规则尚未成型。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/" },
-  { time: "21:30", tag: "ai", tagText: "AI", text: "Anthropic的IPO招股书S-1披露其核心商业逻辑：公司以通往AGI为叙事，为尽可能大规模投入算力提供财务正当性，并试图让华尔街相信其长期AGI愿景。文件引发市场关注其收入、亏损与巨额算力支出如何支撑估值。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive" },
-  { time: "21:01", tag: "ai", tagText: "AI", text: "OpenAI CEO Sam Altman表示，他理解数学家在面对大量AI生成结果时的困扰，但OpenAI对数学领域的“轰炸”不会停止。相关报道梳理了AI近期频繁产出数学成果所引发的争议：从证明可信度、同行评审流程到研究优先级，学界正被迫重建评估标准；这也被视为AI在基础科学研究中角色上升的重要信号。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview" },
 ];
-const aiBreakingDate = "2026年11月3日 07:26 CST";
+const aiBreakingDate = "2026年11月3日 14:30 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
