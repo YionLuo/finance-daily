@@ -1616,19 +1616,20 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 22.73,
+  score: 19.91,
   rating: "extreme fear",
-  timestamp: "2026-11-03T01:00:00+00:00",
+  timestamp: "2026-11-03T14:54:16+00:00",
   previousClose: 22.73,
   previous1Week: 32.89,
   previous1Month: 38.2,
   previous1Year: 32.6,
-  date: "2026年11月3日 14:30 CST"
+  date: "2026年11月3日 22:59 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:54", tag: "macro", tagText: "宏观", text: "垃圾债市场遭遇抛售潮，信用投资者形容为“血洗”。发行人采取激进手段将资产转移至债权人追索范围之外，进一步加剧了跌势，反映信用市场对弱资质借款人保护条款恶化与再融资风险的担忧升温。", source: "Financial Times", url: "https://www.ft.com/content/fdc9a85d-d2c4-465f-99ca-609d68b6d443?syn-25a6b1a6=1" },
   { time: "14:08", tag: "crypto", tagText: "加密", text: "随着美国中期选举投票开始，加密市场整体下跌逾2%，比特币跌破77,000美元。选举结果可能影响美国加密监管立法走向与ETF资金流，投资者在结果明朗前倾向降低风险敞口。", source: "TradingKey", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxPV1J4LUlFR01hTWQzdmxDTTYyeDZEZHFTMXNIeGlLWU9aV2xNbjFRSF9ESjNGLWp5ZWF0UXJQbTB2NFVQU1dXSzdlYTZDRFVZcXFVX3A3RExJZDRUUjZ6TlpXRldicWpTUFVCREdCNGlLbFR3MC1COFhWZ3VrZkl1WEJ1cER5d1NyamtFZ2tFYUhIZk5mLWZ1V24xb2pzMmxnTFI0QmlqMVJ4N3dkSDBCTmM0VGkwVFR5YXBZXw?oc=5" },
   { time: "14:00", tag: "ai", tagText: "AI", text: "桑坦德银行、诺华等多家企业在最新财报中表示，人工智能已开始带来实际收益，包括提升营收、削减成本或改善盈利能力。在投资者日益要求AI投入见到回报的背景下，这些案例成为首批可量化的兑现证据，但整体利润贡献规模仍有限。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html" },
   { time: "13:00", tag: "tech", tagText: "科技", text: "英伟达要求数据中心客户降低对中国敞口，告知云计算服务商其客户中多数必须为非中国客户。这是全球最大芯片制造商在中美科技管制持续收紧背景下，对供应链与客户结构作出的明确表态，可能影响中国AI算力供给及相关云厂商的采购与部署节奏。", source: "Financial Times", url: "https://www.ft.com/content/1902df70-1380-4588-bad5-171352b575f2?syn-25a6b1a6=1" },
@@ -1648,12 +1649,16 @@ const breakingNews = [
   { time: "23:58", tag: "macro", tagText: "宏观", text: "过去一个月原油、AI与债券三大交易的定价逻辑同时变化：市场预期油价继续上行，但美债收益率反而回落。这一组合显示交易员与投资者可能更担心AI概念股泡沫破裂，而非通胀重新抬头，跨资产信号值得警惕。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/oil-bond-yields-ai-market.html" },
   { time: "23:30", tag: "tech", tagText: "科技", text: "微软最新财报营收与利润双双超预期。在AI资本开支高企、投资者对回报周期愈发敏感的背景下，市场关注其云与AI业务增速能否支撑当前估值，以及后续利润率指引。", source: "Barchart", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQT1lkOTk4d0ZMa1ZYOTRrOHhNV0ZmNVJhZ0lOTGVnVTk5S2tYYkw0Y0wyX1lkRWtnVjREZ1pGVmM4bGRjZ292dGNjdzlYNEtEcVBzUGU5X2l2WFF3N2JEZFItZzdxVW9Bc0sycDcyY2swcHVkZ1M1cTBac2R6Nm5LdFpMUXFQYW5KQTduM1NMYkkyLW8yaUwwWWpKT3JUM21DZjYyZUh4X28xWjJCak1EdmJqMFFEQ0dzN2ZDN3hWZTZ3aXF0YmVBRjc2dmZTUVNEa3hiWlN3?oc=5" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "苹果将在周一（罕见时段）发布财报，成为新任CEO John Ternus治下的首份成绩单。投资者关注其如何应对存储芯片价格大涨带来的成本压力，以及消费支出走弱背景下iPhone与服务业务的韧性，这将影响大型科技股整体情绪。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apples-new-earnings-era-begins-at-a-critical-time-for-big-tech-2236a44e?mod=mw_rss_topstories" },
-  { time: "22:54", tag: "macro", tagText: "宏观", text: "垃圾债市场遭遇抛售潮，信用投资者形容为“血洗”。发行人采取激进手段将资产转移至债权人追索范围之外，进一步加剧了跌势，反映信用市场对弱资质借款人保护条款恶化与再融资风险的担忧升温。", source: "Financial Times", url: "https://www.ft.com/content/fdc9a85d-d2c4-465f-99ca-609d68b6d443?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月3日 14:30 CST";
+const breakingDate = "2026年11月3日 22:59 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "22:58", tag: "ai", tagText: "AI", text: "教皇利奥十四世在周五的教宗讲话中呼吁对AI进行“解除武装”，强调“机器是工具，不是人”，并指出人类“有责任去引导、改变，并在必要时拒绝其应用”。此番表态是宗教权威对AI军事化与伦理边界的最新介入，可能影响欧洲及全球AI治理话语。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai" },
+  { time: "22:57", tag: "ai", tagText: "AI", text: "据Telecompaper报道，英国主权AI基金已投资AI芯片初创公司Fractile。报道未披露具体投资金额，但此举显示英国正通过国家资本加大对本土AI芯片与算力产业链的扶持。", source: "Telecompaper", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSHc4WWpjLWhNeVBUVHN6aG9MT2o3Q3dOa0R3UFRSQmtXNVE5cXprSmZGc0JhMHd0X2NObnNmandhWnY0Z1JYUzdrOFdnSGU0Tm1jRVlseVd1OEpJdFJpNjZKd1ZDakFsUzFFRXlzMzV0LUJXQlN3RFNmY0huMV80Tk1NanhNTl9SbXBWdlV0MzVUd2ZHRzlXQ0RVUnk0V2hJNFZwRUJubGpVdzg?oc=5" },
+  { time: "21:57", tag: "ai", tagText: "AI", text: "OpenAI 将 ChatGPT 的 Chat 与 Work 标签页合并，并称 ChatGPT 与 Codex 将共用同一使用额度池。此举意在整合聊天与工作场景，可能影响用户配额及开发者调用方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/" },
+  { time: "21:00", tag: "ai", tagText: "AI", text: "法律AI初创公司Athena完成250万美元种子前（pre-seed）融资，计划重构法律AI的收入模式，以摆脱传统按小时计费逻辑。这是资本继续押注垂直行业AI商业化路径的最新案例。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNEZXTVZSaEVYbXJ2aHlGdWg3QWRYLWJCazlYTk1UMDA5TUpiT29hMkRTLWFjV2RjUDVDWl9OTkE1bXE3MFBaRkdoVGp5aEtrdVRGSm1jSWRBa0pwSWxLamtiTWFuN2haNDlwdXRIMG44T3puU09IWTQxYVhXOEx3U2JBM21zN1BQZGlDRldKdTVxLWtkLUFhZ3h4RDRkN09vS0VXeVI3Y2ZtTllJTmpfSDdTSHM4eU5LeEl4TEFmMWZzZw?oc=5" },
+  { time: "20:00", tag: "tech", tagText: "科技", text: "Crunchbase数据显示，10月全球风险投资总额升至590亿美元，其中中国历史上规模最大的初创企业融资交易成为主要推手。这表明在全球融资环境分化的背景下，资本仍高度集中在少数头部AI与科技标的上。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQb1IycmMxQnBWU1NhVDBQdmpmZnpVblAyTzBZdVR5dEVEX2FzaU5EZ0M3TktZNTVZOTRkcElTcWZ6azljeUFVSVBFVHQ3bWxTZTBVVzBmYVBUZDhZd1Y0Y0JvY0puMnplcXlzVW8yY1luQ0o4TlRUb0cwejZKYXdzUzlQb1RUR0FuM0lMcUpjcU1pX042OHk1M1B3?oc=5" },
   { time: "13:11", tag: "ai", tagText: "AI", text: "BW Disrupt报道，2026年10月AI初创公司融资额超过3.43亿美元，资金重点流向销售和营销自动化领域。该趋势显示资本继续押注能直接改善获客与收入转化的可商业化AI应用。", source: "BW Disrupt", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxNcUk3bU44N0hJcENKN25JSklqbWh6UmlnWml1UjlhMEJ3MkUxSmlwTzlWcG1RN3lRa1E1ZWh5d3VqWWZ0TW1ERzRsb1FCMHNzZ0lIWmFZMzRibTZDZDdvc1ZGSC1RZ29LQ3JQRkRvaFJ5TjJTbTlQUXBWRVFEYWFSN1F4MzVIbDJ6cVQxUDBjQzJWc0drR0VNX3Qxcm9OblBGQWFFU2NDeWZ6NGE2TzVqV2FhYlFhTi1zWTdTMzNZd294WVVM?oc=5" },
   { time: "11:30", tag: "ai", tagText: "AI", text: "谷歌将其AI实验产品Dreambeans引入印度，新增支持13种印度语言，旨在让AI生成的个人故事触达更广泛大众。此举显示谷歌正加快生成式AI产品的多语言本地化。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/" },
   { time: "08:35", tag: "ai", tagText: "AI", text: "英特尔（INTC）参与了一轮规模达7亿美元的AI初创公司融资。Yahoo Finance称，这显示芯片巨头正通过资本投资加码AI生态布局，具体投资标的未在摘要中披露。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUmU5ZDh1Y0Iwd0NTcDN0VVQ4czVMTXNOQlhBVU9DdEQ0M3M2MzdpbFN1NUFISkUxVlBVWTFTSUt3c1NNbXhfQ05XS0JJLVNqM09JX0xTOW5QNkN6Sm9PdEdvQkptRTFQQTVxd0pCR1pPUlBHVTc3U21wcnJ6TU1ZVDZsUzN2Sml5S2xuUTVzR3NuZk5BQXdmdg?oc=5" },
@@ -1669,13 +1674,8 @@ const aiBreakingNews = [
   { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
   { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
   { time: "02:12", tag: "tech", tagText: "科技", text: "以色列初创公司在10月至少融资8.72亿美元，网络安全和AI领域领跑。这显示在全球AI投资热潮与安全需求上升的背景下，以色列科技融资活动仍保持活跃。", source: "CTech", url: "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1LaHplQ0Z4N1FUN1RGcEx5VWQ0S1lfVTVwbUNpN2k5M1RNRTFDWnlFVlFSN1NWcUJVUGk5RU1zU19uY1otc1JxSlgxSXlwQnF2MVBHR1Bqa0dUUTFrSGhqX0tJR2JyYTQ?oc=5" },
-  { time: "02:01", tag: "ai", tagText: "AI", text: "OpenAI宣布将在佐治亚州Effingham County新建数据中心试点“Grid Protectors Program”，承诺为周边电网释放最多1000兆瓦电力，以缓解数据中心用电对社区的影响。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program" },
-  { time: "23:00", tag: "ai", tagText: "AI", text: "Omen AI 以1600万美元收购 Aquatic Labs，两家致力于解决数据中心用水问题的AI初创公司合并。交易反映AI算力扩张背景下，数据中心水资源管理正成为并购与基础设施创新的焦点。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/omen-ai-adds-liquid-know-how-in-16-million-aquatic-labs-acquisition/" },
-  { time: "22:58", tag: "ai", tagText: "AI", text: "教皇利奥十四世在周五的教宗讲话中呼吁对AI进行“解除武装”，强调“机器是工具，不是人”，并指出人类“有责任去引导、改变，并在必要时拒绝其应用”。此番表态是宗教权威对AI军事化与伦理边界的最新介入，可能影响欧洲及全球AI治理话语。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai" },
-  { time: "22:57", tag: "ai", tagText: "AI", text: "据Telecompaper报道，英国主权AI基金已投资AI芯片初创公司Fractile。报道未披露具体投资金额，但此举显示英国正通过国家资本加大对本土AI芯片与算力产业链的扶持。", source: "Telecompaper", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSHc4WWpjLWhNeVBUVHN6aG9MT2o3Q3dOa0R3UFRSQmtXNVE5cXprSmZGc0JhMHd0X2NObnNmandhWnY0Z1JYUzdrOFdnSGU0Tm1jRVlseVd1OEpJdFJpNjZKd1ZDakFsUzFFRXlzMzV0LUJXQlN3RFNmY0huMV80Tk1NanhNTl9SbXBWdlV0MzVUd2ZHRzlXQ0RVUnk0V2hJNFZwRUJubGpVdzg?oc=5" },
-  { time: "21:57", tag: "ai", tagText: "AI", text: "OpenAI 将 ChatGPT 的 Chat 与 Work 标签页合并，并称 ChatGPT 与 Codex 将共用同一使用额度池。此举意在整合聊天与工作场景，可能影响用户配额及开发者调用方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/" },
 ];
-const aiBreakingDate = "2026年11月3日 14:30 CST";
+const aiBreakingDate = "2026年11月3日 22:59 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
