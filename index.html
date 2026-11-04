@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 18.86,
+  score: 19.09,
   rating: "extreme fear",
-  timestamp: "2026-11-03T20:50:11+00:00",
+  timestamp: "2026-11-03T23:59:48+00:00",
   previousClose: 22.73,
   previous1Week: 32.89,
   previous1Month: 38.2,
   previous1Year: 32.6,
-  date: "2026年11月4日 04:54 CST"
+  date: "2026年11月4日 09:13 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,22 @@ const breakingNews = [
   { time: "10:47", tag: "ai", tagText: "AI", text: "OpenAI聘请美国陆军前部长Dan Driscoll出任新设立的国家安全职位，负责国家安全现代化事务。此举显示AI公司正加深与国防及政府体系的合作，也意味着前沿模型供应商在军事与安全领域的角色将面临更多监管与伦理审视。", source: "CNBC", url: "https://www.cnbc.com/2026/11/03/openai-hires-dan-driscoll-national-security.html" },
   { time: "09:50", tag: "tech", tagText: "科技", text: "苹果在新任CEO John Ternus治下的首份财报显示iPhone业务依旧强劲，但公司警告「史无前例」的存储芯片成本将拖累利润率，服务业务展望亦令市场失望，股价盘后下跌。这印证了此前市场对存储涨价挤压硬件厂商业绩的担忧，并可能影响整个消费电子供应链的盈利预期。", source: "CNBC", url: "https://www.cnbc.com/2026/11/02/apple-aapl-q4-2026-earnings-live-updates.html" },
 ];
-const breakingDate = "2026年11月4日 04:54 CST";
+const breakingDate = "2026年11月4日 09:13 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:35", tag: "ai", tagText: "AI", text: "英特尔（INTC）参与了一轮规模达7亿美元的AI初创公司融资。Yahoo Finance称，这显示芯片巨头正通过资本投资加码AI生态布局，具体投资标的未在摘要中披露。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUmU5ZDh1Y0Iwd0NTcDN0VVQ4czVMTXNOQlhBVU9DdEQ0M3M2MzdpbFN1NUFISkUxVlBVWTFTSUt3c1NNbXhfQ05XS0JJLVNqM09JX0xTOW5QNkN6Sm9PdEdvQkptRTFQQTVxd0pCR1pPUlBHVTc3U21wcnJ6TU1ZVDZsUzN2Sml5S2xuUTVzR3NuZk5BQXdmdg?oc=5" },
+  { time: "06:41", tag: "ai", tagText: "AI", text: "Anthropic正研发名为FlashProve的系统，可让任何人核验某条AI回复确实来自其所声称的模型。该机制意在应对模型冒名、API滥用与内容溯源难题，为AI身份认证提供技术基础。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/" },
+  { time: "06:19", tag: "ai", tagText: "AI", text: "由于接入电网和新涡轮机需等待数年，数据中心建设商开始转向使用退役喷气发动机发电。这一方案效率更低、更不环保，凸显AI算力扩张正遭遇电力供应瓶颈。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/" },
+  { time: "06:15", tag: "ai", tagText: "AI", text: "Anthropic警告称，其已非常接近RSI（递归自我改进）能力，即AI能够自我训练并引发能力加速跃升。公司称这一节点可能带来AI能力的戏剧性加速，同时也引发对失控风险的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/" },
+  { time: "05:57", tag: "tech", tagText: "科技", text: "三星将在美国得克萨斯州建设第二座半导体工厂，为AMD和英伟达生产芯片。此举既扩大三星在美代工产能，也呼应美国推动芯片制造本土化的产业政策。", source: "Construction Review", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXdseElfR3BnZ3MxY2t2TFg2ak01ek1yajJFbzZjTUhYUTh1cnk3alRxRmRiWVQ1UDdYd19tNTVyc2k3ZDl0SXRqTXRmcEJRUWNzVlFISnlHaVFwT1dQS0hwdE85d1BhY1lwTTZSZGZVUmgtMG1Zc050ZU82bU5qV3h1NlFpeEZGdFM1Z19Kc3Jlei1BU0dqRVJrM1RTa19RRlRlQkFpb2xzdmdxOUpkQk1iQTBoQ2lkVGIwQmRPVQ?oc=5" },
+  { time: "05:55", tag: "ai", tagText: "AI", text: "OpenAI考虑将数据中心更名为“AI算力园区”，以缓解公众对数据中心的强烈抵触情绪。报道称，这一品牌调整意在改善舆论观感，但未必能消解社区对能耗、水资源和噪音等实际问题的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" },
+  { time: "05:41", tag: "ai", tagText: "AI", text: "苹果CEO为公司在AI领域的现状辩护，称苹果不会“为了AI而AI”，暗示其更注重将AI融入产品体验，而非追逐概念。此番表态正值外界质疑苹果在生成式AI竞赛中的进度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/" },
+  { time: "05:37", tag: "tech", tagText: "科技", text: "AMD股价大涨7%，因AI芯片销售推动其数据中心业务收入同比翻倍，显示其在AI加速器市场对英伟达的挑战正逐步兑现为业绩。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUlpMbU1JV05ickdjUmpRZ2JzcEpsNTFnLVY5WTd5X3JjYzZBeFY1QzNjRHhnVE8tcVNjc01hNVNNdFVuT1I1UlAydDBMMGlwT0FYb1U3VUpkb3AzcmFqYmg3ejZybldYZUxoZy12S2l6S2Y4NTlqbER0emI0eWctRkVQSGdPeFlWcHJDQVhycjVaT3ZXaERqcVU5QQ?oc=5" },
+  { time: "05:17", tag: "ai", tagText: "AI", text: "美国法官裁定，全国有色人种协进会（NAACP）针对xAI数据中心污染提起的《清洁空气法》诉讼可以继续推进。该诉讼指控SpaceX旗下的xAI违反清洁空气法，凸显AI数据中心面临的环境监管与法律风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" },
+  { time: "05:05", tag: "ai", tagText: "AI", text: "Palantir发布大幅增长财报，其中美国商业收入首次超过美国政府收入，被视为一个值得警惕的信号：公司增长引擎正从政府合同转向企业AI需求，但也意味着其业绩更易受企业IT支出周期波动影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/" },
+  { time: "04:16", tag: "tech", tagText: "科技", text: "苹果随iOS 27.3更新开放Siri AI接入第三方应用，开发者现可在“所有应用”中集成Siri AI的新能力，使其跨应用执行操作。这是苹果在AI助手生态上从封闭走向开放的关键一步。", source: "The Verge", url: "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps" },
+  { time: "03:34", tag: "ai", tagText: "AI", text: "AI推理初创公司Fal在新一轮融资中估值翻倍至160亿美元，反映市场对AI模型推理（inference）算力需求的强劲增长。在训练之外，推理环节正成为资本竞相押注的新战场。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/" },
   { time: "03:26", tag: "tech", tagText: "科技", text: "网站托管与建站平台Squarespace宣布裁员19%，作为组织重组的一部分。公司称此举属于更广泛的重组计划，具体受影响人数未在摘要中披露。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/web-host-squarespace-lays-off-19-of-its-employees/" },
   { time: "03:19", tag: "ai", tagText: "AI", text: "《纽约时报》等多家媒体起诉Brave浏览器，指控其未经授权抓取受版权保护内容用于训练AI，并允许用户绕过付费墙；诉状还称Brave将相关内容分发给Anthropic等客户。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/" },
   { time: "03:00", tag: "tech", tagText: "科技", text: "TechCrunch 整理了一份“AI 坟场”清单，追踪已关停或未达预期的 AI 项目与初创公司，其中包括苹果多次延期的 Siri AI 升级以及 OpenAI 混乱的“超级应用”发布。该清单反映出生成式AI热潮中产品落地的落差与淘汰速度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" },
@@ -1662,20 +1674,8 @@ const aiBreakingNews = [
   { time: "02:45", tag: "tech", tagText: "科技", text: "Benzinga 报道称，美光下一代 AI 内存技术突破面临散热难题，反映出高性能 AI 存储与内存的功耗、冷却正成为关键瓶颈。", source: "Benzinga", url: "https://news.google.com/rss/articles/CBMingFBVV95cUxPX1VoNmgyRjB0MWdNMkY5UWd1dEpGbVAyc2tFMXUyTm9YMjNaSU9iYVhVZnlBaDV2N2xYSkhjVXBCc04zNXZpSUhXb3FPcFg2dG5LbVViZFpvaGMxTnA3VHN4WFpENlFKbWJCMGdVTTFIU3FFTWpGSkNiZnVsck9UVDc3UndWZ0xrYnhmRjlPMWczY3ZicXVuNlRXWkxwdw?oc=5" },
   { time: "02:43", tag: "ai", tagText: "AI", text: "微软AI CEO Mustafa Suleyman称，其AI诊断系统在《Science》研究中于疑难病例上表现优于全科医生，并正推进“医疗超级智能”；但报道指出，提升主要来自底层AI模型，而非微软自身。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
   { time: "02:12", tag: "tech", tagText: "科技", text: "以色列初创公司在10月至少融资8.72亿美元，网络安全和AI领域领跑。这显示在全球AI投资热潮与安全需求上升的背景下，以色列科技融资活动仍保持活跃。", source: "CTech", url: "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1LaHplQ0Z4N1FUN1RGcEx5VWQ0S1lfVTVwbUNpN2k5M1RNRTFDWnlFVlFSN1NWcUJVUGk5RU1zU19uY1otc1JxSlgxSXlwQnF2MVBHR1Bqa0dUUTFrSGhqX0tJR2JyYTQ?oc=5" },
-  { time: "22:58", tag: "ai", tagText: "AI", text: "教皇利奥十四世在周五的教宗讲话中呼吁对AI进行“解除武装”，强调“机器是工具，不是人”，并指出人类“有责任去引导、改变，并在必要时拒绝其应用”。此番表态是宗教权威对AI军事化与伦理边界的最新介入，可能影响欧洲及全球AI治理话语。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai" },
-  { time: "22:57", tag: "ai", tagText: "AI", text: "据Telecompaper报道，英国主权AI基金已投资AI芯片初创公司Fractile。报道未披露具体投资金额，但此举显示英国正通过国家资本加大对本土AI芯片与算力产业链的扶持。", source: "Telecompaper", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSHc4WWpjLWhNeVBUVHN6aG9MT2o3Q3dOa0R3UFRSQmtXNVE5cXprSmZGc0JhMHd0X2NObnNmandhWnY0Z1JYUzdrOFdnSGU0Tm1jRVlseVd1OEpJdFJpNjZKd1ZDakFsUzFFRXlzMzV0LUJXQlN3RFNmY0huMV80Tk1NanhNTl9SbXBWdlV0MzVUd2ZHRzlXQ0RVUnk0V2hJNFZwRUJubGpVdzg?oc=5" },
-  { time: "21:57", tag: "ai", tagText: "AI", text: "OpenAI 将 ChatGPT 的 Chat 与 Work 标签页合并，并称 ChatGPT 与 Codex 将共用同一使用额度池。此举意在整合聊天与工作场景，可能影响用户配额及开发者调用方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "法律AI初创公司Athena完成250万美元种子前（pre-seed）融资，计划重构法律AI的收入模式，以摆脱传统按小时计费逻辑。这是资本继续押注垂直行业AI商业化路径的最新案例。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNEZXTVZSaEVYbXJ2aHlGdWg3QWRYLWJCazlYTk1UMDA5TUpiT29hMkRTLWFjV2RjUDVDWl9OTkE1bXE3MFBaRkdoVGp5aEtrdVRGSm1jSWRBa0pwSWxLamtiTWFuN2haNDlwdXRIMG44T3puU09IWTQxYVhXOEx3U2JBM21zN1BQZGlDRldKdTVxLWtkLUFhZ3h4RDRkN09vS0VXeVI3Y2ZtTllJTmpfSDdTSHM4eU5LeEl4TEFmMWZzZw?oc=5" },
-  { time: "20:00", tag: "tech", tagText: "科技", text: "Crunchbase数据显示，10月全球风险投资总额升至590亿美元，其中中国历史上规模最大的初创企业融资交易成为主要推手。这表明在全球融资环境分化的背景下，资本仍高度集中在少数头部AI与科技标的上。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQb1IycmMxQnBWU1NhVDBQdmpmZnpVblAyTzBZdVR5dEVEX2FzaU5EZ0M3TktZNTVZOTRkcElTcWZ6azljeUFVSVBFVHQ3bWxTZTBVVzBmYVBUZDhZd1Y0Y0JvY0puMnplcXlzVW8yY1luQ0o4TlRUb0cwejZKYXdzUzlQb1RUR0FuM0lMcUpjcU1pX042OHk1M1B3?oc=5" },
-  { time: "13:11", tag: "ai", tagText: "AI", text: "BW Disrupt报道，2026年10月AI初创公司融资额超过3.43亿美元，资金重点流向销售和营销自动化领域。该趋势显示资本继续押注能直接改善获客与收入转化的可商业化AI应用。", source: "BW Disrupt", url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxNcUk3bU44N0hJcENKN25JSklqbWh6UmlnWml1UjlhMEJ3MkUxSmlwTzlWcG1RN3lRa1E1ZWh5d3VqWWZ0TW1ERzRsb1FCMHNzZ0lIWmFZMzRibTZDZDdvc1ZGSC1RZ29LQ3JQRkRvaFJ5TjJTbTlQUXBWRVFEYWFSN1F4MzVIbDJ6cVQxUDBjQzJWc0drR0VNX3Qxcm9OblBGQWFFU2NDeWZ6NGE2TzVqV2FhYlFhTi1zWTdTMzNZd294WVVM?oc=5" },
-  { time: "11:30", tag: "ai", tagText: "AI", text: "谷歌将其AI实验产品Dreambeans引入印度，新增支持13种印度语言，旨在让AI生成的个人故事触达更广泛大众。此举显示谷歌正加快生成式AI产品的多语言本地化。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/" },
-  { time: "08:35", tag: "ai", tagText: "AI", text: "英特尔（INTC）参与了一轮规模达7亿美元的AI初创公司融资。Yahoo Finance称，这显示芯片巨头正通过资本投资加码AI生态布局，具体投资标的未在摘要中披露。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUmU5ZDh1Y0Iwd0NTcDN0VVQ4czVMTXNOQlhBVU9DdEQ0M3M2MzdpbFN1NUFISkUxVlBVWTFTSUt3c1NNbXhfQ05XS0JJLVNqM09JX0xTOW5QNkN6Sm9PdEdvQkptRTFQQTVxd0pCR1pPUlBHVTc3U21wcnJ6TU1ZVDZsUzN2Sml5S2xuUTVzR3NuZk5BQXdmdg?oc=5" },
-  { time: "06:15", tag: "ai", tagText: "AI", text: "Anthropic警告称，其已非常接近RSI（递归自我改进）能力，即AI能够自我训练并引发能力加速跃升。公司称这一节点可能带来AI能力的戏剧性加速，同时也引发对失控风险的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/" },
-  { time: "05:55", tag: "ai", tagText: "AI", text: "OpenAI考虑将数据中心更名为“AI算力园区”，以缓解公众对数据中心的强烈抵触情绪。报道称，这一品牌调整意在改善舆论观感，但未必能消解社区对能耗、水资源和噪音等实际问题的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" },
-  { time: "05:41", tag: "ai", tagText: "AI", text: "苹果CEO为公司在AI领域的现状辩护，称苹果不会“为了AI而AI”，暗示其更注重将AI融入产品体验，而非追逐概念。此番表态正值外界质疑苹果在生成式AI竞赛中的进度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/" },
-  { time: "05:17", tag: "ai", tagText: "AI", text: "美国法官裁定，全国有色人种协进会（NAACP）针对xAI数据中心污染提起的《清洁空气法》诉讼可以继续推进。该诉讼指控SpaceX旗下的xAI违反清洁空气法，凸显AI数据中心面临的环境监管与法律风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" },
 ];
-const aiBreakingDate = "2026年11月4日 04:54 CST";
+const aiBreakingDate = "2026年11月4日 09:13 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
