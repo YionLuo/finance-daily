@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 24.53,
+  score: 20.47,
   rating: "extreme fear",
-  timestamp: "2026-11-05T15:31:31+00:00",
+  timestamp: "2026-11-05T20:32:14+00:00",
   previousClose: 27.29,
   previous1Week: 30.77,
   previous1Month: 43.09,
   previous1Year: 23.06,
-  date: "2026年11月5日 23:34 CST"
+  date: "2026年11月6日 04:35 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "03:10", tag: "geo", tagText: "地缘", text: "美国康涅狄格州民主党参议员克里斯·墨菲突发中风并住院，其办公室称他目前已清醒、意识清楚。此事发生在中期选举前夕，可能影响参议院席位安排与立法议程。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/chris-murphy-stroke-senate-hospital.html" },
+  { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
+  { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
+  { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
   { time: "20:04", tag: "macro", tagText: "宏观", text: "英国央行将利率上调至4%，为伊朗战争爆发以来首次加息。通胀压力与地缘风险交织，市场关注英国后续货币政策路径及其对英镑和英债的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html" },
   { time: "18:20", tag: "geo", tagText: "地缘", text: "BNY财富管理策略师Alicia Levine警告，伊朗战争长期化才是市场真正的“黑天鹅”，当前资产价格尚未计入冲突久拖不决的风险；若成真，能源与风险资产将面临重估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-prolonged-war-in-iran-is-the-markets-real-black-swan-says-this-strategist-65d105c7?mod=mw_rss_topstories" },
   { time: "18:00", tag: "ai", tagText: "AI", text: "OpenAI承诺为数据中心用电付费，并承诺就AI数据中心征求社区意见、公开建设计划、保护电费支付者。此举正值选举凸显选民对AI能耗与电价上涨的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "05:34", tag: "geo", tagText: "地缘", text: "副总统万斯将共和党中期选举惨败归咎于伊朗战争；民主党掌控国会后正筹备推动「可负担性」与反腐立法，并加强对特朗普的制衡。与此同时，默多克旗下媒体对特朗普态度转冷，福克斯新闻主播公开质疑伊朗战争策略，《纽约邮报》头版以「蓝色海啸」报道选举结果。", source: "Financial Times", url: "https://www.ft.com/content/6bc8be51-5bd8-468c-bd3c-82bbc2866ba1?syn-25a6b1a6=1" },
   { time: "05:33", tag: "ai", tagText: "AI", text: "AI相关股票走势剧烈分化：微软与亚马逊单日市值合计增加约4,240亿美元，云供给紧张被视为支撑其提价的利好；而美光等数据中心相关芯片股下挫，因民主党在得州等地的胜选令市场担忧AI数据中心建设受阻。分析师认为AI交易短期或继续颠簸，但泡沫缓慢消退好过骤然破裂，尚无理由清仓全部AI股票。", source: "MarketWatch", url: "https://www.marketwatch.com/story/microsoft-and-amazon-combine-for-a-400-billion-market-cap-boost-and-these-factors-show-why-6655d1a9?mod=mw_rss_topstories" },
   { time: "05:16", tag: "macro", tagText: "宏观", text: "美国中期选举中民主党全面夺下国会控制权，消除了悬在华尔街头上的政治不确定性，叠加市场押注伊朗战争将更快结束，美股周三暴力反弹：道指上涨约1,500点，创2025年4月以来最佳单日表现，标普500与纳指同步走高；布伦特原油跌破95美元/桶，美债收益率下行。分析认为这是典型的「纾困式」普涨行情。", source: "CNBC", url: "https://www.cnbc.com/2026/11/03/stock-market-today-live-updates.html" },
-  { time: "03:10", tag: "geo", tagText: "地缘", text: "美国康涅狄格州民主党参议员克里斯·墨菲突发中风并住院，其办公室称他目前已清醒、意识清楚。此事发生在中期选举前夕，可能影响参议院席位安排与立法议程。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/chris-murphy-stroke-senate-hospital.html" },
-  { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
-  { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
-  { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月5日 23:34 CST";
+const breakingDate = "2026年11月6日 04:35 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "05:17", tag: "ai", tagText: "AI", text: "美国法官裁定，全国有色人种协进会（NAACP）针对xAI数据中心污染提起的《清洁空气法》诉讼可以继续推进。该诉讼指控SpaceX旗下的xAI违反清洁空气法，凸显AI数据中心面临的环境监管与法律风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" },
   { time: "05:10", tag: "ai", tagText: "AI", text: "Meta宣布收购AI编程初创公司Conductor。该公司可让软件工程师部署多支AI代理团队，并行处理项目的不同环节。此次收购显示Meta正加码AI辅助软件工程能力，与微软、谷歌在企业级AI编程工具上的竞争进一步升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/" },
 ];
-const aiBreakingDate = "2026年11月5日 23:34 CST";
+const aiBreakingDate = "2026年11月6日 04:35 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
