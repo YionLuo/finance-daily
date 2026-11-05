@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 34.8,
-  rating: "fear",
-  timestamp: "2026-11-05T11:51:16+00:00",
+  score: 24.53,
+  rating: "extreme fear",
+  timestamp: "2026-11-05T15:31:31+00:00",
   previousClose: 27.29,
   previous1Week: 30.77,
   previous1Month: 43.09,
   previous1Year: 23.06,
-  date: "2026年11月5日 20:09 CST"
+  date: "2026年11月5日 23:34 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,14 @@ const breakingNews = [
   { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
   { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月5日 20:09 CST";
+const breakingDate = "2026年11月5日 23:34 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:19", tag: "ai", tagText: "AI", text: "Dropbox宣布以3.5亿美元收购Tigris Data，以强化其AI基础设施。该交易预计将支持DBX Agent Cloud的开发，这是一个面向构建AI模型和代理的开发者的新存储平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/" },
+  { time: "22:02", tag: "geo", tagText: "地缘", text: "报道称，中国AI公司Moonshot AI通过欧洲“neocloud”云服务交易绕过美国芯片出口限制以获取算力。这凸显在美国对华先进芯片管制下，企业正借第三国云基础设施规避限制。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMFJvTHhyVjJJaXNiQ3BpMjBDYk43TG91TmJLaDdQdmQyVVlBX29oSkZ0LXJyU3dab1AybmNkY0VQMDZIOUUyaDQ2aFJxTGFXbkktZ096dlZpQmNXUHVpY1VlM2ZOalpZaXZjMWNrd2twbmd6YXE4aWxKOFFLa0lnTWlXX1oyZG5FU051TDZpRXNUWV8wSlQzYw?oc=5" },
+  { time: "22:00", tag: "tech", tagText: "科技", text: "一家由前苹果和Uber工程师创办的自动驾驶卡车初创公司融资5100万美元，试图重新设计自动驾驶卡车。资金将用于推进其自动驾驶货运技术。", source: "Business Insider", url: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWEhKMmM1YlR6MEZsanJJZVFvZmVNSnpyQ2JLaDVhLXhMZkJ3TWdNTjVpZ3RCMTNOYmdkWEFtZjJpZDdYYmlyUWlaZDJjV2FSdEJVcTVGUjNqODV1Zm14WDFMOThDYkw4Q0NZWFZuUDF2blFGbDVOdmljTllsM25RSHVtbElKWE1PZFNOQm5aWkxCcExsYWlBZ1pFQk1zXzMxU0MzUHpBcGM?oc=5" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "Box采用英伟达Nemotron模型构建“代理优先”的内容检索系统。公司称该系统查询速度提升至4倍、错误减少20%，且token使用量减少90%。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/" },
   { time: "20:00", tag: "tech", tagText: "科技", text: "Agility今日登陆纳斯达克，成为首家公开上市的纯人形机器人公司。这标志着人形机器人赛道正式进入资本市场检验阶段，投资者将直接押注其商业化前景。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/agility-is-the-first-pure-humanoid-robot-company-on-the-stock-market-are-you-buying/" },
   { time: "18:45", tag: "ai", tagText: "AI", text: "大型科技公司的AI数据中心建设支出仍未止步。亚马逊、微软、Alphabet和Meta最新季度财报显示，四巨头继续以创纪录规模投入AI数据中心，且短期内看不到收缩迹象。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1027344/amazon-microsoft-alphabet-google-meta-data-centers-earnings-q3" },
   { time: "09:26", tag: "ai", tagText: "AI", text: "据TechCrunch报道，苹果正大幅削减工程团队内部使用AI的预算，减少其在内部AI工具上的支出规模。此举正值外界持续质疑苹果在生成式AI竞赛中的投入力度与策略方向之际，也显示苹果对AI开支的态度趋于审慎。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "05:25", tag: "ai", tagText: "AI", text: "OpenAI政策负责人Chris Lehane正试图让AI议题主导2028年美国大选，提出一套“新社会契约”主张。报道称，该主张一方面宣称可让美国民众受益，另一方面也与OpenAI自身商业利益相契合，显示AI巨头正提前布局政治议程与监管话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/" },
   { time: "05:17", tag: "ai", tagText: "AI", text: "美国法官裁定，全国有色人种协进会（NAACP）针对xAI数据中心污染提起的《清洁空气法》诉讼可以继续推进。该诉讼指控SpaceX旗下的xAI违反清洁空气法，凸显AI数据中心面临的环境监管与法律风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" },
   { time: "05:10", tag: "ai", tagText: "AI", text: "Meta宣布收购AI编程初创公司Conductor。该公司可让软件工程师部署多支AI代理团队，并行处理项目的不同环节。此次收购显示Meta正加码AI辅助软件工程能力，与微软、谷歌在企业级AI编程工具上的竞争进一步升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/" },
-  { time: "05:05", tag: "ai", tagText: "AI", text: "Palantir发布大幅增长财报，其中美国商业收入首次超过美国政府收入，被视为一个值得警惕的信号：公司增长引擎正从政府合同转向企业AI需求，但也意味着其业绩更易受企业IT支出周期波动影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/" },
-  { time: "04:16", tag: "tech", tagText: "科技", text: "苹果随iOS 27.3更新开放Siri AI接入第三方应用，开发者现可在“所有应用”中集成Siri AI的新能力，使其跨应用执行操作。这是苹果在AI助手生态上从封闭走向开放的关键一步。", source: "The Verge", url: "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps" },
-  { time: "03:34", tag: "ai", tagText: "AI", text: "AI推理初创公司Fal在新一轮融资中估值翻倍至160亿美元，反映市场对AI模型推理（inference）算力需求的强劲增长。在训练之外，推理环节正成为资本竞相押注的新战场。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/" },
-  { time: "03:29", tag: "tech", tagText: "科技", text: "在谷歌因AI政策与学校产生摩擦之际，DuckDuckGo趁机向教育机构推销自家搜索引擎，并突出可关闭AI功能的选项。此举试图借学校对谷歌AI限制的不满争取教育用户，反映搜索市场的AI路线之争正向校园场景蔓延。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy/" },
 ];
-const aiBreakingDate = "2026年11月5日 20:09 CST";
+const aiBreakingDate = "2026年11月5日 23:34 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
