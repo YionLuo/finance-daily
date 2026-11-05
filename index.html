@@ -1616,19 +1616,24 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 27.29,
+  score: 34.8,
   rating: "fear",
-  timestamp: "2026-11-04T23:59:55+00:00",
-  previousClose: 19.09,
-  previous1Week: 34.4,
-  previous1Month: 38.2,
-  previous1Year: 20.94,
-  date: "2026年11月5日 11:25 CST"
+  timestamp: "2026-11-05T11:51:16+00:00",
+  previousClose: 27.29,
+  previous1Week: 30.77,
+  previous1Month: 43.09,
+  previous1Year: 23.06,
+  date: "2026年11月5日 20:09 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:04", tag: "macro", tagText: "宏观", text: "英国央行将利率上调至4%，为伊朗战争爆发以来首次加息。通胀压力与地缘风险交织，市场关注英国后续货币政策路径及其对英镑和英债的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html" },
+  { time: "18:20", tag: "geo", tagText: "地缘", text: "BNY财富管理策略师Alicia Levine警告，伊朗战争长期化才是市场真正的“黑天鹅”，当前资产价格尚未计入冲突久拖不决的风险；若成真，能源与风险资产将面临重估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-prolonged-war-in-iran-is-the-markets-real-black-swan-says-this-strategist-65d105c7?mod=mw_rss_topstories" },
+  { time: "18:00", tag: "ai", tagText: "AI", text: "OpenAI承诺为数据中心用电付费，并承诺就AI数据中心征求社区意见、公开建设计划、保护电费支付者。此举正值选举凸显选民对AI能耗与电价上涨的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html" },
+  { time: "16:41", tag: "geo", tagText: "地缘", text: "印度指称与中国有关联的AI工具被用于针对金融机构的黑客行动。事件加剧外界对AI赋能网络攻击及中印科技安全摩擦的担忧。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWVkN29DQ3RzdVJEWDZTU0JvTXZCSldfNVROUHNLMzFsTF9mSTN1Z1FCV2VQSE16MHR5YU1lR1lhVUgxdkhYQ2VpT0prNktfT3IybFhJTE0zbWZ4U3h5aWUzSTMxZm1JRTVDUkJXeHRGaHBpM1dUYnhDSzhqbVNkVlJMZmJMTS1nRC1vZzBDZDZlMjlzdUZINzZuMFpFM0VnOVRhUEdBZEEzSFRSUHBIX21QTEktTmdCYTFUTjZTUk5qeHpxU2RVdQ?oc=5" },
+  { time: "14:54", tag: "geo", tagText: "地缘", text: "民主党横扫中期选举后，分析人士关注特朗普维持脆弱美中贸易休战的能力所受影响，以及美国对华科技竞争政策可能出现的调整。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/what-the-democrat-midterms-sweep-changes-for-us-china-tech-rivalry.html" },
   { time: "11:01", tag: "geo", tagText: "地缘", text: "受美国中期选举后和平预期升温推动，国际油价跌破每桶100美元。副总统万斯将共和党中期选举惨败归咎于选民对伊朗战争的不满，市场押注冲突将更快结束，地缘风险溢价明显回落。", source: "Financial Times", url: "https://www.ft.com/content/b526f876-810a-4e74-8b8d-4ffca04b29c7?syn-25a6b1a6=1" },
   { time: "09:11", tag: "macro", tagText: "宏观", text: "白宫相关委员会将美联储理事Lisa Cook的听证会推迟至12月14日。特朗普自2025年8月起试图将其解职，但最高法院6月暂时阻止。此事被视为对美联储独立性的关键考验，市场关注后续人事与政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/trump-federal-reserve-lisa-cook-hearing.html" },
   { time: "08:52", tag: "macro", tagText: "宏观", text: "尽管加州Prop 40亿万富翁税预计被否决、成为超级富豪的罕见胜利，民主党在中期选举大胜仍令美国财富税议题留在政策议程上，市场关注后续对高净值人群与资本利得税的可能影响。", source: "Financial Times", url: "https://www.ft.com/content/c701ac0d-0ef4-426f-a629-e38ed29d5260?syn-25a6b1a6=1" },
@@ -1644,16 +1649,13 @@ const breakingNews = [
   { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
   { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
   { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
-  { time: "00:34", tag: "ai", tagText: "AI", text: "摩根大通、亚马逊等企业正封堵Meta Muse等AI个人代理，担心其绕过自家入口、夺走客户关系。零售与科技专家警告，减少用户摩擦的技术通常最终胜出，长期封锁可能并非有效策略，围绕AI代理入口的博弈将重塑电商与金融服务的流量格局。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/jpmorgan-amazon-ai-agents-meta-muse.html" },
-  { time: "23:58", tag: "macro", tagText: "宏观", text: "过去一个月原油、AI与债券三大交易的定价逻辑同时变化：市场预期油价继续上行，但美债收益率反而回落。这一组合显示交易员与投资者可能更担心AI概念股泡沫破裂，而非通胀重新抬头，跨资产信号值得警惕。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/oil-bond-yields-ai-market.html" },
-  { time: "23:30", tag: "tech", tagText: "科技", text: "微软最新财报营收与利润双双超预期。在AI资本开支高企、投资者对回报周期愈发敏感的背景下，市场关注其云与AI业务增速能否支撑当前估值，以及后续利润率指引。", source: "Barchart", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQT1lkOTk4d0ZMa1ZYOTRrOHhNV0ZmNVJhZ0lOTGVnVTk5S2tYYkw0Y0wyX1lkRWtnVjREZ1pGVmM4bGRjZ292dGNjdzlYNEtEcVBzUGU5X2l2WFF3N2JEZFItZzdxVW9Bc0sycDcyY2swcHVkZ1M1cTBac2R6Nm5LdFpMUXFQYW5KQTduM1NMYkkyLW8yaUwwWWpKT3JUM21DZjYyZUh4X28xWjJCak1EdmJqMFFEQ0dzN2ZDN3hWZTZ3aXF0YmVBRjc2dmZTUVNEa3hiWlN3?oc=5" },
-  { time: "23:00", tag: "tech", tagText: "科技", text: "苹果将在周一（罕见时段）发布财报，成为新任CEO John Ternus治下的首份成绩单。投资者关注其如何应对存储芯片价格大涨带来的成本压力，以及消费支出走弱背景下iPhone与服务业务的韧性，这将影响大型科技股整体情绪。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apples-new-earnings-era-begins-at-a-critical-time-for-big-tech-2236a44e?mod=mw_rss_topstories" },
-  { time: "22:54", tag: "macro", tagText: "宏观", text: "垃圾债市场遭遇抛售潮，信用投资者形容为“血洗”。发行人采取激进手段将资产转移至债权人追索范围之外，进一步加剧了跌势，反映信用市场对弱资质借款人保护条款恶化与再融资风险的担忧升温。", source: "Financial Times", url: "https://www.ft.com/content/fdc9a85d-d2c4-465f-99ca-609d68b6d443?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月5日 11:25 CST";
+const breakingDate = "2026年11月5日 20:09 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:00", tag: "tech", tagText: "科技", text: "Agility今日登陆纳斯达克，成为首家公开上市的纯人形机器人公司。这标志着人形机器人赛道正式进入资本市场检验阶段，投资者将直接押注其商业化前景。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/agility-is-the-first-pure-humanoid-robot-company-on-the-stock-market-are-you-buying/" },
+  { time: "18:45", tag: "ai", tagText: "AI", text: "大型科技公司的AI数据中心建设支出仍未止步。亚马逊、微软、Alphabet和Meta最新季度财报显示，四巨头继续以创纪录规模投入AI数据中心，且短期内看不到收缩迹象。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1027344/amazon-microsoft-alphabet-google-meta-data-centers-earnings-q3" },
   { time: "09:26", tag: "ai", tagText: "AI", text: "据TechCrunch报道，苹果正大幅削减工程团队内部使用AI的预算，减少其在内部AI工具上的支出规模。此举正值外界持续质疑苹果在生成式AI竞赛中的投入力度与策略方向之际，也显示苹果对AI开支的态度趋于审慎。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/" },
   { time: "06:45", tag: "ai", tagText: "AI", text: "AI行业政治行动委员会（PAC）在2026年美国中期选举中投入数百万美元试图影响国会构成，但结果喜忧参半。相关政治团体已开始为下一个选举周期布局，显示AI产业正加大对美国政治进程的投入。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/" },
   { time: "06:42", tag: "tech", tagText: "科技", text: "高通在2026财年第四季度财报电话会上表示将大举押注数据中心业务。由于智能手机销量较2025年同期下滑约20%，公司希望以数据中心业务支撑整体业绩，这标志着其营收重心正从手机芯片向AI算力基础设施转移。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "04:16", tag: "tech", tagText: "科技", text: "苹果随iOS 27.3更新开放Siri AI接入第三方应用，开发者现可在“所有应用”中集成Siri AI的新能力，使其跨应用执行操作。这是苹果在AI助手生态上从封闭走向开放的关键一步。", source: "The Verge", url: "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps" },
   { time: "03:34", tag: "ai", tagText: "AI", text: "AI推理初创公司Fal在新一轮融资中估值翻倍至160亿美元，反映市场对AI模型推理（inference）算力需求的强劲增长。在训练之外，推理环节正成为资本竞相押注的新战场。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/" },
   { time: "03:29", tag: "tech", tagText: "科技", text: "在谷歌因AI政策与学校产生摩擦之际，DuckDuckGo趁机向教育机构推销自家搜索引擎，并突出可关闭AI功能的选项。此举试图借学校对谷歌AI限制的不满争取教育用户，反映搜索市场的AI路线之争正向校园场景蔓延。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy/" },
-  { time: "03:26", tag: "tech", tagText: "科技", text: "网站托管与建站平台Squarespace宣布裁员19%，作为组织重组的一部分。公司称此举属于更广泛的重组计划，具体受影响人数未在摘要中披露。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/web-host-squarespace-lays-off-19-of-its-employees/" },
-  { time: "00:17", tag: "ai", tagText: "AI", text: "谷歌计划对限制AI使用的学校关闭搜索服务，引发政界反弹。纽约市长Zohran Mamdani和前FTC主席Lina Khan等批评者指责谷歌充当不受监管的垄断者。该计划将AI采用与核心搜索服务挂钩，可能加剧对科技巨头在教育领域捆绑销售的审查。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/" },
 ];
-const aiBreakingDate = "2026年11月5日 11:25 CST";
+const aiBreakingDate = "2026年11月5日 20:09 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
