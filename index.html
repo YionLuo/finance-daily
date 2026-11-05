@@ -1618,17 +1618,22 @@
 const fearGreedData = {
   score: 27.29,
   rating: "fear",
-  timestamp: "2026-11-04T22:14:46+00:00",
+  timestamp: "2026-11-04T23:59:55+00:00",
   previousClose: 19.09,
   previous1Week: 34.4,
   previous1Month: 38.2,
   previous1Year: 20.94,
-  date: "2026年11月5日 06:34 CST"
+  date: "2026年11月5日 11:25 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "11:01", tag: "geo", tagText: "地缘", text: "受美国中期选举后和平预期升温推动，国际油价跌破每桶100美元。副总统万斯将共和党中期选举惨败归咎于选民对伊朗战争的不满，市场押注冲突将更快结束，地缘风险溢价明显回落。", source: "Financial Times", url: "https://www.ft.com/content/b526f876-810a-4e74-8b8d-4ffca04b29c7?syn-25a6b1a6=1" },
+  { time: "09:11", tag: "macro", tagText: "宏观", text: "白宫相关委员会将美联储理事Lisa Cook的听证会推迟至12月14日。特朗普自2025年8月起试图将其解职，但最高法院6月暂时阻止。此事被视为对美联储独立性的关键考验，市场关注后续人事与政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/trump-federal-reserve-lisa-cook-hearing.html" },
+  { time: "08:52", tag: "macro", tagText: "宏观", text: "尽管加州Prop 40亿万富翁税预计被否决、成为超级富豪的罕见胜利，民主党在中期选举大胜仍令美国财富税议题留在政策议程上，市场关注后续对高净值人群与资本利得税的可能影响。", source: "Financial Times", url: "https://www.ft.com/content/c701ac0d-0ef4-426f-a629-e38ed29d5260?syn-25a6b1a6=1" },
+  { time: "08:04", tag: "macro", tagText: "宏观", text: "印度正考虑减税以吸引外资。外资对印度股市兴趣持续下降，持股比例已降至14%的历史低点，市场关注新德里能否以税收优惠扭转外资流出趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/india-tax-foreign-investors-nifty.html" },
+  { time: "06:38", tag: "macro", tagText: "宏观", text: "大型科技公司约6亿美元的中期选举政治投入收效甚微，马斯克受到批评。选民对AI与硅谷的不满助推民主党选情，显示巨额政治献金未能左右关键选战结果。", source: "Financial Times", url: "https://www.ft.com/content/3e65138f-068f-465f-a1ae-a9c61ea1afc4?syn-25a6b1a6=1" },
   { time: "06:03", tag: "tech", tagText: "科技", text: "高通发布财报后股价盘后下跌约6%。公司虽然业绩好于预期，但对下一季的盈利指引偏弱：存储芯片价格大涨正压制智能手机整体需求，同时苹果逐步弃用其基带芯片也构成双重压力。市场担心高通的手机业务在成本上升与客户流失之间被持续挤压。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/qualcomm-qcom-earnings-report-q4-2026.html" },
   { time: "05:57", tag: "tech", tagText: "科技", text: "预测市场在本次美国中期选举中再次领先主流媒体，提前判定民主党将横扫国会，进一步坐实其作为快速、可靠信息来源的地位。这类平台正借此争取新闻与金融信息领域的合法性和流量，但也面临监管与准确性的持续审视。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/prediction-markets-2026-midterms-election-results.html" },
   { time: "05:53", tag: "crypto", tagText: "加密", text: "民主党横扫中期选举，令美国加密监管立法前景蒙上阴影，比特币随之走低；但华尔街风险偏好回升与「监管希望」也一度推动其盘中反弹，走势反复。专家建议投资者关注国会立法框架与加密ETF资金流变化，短期波动可能加大。", source: "Bloomberg", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNWg3aW5QeW04R2pKaV9WdFp4XzJZdkJnaEw1UEdLNGZINHJBZk5UYldBX1FsY1Z3eUxubmphN1hvQnJJNFdERkJOcjZPMXppclBsN2hOZGZxVUhMZGRydHYwSlVpTXcxekxDZzQ5OFVFS1h3czZwVzQ2VW94VDNLdWdsbm5heHIteUhDZ2RjaC1SWlFycGNJSklZZkVWbThkQjRJQlF5QjJfMEFNWVVLa19n?oc=5" },
@@ -1644,16 +1649,15 @@ const breakingNews = [
   { time: "23:30", tag: "tech", tagText: "科技", text: "微软最新财报营收与利润双双超预期。在AI资本开支高企、投资者对回报周期愈发敏感的背景下，市场关注其云与AI业务增速能否支撑当前估值，以及后续利润率指引。", source: "Barchart", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQT1lkOTk4d0ZMa1ZYOTRrOHhNV0ZmNVJhZ0lOTGVnVTk5S2tYYkw0Y0wyX1lkRWtnVjREZ1pGVmM4bGRjZ292dGNjdzlYNEtEcVBzUGU5X2l2WFF3N2JEZFItZzdxVW9Bc0sycDcyY2swcHVkZ1M1cTBac2R6Nm5LdFpMUXFQYW5KQTduM1NMYkkyLW8yaUwwWWpKT3JUM21DZjYyZUh4X28xWjJCak1EdmJqMFFEQ0dzN2ZDN3hWZTZ3aXF0YmVBRjc2dmZTUVNEa3hiWlN3?oc=5" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "苹果将在周一（罕见时段）发布财报，成为新任CEO John Ternus治下的首份成绩单。投资者关注其如何应对存储芯片价格大涨带来的成本压力，以及消费支出走弱背景下iPhone与服务业务的韧性，这将影响大型科技股整体情绪。", source: "MarketWatch", url: "https://www.marketwatch.com/story/apples-new-earnings-era-begins-at-a-critical-time-for-big-tech-2236a44e?mod=mw_rss_topstories" },
   { time: "22:54", tag: "macro", tagText: "宏观", text: "垃圾债市场遭遇抛售潮，信用投资者形容为“血洗”。发行人采取激进手段将资产转移至债权人追索范围之外，进一步加剧了跌势，反映信用市场对弱资质借款人保护条款恶化与再融资风险的担忧升温。", source: "Financial Times", url: "https://www.ft.com/content/fdc9a85d-d2c4-465f-99ca-609d68b6d443?syn-25a6b1a6=1" },
-  { time: "14:08", tag: "crypto", tagText: "加密", text: "随着美国中期选举投票开始，加密市场整体下跌逾2%，比特币跌破77,000美元。选举结果可能影响美国加密监管立法走向与ETF资金流，投资者在结果明朗前倾向降低风险敞口。", source: "TradingKey", url: "https://news.google.com/rss/articles/CBMivAFBVV95cUxPV1J4LUlFR01hTWQzdmxDTTYyeDZEZHFTMXNIeGlLWU9aV2xNbjFRSF9ESjNGLWp5ZWF0UXJQbTB2NFVQU1dXSzdlYTZDRFVZcXFVX3A3RExJZDRUUjZ6TlpXRldicWpTUFVCREdCNGlLbFR3MC1COFhWZ3VrZkl1WEJ1cER5d1NyamtFZ2tFYUhIZk5mLWZ1V24xb2pzMmxnTFI0QmlqMVJ4N3dkSDBCTmM0VGkwVFR5YXBZXw?oc=5" },
-  { time: "14:00", tag: "ai", tagText: "AI", text: "桑坦德银行、诺华等多家企业在最新财报中表示，人工智能已开始带来实际收益，包括提升营收、削减成本或改善盈利能力。在投资者日益要求AI投入见到回报的背景下，这些案例成为首批可量化的兑现证据，但整体利润贡献规模仍有限。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html" },
-  { time: "13:00", tag: "tech", tagText: "科技", text: "英伟达要求数据中心客户降低对中国敞口，告知云计算服务商其客户中多数必须为非中国客户。这是全球最大芯片制造商在中美科技管制持续收紧背景下，对供应链与客户结构作出的明确表态，可能影响中国AI算力供给及相关云厂商的采购与部署节奏。", source: "Financial Times", url: "https://www.ft.com/content/1902df70-1380-4588-bad5-171352b575f2?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "crypto", tagText: "加密", text: "朝鲜否认与Binance被盗案有关，但区块链研究机构正追踪价值数十亿美元的被盗加密资产在多个网络间流转。专家称黑客将代币拆分为小额包以规避追踪，洗钱过程预计需数月。该事件再度暴露中心化交易所的安全与合规风险，并可能强化美国对朝鲜黑客组织的制裁与执法压力。", source: "Financial Times", url: "https://www.ft.com/content/a6212e33-2175-4957-91d1-8f8f6bc3918b?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "中东与乌克兰冲突已大幅削减全球炼油产能，推动成品油裂解价差与利润率升至高位，但埃克森美孚、壳牌等石油巨头仍抵制新建炼厂的压力。企业更倾向通过回购与分红回报股东，而非投入周期长、面临能源转型风险的炼化项目，这意味着燃油价格高企与供应紧张可能持续更久。", source: "Financial Times", url: "https://www.ft.com/content/4d63f08d-3556-4d84-8e1d-40f866741d15?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月5日 06:34 CST";
+const breakingDate = "2026年11月5日 11:25 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "09:26", tag: "ai", tagText: "AI", text: "据TechCrunch报道，苹果正大幅削减工程团队内部使用AI的预算，减少其在内部AI工具上的支出规模。此举正值外界持续质疑苹果在生成式AI竞赛中的投入力度与策略方向之际，也显示苹果对AI开支的态度趋于审慎。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/" },
+  { time: "06:45", tag: "ai", tagText: "AI", text: "AI行业政治行动委员会（PAC）在2026年美国中期选举中投入数百万美元试图影响国会构成，但结果喜忧参半。相关政治团体已开始为下一个选举周期布局，显示AI产业正加大对美国政治进程的投入。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/" },
+  { time: "06:42", tag: "tech", tagText: "科技", text: "高通在2026财年第四季度财报电话会上表示将大举押注数据中心业务。由于智能手机销量较2025年同期下滑约20%，公司希望以数据中心业务支撑整体业绩，这标志着其营收重心正从手机芯片向AI算力基础设施转移。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers" },
+  { time: "06:26", tag: "tech", tagText: "科技", text: "安全研究人员称，一个疑似受克里姆林宫支持的黑客组织利用iOS与Android系统漏洞感染手机，目标指向外交相关人士。该事件凸显移动操作系统零日漏洞被用于国家级网络间谍活动的风险。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/" },
   { time: "06:19", tag: "ai", tagText: "AI", text: "由于接入电网和新涡轮机需等待数年，数据中心建设商开始转向使用退役喷气发动机发电。这一方案效率更低、更不环保，凸显AI算力扩张正遭遇电力供应瓶颈。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/" },
   { time: "06:15", tag: "ai", tagText: "AI", text: "Anthropic警告称，其已非常接近RSI（递归自我改进）能力，即AI能够自我训练并引发能力加速跃升。公司称这一节点可能带来AI能力的戏剧性加速，同时也引发对失控风险的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/" },
   { time: "06:13", tag: "tech", tagText: "科技", text: "Nothing CEO裴宇（Carl Pei）在X上宣布，公司首款AI设备将于12月发布。他表示这是一款无屏幕的“AI原生”设备，主打借助AI提升生产力。这距离其公布AI原生设备与AI操作系统计划仅一年多，但产品具体形态与功能仍未披露。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "03:29", tag: "tech", tagText: "科技", text: "在谷歌因AI政策与学校产生摩擦之际，DuckDuckGo趁机向教育机构推销自家搜索引擎，并突出可关闭AI功能的选项。此举试图借学校对谷歌AI限制的不满争取教育用户，反映搜索市场的AI路线之争正向校园场景蔓延。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy/" },
   { time: "03:26", tag: "tech", tagText: "科技", text: "网站托管与建站平台Squarespace宣布裁员19%，作为组织重组的一部分。公司称此举属于更广泛的重组计划，具体受影响人数未在摘要中披露。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/web-host-squarespace-lays-off-19-of-its-employees/" },
   { time: "00:17", tag: "ai", tagText: "AI", text: "谷歌计划对限制AI使用的学校关闭搜索服务，引发政界反弹。纽约市长Zohran Mamdani和前FTC主席Lina Khan等批评者指责谷歌充当不受监管的垄断者。该计划将AI采用与核心搜索服务挂钩，可能加剧对科技巨头在教育领域捆绑销售的审查。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/" },
-  { time: "00:06", tag: "crypto", tagText: "加密", text: "币安称盗取数十亿美元加密货币的黑客耗时数月策划此次攻击，手法包括感染笔记本电脑、入侵内部工具以及假招聘面试。该披露揭示了加密交易平台面临的社工与供应链复合攻击风险。", source: "Ars Technica", url: "https://arstechnica.com/information-technology/2026/11/binance-says-hackers-who-stole-billions-in-crypto-spent-months-planning-heist/" },
-  { time: "00:05", tag: "ai", tagText: "AI", text: "美国中期选举后，数据中心开发商预计将面临更严格的建厂环境。多地选民选出支持暂停令的候选人，并通过增加障碍的投票措施，反映AI算力扩张与地方能源、土地和社区矛盾加剧。", source: "The Verge", url: "https://www.theverge.com/policy/1026365/data-centers-midterms-results" },
-  { time: "23:58", tag: "ai", tagText: "AI", text: "Uber在2026年第三季度财报电话会上披露，当季仅完成4单由第三方AI代理安排的行程。这一数据表明，尽管AI代理被热议，其在真实消费场景中的商业化与规模应用仍非常有限。", source: "The Verge", url: "https://www.theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "Alphabet最新财报显示，谷歌搜索查询量增速创五年新高，但搜索业务收入同比增速放缓至12%。The Verge指出，谷歌尚未找到让AI像搜索广告一样变现的模式，AI Overviews等生成式功能正在改变用户搜索行为，却未带来相匹配的收入增长。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3" },
 ];
-const aiBreakingDate = "2026年11月5日 06:34 CST";
+const aiBreakingDate = "2026年11月5日 11:25 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
