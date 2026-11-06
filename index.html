@@ -1616,29 +1616,19 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 24.37,
+  score: 22.08,
   rating: "extreme fear",
-  timestamp: "2026-11-06T17:19:09+00:00",
+  timestamp: "2026-11-06T22:39:38+00:00",
   previousClose: 19.88,
   previous1Week: 26.32,
   previous1Month: 47.03,
   previous1Year: 24.34,
-  date: "2026年11月7日 01:24 CST"
+  date: "2026年11月7日 07:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
-  { time: "20:04", tag: "macro", tagText: "宏观", text: "英国央行将利率上调至4%，为伊朗战争爆发以来首次加息。通胀压力与地缘风险交织，市场关注英国后续货币政策路径及其对英镑和英债的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html" },
-  { time: "18:20", tag: "geo", tagText: "地缘", text: "BNY财富管理策略师Alicia Levine警告，伊朗战争长期化才是市场真正的“黑天鹅”，当前资产价格尚未计入冲突久拖不决的风险；若成真，能源与风险资产将面临重估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-prolonged-war-in-iran-is-the-markets-real-black-swan-says-this-strategist-65d105c7?mod=mw_rss_topstories" },
-  { time: "18:00", tag: "ai", tagText: "AI", text: "OpenAI承诺为数据中心用电付费，并承诺就AI数据中心征求社区意见、公开建设计划、保护电费支付者。此举正值选举凸显选民对AI能耗与电价上涨的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html" },
-  { time: "16:41", tag: "geo", tagText: "地缘", text: "印度指称与中国有关联的AI工具被用于针对金融机构的黑客行动。事件加剧外界对AI赋能网络攻击及中印科技安全摩擦的担忧。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWVkN29DQ3RzdVJEWDZTU0JvTXZCSldfNVROUHNLMzFsTF9mSTN1Z1FCV2VQSE16MHR5YU1lR1lhVUgxdkhYQ2VpT0prNktfT3IybFhJTE0zbWZ4U3h5aWUzSTMxZm1JRTVDUkJXeHRGaHBpM1dUYnhDSzhqbVNkVlJMZmJMTS1nRC1vZzBDZDZlMjlzdUZINzZuMFpFM0VnOVRhUEdBZEEzSFRSUHBIX21QTEktTmdCYTFUTjZTUk5qeHpxU2RVdQ?oc=5" },
-  { time: "14:54", tag: "geo", tagText: "地缘", text: "民主党横扫中期选举后，分析人士关注特朗普维持脆弱美中贸易休战的能力所受影响，以及美国对华科技竞争政策可能出现的调整。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/what-the-democrat-midterms-sweep-changes-for-us-china-tech-rivalry.html" },
-  { time: "11:01", tag: "geo", tagText: "地缘", text: "受美国中期选举后和平预期升温推动，国际油价跌破每桶100美元。副总统万斯将共和党中期选举惨败归咎于选民对伊朗战争的不满，市场押注冲突将更快结束，地缘风险溢价明显回落。", source: "Financial Times", url: "https://www.ft.com/content/b526f876-810a-4e74-8b8d-4ffca04b29c7?syn-25a6b1a6=1" },
-  { time: "09:11", tag: "macro", tagText: "宏观", text: "白宫相关委员会将美联储理事Lisa Cook的听证会推迟至12月14日。特朗普自2025年8月起试图将其解职，但最高法院6月暂时阻止。此事被视为对美联储独立性的关键考验，市场关注后续人事与政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/trump-federal-reserve-lisa-cook-hearing.html" },
-  { time: "08:52", tag: "macro", tagText: "宏观", text: "尽管加州Prop 40亿万富翁税预计被否决、成为超级富豪的罕见胜利，民主党在中期选举大胜仍令美国财富税议题留在政策议程上，市场关注后续对高净值人群与资本利得税的可能影响。", source: "Financial Times", url: "https://www.ft.com/content/c701ac0d-0ef4-426f-a629-e38ed29d5260?syn-25a6b1a6=1" },
-  { time: "08:04", tag: "macro", tagText: "宏观", text: "印度正考虑减税以吸引外资。外资对印度股市兴趣持续下降，持股比例已降至14%的历史低点，市场关注新德里能否以税收优惠扭转外资流出趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/india-tax-foreign-investors-nifty.html" },
   { time: "06:38", tag: "macro", tagText: "宏观", text: "大型科技公司约6亿美元的中期选举政治投入收效甚微，马斯克受到批评。选民对AI与硅谷的不满助推民主党选情，显示巨额政治献金未能左右关键选战结果。", source: "Financial Times", url: "https://www.ft.com/content/3e65138f-068f-465f-a1ae-a9c61ea1afc4?syn-25a6b1a6=1" },
   { time: "06:03", tag: "tech", tagText: "科技", text: "高通发布财报后股价盘后下跌约6%。公司虽然业绩好于预期，但对下一季的盈利指引偏弱：存储芯片价格大涨正压制智能手机整体需求，同时苹果逐步弃用其基带芯片也构成双重压力。市场担心高通的手机业务在成本上升与客户流失之间被持续挤压。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/qualcomm-qcom-earnings-report-q4-2026.html" },
   { time: "05:57", tag: "tech", tagText: "科技", text: "预测市场在本次美国中期选举中再次领先主流媒体，提前判定民主党将横扫国会，进一步坐实其作为快速、可靠信息来源的地位。这类平台正借此争取新闻与金融信息领域的合法性和流量，但也面临监管与准确性的持续审视。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/prediction-markets-2026-midterms-election-results.html" },
@@ -1649,11 +1639,32 @@ const breakingNews = [
   { time: "03:10", tag: "geo", tagText: "地缘", text: "美国康涅狄格州民主党参议员克里斯·墨菲突发中风并住院，其办公室称他目前已清醒、意识清楚。此事发生在中期选举前夕，可能影响参议院席位安排与立法议程。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/chris-murphy-stroke-senate-hospital.html" },
   { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
   { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
+  { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
+  { time: "20:04", tag: "macro", tagText: "宏观", text: "英国央行将利率上调至4%，为伊朗战争爆发以来首次加息。通胀压力与地缘风险交织，市场关注英国后续货币政策路径及其对英镑和英债的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html" },
+  { time: "18:20", tag: "geo", tagText: "地缘", text: "BNY财富管理策略师Alicia Levine警告，伊朗战争长期化才是市场真正的“黑天鹅”，当前资产价格尚未计入冲突久拖不决的风险；若成真，能源与风险资产将面临重估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-prolonged-war-in-iran-is-the-markets-real-black-swan-says-this-strategist-65d105c7?mod=mw_rss_topstories" },
+  { time: "18:00", tag: "ai", tagText: "AI", text: "OpenAI承诺为数据中心用电付费，并承诺就AI数据中心征求社区意见、公开建设计划、保护电费支付者。此举正值选举凸显选民对AI能耗与电价上涨的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html" },
+  { time: "16:41", tag: "geo", tagText: "地缘", text: "印度指称与中国有关联的AI工具被用于针对金融机构的黑客行动。事件加剧外界对AI赋能网络攻击及中印科技安全摩擦的担忧。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWVkN29DQ3RzdVJEWDZTU0JvTXZCSldfNVROUHNLMzFsTF9mSTN1Z1FCV2VQSE16MHR5YU1lR1lhVUgxdkhYQ2VpT0prNktfT3IybFhJTE0zbWZ4U3h5aWUzSTMxZm1JRTVDUkJXeHRGaHBpM1dUYnhDSzhqbVNkVlJMZmJMTS1nRC1vZzBDZDZlMjlzdUZINzZuMFpFM0VnOVRhUEdBZEEzSFRSUHBIX21QTEktTmdCYTFUTjZTUk5qeHpxU2RVdQ?oc=5" },
+  { time: "14:54", tag: "geo", tagText: "地缘", text: "民主党横扫中期选举后，分析人士关注特朗普维持脆弱美中贸易休战的能力所受影响，以及美国对华科技竞争政策可能出现的调整。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/what-the-democrat-midterms-sweep-changes-for-us-china-tech-rivalry.html" },
+  { time: "11:01", tag: "geo", tagText: "地缘", text: "受美国中期选举后和平预期升温推动，国际油价跌破每桶100美元。副总统万斯将共和党中期选举惨败归咎于选民对伊朗战争的不满，市场押注冲突将更快结束，地缘风险溢价明显回落。", source: "Financial Times", url: "https://www.ft.com/content/b526f876-810a-4e74-8b8d-4ffca04b29c7?syn-25a6b1a6=1" },
+  { time: "09:11", tag: "macro", tagText: "宏观", text: "白宫相关委员会将美联储理事Lisa Cook的听证会推迟至12月14日。特朗普自2025年8月起试图将其解职，但最高法院6月暂时阻止。此事被视为对美联储独立性的关键考验，市场关注后续人事与政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/trump-federal-reserve-lisa-cook-hearing.html" },
+  { time: "08:52", tag: "macro", tagText: "宏观", text: "尽管加州Prop 40亿万富翁税预计被否决、成为超级富豪的罕见胜利，民主党在中期选举大胜仍令美国财富税议题留在政策议程上，市场关注后续对高净值人群与资本利得税的可能影响。", source: "Financial Times", url: "https://www.ft.com/content/c701ac0d-0ef4-426f-a629-e38ed29d5260?syn-25a6b1a6=1" },
+  { time: "08:04", tag: "macro", tagText: "宏观", text: "印度正考虑减税以吸引外资。外资对印度股市兴趣持续下降，持股比例已降至14%的历史低点，市场关注新德里能否以税收优惠扭转外资流出趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/india-tax-foreign-investors-nifty.html" },
 ];
-const breakingDate = "2026年11月7日 01:24 CST";
+const breakingDate = "2026年11月7日 07:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "06:53", tag: "ai", tagText: "AI", text: "OpenAI据报在新一轮融资中再募资110亿美元，该轮尚未关闭，预计未来数周完成；公司估值达1.25万亿美元。若成行，将进一步巩固其在生成式AI领域的资金优势。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/" },
+  { time: "06:45", tag: "ai", tagText: "AI", text: "AI行业政治行动委员会（PAC）在2026年美国中期选举中投入数百万美元试图影响国会构成，但结果喜忧参半。相关政治团体已开始为下一个选举周期布局，显示AI产业正加大对美国政治进程的投入。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/" },
+  { time: "06:42", tag: "tech", tagText: "科技", text: "高通在2026财年第四季度财报电话会上表示将大举押注数据中心业务。由于智能手机销量较2025年同期下滑约20%，公司希望以数据中心业务支撑整体业绩，这标志着其营收重心正从手机芯片向AI算力基础设施转移。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers" },
+  { time: "06:26", tag: "tech", tagText: "科技", text: "安全研究人员称，一个疑似受克里姆林宫支持的黑客组织利用iOS与Android系统漏洞感染手机，目标指向外交相关人士。该事件凸显移动操作系统零日漏洞被用于国家级网络间谍活动的风险。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/" },
+  { time: "06:19", tag: "ai", tagText: "AI", text: "由于接入电网和新涡轮机需等待数年，数据中心建设商开始转向使用退役喷气发动机发电。这一方案效率更低、更不环保，凸显AI算力扩张正遭遇电力供应瓶颈。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/" },
+  { time: "06:15", tag: "ai", tagText: "AI", text: "Anthropic警告称，其已非常接近RSI（递归自我改进）能力，即AI能够自我训练并引发能力加速跃升。公司称这一节点可能带来AI能力的戏剧性加速，同时也引发对失控风险的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/" },
+  { time: "06:13", tag: "tech", tagText: "科技", text: "Nothing CEO裴宇（Carl Pei）在X上宣布，公司首款AI设备将于12月发布。他表示这是一款无屏幕的“AI原生”设备，主打借助AI提升生产力。这距离其公布AI原生设备与AI操作系统计划仅一年多，但产品具体形态与功能仍未披露。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei" },
+  { time: "05:57", tag: "tech", tagText: "科技", text: "三星将在美国得克萨斯州建设第二座半导体工厂，为AMD和英伟达生产芯片。此举既扩大三星在美代工产能，也呼应美国推动芯片制造本土化的产业政策。", source: "Construction Review", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXdseElfR3BnZ3MxY2t2TFg2ak01ek1yajJFbzZjTUhYUTh1cnk3alRxRmRiWVQ1UDdYd19tNTVyc2k3ZDl0SXRqTXRmcEJRUWNzVlFISnlHaVFwT1dQS0hwdE85d1BhY1lwTTZSZGZVUmgtMG1Zc050ZU82bU5qV3h1NlFpeEZGdFM1Z19Kc3Jlei1BU0dqRVJrM1RTa19RRlRlQkFpb2xzdmdxOUpkQk1iQTBoQ2lkVGIwQmRPVQ?oc=5" },
+  { time: "05:55", tag: "ai", tagText: "AI", text: "OpenAI考虑将数据中心更名为“AI算力园区”，以缓解公众对数据中心的强烈抵触情绪。报道称，这一品牌调整意在改善舆论观感，但未必能消解社区对能耗、水资源和噪音等实际问题的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" },
+  { time: "04:56", tag: "crypto", tagText: "加密", text: "区块链分析公司Chainalysis称遭“多线网络攻击”，黑客窃取了全部客户的凭证和令牌，攻击涉及AI代理及路径中数据截取。事件可能波及加密合规与执法数据安全。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/chainalysis-says-hackers-stole-credentials-and-tokens-for-all-of-its-customers/" },
+  { time: "02:44", tag: "tech", tagText: "科技", text: "安全研究人员发现，数百个托管Artex渗透测试工具的服务器暴露在公网，任何人可访问这套AI黑客工具。暴露面可能被滥用发起攻击，凸显AI安全工具自身的管理风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/" },
   { time: "23:54", tag: "ai", tagText: "AI", text: "支付与支出管理平台Ramp的数据显示，企业AI使用量仍在上升，但AI支出已经停滞：供应商降价、头部客户加强成本控制，正在压缩实际开销。这一趋势正值Anthropic临近IPO，可能动摇投资者对AI行业超高速增长的假设。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/" },
   { time: "23:19", tag: "ai", tagText: "AI", text: "Dropbox宣布以3.5亿美元收购Tigris Data，以强化其AI基础设施。该交易预计将支持DBX Agent Cloud的开发，这是一个面向构建AI模型和代理的开发者的新存储平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/" },
   { time: "22:10", tag: "ai", tagText: "AI", text: "亚马逊宣布，将允许用户通过短信与Alexa购物助手互动，直接描述想购买的商品并完成下单；该功能将在未来数周向数百万用户推送。此举显示亚马逊正加快把AI助手嵌入电商交易入口。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/" },
@@ -1663,19 +1674,8 @@ const aiBreakingNews = [
   { time: "16:06", tag: "ai", tagText: "AI", text: "韩国无晶圆厂芯片公司转向“物理AI”，押注用于机器人和无人机的NPU。报道称，这些公司希望借边缘AI芯片在机器人与无人机市场寻找新增长点。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE9temUzTUZ5ZDJPMXIyb0R4UGlpYVFlTGhmbmh1dUhHYnRMcTlRcnFHT1ZhYzdJeWlOSkM0dGlyYnV4aW1RZVM3T0hBTks0ZG56cVBlNG43Q1dNUjhtby1ZNjN4VjMteXdidHFEa1ZBbTU5ZnRGZUE?oc=5" },
   { time: "14:30", tag: "ai", tagText: "AI", text: "研究显示，AI模型在乳腺癌病理报告生成中存在系统性错误，凸显医疗AI在临床部署前仍需严格验证与人工复核，以避免诊断与报告风险。", source: "Bioengineer.org", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQX3BTeHh0aTlaSV93dXFkcVpvZERRalo1cnRVaDJSTy1FLXBRMElHN3lmVWQ5cWwyUDBSdlBINFBZZGRKX2lZcnlYRkMyTkx5VnR3SS1vZzJrRjhjTjlLTU1kUnoyNGpmSEl0aEJNcGNaUzBsNW52WXEwWnY0MTJrLXRCQzZVLV9ONHVlWWg3MF9TU3cxZTczRUJB?oc=5" },
   { time: "14:28", tag: "ai", tagText: "AI", text: "Palo Alto Networks正洽谈以5亿美元收购AI代理安全初创公司Clutch。Clutch此前估值约8500万美元，投资方包括Lightspeed与SignalFire；交易显示AI代理安全正成为网络安全并购热点。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/" },
-  { time: "13:52", tag: "tech", tagText: "科技", text: "路透：AI热潮令芯片封装成为半导体下一个战场。随着AI加速器需求攀升，先进封装能力日益成为算力供给和供应链竞争的关键瓶颈。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVTRsRWo5SjhUM1lPV19Xc1ZKUjNWWEx1eTFkZEZLYmpjVG1FNFltZDRRdVBwZ3RBVnk0NlQtbDZmaWdmaFhSY0NFT3Rpa2YzZVRzNl8zSHNzcVdhR3RZdEpFeVNkMW93SDFrbTY5SE9NM3NneHpZOFYxN1FGOVU1ekxjSF9aZ2FyZnRXLU5aY2pFT0gtYTVwMEhfUmU2a2lOaURTeURqcDQ0M185ekd4ZWJwVHdiVWEwanduVElR?oc=5" },
-  { time: "11:43", tag: "tech", tagText: "科技", text: "英伟达H200芯片在香港积压，因中国暂缓进口审批。报道称，这反映在中美科技管制与审批不确定性下，先进AI芯片流入中国仍受阻，供应链与渠道商承压。", source: "Businesskorea", url: "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ldTI3c0xkWUozYmVHdTRqdUNGbVAzaUQ4OGhzeV9EZllDVDNVYndUQ1hPZnFLX09zMXAzeGkzalFvYVRWODFSNHpXRkxLWTYwTnJQOEpBc1haYnlKSWEwUjF2Mi1KUEhRbWMtTVNBemhQOGpt?oc=5" },
-  { time: "09:26", tag: "ai", tagText: "AI", text: "据TechCrunch报道，苹果正大幅削减工程团队内部使用AI的预算，减少其在内部AI工具上的支出规模。此举正值外界持续质疑苹果在生成式AI竞赛中的投入力度与策略方向之际，也显示苹果对AI开支的态度趋于审慎。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/" },
-  { time: "06:45", tag: "ai", tagText: "AI", text: "AI行业政治行动委员会（PAC）在2026年美国中期选举中投入数百万美元试图影响国会构成，但结果喜忧参半。相关政治团体已开始为下一个选举周期布局，显示AI产业正加大对美国政治进程的投入。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/" },
-  { time: "06:42", tag: "tech", tagText: "科技", text: "高通在2026财年第四季度财报电话会上表示将大举押注数据中心业务。由于智能手机销量较2025年同期下滑约20%，公司希望以数据中心业务支撑整体业绩，这标志着其营收重心正从手机芯片向AI算力基础设施转移。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers" },
-  { time: "06:26", tag: "tech", tagText: "科技", text: "安全研究人员称，一个疑似受克里姆林宫支持的黑客组织利用iOS与Android系统漏洞感染手机，目标指向外交相关人士。该事件凸显移动操作系统零日漏洞被用于国家级网络间谍活动的风险。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/" },
-  { time: "06:19", tag: "ai", tagText: "AI", text: "由于接入电网和新涡轮机需等待数年，数据中心建设商开始转向使用退役喷气发动机发电。这一方案效率更低、更不环保，凸显AI算力扩张正遭遇电力供应瓶颈。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/" },
-  { time: "06:15", tag: "ai", tagText: "AI", text: "Anthropic警告称，其已非常接近RSI（递归自我改进）能力，即AI能够自我训练并引发能力加速跃升。公司称这一节点可能带来AI能力的戏剧性加速，同时也引发对失控风险的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/" },
-  { time: "06:13", tag: "tech", tagText: "科技", text: "Nothing CEO裴宇（Carl Pei）在X上宣布，公司首款AI设备将于12月发布。他表示这是一款无屏幕的“AI原生”设备，主打借助AI提升生产力。这距离其公布AI原生设备与AI操作系统计划仅一年多，但产品具体形态与功能仍未披露。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei" },
-  { time: "05:57", tag: "tech", tagText: "科技", text: "三星将在美国得克萨斯州建设第二座半导体工厂，为AMD和英伟达生产芯片。此举既扩大三星在美代工产能，也呼应美国推动芯片制造本土化的产业政策。", source: "Construction Review", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXdseElfR3BnZ3MxY2t2TFg2ak01ek1yajJFbzZjTUhYUTh1cnk3alRxRmRiWVQ1UDdYd19tNTVyc2k3ZDl0SXRqTXRmcEJRUWNzVlFISnlHaVFwT1dQS0hwdE85d1BhY1lwTTZSZGZVUmgtMG1Zc050ZU82bU5qV3h1NlFpeEZGdFM1Z19Kc3Jlei1BU0dqRVJrM1RTa19RRlRlQkFpb2xzdmdxOUpkQk1iQTBoQ2lkVGIwQmRPVQ?oc=5" },
-  { time: "05:55", tag: "ai", tagText: "AI", text: "OpenAI考虑将数据中心更名为“AI算力园区”，以缓解公众对数据中心的强烈抵触情绪。报道称，这一品牌调整意在改善舆论观感，但未必能消解社区对能耗、水资源和噪音等实际问题的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" },
 ];
-const aiBreakingDate = "2026年11月7日 01:24 CST";
+const aiBreakingDate = "2026年11月7日 07:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
