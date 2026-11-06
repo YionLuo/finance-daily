@@ -1616,19 +1616,22 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 20.08,
+  score: 24.97,
   rating: "extreme fear",
-  timestamp: "2026-11-06T08:58:31+00:00",
+  timestamp: "2026-11-06T15:33:42+00:00",
   previousClose: 19.88,
   previous1Week: 26.32,
   previous1Month: 47.03,
   previous1Year: 24.34,
-  date: "2026年11月6日 17:15 CST"
+  date: "2026年11月6日 23:37 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "20:04", tag: "macro", tagText: "宏观", text: "英国央行将利率上调至4%，为伊朗战争爆发以来首次加息。通胀压力与地缘风险交织，市场关注英国后续货币政策路径及其对英镑和英债的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html" },
+  { time: "18:20", tag: "geo", tagText: "地缘", text: "BNY财富管理策略师Alicia Levine警告，伊朗战争长期化才是市场真正的“黑天鹅”，当前资产价格尚未计入冲突久拖不决的风险；若成真，能源与风险资产将面临重估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-prolonged-war-in-iran-is-the-markets-real-black-swan-says-this-strategist-65d105c7?mod=mw_rss_topstories" },
+  { time: "18:00", tag: "ai", tagText: "AI", text: "OpenAI承诺为数据中心用电付费，并承诺就AI数据中心征求社区意见、公开建设计划、保护电费支付者。此举正值选举凸显选民对AI能耗与电价上涨的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html" },
   { time: "16:41", tag: "geo", tagText: "地缘", text: "印度指称与中国有关联的AI工具被用于针对金融机构的黑客行动。事件加剧外界对AI赋能网络攻击及中印科技安全摩擦的担忧。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWVkN29DQ3RzdVJEWDZTU0JvTXZCSldfNVROUHNLMzFsTF9mSTN1Z1FCV2VQSE16MHR5YU1lR1lhVUgxdkhYQ2VpT0prNktfT3IybFhJTE0zbWZ4U3h5aWUzSTMxZm1JRTVDUkJXeHRGaHBpM1dUYnhDSzhqbVNkVlJMZmJMTS1nRC1vZzBDZDZlMjlzdUZINzZuMFpFM0VnOVRhUEdBZEEzSFRSUHBIX21QTEktTmdCYTFUTjZTUk5qeHpxU2RVdQ?oc=5" },
   { time: "14:54", tag: "geo", tagText: "地缘", text: "民主党横扫中期选举后，分析人士关注特朗普维持脆弱美中贸易休战的能力所受影响，以及美国对华科技竞争政策可能出现的调整。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/what-the-democrat-midterms-sweep-changes-for-us-china-tech-rivalry.html" },
   { time: "11:01", tag: "geo", tagText: "地缘", text: "受美国中期选举后和平预期升温推动，国际油价跌破每桶100美元。副总统万斯将共和党中期选举惨败归咎于选民对伊朗战争的不满，市场押注冲突将更快结束，地缘风险溢价明显回落。", source: "Financial Times", url: "https://www.ft.com/content/b526f876-810a-4e74-8b8d-4ffca04b29c7?syn-25a6b1a6=1" },
@@ -1646,14 +1649,15 @@ const breakingNews = [
   { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
   { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
   { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
-  { time: "20:04", tag: "macro", tagText: "宏观", text: "英国央行将利率上调至4%，为伊朗战争爆发以来首次加息。通胀压力与地缘风险交织，市场关注英国后续货币政策路径及其对英镑和英债的影响。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html" },
-  { time: "18:20", tag: "geo", tagText: "地缘", text: "BNY财富管理策略师Alicia Levine警告，伊朗战争长期化才是市场真正的“黑天鹅”，当前资产价格尚未计入冲突久拖不决的风险；若成真，能源与风险资产将面临重估。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-prolonged-war-in-iran-is-the-markets-real-black-swan-says-this-strategist-65d105c7?mod=mw_rss_topstories" },
-  { time: "18:00", tag: "ai", tagText: "AI", text: "OpenAI承诺为数据中心用电付费，并承诺就AI数据中心征求社区意见、公开建设计划、保护电费支付者。此举正值选举凸显选民对AI能耗与电价上涨的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html" },
 ];
-const breakingDate = "2026年11月6日 17:15 CST";
+const breakingDate = "2026年11月6日 23:37 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:19", tag: "ai", tagText: "AI", text: "Dropbox宣布以3.5亿美元收购Tigris Data，以强化其AI基础设施。该交易预计将支持DBX Agent Cloud的开发，这是一个面向构建AI模型和代理的开发者的新存储平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/" },
+  { time: "22:10", tag: "ai", tagText: "AI", text: "亚马逊宣布，将允许用户通过短信与Alexa购物助手互动，直接描述想购买的商品并完成下单；该功能将在未来数周向数百万用户推送。此举显示亚马逊正加快把AI助手嵌入电商交易入口。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/" },
+  { time: "21:17", tag: "tech", tagText: "科技", text: "特斯拉将逐步结束Cybertruck生产，马斯克将重心转向机器人和AI。报道称，这反映特斯拉正调整资源，押注机器人、自动驾驶等AI相关业务。", source: "The Guardian", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxOckp5MHVCMWRzVEZIQlVUZjc5QjVOZEpHNHBPY0VCbGtocXRtMXJXcDJyRTBSYVI5OVJ0eWM2LVFha0FsOGJSVV9PdHNmR252NU5NYTRmQWE0eE5yVHdnaDJXVDVvZDhmdExmMnVUalNTeVpURXIxZ2tpdVd6SXNfamN5djF2Q3JhclJReUFSLXlsWXFIbUhCSGFNM2hONzhxYXRSakxQeFlySGZYYnN1OFFDMDJRS3czVUpqZlRIN0w4S2JxTC1mRU9hZw?oc=5" },
+  { time: "19:55", tag: "tech", tagText: "科技", text: "抗议者闯入阿姆斯特丹微软新数据中心建设工地，Geef Tegengas等团体参与组织反对建设活动。事件凸显AI数据中心扩张在能耗、环境与社区接受度方面面临阻力。", source: "The Verge", url: "https://www.theverge.com/news/1028549/protesters-microsoft-data-center-site-amsterdam" },
   { time: "16:06", tag: "ai", tagText: "AI", text: "韩国无晶圆厂芯片公司转向“物理AI”，押注用于机器人和无人机的NPU。报道称，这些公司希望借边缘AI芯片在机器人与无人机市场寻找新增长点。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE9temUzTUZ5ZDJPMXIyb0R4UGlpYVFlTGhmbmh1dUhHYnRMcTlRcnFHT1ZhYzdJeWlOSkM0dGlyYnV4aW1RZVM3T0hBTks0ZG56cVBlNG43Q1dNUjhtby1ZNjN4VjMteXdidHFEa1ZBbTU5ZnRGZUE?oc=5" },
   { time: "14:30", tag: "ai", tagText: "AI", text: "研究显示，AI模型在乳腺癌病理报告生成中存在系统性错误，凸显医疗AI在临床部署前仍需严格验证与人工复核，以避免诊断与报告风险。", source: "Bioengineer.org", url: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQX3BTeHh0aTlaSV93dXFkcVpvZERRalo1cnRVaDJSTy1FLXBRMElHN3lmVWQ5cWwyUDBSdlBINFBZZGRKX2lZcnlYRkMyTkx5VnR3SS1vZzJrRjhjTjlLTU1kUnoyNGpmSEl0aEJNcGNaUzBsNW52WXEwWnY0MTJrLXRCQzZVLV9ONHVlWWg3MF9TU3cxZTczRUJB?oc=5" },
   { time: "14:28", tag: "ai", tagText: "AI", text: "Palo Alto Networks正洽谈以5亿美元收购AI代理安全初创公司Clutch。Clutch此前估值约8500万美元，投资方包括Lightspeed与SignalFire；交易显示AI代理安全正成为网络安全并购热点。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "05:55", tag: "ai", tagText: "AI", text: "OpenAI考虑将数据中心更名为“AI算力园区”，以缓解公众对数据中心的强烈抵触情绪。报道称，这一品牌调整意在改善舆论观感，但未必能消解社区对能耗、水资源和噪音等实际问题的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" },
   { time: "05:41", tag: "ai", tagText: "AI", text: "苹果CEO为公司在AI领域的现状辩护，称苹果不会“为了AI而AI”，暗示其更注重将AI融入产品体验，而非追逐概念。此番表态正值外界质疑苹果在生成式AI竞赛中的进度。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/" },
   { time: "05:37", tag: "tech", tagText: "科技", text: "AMD股价大涨7%，因AI芯片销售推动其数据中心业务收入同比翻倍，显示其在AI加速器市场对英伟达的挑战正逐步兑现为业绩。", source: "The Tech Buzz", url: "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUlpMbU1JV05ickdjUmpRZ2JzcEpsNTFnLVY5WTd5X3JjYzZBeFY1QzNjRHhnVE8tcVNjc01hNVNNdFVuT1I1UlAydDBMMGlwT0FYb1U3VUpkb3AzcmFqYmg3ejZybldYZUxoZy12S2l6S2Y4NTlqbER0emI0eWctRkVQSGdPeFlWcHJDQVhycjVaT3ZXaERqcVU5QQ?oc=5" },
-  { time: "05:25", tag: "ai", tagText: "AI", text: "OpenAI政策负责人Chris Lehane正试图让AI议题主导2028年美国大选，提出一套“新社会契约”主张。报道称，该主张一方面宣称可让美国民众受益，另一方面也与OpenAI自身商业利益相契合，显示AI巨头正提前布局政治议程与监管话语权。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/" },
-  { time: "05:17", tag: "ai", tagText: "AI", text: "美国法官裁定，全国有色人种协进会（NAACP）针对xAI数据中心污染提起的《清洁空气法》诉讼可以继续推进。该诉讼指控SpaceX旗下的xAI违反清洁空气法，凸显AI数据中心面临的环境监管与法律风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" },
-  { time: "05:10", tag: "ai", tagText: "AI", text: "Meta宣布收购AI编程初创公司Conductor。该公司可让软件工程师部署多支AI代理团队，并行处理项目的不同环节。此次收购显示Meta正加码AI辅助软件工程能力，与微软、谷歌在企业级AI编程工具上的竞争进一步升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/" },
-  { time: "23:19", tag: "ai", tagText: "AI", text: "Dropbox宣布以3.5亿美元收购Tigris Data，以强化其AI基础设施。该交易预计将支持DBX Agent Cloud的开发，这是一个面向构建AI模型和代理的开发者的新存储平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/" },
 ];
-const aiBreakingDate = "2026年11月6日 17:15 CST";
+const aiBreakingDate = "2026年11月6日 23:37 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
