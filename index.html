@@ -1623,15 +1623,18 @@ const fearGreedData = {
   previous1Week: 26.32,
   previous1Month: 47.03,
   previous1Year: 24.34,
-  date: "2026年11月7日 23:30 CST"
+  date: "2026年11月8日 00:18 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "00:02", tag: "macro", tagText: "宏观", text: "民主党将掌控国会，医疗保健股在中期选举后前景不明。投资者担忧新国会推动药价谈判、保险监管与医保政策调整，板块估值和盈利预期可能承压，短期难以获得上行动能。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html" },
+  { time: "23:35", tag: "macro", tagText: "宏观", text: "美国首次购房者中全现金支付比例创纪录，达到约10%。在住房可负担性仍紧张之际，越来越多买家依靠家庭赠与、继承、股票收益或出售旧房所得筹集现金，反映高利率下融资购房门槛上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-record-10-of-first-time-home-buyers-now-pay-in-cash-heres-where-they-get-the-money-70f2e656?mod=mw_rss_topstories" },
   { time: "23:23", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦第三季度加码回购，回购规模超96亿美元，较此前水平翻倍以上；但整体利润与经营利润双双下滑。新任CEO格雷格·阿贝尔同期为股票净卖出方，公司股价表现仍跑赢标普500。市场关注其现金配置策略与接班后的资本运作方向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html" },
   { time: "23:13", tag: "tech", tagText: "科技", text: "台积电ADR盘中一度跳涨约6%，此前有报道称其可能为英伟达代工内存芯片。若消息兑现，将意味着台积电切入HBM/存储供应链，改变目前由少数存储厂商主导的格局，并强化其在AI算力产业链中的核心地位。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNLThISkFpaFQ2b3BIQVVMTXFDcWdTX3d4ZnFzQVFEc2U3WGRNZUp1dlkwZmc5V29vQUVGcXZCZ3Y5X2RTRGltWC0wdkNia1VnM2pCZFlLdXFRV1UyM3lWZ2tDWUZ2Y21Bc1hrcktOUGNmRFlNSFlWNmRNVGdXekxNNkJueHdkOWtkU29yeHBERkV4RGc0azJONTJzTERxT0JOaXJValBKb1RQSzg?oc=5" },
   { time: "22:33", tag: "macro", tagText: "宏观", text: "民主党在中期选举中横扫国会，被视为保守派对可再生能源「开战」的一次重大挫败。分析认为，此前的补贴削减与并网限制政策推进将受阻，风能、光伏、储能与电网设备板块的政策预期改善，投资者需重新评估清洁能源相关头寸。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/midterm-election-blue-wave-trump-renewable-energy.html" },
+  { time: "21:30", tag: "ai", tagText: "AI", text: "Anthropic准备上市，将成为首家纯AI公司登陆公开市场，但时机不佳：科技股抛售持续，中期选举又显示选民对数据中心和AI扩张反弹。投资者关注其是否推迟IPO或折价发行，AI交易情绪面临关键考验。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/anthropic-ipo-ai-data-center-backlash.html" },
   { time: "21:03", tag: "geo", tagText: "地缘", text: "尽管民主党在中期选举中大胜，美伊冲突升级风险依然高企。双方在霍尔木兹海峡及核问题上仍处对撞轨道，中东局势持续紧张，原油价格维持地缘风险溢价。市场担忧任何误判都可能冲击能源运输通道并推高全球通胀。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/iran-war-midterm-election-oil-price-trump.html" },
   { time: "20:58", tag: "macro", tagText: "宏观", text: "高盛建议投资者暂时回避科技股，转而在市场不确定性中寻找优质价值与防御性标的。该行认为，即便AI交易降温、波动加剧，仍存在大量质地优良的买入机会，但配置重心应从高估值成长股向现金流稳健的板块倾斜。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/forget-tech-and-hide-out-in-these-stocks-instead-goldman-sachs-says.html" },
   { time: "20:00", tag: "geo", tagText: "地缘", text: "民主党拿下国会后，乌克兰议题重回立法议程中心。由于特朗普仍牢牢掌控外交政策主导权，议员预计将通过拨款、制裁与决议等立法工具施压，以维持对基辅的支持。这可能导致白宫与国会在对俄、对乌政策上出现新的摩擦。", source: "Financial Times", url: "https://www.ft.com/content/fac3a560-7845-4acf-9487-54ec8a445d74?syn-25a6b1a6=1" },
@@ -1646,11 +1649,8 @@ const breakingNews = [
   { time: "06:38", tag: "macro", tagText: "宏观", text: "大型科技公司约6亿美元的中期选举政治投入收效甚微，马斯克受到批评。选民对AI与硅谷的不满助推民主党选情，显示巨额政治献金未能左右关键选战结果。", source: "Financial Times", url: "https://www.ft.com/content/3e65138f-068f-465f-a1ae-a9c61ea1afc4?syn-25a6b1a6=1" },
   { time: "06:25", tag: "ai", tagText: "AI", text: "OpenAI首席财务官表示，尽管选举结果显示多地选民支持主张限制数据中心开发的候选人，公司仍将继续投资AI数据中心。这一表态凸显AI基建扩张与地方政治阻力、电价与社区负担问题之间的张力。", source: "CNBC", url: "https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html" },
   { time: "06:22", tag: "geo", tagText: "地缘", text: "特朗普宣布由移民强硬派斯蒂芬·米勒接替苏茜·怀尔斯出任白宫幕僚长。此举发生在民主党中期选举大胜、拿下参众两院三天之后，被视为特朗普转向更强硬路线的信号，可能影响后续立法议程及移民、对华政策推进。", source: "CNBC", url: "https://www.cnbc.com/2026/11/06/trump-stephen-miller-wiles-chief-of-staff.html" },
-  { time: "06:16", tag: "macro", tagText: "宏观", text: "美国10月非农新增就业16.5万人，远超市场预期，招聘反弹强化了美联储将进一步加息的预期。数据公布后市场重新定价政策路径，利率与美元走势成为接下来关注焦点。", source: "Financial Times", url: "https://www.ft.com/content/f84c722c-99a9-4628-84dc-c42a192cb35c?syn-25a6b1a6=1" },
-  { time: "06:03", tag: "tech", tagText: "科技", text: "高通发布财报后股价盘后下跌约6%。公司虽然业绩好于预期，但对下一季的盈利指引偏弱：存储芯片价格大涨正压制智能手机整体需求，同时苹果逐步弃用其基带芯片也构成双重压力。市场担心高通的手机业务在成本上升与客户流失之间被持续挤压。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/qualcomm-qcom-earnings-report-q4-2026.html" },
-  { time: "06:00", tag: "ai", tagText: "AI", text: "美股AI板块遭遇历史性抛售：纳斯达克周四创下2025年4月以来最差单日表现，科技股一周市值蒸发约2.5万亿至3.2万亿美元，被华尔街称为「AI现实检验」。周五逢低买盘入场，纳指与标普500反弹约1%，美光等芯片股领涨，但反弹力度远弱于历次大跌后的修复，分析师警告波动尚未结束。", source: "Financial Times", url: "https://www.ft.com/content/088ed252-ea9c-4b61-b2d1-37295fd0f7c2" },
 ];
-const breakingDate = "2026年11月7日 23:30 CST";
+const breakingDate = "2026年11月8日 00:18 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "05:57", tag: "tech", tagText: "科技", text: "三星将在美国得克萨斯州建设第二座半导体工厂，为AMD和英伟达生产芯片。此举既扩大三星在美代工产能，也呼应美国推动芯片制造本土化的产业政策。", source: "Construction Review", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXdseElfR3BnZ3MxY2t2TFg2ak01ek1yajJFbzZjTUhYUTh1cnk3alRxRmRiWVQ1UDdYd19tNTVyc2k3ZDl0SXRqTXRmcEJRUWNzVlFISnlHaVFwT1dQS0hwdE85d1BhY1lwTTZSZGZVUmgtMG1Zc050ZU82bU5qV3h1NlFpeEZGdFM1Z19Kc3Jlei1BU0dqRVJrM1RTa19RRlRlQkFpb2xzdmdxOUpkQk1iQTBoQ2lkVGIwQmRPVQ?oc=5" },
   { time: "05:55", tag: "ai", tagText: "AI", text: "OpenAI考虑将数据中心更名为“AI算力园区”，以缓解公众对数据中心的强烈抵触情绪。报道称，这一品牌调整意在改善舆论观感，但未必能消解社区对能耗、水资源和噪音等实际问题的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" },
 ];
-const aiBreakingDate = "2026年11月7日 23:30 CST";
+const aiBreakingDate = "2026年11月8日 00:18 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
