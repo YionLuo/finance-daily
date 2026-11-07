@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 26.32,
   previous1Month: 47.03,
   previous1Year: 24.34,
-  date: "2026年11月7日 10:41 CST"
+  date: "2026年11月7日 17:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:37", tag: "geo", tagText: "地缘", text: "特朗普称美国对伊朗发动「轻微打击」，此前伊朗媒体报道两枚导弹击中霍尔木兹海峡附近的格什姆岛。此举可能加剧中东紧张局势，威胁能源运输通道。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-us-minor-strikes-iran-qeshm-island.html" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "欧洲多国航空当局正应对一波虚假炸弹威胁，安全机构正在调查这些协调威胁是否源自俄罗斯，初步假设为亲克里姆林宫活动人士或黑客组织所为。分析人士指出，航空业最薄弱环节是在飞行中成为目标，但任何程序调整都将漫长。", source: "Financial Times", url: "https://www.ft.com/content/0845687f-1f74-4bbf-88c9-5c6b031c7f20?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "密西西比州选举成为深南地区的政治地震：民主党人斯科特·科洛姆有望成为150年来首位代表该州进入美国参议院的黑人男性。", source: "Financial Times", url: "https://www.ft.com/content/0700baee-1a7f-4dc4-ac95-5b98e1868d96" },
   { time: "09:11", tag: "macro", tagText: "宏观", text: "白宫相关委员会将美联储理事Lisa Cook的听证会推迟至12月14日。特朗普自2025年8月起试图将其解职，但最高法院6月暂时阻止。此事被视为对美联储独立性的关键考验，市场关注后续人事与政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/trump-federal-reserve-lisa-cook-hearing.html" },
   { time: "08:52", tag: "macro", tagText: "宏观", text: "尽管加州Prop 40亿万富翁税预计被否决、成为超级富豪的罕见胜利，民主党在中期选举大胜仍令美国财富税议题留在政策议程上，市场关注后续对高净值人群与资本利得税的可能影响。", source: "Financial Times", url: "https://www.ft.com/content/c701ac0d-0ef4-426f-a629-e38ed29d5260?syn-25a6b1a6=1" },
   { time: "08:04", tag: "macro", tagText: "宏观", text: "印度正考虑减税以吸引外资。外资对印度股市兴趣持续下降，持股比例已降至14%的历史低点，市场关注新德里能否以税收优惠扭转外资流出趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/india-tax-foreign-investors-nifty.html" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "05:16", tag: "macro", tagText: "宏观", text: "美国中期选举中民主党全面夺下国会控制权，消除了悬在华尔街头上的政治不确定性，叠加市场押注伊朗战争将更快结束，美股周三暴力反弹：道指上涨约1,500点，创2025年4月以来最佳单日表现，标普500与纳指同步走高；布伦特原油跌破95美元/桶，美债收益率下行。分析认为这是典型的「纾困式」普涨行情。", source: "CNBC", url: "https://www.cnbc.com/2026/11/03/stock-market-today-live-updates.html" },
   { time: "05:07", tag: "ai", tagText: "AI", text: "Anthropic仍推进IPO，目标估值1.5万亿美元，计划在感恩节前上市；但投资者认为该估值「过高」，实际定价可能低于预期。在科技股剧烈回调、AI交易整体降温的背景下，此次IPO将成为检验AI资产估值的关键试金石。", source: "Financial Times", url: "https://www.ft.com/content/314e17df-e7af-4814-b208-70a0557cb452?syn-25a6b1a6=1" },
   { time: "03:10", tag: "geo", tagText: "地缘", text: "美国康涅狄格州民主党参议员克里斯·墨菲突发中风并住院，其办公室称他目前已清醒、意识清楚。此事发生在中期选举前夕，可能影响参议院席位安排与立法议程。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/chris-murphy-stroke-senate-hospital.html" },
-  { time: "02:16", tag: "geo", tagText: "地缘", text: "密歇根州民主党众议员Haley Stevens公开支持共和党人Mike Rogers而非本党参议院候选人Abdul El-Sayed，理由是围绕以色列问题的激烈争执。此举标志关键参议院选战中民主党进步派与温和派的团结破裂，可能影响该摇摆州选情及参议院控制权归属。", source: "CNBC", url: "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html" },
-  { time: "02:02", tag: "geo", tagText: "地缘", text: "海湾国家正为美国—以色列同盟与伊朗之间冲突升级做准备，外交官警告新一轮交火造成的破坏将超过此前数轮。若冲突扩大，霍尔木兹海峡航运与地区能源出口面临直接风险，全球油价与避险资产价格可能再度剧烈波动。", source: "Financial Times", url: "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1" },
-  { time: "00:54", tag: "geo", tagText: "地缘", text: "中期选举进入最后阶段，特朗普向不满情绪上升的选民作最后拉票，共和党正力图保住国会控制权以抵御反噬。市场同时关注选举结果对股市的潜在影响：道指期货在近期抛售后承压，投资者评估国会归属变化对税收、监管与财政支出路径的含义。", source: "Financial Times", url: "https://www.ft.com/content/75e8405b-124f-44aa-9c5e-0a33d0ee5b92?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月7日 10:41 CST";
+const breakingDate = "2026年11月7日 17:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "16:06", tag: "ai", tagText: "AI", text: "韩国无晶圆厂芯片公司转向“物理AI”，押注用于机器人和无人机的NPU。报道称，这些公司希望借边缘AI芯片在机器人与无人机市场寻找新增长点。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE9temUzTUZ5ZDJPMXIyb0R4UGlpYVFlTGhmbmh1dUhHYnRMcTlRcnFHT1ZhYzdJeWlOSkM0dGlyYnV4aW1RZVM3T0hBTks0ZG56cVBlNG43Q1dNUjhtby1ZNjN4VjMteXdidHFEa1ZBbTU5ZnRGZUE?oc=5" },
   { time: "09:40", tag: "ai", tagText: "AI", text: "Crusoe将陷入困境的怀俄明州数据中心项目出售给谷歌。该交易凸显开发大型AI数据中心在建设、能源与运营方面面临的挑战。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/" },
   { time: "07:00", tag: "geo", tagText: "地缘", text: "据《纽约时报》报道，中国情报机构招募Megaspeed高管Alice Huang，试图刺探英伟达CEO黄仁勋的相关信息。该报道凸显AI芯片领域的地缘政治与商业间谍风险。", source: "The Verge", url: "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy" },
   { time: "06:53", tag: "ai", tagText: "AI", text: "OpenAI据报在新一轮融资中再募资110亿美元，该轮尚未关闭，预计未来数周完成；公司估值达1.25万亿美元。若成行，将进一步巩固其在生成式AI领域的资金优势。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:17", tag: "tech", tagText: "科技", text: "特斯拉将逐步结束Cybertruck生产，马斯克将重心转向机器人和AI。报道称，这反映特斯拉正调整资源，押注机器人、自动驾驶等AI相关业务。", source: "The Guardian", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxOckp5MHVCMWRzVEZIQlVUZjc5QjVOZEpHNHBPY0VCbGtocXRtMXJXcDJyRTBSYVI5OVJ0eWM2LVFha0FsOGJSVV9PdHNmR252NU5NYTRmQWE0eE5yVHdnaDJXVDVvZDhmdExmMnVUalNTeVpURXIxZ2tpdVd6SXNfamN5djF2Q3JhclJReUFSLXlsWXFIbUhCSGFNM2hONzhxYXRSakxQeFlySGZYYnN1OFFDMDJRS3czVUpqZlRIN0w4S2JxTC1mRU9hZw?oc=5" },
   { time: "21:02", tag: "tech", tagText: "科技", text: "初创公司Underdog在新演示中展示了一个仅32MB的语音模型，体积远小于主流大模型，却能同时生成语音与音乐。若效果稳定，这将成为端侧及低资源AI模型效率提升的一个标志性案例。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/" },
   { time: "19:55", tag: "tech", tagText: "科技", text: "抗议者闯入阿姆斯特丹微软新数据中心建设工地，Geef Tegengas等团体参与组织反对建设活动。事件凸显AI数据中心扩张在能耗、环境与社区接受度方面面临阻力。", source: "The Verge", url: "https://www.theverge.com/news/1028549/protesters-microsoft-data-center-site-amsterdam" },
-  { time: "16:06", tag: "ai", tagText: "AI", text: "韩国无晶圆厂芯片公司转向“物理AI”，押注用于机器人和无人机的NPU。报道称，这些公司希望借边缘AI芯片在机器人与无人机市场寻找新增长点。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE9temUzTUZ5ZDJPMXIyb0R4UGlpYVFlTGhmbmh1dUhHYnRMcTlRcnFHT1ZhYzdJeWlOSkM0dGlyYnV4aW1RZVM3T0hBTks0ZG56cVBlNG43Q1dNUjhtby1ZNjN4VjMteXdidHFEa1ZBbTU5ZnRGZUE?oc=5" },
 ];
-const aiBreakingDate = "2026年11月7日 10:41 CST";
+const aiBreakingDate = "2026年11月7日 17:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
