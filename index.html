@@ -1623,12 +1623,18 @@ const fearGreedData = {
   previous1Week: 26.32,
   previous1Month: 47.03,
   previous1Year: 24.34,
-  date: "2026年11月8日 00:18 CST"
+  date: "2026年11月8日 04:48 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "04:39", tag: "macro", tagText: "宏观", text: "特朗普向UFC总裁兼CEO达纳·怀特提供白宫新闻秘书一职。怀特目前仍掌管UFC母公司TKO，若接受将意味着一位体育娱乐业高管直接进入白宫核心传播岗位，也延续了特朗普第二任期从体制外延揽关键人选的用人风格。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html" },
+  { time: "04:20", tag: "geo", tagText: "地缘", text: "以色列总统赫尔佐格授权反对派政治人物甘地·艾森科特率先组建政府，后者有28天时间拼凑执政联盟。艾森科特为前国防军总参谋长，其组阁前景将决定以色列在加沙与伊朗问题上的政策走向，也牵动美以关系与中东资产风险定价。", source: "Financial Times", url: "https://www.ft.com/content/bf737648-b974-4f87-ba0b-958f2aff1163?syn-25a6b1a6=1" },
+  { time: "01:51", tag: "ai", tagText: "AI", text: "Meta首席战略官戴夫·韦纳离职，出任AI基础设施初创公司Fireworks的CFO。Fireworks今年7月估值达175亿美元，专注模型推理与算力服务。传统大厂高管流向AI基建公司，反映资本与人才正持续向推理侧算力环节迁移。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/dave-wehner-meta-fireworks-cfo.html" },
+  { time: "01:43", tag: "ai", tagText: "AI", text: "英伟达股价连续第六周下跌，市场围绕其估值是否已进入「深度价值」区间展开辩论；同期AI概念股普遍走弱，而比特币相对抗跌。资金正重新评估AI资本开支回报周期，指数层面对AI权重股的高度暴露令波动被放大，分散配置讨论升温。", source: "Seeking Alpha", url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxOTFVHWjZ5elJ3NU1wVHZGVFpaSnIzcXRZdmt1TktrLXFVXzJyQjdBVTBJa3QxS3lzRWVxT1BhclFYLVU5bnVabnRzdnVZTnNvQTU0c2Q5bHZXQ0dlTWpJVktEcTlvZDd6TmxRMGZoNmUyMzhMS21sNEg5UnRiUEpXTWlUY3BLbWFUUkE?oc=5" },
+  { time: "00:56", tag: "geo", tagText: "地缘", text: "在既有海上封锁基础上，美军新设「铁门特遣部队」，将行动扩展至限制伊朗陆路贸易，重点阻断军民两用技术流入及美方所称的非法收入来源。此举意味着对伊施压从海路转向海陆并举，或进一步抬升中东航运与能源供应的风险溢价。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/iran-us-task-force-land-commerce.html" },
+  { time: "00:30", tag: "macro", tagText: "宏观", text: "美国国税局公布2027年税档、标准扣除额及资本利得税率，各档调整幅度明显高于今年，反映通胀回升再度嵌入税制。标准扣除与SALT相关安排同步更新，将影响明年居民实际税负与年终资产处置节奏。", source: "MarketWatch", url: "https://www.marketwatch.com/story/the-2027-tax-brackets-are-out-see-what-the-standard-deduction-and-salt-tax-breaks-will-be-5dd1d293?mod=mw_rss_topstories" },
   { time: "00:02", tag: "macro", tagText: "宏观", text: "民主党将掌控国会，医疗保健股在中期选举后前景不明。投资者担忧新国会推动药价谈判、保险监管与医保政策调整，板块估值和盈利预期可能承压，短期难以获得上行动能。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html" },
   { time: "23:35", tag: "macro", tagText: "宏观", text: "美国首次购房者中全现金支付比例创纪录，达到约10%。在住房可负担性仍紧张之际，越来越多买家依靠家庭赠与、继承、股票收益或出售旧房所得筹集现金，反映高利率下融资购房门槛上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-record-10-of-first-time-home-buyers-now-pay-in-cash-heres-where-they-get-the-money-70f2e656?mod=mw_rss_topstories" },
   { time: "23:23", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦第三季度加码回购，回购规模超96亿美元，较此前水平翻倍以上；但整体利润与经营利润双双下滑。新任CEO格雷格·阿贝尔同期为股票净卖出方，公司股价表现仍跑赢标普500。市场关注其现金配置策略与接班后的资本运作方向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html" },
@@ -1643,14 +1649,8 @@ const breakingNews = [
   { time: "13:00", tag: "geo", tagText: "地缘", text: "欧洲多国航空当局正应对一波虚假炸弹威胁，安全机构正在调查这些协调威胁是否源自俄罗斯，初步假设为亲克里姆林宫活动人士或黑客组织所为。分析人士指出，航空业最薄弱环节是在飞行中成为目标，但任何程序调整都将漫长。", source: "Financial Times", url: "https://www.ft.com/content/0845687f-1f74-4bbf-88c9-5c6b031c7f20?syn-25a6b1a6=1" },
   { time: "13:00", tag: "macro", tagText: "宏观", text: "密西西比州选举成为深南地区的政治地震：民主党人斯科特·科洛姆有望成为150年来首位代表该州进入美国参议院的黑人男性。", source: "Financial Times", url: "https://www.ft.com/content/0700baee-1a7f-4dc4-ac95-5b98e1868d96" },
   { time: "09:11", tag: "macro", tagText: "宏观", text: "白宫相关委员会将美联储理事Lisa Cook的听证会推迟至12月14日。特朗普自2025年8月起试图将其解职，但最高法院6月暂时阻止。此事被视为对美联储独立性的关键考验，市场关注后续人事与政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/04/trump-federal-reserve-lisa-cook-hearing.html" },
-  { time: "08:52", tag: "macro", tagText: "宏观", text: "尽管加州Prop 40亿万富翁税预计被否决、成为超级富豪的罕见胜利，民主党在中期选举大胜仍令美国财富税议题留在政策议程上，市场关注后续对高净值人群与资本利得税的可能影响。", source: "Financial Times", url: "https://www.ft.com/content/c701ac0d-0ef4-426f-a629-e38ed29d5260?syn-25a6b1a6=1" },
-  { time: "08:04", tag: "macro", tagText: "宏观", text: "印度正考虑减税以吸引外资。外资对印度股市兴趣持续下降，持股比例已降至14%的历史低点，市场关注新德里能否以税收优惠扭转外资流出趋势。", source: "CNBC", url: "https://www.cnbc.com/2026/11/05/india-tax-foreign-investors-nifty.html" },
-  { time: "06:53", tag: "geo", tagText: "地缘", text: "美国警告中国必须「立即」履行《釜山贸易协议》承诺，指北京未按要求扩大稀土及其他关键产品供应。此举令刚刚达成的美中贸易休战面临考验，市场关注关键矿产供应链及相关出口管制是否再度收紧。", source: "Financial Times", url: "https://www.ft.com/content/391bb785-0247-4c39-b53b-35007187d603?syn-25a6b1a6=1" },
-  { time: "06:38", tag: "macro", tagText: "宏观", text: "大型科技公司约6亿美元的中期选举政治投入收效甚微，马斯克受到批评。选民对AI与硅谷的不满助推民主党选情，显示巨额政治献金未能左右关键选战结果。", source: "Financial Times", url: "https://www.ft.com/content/3e65138f-068f-465f-a1ae-a9c61ea1afc4?syn-25a6b1a6=1" },
-  { time: "06:25", tag: "ai", tagText: "AI", text: "OpenAI首席财务官表示，尽管选举结果显示多地选民支持主张限制数据中心开发的候选人，公司仍将继续投资AI数据中心。这一表态凸显AI基建扩张与地方政治阻力、电价与社区负担问题之间的张力。", source: "CNBC", url: "https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html" },
-  { time: "06:22", tag: "geo", tagText: "地缘", text: "特朗普宣布由移民强硬派斯蒂芬·米勒接替苏茜·怀尔斯出任白宫幕僚长。此举发生在民主党中期选举大胜、拿下参众两院三天之后，被视为特朗普转向更强硬路线的信号，可能影响后续立法议程及移民、对华政策推进。", source: "CNBC", url: "https://www.cnbc.com/2026/11/06/trump-stephen-miller-wiles-chief-of-staff.html" },
 ];
-const breakingDate = "2026年11月8日 00:18 CST";
+const breakingDate = "2026年11月8日 04:48 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "05:57", tag: "tech", tagText: "科技", text: "三星将在美国得克萨斯州建设第二座半导体工厂，为AMD和英伟达生产芯片。此举既扩大三星在美代工产能，也呼应美国推动芯片制造本土化的产业政策。", source: "Construction Review", url: "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXdseElfR3BnZ3MxY2t2TFg2ak01ek1yajJFbzZjTUhYUTh1cnk3alRxRmRiWVQ1UDdYd19tNTVyc2k3ZDl0SXRqTXRmcEJRUWNzVlFISnlHaVFwT1dQS0hwdE85d1BhY1lwTTZSZGZVUmgtMG1Zc050ZU82bU5qV3h1NlFpeEZGdFM1Z19Kc3Jlei1BU0dqRVJrM1RTa19RRlRlQkFpb2xzdmdxOUpkQk1iQTBoQ2lkVGIwQmRPVQ?oc=5" },
   { time: "05:55", tag: "ai", tagText: "AI", text: "OpenAI考虑将数据中心更名为“AI算力园区”，以缓解公众对数据中心的强烈抵触情绪。报道称，这一品牌调整意在改善舆论观感，但未必能消解社区对能耗、水资源和噪音等实际问题的担忧。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" },
 ];
-const aiBreakingDate = "2026年11月8日 00:18 CST";
+const aiBreakingDate = "2026年11月8日 04:48 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
