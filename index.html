@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 26.32,
   previous1Month: 47.03,
   previous1Year: 24.34,
-  date: "2026年11月9日 07:38 CST"
+  date: "2026年11月9日 14:01 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "13:00", tag: "crypto", tagText: "加密", text: "民主党在中期选举大胜后誓言调查总统家族，加密行业准备迎接与特朗普关系相关的清算。行业此前在特朗普执政期间获得友好监管，如今可能面临国会调查、政策回摆和声誉风险，成为中期选举后的重要监管不确定性。", source: "Financial Times", url: "https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "tech", tagText: "科技", text: "苹果通过在新加坡确认利润，节省约27亿美元税款；新加坡已取代爱尔兰成为其最大税务避风港。新披露文件显示，这家iPhone制造商在亚洲的税务安排继续面临各国监管审视。", source: "Financial Times", url: "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "俄罗斯加速建设类似星链的卫星互联网系统，该项目将支持无人机对乌克兰纵深目标实施更致命打击。莫斯科将其视为旗舰太空工程，若部署成功，可能改变战场通信与无人机作战格局。", source: "Financial Times", url: "https://www.ft.com/content/423ca208-8e22-4fb3-a76d-b9c722fd8cc0?syn-25a6b1a6=1" },
   { time: "06:39", tag: "geo", tagText: "地缘", text: "波兰克拉科夫主广场发生驾车冲撞并开枪事件，造成6人死亡。警方称枪手随机袭击游客密集区域，部长表示其持有「极端民族主义」观点；事件可能再度引发欧洲对政治极端化与公共安全的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/krakow-poland-shooting.html" },
   { time: "05:59", tag: "macro", tagText: "宏观", text: "特朗普要求司法部调查所谓民主党人对共和党人的威胁，并点名密歇根州民主党参议员斯洛特金。此举被视为中期选举后政治对抗升级，可能加剧国会与白宫在司法独立、调查权上的冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-doj-democrats-alleged-threats-slotkin.html" },
   { time: "05:41", tag: "tech", tagText: "科技", text: "据FT报道，美国情报界认为英伟达CEO黄仁勋与一名被中国招募、负责搜集美国公司信息的女高管存在恋爱关系。此事可能将全球最有价值的芯片公司卷入国家安全审查，并加剧美中科技与出口管制紧张。", source: "Financial Times", url: "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790?syn-25a6b1a6=1" },
@@ -1646,14 +1649,12 @@ const breakingNews = [
   { time: "22:33", tag: "macro", tagText: "宏观", text: "民主党在中期选举中横扫国会，被视为保守派对可再生能源「开战」的一次重大挫败。分析认为，此前的补贴削减与并网限制政策推进将受阻，风能、光伏、储能与电网设备板块的政策预期改善，投资者需重新评估清洁能源相关头寸。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/midterm-election-blue-wave-trump-renewable-energy.html" },
   { time: "21:30", tag: "ai", tagText: "AI", text: "Anthropic准备上市，将成为首家纯AI公司登陆公开市场，但时机不佳：科技股抛售持续，中期选举又显示选民对数据中心和AI扩张反弹。投资者关注其是否推迟IPO或折价发行，AI交易情绪面临关键考验。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/anthropic-ipo-ai-data-center-backlash.html" },
   { time: "14:10", tag: "crypto", tagText: "加密", text: "比特币在7.6万美元下方徘徊，币安关闭部分欧洲业务进一步施压加密市场。欧盟监管收紧与交易平台收缩叠加，令市场流动性承压，投资者关注年末加密资产需求是否进一步降温。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORzZWNlIxdzZIdzJibzk3dHBhalE3b1VRU0p4aGZOTDA4eHA3RzlVMlAxM3QxQTlSSzN1ZFNhelZHWk5sMHU4d3R1RjhZUUxPZzRsNzg5YTNFX0VKT29ZaGdjLXd5T1pqVzZMYTdCMU16Y3RpbFVPbkxnQWxNZ0xMSWh1TFYxT0g4TC00NlROaW5rNTNIZGNhb2JMS1BJdGFVQ1E3d2tSUXhHZDdoeUFvaWVKRVo5TWZNczhrVE5MTldCU1RSNG5USTdVclZ4SFEt?oc=5" },
-  { time: "13:00", tag: "crypto", tagText: "加密", text: "民主党在中期选举大胜后誓言调查总统家族，加密行业准备迎接与特朗普关系相关的清算。行业此前在特朗普执政期间获得友好监管，如今可能面临国会调查、政策回摆和声誉风险，成为中期选举后的重要监管不确定性。", source: "Financial Times", url: "https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "tech", tagText: "科技", text: "苹果通过在新加坡确认利润，节省约27亿美元税款；新加坡已取代爱尔兰成为其最大税务避风港。新披露文件显示，这家iPhone制造商在亚洲的税务安排继续面临各国监管审视。", source: "Financial Times", url: "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "俄罗斯加速建设类似星链的卫星互联网系统，该项目将支持无人机对乌克兰纵深目标实施更致命打击。莫斯科将其视为旗舰太空工程，若部署成功，可能改变战场通信与无人机作战格局。", source: "Financial Times", url: "https://www.ft.com/content/423ca208-8e22-4fb3-a76d-b9c722fd8cc0?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月9日 07:38 CST";
+const breakingDate = "2026年11月9日 14:01 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "13:37", tag: "geo", tagText: "地缘", text: "英伟达董事会正调查CEO黄仁勋与一名疑似中国间谍的关系。耶鲁大学Jeffrey Sonnenfeld估计，黄仁勋留任CEO的概率约为“五五开”。该调查令市场关注对中国业务敞口较大的美国芯片股，凸显AI芯片龙头面临的地缘政治与治理风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/" },
   { time: "07:00", tag: "geo", tagText: "地缘", text: "据《纽约时报》报道，中国情报机构招募Megaspeed高管Alice Huang，试图刺探英伟达CEO黄仁勋的相关信息。该报道凸显AI芯片领域的地缘政治与商业间谍风险。", source: "The Verge", url: "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy" },
   { time: "06:53", tag: "ai", tagText: "AI", text: "OpenAI据报在新一轮融资中再募资110亿美元，该轮尚未关闭，预计未来数周完成；公司估值达1.25万亿美元。若成行，将进一步巩固其在生成式AI领域的资金优势。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/" },
   { time: "06:45", tag: "ai", tagText: "AI", text: "AI行业政治行动委员会（PAC）在2026年美国中期选举中投入数百万美元试图影响国会构成，但结果喜忧参半。相关政治团体已开始为下一个选举周期布局，显示AI产业正加大对美国政治进程的投入。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "21:02", tag: "tech", tagText: "科技", text: "初创公司Underdog在新演示中展示了一个仅32MB的语音模型，体积远小于主流大模型，却能同时生成语音与音乐。若效果稳定，这将成为端侧及低资源AI模型效率提升的一个标志性案例。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/" },
   { time: "20:30", tag: "ai", tagText: "AI", text: "METR最新报告显示，Anthropic正用AI加速开发更强的AI，其模型能力提升速度约为一年前的两倍，且几乎看不到放缓迹象。研究者担忧，AI自动化AI研发会压缩安全评估、红队测试与监管介入的时间窗口，使能力跃升先于安全对齐，报告因此引发学界与政策圈警觉。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development" },
   { time: "19:55", tag: "tech", tagText: "科技", text: "抗议者闯入阿姆斯特丹微软新数据中心建设工地，Geef Tegengas等团体参与组织反对建设活动。事件凸显AI数据中心扩张在能耗、环境与社区接受度方面面临阻力。", source: "The Verge", url: "https://www.theverge.com/news/1028549/protesters-microsoft-data-center-site-amsterdam" },
-  { time: "16:06", tag: "ai", tagText: "AI", text: "韩国无晶圆厂芯片公司转向“物理AI”，押注用于机器人和无人机的NPU。报道称，这些公司希望借边缘AI芯片在机器人与无人机市场寻找新增长点。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE9temUzTUZ5ZDJPMXIyb0R4UGlpYVFlTGhmbmh1dUhHYnRMcTlRcnFHT1ZhYzdJeWlOSkM0dGlyYnV4aW1RZVM3T0hBTks0ZG56cVBlNG43Q1dNUjhtby1ZNjN4VjMteXdidHFEa1ZBbTU5ZnRGZUE?oc=5" },
 ];
-const aiBreakingDate = "2026年11月9日 07:38 CST";
+const aiBreakingDate = "2026年11月9日 14:01 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
