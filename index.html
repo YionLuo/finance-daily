@@ -1616,19 +1616,31 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 33.54,
+  score: 33.46,
   rating: "fear",
-  timestamp: "2026-11-10T16:56:40+00:00",
+  timestamp: "2026-11-10T22:00:31+00:00",
   previousClose: 31.71,
   previous1Week: 23.54,
   previous1Month: 43.51,
   previous1Year: 29.94,
-  date: "2026年11月11日 00:58 CST"
+  date: "2026年11月11日 06:17 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "06:13", tag: "ai", tagText: "AI", text: "AI云服务商CoreWeave第三季度营收超预期并上调业绩指引，股价此前因市场担忧其债务与信用风险而大幅下挫，本次财报缓解了外界对AI算力需求放缓的担忧，也成为新云（neocloud）板块的重要风向标。", source: "CNBC", url: "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html" },
+  { time: "06:00", tag: "crypto", tagText: "加密", text: "比特币跌破74,000美元，火热通胀数据令风险资产遭遇抛售，加密市场普跌；此前市场已因流动性收缩与机构需求降温承压，投资者关注若通胀迫使美联储重启加息，加密资产将如何应对衰退式环境。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWFB0ZGQxQllEa3BQWlNSMFlLVVVWV3M5enBmY3lVY3p1bHN4RzJPX0FWX0VfZUd1QnRpOFJvSFZXTXN1dk9KNXBNbzVXZW5mOUcySUtSSzRuMDJFQmlIajItYTdlWW1FUGw3aHVOUi16a1VrLXFVM0FqZUpPMW10aDViVmZEZk5tcFlNc2REdldBckRtc2gyWlZHbkpSalVPYVNrbkdMVi1DSTFzVzhUYW5NaThnVjNhTF9TR19rbzE4aXg2UnMxVkF3Zzd6clJzMjEzQUthS25DdVFQaVM2UA?oc=5" },
+  { time: "05:59", tag: "macro", tagText: "宏观", text: "特朗普要求司法部调查所谓民主党人对共和党人的威胁，并点名密歇根州民主党参议员斯洛特金。此举被视为中期选举后政治对抗升级，可能加剧国会与白宫在司法独立、调查权上的冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-doj-democrats-alleged-threats-slotkin.html" },
+  { time: "05:45", tag: "geo", tagText: "地缘", text: "白宫表示将无视中期选举因物价上涨而产生的政治反弹，继续推进关税政策。企业高管在华盛顿一场峰会上警告成本上升与供应链重构压力，民调显示选民对特朗普关税的反对情绪上升，关税与通胀的政治纠缠加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/10/trump-tariffs-midterms-gary-cohn-inflation.html" },
+  { time: "05:41", tag: "tech", tagText: "科技", text: "据FT报道，美国情报界认为英伟达CEO黄仁勋与一名被中国招募、负责搜集美国公司信息的女高管存在恋爱关系。此事可能将全球最有价值的芯片公司卷入国家安全审查，并加剧美中科技与出口管制紧张。", source: "Financial Times", url: "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790?syn-25a6b1a6=1" },
+  { time: "05:38", tag: "geo", tagText: "地缘", text: "一名美国高级军官在英国因涉嫌为俄罗斯从事间谍活动被捕，英国反恐警察主导调查，FBI与美国军方参与。案件凸显俄乌冲突背景下西方军事系统内部渗透风险，或推动美英进一步收紧涉密人员审查。", source: "Financial Times", url: "https://www.ft.com/content/94aa4846-58c6-4c17-b25a-095f122b4809?syn-25a6b1a6=1" },
+  { time: "05:29", tag: "crypto", tagText: "加密", text: "比特币在Coinbase上连续61天相对其他交易所折价交易，显示美国买盘持续弱于离岸市场。该折价若延续，可能反映美国机构与散户需求降温，并影响年末加密市场流动性。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTHBGVWdLRTdGVGJfX1FZa1g5UFJOa1ZPQzg5Wk9JR0o0WU1EcUpUVnZzQ2pBOUp0YzRDUWtSb2NFbWl5TktfdEN3S3VyQTd2WjlldGhXSWM3VTh4ZHprdjNzNkFJZ013eGdjQ3phbFRJR095QWRNSUVtT2phZU1veVdEMGxwVjdWTmd4YXdmQ0NWQmZsTFNuN1NJMFp5enp6UUE?oc=5" },
+  { time: "05:06", tag: "macro", tagText: "宏观", text: "美国CPI数据超预期，10年期美债收益率再度逼近5%关口，美股承压收低。市场重新押注美联储可能进一步加息，一位美联储官员的讲话亦强化紧缩预期；有经济学家警告，过度紧缩正迅速成为2027年股市的最大风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html" },
+  { time: "04:39", tag: "macro", tagText: "宏观", text: "特朗普向UFC总裁兼CEO达纳·怀特提供白宫新闻秘书一职。怀特目前仍掌管UFC母公司TKO，若接受将意味着一位体育娱乐业高管直接进入白宫核心传播岗位，也延续了特朗普第二任期从体制外延揽关键人选的用人风格。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html" },
+  { time: "04:05", tag: "tech", tagText: "科技", text: "美国商务部推迟将Megaspeed列入贸易黑名单（实体清单）；这家与涉嫌中国间谍、并与黄仁勋有私人关系的女高管相关的公司暂未被制裁。与此同时，分析师称黄仁勋间谍丑闻令国会收紧对华芯片出口管制的立法势头增强，英伟达或面临更严出口规则。", source: "Financial Times", url: "https://www.ft.com/content/afb6c960-a910-4d67-9588-73ba3bea5b06?syn-25a6b1a6=1" },
+  { time: "03:47", tag: "ai", tagText: "AI", text: "Anthropic正式启动IPO，估值超过1万亿美元，拟募资至多630亿美元，预计下周完成定价，将成为首家登陆公开市场的纯AI公司。永续合约交易员押注其上市首日上涨，但在科技股抛售与AI扩张遭选民反弹的背景下，这将是对华尔街AI热情的关键考验。", source: "MarketWatch", url: "https://www.marketwatch.com/story/anthropic-reportedly-retracts-ipo-terms-sent-to-banks-by-mistake-exposing-jitters-over-ai-investments-6116578d?mod=mw_rss_topstories" },
+  { time: "03:24", tag: "ai", tagText: "AI", text: "英伟达聘请上月刚加入Wachtell Lipton的前联邦检察官Joon Kim（曾任纽约南区联邦检察官办公室代理主管）牵头独立调查，审查CEO黄仁勋是否是一起中国间谍行动的目标。该调查将全球市值最高的芯片公司进一步卷入国家安全审查。", source: "Financial Times", url: "https://www.ft.com/content/8d59bf02-960e-4eb1-b5dc-55397e31cea5?syn-25a6b1a6=1" },
   { time: "23:54", tag: "macro", tagText: "宏观", text: "美股周一大幅反弹，道指上涨约900点，油价回落提振风险偏好；科技股除英伟达外普遍走强，市场在经历上周AI相关抛售后情绪有所修复。", source: "CNBC", url: "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html" },
   { time: "23:44", tag: "geo", tagText: "地缘", text: "特朗普公开质疑中期选举结果并重提投票机阴谋论，或加剧选举合法性争议与美国政治不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/11/09/trump-election-results-democrats.html" },
   { time: "23:35", tag: "macro", tagText: "宏观", text: "美国首次购房者中全现金支付比例创纪录，达到约10%。在住房可负担性仍紧张之际，越来越多买家依靠家庭赠与、继承、股票收益或出售旧房所得筹集现金，反映高利率下融资购房门槛上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-record-10-of-first-time-home-buyers-now-pay-in-cash-heres-where-they-get-the-money-70f2e656?mod=mw_rss_topstories" },
@@ -1637,20 +1649,8 @@ const breakingNews = [
   { time: "22:33", tag: "macro", tagText: "宏观", text: "民主党在中期选举中横扫国会，被视为保守派对可再生能源「开战」的一次重大挫败。分析认为，此前的补贴削减与并网限制政策推进将受阻，风能、光伏、储能与电网设备板块的政策预期改善，投资者需重新评估清洁能源相关头寸。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/midterm-election-blue-wave-trump-renewable-energy.html" },
   { time: "22:09", tag: "geo", tagText: "地缘", text: "德国总理默茨威胁，除非欧盟就追加对乌财政支持达成一致，否则将阻止下一份欧盟预算；乌克兰资金问题可能进一步撕裂欧盟内部共识。", source: "Financial Times", url: "https://www.ft.com/content/ec66a5d6-70f1-47fc-b573-067dd96dc913?syn-25a6b1a6=1" },
   { time: "21:54", tag: "macro", tagText: "宏观", text: "美国10月待售房源继续累积，但卖家仍不愿降价，楼市在高按揭利率和可负担性压力下维持深度冻结。", source: "CNBC", url: "https://www.cnbc.com/2026/11/09/home-listings-pile-up-in-october-but-sellers-wont-slash-prices.html" },
-  { time: "21:36", tag: "macro", tagText: "宏观", text: "标普500企业盈利多数超过分析师预期，但超预期幅度为约四年来最窄，显示盈利动能减弱、市场门槛偏低。", source: "MarketWatch", url: "https://www.marketwatch.com/story/corporate-americas-profit-numbers-are-just-barely-beating-wall-streets-expectations-eaa67fe2?mod=mw_rss_topstories" },
-  { time: "21:30", tag: "ai", tagText: "AI", text: "Anthropic准备上市，将成为首家纯AI公司登陆公开市场，但时机不佳：科技股抛售持续，中期选举又显示选民对数据中心和AI扩张反弹。投资者关注其是否推迟IPO或折价发行，AI交易情绪面临关键考验。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/anthropic-ipo-ai-data-center-backlash.html" },
-  { time: "20:00", tag: "ai", tagText: "AI", text: "CoreWeave与Nebius等新型云服务商过去一个月市值腰斩，市场担忧其债务与信用风险，AI算力扩张的融资可持续性正受到审视。", source: "CNBC", url: "https://www.cnbc.com/2026/11/09/coreweave-debt-credit-risk-neoclouds.html" },
-  { time: "14:10", tag: "crypto", tagText: "加密", text: "比特币在7.6万美元下方徘徊，币安关闭部分欧洲业务进一步施压加密市场。欧盟监管收紧与交易平台收缩叠加，令市场流动性承压，投资者关注年末加密资产需求是否进一步降温。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORzZWNlIxdzZIdzJibzk3dHBhalE3b1VRU0p4aGZOTDA4eHA3RzlVMlAxM3QxQTlSSzN1ZFNhelZHWk5sMHU4d3R1RjhZUUxPZzRsNzg5YTNFX0VKT29ZaGdjLXd5T1pqVzZMYTdCMU16Y3RpbFVPbkxnQWxNZ0xMSWh1TFYxT0g4TC00NlROaW5rNTNIZGNhb2JMS1BJdGFVQ1E3d2tSUXhHZDdoeUFvaWVKRVo5TWZNczhrVE5MTldCU1RSNG5USTdVclZ4SFEt?oc=5" },
-  { time: "13:00", tag: "crypto", tagText: "加密", text: "民主党在中期选举大胜后誓言调查总统家族，加密行业准备迎接与特朗普关系相关的清算。行业此前在特朗普执政期间获得友好监管，如今可能面临国会调查、政策回摆和声誉风险，成为中期选举后的重要监管不确定性。", source: "Financial Times", url: "https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "tech", tagText: "科技", text: "苹果通过在新加坡确认利润，节省约27亿美元税款；新加坡已取代爱尔兰成为其最大税务避风港。新披露文件显示，这家iPhone制造商在亚洲的税务安排继续面临各国监管审视。", source: "Financial Times", url: "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "俄罗斯加速建设类似星链的卫星互联网系统，该项目将支持无人机对乌克兰纵深目标实施更致命打击。莫斯科将其视为旗舰太空工程，若部署成功，可能改变战场通信与无人机作战格局。", source: "Financial Times", url: "https://www.ft.com/content/423ca208-8e22-4fb3-a76d-b9c722fd8cc0?syn-25a6b1a6=1" },
-  { time: "06:39", tag: "geo", tagText: "地缘", text: "波兰克拉科夫主广场发生驾车冲撞并开枪事件，造成6人死亡。警方称枪手随机袭击游客密集区域，部长表示其持有「极端民族主义」观点；事件可能再度引发欧洲对政治极端化与公共安全的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/krakow-poland-shooting.html" },
-  { time: "05:59", tag: "macro", tagText: "宏观", text: "特朗普要求司法部调查所谓民主党人对共和党人的威胁，并点名密歇根州民主党参议员斯洛特金。此举被视为中期选举后政治对抗升级，可能加剧国会与白宫在司法独立、调查权上的冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-doj-democrats-alleged-threats-slotkin.html" },
-  { time: "05:41", tag: "tech", tagText: "科技", text: "据FT报道，美国情报界认为英伟达CEO黄仁勋与一名被中国招募、负责搜集美国公司信息的女高管存在恋爱关系。此事可能将全球最有价值的芯片公司卷入国家安全审查，并加剧美中科技与出口管制紧张。", source: "Financial Times", url: "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790?syn-25a6b1a6=1" },
-  { time: "05:29", tag: "crypto", tagText: "加密", text: "比特币在Coinbase上连续61天相对其他交易所折价交易，显示美国买盘持续弱于离岸市场。该折价若延续，可能反映美国机构与散户需求降温，并影响年末加密市场流动性。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTHBGVWdLRTdGVGJfX1FZa1g5UFJOa1ZPQzg5Wk9JR0o0WU1EcUpUVnZzQ2pBOUp0YzRDUWtSb2NFbWl5TktfdEN3S3VyQTd2WjlldGhXSWM3VTh4ZHprdjNzNkFJZ013eGdjQ3phbFRJR095QWRNSUVtT2phZU1veVdEMGxwVjdWTmd4YXdmQ0NWQmZsTFNuN1NJMFp5enp6UUE?oc=5" },
-  { time: "04:39", tag: "macro", tagText: "宏观", text: "特朗普向UFC总裁兼CEO达纳·怀特提供白宫新闻秘书一职。怀特目前仍掌管UFC母公司TKO，若接受将意味着一位体育娱乐业高管直接进入白宫核心传播岗位，也延续了特朗普第二任期从体制外延揽关键人选的用人风格。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html" },
 ];
-const breakingDate = "2026年11月11日 00:58 CST";
+const breakingDate = "2026年11月11日 06:17 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "07:25", tag: "ai", tagText: "AI", text: "英伟达股价大跌逾4%，市值蒸发规模约为现代汽车的五倍。此前公司董事会宣布就CEO黄仁勋与一名疑似中国间谍的关系启动调查。证券法专家指出，英伟达管理层此前就相关关系的公开表态，可能成为股东发起集体诉讼的依据，已有多家律所开始筹备诉讼。与此同时，部分投资者开始评估其他AI芯片替代方案，市场对英伟达治理风险与供应链集中度的担忧升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia/" },
   { time: "07:00", tag: "geo", tagText: "地缘", text: "据《纽约时报》报道，中国情报机构招募Megaspeed高管Alice Huang，试图刺探英伟达CEO黄仁勋的相关信息。该报道凸显AI芯片领域的地缘政治与商业间谍风险。", source: "The Verge", url: "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy" },
 ];
-const aiBreakingDate = "2026年11月11日 00:58 CST";
+const aiBreakingDate = "2026年11月11日 06:17 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
