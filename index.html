@@ -1616,19 +1616,23 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 31.71,
+  score: 33.23,
   rating: "fear",
-  timestamp: "2026-11-09T23:50:51+00:00",
-  previousClose: 22.08,
-  previous1Week: 19.39,
+  timestamp: "2026-11-10T01:59:58+00:00",
+  previousClose: 31.71,
+  previous1Week: 23.54,
   previous1Month: 43.51,
-  previous1Year: 20.43,
-  date: "2026年11月10日 08:08 CST"
+  previous1Year: 29.94,
+  date: "2026年11月10日 16:17 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "14:10", tag: "crypto", tagText: "加密", text: "比特币在7.6万美元下方徘徊，币安关闭部分欧洲业务进一步施压加密市场。欧盟监管收紧与交易平台收缩叠加，令市场流动性承压，投资者关注年末加密资产需求是否进一步降温。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORzZWNlIxdzZIdzJibzk3dHBhalE3b1VRU0p4aGZOTDA4eHA3RzlVMlAxM3QxQTlSSzN1ZFNhelZHWk5sMHU4d3R1RjhZUUxPZzRsNzg5YTNFX0VKT29ZaGdjLXd5T1pqVzZMYTdCMU16Y3RpbFVPbkxnQWxNZ0xMSWh1TFYxT0g4TC00NlROaW5rNTNIZGNhb2JMS1BJdGFVQ1E3d2tSUXhHZDdoeUFvaWVKRVo5TWZNczhrVE5MTldCU1RSNG5USTdVclZ4SFEt?oc=5" },
+  { time: "13:00", tag: "crypto", tagText: "加密", text: "民主党在中期选举大胜后誓言调查总统家族，加密行业准备迎接与特朗普关系相关的清算。行业此前在特朗普执政期间获得友好监管，如今可能面临国会调查、政策回摆和声誉风险，成为中期选举后的重要监管不确定性。", source: "Financial Times", url: "https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "tech", tagText: "科技", text: "苹果通过在新加坡确认利润，节省约27亿美元税款；新加坡已取代爱尔兰成为其最大税务避风港。新披露文件显示，这家iPhone制造商在亚洲的税务安排继续面临各国监管审视。", source: "Financial Times", url: "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "俄罗斯加速建设类似星链的卫星互联网系统，该项目将支持无人机对乌克兰纵深目标实施更致命打击。莫斯科将其视为旗舰太空工程，若部署成功，可能改变战场通信与无人机作战格局。", source: "Financial Times", url: "https://www.ft.com/content/423ca208-8e22-4fb3-a76d-b9c722fd8cc0?syn-25a6b1a6=1" },
   { time: "06:39", tag: "geo", tagText: "地缘", text: "波兰克拉科夫主广场发生驾车冲撞并开枪事件，造成6人死亡。警方称枪手随机袭击游客密集区域，部长表示其持有「极端民族主义」观点；事件可能再度引发欧洲对政治极端化与公共安全的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/krakow-poland-shooting.html" },
   { time: "05:59", tag: "macro", tagText: "宏观", text: "特朗普要求司法部调查所谓民主党人对共和党人的威胁，并点名密歇根州民主党参议员斯洛特金。此举被视为中期选举后政治对抗升级，可能加剧国会与白宫在司法独立、调查权上的冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-doj-democrats-alleged-threats-slotkin.html" },
   { time: "05:41", tag: "tech", tagText: "科技", text: "据FT报道，美国情报界认为英伟达CEO黄仁勋与一名被中国招募、负责搜集美国公司信息的女高管存在恋爱关系。此事可能将全球最有价值的芯片公司卷入国家安全审查，并加剧美中科技与出口管制紧张。", source: "Financial Times", url: "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790?syn-25a6b1a6=1" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "21:36", tag: "macro", tagText: "宏观", text: "标普500企业盈利多数超过分析师预期，但超预期幅度为约四年来最窄，显示盈利动能减弱、市场门槛偏低。", source: "MarketWatch", url: "https://www.marketwatch.com/story/corporate-americas-profit-numbers-are-just-barely-beating-wall-streets-expectations-eaa67fe2?mod=mw_rss_topstories" },
   { time: "21:30", tag: "ai", tagText: "AI", text: "Anthropic准备上市，将成为首家纯AI公司登陆公开市场，但时机不佳：科技股抛售持续，中期选举又显示选民对数据中心和AI扩张反弹。投资者关注其是否推迟IPO或折价发行，AI交易情绪面临关键考验。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/anthropic-ipo-ai-data-center-backlash.html" },
   { time: "20:00", tag: "ai", tagText: "AI", text: "CoreWeave与Nebius等新型云服务商过去一个月市值腰斩，市场担忧其债务与信用风险，AI算力扩张的融资可持续性正受到审视。", source: "CNBC", url: "https://www.cnbc.com/2026/11/09/coreweave-debt-credit-risk-neoclouds.html" },
-  { time: "14:10", tag: "crypto", tagText: "加密", text: "比特币在7.6万美元下方徘徊，币安关闭部分欧洲业务进一步施压加密市场。欧盟监管收紧与交易平台收缩叠加，令市场流动性承压，投资者关注年末加密资产需求是否进一步降温。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORzZWNlIxdzZIdzJibzk3dHBhalE3b1VRU0p4aGZOTDA4eHA3RzlVMlAxM3QxQTlSSzN1ZFNhelZHWk5sMHU4d3R1RjhZUUxPZzRsNzg5YTNFX0VKT29ZaGdjLXd5T1pqVzZMYTdCMU16Y3RpbFVPbkxnQWxNZ0xMSWh1TFYxT0g4TC00NlROaW5rNTNIZGNhb2JMS1BJdGFVQ1E3d2tSUXhHZDdoeUFvaWVKRVo5TWZNczhrVE5MTldCU1RSNG5USTdVclZ4SFEt?oc=5" },
-  { time: "13:00", tag: "crypto", tagText: "加密", text: "民主党在中期选举大胜后誓言调查总统家族，加密行业准备迎接与特朗普关系相关的清算。行业此前在特朗普执政期间获得友好监管，如今可能面临国会调查、政策回摆和声誉风险，成为中期选举后的重要监管不确定性。", source: "Financial Times", url: "https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "tech", tagText: "科技", text: "苹果通过在新加坡确认利润，节省约27亿美元税款；新加坡已取代爱尔兰成为其最大税务避风港。新披露文件显示，这家iPhone制造商在亚洲的税务安排继续面临各国监管审视。", source: "Financial Times", url: "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "俄罗斯加速建设类似星链的卫星互联网系统，该项目将支持无人机对乌克兰纵深目标实施更致命打击。莫斯科将其视为旗舰太空工程，若部署成功，可能改变战场通信与无人机作战格局。", source: "Financial Times", url: "https://www.ft.com/content/423ca208-8e22-4fb3-a76d-b9c722fd8cc0?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月10日 08:08 CST";
+const breakingDate = "2026年11月10日 16:17 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "21:45", tag: "ai", tagText: "AI", text: "谷歌推出定制化版本的AI芯片，进一步升级与英伟达的竞争。此举意在为自家云与Gemini等业务提供更具性价比的算力，同时向外部客户推销替代方案，挑战英伟达在AI加速器市场的主导地位。", source: "The Straits Times", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZWV6bnNtRVhrOWR6cDBSbkdOOUdwY2tWTEd5VjY1YzZxR25HUVdOYklSSW9kR2ZjQUNLU05LRGY2NjV6ek5BQjd0Mm1HeUdIYk54ZXh6VjY2MFNyQ19PNFcxZ01xcG1jYk9BOEtRTjRLQWM2VzZXMVB4bk43bGRPNDI1MUF4MG1vUW95WDhIWlR4MFRMaEIwMzVCTURpMlRqWUdrcFJ0VQ?oc=5" },
   { time: "21:17", tag: "tech", tagText: "科技", text: "特斯拉将逐步结束Cybertruck生产，马斯克将重心转向机器人和AI。报道称，这反映特斯拉正调整资源，押注机器人、自动驾驶等AI相关业务。", source: "The Guardian", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxOckp5MHVCMWRzVEZIQlVUZjc5QjVOZEpHNHBPY0VCbGtocXRtMXJXcDJyRTBSYVI5OVJ0eWM2LVFha0FsOGJSVV9PdHNmR252NU5NYTRmQWE0eE5yVHdnaDJXVDVvZDhmdExmMnVUalNTeVpURXIxZ2tpdVd6SXNfamN5djF2Q3JhclJReUFSLXlsWXFIbUhCSGFNM2hONzhxYXRSakxQeFlySGZYYnN1OFFDMDJRS3czVUpqZlRIN0w4S2JxTC1mRU9hZw?oc=5" },
 ];
-const aiBreakingDate = "2026年11月10日 08:08 CST";
+const aiBreakingDate = "2026年11月10日 16:17 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
