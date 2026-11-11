@@ -1618,12 +1618,12 @@
 const fearGreedData = {
   score: 33.46,
   rating: "fear",
-  timestamp: "2026-11-10T22:00:31+00:00",
+  timestamp: "2026-11-10T23:59:51+00:00",
   previousClose: 31.71,
   previous1Week: 23.54,
   previous1Month: 43.51,
   previous1Year: 29.94,
-  date: "2026年11月11日 06:17 CST"
+  date: "2026年11月11日 10:42 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,16 @@ const breakingNews = [
   { time: "22:09", tag: "geo", tagText: "地缘", text: "德国总理默茨威胁，除非欧盟就追加对乌财政支持达成一致，否则将阻止下一份欧盟预算；乌克兰资金问题可能进一步撕裂欧盟内部共识。", source: "Financial Times", url: "https://www.ft.com/content/ec66a5d6-70f1-47fc-b573-067dd96dc913?syn-25a6b1a6=1" },
   { time: "21:54", tag: "macro", tagText: "宏观", text: "美国10月待售房源继续累积，但卖家仍不愿降价，楼市在高按揭利率和可负担性压力下维持深度冻结。", source: "CNBC", url: "https://www.cnbc.com/2026/11/09/home-listings-pile-up-in-october-but-sellers-wont-slash-prices.html" },
 ];
-const breakingDate = "2026年11月11日 06:17 CST";
+const breakingDate = "2026年11月11日 10:42 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:47", tag: "geo", tagText: "地缘", text: "美国总统特朗普在白宫记者会上被追问是否事先知晓英伟达CEO黄仁勋与一名疑似中国间谍的关系，并对此作出回应。该事件正把一家AI芯片巨头的公司治理问题推向美国政治层面，并令英伟达游说放宽对华芯片出口限制的努力更趋复杂。", source: "The Verge", url: "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference" },
+  { time: "07:25", tag: "ai", tagText: "AI", text: "英伟达股价大跌逾4%，市值蒸发规模约为现代汽车的五倍。此前公司董事会宣布就CEO黄仁勋与一名疑似中国间谍的关系启动调查。证券法专家指出，英伟达管理层此前就相关关系的公开表态，可能成为股东发起集体诉讼的依据，已有多家律所开始筹备诉讼。与此同时，部分投资者开始评估其他AI芯片替代方案，市场对英伟达治理风险与供应链集中度的担忧升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia/" },
+  { time: "07:00", tag: "geo", tagText: "地缘", text: "据《纽约时报》报道，中国情报机构招募Megaspeed高管Alice Huang，试图刺探英伟达CEO黄仁勋的相关信息。该报道凸显AI芯片领域的地缘政治与商业间谍风险。", source: "The Verge", url: "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy" },
+  { time: "05:12", tag: "tech", tagText: "科技", text: "Ars Technica报道，Grok Build编程代理发生大规模数据暴露事件：研究人员发现约3.5万个Grok Build应用对任何访问者开放，泄露大量机密信息，部分信息属于SpaceX。事件凸显AI编程代理在默认权限和访问控制方面的安全风险。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/" },
+  { time: "05:08", tag: "ai", tagText: "AI", text: "OpenAI收购由Sonder创始人Francis Davidson创办的旅行初创公司Odessia。OpenAI尚未说明未来在旅行领域的计划，交易金额也未披露。此举显示OpenAI继续通过并购扩展消费级应用场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/" },
+  { time: "04:52", tag: "ai", tagText: "AI", text: "纽约州AI安全法正式生效，OpenAI、Anthropic等大型AI开发商须注册、披露安全实践并报告重大事故，否则将面临罚款。这标志美国州级AI监管进入执行阶段，可能增加头部模型公司的合规成本。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/" },
   { time: "00:20", tag: "tech", tagText: "科技", text: "eBay似乎已封堵第三方AI代理抓取与浏览平台，包括Meta的Muse代理。有用户向The Verge反映，近几周其AI购物助手在eBay上无法正常使用。此事凸显电商平台与AI代理之间围绕流量、数据与交易入口的控制权之争升温，成为智能体购物赛道的最新摩擦点。", source: "The Verge", url: "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "谷歌正式向公众开放最新AI模型Gemini 4 Carbon，此前两周仅向少数「网络安全防御者」提供。谷歌称Carbon是其迄今最强模型，并首次加入智能体「蜂群」（swarm）功能，可让多个AI代理协同执行任务，标志着大模型竞争从单体能力转向多代理协作。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout" },
   { time: "23:49", tag: "geo", tagText: "地缘", text: "在英伟达相关调查风波发酵之际，特朗普政府进一步收紧对华半导体出口管制。此举与近期有关美方放行部分对华关联企业芯片销售的消息形成反差，显示美国AI芯片政策的收紧与豁免并行，企业对华出货前景仍高度不确定，供应链与股价波动或加剧。", source: "Chosun Ilbo", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQlhYX3k3Q0xuandfc2tSMHlpTzluTzZQYnhxQmhYUnpSZDg2bng0WDM0RFhEV21JclhnTGc4Y0ZzRTBsR0M1NXBudnVQUUZmM3ZQbkpTc0NnSms4NFFwT193aGh0RnVoRVZ4WXlOb3kzMEZQVy1YODVJR3g1TkJhSEdqajRUVE5T?oc=5" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "22:00", tag: "ai", tagText: "AI", text: "Adobe在MAX大会宣布全面押注智能体AI，将AI代理引入Photoshop、Premiere和Firefly，可自动执行创意工作流与重复任务；Firefly还新增原型构建工具和MCP支持，直接挑战Figma。", source: "The Verge", url: "https://www.theverge.com/tech/1030593/adobe-max-ai-agents-mcp-firefly-assistant-updates" },
   { time: "22:00", tag: "tech", tagText: "科技", text: "Automattic推出新平台Spacefast，可让用户直接部署由“氛围编程”（vibe coding）生成的AI应用，正面竞争Lovable等同类产品。该动作显示WordPress母公司正试图在AI驱动的应用生成与托管市场抢占位置，应对互联网建站方式的转变。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/" },
   { time: "21:45", tag: "ai", tagText: "AI", text: "谷歌推出定制化版本的AI芯片，进一步升级与英伟达的竞争。此举意在为自家云与Gemini等业务提供更具性价比的算力，同时向外部客户推销替代方案，挑战英伟达在AI加速器市场的主导地位。", source: "The Straits Times", url: "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZWV6bnNtRVhrOWR6cDBSbkdOOUdwY2tWTEd5VjY1YzZxR25HUVdOYklSSW9kR2ZjQUNLU05LRGY2NjV6ek5BQjd0Mm1HeUdIYk54ZXh6VjY2MFNyQ19PNFcxZ01xcG1jYk9BOEtRTjRLQWM2VzZXMVB4bk43bGRPNDI1MUF4MG1vUW95WDhIWlR4MFRMaEIwMzVCTURpMlRqWUdrcFJ0VQ?oc=5" },
-  { time: "21:17", tag: "tech", tagText: "科技", text: "特斯拉将逐步结束Cybertruck生产，马斯克将重心转向机器人和AI。报道称，这反映特斯拉正调整资源，押注机器人、自动驾驶等AI相关业务。", source: "The Guardian", url: "https://news.google.com/rss/articles/CBMiywFBVV95cUxOckp5MHVCMWRzVEZIQlVUZjc5QjVOZEpHNHBPY0VCbGtocXRtMXJXcDJyRTBSYVI5OVJ0eWM2LVFha0FsOGJSVV9PdHNmR252NU5NYTRmQWE0eE5yVHdnaDJXVDVvZDhmdExmMnVUalNTeVpURXIxZ2tpdVd6SXNfamN5djF2Q3JhclJReUFSLXlsWXFIbUhCSGFNM2hONzhxYXRSakxQeFlySGZYYnN1OFFDMDJRS3czVUpqZlRIN0w4S2JxTC1mRU9hZw?oc=5" },
-  { time: "21:00", tag: "ai", tagText: "AI", text: "Hugging Face高管Irene Solaiman警告，针对开放AI平台的网络攻击日益增多，可能迫使平台收紧安全限制，进而削弱开源AI社区赖以发展的开放性与可及性。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/" },
-  { time: "19:10", tag: "tech", tagText: "科技", text: "台积电销售额再度大幅增长，英伟达和苹果订单推动AI芯片需求持续旺盛，显示晶圆代工景气与AI算力扩张仍在延续。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxQenZvRzRKZVE0bFNfal93UFpFdV9mem5Ed3BjZldLbzN4QU5tUnFSdlBkSERsRjJSYUJZeUg3RVhpa29LaGI1X29WZnltbXlaa0dTZWg5TUtuNXF4NDh4YTZHWlJ4MlQ0V00wSWt1dEFraWxqUkFGYWwxaGFxSHFqaTJocy1tYl9SX3hqYklyWV9FNndvN1d1ZHlpUHdFazFkSUlTVkl5MGJnZ1dFNWozWmE5SWEtUzg0SnRTUWxMZU96LUVVU1BuOUZ4cTNmdw?oc=5" },
-  { time: "07:47", tag: "geo", tagText: "地缘", text: "美国总统特朗普在白宫记者会上被追问是否事先知晓英伟达CEO黄仁勋与一名疑似中国间谍的关系，并对此作出回应。该事件正把一家AI芯片巨头的公司治理问题推向美国政治层面，并令英伟达游说放宽对华芯片出口限制的努力更趋复杂。", source: "The Verge", url: "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference" },
-  { time: "07:25", tag: "ai", tagText: "AI", text: "英伟达股价大跌逾4%，市值蒸发规模约为现代汽车的五倍。此前公司董事会宣布就CEO黄仁勋与一名疑似中国间谍的关系启动调查。证券法专家指出，英伟达管理层此前就相关关系的公开表态，可能成为股东发起集体诉讼的依据，已有多家律所开始筹备诉讼。与此同时，部分投资者开始评估其他AI芯片替代方案，市场对英伟达治理风险与供应链集中度的担忧升温。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia/" },
-  { time: "07:00", tag: "geo", tagText: "地缘", text: "据《纽约时报》报道，中国情报机构招募Megaspeed高管Alice Huang，试图刺探英伟达CEO黄仁勋的相关信息。该报道凸显AI芯片领域的地缘政治与商业间谍风险。", source: "The Verge", url: "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy" },
 ];
-const aiBreakingDate = "2026年11月11日 06:17 CST";
+const aiBreakingDate = "2026年11月11日 10:42 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
