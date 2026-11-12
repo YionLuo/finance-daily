@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 41.06,
+  score: 43.29,
   rating: "fear",
-  timestamp: "2026-11-12T15:35:10+00:00",
+  timestamp: "2026-11-12T18:05:52+00:00",
   previousClose: 36.97,
   previous1Week: 19.99,
   previous1Month: 45.23,
   previous1Year: 34.57,
-  date: "2026年11月12日 23:36 CST"
+  date: "2026年11月13日 02:08 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,17 @@ const breakingNews = [
   { time: "05:06", tag: "macro", tagText: "宏观", text: "美国CPI数据超预期，10年期美债收益率再度逼近5%关口，美股承压收低。市场重新押注美联储可能进一步加息，一位美联储官员的讲话亦强化紧缩预期；有经济学家警告，过度紧缩正迅速成为2027年股市的最大风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html" },
   { time: "04:39", tag: "macro", tagText: "宏观", text: "特朗普向UFC总裁兼CEO达纳·怀特提供白宫新闻秘书一职。怀特目前仍掌管UFC母公司TKO，若接受将意味着一位体育娱乐业高管直接进入白宫核心传播岗位，也延续了特朗普第二任期从体制外延揽关键人选的用人风格。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html" },
 ];
-const breakingDate = "2026年11月12日 23:36 CST";
+const breakingDate = "2026年11月13日 02:08 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "01:36", tag: "ai", tagText: "AI", text: "在黄仁勋辞去英伟达CEO后，Hugging Face CEO公开承诺将继续为开源AI而战，并对英伟达一笔129亿美元的收购案提出疑问，凸显头部AI公司高层动荡对开源生态与行业整合前景的冲击。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/" },
+  { time: "01:00", tag: "macro", tagText: "宏观", text: "软银为给AI数据中心供电而预购天然气涡轮机，损失超过30亿美元。分析认为，这一亏损可能给AI行业大举押注天然气发电的野心降温，并对电力市场供需与投资节奏产生连锁影响。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions/" },
+  { time: "01:00", tag: "tech", tagText: "科技", text: "一项新研究发现，使用AI聊天机器人调研商品或寻找购买渠道的消费者，可能被导向仿冒网站及其他高风险网站。该研究由知识产权保护公司Podqi进行，测试了Gemini、ChatGPT、Perplexity等购物助手，揭示AI购物推荐的信任与安全隐忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations" },
+  { time: "01:00", tag: "tech", tagText: "科技", text: "GDC游戏节最新年度行业调查显示，已有40%的受访游戏开发者在其工作中使用生成式AI工具，比例较去年上升，反映AI正加速渗透游戏内容生产流程。", source: "The Verge", url: "https://www.theverge.com/games/1032085/gdc-festival-of-gaming-annual-survey-ai-layoffs" },
+  { time: "00:36", tag: "geo", tagText: "地缘", text: "英伟达前CEO黄仁勋已同意于周三出席美国国会作证。此前多名资深议员威胁将发出传票。黄仁勋因被曝与一名疑似中国间谍的女性存在婚外情而遭罢免，事件已从公司治理升级为涉及国家安全与美中AI芯片竞争的政治议题。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/" },
+  { time: "00:20", tag: "tech", tagText: "科技", text: "eBay似乎已封堵第三方AI代理抓取与浏览平台，包括Meta的Muse代理。有用户向The Verge反映，近几周其AI购物助手在eBay上无法正常使用。此事凸显电商平台与AI代理之间围绕流量、数据与交易入口的控制权之争升温，成为智能体购物赛道的最新摩擦点。", source: "The Verge", url: "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping" },
+  { time: "00:14", tag: "ai", tagText: "AI", text: "TechCrunch报道，OpenAI季度营收首次突破100亿美元，较第二季度的67亿美元增长近50%，显示其AI产品商业化与付费需求继续快速扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" },
   { time: "23:29", tag: "ai", tagText: "AI", text: "Meta的AI助手Muse扩展至Apple Watch与Android Wear OS，用户可通过语音通话、短信或听写与助手交互。这标志着Meta将AI代理从手机App推向可穿戴设备，争夺随身AI入口，并与苹果、谷歌在腕上智能助手领域正面竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/" },
   { time: "23:19", tag: "ai", tagText: "AI", text: "Dropbox宣布以3.5亿美元收购Tigris Data，以强化其AI基础设施。该交易预计将支持DBX Agent Cloud的开发，这是一个面向构建AI模型和代理的开发者的新存储平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/" },
   { time: "23:18", tag: "ai", tagText: "AI", text: "投资机构Norwest新设40亿美元AI基金，为其迄今最大规模基金，显示资本继续加码AI赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/" },
@@ -1666,16 +1673,9 @@ const aiBreakingNews = [
   { time: "22:10", tag: "ai", tagText: "AI", text: "亚马逊宣布，将允许用户通过短信与Alexa购物助手互动，直接描述想购买的商品并完成下单；该功能将在未来数周向数百万用户推送。此举显示亚马逊正加快把AI助手嵌入电商交易入口。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/" },
   { time: "22:01", tag: "ai", tagText: "AI", text: "Anthropic确认IPO发行价区间为每股70至78美元，按完全稀释口径最高估值约1.404万亿美元；有望成为史上最大IPO之一，但仍低于此前预期。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/" },
   { time: "22:01", tag: "ai", tagText: "AI", text: "SK电讯与英伟达合作推进韩国主权AI基础设施建设，双方将围绕本地化的AI算力与数据中心能力展开协作。此举反映各国在算力自主与AI供应链安全上的投入持续加码，也进一步巩固英伟达在全球AI基建中的核心地位。", source: "UPI", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMXRNTWwwbTlhMWxJcHhweFhhaFRMdWdUZVhtbkFzYkMxRnVhbWdoenlYNjg0UHU1X19WUldLQ3R0ZlFHTER4NjBsVkplcjk3bklDM1U0aGQtSE40di0zWmdCZ3pXYWhja3FKVVVYSkpCS0wwUXdSYmNoeW56NmZDUGxiTlNXVC1EMnYzUlNJaUxqNW43V0t0aHd1eE9TUF8tRWhIYjFNQl9ZeUtPamdGUDVB0gG3AUFVX3lxTE83N3R5WXRDZVNLUDdWX044WFNTdXBsYnV4dzlBV2JEaUlaUnpEX2ZzRjVHVGNSbk9fRGV0M1N1Y3YtUXd3Ylp1UFlpMUZTS3QwM2ZDOFdZeXJLM3Q2RWF3MVR5T2ZQUDlDblNqY2k1eGxhNGxRa0lNVnpxSFNfa25tcFVtSmp0aDRPRlcxRzg3Nmhpay1Ca01ydk9HQlJVN1AwZ1RvWkQ5ell4S1lWYkNUTDc0X0hzSQ?oc=5" },
-  { time: "21:53", tag: "ai", tagText: "AI", text: "英伟达董事会宣布，联合创始人、总裁兼CEO黄仁勋在曝出两段婚外情后辞职，其中一段涉及疑似中国间谍，另一段涉及英伟达员工。消息令英伟达股价大跌并拖累AI板块，接班人选及美国对华AI芯片竞争的国家安全影响受到关注。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-nvidia-ceo-resigns" },
-  { time: "16:00", tag: "ai", tagText: "AI", text: "《财富》独家报道，德国初创公司SE3获得3000万美元A轮融资，该公司为军用无人机构建“空间智能”技术。此轮融资显示，国防科技与AI自主系统赛道持续吸引资本关注。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdmdrRTI4bHcwQzZST29FQjdhbDJSMTB4QUtOcC01Rk0zYTNscTJVMlhQbDcyV3NqMVlsN3BwTmZQZzlQRlZ2UUZPWFVPbTc1WVExZ2wySkltd1BDZU1XMFowZW5kYkdkam5Zem1EM29IS2xRQ2pvRkI2ZG53VWFZUWpRWTRuVERoQ0RWZjh1MTc0SUJBYnU2eWZDLUxGTTVoRGUzcTFOLVJyZEZaZk9MZFBMS0RTRG5pcnZaMUE0WGFqNEhRUndsdC1pQ3d6QjU5MlVhcWhMZGRHd002N3d6dTR3?oc=5" },
-  { time: "15:21", tag: "ai", tagText: "AI", text: "《经济时报》报道，印度AI热潮正呈现「支票更大、赢家更少」的格局：单笔融资规模持续放大，但资金高度集中于少数头部AI企业，中小初创公司融资难度明显上升。这一分化显示印度AI投资正从广撒网转向重注头部玩家，行业整合与淘汰或将加速。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSGJhZkN0NTJNaVliVmt1YTd6RzhPTlRCTGl1MXo3dmlQN3JLRDRMNEVPU0FqQUlrdFBMMmtabFhYNDl5SnhtUXRMTG1EQTEzVllrUWR5c2RHenpaRTZtQXQ3VDNLMWdxVVkybko4c1NqNlVtWmQ1VjZ3OEZXaUFJeFdCbVdtQ2JBY3NVMFE3RFd3VGlxd242U3pDcDZRdnh5NGl5Y1lSQkJjZUFacmkwUDdYd3pRUdIBuwFBVV95cUxQRUl5SUlHcmZVLTljWTlGbWpXaHVrNkFLWXBES3dXdHlwSWZyREd5QTUzeWwxdTZFQXdScHQzaEo5YnFoZGx0RTVSSHdyd0xKWWZhcDdHZGd2b1lMaWVLX053XzVrWnhheldtanNJRGVyQlVUTWZHYllhZWRDbWtlT1pnRGhRTzl4RVlVVVZkSEV0TUFIRWtsLUVDWW8wMXhTbGNmUFgyVkIyQi1YXzJtRmRkRDBfXzFsTUg4?oc=5" },
-  { time: "12:50", tag: "geo", tagText: "地缘", text: "韩联社报道，英伟达CEO黄仁勋相关风波令韩国与英伟达不断深化的AI合作面临不确定性。韩国近期在主权AI、数据中心与先进算力供应上高度依赖英伟达，并与SK电讯等企业推进本地化AI基础设施；管理层的治理争议可能拖慢双方合作节奏，并促使韩方重新评估算力供应链的自主性与风险敞口。", source: "Yonhap News Agency", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBSTFZ0Wlc5SUQxUnVjeWQwMWRMdUFGTERpdFpieVhlRHpNTUZUcXZEM3B0SmRMUGwzcmtEZ2l3aDVFdVNvNGJaWTEzNkYwOW93czkwLUNQVmlUQQ?oc=5" },
-  { time: "12:45", tag: "ai", tagText: "AI", text: "《朝鲜日报》报道，英伟达的订单削减可能令竞争对手受益，反映AI芯片供应链与竞争格局可能因需求或库存调整而发生变化。", source: "Chosun Ilbo", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbXFpMnNDWTRIRzB4RHo1S3hRd2Z4V2NyVFhral9mdzhMVWhwUWIzTUFFb3hZX0lQc3lsbXNpM01MbTJUVGJnUElRSDZtaVVxbmdhQ3JKNGltbEV4UmFtQ0xFazlwZm1PYVpnWmpyVU1kQmdnZnpKb3RsMkFfYmpEbnEyd1pzUjZH?oc=5" },
-  { time: "07:47", tag: "geo", tagText: "地缘", text: "美国总统特朗普在白宫记者会上被追问是否事先知晓英伟达CEO黄仁勋与一名疑似中国间谍的关系，并对此作出回应。该事件正把一家AI芯片巨头的公司治理问题推向美国政治层面，并令英伟达游说放宽对华芯片出口限制的努力更趋复杂。", source: "The Verge", url: "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference" },
-  { time: "00:20", tag: "tech", tagText: "科技", text: "eBay似乎已封堵第三方AI代理抓取与浏览平台，包括Meta的Muse代理。有用户向The Verge反映，近几周其AI购物助手在eBay上无法正常使用。此事凸显电商平台与AI代理之间围绕流量、数据与交易入口的控制权之争升温，成为智能体购物赛道的最新摩擦点。", source: "The Verge", url: "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping" },
-  { time: "00:14", tag: "ai", tagText: "AI", text: "TechCrunch报道，OpenAI季度营收首次突破100亿美元，较第二季度的67亿美元增长近50%，显示其AI产品商业化与付费需求继续快速扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" },
+  { time: "22:00", tag: "ai", tagText: "AI", text: "据《华尔街日报》独家报道，AI初创公司LangChain在新一轮融资中估值翻倍以上，达到30亿美元，显示资本市场对AI应用与代理开发工具赛道的持续追捧。", source: "WSJ", url: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTTExQ3Y3Q3JBV2Z1WGtJbmpzZWdJbTV1UjlDZ21BenEzUWhOTW1pc2doRlhDRktWZFNDT1lhWjROcE9UZUQzQmQxRFBYZW9kYTBockNoUEtzWFhVbDBTb2pZNXFpSnAtU2tMRVdySzA5Y2d4bmY1WFhvQV9Fd3dTbHVmTFhNNXVxcEN2UXFrenhpUy1jdVJ0UHVUUTRpS2djV3lZZ185MXB3QQ?oc=5" },
 ];
-const aiBreakingDate = "2026年11月12日 23:36 CST";
+const aiBreakingDate = "2026年11月13日 02:08 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
