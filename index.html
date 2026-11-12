@@ -1616,27 +1616,19 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 37.94,
+  score: 36.97,
   rating: "fear",
-  timestamp: "2026-11-11T18:32:05+00:00",
+  timestamp: "2026-11-11T23:59:59+00:00",
   previousClose: 33.46,
   previous1Week: 34.17,
   previous1Month: 43.51,
   previous1Year: 30.46,
-  date: "2026年11月12日 02:36 CST"
+  date: "2026年11月12日 09:28 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
-  { time: "23:54", tag: "macro", tagText: "宏观", text: "美股周一大幅反弹，道指上涨约900点，油价回落提振风险偏好；科技股除英伟达外普遍走强，市场在经历上周AI相关抛售后情绪有所修复。", source: "CNBC", url: "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html" },
-  { time: "23:44", tag: "geo", tagText: "地缘", text: "特朗普公开质疑中期选举结果并重提投票机阴谋论，或加剧选举合法性争议与美国政治不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/11/09/trump-election-results-democrats.html" },
-  { time: "23:35", tag: "macro", tagText: "宏观", text: "美国首次购房者中全现金支付比例创纪录，达到约10%。在住房可负担性仍紧张之际，越来越多买家依靠家庭赠与、继承、股票收益或出售旧房所得筹集现金，反映高利率下融资购房门槛上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-record-10-of-first-time-home-buyers-now-pay-in-cash-heres-where-they-get-the-money-70f2e656?mod=mw_rss_topstories" },
-  { time: "23:23", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦第三季度加码回购，回购规模超96亿美元，较此前水平翻倍以上；但整体利润与经营利润双双下滑。新任CEO格雷格·阿贝尔同期为股票净卖出方，公司股价表现仍跑赢标普500。市场关注其现金配置策略与接班后的资本运作方向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html" },
-  { time: "23:13", tag: "tech", tagText: "科技", text: "台积电ADR盘中一度跳涨约6%，此前有报道称其可能为英伟达代工内存芯片。若消息兑现，将意味着台积电切入HBM/存储供应链，改变目前由少数存储厂商主导的格局，并强化其在AI算力产业链中的核心地位。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNLThISkFpaFQ2b3BIQVVMTXFDcWdTX3d4ZnFzQVFEc2U3WGRNZUp1dlkwZmc5V29vQUVGcXZCZ3Y5X2RTRGltWC0wdkNia1VnM2pCZFlLdXFRV1UyM3lWZ2tDWUZ2Y21Bc1hrcktOUGNmRFlNSFlWNmRNVGdXekxNNkJueHdkOWtkU29yeHBERkV4RGc0azJONTJzTERxT0JOaXJValBKb1RQSzg?oc=5" },
-  { time: "13:15", tag: "geo", tagText: "地缘", text: "美国财长贝森特表示，美中在人工智能领域合作与竞争时应“不抱幻想”，并称双方需通过沟通渠道管控严重事件风险。此前习近平9月访美期间，两国同意启动AI对话，以降低误判与冲突升级可能。", source: "CNBC", url: "https://www.cnbc.com/2026/11/11/trump-xi-summit-ai-nvidia-.html" },
-  { time: "13:00", tag: "geo", tagText: "地缘", text: "法国要求德国澄清在何种情况下对俄罗斯实施“纵深精确打击”，以避免引发核报复。此举凸显欧洲在向乌克兰提供远程导弹问题上的分歧，也反映对冲突升级风险的担忧。", source: "FT", url: "https://www.ft.com/content/7f61b561-bcbd-4900-afd7-553ff76d6217?syn-25a6b1a6=1" },
-  { time: "13:00", tag: "macro", tagText: "宏观", text: "伊朗战争引发的全球债券抛售促使投资者重新审视欧元区债务风险，法国和比利时因财政与债务压力成为债市新分化中的承压方，融资成本上升可能加大两国财政整顿难度。", source: "FT", url: "https://www.ft.com/content/5263808c-e8ac-44b8-baa3-af7e8c788684?syn-25a6b1a6=1" },
   { time: "06:13", tag: "ai", tagText: "AI", text: "AI云服务商CoreWeave第三季度营收超预期并上调业绩指引，股价此前因市场担忧其债务与信用风险而大幅下挫，本次财报缓解了外界对AI算力需求放缓的担忧，也成为新云（neocloud）板块的重要风向标。", source: "CNBC", url: "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html" },
   { time: "06:00", tag: "crypto", tagText: "加密", text: "比特币跌破74,000美元，火热通胀数据令风险资产遭遇抛售，加密市场普跌；此前市场已因流动性收缩与机构需求降温承压，投资者关注若通胀迫使美联储重启加息，加密资产将如何应对衰退式环境。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWFB0ZGQxQllEa3BQWlNSMFlLVVVWV3M5enBmY3lVY3p1bHN4RzJPX0FWX0VfZUd1QnRpOFJvSFZXTXN1dk9KNXBNbzVXZW5mOUcySUtSSzRuMDJFQmlIajItYTdlWW1FUGw3aHVOUi16a1VrLXFVM0FqZUpPMW10aDViVmZEZk5tcFlNc2REdldBckRtc2gyWlZHbkpSalVPYVNrbkdMVi1DSTFzVzhUYW5NaThnVjNhTF9TR19rbzE4aXg2UnMxVkF3Zzd6clJzMjEzQUthS25DdVFQaVM2UA?oc=5" },
   { time: "05:59", tag: "macro", tagText: "宏观", text: "特朗普要求司法部调查所谓民主党人对共和党人的威胁，并点名密歇根州民主党参议员斯洛特金。此举被视为中期选举后政治对抗升级，可能加剧国会与白宫在司法独立、调查权上的冲突。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-doj-democrats-alleged-threats-slotkin.html" },
@@ -1649,11 +1641,20 @@ const breakingNews = [
   { time: "04:05", tag: "tech", tagText: "科技", text: "美国商务部推迟将Megaspeed列入贸易黑名单（实体清单）；这家与涉嫌中国间谍、并与黄仁勋有私人关系的女高管相关的公司暂未被制裁。与此同时，分析师称黄仁勋间谍丑闻令国会收紧对华芯片出口管制的立法势头增强，英伟达或面临更严出口规则。", source: "Financial Times", url: "https://www.ft.com/content/afb6c960-a910-4d67-9588-73ba3bea5b06?syn-25a6b1a6=1" },
   { time: "03:47", tag: "ai", tagText: "AI", text: "Anthropic正式启动IPO，估值超过1万亿美元，拟募资至多630亿美元，预计下周完成定价，将成为首家登陆公开市场的纯AI公司。永续合约交易员押注其上市首日上涨，但在科技股抛售与AI扩张遭选民反弹的背景下，这将是对华尔街AI热情的关键考验。", source: "MarketWatch", url: "https://www.marketwatch.com/story/anthropic-reportedly-retracts-ipo-terms-sent-to-banks-by-mistake-exposing-jitters-over-ai-investments-6116578d?mod=mw_rss_topstories" },
   { time: "03:24", tag: "ai", tagText: "AI", text: "英伟达聘请上月刚加入Wachtell Lipton的前联邦检察官Joon Kim（曾任纽约南区联邦检察官办公室代理主管）牵头独立调查，审查CEO黄仁勋是否是一起中国间谍行动的目标。该调查将全球市值最高的芯片公司进一步卷入国家安全审查。", source: "Financial Times", url: "https://www.ft.com/content/8d59bf02-960e-4eb1-b5dc-55397e31cea5?syn-25a6b1a6=1" },
+  { time: "23:54", tag: "macro", tagText: "宏观", text: "美股周一大幅反弹，道指上涨约900点，油价回落提振风险偏好；科技股除英伟达外普遍走强，市场在经历上周AI相关抛售后情绪有所修复。", source: "CNBC", url: "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html" },
+  { time: "23:44", tag: "geo", tagText: "地缘", text: "特朗普公开质疑中期选举结果并重提投票机阴谋论，或加剧选举合法性争议与美国政治不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/11/09/trump-election-results-democrats.html" },
+  { time: "23:35", tag: "macro", tagText: "宏观", text: "美国首次购房者中全现金支付比例创纪录，达到约10%。在住房可负担性仍紧张之际，越来越多买家依靠家庭赠与、继承、股票收益或出售旧房所得筹集现金，反映高利率下融资购房门槛上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-record-10-of-first-time-home-buyers-now-pay-in-cash-heres-where-they-get-the-money-70f2e656?mod=mw_rss_topstories" },
+  { time: "23:23", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦第三季度加码回购，回购规模超96亿美元，较此前水平翻倍以上；但整体利润与经营利润双双下滑。新任CEO格雷格·阿贝尔同期为股票净卖出方，公司股价表现仍跑赢标普500。市场关注其现金配置策略与接班后的资本运作方向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html" },
+  { time: "23:13", tag: "tech", tagText: "科技", text: "台积电ADR盘中一度跳涨约6%，此前有报道称其可能为英伟达代工内存芯片。若消息兑现，将意味着台积电切入HBM/存储供应链，改变目前由少数存储厂商主导的格局，并强化其在AI算力产业链中的核心地位。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNLThISkFpaFQ2b3BIQVVMTXFDcWdTX3d4ZnFzQVFEc2U3WGRNZUp1dlkwZmc5V29vQUVGcXZCZ3Y5X2RTRGltWC0wdkNia1VnM2pCZFlLdXFRV1UyM3lWZ2tDWUZ2Y21Bc1hrcktOUGNmRFlNSFlWNmRNVGdXekxNNkJueHdkOWtkU29yeHBERkV4RGc0azJONTJzTERxT0JOaXJValBKb1RQSzg?oc=5" },
+  { time: "13:15", tag: "geo", tagText: "地缘", text: "美国财长贝森特表示，美中在人工智能领域合作与竞争时应“不抱幻想”，并称双方需通过沟通渠道管控严重事件风险。此前习近平9月访美期间，两国同意启动AI对话，以降低误判与冲突升级可能。", source: "CNBC", url: "https://www.cnbc.com/2026/11/11/trump-xi-summit-ai-nvidia-.html" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "法国要求德国澄清在何种情况下对俄罗斯实施“纵深精确打击”，以避免引发核报复。此举凸显欧洲在向乌克兰提供远程导弹问题上的分歧，也反映对冲突升级风险的担忧。", source: "FT", url: "https://www.ft.com/content/7f61b561-bcbd-4900-afd7-553ff76d6217?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "伊朗战争引发的全球债券抛售促使投资者重新审视欧元区债务风险，法国和比利时因财政与债务压力成为债市新分化中的承压方，融资成本上升可能加大两国财政整顿难度。", source: "FT", url: "https://www.ft.com/content/5263808c-e8ac-44b8-baa3-af7e8c788684?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月12日 02:36 CST";
+const breakingDate = "2026年11月12日 09:28 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:47", tag: "geo", tagText: "地缘", text: "美国总统特朗普在白宫记者会上被追问是否事先知晓英伟达CEO黄仁勋与一名疑似中国间谍的关系，并对此作出回应。该事件正把一家AI芯片巨头的公司治理问题推向美国政治层面，并令英伟达游说放宽对华芯片出口限制的努力更趋复杂。", source: "The Verge", url: "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference" },
   { time: "00:20", tag: "tech", tagText: "科技", text: "eBay似乎已封堵第三方AI代理抓取与浏览平台，包括Meta的Muse代理。有用户向The Verge反映，近几周其AI购物助手在eBay上无法正常使用。此事凸显电商平台与AI代理之间围绕流量、数据与交易入口的控制权之争升温，成为智能体购物赛道的最新摩擦点。", source: "The Verge", url: "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping" },
   { time: "00:14", tag: "ai", tagText: "AI", text: "TechCrunch报道，OpenAI季度营收首次突破100亿美元，较第二季度的67亿美元增长近50%，显示其AI产品商业化与付费需求继续快速扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" },
   { time: "00:00", tag: "ai", tagText: "AI", text: "谷歌正式向公众开放最新AI模型Gemini 4 Carbon，此前两周仅向少数「网络安全防御者」提供。谷歌称Carbon是其迄今最强模型，并首次加入智能体「蜂群」（swarm）功能，可让多个AI代理协同执行任务，标志着大模型竞争从单体能力转向多代理协作。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "20:56", tag: "ai", tagText: "AI", text: "AI销售初创公司Rox估值达13亿美元，正押注以AI代理切入企业销售软件市场，挑战Salesforce等传统巨头。", source: "Fortune", url: "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMDlCOGJYcTUyVnl0aUplMHdDR2doX2s0VlRBei1jT0RtZWx6ZF9jSTQ5OGtrb1R3RGJDa3poeVdLenIyUFRYWjJJRDBYTHZFbzduQjJYdTBPbEN2UVgzb2s1THh2Y1p5aTB3MkpFWnpSQ284Smh0TnRibUZYWWhBcDd4LXBzN1RLeHNN?oc=5" },
   { time: "15:21", tag: "ai", tagText: "AI", text: "《经济时报》报道，印度AI热潮正呈现「支票更大、赢家更少」的格局：单笔融资规模持续放大，但资金高度集中于少数头部AI企业，中小初创公司融资难度明显上升。这一分化显示印度AI投资正从广撒网转向重注头部玩家，行业整合与淘汰或将加速。", source: "The Economic Times", url: "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSGJhZkN0NTJNaVliVmt1YTd6RzhPTlRCTGl1MXo3dmlQN3JLRDRMNEVPU0FqQUlrdFBMMmtabFhYNDl5SnhtUXRMTG1EQTEzVllrUWR5c2RHenpaRTZtQXQ3VDNLMWdxVVkybko4c1NqNlVtWmQ1VjZ3OEZXaUFJeFdCbVdtQ2JBY3NVMFE3RFd3VGlxd242U3pDcDZRdnh5NGl5Y1lSQkJjZUFacmkwUDdYd3pRUdIBuwFBVV95cUxQRUl5SUlHcmZVLTljWTlGbWpXaHVrNkFLWXBES3dXdHlwSWZyREd5QTUzeWwxdTZFQXdScHQzaEo5YnFoZGx0RTVSSHdyd0xKWWZhcDdHZGd2b1lMaWVLX053XzVrWnhheldtanNJRGVyQlVUTWZHYllhZWRDbWtlT1pnRGhRTzl4RVlVVVZkSEV0TUFIRWtsLUVDWW8wMXhTbGNmUFgyVkIyQi1YXzJtRmRkRDBfXzFsTUg4?oc=5" },
   { time: "12:50", tag: "geo", tagText: "地缘", text: "韩联社报道，英伟达CEO黄仁勋相关风波令韩国与英伟达不断深化的AI合作面临不确定性。韩国近期在主权AI、数据中心与先进算力供应上高度依赖英伟达，并与SK电讯等企业推进本地化AI基础设施；管理层的治理争议可能拖慢双方合作节奏，并促使韩方重新评估算力供应链的自主性与风险敞口。", source: "Yonhap News Agency", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBSTFZ0Wlc5SUQxUnVjeWQwMWRMdUFGTERpdFpieVhlRHpNTUZUcXZEM3B0SmRMUGwzcmtEZ2l3aDVFdVNvNGJaWTEzNkYwOW93czkwLUNQVmlUQQ?oc=5" },
-  { time: "07:47", tag: "geo", tagText: "地缘", text: "美国总统特朗普在白宫记者会上被追问是否事先知晓英伟达CEO黄仁勋与一名疑似中国间谍的关系，并对此作出回应。该事件正把一家AI芯片巨头的公司治理问题推向美国政治层面，并令英伟达游说放宽对华芯片出口限制的努力更趋复杂。", source: "The Verge", url: "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference" },
 ];
-const aiBreakingDate = "2026年11月12日 02:36 CST";
+const aiBreakingDate = "2026年11月12日 09:28 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
