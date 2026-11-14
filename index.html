@@ -1618,17 +1618,22 @@
 const fearGreedData = {
   score: 38.6,
   rating: "fear",
-  timestamp: "2026-11-13T22:13:23+00:00",
+  timestamp: "2026-11-13T23:59:56+00:00",
   previousClose: 39.83,
   previous1Week: 24.35,
   previous1Month: 45.6,
   previous1Year: 24.54,
-  date: "2026年11月14日 06:30 CST"
+  date: "2026年11月14日 11:03 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "08:06", tag: "macro", tagText: "宏观", text: "美股期货在周四大跌后回升，标普500与纳指盘中自低位反弹、收复大部分早盘跌幅；英伟达因黄仁勋辞职一度重挫，但投资者逢低买入并押注AI长期前景，带动股价自低位回升，同期油价跳涨。", source: "CNBC", url: "https://www.cnbc.com/2026/11/12/stock-market-today-live-updates.html" },
+  { time: "08:00", tag: "geo", tagText: "地缘", text: "美国特使库什纳表示，没有欧洲参与，美国无法就结束乌克兰战争达成协议。此番言论正值欧洲领导人拒绝俄罗斯提出的重塑欧洲安全架构的要求，凸显美欧在俄乌和谈路径上的协调压力。", source: "Financial Times", url: "https://www.ft.com/content/8d28a5be-af56-421f-a33d-779a0fcc7ad4?syn-25a6b1a6=1" },
+  { time: "07:35", tag: "tech", tagText: "科技", text: "美国国会议员加大对商务部长卢特尼克的施压，要求其解释为何允许向一家与所谓中国间谍有关联的公司出售芯片，英伟达丑闻持续扩大。此举可能将出口管制与国家安全审查推向政治风口浪尖，并加剧美方对华芯片政策争议。", source: "Financial Times", url: "https://www.ft.com/content/190e5eea-7461-4b26-8b69-17a3288e31d4?syn-25a6b1a6=1" },
+  { time: "06:48", tag: "ai", tagText: "AI", text: "AI芯片公司Cerebras季度营收超预期，并宣布与微软达成新合作协议，股价大涨17%。此前公司已与亚马逊、甲骨文等主要云厂商合作，新协议进一步巩固其在AI算力供应链中的地位。", source: "CNBC", url: "https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html" },
+  { time: "06:45", tag: "macro", tagText: "宏观", text: "预测市场平台Kalshi终止与唐纳德·特朗普之子小特朗普的顾问合作，此前民主党在中期选举中大胜。该平台正面临日益升温的政治审查，同时竞争对手Polymarket获得大额投资，行业格局生变。", source: "Financial Times", url: "https://www.ft.com/content/1352ac24-bdd6-4093-9ebd-7b27b6fd29d3?syn-25a6b1a6=1" },
   { time: "06:24", tag: "tech", tagText: "科技", text: "微软发生大范围服务中断，Outlook、Teams及Microsoft 365等多项服务受到影响。此次故障波及大量企业用户，再度引发对大型云服务商可靠性的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html" },
   { time: "06:13", tag: "ai", tagText: "AI", text: "AI云服务商CoreWeave第三季度营收超预期并上调业绩指引，股价此前因市场担忧其债务与信用风险而大幅下挫，本次财报缓解了外界对AI算力需求放缓的担忧，也成为新云（neocloud）板块的重要风向标。", source: "CNBC", url: "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html" },
   { time: "06:00", tag: "crypto", tagText: "加密", text: "比特币跌破74,000美元，火热通胀数据令风险资产遭遇抛售，加密市场普跌；此前市场已因流动性收缩与机构需求降温承压，投资者关注若通胀迫使美联储重启加息，加密资产将如何应对衰退式环境。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWFB0ZGQxQllEa3BQWlNSMFlLVVVWV3M5enBmY3lVY3p1bHN4RzJPX0FWX0VfZUd1QnRpOFJvSFZXTXN1dk9KNXBNbzVXZW5mOUcySUtSSzRuMDJFQmlIajItYTdlWW1FUGw3aHVOUi16a1VrLXFVM0FqZUpPMW10aDViVmZEZk5tcFlNc2REdldBckRtc2gyWlZHbkpSalVPYVNrbkdMVi1DSTFzVzhUYW5NaThnVjNhTF9TR19rbzE4aXg2UnMxVkF3Zzd6clJzMjEzQUthS25DdVFQaVM2UA?oc=5" },
@@ -1644,16 +1649,12 @@ const breakingNews = [
   { time: "23:23", tag: "macro", tagText: "宏观", text: "伯克希尔·哈撒韦第三季度加码回购，回购规模超96亿美元，较此前水平翻倍以上；但整体利润与经营利润双双下滑。新任CEO格雷格·阿贝尔同期为股票净卖出方，公司股价表现仍跑赢标普500。市场关注其现金配置策略与接班后的资本运作方向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html" },
   { time: "23:13", tag: "tech", tagText: "科技", text: "台积电ADR盘中一度跳涨约6%，此前有报道称其可能为英伟达代工内存芯片。若消息兑现，将意味着台积电切入HBM/存储供应链，改变目前由少数存储厂商主导的格局，并强化其在AI算力产业链中的核心地位。", source: "24/7 Wall St.", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNLThISkFpaFQ2b3BIQVVMTXFDcWdTX3d4ZnFzQVFEc2U3WGRNZUp1dlkwZmc5V29vQUVGcXZCZ3Y5X2RTRGltWC0wdkNia1VnM2pCZFlLdXFRV1UyM3lWZ2tDWUZ2Y21Bc1hrcktOUGNmRFlNSFlWNmRNVGdXekxNNkJueHdkOWtkU29yeHBERkV4RGc0azJONTJzTERxT0JOaXJValBKb1RQSzg?oc=5" },
   { time: "23:01", tag: "macro", tagText: "宏观", text: "美国10月房屋销售跌至16年低点，为大衰退以来最低，购房者因7%按揭利率纷纷离场。高利率持续压制住房可负担性与成交量，凸显美国楼市降温。", source: "MarketWatch", url: "https://www.marketwatch.com/story/home-sales-plummet-to-lowest-level-since-the-great-recession-as-buyers-flee-the-market-624e6270?mod=mw_rss_topstories" },
-  { time: "08:06", tag: "macro", tagText: "宏观", text: "美股期货在周四大跌后回升，标普500与纳指盘中自低位反弹、收复大部分早盘跌幅；英伟达因黄仁勋辞职一度重挫，但投资者逢低买入并押注AI长期前景，带动股价自低位回升，同期油价跳涨。", source: "CNBC", url: "https://www.cnbc.com/2026/11/12/stock-market-today-live-updates.html" },
-  { time: "08:00", tag: "geo", tagText: "地缘", text: "美国特使库什纳表示，没有欧洲参与，美国无法就结束乌克兰战争达成协议。此番言论正值欧洲领导人拒绝俄罗斯提出的重塑欧洲安全架构的要求，凸显美欧在俄乌和谈路径上的协调压力。", source: "Financial Times", url: "https://www.ft.com/content/8d28a5be-af56-421f-a33d-779a0fcc7ad4?syn-25a6b1a6=1" },
-  { time: "07:35", tag: "tech", tagText: "科技", text: "美国国会议员加大对商务部长卢特尼克的施压，要求其解释为何允许向一家与所谓中国间谍有关联的公司出售芯片，英伟达丑闻持续扩大。此举可能将出口管制与国家安全审查推向政治风口浪尖，并加剧美方对华芯片政策争议。", source: "Financial Times", url: "https://www.ft.com/content/190e5eea-7461-4b26-8b69-17a3288e31d4?syn-25a6b1a6=1" },
-  { time: "06:48", tag: "ai", tagText: "AI", text: "AI芯片公司Cerebras季度营收超预期，并宣布与微软达成新合作协议，股价大涨17%。此前公司已与亚马逊、甲骨文等主要云厂商合作，新协议进一步巩固其在AI算力供应链中的地位。", source: "CNBC", url: "https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html" },
-  { time: "06:45", tag: "macro", tagText: "宏观", text: "预测市场平台Kalshi终止与唐纳德·特朗普之子小特朗普的顾问合作，此前民主党在中期选举中大胜。该平台正面临日益升温的政治审查，同时竞争对手Polymarket获得大额投资，行业格局生变。", source: "Financial Times", url: "https://www.ft.com/content/1352ac24-bdd6-4093-9ebd-7b27b6fd29d3?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月14日 06:30 CST";
+const breakingDate = "2026年11月14日 11:03 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "07:49", tag: "ai", tagText: "AI", text: "据 The Verge 援引路透社报道，亚马逊计划构建覆盖全球在线购物商品的数据索引/产品图谱，范围包括亚马逊并不销售的商品，并拟通过自家网站提供检索。该计划将支撑AI搜索与购物入口，可能重塑商品数据、电商流量与广告竞争格局。", source: "The Verge", url: "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search" },
   { time: "06:22", tag: "tech", tagText: "科技", text: "Meta旗下AI助手Muse新增付费功能，可代替用户向美国企业拨打外呼电话，商业化路径从免费助手向付费代理服务延伸，显示AI语音代理正加速进入实际商业场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/" },
   { time: "05:55", tag: "ai", tagText: "AI", text: "谷歌发布新一代Gemini 4 Hydrogen模型，并将其接入搜索的AI Mode。谷歌称新模型在理解复杂问题方面显著提升，可更好处理多部分问题、难以辨识的拼写错误以及高度具体的请求，同时提供更相关的链接与更丰富的可视化回答。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen" },
   { time: "05:27", tag: "ai", tagText: "AI", text: "AI云服务商Nebius计划投入400亿美元扩建AI基础设施，资金将通过客户预付款与贷款筹措，被视为“新云（neocloud）”商业模式的一次压力测试。与此同时，其微软数据中心项目出现延期，令外界质疑其融资模式的可持续性。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "23:29", tag: "ai", tagText: "AI", text: "Meta的AI助手Muse扩展至Apple Watch与Android Wear OS，用户可通过语音通话、短信或听写与助手交互。这标志着Meta将AI代理从手机App推向可穿戴设备，争夺随身AI入口，并与苹果、谷歌在腕上智能助手领域正面竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/" },
   { time: "23:19", tag: "ai", tagText: "AI", text: "Dropbox宣布以3.5亿美元收购Tigris Data，以强化其AI基础设施。该交易预计将支持DBX Agent Cloud的开发，这是一个面向构建AI模型和代理的开发者的新存储平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/" },
   { time: "23:18", tag: "ai", tagText: "AI", text: "投资机构Norwest新设40亿美元AI基金，为其迄今最大规模基金，显示资本继续加码AI赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/" },
-  { time: "23:02", tag: "tech", tagText: "科技", text: "Fireworks AI遭网络攻击，黑客得以访问Notion客户的聊天记录；这是该公司两个月内第二起数据泄露事件，凸显AI平台供应链安全风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/" },
 ];
-const aiBreakingDate = "2026年11月14日 06:30 CST";
+const aiBreakingDate = "2026年11月14日 11:03 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
