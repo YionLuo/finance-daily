@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 24.35,
   previous1Month: 45.6,
   previous1Year: 24.54,
-  date: "2026年11月14日 18:10 CST"
+  date: "2026年11月14日 23:32 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "22:02", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦股价创历史新高，第四季度以来累计上涨19%，并连续四个交易日刷新收盘纪录。市场资金持续流向防御性与价值型资产，凸显在宏观不确定性上升背景下的配置偏好。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/berkshire-breaks-out-to-record-high-with-fourth-quarter-rally-reaching-19percent.html" },
+  { time: "21:00", tag: "crypto", tagText: "加密", text: "特朗普媒体集团面临约10亿美元债务压力。随着比特币押注失色、股价与加密资产价格下跌，Truth Social母公司可能被迫出售资产或承担高成本新债，其财务状况和偿债能力受到关注。", source: "FT", url: "https://www.ft.com/content/ada459c4-5f43-4a4a-bc6c-90de8897a4f0?syn-25a6b1a6=1" },
+  { time: "19:41", tag: "geo", tagText: "地缘", text: "泽连斯基表示，美国提出一项将北约成员资格与顿巴斯撤军安排挂钩的方案，以探索结束俄乌战争的条件。他称将把该提议提交乌克兰民众审议，这凸显美欧在俄乌和谈路径上的分歧与协调压力。", source: "FT", url: "https://www.ft.com/content/24319e2d-1a34-4a72-8c91-008d974234f9?syn-25a6b1a6=1" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "据FT报道，英伟达对高管行为引发的损害赔偿缺乏完整保险覆盖，可能面临诉讼风险。此前CEO黄仁勋因与一名被中国招募的女高管存在关系而陷入国家安全审查，公司法律与财务风险进一步上升。", source: "FT", url: "https://www.ft.com/content/4aba8386-35cc-463b-a79c-a0c85c362c89?syn-25a6b1a6=1" },
   { time: "18:04", tag: "macro", tagText: "宏观", text: "美国联邦航空管理局（FAA）解除地面停飞令后，美国航班逐步恢复，但延误和取消仍在增加，航空旅行中断持续。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html" },
   { time: "16:16", tag: "geo", tagText: "地缘", text: "中美在习特会前讨论关税与农产品贸易。北京多次敦促华盛顿落实600亿美元降税协议，并称这是扩大采购美国农产品的先决条件。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/china-us-tariffs-xi-trump-meeting.html" },
   { time: "14:52", tag: "crypto", tagText: "加密", text: "比特币跌破6.7万美元，加密市场抛售加深。报道称Anthropic IPO热潮抽走市场流动性，加剧风险资产承压。", source: "Investing.com", url: "https://news.google.com/rss/articles/CBMizgFBVV95cUxOVkZIQTA4ZnRvTHpyc1RTMUp3RWw2aDNBNXNXdnJRRmlqMmxIekNVWmpPN2pOallua2JpNDZQcFZ6QlZKbWlMVjdFMXJIblowclhFdFRBMno3Wld0RUFuT1FhMDhCQ3l0SmF1OV9ZUTdVdWozY0pyYnFLdmNGSWY0WGVCQjRndHlXdXJhb0txcWN6QmV6V0gyUVZxd1Eyb0JqaWNqS2RkdFV5MmNwZEtQR0hEOU5CMzFZTnRHNDh2MVF3SlVQejQzVlpnQzdNZw?oc=5" },
@@ -1645,15 +1649,14 @@ const breakingNews = [
   { time: "05:41", tag: "tech", tagText: "科技", text: "据FT报道，美国情报界认为英伟达CEO黄仁勋与一名被中国招募、负责搜集美国公司信息的女高管存在恋爱关系。此事可能将全球最有价值的芯片公司卷入国家安全审查，并加剧美中科技与出口管制紧张。", source: "Financial Times", url: "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790?syn-25a6b1a6=1" },
   { time: "05:38", tag: "geo", tagText: "地缘", text: "一名美国高级军官在英国因涉嫌为俄罗斯从事间谍活动被捕，英国反恐警察主导调查，FBI与美国军方参与。案件凸显俄乌冲突背景下西方军事系统内部渗透风险，或推动美英进一步收紧涉密人员审查。", source: "Financial Times", url: "https://www.ft.com/content/94aa4846-58c6-4c17-b25a-095f122b4809?syn-25a6b1a6=1" },
   { time: "05:29", tag: "crypto", tagText: "加密", text: "比特币在Coinbase上连续61天相对其他交易所折价交易，显示美国买盘持续弱于离岸市场。该折价若延续，可能反映美国机构与散户需求降温，并影响年末加密市场流动性。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTHBGVWdLRTdGVGJfX1FZa1g5UFJOa1ZPQzg5Wk9JR0o0WU1EcUpUVnZzQ2pBOUp0YzRDUWtSb2NFbWl5TktfdEN3S3VyQTd2WjlldGhXSWM3VTh4ZHprdjNzNkFJZ013eGdjQ3phbFRJR095QWRNSUVtT2phZU1veVdEMGxwVjdWTmd4YXdmQ0NWQmZsTFNuN1NJMFp5enp6UUE?oc=5" },
-  { time: "05:20", tag: "tech", tagText: "科技", text: "思科季度业绩超预期，并称本财年AI基础设施收入将翻倍。公司正试图在错过AI热潮早期后成为更大的参与者，财报提振了市场对其AI转型的信心。", source: "CNBC", url: "https://www.cnbc.com/2026/11/12/cisco-csco-q1-2027-earnings.html" },
-  { time: "05:06", tag: "macro", tagText: "宏观", text: "美国CPI数据超预期，10年期美债收益率再度逼近5%关口，美股承压收低。市场重新押注美联储可能进一步加息，一位美联储官员的讲话亦强化紧缩预期；有经济学家警告，过度紧缩正迅速成为2027年股市的最大风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html" },
-  { time: "04:39", tag: "macro", tagText: "宏观", text: "特朗普向UFC总裁兼CEO达纳·怀特提供白宫新闻秘书一职。怀特目前仍掌管UFC母公司TKO，若接受将意味着一位体育娱乐业高管直接进入白宫核心传播岗位，也延续了特朗普第二任期从体制外延揽关键人选的用人风格。", source: "CNBC", url: "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html" },
-  { time: "23:35", tag: "macro", tagText: "宏观", text: "美国首次购房者中全现金支付比例创纪录，达到约10%。在住房可负担性仍紧张之际，越来越多买家依靠家庭赠与、继承、股票收益或出售旧房所得筹集现金，反映高利率下融资购房门槛上升。", source: "MarketWatch", url: "https://www.marketwatch.com/story/a-record-10-of-first-time-home-buyers-now-pay-in-cash-heres-where-they-get-the-money-70f2e656?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年11月14日 18:10 CST";
+const breakingDate = "2026年11月14日 23:32 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:29", tag: "ai", tagText: "AI", text: "Meta的AI助手Muse扩展至Apple Watch与Android Wear OS，用户可通过语音通话、短信或听写与助手交互。这标志着Meta将AI代理从手机App推向可穿戴设备，争夺随身AI入口，并与苹果、谷歌在腕上智能助手领域正面竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/" },
+  { time: "23:19", tag: "ai", tagText: "AI", text: "Dropbox宣布以3.5亿美元收购Tigris Data，以强化其AI基础设施。该交易预计将支持DBX Agent Cloud的开发，这是一个面向构建AI模型和代理的开发者的新存储平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/" },
+  { time: "23:18", tag: "ai", tagText: "AI", text: "投资机构Norwest新设40亿美元AI基金，为其迄今最大规模基金，显示资本继续加码AI赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/" },
   { time: "07:49", tag: "ai", tagText: "AI", text: "据 The Verge 援引路透社报道，亚马逊计划构建覆盖全球在线购物商品的数据索引/产品图谱，范围包括亚马逊并不销售的商品，并拟通过自家网站提供检索。该计划将支撑AI搜索与购物入口，可能重塑商品数据、电商流量与广告竞争格局。", source: "The Verge", url: "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search" },
   { time: "06:22", tag: "tech", tagText: "科技", text: "Meta旗下AI助手Muse新增付费功能，可代替用户向美国企业拨打外呼电话，商业化路径从免费助手向付费代理服务延伸，显示AI语音代理正加速进入实际商业场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/" },
   { time: "05:55", tag: "ai", tagText: "AI", text: "谷歌发布新一代Gemini 4 Hydrogen模型，并将其接入搜索的AI Mode。谷歌称新模型在理解复杂问题方面显著提升，可更好处理多部分问题、难以辨识的拼写错误以及高度具体的请求，同时提供更相关的链接与更丰富的可视化回答。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "00:36", tag: "geo", tagText: "地缘", text: "英伟达前CEO黄仁勋已同意于周三出席美国国会作证。此前多名资深议员威胁将发出传票。黄仁勋因被曝与一名疑似中国间谍的女性存在婚外情而遭罢免，事件已从公司治理升级为涉及国家安全与美中AI芯片竞争的政治议题。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/" },
   { time: "00:20", tag: "tech", tagText: "科技", text: "eBay似乎已封堵第三方AI代理抓取与浏览平台，包括Meta的Muse代理。有用户向The Verge反映，近几周其AI购物助手在eBay上无法正常使用。此事凸显电商平台与AI代理之间围绕流量、数据与交易入口的控制权之争升温，成为智能体购物赛道的最新摩擦点。", source: "The Verge", url: "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping" },
   { time: "00:14", tag: "ai", tagText: "AI", text: "TechCrunch报道，OpenAI季度营收首次突破100亿美元，较第二季度的67亿美元增长近50%，显示其AI产品商业化与付费需求继续快速扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" },
-  { time: "23:29", tag: "ai", tagText: "AI", text: "Meta的AI助手Muse扩展至Apple Watch与Android Wear OS，用户可通过语音通话、短信或听写与助手交互。这标志着Meta将AI代理从手机App推向可穿戴设备，争夺随身AI入口，并与苹果、谷歌在腕上智能助手领域正面竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/" },
-  { time: "23:19", tag: "ai", tagText: "AI", text: "Dropbox宣布以3.5亿美元收购Tigris Data，以强化其AI基础设施。该交易预计将支持DBX Agent Cloud的开发，这是一个面向构建AI模型和代理的开发者的新存储平台。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/" },
-  { time: "23:18", tag: "ai", tagText: "AI", text: "投资机构Norwest新设40亿美元AI基金，为其迄今最大规模基金，显示资本继续加码AI赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/" },
 ];
-const aiBreakingDate = "2026年11月14日 18:10 CST";
+const aiBreakingDate = "2026年11月14日 23:32 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
