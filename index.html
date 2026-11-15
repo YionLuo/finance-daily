@@ -1623,12 +1623,14 @@ const fearGreedData = {
   previous1Week: 24.35,
   previous1Month: 45.6,
   previous1Year: 24.54,
-  date: "2026年11月15日 17:11 CST"
+  date: "2026年11月15日 23:38 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:36", tag: "geo", tagText: "地缘", text: "美国官员表示，特朗普在访华期间不计划提及英伟达及间谍问题。此前英伟达CEO黄仁勋因多起婚外情报道（包括与疑似中国间谍Alice Huang的关系）辞职。此举显示美方试图在国家安全审查与对华外交之间保持平衡，但英伟达丑闻仍可能影响芯片出口管制与中美关系。", source: "CNBC", url: "https://www.cnbc.com/2026/11/13/trump-nvidia-huang-china.html" },
+  { time: "22:02", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦股价创历史新高，第四季度以来累计上涨19%，并连续四个交易日刷新收盘纪录。市场资金持续流向防御性与价值型资产，凸显在宏观不确定性上升背景下的配置偏好。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/berkshire-breaks-out-to-record-high-with-fourth-quarter-rally-reaching-19percent.html" },
   { time: "16:16", tag: "geo", tagText: "地缘", text: "中美在习特会前讨论关税与农产品贸易。北京多次敦促华盛顿落实600亿美元降税协议，并称这是扩大采购美国农产品的先决条件。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/china-us-tariffs-xi-trump-meeting.html" },
   { time: "13:00", tag: "macro", tagText: "宏观", text: "美国与英国就业市场陷入“低招聘、低解雇”状态，招聘、离职和跳槽率均低迷。经济学家警告，这种僵化可能拖累劳动生产率，造成长期损伤。", source: "Financial Times", url: "https://www.ft.com/content/44c1fdc6-bc51-46e5-8a7c-c10096a25496?syn-25a6b1a6=1" },
   { time: "13:00", tag: "macro", tagText: "宏观", text: "欧洲银行业管理局（EBA）主席正研究替代方案，而非推进单一存款保险机制，以释放更多跨境贷款。此举凸显欧盟银行业联盟改革路径存在分歧。", source: "Financial Times", url: "https://www.ft.com/content/016ce22d-1e09-4f1d-a7e6-9acf183e757f?syn-25a6b1a6=1" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "05:45", tag: "geo", tagText: "地缘", text: "白宫表示将无视中期选举因物价上涨而产生的政治反弹，继续推进关税政策。企业高管在华盛顿一场峰会上警告成本上升与供应链重构压力，民调显示选民对特朗普关税的反对情绪上升，关税与通胀的政治纠缠加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/10/trump-tariffs-midterms-gary-cohn-inflation.html" },
   { time: "05:41", tag: "tech", tagText: "科技", text: "据FT报道，美国情报界认为英伟达CEO黄仁勋与一名被中国招募、负责搜集美国公司信息的女高管存在恋爱关系。此事可能将全球最有价值的芯片公司卷入国家安全审查，并加剧美中科技与出口管制紧张。", source: "Financial Times", url: "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790?syn-25a6b1a6=1" },
   { time: "05:38", tag: "geo", tagText: "地缘", text: "一名美国高级军官在英国因涉嫌为俄罗斯从事间谍活动被捕，英国反恐警察主导调查，FBI与美国军方参与。案件凸显俄乌冲突背景下西方军事系统内部渗透风险，或推动美英进一步收紧涉密人员审查。", source: "Financial Times", url: "https://www.ft.com/content/94aa4846-58c6-4c17-b25a-095f122b4809?syn-25a6b1a6=1" },
-  { time: "23:36", tag: "geo", tagText: "地缘", text: "美国官员表示，特朗普在访华期间不计划提及英伟达及间谍问题。此前英伟达CEO黄仁勋因多起婚外情报道（包括与疑似中国间谍Alice Huang的关系）辞职。此举显示美方试图在国家安全审查与对华外交之间保持平衡，但英伟达丑闻仍可能影响芯片出口管制与中美关系。", source: "CNBC", url: "https://www.cnbc.com/2026/11/13/trump-nvidia-huang-china.html" },
-  { time: "22:02", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦股价创历史新高，第四季度以来累计上涨19%，并连续四个交易日刷新收盘纪录。市场资金持续流向防御性与价值型资产，凸显在宏观不确定性上升背景下的配置偏好。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/berkshire-breaks-out-to-record-high-with-fourth-quarter-rally-reaching-19percent.html" },
 ];
-const breakingDate = "2026年11月15日 17:11 CST";
+const breakingDate = "2026年11月15日 23:38 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "00:20", tag: "tech", tagText: "科技", text: "eBay似乎已封堵第三方AI代理抓取与浏览平台，包括Meta的Muse代理。有用户向The Verge反映，近几周其AI购物助手在eBay上无法正常使用。此事凸显电商平台与AI代理之间围绕流量、数据与交易入口的控制权之争升温，成为智能体购物赛道的最新摩擦点。", source: "The Verge", url: "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping" },
   { time: "00:14", tag: "ai", tagText: "AI", text: "TechCrunch报道，OpenAI季度营收首次突破100亿美元，较第二季度的67亿美元增长近50%，显示其AI产品商业化与付费需求继续快速扩张。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" },
 ];
-const aiBreakingDate = "2026年11月15日 17:11 CST";
+const aiBreakingDate = "2026年11月15日 23:38 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
