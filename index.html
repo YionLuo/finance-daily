@@ -1616,19 +1616,21 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 38.6,
+  score: 34.02,
   rating: "fear",
-  timestamp: "2026-11-16T09:08:31+00:00",
+  timestamp: "2026-11-16T15:33:37+00:00",
   previousClose: 38.6,
   previous1Week: 31.51,
   previous1Month: 18.21,
   previous1Year: 22.06,
-  date: "2026年11月16日 17:27 CST"
+  date: "2026年11月16日 23:37 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:36", tag: "geo", tagText: "地缘", text: "美国官员表示，特朗普在访华期间不计划提及英伟达及间谍问题。此前英伟达CEO黄仁勋因多起婚外情报道（包括与疑似中国间谍Alice Huang的关系）辞职。此举显示美方试图在国家安全审查与对华外交之间保持平衡，但英伟达丑闻仍可能影响芯片出口管制与中美关系。", source: "CNBC", url: "https://www.cnbc.com/2026/11/13/trump-nvidia-huang-china.html" },
+  { time: "22:02", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦股价创历史新高，第四季度以来累计上涨19%，并连续四个交易日刷新收盘纪录。市场资金持续流向防御性与价值型资产，凸显在宏观不确定性上升背景下的配置偏好。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/berkshire-breaks-out-to-record-high-with-fourth-quarter-rally-reaching-19percent.html" },
   { time: "16:16", tag: "geo", tagText: "地缘", text: "中美在习特会前讨论关税与农产品贸易。北京多次敦促华盛顿落实600亿美元降税协议，并称这是扩大采购美国农产品的先决条件。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/china-us-tariffs-xi-trump-meeting.html" },
   { time: "09:41", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，本周亚洲迎来密集高层外交：特朗普、习近平与普京轮番登场，中国与菲律宾的峰会为一系列重磅会晤提供舞台。议题涵盖中美贸易、俄乌和谈与地区安全，外界将其形容为“雅尔塔2.0”，市场关注大国是否就势力范围与经贸安排达成新默契。", source: "Financial Times", url: "https://www.ft.com/content/5621d364-c767-4b40-a090-054042d1c49b?syn-25a6b1a6=1" },
   { time: "09:03", tag: "ai", tagText: "AI", text: "美股期货小幅走高，标普500、纳指与道指上周均涨超2%，创8月以来最大周涨幅。本周市场焦点集中于英伟达财报与Anthropic的IPO：前者检验AI算力需求成色，后者则被视为AI独角兽估值与一级市场融资环境的首次公开检验。", source: "CNBC", url: "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html" },
@@ -1647,10 +1649,8 @@ const breakingNews = [
   { time: "05:45", tag: "geo", tagText: "地缘", text: "白宫表示将无视中期选举因物价上涨而产生的政治反弹，继续推进关税政策。企业高管在华盛顿一场峰会上警告成本上升与供应链重构压力，民调显示选民对特朗普关税的反对情绪上升，关税与通胀的政治纠缠加剧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/10/trump-tariffs-midterms-gary-cohn-inflation.html" },
   { time: "05:41", tag: "tech", tagText: "科技", text: "据FT报道，美国情报界认为英伟达CEO黄仁勋与一名被中国招募、负责搜集美国公司信息的女高管存在恋爱关系。此事可能将全球最有价值的芯片公司卷入国家安全审查，并加剧美中科技与出口管制紧张。", source: "Financial Times", url: "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790?syn-25a6b1a6=1" },
   { time: "05:38", tag: "geo", tagText: "地缘", text: "一名美国高级军官在英国因涉嫌为俄罗斯从事间谍活动被捕，英国反恐警察主导调查，FBI与美国军方参与。案件凸显俄乌冲突背景下西方军事系统内部渗透风险，或推动美英进一步收紧涉密人员审查。", source: "Financial Times", url: "https://www.ft.com/content/94aa4846-58c6-4c17-b25a-095f122b4809?syn-25a6b1a6=1" },
-  { time: "23:36", tag: "geo", tagText: "地缘", text: "美国官员表示，特朗普在访华期间不计划提及英伟达及间谍问题。此前英伟达CEO黄仁勋因多起婚外情报道（包括与疑似中国间谍Alice Huang的关系）辞职。此举显示美方试图在国家安全审查与对华外交之间保持平衡，但英伟达丑闻仍可能影响芯片出口管制与中美关系。", source: "CNBC", url: "https://www.cnbc.com/2026/11/13/trump-nvidia-huang-china.html" },
-  { time: "22:02", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦股价创历史新高，第四季度以来累计上涨19%，并连续四个交易日刷新收盘纪录。市场资金持续流向防御性与价值型资产，凸显在宏观不确定性上升背景下的配置偏好。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/berkshire-breaks-out-to-record-high-with-fourth-quarter-rally-reaching-19percent.html" },
 ];
-const breakingDate = "2026年11月16日 17:27 CST";
+const breakingDate = "2026年11月16日 23:37 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "01:00", tag: "tech", tagText: "科技", text: "一项新研究发现，使用AI聊天机器人调研商品或寻找购买渠道的消费者，可能被导向仿冒网站及其他高风险网站。该研究由知识产权保护公司Podqi进行，测试了Gemini、ChatGPT、Perplexity等购物助手，揭示AI购物推荐的信任与安全隐忧。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations" },
   { time: "00:36", tag: "geo", tagText: "地缘", text: "英伟达前CEO黄仁勋已同意于周三出席美国国会作证。此前多名资深议员威胁将发出传票。黄仁勋因被曝与一名疑似中国间谍的女性存在婚外情而遭罢免，事件已从公司治理升级为涉及国家安全与美中AI芯片竞争的政治议题。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/" },
 ];
-const aiBreakingDate = "2026年11月16日 17:27 CST";
+const aiBreakingDate = "2026年11月16日 23:37 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
