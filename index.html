@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 25.95,
-  rating: "fear",
-  timestamp: "2026-11-18T15:34:46+00:00",
+  score: 24.61,
+  rating: "extreme fear",
+  timestamp: "2026-11-18T21:30:47+00:00",
   previousClose: 25.23,
   previous1Week: 35.94,
   previous1Month: 18.21,
   previous1Year: 8.9,
-  date: "2026年11月18日 23:38 CST"
+  date: "2026年11月19日 05:49 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,14 @@ const breakingNews = [
   { time: "06:33", tag: "macro", tagText: "宏观", text: "美国联邦航空管理局（FAA）全国范围暂停航班起飞逾四小时后，周日航班延误仍在延续，但周一班表已基本恢复正常，部分旅客滞留机场过夜。事件再度暴露美国空管系统在人力与设备上的脆弱性，或推动航空基建与预算议题升温。", source: "CNBC", url: "https://www.cnbc.com/2026/11/15/flight-delays-ground-faa-stop.html" },
   { time: "06:24", tag: "tech", tagText: "科技", text: "微软发生大范围服务中断，Outlook、Teams及Microsoft 365等多项服务受到影响。此次故障波及大量企业用户，再度引发对大型云服务商可靠性的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html" },
 ];
-const breakingDate = "2026年11月18日 23:38 CST";
+const breakingDate = "2026年11月19日 05:49 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "04:45", tag: "ai", tagText: "AI", text: "OpenAI 为旗下 Dots AI 代理平台推出 ChatGPT Wallet 钱包，首批面向美国 18 岁以上 ChatGPT Pro 订阅用户开放，允许 AI 代理替用户直接完成购物付款。此举标志 OpenAI 从对话助手进一步向可执行交易的代理型支付体系延伸，也意味着其开始介入支付与电商结算环节。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet" },
+  { time: "04:32", tag: "tech", tagText: "科技", text: "Crunchbase 数据显示，英伟达对初创公司的投资交易数量创下历史纪录。在黄仁勋离任 CEO 后，市场关注其企业风投与生态扶持节奏是否延续；多方报道称已签署的投资协议预计仍将执行，但新交易决策与战略方向存在不确定性。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxPa0xFY1hDZ2NkSWRrMTNJOVJFRHFUbHFQamlxNkZUaFJpek9JUklNLS1qeWVNVUg5MTZySWFwZng1OXdfM2M2MWUtTWRCcTVwUkpzVW96enpCcWc5ZXI1V0g3UTJwV3JCSEJpRkVqZFU2NzhhOWpEbTdCMzJNdl9VSXdMTDg?oc=5" },
+  { time: "03:37", tag: "tech", tagText: "科技", text: "AI 代理（Agent）初创公司 LangChain 在新一轮融资中估值达到 30 亿美元。其模型与平台无关的代理管理工具 LangSmith 目前宣称拥有 7000 家客户，反映企业级 AI 代理编排与运维层正成为资本追捧的独立赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/" },
+  { time: "03:20", tag: "tech", tagText: "科技", text: "Crunchbase 与 Traders Union 的统计显示，本周全球规模最大的融资轮次由美国 AI 初创公司主导，资金继续集中流向代理型 AI（Agentic AI）与 AI 基础设施领域。这表明在一级市场整体趋于谨慎的背景下，AI 算力、平台与代理层仍是资本配置的核心方向。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNanlTN0xlcFRiOF9WQjJpbjcwa0E4RTZXdFBDc09iWWxsNWZVYWNaWVUwZkFXX21mMmVMZUIzS1hSZ1VWWGZXUlBLNHNzOTlBWHhtYm1OeHZrRV9GbzFRMUZVb1BoaWN3Nm1tcmJWaHhlamlrc2RDT3JobWFQa1ZEU3VncU1yWlRsNXAtY2xjUEVhYmswdzFxc3c2X3VOcV9STFBQTHkxSFpMcjVCOGc?oc=5" },
   { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
   { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
   { time: "22:05", tag: "tech", tagText: "科技", text: "英伟达在黄仁勋辞任CEO后设立董事会级国家安全常设委员会，负责监督国家安全政策、出口管制合规与全球贸易风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/nvidias-first-big-move-after-jensen-huangs-exit-targets-national-security/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "06:22", tag: "tech", tagText: "科技", text: "Meta旗下AI助手Muse新增付费功能，可代替用户向美国企业拨打外呼电话，商业化路径从免费助手向付费代理服务延伸，显示AI语音代理正加速进入实际商业场景。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/" },
   { time: "06:03", tag: "ai", tagText: "AI", text: "英伟达将于今日（周二）公布第三季度财报，临时CEO兼CFO Colette Kress将面对市场对黄仁勋离职后公司治理、AI芯片出口限制及业务前景的密集追问。此次财报被视为检验英伟达动荡期经营韧性的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/" },
   { time: "05:55", tag: "ai", tagText: "AI", text: "谷歌发布新一代Gemini 4 Hydrogen模型，并将其接入搜索的AI Mode。谷歌称新模型在理解复杂问题方面显著提升，可更好处理多部分问题、难以辨识的拼写错误以及高度具体的请求，同时提供更相关的链接与更丰富的可视化回答。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen" },
-  { time: "04:45", tag: "ai", tagText: "AI", text: "OpenAI 为旗下 Dots AI 代理平台推出 ChatGPT Wallet 钱包，首批面向美国 18 岁以上 ChatGPT Pro 订阅用户开放，允许 AI 代理替用户直接完成购物付款。此举标志 OpenAI 从对话助手进一步向可执行交易的代理型支付体系延伸，也意味着其开始介入支付与电商结算环节。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet" },
-  { time: "04:32", tag: "tech", tagText: "科技", text: "Crunchbase 数据显示，英伟达对初创公司的投资交易数量创下历史纪录。在黄仁勋离任 CEO 后，市场关注其企业风投与生态扶持节奏是否延续；多方报道称已签署的投资协议预计仍将执行，但新交易决策与战略方向存在不确定性。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxPa0xFY1hDZ2NkSWRrMTNJOVJFRHFUbHFQamlxNkZUaFJpek9JUklNLS1qeWVNVUg5MTZySWFwZng1OXdfM2M2MWUtTWRCcTVwUkpzVW96enpCcWc5ZXI1V0g3UTJwV3JCSEJpRkVqZFU2NzhhOWpEbTdCMzJNdl9VSXdMTDg?oc=5" },
-  { time: "03:37", tag: "tech", tagText: "科技", text: "AI 代理（Agent）初创公司 LangChain 在新一轮融资中估值达到 30 亿美元。其模型与平台无关的代理管理工具 LangSmith 目前宣称拥有 7000 家客户，反映企业级 AI 代理编排与运维层正成为资本追捧的独立赛道。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/" },
-  { time: "03:20", tag: "tech", tagText: "科技", text: "Crunchbase 与 Traders Union 的统计显示，本周全球规模最大的融资轮次由美国 AI 初创公司主导，资金继续集中流向代理型 AI（Agentic AI）与 AI 基础设施领域。这表明在一级市场整体趋于谨慎的背景下，AI 算力、平台与代理层仍是资本配置的核心方向。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNanlTN0xlcFRiOF9WQjJpbjcwa0E4RTZXdFBDc09iWWxsNWZVYWNaWVUwZkFXX21mMmVMZUIzS1hSZ1VWWGZXUlBLNHNzOTlBWHhtYm1OeHZrRV9GbzFRMUZVb1BoaWN3Nm1tcmJWaHhlamlrc2RDT3JobWFQa1ZEU3VncU1yWlRsNXAtY2xjUEVhYmswdzFxc3c2X3VOcV9STFBQTHkxSFpMcjVCOGc?oc=5" },
 ];
-const aiBreakingDate = "2026年11月18日 23:38 CST";
+const aiBreakingDate = "2026年11月19日 05:49 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
