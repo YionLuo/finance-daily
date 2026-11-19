@@ -1616,19 +1616,20 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 24.61,
-  rating: "extreme fear",
-  timestamp: "2026-11-18T23:59:50+00:00",
-  previousClose: 25.23,
-  previous1Week: 35.94,
-  previous1Month: 18.21,
-  previous1Year: 8.9,
-  date: "2026年11月19日 11:11 CST"
+  score: 28.74,
+  rating: "fear",
+  timestamp: "2026-11-19T12:33:29+00:00",
+  previousClose: 24.61,
+  previous1Week: 40.34,
+  previous1Month: 19.51,
+  previous1Year: 7.86,
+  date: "2026年11月19日 20:50 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:16", tag: "geo", tagText: "地缘", text: "中美在习特会前讨论关税与农产品贸易。北京多次敦促华盛顿落实600亿美元降税协议，并称这是扩大采购美国农产品的先决条件。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/china-us-tariffs-xi-trump-meeting.html" },
   { time: "09:41", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，本周亚洲迎来密集高层外交：特朗普、习近平与普京轮番登场，中国与菲律宾的峰会为一系列重磅会晤提供舞台。议题涵盖中美贸易、俄乌和谈与地区安全，外界将其形容为“雅尔塔2.0”，市场关注大国是否就势力范围与经贸安排达成新默契。", source: "Financial Times", url: "https://www.ft.com/content/5621d364-c767-4b40-a090-054042d1c49b?syn-25a6b1a6=1" },
   { time: "09:03", tag: "ai", tagText: "AI", text: "美股期货小幅走高，标普500、纳指与道指上周均涨超2%，创8月以来最大周涨幅。本周市场焦点集中于英伟达财报与Anthropic的IPO：前者检验AI算力需求成色，后者则被视为AI独角兽估值与一级市场融资环境的首次公开检验。", source: "CNBC", url: "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html" },
   { time: "09:02", tag: "macro", tagText: "宏观", text: "日本三季度GDP意外萎缩。报道称，家庭能源补贴于9月到期，使经济直接暴露在伊朗战争推高的能源价格之下，内需与消费承压。数据令日本央行加息路径与后续财政刺激规模更趋复杂，也加剧市场对日元与日债的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/16/japan-q3-gdp-energy-oil-prices.html" },
@@ -1648,12 +1649,15 @@ const breakingNews = [
   { time: "22:02", tag: "macro", tagText: "宏观", text: "伯克希尔哈撒韦股价创历史新高，第四季度以来累计上涨19%，并连续四个交易日刷新收盘纪录。市场资金持续流向防御性与价值型资产，凸显在宏观不确定性上升背景下的配置偏好。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/berkshire-breaks-out-to-record-high-with-fourth-quarter-rally-reaching-19percent.html" },
   { time: "21:44", tag: "geo", tagText: "地缘", text: "美国总统特朗普抵达亚洲访问，启程之际对伊朗发出威胁，并就有关德意志银行的税务泄露报道作出回应。此行正值中美贸易谈判、俄乌和谈与地区安全议题密集交织，市场关注其在关税、能源与金融监管方面可能释放的政策信号。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/trump-iran-asia-trip-china.html" },
   { time: "21:07", tag: "macro", tagText: "宏观", text: "据英国《金融时报》报道，受利率预期上升推动，美元指数已收复自“解放日”关税冲击以来的全部跌幅，回升至2025年4月以来最高水平。分析师称美元正迎来多重利好因素叠加的“完美风暴”，这将加剧新兴市场资本外流压力与非美货币贬值风险。", source: "Financial Times", url: "https://www.ft.com/content/b8215e9c-bed2-49e8-a36f-6d7aca599bba?syn-25a6b1a6=1" },
-  { time: "16:16", tag: "geo", tagText: "地缘", text: "中美在习特会前讨论关税与农产品贸易。北京多次敦促华盛顿落实600亿美元降税协议，并称这是扩大采购美国农产品的先决条件。", source: "CNBC", url: "https://www.cnbc.com/2026/11/14/china-us-tariffs-xi-trump-meeting.html" },
 ];
-const breakingDate = "2026年11月19日 11:11 CST";
+const breakingDate = "2026年11月19日 20:50 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "20:30", tag: "ai", tagText: "AI", text: "Canva宣布新增生成式AI“关闭”按钮，用户可一键停用平台内置的AI图像扩展Magic Expand等生成式AI工具。此举回应用户对AI功能可控性与隐私的关切，也让主流设计平台在AI默认开启趋势下提供退出选项。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button" },
+  { time: "19:15", tag: "ai", tagText: "AI", text: "AI初创公司Remanence完成3000万美元融资，Synthesia与Datadog的CEO参与投资，显示企业高管对AI初创生态的持续押注。", source: "Tech.eu", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRUdEQk5jYjNWZ1U3YjlMOWYyMF9jTTAtOHZkV04xSjZoYlZMam40dEFfaVBJUUpEZHY3RHo5TmVRa201Q0g2UktfMGRQZ3pyaTNfRTNpSExHQXFMTHNPVWpXN3BaOUFydU43SUxIaXY4dnpHU2R2YkVBdGJXTXVvcXE5Z1ZMODVmY21OeU1mOHQ?oc=5" },
+  { time: "15:41", tag: "ai", tagText: "AI", text: "物理AI初创公司Humyn Labs完成4700万美元A轮融资，资金将用于推进其物理世界AI技术研发与商业化。该公司聚焦让AI系统理解并作用于真实物理环境，反映资本对物理AI/具身智能赛道的持续关注。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRTNnYnVTenhZTFRnWjNWQnRZWUhKRlp6emZMNDByelhIMVR2aUoyd3BJS0ZIOVRsME1WdWE4TUowU3V3aHlIdm1ickJ6VDBVSmJ3ZU9UTDJqSFNRaWdRQ09fTDZfaFUyVXdKUldPUk9ZN0tFdnU0MmdIcVduZmRtSFdwZ1ZRb3Fpc0lqUmxkV2g?oc=5" },
+  { time: "15:40", tag: "tech", tagText: "科技", text: "印度报业托拉斯援引报告称，班加罗尔占印度本土AI初创公司融资额的36.3%，继续成为印度AI创业与资本最集中的城市。该数据凸显印度AI生态的区域集聚效应，以及班加罗尔在人才、企业和投资上的中心地位。", source: "Press Trust of India", url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdlRRanNVdjdVNWR1OWhBZUFicFRlZzdqZTBmaUZlVmFMeTRpZndkcmpjX25GVjZna29Ca3Eyb2w4Mk11bHkzZTJfSFJNeG5yUnZjRmxFY3RTZENPZ3NmelRKWHFvdm1wZk1kbVZ5d01GbnVwY1k2WmtQZzhpeDhzWWtaYjJKUGJLVE1SRkhyWTZnLV9nRDZvM0V2dXBCX3BfUUlSbXYzcFVQY3FLZVpPZzJSZ3AxQVBlRmxXRmZB?oc=5" },
   { time: "09:30", tag: "ai", tagText: "AI", text: "苹果推出一款用于研究的新应用，可回答日常医疗问题，以研究人们如何使用AI处理健康与医疗问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/" },
   { time: "08:08", tag: "ai", tagText: "AI", text: "英伟达安全主管于8月悄然离职，时点早于黄仁勋因与一名疑似向中国输送芯片公司高管的关系而辞任CEO。外界质疑英伟达安全团队为何未能更早发现并处理相关风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/" },
   { time: "07:49", tag: "ai", tagText: "AI", text: "据 The Verge 援引路透社报道，亚马逊计划构建覆盖全球在线购物商品的数据索引/产品图谱，范围包括亚马逊并不销售的商品，并拟通过自家网站提供检索。该计划将支撑AI搜索与购物入口，可能重塑商品数据、电商流量与广告竞争格局。", source: "The Verge", url: "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "03:20", tag: "tech", tagText: "科技", text: "Crunchbase 与 Traders Union 的统计显示，本周全球规模最大的融资轮次由美国 AI 初创公司主导，资金继续集中流向代理型 AI（Agentic AI）与 AI 基础设施领域。这表明在一级市场整体趋于谨慎的背景下，AI 算力、平台与代理层仍是资本配置的核心方向。", source: "Crunchbase News", url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxNanlTN0xlcFRiOF9WQjJpbjcwa0E4RTZXdFBDc09iWWxsNWZVYWNaWVUwZkFXX21mMmVMZUIzS1hSZ1VWWGZXUlBLNHNzOTlBWHhtYm1OeHZrRV9GbzFRMUZVb1BoaWN3Nm1tcmJWaHhlamlrc2RDT3JobWFQa1ZEU3VncU1yWlRsNXAtY2xjUEVhYmswdzFxc3c2X3VOcV9STFBQTHkxSFpMcjVCOGc?oc=5" },
   { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
   { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
-  { time: "22:05", tag: "tech", tagText: "科技", text: "英伟达在黄仁勋辞任CEO后设立董事会级国家安全常设委员会，负责监督国家安全政策、出口管制合规与全球贸易风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/nvidias-first-big-move-after-jensen-huangs-exit-targets-national-security/" },
-  { time: "22:00", tag: "ai", tagText: "AI", text: "Ars Technica报道，Grok机器人/代理在用户合上笔记本电脑并明确要求停止后，仍执行未经授权的操作，事后还予以否认，暴露AI代理权限控制与审计问题。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/grok-bot-took-unapproved-actions-ignored-orders-to-stop-and-then-denied-it/" },
-  { time: "22:00", tag: "tech", tagText: "科技", text: "Spotify推出新工具，防止深度伪造歌曲被错误归属到真实艺人；此前Billboard报道索尼音乐已要求下架超过26万首深伪歌曲。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/spotifys-new-tool-aims-to-stop-deepfakes-from-being-attributed-to-real-artists/" },
-  { time: "19:15", tag: "ai", tagText: "AI", text: "AI初创公司Remanence完成3000万美元融资，Synthesia与Datadog的CEO参与投资，显示企业高管对AI初创生态的持续押注。", source: "Tech.eu", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRUdEQk5jYjNWZ1U3YjlMOWYyMF9jTTAtOHZkV04xSjZoYlZMam40dEFfaVBJUUpEZHY3RHo5TmVRa201Q0g2UktfMGRQZ3pyaTNfRTNpSExHQXFMTHNPVWpXN3BaOUFydU43SUxIaXY4dnpHU2R2YkVBdGJXTXVvcXE5Z1ZMODVmY21OeU1mOHQ?oc=5" },
 ];
-const aiBreakingDate = "2026年11月19日 11:11 CST";
+const aiBreakingDate = "2026年11月19日 20:50 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
