@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 18.68,
+  score: 17.06,
   rating: "extreme fear",
-  timestamp: "2026-11-19T23:59:41+00:00",
-  previousClose: 24.61,
-  previous1Week: 40.34,
-  previous1Month: 19.51,
-  previous1Year: 7.86,
-  date: "2026年11月20日 10:59 CST"
+  timestamp: "2026-11-20T11:00:01+00:00",
+  previousClose: 18.68,
+  previous1Week: 37.37,
+  previous1Month: 28.74,
+  previous1Year: 5.17,
+  date: "2026年11月20日 19:20 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,14 @@ const breakingNews = [
   { time: "22:18", tag: "geo", tagText: "地缘", text: "联合国国际法院（ICJ）裁定缅甸对罗兴亚人实施种族灭绝，这是该法院首次就国家行为作出此类判决。裁决可能加大国际追责与制裁压力，并影响东南亚地缘政治环境。", source: "Financial Times", url: "https://www.ft.com/content/411d28f3-5adf-4a2f-9390-bc3372b4b3a9?syn-25a6b1a6=1" },
   { time: "22:17", tag: "macro", tagText: "宏观", text: "黄金价格从1月纪录高位持续下挫，年内表现愈发疲弱；利率上升与美元走强削弱了无息资产的吸引力。投资者正重新评估黄金在组合中的对冲价值。", source: "CNBC", url: "https://www.cnbc.com/2026/11/19/gold-prices-fall-fed-rates-dollar.html" },
 ];
-const breakingDate = "2026年11月20日 10:59 CST";
+const breakingDate = "2026年11月20日 19:20 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:15", tag: "ai", tagText: "AI", text: "AI初创公司Remanence完成3000万美元融资，Synthesia与Datadog的CEO参与投资，显示企业高管对AI初创生态的持续押注。", source: "Tech.eu", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRUdEQk5jYjNWZ1U3YjlMOWYyMF9jTTAtOHZkV04xSjZoYlZMam40dEFfaVBJUUpEZHY3RHo5TmVRa201Q0g2UktfMGRQZ3pyaTNfRTNpSExHQXFMTHNPVWpXN3BaOUFydU43SUxIaXY4dnpHU2R2YkVBdGJXTXVvcXE5Z1ZMODVmY21OeU1mOHQ?oc=5" },
+  { time: "18:42", tag: "ai", tagText: "AI", text: "报道称，英伟达正就收购斯坦福背景的扩散AI初创公司Inception进行深入谈判，交易金额可能超过5亿美元。此举显示英伟达继续通过并购补强生成式与扩散模型相关技术布局。", source: "Tech Funding News", url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQelhTc2k2eDFkMjdJam9mM2d1RHRMWlcxZThvMU5PYXl2QkRZT2tHQ1Q4dXNlenllN0ZRcXB2TXVjc25vdkgyZ0wweGlzb09kTUdGUHRVT245OVpjRk82aTdLaF9oOW5oT2xuREdoM0ZuWnJ1ZVhJTnNIQ2xVY1Iyb3daeEg5a3N5ODhpVlZrRmU2QklYYXJWTjdUMzNxTzRvc3V4NWlfQzhUcmF3QWFtTnREcjhxX29YOUVDSklSWEV0Zw?oc=5" },
+  { time: "16:25", tag: "ai", tagText: "AI", text: "据彭博社报道，由前阿里巴巴明星级人物创办的AI初创公司在新一轮融资中估值翻倍至50亿美元。该交易反映资本市场对头部AI创业团队的押注仍在升温。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNkJBU0tfaDQyR1NrRUZOV3hZTUdObnM0SGVfRXphYVl4OC1LQnJxZWpZZTNGNXgwaGl0ZTdzT1FQbGhfaGpLRkFrTzFoeF9tdmpQVm5fYXdSY0c4NUNEdXY5bWpRczEtVnI3WjhpaldDYjVNUHRpX1g2NzM5QWZpczNyNjNXMWpHXzRESmExWUZmc3V5cjZUZlFBWXM1Y0ZTT0F2Z0picW1aZ0pjbEtB?oc=5" },
+  { time: "15:41", tag: "ai", tagText: "AI", text: "物理AI初创公司Humyn Labs完成4700万美元A轮融资，资金将用于推进其物理世界AI技术研发与商业化。该公司聚焦让AI系统理解并作用于真实物理环境，反映资本对物理AI/具身智能赛道的持续关注。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRTNnYnVTenhZTFRnWjNWQnRZWUhKRlp6emZMNDByelhIMVR2aUoyd3BJS0ZIOVRsME1WdWE4TUowU3V3aHlIdm1ickJ6VDBVSmJ3ZU9UTDJqSFNRaWdRQ09fTDZfaFUyVXdKUldPUk9ZN0tFdnU0MmdIcVduZmRtSFdwZ1ZRb3Fpc0lqUmxkV2g?oc=5" },
   { time: "09:30", tag: "ai", tagText: "AI", text: "苹果推出一款用于研究的新应用，可回答日常医疗问题，以研究人们如何使用AI处理健康与医疗问题。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/" },
   { time: "08:56", tag: "ai", tagText: "AI", text: "苹果正招聘工程师开发自有AI代理，目标是让代理在Mac上运行，可浏览网页、跨应用执行任务、编写代码并调用服务。招聘信息显示其将具备多步骤任务执行能力，并可能与Meta Muse、Claude等AI代理竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/" },
   { time: "08:08", tag: "ai", tagText: "AI", text: "英伟达安全主管于8月悄然离职，时点早于黄仁勋因与一名疑似向中国输送芯片公司高管的关系而辞任CEO。外界质疑英伟达安全团队为何未能更早发现并处理相关风险。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/" },
@@ -1670,12 +1674,8 @@ const aiBreakingNews = [
   { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
   { time: "22:25", tag: "ai", tagText: "AI", text: "Anthropic正式登陆公开市场，募资813亿美元，超越SpaceX成为史上规模最大IPO，为其他AI公司上市立下标杆。招股与公开文件同时显示，其算力承诺规模庞大，而亚马逊、谷歌等基础设施伙伴即便在Anthropic失去技术领先的情况下仍可获利，市场将此次IPO视为对AI行业“循环融资”热潮的关键检验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" },
   { time: "22:18", tag: "geo", tagText: "地缘", text: "在特朗普就AI芯片发表最新言论后，英伟达面临对华业务的新现实。市场关注华盛顿出口管制口径变化将如何影响其中国营收、合规路径与产品线安排，这被视为继此前远程访问限制讨论之后，英伟达地缘风险的又一次重估。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQjN2R19leTdvQTNkblVRUlh1djlmYmcxWEs3RDQ0Z1pHNVdrNzdNV3Q5YVp0VzV5QjRhanNRRndzUEc1SU4yTXdOSzBNSlh4Rmx6ZHJRcEVVeEVnWlhubFp2NGkxSTVwU3Azc0hTVXVSSTE0cWFabEZvdlg1WWtVRld4Qjc0aUl0RW8wa0xFVlFtRlY5TFNGNF9ITFNCSldaZnBXR1VwNE1lbmtDRVVWNE56S254TDV0XzJWWDR3Sy1ZRlcyOG9KWkdn?oc=5" },
-  { time: "21:56", tag: "ai", tagText: "AI", text: "德国电信（Deutsche Telekom）向法国AI初创公司Mistral AI投资约1.1亿美元。此举显示欧洲大型电信运营商正加深与本土大模型厂商的绑定，在算力与AI应用落地层面打造“欧洲方案”，以应对美国与中国厂商的竞争。", source: "Quartz", url: "https://news.google.com/rss/articles/CBMieEFVX3lxTE56U3RMN2pack13RjJWYkE0NU9fTnNRSkZhSTcyMWNRVV9vRTJrMlNNQ25uRG80c0xaeFNFU21zLTVMWmc0R1FQME8wVldxV1BOTzBodnphazlzcE8xTi16VmpjcUJBOThJeWJ4cDlGbVp1N1VDRnZxNg?oc=5" },
-  { time: "20:30", tag: "ai", tagText: "AI", text: "Canva宣布新增生成式AI“关闭”按钮，用户可一键停用平台内置的AI图像扩展Magic Expand等生成式AI工具。此举回应用户对AI功能可控性与隐私的关切，也让主流设计平台在AI默认开启趋势下提供退出选项。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button" },
-  { time: "19:15", tag: "ai", tagText: "AI", text: "AI初创公司Remanence完成3000万美元融资，Synthesia与Datadog的CEO参与投资，显示企业高管对AI初创生态的持续押注。", source: "Tech.eu", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRUdEQk5jYjNWZ1U3YjlMOWYyMF9jTTAtOHZkV04xSjZoYlZMam40dEFfaVBJUUpEZHY3RHo5TmVRa201Q0g2UktfMGRQZ3pyaTNfRTNpSExHQXFMTHNPVWpXN3BaOUFydU43SUxIaXY4dnpHU2R2YkVBdGJXTXVvcXE5Z1ZMODVmY21OeU1mOHQ?oc=5" },
-  { time: "15:41", tag: "ai", tagText: "AI", text: "物理AI初创公司Humyn Labs完成4700万美元A轮融资，资金将用于推进其物理世界AI技术研发与商业化。该公司聚焦让AI系统理解并作用于真实物理环境，反映资本对物理AI/具身智能赛道的持续关注。", source: "YourStory.com", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRTNnYnVTenhZTFRnWjNWQnRZWUhKRlp6emZMNDByelhIMVR2aUoyd3BJS0ZIOVRsME1WdWE4TUowU3V3aHlIdm1ickJ6VDBVSmJ3ZU9UTDJqSFNRaWdRQ09fTDZfaFUyVXdKUldPUk9ZN0tFdnU0MmdIcVduZmRtSFdwZ1ZRb3Fpc0lqUmxkV2g?oc=5" },
 ];
-const aiBreakingDate = "2026年11月20日 10:59 CST";
+const aiBreakingDate = "2026年11月20日 19:20 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
