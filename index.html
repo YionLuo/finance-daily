@@ -1623,12 +1623,21 @@ const fearGreedData = {
   previous1Week: 37.37,
   previous1Month: 28.74,
   previous1Year: 5.17,
-  date: "2026年11月21日 09:23 CST"
+  date: "2026年11月21日 17:36 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "16:54", tag: "macro", tagText: "宏观", text: "特朗普签署命令，要求联邦承包商在向国会提供信息前先通知白宫；不遵守者可能被取消现有合同或被暂停参与未来联邦业务。此举可能影响与联邦政府有业务往来的企业合规与政治风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/trump-orders-federal-contractors-to-notify-white-house-before-giving-congress-information.html" },
+  { time: "16:02", tag: "geo", tagText: "地缘", text: "约100个国家同意推动联合国谈判，目标在2028年前就“杀手机器人”制定具有法律约束力的规则；美国、俄罗斯、以色列等主要武器生产国反对该立场。谈判前景仍受大国分歧制约。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/countries-agree-to-un-talks-aiming-to-regulate-killer-robots-by-2028.html" },
+  { time: "16:00", tag: "ai", tagText: "AI", text: "Anthropic承诺向微软Azure投入472亿美元，并采用英特尔芯片；微软另将向Anthropic投资10亿美元。该交易凸显AI算力基础设施竞争与科技巨头联盟继续扩张。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUkU2MVNvazFLdzZkaEc3Qi15RXljajVmSkVLY1BqNXI4S09rWllSaGpzU2ZIS0VOWldWQ3Z2UmozT055SHBCLXZONU5KOEh4QUtVY3pyQnQtSi1EU0FGNUdJT3FndG9zTjFLSW9vMzRJMDd1Q0FzR2pnMUUxTTBOYmstek8tUzkzbHVPanZHYUhEMURZZTdKMFRkUHBWMGZiRmNSQVpCUG1qZG1lRUVwSG44QjBMZDJ2V1ltQVdINTFWM3BVd3Jz?oc=5" },
+  { time: "14:00", tag: "macro", tagText: "宏观", text: "极涡提前崩溃威胁欧洲本已偏低的天然气库存。寒冷天气与低风速可能加剧供需紧张，而欧洲进入冬季时储气水平为十多年来最低，气价面临上行风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/polar-vortex-europe-gas-prices.html" },
+  { time: "12:10", tag: "crypto", tagText: "加密", text: "比特币跌破57,000美元，创两年新低，日内跌幅约10%。市场关注AI交易退潮、ETF资金流出与风险偏好下降对加密资产的持续压力。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMid0FVX3lxTE1NUk9lTzRodUF5M1QyMkpkS3ViSDhVQ2hHZlV1ZUowRnBQeF9Za3l0WkRFb1BUNzVoS1NxcFFERDAydTVnLVpIMG9hcmRUV3hyb1F1RURKeGF3WV9iNlJScVlrYk95VmRJWWxjcE5GLUR4NUgtYWVj?oc=5" },
+  { time: "10:14", tag: "ai", tagText: "AI", text: "AI交易抛售蔓延至亚洲，软银集团股价周五暴跌逾16%，日本与韩国科技股同步重挫。此前Anthropic的IPO未能稳住投资者情绪，市场对AI相关估值与巨额资本开支的疑虑从美股扩散至亚洲科技板块。", source: "CNBC", url: "https://www.cnbc.com/2026/11/20/softbank-ai-tech-stocks-slide-anthropic-debut.html" },
+  { time: "10:03", tag: "ai", tagText: "AI", text: "美股周四大幅下挫：道指收于50,000点下方、单日跌约1,100点，纳指跌2%，标普500连续第六个交易日下跌，三大指数本周或创2025年4月“解放日”关税以来最差表现。Anthropic（ANT）上市首日市值达1.8万亿美元、股价大涨，却未能提振AI板块——英伟达六个交易日累计蒸发6,690亿美元市值，市场对AI资本开支回报与高估值的担忧升温，衰退交易信号开始浮现。", source: "CNBC", url: "https://www.cnbc.com/2026/11/19/anthropic-ipo-ai-stocks-selloff.html" },
+  { time: "09:49", tag: "macro", tagText: "宏观", text: "日本10月核心通胀升至年内最高，主因能源补贴到期推高电费与燃气等消费价格；剔除生鲜食品的核心CPI同比涨幅仍低于路透调查经济学家预期的2.3%。该数据令日本央行的加息路径与后续财政刺激规模更趋复杂。", source: "CNBC", url: "https://www.cnbc.com/2026/11/20/japan-inflation-cpi-october.html" },
+  { time: "09:41", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，本周亚洲迎来密集高层外交：特朗普、习近平与普京轮番登场，中国与菲律宾的峰会为一系列重磅会晤提供舞台。议题涵盖中美贸易、俄乌和谈与地区安全，外界将其形容为“雅尔塔2.0”，市场关注大国是否就势力范围与经贸安排达成新默契。", source: "Financial Times", url: "https://www.ft.com/content/5621d364-c767-4b40-a090-054042d1c49b?syn-25a6b1a6=1" },
   { time: "09:03", tag: "ai", tagText: "AI", text: "美股期货小幅走高，标普500、纳指与道指上周均涨超2%，创8月以来最大周涨幅。本周市场焦点集中于英伟达财报与Anthropic的IPO：前者检验AI算力需求成色，后者则被视为AI独角兽估值与一级市场融资环境的首次公开检验。", source: "CNBC", url: "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html" },
   { time: "09:02", tag: "macro", tagText: "宏观", text: "日本三季度GDP意外萎缩。报道称，家庭能源补贴于9月到期，使经济直接暴露在伊朗战争推高的能源价格之下，内需与消费承压。数据令日本央行加息路径与后续财政刺激规模更趋复杂，也加剧市场对日元与日债的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/16/japan-q3-gdp-energy-oil-prices.html" },
   { time: "08:53", tag: "geo", tagText: "地缘", text: "美国众议员Mast称，商务部已批准向中国企业出售逾87.9万枚英伟达与AMD的AI芯片。五角大楼认为部分采购方与中国人民解放军存在关联，国会在黄仁勋相关丑闻后正推动立法收紧对华芯片出口管制，此事政治压力持续上升。", source: "CNBC", url: "https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html" },
@@ -1640,17 +1649,8 @@ const breakingNews = [
   { time: "23:27", tag: "geo", tagText: "地缘", text: "美国众议院多个委员会将于12月1日就英伟达相关丑闻举行听证，前CEO黄仁勋将出席作证，英伟达律师定于12月2日作证。黄仁勋此前因被曝与一名疑似中国间谍的女性有婚外情而辞去CEO职务，事件正将这家全球市值最高的芯片公司卷入国家安全审查，并可能影响出口管制政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html" },
   { time: "23:18", tag: "ai", tagText: "AI", text: "英伟达将于美东时间周二下午4:20公布2027财年第三季度业绩，随后召开电话会，这是黄仁勋辞职后的首份财报，备受市场关注。投资者急于了解后黄仁勋时代的公司治理、继任安排与AI芯片订单能见度，但管理层料对继任问题保持缄默。该财报被视为检验AI算力需求成色的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" },
   { time: "23:01", tag: "tech", tagText: "科技", text: "美国过去一周接连发生技术故障，白宫与国会加紧调查，副总统万斯临时退出活动；特朗普呼吁民众“放松”。一连串服务中断推动资金回流网络安全板块，华尔街开始关注相关配置机会。", source: "MarketWatch", url: "https://www.marketwatch.com/story/washington-is-scrambling-to-get-to-the-bottom-of-the-growing-number-of-tech-outages-across-america-66fbf299?mod=mw_rss_topstories" },
-  { time: "23:00", tag: "macro", tagText: "宏观", text: "美国房屋建筑商信心指数跌至14年低点，高企的房贷利率以及能源、劳动力和材料成本上升持续压制需求，近半数建筑商已开始降价并提供更低的按揭利率以吸引买家，尽管这进一步压缩了本已高企的建造成本利润率。数据凸显高利率环境下美国住房市场的深层疲软。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/homebuilder-sentiment-plunges-to-14-year-low-leading-more-builders-to-drop-prices.html" },
-  { time: "22:53", tag: "geo", tagText: "地缘", text: "海湾局势一周内报复性升级，伊朗与美国更接近全面对抗，分析人士警告可能重返伊朗战争。市场关注能源供应、地区航运与全球风险资产受冲击的可能性。", source: "Financial Times", url: "https://www.ft.com/content/090da02e-2ed1-491a-a2cf-3c8a6b10522e?syn-25a6b1a6=1" },
-  { time: "22:34", tag: "ai", tagText: "AI", text: "据CNBC消息人士，Anthropic的IPO定价预计将高于每股70至78美元的现有区间，公司将于11月19日以代码“ANT”在纳斯达克挂牌上市。此次IPO拟向散户投资者开放认购，但部分市场人士质疑其估值存在炒作成分。该交易被视为AI板块风险偏好的重要风向标。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html" },
-  { time: "22:18", tag: "geo", tagText: "地缘", text: "联合国国际法院（ICJ）裁定缅甸对罗兴亚人实施种族灭绝，这是该法院首次就国家行为作出此类判决。裁决可能加大国际追责与制裁压力，并影响东南亚地缘政治环境。", source: "Financial Times", url: "https://www.ft.com/content/411d28f3-5adf-4a2f-9390-bc3372b4b3a9?syn-25a6b1a6=1" },
-  { time: "22:17", tag: "macro", tagText: "宏观", text: "黄金价格从1月纪录高位持续下挫，年内表现愈发疲弱；利率上升与美元走强削弱了无息资产的吸引力。投资者正重新评估黄金在组合中的对冲价值。", source: "CNBC", url: "https://www.cnbc.com/2026/11/19/gold-prices-fall-fed-rates-dollar.html" },
-  { time: "10:14", tag: "ai", tagText: "AI", text: "AI交易抛售蔓延至亚洲，软银集团股价周五暴跌逾16%，日本与韩国科技股同步重挫。此前Anthropic的IPO未能稳住投资者情绪，市场对AI相关估值与巨额资本开支的疑虑从美股扩散至亚洲科技板块。", source: "CNBC", url: "https://www.cnbc.com/2026/11/20/softbank-ai-tech-stocks-slide-anthropic-debut.html" },
-  { time: "10:03", tag: "ai", tagText: "AI", text: "美股周四大幅下挫：道指收于50,000点下方、单日跌约1,100点，纳指跌2%，标普500连续第六个交易日下跌，三大指数本周或创2025年4月“解放日”关税以来最差表现。Anthropic（ANT）上市首日市值达1.8万亿美元、股价大涨，却未能提振AI板块——英伟达六个交易日累计蒸发6,690亿美元市值，市场对AI资本开支回报与高估值的担忧升温，衰退交易信号开始浮现。", source: "CNBC", url: "https://www.cnbc.com/2026/11/19/anthropic-ipo-ai-stocks-selloff.html" },
-  { time: "09:49", tag: "macro", tagText: "宏观", text: "日本10月核心通胀升至年内最高，主因能源补贴到期推高电费与燃气等消费价格；剔除生鲜食品的核心CPI同比涨幅仍低于路透调查经济学家预期的2.3%。该数据令日本央行的加息路径与后续财政刺激规模更趋复杂。", source: "CNBC", url: "https://www.cnbc.com/2026/11/20/japan-inflation-cpi-october.html" },
-  { time: "09:41", tag: "geo", tagText: "地缘", text: "英国《金融时报》报道，本周亚洲迎来密集高层外交：特朗普、习近平与普京轮番登场，中国与菲律宾的峰会为一系列重磅会晤提供舞台。议题涵盖中美贸易、俄乌和谈与地区安全，外界将其形容为“雅尔塔2.0”，市场关注大国是否就势力范围与经贸安排达成新默契。", source: "Financial Times", url: "https://www.ft.com/content/5621d364-c767-4b40-a090-054042d1c49b?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月21日 09:23 CST";
+const breakingDate = "2026年11月21日 17:36 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:18", tag: "geo", tagText: "地缘", text: "在特朗普就AI芯片发表最新言论后，英伟达面临对华业务的新现实。市场关注华盛顿出口管制口径变化将如何影响其中国营收、合规路径与产品线安排，这被视为继此前远程访问限制讨论之后，英伟达地缘风险的又一次重估。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQjN2R19leTdvQTNkblVRUlh1djlmYmcxWEs3RDQ0Z1pHNVdrNzdNV3Q5YVp0VzV5QjRhanNRRndzUEc1SU4yTXdOSzBNSlh4Rmx6ZHJRcEVVeEVnWlhubFp2NGkxSTVwU3Azc0hTVXVSSTE0cWFabEZvdlg1WWtVRld4Qjc0aUl0RW8wa0xFVlFtRlY5TFNGNF9ITFNCSldaZnBXR1VwNE1lbmtDRVVWNE56S254TDV0XzJWWDR3Sy1ZRlcyOG9KWkdn?oc=5" },
   { time: "19:15", tag: "ai", tagText: "AI", text: "AI初创公司Remanence完成3000万美元融资，Synthesia与Datadog的CEO参与投资，显示企业高管对AI初创生态的持续押注。", source: "Tech.eu", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRUdEQk5jYjNWZ1U3YjlMOWYyMF9jTTAtOHZkV04xSjZoYlZMam40dEFfaVBJUUpEZHY3RHo5TmVRa201Q0g2UktfMGRQZ3pyaTNfRTNpSExHQXFMTHNPVWpXN3BaOUFydU43SUxIaXY4dnpHU2R2YkVBdGJXTXVvcXE5Z1ZMODVmY21OeU1mOHQ?oc=5" },
 ];
-const aiBreakingDate = "2026年11月21日 09:23 CST";
+const aiBreakingDate = "2026年11月21日 17:36 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
