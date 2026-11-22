@@ -1623,12 +1623,13 @@ const fearGreedData = {
   previous1Week: 37.37,
   previous1Month: 28.74,
   previous1Year: 5.17,
-  date: "2026年11月22日 07:02 CST"
+  date: "2026年11月22日 11:00 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "09:30", tag: "macro", tagText: "宏观", text: "印度规模1260亿美元的保险行业反对拟议的佣金上限，认为该监管将抑制这一刚全面开放外资的市场增长。行业与监管机构就佣金规则的分歧升温。", source: "Financial Times", url: "https://www.ft.com/content/2e67313b-d6c5-4e62-bd50-14639fe5ef95?syn-25a6b1a6=1" },
   { time: "05:28", tag: "geo", tagText: "地缘", text: "墨西哥逮捕涉嫌毒枭法乌斯托·伊西德罗·梅萨-弗洛雷斯（绰号“El Chapo Isidro”），引发锡那罗亚州暴力事件。该嫌疑人因向美国贩运毒品被列入FBI通缉名单。", source: "Financial Times", url: "https://www.ft.com/content/90a8d0bd-32c8-471a-8696-e95555e41b78?syn-25a6b1a6=1" },
   { time: "03:45", tag: "macro", tagText: "宏观", text: "美国房屋销售降至历史低位，仍在高房价和7%按揭利率下入场的少数买家开始掌握议价权。房地产经纪人称，剩余买家正变得更强势。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buyers-are-out-for-blood-as-housing-market-finally-hits-rock-bottom-fa5093a6?mod=mw_rss_topstories" },
   { time: "01:21", tag: "ai", tagText: "AI", text: "亚马逊接近以75亿美元收购AI初创公司Decart，交易将帮助AWS在算力竞赛中对抗英伟达。", source: "Financial Times", url: "https://www.ft.com/content/dc7749dc-0f40-44a6-80bc-7f747d383616?syn-25a6b1a6=1" },
@@ -1648,12 +1649,12 @@ const breakingNews = [
   { time: "19:29", tag: "macro", tagText: "宏观", text: "美股周五收盘，标普500与道指双双跌破纪录高点10%，正式进入回调区间，纳指回吐今年以来全部涨幅，为2026年最差单周。五重压力主导抛售：AI资本开支疑虑、英伟达治理与会计风波、估值过高、加密资产暴跌以及仓位过度拥挤。资金转向防御性资产与长期被冷落的消费类“冷门股”，投资者重心从寻找便宜货转为保护组合。", source: "CNBC", url: "https://www.cnbc.com/2026/11/20/sp-500-correction-market-sell-off.html" },
   { time: "16:54", tag: "macro", tagText: "宏观", text: "特朗普签署命令，要求联邦承包商在向国会提供信息前先通知白宫；不遵守者可能被取消现有合同或被暂停参与未来联邦业务。此举可能影响与联邦政府有业务往来的企业合规与政治风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/trump-orders-federal-contractors-to-notify-white-house-before-giving-congress-information.html" },
   { time: "16:02", tag: "geo", tagText: "地缘", text: "约100个国家同意推动联合国谈判，目标在2028年前就“杀手机器人”制定具有法律约束力的规则；美国、俄罗斯、以色列等主要武器生产国反对该立场。谈判前景仍受大国分歧制约。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/countries-agree-to-un-talks-aiming-to-regulate-killer-robots-by-2028.html" },
-  { time: "16:00", tag: "ai", tagText: "AI", text: "Anthropic承诺向微软Azure投入472亿美元，并采用英特尔芯片；微软另将向Anthropic投资10亿美元。该交易凸显AI算力基础设施竞争与科技巨头联盟继续扩张。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUkU2MVNvazFLdzZkaEc3Qi15RXljajVmSkVLY1BqNXI4S09rWllSaGpzU2ZIS0VOWldWQ3Z2UmozT055SHBCLXZONU5KOEh4QUtVY3pyQnQtSi1EU0FGNUdJT3FndG9zTjFLSW9vMzRJMDd1Q0FzR2pnMUUxTTBOYmstek8tUzkzbHVPanZHYUhEMURZZTdKMFRkUHBWMGZiRmNSQVpCUG1qZG1lRUVwSG44QjBMZDJ2V1ltQVdINTFWM3BVd3Jz?oc=5" },
 ];
-const breakingDate = "2026年11月22日 07:02 CST";
+const breakingDate = "2026年11月22日 11:00 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "08:56", tag: "ai", tagText: "AI", text: "苹果正招聘工程师开发自有AI代理，目标是让代理在Mac上运行，可浏览网页、跨应用执行任务、编写代码并调用服务。招聘信息显示其将具备多步骤任务执行能力，并可能与Meta Muse、Claude等AI代理竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/" },
   { time: "06:12", tag: "ai", tagText: "AI", text: "据彭博社报道，AI编程公司Cognition正洽谈新一轮融资，估值目标达750亿美元。该估值较此前大幅跃升，显示资本仍在积极押注头部AI应用公司。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOanNxamp2UGFnbHNLSlFpZW4yMXN5MkNzT3ZZTmhLLTcyYmM1clBTc0h3TzRxN2JxM0taQnlCU2tPVnZIMGVJQ1VlSGhtcEZDbE80YjhWOVNyLWtPdW1sekwwN3ZuSnYxcWhJbDBWNDVmRzBqZjhBbkpvYnRFQUxoaW9YZDNOZl9Zd3hETmF3MUwzMklyRnBzVk5ZNkxvcUZvMGg5djFCOWEzZE0?oc=5" },
   { time: "05:37", tag: "tech", tagText: "科技", text: "Signal 开始在 Android 与 iOS 客户端限制用户截屏功能。该加密通讯软件称，生成式 AI 与大规模监控能力的结合构成「生存性威胁」，限制截屏是为了防止对话内容被自动化抓取与画像分析。此举在隐私保护与可用性之间引发新的争论，也可能推动其他加密应用跟进类似的防护设计。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/" },
   { time: "05:07", tag: "ai", tagText: "AI", text: "英伟达呈现出「两个面孔」：最新财报显示业务基本面依旧强劲，但与此同时，多位科技公司高管公开呼吁黄仁勋回归掌舵。此前黄仁勋因与一名疑似向中国输送芯片的公司高管存在关联而辞任 CEO，公司治理与安全合规能力受到质疑。市场正试图在亮眼业绩与领导层动荡之间重新定价。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/" },
@@ -1673,9 +1674,8 @@ const aiBreakingNews = [
   { time: "22:25", tag: "ai", tagText: "AI", text: "Anthropic正式登陆公开市场，募资813亿美元，超越SpaceX成为史上规模最大IPO，为其他AI公司上市立下标杆。招股与公开文件同时显示，其算力承诺规模庞大，而亚马逊、谷歌等基础设施伙伴即便在Anthropic失去技术领先的情况下仍可获利，市场将此次IPO视为对AI行业“循环融资”热潮的关键检验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" },
   { time: "22:18", tag: "geo", tagText: "地缘", text: "在特朗普就AI芯片发表最新言论后，英伟达面临对华业务的新现实。市场关注华盛顿出口管制口径变化将如何影响其中国营收、合规路径与产品线安排，这被视为继此前远程访问限制讨论之后，英伟达地缘风险的又一次重估。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQjN2R19leTdvQTNkblVRUlh1djlmYmcxWEs3RDQ0Z1pHNVdrNzdNV3Q5YVp0VzV5QjRhanNRRndzUEc1SU4yTXdOSzBNSlh4Rmx6ZHJRcEVVeEVnWlhubFp2NGkxSTVwU3Azc0hTVXVSSTE0cWFabEZvdlg1WWtVRld4Qjc0aUl0RW8wa0xFVlFtRlY5TFNGNF9ITFNCSldaZnBXR1VwNE1lbmtDRVVWNE56S254TDV0XzJWWDR3Sy1ZRlcyOG9KWkdn?oc=5" },
   { time: "19:15", tag: "ai", tagText: "AI", text: "AI初创公司Remanence完成3000万美元融资，Synthesia与Datadog的CEO参与投资，显示企业高管对AI初创生态的持续押注。", source: "Tech.eu", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRUdEQk5jYjNWZ1U3YjlMOWYyMF9jTTAtOHZkV04xSjZoYlZMam40dEFfaVBJUUpEZHY3RHo5TmVRa201Q0g2UktfMGRQZ3pyaTNfRTNpSExHQXFMTHNPVWpXN3BaOUFydU43SUxIaXY4dnpHU2R2YkVBdGJXTXVvcXE5Z1ZMODVmY21OeU1mOHQ?oc=5" },
-  { time: "08:56", tag: "ai", tagText: "AI", text: "苹果正招聘工程师开发自有AI代理，目标是让代理在Mac上运行，可浏览网页、跨应用执行任务、编写代码并调用服务。招聘信息显示其将具备多步骤任务执行能力，并可能与Meta Muse、Claude等AI代理竞争。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/" },
 ];
-const aiBreakingDate = "2026年11月22日 07:02 CST";
+const aiBreakingDate = "2026年11月22日 11:00 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
