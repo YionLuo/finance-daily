@@ -1623,12 +1623,16 @@ const fearGreedData = {
   previous1Week: 37.37,
   previous1Month: 28.74,
   previous1Year: 5.17,
-  date: "2026年11月22日 11:00 CST"
+  date: "2026年11月22日 19:03 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "18:37", tag: "crypto", tagText: "加密", text: "Kraken交易所出现价格故障，BTC/CAD交易对一度闪崩至1.7万加元，跌幅达71%，与全球比特币价格严重脱节。此次异常报价再次引发市场对交易所定价机制、流动性与风控的担忧，交易员警告极端报价可能触发错误强平。", source: "Bitcoin Foundation", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTTZXRjMwMlpzalZ2amtobUE1YjRMSS10UmxuN1ExX3EtNDNSeklyWG5mcEpqaUdub2xyUkRWYXVpYlpqYWktWm8tRjZKZVFJMGtkdG5xblJDUzJjdHM0UUZLN3RlSnJJaUZTTEJWeUpINW1tZXpyYlAwUm45Rlhzc0NfbXlfb3FVcW9fQ1MwRmdYTjlMc0xtclBpRy1VbzJtVUE?oc=5" },
+  { time: "16:54", tag: "macro", tagText: "宏观", text: "特朗普签署命令，要求联邦承包商在向国会提供信息前先通知白宫；不遵守者可能被取消现有合同或被暂停参与未来联邦业务。此举可能影响与联邦政府有业务往来的企业合规与政治风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/trump-orders-federal-contractors-to-notify-white-house-before-giving-congress-information.html" },
+  { time: "16:02", tag: "geo", tagText: "地缘", text: "约100个国家同意推动联合国谈判，目标在2028年前就“杀手机器人”制定具有法律约束力的规则；美国、俄罗斯、以色列等主要武器生产国反对该立场。谈判前景仍受大国分歧制约。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/countries-agree-to-un-talks-aiming-to-regulate-killer-robots-by-2028.html" },
+  { time: "14:00", tag: "tech", tagText: "科技", text: "量子计算的首个实际商业回报可能出现在能源领域而非药物研发。相关企业正测试将量子计算用于电网优化、太阳能材料与氢催化剂，以缓解可再生能源并网与储能瓶颈。若验证成功，能源行业或成为量子计算最早规模化落地的场景。", source: "CNBC", url: "https://www.cnbc.com/2026/11/22/quantum-computing-energy-applications.html" },
   { time: "09:30", tag: "macro", tagText: "宏观", text: "印度规模1260亿美元的保险行业反对拟议的佣金上限，认为该监管将抑制这一刚全面开放外资的市场增长。行业与监管机构就佣金规则的分歧升温。", source: "Financial Times", url: "https://www.ft.com/content/2e67313b-d6c5-4e62-bd50-14639fe5ef95?syn-25a6b1a6=1" },
   { time: "05:28", tag: "geo", tagText: "地缘", text: "墨西哥逮捕涉嫌毒枭法乌斯托·伊西德罗·梅萨-弗洛雷斯（绰号“El Chapo Isidro”），引发锡那罗亚州暴力事件。该嫌疑人因向美国贩运毒品被列入FBI通缉名单。", source: "Financial Times", url: "https://www.ft.com/content/90a8d0bd-32c8-471a-8696-e95555e41b78?syn-25a6b1a6=1" },
   { time: "03:45", tag: "macro", tagText: "宏观", text: "美国房屋销售降至历史低位，仍在高房价和7%按揭利率下入场的少数买家开始掌握议价权。房地产经纪人称，剩余买家正变得更强势。", source: "MarketWatch", url: "https://www.marketwatch.com/story/buyers-are-out-for-blood-as-housing-market-finally-hits-rock-bottom-fa5093a6?mod=mw_rss_topstories" },
@@ -1645,12 +1649,8 @@ const breakingNews = [
   { time: "21:01", tag: "macro", tagText: "宏观", text: "巴菲特今年感恩节向四家家族基金会捐赠55亿美元，较往年增长逾三倍；这延续其大规模财富转移计划，也引发市场对其继任安排与慈善布局的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/warren-buffett-quadruples-thanksgiving-gifts.html" },
   { time: "20:33", tag: "ai", tagText: "AI", text: "英伟达股价延续暴跌，本轮累计市值蒸发约2.7万亿美元；据报道，美国证监会（SEC）正调查其会计问题。市场人士认为，在黄仁勋相关风波与调查结果明朗之前，即便估值已跌至历史低位，抄底仍为时过早，买盘持续回避。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQS25iVW9uNHFsc3lYdkNPRTJyTUhYcWRVbjhOZlR4QUpLZGs4RkE0d1lSLTEtN2x6N0ZxZnlZdE9KaTQxeS1TbWRFaGFpd0hGc0ZKWmF5OEVRdnFDX1NNWFlBTl9rdVRUVFlxSVRIelpPNmluWVdUVElhQzh1NWtjemJaUnlhRnJ2N3Q2dDNVYlhVYWtXbkswbXhYLWdiOHE0V1dkQ2xjNjFsTlpEQ0hzRDBja0RqV0VFX0FZaXdKRVZ2RHdGVUUtS2VzanJrTkhiSVcxeGVCRXNlUUhSVWJ3?oc=5" },
   { time: "20:23", tag: "geo", tagText: "地缘", text: "英国海上贸易行动办公室（UKMTO）报告，阿曼附近又有两艘油轮遇袭；此前周五哈萨卜（Khasab）附近一艘油轮遭袭并起火。伊朗方面称，一艘船在霍尔木兹海峡以东触雷受损。连续袭击事件加剧海湾航运安全与原油供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html" },
-  { time: "20:00", tag: "macro", tagText: "宏观", text: "随着特朗普关税威胁担忧缓和，交易商开始把美国铜运往中国，以套取当地严重供应短缺与高升水带来的丰厚价差。此前因关税预期而大量滞留美国的铜库存流向逆转，反映市场对贸易政策前景的快速重定价。", source: "Financial Times", url: "https://www.ft.com/content/b84dbcb1-f216-422e-89c7-f203e0ab2757?syn-25a6b1a6=1" },
-  { time: "19:29", tag: "macro", tagText: "宏观", text: "美股周五收盘，标普500与道指双双跌破纪录高点10%，正式进入回调区间，纳指回吐今年以来全部涨幅，为2026年最差单周。五重压力主导抛售：AI资本开支疑虑、英伟达治理与会计风波、估值过高、加密资产暴跌以及仓位过度拥挤。资金转向防御性资产与长期被冷落的消费类“冷门股”，投资者重心从寻找便宜货转为保护组合。", source: "CNBC", url: "https://www.cnbc.com/2026/11/20/sp-500-correction-market-sell-off.html" },
-  { time: "16:54", tag: "macro", tagText: "宏观", text: "特朗普签署命令，要求联邦承包商在向国会提供信息前先通知白宫；不遵守者可能被取消现有合同或被暂停参与未来联邦业务。此举可能影响与联邦政府有业务往来的企业合规与政治风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/trump-orders-federal-contractors-to-notify-white-house-before-giving-congress-information.html" },
-  { time: "16:02", tag: "geo", tagText: "地缘", text: "约100个国家同意推动联合国谈判，目标在2028年前就“杀手机器人”制定具有法律约束力的规则；美国、俄罗斯、以色列等主要武器生产国反对该立场。谈判前景仍受大国分歧制约。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/countries-agree-to-un-talks-aiming-to-regulate-killer-robots-by-2028.html" },
 ];
-const breakingDate = "2026年11月22日 11:00 CST";
+const breakingDate = "2026年11月22日 19:03 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "22:18", tag: "geo", tagText: "地缘", text: "在特朗普就AI芯片发表最新言论后，英伟达面临对华业务的新现实。市场关注华盛顿出口管制口径变化将如何影响其中国营收、合规路径与产品线安排，这被视为继此前远程访问限制讨论之后，英伟达地缘风险的又一次重估。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQjN2R19leTdvQTNkblVRUlh1djlmYmcxWEs3RDQ0Z1pHNVdrNzdNV3Q5YVp0VzV5QjRhanNRRndzUEc1SU4yTXdOSzBNSlh4Rmx6ZHJRcEVVeEVnWlhubFp2NGkxSTVwU3Azc0hTVXVSSTE0cWFabEZvdlg1WWtVRld4Qjc0aUl0RW8wa0xFVlFtRlY5TFNGNF9ITFNCSldaZnBXR1VwNE1lbmtDRVVWNE56S254TDV0XzJWWDR3Sy1ZRlcyOG9KWkdn?oc=5" },
   { time: "19:15", tag: "ai", tagText: "AI", text: "AI初创公司Remanence完成3000万美元融资，Synthesia与Datadog的CEO参与投资，显示企业高管对AI初创生态的持续押注。", source: "Tech.eu", url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRUdEQk5jYjNWZ1U3YjlMOWYyMF9jTTAtOHZkV04xSjZoYlZMam40dEFfaVBJUUpEZHY3RHo5TmVRa201Q0g2UktfMGRQZ3pyaTNfRTNpSExHQXFMTHNPVWpXN3BaOUFydU43SUxIaXY4dnpHU2R2YkVBdGJXTXVvcXE5Z1ZMODVmY21OeU1mOHQ?oc=5" },
 ];
-const aiBreakingDate = "2026年11月22日 11:00 CST";
+const aiBreakingDate = "2026年11月22日 19:03 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
