@@ -1623,7 +1623,7 @@ const fearGreedData = {
   previous1Week: 37.37,
   previous1Month: 28.74,
   previous1Year: 5.17,
-  date: "2026年11月22日 23:34 CST"
+  date: "2026年11月23日 02:27 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,12 @@ const breakingNews = [
   { time: "18:37", tag: "crypto", tagText: "加密", text: "Kraken交易所出现价格故障，BTC/CAD交易对一度闪崩至1.7万加元，跌幅达71%，与全球比特币价格严重脱节。此次异常报价再次引发市场对交易所定价机制、流动性与风控的担忧，交易员警告极端报价可能触发错误强平。", source: "Bitcoin Foundation", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTTZXRjMwMlpzalZ2amtobUE1YjRMSS10UmxuN1ExX3EtNDNSeklyWG5mcEpqaUdub2xyUkRWYXVpYlpqYWktWm8tRjZKZVFJMGtkdG5xblJDUzJjdHM0UUZLN3RlSnJJaUZTTEJWeUpINW1tZXpyYlAwUm45Rlhzc0NfbXlfb3FVcW9fQ1MwRmdYTjlMc0xtclBpRy1VbzJtVUE?oc=5" },
   { time: "16:54", tag: "macro", tagText: "宏观", text: "特朗普签署命令，要求联邦承包商在向国会提供信息前先通知白宫；不遵守者可能被取消现有合同或被暂停参与未来联邦业务。此举可能影响与联邦政府有业务往来的企业合规与政治风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/trump-orders-federal-contractors-to-notify-white-house-before-giving-congress-information.html" },
 ];
-const breakingDate = "2026年11月22日 23:34 CST";
+const breakingDate = "2026年11月23日 02:27 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "02:21", tag: "ai", tagText: "AI", text: "谷歌Gemini的macOS应用上线“电脑使用”能力，可跨本地文件、桌面应用和网页执行多步骤任务，例如整理文件、填表和自动化工作流。AI代理正从聊天助手向操作系统级执行工具迈进。", source: "The Verge", url: "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use" },
+  { time: "00:00", tag: "ai", tagText: "AI", text: "一名演员将其面部肖像授权给微短剧初创公司，允许以AI生成版本出演内容；这一模式在中国已流行，专家担忧若在好莱坞扩散，可能冲击演员肖像权、就业与长期行业生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/" },
   { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
   { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
   { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "04:03", tag: "geo", tagText: "地缘", text: "在日内瓦召开的联合国会议上，各国外交代表未能就自主武器系统（即所谓「杀手机器人」）的监管规则达成一致，会议无果而终。围绕是否应具有法律约束力、如何界定人类对武力使用的最终控制权等核心分歧依旧，意味着在 AI 军事化加速的背景下，全球层面短期内难以形成统一治理框架。", source: "The Verge", url: "https://www.theverge.com/tech/1039554/un-regulations-killer-robots" },
   { time: "03:32", tag: "tech", tagText: "科技", text: "AI与人类研究者同时宣称解决167年历史的黎曼猜想，数学界震惊；结果尚待同行验证，若成立将成为AI辅助基础科学研究的重大里程碑。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/" },
   { time: "02:39", tag: "geo", tagText: "地缘", text: "消息人士称，台积电收紧对华AI芯片供应限制，以配合美国新规堵住制造环节漏洞。新规可能进一步限制中国通过代工渠道获取先进AI芯片，影响全球供应链与相关客户排产。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5" },
-  { time: "02:21", tag: "ai", tagText: "AI", text: "谷歌Gemini的macOS应用上线“电脑使用”能力，可跨本地文件、桌面应用和网页执行多步骤任务，例如整理文件、填表和自动化工作流。AI代理正从聊天助手向操作系统级执行工具迈进。", source: "The Verge", url: "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "一名演员将其面部肖像授权给微短剧初创公司，允许以AI生成版本出演内容；这一模式在中国已流行，专家担忧若在好莱坞扩散，可能冲击演员肖像权、就业与长期行业生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/" },
 ];
-const aiBreakingDate = "2026年11月22日 23:34 CST";
+const aiBreakingDate = "2026年11月23日 02:27 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
