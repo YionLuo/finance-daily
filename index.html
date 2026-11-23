@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 19.44,
+  score: 16.67,
   rating: "extreme fear",
-  timestamp: "2026-11-23T15:35:19+00:00",
+  timestamp: "2026-11-23T21:01:00+00:00",
   previousClose: 9.67,
   previous1Week: 31.07,
   previous1Month: 16.69,
   previous1Year: 5.66,
-  date: "2026年11月23日 23:36 CST"
+  date: "2026年11月24日 05:12 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,20 +1650,11 @@ const breakingNews = [
   { time: "20:23", tag: "geo", tagText: "地缘", text: "英国海上贸易行动办公室（UKMTO）报告，阿曼附近又有两艘油轮遇袭；此前周五哈萨卜（Khasab）附近一艘油轮遭袭并起火。伊朗方面称，一艘船在霍尔木兹海峡以东触雷受损。连续袭击事件加剧海湾航运安全与原油供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html" },
   { time: "19:32", tag: "ai", tagText: "AI", text: "英国数据中心运营商Nscale在计划规模350亿美元的IPO前放缓扩张，除关键岗位外全面暂停招聘并削减开支，显示AI基础设施融资与算力投资热潮出现降温迹象。", source: "Financial Times", url: "https://www.ft.com/content/98f5aa90-5581-45ed-8e9b-d72217c56df8" },
 ];
-const breakingDate = "2026年11月23日 23:36 CST";
+const breakingDate = "2026年11月24日 05:12 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
-  { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
-  { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
-  { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
-  { time: "22:25", tag: "ai", tagText: "AI", text: "Anthropic正式登陆公开市场，募资813亿美元，超越SpaceX成为史上规模最大IPO，为其他AI公司上市立下标杆。招股与公开文件同时显示，其算力承诺规模庞大，而亚马逊、谷歌等基础设施伙伴即便在Anthropic失去技术领先的情况下仍可获利，市场将此次IPO视为对AI行业“循环融资”热潮的关键检验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" },
-  { time: "22:21", tag: "tech", tagText: "科技", text: "英伟达董事会一致投票恢复黄仁勋CEO职务，推翻此前安排；美国政府高层支持此举，特朗普称无证据显示存在不当行为，并敦促英伟达继续配合出口管制调查。消息刺激芯片股大涨，英伟达一度涨28%，英特尔涨13%、AMD涨7%，SK海力士盘前涨超10%。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo/" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "沃尔玛向Meta的AI代理Muse开放购物能力，Muse可通过沃尔玛Sparky助手代用户寻找并购买黑五商品，已进入实际部署。AI代理正从问答助手走向可执行交易的电商入口，可能改变假日购物与零售流量分配。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday" },
-  { time: "15:10", tag: "ai", tagText: "AI", text: "英国国防AI初创公司Agon完成7000万美元A轮融资，显示资本继续押注国防领域的人工智能应用。", source: "Traders Union", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNmV1dW12cHJDdUxzcEt4MldHU2VfMDc0REJVZGJzMy1tVmtoQ180ZlhlVm5SY0R2SW5ydTVGbXp5bGNyYUVYWFhjMkxWVVlTc2NxN3pEdFkwOUFkbGdUMGZ6STdYQ3B0WlN1RXNMUGxkTXJpQUdUMWR5M1BKQXJoUDc5T1BiaXRORWNPVzFNdU94bDQ?oc=5" },
-  { time: "07:35", tag: "ai", tagText: "AI", text: "韩国政府召集英伟达、AMD与英特尔审查AI芯片供应链；HBM和基板短缺正令小型Fabless公司承压，反映AI芯片上游供应瓶颈与产业链风险。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTFBsUXY3NFZBeWE2d0E0Vy1PVzNKRWpmRTBhcTdfQXM4MFNuMXRveGtabE5WU1JuWUotRDA0UEZrQ196bWdfTGNXTVlOV0lBQXFyd2taSXlISE1sWXNaa29MaW1jYnY0ajd5NGR1U3RpNElhSnh3Rnc?oc=5" },
-  { time: "06:12", tag: "ai", tagText: "AI", text: "据彭博社报道，AI编程公司Cognition正洽谈新一轮融资，估值目标达750亿美元。该估值较此前大幅跃升，显示资本仍在积极押注头部AI应用公司。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOanNxamp2UGFnbHNLSlFpZW4yMXN5MkNzT3ZZTmhLLTcyYmM1clBTc0h3TzRxN2JxM0taQnlCU2tPVnZIMGVJQ1VlSGhtcEZDbE80YjhWOVNyLWtPdW1sekwwN3ZuSnYxcWhJbDBWNDVmRzBqZjhBbkpvYnRFQUxoaW9YZDNOZl9Zd3hETmF3MUwzMklyRnBzVk5ZNkxvcUZvMGg5djFCOWEzZE0?oc=5" },
-  { time: "05:37", tag: "tech", tagText: "科技", text: "Signal 开始在 Android 与 iOS 客户端限制用户截屏功能。该加密通讯软件称，生成式 AI 与大规模监控能力的结合构成「生存性威胁」，限制截屏是为了防止对话内容被自动化抓取与画像分析。此举在隐私保护与可用性之间引发新的争论，也可能推动其他加密应用跟进类似的防护设计。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/" },
+  { time: "05:09", tag: "ai", tagText: "AI", text: "在日内瓦举行的联合国气候谈判中，AI数据中心带来的电力需求激增成为各国代表难以回避的新难题：全球经济的全面电气化正与功耗庞大的算力设施扩张同时发生，清洁能源转型的节奏因此面临重估。多国代表在谈判中讨论如何在AI算力扩张与减排目标之间取得平衡。", source: "The Verge", url: "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit" },
   { time: "05:07", tag: "ai", tagText: "AI", text: "英伟达呈现出「两个面孔」：最新财报显示业务基本面依旧强劲，但与此同时，多位科技公司高管公开呼吁黄仁勋回归掌舵。此前黄仁勋因与一名疑似向中国输送芯片的公司高管存在关联而辞任 CEO，公司治理与安全合规能力受到质疑。市场正试图在亮眼业绩与领导层动荡之间重新定价。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/" },
   { time: "04:59", tag: "ai", tagText: "AI", text: "安全研究人员在AI供应链中植入200万个可追踪的“金丝雀”标记，测试发现带有唯一秘密的提示词在流转过程中未能保持私密，暴露严重数据泄露风险，凸显AI服务多层外包与转售环节的隐私隐患。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/" },
   { time: "04:45", tag: "geo", tagText: "地缘", text: "美国一委员会披露，过去六个月美国政府批准向中国出售近90万颗AI芯片。该数字凸显在美中AI竞赛与出口管制持续收紧背景下，对华芯片销售仍具规模，可能引发外界对现有管制执行效果的审查。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxPOFRrWXhLbGJZcHVKYzUycHNKbTdKZUE2clNGYUp5WFFBOTdaWndZbVdDZW0xSTQzUi1EZlRsRElldE00bktXMUFMaG1Sclo4eGdCVnZab1JUbWJwZHQ4cGFSTzgyNkZSZmF0WHAzR0hTa1B3eUQ5cmJRTGRfd1ZBdkFiSzNpU1RDeF8wU0pmbXBqWXYxeFNuaWdmV01QLWk0MWdrclJDV2ZYNVFFN0puWU9B?oc=5" },
@@ -1672,10 +1663,19 @@ const aiBreakingNews = [
   { time: "04:08", tag: "ai", tagText: "AI", text: "AI客服初创公司Sierra据悉正洽谈新一轮融资，估值目标达300亿美元。该公司为企业提供AI客服代理，高估值反映生成式AI在企业服务场景的商业化热度。", source: "PYMNTS.com", url: "https://news.google.com/rss/articles/CBMinwFBVV95cUxNb0p5dEVqTmtaRENiMXd2YnIyYW5kRjJrMlhfOVN5a25VaXppa2ltTXVWeGtpTkhuNGNFaGRBZHV1ZFJoTUpZYUpxT0l2QlFrZmhta1ZrOWJaY3JyM1JyYzVHSXFwTjdtWWt2SHZzTklEck1UQnc4WGhNUzdUQ29KdHNvZG5aVDlzdUJNQUV6S01RX3NqcVBlNUt1blJ0Smc?oc=5" },
   { time: "04:05", tag: "ai", tagText: "AI", text: "谷歌改版搜索首页，将AI聊天入口直接放在主页：用户可打开可折叠侧边栏查看并继续AI对话。此举意味着谷歌把生成式AI进一步推向核心搜索流量入口，可能改变搜索交互与广告模式。", source: "The Verge", url: "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats" },
   { time: "04:03", tag: "geo", tagText: "地缘", text: "在日内瓦召开的联合国会议上，各国外交代表未能就自主武器系统（即所谓「杀手机器人」）的监管规则达成一致，会议无果而终。围绕是否应具有法律约束力、如何界定人类对武力使用的最终控制权等核心分歧依旧，意味着在 AI 军事化加速的背景下，全球层面短期内难以形成统一治理框架。", source: "The Verge", url: "https://www.theverge.com/tech/1039554/un-regulations-killer-robots" },
+  { time: "04:00", tag: "ai", tagText: "AI", text: "Anthropic推出新Claude Ship产品能力：Claude可直接审查代码Pull Request、自动修复问题并批准合并请求，进一步从编程助手升级为可独立交付代码的AI代理。此举将加剧与GitHub Copilot、Cursor等工具在软件工程自动化领域的竞争。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests" },
   { time: "03:32", tag: "tech", tagText: "科技", text: "AI与人类研究者同时宣称解决167年历史的黎曼猜想，数学界震惊；结果尚待同行验证，若成立将成为AI辅助基础科学研究的重大里程碑。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/" },
+  { time: "03:14", tag: "ai", tagText: "AI", text: "谷歌将AI Mode的“个人智能”能力扩展至Drive、Wallet与Gemini应用，搜索AI模式可直接调用用户的云端文件与钱包数据以给出个性化回答。这意味着谷歌正把生态内积累的用户数据转化为生成式AI的竞争壁垒，同时也将再度引发隐私边界讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/" },
   { time: "02:39", tag: "geo", tagText: "地缘", text: "消息人士称，台积电收紧对华AI芯片供应限制，以配合美国新规堵住制造环节漏洞。新规可能进一步限制中国通过代工渠道获取先进AI芯片，影响全球供应链与相关客户排产。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5" },
+  { time: "02:26", tag: "ai", tagText: "AI", text: "美国俄勒冈州与弗吉尼亚州总检察长分别提起诉讼，指控马斯克旗下xAI（起诉对象列为SpaceX）的Grok生成未经同意的色情深度伪造内容，违反各州消费者保护法。案件将检验生成式AI平台对深度伪造内容的责任边界，可能成为美国州级AI监管的重要先例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit" },
+  { time: "02:12", tag: "ai", tagText: "AI", text: "在重返英伟达CEO职位后，黄仁勋已确定于下周出席美国参议院公开听证会，就此前涉及疑似中国间谍的传闻及公司治理问题作证。该听证会由两党共同要求，将成为观察美国AI芯片出口管制与政商关系走向的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo/" },
+  { time: "01:14", tag: "ai", tagText: "AI", text: "亚马逊以约75亿美元收购AI优化技术公司Decart的技术与研发团队，为对外销售自研Trainium芯片铺路。该交易显示云厂商正加速自建“芯片＋优化软件”全栈能力，以降低对英伟达GPU的依赖并提升AI训练推理的性价比。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/" },
+  { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
+  { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
+  { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
+  { time: "22:25", tag: "ai", tagText: "AI", text: "Anthropic正式登陆公开市场，募资813亿美元，超越SpaceX成为史上规模最大IPO，为其他AI公司上市立下标杆。招股与公开文件同时显示，其算力承诺规模庞大，而亚马逊、谷歌等基础设施伙伴即便在Anthropic失去技术领先的情况下仍可获利，市场将此次IPO视为对AI行业“循环融资”热潮的关键检验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" },
 ];
-const aiBreakingDate = "2026年11月23日 23:36 CST";
+const aiBreakingDate = "2026年11月24日 05:12 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
