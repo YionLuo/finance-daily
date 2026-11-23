@@ -1616,24 +1616,28 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 10.41,
+  score: 19.44,
   rating: "extreme fear",
-  timestamp: "2026-11-23T08:35:01+00:00",
+  timestamp: "2026-11-23T15:35:19+00:00",
   previousClose: 9.67,
   previous1Week: 31.07,
   previous1Month: 16.69,
   previous1Year: 5.66,
-  date: "2026年11月23日 16:53 CST"
+  date: "2026年11月23日 23:36 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
   { time: "23:32", tag: "macro", tagText: "宏观", text: "美股周二承压，道指一度下跌400点，受家得宝拖累，纳指在英伟达财报公布前走低。投资者在多家企业财报与英伟达季度业绩之间权衡；与此同时，美国银行客户正大幅减持科技股，科技股敞口降幅创2006年以来最大，显示市场对AI交易的信心出现松动。", source: "CNBC", url: "https://www.cnbc.com/2026/11/16/stock-market-today-live-updates.html" },
+  { time: "23:30", tag: "crypto", tagText: "加密", text: "代币化股票平台OKXICE计划周一首秀，尽管其最初拟上市的股票中约90%的公司表示反对；与此同时，纽交所和纳斯达克正调整布局以应对股票代币化新市场。传统交易所、加密平台与上市公司在股权代币化上的监管与利益冲突升温。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/tokenized-stocks-face-pushback-as-nyse-nasdaq-pivot-for-a-new-market-.html" },
   { time: "23:27", tag: "geo", tagText: "地缘", text: "美国众议院多个委员会将于12月1日就英伟达相关丑闻举行听证，前CEO黄仁勋将出席作证，英伟达律师定于12月2日作证。黄仁勋此前因被曝与一名疑似中国间谍的女性有婚外情而辞去CEO职务，事件正将这家全球市值最高的芯片公司卷入国家安全审查，并可能影响出口管制政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html" },
+  { time: "23:24", tag: "ai", tagText: "AI", text: "英伟达董事会一致决定恢复黄仁勋CEO职务，董事会称获得美国政府高层意见；特朗普表示已直接向英伟达董事会保证黄仁勋不构成国家安全威胁。英伟达股价飙升约30%至35%，创十年来最大单日涨幅，带动纳指涨7.4%、标普500涨5%、道指上扬，科技股与加密资产等风险资产同步反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" },
   { time: "23:18", tag: "ai", tagText: "AI", text: "英伟达将于美东时间周二下午4:20公布2027财年第三季度业绩，随后召开电话会，这是黄仁勋辞职后的首份财报，备受市场关注。投资者急于了解后黄仁勋时代的公司治理、继任安排与AI芯片订单能见度，但管理层料对继任问题保持缄默。该财报被视为检验AI算力需求成色的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" },
   { time: "23:01", tag: "tech", tagText: "科技", text: "美国过去一周接连发生技术故障，白宫与国会加紧调查，副总统万斯临时退出活动；特朗普呼吁民众“放松”。一连串服务中断推动资金回流网络安全板块，华尔街开始关注相关配置机会。", source: "MarketWatch", url: "https://www.marketwatch.com/story/washington-is-scrambling-to-get-to-the-bottom-of-the-growing-number-of-tech-outages-across-america-66fbf299?mod=mw_rss_topstories" },
   { time: "23:00", tag: "tech", tagText: "科技", text: "苹果市值突破5万亿美元，且是在未大举押注AI数据中心的情况下达成。股价目前接近华尔街给出的平均目标价，意味着市场对其现金流与服务业务的定价已相当充分，后续上行空间需新的增长叙事支撑。", source: "Barchart.com", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNRXVwb1laS1Btbm1iTjFsMEg3OGRxd2I4MDBheXBhTmpLTnBpLVpFaGZCdmVabEZnS3FWREh5WDAxcW1KVGpOVFB5NzltWnAyakRibjhhckdQM3BpcVRtSTdHckRoY2RtRFdmZG82T3NlY0xkLS1MczU4b29KQXFXVGdXSjNHMUxBT0NoZmRSb0tuYTdCOEZYWWhGRW8xbUVOTlhkZjJFVGhOUEVaQVptUW05eW1UalZBeG9wRUhLVXljWlVFU0JLc0dkVm1aZjM5OHJEWlVuUmFUd1FJNW1Rdi1UdDN5YlRER0JMZnVpaGNvSVUyRUx5ZA?oc=5" },
+  { time: "22:39", tag: "macro", tagText: "宏观", text: "美国监管机构将矛头指向Medicare Advantage评级，联合健康、Humana和CVS股价下跌。保险商面临业务实践审查及私营联邦医保计划潜在规则变化，政策风险可能影响其保费收入与利润。", source: "MarketWatch", url: "https://www.marketwatch.com/story/unitedhealth-humana-and-cvs-stocks-slide-as-u-s-targets-medicare-advantage-ratings-6c2be5bb?mod=mw_rss_topstories" },
+  { time: "22:38", tag: "tech", tagText: "科技", text: "CrowdStrike宣布以约439亿美元全股票交易收购Zscaler，旨在应对AI加剧的网络攻击。网络安全板块此前已持续走强，此交易将成为行业重大并购，反映AI安全需求上升与行业整合加速。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/crowdstrike-zscaler-aquisition-ai-cyberattacks.html" },
   { time: "22:30", tag: "macro", tagText: "宏观", text: "美国2027年社会保障生活成本调整（COLA）为3.6%，将全面上调养老金给付。但医保保费与税收规则的变化将侵蚀部分增幅，退休人员的实际到手收入仍面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/11/22/social-security-changes-cola-taxes-medicare.html" },
   { time: "22:15", tag: "geo", tagText: "地缘", text: "芬兰海域一艘受制裁的俄罗斯船只遭无人机袭击后起火。芬兰总理表示「战争正蔓延到我们的近邻」，事件令北欧地区安全风险上升，并可能加剧欧盟对俄制裁与航运安全的争论。", source: "Financial Times", url: "https://www.ft.com/content/2c959c95-97a5-4957-9eb2-8436c34ba374?syn-25a6b1a6=1" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "美股进入调整区间并迎接感恩节假期，投资者关注何时见底。MarketWatch援引Norm Fosback的「季节性择时系统」指出，历史记录显示未来两周市场存在上行倾向；但英伟达财报与AI交易降温仍是主要不确定性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-stocks-bounce-back-after-a-brutal-week-this-timing-model-says-history-is-on-the-markets-side-beff1753?mod=mw_rss_topstories" },
@@ -1645,15 +1649,17 @@ const breakingNews = [
   { time: "20:33", tag: "ai", tagText: "AI", text: "英伟达股价延续暴跌，本轮累计市值蒸发约2.7万亿美元；据报道，美国证监会（SEC）正调查其会计问题。市场人士认为，在黄仁勋相关风波与调查结果明朗之前，即便估值已跌至历史低位，抄底仍为时过早，买盘持续回避。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQS25iVW9uNHFsc3lYdkNPRTJyTUhYcWRVbjhOZlR4QUpLZGs4RkE0d1lSLTEtN2x6N0ZxZnlZdE9KaTQxeS1TbWRFaGFpd0hGc0ZKWmF5OEVRdnFDX1NNWFlBTl9rdVRUVFlxSVRIelpPNmluWVdUVElhQzh1NWtjemJaUnlhRnJ2N3Q2dDNVYlhVYWtXbkswbXhYLWdiOHE0V1dkQ2xjNjFsTlpEQ0hzRDBja0RqV0VFX0FZaXdKRVZ2RHdGVUUtS2VzanJrTkhiSVcxeGVCRXNlUUhSVWJ3?oc=5" },
   { time: "20:23", tag: "geo", tagText: "地缘", text: "英国海上贸易行动办公室（UKMTO）报告，阿曼附近又有两艘油轮遇袭；此前周五哈萨卜（Khasab）附近一艘油轮遭袭并起火。伊朗方面称，一艘船在霍尔木兹海峡以东触雷受损。连续袭击事件加剧海湾航运安全与原油供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html" },
   { time: "19:32", tag: "ai", tagText: "AI", text: "英国数据中心运营商Nscale在计划规模350亿美元的IPO前放缓扩张，除关键岗位外全面暂停招聘并削减开支，显示AI基础设施融资与算力投资热潮出现降温迹象。", source: "Financial Times", url: "https://www.ft.com/content/98f5aa90-5581-45ed-8e9b-d72217c56df8" },
-  { time: "19:00", tag: "macro", tagText: "宏观", text: "美国众议院筹款委员会资深民主党议员理查德·尼尔誓言举行听证会，推动撤销特朗普政府的税改与关税措施。若民主党掌控国会，相关立法与调查将直接影响企业税负、进口成本与贸易政策预期。", source: "Financial Times", url: "https://www.ft.com/content/8af97161-2ae0-4655-9f8b-a560f9227359?syn-25a6b1a6=1" },
-  { time: "19:00", tag: "ai", tagText: "AI", text: "Anthropic上市后股价走弱，引发市场质疑其承销商是否过早行使「绿鞋」超额配售权增发股票，进而加剧抛压。该案成为AI独角兽IPO定价与承销操作的最新争议样本。", source: "Financial Times", url: "https://www.ft.com/content/d501198c-14a4-4b96-8880-c3997545902e" },
-  { time: "18:37", tag: "crypto", tagText: "加密", text: "Kraken交易所出现价格故障，BTC/CAD交易对一度闪崩至1.7万加元，跌幅达71%，与全球比特币价格严重脱节。此次异常报价再次引发市场对交易所定价机制、流动性与风控的担忧，交易员警告极端报价可能触发错误强平。", source: "Bitcoin Foundation", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTTZXRjMwMlpzalZ2amtobUE1YjRMSS10UmxuN1ExX3EtNDNSeklyWG5mcEpqaUdub2xyUkRWYXVpYlpqYWktWm8tRjZKZVFJMGtkdG5xblJDUzJjdHM0UUZLN3RlSnJJaUZTTEJWeUpINW1tZXpyYlAwUm45Rlhzc0NfbXlfb3FVcW9fQ1MwRmdYTjlMc0xtclBpRy1VbzJtVUE?oc=5" },
-  { time: "16:54", tag: "macro", tagText: "宏观", text: "特朗普签署命令，要求联邦承包商在向国会提供信息前先通知白宫；不遵守者可能被取消现有合同或被暂停参与未来联邦业务。此举可能影响与联邦政府有业务往来的企业合规与政治风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/trump-orders-federal-contractors-to-notify-white-house-before-giving-congress-information.html" },
 ];
-const breakingDate = "2026年11月23日 16:53 CST";
+const breakingDate = "2026年11月23日 23:36 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
+  { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
+  { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
+  { time: "22:25", tag: "ai", tagText: "AI", text: "Anthropic正式登陆公开市场，募资813亿美元，超越SpaceX成为史上规模最大IPO，为其他AI公司上市立下标杆。招股与公开文件同时显示，其算力承诺规模庞大，而亚马逊、谷歌等基础设施伙伴即便在Anthropic失去技术领先的情况下仍可获利，市场将此次IPO视为对AI行业“循环融资”热潮的关键检验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" },
+  { time: "22:21", tag: "tech", tagText: "科技", text: "英伟达董事会一致投票恢复黄仁勋CEO职务，推翻此前安排；美国政府高层支持此举，特朗普称无证据显示存在不当行为，并敦促英伟达继续配合出口管制调查。消息刺激芯片股大涨，英伟达一度涨28%，英特尔涨13%、AMD涨7%，SK海力士盘前涨超10%。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo/" },
+  { time: "19:00", tag: "ai", tagText: "AI", text: "沃尔玛向Meta的AI代理Muse开放购物能力，Muse可通过沃尔玛Sparky助手代用户寻找并购买黑五商品，已进入实际部署。AI代理正从问答助手走向可执行交易的电商入口，可能改变假日购物与零售流量分配。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday" },
   { time: "15:10", tag: "ai", tagText: "AI", text: "英国国防AI初创公司Agon完成7000万美元A轮融资，显示资本继续押注国防领域的人工智能应用。", source: "Traders Union", url: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNmV1dW12cHJDdUxzcEt4MldHU2VfMDc0REJVZGJzMy1tVmtoQ180ZlhlVm5SY0R2SW5ydTVGbXp5bGNyYUVYWFhjMkxWVVlTc2NxN3pEdFkwOUFkbGdUMGZ6STdYQ3B0WlN1RXNMUGxkTXJpQUdUMWR5M1BKQXJoUDc5T1BiaXRORWNPVzFNdU94bDQ?oc=5" },
   { time: "07:35", tag: "ai", tagText: "AI", text: "韩国政府召集英伟达、AMD与英特尔审查AI芯片供应链；HBM和基板短缺正令小型Fabless公司承压，反映AI芯片上游供应瓶颈与产业链风险。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTFBsUXY3NFZBeWE2d0E0Vy1PVzNKRWpmRTBhcTdfQXM4MFNuMXRveGtabE5WU1JuWUotRDA0UEZrQ196bWdfTGNXTVlOV0lBQXFyd2taSXlISE1sWXNaa29MaW1jYnY0ajd5NGR1U3RpNElhSnh3Rnc?oc=5" },
   { time: "06:12", tag: "ai", tagText: "AI", text: "据彭博社报道，AI编程公司Cognition正洽谈新一轮融资，估值目标达750亿美元。该估值较此前大幅跃升，显示资本仍在积极押注头部AI应用公司。", source: "Bloomberg.com", url: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOanNxamp2UGFnbHNLSlFpZW4yMXN5MkNzT3ZZTmhLLTcyYmM1clBTc0h3TzRxN2JxM0taQnlCU2tPVnZIMGVJQ1VlSGhtcEZDbE80YjhWOVNyLWtPdW1sekwwN3ZuSnYxcWhJbDBWNDVmRzBqZjhBbkpvYnRFQUxoaW9YZDNOZl9Zd3hETmF3MUwzMklyRnBzVk5ZNkxvcUZvMGg5djFCOWEzZE0?oc=5" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "04:03", tag: "geo", tagText: "地缘", text: "在日内瓦召开的联合国会议上，各国外交代表未能就自主武器系统（即所谓「杀手机器人」）的监管规则达成一致，会议无果而终。围绕是否应具有法律约束力、如何界定人类对武力使用的最终控制权等核心分歧依旧，意味着在 AI 军事化加速的背景下，全球层面短期内难以形成统一治理框架。", source: "The Verge", url: "https://www.theverge.com/tech/1039554/un-regulations-killer-robots" },
   { time: "03:32", tag: "tech", tagText: "科技", text: "AI与人类研究者同时宣称解决167年历史的黎曼猜想，数学界震惊；结果尚待同行验证，若成立将成为AI辅助基础科学研究的重大里程碑。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/" },
   { time: "02:39", tag: "geo", tagText: "地缘", text: "消息人士称，台积电收紧对华AI芯片供应限制，以配合美国新规堵住制造环节漏洞。新规可能进一步限制中国通过代工渠道获取先进AI芯片，影响全球供应链与相关客户排产。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5" },
-  { time: "02:21", tag: "ai", tagText: "AI", text: "谷歌Gemini的macOS应用上线“电脑使用”能力，可跨本地文件、桌面应用和网页执行多步骤任务，例如整理文件、填表和自动化工作流。AI代理正从聊天助手向操作系统级执行工具迈进。", source: "The Verge", url: "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use" },
-  { time: "00:00", tag: "ai", tagText: "AI", text: "一名演员将其面部肖像授权给微短剧初创公司，允许以AI生成版本出演内容；这一模式在中国已流行，专家担忧若在好莱坞扩散，可能冲击演员肖像权、就业与长期行业生态。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/" },
-  { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
-  { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
-  { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
-  { time: "22:25", tag: "ai", tagText: "AI", text: "Anthropic正式登陆公开市场，募资813亿美元，超越SpaceX成为史上规模最大IPO，为其他AI公司上市立下标杆。招股与公开文件同时显示，其算力承诺规模庞大，而亚马逊、谷歌等基础设施伙伴即便在Anthropic失去技术领先的情况下仍可获利，市场将此次IPO视为对AI行业“循环融资”热潮的关键检验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" },
 ];
-const aiBreakingDate = "2026年11月23日 16:53 CST";
+const aiBreakingDate = "2026年11月23日 23:36 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
