@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 16.97,
+  score: 17.11,
   rating: "extreme fear",
-  timestamp: "2026-11-24T01:00:00+00:00",
+  timestamp: "2026-11-24T15:27:27+00:00",
   previousClose: 16.97,
   previous1Week: 25.95,
   previous1Month: 16.69,
   previous1Year: 13.69,
-  date: "2026年11月24日 13:55 CST"
+  date: "2026年11月24日 23:32 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,16 @@ const breakingNews = [
   { time: "20:23", tag: "geo", tagText: "地缘", text: "英国海上贸易行动办公室（UKMTO）报告，阿曼附近又有两艘油轮遇袭；此前周五哈萨卜（Khasab）附近一艘油轮遭袭并起火。伊朗方面称，一艘船在霍尔木兹海峡以东触雷受损。连续袭击事件加剧海湾航运安全与原油供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html" },
   { time: "19:32", tag: "ai", tagText: "AI", text: "英国数据中心运营商Nscale在计划规模350亿美元的IPO前放缓扩张，除关键岗位外全面暂停招聘并削减开支，显示AI基础设施融资与算力投资热潮出现降温迹象。", source: "Financial Times", url: "https://www.ft.com/content/98f5aa90-5581-45ed-8e9b-d72217c56df8" },
 ];
-const breakingDate = "2026年11月24日 13:55 CST";
+const breakingDate = "2026年11月24日 23:32 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
+  { time: "23:03", tag: "ai", tagText: "AI", text: "拉美风投机构Kaszek完成6.5亿美元新基金募集，将重点投资拉丁美洲AI初创公司，成为该地区规模较大的AI专项基金之一，或加速拉美AI创业生态发展。", source: "Dealroom", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWlJLS3JDRG1aajF6VzgwWHlrNGNBNzdQbGN3RUpUd0tyQU1VVUlaWkxqMFN4NEdwMWpwcXFaSGRUZG9yV0Zsa1lNdUJCa3pMZ01CMHo0UzV1NXMxMTFFTFVaX0owdUJHVzQyU2Zfd0ZmeUY5SnR3cVNLOE40ZDR1bXdxSHpjeHJBNmhGNThfanVndlZWNVR3TQ?oc=5" },
+  { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
+  { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
+  { time: "22:25", tag: "ai", tagText: "AI", text: "Anthropic正式登陆公开市场，募资813亿美元，超越SpaceX成为史上规模最大IPO，为其他AI公司上市立下标杆。招股与公开文件同时显示，其算力承诺规模庞大，而亚马逊、谷歌等基础设施伙伴即便在Anthropic失去技术领先的情况下仍可获利，市场将此次IPO视为对AI行业“循环融资”热潮的关键检验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" },
+  { time: "20:30", tag: "tech", tagText: "科技", text: "亚马逊披露，黑客利用AI代理以极少人工输入发现并利用了0-day漏洞；其Cairn AI框架同时被攻防双方使用，凸显自主AI代理在网络安全攻防中的现实风险。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/" },
   { time: "05:09", tag: "ai", tagText: "AI", text: "在日内瓦举行的联合国气候谈判中，AI数据中心带来的电力需求激增成为各国代表难以回避的新难题：全球经济的全面电气化正与功耗庞大的算力设施扩张同时发生，清洁能源转型的节奏因此面临重估。多国代表在谈判中讨论如何在AI算力扩张与减排目标之间取得平衡。", source: "The Verge", url: "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit" },
   { time: "05:07", tag: "ai", tagText: "AI", text: "英伟达呈现出「两个面孔」：最新财报显示业务基本面依旧强劲，但与此同时，多位科技公司高管公开呼吁黄仁勋回归掌舵。此前黄仁勋因与一名疑似向中国输送芯片的公司高管存在关联而辞任 CEO，公司治理与安全合规能力受到质疑。市场正试图在亮眼业绩与领导层动荡之间重新定价。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/" },
   { time: "04:59", tag: "ai", tagText: "AI", text: "安全研究人员在AI供应链中植入200万个可追踪的“金丝雀”标记，测试发现带有唯一秘密的提示词在流转过程中未能保持私密，暴露严重数据泄露风险，凸显AI服务多层外包与转售环节的隐私隐患。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/" },
@@ -1668,14 +1674,8 @@ const aiBreakingNews = [
   { time: "03:14", tag: "ai", tagText: "AI", text: "谷歌将AI Mode的“个人智能”能力扩展至Drive、Wallet与Gemini应用，搜索AI模式可直接调用用户的云端文件与钱包数据以给出个性化回答。这意味着谷歌正把生态内积累的用户数据转化为生成式AI的竞争壁垒，同时也将再度引发隐私边界讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/" },
   { time: "02:39", tag: "geo", tagText: "地缘", text: "消息人士称，台积电收紧对华AI芯片供应限制，以配合美国新规堵住制造环节漏洞。新规可能进一步限制中国通过代工渠道获取先进AI芯片，影响全球供应链与相关客户排产。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5" },
   { time: "02:26", tag: "ai", tagText: "AI", text: "美国俄勒冈州与弗吉尼亚州总检察长分别提起诉讼，指控马斯克旗下xAI（起诉对象列为SpaceX）的Grok生成未经同意的色情深度伪造内容，违反各州消费者保护法。案件将检验生成式AI平台对深度伪造内容的责任边界，可能成为美国州级AI监管的重要先例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit" },
-  { time: "02:12", tag: "ai", tagText: "AI", text: "在重返英伟达CEO职位后，黄仁勋已确定于下周出席美国参议院公开听证会，就此前涉及疑似中国间谍的传闻及公司治理问题作证。该听证会由两党共同要求，将成为观察美国AI芯片出口管制与政商关系走向的关键节点。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo/" },
-  { time: "01:14", tag: "ai", tagText: "AI", text: "亚马逊以约75亿美元收购AI优化技术公司Decart的技术与研发团队，为对外销售自研Trainium芯片铺路。该交易显示云厂商正加速自建“芯片＋优化软件”全栈能力，以降低对英伟达GPU的依赖并提升AI训练推理的性价比。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/" },
-  { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
-  { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
-  { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
-  { time: "22:25", tag: "ai", tagText: "AI", text: "Anthropic正式登陆公开市场，募资813亿美元，超越SpaceX成为史上规模最大IPO，为其他AI公司上市立下标杆。招股与公开文件同时显示，其算力承诺规模庞大，而亚马逊、谷歌等基础设施伙伴即便在Anthropic失去技术领先的情况下仍可获利，市场将此次IPO视为对AI行业“循环融资”热潮的关键检验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" },
 ];
-const aiBreakingDate = "2026年11月24日 13:55 CST";
+const aiBreakingDate = "2026年11月24日 23:32 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
