@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 17.42,
+  score: 12.51,
   rating: "extreme fear",
-  timestamp: "2026-11-24T23:59:52+00:00",
-  previousClose: 16.97,
-  previous1Week: 25.95,
+  timestamp: "2026-11-25T12:19:01+00:00",
+  previousClose: 17.42,
+  previous1Week: 29.89,
   previous1Month: 16.69,
-  previous1Year: 13.69,
-  date: "2026年11月25日 10:15 CST"
+  previous1Year: 15.03,
+  date: "2026年11月25日 20:35 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,12 @@ const breakingNews = [
   { time: "22:15", tag: "geo", tagText: "地缘", text: "芬兰海域一艘受制裁的俄罗斯船只遭无人机袭击后起火。芬兰总理表示「战争正蔓延到我们的近邻」，事件令北欧地区安全风险上升，并可能加剧欧盟对俄制裁与航运安全的争论。", source: "Financial Times", url: "https://www.ft.com/content/2c959c95-97a5-4957-9eb2-8436c34ba374?syn-25a6b1a6=1" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "美股进入调整区间并迎接感恩节假期，投资者关注何时见底。MarketWatch援引Norm Fosback的「季节性择时系统」指出，历史记录显示未来两周市场存在上行倾向；但英伟达财报与AI交易降温仍是主要不确定性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-stocks-bounce-back-after-a-brutal-week-this-timing-model-says-history-is-on-the-markets-side-beff1753?mod=mw_rss_topstories" },
 ];
-const breakingDate = "2026年11月25日 10:15 CST";
+const breakingDate = "2026年11月25日 20:35 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "19:29", tag: "ai", tagText: "AI", text: "德国商业银行旗下风投机构CommerzVentures宣布设立规模5000万欧元的新基金，专项投资以人工智能为核心的金融科技初创公司。这表明传统银行正通过外部风险投资布局AI驱动的支付、风控与信贷创新，以应对金融科技与生成式AI融合带来的行业变局。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPaVI5dlV0SUg1bVZTM1VQYnpTQVdFbk5fX0Exd0NIdUd5YVJlUXE2cXNPWE1hVUhaTFFGQzA2Y0lZUENpVk40X3RsdVd2ZEZtbDVxT2RjNnk1dkU5dDQ3ME9NdGFBNXdJSk1TRXhxU1N6aEZkV3dOZ3FKeW1ZSmRMZEt0SF90ZURIeDZRR3dRNjZMVmYybER4WDVDazAyX2MwUFpDbUhGZUg5MmZj?oc=5" },
+  { time: "18:30", tag: "tech", tagText: "科技", text: "据《南华早报》报道，华为正围绕芯片与人工智能领域组建专门的专利团队，以强化知识产权布局。此举被视为华为在AI算力与芯片设计上加速追赶、寻求在部分环节挑战英伟达主导地位的信号，也反映中国厂商在出口管制背景下加快自主技术积累与专利攻防。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdWs3YnVOMVpmUWFsdERwOGFacjI3YW5sX0hwNXgyMkFjamdDLUo4cHNaS3pxQVpSQ0RsTG16NDlSTjU3a2VpNG1kZmo4Mndub2hndGUydXN2Zmk1SmdmaFZLMmJVQW13UmhnUU9FWk02R3FHSkZDWmFJWGt6RC1YUklOLUNlS0FkdnhTR3J4WXJxTUpzbGx5cjhscHRjT2xOaXFGeDJLc3lVM25RM213SkNFQWo0dXk5OTRr?oc=5" },
   { time: "09:45", tag: "ai", tagText: "AI", text: "黄仁勋重返英伟达CEO及董事席位，并获得白宫支持，美国、中国与台湾方面均对这一回归表示欢迎。在全员大会上，黄仁勋向员工致歉，感谢白宫给予的「第二次机会」，并透露自己正在接受心理治疗；他同时坚持认为设立继任计划只会制造不必要的层级。耶鲁大学管理学院的索南菲尔德则警告，市场对此事的乐观可能酿成大错，称英伟达对美国工业实力是「损害」而非「捍卫者」，并可能令董事面临风险。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNjd6cTNFQ3FibGRoeWZ5dUdROV9uRTlPeE4ySGtCTVVzekx6Wi02OHdlXzZHR09NMFRoWGJDMHVaXzNRQnhfNm5zdnltTWhLMDN5d3pLNDBtWjRvMUZrX2FUcHRNNXV2Z3Z5ajdaV1MycmZSaDU1NVdad1lwcjVyU1ZicXcxOTY1?oc=5" },
   { time: "05:33", tag: "ai", tagText: "AI", text: "一项新基准测试显示，即便是最先进的AI代理，在完成日常任务时也难以做到可靠与安全，并可能引入新的风险。随着数以百万计的用户开始使用个人AI助手，该结果表明自主代理在真实生活场景中的可靠性仍是其大规模落地的核心瓶颈。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/" },
   { time: "05:32", tag: "tech", tagText: "科技", text: "沃尔玛与Meta达成合作，消费者可通过Meta的AI代理Muse浏览并购买「黑色星期五」折扣商品。这是大型零售商首次将促销流量直接接入第三方AI代理，意味着AI助手正演变为电商的新流量入口，或改变节日购物季的获客方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/" },
@@ -1672,10 +1674,8 @@ const aiBreakingNews = [
   { time: "02:39", tag: "geo", tagText: "地缘", text: "消息人士称，台积电收紧对华AI芯片供应限制，以配合美国新规堵住制造环节漏洞。新规可能进一步限制中国通过代工渠道获取先进AI芯片，影响全球供应链与相关客户排产。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5" },
   { time: "02:26", tag: "ai", tagText: "AI", text: "美国俄勒冈州与弗吉尼亚州总检察长分别提起诉讼，指控马斯克旗下xAI（起诉对象列为SpaceX）的Grok生成未经同意的色情深度伪造内容，违反各州消费者保护法。案件将检验生成式AI平台对深度伪造内容的责任边界，可能成为美国州级AI监管的重要先例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit" },
   { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
-  { time: "23:03", tag: "ai", tagText: "AI", text: "拉美风投机构Kaszek完成6.5亿美元新基金募集，将重点投资拉丁美洲AI初创公司，成为该地区规模较大的AI专项基金之一，或加速拉美AI创业生态发展。", source: "Dealroom", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWlJLS3JDRG1aajF6VzgwWHlrNGNBNzdQbGN3RUpUd0tyQU1VVUlaWkxqMFN4NEdwMWpwcXFaSGRUZG9yV0Zsa1lNdUJCa3pMZ01CMHo0UzV1NXMxMTFFTFVaX0owdUJHVzQyU2Zfd0ZmeUY5SnR3cVNLOE40ZDR1bXdxSHpjeHJBNmhGNThfanVndlZWNVR3TQ?oc=5" },
-  { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
 ];
-const aiBreakingDate = "2026年11月25日 10:15 CST";
+const aiBreakingDate = "2026年11月25日 20:35 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
