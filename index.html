@@ -1616,19 +1616,27 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 16.75,
+  score: 17.42,
   rating: "extreme fear",
-  timestamp: "2026-11-24T17:27:33+00:00",
+  timestamp: "2026-11-24T23:59:52+00:00",
   previousClose: 16.97,
   previous1Week: 25.95,
   previous1Month: 16.69,
   previous1Year: 13.69,
-  date: "2026年11月25日 01:30 CST"
+  date: "2026年11月25日 10:15 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "10:09", tag: "geo", tagText: "地缘", text: "特朗普表示，如有需要愿意赦免英伟达CEO黄仁勋，并认为黄仁勋不必在国会作证时援引第五修正案；他还称美国政府入股英伟达「为时不晚」。此前众议院多个委员会已定于12月1日就英伟达相关丑闻举行听证，黄仁勋将出席作证。", source: "CNBC", url: "https://www.cnbc.com/2026/11/25/trump-huang-pardon-politics.html" },
+  { time: "10:04", tag: "ai", tagText: "AI", text: "随着英伟达风波持续发酵，那些以「可向中国客户供应芯片」为卖点的亚洲数据中心项目正面临美国更严格的审查，市场开始担忧这轮AI数据中心投资热潮可能降温。", source: "Financial Times", url: "https://www.ft.com/content/e5df32d1-1801-4d81-b2f5-b83e93377c1c?syn-25a6b1a6=1" },
+  { time: "10:00", tag: "tech", tagText: "科技", text: "Shein同意支付1亿美元与美国监管机构达成和解。监管方指控其误导消费者：零售商供应商声称产自美国的棉花，实际是在中国采摘。", source: "Financial Times", url: "https://www.ft.com/content/0128d44e-8ca1-49b8-868b-b8fe0e4824c6?syn-25a6b1a6=1" },
+  { time: "09:57", tag: "ai", tagText: "AI", text: "亚洲科技股周三大跌，软银集团重挫14%，东京与首尔半导体股领跌。华尔街AI交易抛售潮外溢，此前「黄仁勋回归」带来的反弹消退；美股期货同步走低，投资者等待关键通胀数据。", source: "CNBC", url: "https://www.cnbc.com/2026/11/25/tech-stocks-softbank-group-advantest-sk-hynix-samsung.html" },
+  { time: "06:36", tag: "geo", tagText: "地缘", text: "美国法院裁定华为有罪，这起审判暴露了该公司的企业间谍活动与规避制裁行为。判决是美国联邦检察官与中国电信巨头长达八年法律战的胜利。", source: "Financial Times", url: "https://www.ft.com/content/6c64b8b8-531c-4eea-8fd0-90c4c4967ab9?syn-25a6b1a6=1" },
+  { time: "06:26", tag: "crypto", tagText: "加密", text: "比特币跌破6万美元，美国现货比特币ETF资金单日净流出创纪录的47亿美元。加密市场未能守住英伟达财报带来的反弹，ETF赎回与宏观逆风成为主导因素。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPLTNtZEtTS2JrekFZdEt1TTVjWEJIMG5zOUVRdUpVYTFfblo4MkhMNlRxbzRINzVXU3doTi0yNkM5amZKQnpva3VObXBNdFVsWGR0T3lYNy02ZjlVWk41VEE5Wnh0MU5qeHh5MzlZVFJUUWg4cmNXcHFZVXE5dGtoR0VHRTlGTGtKWFNVVFB4OFdNdlA0TTVhc2JGTTBma2RXR0JlMEhLOS1pcFlOQldpcmVlRkNWLXF2Rmx1UDA0LVdLY19pdjhSTHNrX0U1bHNLTjhwQ2FiU05KZ2tVVXRUUVJhY3lGazEyTU01bXNOclg4d2s?oc=5" },
+  { time: "06:07", tag: "ai", tagText: "AI", text: "戴尔第三财季营收同比增逾一倍，受AI服务器需求推动，业绩超预期，并授权250亿美元股票回购，股价上涨。公司称订单积压已「严格审核客户质量，以及对资本、土地和电力的获取能力」。", source: "CNBC", url: "https://www.cnbc.com/2026/11/24/dell-earnings-report-q3-2027.html" },
+  { time: "05:46", tag: "ai", tagText: "AI", text: "Anthropic股价首次跌破83美元的IPO发行价，此时距其登陆纳斯达克尚不足一周。AI概念股集体回落，与英伟达一道拖累纳指周二收跌约1.5%。", source: "MarketWatch", url: "https://www.marketwatch.com/story/anthropics-stock-just-broke-below-its-ipo-price-for-the-first-time-5dc82668?mod=mw_rss_topstories" },
   { time: "23:32", tag: "macro", tagText: "宏观", text: "美股周二承压，道指一度下跌400点，受家得宝拖累，纳指在英伟达财报公布前走低。投资者在多家企业财报与英伟达季度业绩之间权衡；与此同时，美国银行客户正大幅减持科技股，科技股敞口降幅创2006年以来最大，显示市场对AI交易的信心出现松动。", source: "CNBC", url: "https://www.cnbc.com/2026/11/16/stock-market-today-live-updates.html" },
   { time: "23:30", tag: "crypto", tagText: "加密", text: "代币化股票平台OKXICE计划周一首秀，尽管其最初拟上市的股票中约90%的公司表示反对；与此同时，纽交所和纳斯达克正调整布局以应对股票代币化新市场。传统交易所、加密平台与上市公司在股权代币化上的监管与利益冲突升温。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/tokenized-stocks-face-pushback-as-nyse-nasdaq-pivot-for-a-new-market-.html" },
   { time: "23:27", tag: "geo", tagText: "地缘", text: "美国众议院多个委员会将于12月1日就英伟达相关丑闻举行听证，前CEO黄仁勋将出席作证，英伟达律师定于12月2日作证。黄仁勋此前因被曝与一名疑似中国间谍的女性有婚外情而辞去CEO职务，事件正将这家全球市值最高的芯片公司卷入国家安全审查，并可能影响出口管制政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html" },
@@ -1641,25 +1649,14 @@ const breakingNews = [
   { time: "22:30", tag: "macro", tagText: "宏观", text: "美国2027年社会保障生活成本调整（COLA）为3.6%，将全面上调养老金给付。但医保保费与税收规则的变化将侵蚀部分增幅，退休人员的实际到手收入仍面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/11/22/social-security-changes-cola-taxes-medicare.html" },
   { time: "22:15", tag: "geo", tagText: "地缘", text: "芬兰海域一艘受制裁的俄罗斯船只遭无人机袭击后起火。芬兰总理表示「战争正蔓延到我们的近邻」，事件令北欧地区安全风险上升，并可能加剧欧盟对俄制裁与航运安全的争论。", source: "Financial Times", url: "https://www.ft.com/content/2c959c95-97a5-4957-9eb2-8436c34ba374?syn-25a6b1a6=1" },
   { time: "22:00", tag: "macro", tagText: "宏观", text: "美股进入调整区间并迎接感恩节假期，投资者关注何时见底。MarketWatch援引Norm Fosback的「季节性择时系统」指出，历史记录显示未来两周市场存在上行倾向；但英伟达财报与AI交易降温仍是主要不确定性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-stocks-bounce-back-after-a-brutal-week-this-timing-model-says-history-is-on-the-markets-side-beff1753?mod=mw_rss_topstories" },
-  { time: "21:50", tag: "geo", tagText: "地缘", text: "气候谈判在化石燃料问题上陷入僵局后宣告失败。以阿拉伯集团为一方、欧盟牵头联盟为另一方的分歧公开化，暴露出能源转型议题上的地缘裂痕，后续联合国气候框架谈判前景蒙上阴影。", source: "Financial Times", url: "https://www.ft.com/content/1b6089f6-2201-43b4-8ed4-0c689a916afa?syn-25a6b1a6=1" },
-  { time: "21:25", tag: "geo", tagText: "地缘", text: "沙特称击落一架由伊朗支持的胡塞武装发射的无人机；巴林称其一处工业设施遭伊朗发射物击中。与此同时，伊朗外长表示德黑兰仍愿与美国达成协议，地区军事冲突与外交接触同时升温。", source: "CNBC", url: "https://www.cnbc.com/2026/11/22/saudi-houthi-bahrain-iran-attacks-araghchi-talks.html" },
-  { time: "21:12", tag: "macro", tagText: "宏观", text: "中期选举后，围绕预测市场监管的争夺升级：各州、国会与商品期货交易委员会（CFTC）在管辖权限上正面冲突。州层面加码限制Kalshi等平台，联邦机构则主张统一规则。监管不确定性上升，可能影响这一新兴板块的估值与扩张节奏。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/prediction-market-regulation-kalshi-cftc.html" },
-  { time: "21:10", tag: "macro", tagText: "宏观", text: "随着AI交易降温，Clorox、Boston Beer和Campbell's等华尔街此前最不受欢迎的消费股反而成为赢家，显示资金正从高估值AI概念转向防御性、低预期板块。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/from-trash-to-treasure-these-hated-stocks-are-winning-as-ai-flounders.html" },
-  { time: "21:01", tag: "macro", tagText: "宏观", text: "巴菲特今年感恩节向四家家族基金会捐赠55亿美元，较往年增长逾三倍；这延续其大规模财富转移计划，也引发市场对其继任安排与慈善布局的关注。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/warren-buffett-quadruples-thanksgiving-gifts.html" },
-  { time: "20:33", tag: "ai", tagText: "AI", text: "英伟达股价延续暴跌，本轮累计市值蒸发约2.7万亿美元；据报道，美国证监会（SEC）正调查其会计问题。市场人士认为，在黄仁勋相关风波与调查结果明朗之前，即便估值已跌至历史低位，抄底仍为时过早，买盘持续回避。", source: "Yahoo Finance", url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQS25iVW9uNHFsc3lYdkNPRTJyTUhYcWRVbjhOZlR4QUpLZGs4RkE0d1lSLTEtN2x6N0ZxZnlZdE9KaTQxeS1TbWRFaGFpd0hGc0ZKWmF5OEVRdnFDX1NNWFlBTl9rdVRUVFlxSVRIelpPNmluWVdUVElhQzh1NWtjemJaUnlhRnJ2N3Q2dDNVYlhVYWtXbkswbXhYLWdiOHE0V1dkQ2xjNjFsTlpEQ0hzRDBja0RqV0VFX0FZaXdKRVZ2RHdGVUUtS2VzanJrTkhiSVcxeGVCRXNlUUhSVWJ3?oc=5" },
-  { time: "20:23", tag: "geo", tagText: "地缘", text: "英国海上贸易行动办公室（UKMTO）报告，阿曼附近又有两艘油轮遇袭；此前周五哈萨卜（Khasab）附近一艘油轮遭袭并起火。伊朗方面称，一艘船在霍尔木兹海峡以东触雷受损。连续袭击事件加剧海湾航运安全与原油供应风险。", source: "CNBC", url: "https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html" },
-  { time: "19:32", tag: "ai", tagText: "AI", text: "英国数据中心运营商Nscale在计划规模350亿美元的IPO前放缓扩张，除关键岗位外全面暂停招聘并削减开支，显示AI基础设施融资与算力投资热潮出现降温迹象。", source: "Financial Times", url: "https://www.ft.com/content/98f5aa90-5581-45ed-8e9b-d72217c56df8" },
 ];
-const breakingDate = "2026年11月25日 01:30 CST";
+const breakingDate = "2026年11月25日 10:15 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
-  { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
-  { time: "23:03", tag: "ai", tagText: "AI", text: "拉美风投机构Kaszek完成6.5亿美元新基金募集，将重点投资拉丁美洲AI初创公司，成为该地区规模较大的AI专项基金之一，或加速拉美AI创业生态发展。", source: "Dealroom", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWlJLS3JDRG1aajF6VzgwWHlrNGNBNzdQbGN3RUpUd0tyQU1VVUlaWkxqMFN4NEdwMWpwcXFaSGRUZG9yV0Zsa1lNdUJCa3pMZ01CMHo0UzV1NXMxMTFFTFVaX0owdUJHVzQyU2Zfd0ZmeUY5SnR3cVNLOE40ZDR1bXdxSHpjeHJBNmhGNThfanVndlZWNVR3TQ?oc=5" },
-  { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
-  { time: "22:26", tag: "tech", tagText: "科技", text: "脑科技公司Science Corporation完成4亿美元D轮融资，估值达35亿美元，将扩大其抗失明业务。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/" },
-  { time: "22:25", tag: "ai", tagText: "AI", text: "Anthropic正式登陆公开市场，募资813亿美元，超越SpaceX成为史上规模最大IPO，为其他AI公司上市立下标杆。招股与公开文件同时显示，其算力承诺规模庞大，而亚马逊、谷歌等基础设施伙伴即便在Anthropic失去技术领先的情况下仍可获利，市场将此次IPO视为对AI行业“循环融资”热潮的关键检验。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" },
-  { time: "20:30", tag: "tech", tagText: "科技", text: "亚马逊披露，黑客利用AI代理以极少人工输入发现并利用了0-day漏洞；其Cairn AI框架同时被攻防双方使用，凸显自主AI代理在网络安全攻防中的现实风险。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/" },
+  { time: "09:45", tag: "ai", tagText: "AI", text: "黄仁勋重返英伟达CEO及董事席位，并获得白宫支持，美国、中国与台湾方面均对这一回归表示欢迎。在全员大会上，黄仁勋向员工致歉，感谢白宫给予的「第二次机会」，并透露自己正在接受心理治疗；他同时坚持认为设立继任计划只会制造不必要的层级。耶鲁大学管理学院的索南菲尔德则警告，市场对此事的乐观可能酿成大错，称英伟达对美国工业实力是「损害」而非「捍卫者」，并可能令董事面临风险。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNjd6cTNFQ3FibGRoeWZ5dUdROV9uRTlPeE4ySGtCTVVzekx6Wi02OHdlXzZHR09NMFRoWGJDMHVaXzNRQnhfNm5zdnltTWhLMDN5d3pLNDBtWjRvMUZrX2FUcHRNNXV2Z3Z5ajdaV1MycmZSaDU1NVdad1lwcjVyU1ZicXcxOTY1?oc=5" },
+  { time: "05:33", tag: "ai", tagText: "AI", text: "一项新基准测试显示，即便是最先进的AI代理，在完成日常任务时也难以做到可靠与安全，并可能引入新的风险。随着数以百万计的用户开始使用个人AI助手，该结果表明自主代理在真实生活场景中的可靠性仍是其大规模落地的核心瓶颈。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/" },
+  { time: "05:32", tag: "tech", tagText: "科技", text: "沃尔玛与Meta达成合作，消费者可通过Meta的AI代理Muse浏览并购买「黑色星期五」折扣商品。这是大型零售商首次将促销流量直接接入第三方AI代理，意味着AI助手正演变为电商的新流量入口，或改变节日购物季的获客方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/" },
   { time: "05:09", tag: "ai", tagText: "AI", text: "在日内瓦举行的联合国气候谈判中，AI数据中心带来的电力需求激增成为各国代表难以回避的新难题：全球经济的全面电气化正与功耗庞大的算力设施扩张同时发生，清洁能源转型的节奏因此面临重估。多国代表在谈判中讨论如何在AI算力扩张与减排目标之间取得平衡。", source: "The Verge", url: "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit" },
   { time: "05:07", tag: "ai", tagText: "AI", text: "英伟达呈现出「两个面孔」：最新财报显示业务基本面依旧强劲，但与此同时，多位科技公司高管公开呼吁黄仁勋回归掌舵。此前黄仁勋因与一名疑似向中国输送芯片的公司高管存在关联而辞任 CEO，公司治理与安全合规能力受到质疑。市场正试图在亮眼业绩与领导层动荡之间重新定价。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/" },
   { time: "04:59", tag: "ai", tagText: "AI", text: "安全研究人员在AI供应链中植入200万个可追踪的“金丝雀”标记，测试发现带有唯一秘密的提示词在流转过程中未能保持私密，暴露严重数据泄露风险，凸显AI服务多层外包与转售环节的隐私隐患。", source: "Ars Technica", url: "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/" },
@@ -1674,8 +1671,11 @@ const aiBreakingNews = [
   { time: "03:14", tag: "ai", tagText: "AI", text: "谷歌将AI Mode的“个人智能”能力扩展至Drive、Wallet与Gemini应用，搜索AI模式可直接调用用户的云端文件与钱包数据以给出个性化回答。这意味着谷歌正把生态内积累的用户数据转化为生成式AI的竞争壁垒，同时也将再度引发隐私边界讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/" },
   { time: "02:39", tag: "geo", tagText: "地缘", text: "消息人士称，台积电收紧对华AI芯片供应限制，以配合美国新规堵住制造环节漏洞。新规可能进一步限制中国通过代工渠道获取先进AI芯片，影响全球供应链与相关客户排产。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5" },
   { time: "02:26", tag: "ai", tagText: "AI", text: "美国俄勒冈州与弗吉尼亚州总检察长分别提起诉讼，指控马斯克旗下xAI（起诉对象列为SpaceX）的Grok生成未经同意的色情深度伪造内容，违反各州消费者保护法。案件将检验生成式AI平台对深度伪造内容的责任边界，可能成为美国州级AI监管的重要先例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit" },
+  { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
+  { time: "23:03", tag: "ai", tagText: "AI", text: "拉美风投机构Kaszek完成6.5亿美元新基金募集，将重点投资拉丁美洲AI初创公司，成为该地区规模较大的AI专项基金之一，或加速拉美AI创业生态发展。", source: "Dealroom", url: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWlJLS3JDRG1aajF6VzgwWHlrNGNBNzdQbGN3RUpUd0tyQU1VVUlaWkxqMFN4NEdwMWpwcXFaSGRUZG9yV0Zsa1lNdUJCa3pMZ01CMHo0UzV1NXMxMTFFTFVaX0owdUJHVzQyU2Zfd0ZmeUY5SnR3cVNLOE40ZDR1bXdxSHpjeHJBNmhGNThfanVndlZWNVR3TQ?oc=5" },
+  { time: "22:50", tag: "ai", tagText: "AI", text: "由DeepMind分拆的AI药物发现平台Isomorphic Labs完成50亿美元C轮融资，计划推动候选药物进入临床试验。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" },
 ];
-const aiBreakingDate = "2026年11月25日 01:30 CST";
+const aiBreakingDate = "2026年11月25日 10:15 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
