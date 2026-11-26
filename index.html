@@ -1618,17 +1618,30 @@
 const fearGreedData = {
   score: 15.23,
   rating: "extreme fear",
-  timestamp: "2026-11-25T22:04:38+00:00",
+  timestamp: "2026-11-25T23:59:57+00:00",
   previousClose: 17.42,
   previous1Week: 29.89,
   previous1Month: 16.69,
   previous1Year: 15.03,
-  date: "2026年11月26日 06:24 CST"
+  date: "2026年11月26日 12:55 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "12:49", tag: "macro", tagText: "宏观", text: "亚太股市周三普遍上涨，韩国KOSPI领涨，科技股反弹提振区域情绪。投资者似乎已消化白宫周三宣布的新一轮关税——该关税针对十余个主要贸易伙伴；同时，此前美股因AI风险担忧经历震荡交易，科技股承压。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/stock-markets-today-.html" },
+  { time: "12:12", tag: "macro", tagText: "宏观", text: "特朗普最新关税方案拟对孟加拉国、柬埔寨和泰国征收18%关税，对中国和越南征收20%关税（具体视各自贸易协议而定），分析认为这将使印度相对亚洲竞争对手获得出口竞争优势。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/trump-us-tariff-india-trade.html" },
+  { time: "11:19", tag: "ai", tagText: "AI", text: "标普全球评级警告称，可能将英伟达信用评级下调一档，并指出该芯片制造商的管理与治理风险「上升」。这是后黄仁勋时代公司治理风波对英伟达融资信誉的又一冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/nvidia-market-governance-risk.html" },
+  { time: "10:27", tag: "macro", tagText: "宏观", text: "韩国央行宣布加息25个基点，将基准利率上调至3.25%，为今年以来第三次加息。AI芯片出口热潮支撑韩国经济与通胀预期，推动央行继续收紧货币政策。", source: "Financial Times", url: "https://www.ft.com/content/823af978-e22b-49a4-a2a1-52867a6520fa" },
+  { time: "10:09", tag: "geo", tagText: "地缘", text: "特朗普表示，如有需要愿意赦免英伟达CEO黄仁勋，并认为黄仁勋不必在国会作证时援引第五修正案；他还称美国政府入股英伟达「为时不晚」。此前众议院多个委员会已定于12月1日就英伟达相关丑闻举行听证，黄仁勋将出席作证。", source: "CNBC", url: "https://www.cnbc.com/2026/11/25/trump-huang-pardon-politics.html" },
+  { time: "10:04", tag: "ai", tagText: "AI", text: "随着英伟达风波持续发酵，那些以「可向中国客户供应芯片」为卖点的亚洲数据中心项目正面临美国更严格的审查，市场开始担忧这轮AI数据中心投资热潮可能降温。", source: "Financial Times", url: "https://www.ft.com/content/e5df32d1-1801-4d81-b2f5-b83e93377c1c?syn-25a6b1a6=1" },
+  { time: "10:00", tag: "tech", tagText: "科技", text: "Shein同意支付1亿美元与美国监管机构达成和解。监管方指控其误导消费者：零售商供应商声称产自美国的棉花，实际是在中国采摘。", source: "Financial Times", url: "https://www.ft.com/content/0128d44e-8ca1-49b8-868b-b8fe0e4824c6?syn-25a6b1a6=1" },
+  { time: "09:57", tag: "ai", tagText: "AI", text: "亚洲科技股周三大跌，软银集团重挫14%，东京与首尔半导体股领跌。华尔街AI交易抛售潮外溢，此前「黄仁勋回归」带来的反弹消退；美股期货同步走低，投资者等待关键通胀数据。", source: "CNBC", url: "https://www.cnbc.com/2026/11/25/tech-stocks-softbank-group-advantest-sk-hynix-samsung.html" },
+  { time: "09:52", tag: "macro", tagText: "宏观", text: "挪威大西洋航空（Norse Atlantic）暂停航班运营，并警告其财务状况「危急」。公司正寻求短期融资，同时探讨潜在的被收购可能，跨大西洋廉价航空市场再添不确定性。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/norse-airline-finance-business.html" },
+  { time: "07:18", tag: "geo", tagText: "地缘", text: "以色列法官建议检方撤销对总理内塔尼亚胡的部分指控，称受贿罪名成立的可能性不大。这一司法建议对深陷腐败案的内塔尼亚胡构成重大利好，或影响以色列政局走向。", source: "Financial Times", url: "https://www.ft.com/content/db700af5-22b2-4903-ae2e-124513681071?syn-25a6b1a6=1" },
+  { time: "07:18", tag: "geo", tagText: "地缘", text: "美国金融家托德·博利（Todd Boehly）就收购卢克石油（Lukoil）相关资产达成协议。受2022年俄乌冲突全面爆发后的西方制裁影响，该公司股份的交易长期处于冻结状态，此次交易被视为俄罗斯资产处置的重要进展。", source: "Financial Times", url: "https://www.ft.com/content/643dc287-d112-4715-bdf1-aa49b98a4af7?syn-25a6b1a6=1" },
+  { time: "06:36", tag: "geo", tagText: "地缘", text: "美国法院裁定华为有罪，这起审判暴露了该公司的企业间谍活动与规避制裁行为。判决是美国联邦检察官与中国电信巨头长达八年法律战的胜利。", source: "Financial Times", url: "https://www.ft.com/content/6c64b8b8-531c-4eea-8fd0-90c4c4967ab9?syn-25a6b1a6=1" },
+  { time: "06:26", tag: "crypto", tagText: "加密", text: "比特币跌破6万美元，美国现货比特币ETF资金单日净流出创纪录的47亿美元。加密市场未能守住英伟达财报带来的反弹，ETF赎回与宏观逆风成为主导因素。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPLTNtZEtTS2JrekFZdEt1TTVjWEJIMG5zOUVRdUpVYTFfblo4MkhMNlRxbzRINzVXU3doTi0yNkM5amZKQnpva3VObXBNdFVsWGR0T3lYNy02ZjlVWk41VEE5Wnh0MU5qeHh5MzlZVFJUUWg4cmNXcHFZVXE5dGtoR0VHRTlGTGtKWFNVVFB4OFdNdlA0TTVhc2JGTTBma2RXR0JlMEhLOS1pcFlOQldpcmVlRkNWLXF2Rmx1UDA0LVdLY19pdjhSTHNrX0U1bHNLTjhwQ2FiU05KZ2tVVXRUUVJhY3lGazEyTU01bXNOclg4d2s?oc=5" },
   { time: "06:07", tag: "ai", tagText: "AI", text: "戴尔第三财季营收同比增逾一倍，受AI服务器需求推动，业绩超预期，并授权250亿美元股票回购，股价上涨。公司称订单积压已「严格审核客户质量，以及对资本、土地和电力的获取能力」。", source: "CNBC", url: "https://www.cnbc.com/2026/11/24/dell-earnings-report-q3-2027.html" },
   { time: "05:46", tag: "ai", tagText: "AI", text: "Anthropic股价首次跌破83美元的IPO发行价，此时距其登陆纳斯达克尚不足一周。AI概念股集体回落，与英伟达一道拖累纳指周二收跌约1.5%。", source: "MarketWatch", url: "https://www.marketwatch.com/story/anthropics-stock-just-broke-below-its-ipo-price-for-the-first-time-5dc82668?mod=mw_rss_topstories" },
   { time: "23:32", tag: "macro", tagText: "宏观", text: "美股周二承压，道指一度下跌400点，受家得宝拖累，纳指在英伟达财报公布前走低。投资者在多家企业财报与英伟达季度业绩之间权衡；与此同时，美国银行客户正大幅减持科技股，科技股敞口降幅创2006年以来最大，显示市场对AI交易的信心出现松动。", source: "CNBC", url: "https://www.cnbc.com/2026/11/16/stock-market-today-live-updates.html" },
@@ -1636,24 +1649,14 @@ const breakingNews = [
   { time: "23:27", tag: "geo", tagText: "地缘", text: "美国众议院多个委员会将于12月1日就英伟达相关丑闻举行听证，前CEO黄仁勋将出席作证，英伟达律师定于12月2日作证。黄仁勋此前因被曝与一名疑似中国间谍的女性有婚外情而辞去CEO职务，事件正将这家全球市值最高的芯片公司卷入国家安全审查，并可能影响出口管制政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html" },
   { time: "23:24", tag: "ai", tagText: "AI", text: "英伟达董事会一致决定恢复黄仁勋CEO职务，董事会称获得美国政府高层意见；特朗普表示已直接向英伟达董事会保证黄仁勋不构成国家安全威胁。英伟达股价飙升约30%至35%，创十年来最大单日涨幅，带动纳指涨7.4%、标普500涨5%、道指上扬，科技股与加密资产等风险资产同步反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" },
   { time: "23:18", tag: "ai", tagText: "AI", text: "英伟达将于美东时间周二下午4:20公布2027财年第三季度业绩，随后召开电话会，这是黄仁勋辞职后的首份财报，备受市场关注。投资者急于了解后黄仁勋时代的公司治理、继任安排与AI芯片订单能见度，但管理层料对继任问题保持缄默。该财报被视为检验AI算力需求成色的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" },
-  { time: "23:01", tag: "tech", tagText: "科技", text: "美国过去一周接连发生技术故障，白宫与国会加紧调查，副总统万斯临时退出活动；特朗普呼吁民众“放松”。一连串服务中断推动资金回流网络安全板块，华尔街开始关注相关配置机会。", source: "MarketWatch", url: "https://www.marketwatch.com/story/washington-is-scrambling-to-get-to-the-bottom-of-the-growing-number-of-tech-outages-across-america-66fbf299?mod=mw_rss_topstories" },
-  { time: "23:00", tag: "tech", tagText: "科技", text: "苹果市值突破5万亿美元，且是在未大举押注AI数据中心的情况下达成。股价目前接近华尔街给出的平均目标价，意味着市场对其现金流与服务业务的定价已相当充分，后续上行空间需新的增长叙事支撑。", source: "Barchart.com", url: "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNRXVwb1laS1Btbm1iTjFsMEg3OGRxd2I4MDBheXBhTmpLTnBpLVpFaGZCdmVabEZnS3FWREh5WDAxcW1KVGpOVFB5NzltWnAyakRibjhhckdQM3BpcVRtSTdHckRoY2RtRFdmZG82T3NlY0xkLS1MczU4b29KQXFXVGdXSjNHMUxBT0NoZmRSb0tuYTdCOEZYWWhGRW8xbUVOTlhkZjJFVGhOUEVaQVptUW05eW1UalZBeG9wRUhLVXljWlVFU0JLc0dkVm1aZjM5OHJEWlVuUmFUd1FJNW1Rdi1UdDN5YlRER0JMZnVpaGNvSVUyRUx5ZA?oc=5" },
-  { time: "22:39", tag: "macro", tagText: "宏观", text: "美国监管机构将矛头指向Medicare Advantage评级，联合健康、Humana和CVS股价下跌。保险商面临业务实践审查及私营联邦医保计划潜在规则变化，政策风险可能影响其保费收入与利润。", source: "MarketWatch", url: "https://www.marketwatch.com/story/unitedhealth-humana-and-cvs-stocks-slide-as-u-s-targets-medicare-advantage-ratings-6c2be5bb?mod=mw_rss_topstories" },
-  { time: "22:38", tag: "tech", tagText: "科技", text: "CrowdStrike宣布以约439亿美元全股票交易收购Zscaler，旨在应对AI加剧的网络攻击。网络安全板块此前已持续走强，此交易将成为行业重大并购，反映AI安全需求上升与行业整合加速。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/crowdstrike-zscaler-aquisition-ai-cyberattacks.html" },
-  { time: "22:30", tag: "macro", tagText: "宏观", text: "美国2027年社会保障生活成本调整（COLA）为3.6%，将全面上调养老金给付。但医保保费与税收规则的变化将侵蚀部分增幅，退休人员的实际到手收入仍面临压力。", source: "CNBC", url: "https://www.cnbc.com/2026/11/22/social-security-changes-cola-taxes-medicare.html" },
-  { time: "22:15", tag: "geo", tagText: "地缘", text: "芬兰海域一艘受制裁的俄罗斯船只遭无人机袭击后起火。芬兰总理表示「战争正蔓延到我们的近邻」，事件令北欧地区安全风险上升，并可能加剧欧盟对俄制裁与航运安全的争论。", source: "Financial Times", url: "https://www.ft.com/content/2c959c95-97a5-4957-9eb2-8436c34ba374?syn-25a6b1a6=1" },
-  { time: "22:00", tag: "macro", tagText: "宏观", text: "美股进入调整区间并迎接感恩节假期，投资者关注何时见底。MarketWatch援引Norm Fosback的「季节性择时系统」指出，历史记录显示未来两周市场存在上行倾向；但英伟达财报与AI交易降温仍是主要不确定性。", source: "MarketWatch", url: "https://www.marketwatch.com/story/can-stocks-bounce-back-after-a-brutal-week-this-timing-model-says-history-is-on-the-markets-side-beff1753?mod=mw_rss_topstories" },
-  { time: "10:09", tag: "geo", tagText: "地缘", text: "特朗普表示，如有需要愿意赦免英伟达CEO黄仁勋，并认为黄仁勋不必在国会作证时援引第五修正案；他还称美国政府入股英伟达「为时不晚」。此前众议院多个委员会已定于12月1日就英伟达相关丑闻举行听证，黄仁勋将出席作证。", source: "CNBC", url: "https://www.cnbc.com/2026/11/25/trump-huang-pardon-politics.html" },
-  { time: "10:04", tag: "ai", tagText: "AI", text: "随着英伟达风波持续发酵，那些以「可向中国客户供应芯片」为卖点的亚洲数据中心项目正面临美国更严格的审查，市场开始担忧这轮AI数据中心投资热潮可能降温。", source: "Financial Times", url: "https://www.ft.com/content/e5df32d1-1801-4d81-b2f5-b83e93377c1c?syn-25a6b1a6=1" },
-  { time: "10:00", tag: "tech", tagText: "科技", text: "Shein同意支付1亿美元与美国监管机构达成和解。监管方指控其误导消费者：零售商供应商声称产自美国的棉花，实际是在中国采摘。", source: "Financial Times", url: "https://www.ft.com/content/0128d44e-8ca1-49b8-868b-b8fe0e4824c6?syn-25a6b1a6=1" },
-  { time: "09:57", tag: "ai", tagText: "AI", text: "亚洲科技股周三大跌，软银集团重挫14%，东京与首尔半导体股领跌。华尔街AI交易抛售潮外溢，此前「黄仁勋回归」带来的反弹消退；美股期货同步走低，投资者等待关键通胀数据。", source: "CNBC", url: "https://www.cnbc.com/2026/11/25/tech-stocks-softbank-group-advantest-sk-hynix-samsung.html" },
-  { time: "06:36", tag: "geo", tagText: "地缘", text: "美国法院裁定华为有罪，这起审判暴露了该公司的企业间谍活动与规避制裁行为。判决是美国联邦检察官与中国电信巨头长达八年法律战的胜利。", source: "Financial Times", url: "https://www.ft.com/content/6c64b8b8-531c-4eea-8fd0-90c4c4967ab9?syn-25a6b1a6=1" },
-  { time: "06:26", tag: "crypto", tagText: "加密", text: "比特币跌破6万美元，美国现货比特币ETF资金单日净流出创纪录的47亿美元。加密市场未能守住英伟达财报带来的反弹，ETF赎回与宏观逆风成为主导因素。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPLTNtZEtTS2JrekFZdEt1TTVjWEJIMG5zOUVRdUpVYTFfblo4MkhMNlRxbzRINzVXU3doTi0yNkM5amZKQnpva3VObXBNdFVsWGR0T3lYNy02ZjlVWk41VEE5Wnh0MU5qeHh5MzlZVFJUUWg4cmNXcHFZVXE5dGtoR0VHRTlGTGtKWFNVVFB4OFdNdlA0TTVhc2JGTTBma2RXR0JlMEhLOS1pcFlOQldpcmVlRkNWLXF2Rmx1UDA0LVdLY19pdjhSTHNrX0U1bHNLTjhwQ2FiU05KZ2tVVXRUUVJhY3lGazEyTU01bXNOclg4d2s?oc=5" },
 ];
-const breakingDate = "2026年11月26日 06:24 CST";
+const breakingDate = "2026年11月26日 12:55 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "11:24", tag: "ai", tagText: "AI", text: "据《朝鲜日报》报道，随着企业寻求芯片供应多元化，英伟达在AI芯片领域的主导地位出现松动。大型客户加快采用替代方案，可能改变AI算力市场的竞争格局。", source: "Chosun Ilbo", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUnE0QmdXUC1rWmpiMkY3Q1lTU2k0ZWpjem1rcGcteXFfTTdETVMxZldyWjFBNHRxV3ZWX0JoZ1YxbjFQZUxqakNTc2xEdElZM3R6eC1xdVdvOUtJa2Nib3NuUjNNLVh5V1VaOUpZTG1CQ040bFhDVDlFdGNXaVJ4N2gwTmxLdkd3?oc=5" },
+  { time: "09:45", tag: "ai", tagText: "AI", text: "黄仁勋重返英伟达CEO及董事席位，并获得白宫支持，美国、中国与台湾方面均对这一回归表示欢迎。在全员大会上，黄仁勋向员工致歉，感谢白宫给予的「第二次机会」，并透露自己正在接受心理治疗；他同时坚持认为设立继任计划只会制造不必要的层级。耶鲁大学管理学院的索南菲尔德则警告，市场对此事的乐观可能酿成大错，称英伟达对美国工业实力是「损害」而非「捍卫者」，并可能令董事面临风险。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNjd6cTNFQ3FibGRoeWZ5dUdROV9uRTlPeE4ySGtCTVVzekx6Wi02OHdlXzZHR09NMFRoWGJDMHVaXzNRQnhfNm5zdnltTWhLMDN5d3pLNDBtWjRvMUZrX2FUcHRNNXV2Z3Z5ajdaV1MycmZSaDU1NVdad1lwcjVyU1ZicXcxOTY1?oc=5" },
+  { time: "09:42", tag: "ai", tagText: "AI", text: "语音AI初创公司ElevenLabs据悉正寻求新一轮融资，目标估值达330亿美元。该估值反映生成式AI语音赛道的高热度，以及投资者对商业化前景的押注。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxNYkhhVHR1a1Jha0dHX2dwbm9CWjBwc3pmWjc1U1Raa2pIU3lxWW8xMW1oQjB1a0NTTkN3WmtUb3F2UHRNaXYyNTdlaTBYcHplaUVvendoMGZsUUZFSW1wUkxpekdOR21GcmZncVdZWVpOc3NlUlkxZFVfQ1hRaFFlYnV4aDhsZ2UtZEVRSnlRbFhrQzNqMnV0Y254eVN2QmdZcTc0b3lmcjBydnA0SGJCemRR?oc=5" },
   { time: "05:33", tag: "ai", tagText: "AI", text: "一项新基准测试显示，即便是最先进的AI代理，在完成日常任务时也难以做到可靠与安全，并可能引入新的风险。随着数以百万计的用户开始使用个人AI助手，该结果表明自主代理在真实生活场景中的可靠性仍是其大规模落地的核心瓶颈。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/" },
   { time: "05:32", tag: "tech", tagText: "科技", text: "沃尔玛与Meta达成合作，消费者可通过Meta的AI代理Muse浏览并购买「黑色星期五」折扣商品。这是大型零售商首次将促销流量直接接入第三方AI代理，意味着AI助手正演变为电商的新流量入口，或改变节日购物季的获客方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/" },
   { time: "05:09", tag: "ai", tagText: "AI", text: "在日内瓦举行的联合国气候谈判中，AI数据中心带来的电力需求激增成为各国代表难以回避的新难题：全球经济的全面电气化正与功耗庞大的算力设施扩张同时发生，清洁能源转型的节奏因此面临重估。多国代表在谈判中讨论如何在AI算力扩张与减排目标之间取得平衡。", source: "The Verge", url: "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "02:39", tag: "geo", tagText: "地缘", text: "消息人士称，台积电收紧对华AI芯片供应限制，以配合美国新规堵住制造环节漏洞。新规可能进一步限制中国通过代工渠道获取先进AI芯片，影响全球供应链与相关客户排产。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5" },
   { time: "02:26", tag: "ai", tagText: "AI", text: "美国俄勒冈州与弗吉尼亚州总检察长分别提起诉讼，指控马斯克旗下xAI（起诉对象列为SpaceX）的Grok生成未经同意的色情深度伪造内容，违反各州消费者保护法。案件将检验生成式AI平台对深度伪造内容的责任边界，可能成为美国州级AI监管的重要先例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit" },
   { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
-  { time: "19:29", tag: "ai", tagText: "AI", text: "德国商业银行旗下风投机构CommerzVentures宣布设立规模5000万欧元的新基金，专项投资以人工智能为核心的金融科技初创公司。这表明传统银行正通过外部风险投资布局AI驱动的支付、风控与信贷创新，以应对金融科技与生成式AI融合带来的行业变局。", source: "Global Venturing", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPaVI5dlV0SUg1bVZTM1VQYnpTQVdFbk5fX0Exd0NIdUd5YVJlUXE2cXNPWE1hVUhaTFFGQzA2Y0lZUENpVk40X3RsdVd2ZEZtbDVxT2RjNnk1dkU5dDQ3ME9NdGFBNXdJSk1TRXhxU1N6aEZkV3dOZ3FKeW1ZSmRMZEt0SF90ZURIeDZRR3dRNjZMVmYybER4WDVDazAyX2MwUFpDbUhGZUg5MmZj?oc=5" },
-  { time: "18:30", tag: "tech", tagText: "科技", text: "据《南华早报》报道，华为正围绕芯片与人工智能领域组建专门的专利团队，以强化知识产权布局。此举被视为华为在AI算力与芯片设计上加速追赶、寻求在部分环节挑战英伟达主导地位的信号，也反映中国厂商在出口管制背景下加快自主技术积累与专利攻防。", source: "South China Morning Post", url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdWs3YnVOMVpmUWFsdERwOGFacjI3YW5sX0hwNXgyMkFjamdDLUo4cHNaS3pxQVpSQ0RsTG16NDlSTjU3a2VpNG1kZmo4Mndub2hndGUydXN2Zmk1SmdmaFZLMmJVQW13UmhnUU9FWk02R3FHSkZDWmFJWGt6RC1YUklOLUNlS0FkdnhTR3J4WXJxTUpzbGx5cjhscHRjT2xOaXFGeDJLc3lVM25RM213SkNFQWo0dXk5OTRr?oc=5" },
-  { time: "09:45", tag: "ai", tagText: "AI", text: "黄仁勋重返英伟达CEO及董事席位，并获得白宫支持，美国、中国与台湾方面均对这一回归表示欢迎。在全员大会上，黄仁勋向员工致歉，感谢白宫给予的「第二次机会」，并透露自己正在接受心理治疗；他同时坚持认为设立继任计划只会制造不必要的层级。耶鲁大学管理学院的索南菲尔德则警告，市场对此事的乐观可能酿成大错，称英伟达对美国工业实力是「损害」而非「捍卫者」，并可能令董事面临风险。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNjd6cTNFQ3FibGRoeWZ5dUdROV9uRTlPeE4ySGtCTVVzekx6Wi02OHdlXzZHR09NMFRoWGJDMHVaXzNRQnhfNm5zdnltTWhLMDN5d3pLNDBtWjRvMUZrX2FUcHRNNXV2Z3Z5ajdaV1MycmZSaDU1NVdad1lwcjVyU1ZicXcxOTY1?oc=5" },
 ];
-const aiBreakingDate = "2026年11月26日 06:24 CST";
+const aiBreakingDate = "2026年11月26日 12:55 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
