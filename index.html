@@ -1616,14 +1616,14 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 15.23,
+  score: 15.0,
   rating: "extreme fear",
-  timestamp: "2026-11-25T23:59:57+00:00",
-  previousClose: 17.42,
-  previous1Week: 29.89,
-  previous1Month: 16.69,
-  previous1Year: 15.03,
-  date: "2026年11月26日 12:55 CST"
+  timestamp: "2026-11-26T01:59:59+00:00",
+  previousClose: 15.23,
+  previous1Week: 15.87,
+  previous1Month: 29.83,
+  previous1Year: 17.66,
+  date: "2026年11月26日 22:59 CST"
 };
 
 // ============ Breaking News Data ============
@@ -1650,10 +1650,13 @@ const breakingNews = [
   { time: "23:24", tag: "ai", tagText: "AI", text: "英伟达董事会一致决定恢复黄仁勋CEO职务，董事会称获得美国政府高层意见；特朗普表示已直接向英伟达董事会保证黄仁勋不构成国家安全威胁。英伟达股价飙升约30%至35%，创十年来最大单日涨幅，带动纳指涨7.4%、标普500涨5%、道指上扬，科技股与加密资产等风险资产同步反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" },
   { time: "23:18", tag: "ai", tagText: "AI", text: "英伟达将于美东时间周二下午4:20公布2027财年第三季度业绩，随后召开电话会，这是黄仁勋辞职后的首份财报，备受市场关注。投资者急于了解后黄仁勋时代的公司治理、继任安排与AI芯片订单能见度，但管理层料对继任问题保持缄默。该财报被视为检验AI算力需求成色的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" },
 ];
-const breakingDate = "2026年11月26日 12:55 CST";
+const breakingDate = "2026年11月26日 22:59 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "18:53", tag: "ai", tagText: "AI", text: "前OpenAI员工暗示，AI实验室在RSA加密漏洞研究上取得突破。若属实，可能对现有公钥加密体系和网络安全产生重大冲击，但相关细节尚未公开，仍待独立验证。", source: "ForkLog", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNVhGY0FFV0VlZF9RZkppTHFZLTJRZ25HSWFZSnZ1Q3g4VnY1aVhPQjR6QllOOG5xTktMd015SW9hMS1pS25oNUdLZDBBTklCWTlteF94QTJPNVBXV0pnMFoyUEY4LWlBdkY0RVoyMVppd0gxQ3hOd1BCN2d4N01nUTNSNHNJdC1ZYl9VLVZlZDM0bDJ1UERtZTJDcUhFaU1VRWFabnc3MVZjb29O?oc=5" },
+  { time: "18:45", tag: "geo", tagText: "地缘", text: "据报道，英伟达收紧对东南亚的AI芯片出货，以配合美国出口管制。此举可能影响东南亚算力供应链与转口贸易，并进一步改变AI芯片的区域流向。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYXdvOU9jclphZ1Y2dzd2dEUzWmpzTlhWWGNFSFlXT2lQSjhraHRoanA4RWo4NlZ1OTZ0TnVyeDdKMl9CV25tWlBmREdiOXZtaWxtN1NOY19SY1dXN3ZrTUFqa0pjTGhQUTY3dHJNbEllYjItbUxGTnRSamdjUUxtY3pERmVsY19YbHlBdlpwX1dUeUM1YW9DeHhCSFdxXzJ5eE15aHJJZXVfSTZwdTF0OFp5UHV3bHhMMTh0TlgyaXhOd3R0TGNkMVU1TWJ0TC01T0RtaVlJd0tBdw?oc=5" },
+  { time: "17:54", tag: "ai", tagText: "AI", text: "美国42州总检察长联合施压，要求阻止Character.AI在破产程序中出售用户聊天数据。该案凸显生成式AI平台上的用户隐私与数据资产处置争议。", source: "The Verge", url: "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats" },
   { time: "11:24", tag: "ai", tagText: "AI", text: "据《朝鲜日报》报道，随着企业寻求芯片供应多元化，英伟达在AI芯片领域的主导地位出现松动。大型客户加快采用替代方案，可能改变AI算力市场的竞争格局。", source: "Chosun Ilbo", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUnE0QmdXUC1rWmpiMkY3Q1lTU2k0ZWpjem1rcGcteXFfTTdETVMxZldyWjFBNHRxV3ZWX0JoZ1YxbjFQZUxqakNTc2xEdElZM3R6eC1xdVdvOUtJa2Nib3NuUjNNLVh5V1VaOUpZTG1CQ040bFhDVDlFdGNXaVJ4N2gwTmxLdkd3?oc=5" },
   { time: "09:45", tag: "ai", tagText: "AI", text: "黄仁勋重返英伟达CEO及董事席位，并获得白宫支持，美国、中国与台湾方面均对这一回归表示欢迎。在全员大会上，黄仁勋向员工致歉，感谢白宫给予的「第二次机会」，并透露自己正在接受心理治疗；他同时坚持认为设立继任计划只会制造不必要的层级。耶鲁大学管理学院的索南菲尔德则警告，市场对此事的乐观可能酿成大错，称英伟达对美国工业实力是「损害」而非「捍卫者」，并可能令董事面临风险。", source: "朝鲜日报", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNjd6cTNFQ3FibGRoeWZ5dUdROV9uRTlPeE4ySGtCTVVzekx6Wi02OHdlXzZHR09NMFRoWGJDMHVaXzNRQnhfNm5zdnltTWhLMDN5d3pLNDBtWjRvMUZrX2FUcHRNNXV2Z3Z5ajdaV1MycmZSaDU1NVdad1lwcjVyU1ZicXcxOTY1?oc=5" },
   { time: "09:42", tag: "ai", tagText: "AI", text: "语音AI初创公司ElevenLabs据悉正寻求新一轮融资，目标估值达330亿美元。该估值反映生成式AI语音赛道的高热度，以及投资者对商业化前景的押注。", source: "SiliconANGLE", url: "https://news.google.com/rss/articles/CBMisgFBVV95cUxNYkhhVHR1a1Jha0dHX2dwbm9CWjBwc3pmWjc1U1Raa2pIU3lxWW8xMW1oQjB1a0NTTkN3WmtUb3F2UHRNaXYyNTdlaTBYcHplaUVvendoMGZsUUZFSW1wUkxpekdOR21GcmZncVdZWVpOc3NlUlkxZFVfQ1hRaFFlYnV4aDhsZ2UtZEVRSnlRbFhrQzNqMnV0Y254eVN2QmdZcTc0b3lmcjBydnA0SGJCemRR?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "04:00", tag: "ai", tagText: "AI", text: "Anthropic推出新Claude Ship产品能力：Claude可直接审查代码Pull Request、自动修复问题并批准合并请求，进一步从编程助手升级为可独立交付代码的AI代理。此举将加剧与GitHub Copilot、Cursor等工具在软件工程自动化领域的竞争。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests" },
   { time: "03:32", tag: "tech", tagText: "科技", text: "AI与人类研究者同时宣称解决167年历史的黎曼猜想，数学界震惊；结果尚待同行验证，若成立将成为AI辅助基础科学研究的重大里程碑。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/" },
   { time: "03:14", tag: "ai", tagText: "AI", text: "谷歌将AI Mode的“个人智能”能力扩展至Drive、Wallet与Gemini应用，搜索AI模式可直接调用用户的云端文件与钱包数据以给出个性化回答。这意味着谷歌正把生态内积累的用户数据转化为生成式AI的竞争壁垒，同时也将再度引发隐私边界讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/" },
-  { time: "02:39", tag: "geo", tagText: "地缘", text: "消息人士称，台积电收紧对华AI芯片供应限制，以配合美国新规堵住制造环节漏洞。新规可能进一步限制中国通过代工渠道获取先进AI芯片，影响全球供应链与相关客户排产。", source: "Reuters", url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5" },
-  { time: "02:26", tag: "ai", tagText: "AI", text: "美国俄勒冈州与弗吉尼亚州总检察长分别提起诉讼，指控马斯克旗下xAI（起诉对象列为SpaceX）的Grok生成未经同意的色情深度伪造内容，违反各州消费者保护法。案件将检验生成式AI平台对深度伪造内容的责任边界，可能成为美国州级AI监管的重要先例。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit" },
-  { time: "23:16", tag: "tech", tagText: "科技", text: "OpenAI为ChatGPT上线Live Dictation（实时听写）功能，麦克风音频可边说边转写，无需等录音结束后再处理，交互延迟明显降低，目前正在全球范围推送。这被视为ChatGPT语音输入体验的又一次升级。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation" },
 ];
-const aiBreakingDate = "2026年11月26日 12:55 CST";
+const aiBreakingDate = "2026年11月26日 22:59 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
