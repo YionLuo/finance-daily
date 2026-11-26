@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 15.87,
   previous1Month: 29.83,
   previous1Year: 17.66,
-  date: "2026年11月26日 22:59 CST"
+  date: "2026年11月26日 23:34 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:32", tag: "macro", tagText: "宏观", text: "美股周二承压，道指一度下跌400点，受家得宝拖累，纳指在英伟达财报公布前走低。投资者在多家企业财报与英伟达季度业绩之间权衡；与此同时，美国银行客户正大幅减持科技股，科技股敞口降幅创2006年以来最大，显示市场对AI交易的信心出现松动。", source: "CNBC", url: "https://www.cnbc.com/2026/11/16/stock-market-today-live-updates.html" },
+  { time: "23:30", tag: "crypto", tagText: "加密", text: "代币化股票平台OKXICE计划周一首秀，尽管其最初拟上市的股票中约90%的公司表示反对；与此同时，纽交所和纳斯达克正调整布局以应对股票代币化新市场。传统交易所、加密平台与上市公司在股权代币化上的监管与利益冲突升温。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/tokenized-stocks-face-pushback-as-nyse-nasdaq-pivot-for-a-new-market-.html" },
+  { time: "23:27", tag: "geo", tagText: "地缘", text: "美国众议院多个委员会将于12月1日就英伟达相关丑闻举行听证，前CEO黄仁勋将出席作证，英伟达律师定于12月2日作证。黄仁勋此前因被曝与一名疑似中国间谍的女性有婚外情而辞去CEO职务，事件正将这家全球市值最高的芯片公司卷入国家安全审查，并可能影响出口管制政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html" },
+  { time: "23:24", tag: "ai", tagText: "AI", text: "英伟达董事会一致决定恢复黄仁勋CEO职务，董事会称获得美国政府高层意见；特朗普表示已直接向英伟达董事会保证黄仁勋不构成国家安全威胁。英伟达股价飙升约30%至35%，创十年来最大单日涨幅，带动纳指涨7.4%、标普500涨5%、道指上扬，科技股与加密资产等风险资产同步反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" },
+  { time: "23:18", tag: "ai", tagText: "AI", text: "英伟达将于美东时间周二下午4:20公布2027财年第三季度业绩，随后召开电话会，这是黄仁勋辞职后的首份财报，备受市场关注。投资者急于了解后黄仁勋时代的公司治理、继任安排与AI芯片订单能见度，但管理层料对继任问题保持缄默。该财报被视为检验AI算力需求成色的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" },
   { time: "12:49", tag: "macro", tagText: "宏观", text: "亚太股市周三普遍上涨，韩国KOSPI领涨，科技股反弹提振区域情绪。投资者似乎已消化白宫周三宣布的新一轮关税——该关税针对十余个主要贸易伙伴；同时，此前美股因AI风险担忧经历震荡交易，科技股承压。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/stock-markets-today-.html" },
   { time: "12:12", tag: "macro", tagText: "宏观", text: "特朗普最新关税方案拟对孟加拉国、柬埔寨和泰国征收18%关税，对中国和越南征收20%关税（具体视各自贸易协议而定），分析认为这将使印度相对亚洲竞争对手获得出口竞争优势。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/trump-us-tariff-india-trade.html" },
   { time: "11:19", tag: "ai", tagText: "AI", text: "标普全球评级警告称，可能将英伟达信用评级下调一档，并指出该芯片制造商的管理与治理风险「上升」。这是后黄仁勋时代公司治理风波对英伟达融资信誉的又一冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/nvidia-market-governance-risk.html" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "06:26", tag: "crypto", tagText: "加密", text: "比特币跌破6万美元，美国现货比特币ETF资金单日净流出创纪录的47亿美元。加密市场未能守住英伟达财报带来的反弹，ETF赎回与宏观逆风成为主导因素。", source: "The Motley Fool", url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPLTNtZEtTS2JrekFZdEt1TTVjWEJIMG5zOUVRdUpVYTFfblo4MkhMNlRxbzRINzVXU3doTi0yNkM5amZKQnpva3VObXBNdFVsWGR0T3lYNy02ZjlVWk41VEE5Wnh0MU5qeHh5MzlZVFJUUWg4cmNXcHFZVXE5dGtoR0VHRTlGTGtKWFNVVFB4OFdNdlA0TTVhc2JGTTBma2RXR0JlMEhLOS1pcFlOQldpcmVlRkNWLXF2Rmx1UDA0LVdLY19pdjhSTHNrX0U1bHNLTjhwQ2FiU05KZ2tVVXRUUVJhY3lGazEyTU01bXNOclg4d2s?oc=5" },
   { time: "06:07", tag: "ai", tagText: "AI", text: "戴尔第三财季营收同比增逾一倍，受AI服务器需求推动，业绩超预期，并授权250亿美元股票回购，股价上涨。公司称订单积压已「严格审核客户质量，以及对资本、土地和电力的获取能力」。", source: "CNBC", url: "https://www.cnbc.com/2026/11/24/dell-earnings-report-q3-2027.html" },
   { time: "05:46", tag: "ai", tagText: "AI", text: "Anthropic股价首次跌破83美元的IPO发行价，此时距其登陆纳斯达克尚不足一周。AI概念股集体回落，与英伟达一道拖累纳指周二收跌约1.5%。", source: "MarketWatch", url: "https://www.marketwatch.com/story/anthropics-stock-just-broke-below-its-ipo-price-for-the-first-time-5dc82668?mod=mw_rss_topstories" },
-  { time: "23:32", tag: "macro", tagText: "宏观", text: "美股周二承压，道指一度下跌400点，受家得宝拖累，纳指在英伟达财报公布前走低。投资者在多家企业财报与英伟达季度业绩之间权衡；与此同时，美国银行客户正大幅减持科技股，科技股敞口降幅创2006年以来最大，显示市场对AI交易的信心出现松动。", source: "CNBC", url: "https://www.cnbc.com/2026/11/16/stock-market-today-live-updates.html" },
-  { time: "23:30", tag: "crypto", tagText: "加密", text: "代币化股票平台OKXICE计划周一首秀，尽管其最初拟上市的股票中约90%的公司表示反对；与此同时，纽交所和纳斯达克正调整布局以应对股票代币化新市场。传统交易所、加密平台与上市公司在股权代币化上的监管与利益冲突升温。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/tokenized-stocks-face-pushback-as-nyse-nasdaq-pivot-for-a-new-market-.html" },
-  { time: "23:27", tag: "geo", tagText: "地缘", text: "美国众议院多个委员会将于12月1日就英伟达相关丑闻举行听证，前CEO黄仁勋将出席作证，英伟达律师定于12月2日作证。黄仁勋此前因被曝与一名疑似中国间谍的女性有婚外情而辞去CEO职务，事件正将这家全球市值最高的芯片公司卷入国家安全审查，并可能影响出口管制政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html" },
-  { time: "23:24", tag: "ai", tagText: "AI", text: "英伟达董事会一致决定恢复黄仁勋CEO职务，董事会称获得美国政府高层意见；特朗普表示已直接向英伟达董事会保证黄仁勋不构成国家安全威胁。英伟达股价飙升约30%至35%，创十年来最大单日涨幅，带动纳指涨7.4%、标普500涨5%、道指上扬，科技股与加密资产等风险资产同步反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" },
-  { time: "23:18", tag: "ai", tagText: "AI", text: "英伟达将于美东时间周二下午4:20公布2027财年第三季度业绩，随后召开电话会，这是黄仁勋辞职后的首份财报，备受市场关注。投资者急于了解后黄仁勋时代的公司治理、继任安排与AI芯片订单能见度，但管理层料对继任问题保持缄默。该财报被视为检验AI算力需求成色的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" },
 ];
-const breakingDate = "2026年11月26日 22:59 CST";
+const breakingDate = "2026年11月26日 23:34 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "03:32", tag: "tech", tagText: "科技", text: "AI与人类研究者同时宣称解决167年历史的黎曼猜想，数学界震惊；结果尚待同行验证，若成立将成为AI辅助基础科学研究的重大里程碑。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/" },
   { time: "03:14", tag: "ai", tagText: "AI", text: "谷歌将AI Mode的“个人智能”能力扩展至Drive、Wallet与Gemini应用，搜索AI模式可直接调用用户的云端文件与钱包数据以给出个性化回答。这意味着谷歌正把生态内积累的用户数据转化为生成式AI的竞争壁垒，同时也将再度引发隐私边界讨论。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/" },
 ];
-const aiBreakingDate = "2026年11月26日 22:59 CST";
+const aiBreakingDate = "2026年11月26日 23:34 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
