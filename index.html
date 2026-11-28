@@ -1616,19 +1616,25 @@
 // ============ Fear & Greed Index Data ============
 // Updated by automation or manually. Source: CNN Fear & Greed Index.
 const fearGreedData = {
-  score: 24.86,
+  score: 24.89,
   rating: "extreme fear",
-  timestamp: "2026-11-27T18:32:57+00:00",
+  timestamp: "2026-11-27T23:59:59+00:00",
   previousClose: 15.6,
   previous1Week: 18.59,
   previous1Month: 32.89,
   previous1Year: 17.66,
-  date: "2026年11月28日 02:50 CST"
+  date: "2026年11月28日 09:53 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "07:18", tag: "geo", tagText: "地缘", text: "以色列法官建议检方撤销对总理内塔尼亚胡的部分指控，称受贿罪名成立的可能性不大。这一司法建议对深陷腐败案的内塔尼亚胡构成重大利好，或影响以色列政局走向。", source: "Financial Times", url: "https://www.ft.com/content/db700af5-22b2-4903-ae2e-124513681071?syn-25a6b1a6=1" },
+  { time: "06:45", tag: "macro", tagText: "宏观", text: "标普将法国评级展望下调至负面，称政治不稳定将加大该国削减公共赤字的难度。", source: "Financial Times", url: "https://www.ft.com/content/4e16110a-9604-4455-8557-4edece5df01a?syn-25a6b1a6=1" },
+  { time: "06:33", tag: "crypto", tagText: "加密", text: "比特币跌破6万美元，加密市场持续承压；约1.83亿美元清算在68亿美元期权到期前发生，与华尔街近一年最大涨势形成反差。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMivgJBVV95cUxQcXM0bGxmemZEM1dUQV9FUWphTGpEZkstWlBEb3JkaDNlcENRNXM3QmZMM1FNNVhVMERKS0ZuT2pzZkNmdTlwNDlxTVBLNzlmZWF3elJwZHN3SEVxcHA1WEl0ME44bWRRYjBGcWM0X0VRRTVMSjF3cmRlU3FzeW91ZVRjLWphbWdsS3hJWjlISFhSLUt1Y2ZTZVVicVpyaXNZRTA4X1VRWTd2Yjk1WjVfWDRXQ0ZvUENLN2N2N3loUUpKX284QkJDVXNfeFNsNjBjTkZqTFU2dHJRWGVjVFZ1b1h3dVBkajNCTGdoV2liek13ck5ibkdBSkRLWkltMlVORkVXZWNnRkhJNkxWbFZmdzRPb3VmMGNTenozT0F5NHF4UWE4NmRGeXlFLTBZbG9lUkdqUl9haWNWTmVjQmc?oc=5" },
+  { time: "06:00", tag: "macro", tagText: "宏观", text: "通胀压力下消费者更注重性价比，零售商仍预计黑色星期五及后续假期消费保持强劲。", source: "CNBC", url: "https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html" },
+  { time: "03:55", tag: "tech", tagText: "科技", text: "特斯拉股价录得18个月最佳周表现；据报道公司正考虑收购一家德国工具制造商，以推进Cybercab和Optimus的规模化计划。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMiqgJBVV95cUxNQ3RNQUZROFFHTnp5Yl9JZDM3NHVLWkpFcS1BSnJhOHdrWWs2T3hBYUFHOGNmejQ5YzVtZEpDaEQ2SExDVUVpc2xzdjQ4SUtLVFp0YkNoSFBIazd6OW1VWFNQVy1YWU9NTXVHWDV4X0oxZS16cW5kd2lUT3hEMTB2NFNkdWZWWGJ1S203Q3lfZGdOdjdpRExQLU05b1NNazdaOVdnU25qS0hPcERJUlRCZkNKWnd6QnphYjc5X2xxMkRMNm9EMElrNEZaWFptUk9QREM4akk0VXZWemVwSUVzU09qMGszd0lsb0JpUk1tZDJxVkNwaHFhYXdKYWJUSkd5amE4YmdMNXQ3WHZ2Y2JTemFLbnRrSzFIRnNLcktETFRnTGFOd2F0UlNn?oc=5" },
+  { time: "03:55", tag: "macro", tagText: "宏观", text: "明年近64万人将面临不含药品保障的Medicare Advantage计划，其余参保人的选择也将减少，该计划的一体化福利开始瓦解。", source: "MarketWatch", url: "https://www.marketwatch.com/story/coming-next-year-medicare-advantage-plans-without-drug-coverage-for-almost-640-000-people-and-fewer-choices-for-the-rest-25242d69?mod=mw_rss_topstories" },
   { time: "02:20", tag: "tech", tagText: "科技", text: "OpenAI反诉苹果窃取商业秘密，并指控苹果“胁迫和威胁”同时与两家公司合作的供应商，双方法律战进一步升级。", source: "Financial Times", url: "https://www.ft.com/content/af599e07-d44c-4068-ab84-6ee3c85551d4?syn-25a6b1a6=1" },
   { time: "00:45", tag: "geo", tagText: "地缘", text: "法国极左翼总统候选人梅朗雄在柏林竞选活动中将矛头对准德国，加大对法国邻国及最亲密盟友的攻击，或影响法德关系与欧洲政治走向。", source: "Financial Times", url: "https://www.ft.com/content/6689598a-47f2-41b3-92d7-e5c234914c5b?syn-25a6b1a6=1" },
   { time: "00:43", tag: "ai", tagText: "AI", text: "OpenAI、Meta、Google和Instinct等推出的AI购物代理正快速兴起，但亚马逊及越来越多零售商设置障碍，可能抑制这类AI代理的增长。", source: "CNBC", url: "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html" },
@@ -1643,24 +1649,14 @@ const breakingNews = [
   { time: "22:12", tag: "geo", tagText: "地缘", text: "欧盟领导人未能打破1.7万亿美元预算僵局，谈判将于12月恢复，关键期限临近。政治压力上升，反映成员国在长期预算与支出优先事项上的分歧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/27/eu-budget-2028-2034-deadlock.html" },
   { time: "21:58", tag: "macro", tagText: "宏观", text: "欧洲廉价航空公司Norse Atlantic因未能获得融资、燃油成本飙升而申请破产，凸显航空业成本压力与低成本商业模式脆弱性。", source: "CNBC", url: "https://www.cnbc.com/2026/11/27/norse-atlantic-bankruptcy-fuel-costs.html" },
   { time: "21:23", tag: "tech", tagText: "科技", text: "黑客入侵美国空军旗舰云计算平台Cloud One，事件在系统升级过程中被发现。该平台承载敏感国防数据，入侵可能引发对美国防网络安全与云供应链的审查。", source: "CNBC", url: "https://www.cnbc.com/2026/11/27/hackers-breach-us-air-force-flagship-cloud-one-computing-platform.html" },
-  { time: "21:22", tag: "macro", tagText: "宏观", text: "美国10月新建住宅销售升至2026年高点，建筑商通过低息贷款和黑五折扣促销。在高房价与融资成本压力下，开发商以让利换量，反映住房市场结构性分化。", source: "MarketWatch", url: "https://www.marketwatch.com/story/new-home-sales-just-hit-a-2026-high-as-builders-dangle-low-mortgages-and-black-friday-deals-291a3b62?mod=mw_rss_topstories" },
-  { time: "20:29", tag: "macro", tagText: "宏观", text: "特朗普表示愿意支持将信用卡利率上限设为10%，但假日购物者不应过早押注。该提议若推进，可能重塑消费信贷与银行盈利，但立法前景仍不确定。", source: "MarketWatch", url: "https://www.marketwatch.com/story/trump-is-open-to-capping-credit-card-interest-rates-but-holiday-shoppers-shouldnt-bank-on-it-yet-34260705?mod=mw_rss_topstories" },
-  { time: "12:49", tag: "macro", tagText: "宏观", text: "亚太股市周三普遍上涨，韩国KOSPI领涨，科技股反弹提振区域情绪。投资者似乎已消化白宫周三宣布的新一轮关税——该关税针对十余个主要贸易伙伴；同时，此前美股因AI风险担忧经历震荡交易，科技股承压。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/stock-markets-today-.html" },
-  { time: "12:12", tag: "macro", tagText: "宏观", text: "特朗普最新关税方案拟对孟加拉国、柬埔寨和泰国征收18%关税，对中国和越南征收20%关税（具体视各自贸易协议而定），分析认为这将使印度相对亚洲竞争对手获得出口竞争优势。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/trump-us-tariff-india-trade.html" },
-  { time: "11:19", tag: "ai", tagText: "AI", text: "标普全球评级警告称，可能将英伟达信用评级下调一档，并指出该芯片制造商的管理与治理风险「上升」。这是后黄仁勋时代公司治理风波对英伟达融资信誉的又一冲击。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/nvidia-market-governance-risk.html" },
-  { time: "07:18", tag: "geo", tagText: "地缘", text: "以色列法官建议检方撤销对总理内塔尼亚胡的部分指控，称受贿罪名成立的可能性不大。这一司法建议对深陷腐败案的内塔尼亚胡构成重大利好，或影响以色列政局走向。", source: "Financial Times", url: "https://www.ft.com/content/db700af5-22b2-4903-ae2e-124513681071?syn-25a6b1a6=1" },
 ];
-const breakingDate = "2026年11月28日 02:50 CST";
+const breakingDate = "2026年11月28日 09:53 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
-  { time: "23:42", tag: "tech", tagText: "科技", text: "据《朝鲜日报》报道，华为在美国出口制裁持续收紧的背景下，正加快构建自主半导体生态系统，从芯片设计、制造到封装测试及设备材料环节推进本土化替代，以降低对美系技术与供应链的依赖。报道指出，这一体系若成型，将强化中国半导体供应链的自主能力，并可能重塑全球芯片产业的分工与竞争格局。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTGw2ZEdLeHQzUzZiUnlXc1FWX19yS1ktNVR6bWRtcE1HUW5YVGdBNUh1RmpzNzd0T2RsakVBMXNUNlBoOE1pOFY3SW5vWFNsZ1pITUFtZ05ucldNRFY5TlJrTmxrQTFZVnh4c0VibnBVMVZOVTdMa1FYWmY5QWVqT3NBREYtTzlr?oc=5" },
-  { time: "18:53", tag: "ai", tagText: "AI", text: "前OpenAI员工暗示，AI实验室在RSA加密漏洞研究上取得突破。若属实，可能对现有公钥加密体系和网络安全产生重大冲击，但相关细节尚未公开，仍待独立验证。", source: "ForkLog", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNVhGY0FFV0VlZF9RZkppTHFZLTJRZ25HSWFZSnZ1Q3g4VnY1aVhPQjR6QllOOG5xTktMd015SW9hMS1pS25oNUdLZDBBTklCWTlteF94QTJPNVBXV0pnMFoyUEY4LWlBdkY0RVoyMVppd0gxQ3hOd1BCN2d4N01nUTNSNHNJdC1ZYl9VLVZlZDM0bDJ1UERtZTJDcUhFaU1VRWFabnc3MVZjb29O?oc=5" },
-  { time: "18:45", tag: "ai", tagText: "AI", text: "南非宣布设立570万美元AI基金，加入由美国和中国主导的AI竞赛；与此同时，欧洲计划投入549亿美元以缩小差距。两者投资规模形成鲜明对比，凸显全球AI竞赛正从模型和算力延伸到国家产业政策与资本投入。", source: "Business Insider Africa", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZTlVMV9fMzBhblJoLXVkc3A4ZzVtQ0hNbVFkZlE3YU9Gd3BfRml3M0FDN0Ewam4wUW5zUk8zSV92SlJqWjVyWk1ZQnRDZm1mQWgtRjZsOEpzMWlaa1h6YjBqNUtqZjJDeHFfSkpxdExoZ2RrVzdBUXdFa0RRYXJyTHMyM0dEQllBZzc1dzNSYUotSGR5blEzLTlXYkZfRUpocXVZNHFYOGZwcVZscC1pUFF1MXZkR2diTktuMjBXMjhBV3FUUDRkZWk5WTFrSTd5cWZsUnR3?oc=5" },
-  { time: "18:45", tag: "geo", tagText: "地缘", text: "据报道，英伟达收紧对东南亚的AI芯片出货，以配合美国出口管制。此举可能影响东南亚算力供应链与转口贸易，并进一步改变AI芯片的区域流向。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYXdvOU9jclphZ1Y2dzd2dEUzWmpzTlhWWGNFSFlXT2lQSjhraHRoanA4RWo4NlZ1OTZ0TnVyeDdKMl9CV25tWlBmREdiOXZtaWxtN1NOY19SY1dXN3ZrTUFqa0pjTGhQUTY3dHJNbEllYjItbUxGTnRSamdjUUxtY3pERmVsY19YbHlBdlpwX1dUeUM1YW9DeHhCSFdxXzJ5eE15aHJJZXVfSTZwdTF0OFp5UHV3bHhMMTh0TlgyaXhOd3R0TGNkMVU1TWJ0TC01T0RtaVlJd0tBdw?oc=5" },
-  { time: "11:24", tag: "ai", tagText: "AI", text: "据《朝鲜日报》报道，随着企业寻求芯片供应多元化，英伟达在AI芯片领域的主导地位出现松动。大型客户加快采用替代方案，可能改变AI算力市场的竞争格局。", source: "Chosun Ilbo", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUnE0QmdXUC1rWmpiMkY3Q1lTU2k0ZWpjem1rcGcteXFfTTdETVMxZldyWjFBNHRxV3ZWX0JoZ1YxbjFQZUxqakNTc2xEdElZM3R6eC1xdVdvOUtJa2Nib3NuUjNNLVh5V1VaOUpZTG1CQ040bFhDVDlFdGNXaVJ4N2gwTmxLdkd3?oc=5" },
-  { time: "10:44", tag: "ai", tagText: "AI", text: "养老基金正以大幅折价出售2021年配置的VC基金份额，回笼资金转向AI相关投资。此举反映私募股权二级市场折价扩大，也显示机构资金正从早期VC组合向AI主题重新配置。", source: "Startup Fortune", url: "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQ3BsMWloNjd3VDlpbEZ4WkkwMm9kMXloSXVMenZvdnJpNFRXWGkxZUdUd1RSUndSVE9ORllGNTVfVUFpNWJhbUZUR3BmQkdqSmtBX2h3NmlELVNSMEp4VFl0dlZ4M21WcHVfVGxLVzhzRG1mZHpfeHlwTVlxUDkxWXU4ZF9GLVZCcmdEQ2JRLTF6d0JQOTluVHpnOGIwajRT?oc=5" },
+  { time: "09:19", tag: "ai", tagText: "AI", text: "据Vietnam.vn报道，中国在利用AI进行药物发现方面取得突破。若相关成果获独立验证，可能缩短候选药物筛选周期并降低研发成本，进一步推动AI在生物医药领域的落地。", source: "Vietnam.vn", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVUlTS0pzaEl2eXZZbkJrVHJmQlVGeU5ISTU1ZmRlblhPZDlFTEl6dXl5c19SdF9KcTRjanAyUy1GZHFHMUdnR0RsSUd6RXJSTFlmendWWWRyYWlCUDRPRUxjZFR3UkhreFlmVVNGckRGVWo5Z184emplTFlHTElVQkpQYlhtRDYxOU1VWmNMSVg4UQ?oc=5" },
   { time: "06:25", tag: "geo", tagText: "地缘", text: "据BigGo Finance报道，英伟达最先进的AI芯片被怀疑经由中资持股的美国实体流入中国，从而绕开美国出口管制。这一渠道若被证实，意味着芯片出口管制的执行漏洞集中在「所有权与控制权」环节，而非直接的跨境货运，可能促使美方进一步收紧对美境内中资企业采购与转售AI算力的审查。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE9BUU9hSVRLUHZMQlVEaGp5WHc4MUdENHJPVmJXSzZic3ZxNTA2anEtT3ZoOE02eGNFZDRJaGJFQXdFd2VkbTgxRDdOMDlLOTA0dHJoZUY4bkFhVXRDN1JqaUdqREt3Q2wxSWdDWHVZbXZmenFHV2c?oc=5" },
+  { time: "06:11", tag: "ai", tagText: "AI", text: "小鹏发布WorldGPT，一款可同时驱动汽车、机器人和无人机的AI模型，显示车企正把大模型能力扩展至具身智能与多终端场景，或加剧智能驾驶与机器人领域的AI平台竞争。", source: "YugaTech", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbEpVSWpNTEFzM1lVZjBNZGtCZHBMOFhTSk85UTA4anRqbEJpbnBYQzcwc3lTMzhDSG9yUmRZUnM0N2VzWnRUakNLcDhSOFFWbTF6Qkh0Y2F6ZGY2TGRqNGY4MXhGQk1EWFN1WFBNV2h3VENQVjZBeG5TQjdlSVNoUG5TVkFzNkJYNE1XaWxGQ0x1MmhPS3l4bkprMk5EYWZySFE?oc=5" },
   { time: "06:10", tag: "ai", tagText: "AI", text: "据《朝鲜日报》报道，美国出台新限制，禁止通过云服务向中国出租英伟达AI芯片算力。此举把出口管制的范围从实体芯片销售扩大到云端算力租用，堵住中国企业以「远程租算力」方式获取受控AI芯片的路径，预计将影响中美两国云服务商的算力跨境业务与相关合约安排。", source: "The Korea Daily", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE1QWU5MUUltOUZ5b2p5VnoyNGo4S21Ia01iSUk3cmZTZkFaalRTRFhoRVhKWmxsaUZJUFlzSk93OTQ5QlJPUzJwS2NNY0pCSDFmM2twcVJHMkM0VW1PdWwwRVZBc0FSRFlpNGI3b2ZZUEozZWJkcGc?oc=5" },
   { time: "05:33", tag: "ai", tagText: "AI", text: "一项新基准测试显示，即便是最先进的AI代理，在完成日常任务时也难以做到可靠与安全，并可能引入新的风险。随着数以百万计的用户开始使用个人AI助手，该结果表明自主代理在真实生活场景中的可靠性仍是其大规模落地的核心瓶颈。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/" },
   { time: "05:32", tag: "tech", tagText: "科技", text: "沃尔玛与Meta达成合作，消费者可通过Meta的AI代理Muse浏览并购买「黑色星期五」折扣商品。这是大型零售商首次将促销流量直接接入第三方AI代理，意味着AI助手正演变为电商的新流量入口，或改变节日购物季的获客方式。", source: "TechCrunch", url: "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/" },
@@ -1674,8 +1670,12 @@ const aiBreakingNews = [
   { time: "04:05", tag: "ai", tagText: "AI", text: "谷歌改版搜索首页，将AI聊天入口直接放在主页：用户可打开可折叠侧边栏查看并继续AI对话。此举意味着谷歌把生成式AI进一步推向核心搜索流量入口，可能改变搜索交互与广告模式。", source: "The Verge", url: "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats" },
   { time: "04:03", tag: "geo", tagText: "地缘", text: "在日内瓦召开的联合国会议上，各国外交代表未能就自主武器系统（即所谓「杀手机器人」）的监管规则达成一致，会议无果而终。围绕是否应具有法律约束力、如何界定人类对武力使用的最终控制权等核心分歧依旧，意味着在 AI 军事化加速的背景下，全球层面短期内难以形成统一治理框架。", source: "The Verge", url: "https://www.theverge.com/tech/1039554/un-regulations-killer-robots" },
   { time: "04:00", tag: "ai", tagText: "AI", text: "Anthropic推出新Claude Ship产品能力：Claude可直接审查代码Pull Request、自动修复问题并批准合并请求，进一步从编程助手升级为可独立交付代码的AI代理。此举将加剧与GitHub Copilot、Cursor等工具在软件工程自动化领域的竞争。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests" },
+  { time: "23:42", tag: "tech", tagText: "科技", text: "据《朝鲜日报》报道，华为在美国出口制裁持续收紧的背景下，正加快构建自主半导体生态系统，从芯片设计、制造到封装测试及设备材料环节推进本土化替代，以降低对美系技术与供应链的依赖。报道指出，这一体系若成型，将强化中国半导体供应链的自主能力，并可能重塑全球芯片产业的分工与竞争格局。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTGw2ZEdLeHQzUzZiUnlXc1FWX19yS1ktNVR6bWRtcE1HUW5YVGdBNUh1RmpzNzd0T2RsakVBMXNUNlBoOE1pOFY3SW5vWFNsZ1pITUFtZ05ucldNRFY5TlJrTmxrQTFZVnh4c0VibnBVMVZOVTdMa1FYWmY5QWVqT3NBREYtTzlr?oc=5" },
+  { time: "18:53", tag: "ai", tagText: "AI", text: "前OpenAI员工暗示，AI实验室在RSA加密漏洞研究上取得突破。若属实，可能对现有公钥加密体系和网络安全产生重大冲击，但相关细节尚未公开，仍待独立验证。", source: "ForkLog", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNVhGY0FFV0VlZF9RZkppTHFZLTJRZ25HSWFZSnZ1Q3g4VnY1aVhPQjR6QllOOG5xTktMd015SW9hMS1pS25oNUdLZDBBTklCWTlteF94QTJPNVBXV0pnMFoyUEY4LWlBdkY0RVoyMVppd0gxQ3hOd1BCN2d4N01nUTNSNHNJdC1ZYl9VLVZlZDM0bDJ1UERtZTJDcUhFaU1VRWFabnc3MVZjb29O?oc=5" },
+  { time: "18:45", tag: "ai", tagText: "AI", text: "南非宣布设立570万美元AI基金，加入由美国和中国主导的AI竞赛；与此同时，欧洲计划投入549亿美元以缩小差距。两者投资规模形成鲜明对比，凸显全球AI竞赛正从模型和算力延伸到国家产业政策与资本投入。", source: "Business Insider Africa", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZTlVMV9fMzBhblJoLXVkc3A4ZzVtQ0hNbVFkZlE3YU9Gd3BfRml3M0FDN0Ewam4wUW5zUk8zSV92SlJqWjVyWk1ZQnRDZm1mQWgtRjZsOEpzMWlaa1h6YjBqNUtqZjJDeHFfSkpxdExoZ2RrVzdBUXdFa0RRYXJyTHMyM0dEQllBZzc1dzNSYUotSGR5blEzLTlXYkZfRUpocXVZNHFYOGZwcVZscC1pUFF1MXZkR2diTktuMjBXMjhBV3FUUDRkZWk5WTFrSTd5cWZsUnR3?oc=5" },
+  { time: "18:45", tag: "geo", tagText: "地缘", text: "据报道，英伟达收紧对东南亚的AI芯片出货，以配合美国出口管制。此举可能影响东南亚算力供应链与转口贸易，并进一步改变AI芯片的区域流向。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYXdvOU9jclphZ1Y2dzd2dEUzWmpzTlhWWGNFSFlXT2lQSjhraHRoanA4RWo4NlZ1OTZ0TnVyeDdKMl9CV25tWlBmREdiOXZtaWxtN1NOY19SY1dXN3ZrTUFqa0pjTGhQUTY3dHJNbEllYjItbUxGTnRSamdjUUxtY3pERmVsY19YbHlBdlpwX1dUeUM1YW9DeHhCSFdxXzJ5eE15aHJJZXVfSTZwdTF0OFp5UHV3bHhMMTh0TlgyaXhOd3R0TGNkMVU1TWJ0TC01T0RtaVlJd0tBdw?oc=5" },
 ];
-const aiBreakingDate = "2026年11月28日 02:50 CST";
+const aiBreakingDate = "2026年11月28日 09:53 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
