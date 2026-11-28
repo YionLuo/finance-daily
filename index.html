@@ -1623,12 +1623,15 @@ const fearGreedData = {
   previous1Week: 18.59,
   previous1Month: 32.89,
   previous1Year: 17.66,
-  date: "2026年11月28日 18:11 CST"
+  date: "2026年11月28日 23:29 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "23:29", tag: "macro", tagText: "宏观", text: "美股周五在缩短交易时段中上涨，道指涨约300点，标普500与纳指同步走高，涨势扩散至科技股以外；主要股指有望录得2025年4月以来最佳单周表现。市场在AI板块剧烈波动后迎来反弹，但历史显示快速修正后的反弹未必持久。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html" },
+  { time: "23:27", tag: "geo", tagText: "地缘", text: "美国众议院多个委员会将于12月1日就英伟达相关丑闻举行听证，前CEO黄仁勋将出席作证，英伟达律师定于12月2日作证。黄仁勋此前因被曝与一名疑似中国间谍的女性有婚外情而辞去CEO职务，事件正将这家全球市值最高的芯片公司卷入国家安全审查，并可能影响出口管制政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html" },
+  { time: "23:24", tag: "ai", tagText: "AI", text: "英伟达董事会一致决定恢复黄仁勋CEO职务，董事会称获得美国政府高层意见；特朗普表示已直接向英伟达董事会保证黄仁勋不构成国家安全威胁。英伟达股价飙升约30%至35%，创十年来最大单日涨幅，带动纳指涨7.4%、标普500涨5%、道指上扬，科技股与加密资产等风险资产同步反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" },
   { time: "15:40", tag: "geo", tagText: "地缘", text: "据FT报道，美军本月在驻英空军基地部署反无人机技术，击退针对该基地的无人机。事件凸显西方军事设施面临的无人机威胁上升，并可能加大美英防空与安全合作压力。", source: "CNBC", url: "https://www.cnbc.com/2026/11/28/us-military-repelled-drones-at-uk-airbase-this-month-ft-reports.html" },
   { time: "14:00", tag: "macro", tagText: "宏观", text: "沙特经济大臣表示，Vision 2030正从“不惜代价支出与交付”转向“以合适成本支出与交付”，在经济与安全压力下调整支出节奏。这或影响大型项目资本开支、承包商及地区资本流动。", source: "CNBC", url: "https://www.cnbc.com/2026/11/28/saudi-arabia-vision-2030-spending.html" },
   { time: "14:00", tag: "macro", tagText: "宏观", text: "Dangote炼油厂启动IPO，估值约470亿美元，有望成为非洲最大股票上市。该交易将检验非洲资本市场深度，并影响尼日利亚炼油与能源行业格局。", source: "CNBC", url: "https://www.cnbc.com/2026/11/28/dangote-refinery-oil-ipo-nigeria-africa-energy.html" },
@@ -1646,14 +1649,14 @@ const breakingNews = [
   { time: "00:19", tag: "tech", tagText: "科技", text: "英国工作与养老金部、国际足联和美国财政部等机构遭遇网络事件或服务中断，西方经济体受到冲击；市场对AI加剧网络威胁的担忧上升。", source: "Financial Times", url: "https://www.ft.com/content/6ab1172b-4f27-49f5-ad53-b384df82da77?syn-25a6b1a6=1" },
   { time: "23:52", tag: "macro", tagText: "宏观", text: "特朗普要求调查第三季度GDP数据“创纪录错误”，此前该数据被大幅上修。他称应立即调查，此举引发外界对经济数据独立性和政治干预的担忧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/trump-gdp-revision-investigation.html" },
   { time: "23:30", tag: "crypto", tagText: "加密", text: "代币化股票平台OKXICE计划周一首秀，尽管其最初拟上市的股票中约90%的公司表示反对；与此同时，纽交所和纳斯达克正调整布局以应对股票代币化新市场。传统交易所、加密平台与上市公司在股权代币化上的监管与利益冲突升温。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/tokenized-stocks-face-pushback-as-nyse-nasdaq-pivot-for-a-new-market-.html" },
-  { time: "23:29", tag: "macro", tagText: "宏观", text: "美股周五在缩短交易时段中上涨，道指涨约300点，标普500与纳指同步走高，涨势扩散至科技股以外；主要股指有望录得2025年4月以来最佳单周表现。市场在AI板块剧烈波动后迎来反弹，但历史显示快速修正后的反弹未必持久。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html" },
-  { time: "23:27", tag: "geo", tagText: "地缘", text: "美国众议院多个委员会将于12月1日就英伟达相关丑闻举行听证，前CEO黄仁勋将出席作证，英伟达律师定于12月2日作证。黄仁勋此前因被曝与一名疑似中国间谍的女性有婚外情而辞去CEO职务，事件正将这家全球市值最高的芯片公司卷入国家安全审查，并可能影响出口管制政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html" },
-  { time: "23:24", tag: "ai", tagText: "AI", text: "英伟达董事会一致决定恢复黄仁勋CEO职务，董事会称获得美国政府高层意见；特朗普表示已直接向英伟达董事会保证黄仁勋不构成国家安全威胁。英伟达股价飙升约30%至35%，创十年来最大单日涨幅，带动纳指涨7.4%、标普500涨5%、道指上扬，科技股与加密资产等风险资产同步反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" },
 ];
-const breakingDate = "2026年11月28日 18:11 CST";
+const breakingDate = "2026年11月28日 23:29 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
+  { time: "18:53", tag: "ai", tagText: "AI", text: "前OpenAI员工暗示，AI实验室在RSA加密漏洞研究上取得突破。若属实，可能对现有公钥加密体系和网络安全产生重大冲击，但相关细节尚未公开，仍待独立验证。", source: "ForkLog", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNVhGY0FFV0VlZF9RZkppTHFZLTJRZ25HSWFZSnZ1Q3g4VnY1aVhPQjR6QllOOG5xTktMd015SW9hMS1pS25oNUdLZDBBTklCWTlteF94QTJPNVBXV0pnMFoyUEY4LWlBdkY0RVoyMVppd0gxQ3hOd1BCN2d4N01nUTNSNHNJdC1ZYl9VLVZlZDM0bDJ1UERtZTJDcUhFaU1VRWFabnc3MVZjb29O?oc=5" },
+  { time: "18:45", tag: "ai", tagText: "AI", text: "南非宣布设立570万美元AI基金，加入由美国和中国主导的AI竞赛；与此同时，欧洲计划投入549亿美元以缩小差距。两者投资规模形成鲜明对比，凸显全球AI竞赛正从模型和算力延伸到国家产业政策与资本投入。", source: "Business Insider Africa", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZTlVMV9fMzBhblJoLXVkc3A4ZzVtQ0hNbVFkZlE3YU9Gd3BfRml3M0FDN0Ewam4wUW5zUk8zSV92SlJqWjVyWk1ZQnRDZm1mQWgtRjZsOEpzMWlaa1h6YjBqNUtqZjJDeHFfSkpxdExoZ2RrVzdBUXdFa0RRYXJyTHMyM0dEQllBZzc1dzNSYUotSGR5blEzLTlXYkZfRUpocXVZNHFYOGZwcVZscC1pUFF1MXZkR2diTktuMjBXMjhBV3FUUDRkZWk5WTFrSTd5cWZsUnR3?oc=5" },
+  { time: "18:45", tag: "geo", tagText: "地缘", text: "据报道，英伟达收紧对东南亚的AI芯片出货，以配合美国出口管制。此举可能影响东南亚算力供应链与转口贸易，并进一步改变AI芯片的区域流向。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYXdvOU9jclphZ1Y2dzd2dEUzWmpzTlhWWGNFSFlXT2lQSjhraHRoanA4RWo4NlZ1OTZ0TnVyeDdKMl9CV25tWlBmREdiOXZtaWxtN1NOY19SY1dXN3ZrTUFqa0pjTGhQUTY3dHJNbEllYjItbUxGTnRSamdjUUxtY3pERmVsY19YbHlBdlpwX1dUeUM1YW9DeHhCSFdxXzJ5eE15aHJJZXVfSTZwdTF0OFp5UHV3bHhMMTh0TlgyaXhOd3R0TGNkMVU1TWJ0TC01T0RtaVlJd0tBdw?oc=5" },
   { time: "09:19", tag: "ai", tagText: "AI", text: "据Vietnam.vn报道，中国在利用AI进行药物发现方面取得突破。若相关成果获独立验证，可能缩短候选药物筛选周期并降低研发成本，进一步推动AI在生物医药领域的落地。", source: "Vietnam.vn", url: "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVUlTS0pzaEl2eXZZbkJrVHJmQlVGeU5ISTU1ZmRlblhPZDlFTEl6dXl5c19SdF9KcTRjanAyUy1GZHFHMUdnR0RsSUd6RXJSTFlmendWWWRyYWlCUDRPRUxjZFR3UkhreFlmVVNGckRGVWo5Z184emplTFlHTElVQkpQYlhtRDYxOU1VWmNMSVg4UQ?oc=5" },
   { time: "06:25", tag: "geo", tagText: "地缘", text: "据BigGo Finance报道，英伟达最先进的AI芯片被怀疑经由中资持股的美国实体流入中国，从而绕开美国出口管制。这一渠道若被证实，意味着芯片出口管制的执行漏洞集中在「所有权与控制权」环节，而非直接的跨境货运，可能促使美方进一步收紧对美境内中资企业采购与转售AI算力的审查。", source: "BigGo Finance", url: "https://news.google.com/rss/articles/CBMidkFVX3lxTE9BUU9hSVRLUHZMQlVEaGp5WHc4MUdENHJPVmJXSzZic3ZxNTA2anEtT3ZoOE02eGNFZDRJaGJFQXdFd2VkbTgxRDdOMDlLOTA0dHJoZUY4bkFhVXRDN1JqaUdqREt3Q2wxSWdDWHVZbXZmenFHV2c?oc=5" },
   { time: "06:11", tag: "ai", tagText: "AI", text: "小鹏发布WorldGPT，一款可同时驱动汽车、机器人和无人机的AI模型，显示车企正把大模型能力扩展至具身智能与多终端场景，或加剧智能驾驶与机器人领域的AI平台竞争。", source: "YugaTech", url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbEpVSWpNTEFzM1lVZjBNZGtCZHBMOFhTSk85UTA4anRqbEJpbnBYQzcwc3lTMzhDSG9yUmRZUnM0N2VzWnRUakNLcDhSOFFWbTF6Qkh0Y2F6ZGY2TGRqNGY4MXhGQk1EWFN1WFBNV2h3VENQVjZBeG5TQjdlSVNoUG5TVkFzNkJYNE1XaWxGQ0x1MmhPS3l4bkprMk5EYWZySFE?oc=5" },
@@ -1671,11 +1674,8 @@ const aiBreakingNews = [
   { time: "04:03", tag: "geo", tagText: "地缘", text: "在日内瓦召开的联合国会议上，各国外交代表未能就自主武器系统（即所谓「杀手机器人」）的监管规则达成一致，会议无果而终。围绕是否应具有法律约束力、如何界定人类对武力使用的最终控制权等核心分歧依旧，意味着在 AI 军事化加速的背景下，全球层面短期内难以形成统一治理框架。", source: "The Verge", url: "https://www.theverge.com/tech/1039554/un-regulations-killer-robots" },
   { time: "04:00", tag: "ai", tagText: "AI", text: "Anthropic推出新Claude Ship产品能力：Claude可直接审查代码Pull Request、自动修复问题并批准合并请求，进一步从编程助手升级为可独立交付代码的AI代理。此举将加剧与GitHub Copilot、Cursor等工具在软件工程自动化领域的竞争。", source: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests" },
   { time: "23:42", tag: "tech", tagText: "科技", text: "据《朝鲜日报》报道，华为在美国出口制裁持续收紧的背景下，正加快构建自主半导体生态系统，从芯片设计、制造到封装测试及设备材料环节推进本土化替代，以降低对美系技术与供应链的依赖。报道指出，这一体系若成型，将强化中国半导体供应链的自主能力，并可能重塑全球芯片产业的分工与竞争格局。", source: "조선일보", url: "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTGw2ZEdLeHQzUzZiUnlXc1FWX19yS1ktNVR6bWRtcE1HUW5YVGdBNUh1RmpzNzd0T2RsakVBMXNUNlBoOE1pOFY3SW5vWFNsZ1pITUFtZ05ucldNRFY5TlJrTmxrQTFZVnh4c0VibnBVMVZOVTdMa1FYWmY5QWVqT3NBREYtTzlr?oc=5" },
-  { time: "18:53", tag: "ai", tagText: "AI", text: "前OpenAI员工暗示，AI实验室在RSA加密漏洞研究上取得突破。若属实，可能对现有公钥加密体系和网络安全产生重大冲击，但相关细节尚未公开，仍待独立验证。", source: "ForkLog", url: "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNVhGY0FFV0VlZF9RZkppTHFZLTJRZ25HSWFZSnZ1Q3g4VnY1aVhPQjR6QllOOG5xTktMd015SW9hMS1pS25oNUdLZDBBTklCWTlteF94QTJPNVBXV0pnMFoyUEY4LWlBdkY0RVoyMVppd0gxQ3hOd1BCN2d4N01nUTNSNHNJdC1ZYl9VLVZlZDM0bDJ1UERtZTJDcUhFaU1VRWFabnc3MVZjb29O?oc=5" },
-  { time: "18:45", tag: "ai", tagText: "AI", text: "南非宣布设立570万美元AI基金，加入由美国和中国主导的AI竞赛；与此同时，欧洲计划投入549亿美元以缩小差距。两者投资规模形成鲜明对比，凸显全球AI竞赛正从模型和算力延伸到国家产业政策与资本投入。", source: "Business Insider Africa", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZTlVMV9fMzBhblJoLXVkc3A4ZzVtQ0hNbVFkZlE3YU9Gd3BfRml3M0FDN0Ewam4wUW5zUk8zSV92SlJqWjVyWk1ZQnRDZm1mQWgtRjZsOEpzMWlaa1h6YjBqNUtqZjJDeHFfSkpxdExoZ2RrVzdBUXdFa0RRYXJyTHMyM0dEQllBZzc1dzNSYUotSGR5blEzLTlXYkZfRUpocXVZNHFYOGZwcVZscC1pUFF1MXZkR2diTktuMjBXMjhBV3FUUDRkZWk5WTFrSTd5cWZsUnR3?oc=5" },
-  { time: "18:45", tag: "geo", tagText: "地缘", text: "据报道，英伟达收紧对东南亚的AI芯片出货，以配合美国出口管制。此举可能影响东南亚算力供应链与转口贸易，并进一步改变AI芯片的区域流向。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYXdvOU9jclphZ1Y2dzd2dEUzWmpzTlhWWGNFSFlXT2lQSjhraHRoanA4RWo4NlZ1OTZ0TnVyeDdKMl9CV25tWlBmREdiOXZtaWxtN1NOY19SY1dXN3ZrTUFqa0pjTGhQUTY3dHJNbEllYjItbUxGTnRSamdjUUxtY3pERmVsY19YbHlBdlpwX1dUeUM1YW9DeHhCSFdxXzJ5eE15aHJJZXVfSTZwdTF0OFp5UHV3bHhMMTh0TlgyaXhOd3R0TGNkMVU1TWJ0TC01T0RtaVlJd0tBdw?oc=5" },
 ];
-const aiBreakingDate = "2026年11月28日 18:11 CST";
+const aiBreakingDate = "2026年11月28日 23:29 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
