@@ -1623,12 +1623,17 @@ const fearGreedData = {
   previous1Week: 18.59,
   previous1Month: 32.89,
   previous1Year: 17.66,
-  date: "2026年11月28日 09:53 CST"
+  date: "2026年11月28日 18:11 CST"
 };
 
 // ============ Breaking News Data ============
 // Updated by hourly automation. Latest items at top. Max 20 items kept.
 const breakingNews = [
+  { time: "15:40", tag: "geo", tagText: "地缘", text: "据FT报道，美军本月在驻英空军基地部署反无人机技术，击退针对该基地的无人机。事件凸显西方军事设施面临的无人机威胁上升，并可能加大美英防空与安全合作压力。", source: "CNBC", url: "https://www.cnbc.com/2026/11/28/us-military-repelled-drones-at-uk-airbase-this-month-ft-reports.html" },
+  { time: "14:00", tag: "macro", tagText: "宏观", text: "沙特经济大臣表示，Vision 2030正从“不惜代价支出与交付”转向“以合适成本支出与交付”，在经济与安全压力下调整支出节奏。这或影响大型项目资本开支、承包商及地区资本流动。", source: "CNBC", url: "https://www.cnbc.com/2026/11/28/saudi-arabia-vision-2030-spending.html" },
+  { time: "14:00", tag: "macro", tagText: "宏观", text: "Dangote炼油厂启动IPO，估值约470亿美元，有望成为非洲最大股票上市。该交易将检验非洲资本市场深度，并影响尼日利亚炼油与能源行业格局。", source: "CNBC", url: "https://www.cnbc.com/2026/11/28/dangote-refinery-oil-ipo-nigeria-africa-energy.html" },
+  { time: "13:00", tag: "geo", tagText: "地缘", text: "伊朗近两个月至少对六艘船实施“二次打击”，以威慑经霍尔木兹海峡的航运。此类袭击加剧海湾航运安全风险，可能推升能源运输成本与地缘溢价。", source: "Financial Times", url: "https://www.ft.com/content/f9c4da80-cc2c-4b0b-b083-b7acd0337790?syn-25a6b1a6=1" },
+  { time: "13:00", tag: "macro", tagText: "宏观", text: "新分析显示，五家美国跨国公司在爱尔兰缴纳的税额高于其他任何地方，凸显都柏林作为“企业美国税务办公室”的角色。该趋势可能加剧国际税收规则与利润转移争议。", source: "Financial Times", url: "https://www.ft.com/content/ec489542-0968-45d7-9dd7-985ad679f9b2?syn-25a6b1a6=1" },
   { time: "07:18", tag: "geo", tagText: "地缘", text: "以色列法官建议检方撤销对总理内塔尼亚胡的部分指控，称受贿罪名成立的可能性不大。这一司法建议对深陷腐败案的内塔尼亚胡构成重大利好，或影响以色列政局走向。", source: "Financial Times", url: "https://www.ft.com/content/db700af5-22b2-4903-ae2e-124513681071?syn-25a6b1a6=1" },
   { time: "06:45", tag: "macro", tagText: "宏观", text: "标普将法国评级展望下调至负面，称政治不稳定将加大该国削减公共赤字的难度。", source: "Financial Times", url: "https://www.ft.com/content/4e16110a-9604-4455-8557-4edece5df01a?syn-25a6b1a6=1" },
   { time: "06:33", tag: "crypto", tagText: "加密", text: "比特币跌破6万美元，加密市场持续承压；约1.83亿美元清算在68亿美元期权到期前发生，与华尔街近一年最大涨势形成反差。", source: "The Globe and Mail", url: "https://news.google.com/rss/articles/CBMivgJBVV95cUxQcXM0bGxmemZEM1dUQV9FUWphTGpEZkstWlBEb3JkaDNlcENRNXM3QmZMM1FNNVhVMERKS0ZuT2pzZkNmdTlwNDlxTVBLNzlmZWF3elJwZHN3SEVxcHA1WEl0ME44bWRRYjBGcWM0X0VRRTVMSjF3cmRlU3FzeW91ZVRjLWphbWdsS3hJWjlISFhSLUt1Y2ZTZVVicVpyaXNZRTA4X1VRWTd2Yjk1WjVfWDRXQ0ZvUENLN2N2N3loUUpKX284QkJDVXNfeFNsNjBjTkZqTFU2dHJRWGVjVFZ1b1h3dVBkajNCTGdoV2liek13ck5ibkdBSkRLWkltMlVORkVXZWNnRkhJNkxWbFZmdzRPb3VmMGNTenozT0F5NHF4UWE4NmRGeXlFLTBZbG9lUkdqUl9haWNWTmVjQmc?oc=5" },
@@ -1644,13 +1649,8 @@ const breakingNews = [
   { time: "23:29", tag: "macro", tagText: "宏观", text: "美股周五在缩短交易时段中上涨，道指涨约300点，标普500与纳指同步走高，涨势扩散至科技股以外；主要股指有望录得2025年4月以来最佳单周表现。市场在AI板块剧烈波动后迎来反弹，但历史显示快速修正后的反弹未必持久。", source: "CNBC", url: "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html" },
   { time: "23:27", tag: "geo", tagText: "地缘", text: "美国众议院多个委员会将于12月1日就英伟达相关丑闻举行听证，前CEO黄仁勋将出席作证，英伟达律师定于12月2日作证。黄仁勋此前因被曝与一名疑似中国间谍的女性有婚外情而辞去CEO职务，事件正将这家全球市值最高的芯片公司卷入国家安全审查，并可能影响出口管制政策走向。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html" },
   { time: "23:24", tag: "ai", tagText: "AI", text: "英伟达董事会一致决定恢复黄仁勋CEO职务，董事会称获得美国政府高层意见；特朗普表示已直接向英伟达董事会保证黄仁勋不构成国家安全威胁。英伟达股价飙升约30%至35%，创十年来最大单日涨幅，带动纳指涨7.4%、标普500涨5%、道指上扬，科技股与加密资产等风险资产同步反弹。", source: "CNBC", url: "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" },
-  { time: "23:18", tag: "ai", tagText: "AI", text: "英伟达将于美东时间周二下午4:20公布2027财年第三季度业绩，随后召开电话会，这是黄仁勋辞职后的首份财报，备受市场关注。投资者急于了解后黄仁勋时代的公司治理、继任安排与AI芯片订单能见度，但管理层料对继任问题保持缄默。该财报被视为检验AI算力需求成色的关键。", source: "CNBC", url: "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" },
-  { time: "23:01", tag: "ai", tagText: "AI", text: "AI使用量激增但支出停滞，打破传统经济学规则。前沿模型实验室的token消耗上升，却未带来相应收入，凸显AI商业化与算力投资回报之间的落差。", source: "MarketWatch", url: "https://www.marketwatch.com/story/artificial-intelligence-usage-is-exploding-yet-spending-is-stalling-why-a-foundational-rule-of-economics-is-breaking-9c7ad4b3?mod=mw_rss_topstories" },
-  { time: "22:12", tag: "geo", tagText: "地缘", text: "欧盟领导人未能打破1.7万亿美元预算僵局，谈判将于12月恢复，关键期限临近。政治压力上升，反映成员国在长期预算与支出优先事项上的分歧。", source: "CNBC", url: "https://www.cnbc.com/2026/11/27/eu-budget-2028-2034-deadlock.html" },
-  { time: "21:58", tag: "macro", tagText: "宏观", text: "欧洲廉价航空公司Norse Atlantic因未能获得融资、燃油成本飙升而申请破产，凸显航空业成本压力与低成本商业模式脆弱性。", source: "CNBC", url: "https://www.cnbc.com/2026/11/27/norse-atlantic-bankruptcy-fuel-costs.html" },
-  { time: "21:23", tag: "tech", tagText: "科技", text: "黑客入侵美国空军旗舰云计算平台Cloud One，事件在系统升级过程中被发现。该平台承载敏感国防数据，入侵可能引发对美国防网络安全与云供应链的审查。", source: "CNBC", url: "https://www.cnbc.com/2026/11/27/hackers-breach-us-air-force-flagship-cloud-one-computing-platform.html" },
 ];
-const breakingDate = "2026年11月28日 09:53 CST";
+const breakingDate = "2026年11月28日 18:11 CST";
 
 // ============ AI Breaking News Data ============
 const aiBreakingNews = [
@@ -1675,7 +1675,7 @@ const aiBreakingNews = [
   { time: "18:45", tag: "ai", tagText: "AI", text: "南非宣布设立570万美元AI基金，加入由美国和中国主导的AI竞赛；与此同时，欧洲计划投入549亿美元以缩小差距。两者投资规模形成鲜明对比，凸显全球AI竞赛正从模型和算力延伸到国家产业政策与资本投入。", source: "Business Insider Africa", url: "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZTlVMV9fMzBhblJoLXVkc3A4ZzVtQ0hNbVFkZlE3YU9Gd3BfRml3M0FDN0Ewam4wUW5zUk8zSV92SlJqWjVyWk1ZQnRDZm1mQWgtRjZsOEpzMWlaa1h6YjBqNUtqZjJDeHFfSkpxdExoZ2RrVzdBUXdFa0RRYXJyTHMyM0dEQllBZzc1dzNSYUotSGR5blEzLTlXYkZfRUpocXVZNHFYOGZwcVZscC1pUFF1MXZkR2diTktuMjBXMjhBV3FUUDRkZWk5WTFrSTd5cWZsUnR3?oc=5" },
   { time: "18:45", tag: "geo", tagText: "地缘", text: "据报道，英伟达收紧对东南亚的AI芯片出货，以配合美国出口管制。此举可能影响东南亚算力供应链与转口贸易，并进一步改变AI芯片的区域流向。", source: "TradingView", url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYXdvOU9jclphZ1Y2dzd2dEUzWmpzTlhWWGNFSFlXT2lQSjhraHRoanA4RWo4NlZ1OTZ0TnVyeDdKMl9CV25tWlBmREdiOXZtaWxtN1NOY19SY1dXN3ZrTUFqa0pjTGhQUTY3dHJNbEllYjItbUxGTnRSamdjUUxtY3pERmVsY19YbHlBdlpwX1dUeUM1YW9DeHhCSFdxXzJ5eE15aHJJZXVfSTZwdTF0OFp5UHV3bHhMMTh0TlgyaXhOd3R0TGNkMVU1TWJ0TC01T0RtaVlJd0tBdw?oc=5" },
 ];
-const aiBreakingDate = "2026年11月28日 09:53 CST";
+const aiBreakingDate = "2026年11月28日 18:11 CST";
 
 // ============ AI Issue Data ============
 const aiIssues = [
